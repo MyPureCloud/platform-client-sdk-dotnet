@@ -50,20 +50,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialogflowAgent" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Project">The project this Dialogflow agent belongs to.</param>
-        /// <param name="Languages">The target languages of the Dialogflow agent.</param>
-        /// <param name="Intents">An array of Intents associated with this bot alias.</param>
-        public DialogflowAgent(string Name = null, DialogflowProject Project = null, List<string> Languages = null, List<DialogflowIntent> Intents = null)
+        /// <param name="Languages">The supported languages of the Dialogflow agent.</param>
+        /// <param name="Intents">An array of Intents associated with this agent.</param>
+        /// <param name="Environments">Available environments for this agent.</param>
+        public DialogflowAgent(string Name = null, DialogflowProject Project = null, List<string> Languages = null, List<DialogflowIntent> Intents = null, List<string> Environments = null)
         {
             this.Name = Name;
             this.Project = Project;
             this.Languages = Languages;
             this.Intents = Intents;
+            this.Environments = Environments;
             
         }
         
@@ -96,20 +103,29 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The target languages of the Dialogflow agent
+        /// The supported languages of the Dialogflow agent
         /// </summary>
-        /// <value>The target languages of the Dialogflow agent</value>
+        /// <value>The supported languages of the Dialogflow agent</value>
         [DataMember(Name="languages", EmitDefaultValue=false)]
         public List<string> Languages { get; set; }
         
         
         
         /// <summary>
-        /// An array of Intents associated with this bot alias
+        /// An array of Intents associated with this agent
         /// </summary>
-        /// <value>An array of Intents associated with this bot alias</value>
+        /// <value>An array of Intents associated with this agent</value>
         [DataMember(Name="intents", EmitDefaultValue=false)]
         public List<DialogflowIntent> Intents { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Available environments for this agent
+        /// </summary>
+        /// <value>Available environments for this agent</value>
+        [DataMember(Name="environments", EmitDefaultValue=false)]
+        public List<string> Environments { get; set; }
         
         
         
@@ -135,6 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Project: ").Append(Project).Append("\n");
             sb.Append("  Languages: ").Append(Languages).Append("\n");
             sb.Append("  Intents: ").Append(Intents).Append("\n");
+            sb.Append("  Environments: ").Append(Environments).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -198,6 +215,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Intents.SequenceEqual(other.Intents)
                 ) &&
                 (
+                    this.Environments == other.Environments ||
+                    this.Environments != null &&
+                    this.Environments.SequenceEqual(other.Environments)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -230,6 +252,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Intents != null)
                     hash = hash * 59 + this.Intents.GetHashCode();
+                
+                if (this.Environments != null)
+                    hash = hash * 59 + this.Environments.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

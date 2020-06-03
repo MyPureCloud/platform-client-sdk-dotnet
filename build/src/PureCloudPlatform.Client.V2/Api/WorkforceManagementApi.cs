@@ -209,7 +209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitWithHttpInfo (string muId);
         
         /// <summary>
-        /// Deletes an activity code
+        /// Deprecated/Gone: Use the new business unit activity code resources
         /// </summary>
         /// <remarks>
         /// 
@@ -221,7 +221,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteWorkforcemanagementManagementunitActivitycode (string muId, string acId);
 
         /// <summary>
-        /// Deletes an activity code
+        /// Deprecated/Gone: Use the new business unit activity code resources
         /// </summary>
         /// <remarks>
         /// 
@@ -233,55 +233,55 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitActivitycodeWithHttpInfo (string muId, string acId);
         
         /// <summary>
-        /// Cancel a schedule run
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns></returns>
         void DeleteWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId);
 
         /// <summary>
-        /// Cancel a schedule run
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitSchedulingRunWithHttpInfo (string managementUnitId, string runId);
         
         /// <summary>
-        /// Delete a service goal group
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to delete</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone. The ID of the service goal group to delete</param>
         /// <returns></returns>
         void DeleteWorkforcemanagementManagementunitServicegoalgroup (string managementUnitId, string serviceGoalGroupId);
 
         /// <summary>
-        /// Delete a service goal group
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to delete</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone. The ID of the service goal group to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitServicegoalgroupWithHttpInfo (string managementUnitId, string serviceGoalGroupId);
         
         /// <summary>
-        /// Delete a schedule
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -289,12 +289,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of theschedule to delete</param>
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to delete</param>
         /// <returns></returns>
         void DeleteWorkforcemanagementManagementunitWeekSchedule (string managementUnitId, string weekId, string scheduleId);
 
         /// <summary>
-        /// Delete a schedule
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -302,33 +302,33 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of theschedule to delete</param>
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitWeekScheduleWithHttpInfo (string managementUnitId, string weekId, string scheduleId);
         
         /// <summary>
-        /// Delete a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
-        /// Must not be tied to any schedules
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
         /// <returns></returns>
         void DeleteWorkforcemanagementManagementunitWeekShorttermforecast (string managementUnitId, string weekDateId, string forecastId);
 
         /// <summary>
-        /// Delete a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
-        /// Must not be tied to any schedules
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitWeekShorttermforecastWithHttpInfo (string managementUnitId, string weekDateId, string forecastId);
         
@@ -1117,166 +1117,164 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ShiftTradeListResponse> GetWorkforcemanagementManagementunitAgentShifttradesWithHttpInfo (string managementUnitId, string agentId);
         
         /// <summary>
-        /// Get intraday queues for the given date
+        /// Gone.  Moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit</param>
-        /// <param name="date">yyyy-MM-dd date string interpreted in the configured management unit time zone</param>
-        /// <returns>WfmIntradayQueueListing</returns>
-        WfmIntradayQueueListing GetWorkforcemanagementManagementunitIntradayQueues (string muId, string date);
+        /// <returns></returns>
+        void GetWorkforcemanagementManagementunitIntradayQueues (string muId);
 
         /// <summary>
-        /// Get intraday queues for the given date
+        /// Gone.  Moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit</param>
-        /// <param name="date">yyyy-MM-dd date string interpreted in the configured management unit time zone</param>
-        /// <returns>ApiResponse of WfmIntradayQueueListing</returns>
-        ApiResponse<WfmIntradayQueueListing> GetWorkforcemanagementManagementunitIntradayQueuesWithHttpInfo (string muId, string date);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetWorkforcemanagementManagementunitIntradayQueuesWithHttpInfo (string muId);
         
         /// <summary>
-        /// Gets the status for a specific scheduling run
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
-        /// <returns>SchedulingRunResponse</returns>
-        SchedulingRunResponse GetWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId);
+        /// <returns></returns>
+        void GetWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId);
 
         /// <summary>
-        /// Gets the status for a specific scheduling run
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
-        /// <returns>ApiResponse of SchedulingRunResponse</returns>
-        ApiResponse<SchedulingRunResponse> GetWorkforcemanagementManagementunitSchedulingRunWithHttpInfo (string managementUnitId, string runId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetWorkforcemanagementManagementunitSchedulingRunWithHttpInfo (string managementUnitId, string runId);
         
         /// <summary>
-        /// Gets the result of a specific scheduling run
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
-        /// <returns>RescheduleResult</returns>
-        RescheduleResult GetWorkforcemanagementManagementunitSchedulingRunResult (string managementUnitId, string runId);
+        /// <returns></returns>
+        void GetWorkforcemanagementManagementunitSchedulingRunResult (string managementUnitId, string runId);
 
         /// <summary>
-        /// Gets the result of a specific scheduling run
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
-        /// <returns>ApiResponse of RescheduleResult</returns>
-        ApiResponse<RescheduleResult> GetWorkforcemanagementManagementunitSchedulingRunResultWithHttpInfo (string managementUnitId, string runId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetWorkforcemanagementManagementunitSchedulingRunResultWithHttpInfo (string managementUnitId, string runId);
         
         /// <summary>
-        /// Get the status of all the ongoing schedule runs
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
-        /// <returns>SchedulingRunListResponse</returns>
-        SchedulingRunListResponse GetWorkforcemanagementManagementunitSchedulingRuns (string managementUnitId);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
+        /// <returns></returns>
+        void GetWorkforcemanagementManagementunitSchedulingRuns (string managementUnitId);
 
         /// <summary>
-        /// Get the status of all the ongoing schedule runs
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
-        /// <returns>ApiResponse of SchedulingRunListResponse</returns>
-        ApiResponse<SchedulingRunListResponse> GetWorkforcemanagementManagementunitSchedulingRunsWithHttpInfo (string managementUnitId);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetWorkforcemanagementManagementunitSchedulingRunsWithHttpInfo (string managementUnitId);
         
         /// <summary>
-        /// Get a service goal group
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to fetch</param>
-        /// <returns>ServiceGoalGroup</returns>
-        ServiceGoalGroup GetWorkforcemanagementManagementunitServicegoalgroup (string managementUnitId, string serviceGoalGroupId);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone.  The ID of the service goal group to fetch</param>
+        /// <returns></returns>
+        void GetWorkforcemanagementManagementunitServicegoalgroup (string managementUnitId, string serviceGoalGroupId);
 
         /// <summary>
-        /// Get a service goal group
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to fetch</param>
-        /// <returns>ApiResponse of ServiceGoalGroup</returns>
-        ApiResponse<ServiceGoalGroup> GetWorkforcemanagementManagementunitServicegoalgroupWithHttpInfo (string managementUnitId, string serviceGoalGroupId);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone.  The ID of the service goal group to fetch</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetWorkforcemanagementManagementunitServicegoalgroupWithHttpInfo (string managementUnitId, string serviceGoalGroupId);
         
         /// <summary>
-        /// Get service goal groups
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>ServiceGoalGroupList</returns>
-        ServiceGoalGroupList GetWorkforcemanagementManagementunitServicegoalgroups (string managementUnitId);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns></returns>
+        void GetWorkforcemanagementManagementunitServicegoalgroups (string managementUnitId);
 
         /// <summary>
-        /// Get service goal groups
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>ApiResponse of ServiceGoalGroupList</returns>
-        ApiResponse<ServiceGoalGroupList> GetWorkforcemanagementManagementunitServicegoalgroupsWithHttpInfo (string managementUnitId);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetWorkforcemanagementManagementunitServicegoalgroupsWithHttpInfo (string managementUnitId);
         
         /// <summary>
-        /// Get the settings for the requested management unit. Deprecated, use the GET management unit route instead
+        /// Gone. Get management unit settings via expand parameters on the GET management unit
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>ManagementUnitSettingsResponse</returns>
-        ManagementUnitSettingsResponse GetWorkforcemanagementManagementunitSettings (string muId);
+        /// <returns></returns>
+        void GetWorkforcemanagementManagementunitSettings (string muId);
 
         /// <summary>
-        /// Get the settings for the requested management unit. Deprecated, use the GET management unit route instead
+        /// Gone. Get management unit settings via expand parameters on the GET management unit
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>ApiResponse of ManagementUnitSettingsResponse</returns>
-        ApiResponse<ManagementUnitSettingsResponse> GetWorkforcemanagementManagementunitSettingsWithHttpInfo (string muId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetWorkforcemanagementManagementunitSettingsWithHttpInfo (string muId);
         
         /// <summary>
         /// Gets a summary of all shift trades in the matched state
@@ -1397,7 +1395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WfmUserEntityListing> GetWorkforcemanagementManagementunitUsersWithHttpInfo (string muId);
         
         /// <summary>
-        /// Get a week schedule
+        /// Deprecated.  Use the equivalent business unit resource instead. Get a week schedule
         /// </summary>
         /// <remarks>
         /// 
@@ -1412,7 +1410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         WeekScheduleResponse GetWorkforcemanagementManagementunitWeekSchedule (string managementUnitId, string weekId, string scheduleId, string expand = null, bool? forceDownloadService = null);
 
         /// <summary>
-        /// Get a week schedule
+        /// Deprecated.  Use the equivalent business unit resource instead. Get a week schedule
         /// </summary>
         /// <remarks>
         /// 
@@ -1427,7 +1425,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WeekScheduleResponse> GetWorkforcemanagementManagementunitWeekScheduleWithHttpInfo (string managementUnitId, string weekId, string scheduleId, string expand = null, bool? forceDownloadService = null);
         
         /// <summary>
-        /// Get week schedule generation results
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -1435,12 +1433,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to fetch generation results</param>
-        /// <returns>WeekScheduleGenerationResult</returns>
-        WeekScheduleGenerationResult GetWorkforcemanagementManagementunitWeekScheduleGenerationresults (string managementUnitId, string weekId, string scheduleId);
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to fetch generation results</param>
+        /// <returns></returns>
+        void GetWorkforcemanagementManagementunitWeekScheduleGenerationresults (string managementUnitId, string weekId, string scheduleId);
 
         /// <summary>
-        /// Get week schedule generation results
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -1448,12 +1446,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to fetch generation results</param>
-        /// <returns>ApiResponse of WeekScheduleGenerationResult</returns>
-        ApiResponse<WeekScheduleGenerationResult> GetWorkforcemanagementManagementunitWeekScheduleGenerationresultsWithHttpInfo (string managementUnitId, string weekId, string scheduleId);
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to fetch generation results</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetWorkforcemanagementManagementunitWeekScheduleGenerationresultsWithHttpInfo (string managementUnitId, string weekId, string scheduleId);
         
         /// <summary>
-        /// Get the list of schedules in a week in management unit
+        /// Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit
         /// </summary>
         /// <remarks>
         /// 
@@ -1468,7 +1466,7 @@ namespace PureCloudPlatform.Client.V2.Api
         WeekScheduleListResponse GetWorkforcemanagementManagementunitWeekSchedules (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null);
 
         /// <summary>
-        /// Get the list of schedules in a week in management unit
+        /// Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit
         /// </summary>
         /// <remarks>
         /// 
@@ -1509,56 +1507,54 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null);
         
         /// <summary>
-        /// Get the final result of a short term forecast calculation with modifications applied
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>ForecastResultResponse</returns>
-        ForecastResultResponse GetWorkforcemanagementManagementunitWeekShorttermforecastFinal (string managementUnitId, string weekDateId, string forecastId, bool? forceDownloadService = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
+        /// <returns></returns>
+        void GetWorkforcemanagementManagementunitWeekShorttermforecastFinal (string managementUnitId, string weekDateId, string forecastId);
 
         /// <summary>
-        /// Get the final result of a short term forecast calculation with modifications applied
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>ApiResponse of ForecastResultResponse</returns>
-        ApiResponse<ForecastResultResponse> GetWorkforcemanagementManagementunitWeekShorttermforecastFinalWithHttpInfo (string managementUnitId, string weekDateId, string forecastId, bool? forceDownloadService = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetWorkforcemanagementManagementunitWeekShorttermforecastFinalWithHttpInfo (string managementUnitId, string weekDateId, string forecastId);
         
         /// <summary>
-        /// Get short term forecasts
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <returns>ShortTermForecastListResponse</returns>
-        ShortTermForecastListResponse GetWorkforcemanagementManagementunitWeekShorttermforecasts (string managementUnitId, string weekDateId);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns></returns>
+        void GetWorkforcemanagementManagementunitWeekShorttermforecasts (string managementUnitId, string weekDateId);
 
         /// <summary>
-        /// Get short term forecasts
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <returns>ApiResponse of ShortTermForecastListResponse</returns>
-        ApiResponse<ShortTermForecastListResponse> GetWorkforcemanagementManagementunitWeekShorttermforecastsWithHttpInfo (string managementUnitId, string weekDateId);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetWorkforcemanagementManagementunitWeekShorttermforecastsWithHttpInfo (string managementUnitId, string weekDateId);
         
         /// <summary>
         /// Get a work plan
@@ -1919,7 +1915,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ManagementUnit> PatchWorkforcemanagementManagementunitWithHttpInfo (string muId, UpdateManagementUnitRequest body = null);
         
         /// <summary>
-        /// Update an activity code
+        /// Deprecated/Gone: Use the new business unit activity code resources
         /// </summary>
         /// <remarks>
         /// 
@@ -1928,11 +1924,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="acId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>ActivityCode</returns>
-        ActivityCode PatchWorkforcemanagementManagementunitActivitycode (string muId, string acId, UpdateActivityCodeRequest body = null);
+        /// <returns></returns>
+        void PatchWorkforcemanagementManagementunitActivitycode (string muId, string acId, UpdateActivityCodeRequest body = null);
 
         /// <summary>
-        /// Update an activity code
+        /// Deprecated/Gone: Use the new business unit activity code resources
         /// </summary>
         /// <remarks>
         /// 
@@ -1941,84 +1937,80 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="acId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of ActivityCode</returns>
-        ApiResponse<ActivityCode> PatchWorkforcemanagementManagementunitActivitycodeWithHttpInfo (string muId, string acId, UpdateActivityCodeRequest body = null);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchWorkforcemanagementManagementunitActivitycodeWithHttpInfo (string muId, string acId, UpdateActivityCodeRequest body = null);
         
         /// <summary>
-        /// Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>RescheduleResult</returns>
-        RescheduleResult PatchWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null);
+        /// <returns></returns>
+        void PatchWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null);
 
         /// <summary>
-        /// Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of RescheduleResult</returns>
-        ApiResponse<RescheduleResult> PatchWorkforcemanagementManagementunitSchedulingRunWithHttpInfo (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchWorkforcemanagementManagementunitSchedulingRunWithHttpInfo (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null);
         
         /// <summary>
-        /// Update a service goal group
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to update</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ServiceGoalGroup</returns>
-        ServiceGoalGroup PatchWorkforcemanagementManagementunitServicegoalgroup (string managementUnitId, string serviceGoalGroupId, ServiceGoalGroup body = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone. The ID of the service goal group to update</param>
+        /// <returns></returns>
+        void PatchWorkforcemanagementManagementunitServicegoalgroup (string managementUnitId, string serviceGoalGroupId);
 
         /// <summary>
-        /// Update a service goal group
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to update</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of ServiceGoalGroup</returns>
-        ApiResponse<ServiceGoalGroup> PatchWorkforcemanagementManagementunitServicegoalgroupWithHttpInfo (string managementUnitId, string serviceGoalGroupId, ServiceGoalGroup body = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone. The ID of the service goal group to update</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchWorkforcemanagementManagementunitServicegoalgroupWithHttpInfo (string managementUnitId, string serviceGoalGroupId);
         
         /// <summary>
-        /// Update the settings for the requested management unit
+        /// Gone. Update settings by PATCHing the management unit
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">config (optional)</param>
-        /// <returns>ManagementUnitSettingsResponse</returns>
-        ManagementUnitSettingsResponse PatchWorkforcemanagementManagementunitSettings (string muId, ManagementUnitSettingsRequest body = null);
+        /// <returns></returns>
+        void PatchWorkforcemanagementManagementunitSettings (string muId);
 
         /// <summary>
-        /// Update the settings for the requested management unit
+        /// Gone. Update settings by PATCHing the management unit
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">config (optional)</param>
-        /// <returns>ApiResponse of ManagementUnitSettingsResponse</returns>
-        ApiResponse<ManagementUnitSettingsResponse> PatchWorkforcemanagementManagementunitSettingsWithHttpInfo (string muId, ManagementUnitSettingsRequest body = null);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchWorkforcemanagementManagementunitSettingsWithHttpInfo (string muId);
         
         /// <summary>
         /// Update a time off request
@@ -2049,7 +2041,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TimeOffRequestResponse> PatchWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo (string muId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null);
         
         /// <summary>
-        /// Update a week schedule
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -2057,15 +2049,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>AsyncWeekScheduleResponse</returns>
-        AsyncWeekScheduleResponse PatchWorkforcemanagementManagementunitWeekSchedule (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, UpdateWeekScheduleRequest body = null);
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500</param>
+        /// <returns></returns>
+        void PatchWorkforcemanagementManagementunitWeekSchedule (string managementUnitId, string weekId, string scheduleId);
 
         /// <summary>
-        /// Update a week schedule
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -2073,12 +2062,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of AsyncWeekScheduleResponse</returns>
-        ApiResponse<AsyncWeekScheduleResponse> PatchWorkforcemanagementManagementunitWeekScheduleWithHttpInfo (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, UpdateWeekScheduleRequest body = null);
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchWorkforcemanagementManagementunitWeekScheduleWithHttpInfo (string managementUnitId, string weekId, string scheduleId);
         
         /// <summary>
         /// Updates a shift trade. This route can only be called by the initiating agent
@@ -2549,28 +2535,26 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<BusinessUnit> PostWorkforcemanagementBusinessunitsWithHttpInfo (CreateBusinessUnitRequest body = null);
         
         /// <summary>
-        /// Create a new activity code
+        /// Deprecated/Gone: Use the new business unit activity code resources
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ActivityCode</returns>
-        ActivityCode PostWorkforcemanagementManagementunitActivitycodes (string muId, CreateActivityCodeRequest body = null);
+        /// <returns></returns>
+        void PostWorkforcemanagementManagementunitActivitycodes (string muId);
 
         /// <summary>
-        /// Create a new activity code
+        /// Deprecated/Gone: Use the new business unit activity code resources
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of ActivityCode</returns>
-        ApiResponse<ActivityCode> PostWorkforcemanagementManagementunitActivitycodesWithHttpInfo (string muId, CreateActivityCodeRequest body = null);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostWorkforcemanagementManagementunitActivitycodesWithHttpInfo (string muId);
         
         /// <summary>
         /// Query published schedules for given given time range for set of users
@@ -2625,28 +2609,26 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WfmHistoricalAdherenceResponse> PostWorkforcemanagementManagementunitHistoricaladherencequeryWithHttpInfo (string muId, WfmHistoricalAdherenceQuery body = null);
         
         /// <summary>
-        /// Get intraday data for the given date for the requested queueIds
+        /// Gone.  Moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>IntradayResponse</returns>
-        IntradayResponse PostWorkforcemanagementManagementunitIntraday (string muId, IntradayQueryDataCommand body = null);
+        /// <returns></returns>
+        void PostWorkforcemanagementManagementunitIntraday (string muId);
 
         /// <summary>
-        /// Get intraday data for the given date for the requested queueIds
+        /// Gone.  Moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of IntradayResponse</returns>
-        ApiResponse<IntradayResponse> PostWorkforcemanagementManagementunitIntradayWithHttpInfo (string muId, IntradayQueryDataCommand body = null);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostWorkforcemanagementManagementunitIntradayWithHttpInfo (string muId);
         
         /// <summary>
         /// Move the requested management unit to a new business unit
@@ -2697,28 +2679,26 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserScheduleContainer> PostWorkforcemanagementManagementunitSchedulesSearchWithHttpInfo (string muId, UserListScheduleRequestBody body = null);
         
         /// <summary>
-        /// Create a new service goal group
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ServiceGoalGroup</returns>
-        ServiceGoalGroup PostWorkforcemanagementManagementunitServicegoalgroups (string managementUnitId, CreateServiceGoalGroupRequest body = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns></returns>
+        void PostWorkforcemanagementManagementunitServicegoalgroups (string managementUnitId);
 
         /// <summary>
-        /// Create a new service goal group
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of ServiceGoalGroup</returns>
-        ApiResponse<ServiceGoalGroup> PostWorkforcemanagementManagementunitServicegoalgroupsWithHttpInfo (string managementUnitId, CreateServiceGoalGroupRequest body = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostWorkforcemanagementManagementunitServicegoalgroupsWithHttpInfo (string managementUnitId);
         
         /// <summary>
         /// Create a new time off request
@@ -2745,7 +2725,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TimeOffRequestList> PostWorkforcemanagementManagementunitTimeoffrequestsWithHttpInfo (string muId, CreateAdminTimeOffRequest body = null);
         
         /// <summary>
-        /// Gets a list of time off requests from lookup ids
+        /// Gone.  All data is now returned in the query route
         /// </summary>
         /// <remarks>
         /// 
@@ -2753,11 +2733,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>TimeOffRequestEntityList</returns>
-        TimeOffRequestEntityList PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetails (string muId, TimeOffRequestLookupList body = null);
+        /// <returns></returns>
+        void PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetails (string muId, TimeOffRequestListing body = null);
 
         /// <summary>
-        /// Gets a list of time off requests from lookup ids
+        /// Gone.  All data is now returned in the query route
         /// </summary>
         /// <remarks>
         /// 
@@ -2765,8 +2745,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of TimeOffRequestEntityList</returns>
-        ApiResponse<TimeOffRequestEntityList> PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetailsWithHttpInfo (string muId, TimeOffRequestLookupList body = null);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetailsWithHttpInfo (string muId, TimeOffRequestListing body = null);
         
         /// <summary>
         /// Gets the lookup ids to fetch the specified set of requests
@@ -2777,8 +2757,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>TimeOffRequestLookupList</returns>
-        TimeOffRequestLookupList PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string muId, TimeOffRequestQueryBody body = null);
+        /// <returns>TimeOffRequestListing</returns>
+        TimeOffRequestListing PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string muId, TimeOffRequestQueryBody body = null);
 
         /// <summary>
         /// Gets the lookup ids to fetch the specified set of requests
@@ -2789,11 +2769,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of TimeOffRequestLookupList</returns>
-        ApiResponse<TimeOffRequestLookupList> PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo (string muId, TimeOffRequestQueryBody body = null);
+        /// <returns>ApiResponse of TimeOffRequestListing</returns>
+        ApiResponse<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo (string muId, TimeOffRequestQueryBody body = null);
         
         /// <summary>
-        /// Copy a week schedule
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -2801,15 +2781,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to copy from</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>AsyncWeekScheduleResponse</returns>
-        AsyncWeekScheduleResponse PostWorkforcemanagementManagementunitWeekScheduleCopy (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, CopyWeekScheduleRequest body = null);
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to copy from</param>
+        /// <returns></returns>
+        void PostWorkforcemanagementManagementunitWeekScheduleCopy (string managementUnitId, string weekId, string scheduleId);
 
         /// <summary>
-        /// Copy a week schedule
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -2817,15 +2794,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to copy from</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of AsyncWeekScheduleResponse</returns>
-        ApiResponse<AsyncWeekScheduleResponse> PostWorkforcemanagementManagementunitWeekScheduleCopyWithHttpInfo (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, CopyWeekScheduleRequest body = null);
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to copy from</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostWorkforcemanagementManagementunitWeekScheduleCopyWithHttpInfo (string managementUnitId, string weekId, string scheduleId);
         
         /// <summary>
-        /// Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -2833,13 +2807,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to re-optimize</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>AsyncWeekScheduleResponse</returns>
-        AsyncWeekScheduleResponse PostWorkforcemanagementManagementunitWeekScheduleReschedule (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null);
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to re-optimize</param>
+        /// <returns></returns>
+        void PostWorkforcemanagementManagementunitWeekScheduleReschedule (string managementUnitId, string weekId, string scheduleId);
 
         /// <summary>
-        /// Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -2847,13 +2820,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to re-optimize</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of AsyncWeekScheduleResponse</returns>
-        ApiResponse<AsyncWeekScheduleResponse> PostWorkforcemanagementManagementunitWeekScheduleRescheduleWithHttpInfo (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null);
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to re-optimize</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostWorkforcemanagementManagementunitWeekScheduleRescheduleWithHttpInfo (string managementUnitId, string weekId, string scheduleId);
         
         /// <summary>
-        /// Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -2861,14 +2833,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>AsyncWeekScheduleResponse</returns>
-        AsyncWeekScheduleResponse PostWorkforcemanagementManagementunitWeekSchedules (string managementUnitId, string weekId, bool? forceAsync = null, bool? forceDownloadService = null, ImportWeekScheduleRequest body = null);
+        /// <returns></returns>
+        void PostWorkforcemanagementManagementunitWeekSchedules (string managementUnitId, string weekId);
 
         /// <summary>
-        /// Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -2876,14 +2845,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of AsyncWeekScheduleResponse</returns>
-        ApiResponse<AsyncWeekScheduleResponse> PostWorkforcemanagementManagementunitWeekSchedulesWithHttpInfo (string managementUnitId, string weekId, bool? forceAsync = null, bool? forceDownloadService = null, ImportWeekScheduleRequest body = null);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostWorkforcemanagementManagementunitWeekSchedulesWithHttpInfo (string managementUnitId, string weekId);
         
         /// <summary>
-        /// Generate a week schedule
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -2891,12 +2857,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>GenerateWeekScheduleResponse</returns>
-        GenerateWeekScheduleResponse PostWorkforcemanagementManagementunitWeekSchedulesGenerate (string managementUnitId, string weekId, GenerateWeekScheduleRequest body = null);
+        /// <returns></returns>
+        void PostWorkforcemanagementManagementunitWeekSchedulesGenerate (string managementUnitId, string weekId);
 
         /// <summary>
-        /// Generate a week schedule
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -2904,12 +2869,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of GenerateWeekScheduleResponse</returns>
-        ApiResponse<GenerateWeekScheduleResponse> PostWorkforcemanagementManagementunitWeekSchedulesGenerateWithHttpInfo (string managementUnitId, string weekId, GenerateWeekScheduleRequest body = null);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostWorkforcemanagementManagementunitWeekSchedulesGenerateWithHttpInfo (string managementUnitId, string weekId);
         
         /// <summary>
-        /// Partial upload of user schedules where activity count is greater than 17500
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -2917,12 +2881,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>PartialUploadResponse</returns>
-        PartialUploadResponse PostWorkforcemanagementManagementunitWeekSchedulesPartialupload (string managementUnitId, string weekId, UserSchedulesPartialUploadRequest body = null);
+        /// <returns></returns>
+        void PostWorkforcemanagementManagementunitWeekSchedulesPartialupload (string managementUnitId, string weekId);
 
         /// <summary>
-        /// Partial upload of user schedules where activity count is greater than 17500
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -2930,9 +2893,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of PartialUploadResponse</returns>
-        ApiResponse<PartialUploadResponse> PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadWithHttpInfo (string managementUnitId, string weekId, UserSchedulesPartialUploadRequest body = null);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadWithHttpInfo (string managementUnitId, string weekId);
         
         /// <summary>
         /// Matches a shift trade. This route can only be called by the receiving agent
@@ -3043,116 +3005,102 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<BulkUpdateShiftTradeStateResponse> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkWithHttpInfo (string managementUnitId, DateTime? weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null);
         
         /// <summary>
-        /// Copy a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast to copy</param>
-        /// <param name="body">body</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>ShortTermForecastResponse</returns>
-        ShortTermForecastResponse PostWorkforcemanagementManagementunitWeekShorttermforecastCopy (string managementUnitId, string weekDateId, string forecastId, CopyShortTermForecastRequest body, bool? forceAsync = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
+        /// <returns></returns>
+        void PostWorkforcemanagementManagementunitWeekShorttermforecastCopy (string managementUnitId, string weekDateId, string forecastId);
 
         /// <summary>
-        /// Copy a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast to copy</param>
-        /// <param name="body">body</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>ApiResponse of ShortTermForecastResponse</returns>
-        ApiResponse<ShortTermForecastResponse> PostWorkforcemanagementManagementunitWeekShorttermforecastCopyWithHttpInfo (string managementUnitId, string weekDateId, string forecastId, CopyShortTermForecastRequest body, bool? forceAsync = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostWorkforcemanagementManagementunitWeekShorttermforecastCopyWithHttpInfo (string managementUnitId, string weekDateId, string forecastId);
         
         /// <summary>
-        /// Import a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body">body</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>ShortTermForecastResponse</returns>
-        ShortTermForecastResponse PostWorkforcemanagementManagementunitWeekShorttermforecasts (string managementUnitId, string weekDateId, ImportShortTermForecastRequest body, bool? forceAsync = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns></returns>
+        void PostWorkforcemanagementManagementunitWeekShorttermforecasts (string managementUnitId, string weekDateId);
 
         /// <summary>
-        /// Import a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body">body</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>ApiResponse of ShortTermForecastResponse</returns>
-        ApiResponse<ShortTermForecastResponse> PostWorkforcemanagementManagementunitWeekShorttermforecastsWithHttpInfo (string managementUnitId, string weekDateId, ImportShortTermForecastRequest body, bool? forceAsync = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostWorkforcemanagementManagementunitWeekShorttermforecastsWithHttpInfo (string managementUnitId, string weekDateId);
         
         /// <summary>
-        /// Generate a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body"></param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>GenerateShortTermForecastResponse</returns>
-        GenerateShortTermForecastResponse PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate (string managementUnitId, string weekDateId, GenerateShortTermForecastRequest body, bool? forceAsync = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns></returns>
+        void PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate (string managementUnitId, string weekDateId);
 
         /// <summary>
-        /// Generate a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body"></param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>ApiResponse of GenerateShortTermForecastResponse</returns>
-        ApiResponse<GenerateShortTermForecastResponse> PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerateWithHttpInfo (string managementUnitId, string weekDateId, GenerateShortTermForecastRequest body, bool? forceAsync = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerateWithHttpInfo (string managementUnitId, string weekDateId);
         
         /// <summary>
-        /// Import a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body">body</param>
-        /// <returns>PartialUploadResponse</returns>
-        PartialUploadResponse PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload (string managementUnitId, string weekDateId, RouteGroupList body);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns></returns>
+        void PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload (string managementUnitId, string weekDateId);
 
         /// <summary>
-        /// Import a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body">body</param>
-        /// <returns>ApiResponse of PartialUploadResponse</returns>
-        ApiResponse<PartialUploadResponse> PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialuploadWithHttpInfo (string managementUnitId, string weekDateId, RouteGroupList body);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialuploadWithHttpInfo (string managementUnitId, string weekDateId);
         
         /// <summary>
         /// Create a copy of work plan
@@ -3489,7 +3437,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitAsyncWithHttpInfo (string muId);
         
         /// <summary>
-        /// Deletes an activity code
+        /// Deprecated/Gone: Use the new business unit activity code resources
         /// </summary>
         /// <remarks>
         /// 
@@ -3501,7 +3449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitActivitycodeAsync (string muId, string acId);
 
         /// <summary>
-        /// Deletes an activity code
+        /// Deprecated/Gone: Use the new business unit activity code resources
         /// </summary>
         /// <remarks>
         /// 
@@ -3513,55 +3461,55 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitActivitycodeAsyncWithHttpInfo (string muId, string acId);
         
         /// <summary>
-        /// Cancel a schedule run
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitSchedulingRunAsync (string managementUnitId, string runId);
 
         /// <summary>
-        /// Cancel a schedule run
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo (string managementUnitId, string runId);
         
         /// <summary>
-        /// Delete a service goal group
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to delete</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone. The ID of the service goal group to delete</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitServicegoalgroupAsync (string managementUnitId, string serviceGoalGroupId);
 
         /// <summary>
-        /// Delete a service goal group
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to delete</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone. The ID of the service goal group to delete</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitServicegoalgroupAsyncWithHttpInfo (string managementUnitId, string serviceGoalGroupId);
         
         /// <summary>
-        /// Delete a schedule
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -3569,12 +3517,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of theschedule to delete</param>
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to delete</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitWeekScheduleAsync (string managementUnitId, string weekId, string scheduleId);
 
         /// <summary>
-        /// Delete a schedule
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -3582,33 +3530,33 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of theschedule to delete</param>
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to delete</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitWeekScheduleAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId);
         
         /// <summary>
-        /// Delete a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
-        /// Must not be tied to any schedules
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitWeekShorttermforecastAsync (string managementUnitId, string weekDateId, string forecastId);
 
         /// <summary>
-        /// Delete a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
-        /// Must not be tied to any schedules
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitWeekShorttermforecastAsyncWithHttpInfo (string managementUnitId, string weekDateId, string forecastId);
         
@@ -4397,166 +4345,164 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ShiftTradeListResponse>> GetWorkforcemanagementManagementunitAgentShifttradesAsyncWithHttpInfo (string managementUnitId, string agentId);
         
         /// <summary>
-        /// Get intraday queues for the given date
+        /// Gone.  Moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit</param>
-        /// <param name="date">yyyy-MM-dd date string interpreted in the configured management unit time zone</param>
-        /// <returns>Task of WfmIntradayQueueListing</returns>
-        System.Threading.Tasks.Task<WfmIntradayQueueListing> GetWorkforcemanagementManagementunitIntradayQueuesAsync (string muId, string date);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetWorkforcemanagementManagementunitIntradayQueuesAsync (string muId);
 
         /// <summary>
-        /// Get intraday queues for the given date
+        /// Gone.  Moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit</param>
-        /// <param name="date">yyyy-MM-dd date string interpreted in the configured management unit time zone</param>
-        /// <returns>Task of ApiResponse (WfmIntradayQueueListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WfmIntradayQueueListing>> GetWorkforcemanagementManagementunitIntradayQueuesAsyncWithHttpInfo (string muId, string date);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitIntradayQueuesAsyncWithHttpInfo (string muId);
         
         /// <summary>
-        /// Gets the status for a specific scheduling run
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
-        /// <returns>Task of SchedulingRunResponse</returns>
-        System.Threading.Tasks.Task<SchedulingRunResponse> GetWorkforcemanagementManagementunitSchedulingRunAsync (string managementUnitId, string runId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetWorkforcemanagementManagementunitSchedulingRunAsync (string managementUnitId, string runId);
 
         /// <summary>
-        /// Gets the status for a specific scheduling run
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
-        /// <returns>Task of ApiResponse (SchedulingRunResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SchedulingRunResponse>> GetWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo (string managementUnitId, string runId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo (string managementUnitId, string runId);
         
         /// <summary>
-        /// Gets the result of a specific scheduling run
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
-        /// <returns>Task of RescheduleResult</returns>
-        System.Threading.Tasks.Task<RescheduleResult> GetWorkforcemanagementManagementunitSchedulingRunResultAsync (string managementUnitId, string runId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetWorkforcemanagementManagementunitSchedulingRunResultAsync (string managementUnitId, string runId);
 
         /// <summary>
-        /// Gets the result of a specific scheduling run
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
-        /// <returns>Task of ApiResponse (RescheduleResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RescheduleResult>> GetWorkforcemanagementManagementunitSchedulingRunResultAsyncWithHttpInfo (string managementUnitId, string runId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitSchedulingRunResultAsyncWithHttpInfo (string managementUnitId, string runId);
         
         /// <summary>
-        /// Get the status of all the ongoing schedule runs
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
-        /// <returns>Task of SchedulingRunListResponse</returns>
-        System.Threading.Tasks.Task<SchedulingRunListResponse> GetWorkforcemanagementManagementunitSchedulingRunsAsync (string managementUnitId);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetWorkforcemanagementManagementunitSchedulingRunsAsync (string managementUnitId);
 
         /// <summary>
-        /// Get the status of all the ongoing schedule runs
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
-        /// <returns>Task of ApiResponse (SchedulingRunListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SchedulingRunListResponse>> GetWorkforcemanagementManagementunitSchedulingRunsAsyncWithHttpInfo (string managementUnitId);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitSchedulingRunsAsyncWithHttpInfo (string managementUnitId);
         
         /// <summary>
-        /// Get a service goal group
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to fetch</param>
-        /// <returns>Task of ServiceGoalGroup</returns>
-        System.Threading.Tasks.Task<ServiceGoalGroup> GetWorkforcemanagementManagementunitServicegoalgroupAsync (string managementUnitId, string serviceGoalGroupId);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone.  The ID of the service goal group to fetch</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetWorkforcemanagementManagementunitServicegoalgroupAsync (string managementUnitId, string serviceGoalGroupId);
 
         /// <summary>
-        /// Get a service goal group
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to fetch</param>
-        /// <returns>Task of ApiResponse (ServiceGoalGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServiceGoalGroup>> GetWorkforcemanagementManagementunitServicegoalgroupAsyncWithHttpInfo (string managementUnitId, string serviceGoalGroupId);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone.  The ID of the service goal group to fetch</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitServicegoalgroupAsyncWithHttpInfo (string managementUnitId, string serviceGoalGroupId);
         
         /// <summary>
-        /// Get service goal groups
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>Task of ServiceGoalGroupList</returns>
-        System.Threading.Tasks.Task<ServiceGoalGroupList> GetWorkforcemanagementManagementunitServicegoalgroupsAsync (string managementUnitId);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetWorkforcemanagementManagementunitServicegoalgroupsAsync (string managementUnitId);
 
         /// <summary>
-        /// Get service goal groups
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>Task of ApiResponse (ServiceGoalGroupList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServiceGoalGroupList>> GetWorkforcemanagementManagementunitServicegoalgroupsAsyncWithHttpInfo (string managementUnitId);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitServicegoalgroupsAsyncWithHttpInfo (string managementUnitId);
         
         /// <summary>
-        /// Get the settings for the requested management unit. Deprecated, use the GET management unit route instead
+        /// Gone. Get management unit settings via expand parameters on the GET management unit
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>Task of ManagementUnitSettingsResponse</returns>
-        System.Threading.Tasks.Task<ManagementUnitSettingsResponse> GetWorkforcemanagementManagementunitSettingsAsync (string muId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetWorkforcemanagementManagementunitSettingsAsync (string muId);
 
         /// <summary>
-        /// Get the settings for the requested management unit. Deprecated, use the GET management unit route instead
+        /// Gone. Get management unit settings via expand parameters on the GET management unit
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>Task of ApiResponse (ManagementUnitSettingsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ManagementUnitSettingsResponse>> GetWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo (string muId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo (string muId);
         
         /// <summary>
         /// Gets a summary of all shift trades in the matched state
@@ -4677,7 +4623,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitUsersAsyncWithHttpInfo (string muId);
         
         /// <summary>
-        /// Get a week schedule
+        /// Deprecated.  Use the equivalent business unit resource instead. Get a week schedule
         /// </summary>
         /// <remarks>
         /// 
@@ -4692,7 +4638,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<WeekScheduleResponse> GetWorkforcemanagementManagementunitWeekScheduleAsync (string managementUnitId, string weekId, string scheduleId, string expand = null, bool? forceDownloadService = null);
 
         /// <summary>
-        /// Get a week schedule
+        /// Deprecated.  Use the equivalent business unit resource instead. Get a week schedule
         /// </summary>
         /// <remarks>
         /// 
@@ -4707,7 +4653,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WeekScheduleResponse>> GetWorkforcemanagementManagementunitWeekScheduleAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId, string expand = null, bool? forceDownloadService = null);
         
         /// <summary>
-        /// Get week schedule generation results
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -4715,12 +4661,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to fetch generation results</param>
-        /// <returns>Task of WeekScheduleGenerationResult</returns>
-        System.Threading.Tasks.Task<WeekScheduleGenerationResult> GetWorkforcemanagementManagementunitWeekScheduleGenerationresultsAsync (string managementUnitId, string weekId, string scheduleId);
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to fetch generation results</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetWorkforcemanagementManagementunitWeekScheduleGenerationresultsAsync (string managementUnitId, string weekId, string scheduleId);
 
         /// <summary>
-        /// Get week schedule generation results
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -4728,12 +4674,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to fetch generation results</param>
-        /// <returns>Task of ApiResponse (WeekScheduleGenerationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WeekScheduleGenerationResult>> GetWorkforcemanagementManagementunitWeekScheduleGenerationresultsAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId);
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to fetch generation results</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitWeekScheduleGenerationresultsAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId);
         
         /// <summary>
-        /// Get the list of schedules in a week in management unit
+        /// Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit
         /// </summary>
         /// <remarks>
         /// 
@@ -4748,7 +4694,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<WeekScheduleListResponse> GetWorkforcemanagementManagementunitWeekSchedulesAsync (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null);
 
         /// <summary>
-        /// Get the list of schedules in a week in management unit
+        /// Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit
         /// </summary>
         /// <remarks>
         /// 
@@ -4789,56 +4735,54 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WeekShiftTradeListResponse>> GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null);
         
         /// <summary>
-        /// Get the final result of a short term forecast calculation with modifications applied
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of ForecastResultResponse</returns>
-        System.Threading.Tasks.Task<ForecastResultResponse> GetWorkforcemanagementManagementunitWeekShorttermforecastFinalAsync (string managementUnitId, string weekDateId, string forecastId, bool? forceDownloadService = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetWorkforcemanagementManagementunitWeekShorttermforecastFinalAsync (string managementUnitId, string weekDateId, string forecastId);
 
         /// <summary>
-        /// Get the final result of a short term forecast calculation with modifications applied
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of ApiResponse (ForecastResultResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ForecastResultResponse>> GetWorkforcemanagementManagementunitWeekShorttermforecastFinalAsyncWithHttpInfo (string managementUnitId, string weekDateId, string forecastId, bool? forceDownloadService = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitWeekShorttermforecastFinalAsyncWithHttpInfo (string managementUnitId, string weekDateId, string forecastId);
         
         /// <summary>
-        /// Get short term forecasts
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <returns>Task of ShortTermForecastListResponse</returns>
-        System.Threading.Tasks.Task<ShortTermForecastListResponse> GetWorkforcemanagementManagementunitWeekShorttermforecastsAsync (string managementUnitId, string weekDateId);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetWorkforcemanagementManagementunitWeekShorttermforecastsAsync (string managementUnitId, string weekDateId);
 
         /// <summary>
-        /// Get short term forecasts
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <returns>Task of ApiResponse (ShortTermForecastListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ShortTermForecastListResponse>> GetWorkforcemanagementManagementunitWeekShorttermforecastsAsyncWithHttpInfo (string managementUnitId, string weekDateId);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitWeekShorttermforecastsAsyncWithHttpInfo (string managementUnitId, string weekDateId);
         
         /// <summary>
         /// Get a work plan
@@ -5199,7 +5143,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> PatchWorkforcemanagementManagementunitAsyncWithHttpInfo (string muId, UpdateManagementUnitRequest body = null);
         
         /// <summary>
-        /// Update an activity code
+        /// Deprecated/Gone: Use the new business unit activity code resources
         /// </summary>
         /// <remarks>
         /// 
@@ -5208,11 +5152,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="acId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of ActivityCode</returns>
-        System.Threading.Tasks.Task<ActivityCode> PatchWorkforcemanagementManagementunitActivitycodeAsync (string muId, string acId, UpdateActivityCodeRequest body = null);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchWorkforcemanagementManagementunitActivitycodeAsync (string muId, string acId, UpdateActivityCodeRequest body = null);
 
         /// <summary>
-        /// Update an activity code
+        /// Deprecated/Gone: Use the new business unit activity code resources
         /// </summary>
         /// <remarks>
         /// 
@@ -5221,84 +5165,80 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="acId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (ActivityCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ActivityCode>> PatchWorkforcemanagementManagementunitActivitycodeAsyncWithHttpInfo (string muId, string acId, UpdateActivityCodeRequest body = null);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementManagementunitActivitycodeAsyncWithHttpInfo (string muId, string acId, UpdateActivityCodeRequest body = null);
         
         /// <summary>
-        /// Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of RescheduleResult</returns>
-        System.Threading.Tasks.Task<RescheduleResult> PatchWorkforcemanagementManagementunitSchedulingRunAsync (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchWorkforcemanagementManagementunitSchedulingRunAsync (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null);
 
         /// <summary>
-        /// Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (RescheduleResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RescheduleResult>> PatchWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null);
         
         /// <summary>
-        /// Update a service goal group
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to update</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ServiceGoalGroup</returns>
-        System.Threading.Tasks.Task<ServiceGoalGroup> PatchWorkforcemanagementManagementunitServicegoalgroupAsync (string managementUnitId, string serviceGoalGroupId, ServiceGoalGroup body = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone. The ID of the service goal group to update</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchWorkforcemanagementManagementunitServicegoalgroupAsync (string managementUnitId, string serviceGoalGroupId);
 
         /// <summary>
-        /// Update a service goal group
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to update</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (ServiceGoalGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServiceGoalGroup>> PatchWorkforcemanagementManagementunitServicegoalgroupAsyncWithHttpInfo (string managementUnitId, string serviceGoalGroupId, ServiceGoalGroup body = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone. The ID of the service goal group to update</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementManagementunitServicegoalgroupAsyncWithHttpInfo (string managementUnitId, string serviceGoalGroupId);
         
         /// <summary>
-        /// Update the settings for the requested management unit
+        /// Gone. Update settings by PATCHing the management unit
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">config (optional)</param>
-        /// <returns>Task of ManagementUnitSettingsResponse</returns>
-        System.Threading.Tasks.Task<ManagementUnitSettingsResponse> PatchWorkforcemanagementManagementunitSettingsAsync (string muId, ManagementUnitSettingsRequest body = null);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchWorkforcemanagementManagementunitSettingsAsync (string muId);
 
         /// <summary>
-        /// Update the settings for the requested management unit
+        /// Gone. Update settings by PATCHing the management unit
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">config (optional)</param>
-        /// <returns>Task of ApiResponse (ManagementUnitSettingsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ManagementUnitSettingsResponse>> PatchWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo (string muId, ManagementUnitSettingsRequest body = null);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo (string muId);
         
         /// <summary>
         /// Update a time off request
@@ -5329,7 +5269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> PatchWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo (string muId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null);
         
         /// <summary>
-        /// Update a week schedule
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -5337,15 +5277,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of AsyncWeekScheduleResponse</returns>
-        System.Threading.Tasks.Task<AsyncWeekScheduleResponse> PatchWorkforcemanagementManagementunitWeekScheduleAsync (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, UpdateWeekScheduleRequest body = null);
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchWorkforcemanagementManagementunitWeekScheduleAsync (string managementUnitId, string weekId, string scheduleId);
 
         /// <summary>
-        /// Update a week schedule
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -5353,12 +5290,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (AsyncWeekScheduleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AsyncWeekScheduleResponse>> PatchWorkforcemanagementManagementunitWeekScheduleAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, UpdateWeekScheduleRequest body = null);
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementManagementunitWeekScheduleAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId);
         
         /// <summary>
         /// Updates a shift trade. This route can only be called by the initiating agent
@@ -5829,28 +5763,26 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<BusinessUnit>> PostWorkforcemanagementBusinessunitsAsyncWithHttpInfo (CreateBusinessUnitRequest body = null);
         
         /// <summary>
-        /// Create a new activity code
+        /// Deprecated/Gone: Use the new business unit activity code resources
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ActivityCode</returns>
-        System.Threading.Tasks.Task<ActivityCode> PostWorkforcemanagementManagementunitActivitycodesAsync (string muId, CreateActivityCodeRequest body = null);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostWorkforcemanagementManagementunitActivitycodesAsync (string muId);
 
         /// <summary>
-        /// Create a new activity code
+        /// Deprecated/Gone: Use the new business unit activity code resources
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (ActivityCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ActivityCode>> PostWorkforcemanagementManagementunitActivitycodesAsyncWithHttpInfo (string muId, CreateActivityCodeRequest body = null);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitActivitycodesAsyncWithHttpInfo (string muId);
         
         /// <summary>
         /// Query published schedules for given given time range for set of users
@@ -5905,28 +5837,26 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsyncWithHttpInfo (string muId, WfmHistoricalAdherenceQuery body = null);
         
         /// <summary>
-        /// Get intraday data for the given date for the requested queueIds
+        /// Gone.  Moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of IntradayResponse</returns>
-        System.Threading.Tasks.Task<IntradayResponse> PostWorkforcemanagementManagementunitIntradayAsync (string muId, IntradayQueryDataCommand body = null);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostWorkforcemanagementManagementunitIntradayAsync (string muId);
 
         /// <summary>
-        /// Get intraday data for the given date for the requested queueIds
+        /// Gone.  Moved under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (IntradayResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<IntradayResponse>> PostWorkforcemanagementManagementunitIntradayAsyncWithHttpInfo (string muId, IntradayQueryDataCommand body = null);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitIntradayAsyncWithHttpInfo (string muId);
         
         /// <summary>
         /// Move the requested management unit to a new business unit
@@ -5977,28 +5907,26 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitSchedulesSearchAsyncWithHttpInfo (string muId, UserListScheduleRequestBody body = null);
         
         /// <summary>
-        /// Create a new service goal group
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ServiceGoalGroup</returns>
-        System.Threading.Tasks.Task<ServiceGoalGroup> PostWorkforcemanagementManagementunitServicegoalgroupsAsync (string managementUnitId, CreateServiceGoalGroupRequest body = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostWorkforcemanagementManagementunitServicegoalgroupsAsync (string managementUnitId);
 
         /// <summary>
-        /// Create a new service goal group
+        /// Gone. Replaced with service goal templates and planning groups under business units
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (ServiceGoalGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServiceGoalGroup>> PostWorkforcemanagementManagementunitServicegoalgroupsAsyncWithHttpInfo (string managementUnitId, CreateServiceGoalGroupRequest body = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitServicegoalgroupsAsyncWithHttpInfo (string managementUnitId);
         
         /// <summary>
         /// Create a new time off request
@@ -6025,7 +5953,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> PostWorkforcemanagementManagementunitTimeoffrequestsAsyncWithHttpInfo (string muId, CreateAdminTimeOffRequest body = null);
         
         /// <summary>
-        /// Gets a list of time off requests from lookup ids
+        /// Gone.  All data is now returned in the query route
         /// </summary>
         /// <remarks>
         /// 
@@ -6033,11 +5961,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of TimeOffRequestEntityList</returns>
-        System.Threading.Tasks.Task<TimeOffRequestEntityList> PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetailsAsync (string muId, TimeOffRequestLookupList body = null);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetailsAsync (string muId, TimeOffRequestListing body = null);
 
         /// <summary>
-        /// Gets a list of time off requests from lookup ids
+        /// Gone.  All data is now returned in the query route
         /// </summary>
         /// <remarks>
         /// 
@@ -6045,8 +5973,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (TimeOffRequestEntityList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestEntityList>> PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetailsAsyncWithHttpInfo (string muId, TimeOffRequestLookupList body = null);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetailsAsyncWithHttpInfo (string muId, TimeOffRequestListing body = null);
         
         /// <summary>
         /// Gets the lookup ids to fetch the specified set of requests
@@ -6057,8 +5985,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of TimeOffRequestLookupList</returns>
-        System.Threading.Tasks.Task<TimeOffRequestLookupList> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsync (string muId, TimeOffRequestQueryBody body = null);
+        /// <returns>Task of TimeOffRequestListing</returns>
+        System.Threading.Tasks.Task<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsync (string muId, TimeOffRequestQueryBody body = null);
 
         /// <summary>
         /// Gets the lookup ids to fetch the specified set of requests
@@ -6069,11 +5997,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (TimeOffRequestLookupList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestLookupList>> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo (string muId, TimeOffRequestQueryBody body = null);
+        /// <returns>Task of ApiResponse (TimeOffRequestListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestListing>> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo (string muId, TimeOffRequestQueryBody body = null);
         
         /// <summary>
-        /// Copy a week schedule
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -6081,15 +6009,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to copy from</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of AsyncWeekScheduleResponse</returns>
-        System.Threading.Tasks.Task<AsyncWeekScheduleResponse> PostWorkforcemanagementManagementunitWeekScheduleCopyAsync (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, CopyWeekScheduleRequest body = null);
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to copy from</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostWorkforcemanagementManagementunitWeekScheduleCopyAsync (string managementUnitId, string weekId, string scheduleId);
 
         /// <summary>
-        /// Copy a week schedule
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -6097,15 +6022,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to copy from</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (AsyncWeekScheduleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AsyncWeekScheduleResponse>> PostWorkforcemanagementManagementunitWeekScheduleCopyAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, CopyWeekScheduleRequest body = null);
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to copy from</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitWeekScheduleCopyAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId);
         
         /// <summary>
-        /// Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -6113,13 +6035,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to re-optimize</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of AsyncWeekScheduleResponse</returns>
-        System.Threading.Tasks.Task<AsyncWeekScheduleResponse> PostWorkforcemanagementManagementunitWeekScheduleRescheduleAsync (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null);
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to re-optimize</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostWorkforcemanagementManagementunitWeekScheduleRescheduleAsync (string managementUnitId, string weekId, string scheduleId);
 
         /// <summary>
-        /// Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -6127,13 +6048,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to re-optimize</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (AsyncWeekScheduleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AsyncWeekScheduleResponse>> PostWorkforcemanagementManagementunitWeekScheduleRescheduleAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null);
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to re-optimize</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitWeekScheduleRescheduleAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId);
         
         /// <summary>
-        /// Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -6141,14 +6061,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of AsyncWeekScheduleResponse</returns>
-        System.Threading.Tasks.Task<AsyncWeekScheduleResponse> PostWorkforcemanagementManagementunitWeekSchedulesAsync (string managementUnitId, string weekId, bool? forceAsync = null, bool? forceDownloadService = null, ImportWeekScheduleRequest body = null);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostWorkforcemanagementManagementunitWeekSchedulesAsync (string managementUnitId, string weekId);
 
         /// <summary>
-        /// Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -6156,14 +6073,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (AsyncWeekScheduleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AsyncWeekScheduleResponse>> PostWorkforcemanagementManagementunitWeekSchedulesAsyncWithHttpInfo (string managementUnitId, string weekId, bool? forceAsync = null, bool? forceDownloadService = null, ImportWeekScheduleRequest body = null);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitWeekSchedulesAsyncWithHttpInfo (string managementUnitId, string weekId);
         
         /// <summary>
-        /// Generate a week schedule
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -6171,12 +6085,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of GenerateWeekScheduleResponse</returns>
-        System.Threading.Tasks.Task<GenerateWeekScheduleResponse> PostWorkforcemanagementManagementunitWeekSchedulesGenerateAsync (string managementUnitId, string weekId, GenerateWeekScheduleRequest body = null);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostWorkforcemanagementManagementunitWeekSchedulesGenerateAsync (string managementUnitId, string weekId);
 
         /// <summary>
-        /// Generate a week schedule
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -6184,12 +6097,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (GenerateWeekScheduleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GenerateWeekScheduleResponse>> PostWorkforcemanagementManagementunitWeekSchedulesGenerateAsyncWithHttpInfo (string managementUnitId, string weekId, GenerateWeekScheduleRequest body = null);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitWeekSchedulesGenerateAsyncWithHttpInfo (string managementUnitId, string weekId);
         
         /// <summary>
-        /// Partial upload of user schedules where activity count is greater than 17500
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -6197,12 +6109,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of PartialUploadResponse</returns>
-        System.Threading.Tasks.Task<PartialUploadResponse> PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadAsync (string managementUnitId, string weekId, UserSchedulesPartialUploadRequest body = null);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadAsync (string managementUnitId, string weekId);
 
         /// <summary>
-        /// Partial upload of user schedules where activity count is greater than 17500
+        /// Gone.  Scheduling has moved under business units
         /// </summary>
         /// <remarks>
         /// 
@@ -6210,9 +6121,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (PartialUploadResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PartialUploadResponse>> PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadAsyncWithHttpInfo (string managementUnitId, string weekId, UserSchedulesPartialUploadRequest body = null);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadAsyncWithHttpInfo (string managementUnitId, string weekId);
         
         /// <summary>
         /// Matches a shift trade. This route can only be called by the receiving agent
@@ -6323,116 +6233,102 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<BulkUpdateShiftTradeStateResponse>> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null);
         
         /// <summary>
-        /// Copy a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast to copy</param>
-        /// <param name="body">body</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of ShortTermForecastResponse</returns>
-        System.Threading.Tasks.Task<ShortTermForecastResponse> PostWorkforcemanagementManagementunitWeekShorttermforecastCopyAsync (string managementUnitId, string weekDateId, string forecastId, CopyShortTermForecastRequest body, bool? forceAsync = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostWorkforcemanagementManagementunitWeekShorttermforecastCopyAsync (string managementUnitId, string weekDateId, string forecastId);
 
         /// <summary>
-        /// Copy a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast to copy</param>
-        /// <param name="body">body</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of ApiResponse (ShortTermForecastResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ShortTermForecastResponse>> PostWorkforcemanagementManagementunitWeekShorttermforecastCopyAsyncWithHttpInfo (string managementUnitId, string weekDateId, string forecastId, CopyShortTermForecastRequest body, bool? forceAsync = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitWeekShorttermforecastCopyAsyncWithHttpInfo (string managementUnitId, string weekDateId, string forecastId);
         
         /// <summary>
-        /// Import a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body">body</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of ShortTermForecastResponse</returns>
-        System.Threading.Tasks.Task<ShortTermForecastResponse> PostWorkforcemanagementManagementunitWeekShorttermforecastsAsync (string managementUnitId, string weekDateId, ImportShortTermForecastRequest body, bool? forceAsync = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostWorkforcemanagementManagementunitWeekShorttermforecastsAsync (string managementUnitId, string weekDateId);
 
         /// <summary>
-        /// Import a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body">body</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of ApiResponse (ShortTermForecastResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ShortTermForecastResponse>> PostWorkforcemanagementManagementunitWeekShorttermforecastsAsyncWithHttpInfo (string managementUnitId, string weekDateId, ImportShortTermForecastRequest body, bool? forceAsync = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitWeekShorttermforecastsAsyncWithHttpInfo (string managementUnitId, string weekDateId);
         
         /// <summary>
-        /// Generate a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body"></param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of GenerateShortTermForecastResponse</returns>
-        System.Threading.Tasks.Task<GenerateShortTermForecastResponse> PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerateAsync (string managementUnitId, string weekDateId, GenerateShortTermForecastRequest body, bool? forceAsync = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerateAsync (string managementUnitId, string weekDateId);
 
         /// <summary>
-        /// Generate a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body"></param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of ApiResponse (GenerateShortTermForecastResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GenerateShortTermForecastResponse>> PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerateAsyncWithHttpInfo (string managementUnitId, string weekDateId, GenerateShortTermForecastRequest body, bool? forceAsync = null);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerateAsyncWithHttpInfo (string managementUnitId, string weekDateId);
         
         /// <summary>
-        /// Import a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body">body</param>
-        /// <returns>Task of PartialUploadResponse</returns>
-        System.Threading.Tasks.Task<PartialUploadResponse> PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialuploadAsync (string managementUnitId, string weekDateId, RouteGroupList body);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialuploadAsync (string managementUnitId, string weekDateId);
 
         /// <summary>
-        /// Import a short term forecast
+        /// Gone. Use equivalent business unit resource instead
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body">body</param>
-        /// <returns>Task of ApiResponse (PartialUploadResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PartialUploadResponse>> PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialuploadAsyncWithHttpInfo (string managementUnitId, string weekDateId, RouteGroupList body);
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialuploadAsyncWithHttpInfo (string managementUnitId, string weekDateId);
         
         /// <summary>
         /// Create a copy of work plan
@@ -8299,7 +8195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Deletes an activity code 
+        /// Deprecated/Gone: Use the new business unit activity code resources 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -8311,7 +8207,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Deletes an activity code 
+        /// Deprecated/Gone: Use the new business unit activity code resources 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -8399,7 +8295,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Deletes an activity code 
+        /// Deprecated/Gone: Use the new business unit activity code resources 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -8412,7 +8308,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Deletes an activity code 
+        /// Deprecated/Gone: Use the new business unit activity code resources 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -8503,10 +8399,10 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Cancel a schedule run 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns></returns>
         public void DeleteWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId)
@@ -8515,10 +8411,10 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Cancel a schedule run 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteWorkforcemanagementManagementunitSchedulingRunWithHttpInfo (string managementUnitId, string runId)
@@ -8603,10 +8499,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Cancel a schedule run 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitSchedulingRunAsync (string managementUnitId, string runId)
@@ -8616,10 +8512,10 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Cancel a schedule run 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo (string managementUnitId, string runId)
@@ -8707,11 +8603,11 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Delete a service goal group 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to delete</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone. The ID of the service goal group to delete</param>
         /// <returns></returns>
         public void DeleteWorkforcemanagementManagementunitServicegoalgroup (string managementUnitId, string serviceGoalGroupId)
         {
@@ -8719,11 +8615,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a service goal group 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to delete</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone. The ID of the service goal group to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteWorkforcemanagementManagementunitServicegoalgroupWithHttpInfo (string managementUnitId, string serviceGoalGroupId)
         { 
@@ -8807,11 +8703,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Delete a service goal group 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to delete</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone. The ID of the service goal group to delete</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitServicegoalgroupAsync (string managementUnitId, string serviceGoalGroupId)
         {
@@ -8820,11 +8716,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a service goal group 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to delete</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone. The ID of the service goal group to delete</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitServicegoalgroupAsyncWithHttpInfo (string managementUnitId, string serviceGoalGroupId)
         { 
@@ -8911,12 +8807,12 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Delete a schedule 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of theschedule to delete</param>
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to delete</param>
         /// <returns></returns>
         public void DeleteWorkforcemanagementManagementunitWeekSchedule (string managementUnitId, string weekId, string scheduleId)
         {
@@ -8924,12 +8820,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a schedule 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of theschedule to delete</param>
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteWorkforcemanagementManagementunitWeekScheduleWithHttpInfo (string managementUnitId, string weekId, string scheduleId)
         { 
@@ -9017,12 +8913,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Delete a schedule 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of theschedule to delete</param>
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to delete</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitWeekScheduleAsync (string managementUnitId, string weekId, string scheduleId)
         {
@@ -9031,12 +8927,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a schedule 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of theschedule to delete</param>
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to delete</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitWeekScheduleAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId)
         { 
@@ -9128,12 +9024,12 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Delete a short term forecast Must not be tied to any schedules
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
         /// <returns></returns>
         public void DeleteWorkforcemanagementManagementunitWeekShorttermforecast (string managementUnitId, string weekDateId, string forecastId)
         {
@@ -9141,12 +9037,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a short term forecast Must not be tied to any schedules
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteWorkforcemanagementManagementunitWeekShorttermforecastWithHttpInfo (string managementUnitId, string weekDateId, string forecastId)
         { 
@@ -9234,12 +9130,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Delete a short term forecast Must not be tied to any schedules
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitWeekShorttermforecastAsync (string managementUnitId, string weekDateId, string forecastId)
         {
@@ -9248,12 +9144,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a short term forecast Must not be tied to any schedules
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitWeekShorttermforecastAsyncWithHttpInfo (string managementUnitId, string weekDateId, string forecastId)
         { 
@@ -15941,33 +15837,27 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get intraday queues for the given date 
+        /// Gone.  Moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit</param>
-        /// <param name="date">yyyy-MM-dd date string interpreted in the configured management unit time zone</param>
-        /// <returns>WfmIntradayQueueListing</returns>
-        public WfmIntradayQueueListing GetWorkforcemanagementManagementunitIntradayQueues (string muId, string date)
+        /// <returns></returns>
+        public void GetWorkforcemanagementManagementunitIntradayQueues (string muId)
         {
-             ApiResponse<WfmIntradayQueueListing> localVarResponse = GetWorkforcemanagementManagementunitIntradayQueuesWithHttpInfo(muId, date);
-             return localVarResponse.Data;
+             GetWorkforcemanagementManagementunitIntradayQueuesWithHttpInfo(muId);
         }
 
         /// <summary>
-        /// Get intraday queues for the given date 
+        /// Gone.  Moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit</param>
-        /// <param name="date">yyyy-MM-dd date string interpreted in the configured management unit time zone</param>
-        /// <returns>ApiResponse of WfmIntradayQueueListing</returns>
-        public ApiResponse< WfmIntradayQueueListing > GetWorkforcemanagementManagementunitIntradayQueuesWithHttpInfo (string muId, string date)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetWorkforcemanagementManagementunitIntradayQueuesWithHttpInfo (string muId)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
                 throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitIntradayQueues");
-            // verify the required parameter 'date' is set
-            if (date == null)
-                throw new ApiException(400, "Missing required parameter 'date' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitIntradayQueues");
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/intraday/queues";
             var localVarPathParams = new Dictionary<String, String>();
@@ -16003,7 +15893,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
 
             // Query params
-            if (date != null) localVarQueryParams.Add(new Tuple<string, string>("date", this.Configuration.ApiClient.ParameterToString(date)));
 
             // Header params
 
@@ -16033,44 +15922,37 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitIntradayQueues: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WfmIntradayQueueListing>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (WfmIntradayQueueListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmIntradayQueueListing)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Get intraday queues for the given date 
+        /// Gone.  Moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit</param>
-        /// <param name="date">yyyy-MM-dd date string interpreted in the configured management unit time zone</param>
-        /// <returns>Task of WfmIntradayQueueListing</returns>
-        public async System.Threading.Tasks.Task<WfmIntradayQueueListing> GetWorkforcemanagementManagementunitIntradayQueuesAsync (string muId, string date)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetWorkforcemanagementManagementunitIntradayQueuesAsync (string muId)
         {
-             ApiResponse<WfmIntradayQueueListing> localVarResponse = await GetWorkforcemanagementManagementunitIntradayQueuesAsyncWithHttpInfo(muId, date);
-             return localVarResponse.Data;
+             await GetWorkforcemanagementManagementunitIntradayQueuesAsyncWithHttpInfo(muId);
 
         }
 
         /// <summary>
-        /// Get intraday queues for the given date 
+        /// Gone.  Moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit</param>
-        /// <param name="date">yyyy-MM-dd date string interpreted in the configured management unit time zone</param>
-        /// <returns>Task of ApiResponse (WfmIntradayQueueListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WfmIntradayQueueListing>> GetWorkforcemanagementManagementunitIntradayQueuesAsyncWithHttpInfo (string muId, string date)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitIntradayQueuesAsyncWithHttpInfo (string muId)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
                 throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitIntradayQueues");
-            
-            // verify the required parameter 'date' is set
-            if (date == null)
-                throw new ApiException(400, "Missing required parameter 'date' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitIntradayQueues");
             
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/intraday/queues";
@@ -16107,7 +15989,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
 
             // Query params
-            if (date != null) localVarQueryParams.Add(new Tuple<string, string>("date", this.Configuration.ApiClient.ParameterToString(date)));
 
             // Header params
 
@@ -16137,9 +16018,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitIntradayQueues: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WfmIntradayQueueListing>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (WfmIntradayQueueListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmIntradayQueueListing)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -16147,26 +16028,25 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Gets the status for a specific scheduling run 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
-        /// <returns>SchedulingRunResponse</returns>
-        public SchedulingRunResponse GetWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId)
+        /// <returns></returns>
+        public void GetWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId)
         {
-             ApiResponse<SchedulingRunResponse> localVarResponse = GetWorkforcemanagementManagementunitSchedulingRunWithHttpInfo(managementUnitId, runId);
-             return localVarResponse.Data;
+             GetWorkforcemanagementManagementunitSchedulingRunWithHttpInfo(managementUnitId, runId);
         }
 
         /// <summary>
-        /// Gets the status for a specific scheduling run 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
-        /// <returns>ApiResponse of SchedulingRunResponse</returns>
-        public ApiResponse< SchedulingRunResponse > GetWorkforcemanagementManagementunitSchedulingRunWithHttpInfo (string managementUnitId, string runId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetWorkforcemanagementManagementunitSchedulingRunWithHttpInfo (string managementUnitId, string runId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -16239,36 +16119,35 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSchedulingRun: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<SchedulingRunResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (SchedulingRunResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SchedulingRunResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Gets the status for a specific scheduling run 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
-        /// <returns>Task of SchedulingRunResponse</returns>
-        public async System.Threading.Tasks.Task<SchedulingRunResponse> GetWorkforcemanagementManagementunitSchedulingRunAsync (string managementUnitId, string runId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetWorkforcemanagementManagementunitSchedulingRunAsync (string managementUnitId, string runId)
         {
-             ApiResponse<SchedulingRunResponse> localVarResponse = await GetWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo(managementUnitId, runId);
-             return localVarResponse.Data;
+             await GetWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo(managementUnitId, runId);
 
         }
 
         /// <summary>
-        /// Gets the status for a specific scheduling run 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
-        /// <returns>Task of ApiResponse (SchedulingRunResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SchedulingRunResponse>> GetWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo (string managementUnitId, string runId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo (string managementUnitId, string runId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -16343,9 +16222,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSchedulingRun: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<SchedulingRunResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (SchedulingRunResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SchedulingRunResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -16353,26 +16232,25 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Gets the result of a specific scheduling run 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
-        /// <returns>RescheduleResult</returns>
-        public RescheduleResult GetWorkforcemanagementManagementunitSchedulingRunResult (string managementUnitId, string runId)
+        /// <returns></returns>
+        public void GetWorkforcemanagementManagementunitSchedulingRunResult (string managementUnitId, string runId)
         {
-             ApiResponse<RescheduleResult> localVarResponse = GetWorkforcemanagementManagementunitSchedulingRunResultWithHttpInfo(managementUnitId, runId);
-             return localVarResponse.Data;
+             GetWorkforcemanagementManagementunitSchedulingRunResultWithHttpInfo(managementUnitId, runId);
         }
 
         /// <summary>
-        /// Gets the result of a specific scheduling run 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
-        /// <returns>ApiResponse of RescheduleResult</returns>
-        public ApiResponse< RescheduleResult > GetWorkforcemanagementManagementunitSchedulingRunResultWithHttpInfo (string managementUnitId, string runId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetWorkforcemanagementManagementunitSchedulingRunResultWithHttpInfo (string managementUnitId, string runId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -16445,36 +16323,35 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSchedulingRunResult: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<RescheduleResult>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (RescheduleResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RescheduleResult)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Gets the result of a specific scheduling run 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
-        /// <returns>Task of RescheduleResult</returns>
-        public async System.Threading.Tasks.Task<RescheduleResult> GetWorkforcemanagementManagementunitSchedulingRunResultAsync (string managementUnitId, string runId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetWorkforcemanagementManagementunitSchedulingRunResultAsync (string managementUnitId, string runId)
         {
-             ApiResponse<RescheduleResult> localVarResponse = await GetWorkforcemanagementManagementunitSchedulingRunResultAsyncWithHttpInfo(managementUnitId, runId);
-             return localVarResponse.Data;
+             await GetWorkforcemanagementManagementunitSchedulingRunResultAsyncWithHttpInfo(managementUnitId, runId);
 
         }
 
         /// <summary>
-        /// Gets the result of a specific scheduling run 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
-        /// <returns>Task of ApiResponse (RescheduleResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RescheduleResult>> GetWorkforcemanagementManagementunitSchedulingRunResultAsyncWithHttpInfo (string managementUnitId, string runId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitSchedulingRunResultAsyncWithHttpInfo (string managementUnitId, string runId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -16549,9 +16426,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSchedulingRunResult: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<RescheduleResult>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (RescheduleResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RescheduleResult)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -16559,24 +16436,23 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get the status of all the ongoing schedule runs 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
-        /// <returns>SchedulingRunListResponse</returns>
-        public SchedulingRunListResponse GetWorkforcemanagementManagementunitSchedulingRuns (string managementUnitId)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
+        /// <returns></returns>
+        public void GetWorkforcemanagementManagementunitSchedulingRuns (string managementUnitId)
         {
-             ApiResponse<SchedulingRunListResponse> localVarResponse = GetWorkforcemanagementManagementunitSchedulingRunsWithHttpInfo(managementUnitId);
-             return localVarResponse.Data;
+             GetWorkforcemanagementManagementunitSchedulingRunsWithHttpInfo(managementUnitId);
         }
 
         /// <summary>
-        /// Get the status of all the ongoing schedule runs 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
-        /// <returns>ApiResponse of SchedulingRunListResponse</returns>
-        public ApiResponse< SchedulingRunListResponse > GetWorkforcemanagementManagementunitSchedulingRunsWithHttpInfo (string managementUnitId)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetWorkforcemanagementManagementunitSchedulingRunsWithHttpInfo (string managementUnitId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -16645,34 +16521,33 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSchedulingRuns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<SchedulingRunListResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (SchedulingRunListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SchedulingRunListResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Get the status of all the ongoing schedule runs 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
-        /// <returns>Task of SchedulingRunListResponse</returns>
-        public async System.Threading.Tasks.Task<SchedulingRunListResponse> GetWorkforcemanagementManagementunitSchedulingRunsAsync (string managementUnitId)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetWorkforcemanagementManagementunitSchedulingRunsAsync (string managementUnitId)
         {
-             ApiResponse<SchedulingRunListResponse> localVarResponse = await GetWorkforcemanagementManagementunitSchedulingRunsAsyncWithHttpInfo(managementUnitId);
-             return localVarResponse.Data;
+             await GetWorkforcemanagementManagementunitSchedulingRunsAsyncWithHttpInfo(managementUnitId);
 
         }
 
         /// <summary>
-        /// Get the status of all the ongoing schedule runs 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
-        /// <returns>Task of ApiResponse (SchedulingRunListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SchedulingRunListResponse>> GetWorkforcemanagementManagementunitSchedulingRunsAsyncWithHttpInfo (string managementUnitId)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitSchedulingRunsAsyncWithHttpInfo (string managementUnitId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -16742,9 +16617,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSchedulingRuns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<SchedulingRunListResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (SchedulingRunListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SchedulingRunListResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -16752,26 +16627,25 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get a service goal group 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to fetch</param>
-        /// <returns>ServiceGoalGroup</returns>
-        public ServiceGoalGroup GetWorkforcemanagementManagementunitServicegoalgroup (string managementUnitId, string serviceGoalGroupId)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone.  The ID of the service goal group to fetch</param>
+        /// <returns></returns>
+        public void GetWorkforcemanagementManagementunitServicegoalgroup (string managementUnitId, string serviceGoalGroupId)
         {
-             ApiResponse<ServiceGoalGroup> localVarResponse = GetWorkforcemanagementManagementunitServicegoalgroupWithHttpInfo(managementUnitId, serviceGoalGroupId);
-             return localVarResponse.Data;
+             GetWorkforcemanagementManagementunitServicegoalgroupWithHttpInfo(managementUnitId, serviceGoalGroupId);
         }
 
         /// <summary>
-        /// Get a service goal group 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to fetch</param>
-        /// <returns>ApiResponse of ServiceGoalGroup</returns>
-        public ApiResponse< ServiceGoalGroup > GetWorkforcemanagementManagementunitServicegoalgroupWithHttpInfo (string managementUnitId, string serviceGoalGroupId)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone.  The ID of the service goal group to fetch</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetWorkforcemanagementManagementunitServicegoalgroupWithHttpInfo (string managementUnitId, string serviceGoalGroupId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -16844,36 +16718,35 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitServicegoalgroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ServiceGoalGroup>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ServiceGoalGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServiceGoalGroup)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Get a service goal group 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to fetch</param>
-        /// <returns>Task of ServiceGoalGroup</returns>
-        public async System.Threading.Tasks.Task<ServiceGoalGroup> GetWorkforcemanagementManagementunitServicegoalgroupAsync (string managementUnitId, string serviceGoalGroupId)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone.  The ID of the service goal group to fetch</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetWorkforcemanagementManagementunitServicegoalgroupAsync (string managementUnitId, string serviceGoalGroupId)
         {
-             ApiResponse<ServiceGoalGroup> localVarResponse = await GetWorkforcemanagementManagementunitServicegoalgroupAsyncWithHttpInfo(managementUnitId, serviceGoalGroupId);
-             return localVarResponse.Data;
+             await GetWorkforcemanagementManagementunitServicegoalgroupAsyncWithHttpInfo(managementUnitId, serviceGoalGroupId);
 
         }
 
         /// <summary>
-        /// Get a service goal group 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to fetch</param>
-        /// <returns>Task of ApiResponse (ServiceGoalGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ServiceGoalGroup>> GetWorkforcemanagementManagementunitServicegoalgroupAsyncWithHttpInfo (string managementUnitId, string serviceGoalGroupId)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone.  The ID of the service goal group to fetch</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitServicegoalgroupAsyncWithHttpInfo (string managementUnitId, string serviceGoalGroupId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -16948,9 +16821,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitServicegoalgroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ServiceGoalGroup>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ServiceGoalGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServiceGoalGroup)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -16958,24 +16831,23 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get service goal groups 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>ServiceGoalGroupList</returns>
-        public ServiceGoalGroupList GetWorkforcemanagementManagementunitServicegoalgroups (string managementUnitId)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns></returns>
+        public void GetWorkforcemanagementManagementunitServicegoalgroups (string managementUnitId)
         {
-             ApiResponse<ServiceGoalGroupList> localVarResponse = GetWorkforcemanagementManagementunitServicegoalgroupsWithHttpInfo(managementUnitId);
-             return localVarResponse.Data;
+             GetWorkforcemanagementManagementunitServicegoalgroupsWithHttpInfo(managementUnitId);
         }
 
         /// <summary>
-        /// Get service goal groups 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>ApiResponse of ServiceGoalGroupList</returns>
-        public ApiResponse< ServiceGoalGroupList > GetWorkforcemanagementManagementunitServicegoalgroupsWithHttpInfo (string managementUnitId)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetWorkforcemanagementManagementunitServicegoalgroupsWithHttpInfo (string managementUnitId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -17044,34 +16916,33 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitServicegoalgroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ServiceGoalGroupList>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ServiceGoalGroupList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServiceGoalGroupList)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Get service goal groups 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>Task of ServiceGoalGroupList</returns>
-        public async System.Threading.Tasks.Task<ServiceGoalGroupList> GetWorkforcemanagementManagementunitServicegoalgroupsAsync (string managementUnitId)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetWorkforcemanagementManagementunitServicegoalgroupsAsync (string managementUnitId)
         {
-             ApiResponse<ServiceGoalGroupList> localVarResponse = await GetWorkforcemanagementManagementunitServicegoalgroupsAsyncWithHttpInfo(managementUnitId);
-             return localVarResponse.Data;
+             await GetWorkforcemanagementManagementunitServicegoalgroupsAsyncWithHttpInfo(managementUnitId);
 
         }
 
         /// <summary>
-        /// Get service goal groups 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>Task of ApiResponse (ServiceGoalGroupList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ServiceGoalGroupList>> GetWorkforcemanagementManagementunitServicegoalgroupsAsyncWithHttpInfo (string managementUnitId)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitServicegoalgroupsAsyncWithHttpInfo (string managementUnitId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -17141,9 +17012,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitServicegoalgroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ServiceGoalGroupList>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ServiceGoalGroupList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServiceGoalGroupList)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -17151,24 +17022,23 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get the settings for the requested management unit. Deprecated, use the GET management unit route instead 
+        /// Gone. Get management unit settings via expand parameters on the GET management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>ManagementUnitSettingsResponse</returns>
-        public ManagementUnitSettingsResponse GetWorkforcemanagementManagementunitSettings (string muId)
+        /// <returns></returns>
+        public void GetWorkforcemanagementManagementunitSettings (string muId)
         {
-             ApiResponse<ManagementUnitSettingsResponse> localVarResponse = GetWorkforcemanagementManagementunitSettingsWithHttpInfo(muId);
-             return localVarResponse.Data;
+             GetWorkforcemanagementManagementunitSettingsWithHttpInfo(muId);
         }
 
         /// <summary>
-        /// Get the settings for the requested management unit. Deprecated, use the GET management unit route instead 
+        /// Gone. Get management unit settings via expand parameters on the GET management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>ApiResponse of ManagementUnitSettingsResponse</returns>
-        public ApiResponse< ManagementUnitSettingsResponse > GetWorkforcemanagementManagementunitSettingsWithHttpInfo (string muId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetWorkforcemanagementManagementunitSettingsWithHttpInfo (string muId)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -17237,34 +17107,33 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ManagementUnitSettingsResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ManagementUnitSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagementUnitSettingsResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Get the settings for the requested management unit. Deprecated, use the GET management unit route instead 
+        /// Gone. Get management unit settings via expand parameters on the GET management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>Task of ManagementUnitSettingsResponse</returns>
-        public async System.Threading.Tasks.Task<ManagementUnitSettingsResponse> GetWorkforcemanagementManagementunitSettingsAsync (string muId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetWorkforcemanagementManagementunitSettingsAsync (string muId)
         {
-             ApiResponse<ManagementUnitSettingsResponse> localVarResponse = await GetWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo(muId);
-             return localVarResponse.Data;
+             await GetWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo(muId);
 
         }
 
         /// <summary>
-        /// Get the settings for the requested management unit. Deprecated, use the GET management unit route instead 
+        /// Gone. Get management unit settings via expand parameters on the GET management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>Task of ApiResponse (ManagementUnitSettingsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ManagementUnitSettingsResponse>> GetWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo (string muId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo (string muId)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -17334,9 +17203,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ManagementUnitSettingsResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ManagementUnitSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagementUnitSettingsResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -18354,7 +18223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get a week schedule 
+        /// Deprecated.  Use the equivalent business unit resource instead. Get a week schedule 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -18370,7 +18239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a week schedule 
+        /// Deprecated.  Use the equivalent business unit resource instead. Get a week schedule 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -18467,7 +18336,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get a week schedule 
+        /// Deprecated.  Use the equivalent business unit resource instead. Get a week schedule 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -18484,7 +18353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a week schedule 
+        /// Deprecated.  Use the equivalent business unit resource instead. Get a week schedule 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -18585,28 +18454,27 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get week schedule generation results 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to fetch generation results</param>
-        /// <returns>WeekScheduleGenerationResult</returns>
-        public WeekScheduleGenerationResult GetWorkforcemanagementManagementunitWeekScheduleGenerationresults (string managementUnitId, string weekId, string scheduleId)
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to fetch generation results</param>
+        /// <returns></returns>
+        public void GetWorkforcemanagementManagementunitWeekScheduleGenerationresults (string managementUnitId, string weekId, string scheduleId)
         {
-             ApiResponse<WeekScheduleGenerationResult> localVarResponse = GetWorkforcemanagementManagementunitWeekScheduleGenerationresultsWithHttpInfo(managementUnitId, weekId, scheduleId);
-             return localVarResponse.Data;
+             GetWorkforcemanagementManagementunitWeekScheduleGenerationresultsWithHttpInfo(managementUnitId, weekId, scheduleId);
         }
 
         /// <summary>
-        /// Get week schedule generation results 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to fetch generation results</param>
-        /// <returns>ApiResponse of WeekScheduleGenerationResult</returns>
-        public ApiResponse< WeekScheduleGenerationResult > GetWorkforcemanagementManagementunitWeekScheduleGenerationresultsWithHttpInfo (string managementUnitId, string weekId, string scheduleId)
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to fetch generation results</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetWorkforcemanagementManagementunitWeekScheduleGenerationresultsWithHttpInfo (string managementUnitId, string weekId, string scheduleId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -18683,38 +18551,37 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitWeekScheduleGenerationresults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WeekScheduleGenerationResult>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (WeekScheduleGenerationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WeekScheduleGenerationResult)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Get week schedule generation results 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to fetch generation results</param>
-        /// <returns>Task of WeekScheduleGenerationResult</returns>
-        public async System.Threading.Tasks.Task<WeekScheduleGenerationResult> GetWorkforcemanagementManagementunitWeekScheduleGenerationresultsAsync (string managementUnitId, string weekId, string scheduleId)
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to fetch generation results</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetWorkforcemanagementManagementunitWeekScheduleGenerationresultsAsync (string managementUnitId, string weekId, string scheduleId)
         {
-             ApiResponse<WeekScheduleGenerationResult> localVarResponse = await GetWorkforcemanagementManagementunitWeekScheduleGenerationresultsAsyncWithHttpInfo(managementUnitId, weekId, scheduleId);
-             return localVarResponse.Data;
+             await GetWorkforcemanagementManagementunitWeekScheduleGenerationresultsAsyncWithHttpInfo(managementUnitId, weekId, scheduleId);
 
         }
 
         /// <summary>
-        /// Get week schedule generation results 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to fetch generation results</param>
-        /// <returns>Task of ApiResponse (WeekScheduleGenerationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WeekScheduleGenerationResult>> GetWorkforcemanagementManagementunitWeekScheduleGenerationresultsAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId)
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to fetch generation results</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitWeekScheduleGenerationresultsAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -18794,9 +18661,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitWeekScheduleGenerationresults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WeekScheduleGenerationResult>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (WeekScheduleGenerationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WeekScheduleGenerationResult)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -18804,7 +18671,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get the list of schedules in a week in management unit 
+        /// Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -18820,7 +18687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of schedules in a week in management unit 
+        /// Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -18914,7 +18781,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get the list of schedules in a week in management unit 
+        /// Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -18931,7 +18798,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of schedules in a week in management unit 
+        /// Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -19240,30 +19107,27 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get the final result of a short term forecast calculation with modifications applied 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>ForecastResultResponse</returns>
-        public ForecastResultResponse GetWorkforcemanagementManagementunitWeekShorttermforecastFinal (string managementUnitId, string weekDateId, string forecastId, bool? forceDownloadService = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
+        /// <returns></returns>
+        public void GetWorkforcemanagementManagementunitWeekShorttermforecastFinal (string managementUnitId, string weekDateId, string forecastId)
         {
-             ApiResponse<ForecastResultResponse> localVarResponse = GetWorkforcemanagementManagementunitWeekShorttermforecastFinalWithHttpInfo(managementUnitId, weekDateId, forecastId, forceDownloadService);
-             return localVarResponse.Data;
+             GetWorkforcemanagementManagementunitWeekShorttermforecastFinalWithHttpInfo(managementUnitId, weekDateId, forecastId);
         }
 
         /// <summary>
-        /// Get the final result of a short term forecast calculation with modifications applied 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>ApiResponse of ForecastResultResponse</returns>
-        public ApiResponse< ForecastResultResponse > GetWorkforcemanagementManagementunitWeekShorttermforecastFinalWithHttpInfo (string managementUnitId, string weekDateId, string forecastId, bool? forceDownloadService = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetWorkforcemanagementManagementunitWeekShorttermforecastFinalWithHttpInfo (string managementUnitId, string weekDateId, string forecastId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -19311,7 +19175,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (forecastId != null) localVarPathParams.Add("forecastId", this.Configuration.ApiClient.ParameterToString(forecastId));
 
             // Query params
-            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
@@ -19341,40 +19204,37 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitWeekShorttermforecastFinal: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ForecastResultResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ForecastResultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ForecastResultResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Get the final result of a short term forecast calculation with modifications applied 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of ForecastResultResponse</returns>
-        public async System.Threading.Tasks.Task<ForecastResultResponse> GetWorkforcemanagementManagementunitWeekShorttermforecastFinalAsync (string managementUnitId, string weekDateId, string forecastId, bool? forceDownloadService = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetWorkforcemanagementManagementunitWeekShorttermforecastFinalAsync (string managementUnitId, string weekDateId, string forecastId)
         {
-             ApiResponse<ForecastResultResponse> localVarResponse = await GetWorkforcemanagementManagementunitWeekShorttermforecastFinalAsyncWithHttpInfo(managementUnitId, weekDateId, forecastId, forceDownloadService);
-             return localVarResponse.Data;
+             await GetWorkforcemanagementManagementunitWeekShorttermforecastFinalAsyncWithHttpInfo(managementUnitId, weekDateId, forecastId);
 
         }
 
         /// <summary>
-        /// Get the final result of a short term forecast calculation with modifications applied 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of ApiResponse (ForecastResultResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ForecastResultResponse>> GetWorkforcemanagementManagementunitWeekShorttermforecastFinalAsyncWithHttpInfo (string managementUnitId, string weekDateId, string forecastId, bool? forceDownloadService = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitWeekShorttermforecastFinalAsyncWithHttpInfo (string managementUnitId, string weekDateId, string forecastId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -19425,7 +19285,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (forecastId != null) localVarPathParams.Add("forecastId", this.Configuration.ApiClient.ParameterToString(forecastId));
 
             // Query params
-            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
@@ -19455,9 +19314,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitWeekShorttermforecastFinal: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ForecastResultResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ForecastResultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ForecastResultResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -19465,26 +19324,25 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get short term forecasts Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <returns>ShortTermForecastListResponse</returns>
-        public ShortTermForecastListResponse GetWorkforcemanagementManagementunitWeekShorttermforecasts (string managementUnitId, string weekDateId)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns></returns>
+        public void GetWorkforcemanagementManagementunitWeekShorttermforecasts (string managementUnitId, string weekDateId)
         {
-             ApiResponse<ShortTermForecastListResponse> localVarResponse = GetWorkforcemanagementManagementunitWeekShorttermforecastsWithHttpInfo(managementUnitId, weekDateId);
-             return localVarResponse.Data;
+             GetWorkforcemanagementManagementunitWeekShorttermforecastsWithHttpInfo(managementUnitId, weekDateId);
         }
 
         /// <summary>
-        /// Get short term forecasts Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <returns>ApiResponse of ShortTermForecastListResponse</returns>
-        public ApiResponse< ShortTermForecastListResponse > GetWorkforcemanagementManagementunitWeekShorttermforecastsWithHttpInfo (string managementUnitId, string weekDateId)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetWorkforcemanagementManagementunitWeekShorttermforecastsWithHttpInfo (string managementUnitId, string weekDateId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -19557,36 +19415,35 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitWeekShorttermforecasts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ShortTermForecastListResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ShortTermForecastListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShortTermForecastListResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Get short term forecasts Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <returns>Task of ShortTermForecastListResponse</returns>
-        public async System.Threading.Tasks.Task<ShortTermForecastListResponse> GetWorkforcemanagementManagementunitWeekShorttermforecastsAsync (string managementUnitId, string weekDateId)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetWorkforcemanagementManagementunitWeekShorttermforecastsAsync (string managementUnitId, string weekDateId)
         {
-             ApiResponse<ShortTermForecastListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWeekShorttermforecastsAsyncWithHttpInfo(managementUnitId, weekDateId);
-             return localVarResponse.Data;
+             await GetWorkforcemanagementManagementunitWeekShorttermforecastsAsyncWithHttpInfo(managementUnitId, weekDateId);
 
         }
 
         /// <summary>
-        /// Get short term forecasts Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <returns>Task of ApiResponse (ShortTermForecastListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ShortTermForecastListResponse>> GetWorkforcemanagementManagementunitWeekShorttermforecastsAsyncWithHttpInfo (string managementUnitId, string weekDateId)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetWorkforcemanagementManagementunitWeekShorttermforecastsAsyncWithHttpInfo (string managementUnitId, string weekDateId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -19661,9 +19518,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitWeekShorttermforecasts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ShortTermForecastListResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ShortTermForecastListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShortTermForecastListResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -22696,28 +22553,27 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update an activity code 
+        /// Deprecated/Gone: Use the new business unit activity code resources 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="acId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>ActivityCode</returns>
-        public ActivityCode PatchWorkforcemanagementManagementunitActivitycode (string muId, string acId, UpdateActivityCodeRequest body = null)
+        /// <returns></returns>
+        public void PatchWorkforcemanagementManagementunitActivitycode (string muId, string acId, UpdateActivityCodeRequest body = null)
         {
-             ApiResponse<ActivityCode> localVarResponse = PatchWorkforcemanagementManagementunitActivitycodeWithHttpInfo(muId, acId, body);
-             return localVarResponse.Data;
+             PatchWorkforcemanagementManagementunitActivitycodeWithHttpInfo(muId, acId, body);
         }
 
         /// <summary>
-        /// Update an activity code 
+        /// Deprecated/Gone: Use the new business unit activity code resources 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="acId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of ActivityCode</returns>
-        public ApiResponse< ActivityCode > PatchWorkforcemanagementManagementunitActivitycodeWithHttpInfo (string muId, string acId, UpdateActivityCodeRequest body = null)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchWorkforcemanagementManagementunitActivitycodeWithHttpInfo (string muId, string acId, UpdateActivityCodeRequest body = null)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -22795,38 +22651,37 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitActivitycode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ActivityCode>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ActivityCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityCode)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Update an activity code 
+        /// Deprecated/Gone: Use the new business unit activity code resources 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="acId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of ActivityCode</returns>
-        public async System.Threading.Tasks.Task<ActivityCode> PatchWorkforcemanagementManagementunitActivitycodeAsync (string muId, string acId, UpdateActivityCodeRequest body = null)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchWorkforcemanagementManagementunitActivitycodeAsync (string muId, string acId, UpdateActivityCodeRequest body = null)
         {
-             ApiResponse<ActivityCode> localVarResponse = await PatchWorkforcemanagementManagementunitActivitycodeAsyncWithHttpInfo(muId, acId, body);
-             return localVarResponse.Data;
+             await PatchWorkforcemanagementManagementunitActivitycodeAsyncWithHttpInfo(muId, acId, body);
 
         }
 
         /// <summary>
-        /// Update an activity code 
+        /// Deprecated/Gone: Use the new business unit activity code resources 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="acId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (ActivityCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ActivityCode>> PatchWorkforcemanagementManagementunitActivitycodeAsyncWithHttpInfo (string muId, string acId, UpdateActivityCodeRequest body = null)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementManagementunitActivitycodeAsyncWithHttpInfo (string muId, string acId, UpdateActivityCodeRequest body = null)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -22906,9 +22761,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitActivitycode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ActivityCode>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ActivityCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityCode)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -22916,28 +22771,27 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Marks a specific scheduling run as applied, allowing a new rescheduling run to be started 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>RescheduleResult</returns>
-        public RescheduleResult PatchWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null)
+        /// <returns></returns>
+        public void PatchWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null)
         {
-             ApiResponse<RescheduleResult> localVarResponse = PatchWorkforcemanagementManagementunitSchedulingRunWithHttpInfo(managementUnitId, runId, body);
-             return localVarResponse.Data;
+             PatchWorkforcemanagementManagementunitSchedulingRunWithHttpInfo(managementUnitId, runId, body);
         }
 
         /// <summary>
-        /// Marks a specific scheduling run as applied, allowing a new rescheduling run to be started 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of RescheduleResult</returns>
-        public ApiResponse< RescheduleResult > PatchWorkforcemanagementManagementunitSchedulingRunWithHttpInfo (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchWorkforcemanagementManagementunitSchedulingRunWithHttpInfo (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -23015,38 +22869,37 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitSchedulingRun: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<RescheduleResult>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (RescheduleResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RescheduleResult)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Marks a specific scheduling run as applied, allowing a new rescheduling run to be started 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of RescheduleResult</returns>
-        public async System.Threading.Tasks.Task<RescheduleResult> PatchWorkforcemanagementManagementunitSchedulingRunAsync (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchWorkforcemanagementManagementunitSchedulingRunAsync (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null)
         {
-             ApiResponse<RescheduleResult> localVarResponse = await PatchWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo(managementUnitId, runId, body);
-             return localVarResponse.Data;
+             await PatchWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo(managementUnitId, runId, body);
 
         }
 
         /// <summary>
-        /// Marks a specific scheduling run as applied, allowing a new rescheduling run to be started 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit.</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (RescheduleResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RescheduleResult>> PatchWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -23126,9 +22979,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitSchedulingRun: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<RescheduleResult>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (RescheduleResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RescheduleResult)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -23136,28 +22989,25 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update a service goal group 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to update</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ServiceGoalGroup</returns>
-        public ServiceGoalGroup PatchWorkforcemanagementManagementunitServicegoalgroup (string managementUnitId, string serviceGoalGroupId, ServiceGoalGroup body = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone. The ID of the service goal group to update</param>
+        /// <returns></returns>
+        public void PatchWorkforcemanagementManagementunitServicegoalgroup (string managementUnitId, string serviceGoalGroupId)
         {
-             ApiResponse<ServiceGoalGroup> localVarResponse = PatchWorkforcemanagementManagementunitServicegoalgroupWithHttpInfo(managementUnitId, serviceGoalGroupId, body);
-             return localVarResponse.Data;
+             PatchWorkforcemanagementManagementunitServicegoalgroupWithHttpInfo(managementUnitId, serviceGoalGroupId);
         }
 
         /// <summary>
-        /// Update a service goal group 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to update</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of ServiceGoalGroup</returns>
-        public ApiResponse< ServiceGoalGroup > PatchWorkforcemanagementManagementunitServicegoalgroupWithHttpInfo (string managementUnitId, string serviceGoalGroupId, ServiceGoalGroup body = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone. The ID of the service goal group to update</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchWorkforcemanagementManagementunitServicegoalgroupWithHttpInfo (string managementUnitId, string serviceGoalGroupId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -23207,11 +23057,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -23235,38 +23080,35 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitServicegoalgroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ServiceGoalGroup>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ServiceGoalGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServiceGoalGroup)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Update a service goal group 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to update</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ServiceGoalGroup</returns>
-        public async System.Threading.Tasks.Task<ServiceGoalGroup> PatchWorkforcemanagementManagementunitServicegoalgroupAsync (string managementUnitId, string serviceGoalGroupId, ServiceGoalGroup body = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone. The ID of the service goal group to update</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchWorkforcemanagementManagementunitServicegoalgroupAsync (string managementUnitId, string serviceGoalGroupId)
         {
-             ApiResponse<ServiceGoalGroup> localVarResponse = await PatchWorkforcemanagementManagementunitServicegoalgroupAsyncWithHttpInfo(managementUnitId, serviceGoalGroupId, body);
-             return localVarResponse.Data;
+             await PatchWorkforcemanagementManagementunitServicegoalgroupAsyncWithHttpInfo(managementUnitId, serviceGoalGroupId);
 
         }
 
         /// <summary>
-        /// Update a service goal group 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="serviceGoalGroupId">The ID of the service goal group to update</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (ServiceGoalGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ServiceGoalGroup>> PatchWorkforcemanagementManagementunitServicegoalgroupAsyncWithHttpInfo (string managementUnitId, string serviceGoalGroupId, ServiceGoalGroup body = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="serviceGoalGroupId">Gone. The ID of the service goal group to update</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementManagementunitServicegoalgroupAsyncWithHttpInfo (string managementUnitId, string serviceGoalGroupId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -23318,11 +23160,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -23346,9 +23183,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitServicegoalgroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ServiceGoalGroup>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ServiceGoalGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServiceGoalGroup)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -23356,26 +23193,23 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update the settings for the requested management unit 
+        /// Gone. Update settings by PATCHing the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">config (optional)</param>
-        /// <returns>ManagementUnitSettingsResponse</returns>
-        public ManagementUnitSettingsResponse PatchWorkforcemanagementManagementunitSettings (string muId, ManagementUnitSettingsRequest body = null)
+        /// <returns></returns>
+        public void PatchWorkforcemanagementManagementunitSettings (string muId)
         {
-             ApiResponse<ManagementUnitSettingsResponse> localVarResponse = PatchWorkforcemanagementManagementunitSettingsWithHttpInfo(muId, body);
-             return localVarResponse.Data;
+             PatchWorkforcemanagementManagementunitSettingsWithHttpInfo(muId);
         }
 
         /// <summary>
-        /// Update the settings for the requested management unit 
+        /// Gone. Update settings by PATCHing the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">config (optional)</param>
-        /// <returns>ApiResponse of ManagementUnitSettingsResponse</returns>
-        public ApiResponse< ManagementUnitSettingsResponse > PatchWorkforcemanagementManagementunitSettingsWithHttpInfo (string muId, ManagementUnitSettingsRequest body = null)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchWorkforcemanagementManagementunitSettingsWithHttpInfo (string muId)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -23421,11 +23255,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -23449,36 +23278,33 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ManagementUnitSettingsResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ManagementUnitSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagementUnitSettingsResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Update the settings for the requested management unit 
+        /// Gone. Update settings by PATCHing the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">config (optional)</param>
-        /// <returns>Task of ManagementUnitSettingsResponse</returns>
-        public async System.Threading.Tasks.Task<ManagementUnitSettingsResponse> PatchWorkforcemanagementManagementunitSettingsAsync (string muId, ManagementUnitSettingsRequest body = null)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchWorkforcemanagementManagementunitSettingsAsync (string muId)
         {
-             ApiResponse<ManagementUnitSettingsResponse> localVarResponse = await PatchWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo(muId, body);
-             return localVarResponse.Data;
+             await PatchWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo(muId);
 
         }
 
         /// <summary>
-        /// Update the settings for the requested management unit 
+        /// Gone. Update settings by PATCHing the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">config (optional)</param>
-        /// <returns>Task of ApiResponse (ManagementUnitSettingsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ManagementUnitSettingsResponse>> PatchWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo (string muId, ManagementUnitSettingsRequest body = null)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo (string muId)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -23525,11 +23351,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -23553,9 +23374,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ManagementUnitSettingsResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ManagementUnitSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagementUnitSettingsResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -23796,34 +23617,27 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update a week schedule 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>AsyncWeekScheduleResponse</returns>
-        public AsyncWeekScheduleResponse PatchWorkforcemanagementManagementunitWeekSchedule (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, UpdateWeekScheduleRequest body = null)
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500</param>
+        /// <returns></returns>
+        public void PatchWorkforcemanagementManagementunitWeekSchedule (string managementUnitId, string weekId, string scheduleId)
         {
-             ApiResponse<AsyncWeekScheduleResponse> localVarResponse = PatchWorkforcemanagementManagementunitWeekScheduleWithHttpInfo(managementUnitId, weekId, scheduleId, forceAsync, forceDownloadService, body);
-             return localVarResponse.Data;
+             PatchWorkforcemanagementManagementunitWeekScheduleWithHttpInfo(managementUnitId, weekId, scheduleId);
         }
 
         /// <summary>
-        /// Update a week schedule 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of AsyncWeekScheduleResponse</returns>
-        public ApiResponse< AsyncWeekScheduleResponse > PatchWorkforcemanagementManagementunitWeekScheduleWithHttpInfo (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, UpdateWeekScheduleRequest body = null)
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchWorkforcemanagementManagementunitWeekScheduleWithHttpInfo (string managementUnitId, string weekId, string scheduleId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -23871,19 +23685,12 @@ namespace PureCloudPlatform.Client.V2.Api
             if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
 
             // Query params
-            if (forceAsync != null) localVarQueryParams.Add(new Tuple<string, string>("forceAsync", this.Configuration.ApiClient.ParameterToString(forceAsync)));
-            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -23907,44 +23714,37 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitWeekSchedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AsyncWeekScheduleResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (AsyncWeekScheduleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncWeekScheduleResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Update a week schedule 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of AsyncWeekScheduleResponse</returns>
-        public async System.Threading.Tasks.Task<AsyncWeekScheduleResponse> PatchWorkforcemanagementManagementunitWeekScheduleAsync (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, UpdateWeekScheduleRequest body = null)
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchWorkforcemanagementManagementunitWeekScheduleAsync (string managementUnitId, string weekId, string scheduleId)
         {
-             ApiResponse<AsyncWeekScheduleResponse> localVarResponse = await PatchWorkforcemanagementManagementunitWeekScheduleAsyncWithHttpInfo(managementUnitId, weekId, scheduleId, forceAsync, forceDownloadService, body);
-             return localVarResponse.Data;
+             await PatchWorkforcemanagementManagementunitWeekScheduleAsyncWithHttpInfo(managementUnitId, weekId, scheduleId);
 
         }
 
         /// <summary>
-        /// Update a week schedule 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (AsyncWeekScheduleResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AsyncWeekScheduleResponse>> PatchWorkforcemanagementManagementunitWeekScheduleAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, UpdateWeekScheduleRequest body = null)
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementManagementunitWeekScheduleAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -23995,19 +23795,12 @@ namespace PureCloudPlatform.Client.V2.Api
             if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
 
             // Query params
-            if (forceAsync != null) localVarQueryParams.Add(new Tuple<string, string>("forceAsync", this.Configuration.ApiClient.ParameterToString(forceAsync)));
-            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -24031,9 +23824,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitWeekSchedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AsyncWeekScheduleResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (AsyncWeekScheduleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncWeekScheduleResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -28008,26 +27801,23 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Create a new activity code 
+        /// Deprecated/Gone: Use the new business unit activity code resources 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ActivityCode</returns>
-        public ActivityCode PostWorkforcemanagementManagementunitActivitycodes (string muId, CreateActivityCodeRequest body = null)
+        /// <returns></returns>
+        public void PostWorkforcemanagementManagementunitActivitycodes (string muId)
         {
-             ApiResponse<ActivityCode> localVarResponse = PostWorkforcemanagementManagementunitActivitycodesWithHttpInfo(muId, body);
-             return localVarResponse.Data;
+             PostWorkforcemanagementManagementunitActivitycodesWithHttpInfo(muId);
         }
 
         /// <summary>
-        /// Create a new activity code 
+        /// Deprecated/Gone: Use the new business unit activity code resources 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of ActivityCode</returns>
-        public ApiResponse< ActivityCode > PostWorkforcemanagementManagementunitActivitycodesWithHttpInfo (string muId, CreateActivityCodeRequest body = null)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostWorkforcemanagementManagementunitActivitycodesWithHttpInfo (string muId)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -28073,11 +27863,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -28101,36 +27886,33 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitActivitycodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ActivityCode>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ActivityCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityCode)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Create a new activity code 
+        /// Deprecated/Gone: Use the new business unit activity code resources 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ActivityCode</returns>
-        public async System.Threading.Tasks.Task<ActivityCode> PostWorkforcemanagementManagementunitActivitycodesAsync (string muId, CreateActivityCodeRequest body = null)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostWorkforcemanagementManagementunitActivitycodesAsync (string muId)
         {
-             ApiResponse<ActivityCode> localVarResponse = await PostWorkforcemanagementManagementunitActivitycodesAsyncWithHttpInfo(muId, body);
-             return localVarResponse.Data;
+             await PostWorkforcemanagementManagementunitActivitycodesAsyncWithHttpInfo(muId);
 
         }
 
         /// <summary>
-        /// Create a new activity code 
+        /// Deprecated/Gone: Use the new business unit activity code resources 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (ActivityCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ActivityCode>> PostWorkforcemanagementManagementunitActivitycodesAsyncWithHttpInfo (string muId, CreateActivityCodeRequest body = null)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitActivitycodesAsyncWithHttpInfo (string muId)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -28177,11 +27959,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -28205,9 +27982,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitActivitycodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ActivityCode>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ActivityCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityCode)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -28641,26 +28418,23 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get intraday data for the given date for the requested queueIds 
+        /// Gone.  Moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>IntradayResponse</returns>
-        public IntradayResponse PostWorkforcemanagementManagementunitIntraday (string muId, IntradayQueryDataCommand body = null)
+        /// <returns></returns>
+        public void PostWorkforcemanagementManagementunitIntraday (string muId)
         {
-             ApiResponse<IntradayResponse> localVarResponse = PostWorkforcemanagementManagementunitIntradayWithHttpInfo(muId, body);
-             return localVarResponse.Data;
+             PostWorkforcemanagementManagementunitIntradayWithHttpInfo(muId);
         }
 
         /// <summary>
-        /// Get intraday data for the given date for the requested queueIds 
+        /// Gone.  Moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of IntradayResponse</returns>
-        public ApiResponse< IntradayResponse > PostWorkforcemanagementManagementunitIntradayWithHttpInfo (string muId, IntradayQueryDataCommand body = null)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostWorkforcemanagementManagementunitIntradayWithHttpInfo (string muId)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -28706,11 +28480,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -28734,36 +28503,33 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitIntraday: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IntradayResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (IntradayResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntradayResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Get intraday data for the given date for the requested queueIds 
+        /// Gone.  Moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of IntradayResponse</returns>
-        public async System.Threading.Tasks.Task<IntradayResponse> PostWorkforcemanagementManagementunitIntradayAsync (string muId, IntradayQueryDataCommand body = null)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostWorkforcemanagementManagementunitIntradayAsync (string muId)
         {
-             ApiResponse<IntradayResponse> localVarResponse = await PostWorkforcemanagementManagementunitIntradayAsyncWithHttpInfo(muId, body);
-             return localVarResponse.Data;
+             await PostWorkforcemanagementManagementunitIntradayAsyncWithHttpInfo(muId);
 
         }
 
         /// <summary>
-        /// Get intraday data for the given date for the requested queueIds 
+        /// Gone.  Moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (IntradayResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<IntradayResponse>> PostWorkforcemanagementManagementunitIntradayAsyncWithHttpInfo (string muId, IntradayQueryDataCommand body = null)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitIntradayAsyncWithHttpInfo (string muId)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -28810,11 +28576,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -28838,9 +28599,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitIntraday: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IntradayResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (IntradayResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntradayResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -29262,26 +29023,23 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Create a new service goal group 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ServiceGoalGroup</returns>
-        public ServiceGoalGroup PostWorkforcemanagementManagementunitServicegoalgroups (string managementUnitId, CreateServiceGoalGroupRequest body = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns></returns>
+        public void PostWorkforcemanagementManagementunitServicegoalgroups (string managementUnitId)
         {
-             ApiResponse<ServiceGoalGroup> localVarResponse = PostWorkforcemanagementManagementunitServicegoalgroupsWithHttpInfo(managementUnitId, body);
-             return localVarResponse.Data;
+             PostWorkforcemanagementManagementunitServicegoalgroupsWithHttpInfo(managementUnitId);
         }
 
         /// <summary>
-        /// Create a new service goal group 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of ServiceGoalGroup</returns>
-        public ApiResponse< ServiceGoalGroup > PostWorkforcemanagementManagementunitServicegoalgroupsWithHttpInfo (string managementUnitId, CreateServiceGoalGroupRequest body = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostWorkforcemanagementManagementunitServicegoalgroupsWithHttpInfo (string managementUnitId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -29327,11 +29085,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -29355,36 +29108,33 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitServicegoalgroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ServiceGoalGroup>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ServiceGoalGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServiceGoalGroup)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Create a new service goal group 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ServiceGoalGroup</returns>
-        public async System.Threading.Tasks.Task<ServiceGoalGroup> PostWorkforcemanagementManagementunitServicegoalgroupsAsync (string managementUnitId, CreateServiceGoalGroupRequest body = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostWorkforcemanagementManagementunitServicegoalgroupsAsync (string managementUnitId)
         {
-             ApiResponse<ServiceGoalGroup> localVarResponse = await PostWorkforcemanagementManagementunitServicegoalgroupsAsyncWithHttpInfo(managementUnitId, body);
-             return localVarResponse.Data;
+             await PostWorkforcemanagementManagementunitServicegoalgroupsAsyncWithHttpInfo(managementUnitId);
 
         }
 
         /// <summary>
-        /// Create a new service goal group 
+        /// Gone. Replaced with service goal templates and planning groups under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (ServiceGoalGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ServiceGoalGroup>> PostWorkforcemanagementManagementunitServicegoalgroupsAsyncWithHttpInfo (string managementUnitId, CreateServiceGoalGroupRequest body = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitServicegoalgroupsAsyncWithHttpInfo (string managementUnitId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -29431,11 +29181,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -29459,9 +29204,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitServicegoalgroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ServiceGoalGroup>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ServiceGoalGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServiceGoalGroup)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -29676,26 +29421,25 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Gets a list of time off requests from lookup ids 
+        /// Gone.  All data is now returned in the query route 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>TimeOffRequestEntityList</returns>
-        public TimeOffRequestEntityList PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetails (string muId, TimeOffRequestLookupList body = null)
+        /// <returns></returns>
+        public void PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetails (string muId, TimeOffRequestListing body = null)
         {
-             ApiResponse<TimeOffRequestEntityList> localVarResponse = PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetailsWithHttpInfo(muId, body);
-             return localVarResponse.Data;
+             PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetailsWithHttpInfo(muId, body);
         }
 
         /// <summary>
-        /// Gets a list of time off requests from lookup ids 
+        /// Gone.  All data is now returned in the query route 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of TimeOffRequestEntityList</returns>
-        public ApiResponse< TimeOffRequestEntityList > PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetailsWithHttpInfo (string muId, TimeOffRequestLookupList body = null)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetailsWithHttpInfo (string muId, TimeOffRequestListing body = null)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -29769,36 +29513,35 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<TimeOffRequestEntityList>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (TimeOffRequestEntityList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequestEntityList)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Gets a list of time off requests from lookup ids 
+        /// Gone.  All data is now returned in the query route 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of TimeOffRequestEntityList</returns>
-        public async System.Threading.Tasks.Task<TimeOffRequestEntityList> PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetailsAsync (string muId, TimeOffRequestLookupList body = null)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetailsAsync (string muId, TimeOffRequestListing body = null)
         {
-             ApiResponse<TimeOffRequestEntityList> localVarResponse = await PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetailsAsyncWithHttpInfo(muId, body);
-             return localVarResponse.Data;
+             await PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetailsAsyncWithHttpInfo(muId, body);
 
         }
 
         /// <summary>
-        /// Gets a list of time off requests from lookup ids 
+        /// Gone.  All data is now returned in the query route 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (TimeOffRequestEntityList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestEntityList>> PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetailsAsyncWithHttpInfo (string muId, TimeOffRequestLookupList body = null)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetailsAsyncWithHttpInfo (string muId, TimeOffRequestListing body = null)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -29873,9 +29616,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<TimeOffRequestEntityList>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (TimeOffRequestEntityList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequestEntityList)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -29888,10 +29631,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>TimeOffRequestLookupList</returns>
-        public TimeOffRequestLookupList PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string muId, TimeOffRequestQueryBody body = null)
+        /// <returns>TimeOffRequestListing</returns>
+        public TimeOffRequestListing PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string muId, TimeOffRequestQueryBody body = null)
         {
-             ApiResponse<TimeOffRequestLookupList> localVarResponse = PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo(muId, body);
+             ApiResponse<TimeOffRequestListing> localVarResponse = PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo(muId, body);
              return localVarResponse.Data;
         }
 
@@ -29901,8 +29644,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of TimeOffRequestLookupList</returns>
-        public ApiResponse< TimeOffRequestLookupList > PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo (string muId, TimeOffRequestQueryBody body = null)
+        /// <returns>ApiResponse of TimeOffRequestListing</returns>
+        public ApiResponse< TimeOffRequestListing > PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo (string muId, TimeOffRequestQueryBody body = null)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -29976,9 +29719,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeoffrequestsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<TimeOffRequestLookupList>(localVarStatusCode,
+            return new ApiResponse<TimeOffRequestListing>(localVarStatusCode,
                 localVarHeaders,
-                (TimeOffRequestLookupList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequestLookupList)),
+                (TimeOffRequestListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequestListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -29990,10 +29733,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of TimeOffRequestLookupList</returns>
-        public async System.Threading.Tasks.Task<TimeOffRequestLookupList> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsync (string muId, TimeOffRequestQueryBody body = null)
+        /// <returns>Task of TimeOffRequestListing</returns>
+        public async System.Threading.Tasks.Task<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsync (string muId, TimeOffRequestQueryBody body = null)
         {
-             ApiResponse<TimeOffRequestLookupList> localVarResponse = await PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo(muId, body);
+             ApiResponse<TimeOffRequestListing> localVarResponse = await PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo(muId, body);
              return localVarResponse.Data;
 
         }
@@ -30004,8 +29747,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (TimeOffRequestLookupList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestLookupList>> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo (string muId, TimeOffRequestQueryBody body = null)
+        /// <returns>Task of ApiResponse (TimeOffRequestListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestListing>> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo (string muId, TimeOffRequestQueryBody body = null)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -30080,9 +29823,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeoffrequestsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<TimeOffRequestLookupList>(localVarStatusCode,
+            return new ApiResponse<TimeOffRequestListing>(localVarStatusCode,
                 localVarHeaders,
-                (TimeOffRequestLookupList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequestLookupList)),
+                (TimeOffRequestListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequestListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -30090,34 +29833,27 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Copy a week schedule 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to copy from</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>AsyncWeekScheduleResponse</returns>
-        public AsyncWeekScheduleResponse PostWorkforcemanagementManagementunitWeekScheduleCopy (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, CopyWeekScheduleRequest body = null)
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to copy from</param>
+        /// <returns></returns>
+        public void PostWorkforcemanagementManagementunitWeekScheduleCopy (string managementUnitId, string weekId, string scheduleId)
         {
-             ApiResponse<AsyncWeekScheduleResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekScheduleCopyWithHttpInfo(managementUnitId, weekId, scheduleId, forceAsync, forceDownloadService, body);
-             return localVarResponse.Data;
+             PostWorkforcemanagementManagementunitWeekScheduleCopyWithHttpInfo(managementUnitId, weekId, scheduleId);
         }
 
         /// <summary>
-        /// Copy a week schedule 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to copy from</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of AsyncWeekScheduleResponse</returns>
-        public ApiResponse< AsyncWeekScheduleResponse > PostWorkforcemanagementManagementunitWeekScheduleCopyWithHttpInfo (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, CopyWeekScheduleRequest body = null)
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to copy from</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostWorkforcemanagementManagementunitWeekScheduleCopyWithHttpInfo (string managementUnitId, string weekId, string scheduleId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -30165,19 +29901,12 @@ namespace PureCloudPlatform.Client.V2.Api
             if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
 
             // Query params
-            if (forceAsync != null) localVarQueryParams.Add(new Tuple<string, string>("forceAsync", this.Configuration.ApiClient.ParameterToString(forceAsync)));
-            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -30201,44 +29930,37 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekScheduleCopy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AsyncWeekScheduleResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (AsyncWeekScheduleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncWeekScheduleResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Copy a week schedule 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to copy from</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of AsyncWeekScheduleResponse</returns>
-        public async System.Threading.Tasks.Task<AsyncWeekScheduleResponse> PostWorkforcemanagementManagementunitWeekScheduleCopyAsync (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, CopyWeekScheduleRequest body = null)
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to copy from</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostWorkforcemanagementManagementunitWeekScheduleCopyAsync (string managementUnitId, string weekId, string scheduleId)
         {
-             ApiResponse<AsyncWeekScheduleResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekScheduleCopyAsyncWithHttpInfo(managementUnitId, weekId, scheduleId, forceAsync, forceDownloadService, body);
-             return localVarResponse.Data;
+             await PostWorkforcemanagementManagementunitWeekScheduleCopyAsyncWithHttpInfo(managementUnitId, weekId, scheduleId);
 
         }
 
         /// <summary>
-        /// Copy a week schedule 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to copy from</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (AsyncWeekScheduleResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AsyncWeekScheduleResponse>> PostWorkforcemanagementManagementunitWeekScheduleCopyAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, CopyWeekScheduleRequest body = null)
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to copy from</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitWeekScheduleCopyAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -30289,19 +30011,12 @@ namespace PureCloudPlatform.Client.V2.Api
             if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
 
             // Query params
-            if (forceAsync != null) localVarQueryParams.Add(new Tuple<string, string>("forceAsync", this.Configuration.ApiClient.ParameterToString(forceAsync)));
-            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -30325,9 +30040,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekScheduleCopy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AsyncWeekScheduleResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (AsyncWeekScheduleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncWeekScheduleResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -30335,30 +30050,27 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to re-optimize</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>AsyncWeekScheduleResponse</returns>
-        public AsyncWeekScheduleResponse PostWorkforcemanagementManagementunitWeekScheduleReschedule (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null)
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to re-optimize</param>
+        /// <returns></returns>
+        public void PostWorkforcemanagementManagementunitWeekScheduleReschedule (string managementUnitId, string weekId, string scheduleId)
         {
-             ApiResponse<AsyncWeekScheduleResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekScheduleRescheduleWithHttpInfo(managementUnitId, weekId, scheduleId, body);
-             return localVarResponse.Data;
+             PostWorkforcemanagementManagementunitWeekScheduleRescheduleWithHttpInfo(managementUnitId, weekId, scheduleId);
         }
 
         /// <summary>
-        /// Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to re-optimize</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of AsyncWeekScheduleResponse</returns>
-        public ApiResponse< AsyncWeekScheduleResponse > PostWorkforcemanagementManagementunitWeekScheduleRescheduleWithHttpInfo (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null)
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to re-optimize</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostWorkforcemanagementManagementunitWeekScheduleRescheduleWithHttpInfo (string managementUnitId, string weekId, string scheduleId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -30412,11 +30124,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -30440,40 +30147,37 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekScheduleReschedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AsyncWeekScheduleResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (AsyncWeekScheduleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncWeekScheduleResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to re-optimize</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of AsyncWeekScheduleResponse</returns>
-        public async System.Threading.Tasks.Task<AsyncWeekScheduleResponse> PostWorkforcemanagementManagementunitWeekScheduleRescheduleAsync (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null)
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to re-optimize</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostWorkforcemanagementManagementunitWeekScheduleRescheduleAsync (string managementUnitId, string weekId, string scheduleId)
         {
-             ApiResponse<AsyncWeekScheduleResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekScheduleRescheduleAsyncWithHttpInfo(managementUnitId, weekId, scheduleId, body);
-             return localVarResponse.Data;
+             await PostWorkforcemanagementManagementunitWeekScheduleRescheduleAsyncWithHttpInfo(managementUnitId, weekId, scheduleId);
 
         }
 
         /// <summary>
-        /// Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="scheduleId">The ID of the schedule to re-optimize</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (AsyncWeekScheduleResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AsyncWeekScheduleResponse>> PostWorkforcemanagementManagementunitWeekScheduleRescheduleAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null)
+        /// <param name="scheduleId">Gone/deprecated. The ID of the schedule to re-optimize</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitWeekScheduleRescheduleAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -30530,11 +30234,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -30558,9 +30257,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekScheduleReschedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AsyncWeekScheduleResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (AsyncWeekScheduleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncWeekScheduleResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -30568,32 +30267,25 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>AsyncWeekScheduleResponse</returns>
-        public AsyncWeekScheduleResponse PostWorkforcemanagementManagementunitWeekSchedules (string managementUnitId, string weekId, bool? forceAsync = null, bool? forceDownloadService = null, ImportWeekScheduleRequest body = null)
+        /// <returns></returns>
+        public void PostWorkforcemanagementManagementunitWeekSchedules (string managementUnitId, string weekId)
         {
-             ApiResponse<AsyncWeekScheduleResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekSchedulesWithHttpInfo(managementUnitId, weekId, forceAsync, forceDownloadService, body);
-             return localVarResponse.Data;
+             PostWorkforcemanagementManagementunitWeekSchedulesWithHttpInfo(managementUnitId, weekId);
         }
 
         /// <summary>
-        /// Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of AsyncWeekScheduleResponse</returns>
-        public ApiResponse< AsyncWeekScheduleResponse > PostWorkforcemanagementManagementunitWeekSchedulesWithHttpInfo (string managementUnitId, string weekId, bool? forceAsync = null, bool? forceDownloadService = null, ImportWeekScheduleRequest body = null)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostWorkforcemanagementManagementunitWeekSchedulesWithHttpInfo (string managementUnitId, string weekId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -30637,19 +30329,12 @@ namespace PureCloudPlatform.Client.V2.Api
             if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
 
             // Query params
-            if (forceAsync != null) localVarQueryParams.Add(new Tuple<string, string>("forceAsync", this.Configuration.ApiClient.ParameterToString(forceAsync)));
-            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -30673,42 +30358,35 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekSchedules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AsyncWeekScheduleResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (AsyncWeekScheduleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncWeekScheduleResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of AsyncWeekScheduleResponse</returns>
-        public async System.Threading.Tasks.Task<AsyncWeekScheduleResponse> PostWorkforcemanagementManagementunitWeekSchedulesAsync (string managementUnitId, string weekId, bool? forceAsync = null, bool? forceDownloadService = null, ImportWeekScheduleRequest body = null)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostWorkforcemanagementManagementunitWeekSchedulesAsync (string managementUnitId, string weekId)
         {
-             ApiResponse<AsyncWeekScheduleResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekSchedulesAsyncWithHttpInfo(managementUnitId, weekId, forceAsync, forceDownloadService, body);
-             return localVarResponse.Data;
+             await PostWorkforcemanagementManagementunitWeekSchedulesAsyncWithHttpInfo(managementUnitId, weekId);
 
         }
 
         /// <summary>
-        /// Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (AsyncWeekScheduleResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AsyncWeekScheduleResponse>> PostWorkforcemanagementManagementunitWeekSchedulesAsyncWithHttpInfo (string managementUnitId, string weekId, bool? forceAsync = null, bool? forceDownloadService = null, ImportWeekScheduleRequest body = null)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitWeekSchedulesAsyncWithHttpInfo (string managementUnitId, string weekId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -30754,19 +30432,12 @@ namespace PureCloudPlatform.Client.V2.Api
             if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
 
             // Query params
-            if (forceAsync != null) localVarQueryParams.Add(new Tuple<string, string>("forceAsync", this.Configuration.ApiClient.ParameterToString(forceAsync)));
-            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -30790,9 +30461,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekSchedules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AsyncWeekScheduleResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (AsyncWeekScheduleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncWeekScheduleResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -30800,28 +30471,25 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Generate a week schedule 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>GenerateWeekScheduleResponse</returns>
-        public GenerateWeekScheduleResponse PostWorkforcemanagementManagementunitWeekSchedulesGenerate (string managementUnitId, string weekId, GenerateWeekScheduleRequest body = null)
+        /// <returns></returns>
+        public void PostWorkforcemanagementManagementunitWeekSchedulesGenerate (string managementUnitId, string weekId)
         {
-             ApiResponse<GenerateWeekScheduleResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekSchedulesGenerateWithHttpInfo(managementUnitId, weekId, body);
-             return localVarResponse.Data;
+             PostWorkforcemanagementManagementunitWeekSchedulesGenerateWithHttpInfo(managementUnitId, weekId);
         }
 
         /// <summary>
-        /// Generate a week schedule 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of GenerateWeekScheduleResponse</returns>
-        public ApiResponse< GenerateWeekScheduleResponse > PostWorkforcemanagementManagementunitWeekSchedulesGenerateWithHttpInfo (string managementUnitId, string weekId, GenerateWeekScheduleRequest body = null)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostWorkforcemanagementManagementunitWeekSchedulesGenerateWithHttpInfo (string managementUnitId, string weekId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -30871,11 +30539,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -30899,38 +30562,35 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekSchedulesGenerate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<GenerateWeekScheduleResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (GenerateWeekScheduleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GenerateWeekScheduleResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Generate a week schedule 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of GenerateWeekScheduleResponse</returns>
-        public async System.Threading.Tasks.Task<GenerateWeekScheduleResponse> PostWorkforcemanagementManagementunitWeekSchedulesGenerateAsync (string managementUnitId, string weekId, GenerateWeekScheduleRequest body = null)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostWorkforcemanagementManagementunitWeekSchedulesGenerateAsync (string managementUnitId, string weekId)
         {
-             ApiResponse<GenerateWeekScheduleResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekSchedulesGenerateAsyncWithHttpInfo(managementUnitId, weekId, body);
-             return localVarResponse.Data;
+             await PostWorkforcemanagementManagementunitWeekSchedulesGenerateAsyncWithHttpInfo(managementUnitId, weekId);
 
         }
 
         /// <summary>
-        /// Generate a week schedule 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (GenerateWeekScheduleResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GenerateWeekScheduleResponse>> PostWorkforcemanagementManagementunitWeekSchedulesGenerateAsyncWithHttpInfo (string managementUnitId, string weekId, GenerateWeekScheduleRequest body = null)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitWeekSchedulesGenerateAsyncWithHttpInfo (string managementUnitId, string weekId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -30982,11 +30642,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -31010,9 +30665,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekSchedulesGenerate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<GenerateWeekScheduleResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (GenerateWeekScheduleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GenerateWeekScheduleResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -31020,28 +30675,25 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Partial upload of user schedules where activity count is greater than 17500 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>PartialUploadResponse</returns>
-        public PartialUploadResponse PostWorkforcemanagementManagementunitWeekSchedulesPartialupload (string managementUnitId, string weekId, UserSchedulesPartialUploadRequest body = null)
+        /// <returns></returns>
+        public void PostWorkforcemanagementManagementunitWeekSchedulesPartialupload (string managementUnitId, string weekId)
         {
-             ApiResponse<PartialUploadResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadWithHttpInfo(managementUnitId, weekId, body);
-             return localVarResponse.Data;
+             PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadWithHttpInfo(managementUnitId, weekId);
         }
 
         /// <summary>
-        /// Partial upload of user schedules where activity count is greater than 17500 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of PartialUploadResponse</returns>
-        public ApiResponse< PartialUploadResponse > PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadWithHttpInfo (string managementUnitId, string weekId, UserSchedulesPartialUploadRequest body = null)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadWithHttpInfo (string managementUnitId, string weekId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -31091,11 +30743,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -31119,38 +30766,35 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekSchedulesPartialupload: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PartialUploadResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (PartialUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PartialUploadResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Partial upload of user schedules where activity count is greater than 17500 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of PartialUploadResponse</returns>
-        public async System.Threading.Tasks.Task<PartialUploadResponse> PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadAsync (string managementUnitId, string weekId, UserSchedulesPartialUploadRequest body = null)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadAsync (string managementUnitId, string weekId)
         {
-             ApiResponse<PartialUploadResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadAsyncWithHttpInfo(managementUnitId, weekId, body);
-             return localVarResponse.Data;
+             await PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadAsyncWithHttpInfo(managementUnitId, weekId);
 
         }
 
         /// <summary>
-        /// Partial upload of user schedules where activity count is greater than 17500 
+        /// Gone.  Scheduling has moved under business units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
-        /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (PartialUploadResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PartialUploadResponse>> PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadAsyncWithHttpInfo (string managementUnitId, string weekId, UserSchedulesPartialUploadRequest body = null)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadAsyncWithHttpInfo (string managementUnitId, string weekId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -31202,11 +30846,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -31230,9 +30869,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekSchedulesPartialupload: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PartialUploadResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (PartialUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PartialUploadResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -32167,32 +31806,27 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Copy a short term forecast 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast to copy</param>
-        /// <param name="body">body</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>ShortTermForecastResponse</returns>
-        public ShortTermForecastResponse PostWorkforcemanagementManagementunitWeekShorttermforecastCopy (string managementUnitId, string weekDateId, string forecastId, CopyShortTermForecastRequest body, bool? forceAsync = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
+        /// <returns></returns>
+        public void PostWorkforcemanagementManagementunitWeekShorttermforecastCopy (string managementUnitId, string weekDateId, string forecastId)
         {
-             ApiResponse<ShortTermForecastResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShorttermforecastCopyWithHttpInfo(managementUnitId, weekDateId, forecastId, body, forceAsync);
-             return localVarResponse.Data;
+             PostWorkforcemanagementManagementunitWeekShorttermforecastCopyWithHttpInfo(managementUnitId, weekDateId, forecastId);
         }
 
         /// <summary>
-        /// Copy a short term forecast 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast to copy</param>
-        /// <param name="body">body</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>ApiResponse of ShortTermForecastResponse</returns>
-        public ApiResponse< ShortTermForecastResponse > PostWorkforcemanagementManagementunitWeekShorttermforecastCopyWithHttpInfo (string managementUnitId, string weekDateId, string forecastId, CopyShortTermForecastRequest body, bool? forceAsync = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostWorkforcemanagementManagementunitWeekShorttermforecastCopyWithHttpInfo (string managementUnitId, string weekDateId, string forecastId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -32203,9 +31837,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'forecastId' is set
             if (forecastId == null)
                 throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShorttermforecastCopy");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShorttermforecastCopy");
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/copy";
             var localVarPathParams = new Dictionary<String, String>();
@@ -32243,18 +31874,12 @@ namespace PureCloudPlatform.Client.V2.Api
             if (forecastId != null) localVarPathParams.Add("forecastId", this.Configuration.ApiClient.ParameterToString(forecastId));
 
             // Query params
-            if (forceAsync != null) localVarQueryParams.Add(new Tuple<string, string>("forceAsync", this.Configuration.ApiClient.ParameterToString(forceAsync)));
 
             // Header params
 
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -32278,42 +31903,37 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShorttermforecastCopy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ShortTermForecastResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ShortTermForecastResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShortTermForecastResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Copy a short term forecast 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast to copy</param>
-        /// <param name="body">body</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of ShortTermForecastResponse</returns>
-        public async System.Threading.Tasks.Task<ShortTermForecastResponse> PostWorkforcemanagementManagementunitWeekShorttermforecastCopyAsync (string managementUnitId, string weekDateId, string forecastId, CopyShortTermForecastRequest body, bool? forceAsync = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostWorkforcemanagementManagementunitWeekShorttermforecastCopyAsync (string managementUnitId, string weekDateId, string forecastId)
         {
-             ApiResponse<ShortTermForecastResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShorttermforecastCopyAsyncWithHttpInfo(managementUnitId, weekDateId, forecastId, body, forceAsync);
-             return localVarResponse.Data;
+             await PostWorkforcemanagementManagementunitWeekShorttermforecastCopyAsyncWithHttpInfo(managementUnitId, weekDateId, forecastId);
 
         }
 
         /// <summary>
-        /// Copy a short term forecast 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="forecastId">The ID of the forecast to copy</param>
-        /// <param name="body">body</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of ApiResponse (ShortTermForecastResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ShortTermForecastResponse>> PostWorkforcemanagementManagementunitWeekShorttermforecastCopyAsyncWithHttpInfo (string managementUnitId, string weekDateId, string forecastId, CopyShortTermForecastRequest body, bool? forceAsync = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <param name="forecastId">(Gone/Deprecated): The ID of the forecast</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitWeekShorttermforecastCopyAsyncWithHttpInfo (string managementUnitId, string weekDateId, string forecastId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -32326,10 +31946,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'forecastId' is set
             if (forecastId == null)
                 throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShorttermforecastCopy");
-            
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShorttermforecastCopy");
             
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/copy";
@@ -32368,18 +31984,12 @@ namespace PureCloudPlatform.Client.V2.Api
             if (forecastId != null) localVarPathParams.Add("forecastId", this.Configuration.ApiClient.ParameterToString(forecastId));
 
             // Query params
-            if (forceAsync != null) localVarQueryParams.Add(new Tuple<string, string>("forceAsync", this.Configuration.ApiClient.ParameterToString(forceAsync)));
 
             // Header params
 
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -32403,9 +32013,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShorttermforecastCopy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ShortTermForecastResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ShortTermForecastResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShortTermForecastResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -32413,30 +32023,25 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Import a short term forecast 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body">body</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>ShortTermForecastResponse</returns>
-        public ShortTermForecastResponse PostWorkforcemanagementManagementunitWeekShorttermforecasts (string managementUnitId, string weekDateId, ImportShortTermForecastRequest body, bool? forceAsync = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns></returns>
+        public void PostWorkforcemanagementManagementunitWeekShorttermforecasts (string managementUnitId, string weekDateId)
         {
-             ApiResponse<ShortTermForecastResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShorttermforecastsWithHttpInfo(managementUnitId, weekDateId, body, forceAsync);
-             return localVarResponse.Data;
+             PostWorkforcemanagementManagementunitWeekShorttermforecastsWithHttpInfo(managementUnitId, weekDateId);
         }
 
         /// <summary>
-        /// Import a short term forecast 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body">body</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>ApiResponse of ShortTermForecastResponse</returns>
-        public ApiResponse< ShortTermForecastResponse > PostWorkforcemanagementManagementunitWeekShorttermforecastsWithHttpInfo (string managementUnitId, string weekDateId, ImportShortTermForecastRequest body, bool? forceAsync = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostWorkforcemanagementManagementunitWeekShorttermforecastsWithHttpInfo (string managementUnitId, string weekDateId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -32444,9 +32049,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'weekDateId' is set
             if (weekDateId == null)
                 throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShorttermforecasts");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShorttermforecasts");
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts";
             var localVarPathParams = new Dictionary<String, String>();
@@ -32483,18 +32085,12 @@ namespace PureCloudPlatform.Client.V2.Api
             if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
 
             // Query params
-            if (forceAsync != null) localVarQueryParams.Add(new Tuple<string, string>("forceAsync", this.Configuration.ApiClient.ParameterToString(forceAsync)));
 
             // Header params
 
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -32518,40 +32114,35 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShorttermforecasts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ShortTermForecastResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ShortTermForecastResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShortTermForecastResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Import a short term forecast 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body">body</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of ShortTermForecastResponse</returns>
-        public async System.Threading.Tasks.Task<ShortTermForecastResponse> PostWorkforcemanagementManagementunitWeekShorttermforecastsAsync (string managementUnitId, string weekDateId, ImportShortTermForecastRequest body, bool? forceAsync = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostWorkforcemanagementManagementunitWeekShorttermforecastsAsync (string managementUnitId, string weekDateId)
         {
-             ApiResponse<ShortTermForecastResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShorttermforecastsAsyncWithHttpInfo(managementUnitId, weekDateId, body, forceAsync);
-             return localVarResponse.Data;
+             await PostWorkforcemanagementManagementunitWeekShorttermforecastsAsyncWithHttpInfo(managementUnitId, weekDateId);
 
         }
 
         /// <summary>
-        /// Import a short term forecast 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body">body</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of ApiResponse (ShortTermForecastResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ShortTermForecastResponse>> PostWorkforcemanagementManagementunitWeekShorttermforecastsAsyncWithHttpInfo (string managementUnitId, string weekDateId, ImportShortTermForecastRequest body, bool? forceAsync = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitWeekShorttermforecastsAsyncWithHttpInfo (string managementUnitId, string weekDateId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -32560,10 +32151,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'weekDateId' is set
             if (weekDateId == null)
                 throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShorttermforecasts");
-            
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShorttermforecasts");
             
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts";
@@ -32601,18 +32188,12 @@ namespace PureCloudPlatform.Client.V2.Api
             if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
 
             // Query params
-            if (forceAsync != null) localVarQueryParams.Add(new Tuple<string, string>("forceAsync", this.Configuration.ApiClient.ParameterToString(forceAsync)));
 
             // Header params
 
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -32636,9 +32217,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShorttermforecasts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ShortTermForecastResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (ShortTermForecastResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShortTermForecastResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -32646,30 +32227,25 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Generate a short term forecast 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body"></param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>GenerateShortTermForecastResponse</returns>
-        public GenerateShortTermForecastResponse PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate (string managementUnitId, string weekDateId, GenerateShortTermForecastRequest body, bool? forceAsync = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns></returns>
+        public void PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate (string managementUnitId, string weekDateId)
         {
-             ApiResponse<GenerateShortTermForecastResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerateWithHttpInfo(managementUnitId, weekDateId, body, forceAsync);
-             return localVarResponse.Data;
+             PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerateWithHttpInfo(managementUnitId, weekDateId);
         }
 
         /// <summary>
-        /// Generate a short term forecast 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body"></param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>ApiResponse of GenerateShortTermForecastResponse</returns>
-        public ApiResponse< GenerateShortTermForecastResponse > PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerateWithHttpInfo (string managementUnitId, string weekDateId, GenerateShortTermForecastRequest body, bool? forceAsync = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerateWithHttpInfo (string managementUnitId, string weekDateId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -32677,9 +32253,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'weekDateId' is set
             if (weekDateId == null)
                 throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate");
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/generate";
             var localVarPathParams = new Dictionary<String, String>();
@@ -32716,18 +32289,12 @@ namespace PureCloudPlatform.Client.V2.Api
             if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
 
             // Query params
-            if (forceAsync != null) localVarQueryParams.Add(new Tuple<string, string>("forceAsync", this.Configuration.ApiClient.ParameterToString(forceAsync)));
 
             // Header params
 
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -32751,40 +32318,35 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<GenerateShortTermForecastResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (GenerateShortTermForecastResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GenerateShortTermForecastResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Generate a short term forecast 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body"></param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of GenerateShortTermForecastResponse</returns>
-        public async System.Threading.Tasks.Task<GenerateShortTermForecastResponse> PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerateAsync (string managementUnitId, string weekDateId, GenerateShortTermForecastRequest body, bool? forceAsync = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerateAsync (string managementUnitId, string weekDateId)
         {
-             ApiResponse<GenerateShortTermForecastResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerateAsyncWithHttpInfo(managementUnitId, weekDateId, body, forceAsync);
-             return localVarResponse.Data;
+             await PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerateAsyncWithHttpInfo(managementUnitId, weekDateId);
 
         }
 
         /// <summary>
-        /// Generate a short term forecast 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body"></param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of ApiResponse (GenerateShortTermForecastResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GenerateShortTermForecastResponse>> PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerateAsyncWithHttpInfo (string managementUnitId, string weekDateId, GenerateShortTermForecastRequest body, bool? forceAsync = null)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerateAsyncWithHttpInfo (string managementUnitId, string weekDateId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -32793,10 +32355,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'weekDateId' is set
             if (weekDateId == null)
                 throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate");
-            
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate");
             
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/generate";
@@ -32834,18 +32392,12 @@ namespace PureCloudPlatform.Client.V2.Api
             if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
 
             // Query params
-            if (forceAsync != null) localVarQueryParams.Add(new Tuple<string, string>("forceAsync", this.Configuration.ApiClient.ParameterToString(forceAsync)));
 
             // Header params
 
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -32869,9 +32421,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<GenerateShortTermForecastResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (GenerateShortTermForecastResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GenerateShortTermForecastResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -32879,28 +32431,25 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Import a short term forecast 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body">body</param>
-        /// <returns>PartialUploadResponse</returns>
-        public PartialUploadResponse PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload (string managementUnitId, string weekDateId, RouteGroupList body)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns></returns>
+        public void PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload (string managementUnitId, string weekDateId)
         {
-             ApiResponse<PartialUploadResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialuploadWithHttpInfo(managementUnitId, weekDateId, body);
-             return localVarResponse.Data;
+             PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialuploadWithHttpInfo(managementUnitId, weekDateId);
         }
 
         /// <summary>
-        /// Import a short term forecast 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body">body</param>
-        /// <returns>ApiResponse of PartialUploadResponse</returns>
-        public ApiResponse< PartialUploadResponse > PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialuploadWithHttpInfo (string managementUnitId, string weekDateId, RouteGroupList body)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialuploadWithHttpInfo (string managementUnitId, string weekDateId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -32908,9 +32457,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'weekDateId' is set
             if (weekDateId == null)
                 throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload");
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/partialupload";
             var localVarPathParams = new Dictionary<String, String>();
@@ -32953,11 +32499,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -32981,38 +32522,35 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PartialUploadResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (PartialUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PartialUploadResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Import a short term forecast 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body">body</param>
-        /// <returns>Task of PartialUploadResponse</returns>
-        public async System.Threading.Tasks.Task<PartialUploadResponse> PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialuploadAsync (string managementUnitId, string weekDateId, RouteGroupList body)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialuploadAsync (string managementUnitId, string weekDateId)
         {
-             ApiResponse<PartialUploadResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialuploadAsyncWithHttpInfo(managementUnitId, weekDateId, body);
-             return localVarResponse.Data;
+             await PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialuploadAsyncWithHttpInfo(managementUnitId, weekDateId);
 
         }
 
         /// <summary>
-        /// Import a short term forecast 
+        /// Gone. Use equivalent business unit resource instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format</param>
-        /// <param name="body">body</param>
-        /// <returns>Task of ApiResponse (PartialUploadResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PartialUploadResponse>> PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialuploadAsyncWithHttpInfo (string managementUnitId, string weekDateId, RouteGroupList body)
+        /// <param name="managementUnitId">(Deprecated/gone): The id of the management unit.</param>
+        /// <param name="weekDateId">(Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialuploadAsyncWithHttpInfo (string managementUnitId, string weekDateId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -33021,10 +32559,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'weekDateId' is set
             if (weekDateId == null)
                 throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload");
-            
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload");
             
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/partialupload";
@@ -33068,11 +32602,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
 
             
             // authentication (PureCloud OAuth) required
@@ -33096,9 +32625,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PartialUploadResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (PartialUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PartialUploadResponse)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

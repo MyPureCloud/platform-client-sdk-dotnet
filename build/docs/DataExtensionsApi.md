@@ -1,0 +1,187 @@
+---
+title: DataExtensionsApi
+---
+## PureCloudPlatform.Client.V2.Api.DataExtensionsApi
+
+All URIs are relative to *https://api.mypurecloud.com*
+
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**GetDataextensionsCoretype**](DataExtensionsApi.html#getdataextensionscoretype) | **GET** /api/v2/dataextensions/coretypes/{coretypeName} | Get a specific named core type. |
+| [**GetDataextensionsCoretypes**](DataExtensionsApi.html#getdataextensionscoretypes) | **GET** /api/v2/dataextensions/coretypes | Get the core types from which all schemas are built. |
+| [**GetDataextensionsLimits**](DataExtensionsApi.html#getdataextensionslimits) | **GET** /api/v2/dataextensions/limits | Get quantitative limits on schemas |
+{: class="table table-striped"}
+
+<a name="getdataextensionscoretype"></a>
+
+## [**Coretype**](Coretype.html) GetDataextensionsCoretype (string coretypeName)
+
+
+
+Get a specific named core type.
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetDataextensionsCoretypeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DataExtensionsApi();
+            var coretypeName = coretypeName_example;  // string | The core type's name
+
+            try
+            { 
+                // Get a specific named core type.
+                Coretype result = apiInstance.GetDataextensionsCoretype(coretypeName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DataExtensionsApi.GetDataextensionsCoretype: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **coretypeName** | **string**| The core type&#39;s name | <br />**Values**: text, longtext, url, identifier, enum, date, datetime, integer, number, checkbox, tag |
+{: class="table table-striped"}
+
+### Return type
+
+[**Coretype**](Coretype.html)
+
+<a name="getdataextensionscoretypes"></a>
+
+## [**CoretypeListing**](CoretypeListing.html) GetDataextensionsCoretypes ()
+
+
+
+Get the core types from which all schemas are built.
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetDataextensionsCoretypesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DataExtensionsApi();
+
+            try
+            { 
+                // Get the core types from which all schemas are built.
+                CoretypeListing result = apiInstance.GetDataextensionsCoretypes();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DataExtensionsApi.GetDataextensionsCoretypes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**CoretypeListing**](CoretypeListing.html)
+
+<a name="getdataextensionslimits"></a>
+
+## [**SchemaQuantityLimits**](SchemaQuantityLimits.html) GetDataextensionsLimits ()
+
+
+
+Get quantitative limits on schemas
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetDataextensionsLimitsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DataExtensionsApi();
+
+            try
+            { 
+                // Get quantitative limits on schemas
+                SchemaQuantityLimits result = apiInstance.GetDataextensionsLimits();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DataExtensionsApi.GetDataextensionsLimits: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**SchemaQuantityLimits**](SchemaQuantityLimits.html)
+

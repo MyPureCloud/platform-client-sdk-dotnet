@@ -246,6 +246,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -300,6 +303,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationChat" /> class.
@@ -321,7 +326,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
         /// <param name="AvatarImageUrl">If available, the URI to the avatar image of this communication..</param>
         /// <param name="JourneyContext">A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context)..</param>
-        public ConversationChat(StateEnum? State = null, string Id = null, string RoomId = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string ScriptId = null, string PeerId = null, string AvatarImageUrl = null, JourneyContext JourneyContext = null)
+        /// <param name="Wrapup">Call wrap up or disposition data..</param>
+        public ConversationChat(StateEnum? State = null, string Id = null, string RoomId = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string ScriptId = null, string PeerId = null, string AvatarImageUrl = null, JourneyContext JourneyContext = null, Wrapup Wrapup = null)
         {
             this.State = State;
             this.Id = Id;
@@ -340,6 +346,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PeerId = PeerId;
             this.AvatarImageUrl = AvatarImageUrl;
             this.JourneyContext = JourneyContext;
+            this.Wrapup = Wrapup;
             
         }
         
@@ -476,6 +483,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public JourneyContext JourneyContext { get; set; }
         
         
+        
+        /// <summary>
+        /// Call wrap up or disposition data.
+        /// </summary>
+        /// <value>Call wrap up or disposition data.</value>
+        [DataMember(Name="wrapup", EmitDefaultValue=false)]
+        public Wrapup Wrapup { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -502,6 +518,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
             sb.Append("  AvatarImageUrl: ").Append(AvatarImageUrl).Append("\n");
             sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
+            sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -622,6 +639,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.JourneyContext == other.JourneyContext ||
                     this.JourneyContext != null &&
                     this.JourneyContext.Equals(other.JourneyContext)
+                ) &&
+                (
+                    this.Wrapup == other.Wrapup ||
+                    this.Wrapup != null &&
+                    this.Wrapup.Equals(other.Wrapup)
                 );
         }
 
@@ -687,6 +709,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.JourneyContext != null)
                     hash = hash * 59 + this.JourneyContext.GetHashCode();
+                
+                if (this.Wrapup != null)
+                    hash = hash * 59 + this.Wrapup.GetHashCode();
                 
                 return hash;
             }

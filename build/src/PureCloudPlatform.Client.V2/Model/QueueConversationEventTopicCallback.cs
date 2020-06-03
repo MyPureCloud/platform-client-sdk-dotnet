@@ -294,6 +294,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -351,6 +354,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationEventTopicCallback" /> class.
@@ -367,6 +372,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallbackUserName">CallbackUserName.</param>
         /// <param name="ScriptId">ScriptId.</param>
         /// <param name="PeerId">PeerId.</param>
+        /// <param name="ExternalCampaign">ExternalCampaign.</param>
         /// <param name="SkipEnabled">SkipEnabled.</param>
         /// <param name="Provider">Provider.</param>
         /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
@@ -375,7 +381,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallbackScheduledTime">CallbackScheduledTime.</param>
         /// <param name="AutomatedCallbackConfigId">AutomatedCallbackConfigId.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationEventTopicCallback(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, QueueConversationEventTopicDialerPreview DialerPreview = null, QueueConversationEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, Object AdditionalProperties = null)
+        public QueueConversationEventTopicCallback(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, QueueConversationEventTopicDialerPreview DialerPreview = null, QueueConversationEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Id = Id;
@@ -389,6 +395,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CallbackUserName = CallbackUserName;
             this.ScriptId = ScriptId;
             this.PeerId = PeerId;
+            this.ExternalCampaign = ExternalCampaign;
             this.SkipEnabled = SkipEnabled;
             this.Provider = Provider;
             this.TimeoutSeconds = TimeoutSeconds;
@@ -481,6 +488,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets ExternalCampaign
+        /// </summary>
+        [DataMember(Name="externalCampaign", EmitDefaultValue=false)]
+        public bool? ExternalCampaign { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets SkipEnabled
         /// </summary>
         [DataMember(Name="skipEnabled", EmitDefaultValue=false)]
@@ -564,6 +579,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
+            sb.Append("  ExternalCampaign: ").Append(ExternalCampaign).Append("\n");
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
@@ -669,6 +685,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PeerId.Equals(other.PeerId)
                 ) &&
                 (
+                    this.ExternalCampaign == other.ExternalCampaign ||
+                    this.ExternalCampaign != null &&
+                    this.ExternalCampaign.Equals(other.ExternalCampaign)
+                ) &&
+                (
                     this.SkipEnabled == other.SkipEnabled ||
                     this.SkipEnabled != null &&
                     this.SkipEnabled.Equals(other.SkipEnabled)
@@ -757,6 +778,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
+                
+                if (this.ExternalCampaign != null)
+                    hash = hash * 59 + this.ExternalCampaign.GetHashCode();
                 
                 if (this.SkipEnabled != null)
                     hash = hash * 59 + this.SkipEnabled.GetHashCode();

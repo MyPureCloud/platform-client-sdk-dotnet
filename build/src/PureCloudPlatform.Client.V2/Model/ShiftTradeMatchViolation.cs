@@ -72,6 +72,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Initiatingshiftdoesnotexist,
             
             /// <summary>
+            /// Enum Initiatingshifthasexternalactivities for "InitiatingShiftHasExternalActivities"
+            /// </summary>
+            [EnumMember(Value = "InitiatingShiftHasExternalActivities")]
+            Initiatingshifthasexternalactivities,
+            
+            /// <summary>
             /// Enum Initiatingshiftoverlapsexisting for "InitiatingShiftOverlapsExisting"
             /// </summary>
             [EnumMember(Value = "InitiatingShiftOverlapsExisting")]
@@ -136,6 +142,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ReceivingShiftForOneSidedTrade")]
             Receivingshiftforonesidedtrade,
+            
+            /// <summary>
+            /// Enum Receivingshifthasexternalactivities for "ReceivingShiftHasExternalActivities"
+            /// </summary>
+            [EnumMember(Value = "ReceivingShiftHasExternalActivities")]
+            Receivingshifthasexternalactivities,
             
             /// <summary>
             /// Enum Receivingshiftmissingfortwosidedtrade for "ReceivingShiftMissingForTwoSidedTrade"

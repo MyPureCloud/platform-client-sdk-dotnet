@@ -106,6 +106,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Initiatingagentschedulenotfound,
             
             /// <summary>
+            /// Enum Initiatingagentshifthasexternalactivities for "InitiatingAgentShiftHasExternalActivities"
+            /// </summary>
+            [EnumMember(Value = "InitiatingAgentShiftHasExternalActivities")]
+            Initiatingagentshifthasexternalactivities,
+            
+            /// <summary>
             /// Enum Initiatingagentshiftnotfound for "InitiatingAgentShiftNotFound"
             /// </summary>
             [EnumMember(Value = "InitiatingAgentShiftNotFound")]
@@ -122,6 +128,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ReceivingAgentScheduleNotFound")]
             Receivingagentschedulenotfound,
+            
+            /// <summary>
+            /// Enum Receivingagentshifthasexternalactivities for "ReceivingAgentShiftHasExternalActivities"
+            /// </summary>
+            [EnumMember(Value = "ReceivingAgentShiftHasExternalActivities")]
+            Receivingagentshifthasexternalactivities,
             
             /// <summary>
             /// Enum Receivingagentshiftnotfound for "ReceivingAgentShiftNotFound"

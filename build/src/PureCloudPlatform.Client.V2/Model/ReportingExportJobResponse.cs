@@ -515,6 +515,47 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets Inner
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum InnerEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Sent for "Sent"
+            /// </summary>
+            [EnumMember(Value = "Sent")]
+            Sent,
+            
+            /// <summary>
+            /// Enum Pending for "Pending"
+            /// </summary>
+            [EnumMember(Value = "Pending")]
+            Pending,
+            
+            /// <summary>
+            /// Enum Failed for "Failed"
+            /// </summary>
+            [EnumMember(Value = "Failed")]
+            Failed
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -583,6 +624,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingExportJobResponse" /> class.
@@ -612,7 +657,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HasSplitFilters">Indicates if filters will be split in aggregate detail exports.</param>
         /// <param name="SelectedColumns">The list of ordered selected columns from the export view by the user.</param>
         /// <param name="HasCustomParticipantAttributes">Indicates if custom participant attributes will be exported.</param>
-        public ReportingExportJobResponse(string Name = null, StatusEnum? Status = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null)
+        /// <param name="RecipientEmails">The list of email recipients for the exports.</param>
+        /// <param name="EmailStatuses">The status of individual email addresses as a map.</param>
+        public ReportingExportJobResponse(string Name = null, StatusEnum? Status = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null, Dictionary<string, string> EmailStatuses = null)
         {
             this.Name = Name;
             this.Status = Status;
@@ -633,6 +680,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.HasSplitFilters = HasSplitFilters;
             this.SelectedColumns = SelectedColumns;
             this.HasCustomParticipantAttributes = HasCustomParticipantAttributes;
+            this.RecipientEmails = RecipientEmails;
+            this.EmailStatuses = EmailStatuses;
             
         }
         
@@ -790,6 +839,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The list of email recipients for the exports
+        /// </summary>
+        /// <value>The list of email recipients for the exports</value>
+        [DataMember(Name="recipientEmails", EmitDefaultValue=false)]
+        public List<string> RecipientEmails { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The status of individual email addresses as a map
+        /// </summary>
+        /// <value>The status of individual email addresses as a map</value>
+        [DataMember(Name="emailStatuses", EmitDefaultValue=false)]
+        public Dictionary<string, string> EmailStatuses { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -826,6 +893,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  HasSplitFilters: ").Append(HasSplitFilters).Append("\n");
             sb.Append("  SelectedColumns: ").Append(SelectedColumns).Append("\n");
             sb.Append("  HasCustomParticipantAttributes: ").Append(HasCustomParticipantAttributes).Append("\n");
+            sb.Append("  RecipientEmails: ").Append(RecipientEmails).Append("\n");
+            sb.Append("  EmailStatuses: ").Append(EmailStatuses).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -964,6 +1033,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HasCustomParticipantAttributes.Equals(other.HasCustomParticipantAttributes)
                 ) &&
                 (
+                    this.RecipientEmails == other.RecipientEmails ||
+                    this.RecipientEmails != null &&
+                    this.RecipientEmails.SequenceEqual(other.RecipientEmails)
+                ) &&
+                (
+                    this.EmailStatuses == other.EmailStatuses ||
+                    this.EmailStatuses != null &&
+                    this.EmailStatuses.SequenceEqual(other.EmailStatuses)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -1041,6 +1120,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.HasCustomParticipantAttributes != null)
                     hash = hash * 59 + this.HasCustomParticipantAttributes.GetHashCode();
+                
+                if (this.RecipientEmails != null)
+                    hash = hash * 59 + this.RecipientEmails.GetHashCode();
+                
+                if (this.EmailStatuses != null)
+                    hash = hash * 59 + this.EmailStatuses.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

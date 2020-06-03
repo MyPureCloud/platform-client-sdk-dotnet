@@ -24,6 +24,7 @@ title: ConversationChat
 | **PeerId** | **string** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
 | **AvatarImageUrl** | **string** | If available, the URI to the avatar image of this communication. | [optional] |
 | **JourneyContext** | [**JourneyContext**](JourneyContext.html) | A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context). | [optional] |
+| **Wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
 {: class="table table-striped"}
 
 

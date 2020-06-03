@@ -248,6 +248,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -295,6 +298,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SocialExpression" /> class.
@@ -316,7 +321,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Provider">The source provider for the social expression..</param>
         /// <param name="ScriptId">The UUID of the script to use..</param>
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
-        public SocialExpression(StateEnum? State = null, string Id = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string ScriptId = null, string PeerId = null)
+        /// <param name="Wrapup">Call wrap up or disposition data..</param>
+        public SocialExpression(StateEnum? State = null, string Id = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string ScriptId = null, string PeerId = null, Wrapup Wrapup = null)
         {
             this.State = State;
             this.Id = Id;
@@ -335,6 +341,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Provider = Provider;
             this.ScriptId = ScriptId;
             this.PeerId = PeerId;
+            this.Wrapup = Wrapup;
             
         }
         
@@ -478,6 +485,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string PeerId { get; set; }
         
         
+        
+        /// <summary>
+        /// Call wrap up or disposition data.
+        /// </summary>
+        /// <value>Call wrap up or disposition data.</value>
+        [DataMember(Name="wrapup", EmitDefaultValue=false)]
+        public Wrapup Wrapup { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -504,6 +520,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
+            sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -624,6 +641,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PeerId == other.PeerId ||
                     this.PeerId != null &&
                     this.PeerId.Equals(other.PeerId)
+                ) &&
+                (
+                    this.Wrapup == other.Wrapup ||
+                    this.Wrapup != null &&
+                    this.Wrapup.Equals(other.Wrapup)
                 );
         }
 
@@ -689,6 +711,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
+                
+                if (this.Wrapup != null)
+                    hash = hash * 59 + this.Wrapup.GetHashCode();
                 
                 return hash;
             }

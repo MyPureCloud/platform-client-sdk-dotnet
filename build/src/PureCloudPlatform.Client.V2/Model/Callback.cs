@@ -297,6 +297,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -361,6 +364,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Callback" /> class.
@@ -387,7 +392,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutomatedCallbackConfigId">The id of the config for automatically placing the callback (and handling the disposition). If null, the callback will not be placed automatically but routed to an agent as per normal..</param>
         /// <param name="Provider">The source provider for the callback..</param>
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
-        public Callback(StateEnum? State = null, string Id = null, List<Segment> Segments = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DialerPreview DialerPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, string Provider = null, string PeerId = null)
+        /// <param name="Wrapup">Call wrap up or disposition data..</param>
+        public Callback(StateEnum? State = null, string Id = null, List<Segment> Segments = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DialerPreview DialerPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, string Provider = null, string PeerId = null, Wrapup Wrapup = null)
         {
             this.State = State;
             this.Id = Id;
@@ -411,6 +417,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
             this.Provider = Provider;
             this.PeerId = PeerId;
+            this.Wrapup = Wrapup;
             
         }
         
@@ -592,6 +599,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string PeerId { get; set; }
         
         
+        
+        /// <summary>
+        /// Call wrap up or disposition data.
+        /// </summary>
+        /// <value>Call wrap up or disposition data.</value>
+        [DataMember(Name="wrapup", EmitDefaultValue=false)]
+        public Wrapup Wrapup { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -623,6 +639,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AutomatedCallbackConfigId: ").Append(AutomatedCallbackConfigId).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
+            sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -768,6 +785,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PeerId == other.PeerId ||
                     this.PeerId != null &&
                     this.PeerId.Equals(other.PeerId)
+                ) &&
+                (
+                    this.Wrapup == other.Wrapup ||
+                    this.Wrapup != null &&
+                    this.Wrapup.Equals(other.Wrapup)
                 );
         }
 
@@ -848,6 +870,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
+                
+                if (this.Wrapup != null)
+                    hash = hash * 59 + this.Wrapup.GetHashCode();
                 
                 return hash;
             }

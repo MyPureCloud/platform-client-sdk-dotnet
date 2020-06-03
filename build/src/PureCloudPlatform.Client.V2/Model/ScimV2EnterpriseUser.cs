@@ -35,6 +35,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2EnterpriseUser" /> class.
@@ -42,11 +47,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Division">The division that the user belongs to..</param>
         /// <param name="Department">The department that the user belongs to..</param>
         /// <param name="Manager">The user&#39;s manager..</param>
-        public ScimV2EnterpriseUser(string Division = null, string Department = null, Manager Manager = null)
+        /// <param name="EmployeeNumber">The users employee number..</param>
+        public ScimV2EnterpriseUser(string Division = null, string Department = null, Manager Manager = null, string EmployeeNumber = null)
         {
             this.Division = Division;
             this.Department = Department;
             this.Manager = Manager;
+            this.EmployeeNumber = EmployeeNumber;
             
         }
         
@@ -78,6 +85,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Manager Manager { get; set; }
         
         
+        
+        /// <summary>
+        /// The users employee number.
+        /// </summary>
+        /// <value>The users employee number.</value>
+        [DataMember(Name="employeeNumber", EmitDefaultValue=false)]
+        public string EmployeeNumber { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Department: ").Append(Department).Append("\n");
             sb.Append("  Manager: ").Append(Manager).Append("\n");
+            sb.Append("  EmployeeNumber: ").Append(EmployeeNumber).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -140,6 +157,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Manager == other.Manager ||
                     this.Manager != null &&
                     this.Manager.Equals(other.Manager)
+                ) &&
+                (
+                    this.EmployeeNumber == other.EmployeeNumber ||
+                    this.EmployeeNumber != null &&
+                    this.EmployeeNumber.Equals(other.EmployeeNumber)
                 );
         }
 
@@ -163,6 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Manager != null)
                     hash = hash * 59 + this.Manager.GetHashCode();
+                
+                if (this.EmployeeNumber != null)
+                    hash = hash * 59 + this.EmployeeNumber.GetHashCode();
                 
                 return hash;
             }

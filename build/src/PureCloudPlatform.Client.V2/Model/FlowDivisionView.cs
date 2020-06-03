@@ -135,11 +135,21 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
+        
+        
         
         
         
@@ -164,7 +174,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Type.</param>
         /// <param name="InputSchema">json schema describing the inputs for the flow.</param>
         /// <param name="OutputSchema">json schema describing the outputs for the flow.</param>
-        public FlowDivisionView(string Id = null, string Name = null, WritableDivision Division = null, TypeEnum? Type = null, JsonSchemaDocument InputSchema = null, JsonSchemaDocument OutputSchema = null)
+        /// <param name="PublishedVersion">published version information if there is a published version.</param>
+        /// <param name="DebugVersion">debug version information if there is a debug version.</param>
+        public FlowDivisionView(string Id = null, string Name = null, WritableDivision Division = null, TypeEnum? Type = null, JsonSchemaDocument InputSchema = null, JsonSchemaDocument OutputSchema = null, FlowVersion PublishedVersion = null, FlowVersion DebugVersion = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -172,6 +184,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Type = Type;
             this.InputSchema = InputSchema;
             this.OutputSchema = OutputSchema;
+            this.PublishedVersion = PublishedVersion;
+            this.DebugVersion = DebugVersion;
             
         }
         
@@ -225,6 +239,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// published version information if there is a published version
+        /// </summary>
+        /// <value>published version information if there is a published version</value>
+        [DataMember(Name="publishedVersion", EmitDefaultValue=false)]
+        public FlowVersion PublishedVersion { get; set; }
+        
+        
+        
+        /// <summary>
+        /// debug version information if there is a debug version
+        /// </summary>
+        /// <value>debug version information if there is a debug version</value>
+        [DataMember(Name="debugVersion", EmitDefaultValue=false)]
+        public FlowVersion DebugVersion { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -247,6 +279,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  InputSchema: ").Append(InputSchema).Append("\n");
             sb.Append("  OutputSchema: ").Append(OutputSchema).Append("\n");
+            sb.Append("  PublishedVersion: ").Append(PublishedVersion).Append("\n");
+            sb.Append("  DebugVersion: ").Append(DebugVersion).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -315,6 +349,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OutputSchema.Equals(other.OutputSchema)
                 ) &&
                 (
+                    this.PublishedVersion == other.PublishedVersion ||
+                    this.PublishedVersion != null &&
+                    this.PublishedVersion.Equals(other.PublishedVersion)
+                ) &&
+                (
+                    this.DebugVersion == other.DebugVersion ||
+                    this.DebugVersion != null &&
+                    this.DebugVersion.Equals(other.DebugVersion)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -350,6 +394,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.OutputSchema != null)
                     hash = hash * 59 + this.OutputSchema.GetHashCode();
+                
+                if (this.PublishedVersion != null)
+                    hash = hash * 59 + this.PublishedVersion.GetHashCode();
+                
+                if (this.DebugVersion != null)
+                    hash = hash * 59 + this.DebugVersion.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -24,6 +24,7 @@ title: SocialExpression
 | **Provider** | **string** | The source provider for the social expression. | [optional] |
 | **ScriptId** | **string** | The UUID of the script to use. | [optional] |
 | **PeerId** | **string** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
+| **Wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
 {: class="table table-striped"}
 
 

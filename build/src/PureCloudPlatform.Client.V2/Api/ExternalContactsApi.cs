@@ -63,6 +63,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Empty> DeleteExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId);
         
         /// <summary>
+        /// Delete a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns></returns>
+        void DeleteExternalcontactsContactsSchema (string schemaId);
+
+        /// <summary>
+        /// Delete a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteExternalcontactsContactsSchemaWithHttpInfo (string schemaId);
+        
+        /// <summary>
         /// Delete an external organization
         /// </summary>
         /// <remarks>
@@ -263,6 +285,94 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ContactListing> GetExternalcontactsContactsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
         
         /// <summary>
+        /// Get a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>DataSchema</returns>
+        DataSchema GetExternalcontactsContactsSchema (string schemaId);
+
+        /// <summary>
+        /// Get a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        ApiResponse<DataSchema> GetExternalcontactsContactsSchemaWithHttpInfo (string schemaId);
+        
+        /// <summary>
+        /// Get a specific version of a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>DataSchema</returns>
+        DataSchema GetExternalcontactsContactsSchemaVersion (string schemaId, string versionId);
+
+        /// <summary>
+        /// Get a specific version of a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        ApiResponse<DataSchema> GetExternalcontactsContactsSchemaVersionWithHttpInfo (string schemaId, string versionId);
+        
+        /// <summary>
+        /// Get all versions of an external contact&#39;s schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>DataSchema</returns>
+        DataSchema GetExternalcontactsContactsSchemaVersions (string schemaId);
+
+        /// <summary>
+        /// Get all versions of an external contact&#39;s schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        ApiResponse<DataSchema> GetExternalcontactsContactsSchemaVersionsWithHttpInfo (string schemaId);
+        
+        /// <summary>
+        /// Get a list of schemas.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>DataSchemaListing</returns>
+        DataSchemaListing GetExternalcontactsContactsSchemas ();
+
+        /// <summary>
+        /// Get a list of schemas.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of DataSchemaListing</returns>
+        ApiResponse<DataSchemaListing> GetExternalcontactsContactsSchemasWithHttpInfo ();
+        
+        /// <summary>
         /// Fetch an external organization
         /// </summary>
         /// <remarks>
@@ -441,6 +551,94 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ExternalOrganizationListing> GetExternalcontactsOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null);
         
         /// <summary>
+        /// Get a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>DataSchema</returns>
+        DataSchema GetExternalcontactsOrganizationsSchema (string schemaId);
+
+        /// <summary>
+        /// Get a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        ApiResponse<DataSchema> GetExternalcontactsOrganizationsSchemaWithHttpInfo (string schemaId);
+        
+        /// <summary>
+        /// Get a specific version of a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>DataSchema</returns>
+        DataSchema GetExternalcontactsOrganizationsSchemaVersion (string schemaId, string versionId);
+
+        /// <summary>
+        /// Get a specific version of a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        ApiResponse<DataSchema> GetExternalcontactsOrganizationsSchemaVersionWithHttpInfo (string schemaId, string versionId);
+        
+        /// <summary>
+        /// Get all versions of an external organization&#39;s schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>DataSchema</returns>
+        DataSchema GetExternalcontactsOrganizationsSchemaVersions (string schemaId);
+
+        /// <summary>
+        /// Get all versions of an external organization&#39;s schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        ApiResponse<DataSchema> GetExternalcontactsOrganizationsSchemaVersionsWithHttpInfo (string schemaId);
+        
+        /// <summary>
+        /// Get a list of schemas.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>DataSchemaListing</returns>
+        DataSchemaListing GetExternalcontactsOrganizationsSchemas ();
+
+        /// <summary>
+        /// Get a list of schemas.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of DataSchemaListing</returns>
+        ApiResponse<DataSchemaListing> GetExternalcontactsOrganizationsSchemasWithHttpInfo ();
+        
+        /// <summary>
         /// Fetch a relationship
         /// </summary>
         /// <remarks>
@@ -535,6 +733,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ExternalContact> PostExternalcontactsContactsWithHttpInfo (ExternalContact body);
         
         /// <summary>
+        /// Create a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>DataSchema</returns>
+        DataSchema PostExternalcontactsContactsSchemas (DataSchema body);
+
+        /// <summary>
+        /// Create a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        ApiResponse<DataSchema> PostExternalcontactsContactsSchemasWithHttpInfo (DataSchema body);
+        
+        /// <summary>
         /// Create a note for an external organization
         /// </summary>
         /// <remarks>
@@ -579,6 +799,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExternalOrganization</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
         ApiResponse<ExternalOrganization> PostExternalcontactsOrganizationsWithHttpInfo (ExternalOrganization body);
+        
+        /// <summary>
+        /// Create a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>DataSchema</returns>
+        DataSchema PostExternalcontactsOrganizationsSchemas (DataSchema body);
+
+        /// <summary>
+        /// Create a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        ApiResponse<DataSchema> PostExternalcontactsOrganizationsSchemasWithHttpInfo (DataSchema body);
         
         /// <summary>
         /// Create a relationship
@@ -651,6 +893,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Note</param>
         /// <returns>ApiResponse of Note</returns>
         ApiResponse<Note> PutExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId, Note body);
+        
+        /// <summary>
+        /// Update a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>DataSchema</returns>
+        DataSchema PutExternalcontactsContactsSchema (string schemaId, DataSchema body);
+
+        /// <summary>
+        /// Update a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        ApiResponse<DataSchema> PutExternalcontactsContactsSchemaWithHttpInfo (string schemaId, DataSchema body);
         
         /// <summary>
         /// Associate an external contact with a conversation
@@ -751,6 +1017,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ExternalOrganizationTrustorLink> PutExternalcontactsOrganizationTrustorTrustorIdWithHttpInfo (string externalOrganizationId, string trustorId);
         
         /// <summary>
+        /// Update a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>DataSchema</returns>
+        DataSchema PutExternalcontactsOrganizationsSchema (string schemaId, DataSchema body);
+
+        /// <summary>
+        /// Update a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        ApiResponse<DataSchema> PutExternalcontactsOrganizationsSchemaWithHttpInfo (string schemaId, DataSchema body);
+        
+        /// <summary>
         /// Update a relationship
         /// </summary>
         /// <remarks>
@@ -823,6 +1113,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of ApiResponse (Empty)</returns>
         System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId);
+        
+        /// <summary>
+        /// Delete a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteExternalcontactsContactsSchemaAsync (string schemaId);
+
+        /// <summary>
+        /// Delete a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactsSchemaAsyncWithHttpInfo (string schemaId);
         
         /// <summary>
         /// Delete an external organization
@@ -1025,6 +1337,94 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetExternalcontactsContactsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
         
         /// <summary>
+        /// Get a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of DataSchema</returns>
+        System.Threading.Tasks.Task<DataSchema> GetExternalcontactsContactsSchemaAsync (string schemaId);
+
+        /// <summary>
+        /// Get a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsContactsSchemaAsyncWithHttpInfo (string schemaId);
+        
+        /// <summary>
+        /// Get a specific version of a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>Task of DataSchema</returns>
+        System.Threading.Tasks.Task<DataSchema> GetExternalcontactsContactsSchemaVersionAsync (string schemaId, string versionId);
+
+        /// <summary>
+        /// Get a specific version of a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsContactsSchemaVersionAsyncWithHttpInfo (string schemaId, string versionId);
+        
+        /// <summary>
+        /// Get all versions of an external contact&#39;s schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of DataSchema</returns>
+        System.Threading.Tasks.Task<DataSchema> GetExternalcontactsContactsSchemaVersionsAsync (string schemaId);
+
+        /// <summary>
+        /// Get all versions of an external contact&#39;s schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsContactsSchemaVersionsAsyncWithHttpInfo (string schemaId);
+        
+        /// <summary>
+        /// Get a list of schemas.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of DataSchemaListing</returns>
+        System.Threading.Tasks.Task<DataSchemaListing> GetExternalcontactsContactsSchemasAsync ();
+
+        /// <summary>
+        /// Get a list of schemas.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsContactsSchemasAsyncWithHttpInfo ();
+        
+        /// <summary>
         /// Fetch an external organization
         /// </summary>
         /// <remarks>
@@ -1203,6 +1603,94 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetExternalcontactsOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null);
         
         /// <summary>
+        /// Get a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of DataSchema</returns>
+        System.Threading.Tasks.Task<DataSchema> GetExternalcontactsOrganizationsSchemaAsync (string schemaId);
+
+        /// <summary>
+        /// Get a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsOrganizationsSchemaAsyncWithHttpInfo (string schemaId);
+        
+        /// <summary>
+        /// Get a specific version of a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>Task of DataSchema</returns>
+        System.Threading.Tasks.Task<DataSchema> GetExternalcontactsOrganizationsSchemaVersionAsync (string schemaId, string versionId);
+
+        /// <summary>
+        /// Get a specific version of a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsOrganizationsSchemaVersionAsyncWithHttpInfo (string schemaId, string versionId);
+        
+        /// <summary>
+        /// Get all versions of an external organization&#39;s schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of DataSchema</returns>
+        System.Threading.Tasks.Task<DataSchema> GetExternalcontactsOrganizationsSchemaVersionsAsync (string schemaId);
+
+        /// <summary>
+        /// Get all versions of an external organization&#39;s schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsOrganizationsSchemaVersionsAsyncWithHttpInfo (string schemaId);
+        
+        /// <summary>
+        /// Get a list of schemas.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of DataSchemaListing</returns>
+        System.Threading.Tasks.Task<DataSchemaListing> GetExternalcontactsOrganizationsSchemasAsync ();
+
+        /// <summary>
+        /// Get a list of schemas.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsOrganizationsSchemasAsyncWithHttpInfo ();
+        
+        /// <summary>
         /// Fetch a relationship
         /// </summary>
         /// <remarks>
@@ -1297,6 +1785,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsContactsAsyncWithHttpInfo (ExternalContact body);
         
         /// <summary>
+        /// Create a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>Task of DataSchema</returns>
+        System.Threading.Tasks.Task<DataSchema> PostExternalcontactsContactsSchemasAsync (DataSchema body);
+
+        /// <summary>
+        /// Create a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostExternalcontactsContactsSchemasAsyncWithHttpInfo (DataSchema body);
+        
+        /// <summary>
         /// Create a note for an external organization
         /// </summary>
         /// <remarks>
@@ -1341,6 +1851,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PostExternalcontactsOrganizationsAsyncWithHttpInfo (ExternalOrganization body);
+        
+        /// <summary>
+        /// Create a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>Task of DataSchema</returns>
+        System.Threading.Tasks.Task<DataSchema> PostExternalcontactsOrganizationsSchemasAsync (DataSchema body);
+
+        /// <summary>
+        /// Create a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostExternalcontactsOrganizationsSchemasAsyncWithHttpInfo (DataSchema body);
         
         /// <summary>
         /// Create a relationship
@@ -1413,6 +1945,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Note</param>
         /// <returns>Task of ApiResponse (Note)</returns>
         System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId, Note body);
+        
+        /// <summary>
+        /// Update a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>Task of DataSchema</returns>
+        System.Threading.Tasks.Task<DataSchema> PutExternalcontactsContactsSchemaAsync (string schemaId, DataSchema body);
+
+        /// <summary>
+        /// Update a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutExternalcontactsContactsSchemaAsyncWithHttpInfo (string schemaId, DataSchema body);
         
         /// <summary>
         /// Associate an external contact with a conversation
@@ -1511,6 +2067,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorId">Trustor ID</param>
         /// <returns>Task of ApiResponse (ExternalOrganizationTrustorLink)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationTrustorLink>> PutExternalcontactsOrganizationTrustorTrustorIdAsyncWithHttpInfo (string externalOrganizationId, string trustorId);
+        
+        /// <summary>
+        /// Update a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>Task of DataSchema</returns>
+        System.Threading.Tasks.Task<DataSchema> PutExternalcontactsOrganizationsSchemaAsync (string schemaId, DataSchema body);
+
+        /// <summary>
+        /// Update a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutExternalcontactsOrganizationsSchemaAsyncWithHttpInfo (string schemaId, DataSchema body);
         
         /// <summary>
         /// Update a relationship
@@ -2021,6 +2601,197 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
                 (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns></returns>
+        public void DeleteExternalcontactsContactsSchema (string schemaId)
+        {
+             DeleteExternalcontactsContactsSchemaWithHttpInfo(schemaId);
+        }
+
+        /// <summary>
+        /// Delete a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteExternalcontactsContactsSchemaWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->DeleteExternalcontactsContactsSchema");
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContactsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContactsSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteExternalcontactsContactsSchemaAsync (string schemaId)
+        {
+             await DeleteExternalcontactsContactsSchemaAsyncWithHttpInfo(schemaId);
+
+        }
+
+        /// <summary>
+        /// Delete a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactsSchemaAsyncWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->DeleteExternalcontactsContactsSchema");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContactsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContactsSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -3649,6 +4420,778 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>DataSchema</returns>
+        public DataSchema GetExternalcontactsContactsSchema (string schemaId)
+        {
+             ApiResponse<DataSchema> localVarResponse = GetExternalcontactsContactsSchemaWithHttpInfo(schemaId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        public ApiResponse< DataSchema > GetExternalcontactsContactsSchemaWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsContactsSchema");
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of DataSchema</returns>
+        public async System.Threading.Tasks.Task<DataSchema> GetExternalcontactsContactsSchemaAsync (string schemaId)
+        {
+             ApiResponse<DataSchema> localVarResponse = await GetExternalcontactsContactsSchemaAsyncWithHttpInfo(schemaId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsContactsSchemaAsyncWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsContactsSchema");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a specific version of a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>DataSchema</returns>
+        public DataSchema GetExternalcontactsContactsSchemaVersion (string schemaId, string versionId)
+        {
+             ApiResponse<DataSchema> localVarResponse = GetExternalcontactsContactsSchemaVersionWithHttpInfo(schemaId, versionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a specific version of a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        public ApiResponse< DataSchema > GetExternalcontactsContactsSchemaVersionWithHttpInfo (string schemaId, string versionId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsContactsSchemaVersion");
+            // verify the required parameter 'versionId' is set
+            if (versionId == null)
+                throw new ApiException(400, "Missing required parameter 'versionId' when calling ExternalContactsApi->GetExternalcontactsContactsSchemaVersion");
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}/versions/{versionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+            if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemaVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemaVersion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a specific version of a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>Task of DataSchema</returns>
+        public async System.Threading.Tasks.Task<DataSchema> GetExternalcontactsContactsSchemaVersionAsync (string schemaId, string versionId)
+        {
+             ApiResponse<DataSchema> localVarResponse = await GetExternalcontactsContactsSchemaVersionAsyncWithHttpInfo(schemaId, versionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a specific version of a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsContactsSchemaVersionAsyncWithHttpInfo (string schemaId, string versionId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsContactsSchemaVersion");
+            
+            // verify the required parameter 'versionId' is set
+            if (versionId == null)
+                throw new ApiException(400, "Missing required parameter 'versionId' when calling ExternalContactsApi->GetExternalcontactsContactsSchemaVersion");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}/versions/{versionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+            if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemaVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemaVersion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get all versions of an external contact&#39;s schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>DataSchema</returns>
+        public DataSchema GetExternalcontactsContactsSchemaVersions (string schemaId)
+        {
+             ApiResponse<DataSchema> localVarResponse = GetExternalcontactsContactsSchemaVersionsWithHttpInfo(schemaId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all versions of an external contact&#39;s schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        public ApiResponse< DataSchema > GetExternalcontactsContactsSchemaVersionsWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsContactsSchemaVersions");
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}/versions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemaVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemaVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get all versions of an external contact&#39;s schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of DataSchema</returns>
+        public async System.Threading.Tasks.Task<DataSchema> GetExternalcontactsContactsSchemaVersionsAsync (string schemaId)
+        {
+             ApiResponse<DataSchema> localVarResponse = await GetExternalcontactsContactsSchemaVersionsAsyncWithHttpInfo(schemaId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all versions of an external contact&#39;s schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsContactsSchemaVersionsAsyncWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsContactsSchemaVersions");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}/versions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemaVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemaVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a list of schemas. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>DataSchemaListing</returns>
+        public DataSchemaListing GetExternalcontactsContactsSchemas ()
+        {
+             ApiResponse<DataSchemaListing> localVarResponse = GetExternalcontactsContactsSchemasWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of schemas. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of DataSchemaListing</returns>
+        public ApiResponse< DataSchemaListing > GetExternalcontactsContactsSchemasWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/schemas";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchemaListing>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchemaListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a list of schemas. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of DataSchemaListing</returns>
+        public async System.Threading.Tasks.Task<DataSchemaListing> GetExternalcontactsContactsSchemasAsync ()
+        {
+             ApiResponse<DataSchemaListing> localVarResponse = await GetExternalcontactsContactsSchemasAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of schemas. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsContactsSchemasAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/schemas";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchemaListing>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchemaListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Fetch an external organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4945,6 +6488,778 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>DataSchema</returns>
+        public DataSchema GetExternalcontactsOrganizationsSchema (string schemaId)
+        {
+             ApiResponse<DataSchema> localVarResponse = GetExternalcontactsOrganizationsSchemaWithHttpInfo(schemaId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        public ApiResponse< DataSchema > GetExternalcontactsOrganizationsSchemaWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsOrganizationsSchema");
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/schemas/{schemaId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of DataSchema</returns>
+        public async System.Threading.Tasks.Task<DataSchema> GetExternalcontactsOrganizationsSchemaAsync (string schemaId)
+        {
+             ApiResponse<DataSchema> localVarResponse = await GetExternalcontactsOrganizationsSchemaAsyncWithHttpInfo(schemaId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsOrganizationsSchemaAsyncWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsOrganizationsSchema");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/schemas/{schemaId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a specific version of a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>DataSchema</returns>
+        public DataSchema GetExternalcontactsOrganizationsSchemaVersion (string schemaId, string versionId)
+        {
+             ApiResponse<DataSchema> localVarResponse = GetExternalcontactsOrganizationsSchemaVersionWithHttpInfo(schemaId, versionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a specific version of a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        public ApiResponse< DataSchema > GetExternalcontactsOrganizationsSchemaVersionWithHttpInfo (string schemaId, string versionId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsOrganizationsSchemaVersion");
+            // verify the required parameter 'versionId' is set
+            if (versionId == null)
+                throw new ApiException(400, "Missing required parameter 'versionId' when calling ExternalContactsApi->GetExternalcontactsOrganizationsSchemaVersion");
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/schemas/{schemaId}/versions/{versionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+            if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemaVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemaVersion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a specific version of a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>Task of DataSchema</returns>
+        public async System.Threading.Tasks.Task<DataSchema> GetExternalcontactsOrganizationsSchemaVersionAsync (string schemaId, string versionId)
+        {
+             ApiResponse<DataSchema> localVarResponse = await GetExternalcontactsOrganizationsSchemaVersionAsyncWithHttpInfo(schemaId, versionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a specific version of a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsOrganizationsSchemaVersionAsyncWithHttpInfo (string schemaId, string versionId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsOrganizationsSchemaVersion");
+            
+            // verify the required parameter 'versionId' is set
+            if (versionId == null)
+                throw new ApiException(400, "Missing required parameter 'versionId' when calling ExternalContactsApi->GetExternalcontactsOrganizationsSchemaVersion");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/schemas/{schemaId}/versions/{versionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+            if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemaVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemaVersion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get all versions of an external organization&#39;s schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>DataSchema</returns>
+        public DataSchema GetExternalcontactsOrganizationsSchemaVersions (string schemaId)
+        {
+             ApiResponse<DataSchema> localVarResponse = GetExternalcontactsOrganizationsSchemaVersionsWithHttpInfo(schemaId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all versions of an external organization&#39;s schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        public ApiResponse< DataSchema > GetExternalcontactsOrganizationsSchemaVersionsWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsOrganizationsSchemaVersions");
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/schemas/{schemaId}/versions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemaVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemaVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get all versions of an external organization&#39;s schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of DataSchema</returns>
+        public async System.Threading.Tasks.Task<DataSchema> GetExternalcontactsOrganizationsSchemaVersionsAsync (string schemaId)
+        {
+             ApiResponse<DataSchema> localVarResponse = await GetExternalcontactsOrganizationsSchemaVersionsAsyncWithHttpInfo(schemaId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all versions of an external organization&#39;s schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsOrganizationsSchemaVersionsAsyncWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsOrganizationsSchemaVersions");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/schemas/{schemaId}/versions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemaVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemaVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a list of schemas. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>DataSchemaListing</returns>
+        public DataSchemaListing GetExternalcontactsOrganizationsSchemas ()
+        {
+             ApiResponse<DataSchemaListing> localVarResponse = GetExternalcontactsOrganizationsSchemasWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of schemas. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of DataSchemaListing</returns>
+        public ApiResponse< DataSchemaListing > GetExternalcontactsOrganizationsSchemasWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/schemas";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchemaListing>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchemaListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a list of schemas. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of DataSchemaListing</returns>
+        public async System.Threading.Tasks.Task<DataSchemaListing> GetExternalcontactsOrganizationsSchemasAsync ()
+        {
+             ApiResponse<DataSchemaListing> localVarResponse = await GetExternalcontactsOrganizationsSchemasAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of schemas. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsOrganizationsSchemasAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/schemas";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchemaListing>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchemaListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Fetch a relationship 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5758,6 +8073,207 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Create a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>DataSchema</returns>
+        public DataSchema PostExternalcontactsContactsSchemas (DataSchema body)
+        {
+             ApiResponse<DataSchema> localVarResponse = PostExternalcontactsContactsSchemasWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        public ApiResponse< DataSchema > PostExternalcontactsContactsSchemasWithHttpInfo (DataSchema body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsContactsSchemas");
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/schemas";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContactsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContactsSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Create a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>Task of DataSchema</returns>
+        public async System.Threading.Tasks.Task<DataSchema> PostExternalcontactsContactsSchemasAsync (DataSchema body)
+        {
+             ApiResponse<DataSchema> localVarResponse = await PostExternalcontactsContactsSchemasAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostExternalcontactsContactsSchemasAsyncWithHttpInfo (DataSchema body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsContactsSchemas");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/schemas";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContactsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContactsSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Create a note for an external organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6166,6 +8682,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ExternalOrganization>(localVarStatusCode,
                 localVarHeaders,
                 (ExternalOrganization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalOrganization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Create a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>DataSchema</returns>
+        public DataSchema PostExternalcontactsOrganizationsSchemas (DataSchema body)
+        {
+             ApiResponse<DataSchema> localVarResponse = PostExternalcontactsOrganizationsSchemasWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        public ApiResponse< DataSchema > PostExternalcontactsOrganizationsSchemasWithHttpInfo (DataSchema body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsOrganizationsSchemas");
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/schemas";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsOrganizationsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsOrganizationsSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Create a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>Task of DataSchema</returns>
+        public async System.Threading.Tasks.Task<DataSchema> PostExternalcontactsOrganizationsSchemasAsync (DataSchema body)
+        {
+             ApiResponse<DataSchema> localVarResponse = await PostExternalcontactsOrganizationsSchemasAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostExternalcontactsOrganizationsSchemasAsyncWithHttpInfo (DataSchema body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsOrganizationsSchemas");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/schemas";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsOrganizationsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsOrganizationsSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6808,6 +9525,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Note>(localVarStatusCode,
                 localVarHeaders,
                 (Note) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Note)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>DataSchema</returns>
+        public DataSchema PutExternalcontactsContactsSchema (string schemaId, DataSchema body)
+        {
+             ApiResponse<DataSchema> localVarResponse = PutExternalcontactsContactsSchemaWithHttpInfo(schemaId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        public ApiResponse< DataSchema > PutExternalcontactsContactsSchemaWithHttpInfo (string schemaId, DataSchema body)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->PutExternalcontactsContactsSchema");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsContactsSchema");
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsContactsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsContactsSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>Task of DataSchema</returns>
+        public async System.Threading.Tasks.Task<DataSchema> PutExternalcontactsContactsSchemaAsync (string schemaId, DataSchema body)
+        {
+             ApiResponse<DataSchema> localVarResponse = await PutExternalcontactsContactsSchemaAsyncWithHttpInfo(schemaId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutExternalcontactsContactsSchemaAsyncWithHttpInfo (string schemaId, DataSchema body)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->PutExternalcontactsContactsSchema");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsContactsSchema");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsContactsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsContactsSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7667,6 +10598,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ExternalOrganizationTrustorLink>(localVarStatusCode,
                 localVarHeaders,
                 (ExternalOrganizationTrustorLink) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalOrganizationTrustorLink)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>DataSchema</returns>
+        public DataSchema PutExternalcontactsOrganizationsSchema (string schemaId, DataSchema body)
+        {
+             ApiResponse<DataSchema> localVarResponse = PutExternalcontactsOrganizationsSchemaWithHttpInfo(schemaId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        public ApiResponse< DataSchema > PutExternalcontactsOrganizationsSchemaWithHttpInfo (string schemaId, DataSchema body)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->PutExternalcontactsOrganizationsSchema");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsOrganizationsSchema");
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/schemas/{schemaId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsOrganizationsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsOrganizationsSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>Task of DataSchema</returns>
+        public async System.Threading.Tasks.Task<DataSchema> PutExternalcontactsOrganizationsSchemaAsync (string schemaId, DataSchema body)
+        {
+             ApiResponse<DataSchema> localVarResponse = await PutExternalcontactsOrganizationsSchemaAsyncWithHttpInfo(schemaId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a schema 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutExternalcontactsOrganizationsSchemaAsyncWithHttpInfo (string schemaId, DataSchema body)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->PutExternalcontactsOrganizationsSchema");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsOrganizationsSchema");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/schemas/{schemaId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsOrganizationsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsOrganizationsSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

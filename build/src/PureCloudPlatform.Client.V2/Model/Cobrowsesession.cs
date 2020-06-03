@@ -236,6 +236,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -253,6 +256,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
         
         
         
@@ -298,7 +303,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Provider">The source provider for the co-browse session..</param>
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
         /// <param name="Segments">The time line of the participant&#39;s call, divided into activity segments..</param>
-        public Cobrowsesession(StateEnum? State = null, string Id = null, DisconnectTypeEnum? DisconnectType = null, Address Self = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, DateTime? ProviderEventTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string PeerId = null, List<Segment> Segments = null)
+        /// <param name="Wrapup">Call wrap up or disposition data..</param>
+        public Cobrowsesession(StateEnum? State = null, string Id = null, DisconnectTypeEnum? DisconnectType = null, Address Self = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, DateTime? ProviderEventTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string PeerId = null, List<Segment> Segments = null, Wrapup Wrapup = null)
         {
             this.State = State;
             this.Id = Id;
@@ -315,6 +321,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Provider = Provider;
             this.PeerId = PeerId;
             this.Segments = Segments;
+            this.Wrapup = Wrapup;
             
         }
         
@@ -440,6 +447,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<Segment> Segments { get; set; }
         
         
+        
+        /// <summary>
+        /// Call wrap up or disposition data.
+        /// </summary>
+        /// <value>Call wrap up or disposition data.</value>
+        [DataMember(Name="wrapup", EmitDefaultValue=false)]
+        public Wrapup Wrapup { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -464,6 +480,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
             sb.Append("  Segments: ").Append(Segments).Append("\n");
+            sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -574,6 +591,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Segments == other.Segments ||
                     this.Segments != null &&
                     this.Segments.SequenceEqual(other.Segments)
+                ) &&
+                (
+                    this.Wrapup == other.Wrapup ||
+                    this.Wrapup != null &&
+                    this.Wrapup.Equals(other.Wrapup)
                 );
         }
 
@@ -633,6 +655,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Segments != null)
                     hash = hash * 59 + this.Segments.GetHashCode();
+                
+                if (this.Wrapup != null)
+                    hash = hash * 59 + this.Wrapup.GetHashCode();
                 
                 return hash;
             }

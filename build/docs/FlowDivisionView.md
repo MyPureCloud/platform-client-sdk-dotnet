@@ -13,6 +13,8 @@ title: FlowDivisionView
 | **Type** | **string** |  | [optional] |
 | **InputSchema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) | json schema describing the inputs for the flow | [optional] |
 | **OutputSchema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) | json schema describing the outputs for the flow | [optional] |
+| **PublishedVersion** | [**FlowVersion**](FlowVersion.html) | published version information if there is a published version | [optional] |
+| **DebugVersion** | [**FlowVersion**](FlowVersion.html) | debug version information if there is a debug version | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

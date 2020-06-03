@@ -316,6 +316,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -385,6 +388,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Message" /> class.
@@ -410,7 +415,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ToAddress">Address and name data for a call endpoint..</param>
         /// <param name="FromAddress">Address and name data for a call endpoint..</param>
         /// <param name="Messages">The messages sent on this communication channel..</param>
-        public Message(StateEnum? State = null, string Id = null, bool? Held = null, List<Segment> Segments = null, DirectionEnum? Direction = null, string RecordingId = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ScriptId = null, string PeerId = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null)
+        /// <param name="Wrapup">Call wrap up or disposition data..</param>
+        public Message(StateEnum? State = null, string Id = null, bool? Held = null, List<Segment> Segments = null, DirectionEnum? Direction = null, string RecordingId = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ScriptId = null, string PeerId = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, Wrapup Wrapup = null)
         {
             this.State = State;
             this.Id = Id;
@@ -433,6 +439,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ToAddress = ToAddress;
             this.FromAddress = FromAddress;
             this.Messages = Messages;
+            this.Wrapup = Wrapup;
             
         }
         
@@ -597,6 +604,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<MessageDetails> Messages { get; set; }
         
         
+        
+        /// <summary>
+        /// Call wrap up or disposition data.
+        /// </summary>
+        /// <value>Call wrap up or disposition data.</value>
+        [DataMember(Name="wrapup", EmitDefaultValue=false)]
+        public Wrapup Wrapup { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -627,6 +643,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ToAddress: ").Append(ToAddress).Append("\n");
             sb.Append("  FromAddress: ").Append(FromAddress).Append("\n");
             sb.Append("  Messages: ").Append(Messages).Append("\n");
+            sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -767,6 +784,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Messages == other.Messages ||
                     this.Messages != null &&
                     this.Messages.SequenceEqual(other.Messages)
+                ) &&
+                (
+                    this.Wrapup == other.Wrapup ||
+                    this.Wrapup != null &&
+                    this.Wrapup.Equals(other.Wrapup)
                 );
         }
 
@@ -844,6 +866,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Messages != null)
                     hash = hash * 59 + this.Messages.GetHashCode();
+                
+                if (this.Wrapup != null)
+                    hash = hash * 59 + this.Wrapup.GetHashCode();
                 
                 return hash;
             }

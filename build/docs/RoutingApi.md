@@ -14,6 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteRoutingQueueWrapupcode**](RoutingApi.html#deleteroutingqueuewrapupcode) | **DELETE** /api/v2/routing/queues/{queueId}/wrapupcodes/{codeId} | Delete a wrap-up code from a queue |
 | [**DeleteRoutingSettings**](RoutingApi.html#deleteroutingsettings) | **DELETE** /api/v2/routing/settings | Delete an organization&#39;s routing settings |
 | [**DeleteRoutingSkill**](RoutingApi.html#deleteroutingskill) | **DELETE** /api/v2/routing/skills/{skillId} | Delete Routing Skill |
+| [**DeleteRoutingSmsAddress**](RoutingApi.html#deleteroutingsmsaddress) | **DELETE** /api/v2/routing/sms/addresses/{addressId} | Delete an Address by Id for SMS |
 | [**DeleteRoutingSmsPhonenumber**](RoutingApi.html#deleteroutingsmsphonenumber) | **DELETE** /api/v2/routing/sms/phonenumbers/{addressId} | Delete a phone number provisioned for SMS. |
 | [**DeleteRoutingUserUtilization**](RoutingApi.html#deleteroutinguserutilization) | **DELETE** /api/v2/routing/users/{userId}/utilization | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
 | [**DeleteRoutingUtilization**](RoutingApi.html#deleteroutingutilization) | **DELETE** /api/v2/routing/utilization | Delete the organization-wide max utilization settings and revert to the system default. |
@@ -507,6 +508,66 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **skillId** | **string**| Skill ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteroutingsmsaddress"></a>
+
+## void DeleteRoutingSmsAddress (string addressId)
+
+
+
+Delete an Address by Id for SMS
+
+
+
+Requires ALL permissions: 
+
+* sms:phoneNumber:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteRoutingSmsAddressExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RoutingApi();
+            var addressId = addressId_example;  // string | Address ID
+
+            try
+            { 
+                // Delete an Address by Id for SMS
+                apiInstance.DeleteRoutingSmsAddress(addressId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.DeleteRoutingSmsAddress: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **addressId** | **string**| Address ID |  |
 {: class="table table-striped"}
 
 ### Return type

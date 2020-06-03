@@ -527,7 +527,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StatusCode">The current status of the Edge..</param>
         /// <param name="EdgeGroup">EdgeGroup.</param>
         /// <param name="Site">The Site to which the Edge is assigned..</param>
-        /// <param name="SoftwareStatus">SoftwareStatus.</param>
+        /// <param name="SoftwareStatus">Details about an in-progress or recently in-progress Edge software upgrade. This node appears only if a software upgrade was recently initiated for this Edge..</param>
         /// <param name="OnlineStatus">OnlineStatus.</param>
         /// <param name="SerialNumber">SerialNumber.</param>
         /// <param name="PhysicalEdge">PhysicalEdge.</param>
@@ -813,8 +813,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets SoftwareStatus
+        /// Details about an in-progress or recently in-progress Edge software upgrade. This node appears only if a software upgrade was recently initiated for this Edge.
         /// </summary>
+        /// <value>Details about an in-progress or recently in-progress Edge software upgrade. This node appears only if a software upgrade was recently initiated for this Edge.</value>
         [DataMember(Name="softwareStatus", EmitDefaultValue=false)]
         public DomainEdgeSoftwareUpdateDto SoftwareStatus { get; set; }
         

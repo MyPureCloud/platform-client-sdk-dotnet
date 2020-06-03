@@ -32,6 +32,7 @@ title: CallBasic
 | **UuiData** | **string** | User to User Information (UUI) data managed by SIP session application. | [optional] |
 | **Self** | [**Address**](Address.html) | Address and name data for a call endpoint. | [optional] |
 | **Other** | [**Address**](Address.html) | Address and name data for a call endpoint. | [optional] |
+| **Wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
 {: class="table table-striped"}
 
 

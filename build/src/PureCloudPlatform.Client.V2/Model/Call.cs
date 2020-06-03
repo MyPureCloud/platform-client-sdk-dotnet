@@ -352,6 +352,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -429,6 +432,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Call" /> class.
@@ -458,7 +463,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UuiData">User to User Information (UUI) data managed by SIP session application..</param>
         /// <param name="Self">Address and name data for a call endpoint..</param>
         /// <param name="Other">Address and name data for a call endpoint..</param>
-        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null, Address Self = null, Address Other = null)
+        /// <param name="Wrapup">Call wrap up or disposition data..</param>
+        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null, Address Self = null, Address Other = null, Wrapup Wrapup = null)
         {
             this.State = State;
             this.Id = Id;
@@ -485,6 +491,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.UuiData = UuiData;
             this.Self = Self;
             this.Other = Other;
+            this.Wrapup = Wrapup;
             
         }
         
@@ -685,6 +692,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Address Other { get; set; }
         
         
+        
+        /// <summary>
+        /// Call wrap up or disposition data.
+        /// </summary>
+        /// <value>Call wrap up or disposition data.</value>
+        [DataMember(Name="wrapup", EmitDefaultValue=false)]
+        public Wrapup Wrapup { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -719,6 +735,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UuiData: ").Append(UuiData).Append("\n");
             sb.Append("  Self: ").Append(Self).Append("\n");
             sb.Append("  Other: ").Append(Other).Append("\n");
+            sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -879,6 +896,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Other == other.Other ||
                     this.Other != null &&
                     this.Other.Equals(other.Other)
+                ) &&
+                (
+                    this.Wrapup == other.Wrapup ||
+                    this.Wrapup != null &&
+                    this.Wrapup.Equals(other.Wrapup)
                 );
         }
 
@@ -968,6 +990,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Other != null)
                     hash = hash * 59 + this.Other.GetHashCode();
+                
+                if (this.Wrapup != null)
+                    hash = hash * 59 + this.Wrapup.GetHashCode();
                 
                 return hash;
             }

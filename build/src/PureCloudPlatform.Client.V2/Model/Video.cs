@@ -242,6 +242,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -285,6 +288,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Video" /> class.
@@ -304,7 +309,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
         /// <param name="Msids">List of media stream ids.</param>
         /// <param name="Self">Address and name data for a call endpoint..</param>
-        public Video(StateEnum? State = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string PeerId = null, List<string> Msids = null, Address Self = null)
+        /// <param name="Wrapup">Call wrap up or disposition data..</param>
+        public Video(StateEnum? State = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string PeerId = null, List<string> Msids = null, Address Self = null, Wrapup Wrapup = null)
         {
             this.State = State;
             this.Id = Id;
@@ -321,6 +327,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PeerId = PeerId;
             this.Msids = Msids;
             this.Self = Self;
+            this.Wrapup = Wrapup;
             
         }
         
@@ -446,6 +453,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Address Self { get; set; }
         
         
+        
+        /// <summary>
+        /// Call wrap up or disposition data.
+        /// </summary>
+        /// <value>Call wrap up or disposition data.</value>
+        [DataMember(Name="wrapup", EmitDefaultValue=false)]
+        public Wrapup Wrapup { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -470,6 +486,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
             sb.Append("  Msids: ").Append(Msids).Append("\n");
             sb.Append("  Self: ").Append(Self).Append("\n");
+            sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -580,6 +597,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Self == other.Self ||
                     this.Self != null &&
                     this.Self.Equals(other.Self)
+                ) &&
+                (
+                    this.Wrapup == other.Wrapup ||
+                    this.Wrapup != null &&
+                    this.Wrapup.Equals(other.Wrapup)
                 );
         }
 
@@ -639,6 +661,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Self != null)
                     hash = hash * 59 + this.Self.GetHashCode();
+                
+                if (this.Wrapup != null)
+                    hash = hash * 59 + this.Wrapup.GetHashCode();
                 
                 return hash;
             }

@@ -15,11 +15,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteWorkforcemanagementBusinessunitWeekSchedule**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunitweekschedule) | **DELETE** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId} | Delete a schedule |
 | [**DeleteWorkforcemanagementBusinessunitWeekShorttermforecast**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunitweekshorttermforecast) | **DELETE** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId} | Delete a short term forecast |
 | [**DeleteWorkforcemanagementManagementunit**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunit) | **DELETE** /api/v2/workforcemanagement/managementunits/{muId} | Delete management unit |
-| [**DeleteWorkforcemanagementManagementunitActivitycode**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunitactivitycode) | **DELETE** /api/v2/workforcemanagement/managementunits/{muId}/activitycodes/{acId} | Deletes an activity code |
-| [**DeleteWorkforcemanagementManagementunitSchedulingRun**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunitschedulingrun) | **DELETE** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId} | Cancel a schedule run |
-| [**DeleteWorkforcemanagementManagementunitServicegoalgroup**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunitservicegoalgroup) | **DELETE** /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups/{serviceGoalGroupId} | Delete a service goal group |
-| [**DeleteWorkforcemanagementManagementunitWeekSchedule**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunitweekschedule) | **DELETE** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId} | Delete a schedule |
-| [**DeleteWorkforcemanagementManagementunitWeekShorttermforecast**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunitweekshorttermforecast) | **DELETE** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId} | Delete a short term forecast |
+| [**DeleteWorkforcemanagementManagementunitActivitycode**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunitactivitycode) | **DELETE** /api/v2/workforcemanagement/managementunits/{muId}/activitycodes/{acId} | Deprecated/Gone: Use the new business unit activity code resources |
+| [**DeleteWorkforcemanagementManagementunitSchedulingRun**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunitschedulingrun) | **DELETE** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId} | Gone.  Scheduling has moved under business units |
+| [**DeleteWorkforcemanagementManagementunitServicegoalgroup**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunitservicegoalgroup) | **DELETE** /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups/{serviceGoalGroupId} | Gone. Replaced with service goal templates and planning groups under business units |
+| [**DeleteWorkforcemanagementManagementunitWeekSchedule**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunitweekschedule) | **DELETE** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId} | Gone.  Scheduling has moved under business units |
+| [**DeleteWorkforcemanagementManagementunitWeekShorttermforecast**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunitweekshorttermforecast) | **DELETE** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId} | Gone. Use equivalent business unit resource instead |
 | [**DeleteWorkforcemanagementManagementunitWorkplan**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunitworkplan) | **DELETE** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId} | Delete a work plan |
 | [**GetWorkforcemanagementAdherence**](WorkforceManagementApi.html#getworkforcemanagementadherence) | **GET** /api/v2/workforcemanagement/adherence | Get a list of UserScheduleAdherence records for the requested users |
 | [**GetWorkforcemanagementAdhocmodelingjob**](WorkforceManagementApi.html#getworkforcemanagementadhocmodelingjob) | **GET** /api/v2/workforcemanagement/adhocmodelingjobs/{jobId} | Get status of the modeling job |
@@ -52,24 +52,24 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementManagementunitAdherence**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitadherence) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/adherence | Get a list of user schedule adherence records for the requested management unit |
 | [**GetWorkforcemanagementManagementunitAgent**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitagent) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId} | Get data for agent in the management unit |
 | [**GetWorkforcemanagementManagementunitAgentShifttrades**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitagentshifttrades) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}/shifttrades | Gets all the shift trades for a given agent |
-| [**GetWorkforcemanagementManagementunitIntradayQueues**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitintradayqueues) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/intraday/queues | Get intraday queues for the given date |
-| [**GetWorkforcemanagementManagementunitSchedulingRun**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitschedulingrun) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId} | Gets the status for a specific scheduling run |
-| [**GetWorkforcemanagementManagementunitSchedulingRunResult**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitschedulingrunresult) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}/result | Gets the result of a specific scheduling run |
-| [**GetWorkforcemanagementManagementunitSchedulingRuns**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitschedulingruns) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs | Get the status of all the ongoing schedule runs |
-| [**GetWorkforcemanagementManagementunitServicegoalgroup**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitservicegoalgroup) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups/{serviceGoalGroupId} | Get a service goal group |
-| [**GetWorkforcemanagementManagementunitServicegoalgroups**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitservicegoalgroups) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups | Get service goal groups |
-| [**GetWorkforcemanagementManagementunitSettings**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitsettings) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/settings | Get the settings for the requested management unit. Deprecated, use the GET management unit route instead |
+| [**GetWorkforcemanagementManagementunitIntradayQueues**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitintradayqueues) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/intraday/queues | Gone.  Moved under business units |
+| [**GetWorkforcemanagementManagementunitSchedulingRun**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitschedulingrun) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId} | Gone.  Scheduling has moved under business units |
+| [**GetWorkforcemanagementManagementunitSchedulingRunResult**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitschedulingrunresult) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}/result | Gone.  Scheduling has moved under business units |
+| [**GetWorkforcemanagementManagementunitSchedulingRuns**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitschedulingruns) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs | Gone.  Scheduling has moved under business units |
+| [**GetWorkforcemanagementManagementunitServicegoalgroup**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitservicegoalgroup) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups/{serviceGoalGroupId} | Gone. Replaced with service goal templates and planning groups under business units |
+| [**GetWorkforcemanagementManagementunitServicegoalgroups**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitservicegoalgroups) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups | Gone. Replaced with service goal templates and planning groups under business units |
+| [**GetWorkforcemanagementManagementunitSettings**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitsettings) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/settings | Gone. Get management unit settings via expand parameters on the GET management unit |
 | [**GetWorkforcemanagementManagementunitShifttradesMatched**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitshifttradesmatched) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/shifttrades/matched | Gets a summary of all shift trades in the matched state |
 | [**GetWorkforcemanagementManagementunitShifttradesUsers**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitshifttradesusers) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/shifttrades/users | Gets list of users available for whom you can send direct shift trade requests |
 | [**GetWorkforcemanagementManagementunitUserTimeoffrequest**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitusertimeoffrequest) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId} | Get a time off request |
 | [**GetWorkforcemanagementManagementunitUserTimeoffrequests**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitusertimeoffrequests) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests | Get a list of time off requests for a given user |
 | [**GetWorkforcemanagementManagementunitUsers**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitusers) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/users | Get users in the management unit |
-| [**GetWorkforcemanagementManagementunitWeekSchedule**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitweekschedule) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId} | Get a week schedule |
-| [**GetWorkforcemanagementManagementunitWeekScheduleGenerationresults**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitweekschedulegenerationresults) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}/generationresults | Get week schedule generation results |
-| [**GetWorkforcemanagementManagementunitWeekSchedules**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitweekschedules) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules | Get the list of schedules in a week in management unit |
+| [**GetWorkforcemanagementManagementunitWeekSchedule**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitweekschedule) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId} | Deprecated.  Use the equivalent business unit resource instead. Get a week schedule |
+| [**GetWorkforcemanagementManagementunitWeekScheduleGenerationresults**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitweekschedulegenerationresults) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}/generationresults | Gone.  Scheduling has moved under business units |
+| [**GetWorkforcemanagementManagementunitWeekSchedules**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitweekschedules) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules | Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit |
 | [**GetWorkforcemanagementManagementunitWeekShifttrades**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitweekshifttrades) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades | Gets all the shift trades for a given week |
-| [**GetWorkforcemanagementManagementunitWeekShorttermforecastFinal**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitweekshorttermforecastfinal) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/final | Get the final result of a short term forecast calculation with modifications applied |
-| [**GetWorkforcemanagementManagementunitWeekShorttermforecasts**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitweekshorttermforecasts) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts | Get short term forecasts |
+| [**GetWorkforcemanagementManagementunitWeekShorttermforecastFinal**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitweekshorttermforecastfinal) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/final | Gone. Use equivalent business unit resource instead |
+| [**GetWorkforcemanagementManagementunitWeekShorttermforecasts**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitweekshorttermforecasts) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts | Gone. Use equivalent business unit resource instead |
 | [**GetWorkforcemanagementManagementunitWorkplan**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitworkplan) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId} | Get a work plan |
 | [**GetWorkforcemanagementManagementunitWorkplans**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitworkplans) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans | Get work plans |
 | [**GetWorkforcemanagementManagementunits**](WorkforceManagementApi.html#getworkforcemanagementmanagementunits) | **GET** /api/v2/workforcemanagement/managementunits | Get management units |
@@ -85,12 +85,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitschedulingrun) | **PATCH** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId} | Mark a schedule run as applied |
 | [**PatchWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitservicegoaltemplate) | **PATCH** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId} | Updates a service goal template |
 | [**PatchWorkforcemanagementManagementunit**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunit) | **PATCH** /api/v2/workforcemanagement/managementunits/{muId} | Update the requested management unit |
-| [**PatchWorkforcemanagementManagementunitActivitycode**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitactivitycode) | **PATCH** /api/v2/workforcemanagement/managementunits/{muId}/activitycodes/{acId} | Update an activity code |
-| [**PatchWorkforcemanagementManagementunitSchedulingRun**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitschedulingrun) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId} | Marks a specific scheduling run as applied, allowing a new rescheduling run to be started |
-| [**PatchWorkforcemanagementManagementunitServicegoalgroup**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitservicegoalgroup) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups/{serviceGoalGroupId} | Update a service goal group |
-| [**PatchWorkforcemanagementManagementunitSettings**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitsettings) | **PATCH** /api/v2/workforcemanagement/managementunits/{muId}/settings | Update the settings for the requested management unit |
+| [**PatchWorkforcemanagementManagementunitActivitycode**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitactivitycode) | **PATCH** /api/v2/workforcemanagement/managementunits/{muId}/activitycodes/{acId} | Deprecated/Gone: Use the new business unit activity code resources |
+| [**PatchWorkforcemanagementManagementunitSchedulingRun**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitschedulingrun) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId} | Gone.  Scheduling has moved under business units |
+| [**PatchWorkforcemanagementManagementunitServicegoalgroup**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitservicegoalgroup) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups/{serviceGoalGroupId} | Gone. Replaced with service goal templates and planning groups under business units |
+| [**PatchWorkforcemanagementManagementunitSettings**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitsettings) | **PATCH** /api/v2/workforcemanagement/managementunits/{muId}/settings | Gone. Update settings by PATCHing the management unit |
 | [**PatchWorkforcemanagementManagementunitUserTimeoffrequest**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitusertimeoffrequest) | **PATCH** /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId} | Update a time off request |
-| [**PatchWorkforcemanagementManagementunitWeekSchedule**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitweekschedule) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId} | Update a week schedule |
+| [**PatchWorkforcemanagementManagementunitWeekSchedule**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitweekschedule) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId} | Gone.  Scheduling has moved under business units |
 | [**PatchWorkforcemanagementManagementunitWeekShifttrade**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitweekshifttrade) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId} | Updates a shift trade. This route can only be called by the initiating agent |
 | [**PatchWorkforcemanagementManagementunitWorkplan**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitworkplan) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId} | Update a work plan |
 | [**PatchWorkforcemanagementTimeoffrequest**](WorkforceManagementApi.html#patchworkforcemanagementtimeoffrequest) | **PATCH** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Update a time off request for the current user |
@@ -109,29 +109,29 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementBusinessunitWeekShorttermforecastCopy**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekshorttermforecastcopy) | **POST** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/copy | Copy a short term forecast |
 | [**PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekshorttermforecastsgenerate) | **POST** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/generate | Generate a short term forecast |
 | [**PostWorkforcemanagementBusinessunits**](WorkforceManagementApi.html#postworkforcemanagementbusinessunits) | **POST** /api/v2/workforcemanagement/businessunits | Add a new business unit |
-| [**PostWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitactivitycodes) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/activitycodes | Create a new activity code |
+| [**PostWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitactivitycodes) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/activitycodes | Deprecated/Gone: Use the new business unit activity code resources |
 | [**PostWorkforcemanagementManagementunitAgentschedulesSearch**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitagentschedulessearch) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/agentschedules/search | Query published schedules for given given time range for set of users |
 | [**PostWorkforcemanagementManagementunitHistoricaladherencequery**](WorkforceManagementApi.html#postworkforcemanagementmanagementunithistoricaladherencequery) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/historicaladherencequery | Request a historical adherence report |
-| [**PostWorkforcemanagementManagementunitIntraday**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitintraday) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/intraday | Get intraday data for the given date for the requested queueIds |
+| [**PostWorkforcemanagementManagementunitIntraday**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitintraday) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/intraday | Gone.  Moved under business units |
 | [**PostWorkforcemanagementManagementunitMove**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitmove) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/move | Move the requested management unit to a new business unit |
 | [**PostWorkforcemanagementManagementunitSchedulesSearch**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitschedulessearch) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/schedules/search | Query published schedules for given given time range for set of users |
-| [**PostWorkforcemanagementManagementunitServicegoalgroups**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitservicegoalgroups) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups | Create a new service goal group |
+| [**PostWorkforcemanagementManagementunitServicegoalgroups**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitservicegoalgroups) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups | Gone. Replaced with service goal templates and planning groups under business units |
 | [**PostWorkforcemanagementManagementunitTimeoffrequests**](WorkforceManagementApi.html#postworkforcemanagementmanagementunittimeoffrequests) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests | Create a new time off request |
-| [**PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetails**](WorkforceManagementApi.html#postworkforcemanagementmanagementunittimeoffrequestsfetchdetails) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests/fetchdetails | Gets a list of time off requests from lookup ids |
+| [**PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetails**](WorkforceManagementApi.html#postworkforcemanagementmanagementunittimeoffrequestsfetchdetails) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests/fetchdetails | Gone.  All data is now returned in the query route |
 | [**PostWorkforcemanagementManagementunitTimeoffrequestsQuery**](WorkforceManagementApi.html#postworkforcemanagementmanagementunittimeoffrequestsquery) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests/query | Gets the lookup ids to fetch the specified set of requests |
-| [**PostWorkforcemanagementManagementunitWeekScheduleCopy**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekschedulecopy) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}/copy | Copy a week schedule |
-| [**PostWorkforcemanagementManagementunitWeekScheduleReschedule**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekschedulereschedule) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}/reschedule | Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied |
-| [**PostWorkforcemanagementManagementunitWeekSchedules**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekschedules) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules | Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500 |
-| [**PostWorkforcemanagementManagementunitWeekSchedulesGenerate**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekschedulesgenerate) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/generate | Generate a week schedule |
-| [**PostWorkforcemanagementManagementunitWeekSchedulesPartialupload**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekschedulespartialupload) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/partialupload | Partial upload of user schedules where activity count is greater than 17500 |
+| [**PostWorkforcemanagementManagementunitWeekScheduleCopy**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekschedulecopy) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}/copy | Gone.  Scheduling has moved under business units |
+| [**PostWorkforcemanagementManagementunitWeekScheduleReschedule**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekschedulereschedule) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}/reschedule | Gone.  Scheduling has moved under business units |
+| [**PostWorkforcemanagementManagementunitWeekSchedules**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekschedules) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules | Gone.  Scheduling has moved under business units |
+| [**PostWorkforcemanagementManagementunitWeekSchedulesGenerate**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekschedulesgenerate) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/generate | Gone.  Scheduling has moved under business units |
+| [**PostWorkforcemanagementManagementunitWeekSchedulesPartialupload**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekschedulespartialupload) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/partialupload | Gone.  Scheduling has moved under business units |
 | [**PostWorkforcemanagementManagementunitWeekShifttradeMatch**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshifttradematch) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/match | Matches a shift trade. This route can only be called by the receiving agent |
 | [**PostWorkforcemanagementManagementunitWeekShifttrades**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshifttrades) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades | Adds a shift trade |
 | [**PostWorkforcemanagementManagementunitWeekShifttradesSearch**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshifttradessearch) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/search | Searches for potential shift trade matches for the current agent |
 | [**PostWorkforcemanagementManagementunitWeekShifttradesStateBulk**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshifttradesstatebulk) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/state/bulk | Updates the state of a batch of shift trades |
-| [**PostWorkforcemanagementManagementunitWeekShorttermforecastCopy**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshorttermforecastcopy) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/copy | Copy a short term forecast |
-| [**PostWorkforcemanagementManagementunitWeekShorttermforecasts**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshorttermforecasts) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts | Import a short term forecast |
-| [**PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshorttermforecastsgenerate) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/generate | Generate a short term forecast |
-| [**PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshorttermforecastspartialupload) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/partialupload | Import a short term forecast |
+| [**PostWorkforcemanagementManagementunitWeekShorttermforecastCopy**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshorttermforecastcopy) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/copy | Gone. Use equivalent business unit resource instead |
+| [**PostWorkforcemanagementManagementunitWeekShorttermforecasts**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshorttermforecasts) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts | Gone. Use equivalent business unit resource instead |
+| [**PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshorttermforecastsgenerate) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/generate | Gone. Use equivalent business unit resource instead |
+| [**PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshorttermforecastspartialupload) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/partialupload | Gone. Use equivalent business unit resource instead |
 | [**PostWorkforcemanagementManagementunitWorkplanCopy**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitworkplancopy) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/copy | Create a copy of work plan |
 | [**PostWorkforcemanagementManagementunitWorkplans**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitworkplans) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans | Create a new work plan |
 | [**PostWorkforcemanagementManagementunits**](WorkforceManagementApi.html#postworkforcemanagementmanagementunits) | **POST** /api/v2/workforcemanagement/managementunits | Add a management unit |
@@ -643,13 +643,12 @@ void (empty response body)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Deletes an activity code
+Deprecated/Gone: Use the new business unit activity code resources
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:activityCode:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -674,7 +673,7 @@ namespace Example
 
             try
             { 
-                // Deletes an activity code
+                // Deprecated/Gone: Use the new business unit activity code resources
                 apiInstance.DeleteWorkforcemanagementManagementunitActivitycode(muId, acId);
             }
             catch (Exception e)
@@ -705,13 +704,12 @@ void (empty response body)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Cancel a schedule run
+Gone.  Scheduling has moved under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:generate
 
 ### Example
 ```{"language":"csharp"}
@@ -731,12 +729,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
+            var managementUnitId = managementUnitId_example;  // string | (Deprecated/gone): The ID of the management unit.
             var runId = runId_example;  // string | The ID of the schedule run
 
             try
             { 
-                // Cancel a schedule run
+                // Gone.  Scheduling has moved under business units
                 apiInstance.DeleteWorkforcemanagementManagementunitSchedulingRun(managementUnitId, runId);
             }
             catch (Exception e)
@@ -753,7 +751,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The ID of the management unit. |  |
+| **managementUnitId** | **string**| (Deprecated/gone): The ID of the management unit. |  |
 | **runId** | **string**| The ID of the schedule run |  |
 {: class="table table-striped"}
 
@@ -767,13 +765,12 @@ void (empty response body)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Delete a service goal group
+Gone. Replaced with service goal templates and planning groups under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:serviceGoalGroup:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -793,12 +790,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var serviceGoalGroupId = serviceGoalGroupId_example;  // string | The ID of the service goal group to delete
+            var managementUnitId = managementUnitId_example;  // string | (Deprecated/gone): The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var serviceGoalGroupId = serviceGoalGroupId_example;  // string | Gone. The ID of the service goal group to delete
 
             try
             { 
-                // Delete a service goal group
+                // Gone. Replaced with service goal templates and planning groups under business units
                 apiInstance.DeleteWorkforcemanagementManagementunitServicegoalgroup(managementUnitId, serviceGoalGroupId);
             }
             catch (Exception e)
@@ -815,8 +812,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **serviceGoalGroupId** | **string**| The ID of the service goal group to delete |  |
+| **managementUnitId** | **string**| (Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **serviceGoalGroupId** | **string**| Gone. The ID of the service goal group to delete |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -829,13 +826,12 @@ void (empty response body)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Delete a schedule
+Gone.  Scheduling has moved under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -857,11 +853,11 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
-            var scheduleId = scheduleId_example;  // string | The ID of theschedule to delete
+            var scheduleId = scheduleId_example;  // string | Gone/deprecated. The ID of the schedule to delete
 
             try
             { 
-                // Delete a schedule
+                // Gone.  Scheduling has moved under business units
                 apiInstance.DeleteWorkforcemanagementManagementunitWeekSchedule(managementUnitId, weekId, scheduleId);
             }
             catch (Exception e)
@@ -880,7 +876,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **weekId** | **string**| First day of schedule week in yyyy-MM-dd format. |  |
-| **scheduleId** | **string**| The ID of theschedule to delete |  |
+| **scheduleId** | **string**| Gone/deprecated. The ID of the schedule to delete |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -893,13 +889,12 @@ void (empty response body)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Delete a short term forecast
+Gone. Use equivalent business unit resource instead
 
-Must not be tied to any schedules
 
-Requires ANY permissions: 
 
-* wfm:shortTermForecast:delete
+Requires NO permissions: 
+
 
 ### Example
 ```{"language":"csharp"}
@@ -919,13 +914,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit to which the forecast belongs
-            var weekDateId = weekDateId_example;  // string | The week start date of the forecast in yyyy-MM-dd format
-            var forecastId = forecastId_example;  // string | The ID of the forecast
+            var managementUnitId = managementUnitId_example;  // string | (Deprecated/gone): The id of the management unit.
+            var weekDateId = weekDateId_example;  // string | (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format
+            var forecastId = forecastId_example;  // string | (Gone/Deprecated): The ID of the forecast
 
             try
             { 
-                // Delete a short term forecast
+                // Gone. Use equivalent business unit resource instead
                 apiInstance.DeleteWorkforcemanagementManagementunitWeekShorttermforecast(managementUnitId, weekDateId, forecastId);
             }
             catch (Exception e)
@@ -942,9 +937,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit to which the forecast belongs |  |
-| **weekDateId** | **string**| The week start date of the forecast in yyyy-MM-dd format |  |
-| **forecastId** | **string**| The ID of the forecast |  |
+| **managementUnitId** | **string**| (Deprecated/gone): The id of the management unit. |  |
+| **weekDateId** | **string**| (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format |  |
+| **forecastId** | **string**| (Gone/Deprecated): The ID of the forecast |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3180,17 +3175,16 @@ namespace Example
 
 <a name="getworkforcemanagementmanagementunitintradayqueues"></a>
 
-## [**WfmIntradayQueueListing**](WfmIntradayQueueListing.html) GetWorkforcemanagementManagementunitIntradayQueues (string muId, string date)
+## void GetWorkforcemanagementManagementunitIntradayQueues (string muId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Get intraday queues for the given date
+Gone.  Moved under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:intraday:view
 
 ### Example
 ```{"language":"csharp"}
@@ -3211,13 +3205,11 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var muId = muId_example;  // string | The management unit ID of the management unit
-            var date = date_example;  // string | yyyy-MM-dd date string interpreted in the configured management unit time zone
 
             try
             { 
-                // Get intraday queues for the given date
-                WfmIntradayQueueListing result = apiInstance.GetWorkforcemanagementManagementunitIntradayQueues(muId, date);
-                Debug.WriteLine(result);
+                // Gone.  Moved under business units
+                apiInstance.GetWorkforcemanagementManagementunitIntradayQueues(muId);
             }
             catch (Exception e)
             {
@@ -3234,26 +3226,24 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **muId** | **string**| The management unit ID of the management unit |  |
-| **date** | **string**| yyyy-MM-dd date string interpreted in the configured management unit time zone |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**WfmIntradayQueueListing**](WfmIntradayQueueListing.html)
+void (empty response body)
 
 <a name="getworkforcemanagementmanagementunitschedulingrun"></a>
 
-## [**SchedulingRunResponse**](SchedulingRunResponse.html) GetWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId)
+## void GetWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Gets the status for a specific scheduling run
+Gone.  Scheduling has moved under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:generate
 
 ### Example
 ```{"language":"csharp"}
@@ -3273,14 +3263,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
+            var managementUnitId = managementUnitId_example;  // string | (Deprecated/gone): The ID of the management unit.
             var runId = runId_example;  // string | The ID of the schedule run
 
             try
             { 
-                // Gets the status for a specific scheduling run
-                SchedulingRunResponse result = apiInstance.GetWorkforcemanagementManagementunitSchedulingRun(managementUnitId, runId);
-                Debug.WriteLine(result);
+                // Gone.  Scheduling has moved under business units
+                apiInstance.GetWorkforcemanagementManagementunitSchedulingRun(managementUnitId, runId);
             }
             catch (Exception e)
             {
@@ -3296,27 +3285,26 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The ID of the management unit. |  |
+| **managementUnitId** | **string**| (Deprecated/gone): The ID of the management unit. |  |
 | **runId** | **string**| The ID of the schedule run |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**SchedulingRunResponse**](SchedulingRunResponse.html)
+void (empty response body)
 
 <a name="getworkforcemanagementmanagementunitschedulingrunresult"></a>
 
-## [**RescheduleResult**](RescheduleResult.html) GetWorkforcemanagementManagementunitSchedulingRunResult (string managementUnitId, string runId)
+## void GetWorkforcemanagementManagementunitSchedulingRunResult (string managementUnitId, string runId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Gets the result of a specific scheduling run
+Gone.  Scheduling has moved under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -3336,14 +3324,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
+            var managementUnitId = managementUnitId_example;  // string | (Deprecated/gone): The ID of the management unit.
             var runId = runId_example;  // string | The ID of the schedule run
 
             try
             { 
-                // Gets the result of a specific scheduling run
-                RescheduleResult result = apiInstance.GetWorkforcemanagementManagementunitSchedulingRunResult(managementUnitId, runId);
-                Debug.WriteLine(result);
+                // Gone.  Scheduling has moved under business units
+                apiInstance.GetWorkforcemanagementManagementunitSchedulingRunResult(managementUnitId, runId);
             }
             catch (Exception e)
             {
@@ -3359,27 +3346,26 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The ID of the management unit. |  |
+| **managementUnitId** | **string**| (Deprecated/gone): The ID of the management unit. |  |
 | **runId** | **string**| The ID of the schedule run |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**RescheduleResult**](RescheduleResult.html)
+void (empty response body)
 
 <a name="getworkforcemanagementmanagementunitschedulingruns"></a>
 
-## [**SchedulingRunListResponse**](SchedulingRunListResponse.html) GetWorkforcemanagementManagementunitSchedulingRuns (string managementUnitId)
+## void GetWorkforcemanagementManagementunitSchedulingRuns (string managementUnitId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Get the status of all the ongoing schedule runs
+Gone.  Scheduling has moved under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:generate
 
 ### Example
 ```{"language":"csharp"}
@@ -3399,13 +3385,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
+            var managementUnitId = managementUnitId_example;  // string | (Deprecated/gone): The ID of the management unit.
 
             try
             { 
-                // Get the status of all the ongoing schedule runs
-                SchedulingRunListResponse result = apiInstance.GetWorkforcemanagementManagementunitSchedulingRuns(managementUnitId);
-                Debug.WriteLine(result);
+                // Gone.  Scheduling has moved under business units
+                apiInstance.GetWorkforcemanagementManagementunitSchedulingRuns(managementUnitId);
             }
             catch (Exception e)
             {
@@ -3421,26 +3406,25 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The ID of the management unit. |  |
+| **managementUnitId** | **string**| (Deprecated/gone): The ID of the management unit. |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**SchedulingRunListResponse**](SchedulingRunListResponse.html)
+void (empty response body)
 
 <a name="getworkforcemanagementmanagementunitservicegoalgroup"></a>
 
-## [**ServiceGoalGroup**](ServiceGoalGroup.html) GetWorkforcemanagementManagementunitServicegoalgroup (string managementUnitId, string serviceGoalGroupId)
+## void GetWorkforcemanagementManagementunitServicegoalgroup (string managementUnitId, string serviceGoalGroupId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Get a service goal group
+Gone. Replaced with service goal templates and planning groups under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:serviceGoalGroup:view
 
 ### Example
 ```{"language":"csharp"}
@@ -3460,14 +3444,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var serviceGoalGroupId = serviceGoalGroupId_example;  // string | The ID of the service goal group to fetch
+            var managementUnitId = managementUnitId_example;  // string | (Deprecated/gone): The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var serviceGoalGroupId = serviceGoalGroupId_example;  // string | Gone.  The ID of the service goal group to fetch
 
             try
             { 
-                // Get a service goal group
-                ServiceGoalGroup result = apiInstance.GetWorkforcemanagementManagementunitServicegoalgroup(managementUnitId, serviceGoalGroupId);
-                Debug.WriteLine(result);
+                // Gone. Replaced with service goal templates and planning groups under business units
+                apiInstance.GetWorkforcemanagementManagementunitServicegoalgroup(managementUnitId, serviceGoalGroupId);
             }
             catch (Exception e)
             {
@@ -3483,28 +3466,26 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **serviceGoalGroupId** | **string**| The ID of the service goal group to fetch |  |
+| **managementUnitId** | **string**| (Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **serviceGoalGroupId** | **string**| Gone.  The ID of the service goal group to fetch |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ServiceGoalGroup**](ServiceGoalGroup.html)
+void (empty response body)
 
 <a name="getworkforcemanagementmanagementunitservicegoalgroups"></a>
 
-## [**ServiceGoalGroupList**](ServiceGoalGroupList.html) GetWorkforcemanagementManagementunitServicegoalgroups (string managementUnitId)
+## void GetWorkforcemanagementManagementunitServicegoalgroups (string managementUnitId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Get service goal groups
+Gone. Replaced with service goal templates and planning groups under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:serviceGoalGroup:view
-* wfm:shortTermForecast:view
 
 ### Example
 ```{"language":"csharp"}
@@ -3524,13 +3505,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | (Deprecated/gone): The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
             try
             { 
-                // Get service goal groups
-                ServiceGoalGroupList result = apiInstance.GetWorkforcemanagementManagementunitServicegoalgroups(managementUnitId);
-                Debug.WriteLine(result);
+                // Gone. Replaced with service goal templates and planning groups under business units
+                apiInstance.GetWorkforcemanagementManagementunitServicegoalgroups(managementUnitId);
             }
             catch (Exception e)
             {
@@ -3546,26 +3526,25 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| (Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ServiceGoalGroupList**](ServiceGoalGroupList.html)
+void (empty response body)
 
 <a name="getworkforcemanagementmanagementunitsettings"></a>
 
-## [**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html) GetWorkforcemanagementManagementunitSettings (string muId)
+## void GetWorkforcemanagementManagementunitSettings (string muId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Get the settings for the requested management unit. Deprecated, use the GET management unit route instead
+Gone. Get management unit settings via expand parameters on the GET management unit
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:managementUnit:view
 
 ### Example
 ```{"language":"csharp"}
@@ -3589,9 +3568,8 @@ namespace Example
 
             try
             { 
-                // Get the settings for the requested management unit. Deprecated, use the GET management unit route instead
-                ManagementUnitSettingsResponse result = apiInstance.GetWorkforcemanagementManagementunitSettings(muId);
-                Debug.WriteLine(result);
+                // Gone. Get management unit settings via expand parameters on the GET management unit
+                apiInstance.GetWorkforcemanagementManagementunitSettings(muId);
             }
             catch (Exception e)
             {
@@ -3612,7 +3590,7 @@ namespace Example
 
 ### Return type
 
-[**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html)
+void (empty response body)
 
 <a name="getworkforcemanagementmanagementunitshifttradesmatched"></a>
 
@@ -3940,7 +3918,7 @@ namespace Example
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Get a week schedule
+Deprecated.  Use the equivalent business unit resource instead. Get a week schedule
 
 
 
@@ -3975,7 +3953,7 @@ namespace Example
 
             try
             { 
-                // Get a week schedule
+                // Deprecated.  Use the equivalent business unit resource instead. Get a week schedule
                 WeekScheduleResponse result = apiInstance.GetWorkforcemanagementManagementunitWeekSchedule(managementUnitId, weekId, scheduleId, expand, forceDownloadService);
                 Debug.WriteLine(result);
             }
@@ -4006,18 +3984,16 @@ namespace Example
 
 <a name="getworkforcemanagementmanagementunitweekschedulegenerationresults"></a>
 
-## [**WeekScheduleGenerationResult**](WeekScheduleGenerationResult.html) GetWorkforcemanagementManagementunitWeekScheduleGenerationresults (string managementUnitId, string weekId, string scheduleId)
+## void GetWorkforcemanagementManagementunitWeekScheduleGenerationresults (string managementUnitId, string weekId, string scheduleId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Get week schedule generation results
+Gone.  Scheduling has moved under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:publishedSchedule:view
-* wfm:schedule:view
 
 ### Example
 ```{"language":"csharp"}
@@ -4039,13 +4015,12 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
-            var scheduleId = scheduleId_example;  // string | The ID of the schedule to fetch generation results
+            var scheduleId = scheduleId_example;  // string | Gone/deprecated. The ID of the schedule to fetch generation results
 
             try
             { 
-                // Get week schedule generation results
-                WeekScheduleGenerationResult result = apiInstance.GetWorkforcemanagementManagementunitWeekScheduleGenerationresults(managementUnitId, weekId, scheduleId);
-                Debug.WriteLine(result);
+                // Gone.  Scheduling has moved under business units
+                apiInstance.GetWorkforcemanagementManagementunitWeekScheduleGenerationresults(managementUnitId, weekId, scheduleId);
             }
             catch (Exception e)
             {
@@ -4063,12 +4038,12 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **weekId** | **string**| First day of schedule week in yyyy-MM-dd format. |  |
-| **scheduleId** | **string**| The ID of the schedule to fetch generation results |  |
+| **scheduleId** | **string**| Gone/deprecated. The ID of the schedule to fetch generation results |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**WeekScheduleGenerationResult**](WeekScheduleGenerationResult.html)
+void (empty response body)
 
 <a name="getworkforcemanagementmanagementunitweekschedules"></a>
 
@@ -4076,7 +4051,7 @@ namespace Example
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Get the list of schedules in a week in management unit
+Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit
 
 
 
@@ -4111,7 +4086,7 @@ namespace Example
 
             try
             { 
-                // Get the list of schedules in a week in management unit
+                // Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit
                 WeekScheduleListResponse result = apiInstance.GetWorkforcemanagementManagementunitWeekSchedules(managementUnitId, weekId, includeOnlyPublished, earliestWeekDate, latestWeekDate);
                 Debug.WriteLine(result);
             }
@@ -4208,17 +4183,16 @@ namespace Example
 
 <a name="getworkforcemanagementmanagementunitweekshorttermforecastfinal"></a>
 
-## [**ForecastResultResponse**](ForecastResultResponse.html) GetWorkforcemanagementManagementunitWeekShorttermforecastFinal (string managementUnitId, string weekDateId, string forecastId, bool? forceDownloadService = null)
+## void GetWorkforcemanagementManagementunitWeekShorttermforecastFinal (string managementUnitId, string weekDateId, string forecastId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Get the final result of a short term forecast calculation with modifications applied
+Gone. Use equivalent business unit resource instead
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:shortTermForecast:view
 
 ### Example
 ```{"language":"csharp"}
@@ -4238,16 +4212,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit to which the forecast belongs
-            var weekDateId = weekDateId_example;  // string | The week start date of the forecast in yyyy-MM-dd format
-            var forecastId = forecastId_example;  // string | The ID of the forecast
-            var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service.  For testing/app development purposes (optional) 
+            var managementUnitId = managementUnitId_example;  // string | (Deprecated/gone): The id of the management unit.
+            var weekDateId = weekDateId_example;  // string | (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format
+            var forecastId = forecastId_example;  // string | (Gone/Deprecated): The ID of the forecast
 
             try
             { 
-                // Get the final result of a short term forecast calculation with modifications applied
-                ForecastResultResponse result = apiInstance.GetWorkforcemanagementManagementunitWeekShorttermforecastFinal(managementUnitId, weekDateId, forecastId, forceDownloadService);
-                Debug.WriteLine(result);
+                // Gone. Use equivalent business unit resource instead
+                apiInstance.GetWorkforcemanagementManagementunitWeekShorttermforecastFinal(managementUnitId, weekDateId, forecastId);
             }
             catch (Exception e)
             {
@@ -4263,30 +4235,27 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit to which the forecast belongs |  |
-| **weekDateId** | **string**| The week start date of the forecast in yyyy-MM-dd format |  |
-| **forecastId** | **string**| The ID of the forecast |  |
-| **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional]  |
+| **managementUnitId** | **string**| (Deprecated/gone): The id of the management unit. |  |
+| **weekDateId** | **string**| (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format |  |
+| **forecastId** | **string**| (Gone/Deprecated): The ID of the forecast |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ForecastResultResponse**](ForecastResultResponse.html)
+void (empty response body)
 
 <a name="getworkforcemanagementmanagementunitweekshorttermforecasts"></a>
 
-## [**ShortTermForecastListResponse**](ShortTermForecastListResponse.html) GetWorkforcemanagementManagementunitWeekShorttermforecasts (string managementUnitId, string weekDateId)
+## void GetWorkforcemanagementManagementunitWeekShorttermforecasts (string managementUnitId, string weekDateId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Get short term forecasts
+Gone. Use equivalent business unit resource instead
 
-Use \"recent\" for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date
 
-Requires ANY permissions: 
 
-* wfm:schedule:generate
-* wfm:shortTermForecast:view
+Requires NO permissions: 
+
 
 ### Example
 ```{"language":"csharp"}
@@ -4306,14 +4275,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit to which the forecast belongs
-            var weekDateId = weekDateId_example;  // string | The week start date of the forecast in yyyy-MM-dd format
+            var managementUnitId = managementUnitId_example;  // string | (Deprecated/gone): The id of the management unit.
+            var weekDateId = weekDateId_example;  // string | (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format
 
             try
             { 
-                // Get short term forecasts
-                ShortTermForecastListResponse result = apiInstance.GetWorkforcemanagementManagementunitWeekShorttermforecasts(managementUnitId, weekDateId);
-                Debug.WriteLine(result);
+                // Gone. Use equivalent business unit resource instead
+                apiInstance.GetWorkforcemanagementManagementunitWeekShorttermforecasts(managementUnitId, weekDateId);
             }
             catch (Exception e)
             {
@@ -4329,13 +4297,13 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit to which the forecast belongs |  |
-| **weekDateId** | **string**| The week start date of the forecast in yyyy-MM-dd format |  |
+| **managementUnitId** | **string**| (Deprecated/gone): The id of the management unit. |  |
+| **weekDateId** | **string**| (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ShortTermForecastListResponse**](ShortTermForecastListResponse.html)
+void (empty response body)
 
 <a name="getworkforcemanagementmanagementunitworkplan"></a>
 
@@ -5281,17 +5249,16 @@ namespace Example
 
 <a name="patchworkforcemanagementmanagementunitactivitycode"></a>
 
-## [**ActivityCode**](ActivityCode.html) PatchWorkforcemanagementManagementunitActivitycode (string muId, string acId, UpdateActivityCodeRequest body = null)
+## void PatchWorkforcemanagementManagementunitActivitycode (string muId, string acId, UpdateActivityCodeRequest body = null)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Update an activity code
+Deprecated/Gone: Use the new business unit activity code resources
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:activityCode:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -5317,9 +5284,8 @@ namespace Example
 
             try
             { 
-                // Update an activity code
-                ActivityCode result = apiInstance.PatchWorkforcemanagementManagementunitActivitycode(muId, acId, body);
-                Debug.WriteLine(result);
+                // Deprecated/Gone: Use the new business unit activity code resources
+                apiInstance.PatchWorkforcemanagementManagementunitActivitycode(muId, acId, body);
             }
             catch (Exception e)
             {
@@ -5342,21 +5308,20 @@ namespace Example
 
 ### Return type
 
-[**ActivityCode**](ActivityCode.html)
+void (empty response body)
 
 <a name="patchworkforcemanagementmanagementunitschedulingrun"></a>
 
-## [**RescheduleResult**](RescheduleResult.html) PatchWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null)
+## void PatchWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
+Gone.  Scheduling has moved under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -5376,15 +5341,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
+            var managementUnitId = managementUnitId_example;  // string | (Deprecated/gone): The ID of the management unit.
             var runId = runId_example;  // string | The ID of the schedule run
             var body = new UpdateSchedulingRunRequest(); // UpdateSchedulingRunRequest | body (optional) 
 
             try
             { 
-                // Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
-                RescheduleResult result = apiInstance.PatchWorkforcemanagementManagementunitSchedulingRun(managementUnitId, runId, body);
-                Debug.WriteLine(result);
+                // Gone.  Scheduling has moved under business units
+                apiInstance.PatchWorkforcemanagementManagementunitSchedulingRun(managementUnitId, runId, body);
             }
             catch (Exception e)
             {
@@ -5400,28 +5364,27 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The ID of the management unit. |  |
+| **managementUnitId** | **string**| (Deprecated/gone): The ID of the management unit. |  |
 | **runId** | **string**| The ID of the schedule run |  |
 | **body** | [**UpdateSchedulingRunRequest**](UpdateSchedulingRunRequest.html)| body | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**RescheduleResult**](RescheduleResult.html)
+void (empty response body)
 
 <a name="patchworkforcemanagementmanagementunitservicegoalgroup"></a>
 
-## [**ServiceGoalGroup**](ServiceGoalGroup.html) PatchWorkforcemanagementManagementunitServicegoalgroup (string managementUnitId, string serviceGoalGroupId, ServiceGoalGroup body = null)
+## void PatchWorkforcemanagementManagementunitServicegoalgroup (string managementUnitId, string serviceGoalGroupId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Update a service goal group
+Gone. Replaced with service goal templates and planning groups under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:serviceGoalGroup:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -5441,15 +5404,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var serviceGoalGroupId = serviceGoalGroupId_example;  // string | The ID of the service goal group to update
-            var body = new ServiceGoalGroup(); // ServiceGoalGroup | body (optional) 
+            var managementUnitId = managementUnitId_example;  // string | (Deprecated/gone): The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var serviceGoalGroupId = serviceGoalGroupId_example;  // string | Gone. The ID of the service goal group to update
 
             try
             { 
-                // Update a service goal group
-                ServiceGoalGroup result = apiInstance.PatchWorkforcemanagementManagementunitServicegoalgroup(managementUnitId, serviceGoalGroupId, body);
-                Debug.WriteLine(result);
+                // Gone. Replaced with service goal templates and planning groups under business units
+                apiInstance.PatchWorkforcemanagementManagementunitServicegoalgroup(managementUnitId, serviceGoalGroupId);
             }
             catch (Exception e)
             {
@@ -5465,28 +5426,26 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **serviceGoalGroupId** | **string**| The ID of the service goal group to update |  |
-| **body** | [**ServiceGoalGroup**](ServiceGoalGroup.html)| body | [optional]  |
+| **managementUnitId** | **string**| (Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **serviceGoalGroupId** | **string**| Gone. The ID of the service goal group to update |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ServiceGoalGroup**](ServiceGoalGroup.html)
+void (empty response body)
 
 <a name="patchworkforcemanagementmanagementunitsettings"></a>
 
-## [**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html) PatchWorkforcemanagementManagementunitSettings (string muId, ManagementUnitSettingsRequest body = null)
+## void PatchWorkforcemanagementManagementunitSettings (string muId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Update the settings for the requested management unit
+Gone. Update settings by PATCHing the management unit
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:managementUnit:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -5507,13 +5466,11 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var muId = muId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var body = new ManagementUnitSettingsRequest(); // ManagementUnitSettingsRequest | config (optional) 
 
             try
             { 
-                // Update the settings for the requested management unit
-                ManagementUnitSettingsResponse result = apiInstance.PatchWorkforcemanagementManagementunitSettings(muId, body);
-                Debug.WriteLine(result);
+                // Gone. Update settings by PATCHing the management unit
+                apiInstance.PatchWorkforcemanagementManagementunitSettings(muId);
             }
             catch (Exception e)
             {
@@ -5530,12 +5487,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **muId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **body** | [**ManagementUnitSettingsRequest**](ManagementUnitSettingsRequest.html)| config | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html)
+void (empty response body)
 
 <a name="patchworkforcemanagementmanagementunitusertimeoffrequest"></a>
 
@@ -5606,17 +5562,16 @@ namespace Example
 
 <a name="patchworkforcemanagementmanagementunitweekschedule"></a>
 
-## [**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) PatchWorkforcemanagementManagementunitWeekSchedule (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, UpdateWeekScheduleRequest body = null)
+## void PatchWorkforcemanagementManagementunitWeekSchedule (string managementUnitId, string weekId, string scheduleId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Update a week schedule
+Gone.  Scheduling has moved under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -5638,16 +5593,12 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
-            var scheduleId = scheduleId_example;  // string | The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500
-            var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
-            var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service.  For testing/app development purposes (optional) 
-            var body = new UpdateWeekScheduleRequest(); // UpdateWeekScheduleRequest | body (optional) 
+            var scheduleId = scheduleId_example;  // string | Gone/deprecated. The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500
 
             try
             { 
-                // Update a week schedule
-                AsyncWeekScheduleResponse result = apiInstance.PatchWorkforcemanagementManagementunitWeekSchedule(managementUnitId, weekId, scheduleId, forceAsync, forceDownloadService, body);
-                Debug.WriteLine(result);
+                // Gone.  Scheduling has moved under business units
+                apiInstance.PatchWorkforcemanagementManagementunitWeekSchedule(managementUnitId, weekId, scheduleId);
             }
             catch (Exception e)
             {
@@ -5665,15 +5616,12 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **weekId** | **string**| First day of schedule week in yyyy-MM-dd format. |  |
-| **scheduleId** | **string**| The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500 |  |
-| **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
-| **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional]  |
-| **body** | [**UpdateWeekScheduleRequest**](UpdateWeekScheduleRequest.html)| body | [optional]  |
+| **scheduleId** | **string**| Gone/deprecated. The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500 |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html)
+void (empty response body)
 
 <a name="patchworkforcemanagementmanagementunitweekshifttrade"></a>
 
@@ -6849,17 +6797,16 @@ namespace Example
 
 <a name="postworkforcemanagementmanagementunitactivitycodes"></a>
 
-## [**ActivityCode**](ActivityCode.html) PostWorkforcemanagementManagementunitActivitycodes (string muId, CreateActivityCodeRequest body = null)
+## void PostWorkforcemanagementManagementunitActivitycodes (string muId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Create a new activity code
+Deprecated/Gone: Use the new business unit activity code resources
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:activityCode:add
 
 ### Example
 ```{"language":"csharp"}
@@ -6880,13 +6827,11 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var muId = muId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var body = new CreateActivityCodeRequest(); // CreateActivityCodeRequest | body (optional) 
 
             try
             { 
-                // Create a new activity code
-                ActivityCode result = apiInstance.PostWorkforcemanagementManagementunitActivitycodes(muId, body);
-                Debug.WriteLine(result);
+                // Deprecated/Gone: Use the new business unit activity code resources
+                apiInstance.PostWorkforcemanagementManagementunitActivitycodes(muId);
             }
             catch (Exception e)
             {
@@ -6903,12 +6848,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **muId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **body** | [**CreateActivityCodeRequest**](CreateActivityCodeRequest.html)| body | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ActivityCode**](ActivityCode.html)
+void (empty response body)
 
 <a name="postworkforcemanagementmanagementunitagentschedulessearch"></a>
 
@@ -7043,17 +6987,16 @@ namespace Example
 
 <a name="postworkforcemanagementmanagementunitintraday"></a>
 
-## [**IntradayResponse**](IntradayResponse.html) PostWorkforcemanagementManagementunitIntraday (string muId, IntradayQueryDataCommand body = null)
+## void PostWorkforcemanagementManagementunitIntraday (string muId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Get intraday data for the given date for the requested queueIds
+Gone.  Moved under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:intraday:view
 
 ### Example
 ```{"language":"csharp"}
@@ -7074,13 +7017,11 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var muId = muId_example;  // string | The management unit ID of the management unit
-            var body = new IntradayQueryDataCommand(); // IntradayQueryDataCommand | body (optional) 
 
             try
             { 
-                // Get intraday data for the given date for the requested queueIds
-                IntradayResponse result = apiInstance.PostWorkforcemanagementManagementunitIntraday(muId, body);
-                Debug.WriteLine(result);
+                // Gone.  Moved under business units
+                apiInstance.PostWorkforcemanagementManagementunitIntraday(muId);
             }
             catch (Exception e)
             {
@@ -7097,12 +7038,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **muId** | **string**| The management unit ID of the management unit |  |
-| **body** | [**IntradayQueryDataCommand**](IntradayQueryDataCommand.html)| body | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**IntradayResponse**](IntradayResponse.html)
+void (empty response body)
 
 <a name="postworkforcemanagementmanagementunitmove"></a>
 
@@ -7233,17 +7173,16 @@ namespace Example
 
 <a name="postworkforcemanagementmanagementunitservicegoalgroups"></a>
 
-## [**ServiceGoalGroup**](ServiceGoalGroup.html) PostWorkforcemanagementManagementunitServicegoalgroups (string managementUnitId, CreateServiceGoalGroupRequest body = null)
+## void PostWorkforcemanagementManagementunitServicegoalgroups (string managementUnitId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Create a new service goal group
+Gone. Replaced with service goal templates and planning groups under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:serviceGoalGroup:add
 
 ### Example
 ```{"language":"csharp"}
@@ -7263,14 +7202,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var body = new CreateServiceGoalGroupRequest(); // CreateServiceGoalGroupRequest | body (optional) 
+            var managementUnitId = managementUnitId_example;  // string | (Deprecated/gone): The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
             try
             { 
-                // Create a new service goal group
-                ServiceGoalGroup result = apiInstance.PostWorkforcemanagementManagementunitServicegoalgroups(managementUnitId, body);
-                Debug.WriteLine(result);
+                // Gone. Replaced with service goal templates and planning groups under business units
+                apiInstance.PostWorkforcemanagementManagementunitServicegoalgroups(managementUnitId);
             }
             catch (Exception e)
             {
@@ -7286,13 +7223,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **body** | [**CreateServiceGoalGroupRequest**](CreateServiceGoalGroupRequest.html)| body | [optional]  |
+| **managementUnitId** | **string**| (Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ServiceGoalGroup**](ServiceGoalGroup.html)
+void (empty response body)
 
 <a name="postworkforcemanagementmanagementunittimeoffrequests"></a>
 
@@ -7359,17 +7295,16 @@ namespace Example
 
 <a name="postworkforcemanagementmanagementunittimeoffrequestsfetchdetails"></a>
 
-## [**TimeOffRequestEntityList**](TimeOffRequestEntityList.html) PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetails (string muId, TimeOffRequestLookupList body = null)
+## void PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetails (string muId, TimeOffRequestListing body = null)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Gets a list of time off requests from lookup ids
+Gone.  All data is now returned in the query route
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:timeOffRequest:view
 
 ### Example
 ```{"language":"csharp"}
@@ -7390,13 +7325,12 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
-            var body = new TimeOffRequestLookupList(); // TimeOffRequestLookupList | body (optional) 
+            var body = new TimeOffRequestListing(); // TimeOffRequestListing | body (optional) 
 
             try
             { 
-                // Gets a list of time off requests from lookup ids
-                TimeOffRequestEntityList result = apiInstance.PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetails(muId, body);
-                Debug.WriteLine(result);
+                // Gone.  All data is now returned in the query route
+                apiInstance.PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetails(muId, body);
             }
             catch (Exception e)
             {
@@ -7413,16 +7347,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **muId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **body** | [**TimeOffRequestLookupList**](TimeOffRequestLookupList.html)| body | [optional]  |
+| **body** | [**TimeOffRequestListing**](TimeOffRequestListing.html)| body | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**TimeOffRequestEntityList**](TimeOffRequestEntityList.html)
+void (empty response body)
 
 <a name="postworkforcemanagementmanagementunittimeoffrequestsquery"></a>
 
-## [**TimeOffRequestLookupList**](TimeOffRequestLookupList.html) PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string muId, TimeOffRequestQueryBody body = null)
+## [**TimeOffRequestListing**](TimeOffRequestListing.html) PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string muId, TimeOffRequestQueryBody body = null)
 
 
 
@@ -7458,7 +7392,7 @@ namespace Example
             try
             { 
                 // Gets the lookup ids to fetch the specified set of requests
-                TimeOffRequestLookupList result = apiInstance.PostWorkforcemanagementManagementunitTimeoffrequestsQuery(muId, body);
+                TimeOffRequestListing result = apiInstance.PostWorkforcemanagementManagementunitTimeoffrequestsQuery(muId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7481,21 +7415,20 @@ namespace Example
 
 ### Return type
 
-[**TimeOffRequestLookupList**](TimeOffRequestLookupList.html)
+[**TimeOffRequestListing**](TimeOffRequestListing.html)
 
 <a name="postworkforcemanagementmanagementunitweekschedulecopy"></a>
 
-## [**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) PostWorkforcemanagementManagementunitWeekScheduleCopy (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, CopyWeekScheduleRequest body = null)
+## void PostWorkforcemanagementManagementunitWeekScheduleCopy (string managementUnitId, string weekId, string scheduleId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Copy a week schedule
+Gone.  Scheduling has moved under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:add
 
 ### Example
 ```{"language":"csharp"}
@@ -7517,16 +7450,12 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
-            var scheduleId = scheduleId_example;  // string | The ID of the schedule to copy from
-            var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
-            var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service.  For testing/app development purposes (optional) 
-            var body = new CopyWeekScheduleRequest(); // CopyWeekScheduleRequest | body (optional) 
+            var scheduleId = scheduleId_example;  // string | Gone/deprecated. The ID of the schedule to copy from
 
             try
             { 
-                // Copy a week schedule
-                AsyncWeekScheduleResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekScheduleCopy(managementUnitId, weekId, scheduleId, forceAsync, forceDownloadService, body);
-                Debug.WriteLine(result);
+                // Gone.  Scheduling has moved under business units
+                apiInstance.PostWorkforcemanagementManagementunitWeekScheduleCopy(managementUnitId, weekId, scheduleId);
             }
             catch (Exception e)
             {
@@ -7544,29 +7473,25 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **weekId** | **string**| First day of schedule week in yyyy-MM-dd format. |  |
-| **scheduleId** | **string**| The ID of the schedule to copy from |  |
-| **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
-| **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional]  |
-| **body** | [**CopyWeekScheduleRequest**](CopyWeekScheduleRequest.html)| body | [optional]  |
+| **scheduleId** | **string**| Gone/deprecated. The ID of the schedule to copy from |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html)
+void (empty response body)
 
 <a name="postworkforcemanagementmanagementunitweekschedulereschedule"></a>
 
-## [**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) PostWorkforcemanagementManagementunitWeekScheduleReschedule (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null)
+## void PostWorkforcemanagementManagementunitWeekScheduleReschedule (string managementUnitId, string weekId, string scheduleId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
+Gone.  Scheduling has moved under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:generate
 
 ### Example
 ```{"language":"csharp"}
@@ -7588,14 +7513,12 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
-            var scheduleId = scheduleId_example;  // string | The ID of the schedule to re-optimize
-            var body = new RescheduleRequest(); // RescheduleRequest | body (optional) 
+            var scheduleId = scheduleId_example;  // string | Gone/deprecated. The ID of the schedule to re-optimize
 
             try
             { 
-                // Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
-                AsyncWeekScheduleResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekScheduleReschedule(managementUnitId, weekId, scheduleId, body);
-                Debug.WriteLine(result);
+                // Gone.  Scheduling has moved under business units
+                apiInstance.PostWorkforcemanagementManagementunitWeekScheduleReschedule(managementUnitId, weekId, scheduleId);
             }
             catch (Exception e)
             {
@@ -7613,27 +7536,25 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **weekId** | **string**| First day of schedule week in yyyy-MM-dd format. |  |
-| **scheduleId** | **string**| The ID of the schedule to re-optimize |  |
-| **body** | [**RescheduleRequest**](RescheduleRequest.html)| body | [optional]  |
+| **scheduleId** | **string**| Gone/deprecated. The ID of the schedule to re-optimize |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html)
+void (empty response body)
 
 <a name="postworkforcemanagementmanagementunitweekschedules"></a>
 
-## [**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) PostWorkforcemanagementManagementunitWeekSchedules (string managementUnitId, string weekId, bool? forceAsync = null, bool? forceDownloadService = null, ImportWeekScheduleRequest body = null)
+## void PostWorkforcemanagementManagementunitWeekSchedules (string managementUnitId, string weekId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500
+Gone.  Scheduling has moved under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:add
 
 ### Example
 ```{"language":"csharp"}
@@ -7655,15 +7576,11 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
-            var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
-            var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service.  For testing/app development purposes (optional) 
-            var body = new ImportWeekScheduleRequest(); // ImportWeekScheduleRequest | body (optional) 
 
             try
             { 
-                // Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500
-                AsyncWeekScheduleResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekSchedules(managementUnitId, weekId, forceAsync, forceDownloadService, body);
-                Debug.WriteLine(result);
+                // Gone.  Scheduling has moved under business units
+                apiInstance.PostWorkforcemanagementManagementunitWeekSchedules(managementUnitId, weekId);
             }
             catch (Exception e)
             {
@@ -7681,22 +7598,19 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **weekId** | **string**| First day of schedule week in yyyy-MM-dd format. |  |
-| **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
-| **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional]  |
-| **body** | [**ImportWeekScheduleRequest**](ImportWeekScheduleRequest.html)| body | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html)
+void (empty response body)
 
 <a name="postworkforcemanagementmanagementunitweekschedulesgenerate"></a>
 
-## [**GenerateWeekScheduleResponse**](GenerateWeekScheduleResponse.html) PostWorkforcemanagementManagementunitWeekSchedulesGenerate (string managementUnitId, string weekId, GenerateWeekScheduleRequest body = null)
+## void PostWorkforcemanagementManagementunitWeekSchedulesGenerate (string managementUnitId, string weekId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Generate a week schedule
+Gone.  Scheduling has moved under business units
 
 
 
@@ -7724,13 +7638,11 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
-            var body = new GenerateWeekScheduleRequest(); // GenerateWeekScheduleRequest | body (optional) 
 
             try
             { 
-                // Generate a week schedule
-                GenerateWeekScheduleResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekSchedulesGenerate(managementUnitId, weekId, body);
-                Debug.WriteLine(result);
+                // Gone.  Scheduling has moved under business units
+                apiInstance.PostWorkforcemanagementManagementunitWeekSchedulesGenerate(managementUnitId, weekId);
             }
             catch (Exception e)
             {
@@ -7748,27 +7660,24 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **weekId** | **string**| First day of schedule week in yyyy-MM-dd format. |  |
-| **body** | [**GenerateWeekScheduleRequest**](GenerateWeekScheduleRequest.html)| body | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**GenerateWeekScheduleResponse**](GenerateWeekScheduleResponse.html)
+void (empty response body)
 
 <a name="postworkforcemanagementmanagementunitweekschedulespartialupload"></a>
 
-## [**PartialUploadResponse**](PartialUploadResponse.html) PostWorkforcemanagementManagementunitWeekSchedulesPartialupload (string managementUnitId, string weekId, UserSchedulesPartialUploadRequest body = null)
+## void PostWorkforcemanagementManagementunitWeekSchedulesPartialupload (string managementUnitId, string weekId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Partial upload of user schedules where activity count is greater than 17500
+Gone.  Scheduling has moved under business units
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:add
-* wfm:schedule:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -7790,13 +7699,11 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
-            var body = new UserSchedulesPartialUploadRequest(); // UserSchedulesPartialUploadRequest | body (optional) 
 
             try
             { 
-                // Partial upload of user schedules where activity count is greater than 17500
-                PartialUploadResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekSchedulesPartialupload(managementUnitId, weekId, body);
-                Debug.WriteLine(result);
+                // Gone.  Scheduling has moved under business units
+                apiInstance.PostWorkforcemanagementManagementunitWeekSchedulesPartialupload(managementUnitId, weekId);
             }
             catch (Exception e)
             {
@@ -7814,12 +7721,11 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **weekId** | **string**| First day of schedule week in yyyy-MM-dd format. |  |
-| **body** | [**UserSchedulesPartialUploadRequest**](UserSchedulesPartialUploadRequest.html)| body | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**PartialUploadResponse**](PartialUploadResponse.html)
+void (empty response body)
 
 <a name="postworkforcemanagementmanagementunitweekshifttradematch"></a>
 
@@ -8088,17 +7994,16 @@ namespace Example
 
 <a name="postworkforcemanagementmanagementunitweekshorttermforecastcopy"></a>
 
-## [**ShortTermForecastResponse**](ShortTermForecastResponse.html) PostWorkforcemanagementManagementunitWeekShorttermforecastCopy (string managementUnitId, string weekDateId, string forecastId, CopyShortTermForecastRequest body, bool? forceAsync = null)
+## void PostWorkforcemanagementManagementunitWeekShorttermforecastCopy (string managementUnitId, string weekDateId, string forecastId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Copy a short term forecast
+Gone. Use equivalent business unit resource instead
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:shortTermForecast:add
 
 ### Example
 ```{"language":"csharp"}
@@ -8118,17 +8023,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit to which the forecast belongs
-            var weekDateId = weekDateId_example;  // string | The week start date of the forecast in yyyy-MM-dd format
-            var forecastId = forecastId_example;  // string | The ID of the forecast to copy
-            var body = new CopyShortTermForecastRequest(); // CopyShortTermForecastRequest | body
-            var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
+            var managementUnitId = managementUnitId_example;  // string | (Deprecated/gone): The id of the management unit.
+            var weekDateId = weekDateId_example;  // string | (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format
+            var forecastId = forecastId_example;  // string | (Gone/Deprecated): The ID of the forecast
 
             try
             { 
-                // Copy a short term forecast
-                ShortTermForecastResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekShorttermforecastCopy(managementUnitId, weekDateId, forecastId, body, forceAsync);
-                Debug.WriteLine(result);
+                // Gone. Use equivalent business unit resource instead
+                apiInstance.PostWorkforcemanagementManagementunitWeekShorttermforecastCopy(managementUnitId, weekDateId, forecastId);
             }
             catch (Exception e)
             {
@@ -8144,30 +8046,27 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit to which the forecast belongs |  |
-| **weekDateId** | **string**| The week start date of the forecast in yyyy-MM-dd format |  |
-| **forecastId** | **string**| The ID of the forecast to copy |  |
-| **body** | [**CopyShortTermForecastRequest**](CopyShortTermForecastRequest.html)| body |  |
-| **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
+| **managementUnitId** | **string**| (Deprecated/gone): The id of the management unit. |  |
+| **weekDateId** | **string**| (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format |  |
+| **forecastId** | **string**| (Gone/Deprecated): The ID of the forecast |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ShortTermForecastResponse**](ShortTermForecastResponse.html)
+void (empty response body)
 
 <a name="postworkforcemanagementmanagementunitweekshorttermforecasts"></a>
 
-## [**ShortTermForecastResponse**](ShortTermForecastResponse.html) PostWorkforcemanagementManagementunitWeekShorttermforecasts (string managementUnitId, string weekDateId, ImportShortTermForecastRequest body, bool? forceAsync = null)
+## void PostWorkforcemanagementManagementunitWeekShorttermforecasts (string managementUnitId, string weekDateId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Import a short term forecast
+Gone. Use equivalent business unit resource instead
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:shortTermForecast:add
 
 ### Example
 ```{"language":"csharp"}
@@ -8187,16 +8086,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit to which the forecast belongs
-            var weekDateId = weekDateId_example;  // string | The week start date of the forecast in yyyy-MM-dd format
-            var body = new ImportShortTermForecastRequest(); // ImportShortTermForecastRequest | body
-            var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
+            var managementUnitId = managementUnitId_example;  // string | (Deprecated/gone): The id of the management unit.
+            var weekDateId = weekDateId_example;  // string | (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format
 
             try
             { 
-                // Import a short term forecast
-                ShortTermForecastResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekShorttermforecasts(managementUnitId, weekDateId, body, forceAsync);
-                Debug.WriteLine(result);
+                // Gone. Use equivalent business unit resource instead
+                apiInstance.PostWorkforcemanagementManagementunitWeekShorttermforecasts(managementUnitId, weekDateId);
             }
             catch (Exception e)
             {
@@ -8212,29 +8108,26 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit to which the forecast belongs |  |
-| **weekDateId** | **string**| The week start date of the forecast in yyyy-MM-dd format |  |
-| **body** | [**ImportShortTermForecastRequest**](ImportShortTermForecastRequest.html)| body |  |
-| **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
+| **managementUnitId** | **string**| (Deprecated/gone): The id of the management unit. |  |
+| **weekDateId** | **string**| (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ShortTermForecastResponse**](ShortTermForecastResponse.html)
+void (empty response body)
 
 <a name="postworkforcemanagementmanagementunitweekshorttermforecastsgenerate"></a>
 
-## [**GenerateShortTermForecastResponse**](GenerateShortTermForecastResponse.html) PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate (string managementUnitId, string weekDateId, GenerateShortTermForecastRequest body, bool? forceAsync = null)
+## void PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate (string managementUnitId, string weekDateId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Generate a short term forecast
+Gone. Use equivalent business unit resource instead
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:shortTermForecast:add
 
 ### Example
 ```{"language":"csharp"}
@@ -8254,16 +8147,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit to which the forecast belongs
-            var weekDateId = weekDateId_example;  // string | The week start date of the forecast in yyyy-MM-dd format
-            var body = new GenerateShortTermForecastRequest(); // GenerateShortTermForecastRequest | 
-            var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
+            var managementUnitId = managementUnitId_example;  // string | (Deprecated/gone): The id of the management unit.
+            var weekDateId = weekDateId_example;  // string | (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format
 
             try
             { 
-                // Generate a short term forecast
-                GenerateShortTermForecastResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate(managementUnitId, weekDateId, body, forceAsync);
-                Debug.WriteLine(result);
+                // Gone. Use equivalent business unit resource instead
+                apiInstance.PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate(managementUnitId, weekDateId);
             }
             catch (Exception e)
             {
@@ -8279,29 +8169,26 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit to which the forecast belongs |  |
-| **weekDateId** | **string**| The week start date of the forecast in yyyy-MM-dd format |  |
-| **body** | [**GenerateShortTermForecastRequest**](GenerateShortTermForecastRequest.html)|  |  |
-| **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
+| **managementUnitId** | **string**| (Deprecated/gone): The id of the management unit. |  |
+| **weekDateId** | **string**| (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**GenerateShortTermForecastResponse**](GenerateShortTermForecastResponse.html)
+void (empty response body)
 
 <a name="postworkforcemanagementmanagementunitweekshorttermforecastspartialupload"></a>
 
-## [**PartialUploadResponse**](PartialUploadResponse.html) PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload (string managementUnitId, string weekDateId, RouteGroupList body)
+## void PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload (string managementUnitId, string weekDateId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Import a short term forecast
+Gone. Use equivalent business unit resource instead
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:shortTermForecast:add
 
 ### Example
 ```{"language":"csharp"}
@@ -8321,15 +8208,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit to which the forecast belongs
-            var weekDateId = weekDateId_example;  // string | The week start date of the forecast in yyyy-MM-dd format
-            var body = new RouteGroupList(); // RouteGroupList | body
+            var managementUnitId = managementUnitId_example;  // string | (Deprecated/gone): The id of the management unit.
+            var weekDateId = weekDateId_example;  // string | (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format
 
             try
             { 
-                // Import a short term forecast
-                PartialUploadResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload(managementUnitId, weekDateId, body);
-                Debug.WriteLine(result);
+                // Gone. Use equivalent business unit resource instead
+                apiInstance.PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload(managementUnitId, weekDateId);
             }
             catch (Exception e)
             {
@@ -8345,14 +8230,13 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit to which the forecast belongs |  |
-| **weekDateId** | **string**| The week start date of the forecast in yyyy-MM-dd format |  |
-| **body** | [**RouteGroupList**](RouteGroupList.html)| body |  |
+| **managementUnitId** | **string**| (Deprecated/gone): The id of the management unit. |  |
+| **weekDateId** | **string**| (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**PartialUploadResponse**](PartialUploadResponse.html)
+void (empty response body)
 
 <a name="postworkforcemanagementmanagementunitworkplancopy"></a>
 

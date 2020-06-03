@@ -19,6 +19,7 @@ title: Screenshare
 | **Provider** | **string** | The source provider for the screen share. | [optional] |
 | **PeerId** | **string** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
 | **Segments** | [**List&lt;Segment&gt;**](Segment.html) | The time line of the participant&#39;s call, divided into activity segments. | [optional] |
+| **Wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
 {: class="table table-striped"}
 
 

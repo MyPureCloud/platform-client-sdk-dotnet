@@ -46,6 +46,7 @@ title: QueueConversationCallbackEventTopicCallbackMediaParticipant
 | **CallbackNumbers** | **List&lt;string&gt;** |  | [optional] |
 | **CallbackUserName** | **string** |  | [optional] |
 | **SkipEnabled** | **bool?** |  | [optional] |
+| **ExternalCampaign** | **bool?** |  | [optional] |
 | **TimeoutSeconds** | **int?** |  | [optional] |
 | **CallbackScheduledTime** | **DateTime?** |  | [optional] |
 | **AutomatedCallbackConfigId** | **string** |  | [optional] |
