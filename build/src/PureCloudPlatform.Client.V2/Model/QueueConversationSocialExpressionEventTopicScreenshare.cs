@@ -231,6 +231,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -266,6 +269,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationSocialExpressionEventTopicScreenshare" /> class.
@@ -281,8 +286,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisconnectType">DisconnectType.</param>
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
+        /// <param name="Wrapup">Wrapup.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationSocialExpressionEventTopicScreenshare(StateEnum? State = null, QueueConversationSocialExpressionEventTopicAddress Self = null, string Id = null, string Context = null, bool? Sharing = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
+        public QueueConversationSocialExpressionEventTopicScreenshare(StateEnum? State = null, QueueConversationSocialExpressionEventTopicAddress Self = null, string Id = null, string Context = null, bool? Sharing = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Self = Self;
@@ -295,6 +301,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DisconnectType = DisconnectType;
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
+            this.Wrapup = Wrapup;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -378,6 +385,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets Wrapup
+        /// </summary>
+        [DataMember(Name="wrapup", EmitDefaultValue=false)]
+        public QueueConversationSocialExpressionEventTopicWrapup Wrapup { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -404,6 +419,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
+            sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -497,6 +513,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DisconnectedTime.Equals(other.DisconnectedTime)
                 ) &&
                 (
+                    this.Wrapup == other.Wrapup ||
+                    this.Wrapup != null &&
+                    this.Wrapup.Equals(other.Wrapup)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -547,6 +568,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DisconnectedTime != null)
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
+                
+                if (this.Wrapup != null)
+                    hash = hash * 59 + this.Wrapup.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

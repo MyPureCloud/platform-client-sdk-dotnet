@@ -240,6 +240,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -281,6 +284,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationSocialExpressionEventTopicVideo" /> class.
@@ -299,8 +304,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="Msids">Msids.</param>
+        /// <param name="Wrapup">Wrapup.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationSocialExpressionEventTopicVideo(StateEnum? State = null, QueueConversationSocialExpressionEventTopicAddress Self = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<string> Msids = null, Object AdditionalProperties = null)
+        public QueueConversationSocialExpressionEventTopicVideo(StateEnum? State = null, QueueConversationSocialExpressionEventTopicAddress Self = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<string> Msids = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Self = Self;
@@ -316,6 +322,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
             this.Msids = Msids;
+            this.Wrapup = Wrapup;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -423,6 +430,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets Wrapup
+        /// </summary>
+        [DataMember(Name="wrapup", EmitDefaultValue=false)]
+        public QueueConversationSocialExpressionEventTopicWrapup Wrapup { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -452,6 +467,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  Msids: ").Append(Msids).Append("\n");
+            sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -560,6 +576,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Msids.SequenceEqual(other.Msids)
                 ) &&
                 (
+                    this.Wrapup == other.Wrapup ||
+                    this.Wrapup != null &&
+                    this.Wrapup.Equals(other.Wrapup)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -619,6 +640,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Msids != null)
                     hash = hash * 59 + this.Msids.GetHashCode();
+                
+                if (this.Wrapup != null)
+                    hash = hash * 59 + this.Wrapup.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

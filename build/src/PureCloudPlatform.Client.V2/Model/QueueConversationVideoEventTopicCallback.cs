@@ -297,6 +297,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -356,6 +359,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationVideoEventTopicCallback" /> class.
@@ -380,8 +385,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="CallbackScheduledTime">CallbackScheduledTime.</param>
         /// <param name="AutomatedCallbackConfigId">AutomatedCallbackConfigId.</param>
+        /// <param name="Wrapup">Wrapup.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationVideoEventTopicCallback(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, QueueConversationVideoEventTopicDialerPreview DialerPreview = null, QueueConversationVideoEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, Object AdditionalProperties = null)
+        public QueueConversationVideoEventTopicCallback(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, QueueConversationVideoEventTopicDialerPreview DialerPreview = null, QueueConversationVideoEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, QueueConversationVideoEventTopicWrapup Wrapup = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Id = Id;
@@ -403,6 +409,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DisconnectedTime = DisconnectedTime;
             this.CallbackScheduledTime = CallbackScheduledTime;
             this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
+            this.Wrapup = Wrapup;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -552,6 +559,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets Wrapup
+        /// </summary>
+        [DataMember(Name="wrapup", EmitDefaultValue=false)]
+        public QueueConversationVideoEventTopicWrapup Wrapup { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -587,6 +602,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
             sb.Append("  AutomatedCallbackConfigId: ").Append(AutomatedCallbackConfigId).Append("\n");
+            sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -725,6 +741,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AutomatedCallbackConfigId.Equals(other.AutomatedCallbackConfigId)
                 ) &&
                 (
+                    this.Wrapup == other.Wrapup ||
+                    this.Wrapup != null &&
+                    this.Wrapup.Equals(other.Wrapup)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -802,6 +823,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AutomatedCallbackConfigId != null)
                     hash = hash * 59 + this.AutomatedCallbackConfigId.GetHashCode();
+                
+                if (this.Wrapup != null)
+                    hash = hash * 59 + this.Wrapup.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

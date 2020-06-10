@@ -290,6 +290,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -341,6 +344,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationVideoEventTopicMessage" /> class.
@@ -362,8 +367,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Type.</param>
         /// <param name="RecipientCountry">RecipientCountry.</param>
         /// <param name="RecipientType">RecipientType.</param>
+        /// <param name="Wrapup">Wrapup.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationVideoEventTopicMessage(string Id = null, StateEnum? State = null, bool? Held = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationVideoEventTopicAddress ToAddress = null, QueueConversationVideoEventTopicAddress FromAddress = null, List<QueueConversationVideoEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, Object AdditionalProperties = null)
+        public QueueConversationVideoEventTopicMessage(string Id = null, StateEnum? State = null, bool? Held = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationVideoEventTopicAddress ToAddress = null, QueueConversationVideoEventTopicAddress FromAddress = null, List<QueueConversationVideoEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, QueueConversationVideoEventTopicWrapup Wrapup = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.State = State;
@@ -382,6 +388,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Type = Type;
             this.RecipientCountry = RecipientCountry;
             this.RecipientType = RecipientType;
+            this.Wrapup = Wrapup;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -507,6 +514,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets Wrapup
+        /// </summary>
+        [DataMember(Name="wrapup", EmitDefaultValue=false)]
+        public QueueConversationVideoEventTopicWrapup Wrapup { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -539,6 +554,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  RecipientCountry: ").Append(RecipientCountry).Append("\n");
             sb.Append("  RecipientType: ").Append(RecipientType).Append("\n");
+            sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -662,6 +678,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RecipientType.Equals(other.RecipientType)
                 ) &&
                 (
+                    this.Wrapup == other.Wrapup ||
+                    this.Wrapup != null &&
+                    this.Wrapup.Equals(other.Wrapup)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -730,6 +751,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RecipientType != null)
                     hash = hash * 59 + this.RecipientType.GetHashCode();
+                
+                if (this.Wrapup != null)
+                    hash = hash * 59 + this.Wrapup.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

@@ -25,6 +25,7 @@ title: QueueConversationEventTopicEmail
 | **Direction** | **string** |  | [optional] |
 | **DraftAttachments** | [**List&lt;QueueConversationEventTopicAttachment&gt;**](QueueConversationEventTopicAttachment.html) |  | [optional] |
 | **Spam** | **bool?** |  | [optional] |
+| **Wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup.html) |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

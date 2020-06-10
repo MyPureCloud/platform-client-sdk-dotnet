@@ -344,6 +344,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -411,6 +414,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationSocialExpressionEventTopicCall" /> class.
@@ -437,8 +442,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisconnectReasons">DisconnectReasons.</param>
         /// <param name="FaxStatus">FaxStatus.</param>
         /// <param name="UuiData">UuiData.</param>
+        /// <param name="Wrapup">Wrapup.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationSocialExpressionEventTopicCall(string Id = null, StateEnum? State = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, QueueConversationSocialExpressionEventTopicErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, QueueConversationSocialExpressionEventTopicAddress Self = null, QueueConversationSocialExpressionEventTopicAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<QueueConversationSocialExpressionEventTopicDisconnectReason> DisconnectReasons = null, QueueConversationSocialExpressionEventTopicFaxStatus FaxStatus = null, string UuiData = null, Object AdditionalProperties = null)
+        public QueueConversationSocialExpressionEventTopicCall(string Id = null, StateEnum? State = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, QueueConversationSocialExpressionEventTopicErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, QueueConversationSocialExpressionEventTopicAddress Self = null, QueueConversationSocialExpressionEventTopicAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<QueueConversationSocialExpressionEventTopicDisconnectReason> DisconnectReasons = null, QueueConversationSocialExpressionEventTopicFaxStatus FaxStatus = null, string UuiData = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.State = State;
@@ -462,6 +468,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DisconnectReasons = DisconnectReasons;
             this.FaxStatus = FaxStatus;
             this.UuiData = UuiData;
+            this.Wrapup = Wrapup;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -621,6 +628,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets Wrapup
+        /// </summary>
+        [DataMember(Name="wrapup", EmitDefaultValue=false)]
+        public QueueConversationSocialExpressionEventTopicWrapup Wrapup { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -658,6 +673,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DisconnectReasons: ").Append(DisconnectReasons).Append("\n");
             sb.Append("  FaxStatus: ").Append(FaxStatus).Append("\n");
             sb.Append("  UuiData: ").Append(UuiData).Append("\n");
+            sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -806,6 +822,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UuiData.Equals(other.UuiData)
                 ) &&
                 (
+                    this.Wrapup == other.Wrapup ||
+                    this.Wrapup != null &&
+                    this.Wrapup.Equals(other.Wrapup)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -889,6 +910,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.UuiData != null)
                     hash = hash * 59 + this.UuiData.GetHashCode();
+                
+                if (this.Wrapup != null)
+                    hash = hash * 59 + this.Wrapup.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
