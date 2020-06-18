@@ -145,6 +145,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Edgeid,
             
             /// <summary>
+            /// Enum Externalcontactid for "externalContactId"
+            /// </summary>
+            [EnumMember(Value = "externalContactId")]
+            Externalcontactid,
+            
+            /// <summary>
             /// Enum Externalmediacount for "externalMediaCount"
             /// </summary>
             [EnumMember(Value = "externalMediaCount")]

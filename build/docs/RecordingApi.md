@@ -360,7 +360,7 @@ void (empty response body)
 
 <a name="getconversationrecording"></a>
 
-## [**Recording**](Recording.html) GetConversationRecording (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null, string locale = null)
+## [**Recording**](Recording.html) GetConversationRecording (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null)
 
 
 
@@ -393,6 +393,9 @@ namespace Example
             var conversationId = conversationId_example;  // string | Conversation ID
             var recordingId = recordingId_example;  // string | Recording ID
             var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
+            var emailFormatId = emailFormatId_example;  // string | The desired media format when downloading an email recording. (optional)  (default to EML)
+            var chatFormatId = chatFormatId_example;  // string | The desired media format when downloading a chat recording. (optional)  (default to ZIP)
+            var messageFormatId = messageFormatId_example;  // string | The desired media format when downloading a message recording. (optional)  (default to ZIP)
             var download = true;  // bool? | requesting a download format of the recording (optional)  (default to false)
             var fileName = fileName_example;  // string | the name of the downloaded fileName (optional) 
             var locale = locale_example;  // string | The locale for the requested file when downloading, as an ISO 639-1 code (optional) 
@@ -400,7 +403,7 @@ namespace Example
             try
             { 
                 // Gets a specific recording.
-                Recording result = apiInstance.GetConversationRecording(conversationId, recordingId, formatId, download, fileName, locale);
+                Recording result = apiInstance.GetConversationRecording(conversationId, recordingId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -420,6 +423,9 @@ namespace Example
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
 | **formatId** | **string**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
+| **emailFormatId** | **string**| The desired media format when downloading an email recording. | [optional] [default to EML]<br />**Values**: EML, NONE |
+| **chatFormatId** | **string**| The desired media format when downloading a chat recording. | [optional] [default to ZIP]<br />**Values**: ZIP, NONE |
+| **messageFormatId** | **string**| The desired media format when downloading a message recording. | [optional] [default to ZIP]<br />**Values**: ZIP, NONE |
 | **download** | **bool?**| requesting a download format of the recording | [optional] [default to false] |
 | **fileName** | **string**| the name of the downloaded fileName | [optional]  |
 | **locale** | **string**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional]  |
@@ -808,7 +814,7 @@ namespace Example
 
 <a name="getorphanrecordingmedia"></a>
 
-## [**Recording**](Recording.html) GetOrphanrecordingMedia (string orphanId, string formatId = null, bool? download = null, string fileName = null, string locale = null)
+## [**Recording**](Recording.html) GetOrphanrecordingMedia (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null)
 
 
 
@@ -840,6 +846,9 @@ namespace Example
             var apiInstance = new RecordingApi();
             var orphanId = orphanId_example;  // string | Orphan ID
             var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
+            var emailFormatId = emailFormatId_example;  // string | The desired media format when downloading an email recording. (optional)  (default to EML)
+            var chatFormatId = chatFormatId_example;  // string | The desired media format when downloading a chat recording. (optional)  (default to ZIP)
+            var messageFormatId = messageFormatId_example;  // string | The desired media format when downloading a message recording. (optional)  (default to ZIP)
             var download = true;  // bool? | requesting a download format of the recording (optional)  (default to false)
             var fileName = fileName_example;  // string | the name of the downloaded fileName (optional) 
             var locale = locale_example;  // string | The locale for the requested file when downloading, as an ISO 639-1 code (optional) 
@@ -847,7 +856,7 @@ namespace Example
             try
             { 
                 // Gets the media of a single orphan recording
-                Recording result = apiInstance.GetOrphanrecordingMedia(orphanId, formatId, download, fileName, locale);
+                Recording result = apiInstance.GetOrphanrecordingMedia(orphanId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -866,6 +875,9 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **orphanId** | **string**| Orphan ID |  |
 | **formatId** | **string**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
+| **emailFormatId** | **string**| The desired media format when downloading an email recording. | [optional] [default to EML]<br />**Values**: EML, NONE |
+| **chatFormatId** | **string**| The desired media format when downloading a chat recording. | [optional] [default to ZIP]<br />**Values**: ZIP, NONE |
+| **messageFormatId** | **string**| The desired media format when downloading a message recording. | [optional] [default to ZIP]<br />**Values**: ZIP, NONE |
 | **download** | **bool?**| requesting a download format of the recording | [optional] [default to false] |
 | **fileName** | **string**| the name of the downloaded fileName | [optional]  |
 | **locale** | **string**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional]  |

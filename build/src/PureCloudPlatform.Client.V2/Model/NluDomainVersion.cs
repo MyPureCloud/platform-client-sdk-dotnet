@@ -93,6 +93,49 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The evaluation status of the NLU domain version.
+        /// </summary>
+        /// <value>The evaluation status of the NLU domain version.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum EvaluationStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unevaluated for "Unevaluated"
+            /// </summary>
+            [EnumMember(Value = "Unevaluated")]
+            Unevaluated,
+            
+            /// <summary>
+            /// Enum Evaluating for "Evaluating"
+            /// </summary>
+            [EnumMember(Value = "Evaluating")]
+            Evaluating,
+            
+            /// <summary>
+            /// Enum Evaluated for "Evaluated"
+            /// </summary>
+            [EnumMember(Value = "Evaluated")]
+            Evaluated,
+            
+            /// <summary>
+            /// Enum Error for "Error"
+            /// </summary>
+            [EnumMember(Value = "Error")]
+            Error
+        }
+        
+        
+        
+        
         
         
         
@@ -125,6 +168,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The training status of the NLU domain version.</value>
         [DataMember(Name="trainingStatus", EmitDefaultValue=false)]
         public TrainingStatusEnum? TrainingStatus { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The evaluation status of the NLU domain version.
+        /// </summary>
+        /// <value>The evaluation status of the NLU domain version.</value>
+        [DataMember(Name="evaluationStatus", EmitDefaultValue=false)]
+        public EvaluationStatusEnum? EvaluationStatus { get; set; }
         
         
         
@@ -228,6 +280,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The intents defined for this NLU domain version.
         /// </summary>
@@ -272,6 +326,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateTrained: ").Append(DateTrained).Append("\n");
             sb.Append("  DatePublished: ").Append(DatePublished).Append("\n");
             sb.Append("  TrainingStatus: ").Append(TrainingStatus).Append("\n");
+            sb.Append("  EvaluationStatus: ").Append(EvaluationStatus).Append("\n");
             sb.Append("  Intents: ").Append(Intents).Append("\n");
             sb.Append("  EntityTypes: ").Append(EntityTypes).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -357,6 +412,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TrainingStatus.Equals(other.TrainingStatus)
                 ) &&
                 (
+                    this.EvaluationStatus == other.EvaluationStatus ||
+                    this.EvaluationStatus != null &&
+                    this.EvaluationStatus.Equals(other.EvaluationStatus)
+                ) &&
+                (
                     this.Intents == other.Intents ||
                     this.Intents != null &&
                     this.Intents.SequenceEqual(other.Intents)
@@ -411,6 +471,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TrainingStatus != null)
                     hash = hash * 59 + this.TrainingStatus.GetHashCode();
+                
+                if (this.EvaluationStatus != null)
+                    hash = hash * 59 + this.EvaluationStatus.GetHashCode();
                 
                 if (this.Intents != null)
                     hash = hash * 59 + this.Intents.GetHashCode();

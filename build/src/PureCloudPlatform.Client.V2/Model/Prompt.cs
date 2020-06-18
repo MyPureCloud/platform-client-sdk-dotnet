@@ -63,8 +63,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The prompt identifier.</param>
         /// <param name="Name">The prompt name. (required).</param>
         /// <param name="Description">Description.</param>
-        /// <param name="Resources">Resources.</param>
-        /// <param name="CurrentOperation">CurrentOperation.</param>
+        /// <param name="Resources">List of resources associated with this prompt.</param>
+        /// <param name="CurrentOperation">Current prompt operation status.</param>
         public Prompt(string Id = null, string Name = null, string Description = null, List<PromptAsset> Resources = null, Operation CurrentOperation = null)
         {
             this.Id = Id;
@@ -104,16 +104,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Resources
+        /// List of resources associated with this prompt
         /// </summary>
+        /// <value>List of resources associated with this prompt</value>
         [DataMember(Name="resources", EmitDefaultValue=false)]
         public List<PromptAsset> Resources { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CurrentOperation
+        /// Current prompt operation status
         /// </summary>
+        /// <value>Current prompt operation status</value>
         [DataMember(Name="currentOperation", EmitDefaultValue=false)]
         public Operation CurrentOperation { get; set; }
         

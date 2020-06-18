@@ -11,10 +11,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOauthAuthorization**](OAuthApi.html#getoauthauthorization) | **GET** /api/v2/oauth/authorizations/{clientId} | Get a client that is authorized by the resource owner |
 | [**GetOauthAuthorizations**](OAuthApi.html#getoauthauthorizations) | **GET** /api/v2/oauth/authorizations | List clients that are authorized by the resource owner |
 | [**GetOauthClient**](OAuthApi.html#getoauthclient) | **GET** /api/v2/oauth/clients/{clientId} | Get OAuth Client |
+| [**GetOauthClientUsageQueryResult**](OAuthApi.html#getoauthclientusagequeryresult) | **GET** /api/v2/oauth/clients/{clientId}/usage/query/results/{executionId} | Get the results of a usage query |
+| [**GetOauthClientUsageSummary**](OAuthApi.html#getoauthclientusagesummary) | **GET** /api/v2/oauth/clients/{clientId}/usage/summary | Get a summary of OAuth client API usage |
 | [**GetOauthClients**](OAuthApi.html#getoauthclients) | **GET** /api/v2/oauth/clients | The list of OAuth clients |
 | [**GetOauthScope**](OAuthApi.html#getoauthscope) | **GET** /api/v2/oauth/scopes/{scopeId} | An OAuth scope |
 | [**GetOauthScopes**](OAuthApi.html#getoauthscopes) | **GET** /api/v2/oauth/scopes | The list of OAuth scopes |
 | [**PostOauthClientSecret**](OAuthApi.html#postoauthclientsecret) | **POST** /api/v2/oauth/clients/{clientId}/secret | Regenerate Client Secret |
+| [**PostOauthClientUsageQuery**](OAuthApi.html#postoauthclientusagequery) | **POST** /api/v2/oauth/clients/{clientId}/usage/query | Query for OAuth client API usage |
 | [**PostOauthClients**](OAuthApi.html#postoauthclients) | **POST** /api/v2/oauth/clients | Create OAuth client |
 | [**PutOauthClient**](OAuthApi.html#putoauthclient) | **PUT** /api/v2/oauth/clients/{clientId} | Update OAuth Client |
 {: class="table table-striped"}
@@ -257,6 +260,132 @@ namespace Example
 
 [**OAuthClient**](OAuthClient.html)
 
+<a name="getoauthclientusagequeryresult"></a>
+
+## [**ApiUsageQueryResult**](ApiUsageQueryResult.html) GetOauthClientUsageQueryResult (string executionId, string clientId)
+
+
+
+Get the results of a usage query
+
+
+
+Requires ANY permissions: 
+
+* oauth:client:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOauthClientUsageQueryResultExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OAuthApi();
+            var executionId = executionId_example;  // string | ID of the query execution
+            var clientId = clientId_example;  // string | Client ID
+
+            try
+            { 
+                // Get the results of a usage query
+                ApiUsageQueryResult result = apiInstance.GetOauthClientUsageQueryResult(executionId, clientId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OAuthApi.GetOauthClientUsageQueryResult: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **executionId** | **string**| ID of the query execution |  |
+| **clientId** | **string**| Client ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ApiUsageQueryResult**](ApiUsageQueryResult.html)
+
+<a name="getoauthclientusagesummary"></a>
+
+## [**UsageExecutionResult**](UsageExecutionResult.html) GetOauthClientUsageSummary (string clientId, string days = null)
+
+
+
+Get a summary of OAuth client API usage
+
+After calling this method, you will then need to poll for the query results based on the returned execution Id
+
+Requires ANY permissions: 
+
+* oauth:client:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOauthClientUsageSummaryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OAuthApi();
+            var clientId = clientId_example;  // string | Client ID
+            var days = days_example;  // string | Previous number of days to query (optional)  (default to 7)
+
+            try
+            { 
+                // Get a summary of OAuth client API usage
+                UsageExecutionResult result = apiInstance.GetOauthClientUsageSummary(clientId, days);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OAuthApi.GetOauthClientUsageSummary: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **clientId** | **string**| Client ID |  |
+| **days** | **string**| Previous number of days to query | [optional] [default to 7] |
+{: class="table table-striped"}
+
+### Return type
+
+[**UsageExecutionResult**](UsageExecutionResult.html)
+
 <a name="getoauthclients"></a>
 
 ## [**OAuthClientEntityListing**](OAuthClientEntityListing.html) GetOauthClients ()
@@ -495,6 +624,69 @@ namespace Example
 ### Return type
 
 [**OAuthClient**](OAuthClient.html)
+
+<a name="postoauthclientusagequery"></a>
+
+## [**UsageExecutionResult**](UsageExecutionResult.html) PostOauthClientUsageQuery (string clientId, ApiUsageQuery body)
+
+
+
+Query for OAuth client API usage
+
+After calling this method, you will then need to poll for the query results based on the returned execution Id
+
+Requires ANY permissions: 
+
+* oauth:client:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOauthClientUsageQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OAuthApi();
+            var clientId = clientId_example;  // string | Client ID
+            var body = new ApiUsageQuery(); // ApiUsageQuery | Query
+
+            try
+            { 
+                // Query for OAuth client API usage
+                UsageExecutionResult result = apiInstance.PostOauthClientUsageQuery(clientId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OAuthApi.PostOauthClientUsageQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **clientId** | **string**| Client ID |  |
+| **body** | [**ApiUsageQuery**](ApiUsageQuery.html)| Query |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UsageExecutionResult**](UsageExecutionResult.html)
 
 <a name="postoauthclients"></a>
 

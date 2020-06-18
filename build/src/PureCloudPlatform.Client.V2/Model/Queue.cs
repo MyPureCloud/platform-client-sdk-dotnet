@@ -56,6 +56,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The skill evaluation method to use when routing conversations.
         /// </summary>
@@ -89,6 +92,8 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ALL")]
             All
         }
+        
+        
         
         
         
@@ -183,6 +188,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedBy">The ID of the user that last modified the queue..</param>
         /// <param name="CreatedBy">The ID of the user that created the queue..</param>
         /// <param name="MediaSettings">The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM.</param>
+        /// <param name="RoutingRules">The routing rules for the queue, used for routing to known or preferred agents..</param>
         /// <param name="Bullseye">The bulls-eye settings for the queue..</param>
         /// <param name="AcwSettings">The ACW settings for the queue..</param>
         /// <param name="SkillEvaluationMethod">The skill evaluation method to use when routing conversations..</param>
@@ -194,7 +200,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultScripts">The default script Ids for the communication types..</param>
         /// <param name="OutboundMessagingAddresses">The messaging addresses for the queue..</param>
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
-        public Queue(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, DomainEntityRef QueueFlow = null, DomainEntityRef WhisperPrompt = null, bool? AutoAnswerOnly = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null)
+        public Queue(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, Dictionary<string, MediaSetting> MediaSettings = null, List<RoutingRule> RoutingRules = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, DomainEntityRef QueueFlow = null, DomainEntityRef WhisperPrompt = null, bool? AutoAnswerOnly = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -204,6 +210,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ModifiedBy = ModifiedBy;
             this.CreatedBy = CreatedBy;
             this.MediaSettings = MediaSettings;
+            this.RoutingRules = RoutingRules;
             this.Bullseye = Bullseye;
             this.AcwSettings = AcwSettings;
             this.SkillEvaluationMethod = SkillEvaluationMethod;
@@ -306,6 +313,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM</value>
         [DataMember(Name="mediaSettings", EmitDefaultValue=false)]
         public Dictionary<string, MediaSetting> MediaSettings { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The routing rules for the queue, used for routing to known or preferred agents.
+        /// </summary>
+        /// <value>The routing rules for the queue, used for routing to known or preferred agents.</value>
+        [DataMember(Name="routingRules", EmitDefaultValue=false)]
+        public List<RoutingRule> RoutingRules { get; set; }
         
         
         
@@ -427,6 +443,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
             sb.Append("  MediaSettings: ").Append(MediaSettings).Append("\n");
+            sb.Append("  RoutingRules: ").Append(RoutingRules).Append("\n");
             sb.Append("  Bullseye: ").Append(Bullseye).Append("\n");
             sb.Append("  AcwSettings: ").Append(AcwSettings).Append("\n");
             sb.Append("  SkillEvaluationMethod: ").Append(SkillEvaluationMethod).Append("\n");
@@ -524,6 +541,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaSettings == other.MediaSettings ||
                     this.MediaSettings != null &&
                     this.MediaSettings.SequenceEqual(other.MediaSettings)
+                ) &&
+                (
+                    this.RoutingRules == other.RoutingRules ||
+                    this.RoutingRules != null &&
+                    this.RoutingRules.SequenceEqual(other.RoutingRules)
                 ) &&
                 (
                     this.Bullseye == other.Bullseye ||
@@ -628,6 +650,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MediaSettings != null)
                     hash = hash * 59 + this.MediaSettings.GetHashCode();
+                
+                if (this.RoutingRules != null)
+                    hash = hash * 59 + this.RoutingRules.GetHashCode();
                 
                 if (this.Bullseye != null)
                     hash = hash * 59 + this.Bullseye.GetHashCode();

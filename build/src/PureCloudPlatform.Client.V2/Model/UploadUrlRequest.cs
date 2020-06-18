@@ -29,10 +29,42 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets ServerSideEncryption
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ServerSideEncryptionEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Aes256 for "AES256"
+            /// </summary>
+            [EnumMember(Value = "AES256")]
+            Aes256
+        }
         
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets ServerSideEncryption
+        /// </summary>
+        [DataMember(Name="serverSideEncryption", EmitDefaultValue=false)]
+        public ServerSideEncryptionEnum? ServerSideEncryption { get; set; }
         
         
     
@@ -42,11 +74,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FileName">Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%`]\&quot;&gt;[~&lt;#|.</param>
         /// <param name="ContentMd5">Content MD-5 of the file to upload.</param>
         /// <param name="SignedUrlTimeoutSeconds">The number of seconds the presigned URL is valid for (from 1 to 604800 seconds). If none provided, defaults to 600 seconds.</param>
-        public UploadUrlRequest(string FileName = null, string ContentMd5 = null, int? SignedUrlTimeoutSeconds = null)
+        /// <param name="ServerSideEncryption">ServerSideEncryption.</param>
+        public UploadUrlRequest(string FileName = null, string ContentMd5 = null, int? SignedUrlTimeoutSeconds = null, ServerSideEncryptionEnum? ServerSideEncryption = null)
         {
             this.FileName = FileName;
             this.ContentMd5 = ContentMd5;
             this.SignedUrlTimeoutSeconds = SignedUrlTimeoutSeconds;
+            this.ServerSideEncryption = ServerSideEncryption;
             
         }
         
@@ -78,6 +112,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? SignedUrlTimeoutSeconds { get; set; }
         
         
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,6 +126,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FileName: ").Append(FileName).Append("\n");
             sb.Append("  ContentMd5: ").Append(ContentMd5).Append("\n");
             sb.Append("  SignedUrlTimeoutSeconds: ").Append(SignedUrlTimeoutSeconds).Append("\n");
+            sb.Append("  ServerSideEncryption: ").Append(ServerSideEncryption).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -140,6 +177,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SignedUrlTimeoutSeconds == other.SignedUrlTimeoutSeconds ||
                     this.SignedUrlTimeoutSeconds != null &&
                     this.SignedUrlTimeoutSeconds.Equals(other.SignedUrlTimeoutSeconds)
+                ) &&
+                (
+                    this.ServerSideEncryption == other.ServerSideEncryption ||
+                    this.ServerSideEncryption != null &&
+                    this.ServerSideEncryption.Equals(other.ServerSideEncryption)
                 );
         }
 
@@ -163,6 +205,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SignedUrlTimeoutSeconds != null)
                     hash = hash * 59 + this.SignedUrlTimeoutSeconds.GetHashCode();
+                
+                if (this.ServerSideEncryption != null)
+                    hash = hash * 59 + this.ServerSideEncryption.GetHashCode();
                 
                 return hash;
             }

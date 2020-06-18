@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteIdentityprovidersAdfs**](IdentityProviderApi.html#deleteidentityprovidersadfs) | **DELETE** /api/v2/identityproviders/adfs | Delete ADFS Identity Provider |
 | [**DeleteIdentityprovidersCic**](IdentityProviderApi.html#deleteidentityproviderscic) | **DELETE** /api/v2/identityproviders/cic | Delete Customer Interaction Center (CIC) Identity Provider |
+| [**DeleteIdentityprovidersGeneric**](IdentityProviderApi.html#deleteidentityprovidersgeneric) | **DELETE** /api/v2/identityproviders/generic | Delete Generic SAML Identity Provider |
 | [**DeleteIdentityprovidersGsuite**](IdentityProviderApi.html#deleteidentityprovidersgsuite) | **DELETE** /api/v2/identityproviders/gsuite | Delete G Suite Identity Provider |
 | [**DeleteIdentityprovidersIdentitynow**](IdentityProviderApi.html#deleteidentityprovidersidentitynow) | **DELETE** /api/v2/identityproviders/identitynow | Delete IdentityNow Provider |
 | [**DeleteIdentityprovidersOkta**](IdentityProviderApi.html#deleteidentityprovidersokta) | **DELETE** /api/v2/identityproviders/okta | Delete Okta Identity Provider |
@@ -20,6 +21,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetIdentityproviders**](IdentityProviderApi.html#getidentityproviders) | **GET** /api/v2/identityproviders | The list of identity providers |
 | [**GetIdentityprovidersAdfs**](IdentityProviderApi.html#getidentityprovidersadfs) | **GET** /api/v2/identityproviders/adfs | Get ADFS Identity Provider |
 | [**GetIdentityprovidersCic**](IdentityProviderApi.html#getidentityproviderscic) | **GET** /api/v2/identityproviders/cic | Get Customer Interaction Center (CIC) Identity Provider |
+| [**GetIdentityprovidersGeneric**](IdentityProviderApi.html#getidentityprovidersgeneric) | **GET** /api/v2/identityproviders/generic | Get Generic SAML Identity Provider |
 | [**GetIdentityprovidersGsuite**](IdentityProviderApi.html#getidentityprovidersgsuite) | **GET** /api/v2/identityproviders/gsuite | Get G Suite Identity Provider |
 | [**GetIdentityprovidersIdentitynow**](IdentityProviderApi.html#getidentityprovidersidentitynow) | **GET** /api/v2/identityproviders/identitynow | Get IdentityNow Provider |
 | [**GetIdentityprovidersOkta**](IdentityProviderApi.html#getidentityprovidersokta) | **GET** /api/v2/identityproviders/okta | Get Okta Identity Provider |
@@ -30,6 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetIdentityprovidersSalesforce**](IdentityProviderApi.html#getidentityproviderssalesforce) | **GET** /api/v2/identityproviders/salesforce | Get Salesforce Identity Provider |
 | [**PutIdentityprovidersAdfs**](IdentityProviderApi.html#putidentityprovidersadfs) | **PUT** /api/v2/identityproviders/adfs | Update/Create ADFS Identity Provider |
 | [**PutIdentityprovidersCic**](IdentityProviderApi.html#putidentityproviderscic) | **PUT** /api/v2/identityproviders/cic | Update/Create Customer Interaction Center (CIC) Identity Provider |
+| [**PutIdentityprovidersGeneric**](IdentityProviderApi.html#putidentityprovidersgeneric) | **PUT** /api/v2/identityproviders/generic | Update/Create Generic SAML Identity Provider |
 | [**PutIdentityprovidersGsuite**](IdentityProviderApi.html#putidentityprovidersgsuite) | **PUT** /api/v2/identityproviders/gsuite | Update/Create G Suite Identity Provider |
 | [**PutIdentityprovidersIdentitynow**](IdentityProviderApi.html#putidentityprovidersidentitynow) | **PUT** /api/v2/identityproviders/identitynow | Update/Create IdentityNow Provider |
 | [**PutIdentityprovidersOkta**](IdentityProviderApi.html#putidentityprovidersokta) | **PUT** /api/v2/identityproviders/okta | Update/Create Okta Identity Provider |
@@ -138,6 +141,62 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling IdentityProviderApi.DeleteIdentityprovidersCic: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**Empty**](Empty.html)
+
+<a name="deleteidentityprovidersgeneric"></a>
+
+## [**Empty**](Empty.html) DeleteIdentityprovidersGeneric ()
+
+
+
+Delete Generic SAML Identity Provider
+
+
+
+Requires ANY permissions: 
+
+* sso:provider:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteIdentityprovidersGenericExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new IdentityProviderApi();
+
+            try
+            { 
+                // Delete Generic SAML Identity Provider
+                Empty result = apiInstance.DeleteIdentityprovidersGeneric();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IdentityProviderApi.DeleteIdentityprovidersGeneric: " + e.Message );
             }
         }
     }
@@ -768,6 +827,62 @@ This endpoint does require any parameters.
 
 [**CustomerInteractionCenter**](CustomerInteractionCenter.html)
 
+<a name="getidentityprovidersgeneric"></a>
+
+## [**GenericSAML**](GenericSAML.html) GetIdentityprovidersGeneric ()
+
+
+
+Get Generic SAML Identity Provider
+
+
+
+Requires ANY permissions: 
+
+* sso:provider:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIdentityprovidersGenericExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new IdentityProviderApi();
+
+            try
+            { 
+                // Get Generic SAML Identity Provider
+                GenericSAML result = apiInstance.GetIdentityprovidersGeneric();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IdentityProviderApi.GetIdentityprovidersGeneric: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**GenericSAML**](GenericSAML.html)
+
 <a name="getidentityprovidersgsuite"></a>
 
 ## [**GSuite**](GSuite.html) GetIdentityprovidersGsuite ()
@@ -1334,6 +1449,68 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CustomerInteractionCenter**](CustomerInteractionCenter.html)| Provider |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OAuthProvider**](OAuthProvider.html)
+
+<a name="putidentityprovidersgeneric"></a>
+
+## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersGeneric (GenericSAML body)
+
+
+
+Update/Create Generic SAML Identity Provider
+
+
+
+Requires ANY permissions: 
+
+* sso:provider:add
+* sso:provider:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutIdentityprovidersGenericExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new IdentityProviderApi();
+            var body = new GenericSAML(); // GenericSAML | Provider
+
+            try
+            { 
+                // Update/Create Generic SAML Identity Provider
+                OAuthProvider result = apiInstance.PutIdentityprovidersGeneric(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IdentityProviderApi.PutIdentityprovidersGeneric: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**GenericSAML**](GenericSAML.html)| Provider |  |
 {: class="table table-striped"}
 
 ### Return type

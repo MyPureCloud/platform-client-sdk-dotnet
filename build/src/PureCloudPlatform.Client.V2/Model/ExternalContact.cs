@@ -145,6 +145,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalContact" /> class.
@@ -177,8 +187,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="SurveyOptOut">SurveyOptOut.</param>
         /// <param name="ExternalSystemUrl">A string that identifies an external system-of-record resource that may have more detailed information on the contact. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace..</param>
+        /// <param name="Schema">The schema defining custom fields for this contact.</param>
+        /// <param name="CustomFields">Custom fields defined in the schema referenced by schemaId and schemaVersion..</param>
         /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
-        public ExternalContact(string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, TwitterId TwitterId = null, LineId LineId = null, WhatsAppId WhatsAppId = null, FacebookId FacebookId = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, List<ExternalDataSource> ExternalDataSources = null)
+        public ExternalContact(string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, TwitterId TwitterId = null, LineId LineId = null, WhatsAppId WhatsAppId = null, FacebookId FacebookId = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null, List<ExternalDataSource> ExternalDataSources = null)
         {
             this.FirstName = FirstName;
             this.MiddleName = MiddleName;
@@ -202,6 +214,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalOrganization = ExternalOrganization;
             this.SurveyOptOut = SurveyOptOut;
             this.ExternalSystemUrl = ExternalSystemUrl;
+            this.Schema = Schema;
+            this.CustomFields = CustomFields;
             this.ExternalDataSources = ExternalDataSources;
             
         }
@@ -399,6 +413,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The schema defining custom fields for this contact
+        /// </summary>
+        /// <value>The schema defining custom fields for this contact</value>
+        [DataMember(Name="schema", EmitDefaultValue=false)]
+        public DataSchema Schema { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Custom fields defined in the schema referenced by schemaId and schemaVersion.
+        /// </summary>
+        /// <value>Custom fields defined in the schema referenced by schemaId and schemaVersion.</value>
+        [DataMember(Name="customFields", EmitDefaultValue=false)]
+        public Dictionary<string, Object> CustomFields { get; set; }
+        
+        
+        
+        /// <summary>
         /// Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.
         /// </summary>
         /// <value>Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.</value>
@@ -447,6 +479,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  SurveyOptOut: ").Append(SurveyOptOut).Append("\n");
             sb.Append("  ExternalSystemUrl: ").Append(ExternalSystemUrl).Append("\n");
+            sb.Append("  Schema: ").Append(Schema).Append("\n");
+            sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
             sb.Append("  ExternalDataSources: ").Append(ExternalDataSources).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -601,6 +635,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalSystemUrl.Equals(other.ExternalSystemUrl)
                 ) &&
                 (
+                    this.Schema == other.Schema ||
+                    this.Schema != null &&
+                    this.Schema.Equals(other.Schema)
+                ) &&
+                (
+                    this.CustomFields == other.CustomFields ||
+                    this.CustomFields != null &&
+                    this.CustomFields.SequenceEqual(other.CustomFields)
+                ) &&
+                (
                     this.ExternalDataSources == other.ExternalDataSources ||
                     this.ExternalDataSources != null &&
                     this.ExternalDataSources.SequenceEqual(other.ExternalDataSources)
@@ -692,6 +736,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ExternalSystemUrl != null)
                     hash = hash * 59 + this.ExternalSystemUrl.GetHashCode();
+                
+                if (this.Schema != null)
+                    hash = hash * 59 + this.Schema.GetHashCode();
+                
+                if (this.CustomFields != null)
+                    hash = hash * 59 + this.CustomFields.GetHashCode();
                 
                 if (this.ExternalDataSources != null)
                     hash = hash * 59 + this.ExternalDataSources.GetHashCode();

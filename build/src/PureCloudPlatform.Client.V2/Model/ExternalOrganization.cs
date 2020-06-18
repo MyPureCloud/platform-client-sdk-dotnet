@@ -120,6 +120,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalOrganization" /> class.
@@ -148,8 +158,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Trustor">Trustor.</param>
+        /// <param name="Schema">The schema defining custom fields for this contact.</param>
+        /// <param name="CustomFields">Custom fields defined in the schema referenced by schemaId and schemaVersion..</param>
         /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
-        public ExternalOrganization(string Id = null, string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, string ExternalSystemUrl = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, Trustor Trustor = null, List<ExternalDataSource> ExternalDataSources = null)
+        public ExternalOrganization(string Id = null, string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, string ExternalSystemUrl = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, Trustor Trustor = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null, List<ExternalDataSource> ExternalDataSources = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -169,6 +181,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ModifyDate = ModifyDate;
             this.CreateDate = CreateDate;
             this.Trustor = Trustor;
+            this.Schema = Schema;
+            this.CustomFields = CustomFields;
             this.ExternalDataSources = ExternalDataSources;
             
         }
@@ -325,6 +339,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The schema defining custom fields for this contact
+        /// </summary>
+        /// <value>The schema defining custom fields for this contact</value>
+        [DataMember(Name="schema", EmitDefaultValue=false)]
+        public DataSchema Schema { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Custom fields defined in the schema referenced by schemaId and schemaVersion.
+        /// </summary>
+        /// <value>Custom fields defined in the schema referenced by schemaId and schemaVersion.</value>
+        [DataMember(Name="customFields", EmitDefaultValue=false)]
+        public Dictionary<string, Object> CustomFields { get; set; }
+        
+        
+        
+        /// <summary>
         /// Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.
         /// </summary>
         /// <value>Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.</value>
@@ -368,6 +400,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ModifyDate: ").Append(ModifyDate).Append("\n");
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
             sb.Append("  Trustor: ").Append(Trustor).Append("\n");
+            sb.Append("  Schema: ").Append(Schema).Append("\n");
+            sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
             sb.Append("  ExternalDataSources: ").Append(ExternalDataSources).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -497,6 +531,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Trustor.Equals(other.Trustor)
                 ) &&
                 (
+                    this.Schema == other.Schema ||
+                    this.Schema != null &&
+                    this.Schema.Equals(other.Schema)
+                ) &&
+                (
+                    this.CustomFields == other.CustomFields ||
+                    this.CustomFields != null &&
+                    this.CustomFields.SequenceEqual(other.CustomFields)
+                ) &&
+                (
                     this.ExternalDataSources == other.ExternalDataSources ||
                     this.ExternalDataSources != null &&
                     this.ExternalDataSources.SequenceEqual(other.ExternalDataSources)
@@ -573,6 +617,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Trustor != null)
                     hash = hash * 59 + this.Trustor.GetHashCode();
+                
+                if (this.Schema != null)
+                    hash = hash * 59 + this.Schema.GetHashCode();
+                
+                if (this.CustomFields != null)
+                    hash = hash * 59 + this.CustomFields.GetHashCode();
                 
                 if (this.ExternalDataSources != null)
                     hash = hash * 59 + this.ExternalDataSources.GetHashCode();

@@ -7,10 +7,67 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**GetAuditsQueryServicemapping**](AuditApi.html#getauditsqueryservicemapping) | **GET** /api/v2/audits/query/servicemapping | Get service mapping information used in audits. |
 | [**GetAuditsQueryTransactionId**](AuditApi.html#getauditsquerytransactionid) | **GET** /api/v2/audits/query/{transactionId} | Get status of audit query execution |
 | [**GetAuditsQueryTransactionIdResults**](AuditApi.html#getauditsquerytransactionidresults) | **GET** /api/v2/audits/query/{transactionId}/results | Get results of audit query |
 | [**PostAuditsQuery**](AuditApi.html#postauditsquery) | **POST** /api/v2/audits/query | Create audit query execution |
 {: class="table table-striped"}
+
+<a name="getauditsqueryservicemapping"></a>
+
+## [**AuditQueryServiceMapping**](AuditQueryServiceMapping.html) GetAuditsQueryServicemapping ()
+
+
+
+Get service mapping information used in audits.
+
+
+
+Requires ALL permissions: 
+
+* audits:audit:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuditsQueryServicemappingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AuditApi();
+
+            try
+            { 
+                // Get service mapping information used in audits.
+                AuditQueryServiceMapping result = apiInstance.GetAuditsQueryServicemapping();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuditApi.GetAuditsQueryServicemapping: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**AuditQueryServiceMapping**](AuditQueryServiceMapping.html)
 
 <a name="getauditsquerytransactionid"></a>
 

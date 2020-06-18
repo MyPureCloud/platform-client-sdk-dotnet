@@ -59,6 +59,26 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EmbeddedIntegration> GetOrganizationsEmbeddedintegrationWithHttpInfo ();
         
         /// <summary>
+        /// Get organization IP address whitelist settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>IpAddressAuthentication</returns>
+        IpAddressAuthentication GetOrganizationsIpaddressauthentication ();
+
+        /// <summary>
+        /// Get organization IP address whitelist settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of IpAddressAuthentication</returns>
+        ApiResponse<IpAddressAuthentication> GetOrganizationsIpaddressauthenticationWithHttpInfo ();
+        
+        /// <summary>
         /// Get organization.
         /// </summary>
         /// <remarks>
@@ -143,6 +163,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Whitelist settings</param>
         /// <returns>ApiResponse of EmbeddedIntegration</returns>
         ApiResponse<EmbeddedIntegration> PutOrganizationsEmbeddedintegrationWithHttpInfo (EmbeddedIntegration body);
+        
+        /// <summary>
+        /// Update organization IP address whitelist settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">IP address Whitelist settings</param>
+        /// <returns>IpAddressAuthentication</returns>
+        IpAddressAuthentication PutOrganizationsIpaddressauthentication (IpAddressAuthentication body);
+
+        /// <summary>
+        /// Update organization IP address whitelist settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">IP address Whitelist settings</param>
+        /// <returns>ApiResponse of IpAddressAuthentication</returns>
+        ApiResponse<IpAddressAuthentication> PutOrganizationsIpaddressauthenticationWithHttpInfo (IpAddressAuthentication body);
         
         /// <summary>
         /// Update organization.
@@ -235,6 +277,26 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EmbeddedIntegration>> GetOrganizationsEmbeddedintegrationAsyncWithHttpInfo ();
         
         /// <summary>
+        /// Get organization IP address whitelist settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of IpAddressAuthentication</returns>
+        System.Threading.Tasks.Task<IpAddressAuthentication> GetOrganizationsIpaddressauthenticationAsync ();
+
+        /// <summary>
+        /// Get organization IP address whitelist settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (IpAddressAuthentication)</returns>
+        System.Threading.Tasks.Task<ApiResponse<IpAddressAuthentication>> GetOrganizationsIpaddressauthenticationAsyncWithHttpInfo ();
+        
+        /// <summary>
         /// Get organization.
         /// </summary>
         /// <remarks>
@@ -319,6 +381,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Whitelist settings</param>
         /// <returns>Task of ApiResponse (EmbeddedIntegration)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmbeddedIntegration>> PutOrganizationsEmbeddedintegrationAsyncWithHttpInfo (EmbeddedIntegration body);
+        
+        /// <summary>
+        /// Update organization IP address whitelist settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">IP address Whitelist settings</param>
+        /// <returns>Task of IpAddressAuthentication</returns>
+        System.Threading.Tasks.Task<IpAddressAuthentication> PutOrganizationsIpaddressauthenticationAsync (IpAddressAuthentication body);
+
+        /// <summary>
+        /// Update organization IP address whitelist settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">IP address Whitelist settings</param>
+        /// <returns>Task of ApiResponse (IpAddressAuthentication)</returns>
+        System.Threading.Tasks.Task<ApiResponse<IpAddressAuthentication>> PutOrganizationsIpaddressauthenticationAsyncWithHttpInfo (IpAddressAuthentication body);
         
         /// <summary>
         /// Update organization.
@@ -823,6 +907,186 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<EmbeddedIntegration>(localVarStatusCode,
                 localVarHeaders,
                 (EmbeddedIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbeddedIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get organization IP address whitelist settings 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>IpAddressAuthentication</returns>
+        public IpAddressAuthentication GetOrganizationsIpaddressauthentication ()
+        {
+             ApiResponse<IpAddressAuthentication> localVarResponse = GetOrganizationsIpaddressauthenticationWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get organization IP address whitelist settings 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of IpAddressAuthentication</returns>
+        public ApiResponse< IpAddressAuthentication > GetOrganizationsIpaddressauthenticationWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/organizations/ipaddressauthentication";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsIpaddressauthentication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsIpaddressauthentication: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IpAddressAuthentication>(localVarStatusCode,
+                localVarHeaders,
+                (IpAddressAuthentication) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IpAddressAuthentication)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get organization IP address whitelist settings 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of IpAddressAuthentication</returns>
+        public async System.Threading.Tasks.Task<IpAddressAuthentication> GetOrganizationsIpaddressauthenticationAsync ()
+        {
+             ApiResponse<IpAddressAuthentication> localVarResponse = await GetOrganizationsIpaddressauthenticationAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get organization IP address whitelist settings 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (IpAddressAuthentication)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<IpAddressAuthentication>> GetOrganizationsIpaddressauthenticationAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/organizations/ipaddressauthentication";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsIpaddressauthentication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsIpaddressauthentication: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IpAddressAuthentication>(localVarStatusCode,
+                localVarHeaders,
+                (IpAddressAuthentication) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IpAddressAuthentication)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -1598,6 +1862,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<EmbeddedIntegration>(localVarStatusCode,
                 localVarHeaders,
                 (EmbeddedIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbeddedIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update organization IP address whitelist settings 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">IP address Whitelist settings</param>
+        /// <returns>IpAddressAuthentication</returns>
+        public IpAddressAuthentication PutOrganizationsIpaddressauthentication (IpAddressAuthentication body)
+        {
+             ApiResponse<IpAddressAuthentication> localVarResponse = PutOrganizationsIpaddressauthenticationWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update organization IP address whitelist settings 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">IP address Whitelist settings</param>
+        /// <returns>ApiResponse of IpAddressAuthentication</returns>
+        public ApiResponse< IpAddressAuthentication > PutOrganizationsIpaddressauthenticationWithHttpInfo (IpAddressAuthentication body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationApi->PutOrganizationsIpaddressauthentication");
+
+            var localVarPath = "/api/v2/organizations/ipaddressauthentication";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrganizationsIpaddressauthentication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrganizationsIpaddressauthentication: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IpAddressAuthentication>(localVarStatusCode,
+                localVarHeaders,
+                (IpAddressAuthentication) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IpAddressAuthentication)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update organization IP address whitelist settings 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">IP address Whitelist settings</param>
+        /// <returns>Task of IpAddressAuthentication</returns>
+        public async System.Threading.Tasks.Task<IpAddressAuthentication> PutOrganizationsIpaddressauthenticationAsync (IpAddressAuthentication body)
+        {
+             ApiResponse<IpAddressAuthentication> localVarResponse = await PutOrganizationsIpaddressauthenticationAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update organization IP address whitelist settings 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">IP address Whitelist settings</param>
+        /// <returns>Task of ApiResponse (IpAddressAuthentication)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<IpAddressAuthentication>> PutOrganizationsIpaddressauthenticationAsyncWithHttpInfo (IpAddressAuthentication body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationApi->PutOrganizationsIpaddressauthentication");
+            
+
+            var localVarPath = "/api/v2/organizations/ipaddressauthentication";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrganizationsIpaddressauthentication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrganizationsIpaddressauthentication: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IpAddressAuthentication>(localVarStatusCode,
+                localVarHeaders,
+                (IpAddressAuthentication) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IpAddressAuthentication)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

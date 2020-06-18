@@ -90,12 +90,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Name of the service to query audits for.
         /// </summary>
         /// <value>Name of the service to query audits for.</value>
         [DataMember(Name="serviceName", EmitDefaultValue=false)]
         public ServiceNameEnum? ServiceName { get; set; }
+        
+        
         
         
         
@@ -113,11 +118,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Interval">Date and time range of data to query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (required).</param>
         /// <param name="ServiceName">Name of the service to query audits for. (required).</param>
         /// <param name="Filters">Additional filters for the query..</param>
-        public AuditQueryRequest(string Interval = null, ServiceNameEnum? ServiceName = null, List<AuditQueryFilter> Filters = null)
+        /// <param name="Sort">Sort parameter for the query..</param>
+        public AuditQueryRequest(string Interval = null, ServiceNameEnum? ServiceName = null, List<AuditQueryFilter> Filters = null, List<AuditQuerySort> Sort = null)
         {
             this.Interval = Interval;
             this.ServiceName = ServiceName;
             this.Filters = Filters;
+            this.Sort = Sort;
             
         }
         
@@ -142,6 +149,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<AuditQueryFilter> Filters { get; set; }
         
         
+        
+        /// <summary>
+        /// Sort parameter for the query.
+        /// </summary>
+        /// <value>Sort parameter for the query.</value>
+        [DataMember(Name="sort", EmitDefaultValue=false)]
+        public List<AuditQuerySort> Sort { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -154,6 +170,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  ServiceName: ").Append(ServiceName).Append("\n");
             sb.Append("  Filters: ").Append(Filters).Append("\n");
+            sb.Append("  Sort: ").Append(Sort).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -204,6 +221,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Filters == other.Filters ||
                     this.Filters != null &&
                     this.Filters.SequenceEqual(other.Filters)
+                ) &&
+                (
+                    this.Sort == other.Sort ||
+                    this.Sort != null &&
+                    this.Sort.SequenceEqual(other.Sort)
                 );
         }
 
@@ -227,6 +249,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Filters != null)
                     hash = hash * 59 + this.Filters.GetHashCode();
+                
+                if (this.Sort != null)
+                    hash = hash * 59 + this.Sort.GetHashCode();
                 
                 return hash;
             }

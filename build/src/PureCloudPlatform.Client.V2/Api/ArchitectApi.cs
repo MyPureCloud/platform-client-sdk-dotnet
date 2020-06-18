@@ -1523,6 +1523,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<FlowDivisionViewEntityListing> GetFlowsDivisionviewsWithHttpInfo (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null, bool? includeSchemas = null);
         
         /// <summary>
+        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowExecutionId">flow execution ID</param>
+        /// <returns>FlowRuntimeExecution</returns>
+        FlowRuntimeExecution GetFlowsExecution (string flowExecutionId);
+
+        /// <summary>
+        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowExecutionId">flow execution ID</param>
+        /// <returns>ApiResponse of FlowRuntimeExecution</returns>
+        ApiResponse<FlowRuntimeExecution> GetFlowsExecutionWithHttpInfo (string flowExecutionId);
+        
+        /// <summary>
         /// Get a flow outcome
         /// </summary>
         /// <remarks>
@@ -2073,6 +2095,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">datatable json-schema</param>
         /// <returns>ApiResponse of DataTable</returns>
         ApiResponse<DataTable> PostFlowsDatatablesWithHttpInfo (DataTable body);
+        
+        /// <summary>
+        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type.
+        /// </summary>
+        /// <remarks>
+        /// The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowLaunchRequest"></param>
+        /// <returns>FlowExecutionLaunchResponse</returns>
+        FlowExecutionLaunchResponse PostFlowsExecutions (FlowExecutionLaunchRequest flowLaunchRequest);
+
+        /// <summary>
+        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type.
+        /// </summary>
+        /// <remarks>
+        /// The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowLaunchRequest"></param>
+        /// <returns>ApiResponse of FlowExecutionLaunchResponse</returns>
+        ApiResponse<FlowExecutionLaunchResponse> PostFlowsExecutionsWithHttpInfo (FlowExecutionLaunchRequest flowLaunchRequest);
         
         /// <summary>
         /// Create a flow outcome
@@ -3879,6 +3923,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<FlowDivisionViewEntityListing>> GetFlowsDivisionviewsAsyncWithHttpInfo (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null, bool? includeSchemas = null);
         
         /// <summary>
+        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowExecutionId">flow execution ID</param>
+        /// <returns>Task of FlowRuntimeExecution</returns>
+        System.Threading.Tasks.Task<FlowRuntimeExecution> GetFlowsExecutionAsync (string flowExecutionId);
+
+        /// <summary>
+        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowExecutionId">flow execution ID</param>
+        /// <returns>Task of ApiResponse (FlowRuntimeExecution)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlowRuntimeExecution>> GetFlowsExecutionAsyncWithHttpInfo (string flowExecutionId);
+        
+        /// <summary>
         /// Get a flow outcome
         /// </summary>
         /// <remarks>
@@ -4429,6 +4495,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">datatable json-schema</param>
         /// <returns>Task of ApiResponse (DataTable)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataTable>> PostFlowsDatatablesAsyncWithHttpInfo (DataTable body);
+        
+        /// <summary>
+        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type.
+        /// </summary>
+        /// <remarks>
+        /// The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowLaunchRequest"></param>
+        /// <returns>Task of FlowExecutionLaunchResponse</returns>
+        System.Threading.Tasks.Task<FlowExecutionLaunchResponse> PostFlowsExecutionsAsync (FlowExecutionLaunchRequest flowLaunchRequest);
+
+        /// <summary>
+        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type.
+        /// </summary>
+        /// <remarks>
+        /// The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowLaunchRequest"></param>
+        /// <returns>Task of ApiResponse (FlowExecutionLaunchResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlowExecutionLaunchResponse>> PostFlowsExecutionsAsyncWithHttpInfo (FlowExecutionLaunchRequest flowLaunchRequest);
         
         /// <summary>
         /// Create a flow outcome
@@ -16326,6 +16414,199 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowExecutionId">flow execution ID</param>
+        /// <returns>FlowRuntimeExecution</returns>
+        public FlowRuntimeExecution GetFlowsExecution (string flowExecutionId)
+        {
+             ApiResponse<FlowRuntimeExecution> localVarResponse = GetFlowsExecutionWithHttpInfo(flowExecutionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowExecutionId">flow execution ID</param>
+        /// <returns>ApiResponse of FlowRuntimeExecution</returns>
+        public ApiResponse< FlowRuntimeExecution > GetFlowsExecutionWithHttpInfo (string flowExecutionId)
+        { 
+            // verify the required parameter 'flowExecutionId' is set
+            if (flowExecutionId == null)
+                throw new ApiException(400, "Missing required parameter 'flowExecutionId' when calling ArchitectApi->GetFlowsExecution");
+
+            var localVarPath = "/api/v2/flows/executions/{flowExecutionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowExecutionId != null) localVarPathParams.Add("flowExecutionId", this.Configuration.ApiClient.ParameterToString(flowExecutionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsExecution: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsExecution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowRuntimeExecution>(localVarStatusCode,
+                localVarHeaders,
+                (FlowRuntimeExecution) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowRuntimeExecution)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowExecutionId">flow execution ID</param>
+        /// <returns>Task of FlowRuntimeExecution</returns>
+        public async System.Threading.Tasks.Task<FlowRuntimeExecution> GetFlowsExecutionAsync (string flowExecutionId)
+        {
+             ApiResponse<FlowRuntimeExecution> localVarResponse = await GetFlowsExecutionAsyncWithHttpInfo(flowExecutionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowExecutionId">flow execution ID</param>
+        /// <returns>Task of ApiResponse (FlowRuntimeExecution)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlowRuntimeExecution>> GetFlowsExecutionAsyncWithHttpInfo (string flowExecutionId)
+        { 
+            // verify the required parameter 'flowExecutionId' is set
+            if (flowExecutionId == null)
+                throw new ApiException(400, "Missing required parameter 'flowExecutionId' when calling ArchitectApi->GetFlowsExecution");
+            
+
+            var localVarPath = "/api/v2/flows/executions/{flowExecutionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowExecutionId != null) localVarPathParams.Add("flowExecutionId", this.Configuration.ApiClient.ParameterToString(flowExecutionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsExecution: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsExecution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowRuntimeExecution>(localVarStatusCode,
+                localVarHeaders,
+                (FlowRuntimeExecution) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowRuntimeExecution)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get a flow outcome Returns a specified flow outcome
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -21138,6 +21419,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DataTable>(localVarStatusCode,
                 localVarHeaders,
                 (DataTable) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTable)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowLaunchRequest"></param>
+        /// <returns>FlowExecutionLaunchResponse</returns>
+        public FlowExecutionLaunchResponse PostFlowsExecutions (FlowExecutionLaunchRequest flowLaunchRequest)
+        {
+             ApiResponse<FlowExecutionLaunchResponse> localVarResponse = PostFlowsExecutionsWithHttpInfo(flowLaunchRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowLaunchRequest"></param>
+        /// <returns>ApiResponse of FlowExecutionLaunchResponse</returns>
+        public ApiResponse< FlowExecutionLaunchResponse > PostFlowsExecutionsWithHttpInfo (FlowExecutionLaunchRequest flowLaunchRequest)
+        { 
+            // verify the required parameter 'flowLaunchRequest' is set
+            if (flowLaunchRequest == null)
+                throw new ApiException(400, "Missing required parameter 'flowLaunchRequest' when calling ArchitectApi->PostFlowsExecutions");
+
+            var localVarPath = "/api/v2/flows/executions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (flowLaunchRequest != null && flowLaunchRequest.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(flowLaunchRequest); // http body (model) parameter
+            else
+                localVarPostBody = flowLaunchRequest; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsExecutions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsExecutions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowExecutionLaunchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (FlowExecutionLaunchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowExecutionLaunchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowLaunchRequest"></param>
+        /// <returns>Task of FlowExecutionLaunchResponse</returns>
+        public async System.Threading.Tasks.Task<FlowExecutionLaunchResponse> PostFlowsExecutionsAsync (FlowExecutionLaunchRequest flowLaunchRequest)
+        {
+             ApiResponse<FlowExecutionLaunchResponse> localVarResponse = await PostFlowsExecutionsAsyncWithHttpInfo(flowLaunchRequest);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowLaunchRequest"></param>
+        /// <returns>Task of ApiResponse (FlowExecutionLaunchResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlowExecutionLaunchResponse>> PostFlowsExecutionsAsyncWithHttpInfo (FlowExecutionLaunchRequest flowLaunchRequest)
+        { 
+            // verify the required parameter 'flowLaunchRequest' is set
+            if (flowLaunchRequest == null)
+                throw new ApiException(400, "Missing required parameter 'flowLaunchRequest' when calling ArchitectApi->PostFlowsExecutions");
+            
+
+            var localVarPath = "/api/v2/flows/executions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (flowLaunchRequest != null && flowLaunchRequest.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(flowLaunchRequest); // http body (model) parameter
+            else
+                localVarPostBody = flowLaunchRequest; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsExecutions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsExecutions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowExecutionLaunchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (FlowExecutionLaunchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowExecutionLaunchResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

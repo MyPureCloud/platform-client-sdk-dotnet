@@ -64,6 +64,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Search Id
+        /// </summary>
+        /// <value>Search Id</value>
+        [DataMember(Name="searchId", EmitDefaultValue=false)]
+        public string SearchId { get; private set; }
+        
+        
+        
+        /// <summary>
         /// Total number of records returned
         /// </summary>
         /// <value>Total number of records returned</value>
@@ -100,15 +109,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// ID of the Search Response
-        /// </summary>
-        /// <value>ID of the Search Response</value>
-        [DataMember(Name="searchId", EmitDefaultValue=false)]
-        public string SearchId { get; private set; }
-        
-        
-        
-        /// <summary>
         /// Results associated to the search response
         /// </summary>
         /// <value>Results associated to the search response</value>
@@ -125,11 +125,11 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class KnowledgeSearchResponse {\n");
             
+            sb.Append("  SearchId: ").Append(SearchId).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
-            sb.Append("  SearchId: ").Append(SearchId).Append("\n");
             sb.Append("  Results: ").Append(Results).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -168,6 +168,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.SearchId == other.SearchId ||
+                    this.SearchId != null &&
+                    this.SearchId.Equals(other.SearchId)
+                ) &&
+                (
                     this.Total == other.Total ||
                     this.Total != null &&
                     this.Total.Equals(other.Total)
@@ -188,11 +193,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PageNumber.Equals(other.PageNumber)
                 ) &&
                 (
-                    this.SearchId == other.SearchId ||
-                    this.SearchId != null &&
-                    this.SearchId.Equals(other.SearchId)
-                ) &&
-                (
                     this.Results == other.Results ||
                     this.Results != null &&
                     this.Results.SequenceEqual(other.Results)
@@ -211,6 +211,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.SearchId != null)
+                    hash = hash * 59 + this.SearchId.GetHashCode();
+                
                 if (this.Total != null)
                     hash = hash * 59 + this.Total.GetHashCode();
                 
@@ -222,9 +225,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
-                
-                if (this.SearchId != null)
-                    hash = hash * 59 + this.SearchId.GetHashCode();
                 
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();

@@ -9,10 +9,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**GetFieldconfig**](OrganizationApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
 | [**GetOrganizationsEmbeddedintegration**](OrganizationApi.html#getorganizationsembeddedintegration) | **GET** /api/v2/organizations/embeddedintegration | Get the list of domains that will be allowed to embed PureCloud applications |
+| [**GetOrganizationsIpaddressauthentication**](OrganizationApi.html#getorganizationsipaddressauthentication) | **GET** /api/v2/organizations/ipaddressauthentication | Get organization IP address whitelist settings |
 | [**GetOrganizationsMe**](OrganizationApi.html#getorganizationsme) | **GET** /api/v2/organizations/me | Get organization. |
 | [**GetOrganizationsWhitelist**](OrganizationApi.html#getorganizationswhitelist) | **GET** /api/v2/organizations/whitelist | Use PUT /api/v2/organizations/embeddedintegration instead |
 | [**PatchOrganizationsFeature**](OrganizationApi.html#patchorganizationsfeature) | **PATCH** /api/v2/organizations/features/{featureName} | Update organization |
 | [**PutOrganizationsEmbeddedintegration**](OrganizationApi.html#putorganizationsembeddedintegration) | **PUT** /api/v2/organizations/embeddedintegration | Update the list of domains that will be allowed to embed PureCloud applications |
+| [**PutOrganizationsIpaddressauthentication**](OrganizationApi.html#putorganizationsipaddressauthentication) | **PUT** /api/v2/organizations/ipaddressauthentication | Update organization IP address whitelist settings |
 | [**PutOrganizationsMe**](OrganizationApi.html#putorganizationsme) | **PUT** /api/v2/organizations/me | Update organization. |
 | [**PutOrganizationsWhitelist**](OrganizationApi.html#putorganizationswhitelist) | **PUT** /api/v2/organizations/whitelist | Use PUT /api/v2/organizations/embeddedintegration instead |
 {: class="table table-striped"}
@@ -131,6 +133,62 @@ This endpoint does require any parameters.
 ### Return type
 
 [**EmbeddedIntegration**](EmbeddedIntegration.html)
+
+<a name="getorganizationsipaddressauthentication"></a>
+
+## [**IpAddressAuthentication**](IpAddressAuthentication.html) GetOrganizationsIpaddressauthentication ()
+
+
+
+Get organization IP address whitelist settings
+
+
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrganizationsIpaddressauthenticationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OrganizationApi();
+
+            try
+            { 
+                // Get organization IP address whitelist settings
+                IpAddressAuthentication result = apiInstance.GetOrganizationsIpaddressauthentication();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationApi.GetOrganizationsIpaddressauthentication: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**IpAddressAuthentication**](IpAddressAuthentication.html)
 
 <a name="getorganizationsme"></a>
 
@@ -365,6 +423,67 @@ namespace Example
 ### Return type
 
 [**EmbeddedIntegration**](EmbeddedIntegration.html)
+
+<a name="putorganizationsipaddressauthentication"></a>
+
+## [**IpAddressAuthentication**](IpAddressAuthentication.html) PutOrganizationsIpaddressauthentication (IpAddressAuthentication body)
+
+
+
+Update organization IP address whitelist settings
+
+
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutOrganizationsIpaddressauthenticationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OrganizationApi();
+            var body = new IpAddressAuthentication(); // IpAddressAuthentication | IP address Whitelist settings
+
+            try
+            { 
+                // Update organization IP address whitelist settings
+                IpAddressAuthentication result = apiInstance.PutOrganizationsIpaddressauthentication(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationApi.PutOrganizationsIpaddressauthentication: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**IpAddressAuthentication**](IpAddressAuthentication.html)| IP address Whitelist settings |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**IpAddressAuthentication**](IpAddressAuthentication.html)
 
 <a name="putorganizationsme"></a>
 

@@ -145,6 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Status of the audit query execution request.
         /// </summary>
@@ -168,6 +171,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditQueryExecutionStatusResponse" /> class.
@@ -178,7 +183,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Interval">Interval for the audit query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
         /// <param name="ServiceName">Service name for the audit query..</param>
         /// <param name="Filters">Filters for the audit query..</param>
-        public AuditQueryExecutionStatusResponse(string Id = null, StateEnum? State = null, DateTime? StartDate = null, string Interval = null, ServiceNameEnum? ServiceName = null, List<AuditQueryFilter> Filters = null)
+        /// <param name="Sort">Sort parameter for the audit query..</param>
+        public AuditQueryExecutionStatusResponse(string Id = null, StateEnum? State = null, DateTime? StartDate = null, string Interval = null, ServiceNameEnum? ServiceName = null, List<AuditQueryFilter> Filters = null, List<AuditQuerySort> Sort = null)
         {
             this.Id = Id;
             this.State = State;
@@ -186,6 +192,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Interval = Interval;
             this.ServiceName = ServiceName;
             this.Filters = Filters;
+            this.Sort = Sort;
             
         }
         
@@ -230,6 +237,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<AuditQueryFilter> Filters { get; set; }
         
         
+        
+        /// <summary>
+        /// Sort parameter for the audit query.
+        /// </summary>
+        /// <value>Sort parameter for the audit query.</value>
+        [DataMember(Name="sort", EmitDefaultValue=false)]
+        public List<AuditQuerySort> Sort { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -245,6 +261,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  ServiceName: ").Append(ServiceName).Append("\n");
             sb.Append("  Filters: ").Append(Filters).Append("\n");
+            sb.Append("  Sort: ").Append(Sort).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -310,6 +327,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Filters == other.Filters ||
                     this.Filters != null &&
                     this.Filters.SequenceEqual(other.Filters)
+                ) &&
+                (
+                    this.Sort == other.Sort ||
+                    this.Sort != null &&
+                    this.Sort.SequenceEqual(other.Sort)
                 );
         }
 
@@ -342,6 +364,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Filters != null)
                     hash = hash * 59 + this.Filters.GetHashCode();
+                
+                if (this.Sort != null)
+                    hash = hash * 59 + this.Sort.GetHashCode();
                 
                 return hash;
             }

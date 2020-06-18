@@ -62,6 +62,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlowsDatatableRows**](ArchitectApi.html#getflowsdatatablerows) | **GET** /api/v2/flows/datatables/{datatableId}/rows | Returns the rows for the datatable with the given id |
 | [**GetFlowsDatatables**](ArchitectApi.html#getflowsdatatables) | **GET** /api/v2/flows/datatables | Retrieve a list of datatables for the org |
 | [**GetFlowsDivisionviews**](ArchitectApi.html#getflowsdivisionviews) | **GET** /api/v2/flows/divisionviews | Get a pageable list of basic flow information objects filterable by query parameters. |
+| [**GetFlowsExecution**](ArchitectApi.html#getflowsexecution) | **GET** /api/v2/flows/executions/{flowExecutionId} | Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. |
 | [**GetFlowsOutcome**](ArchitectApi.html#getflowsoutcome) | **GET** /api/v2/flows/outcomes/{flowOutcomeId} | Get a flow outcome |
 | [**GetFlowsOutcomes**](ArchitectApi.html#getflowsoutcomes) | **GET** /api/v2/flows/outcomes | Get a pageable list of flow outcomes, filtered by query parameters |
 | [**PostArchitectDependencytrackingBuild**](ArchitectApi.html#postarchitectdependencytrackingbuild) | **POST** /api/v2/architect/dependencytracking/build | Rebuild Dependency Tracking data for an organization |
@@ -86,6 +87,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostFlowsDatatableImportJobs**](ArchitectApi.html#postflowsdatatableimportjobs) | **POST** /api/v2/flows/datatables/{datatableId}/import/jobs | Begin an import process for importing rows into a datatable |
 | [**PostFlowsDatatableRows**](ArchitectApi.html#postflowsdatatablerows) | **POST** /api/v2/flows/datatables/{datatableId}/rows | Create a new row entry for the datatable. |
 | [**PostFlowsDatatables**](ArchitectApi.html#postflowsdatatables) | **POST** /api/v2/flows/datatables | Create a new datatable with the specified json-schema definition |
+| [**PostFlowsExecutions**](ArchitectApi.html#postflowsexecutions) | **POST** /api/v2/flows/executions | Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. |
 | [**PostFlowsOutcomes**](ArchitectApi.html#postflowsoutcomes) | **POST** /api/v2/flows/outcomes | Create a flow outcome |
 | [**PutArchitectEmergencygroup**](ArchitectApi.html#putarchitectemergencygroup) | **PUT** /api/v2/architect/emergencygroups/{emergencyGroupId} | Updates a emergency group by ID |
 | [**PutArchitectIvr**](ArchitectApi.html#putarchitectivr) | **PUT** /api/v2/architect/ivrs/{ivrId} | Update an IVR Config. |
@@ -3737,6 +3739,67 @@ namespace Example
 
 [**FlowDivisionViewEntityListing**](FlowDivisionViewEntityListing.html)
 
+<a name="getflowsexecution"></a>
+
+## [**FlowRuntimeExecution**](FlowRuntimeExecution.html) GetFlowsExecution (string flowExecutionId)
+
+
+
+Get a flow execution's details. Flow execution details are available for several days after the flow is started.
+
+
+
+Requires ANY permissions: 
+
+* architect:flowExecution:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsExecutionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ArchitectApi();
+            var flowExecutionId = flowExecutionId_example;  // string | flow execution ID
+
+            try
+            { 
+                // Get a flow execution's details. Flow execution details are available for several days after the flow is started.
+                FlowRuntimeExecution result = apiInstance.GetFlowsExecution(flowExecutionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsExecution: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flowExecutionId** | **string**| flow execution ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FlowRuntimeExecution**](FlowRuntimeExecution.html)
+
 <a name="getflowsoutcome"></a>
 
 ## [**FlowOutcome**](FlowOutcome.html) GetFlowsOutcome (string flowOutcomeId)
@@ -5222,6 +5285,67 @@ namespace Example
 ### Return type
 
 [**DataTable**](DataTable.html)
+
+<a name="postflowsexecutions"></a>
+
+## [**FlowExecutionLaunchResponse**](FlowExecutionLaunchResponse.html) PostFlowsExecutions (FlowExecutionLaunchRequest flowLaunchRequest)
+
+
+
+Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
+
+The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+
+Requires ANY permissions: 
+
+* architect:flow:launch
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowsExecutionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ArchitectApi();
+            var flowLaunchRequest = new FlowExecutionLaunchRequest(); // FlowExecutionLaunchRequest | 
+
+            try
+            { 
+                // Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
+                FlowExecutionLaunchResponse result = apiInstance.PostFlowsExecutions(flowLaunchRequest);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlowsExecutions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flowLaunchRequest** | [**FlowExecutionLaunchRequest**](FlowExecutionLaunchRequest.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FlowExecutionLaunchResponse**](FlowExecutionLaunchResponse.html)
 
 <a name="postflowsoutcomes"></a>
 
