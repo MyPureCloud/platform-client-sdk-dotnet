@@ -41,6 +41,45 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Audio upload status
+        /// </summary>
+        /// <value>Audio upload status</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum UploadStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Created for "created"
+            /// </summary>
+            [EnumMember(Value = "created")]
+            Created,
+            
+            /// <summary>
+            /// Enum Uploaded for "uploaded"
+            /// </summary>
+            [EnumMember(Value = "uploaded")]
+            Uploaded,
+            
+            /// <summary>
+            /// Enum Transcoded for "transcoded"
+            /// </summary>
+            [EnumMember(Value = "transcoded")]
+            Transcoded,
+            
+            /// <summary>
+            /// Enum Transcodefailed for "transcodeFailed"
+            /// </summary>
+            [EnumMember(Value = "transcodeFailed")]
+            Transcodefailed
+        }
         
         
         
@@ -73,6 +112,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        /// <summary>
+        /// Audio upload status
+        /// </summary>
+        /// <value>Audio upload status</value>
+        [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
+        public UploadStatusEnum? UploadStatus { get; set; }
         
         
         
@@ -175,13 +222,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Text { get; set; }
         
         
-        
-        /// <summary>
-        /// Audio upload status
-        /// </summary>
-        /// <value>Audio upload status</value>
-        [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
-        public string UploadStatus { get; private set; }
         
         
         

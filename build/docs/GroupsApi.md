@@ -397,11 +397,11 @@ namespace Example
 
 ## [**GroupProfile**](GroupProfile.html) GetGroupProfile (string groupId, string fields = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get group profile
 
-
+This api is deprecated. Use /api/v2/groups instead
 
 Requires NO permissions: 
 
@@ -589,11 +589,11 @@ namespace Example
 
 ## [**GroupProfileEntityListing**](GroupProfileEntityListing.html) GetProfilesGroups (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get group profile listing
 
-
+This api is deprecated. Use /api/v2/groups instead.
 
 Requires NO permissions: 
 

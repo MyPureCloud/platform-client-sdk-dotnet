@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E5FB001F-90DD-4360-A701-6A831EF4513A}</ProjectGuid>
+    <ProjectGuid>{3E61C225-CFF4-4570-BADA-31E3619F14E8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PureCloud Platform Client SDK</RootNamespace>

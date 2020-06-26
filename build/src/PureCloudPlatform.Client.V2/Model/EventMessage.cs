@@ -83,6 +83,12 @@ namespace PureCloudPlatform.Client.V2.Model
             CampaignThrottled,
             
             /// <summary>
+            /// Enum CampaignQueueMembersLimitExceeded for "CAMPAIGN_QUEUE_MEMBERS_LIMIT_EXCEEDED"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_QUEUE_MEMBERS_LIMIT_EXCEEDED")]
+            CampaignQueueMembersLimitExceeded,
+            
+            /// <summary>
             /// Enum InvalidCallableTimeZone for "INVALID_CALLABLE_TIME_ZONE"
             /// </summary>
             [EnumMember(Value = "INVALID_CALLABLE_TIME_ZONE")]

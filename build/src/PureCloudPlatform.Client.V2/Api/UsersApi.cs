@@ -394,7 +394,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user profile listing
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api is deprecated. User /api/v2/users
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -410,7 +410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user profile listing
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api is deprecated. User /api/v2/users
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -620,7 +620,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get user profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api has been deprecated. Use api/v2/users instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -632,7 +632,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get user profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api has been deprecated. Use api/v2/users instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -2118,7 +2118,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user profile listing
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api is deprecated. User /api/v2/users
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -2134,7 +2134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user profile listing
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api is deprecated. User /api/v2/users
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -2344,7 +2344,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get user profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api has been deprecated. Use api/v2/users instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -2356,7 +2356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get user profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api has been deprecated. Use api/v2/users instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -6721,7 +6721,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get a user profile listing 
+        /// Get a user profile listing This api is deprecated. User /api/v2/users
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -6738,7 +6738,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user profile listing 
+        /// Get a user profile listing This api is deprecated. User /api/v2/users
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -6828,7 +6828,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get a user profile listing 
+        /// Get a user profile listing This api is deprecated. User /api/v2/users
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -6846,7 +6846,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user profile listing 
+        /// Get a user profile listing This api is deprecated. User /api/v2/users
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -8542,7 +8542,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get user profile 
+        /// Get user profile This api has been deprecated. Use api/v2/users instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -8555,7 +8555,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get user profile 
+        /// Get user profile This api has been deprecated. Use api/v2/users instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -8640,7 +8640,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get user profile 
+        /// Get user profile This api has been deprecated. Use api/v2/users instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -8654,7 +8654,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get user profile 
+        /// Get user profile This api has been deprecated. Use api/v2/users instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>

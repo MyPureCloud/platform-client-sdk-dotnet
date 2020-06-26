@@ -74,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimEmail" /> class.
         /// </summary>
-        /// <param name="Value">The email address..</param>
+        /// <param name="Value">The email address. Note value for type &#39;other&#39;is immutable..</param>
         /// <param name="Type">The type of email address..</param>
         /// <param name="Primary">Indicates whether the email address is the primary email address..</param>
         public ScimEmail(string Value = null, TypeEnum? Type = null, bool? Primary = null)
@@ -88,9 +88,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The email address.
+        /// The email address. Note value for type &#39;other&#39;is immutable.
         /// </summary>
-        /// <value>The email address.</value>
+        /// <value>The email address. Note value for type &#39;other&#39;is immutable.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
         

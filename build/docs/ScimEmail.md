@@ -7,7 +7,7 @@ title: ScimEmail
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Value** | **string** | The email address. | [optional] |
+| **Value** | **string** | The email address. Note value for type &#39;other&#39;is immutable. | [optional] |
 | **Type** | **string** | The type of email address. | [optional] |
 | **Primary** | **bool?** | Indicates whether the email address is the primary email address. | [optional] |
 {: class="table table-striped"}

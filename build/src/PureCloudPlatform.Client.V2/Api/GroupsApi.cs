@@ -162,7 +162,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get group profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api is deprecated. Use /api/v2/groups instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
@@ -174,7 +174,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get group profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api is deprecated. Use /api/v2/groups instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
@@ -240,7 +240,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get group profile listing
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api is deprecated. Use /api/v2/groups instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -254,7 +254,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get group profile listing
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api is deprecated. Use /api/v2/groups instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -506,7 +506,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get group profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api is deprecated. Use /api/v2/groups instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
@@ -518,7 +518,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get group profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api is deprecated. Use /api/v2/groups instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
@@ -584,7 +584,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get group profile listing
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api is deprecated. Use /api/v2/groups instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -598,7 +598,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get group profile listing
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api is deprecated. Use /api/v2/groups instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -1986,7 +1986,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get group profile 
+        /// Get group profile This api is deprecated. Use /api/v2/groups instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
@@ -1999,7 +1999,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get group profile 
+        /// Get group profile This api is deprecated. Use /api/v2/groups instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
@@ -2084,7 +2084,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get group profile 
+        /// Get group profile This api is deprecated. Use /api/v2/groups instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
@@ -2098,7 +2098,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get group profile 
+        /// Get group profile This api is deprecated. Use /api/v2/groups instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
@@ -2594,7 +2594,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get group profile listing 
+        /// Get group profile listing This api is deprecated. Use /api/v2/groups instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -2609,7 +2609,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get group profile listing 
+        /// Get group profile listing This api is deprecated. Use /api/v2/groups instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -2695,7 +2695,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get group profile listing 
+        /// Get group profile listing This api is deprecated. Use /api/v2/groups instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -2711,7 +2711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get group profile listing 
+        /// Get group profile listing This api is deprecated. Use /api/v2/groups instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>

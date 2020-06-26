@@ -1068,11 +1068,11 @@ namespace Example
 
 ## [**UserProfileEntityListing**](UserProfileEntityListing.html) GetProfilesUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get a user profile listing
 
-
+This api is deprecated. User /api/v2/users
 
 Requires NO permissions: 
 
@@ -1638,11 +1638,11 @@ namespace Example
 
 ## [**UserProfile**](UserProfile.html) GetUserProfile (string userId, List<string> expand = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get user profile
 
-
+This api has been deprecated. Use api/v2/users instead
 
 Requires NO permissions: 
 
@@ -1689,7 +1689,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| userId |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team |
 {: class="table table-striped"}
 
 ### Return type

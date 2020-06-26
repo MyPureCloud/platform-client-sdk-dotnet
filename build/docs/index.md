@@ -31,7 +31,7 @@ If you're building from source or otherwise not using nuget, reference your vers
 * The app is running locally on the user's computer
 * The app has an embedded browser to use for OAuth
 
-If the application will be authenticating as a human, the [Implicit Grant](http://developer.mypurecloud.com/api/rest/authorization/use-implicit-grant.html) OAuth 2 flow may be used from an embeddable browser. The access token can be retrieved from the querystring of the redirected URL in the browser control. This process is implemented in the [PureCloud API dotNET OAuth Control](https://github.com/MyPureCloud/purecloud_api_dotnet_oauth_control) project.
+If the application will be authenticating as a human, the [Implicit Grant](http://developer.mypurecloud.com/api/rest/authorization/use-implicit-grant.html) OAuth 2 flow may be used from an embeddable browser. The access token can be retrieved from the querystring of the redirected URL in the browser control. This process is implemented in the [Genesys Cloud API dotNET OAuth Control](https://github.com/MyPureCloud/purecloud_api_dotnet_oauth_control) project.
 
 See the browser control implemented in a winforms project in the [C# OAuth With Implicit Grant](https://developer.mypurecloud.com/api/tutorials/oauth-implicit/#csharp) tutorial.
 
@@ -128,7 +128,7 @@ Configuration.Default.AccessToken = accessTokenInfo.AccessToken;
 
 #### Setting the Environment
 
-If connecting to a PureCloud environment other than mypurecloud.com (e.g. mypurecloud.ie), set the new base path before constructing any API classes. The new base path should be the base path to the Platform API for your environment.
+If connecting to a Genesys Cloud environment other than mypurecloud.com (e.g. mypurecloud.ie), set the new base path before constructing any API classes. The new base path should be the base path to the Platform API for your environment.
 
 ```{"language":"csharp"}
 PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1;
@@ -184,7 +184,7 @@ Console.WriteLine($"Hello, {me.DisplayName}");
 
 ## NotificationHandler Helper Class
 
-The .NET SDK includes a helper class `NotificationHandler` to assist in managing PureCloud notifications. The class will create a single notification channel, or use an existing one, and provides methods to add and remove subscriptions and raises an event with a deserialized notification object whenever one is received.
+The .NET SDK includes a helper class `NotificationHandler` to assist in managing GenesysCloud notifications. The class will create a single notification channel, or use an existing one, and provides methods to add and remove subscriptions and raises an event with a deserialized notification object whenever one is received.
 
 **WARNING**
 
@@ -311,6 +311,6 @@ The SDK's version is incremented according to the [Semantic Versioning Specifica
 
 ## Support
 
-This package is intended to be forwards compatible with v2 of PureCloud's Platform API. While the general policy for the API is not to introduce breaking changes, there are certain additions and changes to the API that cause breaking changes for the SDK, often due to the way the API is expressed in its swagger definition. Because of this, the SDK can have a major version bump while the API remains at major version 2. While the SDK is intended to be forward compatible, patches will only be released to the latest version. For these reasons, it is strongly recommended that all applications using this SDK are kept up to date and use the latest version of the SDK.
+This package is intended to be forwards compatible with v2 of Genesys Cloud's Platform API. While the general policy for the API is not to introduce breaking changes, there are certain additions and changes to the API that cause breaking changes for the SDK, often due to the way the API is expressed in its swagger definition. Because of this, the SDK can have a major version bump while the API remains at major version 2. While the SDK is intended to be forward compatible, patches will only be released to the latest version. For these reasons, it is strongly recommended that all applications using this SDK are kept up to date and use the latest version of the SDK.
 
-For any issues, questions, or suggestions for the SDK, visit the [PureCloud Developer Forum](https://developer.mypurecloud.com/forum/).
+For any issues, questions, or suggestions for the SDK, visit the [Genesys Cloud Developer Forum](https://developer.mypurecloud.com/forum/).
