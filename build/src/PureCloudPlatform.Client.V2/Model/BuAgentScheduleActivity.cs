@@ -41,6 +41,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The type of the external activity associated with this activity, if applicable
+        /// </summary>
+        /// <value>The type of the external activity associated with this activity, if applicable</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ExternalActivityTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Coaching for "Coaching"
+            /// </summary>
+            [EnumMember(Value = "Coaching")]
+            Coaching
+        }
         
         
         
@@ -48,6 +69,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The type of the external activity associated with this activity, if applicable
+        /// </summary>
+        /// <value>The type of the external activity associated with this activity, if applicable</value>
+        [DataMember(Name="externalActivityType", EmitDefaultValue=false)]
+        public ExternalActivityTypeEnum? ExternalActivityType { get; set; }
         
         
     
@@ -60,7 +99,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ActivityCodeId">The ID of the activity code associated with this activity.</param>
         /// <param name="Paid">Whether this activity is paid.</param>
         /// <param name="TimeOffRequestId">The ID of the time off request associated with this activity, if applicable.</param>
-        public BuAgentScheduleActivity(DateTime? StartDate = null, int? LengthMinutes = null, string Description = null, string ActivityCodeId = null, bool? Paid = null, string TimeOffRequestId = null)
+        /// <param name="ExternalActivityId">The ID of the external activity associated with this activity, if applicable.</param>
+        /// <param name="ExternalActivityType">The type of the external activity associated with this activity, if applicable.</param>
+        public BuAgentScheduleActivity(DateTime? StartDate = null, int? LengthMinutes = null, string Description = null, string ActivityCodeId = null, bool? Paid = null, string TimeOffRequestId = null, string ExternalActivityId = null, ExternalActivityTypeEnum? ExternalActivityType = null)
         {
             this.StartDate = StartDate;
             this.LengthMinutes = LengthMinutes;
@@ -68,6 +109,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ActivityCodeId = ActivityCodeId;
             this.Paid = Paid;
             this.TimeOffRequestId = TimeOffRequestId;
+            this.ExternalActivityId = ExternalActivityId;
+            this.ExternalActivityType = ExternalActivityType;
             
         }
         
@@ -126,6 +169,17 @@ namespace PureCloudPlatform.Client.V2.Model
         public string TimeOffRequestId { get; set; }
         
         
+        
+        /// <summary>
+        /// The ID of the external activity associated with this activity, if applicable
+        /// </summary>
+        /// <value>The ID of the external activity associated with this activity, if applicable</value>
+        [DataMember(Name="externalActivityId", EmitDefaultValue=false)]
+        public string ExternalActivityId { get; set; }
+        
+        
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -141,6 +195,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
             sb.Append("  Paid: ").Append(Paid).Append("\n");
             sb.Append("  TimeOffRequestId: ").Append(TimeOffRequestId).Append("\n");
+            sb.Append("  ExternalActivityId: ").Append(ExternalActivityId).Append("\n");
+            sb.Append("  ExternalActivityType: ").Append(ExternalActivityType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -206,6 +262,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TimeOffRequestId == other.TimeOffRequestId ||
                     this.TimeOffRequestId != null &&
                     this.TimeOffRequestId.Equals(other.TimeOffRequestId)
+                ) &&
+                (
+                    this.ExternalActivityId == other.ExternalActivityId ||
+                    this.ExternalActivityId != null &&
+                    this.ExternalActivityId.Equals(other.ExternalActivityId)
+                ) &&
+                (
+                    this.ExternalActivityType == other.ExternalActivityType ||
+                    this.ExternalActivityType != null &&
+                    this.ExternalActivityType.Equals(other.ExternalActivityType)
                 );
         }
 
@@ -238,6 +304,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TimeOffRequestId != null)
                     hash = hash * 59 + this.TimeOffRequestId.GetHashCode();
+                
+                if (this.ExternalActivityId != null)
+                    hash = hash * 59 + this.ExternalActivityId.GetHashCode();
+                
+                if (this.ExternalActivityType != null)
+                    hash = hash * 59 + this.ExternalActivityType.GetHashCode();
                 
                 return hash;
             }

@@ -80,6 +80,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailMessagesTopicVoicemailMessage" /> class.
@@ -96,7 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Note">Note.</param>
         /// <param name="Deleted">Deleted.</param>
         /// <param name="ModifiedByUserId">ModifiedByUserId.</param>
-        public VoicemailMessagesTopicVoicemailMessage(string Id = null, bool? Read = null, int? AudioRecordingDurationSeconds = null, int? AudioRecordingSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string CallerAddress = null, string CallerName = null, string Action = null, string Note = null, bool? Deleted = null, string ModifiedByUserId = null)
+        /// <param name="CopiedTo">CopiedTo.</param>
+        /// <param name="CopiedFrom">CopiedFrom.</param>
+        public VoicemailMessagesTopicVoicemailMessage(string Id = null, bool? Read = null, int? AudioRecordingDurationSeconds = null, int? AudioRecordingSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string CallerAddress = null, string CallerName = null, string Action = null, string Note = null, bool? Deleted = null, string ModifiedByUserId = null, List<VoicemailMessagesTopicVoicemailCopyRecord> CopiedTo = null, VoicemailMessagesTopicVoicemailCopyRecord CopiedFrom = null)
         {
             this.Id = Id;
             this.Read = Read;
@@ -110,6 +122,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Note = Note;
             this.Deleted = Deleted;
             this.ModifiedByUserId = ModifiedByUserId;
+            this.CopiedTo = CopiedTo;
+            this.CopiedFrom = CopiedFrom;
             
         }
         
@@ -210,6 +224,22 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ModifiedByUserId { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets CopiedTo
+        /// </summary>
+        [DataMember(Name="copiedTo", EmitDefaultValue=false)]
+        public List<VoicemailMessagesTopicVoicemailCopyRecord> CopiedTo { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets CopiedFrom
+        /// </summary>
+        [DataMember(Name="copiedFrom", EmitDefaultValue=false)]
+        public VoicemailMessagesTopicVoicemailCopyRecord CopiedFrom { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -231,6 +261,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Note: ").Append(Note).Append("\n");
             sb.Append("  Deleted: ").Append(Deleted).Append("\n");
             sb.Append("  ModifiedByUserId: ").Append(ModifiedByUserId).Append("\n");
+            sb.Append("  CopiedTo: ").Append(CopiedTo).Append("\n");
+            sb.Append("  CopiedFrom: ").Append(CopiedFrom).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -326,6 +358,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ModifiedByUserId == other.ModifiedByUserId ||
                     this.ModifiedByUserId != null &&
                     this.ModifiedByUserId.Equals(other.ModifiedByUserId)
+                ) &&
+                (
+                    this.CopiedTo == other.CopiedTo ||
+                    this.CopiedTo != null &&
+                    this.CopiedTo.SequenceEqual(other.CopiedTo)
+                ) &&
+                (
+                    this.CopiedFrom == other.CopiedFrom ||
+                    this.CopiedFrom != null &&
+                    this.CopiedFrom.Equals(other.CopiedFrom)
                 );
         }
 
@@ -376,6 +418,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ModifiedByUserId != null)
                     hash = hash * 59 + this.ModifiedByUserId.GetHashCode();
+                
+                if (this.CopiedTo != null)
+                    hash = hash * 59 + this.CopiedTo.GetHashCode();
+                
+                if (this.CopiedFrom != null)
+                    hash = hash * 59 + this.CopiedFrom.GetHashCode();
                 
                 return hash;
             }

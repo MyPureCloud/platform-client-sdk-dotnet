@@ -469,6 +469,44 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets Inner
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum InnerEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Sent for "Sent"
+            /// </summary>
+            [EnumMember(Value = "Sent")]
+            Sent,
+            
+            /// <summary>
+            /// Enum Pending for "Pending"
+            /// </summary>
+            [EnumMember(Value = "Pending")]
+            Pending,
+            
+            /// <summary>
+            /// Enum Failed for "Failed"
+            /// </summary>
+            [EnumMember(Value = "Failed")]
+            Failed
+        }
+        
+        
+        
+        
+        
+        
         
         
         
@@ -513,6 +551,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingDataExportTopicDataExportNotification" /> class.
@@ -528,7 +568,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedDateTime">CreatedDateTime.</param>
         /// <param name="ModifiedDateTime">ModifiedDateTime.</param>
         /// <param name="PercentageComplete">PercentageComplete.</param>
-        public ReportingDataExportTopicDataExportNotification(string Id = null, string Name = null, StatusEnum? Status = null, ExportFormatEnum? ExportFormat = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, double? PercentageComplete = null)
+        /// <param name="EmailStatuses">EmailStatuses.</param>
+        public ReportingDataExportTopicDataExportNotification(string Id = null, string Name = null, StatusEnum? Status = null, ExportFormatEnum? ExportFormat = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, double? PercentageComplete = null, Dictionary<string, string> EmailStatuses = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -541,6 +582,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CreatedDateTime = CreatedDateTime;
             this.ModifiedDateTime = ModifiedDateTime;
             this.PercentageComplete = PercentageComplete;
+            this.EmailStatuses = EmailStatuses;
             
         }
         
@@ -609,6 +651,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public double? PercentageComplete { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets EmailStatuses
+        /// </summary>
+        [DataMember(Name="emailStatuses", EmitDefaultValue=false)]
+        public Dictionary<string, string> EmailStatuses { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -629,6 +679,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CreatedDateTime: ").Append(CreatedDateTime).Append("\n");
             sb.Append("  ModifiedDateTime: ").Append(ModifiedDateTime).Append("\n");
             sb.Append("  PercentageComplete: ").Append(PercentageComplete).Append("\n");
+            sb.Append("  EmailStatuses: ").Append(EmailStatuses).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -719,6 +770,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PercentageComplete == other.PercentageComplete ||
                     this.PercentageComplete != null &&
                     this.PercentageComplete.Equals(other.PercentageComplete)
+                ) &&
+                (
+                    this.EmailStatuses == other.EmailStatuses ||
+                    this.EmailStatuses != null &&
+                    this.EmailStatuses.SequenceEqual(other.EmailStatuses)
                 );
         }
 
@@ -766,6 +822,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PercentageComplete != null)
                     hash = hash * 59 + this.PercentageComplete.GetHashCode();
+                
+                if (this.EmailStatuses != null)
+                    hash = hash * 59 + this.EmailStatuses.GetHashCode();
                 
                 return hash;
             }

@@ -133,7 +133,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Predictiveengagement for "PredictiveEngagement"
             /// </summary>
             [EnumMember(Value = "PredictiveEngagement")]
-            Predictiveengagement
+            Predictiveengagement,
+            
+            /// <summary>
+            /// Enum Workforcemanagement for "WorkforceManagement"
+            /// </summary>
+            [EnumMember(Value = "WorkforceManagement")]
+            Workforcemanagement
         }
         
         

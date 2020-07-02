@@ -87,7 +87,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Predictiveengagement for "PredictiveEngagement"
             /// </summary>
             [EnumMember(Value = "PredictiveEngagement")]
-            Predictiveengagement
+            Predictiveengagement,
+            
+            /// <summary>
+            /// Enum Workforcemanagement for "WorkforceManagement"
+            /// </summary>
+            [EnumMember(Value = "WorkforceManagement")]
+            Workforcemanagement
         }
         
         
@@ -203,6 +209,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Publish")]
             Publish,
+            
+            /// <summary>
+            /// Enum Unpublish for "Unpublish"
+            /// </summary>
+            [EnumMember(Value = "Unpublish")]
+            Unpublish,
             
             /// <summary>
             /// Enum Authorize for "Authorize"
@@ -356,7 +368,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Clickstreamsettings for "ClickstreamSettings"
             /// </summary>
             [EnumMember(Value = "ClickstreamSettings")]
-            Clickstreamsettings
+            Clickstreamsettings,
+            
+            /// <summary>
+            /// Enum Schedule for "Schedule"
+            /// </summary>
+            [EnumMember(Value = "Schedule")]
+            Schedule
         }
         
         

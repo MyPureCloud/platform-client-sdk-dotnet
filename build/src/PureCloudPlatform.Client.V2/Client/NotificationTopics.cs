@@ -101,6 +101,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.workforcemanagement.agents", typeof(WfmMoveAgentsCompleteTopicWfmMoveAgentsComplete)},
               {"v2.workforcemanagement.businessunits.{id}.schedules", typeof(WfmBuScheduleTopicBuScheduleNotification)},
               {"v2.workforcemanagement.businessunits.{id}.scheduling.runs", typeof(WfmBuScheduleRunTopicBuSchedulingRunProgressNotification)},
+              {"v2.workforcemanagement.businessunits.{id}.shorttermforecasts.import", typeof(WfmBuShortTermForecastImportCompleteTopicBuShortTermForecastNotification)},
               {"v2.workforcemanagement.managementunits.{id}", typeof(WfmMoveManagementUnitTopicMoveManagementUnitNotification)},
               {"v2.workforcemanagement.managementunits.{id}.adherence", typeof(WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate)},
               {"v2.workforcemanagement.managementunits.{id}.agents.sync", typeof(WfmUpdateAgentDetailsTopicWfmUpdateAgentDetailsComplete)},

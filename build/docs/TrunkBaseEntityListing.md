@@ -12,8 +12,8 @@ title: TrunkBaseEntityListing
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
-| **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **NextUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
