@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteLanguageunderstandingDomain**](LanguageUnderstandingApi.html#deletelanguageunderstandingdomain) | **DELETE** /api/v2/languageunderstanding/domains/{domainId} | Delete an NLU Domain. |
 | [**DeleteLanguageunderstandingDomainFeedbackFeedbackId**](LanguageUnderstandingApi.html#deletelanguageunderstandingdomainfeedbackfeedbackid) | **DELETE** /api/v2/languageunderstanding/domains/{domainId}/feedback/{feedbackId} | Delete the feedback on the NLU Domain Version. |
+| [**DeleteLanguageunderstandingDomainVersion**](LanguageUnderstandingApi.html#deletelanguageunderstandingdomainversion) | **DELETE** /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId} | Delete an NLU Domain Version |
 | [**GetLanguageunderstandingDomain**](LanguageUnderstandingApi.html#getlanguageunderstandingdomain) | **GET** /api/v2/languageunderstanding/domains/{domainId} | Find an NLU Domain. |
 | [**GetLanguageunderstandingDomainFeedback**](LanguageUnderstandingApi.html#getlanguageunderstandingdomainfeedback) | **GET** /api/v2/languageunderstanding/domains/{domainId}/feedback | Get all feedback in the given NLU Domain Version. |
 | [**GetLanguageunderstandingDomainFeedbackFeedbackId**](LanguageUnderstandingApi.html#getlanguageunderstandingdomainfeedbackfeedbackid) | **GET** /api/v2/languageunderstanding/domains/{domainId}/feedback/{feedbackId} | Find a Feedback |
@@ -21,6 +22,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostLanguageunderstandingDomainVersionDetect**](LanguageUnderstandingApi.html#postlanguageunderstandingdomainversiondetect) | **POST** /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/detect | Detect intent, entities, etc. in the submitted text using the specified NLU domain version. |
 | [**PostLanguageunderstandingDomainVersionPublish**](LanguageUnderstandingApi.html#postlanguageunderstandingdomainversionpublish) | **POST** /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/publish | Publish the draft NLU Domain Version. |
 | [**PostLanguageunderstandingDomainVersionTrain**](LanguageUnderstandingApi.html#postlanguageunderstandingdomainversiontrain) | **POST** /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/train | Train the draft NLU Domain Version. |
+| [**PostLanguageunderstandingDomainVersions**](LanguageUnderstandingApi.html#postlanguageunderstandingdomainversions) | **POST** /api/v2/languageunderstanding/domains/{domainId}/versions | Create an NLU Domain Version. |
 | [**PostLanguageunderstandingDomains**](LanguageUnderstandingApi.html#postlanguageunderstandingdomains) | **POST** /api/v2/languageunderstanding/domains | Create an NLU Domain. |
 | [**PutLanguageunderstandingDomainVersion**](LanguageUnderstandingApi.html#putlanguageunderstandingdomainversion) | **PUT** /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId} | Update an NLU Domain Version. |
 {: class="table table-striped"}
@@ -143,6 +145,69 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **feedbackId** | **string**| ID of the Feedback |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deletelanguageunderstandingdomainversion"></a>
+
+## void DeleteLanguageunderstandingDomainVersion (string domainId, string domainVersionId)
+
+
+
+Delete an NLU Domain Version
+
+
+
+Requires ANY permissions: 
+
+* languageUnderstanding:nluDomainVersion:delete
+* dialog:botVersion:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteLanguageunderstandingDomainVersionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var domainId = domainId_example;  // string | ID of the NLU domain.
+            var domainVersionId = domainVersionId_example;  // string | ID of the NLU domain version.
+
+            try
+            { 
+                // Delete an NLU Domain Version
+                apiInstance.DeleteLanguageunderstandingDomainVersion(domainId, domainVersionId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.DeleteLanguageunderstandingDomainVersion: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainId** | **string**| ID of the NLU domain. |  |
+| **domainVersionId** | **string**| ID of the NLU domain version. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -619,7 +684,7 @@ namespace Example
 
 <a name="patchlanguageunderstandingdomain"></a>
 
-## [**NluDomain**](NluDomain.html) PatchLanguageunderstandingDomain (string domainId, NluDomain body = null)
+## [**NluDomain**](NluDomain.html) PatchLanguageunderstandingDomain (string domainId, NluDomain body)
 
 
 
@@ -651,7 +716,7 @@ namespace Example
 
             var apiInstance = new LanguageUnderstandingApi();
             var domainId = domainId_example;  // string | ID of the NLU domain.
-            var body = new NluDomain(); // NluDomain |  (optional) 
+            var body = new NluDomain(); // NluDomain | The updated NLU Domain.
 
             try
             { 
@@ -674,7 +739,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| ID of the NLU domain. |  |
-| **body** | [**NluDomain**](NluDomain.html)|  | [optional]  |
+| **body** | [**NluDomain**](NluDomain.html)| The updated NLU Domain. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -683,7 +748,7 @@ namespace Example
 
 <a name="postlanguageunderstandingdomainfeedback"></a>
 
-## [**NluFeedbackResponse**](NluFeedbackResponse.html) PostLanguageunderstandingDomainFeedback (string domainId, NluFeedbackRequest body = null)
+## [**NluFeedbackResponse**](NluFeedbackResponse.html) PostLanguageunderstandingDomainFeedback (string domainId, NluFeedbackRequest body)
 
 
 
@@ -715,7 +780,7 @@ namespace Example
 
             var apiInstance = new LanguageUnderstandingApi();
             var domainId = domainId_example;  // string | ID of the NLU domain.
-            var body = new NluFeedbackRequest(); // NluFeedbackRequest |  (optional) 
+            var body = new NluFeedbackRequest(); // NluFeedbackRequest | The Feedback to create.
 
             try
             { 
@@ -738,7 +803,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| ID of the NLU domain. |  |
-| **body** | [**NluFeedbackRequest**](NluFeedbackRequest.html)|  | [optional]  |
+| **body** | [**NluFeedbackRequest**](NluFeedbackRequest.html)| The Feedback to create. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -747,7 +812,7 @@ namespace Example
 
 <a name="postlanguageunderstandingdomainversiondetect"></a>
 
-## [**NluDetectionResponse**](NluDetectionResponse.html) PostLanguageunderstandingDomainVersionDetect (string domainId, string domainVersionId, NluDetectionRequest body = null)
+## [**NluDetectionResponse**](NluDetectionResponse.html) PostLanguageunderstandingDomainVersionDetect (string domainId, string domainVersionId, NluDetectionRequest body)
 
 
 
@@ -780,7 +845,7 @@ namespace Example
             var apiInstance = new LanguageUnderstandingApi();
             var domainId = domainId_example;  // string | ID of the NLU domain.
             var domainVersionId = domainVersionId_example;  // string | ID of the NLU domain version.
-            var body = new NluDetectionRequest(); // NluDetectionRequest |  (optional) 
+            var body = new NluDetectionRequest(); // NluDetectionRequest | The input data to perform detection on.
 
             try
             { 
@@ -804,7 +869,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **domainVersionId** | **string**| ID of the NLU domain version. |  |
-| **body** | [**NluDetectionRequest**](NluDetectionRequest.html)|  | [optional]  |
+| **body** | [**NluDetectionRequest**](NluDetectionRequest.html)| The input data to perform detection on. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -939,9 +1004,73 @@ namespace Example
 
 [**NluDomainVersionTrainingResponse**](NluDomainVersionTrainingResponse.html)
 
+<a name="postlanguageunderstandingdomainversions"></a>
+
+## [**NluDomainVersion**](NluDomainVersion.html) PostLanguageunderstandingDomainVersions (string domainId, NluDomainVersion body)
+
+
+
+Create an NLU Domain Version.
+
+
+
+Requires ANY permissions: 
+
+* languageUnderstanding:nluDomainVersion:add
+* dialog:botVersion:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLanguageunderstandingDomainVersionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var domainId = domainId_example;  // string | ID of the NLU domain.
+            var body = new NluDomainVersion(); // NluDomainVersion | The NLU Domain Version to create.
+
+            try
+            { 
+                // Create an NLU Domain Version.
+                NluDomainVersion result = apiInstance.PostLanguageunderstandingDomainVersions(domainId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.PostLanguageunderstandingDomainVersions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainId** | **string**| ID of the NLU domain. |  |
+| **body** | [**NluDomainVersion**](NluDomainVersion.html)| The NLU Domain Version to create. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**NluDomainVersion**](NluDomainVersion.html)
+
 <a name="postlanguageunderstandingdomains"></a>
 
-## [**NluDomain**](NluDomain.html) PostLanguageunderstandingDomains (NluDomain body = null)
+## [**NluDomain**](NluDomain.html) PostLanguageunderstandingDomains (NluDomain body)
 
 
 
@@ -972,7 +1101,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LanguageUnderstandingApi();
-            var body = new NluDomain(); // NluDomain |  (optional) 
+            var body = new NluDomain(); // NluDomain | The NLU Domain to create.
 
             try
             { 
@@ -994,7 +1123,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**NluDomain**](NluDomain.html)|  | [optional]  |
+| **body** | [**NluDomain**](NluDomain.html)| The NLU Domain to create. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1003,7 +1132,7 @@ namespace Example
 
 <a name="putlanguageunderstandingdomainversion"></a>
 
-## [**NluDomainVersion**](NluDomainVersion.html) PutLanguageunderstandingDomainVersion (string domainId, string domainVersionId, NluDomainVersion body = null)
+## [**NluDomainVersion**](NluDomainVersion.html) PutLanguageunderstandingDomainVersion (string domainId, string domainVersionId, NluDomainVersion body)
 
 
 
@@ -1036,7 +1165,7 @@ namespace Example
             var apiInstance = new LanguageUnderstandingApi();
             var domainId = domainId_example;  // string | ID of the NLU domain.
             var domainVersionId = domainVersionId_example;  // string | ID of the NLU domain version.
-            var body = new NluDomainVersion(); // NluDomainVersion |  (optional) 
+            var body = new NluDomainVersion(); // NluDomainVersion | The updated NLU Domain Version.
 
             try
             { 
@@ -1060,7 +1189,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **domainVersionId** | **string**| ID of the NLU domain version. |  |
-| **body** | [**NluDomainVersion**](NluDomainVersion.html)|  | [optional]  |
+| **body** | [**NluDomainVersion**](NluDomainVersion.html)| The updated NLU Domain Version. |  |
 {: class="table table-striped"}
 
 ### Return type

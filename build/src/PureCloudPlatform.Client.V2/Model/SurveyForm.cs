@@ -80,16 +80,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SurveyForm" /> class.
@@ -103,17 +93,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The survey form name (required).</param>
         /// <param name="Disabled">Is this form disabled.</param>
         /// <param name="Language">Language for survey viewer localization. Currently localized languages: da, de, en-US, es, fi, fr, it, ja, ko, nl, no, pl, pt-BR, sv, th, tr, zh-CH, zh-TW (required).</param>
-        /// <param name="HeaderImageId">Id of the header image appearing at the top of the form..</param>
         /// <param name="Header">Markdown text for the top of the form..</param>
         /// <param name="Footer">Markdown text for the bottom of the form..</param>
         /// <param name="QuestionGroups">A list of question groups (required).</param>
         /// <param name="PublishedVersions">List of published version of this form.</param>
-        public SurveyForm(string Name = null, bool? Disabled = null, string Language = null, string HeaderImageId = null, string Header = null, string Footer = null, List<SurveyQuestionGroup> QuestionGroups = null, DomainEntityListingSurveyForm PublishedVersions = null)
+        public SurveyForm(string Name = null, bool? Disabled = null, string Language = null, string Header = null, string Footer = null, List<SurveyQuestionGroup> QuestionGroups = null, DomainEntityListingSurveyForm PublishedVersions = null)
         {
             this.Name = Name;
             this.Disabled = Disabled;
             this.Language = Language;
-            this.HeaderImageId = HeaderImageId;
             this.Header = Header;
             this.Footer = Footer;
             this.QuestionGroups = QuestionGroups;
@@ -187,24 +175,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Id of the header image appearing at the top of the form.
-        /// </summary>
-        /// <value>Id of the header image appearing at the top of the form.</value>
-        [DataMember(Name="headerImageId", EmitDefaultValue=false)]
-        public string HeaderImageId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Temporary URL for accessing header image
-        /// </summary>
-        /// <value>Temporary URL for accessing header image</value>
-        [DataMember(Name="headerImageUrl", EmitDefaultValue=false)]
-        public string HeaderImageUrl { get; private set; }
-        
-        
-        
-        /// <summary>
         /// Markdown text for the top of the form.
         /// </summary>
         /// <value>Markdown text for the top of the form.</value>
@@ -264,8 +234,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
-            sb.Append("  HeaderImageId: ").Append(HeaderImageId).Append("\n");
-            sb.Append("  HeaderImageUrl: ").Append(HeaderImageUrl).Append("\n");
             sb.Append("  Header: ").Append(Header).Append("\n");
             sb.Append("  Footer: ").Append(Footer).Append("\n");
             sb.Append("  QuestionGroups: ").Append(QuestionGroups).Append("\n");
@@ -343,16 +311,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Language.Equals(other.Language)
                 ) &&
                 (
-                    this.HeaderImageId == other.HeaderImageId ||
-                    this.HeaderImageId != null &&
-                    this.HeaderImageId.Equals(other.HeaderImageId)
-                ) &&
-                (
-                    this.HeaderImageUrl == other.HeaderImageUrl ||
-                    this.HeaderImageUrl != null &&
-                    this.HeaderImageUrl.Equals(other.HeaderImageUrl)
-                ) &&
-                (
                     this.Header == other.Header ||
                     this.Header != null &&
                     this.Header.Equals(other.Header)
@@ -411,12 +369,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
-                if (this.HeaderImageId != null)
-                    hash = hash * 59 + this.HeaderImageId.GetHashCode();
-                
-                if (this.HeaderImageUrl != null)
-                    hash = hash * 59 + this.HeaderImageUrl.GetHashCode();
                 
                 if (this.Header != null)
                     hash = hash * 59 + this.Header.GetHashCode();

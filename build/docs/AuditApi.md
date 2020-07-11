@@ -11,6 +11,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAuditsQueryTransactionId**](AuditApi.html#getauditsquerytransactionid) | **GET** /api/v2/audits/query/{transactionId} | Get status of audit query execution |
 | [**GetAuditsQueryTransactionIdResults**](AuditApi.html#getauditsquerytransactionidresults) | **GET** /api/v2/audits/query/{transactionId}/results | Get results of audit query |
 | [**PostAuditsQuery**](AuditApi.html#postauditsquery) | **POST** /api/v2/audits/query | Create audit query execution |
+| [**PostAuditsQueryRealtime**](AuditApi.html#postauditsqueryrealtime) | **POST** /api/v2/audits/query/realtime | This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits. |
 {: class="table table-striped"}
 
 <a name="getauditsqueryservicemapping"></a>
@@ -257,4 +258,67 @@ namespace Example
 ### Return type
 
 [**AuditQueryExecutionStatusResponse**](AuditQueryExecutionStatusResponse.html)
+
+<a name="postauditsqueryrealtime"></a>
+
+## [**AuditRealtimeQueryResultsResponse**](AuditRealtimeQueryResultsResponse.html) PostAuditsQueryRealtime (AuditRealtimeQueryRequest body, List<string> expand = null)
+
+
+
+This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
+
+
+
+Requires ALL permissions: 
+
+* audits:audit:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAuditsQueryRealtimeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AuditApi();
+            var body = new AuditRealtimeQueryRequest(); // AuditRealtimeQueryRequest | query
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            { 
+                // This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
+                AuditRealtimeQueryResultsResponse result = apiInstance.PostAuditsQueryRealtime(body, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuditApi.PostAuditsQueryRealtime: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AuditRealtimeQueryRequest**](AuditRealtimeQueryRequest.html)| query |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: user |
+{: class="table table-striped"}
+
+### Return type
+
+[**AuditRealtimeQueryResultsResponse**](AuditRealtimeQueryResultsResponse.html)
 

@@ -63,6 +63,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteLanguageunderstandingDomainFeedbackFeedbackIdWithHttpInfo (string domainId, string feedbackId);
         
         /// <summary>
+        /// Delete an NLU Domain Version
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">ID of the NLU domain.</param>
+        /// <param name="domainVersionId">ID of the NLU domain version.</param>
+        /// <returns></returns>
+        void DeleteLanguageunderstandingDomainVersion (string domainId, string domainVersionId);
+
+        /// <summary>
+        /// Delete an NLU Domain Version
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">ID of the NLU domain.</param>
+        /// <param name="domainVersionId">ID of the NLU domain version.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteLanguageunderstandingDomainVersionWithHttpInfo (string domainId, string domainVersionId);
+        
+        /// <summary>
         /// Find an NLU Domain.
         /// </summary>
         /// <remarks>
@@ -258,9 +282,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The updated NLU Domain.</param>
         /// <returns>NluDomain</returns>
-        NluDomain PatchLanguageunderstandingDomain (string domainId, NluDomain body = null);
+        NluDomain PatchLanguageunderstandingDomain (string domainId, NluDomain body);
 
         /// <summary>
         /// Update an NLU Domain.
@@ -270,9 +294,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The updated NLU Domain.</param>
         /// <returns>ApiResponse of NluDomain</returns>
-        ApiResponse<NluDomain> PatchLanguageunderstandingDomainWithHttpInfo (string domainId, NluDomain body = null);
+        ApiResponse<NluDomain> PatchLanguageunderstandingDomainWithHttpInfo (string domainId, NluDomain body);
         
         /// <summary>
         /// Create feedback for the NLU Domain Version.
@@ -282,9 +306,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The Feedback to create.</param>
         /// <returns>NluFeedbackResponse</returns>
-        NluFeedbackResponse PostLanguageunderstandingDomainFeedback (string domainId, NluFeedbackRequest body = null);
+        NluFeedbackResponse PostLanguageunderstandingDomainFeedback (string domainId, NluFeedbackRequest body);
 
         /// <summary>
         /// Create feedback for the NLU Domain Version.
@@ -294,9 +318,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The Feedback to create.</param>
         /// <returns>ApiResponse of NluFeedbackResponse</returns>
-        ApiResponse<NluFeedbackResponse> PostLanguageunderstandingDomainFeedbackWithHttpInfo (string domainId, NluFeedbackRequest body = null);
+        ApiResponse<NluFeedbackResponse> PostLanguageunderstandingDomainFeedbackWithHttpInfo (string domainId, NluFeedbackRequest body);
         
         /// <summary>
         /// Detect intent, entities, etc. in the submitted text using the specified NLU domain version.
@@ -307,9 +331,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The input data to perform detection on.</param>
         /// <returns>NluDetectionResponse</returns>
-        NluDetectionResponse PostLanguageunderstandingDomainVersionDetect (string domainId, string domainVersionId, NluDetectionRequest body = null);
+        NluDetectionResponse PostLanguageunderstandingDomainVersionDetect (string domainId, string domainVersionId, NluDetectionRequest body);
 
         /// <summary>
         /// Detect intent, entities, etc. in the submitted text using the specified NLU domain version.
@@ -320,9 +344,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The input data to perform detection on.</param>
         /// <returns>ApiResponse of NluDetectionResponse</returns>
-        ApiResponse<NluDetectionResponse> PostLanguageunderstandingDomainVersionDetectWithHttpInfo (string domainId, string domainVersionId, NluDetectionRequest body = null);
+        ApiResponse<NluDetectionResponse> PostLanguageunderstandingDomainVersionDetectWithHttpInfo (string domainId, string domainVersionId, NluDetectionRequest body);
         
         /// <summary>
         /// Publish the draft NLU Domain Version.
@@ -373,15 +397,39 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<NluDomainVersionTrainingResponse> PostLanguageunderstandingDomainVersionTrainWithHttpInfo (string domainId, string domainVersionId);
         
         /// <summary>
+        /// Create an NLU Domain Version.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">ID of the NLU domain.</param>
+        /// <param name="body">The NLU Domain Version to create.</param>
+        /// <returns>NluDomainVersion</returns>
+        NluDomainVersion PostLanguageunderstandingDomainVersions (string domainId, NluDomainVersion body);
+
+        /// <summary>
+        /// Create an NLU Domain Version.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">ID of the NLU domain.</param>
+        /// <param name="body">The NLU Domain Version to create.</param>
+        /// <returns>ApiResponse of NluDomainVersion</returns>
+        ApiResponse<NluDomainVersion> PostLanguageunderstandingDomainVersionsWithHttpInfo (string domainId, NluDomainVersion body);
+        
+        /// <summary>
         /// Create an NLU Domain.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The NLU Domain to create.</param>
         /// <returns>NluDomain</returns>
-        NluDomain PostLanguageunderstandingDomains (NluDomain body = null);
+        NluDomain PostLanguageunderstandingDomains (NluDomain body);
 
         /// <summary>
         /// Create an NLU Domain.
@@ -390,9 +438,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The NLU Domain to create.</param>
         /// <returns>ApiResponse of NluDomain</returns>
-        ApiResponse<NluDomain> PostLanguageunderstandingDomainsWithHttpInfo (NluDomain body = null);
+        ApiResponse<NluDomain> PostLanguageunderstandingDomainsWithHttpInfo (NluDomain body);
         
         /// <summary>
         /// Update an NLU Domain Version.
@@ -403,9 +451,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The updated NLU Domain Version.</param>
         /// <returns>NluDomainVersion</returns>
-        NluDomainVersion PutLanguageunderstandingDomainVersion (string domainId, string domainVersionId, NluDomainVersion body = null);
+        NluDomainVersion PutLanguageunderstandingDomainVersion (string domainId, string domainVersionId, NluDomainVersion body);
 
         /// <summary>
         /// Update an NLU Domain Version.
@@ -416,9 +464,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The updated NLU Domain Version.</param>
         /// <returns>ApiResponse of NluDomainVersion</returns>
-        ApiResponse<NluDomainVersion> PutLanguageunderstandingDomainVersionWithHttpInfo (string domainId, string domainVersionId, NluDomainVersion body = null);
+        ApiResponse<NluDomainVersion> PutLanguageunderstandingDomainVersionWithHttpInfo (string domainId, string domainVersionId, NluDomainVersion body);
         
         #endregion Synchronous Operations
         
@@ -469,6 +517,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feedbackId">ID of the Feedback</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageunderstandingDomainFeedbackFeedbackIdAsyncWithHttpInfo (string domainId, string feedbackId);
+        
+        /// <summary>
+        /// Delete an NLU Domain Version
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">ID of the NLU domain.</param>
+        /// <param name="domainVersionId">ID of the NLU domain version.</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteLanguageunderstandingDomainVersionAsync (string domainId, string domainVersionId);
+
+        /// <summary>
+        /// Delete an NLU Domain Version
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">ID of the NLU domain.</param>
+        /// <param name="domainVersionId">ID of the NLU domain version.</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageunderstandingDomainVersionAsyncWithHttpInfo (string domainId, string domainVersionId);
         
         /// <summary>
         /// Find an NLU Domain.
@@ -666,9 +738,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The updated NLU Domain.</param>
         /// <returns>Task of NluDomain</returns>
-        System.Threading.Tasks.Task<NluDomain> PatchLanguageunderstandingDomainAsync (string domainId, NluDomain body = null);
+        System.Threading.Tasks.Task<NluDomain> PatchLanguageunderstandingDomainAsync (string domainId, NluDomain body);
 
         /// <summary>
         /// Update an NLU Domain.
@@ -678,9 +750,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The updated NLU Domain.</param>
         /// <returns>Task of ApiResponse (NluDomain)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NluDomain>> PatchLanguageunderstandingDomainAsyncWithHttpInfo (string domainId, NluDomain body = null);
+        System.Threading.Tasks.Task<ApiResponse<NluDomain>> PatchLanguageunderstandingDomainAsyncWithHttpInfo (string domainId, NluDomain body);
         
         /// <summary>
         /// Create feedback for the NLU Domain Version.
@@ -690,9 +762,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The Feedback to create.</param>
         /// <returns>Task of NluFeedbackResponse</returns>
-        System.Threading.Tasks.Task<NluFeedbackResponse> PostLanguageunderstandingDomainFeedbackAsync (string domainId, NluFeedbackRequest body = null);
+        System.Threading.Tasks.Task<NluFeedbackResponse> PostLanguageunderstandingDomainFeedbackAsync (string domainId, NluFeedbackRequest body);
 
         /// <summary>
         /// Create feedback for the NLU Domain Version.
@@ -702,9 +774,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The Feedback to create.</param>
         /// <returns>Task of ApiResponse (NluFeedbackResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NluFeedbackResponse>> PostLanguageunderstandingDomainFeedbackAsyncWithHttpInfo (string domainId, NluFeedbackRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<NluFeedbackResponse>> PostLanguageunderstandingDomainFeedbackAsyncWithHttpInfo (string domainId, NluFeedbackRequest body);
         
         /// <summary>
         /// Detect intent, entities, etc. in the submitted text using the specified NLU domain version.
@@ -715,9 +787,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The input data to perform detection on.</param>
         /// <returns>Task of NluDetectionResponse</returns>
-        System.Threading.Tasks.Task<NluDetectionResponse> PostLanguageunderstandingDomainVersionDetectAsync (string domainId, string domainVersionId, NluDetectionRequest body = null);
+        System.Threading.Tasks.Task<NluDetectionResponse> PostLanguageunderstandingDomainVersionDetectAsync (string domainId, string domainVersionId, NluDetectionRequest body);
 
         /// <summary>
         /// Detect intent, entities, etc. in the submitted text using the specified NLU domain version.
@@ -728,9 +800,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The input data to perform detection on.</param>
         /// <returns>Task of ApiResponse (NluDetectionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NluDetectionResponse>> PostLanguageunderstandingDomainVersionDetectAsyncWithHttpInfo (string domainId, string domainVersionId, NluDetectionRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<NluDetectionResponse>> PostLanguageunderstandingDomainVersionDetectAsyncWithHttpInfo (string domainId, string domainVersionId, NluDetectionRequest body);
         
         /// <summary>
         /// Publish the draft NLU Domain Version.
@@ -781,15 +853,39 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<NluDomainVersionTrainingResponse>> PostLanguageunderstandingDomainVersionTrainAsyncWithHttpInfo (string domainId, string domainVersionId);
         
         /// <summary>
+        /// Create an NLU Domain Version.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">ID of the NLU domain.</param>
+        /// <param name="body">The NLU Domain Version to create.</param>
+        /// <returns>Task of NluDomainVersion</returns>
+        System.Threading.Tasks.Task<NluDomainVersion> PostLanguageunderstandingDomainVersionsAsync (string domainId, NluDomainVersion body);
+
+        /// <summary>
+        /// Create an NLU Domain Version.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">ID of the NLU domain.</param>
+        /// <param name="body">The NLU Domain Version to create.</param>
+        /// <returns>Task of ApiResponse (NluDomainVersion)</returns>
+        System.Threading.Tasks.Task<ApiResponse<NluDomainVersion>> PostLanguageunderstandingDomainVersionsAsyncWithHttpInfo (string domainId, NluDomainVersion body);
+        
+        /// <summary>
         /// Create an NLU Domain.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The NLU Domain to create.</param>
         /// <returns>Task of NluDomain</returns>
-        System.Threading.Tasks.Task<NluDomain> PostLanguageunderstandingDomainsAsync (NluDomain body = null);
+        System.Threading.Tasks.Task<NluDomain> PostLanguageunderstandingDomainsAsync (NluDomain body);
 
         /// <summary>
         /// Create an NLU Domain.
@@ -798,9 +894,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The NLU Domain to create.</param>
         /// <returns>Task of ApiResponse (NluDomain)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NluDomain>> PostLanguageunderstandingDomainsAsyncWithHttpInfo (NluDomain body = null);
+        System.Threading.Tasks.Task<ApiResponse<NluDomain>> PostLanguageunderstandingDomainsAsyncWithHttpInfo (NluDomain body);
         
         /// <summary>
         /// Update an NLU Domain Version.
@@ -811,9 +907,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The updated NLU Domain Version.</param>
         /// <returns>Task of NluDomainVersion</returns>
-        System.Threading.Tasks.Task<NluDomainVersion> PutLanguageunderstandingDomainVersionAsync (string domainId, string domainVersionId, NluDomainVersion body = null);
+        System.Threading.Tasks.Task<NluDomainVersion> PutLanguageunderstandingDomainVersionAsync (string domainId, string domainVersionId, NluDomainVersion body);
 
         /// <summary>
         /// Update an NLU Domain Version.
@@ -824,9 +920,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The updated NLU Domain Version.</param>
         /// <returns>Task of ApiResponse (NluDomainVersion)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NluDomainVersion>> PutLanguageunderstandingDomainVersionAsyncWithHttpInfo (string domainId, string domainVersionId, NluDomainVersion body = null);
+        System.Threading.Tasks.Task<ApiResponse<NluDomainVersion>> PutLanguageunderstandingDomainVersionAsyncWithHttpInfo (string domainId, string domainVersionId, NluDomainVersion body);
         
         #endregion Asynchronous Operations
         
@@ -1305,6 +1401,210 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageunderstandingDomainFeedbackFeedbackId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageunderstandingDomainFeedbackFeedbackId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete an NLU Domain Version 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">ID of the NLU domain.</param>
+        /// <param name="domainVersionId">ID of the NLU domain version.</param>
+        /// <returns></returns>
+        public void DeleteLanguageunderstandingDomainVersion (string domainId, string domainVersionId)
+        {
+             DeleteLanguageunderstandingDomainVersionWithHttpInfo(domainId, domainVersionId);
+        }
+
+        /// <summary>
+        /// Delete an NLU Domain Version 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">ID of the NLU domain.</param>
+        /// <param name="domainVersionId">ID of the NLU domain version.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteLanguageunderstandingDomainVersionWithHttpInfo (string domainId, string domainVersionId)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingDomainVersion");
+            // verify the required parameter 'domainVersionId' is set
+            if (domainVersionId == null)
+                throw new ApiException(400, "Missing required parameter 'domainVersionId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingDomainVersion");
+
+            var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+            if (domainVersionId != null) localVarPathParams.Add("domainVersionId", this.Configuration.ApiClient.ParameterToString(domainVersionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageunderstandingDomainVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageunderstandingDomainVersion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete an NLU Domain Version 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">ID of the NLU domain.</param>
+        /// <param name="domainVersionId">ID of the NLU domain version.</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteLanguageunderstandingDomainVersionAsync (string domainId, string domainVersionId)
+        {
+             await DeleteLanguageunderstandingDomainVersionAsyncWithHttpInfo(domainId, domainVersionId);
+
+        }
+
+        /// <summary>
+        /// Delete an NLU Domain Version 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">ID of the NLU domain.</param>
+        /// <param name="domainVersionId">ID of the NLU domain version.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageunderstandingDomainVersionAsyncWithHttpInfo (string domainId, string domainVersionId)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingDomainVersion");
+            
+            // verify the required parameter 'domainVersionId' is set
+            if (domainVersionId == null)
+                throw new ApiException(400, "Missing required parameter 'domainVersionId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingDomainVersion");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+            if (domainVersionId != null) localVarPathParams.Add("domainVersionId", this.Configuration.ApiClient.ParameterToString(domainVersionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageunderstandingDomainVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageunderstandingDomainVersion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -2787,9 +3087,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The updated NLU Domain.</param>
         /// <returns>NluDomain</returns>
-        public NluDomain PatchLanguageunderstandingDomain (string domainId, NluDomain body = null)
+        public NluDomain PatchLanguageunderstandingDomain (string domainId, NluDomain body)
         {
              ApiResponse<NluDomain> localVarResponse = PatchLanguageunderstandingDomainWithHttpInfo(domainId, body);
              return localVarResponse.Data;
@@ -2800,13 +3100,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The updated NLU Domain.</param>
         /// <returns>ApiResponse of NluDomain</returns>
-        public ApiResponse< NluDomain > PatchLanguageunderstandingDomainWithHttpInfo (string domainId, NluDomain body = null)
+        public ApiResponse< NluDomain > PatchLanguageunderstandingDomainWithHttpInfo (string domainId, NluDomain body)
         { 
             // verify the required parameter 'domainId' is set
             if (domainId == null)
                 throw new ApiException(400, "Missing required parameter 'domainId' when calling LanguageUnderstandingApi->PatchLanguageunderstandingDomain");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PatchLanguageunderstandingDomain");
 
             var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2889,9 +3192,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The updated NLU Domain.</param>
         /// <returns>Task of NluDomain</returns>
-        public async System.Threading.Tasks.Task<NluDomain> PatchLanguageunderstandingDomainAsync (string domainId, NluDomain body = null)
+        public async System.Threading.Tasks.Task<NluDomain> PatchLanguageunderstandingDomainAsync (string domainId, NluDomain body)
         {
              ApiResponse<NluDomain> localVarResponse = await PatchLanguageunderstandingDomainAsyncWithHttpInfo(domainId, body);
              return localVarResponse.Data;
@@ -2903,13 +3206,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The updated NLU Domain.</param>
         /// <returns>Task of ApiResponse (NluDomain)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<NluDomain>> PatchLanguageunderstandingDomainAsyncWithHttpInfo (string domainId, NluDomain body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<NluDomain>> PatchLanguageunderstandingDomainAsyncWithHttpInfo (string domainId, NluDomain body)
         { 
             // verify the required parameter 'domainId' is set
             if (domainId == null)
                 throw new ApiException(400, "Missing required parameter 'domainId' when calling LanguageUnderstandingApi->PatchLanguageunderstandingDomain");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PatchLanguageunderstandingDomain");
             
 
             var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}";
@@ -2994,9 +3301,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The Feedback to create.</param>
         /// <returns>NluFeedbackResponse</returns>
-        public NluFeedbackResponse PostLanguageunderstandingDomainFeedback (string domainId, NluFeedbackRequest body = null)
+        public NluFeedbackResponse PostLanguageunderstandingDomainFeedback (string domainId, NluFeedbackRequest body)
         {
              ApiResponse<NluFeedbackResponse> localVarResponse = PostLanguageunderstandingDomainFeedbackWithHttpInfo(domainId, body);
              return localVarResponse.Data;
@@ -3007,13 +3314,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The Feedback to create.</param>
         /// <returns>ApiResponse of NluFeedbackResponse</returns>
-        public ApiResponse< NluFeedbackResponse > PostLanguageunderstandingDomainFeedbackWithHttpInfo (string domainId, NluFeedbackRequest body = null)
+        public ApiResponse< NluFeedbackResponse > PostLanguageunderstandingDomainFeedbackWithHttpInfo (string domainId, NluFeedbackRequest body)
         { 
             // verify the required parameter 'domainId' is set
             if (domainId == null)
                 throw new ApiException(400, "Missing required parameter 'domainId' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainFeedback");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainFeedback");
 
             var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/feedback";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3096,9 +3406,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The Feedback to create.</param>
         /// <returns>Task of NluFeedbackResponse</returns>
-        public async System.Threading.Tasks.Task<NluFeedbackResponse> PostLanguageunderstandingDomainFeedbackAsync (string domainId, NluFeedbackRequest body = null)
+        public async System.Threading.Tasks.Task<NluFeedbackResponse> PostLanguageunderstandingDomainFeedbackAsync (string domainId, NluFeedbackRequest body)
         {
              ApiResponse<NluFeedbackResponse> localVarResponse = await PostLanguageunderstandingDomainFeedbackAsyncWithHttpInfo(domainId, body);
              return localVarResponse.Data;
@@ -3110,13 +3420,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The Feedback to create.</param>
         /// <returns>Task of ApiResponse (NluFeedbackResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<NluFeedbackResponse>> PostLanguageunderstandingDomainFeedbackAsyncWithHttpInfo (string domainId, NluFeedbackRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<NluFeedbackResponse>> PostLanguageunderstandingDomainFeedbackAsyncWithHttpInfo (string domainId, NluFeedbackRequest body)
         { 
             // verify the required parameter 'domainId' is set
             if (domainId == null)
                 throw new ApiException(400, "Missing required parameter 'domainId' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainFeedback");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainFeedback");
             
 
             var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/feedback";
@@ -3202,9 +3516,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The input data to perform detection on.</param>
         /// <returns>NluDetectionResponse</returns>
-        public NluDetectionResponse PostLanguageunderstandingDomainVersionDetect (string domainId, string domainVersionId, NluDetectionRequest body = null)
+        public NluDetectionResponse PostLanguageunderstandingDomainVersionDetect (string domainId, string domainVersionId, NluDetectionRequest body)
         {
              ApiResponse<NluDetectionResponse> localVarResponse = PostLanguageunderstandingDomainVersionDetectWithHttpInfo(domainId, domainVersionId, body);
              return localVarResponse.Data;
@@ -3216,9 +3530,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The input data to perform detection on.</param>
         /// <returns>ApiResponse of NluDetectionResponse</returns>
-        public ApiResponse< NluDetectionResponse > PostLanguageunderstandingDomainVersionDetectWithHttpInfo (string domainId, string domainVersionId, NluDetectionRequest body = null)
+        public ApiResponse< NluDetectionResponse > PostLanguageunderstandingDomainVersionDetectWithHttpInfo (string domainId, string domainVersionId, NluDetectionRequest body)
         { 
             // verify the required parameter 'domainId' is set
             if (domainId == null)
@@ -3226,6 +3540,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'domainVersionId' is set
             if (domainVersionId == null)
                 throw new ApiException(400, "Missing required parameter 'domainVersionId' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainVersionDetect");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainVersionDetect");
 
             var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/detect";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3310,9 +3627,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The input data to perform detection on.</param>
         /// <returns>Task of NluDetectionResponse</returns>
-        public async System.Threading.Tasks.Task<NluDetectionResponse> PostLanguageunderstandingDomainVersionDetectAsync (string domainId, string domainVersionId, NluDetectionRequest body = null)
+        public async System.Threading.Tasks.Task<NluDetectionResponse> PostLanguageunderstandingDomainVersionDetectAsync (string domainId, string domainVersionId, NluDetectionRequest body)
         {
              ApiResponse<NluDetectionResponse> localVarResponse = await PostLanguageunderstandingDomainVersionDetectAsyncWithHttpInfo(domainId, domainVersionId, body);
              return localVarResponse.Data;
@@ -3325,9 +3642,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The input data to perform detection on.</param>
         /// <returns>Task of ApiResponse (NluDetectionResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<NluDetectionResponse>> PostLanguageunderstandingDomainVersionDetectAsyncWithHttpInfo (string domainId, string domainVersionId, NluDetectionRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<NluDetectionResponse>> PostLanguageunderstandingDomainVersionDetectAsyncWithHttpInfo (string domainId, string domainVersionId, NluDetectionRequest body)
         { 
             // verify the required parameter 'domainId' is set
             if (domainId == null)
@@ -3336,6 +3653,10 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'domainVersionId' is set
             if (domainVersionId == null)
                 throw new ApiException(400, "Missing required parameter 'domainVersionId' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainVersionDetect");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainVersionDetect");
             
 
             var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/detect";
@@ -3829,12 +4150,226 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Create an NLU Domain Version. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">ID of the NLU domain.</param>
+        /// <param name="body">The NLU Domain Version to create.</param>
+        /// <returns>NluDomainVersion</returns>
+        public NluDomainVersion PostLanguageunderstandingDomainVersions (string domainId, NluDomainVersion body)
+        {
+             ApiResponse<NluDomainVersion> localVarResponse = PostLanguageunderstandingDomainVersionsWithHttpInfo(domainId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create an NLU Domain Version. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">ID of the NLU domain.</param>
+        /// <param name="body">The NLU Domain Version to create.</param>
+        /// <returns>ApiResponse of NluDomainVersion</returns>
+        public ApiResponse< NluDomainVersion > PostLanguageunderstandingDomainVersionsWithHttpInfo (string domainId, NluDomainVersion body)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainVersions");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainVersions");
+
+            var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingDomainVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingDomainVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<NluDomainVersion>(localVarStatusCode,
+                localVarHeaders,
+                (NluDomainVersion) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NluDomainVersion)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Create an NLU Domain Version. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">ID of the NLU domain.</param>
+        /// <param name="body">The NLU Domain Version to create.</param>
+        /// <returns>Task of NluDomainVersion</returns>
+        public async System.Threading.Tasks.Task<NluDomainVersion> PostLanguageunderstandingDomainVersionsAsync (string domainId, NluDomainVersion body)
+        {
+             ApiResponse<NluDomainVersion> localVarResponse = await PostLanguageunderstandingDomainVersionsAsyncWithHttpInfo(domainId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create an NLU Domain Version. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">ID of the NLU domain.</param>
+        /// <param name="body">The NLU Domain Version to create.</param>
+        /// <returns>Task of ApiResponse (NluDomainVersion)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<NluDomainVersion>> PostLanguageunderstandingDomainVersionsAsyncWithHttpInfo (string domainId, NluDomainVersion body)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainVersions");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainVersions");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingDomainVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingDomainVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<NluDomainVersion>(localVarStatusCode,
+                localVarHeaders,
+                (NluDomainVersion) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NluDomainVersion)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Create an NLU Domain. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The NLU Domain to create.</param>
         /// <returns>NluDomain</returns>
-        public NluDomain PostLanguageunderstandingDomains (NluDomain body = null)
+        public NluDomain PostLanguageunderstandingDomains (NluDomain body)
         {
              ApiResponse<NluDomain> localVarResponse = PostLanguageunderstandingDomainsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -3844,10 +4379,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create an NLU Domain. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The NLU Domain to create.</param>
         /// <returns>ApiResponse of NluDomain</returns>
-        public ApiResponse< NluDomain > PostLanguageunderstandingDomainsWithHttpInfo (NluDomain body = null)
+        public ApiResponse< NluDomain > PostLanguageunderstandingDomainsWithHttpInfo (NluDomain body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomains");
 
             var localVarPath = "/api/v2/languageunderstanding/domains";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3928,9 +4466,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create an NLU Domain. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The NLU Domain to create.</param>
         /// <returns>Task of NluDomain</returns>
-        public async System.Threading.Tasks.Task<NluDomain> PostLanguageunderstandingDomainsAsync (NluDomain body = null)
+        public async System.Threading.Tasks.Task<NluDomain> PostLanguageunderstandingDomainsAsync (NluDomain body)
         {
              ApiResponse<NluDomain> localVarResponse = await PostLanguageunderstandingDomainsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -3941,10 +4479,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create an NLU Domain. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The NLU Domain to create.</param>
         /// <returns>Task of ApiResponse (NluDomain)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<NluDomain>> PostLanguageunderstandingDomainsAsyncWithHttpInfo (NluDomain body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<NluDomain>> PostLanguageunderstandingDomainsAsyncWithHttpInfo (NluDomain body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomains");
+            
 
             var localVarPath = "/api/v2/languageunderstanding/domains";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4028,9 +4570,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The updated NLU Domain Version.</param>
         /// <returns>NluDomainVersion</returns>
-        public NluDomainVersion PutLanguageunderstandingDomainVersion (string domainId, string domainVersionId, NluDomainVersion body = null)
+        public NluDomainVersion PutLanguageunderstandingDomainVersion (string domainId, string domainVersionId, NluDomainVersion body)
         {
              ApiResponse<NluDomainVersion> localVarResponse = PutLanguageunderstandingDomainVersionWithHttpInfo(domainId, domainVersionId, body);
              return localVarResponse.Data;
@@ -4042,9 +4584,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The updated NLU Domain Version.</param>
         /// <returns>ApiResponse of NluDomainVersion</returns>
-        public ApiResponse< NluDomainVersion > PutLanguageunderstandingDomainVersionWithHttpInfo (string domainId, string domainVersionId, NluDomainVersion body = null)
+        public ApiResponse< NluDomainVersion > PutLanguageunderstandingDomainVersionWithHttpInfo (string domainId, string domainVersionId, NluDomainVersion body)
         { 
             // verify the required parameter 'domainId' is set
             if (domainId == null)
@@ -4052,6 +4594,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'domainVersionId' is set
             if (domainVersionId == null)
                 throw new ApiException(400, "Missing required parameter 'domainVersionId' when calling LanguageUnderstandingApi->PutLanguageunderstandingDomainVersion");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PutLanguageunderstandingDomainVersion");
 
             var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4136,9 +4681,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The updated NLU Domain Version.</param>
         /// <returns>Task of NluDomainVersion</returns>
-        public async System.Threading.Tasks.Task<NluDomainVersion> PutLanguageunderstandingDomainVersionAsync (string domainId, string domainVersionId, NluDomainVersion body = null)
+        public async System.Threading.Tasks.Task<NluDomainVersion> PutLanguageunderstandingDomainVersionAsync (string domainId, string domainVersionId, NluDomainVersion body)
         {
              ApiResponse<NluDomainVersion> localVarResponse = await PutLanguageunderstandingDomainVersionAsyncWithHttpInfo(domainId, domainVersionId, body);
              return localVarResponse.Data;
@@ -4151,9 +4696,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">The updated NLU Domain Version.</param>
         /// <returns>Task of ApiResponse (NluDomainVersion)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<NluDomainVersion>> PutLanguageunderstandingDomainVersionAsyncWithHttpInfo (string domainId, string domainVersionId, NluDomainVersion body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<NluDomainVersion>> PutLanguageunderstandingDomainVersionAsyncWithHttpInfo (string domainId, string domainVersionId, NluDomainVersion body)
         { 
             // verify the required parameter 'domainId' is set
             if (domainId == null)
@@ -4162,6 +4707,10 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'domainVersionId' is set
             if (domainVersionId == null)
                 throw new ApiException(400, "Missing required parameter 'domainVersionId' when calling LanguageUnderstandingApi->PutLanguageunderstandingDomainVersion");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PutLanguageunderstandingDomainVersion");
             
 
             var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}";

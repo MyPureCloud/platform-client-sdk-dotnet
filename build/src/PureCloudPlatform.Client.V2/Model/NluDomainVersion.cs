@@ -44,6 +44,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The training status of the NLU domain version.
         /// </summary>
@@ -162,6 +165,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The training status of the NLU domain version.
         /// </summary>
@@ -189,9 +194,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDomainVersion" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected NluDomainVersion() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NluDomainVersion" /> class.
+        /// </summary>
         /// <param name="Domain">The NLU domain of the version..</param>
         /// <param name="Description">The description of the NLU domain version..</param>
-        /// <param name="Language">The language that the NLU domain version supports..</param>
+        /// <param name="Language">The language that the NLU domain version supports. (required).</param>
         /// <param name="Intents">The intents defined for this NLU domain version..</param>
         /// <param name="EntityTypes">The entity types defined for this NLU domain version..</param>
         public NluDomainVersion(NluDomain Domain = null, string Description = null, string Language = null, List<IntentDefinition> Intents = null, List<NamedEntityTypeDefinition> EntityTypes = null)
@@ -239,6 +250,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The language that the NLU domain version supports.</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Whether this NLU domain version has been published.
+        /// </summary>
+        /// <value>Whether this NLU domain version has been published.</value>
+        [DataMember(Name="published", EmitDefaultValue=false)]
+        public bool? Published { get; private set; }
         
         
         
@@ -321,6 +341,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
+            sb.Append("  Published: ").Append(Published).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  DateTrained: ").Append(DateTrained).Append("\n");
@@ -385,6 +406,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Language == other.Language ||
                     this.Language != null &&
                     this.Language.Equals(other.Language)
+                ) &&
+                (
+                    this.Published == other.Published ||
+                    this.Published != null &&
+                    this.Published.Equals(other.Published)
                 ) &&
                 (
                     this.DateCreated == other.DateCreated ||
@@ -456,6 +482,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
+                
+                if (this.Published != null)
+                    hash = hash * 59 + this.Published.GetHashCode();
                 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();

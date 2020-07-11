@@ -116,12 +116,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Indicates if the resource is active, inactive, or deleted.
         /// </summary>
         /// <value>Indicates if the resource is active, inactive, or deleted.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -156,9 +161,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedByApp">The application that last modified the resource..</param>
         /// <param name="CreatedByApp">The application that created the resource..</param>
         /// <param name="Managed">Is this edge group being managed remotely..</param>
+        /// <param name="Hybrid">Is this edge group hybrid..</param>
         /// <param name="EdgeTrunkBaseAssignment">A trunk base settings assignment of trunkType \&quot;EDGE\&quot; to use for edge-to-edge communication. (required).</param>
         /// <param name="PhoneTrunkBases">Trunk base settings of trunkType \&quot;PHONE\&quot; to inherit to edge logical interface for phone communication. (required).</param>
-        public EdgeGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, bool? Managed = null, TrunkBaseAssignment EdgeTrunkBaseAssignment = null, List<TrunkBase> PhoneTrunkBases = null)
+        public EdgeGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, bool? Managed = null, bool? Hybrid = null, TrunkBaseAssignment EdgeTrunkBaseAssignment = null, List<TrunkBase> PhoneTrunkBases = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -170,6 +176,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
             this.Managed = Managed;
+            this.Hybrid = Hybrid;
             this.EdgeTrunkBaseAssignment = EdgeTrunkBaseAssignment;
             this.PhoneTrunkBases = PhoneTrunkBases;
             
@@ -279,6 +286,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Is this edge group hybrid.
+        /// </summary>
+        /// <value>Is this edge group hybrid.</value>
+        [DataMember(Name="hybrid", EmitDefaultValue=false)]
+        public bool? Hybrid { get; set; }
+        
+        
+        
+        /// <summary>
         /// A trunk base settings assignment of trunkType \&quot;EDGE\&quot; to use for edge-to-edge communication.
         /// </summary>
         /// <value>A trunk base settings assignment of trunkType \&quot;EDGE\&quot; to use for edge-to-edge communication.</value>
@@ -325,6 +341,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ModifiedByApp: ").Append(ModifiedByApp).Append("\n");
             sb.Append("  CreatedByApp: ").Append(CreatedByApp).Append("\n");
             sb.Append("  Managed: ").Append(Managed).Append("\n");
+            sb.Append("  Hybrid: ").Append(Hybrid).Append("\n");
             sb.Append("  EdgeTrunkBaseAssignment: ").Append(EdgeTrunkBaseAssignment).Append("\n");
             sb.Append("  PhoneTrunkBases: ").Append(PhoneTrunkBases).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -425,6 +442,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Managed.Equals(other.Managed)
                 ) &&
                 (
+                    this.Hybrid == other.Hybrid ||
+                    this.Hybrid != null &&
+                    this.Hybrid.Equals(other.Hybrid)
+                ) &&
+                (
                     this.EdgeTrunkBaseAssignment == other.EdgeTrunkBaseAssignment ||
                     this.EdgeTrunkBaseAssignment != null &&
                     this.EdgeTrunkBaseAssignment.Equals(other.EdgeTrunkBaseAssignment)
@@ -488,6 +510,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Managed != null)
                     hash = hash * 59 + this.Managed.GetHashCode();
+                
+                if (this.Hybrid != null)
+                    hash = hash * 59 + this.Hybrid.GetHashCode();
                 
                 if (this.EdgeTrunkBaseAssignment != null)
                     hash = hash * 59 + this.EdgeTrunkBaseAssignment.GetHashCode();
