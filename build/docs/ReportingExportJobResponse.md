@@ -25,10 +25,13 @@ title: ReportingExportJobResponse
 | **PercentageComplete** | **double?** | The percentage of the job that has completed processing | |
 | **HasFormatDurations** | **bool?** | Indicates if durations are formatted in hh:mm:ss format instead of ms | [optional] |
 | **HasSplitFilters** | **bool?** | Indicates if filters will be split in aggregate detail exports | [optional] |
+| **ExcludeEmptyRows** | **bool?** | Excludes empty rows from the exports | [optional] |
+| **HasSplitByMedia** | **bool?** | Indicates if media type will be split in aggregate detail exports | [optional] |
 | **SelectedColumns** | [**List&lt;SelectedColumns&gt;**](SelectedColumns.html) | The list of ordered selected columns from the export view by the user | [optional] |
 | **HasCustomParticipantAttributes** | **bool?** | Indicates if custom participant attributes will be exported | [optional] |
 | **RecipientEmails** | **List&lt;string&gt;** | The list of email recipients for the exports | [optional] |
 | **EmailStatuses** | **Dictionary&lt;string, string&gt;** | The status of individual email addresses as a map | [optional] |
+| **Enabled** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

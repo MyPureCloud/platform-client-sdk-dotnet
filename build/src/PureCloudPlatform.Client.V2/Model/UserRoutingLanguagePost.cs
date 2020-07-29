@@ -80,9 +80,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// URI to the organization language used by this user langauge.
+        /// URI to the organization language used by this user language.
         /// </summary>
-        /// <value>URI to the organization language used by this user langauge.</value>
+        /// <value>URI to the organization language used by this user language.</value>
         [DataMember(Name="languageUri", EmitDefaultValue=false)]
         public string LanguageUri { get; private set; }
         

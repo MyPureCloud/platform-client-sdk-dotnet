@@ -7,8 +7,8 @@ title: ScimUserExtensions
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **RoutingSkills** | [**List&lt;ScimUserRoutingSkill&gt;**](ScimUserRoutingSkill.html) | Routing Skills assigned to user. No more than 50 skills may be assigned to a user. | [optional] |
-| **RoutingLanguages** | [**List&lt;ScimUserRoutingLanguage&gt;**](ScimUserRoutingLanguage.html) | Routing Languages assigned to user. No more than 50 languages may be assigned to a user. | [optional] |
+| **RoutingSkills** | [**List&lt;ScimUserRoutingSkill&gt;**](ScimUserRoutingSkill.html) | The list of routing skills assigned to a user. Maximum 50 skills. | [optional] |
+| **RoutingLanguages** | [**List&lt;ScimUserRoutingLanguage&gt;**](ScimUserRoutingLanguage.html) | The list of routing languages assigned to a user. Maximum 50 languages. | [optional] |
 {: class="table table-striped"}
 
 

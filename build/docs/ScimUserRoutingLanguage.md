@@ -7,8 +7,8 @@ title: ScimUserRoutingLanguage
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Name** | **string** | Case-sensitive name identifying a language configured in routing languages. | |
-| **Proficiency** | **double?** | Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular language. It is used when a queue is set to \&quot;Best available language\&quot; mode to allow acd interactions to target agents with higher proficiency ratings. | [optional] |
+| **Name** | **string** | The case-sensitive name of a routing language configured in Genesys Cloud. | |
+| **Proficiency** | **double?** | A rating from 0.0 to 5.0 that indicates how fluent an agent is in a particular language. ACD interactions are routed to agents with higher proficiency ratings. | [optional] |
 {: class="table table-striped"}
 
 

@@ -919,10 +919,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DataSchema> PutExternalcontactsContactsSchemaWithHttpInfo (string schemaId, DataSchema body);
         
         /// <summary>
-        /// Associate an external contact with a conversation
+        /// Associate/disassociate an external contact with a conversation
         /// </summary>
         /// <remarks>
-        /// 
+        /// To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -931,10 +931,10 @@ namespace PureCloudPlatform.Client.V2.Api
         void PutExternalcontactsConversation (string conversationId, ConversationAssociation body);
 
         /// <summary>
-        /// Associate an external contact with a conversation
+        /// Associate/disassociate an external contact with a conversation
         /// </summary>
         /// <remarks>
-        /// 
+        /// To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -1971,10 +1971,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutExternalcontactsContactsSchemaAsyncWithHttpInfo (string schemaId, DataSchema body);
         
         /// <summary>
-        /// Associate an external contact with a conversation
+        /// Associate/disassociate an external contact with a conversation
         /// </summary>
         /// <remarks>
-        /// 
+        /// To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -1983,10 +1983,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task PutExternalcontactsConversationAsync (string conversationId, ConversationAssociation body);
 
         /// <summary>
-        /// Associate an external contact with a conversation
+        /// Associate/disassociate an external contact with a conversation
         /// </summary>
         /// <remarks>
-        /// 
+        /// To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -9746,7 +9746,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Associate an external contact with a conversation 
+        /// Associate/disassociate an external contact with a conversation To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -9758,7 +9758,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Associate an external contact with a conversation 
+        /// Associate/disassociate an external contact with a conversation To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -9850,7 +9850,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Associate an external contact with a conversation 
+        /// Associate/disassociate an external contact with a conversation To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -9863,7 +9863,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Associate an external contact with a conversation 
+        /// Associate/disassociate an external contact with a conversation To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>

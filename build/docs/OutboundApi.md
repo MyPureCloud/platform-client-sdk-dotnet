@@ -19,6 +19,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteOutboundContactlistfilter**](OutboundApi.html#deleteoutboundcontactlistfilter) | **DELETE** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Delete Contact List Filter |
 | [**DeleteOutboundContactlists**](OutboundApi.html#deleteoutboundcontactlists) | **DELETE** /api/v2/outbound/contactlists | Delete multiple contact lists. |
 | [**DeleteOutboundDnclist**](OutboundApi.html#deleteoutbounddnclist) | **DELETE** /api/v2/outbound/dnclists/{dncListId} | Delete dialer DNC list |
+| [**DeleteOutboundMessagingcampaign**](OutboundApi.html#deleteoutboundmessagingcampaign) | **DELETE** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Delete an Outbound Messaging Campaign |
 | [**DeleteOutboundRuleset**](OutboundApi.html#deleteoutboundruleset) | **DELETE** /api/v2/outbound/rulesets/{ruleSetId} | Delete a Rule set. |
 | [**DeleteOutboundSchedulesCampaign**](OutboundApi.html#deleteoutboundschedulescampaign) | **DELETE** /api/v2/outbound/schedules/campaigns/{campaignId} | Delete a dialer campaign schedule. |
 | [**DeleteOutboundSchedulesSequence**](OutboundApi.html#deleteoutboundschedulessequence) | **DELETE** /api/v2/outbound/schedules/sequences/{sequenceId} | Delete a dialer sequence schedule. |
@@ -37,6 +38,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundCampaignrule**](OutboundApi.html#getoutboundcampaignrule) | **GET** /api/v2/outbound/campaignrules/{campaignRuleId} | Get Campaign Rule |
 | [**GetOutboundCampaignrules**](OutboundApi.html#getoutboundcampaignrules) | **GET** /api/v2/outbound/campaignrules | Query Campaign Rule list |
 | [**GetOutboundCampaigns**](OutboundApi.html#getoutboundcampaigns) | **GET** /api/v2/outbound/campaigns | Query a list of dialer campaigns. |
+| [**GetOutboundCampaignsAll**](OutboundApi.html#getoutboundcampaignsall) | **GET** /api/v2/outbound/campaigns/all | Query across all types of campaigns by division |
+| [**GetOutboundCampaignsAllDivisionviews**](OutboundApi.html#getoutboundcampaignsalldivisionviews) | **GET** /api/v2/outbound/campaigns/all/divisionviews | Query across all types of campaigns |
 | [**GetOutboundCampaignsDivisionview**](OutboundApi.html#getoutboundcampaignsdivisionview) | **GET** /api/v2/outbound/campaigns/divisionviews/{campaignId} | Get a basic Campaign information object |
 | [**GetOutboundCampaignsDivisionviews**](OutboundApi.html#getoutboundcampaignsdivisionviews) | **GET** /api/v2/outbound/campaigns/divisionviews | Query a list of basic Campaign information objects |
 | [**GetOutboundContactlist**](OutboundApi.html#getoutboundcontactlist) | **GET** /api/v2/outbound/contactlists/{contactListId} | Get a dialer contact list. |
@@ -57,6 +60,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundDnclistsDivisionviews**](OutboundApi.html#getoutbounddnclistsdivisionviews) | **GET** /api/v2/outbound/dnclists/divisionviews | Query a list of simplified dnc list objects. |
 | [**GetOutboundEvent**](OutboundApi.html#getoutboundevent) | **GET** /api/v2/outbound/events/{eventId} | Get Dialer Event |
 | [**GetOutboundEvents**](OutboundApi.html#getoutboundevents) | **GET** /api/v2/outbound/events | Query Event Logs |
+| [**GetOutboundMessagingcampaign**](OutboundApi.html#getoutboundmessagingcampaign) | **GET** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Get an Outbound Messaging Campaign |
+| [**GetOutboundMessagingcampaignProgress**](OutboundApi.html#getoutboundmessagingcampaignprogress) | **GET** /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress | Get messaging campaign&#39;s progress |
+| [**GetOutboundMessagingcampaigns**](OutboundApi.html#getoutboundmessagingcampaigns) | **GET** /api/v2/outbound/messagingcampaigns | Query a list of Messaging Campaigns |
+| [**GetOutboundMessagingcampaignsDivisionview**](OutboundApi.html#getoutboundmessagingcampaignsdivisionview) | **GET** /api/v2/outbound/messagingcampaigns/divisionviews/{messagingCampaignId} | Get a basic Messaging Campaign information object |
+| [**GetOutboundMessagingcampaignsDivisionviews**](OutboundApi.html#getoutboundmessagingcampaignsdivisionviews) | **GET** /api/v2/outbound/messagingcampaigns/divisionviews | Query a list of basic Messaging Campaign information objects |
 | [**GetOutboundRuleset**](OutboundApi.html#getoutboundruleset) | **GET** /api/v2/outbound/rulesets/{ruleSetId} | Get a Rule Set by ID. |
 | [**GetOutboundRulesets**](OutboundApi.html#getoutboundrulesets) | **GET** /api/v2/outbound/rulesets | Query a list of Rule Sets. |
 | [**GetOutboundSchedulesCampaign**](OutboundApi.html#getoutboundschedulescampaign) | **GET** /api/v2/outbound/schedules/campaigns/{campaignId} | Get a dialer campaign schedule. |
@@ -87,6 +95,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundDnclistExport**](OutboundApi.html#postoutbounddnclistexport) | **POST** /api/v2/outbound/dnclists/{dncListId}/export | Initiate the export of a dnc list. |
 | [**PostOutboundDnclistPhonenumbers**](OutboundApi.html#postoutbounddnclistphonenumbers) | **POST** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add phone numbers to a Dialer DNC list. |
 | [**PostOutboundDnclists**](OutboundApi.html#postoutbounddnclists) | **POST** /api/v2/outbound/dnclists | Create dialer DNC list |
+| [**PostOutboundMessagingcampaigns**](OutboundApi.html#postoutboundmessagingcampaigns) | **POST** /api/v2/outbound/messagingcampaigns | Create a Messaging Campaign |
+| [**PostOutboundMessagingcampaignsProgress**](OutboundApi.html#postoutboundmessagingcampaignsprogress) | **POST** /api/v2/outbound/messagingcampaigns/progress | Get progress for a list of messaging campaigns |
 | [**PostOutboundRulesets**](OutboundApi.html#postoutboundrulesets) | **POST** /api/v2/outbound/rulesets | Create a Dialer Call Analysis Response Set. |
 | [**PostOutboundSequences**](OutboundApi.html#postoutboundsequences) | **POST** /api/v2/outbound/sequences | Create a new campaign sequence. |
 | [**PutOutboundAttemptlimit**](OutboundApi.html#putoutboundattemptlimit) | **PUT** /api/v2/outbound/attemptlimits/{attemptLimitsId} | Update attempt limits |
@@ -99,6 +109,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutOutboundContactlistContact**](OutboundApi.html#putoutboundcontactlistcontact) | **PUT** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Update a contact. |
 | [**PutOutboundContactlistfilter**](OutboundApi.html#putoutboundcontactlistfilter) | **PUT** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Update Contact List Filter |
 | [**PutOutboundDnclist**](OutboundApi.html#putoutbounddnclist) | **PUT** /api/v2/outbound/dnclists/{dncListId} | Update dialer DNC list |
+| [**PutOutboundMessagingcampaign**](OutboundApi.html#putoutboundmessagingcampaign) | **PUT** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Update an Outbound Messaging Campaign |
 | [**PutOutboundRuleset**](OutboundApi.html#putoutboundruleset) | **PUT** /api/v2/outbound/rulesets/{ruleSetId} | Update a RuleSet. |
 | [**PutOutboundSchedulesCampaign**](OutboundApi.html#putoutboundschedulescampaign) | **PUT** /api/v2/outbound/schedules/campaigns/{campaignId} | Update a new campaign schedule. |
 | [**PutOutboundSchedulesSequence**](OutboundApi.html#putoutboundschedulessequence) | **PUT** /api/v2/outbound/schedules/sequences/{sequenceId} | Update a new sequence schedule. |
@@ -831,6 +842,67 @@ namespace Example
 
 void (empty response body)
 
+<a name="deleteoutboundmessagingcampaign"></a>
+
+## [**MessagingCampaign**](MessagingCampaign.html) DeleteOutboundMessagingcampaign (string messagingCampaignId)
+
+
+
+Delete an Outbound Messaging Campaign
+
+
+
+Requires ANY permissions: 
+
+* outbound:campaign:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOutboundMessagingcampaignExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OutboundApi();
+            var messagingCampaignId = messagingCampaignId_example;  // string | The Messaging Campaign ID
+
+            try
+            { 
+                // Delete an Outbound Messaging Campaign
+                MessagingCampaign result = apiInstance.DeleteOutboundMessagingcampaign(messagingCampaignId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteOutboundMessagingcampaign: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messagingCampaignId** | **string**| The Messaging Campaign ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessagingCampaign**](MessagingCampaign.html)
+
 <a name="deleteoutboundruleset"></a>
 
 ## void DeleteOutboundRuleset (string ruleSetId)
@@ -1134,7 +1206,7 @@ namespace Example
 
 <a name="getoutboundattemptlimits"></a>
 
-## [**AttemptLimitsEntityListing**](AttemptLimitsEntityListing.html) GetOutboundAttemptlimits (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+## [**AttemptLimitsEntityListing**](AttemptLimitsEntityListing.html) GetOutboundAttemptlimits (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
 
 
@@ -1166,6 +1238,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var allowEmptyResult = true;  // bool? | Whether to return an empty page when there are no results for that page (optional)  (default to false)
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional) 
@@ -1174,7 +1247,7 @@ namespace Example
             try
             { 
                 // Query attempt limits list
-                AttemptLimitsEntityListing result = apiInstance.GetOutboundAttemptlimits(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+                AttemptLimitsEntityListing result = apiInstance.GetOutboundAttemptlimits(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1193,6 +1266,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **bool?**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
@@ -1266,7 +1340,7 @@ namespace Example
 
 <a name="getoutboundcallabletimesets"></a>
 
-## [**CallableTimeSetEntityListing**](CallableTimeSetEntityListing.html) GetOutboundCallabletimesets (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+## [**CallableTimeSetEntityListing**](CallableTimeSetEntityListing.html) GetOutboundCallabletimesets (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
 
 
@@ -1298,6 +1372,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var allowEmptyResult = true;  // bool? | Whether to return an empty page when there are no results for that page (optional)  (default to false)
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional) 
@@ -1306,7 +1381,7 @@ namespace Example
             try
             { 
                 // Query callable time set list
-                CallableTimeSetEntityListing result = apiInstance.GetOutboundCallabletimesets(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+                CallableTimeSetEntityListing result = apiInstance.GetOutboundCallabletimesets(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1325,6 +1400,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **bool?**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
@@ -1398,7 +1474,7 @@ namespace Example
 
 <a name="getoutboundcallanalysisresponsesets"></a>
 
-## [**ResponseSetEntityListing**](ResponseSetEntityListing.html) GetOutboundCallanalysisresponsesets (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+## [**ResponseSetEntityListing**](ResponseSetEntityListing.html) GetOutboundCallanalysisresponsesets (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
 
 
@@ -1430,6 +1506,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var allowEmptyResult = true;  // bool? | Whether to return an empty page when there are no results for that page (optional)  (default to false)
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional) 
@@ -1438,7 +1515,7 @@ namespace Example
             try
             { 
                 // Query a list of dialer call analysis response sets.
-                ResponseSetEntityListing result = apiInstance.GetOutboundCallanalysisresponsesets(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+                ResponseSetEntityListing result = apiInstance.GetOutboundCallanalysisresponsesets(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1457,6 +1534,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **bool?**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
@@ -1835,7 +1913,7 @@ namespace Example
 
 <a name="getoutboundcampaignrules"></a>
 
-## [**CampaignRuleEntityListing**](CampaignRuleEntityListing.html) GetOutboundCampaignrules (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+## [**CampaignRuleEntityListing**](CampaignRuleEntityListing.html) GetOutboundCampaignrules (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
 
 
@@ -1867,6 +1945,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var allowEmptyResult = true;  // bool? | Whether to return an empty page when there are no results for that page (optional)  (default to false)
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional) 
@@ -1875,7 +1954,7 @@ namespace Example
             try
             { 
                 // Query Campaign Rule list
-                CampaignRuleEntityListing result = apiInstance.GetOutboundCampaignrules(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+                CampaignRuleEntityListing result = apiInstance.GetOutboundCampaignrules(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1894,6 +1973,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **bool?**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
@@ -1988,6 +2068,154 @@ namespace Example
 ### Return type
 
 [**CampaignEntityListing**](CampaignEntityListing.html)
+
+<a name="getoutboundcampaignsall"></a>
+
+## [**CommonCampaignEntityListing**](CommonCampaignEntityListing.html) GetOutboundCampaignsAll (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null)
+
+
+
+Query across all types of campaigns by division
+
+
+
+Requires ANY permissions: 
+
+* outbound:campaign:view
+* outbound:messagingCampaign:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundCampaignsAllExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OutboundApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var id = new List<string>(); // List<string> | Campaign ID(s) (optional) 
+            var name = name_example;  // string | Campaign name(s) (optional) 
+            var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
+            var mediaType = new List<string>(); // List<string> | Media type(s) (optional) 
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
+
+            try
+            { 
+                // Query across all types of campaigns by division
+                CommonCampaignEntityListing result = apiInstance.GetOutboundCampaignsAll(pageSize, pageNumber, id, name, divisionId, mediaType, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundCampaignsAll: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **id** | [**List<string>**](string.html)| Campaign ID(s) | [optional]  |
+| **name** | **string**| Campaign name(s) | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
+| **mediaType** | [**List<string>**](string.html)| Media type(s) | [optional] <br />**Values**: sms, voice |
+| **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
+{: class="table table-striped"}
+
+### Return type
+
+[**CommonCampaignEntityListing**](CommonCampaignEntityListing.html)
+
+<a name="getoutboundcampaignsalldivisionviews"></a>
+
+## [**CommonCampaignDivisionViewEntityListing**](CommonCampaignDivisionViewEntityListing.html) GetOutboundCampaignsAllDivisionviews (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null)
+
+
+
+Query across all types of campaigns
+
+
+
+Requires ANY permissions: 
+
+* outbound:campaign:search
+* outbound:messagingCampaign:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundCampaignsAllDivisionviewsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OutboundApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var id = new List<string>(); // List<string> | Campaign ID(s) (optional) 
+            var name = name_example;  // string | Campaign name(s) (optional) 
+            var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
+            var mediaType = new List<string>(); // List<string> | Media type(s) (optional) 
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
+
+            try
+            { 
+                // Query across all types of campaigns
+                CommonCampaignDivisionViewEntityListing result = apiInstance.GetOutboundCampaignsAllDivisionviews(pageSize, pageNumber, id, name, divisionId, mediaType, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundCampaignsAllDivisionviews: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **id** | [**List<string>**](string.html)| Campaign ID(s) | [optional]  |
+| **name** | **string**| Campaign name(s) | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
+| **mediaType** | [**List<string>**](string.html)| Media type(s) | [optional] <br />**Values**: sms, voice |
+| **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
+{: class="table table-striped"}
+
+### Return type
+
+[**CommonCampaignDivisionViewEntityListing**](CommonCampaignDivisionViewEntityListing.html)
 
 <a name="getoutboundcampaignsdivisionview"></a>
 
@@ -2500,7 +2728,7 @@ namespace Example
 
 <a name="getoutboundcontactlistfilters"></a>
 
-## [**ContactListFilterEntityListing**](ContactListFilterEntityListing.html) GetOutboundContactlistfilters (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null)
+## [**ContactListFilterEntityListing**](ContactListFilterEntityListing.html) GetOutboundContactlistfilters (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null)
 
 
 
@@ -2532,6 +2760,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var allowEmptyResult = true;  // bool? | Whether to return an empty page when there are no results for that page (optional)  (default to false)
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional) 
@@ -2541,7 +2770,7 @@ namespace Example
             try
             { 
                 // Query Contact list filters
-                ContactListFilterEntityListing result = apiInstance.GetOutboundContactlistfilters(pageSize, pageNumber, filterType, name, sortBy, sortOrder, contactListId);
+                ContactListFilterEntityListing result = apiInstance.GetOutboundContactlistfilters(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder, contactListId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2560,6 +2789,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **bool?**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
@@ -2573,7 +2803,7 @@ namespace Example
 
 <a name="getoutboundcontactlists"></a>
 
-## [**ContactListEntityListing**](ContactListEntityListing.html) GetOutboundContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
+## [**ContactListEntityListing**](ContactListEntityListing.html) GetOutboundContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
 
 
 
@@ -2607,6 +2837,7 @@ namespace Example
             var includeSize = true;  // bool? | Include size (optional)  (default to false)
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var allowEmptyResult = true;  // bool? | Whether to return an empty page when there are no results for that page (optional)  (default to false)
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
             var id = new List<string>(); // List<string> | id (optional) 
@@ -2617,7 +2848,7 @@ namespace Example
             try
             { 
                 // Query a list of contact lists.
-                ContactListEntityListing result = apiInstance.GetOutboundContactlists(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, id, divisionId, sortBy, sortOrder);
+                ContactListEntityListing result = apiInstance.GetOutboundContactlists(includeImportStatus, includeSize, pageSize, pageNumber, allowEmptyResult, filterType, name, id, divisionId, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2638,6 +2869,7 @@ namespace Example
 | **includeSize** | **bool?**| Include size | [optional] [default to false] |
 | **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **bool?**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
 | **id** | [**List<string>**](string.html)| id | [optional]  |
@@ -2984,7 +3216,7 @@ namespace Example
 
 <a name="getoutbounddnclists"></a>
 
-## [**DncListEntityListing**](DncListEntityListing.html) GetOutboundDnclists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string dncSourceType = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
+## [**DncListEntityListing**](DncListEntityListing.html) GetOutboundDnclists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string dncSourceType = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
 
 
 
@@ -3018,6 +3250,7 @@ namespace Example
             var includeSize = true;  // bool? | Include size (optional)  (default to false)
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var allowEmptyResult = true;  // bool? | Whether to return an empty page when there are no results for that page (optional)  (default to false)
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
             var dncSourceType = dncSourceType_example;  // string | DncSourceType (optional) 
@@ -3028,7 +3261,7 @@ namespace Example
             try
             { 
                 // Query dialer DNC lists
-                DncListEntityListing result = apiInstance.GetOutboundDnclists(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, dncSourceType, divisionId, sortBy, sortOrder);
+                DncListEntityListing result = apiInstance.GetOutboundDnclists(includeImportStatus, includeSize, pageSize, pageNumber, allowEmptyResult, filterType, name, dncSourceType, divisionId, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3049,6 +3282,7 @@ namespace Example
 | **includeSize** | **bool?**| Include size | [optional] [default to false] |
 | **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **bool?**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
 | **dncSourceType** | **string**| DncSourceType | [optional] <br />**Values**: rds, dnc.com, gryphon |
@@ -3337,6 +3571,339 @@ namespace Example
 
 [**DialerEventEntityListing**](DialerEventEntityListing.html)
 
+<a name="getoutboundmessagingcampaign"></a>
+
+## [**MessagingCampaign**](MessagingCampaign.html) GetOutboundMessagingcampaign (string messagingCampaignId)
+
+
+
+Get an Outbound Messaging Campaign
+
+
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundMessagingcampaignExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OutboundApi();
+            var messagingCampaignId = messagingCampaignId_example;  // string | The Messaging Campaign ID
+
+            try
+            { 
+                // Get an Outbound Messaging Campaign
+                MessagingCampaign result = apiInstance.GetOutboundMessagingcampaign(messagingCampaignId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundMessagingcampaign: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messagingCampaignId** | **string**| The Messaging Campaign ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessagingCampaign**](MessagingCampaign.html)
+
+<a name="getoutboundmessagingcampaignprogress"></a>
+
+## [**CampaignProgress**](CampaignProgress.html) GetOutboundMessagingcampaignProgress (string messagingCampaignId)
+
+
+
+Get messaging campaign's progress
+
+
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundMessagingcampaignProgressExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OutboundApi();
+            var messagingCampaignId = messagingCampaignId_example;  // string | The Messaging Campaign ID
+
+            try
+            { 
+                // Get messaging campaign's progress
+                CampaignProgress result = apiInstance.GetOutboundMessagingcampaignProgress(messagingCampaignId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundMessagingcampaignProgress: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messagingCampaignId** | **string**| The Messaging Campaign ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CampaignProgress**](CampaignProgress.html)
+
+<a name="getoutboundmessagingcampaigns"></a>
+
+## [**MessagingCampaignEntityListing**](MessagingCampaignEntityListing.html) GetOutboundMessagingcampaigns (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null)
+
+
+
+Query a list of Messaging Campaigns
+
+
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundMessagingcampaignsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OutboundApi();
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortBy = sortBy_example;  // string | The field to sort by (optional)  (default to name)
+            var sortOrder = sortOrder_example;  // string | The direction to sort (optional)  (default to ascending)
+            var name = name_example;  // string | Name (optional) 
+            var contactListId = contactListId_example;  // string | Contact List ID (optional) 
+            var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
+            var type = type_example;  // string | Campaign Type (optional) 
+            var senderSmsPhoneNumber = senderSmsPhoneNumber_example;  // string | Sender SMS Phone Number (optional) 
+            var id = new List<string>(); // List<string> | A list of messaging campaign ids to bulk fetch (optional) 
+
+            try
+            { 
+                // Query a list of Messaging Campaigns
+                MessagingCampaignEntityListing result = apiInstance.GetOutboundMessagingcampaigns(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundMessagingcampaigns: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortBy** | **string**| The field to sort by | [optional] [default to name]<br />**Values**: campaignStatus, name, type |
+| **sortOrder** | **string**| The direction to sort | [optional] [default to ascending]<br />**Values**: ascending, descending |
+| **name** | **string**| Name | [optional]  |
+| **contactListId** | **string**| Contact List ID | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
+| **type** | **string**| Campaign Type | [optional] <br />**Values**: SMS |
+| **senderSmsPhoneNumber** | **string**| Sender SMS Phone Number | [optional]  |
+| **id** | [**List<string>**](string.html)| A list of messaging campaign ids to bulk fetch | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessagingCampaignEntityListing**](MessagingCampaignEntityListing.html)
+
+<a name="getoutboundmessagingcampaignsdivisionview"></a>
+
+## [**MessagingCampaignDivisionView**](MessagingCampaignDivisionView.html) GetOutboundMessagingcampaignsDivisionview (string messagingCampaignId)
+
+
+
+Get a basic Messaging Campaign information object
+
+This returns a simplified version of a Messaging Campaign, consisting of id, name, and division.
+
+Requires ALL permissions: 
+
+* outbound:messagingCampaign:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundMessagingcampaignsDivisionviewExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OutboundApi();
+            var messagingCampaignId = messagingCampaignId_example;  // string | The Messaging Campaign ID
+
+            try
+            { 
+                // Get a basic Messaging Campaign information object
+                MessagingCampaignDivisionView result = apiInstance.GetOutboundMessagingcampaignsDivisionview(messagingCampaignId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundMessagingcampaignsDivisionview: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messagingCampaignId** | **string**| The Messaging Campaign ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessagingCampaignDivisionView**](MessagingCampaignDivisionView.html)
+
+<a name="getoutboundmessagingcampaignsdivisionviews"></a>
+
+## [**MessagingCampaignDivisionViewEntityListing**](MessagingCampaignDivisionViewEntityListing.html) GetOutboundMessagingcampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null, string senderSmsPhoneNumber = null)
+
+
+
+Query a list of basic Messaging Campaign information objects
+
+This returns a listing of simplified Messaging Campaigns, each consisting of id, name, and division.
+
+Requires ALL permissions: 
+
+* outbound:messagingCampaign:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundMessagingcampaignsDivisionviewsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OutboundApi();
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortOrder = sortOrder_example;  // string | The direction to sort (optional)  (default to a)
+            var name = name_example;  // string | Name (optional) 
+            var id = new List<string>(); // List<string> | id (optional) 
+            var senderSmsPhoneNumber = senderSmsPhoneNumber_example;  // string | Sender SMS Phone Number (optional) 
+
+            try
+            { 
+                // Query a list of basic Messaging Campaign information objects
+                MessagingCampaignDivisionViewEntityListing result = apiInstance.GetOutboundMessagingcampaignsDivisionviews(pageSize, pageNumber, sortOrder, name, id, senderSmsPhoneNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundMessagingcampaignsDivisionviews: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortOrder** | **string**| The direction to sort | [optional] [default to a]<br />**Values**: ascending, descending |
+| **name** | **string**| Name | [optional]  |
+| **id** | [**List<string>**](string.html)| id | [optional]  |
+| **senderSmsPhoneNumber** | **string**| Sender SMS Phone Number | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessagingCampaignDivisionViewEntityListing**](MessagingCampaignDivisionViewEntityListing.html)
+
 <a name="getoutboundruleset"></a>
 
 ## [**RuleSet**](RuleSet.html) GetOutboundRuleset (string ruleSetId)
@@ -3400,7 +3967,7 @@ namespace Example
 
 <a name="getoutboundrulesets"></a>
 
-## [**RuleSetEntityListing**](RuleSetEntityListing.html) GetOutboundRulesets (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+## [**RuleSetEntityListing**](RuleSetEntityListing.html) GetOutboundRulesets (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
 
 
@@ -3432,6 +3999,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var allowEmptyResult = true;  // bool? | Whether to return an empty page when there are no results for that page (optional)  (default to false)
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional) 
@@ -3440,7 +4008,7 @@ namespace Example
             try
             { 
                 // Query a list of Rule Sets.
-                RuleSetEntityListing result = apiInstance.GetOutboundRulesets(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+                RuleSetEntityListing result = apiInstance.GetOutboundRulesets(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3459,6 +4027,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **bool?**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
@@ -3766,7 +4335,7 @@ namespace Example
 
 <a name="getoutboundsequences"></a>
 
-## [**CampaignSequenceEntityListing**](CampaignSequenceEntityListing.html) GetOutboundSequences (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+## [**CampaignSequenceEntityListing**](CampaignSequenceEntityListing.html) GetOutboundSequences (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
 
 
@@ -3798,6 +4367,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var allowEmptyResult = true;  // bool? | Whether to return an empty page when there are no results for that page (optional)  (default to false)
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional) 
@@ -3806,7 +4376,7 @@ namespace Example
             try
             { 
                 // Query a list of dialer campaign sequences.
-                CampaignSequenceEntityListing result = apiInstance.GetOutboundSequences(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+                CampaignSequenceEntityListing result = apiInstance.GetOutboundSequences(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3825,6 +4395,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **bool?**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
@@ -5188,6 +5759,128 @@ namespace Example
 
 [**DncList**](DncList.html)
 
+<a name="postoutboundmessagingcampaigns"></a>
+
+## [**MessagingCampaign**](MessagingCampaign.html) PostOutboundMessagingcampaigns (MessagingCampaign body)
+
+
+
+Create a Messaging Campaign
+
+
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundMessagingcampaignsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OutboundApi();
+            var body = new MessagingCampaign(); // MessagingCampaign | Messaging Campaign
+
+            try
+            { 
+                // Create a Messaging Campaign
+                MessagingCampaign result = apiInstance.PostOutboundMessagingcampaigns(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundMessagingcampaigns: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**MessagingCampaign**](MessagingCampaign.html)| Messaging Campaign |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessagingCampaign**](MessagingCampaign.html)
+
+<a name="postoutboundmessagingcampaignsprogress"></a>
+
+## [**List&lt;CampaignProgress&gt;**](CampaignProgress.html) PostOutboundMessagingcampaignsProgress (List<string> body)
+
+
+
+Get progress for a list of messaging campaigns
+
+
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundMessagingcampaignsProgressExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OutboundApi();
+            var body = ;  // List<string> | Messaging Campaign IDs
+
+            try
+            { 
+                // Get progress for a list of messaging campaigns
+                List&lt;CampaignProgress&gt; result = apiInstance.PostOutboundMessagingcampaignsProgress(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundMessagingcampaignsProgress: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | **List<string>**| Messaging Campaign IDs |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<CampaignProgress>**](CampaignProgress.html)
+
 <a name="postoutboundrulesets"></a>
 
 ## [**RuleSet**](RuleSet.html) PostOutboundRulesets (RuleSet body)
@@ -5942,6 +6635,69 @@ namespace Example
 ### Return type
 
 [**DncList**](DncList.html)
+
+<a name="putoutboundmessagingcampaign"></a>
+
+## [**MessagingCampaign**](MessagingCampaign.html) PutOutboundMessagingcampaign (string messagingCampaignId, MessagingCampaign body)
+
+
+
+Update an Outbound Messaging Campaign
+
+
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutOutboundMessagingcampaignExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OutboundApi();
+            var messagingCampaignId = messagingCampaignId_example;  // string | The Messaging Campaign ID
+            var body = new MessagingCampaign(); // MessagingCampaign | MessagingCampaign
+
+            try
+            { 
+                // Update an Outbound Messaging Campaign
+                MessagingCampaign result = apiInstance.PutOutboundMessagingcampaign(messagingCampaignId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutOutboundMessagingcampaign: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messagingCampaignId** | **string**| The Messaging Campaign ID |  |
+| **body** | [**MessagingCampaign**](MessagingCampaign.html)| MessagingCampaign |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessagingCampaign**](MessagingCampaign.html)
 
 <a name="putoutboundruleset"></a>
 

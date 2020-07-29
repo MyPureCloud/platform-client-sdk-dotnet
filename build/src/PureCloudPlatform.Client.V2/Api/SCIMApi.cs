@@ -17,26 +17,26 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Delete a group.
+        /// Delete a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
         /// <returns></returns>
         void DeleteScimGroup (string groupId, string ifMatch = null);
 
         /// <summary>
-        /// Delete a group.
+        /// Delete a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteScimGroupWithHttpInfo (string groupId, string ifMatch = null);
         
@@ -65,26 +65,26 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Empty> DeleteScimUserWithHttpInfo (string userId, string ifMatch = null);
         
         /// <summary>
-        /// Delete a group.
+        /// Delete a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
         /// <returns></returns>
         void DeleteScimV2Group (string groupId, string ifMatch = null);
 
         /// <summary>
-        /// Delete a group.
+        /// Delete a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteScimV2GroupWithHttpInfo (string groupId, string ifMatch = null);
         
@@ -120,8 +120,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>ScimV2Group</returns>
         ScimV2Group GetScimGroup (string groupId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null);
@@ -134,8 +134,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         ApiResponse<ScimV2Group> GetScimGroupWithHttpInfo (string groupId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null);
@@ -148,10 +148,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
-        /// <param name="filter">Filters results. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="filter">Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;. (optional)</param>
         /// <returns>ScimGroupListResponse</returns>
         ScimGroupListResponse GetScimGroups (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null);
 
@@ -163,10 +163,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
-        /// <param name="filter">Filters results. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="filter">Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;. (optional)</param>
         /// <returns>ApiResponse of ScimGroupListResponse</returns>
         ApiResponse<ScimGroupListResponse> GetScimGroupsWithHttpInfo (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null);
         
@@ -213,46 +213,46 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ScimConfigResourceTypesListResponse> GetScimResourcetypesWithHttpInfo ();
         
         /// <summary>
-        /// Get the SCIM schema by id
+        /// Get a SCIM schema
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="schemaId">The ID of a schema.</param>
+        /// <param name="schemaId">The ID of a schema. Returned with GET /api/v2/scim/schemas.</param>
         /// <returns>ScimConfigResourceType</returns>
         ScimConfigResourceType GetScimSchema (string schemaId);
 
         /// <summary>
-        /// Get the SCIM schema by id
+        /// Get a SCIM schema
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="schemaId">The ID of a schema.</param>
+        /// <param name="schemaId">The ID of a schema. Returned with GET /api/v2/scim/schemas.</param>
         /// <returns>ApiResponse of ScimConfigResourceType</returns>
         ApiResponse<ScimConfigResourceType> GetScimSchemaWithHttpInfo (string schemaId);
         
         /// <summary>
-        /// Get the SCIM schemas
+        /// Get a list of SCIM schemas
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <param name="filter">Filtered results are invalid and return 403 Unauthorized. (optional)</param>
         /// <returns>ScimConfigResourceTypesListResponse</returns>
         ScimConfigResourceTypesListResponse GetScimSchemas (string filter = null);
 
         /// <summary>
-        /// Get the SCIM schemas
+        /// Get a list of SCIM schemas
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <param name="filter">Filtered results are invalid and return 403 Unauthorized. (optional)</param>
         /// <returns>ApiResponse of ScimConfigResourceTypesListResponse</returns>
         ApiResponse<ScimConfigResourceTypesListResponse> GetScimSchemasWithHttpInfo (string filter = null);
         
@@ -286,8 +286,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>ScimV2User</returns>
         ScimV2User GetScimUser (string userId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null);
@@ -300,8 +300,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>ApiResponse of ScimV2User</returns>
         ApiResponse<ScimV2User> GetScimUserWithHttpInfo (string userId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null);
@@ -310,13 +310,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of users
         /// </summary>
         /// <remarks>
-        /// To return all active users, do not use a filter parameter. To return inactive users, set \&quot;filter\&quot; to \&quot;active eq false\&quot;. By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \&quot;attributes\&quot; to \&quot;id,active\&quot; or \&quot;excludeAttributes\&quot; to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
+        /// To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \&quot;active eq false\&quot;. By default, returns SCIM attributes \&quot;externalId\&quot;, \&quot;enterprise-user:manager\&quot;, and \&quot;roles\&quot;. To exclude these attributes, set the attributes parameter to \&quot;id,active\&quot; or the excludeAttributes parameter to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="filter">Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)</param>
         /// <returns>ScimUserListResponse</returns>
         ScimUserListResponse GetScimUsers (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null);
@@ -325,13 +325,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of users
         /// </summary>
         /// <remarks>
-        /// To return all active users, do not use a filter parameter. To return inactive users, set \&quot;filter\&quot; to \&quot;active eq false\&quot;. By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \&quot;attributes\&quot; to \&quot;id,active\&quot; or \&quot;excludeAttributes\&quot; to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
+        /// To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \&quot;active eq false\&quot;. By default, returns SCIM attributes \&quot;externalId\&quot;, \&quot;enterprise-user:manager\&quot;, and \&quot;roles\&quot;. To exclude these attributes, set the attributes parameter to \&quot;id,active\&quot; or the excludeAttributes parameter to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="filter">Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)</param>
         /// <returns>ApiResponse of ScimUserListResponse</returns>
         ApiResponse<ScimUserListResponse> GetScimUsersWithHttpInfo (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null);
@@ -344,9 +344,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
-        /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>ScimV2Group</returns>
         ScimV2Group GetScimV2Group (string groupId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null);
 
@@ -358,9 +358,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
-        /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         ApiResponse<ScimV2Group> GetScimV2GroupWithHttpInfo (string groupId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null);
         
@@ -371,11 +371,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filters results.</param>
+        /// <param name="filter">Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;.</param>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <returns>ScimGroupListResponse</returns>
         ScimGroupListResponse GetScimV2Groups (string filter, int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null);
 
@@ -386,11 +386,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filters results.</param>
+        /// <param name="filter">Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;.</param>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <returns>ApiResponse of ScimGroupListResponse</returns>
         ApiResponse<ScimGroupListResponse> GetScimV2GroupsWithHttpInfo (string filter, int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null);
         
@@ -437,46 +437,46 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ScimConfigResourceTypesListResponse> GetScimV2ResourcetypesWithHttpInfo ();
         
         /// <summary>
-        /// Get the SCIM schema by id
+        /// Get a SCIM schema
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="schemaId">The ID of a schema.</param>
+        /// <param name="schemaId">The ID of a schema. Returned with GET /api/v2/scim/v2/schemas.</param>
         /// <returns>ScimV2SchemaDefinition</returns>
         ScimV2SchemaDefinition GetScimV2Schema (string schemaId);
 
         /// <summary>
-        /// Get the SCIM schema by id
+        /// Get a SCIM schema
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="schemaId">The ID of a schema.</param>
+        /// <param name="schemaId">The ID of a schema. Returned with GET /api/v2/scim/v2/schemas.</param>
         /// <returns>ApiResponse of ScimV2SchemaDefinition</returns>
         ApiResponse<ScimV2SchemaDefinition> GetScimV2SchemaWithHttpInfo (string schemaId);
         
         /// <summary>
-        /// Get the SCIM schemas
+        /// Get a list of SCIM schemas
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <param name="filter">Filtered results are invalid and return 403 Unauthorized. (optional)</param>
         /// <returns>ScimV2SchemaListResponse</returns>
         ScimV2SchemaListResponse GetScimV2Schemas (string filter = null);
 
         /// <summary>
-        /// Get the SCIM schemas
+        /// Get a list of SCIM schemas
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <param name="filter">Filtered results are invalid and return 403 Unauthorized. (optional)</param>
         /// <returns>ApiResponse of ScimV2SchemaListResponse</returns>
         ApiResponse<ScimV2SchemaListResponse> GetScimV2SchemasWithHttpInfo (string filter = null);
         
@@ -510,8 +510,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>ScimV2User</returns>
         ScimV2User GetScimV2User (string userId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null);
@@ -524,8 +524,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>ApiResponse of ScimV2User</returns>
         ApiResponse<ScimV2User> GetScimV2UserWithHttpInfo (string userId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null);
@@ -534,13 +534,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of users
         /// </summary>
         /// <remarks>
-        /// To return all active users, do not use a filter parameter. To return inactive users, set \&quot;filter\&quot; to \&quot;active eq false\&quot;. By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \&quot;attributes\&quot; to \&quot;id,active\&quot; or \&quot;excludeAttributes\&quot; to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
+        /// To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \&quot;active eq false\&quot;. By default, returns SCIM attributes \&quot;externalId\&quot;, \&quot;enterprise-user:manager\&quot;, and \&quot;roles\&quot;. To exclude these attributes, set the attributes parameter to \&quot;id,active\&quot; or the excludeAttributes parameter to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="filter">Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)</param>
         /// <returns>ScimUserListResponse</returns>
         ScimUserListResponse GetScimV2Users (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null);
@@ -549,13 +549,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of users
         /// </summary>
         /// <remarks>
-        /// To return all active users, do not use a filter parameter. To return inactive users, set \&quot;filter\&quot; to \&quot;active eq false\&quot;. By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \&quot;attributes\&quot; to \&quot;id,active\&quot; or \&quot;excludeAttributes\&quot; to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
+        /// To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \&quot;active eq false\&quot;. By default, returns SCIM attributes \&quot;externalId\&quot;, \&quot;enterprise-user:manager\&quot;, and \&quot;roles\&quot;. To exclude these attributes, set the attributes parameter to \&quot;id,active\&quot; or the excludeAttributes parameter to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="filter">Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)</param>
         /// <returns>ApiResponse of ScimUserListResponse</returns>
         ApiResponse<ScimUserListResponse> GetScimV2UsersWithHttpInfo (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null);
@@ -665,10 +665,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ScimV2User> PatchScimV2UserWithHttpInfo (string userId, ScimV2PatchRequest body, string ifMatch = null);
         
         /// <summary>
-        /// The information used to create a group.
+        /// Creates a group
         /// </summary>
         /// <remarks>
-        /// PureCloud group will be created as \&quot;Official\&quot; group with visibility set \&quot;Public\&quot;, and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+        /// Creates a Genesys Cloud group with group visibility set to \&quot;public\&quot; and rules visibility set to \&quot;true\&quot;. Auto-creates an \&quot;externalId\&quot;. \&quot;externalId\&quot; is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The information used to create a group.</param>
@@ -676,10 +676,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ScimV2Group PostScimGroups (ScimV2Group body);
 
         /// <summary>
-        /// The information used to create a group.
+        /// Creates a group
         /// </summary>
         /// <remarks>
-        /// PureCloud group will be created as \&quot;Official\&quot; group with visibility set \&quot;Public\&quot;, and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+        /// Creates a Genesys Cloud group with group visibility set to \&quot;public\&quot; and rules visibility set to \&quot;true\&quot;. Auto-creates an \&quot;externalId\&quot;. \&quot;externalId\&quot; is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The information used to create a group.</param>
@@ -709,24 +709,24 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ScimV2User> PostScimUsersWithHttpInfo (ScimV2CreateUser body);
         
         /// <summary>
-        /// The information used to create a group.
+        /// Create a group
         /// </summary>
         /// <remarks>
-        /// PureCloud group will be created as \&quot;Official\&quot; group with visibility set \&quot;Public\&quot;, and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+        /// Creates an \&quot;official\&quot; Genesys Cloud group with group visibility set to \&quot;public\&quot; and rules visibility set to \&quot;true\&quot;. Auto-creates an \&quot;externalId\&quot;. \&quot;externalId\&quot; is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">The information used to create a group.</param>
+        /// <param name="body">Creates a group.</param>
         /// <returns>ScimV2Group</returns>
         ScimV2Group PostScimV2Groups (ScimV2Group body);
 
         /// <summary>
-        /// The information used to create a group.
+        /// Create a group
         /// </summary>
         /// <remarks>
-        /// PureCloud group will be created as \&quot;Official\&quot; group with visibility set \&quot;Public\&quot;, and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+        /// Creates an \&quot;official\&quot; Genesys Cloud group with group visibility set to \&quot;public\&quot; and rules visibility set to \&quot;true\&quot;. Auto-creates an \&quot;externalId\&quot;. \&quot;externalId\&quot; is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">The information used to create a group.</param>
+        /// <param name="body">Creates a group.</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         ApiResponse<ScimV2Group> PostScimV2GroupsWithHttpInfo (ScimV2Group body);
         
@@ -861,26 +861,26 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Delete a group.
+        /// Delete a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteScimGroupAsync (string groupId, string ifMatch = null);
 
         /// <summary>
-        /// Delete a group.
+        /// Delete a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteScimGroupAsyncWithHttpInfo (string groupId, string ifMatch = null);
         
@@ -909,26 +909,26 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteScimUserAsyncWithHttpInfo (string userId, string ifMatch = null);
         
         /// <summary>
-        /// Delete a group.
+        /// Delete a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteScimV2GroupAsync (string groupId, string ifMatch = null);
 
         /// <summary>
-        /// Delete a group.
+        /// Delete a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteScimV2GroupAsyncWithHttpInfo (string groupId, string ifMatch = null);
         
@@ -964,8 +964,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         System.Threading.Tasks.Task<ScimV2Group> GetScimGroupAsync (string groupId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null);
@@ -978,8 +978,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> GetScimGroupAsyncWithHttpInfo (string groupId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null);
@@ -992,10 +992,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
-        /// <param name="filter">Filters results. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="filter">Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;. (optional)</param>
         /// <returns>Task of ScimGroupListResponse</returns>
         System.Threading.Tasks.Task<ScimGroupListResponse> GetScimGroupsAsync (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null);
 
@@ -1007,10 +1007,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
-        /// <param name="filter">Filters results. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="filter">Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;. (optional)</param>
         /// <returns>Task of ApiResponse (ScimGroupListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimGroupListResponse>> GetScimGroupsAsyncWithHttpInfo (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null);
         
@@ -1057,46 +1057,46 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ScimConfigResourceTypesListResponse>> GetScimResourcetypesAsyncWithHttpInfo ();
         
         /// <summary>
-        /// Get the SCIM schema by id
+        /// Get a SCIM schema
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="schemaId">The ID of a schema.</param>
+        /// <param name="schemaId">The ID of a schema. Returned with GET /api/v2/scim/schemas.</param>
         /// <returns>Task of ScimConfigResourceType</returns>
         System.Threading.Tasks.Task<ScimConfigResourceType> GetScimSchemaAsync (string schemaId);
 
         /// <summary>
-        /// Get the SCIM schema by id
+        /// Get a SCIM schema
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="schemaId">The ID of a schema.</param>
+        /// <param name="schemaId">The ID of a schema. Returned with GET /api/v2/scim/schemas.</param>
         /// <returns>Task of ApiResponse (ScimConfigResourceType)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimConfigResourceType>> GetScimSchemaAsyncWithHttpInfo (string schemaId);
         
         /// <summary>
-        /// Get the SCIM schemas
+        /// Get a list of SCIM schemas
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <param name="filter">Filtered results are invalid and return 403 Unauthorized. (optional)</param>
         /// <returns>Task of ScimConfigResourceTypesListResponse</returns>
         System.Threading.Tasks.Task<ScimConfigResourceTypesListResponse> GetScimSchemasAsync (string filter = null);
 
         /// <summary>
-        /// Get the SCIM schemas
+        /// Get a list of SCIM schemas
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <param name="filter">Filtered results are invalid and return 403 Unauthorized. (optional)</param>
         /// <returns>Task of ApiResponse (ScimConfigResourceTypesListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimConfigResourceTypesListResponse>> GetScimSchemasAsyncWithHttpInfo (string filter = null);
         
@@ -1130,8 +1130,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ScimV2User</returns>
         System.Threading.Tasks.Task<ScimV2User> GetScimUserAsync (string userId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null);
@@ -1144,8 +1144,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2User)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2User>> GetScimUserAsyncWithHttpInfo (string userId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null);
@@ -1154,13 +1154,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of users
         /// </summary>
         /// <remarks>
-        /// To return all active users, do not use a filter parameter. To return inactive users, set \&quot;filter\&quot; to \&quot;active eq false\&quot;. By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \&quot;attributes\&quot; to \&quot;id,active\&quot; or \&quot;excludeAttributes\&quot; to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
+        /// To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \&quot;active eq false\&quot;. By default, returns SCIM attributes \&quot;externalId\&quot;, \&quot;enterprise-user:manager\&quot;, and \&quot;roles\&quot;. To exclude these attributes, set the attributes parameter to \&quot;id,active\&quot; or the excludeAttributes parameter to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="filter">Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)</param>
         /// <returns>Task of ScimUserListResponse</returns>
         System.Threading.Tasks.Task<ScimUserListResponse> GetScimUsersAsync (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null);
@@ -1169,13 +1169,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of users
         /// </summary>
         /// <remarks>
-        /// To return all active users, do not use a filter parameter. To return inactive users, set \&quot;filter\&quot; to \&quot;active eq false\&quot;. By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \&quot;attributes\&quot; to \&quot;id,active\&quot; or \&quot;excludeAttributes\&quot; to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
+        /// To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \&quot;active eq false\&quot;. By default, returns SCIM attributes \&quot;externalId\&quot;, \&quot;enterprise-user:manager\&quot;, and \&quot;roles\&quot;. To exclude these attributes, set the attributes parameter to \&quot;id,active\&quot; or the excludeAttributes parameter to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="filter">Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)</param>
         /// <returns>Task of ApiResponse (ScimUserListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimUserListResponse>> GetScimUsersAsyncWithHttpInfo (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null);
@@ -1188,9 +1188,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
-        /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         System.Threading.Tasks.Task<ScimV2Group> GetScimV2GroupAsync (string groupId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null);
 
@@ -1202,9 +1202,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
-        /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> GetScimV2GroupAsyncWithHttpInfo (string groupId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null);
         
@@ -1215,11 +1215,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filters results.</param>
+        /// <param name="filter">Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;.</param>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <returns>Task of ScimGroupListResponse</returns>
         System.Threading.Tasks.Task<ScimGroupListResponse> GetScimV2GroupsAsync (string filter, int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null);
 
@@ -1230,11 +1230,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filters results.</param>
+        /// <param name="filter">Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;.</param>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <returns>Task of ApiResponse (ScimGroupListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimGroupListResponse>> GetScimV2GroupsAsyncWithHttpInfo (string filter, int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null);
         
@@ -1281,46 +1281,46 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ScimConfigResourceTypesListResponse>> GetScimV2ResourcetypesAsyncWithHttpInfo ();
         
         /// <summary>
-        /// Get the SCIM schema by id
+        /// Get a SCIM schema
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="schemaId">The ID of a schema.</param>
+        /// <param name="schemaId">The ID of a schema. Returned with GET /api/v2/scim/v2/schemas.</param>
         /// <returns>Task of ScimV2SchemaDefinition</returns>
         System.Threading.Tasks.Task<ScimV2SchemaDefinition> GetScimV2SchemaAsync (string schemaId);
 
         /// <summary>
-        /// Get the SCIM schema by id
+        /// Get a SCIM schema
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="schemaId">The ID of a schema.</param>
+        /// <param name="schemaId">The ID of a schema. Returned with GET /api/v2/scim/v2/schemas.</param>
         /// <returns>Task of ApiResponse (ScimV2SchemaDefinition)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2SchemaDefinition>> GetScimV2SchemaAsyncWithHttpInfo (string schemaId);
         
         /// <summary>
-        /// Get the SCIM schemas
+        /// Get a list of SCIM schemas
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <param name="filter">Filtered results are invalid and return 403 Unauthorized. (optional)</param>
         /// <returns>Task of ScimV2SchemaListResponse</returns>
         System.Threading.Tasks.Task<ScimV2SchemaListResponse> GetScimV2SchemasAsync (string filter = null);
 
         /// <summary>
-        /// Get the SCIM schemas
+        /// Get a list of SCIM schemas
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <param name="filter">Filtered results are invalid and return 403 Unauthorized. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2SchemaListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2SchemaListResponse>> GetScimV2SchemasAsyncWithHttpInfo (string filter = null);
         
@@ -1354,8 +1354,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ScimV2User</returns>
         System.Threading.Tasks.Task<ScimV2User> GetScimV2UserAsync (string userId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null);
@@ -1368,8 +1368,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2User)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2User>> GetScimV2UserAsyncWithHttpInfo (string userId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null);
@@ -1378,13 +1378,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of users
         /// </summary>
         /// <remarks>
-        /// To return all active users, do not use a filter parameter. To return inactive users, set \&quot;filter\&quot; to \&quot;active eq false\&quot;. By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \&quot;attributes\&quot; to \&quot;id,active\&quot; or \&quot;excludeAttributes\&quot; to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
+        /// To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \&quot;active eq false\&quot;. By default, returns SCIM attributes \&quot;externalId\&quot;, \&quot;enterprise-user:manager\&quot;, and \&quot;roles\&quot;. To exclude these attributes, set the attributes parameter to \&quot;id,active\&quot; or the excludeAttributes parameter to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="filter">Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)</param>
         /// <returns>Task of ScimUserListResponse</returns>
         System.Threading.Tasks.Task<ScimUserListResponse> GetScimV2UsersAsync (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null);
@@ -1393,13 +1393,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of users
         /// </summary>
         /// <remarks>
-        /// To return all active users, do not use a filter parameter. To return inactive users, set \&quot;filter\&quot; to \&quot;active eq false\&quot;. By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \&quot;attributes\&quot; to \&quot;id,active\&quot; or \&quot;excludeAttributes\&quot; to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
+        /// To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \&quot;active eq false\&quot;. By default, returns SCIM attributes \&quot;externalId\&quot;, \&quot;enterprise-user:manager\&quot;, and \&quot;roles\&quot;. To exclude these attributes, set the attributes parameter to \&quot;id,active\&quot; or the excludeAttributes parameter to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="filter">Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)</param>
         /// <returns>Task of ApiResponse (ScimUserListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimUserListResponse>> GetScimV2UsersAsyncWithHttpInfo (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null);
@@ -1509,10 +1509,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ScimV2User>> PatchScimV2UserAsyncWithHttpInfo (string userId, ScimV2PatchRequest body, string ifMatch = null);
         
         /// <summary>
-        /// The information used to create a group.
+        /// Creates a group
         /// </summary>
         /// <remarks>
-        /// PureCloud group will be created as \&quot;Official\&quot; group with visibility set \&quot;Public\&quot;, and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+        /// Creates a Genesys Cloud group with group visibility set to \&quot;public\&quot; and rules visibility set to \&quot;true\&quot;. Auto-creates an \&quot;externalId\&quot;. \&quot;externalId\&quot; is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The information used to create a group.</param>
@@ -1520,10 +1520,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ScimV2Group> PostScimGroupsAsync (ScimV2Group body);
 
         /// <summary>
-        /// The information used to create a group.
+        /// Creates a group
         /// </summary>
         /// <remarks>
-        /// PureCloud group will be created as \&quot;Official\&quot; group with visibility set \&quot;Public\&quot;, and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+        /// Creates a Genesys Cloud group with group visibility set to \&quot;public\&quot; and rules visibility set to \&quot;true\&quot;. Auto-creates an \&quot;externalId\&quot;. \&quot;externalId\&quot; is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The information used to create a group.</param>
@@ -1553,24 +1553,24 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ScimV2User>> PostScimUsersAsyncWithHttpInfo (ScimV2CreateUser body);
         
         /// <summary>
-        /// The information used to create a group.
+        /// Create a group
         /// </summary>
         /// <remarks>
-        /// PureCloud group will be created as \&quot;Official\&quot; group with visibility set \&quot;Public\&quot;, and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+        /// Creates an \&quot;official\&quot; Genesys Cloud group with group visibility set to \&quot;public\&quot; and rules visibility set to \&quot;true\&quot;. Auto-creates an \&quot;externalId\&quot;. \&quot;externalId\&quot; is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">The information used to create a group.</param>
+        /// <param name="body">Creates a group.</param>
         /// <returns>Task of ScimV2Group</returns>
         System.Threading.Tasks.Task<ScimV2Group> PostScimV2GroupsAsync (ScimV2Group body);
 
         /// <summary>
-        /// The information used to create a group.
+        /// Create a group
         /// </summary>
         /// <remarks>
-        /// PureCloud group will be created as \&quot;Official\&quot; group with visibility set \&quot;Public\&quot;, and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+        /// Creates an \&quot;official\&quot; Genesys Cloud group with group visibility set to \&quot;public\&quot; and rules visibility set to \&quot;true\&quot;. Auto-creates an \&quot;externalId\&quot;. \&quot;externalId\&quot; is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">The information used to create a group.</param>
+        /// <param name="body">Creates a group.</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> PostScimV2GroupsAsyncWithHttpInfo (ScimV2Group body);
         
@@ -1793,11 +1793,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Delete a group. 
+        /// Delete a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
         /// <returns></returns>
         public void DeleteScimGroup (string groupId, string ifMatch = null)
         {
@@ -1805,11 +1805,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a group. 
+        /// Delete a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteScimGroupWithHttpInfo (string groupId, string ifMatch = null)
         { 
@@ -1894,11 +1894,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Delete a group. 
+        /// Delete a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteScimGroupAsync (string groupId, string ifMatch = null)
         {
@@ -1907,11 +1907,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a group. 
+        /// Delete a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteScimGroupAsyncWithHttpInfo (string groupId, string ifMatch = null)
         { 
@@ -2205,11 +2205,11 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Delete a group. 
+        /// Delete a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
         /// <returns></returns>
         public void DeleteScimV2Group (string groupId, string ifMatch = null)
         {
@@ -2217,11 +2217,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a group. 
+        /// Delete a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteScimV2GroupWithHttpInfo (string groupId, string ifMatch = null)
         { 
@@ -2306,11 +2306,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Delete a group. 
+        /// Delete a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteScimV2GroupAsync (string groupId, string ifMatch = null)
         {
@@ -2319,11 +2319,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a group. 
+        /// Delete a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteScimV2GroupAsyncWithHttpInfo (string groupId, string ifMatch = null)
         { 
@@ -2621,8 +2621,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>ScimV2Group</returns>
         public ScimV2Group GetScimGroup (string groupId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
@@ -2636,8 +2636,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         public ApiResponse< ScimV2Group > GetScimGroupWithHttpInfo (string groupId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
@@ -2729,8 +2729,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         public async System.Threading.Tasks.Task<ScimV2Group> GetScimGroupAsync (string groupId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
@@ -2745,8 +2745,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> GetScimGroupAsyncWithHttpInfo (string groupId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
@@ -2840,10 +2840,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
-        /// <param name="filter">Filters results. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="filter">Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;. (optional)</param>
         /// <returns>ScimGroupListResponse</returns>
         public ScimGroupListResponse GetScimGroups (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null)
         {
@@ -2856,10 +2856,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
-        /// <param name="filter">Filters results. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="filter">Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;. (optional)</param>
         /// <returns>ApiResponse of ScimGroupListResponse</returns>
         public ApiResponse< ScimGroupListResponse > GetScimGroupsWithHttpInfo (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null)
         { 
@@ -2948,10 +2948,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
-        /// <param name="filter">Filters results. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="filter">Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;. (optional)</param>
         /// <returns>Task of ScimGroupListResponse</returns>
         public async System.Threading.Tasks.Task<ScimGroupListResponse> GetScimGroupsAsync (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null)
         {
@@ -2965,10 +2965,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
-        /// <param name="filter">Filters results. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="filter">Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;. (optional)</param>
         /// <returns>Task of ApiResponse (ScimGroupListResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimGroupListResponse>> GetScimGroupsAsyncWithHttpInfo (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null)
         { 
@@ -3443,10 +3443,10 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get the SCIM schema by id 
+        /// Get a SCIM schema 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="schemaId">The ID of a schema.</param>
+        /// <param name="schemaId">The ID of a schema. Returned with GET /api/v2/scim/schemas.</param>
         /// <returns>ScimConfigResourceType</returns>
         public ScimConfigResourceType GetScimSchema (string schemaId)
         {
@@ -3455,10 +3455,10 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the SCIM schema by id 
+        /// Get a SCIM schema 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="schemaId">The ID of a schema.</param>
+        /// <param name="schemaId">The ID of a schema. Returned with GET /api/v2/scim/schemas.</param>
         /// <returns>ApiResponse of ScimConfigResourceType</returns>
         public ApiResponse< ScimConfigResourceType > GetScimSchemaWithHttpInfo (string schemaId)
         { 
@@ -3542,10 +3542,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get the SCIM schema by id 
+        /// Get a SCIM schema 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="schemaId">The ID of a schema.</param>
+        /// <param name="schemaId">The ID of a schema. Returned with GET /api/v2/scim/schemas.</param>
         /// <returns>Task of ScimConfigResourceType</returns>
         public async System.Threading.Tasks.Task<ScimConfigResourceType> GetScimSchemaAsync (string schemaId)
         {
@@ -3555,10 +3555,10 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the SCIM schema by id 
+        /// Get a SCIM schema 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="schemaId">The ID of a schema.</param>
+        /// <param name="schemaId">The ID of a schema. Returned with GET /api/v2/scim/schemas.</param>
         /// <returns>Task of ApiResponse (ScimConfigResourceType)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimConfigResourceType>> GetScimSchemaAsyncWithHttpInfo (string schemaId)
         { 
@@ -3644,10 +3644,10 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get the SCIM schemas 
+        /// Get a list of SCIM schemas 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <param name="filter">Filtered results are invalid and return 403 Unauthorized. (optional)</param>
         /// <returns>ScimConfigResourceTypesListResponse</returns>
         public ScimConfigResourceTypesListResponse GetScimSchemas (string filter = null)
         {
@@ -3656,10 +3656,10 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the SCIM schemas 
+        /// Get a list of SCIM schemas 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <param name="filter">Filtered results are invalid and return 403 Unauthorized. (optional)</param>
         /// <returns>ApiResponse of ScimConfigResourceTypesListResponse</returns>
         public ApiResponse< ScimConfigResourceTypesListResponse > GetScimSchemasWithHttpInfo (string filter = null)
         { 
@@ -3740,10 +3740,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get the SCIM schemas 
+        /// Get a list of SCIM schemas 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <param name="filter">Filtered results are invalid and return 403 Unauthorized. (optional)</param>
         /// <returns>Task of ScimConfigResourceTypesListResponse</returns>
         public async System.Threading.Tasks.Task<ScimConfigResourceTypesListResponse> GetScimSchemasAsync (string filter = null)
         {
@@ -3753,10 +3753,10 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the SCIM schemas 
+        /// Get a list of SCIM schemas 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <param name="filter">Filtered results are invalid and return 403 Unauthorized. (optional)</param>
         /// <returns>Task of ApiResponse (ScimConfigResourceTypesListResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimConfigResourceTypesListResponse>> GetScimSchemasAsyncWithHttpInfo (string filter = null)
         { 
@@ -4036,8 +4036,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>ScimV2User</returns>
         public ScimV2User GetScimUser (string userId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
@@ -4051,8 +4051,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>ApiResponse of ScimV2User</returns>
         public ApiResponse< ScimV2User > GetScimUserWithHttpInfo (string userId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
@@ -4144,8 +4144,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ScimV2User</returns>
         public async System.Threading.Tasks.Task<ScimV2User> GetScimUserAsync (string userId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
@@ -4160,8 +4160,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2User)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2User>> GetScimUserAsyncWithHttpInfo (string userId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
@@ -4251,13 +4251,13 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get a list of users To return all active users, do not use a filter parameter. To return inactive users, set \&quot;filter\&quot; to \&quot;active eq false\&quot;. By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \&quot;attributes\&quot; to \&quot;id,active\&quot; or \&quot;excludeAttributes\&quot; to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
+        /// Get a list of users To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \&quot;active eq false\&quot;. By default, returns SCIM attributes \&quot;externalId\&quot;, \&quot;enterprise-user:manager\&quot;, and \&quot;roles\&quot;. To exclude these attributes, set the attributes parameter to \&quot;id,active\&quot; or the excludeAttributes parameter to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="filter">Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)</param>
         /// <returns>ScimUserListResponse</returns>
         public ScimUserListResponse GetScimUsers (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null)
@@ -4267,13 +4267,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of users To return all active users, do not use a filter parameter. To return inactive users, set \&quot;filter\&quot; to \&quot;active eq false\&quot;. By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \&quot;attributes\&quot; to \&quot;id,active\&quot; or \&quot;excludeAttributes\&quot; to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
+        /// Get a list of users To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \&quot;active eq false\&quot;. By default, returns SCIM attributes \&quot;externalId\&quot;, \&quot;enterprise-user:manager\&quot;, and \&quot;roles\&quot;. To exclude these attributes, set the attributes parameter to \&quot;id,active\&quot; or the excludeAttributes parameter to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="filter">Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)</param>
         /// <returns>ApiResponse of ScimUserListResponse</returns>
         public ApiResponse< ScimUserListResponse > GetScimUsersWithHttpInfo (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null)
@@ -4359,13 +4359,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get a list of users To return all active users, do not use a filter parameter. To return inactive users, set \&quot;filter\&quot; to \&quot;active eq false\&quot;. By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \&quot;attributes\&quot; to \&quot;id,active\&quot; or \&quot;excludeAttributes\&quot; to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
+        /// Get a list of users To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \&quot;active eq false\&quot;. By default, returns SCIM attributes \&quot;externalId\&quot;, \&quot;enterprise-user:manager\&quot;, and \&quot;roles\&quot;. To exclude these attributes, set the attributes parameter to \&quot;id,active\&quot; or the excludeAttributes parameter to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="filter">Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)</param>
         /// <returns>Task of ScimUserListResponse</returns>
         public async System.Threading.Tasks.Task<ScimUserListResponse> GetScimUsersAsync (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null)
@@ -4376,13 +4376,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of users To return all active users, do not use a filter parameter. To return inactive users, set \&quot;filter\&quot; to \&quot;active eq false\&quot;. By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \&quot;attributes\&quot; to \&quot;id,active\&quot; or \&quot;excludeAttributes\&quot; to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
+        /// Get a list of users To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \&quot;active eq false\&quot;. By default, returns SCIM attributes \&quot;externalId\&quot;, \&quot;enterprise-user:manager\&quot;, and \&quot;roles\&quot;. To exclude these attributes, set the attributes parameter to \&quot;id,active\&quot; or the excludeAttributes parameter to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="filter">Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)</param>
         /// <returns>Task of ApiResponse (ScimUserListResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimUserListResponse>> GetScimUsersAsyncWithHttpInfo (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null)
@@ -4473,9 +4473,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
-        /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>ScimV2Group</returns>
         public ScimV2Group GetScimV2Group (string groupId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
         {
@@ -4488,9 +4488,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
-        /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         public ApiResponse< ScimV2Group > GetScimV2GroupWithHttpInfo (string groupId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
         { 
@@ -4581,9 +4581,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
-        /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         public async System.Threading.Tasks.Task<ScimV2Group> GetScimV2GroupAsync (string groupId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
         {
@@ -4597,9 +4597,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
-        /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="ifNoneMatch">TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> GetScimV2GroupAsyncWithHttpInfo (string groupId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
         { 
@@ -4691,11 +4691,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of groups 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filters results.</param>
+        /// <param name="filter">Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;.</param>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <returns>ScimGroupListResponse</returns>
         public ScimGroupListResponse GetScimV2Groups (string filter, int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null)
         {
@@ -4707,11 +4707,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of groups 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filters results.</param>
+        /// <param name="filter">Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;.</param>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <returns>ApiResponse of ScimGroupListResponse</returns>
         public ApiResponse< ScimGroupListResponse > GetScimV2GroupsWithHttpInfo (string filter, int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null)
         { 
@@ -4802,11 +4802,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of groups 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filters results.</param>
+        /// <param name="filter">Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;.</param>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <returns>Task of ScimGroupListResponse</returns>
         public async System.Threading.Tasks.Task<ScimGroupListResponse> GetScimV2GroupsAsync (string filter, int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null)
         {
@@ -4819,11 +4819,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of groups 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filters results.</param>
+        /// <param name="filter">Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;.</param>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <returns>Task of ApiResponse (ScimGroupListResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimGroupListResponse>> GetScimV2GroupsAsyncWithHttpInfo (string filter, int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null)
         { 
@@ -5302,10 +5302,10 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get the SCIM schema by id 
+        /// Get a SCIM schema 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="schemaId">The ID of a schema.</param>
+        /// <param name="schemaId">The ID of a schema. Returned with GET /api/v2/scim/v2/schemas.</param>
         /// <returns>ScimV2SchemaDefinition</returns>
         public ScimV2SchemaDefinition GetScimV2Schema (string schemaId)
         {
@@ -5314,10 +5314,10 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the SCIM schema by id 
+        /// Get a SCIM schema 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="schemaId">The ID of a schema.</param>
+        /// <param name="schemaId">The ID of a schema. Returned with GET /api/v2/scim/v2/schemas.</param>
         /// <returns>ApiResponse of ScimV2SchemaDefinition</returns>
         public ApiResponse< ScimV2SchemaDefinition > GetScimV2SchemaWithHttpInfo (string schemaId)
         { 
@@ -5401,10 +5401,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get the SCIM schema by id 
+        /// Get a SCIM schema 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="schemaId">The ID of a schema.</param>
+        /// <param name="schemaId">The ID of a schema. Returned with GET /api/v2/scim/v2/schemas.</param>
         /// <returns>Task of ScimV2SchemaDefinition</returns>
         public async System.Threading.Tasks.Task<ScimV2SchemaDefinition> GetScimV2SchemaAsync (string schemaId)
         {
@@ -5414,10 +5414,10 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the SCIM schema by id 
+        /// Get a SCIM schema 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="schemaId">The ID of a schema.</param>
+        /// <param name="schemaId">The ID of a schema. Returned with GET /api/v2/scim/v2/schemas.</param>
         /// <returns>Task of ApiResponse (ScimV2SchemaDefinition)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2SchemaDefinition>> GetScimV2SchemaAsyncWithHttpInfo (string schemaId)
         { 
@@ -5503,10 +5503,10 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get the SCIM schemas 
+        /// Get a list of SCIM schemas 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <param name="filter">Filtered results are invalid and return 403 Unauthorized. (optional)</param>
         /// <returns>ScimV2SchemaListResponse</returns>
         public ScimV2SchemaListResponse GetScimV2Schemas (string filter = null)
         {
@@ -5515,10 +5515,10 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the SCIM schemas 
+        /// Get a list of SCIM schemas 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <param name="filter">Filtered results are invalid and return 403 Unauthorized. (optional)</param>
         /// <returns>ApiResponse of ScimV2SchemaListResponse</returns>
         public ApiResponse< ScimV2SchemaListResponse > GetScimV2SchemasWithHttpInfo (string filter = null)
         { 
@@ -5599,10 +5599,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get the SCIM schemas 
+        /// Get a list of SCIM schemas 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <param name="filter">Filtered results are invalid and return 403 Unauthorized. (optional)</param>
         /// <returns>Task of ScimV2SchemaListResponse</returns>
         public async System.Threading.Tasks.Task<ScimV2SchemaListResponse> GetScimV2SchemasAsync (string filter = null)
         {
@@ -5612,10 +5612,10 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the SCIM schemas 
+        /// Get a list of SCIM schemas 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <param name="filter">Filtered results are invalid and return 403 Unauthorized. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2SchemaListResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2SchemaListResponse>> GetScimV2SchemasAsyncWithHttpInfo (string filter = null)
         { 
@@ -5895,8 +5895,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>ScimV2User</returns>
         public ScimV2User GetScimV2User (string userId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
@@ -5910,8 +5910,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>ApiResponse of ScimV2User</returns>
         public ApiResponse< ScimV2User > GetScimV2UserWithHttpInfo (string userId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
@@ -6003,8 +6003,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ScimV2User</returns>
         public async System.Threading.Tasks.Task<ScimV2User> GetScimV2UserAsync (string userId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
@@ -6019,8 +6019,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2User)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2User>> GetScimV2UserAsyncWithHttpInfo (string userId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
@@ -6110,13 +6110,13 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get a list of users To return all active users, do not use a filter parameter. To return inactive users, set \&quot;filter\&quot; to \&quot;active eq false\&quot;. By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \&quot;attributes\&quot; to \&quot;id,active\&quot; or \&quot;excludeAttributes\&quot; to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
+        /// Get a list of users To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \&quot;active eq false\&quot;. By default, returns SCIM attributes \&quot;externalId\&quot;, \&quot;enterprise-user:manager\&quot;, and \&quot;roles\&quot;. To exclude these attributes, set the attributes parameter to \&quot;id,active\&quot; or the excludeAttributes parameter to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="filter">Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)</param>
         /// <returns>ScimUserListResponse</returns>
         public ScimUserListResponse GetScimV2Users (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null)
@@ -6126,13 +6126,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of users To return all active users, do not use a filter parameter. To return inactive users, set \&quot;filter\&quot; to \&quot;active eq false\&quot;. By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \&quot;attributes\&quot; to \&quot;id,active\&quot; or \&quot;excludeAttributes\&quot; to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
+        /// Get a list of users To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \&quot;active eq false\&quot;. By default, returns SCIM attributes \&quot;externalId\&quot;, \&quot;enterprise-user:manager\&quot;, and \&quot;roles\&quot;. To exclude these attributes, set the attributes parameter to \&quot;id,active\&quot; or the excludeAttributes parameter to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="filter">Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)</param>
         /// <returns>ApiResponse of ScimUserListResponse</returns>
         public ApiResponse< ScimUserListResponse > GetScimV2UsersWithHttpInfo (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null)
@@ -6218,13 +6218,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get a list of users To return all active users, do not use a filter parameter. To return inactive users, set \&quot;filter\&quot; to \&quot;active eq false\&quot;. By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \&quot;attributes\&quot; to \&quot;id,active\&quot; or \&quot;excludeAttributes\&quot; to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
+        /// Get a list of users To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \&quot;active eq false\&quot;. By default, returns SCIM attributes \&quot;externalId\&quot;, \&quot;enterprise-user:manager\&quot;, and \&quot;roles\&quot;. To exclude these attributes, set the attributes parameter to \&quot;id,active\&quot; or the excludeAttributes parameter to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="filter">Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)</param>
         /// <returns>Task of ScimUserListResponse</returns>
         public async System.Threading.Tasks.Task<ScimUserListResponse> GetScimV2UsersAsync (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null)
@@ -6235,13 +6235,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of users To return all active users, do not use a filter parameter. To return inactive users, set \&quot;filter\&quot; to \&quot;active eq false\&quot;. By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \&quot;attributes\&quot; to \&quot;id,active\&quot; or \&quot;excludeAttributes\&quot; to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
+        /// Get a list of users To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \&quot;active eq false\&quot;. By default, returns SCIM attributes \&quot;externalId\&quot;, \&quot;enterprise-user:manager\&quot;, and \&quot;roles\&quot;. To exclude these attributes, set the attributes parameter to \&quot;id,active\&quot; or the excludeAttributes parameter to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)</param>
-        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
-        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)</param>
         /// <param name="filter">Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)</param>
         /// <returns>Task of ApiResponse (ScimUserListResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimUserListResponse>> GetScimV2UsersAsyncWithHttpInfo (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null)
@@ -7240,7 +7240,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// The information used to create a group. PureCloud group will be created as \&quot;Official\&quot; group with visibility set \&quot;Public\&quot;, and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+        /// Creates a group Creates a Genesys Cloud group with group visibility set to \&quot;public\&quot; and rules visibility set to \&quot;true\&quot;. Auto-creates an \&quot;externalId\&quot;. \&quot;externalId\&quot; is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The information used to create a group.</param>
@@ -7252,7 +7252,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// The information used to create a group. PureCloud group will be created as \&quot;Official\&quot; group with visibility set \&quot;Public\&quot;, and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+        /// Creates a group Creates a Genesys Cloud group with group visibility set to \&quot;public\&quot; and rules visibility set to \&quot;true\&quot;. Auto-creates an \&quot;externalId\&quot;. \&quot;externalId\&quot; is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The information used to create a group.</param>
@@ -7343,7 +7343,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// The information used to create a group. PureCloud group will be created as \&quot;Official\&quot; group with visibility set \&quot;Public\&quot;, and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+        /// Creates a group Creates a Genesys Cloud group with group visibility set to \&quot;public\&quot; and rules visibility set to \&quot;true\&quot;. Auto-creates an \&quot;externalId\&quot;. \&quot;externalId\&quot; is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The information used to create a group.</param>
@@ -7356,7 +7356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// The information used to create a group. PureCloud group will be created as \&quot;Official\&quot; group with visibility set \&quot;Public\&quot;, and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+        /// Creates a group Creates a Genesys Cloud group with group visibility set to \&quot;public\&quot; and rules visibility set to \&quot;true\&quot;. Auto-creates an \&quot;externalId\&quot;. \&quot;externalId\&quot; is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The information used to create a group.</param>
@@ -7658,10 +7658,10 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// The information used to create a group. PureCloud group will be created as \&quot;Official\&quot; group with visibility set \&quot;Public\&quot;, and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+        /// Create a group Creates an \&quot;official\&quot; Genesys Cloud group with group visibility set to \&quot;public\&quot; and rules visibility set to \&quot;true\&quot;. Auto-creates an \&quot;externalId\&quot;. \&quot;externalId\&quot; is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">The information used to create a group.</param>
+        /// <param name="body">Creates a group.</param>
         /// <returns>ScimV2Group</returns>
         public ScimV2Group PostScimV2Groups (ScimV2Group body)
         {
@@ -7670,10 +7670,10 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// The information used to create a group. PureCloud group will be created as \&quot;Official\&quot; group with visibility set \&quot;Public\&quot;, and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+        /// Create a group Creates an \&quot;official\&quot; Genesys Cloud group with group visibility set to \&quot;public\&quot; and rules visibility set to \&quot;true\&quot;. Auto-creates an \&quot;externalId\&quot;. \&quot;externalId\&quot; is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">The information used to create a group.</param>
+        /// <param name="body">Creates a group.</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         public ApiResponse< ScimV2Group > PostScimV2GroupsWithHttpInfo (ScimV2Group body)
         { 
@@ -7761,10 +7761,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// The information used to create a group. PureCloud group will be created as \&quot;Official\&quot; group with visibility set \&quot;Public\&quot;, and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+        /// Create a group Creates an \&quot;official\&quot; Genesys Cloud group with group visibility set to \&quot;public\&quot; and rules visibility set to \&quot;true\&quot;. Auto-creates an \&quot;externalId\&quot;. \&quot;externalId\&quot; is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">The information used to create a group.</param>
+        /// <param name="body">Creates a group.</param>
         /// <returns>Task of ScimV2Group</returns>
         public async System.Threading.Tasks.Task<ScimV2Group> PostScimV2GroupsAsync (ScimV2Group body)
         {
@@ -7774,10 +7774,10 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// The information used to create a group. PureCloud group will be created as \&quot;Official\&quot; group with visibility set \&quot;Public\&quot;, and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+        /// Create a group Creates an \&quot;official\&quot; Genesys Cloud group with group visibility set to \&quot;public\&quot; and rules visibility set to \&quot;true\&quot;. Auto-creates an \&quot;externalId\&quot;. \&quot;externalId\&quot; is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">The information used to create a group.</param>
+        /// <param name="body">Creates a group.</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> PostScimV2GroupsAsyncWithHttpInfo (ScimV2Group body)
         { 

@@ -212,6 +212,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Lexbotalias,
             
             /// <summary>
+            /// Enum Nludomain for "NLUDOMAIN"
+            /// </summary>
+            [EnumMember(Value = "NLUDOMAIN")]
+            Nludomain,
+            
+            /// <summary>
             /// Enum Outboundcallflow for "OUTBOUNDCALLFLOW"
             /// </summary>
             [EnumMember(Value = "OUTBOUNDCALLFLOW")]

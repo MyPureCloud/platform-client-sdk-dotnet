@@ -24,8 +24,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
-        /// <returns></returns>
-        void DeleteCoachingAppointment (string appointmentId);
+        /// <returns>CoachingAppointmentReference</returns>
+        CoachingAppointmentReference DeleteCoachingAppointment (string appointmentId);
 
         /// <summary>
         /// Delete an existing appointment
@@ -35,8 +35,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteCoachingAppointmentWithHttpInfo (string appointmentId);
+        /// <returns>ApiResponse of CoachingAppointmentReference</returns>
+        ApiResponse<CoachingAppointmentReference> DeleteCoachingAppointmentWithHttpInfo (string appointmentId);
         
         /// <summary>
         /// Delete an existing annotation
@@ -168,7 +168,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
-        /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
@@ -185,7 +185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
-        /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
@@ -201,7 +201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
@@ -217,7 +217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
@@ -428,8 +428,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteCoachingAppointmentAsync (string appointmentId);
+        /// <returns>Task of CoachingAppointmentReference</returns>
+        System.Threading.Tasks.Task<CoachingAppointmentReference> DeleteCoachingAppointmentAsync (string appointmentId);
 
         /// <summary>
         /// Delete an existing appointment
@@ -439,8 +439,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCoachingAppointmentAsyncWithHttpInfo (string appointmentId);
+        /// <returns>Task of ApiResponse (CoachingAppointmentReference)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentReference>> DeleteCoachingAppointmentAsyncWithHttpInfo (string appointmentId);
         
         /// <summary>
         /// Delete an existing annotation
@@ -572,7 +572,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
-        /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
@@ -589,7 +589,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
-        /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
@@ -605,7 +605,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
@@ -621,7 +621,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
@@ -917,10 +917,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
-        /// <returns></returns>
-        public void DeleteCoachingAppointment (string appointmentId)
+        /// <returns>CoachingAppointmentReference</returns>
+        public CoachingAppointmentReference DeleteCoachingAppointment (string appointmentId)
         {
-             DeleteCoachingAppointmentWithHttpInfo(appointmentId);
+             ApiResponse<CoachingAppointmentReference> localVarResponse = DeleteCoachingAppointmentWithHttpInfo(appointmentId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -928,8 +929,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteCoachingAppointmentWithHttpInfo (string appointmentId)
+        /// <returns>ApiResponse of CoachingAppointmentReference</returns>
+        public ApiResponse< CoachingAppointmentReference > DeleteCoachingAppointmentWithHttpInfo (string appointmentId)
         { 
             // verify the required parameter 'appointmentId' is set
             if (appointmentId == null)
@@ -998,9 +999,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteCoachingAppointment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<CoachingAppointmentReference>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (CoachingAppointmentReference) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoachingAppointmentReference)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -1011,10 +1012,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteCoachingAppointmentAsync (string appointmentId)
+        /// <returns>Task of CoachingAppointmentReference</returns>
+        public async System.Threading.Tasks.Task<CoachingAppointmentReference> DeleteCoachingAppointmentAsync (string appointmentId)
         {
-             await DeleteCoachingAppointmentAsyncWithHttpInfo(appointmentId);
+             ApiResponse<CoachingAppointmentReference> localVarResponse = await DeleteCoachingAppointmentAsyncWithHttpInfo(appointmentId);
+             return localVarResponse.Data;
 
         }
 
@@ -1023,8 +1025,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCoachingAppointmentAsyncWithHttpInfo (string appointmentId)
+        /// <returns>Task of ApiResponse (CoachingAppointmentReference)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentReference>> DeleteCoachingAppointmentAsyncWithHttpInfo (string appointmentId)
         { 
             // verify the required parameter 'appointmentId' is set
             if (appointmentId == null)
@@ -1094,9 +1096,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteCoachingAppointment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<CoachingAppointmentReference>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (CoachingAppointmentReference) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoachingAppointmentReference)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -2121,7 +2123,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
-        /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
@@ -2139,7 +2141,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
-        /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
@@ -2234,7 +2236,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
-        /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
@@ -2253,7 +2255,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
-        /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
@@ -2349,7 +2351,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get my appointments for a given date range 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
@@ -2366,7 +2368,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get my appointments for a given date range 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
@@ -2456,7 +2458,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get my appointments for a given date range 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
@@ -2474,7 +2476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get my appointments for a given date range 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>

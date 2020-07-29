@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Routing skill assigned to user.
+    /// The routing skill assigned to a user.
     /// </summary>
     [DataContract]
     public partial class ScimUserRoutingSkill :  IEquatable<ScimUserRoutingSkill>
@@ -40,8 +40,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimUserRoutingSkill" /> class.
         /// </summary>
-        /// <param name="Name">Case-sensitive name identifying a skill configured in routing skills. (required).</param>
-        /// <param name="Proficiency">Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular skill. It is used when a queue is set to \&quot;Best available skills\&quot; mode to allow acd interactions to target agents with higher proficiency ratings..</param>
+        /// <param name="Name">The case-sensitive name of a routing skill configured in Genesys Cloud. (required).</param>
+        /// <param name="Proficiency">A rating from 0.0 to 5.0 that indicates how adept an agent is at a particular skill. When \&quot;Best available skills\&quot; is enabled for a queue in Genesys Cloud, ACD interactions in that queue are routed to agents with higher proficiency ratings..</param>
         public ScimUserRoutingSkill(string Name = null, double? Proficiency = null)
         {
             this.Name = Name;
@@ -52,18 +52,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Case-sensitive name identifying a skill configured in routing skills.
+        /// The case-sensitive name of a routing skill configured in Genesys Cloud.
         /// </summary>
-        /// <value>Case-sensitive name identifying a skill configured in routing skills.</value>
+        /// <value>The case-sensitive name of a routing skill configured in Genesys Cloud.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
         
         
         /// <summary>
-        /// Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular skill. It is used when a queue is set to \&quot;Best available skills\&quot; mode to allow acd interactions to target agents with higher proficiency ratings.
+        /// A rating from 0.0 to 5.0 that indicates how adept an agent is at a particular skill. When \&quot;Best available skills\&quot; is enabled for a queue in Genesys Cloud, ACD interactions in that queue are routed to agents with higher proficiency ratings.
         /// </summary>
-        /// <value>Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular skill. It is used when a queue is set to \&quot;Best available skills\&quot; mode to allow acd interactions to target agents with higher proficiency ratings.</value>
+        /// <value>A rating from 0.0 to 5.0 that indicates how adept an agent is at a particular skill. When \&quot;Best available skills\&quot; is enabled for a queue in Genesys Cloud, ACD interactions in that queue are routed to agents with higher proficiency ratings.</value>
         [DataMember(Name="proficiency", EmitDefaultValue=false)]
         public double? Proficiency { get; set; }
         

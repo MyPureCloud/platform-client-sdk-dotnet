@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Represents an organization langauge assigned to a user. When assigning to a user specify the organization language id as the id.
+    /// Represents an organization language assigned to a user. When assigning to a user specify the organization language id as the id.
     /// </summary>
     [DataContract]
     public partial class UserRoutingLanguage :  IEquatable<UserRoutingLanguage>
@@ -30,9 +30,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Activate or deactivate this routing langauge.
+        /// Activate or deactivate this routing language.
         /// </summary>
-        /// <value>Activate or deactivate this routing langauge.</value>
+        /// <value>Activate or deactivate this routing language.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
@@ -80,9 +80,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Activate or deactivate this routing langauge.
+        /// Activate or deactivate this routing language.
         /// </summary>
-        /// <value>Activate or deactivate this routing langauge.</value>
+        /// <value>Activate or deactivate this routing language.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         
@@ -96,8 +96,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="UserRoutingLanguage" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Proficiency">Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular language. It is used when a queue is set to \&quot;Best available language\&quot; mode to allow acd interactions to target agents with higher proficiency ratings..</param>
-        /// <param name="State">Activate or deactivate this routing langauge..</param>
+        /// <param name="Proficiency">A rating from 0.0 to 5.0 that indicates how fluent an agent is in a particular language. ACD interactions are routed to agents with higher proficiency ratings..</param>
+        /// <param name="State">Activate or deactivate this routing language..</param>
         public UserRoutingLanguage(string Name = null, double? Proficiency = null, StateEnum? State = null)
         {
             this.Name = Name;
@@ -126,9 +126,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular language. It is used when a queue is set to \&quot;Best available language\&quot; mode to allow acd interactions to target agents with higher proficiency ratings.
+        /// A rating from 0.0 to 5.0 that indicates how fluent an agent is in a particular language. ACD interactions are routed to agents with higher proficiency ratings.
         /// </summary>
-        /// <value>Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular language. It is used when a queue is set to \&quot;Best available language\&quot; mode to allow acd interactions to target agents with higher proficiency ratings.</value>
+        /// <value>A rating from 0.0 to 5.0 that indicates how fluent an agent is in a particular language. ACD interactions are routed to agents with higher proficiency ratings.</value>
         [DataMember(Name="proficiency", EmitDefaultValue=false)]
         public double? Proficiency { get; set; }
         
@@ -137,9 +137,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// URI to the organization language used by this user langauge.
+        /// URI to the organization language used by this user language.
         /// </summary>
-        /// <value>URI to the organization language used by this user langauge.</value>
+        /// <value>URI to the organization language used by this user language.</value>
         [DataMember(Name="languageUri", EmitDefaultValue=false)]
         public string LanguageUri { get; private set; }
         

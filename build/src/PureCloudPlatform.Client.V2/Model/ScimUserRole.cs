@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimUserRole" /> class.
         /// </summary>
-        /// <param name="Value">Purecloud user role name.</param>
+        /// <param name="Value">The role of the Genesys Cloud user..</param>
         public ScimUserRole(string Value = null)
         {
             this.Value = Value;
@@ -39,9 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Purecloud user role name
+        /// The role of the Genesys Cloud user.
         /// </summary>
-        /// <value>Purecloud user role name</value>
+        /// <value>The role of the Genesys Cloud user.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
         

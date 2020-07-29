@@ -27,7 +27,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deletecoachingappointment"></a>
 
-## void DeleteCoachingAppointment (string appointmentId)
+## [**CoachingAppointmentReference**](CoachingAppointmentReference.html) DeleteCoachingAppointment (string appointmentId)
 
 
 
@@ -62,7 +62,8 @@ namespace Example
             try
             { 
                 // Delete an existing appointment
-                apiInstance.DeleteCoachingAppointment(appointmentId);
+                CoachingAppointmentReference result = apiInstance.DeleteCoachingAppointment(appointmentId);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -83,7 +84,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**CoachingAppointmentReference**](CoachingAppointmentReference.html)
 
 <a name="deletecoachingappointmentannotation"></a>
 
@@ -437,7 +438,7 @@ namespace Example
 
             var apiInstance = new CoachingApi();
             var userIds = new List<string>(); // List<string> | The user IDs for which to retrieve appointments
-            var interval = interval_example;  // string | Interval string; format is ISO-8601. Separate start and end times with forward slash '/' (optional) 
+            var interval = interval_example;  // string | Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var statuses = new List<string>(); // List<string> | Appointment Statuses to filter by (optional) 
@@ -465,7 +466,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userIds** | [**List<string>**](string.html)| The user IDs for which to retrieve appointments |  |
-| **interval** | **string**| Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; | [optional]  |
+| **interval** | **string**| Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **statuses** | [**List<string>**](string.html)| Appointment Statuses to filter by | [optional] <br />**Values**: Scheduled, InProgress, Completed, InvalidSchedule |
@@ -508,7 +509,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new CoachingApi();
-            var interval = interval_example;  // string | Interval string; format is ISO-8601. Separate start and end times with forward slash '/' (optional) 
+            var interval = interval_example;  // string | Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var statuses = new List<string>(); // List<string> | Appointment Statuses to filter by (optional) 
@@ -535,7 +536,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **interval** | **string**| Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; | [optional]  |
+| **interval** | **string**| Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **statuses** | [**List<string>**](string.html)| Appointment Statuses to filter by | [optional] <br />**Values**: Scheduled, InProgress, Completed |

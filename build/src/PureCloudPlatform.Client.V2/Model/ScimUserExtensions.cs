@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// SCIM PureCloud extensions of user.
+    /// Defines a SCIM Genesys Cloud user.
     /// </summary>
     [DataContract]
     public partial class ScimUserExtensions :  IEquatable<ScimUserExtensions>
@@ -34,8 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimUserExtensions" /> class.
         /// </summary>
-        /// <param name="RoutingSkills">Routing Skills assigned to user. No more than 50 skills may be assigned to a user..</param>
-        /// <param name="RoutingLanguages">Routing Languages assigned to user. No more than 50 languages may be assigned to a user..</param>
+        /// <param name="RoutingSkills">The list of routing skills assigned to a user. Maximum 50 skills..</param>
+        /// <param name="RoutingLanguages">The list of routing languages assigned to a user. Maximum 50 languages..</param>
         public ScimUserExtensions(List<ScimUserRoutingSkill> RoutingSkills = null, List<ScimUserRoutingLanguage> RoutingLanguages = null)
         {
             this.RoutingSkills = RoutingSkills;
@@ -46,18 +46,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Routing Skills assigned to user. No more than 50 skills may be assigned to a user.
+        /// The list of routing skills assigned to a user. Maximum 50 skills.
         /// </summary>
-        /// <value>Routing Skills assigned to user. No more than 50 skills may be assigned to a user.</value>
+        /// <value>The list of routing skills assigned to a user. Maximum 50 skills.</value>
         [DataMember(Name="routingSkills", EmitDefaultValue=false)]
         public List<ScimUserRoutingSkill> RoutingSkills { get; set; }
         
         
         
         /// <summary>
-        /// Routing Languages assigned to user. No more than 50 languages may be assigned to a user.
+        /// The list of routing languages assigned to a user. Maximum 50 languages.
         /// </summary>
-        /// <value>Routing Languages assigned to user. No more than 50 languages may be assigned to a user.</value>
+        /// <value>The list of routing languages assigned to a user. Maximum 50 languages.</value>
         [DataMember(Name="routingLanguages", EmitDefaultValue=false)]
         public List<ScimUserRoutingLanguage> RoutingLanguages { get; set; }
         

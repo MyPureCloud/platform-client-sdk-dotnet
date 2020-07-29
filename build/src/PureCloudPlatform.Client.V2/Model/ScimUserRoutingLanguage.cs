@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Routing language assigned to user.
+    /// The routing language assigned to a user.
     /// </summary>
     [DataContract]
     public partial class ScimUserRoutingLanguage :  IEquatable<ScimUserRoutingLanguage>
@@ -40,8 +40,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimUserRoutingLanguage" /> class.
         /// </summary>
-        /// <param name="Name">Case-sensitive name identifying a language configured in routing languages. (required).</param>
-        /// <param name="Proficiency">Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular language. It is used when a queue is set to \&quot;Best available language\&quot; mode to allow acd interactions to target agents with higher proficiency ratings..</param>
+        /// <param name="Name">The case-sensitive name of a routing language configured in Genesys Cloud. (required).</param>
+        /// <param name="Proficiency">A rating from 0.0 to 5.0 that indicates how fluent an agent is in a particular language. ACD interactions are routed to agents with higher proficiency ratings..</param>
         public ScimUserRoutingLanguage(string Name = null, double? Proficiency = null)
         {
             this.Name = Name;
@@ -52,18 +52,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Case-sensitive name identifying a language configured in routing languages.
+        /// The case-sensitive name of a routing language configured in Genesys Cloud.
         /// </summary>
-        /// <value>Case-sensitive name identifying a language configured in routing languages.</value>
+        /// <value>The case-sensitive name of a routing language configured in Genesys Cloud.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
         
         
         /// <summary>
-        /// Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular language. It is used when a queue is set to \&quot;Best available language\&quot; mode to allow acd interactions to target agents with higher proficiency ratings.
+        /// A rating from 0.0 to 5.0 that indicates how fluent an agent is in a particular language. ACD interactions are routed to agents with higher proficiency ratings.
         /// </summary>
-        /// <value>Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular language. It is used when a queue is set to \&quot;Best available language\&quot; mode to allow acd interactions to target agents with higher proficiency ratings.</value>
+        /// <value>A rating from 0.0 to 5.0 that indicates how fluent an agent is in a particular language. ACD interactions are routed to agents with higher proficiency ratings.</value>
         [DataMember(Name="proficiency", EmitDefaultValue=false)]
         public double? Proficiency { get; set; }
         

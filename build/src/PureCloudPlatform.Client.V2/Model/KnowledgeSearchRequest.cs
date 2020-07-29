@@ -90,9 +90,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="KnowledgeSearchRequest" /> class.
         /// </summary>
         /// <param name="Query">Input query to search content in the knowledge base (required).</param>
-        /// <param name="PageSize">Page size of the returned results (required).</param>
-        /// <param name="PageNumber">Page number of the returned results (required).</param>
-        /// <param name="DocumentType">Document type to be used while searching (required).</param>
+        /// <param name="PageSize">Page size of the returned results.</param>
+        /// <param name="PageNumber">Page number of the returned results.</param>
+        /// <param name="DocumentType">Document type to be used while searching.</param>
         /// <param name="LanguageCode">query search for specific languageCode (required).</param>
         /// <param name="SearchOnDraftDocuments">If true the search query will be executed on draft documents, else it will be on active documents.</param>
         public KnowledgeSearchRequest(string Query = null, int? PageSize = null, int? PageNumber = null, DocumentTypeEnum? DocumentType = null, string LanguageCode = null, bool? SearchOnDraftDocuments = null)

@@ -41,6 +41,18 @@ namespace PureCloudPlatform.Client.V2.Model
             ApproachingContactLimit,
             
             /// <summary>
+            /// Enum ApproachingDncListPhoneNumberLimit for "APPROACHING_DNC_LIST_PHONE_NUMBER_LIMIT"
+            /// </summary>
+            [EnumMember(Value = "APPROACHING_DNC_LIST_PHONE_NUMBER_LIMIT")]
+            ApproachingDncListPhoneNumberLimit,
+            
+            /// <summary>
+            /// Enum ApproachingDncOrganizationPhoneNumberLimit for "APPROACHING_DNC_ORGANIZATION_PHONE_NUMBER_LIMIT"
+            /// </summary>
+            [EnumMember(Value = "APPROACHING_DNC_ORGANIZATION_PHONE_NUMBER_LIMIT")]
+            ApproachingDncOrganizationPhoneNumberLimit,
+            
+            /// <summary>
             /// Enum ApproachingEntityLimit for "APPROACHING_ENTITY_LIMIT"
             /// </summary>
             [EnumMember(Value = "APPROACHING_ENTITY_LIMIT")]

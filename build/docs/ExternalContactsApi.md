@@ -44,7 +44,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutExternalcontactsContact**](ExternalContactsApi.html#putexternalcontactscontact) | **PUT** /api/v2/externalcontacts/contacts/{contactId} | Update an external contact |
 | [**PutExternalcontactsContactNote**](ExternalContactsApi.html#putexternalcontactscontactnote) | **PUT** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Update a note for an external contact |
 | [**PutExternalcontactsContactsSchema**](ExternalContactsApi.html#putexternalcontactscontactsschema) | **PUT** /api/v2/externalcontacts/contacts/schemas/{schemaId} | Update a schema |
-| [**PutExternalcontactsConversation**](ExternalContactsApi.html#putexternalcontactsconversation) | **PUT** /api/v2/externalcontacts/conversations/{conversationId} | Associate an external contact with a conversation |
+| [**PutExternalcontactsConversation**](ExternalContactsApi.html#putexternalcontactsconversation) | **PUT** /api/v2/externalcontacts/conversations/{conversationId} | Associate/disassociate an external contact with a conversation |
 | [**PutExternalcontactsOrganization**](ExternalContactsApi.html#putexternalcontactsorganization) | **PUT** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Update an external organization |
 | [**PutExternalcontactsOrganizationNote**](ExternalContactsApi.html#putexternalcontactsorganizationnote) | **PUT** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Update a note for an external organization |
 | [**PutExternalcontactsOrganizationTrustorTrustorId**](ExternalContactsApi.html#putexternalcontactsorganizationtrustortrustorid) | **PUT** /api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor/{trustorId} | Links a Trustor with an External Organization |
@@ -2402,9 +2402,9 @@ namespace Example
 
 
 
-Associate an external contact with a conversation
+Associate/disassociate an external contact with a conversation
 
-
+To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
 
 Requires ANY permissions: 
 
@@ -2433,7 +2433,7 @@ namespace Example
 
             try
             { 
-                // Associate an external contact with a conversation
+                // Associate/disassociate an external contact with a conversation
                 apiInstance.PutExternalcontactsConversation(conversationId, body);
             }
             catch (Exception e)

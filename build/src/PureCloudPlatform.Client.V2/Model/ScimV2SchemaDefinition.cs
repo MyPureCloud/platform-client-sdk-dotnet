@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// A SCIM schema definition.
+    /// Defines a SCIM schema.
     /// </summary>
     [DataContract]
     public partial class ScimV2SchemaDefinition :  IEquatable<ScimV2SchemaDefinition>
@@ -49,7 +49,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2SchemaDefinition" /> class.
         /// </summary>
-        /// <param name="Attributes">A complex type that defines service provider attributes and their qualities..</param>
+        /// <param name="Attributes">The list of service provider attributes..</param>
         /// <param name="Meta">The metadata of the SCIM resource..</param>
         public ScimV2SchemaDefinition(List<ScimV2SchemaAttribute> Attributes = null, ScimMetadata Meta = null)
         {
@@ -61,36 +61,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;Mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;Returned\&quot; is set to \&quot;always\&quot;.
+        /// The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;returned\&quot; is set to \&quot;always\&quot;.
         /// </summary>
-        /// <value>The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;Mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;Returned\&quot; is set to \&quot;always\&quot;.</value>
+        /// <value>The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;returned\&quot; is set to \&quot;always\&quot;.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         
         
         
         /// <summary>
-        /// Schema name.
+        /// The name of the schema.
         /// </summary>
-        /// <value>Schema name.</value>
+        /// <value>The name of the schema.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; private set; }
         
         
         
         /// <summary>
-        /// Schema description.
+        /// The description of the schema.
         /// </summary>
-        /// <value>Schema description.</value>
+        /// <value>The description of the schema.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; private set; }
         
         
         
         /// <summary>
-        /// A complex type that defines service provider attributes and their qualities.
+        /// The list of service provider attributes.
         /// </summary>
-        /// <value>A complex type that defines service provider attributes and their qualities.</value>
+        /// <value>The list of service provider attributes.</value>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public List<ScimV2SchemaAttribute> Attributes { get; set; }
         

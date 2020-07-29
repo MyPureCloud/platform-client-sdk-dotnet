@@ -71,6 +71,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
@@ -309,6 +312,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
@@ -353,6 +358,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">Id.</param>
         /// <param name="State">State.</param>
         /// <param name="Held">Held.</param>
+        /// <param name="ErrorInfo">ErrorInfo.</param>
         /// <param name="Provider">Provider.</param>
         /// <param name="ScriptId">ScriptId.</param>
         /// <param name="PeerId">PeerId.</param>
@@ -369,11 +375,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecipientType">RecipientType.</param>
         /// <param name="Wrapup">Wrapup.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationEventTopicMessage(string Id = null, StateEnum? State = null, bool? Held = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, ConversationEventTopicAddress ToAddress = null, ConversationEventTopicAddress FromAddress = null, List<ConversationEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, ConversationEventTopicWrapup Wrapup = null, Object AdditionalProperties = null)
+        public ConversationEventTopicMessage(string Id = null, StateEnum? State = null, bool? Held = null, ConversationEventTopicErrorDetails ErrorInfo = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, ConversationEventTopicAddress ToAddress = null, ConversationEventTopicAddress FromAddress = null, List<ConversationEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, ConversationEventTopicWrapup Wrapup = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.State = State;
             this.Held = Held;
+            this.ErrorInfo = ErrorInfo;
             this.Provider = Provider;
             this.ScriptId = ScriptId;
             this.PeerId = PeerId;
@@ -410,6 +417,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets ErrorInfo
+        /// </summary>
+        [DataMember(Name="errorInfo", EmitDefaultValue=false)]
+        public ConversationEventTopicErrorDetails ErrorInfo { get; set; }
         
         
         
@@ -540,6 +555,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Held: ").Append(Held).Append("\n");
+            sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
@@ -606,6 +622,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Held == other.Held ||
                     this.Held != null &&
                     this.Held.Equals(other.Held)
+                ) &&
+                (
+                    this.ErrorInfo == other.ErrorInfo ||
+                    this.ErrorInfo != null &&
+                    this.ErrorInfo.Equals(other.ErrorInfo)
                 ) &&
                 (
                     this.Provider == other.Provider ||
@@ -709,6 +730,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();
+                
+                if (this.ErrorInfo != null)
+                    hash = hash * 59 + this.ErrorInfo.GetHashCode();
                 
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();

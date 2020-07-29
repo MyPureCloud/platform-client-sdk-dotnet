@@ -7,7 +7,7 @@ title: ScimUserRole
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Value** | **string** | Purecloud user role name | [optional] |
+| **Value** | **string** | The role of the Genesys Cloud user. | [optional] |
 {: class="table table-striped"}
 
 

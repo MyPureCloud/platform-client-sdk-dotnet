@@ -312,6 +312,123 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// Gets or Sets RequestedRoutings
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum RequestedRoutingsEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Predictive for "Predictive"
+            /// </summary>
+            [EnumMember(Value = "Predictive")]
+            Predictive,
+            
+            /// <summary>
+            /// Enum Preferred for "Preferred"
+            /// </summary>
+            [EnumMember(Value = "Preferred")]
+            Preferred,
+            
+            /// <summary>
+            /// Enum Manual for "Manual"
+            /// </summary>
+            [EnumMember(Value = "Manual")]
+            Manual,
+            
+            /// <summary>
+            /// Enum Last for "Last"
+            /// </summary>
+            [EnumMember(Value = "Last")]
+            Last,
+            
+            /// <summary>
+            /// Enum Bullseye for "Bullseye"
+            /// </summary>
+            [EnumMember(Value = "Bullseye")]
+            Bullseye,
+            
+            /// <summary>
+            /// Enum Standard for "Standard"
+            /// </summary>
+            [EnumMember(Value = "Standard")]
+            Standard
+        }
+        
+        
+        
+        
+        /// <summary>
+        /// Complete routing method
+        /// </summary>
+        /// <value>Complete routing method</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum UsedRoutingEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Predictive for "Predictive"
+            /// </summary>
+            [EnumMember(Value = "Predictive")]
+            Predictive,
+            
+            /// <summary>
+            /// Enum Preferred for "Preferred"
+            /// </summary>
+            [EnumMember(Value = "Preferred")]
+            Preferred,
+            
+            /// <summary>
+            /// Enum Manual for "Manual"
+            /// </summary>
+            [EnumMember(Value = "Manual")]
+            Manual,
+            
+            /// <summary>
+            /// Enum Last for "Last"
+            /// </summary>
+            [EnumMember(Value = "Last")]
+            Last,
+            
+            /// <summary>
+            /// Enum Bullseye for "Bullseye"
+            /// </summary>
+            [EnumMember(Value = "Bullseye")]
+            Bullseye,
+            
+            /// <summary>
+            /// Enum Standard for "Standard"
+            /// </summary>
+            [EnumMember(Value = "Standard")]
+            Standard
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The session media type
         /// </summary>
@@ -438,6 +555,21 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        /// <summary>
+        /// Complete routing method
+        /// </summary>
+        /// <value>Complete routing method</value>
+        [DataMember(Name="usedRouting", EmitDefaultValue=false)]
+        public UsedRoutingEnum? UsedRouting { get; set; }
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsSession" /> class.
@@ -495,7 +627,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Remote">Name, phone number, or email address of the remote party..</param>
         /// <param name="MediaCount">Count of any media (images, files, etc) included in this session.</param>
         /// <param name="FlowOutType">Type of flow out that occurred, e.g. voicemail, callback, or acd.</param>
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string SessionDnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, bool? Recording = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string JourneyActionId = null, string JourneyActionMapId = null, string JourneyActionMapVersion = null, string ProtocolCallId = null, string Provider = null, string Remote = null, int? MediaCount = null, string FlowOutType = null)
+        /// <param name="RequestedRoutings">All routing types for requested/attempted routing methods..</param>
+        /// <param name="UsedRouting">Complete routing method.</param>
+        /// <param name="SelectedAgentId">Selected agent id.</param>
+        /// <param name="SelectedAgentRank">Selected agent GPR rank.</param>
+        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string SessionDnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, bool? Recording = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string JourneyActionId = null, string JourneyActionMapId = null, string JourneyActionMapVersion = null, string ProtocolCallId = null, string Provider = null, string Remote = null, int? MediaCount = null, string FlowOutType = null, List<RequestedRoutingsEnum> RequestedRoutings = null, UsedRoutingEnum? UsedRouting = null, string SelectedAgentId = null, int? SelectedAgentRank = null)
         {
             this.MediaType = MediaType;
             this.SessionId = SessionId;
@@ -550,6 +686,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Remote = Remote;
             this.MediaCount = MediaCount;
             this.FlowOutType = FlowOutType;
+            this.RequestedRoutings = RequestedRoutings;
+            this.UsedRouting = UsedRouting;
+            this.SelectedAgentId = SelectedAgentId;
+            this.SelectedAgentRank = SelectedAgentRank;
             
         }
         
@@ -1003,6 +1143,35 @@ namespace PureCloudPlatform.Client.V2.Model
         public string FlowOutType { get; set; }
         
         
+        
+        /// <summary>
+        /// All routing types for requested/attempted routing methods.
+        /// </summary>
+        /// <value>All routing types for requested/attempted routing methods.</value>
+        [DataMember(Name="requestedRoutings", EmitDefaultValue=false)]
+        public List<RequestedRoutingsEnum> RequestedRoutings { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Selected agent id
+        /// </summary>
+        /// <value>Selected agent id</value>
+        [DataMember(Name="selectedAgentId", EmitDefaultValue=false)]
+        public string SelectedAgentId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Selected agent GPR rank
+        /// </summary>
+        /// <value>Selected agent GPR rank</value>
+        [DataMember(Name="selectedAgentRank", EmitDefaultValue=false)]
+        public int? SelectedAgentRank { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1065,6 +1234,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Remote: ").Append(Remote).Append("\n");
             sb.Append("  MediaCount: ").Append(MediaCount).Append("\n");
             sb.Append("  FlowOutType: ").Append(FlowOutType).Append("\n");
+            sb.Append("  RequestedRoutings: ").Append(RequestedRoutings).Append("\n");
+            sb.Append("  UsedRouting: ").Append(UsedRouting).Append("\n");
+            sb.Append("  SelectedAgentId: ").Append(SelectedAgentId).Append("\n");
+            sb.Append("  SelectedAgentRank: ").Append(SelectedAgentRank).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1365,6 +1538,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FlowOutType == other.FlowOutType ||
                     this.FlowOutType != null &&
                     this.FlowOutType.Equals(other.FlowOutType)
+                ) &&
+                (
+                    this.RequestedRoutings == other.RequestedRoutings ||
+                    this.RequestedRoutings != null &&
+                    this.RequestedRoutings.SequenceEqual(other.RequestedRoutings)
+                ) &&
+                (
+                    this.UsedRouting == other.UsedRouting ||
+                    this.UsedRouting != null &&
+                    this.UsedRouting.Equals(other.UsedRouting)
+                ) &&
+                (
+                    this.SelectedAgentId == other.SelectedAgentId ||
+                    this.SelectedAgentId != null &&
+                    this.SelectedAgentId.Equals(other.SelectedAgentId)
+                ) &&
+                (
+                    this.SelectedAgentRank == other.SelectedAgentRank ||
+                    this.SelectedAgentRank != null &&
+                    this.SelectedAgentRank.Equals(other.SelectedAgentRank)
                 );
         }
 
@@ -1538,6 +1731,18 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.FlowOutType != null)
                     hash = hash * 59 + this.FlowOutType.GetHashCode();
+                
+                if (this.RequestedRoutings != null)
+                    hash = hash * 59 + this.RequestedRoutings.GetHashCode();
+                
+                if (this.UsedRouting != null)
+                    hash = hash * 59 + this.UsedRouting.GetHashCode();
+                
+                if (this.SelectedAgentId != null)
+                    hash = hash * 59 + this.SelectedAgentId.GetHashCode();
+                
+                if (this.SelectedAgentRank != null)
+                    hash = hash * 59 + this.SelectedAgentRank.GetHashCode();
                 
                 return hash;
             }

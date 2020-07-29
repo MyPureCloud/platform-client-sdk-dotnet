@@ -351,6 +351,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The requested format of the exported data
         /// </summary>
@@ -370,6 +376,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The type of view export job to be created</value>
         [DataMember(Name="viewType", EmitDefaultValue=false)]
         public ViewTypeEnum? ViewType { get; set; }
+        
+        
+        
+        
         
         
         
@@ -409,10 +419,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Locale">The locale use for localization of the exported data, i.e. en-us, es-mx   (required).</param>
         /// <param name="HasFormatDurations">Indicates if durations are formatted in hh:mm:ss format instead of ms.</param>
         /// <param name="HasSplitFilters">Indicates if filters will be split in aggregate detail exports.</param>
+        /// <param name="ExcludeEmptyRows">Excludes empty rows from the exports.</param>
+        /// <param name="HasSplitByMedia">Indicates if media type will be split in aggregate detail exports.</param>
         /// <param name="SelectedColumns">The list of ordered selected columns from the export view by the user.</param>
         /// <param name="HasCustomParticipantAttributes">Indicates if custom participant attributes will be exported.</param>
         /// <param name="RecipientEmails">The list of email recipients for the exports.</param>
-        public ReportingExportJobRequest(string Name = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null)
+        public ReportingExportJobRequest(string Name = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, bool? ExcludeEmptyRows = null, bool? HasSplitByMedia = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null)
         {
             this.Name = Name;
             this.TimeZone = TimeZone;
@@ -425,6 +437,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Locale = Locale;
             this.HasFormatDurations = HasFormatDurations;
             this.HasSplitFilters = HasSplitFilters;
+            this.ExcludeEmptyRows = ExcludeEmptyRows;
+            this.HasSplitByMedia = HasSplitByMedia;
             this.SelectedColumns = SelectedColumns;
             this.HasCustomParticipantAttributes = HasCustomParticipantAttributes;
             this.RecipientEmails = RecipientEmails;
@@ -519,6 +533,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Excludes empty rows from the exports
+        /// </summary>
+        /// <value>Excludes empty rows from the exports</value>
+        [DataMember(Name="excludeEmptyRows", EmitDefaultValue=false)]
+        public bool? ExcludeEmptyRows { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates if media type will be split in aggregate detail exports
+        /// </summary>
+        /// <value>Indicates if media type will be split in aggregate detail exports</value>
+        [DataMember(Name="hasSplitByMedia", EmitDefaultValue=false)]
+        public bool? HasSplitByMedia { get; set; }
+        
+        
+        
+        /// <summary>
         /// The list of ordered selected columns from the export view by the user
         /// </summary>
         /// <value>The list of ordered selected columns from the export view by the user</value>
@@ -564,6 +596,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Locale: ").Append(Locale).Append("\n");
             sb.Append("  HasFormatDurations: ").Append(HasFormatDurations).Append("\n");
             sb.Append("  HasSplitFilters: ").Append(HasSplitFilters).Append("\n");
+            sb.Append("  ExcludeEmptyRows: ").Append(ExcludeEmptyRows).Append("\n");
+            sb.Append("  HasSplitByMedia: ").Append(HasSplitByMedia).Append("\n");
             sb.Append("  SelectedColumns: ").Append(SelectedColumns).Append("\n");
             sb.Append("  HasCustomParticipantAttributes: ").Append(HasCustomParticipantAttributes).Append("\n");
             sb.Append("  RecipientEmails: ").Append(RecipientEmails).Append("\n");
@@ -659,6 +693,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HasSplitFilters.Equals(other.HasSplitFilters)
                 ) &&
                 (
+                    this.ExcludeEmptyRows == other.ExcludeEmptyRows ||
+                    this.ExcludeEmptyRows != null &&
+                    this.ExcludeEmptyRows.Equals(other.ExcludeEmptyRows)
+                ) &&
+                (
+                    this.HasSplitByMedia == other.HasSplitByMedia ||
+                    this.HasSplitByMedia != null &&
+                    this.HasSplitByMedia.Equals(other.HasSplitByMedia)
+                ) &&
+                (
                     this.SelectedColumns == other.SelectedColumns ||
                     this.SelectedColumns != null &&
                     this.SelectedColumns.SequenceEqual(other.SelectedColumns)
@@ -719,6 +763,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.HasSplitFilters != null)
                     hash = hash * 59 + this.HasSplitFilters.GetHashCode();
+                
+                if (this.ExcludeEmptyRows != null)
+                    hash = hash * 59 + this.ExcludeEmptyRows.GetHashCode();
+                
+                if (this.HasSplitByMedia != null)
+                    hash = hash * 59 + this.HasSplitByMedia.GetHashCode();
                 
                 if (this.SelectedColumns != null)
                     hash = hash * 59 + this.SelectedColumns.GetHashCode();

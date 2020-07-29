@@ -352,6 +352,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Requestedlanguageid,
             
             /// <summary>
+            /// Enum Requestedrouting for "requestedRouting"
+            /// </summary>
+            [EnumMember(Value = "requestedRouting")]
+            Requestedrouting,
+            
+            /// <summary>
             /// Enum Requestedroutingskillid for "requestedRoutingSkillId"
             /// </summary>
             [EnumMember(Value = "requestedRoutingSkillId")]
@@ -374,6 +380,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "scoredAgentId")]
             Scoredagentid,
+            
+            /// <summary>
+            /// Enum Selectedagentid for "selectedAgentId"
+            /// </summary>
+            [EnumMember(Value = "selectedAgentId")]
+            Selectedagentid,
+            
+            /// <summary>
+            /// Enum Selectedagentrank for "selectedAgentRank"
+            /// </summary>
+            [EnumMember(Value = "selectedAgentRank")]
+            Selectedagentrank,
             
             /// <summary>
             /// Enum Sessiondnis for "sessionDnis"
@@ -422,6 +440,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "transferType")]
             Transfertype,
+            
+            /// <summary>
+            /// Enum Usedrouting for "usedRouting"
+            /// </summary>
+            [EnumMember(Value = "usedRouting")]
+            Usedrouting,
             
             /// <summary>
             /// Enum Userid for "userId"

@@ -10,6 +10,7 @@ title: QueueConversationEventTopicMessage
 | **Id** | **string** |  | [optional] |
 | **State** | **string** |  | [optional] |
 | **Held** | **bool?** |  | [optional] |
+| **ErrorInfo** | [**QueueConversationEventTopicErrorDetails**](QueueConversationEventTopicErrorDetails.html) |  | [optional] |
 | **Provider** | **string** |  | [optional] |
 | **ScriptId** | **string** |  | [optional] |
 | **PeerId** | **string** |  | [optional] |

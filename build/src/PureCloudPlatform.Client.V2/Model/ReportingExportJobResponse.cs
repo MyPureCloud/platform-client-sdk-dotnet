@@ -515,6 +515,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Inner
         /// </summary>
@@ -547,6 +553,9 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Failed")]
             Failed
         }
+        
+        
+        
         
         
         
@@ -628,6 +637,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingExportJobResponse" /> class.
@@ -655,11 +670,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PercentageComplete">The percentage of the job that has completed processing (required).</param>
         /// <param name="HasFormatDurations">Indicates if durations are formatted in hh:mm:ss format instead of ms.</param>
         /// <param name="HasSplitFilters">Indicates if filters will be split in aggregate detail exports.</param>
+        /// <param name="ExcludeEmptyRows">Excludes empty rows from the exports.</param>
+        /// <param name="HasSplitByMedia">Indicates if media type will be split in aggregate detail exports.</param>
         /// <param name="SelectedColumns">The list of ordered selected columns from the export view by the user.</param>
         /// <param name="HasCustomParticipantAttributes">Indicates if custom participant attributes will be exported.</param>
         /// <param name="RecipientEmails">The list of email recipients for the exports.</param>
         /// <param name="EmailStatuses">The status of individual email addresses as a map.</param>
-        public ReportingExportJobResponse(string Name = null, StatusEnum? Status = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null, Dictionary<string, string> EmailStatuses = null)
+        /// <param name="Enabled">Enabled.</param>
+        public ReportingExportJobResponse(string Name = null, StatusEnum? Status = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, bool? ExcludeEmptyRows = null, bool? HasSplitByMedia = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null, Dictionary<string, string> EmailStatuses = null, bool? Enabled = null)
         {
             this.Name = Name;
             this.Status = Status;
@@ -678,10 +696,13 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PercentageComplete = PercentageComplete;
             this.HasFormatDurations = HasFormatDurations;
             this.HasSplitFilters = HasSplitFilters;
+            this.ExcludeEmptyRows = ExcludeEmptyRows;
+            this.HasSplitByMedia = HasSplitByMedia;
             this.SelectedColumns = SelectedColumns;
             this.HasCustomParticipantAttributes = HasCustomParticipantAttributes;
             this.RecipientEmails = RecipientEmails;
             this.EmailStatuses = EmailStatuses;
+            this.Enabled = Enabled;
             
         }
         
@@ -821,6 +842,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Excludes empty rows from the exports
+        /// </summary>
+        /// <value>Excludes empty rows from the exports</value>
+        [DataMember(Name="excludeEmptyRows", EmitDefaultValue=false)]
+        public bool? ExcludeEmptyRows { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates if media type will be split in aggregate detail exports
+        /// </summary>
+        /// <value>Indicates if media type will be split in aggregate detail exports</value>
+        [DataMember(Name="hasSplitByMedia", EmitDefaultValue=false)]
+        public bool? HasSplitByMedia { get; set; }
+        
+        
+        
+        /// <summary>
         /// The list of ordered selected columns from the export view by the user
         /// </summary>
         /// <value>The list of ordered selected columns from the export view by the user</value>
@@ -853,6 +892,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The status of individual email addresses as a map</value>
         [DataMember(Name="emailStatuses", EmitDefaultValue=false)]
         public Dictionary<string, string> EmailStatuses { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Enabled
+        /// </summary>
+        [DataMember(Name="enabled", EmitDefaultValue=false)]
+        public bool? Enabled { get; set; }
         
         
         
@@ -891,10 +938,13 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PercentageComplete: ").Append(PercentageComplete).Append("\n");
             sb.Append("  HasFormatDurations: ").Append(HasFormatDurations).Append("\n");
             sb.Append("  HasSplitFilters: ").Append(HasSplitFilters).Append("\n");
+            sb.Append("  ExcludeEmptyRows: ").Append(ExcludeEmptyRows).Append("\n");
+            sb.Append("  HasSplitByMedia: ").Append(HasSplitByMedia).Append("\n");
             sb.Append("  SelectedColumns: ").Append(SelectedColumns).Append("\n");
             sb.Append("  HasCustomParticipantAttributes: ").Append(HasCustomParticipantAttributes).Append("\n");
             sb.Append("  RecipientEmails: ").Append(RecipientEmails).Append("\n");
             sb.Append("  EmailStatuses: ").Append(EmailStatuses).Append("\n");
+            sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -1023,6 +1073,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HasSplitFilters.Equals(other.HasSplitFilters)
                 ) &&
                 (
+                    this.ExcludeEmptyRows == other.ExcludeEmptyRows ||
+                    this.ExcludeEmptyRows != null &&
+                    this.ExcludeEmptyRows.Equals(other.ExcludeEmptyRows)
+                ) &&
+                (
+                    this.HasSplitByMedia == other.HasSplitByMedia ||
+                    this.HasSplitByMedia != null &&
+                    this.HasSplitByMedia.Equals(other.HasSplitByMedia)
+                ) &&
+                (
                     this.SelectedColumns == other.SelectedColumns ||
                     this.SelectedColumns != null &&
                     this.SelectedColumns.SequenceEqual(other.SelectedColumns)
@@ -1041,6 +1101,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EmailStatuses == other.EmailStatuses ||
                     this.EmailStatuses != null &&
                     this.EmailStatuses.SequenceEqual(other.EmailStatuses)
+                ) &&
+                (
+                    this.Enabled == other.Enabled ||
+                    this.Enabled != null &&
+                    this.Enabled.Equals(other.Enabled)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -1115,6 +1180,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.HasSplitFilters != null)
                     hash = hash * 59 + this.HasSplitFilters.GetHashCode();
                 
+                if (this.ExcludeEmptyRows != null)
+                    hash = hash * 59 + this.ExcludeEmptyRows.GetHashCode();
+                
+                if (this.HasSplitByMedia != null)
+                    hash = hash * 59 + this.HasSplitByMedia.GetHashCode();
+                
                 if (this.SelectedColumns != null)
                     hash = hash * 59 + this.SelectedColumns.GetHashCode();
                 
@@ -1126,6 +1197,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.EmailStatuses != null)
                     hash = hash * 59 + this.EmailStatuses.GetHashCode();
+                
+                if (this.Enabled != null)
+                    hash = hash * 59 + this.Enabled.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

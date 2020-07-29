@@ -884,8 +884,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
+        /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <returns>ScheduleGroupEntityListing</returns>
-        ScheduleGroupEntityListing GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
+        ScheduleGroupEntityListing GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null);
 
         /// <summary>
         /// Get a list of schedule groups.
@@ -899,8 +900,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
+        /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <returns>ApiResponse of ScheduleGroupEntityListing</returns>
-        ApiResponse<ScheduleGroupEntityListing> GetArchitectSchedulegroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
+        ApiResponse<ScheduleGroupEntityListing> GetArchitectSchedulegroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null);
         
         /// <summary>
         /// Get a list of schedules.
@@ -3284,8 +3286,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
+        /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <returns>Task of ScheduleGroupEntityListing</returns>
-        System.Threading.Tasks.Task<ScheduleGroupEntityListing> GetArchitectSchedulegroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
+        System.Threading.Tasks.Task<ScheduleGroupEntityListing> GetArchitectSchedulegroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null);
 
         /// <summary>
         /// Get a list of schedule groups.
@@ -3299,8 +3302,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
+        /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (ScheduleGroupEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScheduleGroupEntityListing>> GetArchitectSchedulegroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<ScheduleGroupEntityListing>> GetArchitectSchedulegroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null);
         
         /// <summary>
         /// Get a list of schedules.
@@ -11664,10 +11668,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
+        /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <returns>ScheduleGroupEntityListing</returns>
-        public ScheduleGroupEntityListing GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
+        public ScheduleGroupEntityListing GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null)
         {
-             ApiResponse<ScheduleGroupEntityListing> localVarResponse = GetArchitectSchedulegroupsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name);
+             ApiResponse<ScheduleGroupEntityListing> localVarResponse = GetArchitectSchedulegroupsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, scheduleIds);
              return localVarResponse.Data;
         }
 
@@ -11680,8 +11685,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
+        /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <returns>ApiResponse of ScheduleGroupEntityListing</returns>
-        public ApiResponse< ScheduleGroupEntityListing > GetArchitectSchedulegroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
+        public ApiResponse< ScheduleGroupEntityListing > GetArchitectSchedulegroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null)
         { 
 
             var localVarPath = "/api/v2/architect/schedulegroups";
@@ -11722,6 +11728,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (scheduleIds != null) localVarQueryParams.Add(new Tuple<string, string>("scheduleIds", this.Configuration.ApiClient.ParameterToString(scheduleIds)));
 
             // Header params
 
@@ -11768,10 +11775,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
+        /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <returns>Task of ScheduleGroupEntityListing</returns>
-        public async System.Threading.Tasks.Task<ScheduleGroupEntityListing> GetArchitectSchedulegroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
+        public async System.Threading.Tasks.Task<ScheduleGroupEntityListing> GetArchitectSchedulegroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null)
         {
-             ApiResponse<ScheduleGroupEntityListing> localVarResponse = await GetArchitectSchedulegroupsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name);
+             ApiResponse<ScheduleGroupEntityListing> localVarResponse = await GetArchitectSchedulegroupsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, scheduleIds);
              return localVarResponse.Data;
 
         }
@@ -11785,8 +11793,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
+        /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (ScheduleGroupEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroupEntityListing>> GetArchitectSchedulegroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroupEntityListing>> GetArchitectSchedulegroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null)
         { 
 
             var localVarPath = "/api/v2/architect/schedulegroups";
@@ -11827,6 +11836,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (scheduleIds != null) localVarQueryParams.Add(new Tuple<string, string>("scheduleIds", this.Configuration.ApiClient.ParameterToString(scheduleIds)));
 
             // Header params
 

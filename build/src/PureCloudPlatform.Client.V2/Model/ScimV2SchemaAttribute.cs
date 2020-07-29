@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// A complex type that defines service provider attributes, or sub-attributes and their qualities.
+    /// A complex type that defines service provider attributes or subattributes and their qualities.
     /// </summary>
     [DataContract]
     public partial class ScimV2SchemaAttribute :  IEquatable<ScimV2SchemaAttribute>
@@ -24,9 +24,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The attribute's data type.  Valid values are \"string\", \"boolean\", \"decimal\", \"integer\", \"dateTime\", \"reference\", and \"complex\".
+        /// The data type of the attribute.
         /// </summary>
-        /// <value>The attribute's data type.  Valid values are \"string\", \"boolean\", \"decimal\", \"integer\", \"dateTime\", \"reference\", and \"complex\".</value>
+        /// <value>The data type of the attribute.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -103,9 +103,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// A single keyword indicating the circumstances under which the value of the attribute can be (re)defined. Value are readOnly, readWrite, immutable, writeOnly
+        /// The circumstances under which an attribute can be defined or redefined. The default is \"readWrite\".
         /// </summary>
-        /// <value>A single keyword indicating the circumstances under which the value of the attribute can be (re)defined. Value are readOnly, readWrite, immutable, writeOnly</value>
+        /// <value>The circumstances under which an attribute can be defined or redefined. The default is \"readWrite\".</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum MutabilityEnum
         {
@@ -146,9 +146,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// A single keyword that indicates when an attribute and associated values are returned in response to a GET request, or in response to a PUT, POST, or PATCH request.  Valid keywords are as follows: always, never, default, request
+        /// The circumstances under which an attribute and its values are returned in response to a GET, PUT, POST, or PATCH request.
         /// </summary>
-        /// <value>A single keyword that indicates when an attribute and associated values are returned in response to a GET request, or in response to a PUT, POST, or PATCH request.  Valid keywords are as follows: always, never, default, request</value>
+        /// <value>The circumstances under which an attribute and its values are returned in response to a GET, PUT, POST, or PATCH request.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ReturnedEnum
         {
@@ -189,9 +189,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// A single keyword value that specifies how the service provider enforces uniqueness of attribute values.  A server MAY reject an invalid value based on uniqueness by returning HTTP response code 400 (Bad Request).  A client MAY enforce uniqueness on the client side to a greater degree than the service provider enforces.  For example, a client could make a value unique while the server has uniqueness of \"none\".  Valid keywords are as follows: none, server, global
+        /// The method by which the service provider enforces the uniqueness of an attribute value. A server can reject a value by returning the HTTP response code 400 (Bad Request). A client can enforce uniqueness to a greater degree than the server provider enforces. For example, a client could make a value unique even though the server has \"uniqueness\" set to \"none\".
         /// </summary>
-        /// <value>A single keyword value that specifies how the service provider enforces uniqueness of attribute values.  A server MAY reject an invalid value based on uniqueness by returning HTTP response code 400 (Bad Request).  A client MAY enforce uniqueness on the client side to a greater degree than the service provider enforces.  For example, a client could make a value unique while the server has uniqueness of \"none\".  Valid keywords are as follows: none, server, global</value>
+        /// <value>The method by which the service provider enforces the uniqueness of an attribute value. A server can reject a value by returning the HTTP response code 400 (Bad Request). A client can enforce uniqueness to a greater degree than the server provider enforces. For example, a client could make a value unique even though the server has \"uniqueness\" set to \"none\".</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum UniquenessEnum
         {
@@ -273,9 +273,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The attribute's data type.  Valid values are \"string\", \"boolean\", \"decimal\", \"integer\", \"dateTime\", \"reference\", and \"complex\".
+        /// The data type of the attribute.
         /// </summary>
-        /// <value>The attribute's data type.  Valid values are \"string\", \"boolean\", \"decimal\", \"integer\", \"dateTime\", \"reference\", and \"complex\".</value>
+        /// <value>The data type of the attribute.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         
@@ -294,27 +294,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// A single keyword indicating the circumstances under which the value of the attribute can be (re)defined. Value are readOnly, readWrite, immutable, writeOnly
+        /// The circumstances under which an attribute can be defined or redefined. The default is \"readWrite\".
         /// </summary>
-        /// <value>A single keyword indicating the circumstances under which the value of the attribute can be (re)defined. Value are readOnly, readWrite, immutable, writeOnly</value>
+        /// <value>The circumstances under which an attribute can be defined or redefined. The default is \"readWrite\".</value>
         [DataMember(Name="mutability", EmitDefaultValue=false)]
         public MutabilityEnum? Mutability { get; set; }
         
         
         
         /// <summary>
-        /// A single keyword that indicates when an attribute and associated values are returned in response to a GET request, or in response to a PUT, POST, or PATCH request.  Valid keywords are as follows: always, never, default, request
+        /// The circumstances under which an attribute and its values are returned in response to a GET, PUT, POST, or PATCH request.
         /// </summary>
-        /// <value>A single keyword that indicates when an attribute and associated values are returned in response to a GET request, or in response to a PUT, POST, or PATCH request.  Valid keywords are as follows: always, never, default, request</value>
+        /// <value>The circumstances under which an attribute and its values are returned in response to a GET, PUT, POST, or PATCH request.</value>
         [DataMember(Name="returned", EmitDefaultValue=false)]
         public ReturnedEnum? Returned { get; set; }
         
         
         
         /// <summary>
-        /// A single keyword value that specifies how the service provider enforces uniqueness of attribute values.  A server MAY reject an invalid value based on uniqueness by returning HTTP response code 400 (Bad Request).  A client MAY enforce uniqueness on the client side to a greater degree than the service provider enforces.  For example, a client could make a value unique while the server has uniqueness of \"none\".  Valid keywords are as follows: none, server, global
+        /// The method by which the service provider enforces the uniqueness of an attribute value. A server can reject a value by returning the HTTP response code 400 (Bad Request). A client can enforce uniqueness to a greater degree than the server provider enforces. For example, a client could make a value unique even though the server has \"uniqueness\" set to \"none\".
         /// </summary>
-        /// <value>A single keyword value that specifies how the service provider enforces uniqueness of attribute values.  A server MAY reject an invalid value based on uniqueness by returning HTTP response code 400 (Bad Request).  A client MAY enforce uniqueness on the client side to a greater degree than the service provider enforces.  For example, a client could make a value unique while the server has uniqueness of \"none\".  Valid keywords are as follows: none, server, global</value>
+        /// <value>The method by which the service provider enforces the uniqueness of an attribute value. A server can reject a value by returning the HTTP response code 400 (Bad Request). A client can enforce uniqueness to a greater degree than the server provider enforces. For example, a client could make a value unique even though the server has \"uniqueness\" set to \"none\".</value>
         [DataMember(Name="uniqueness", EmitDefaultValue=false)]
         public UniquenessEnum? Uniqueness { get; set; }
         
@@ -325,9 +325,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2SchemaAttribute" /> class.
         /// </summary>
-        /// <param name="SubAttributes">When an attribute is of type \&quot;complex\&quot;, \&quot;subAttributes\&quot; defines a set of sub-attributes. \&quot;subAttributes\&quot; has the same schema sub-attributes as \&quot;attributes\&quot;.</param>
-        /// <param name="CanonicalValues">A collection of suggested canonical values that MAY be used (e.g., \&quot;work\&quot; and \&quot;home\&quot;).  In some cases, service providers MAY choose to ignore unsupported values.  OPTIONAL..</param>
-        /// <param name="ReferenceTypes">A multi-valued array of JSON strings that indicate the SCIM resource types that may be referenced. Values include User, Group, external and uri..</param>
+        /// <param name="SubAttributes">The list of subattributes for an attribute of the type \&quot;complex\&quot;. Uses the same schema as \&quot;attributes\&quot;..</param>
+        /// <param name="CanonicalValues">The list of standard values that service providers may use. Service providers may ignore unsupported values..</param>
+        /// <param name="ReferenceTypes">The list of SCIM resource types that may be referenced. Only applies when \&quot;type\&quot; is set to \&quot;reference\&quot;..</param>
         public ScimV2SchemaAttribute(List<ScimV2SchemaAttribute> SubAttributes = null, List<string> CanonicalValues = null, List<ReferenceTypesEnum> ReferenceTypes = null)
         {
             this.SubAttributes = SubAttributes;
@@ -350,54 +350,54 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// When an attribute is of type \&quot;complex\&quot;, \&quot;subAttributes\&quot; defines a set of sub-attributes. \&quot;subAttributes\&quot; has the same schema sub-attributes as \&quot;attributes\&quot;
+        /// The list of subattributes for an attribute of the type \&quot;complex\&quot;. Uses the same schema as \&quot;attributes\&quot;.
         /// </summary>
-        /// <value>When an attribute is of type \&quot;complex\&quot;, \&quot;subAttributes\&quot; defines a set of sub-attributes. \&quot;subAttributes\&quot; has the same schema sub-attributes as \&quot;attributes\&quot;</value>
+        /// <value>The list of subattributes for an attribute of the type \&quot;complex\&quot;. Uses the same schema as \&quot;attributes\&quot;.</value>
         [DataMember(Name="subAttributes", EmitDefaultValue=false)]
         public List<ScimV2SchemaAttribute> SubAttributes { get; set; }
         
         
         
         /// <summary>
-        /// A Boolean value indicating the attribute&#39;s plurality.
+        /// Indicates whether an attribute contains multiple values.
         /// </summary>
-        /// <value>A Boolean value indicating the attribute&#39;s plurality.</value>
+        /// <value>Indicates whether an attribute contains multiple values.</value>
         [DataMember(Name="multiValued", EmitDefaultValue=false)]
         public bool? MultiValued { get; private set; }
         
         
         
         /// <summary>
-        /// The attribute&#39;s human-readable description.
+        /// The description of the attribute.
         /// </summary>
-        /// <value>The attribute&#39;s human-readable description.</value>
+        /// <value>The description of the attribute.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; private set; }
         
         
         
         /// <summary>
-        /// A Boolean value that specifies whether or not the attribute is required.
+        /// Indicates whether an attribute is required.
         /// </summary>
-        /// <value>A Boolean value that specifies whether or not the attribute is required.</value>
+        /// <value>Indicates whether an attribute is required.</value>
         [DataMember(Name="required", EmitDefaultValue=false)]
         public bool? Required { get; private set; }
         
         
         
         /// <summary>
-        /// A collection of suggested canonical values that MAY be used (e.g., \&quot;work\&quot; and \&quot;home\&quot;).  In some cases, service providers MAY choose to ignore unsupported values.  OPTIONAL.
+        /// The list of standard values that service providers may use. Service providers may ignore unsupported values.
         /// </summary>
-        /// <value>A collection of suggested canonical values that MAY be used (e.g., \&quot;work\&quot; and \&quot;home\&quot;).  In some cases, service providers MAY choose to ignore unsupported values.  OPTIONAL.</value>
+        /// <value>The list of standard values that service providers may use. Service providers may ignore unsupported values.</value>
         [DataMember(Name="canonicalValues", EmitDefaultValue=false)]
         public List<string> CanonicalValues { get; set; }
         
         
         
         /// <summary>
-        /// A Boolean value that specifies whether or not a string attribute is case sensitive.  The server SHALL use case sensitivity when evaluating filters.  For attributes that are case exact, the server SHALL preserve case for any value submitted.  If the attribute is case insensitive, the server MAY alter case for a submitted value.  Case sensitivity also impacts how attribute values MAY be compared against filter values (see Section 3.4.2.2 of [RFC7644])
+        /// Indicates whether a string attribute is case-sensitive. If set to \&quot;true\&quot;, the server preserves case sensitivity. If set to \&quot;false\&quot;, the server may change the case. The server also uses case sensitivity when evaluating filters. See section 3.4.2.2 \&quot;Filtering\&quot; in RFC 7644 for details.
         /// </summary>
-        /// <value>A Boolean value that specifies whether or not a string attribute is case sensitive.  The server SHALL use case sensitivity when evaluating filters.  For attributes that are case exact, the server SHALL preserve case for any value submitted.  If the attribute is case insensitive, the server MAY alter case for a submitted value.  Case sensitivity also impacts how attribute values MAY be compared against filter values (see Section 3.4.2.2 of [RFC7644])</value>
+        /// <value>Indicates whether a string attribute is case-sensitive. If set to \&quot;true\&quot;, the server preserves case sensitivity. If set to \&quot;false\&quot;, the server may change the case. The server also uses case sensitivity when evaluating filters. See section 3.4.2.2 \&quot;Filtering\&quot; in RFC 7644 for details.</value>
         [DataMember(Name="caseExact", EmitDefaultValue=false)]
         public bool? CaseExact { get; private set; }
         
@@ -410,9 +410,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// A multi-valued array of JSON strings that indicate the SCIM resource types that may be referenced. Values include User, Group, external and uri.
+        /// The list of SCIM resource types that may be referenced. Only applies when \&quot;type\&quot; is set to \&quot;reference\&quot;.
         /// </summary>
-        /// <value>A multi-valued array of JSON strings that indicate the SCIM resource types that may be referenced. Values include User, Group, external and uri.</value>
+        /// <value>The list of SCIM resource types that may be referenced. Only applies when \&quot;type\&quot; is set to \&quot;reference\&quot;.</value>
         [DataMember(Name="referenceTypes", EmitDefaultValue=false)]
         public List<ReferenceTypesEnum> ReferenceTypes { get; set; }
         

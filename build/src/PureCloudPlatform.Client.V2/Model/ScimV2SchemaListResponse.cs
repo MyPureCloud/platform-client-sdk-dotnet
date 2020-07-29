@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// SCIM Resource Types list response
+    /// Defines the list response for SCIM resource types.
     /// </summary>
     [DataContract]
     public partial class ScimV2SchemaListResponse :  IEquatable<ScimV2SchemaListResponse>
@@ -49,7 +49,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2SchemaListResponse" /> class.
         /// </summary>
-        /// <param name="Resources">Resources.</param>
+        /// <param name="Resources">The list of requested resources..</param>
         /// <param name="Schemas">The list of supported schemas..</param>
         public ScimV2SchemaListResponse(List<ScimV2SchemaDefinition> Resources = null, List<string> Schemas = null)
         {
@@ -88,9 +88,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Resources
+        /// The list of requested resources.
         /// </summary>
-        /// <value>Resources</value>
+        /// <value>The list of requested resources.</value>
         [DataMember(Name="Resources", EmitDefaultValue=false)]
         public List<ScimV2SchemaDefinition> Resources { get; set; }
         

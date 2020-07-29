@@ -127,7 +127,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationAssociation" /> class.
         /// </summary>
-        /// <param name="ExternalContactId">External Contact ID.</param>
+        /// <param name="ExternalContactId">An external contact ID.  If not supplied, implies the conversation should be disassociated with any external contact..</param>
         /// <param name="ConversationId">Conversation ID (required).</param>
         /// <param name="CommunicationId">Communication ID (required).</param>
         /// <param name="MediaType">Media type (required).</param>
@@ -143,9 +143,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// External Contact ID
+        /// An external contact ID.  If not supplied, implies the conversation should be disassociated with any external contact.
         /// </summary>
-        /// <value>External Contact ID</value>
+        /// <value>An external contact ID.  If not supplied, implies the conversation should be disassociated with any external contact.</value>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
         public string ExternalContactId { get; set; }
         

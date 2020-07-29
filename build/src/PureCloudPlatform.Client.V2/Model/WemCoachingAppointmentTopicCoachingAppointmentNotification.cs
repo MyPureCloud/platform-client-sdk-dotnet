@@ -62,7 +62,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Completed for "Completed"
             /// </summary>
             [EnumMember(Value = "Completed")]
-            Completed
+            Completed,
+            
+            /// <summary>
+            /// Enum Invalidschedule for "InvalidSchedule"
+            /// </summary>
+            [EnumMember(Value = "InvalidSchedule")]
+            Invalidschedule
         }
         
         
@@ -122,7 +128,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Delete for "Delete"
             /// </summary>
             [EnumMember(Value = "Delete")]
-            Delete
+            Delete,
+            
+            /// <summary>
+            /// Enum Invalidate for "Invalidate"
+            /// </summary>
+            [EnumMember(Value = "Invalidate")]
+            Invalidate
         }
         
         

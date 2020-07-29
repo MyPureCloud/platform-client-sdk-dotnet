@@ -40,16 +40,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailUserPolicy" /> class.
         /// </summary>
         /// <param name="AlertTimeoutSeconds">The number of seconds to ring the user&#39;s phone before a call is transfered to voicemail.</param>
         /// <param name="Pin">The user&#39;s PIN to access their voicemail. This property is only used for updates and never provided otherwise to ensure security.</param>
-        public VoicemailUserPolicy(int? AlertTimeoutSeconds = null, string Pin = null)
+        /// <param name="SendEmailNotifications">Whether email notifications are sent to the user when a new voicemail is received.</param>
+        public VoicemailUserPolicy(int? AlertTimeoutSeconds = null, string Pin = null, bool? SendEmailNotifications = null)
         {
             this.AlertTimeoutSeconds = AlertTimeoutSeconds;
             this.Pin = Pin;
+            this.SendEmailNotifications = SendEmailNotifications;
             
         }
         
@@ -90,6 +97,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? ModifiedDate { get; private set; }
         
         
+        
+        /// <summary>
+        /// Whether email notifications are sent to the user when a new voicemail is received
+        /// </summary>
+        /// <value>Whether email notifications are sent to the user when a new voicemail is received</value>
+        [DataMember(Name="sendEmailNotifications", EmitDefaultValue=false)]
+        public bool? SendEmailNotifications { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -103,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AlertTimeoutSeconds: ").Append(AlertTimeoutSeconds).Append("\n");
             sb.Append("  Pin: ").Append(Pin).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
+            sb.Append("  SendEmailNotifications: ").Append(SendEmailNotifications).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -158,6 +175,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
+                ) &&
+                (
+                    this.SendEmailNotifications == other.SendEmailNotifications ||
+                    this.SendEmailNotifications != null &&
+                    this.SendEmailNotifications.Equals(other.SendEmailNotifications)
                 );
         }
 
@@ -184,6 +206,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
+                
+                if (this.SendEmailNotifications != null)
+                    hash = hash * 59 + this.SendEmailNotifications.GetHashCode();
                 
                 return hash;
             }
