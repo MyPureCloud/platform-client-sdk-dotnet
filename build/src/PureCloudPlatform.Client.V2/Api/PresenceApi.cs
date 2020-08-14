@@ -114,11 +114,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user&#39;s Presence
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a user&#39;s presence for the specified source that is not specifically listed.  Used to support custom presence sources.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="sourceId">Source</param>
+        /// <param name="sourceId">Presence source ID</param>
         /// <returns>UserPresence</returns>
         UserPresence GetUserPresence (string userId, string sourceId);
 
@@ -126,23 +126,67 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user&#39;s Presence
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a user&#39;s presence for the specified source that is not specifically listed.  Used to support custom presence sources.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="sourceId">Source</param>
+        /// <param name="sourceId">Presence source ID</param>
         /// <returns>ApiResponse of UserPresence</returns>
         ApiResponse<UserPresence> GetUserPresenceWithHttpInfo (string userId, string sourceId);
+        
+        /// <summary>
+        /// Get a user&#39;s Microsoft Teams presence.
+        /// </summary>
+        /// <remarks>
+        /// Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <returns>PresenceExpand</returns>
+        PresenceExpand GetUserPresencesMicrosoftteams (string userId);
+
+        /// <summary>
+        /// Get a user&#39;s Microsoft Teams presence.
+        /// </summary>
+        /// <remarks>
+        /// Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <returns>ApiResponse of PresenceExpand</returns>
+        ApiResponse<PresenceExpand> GetUserPresencesMicrosoftteamsWithHttpInfo (string userId);
+        
+        /// <summary>
+        /// Get a user&#39;s GenesysCloud presence.
+        /// </summary>
+        /// <remarks>
+        /// Get the default GenesysCloud user presence source PURECLOUD
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <returns>UserPresence</returns>
+        UserPresence GetUserPresencesPurecloud (string userId);
+
+        /// <summary>
+        /// Get a user&#39;s GenesysCloud presence.
+        /// </summary>
+        /// <remarks>
+        /// Get the default GenesysCloud user presence source PURECLOUD
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <returns>ApiResponse of UserPresence</returns>
+        ApiResponse<UserPresence> GetUserPresencesPurecloudWithHttpInfo (string userId);
         
         /// <summary>
         /// Patch a user&#39;s Presence
         /// </summary>
         /// <remarks>
-        /// The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Patch a user&#39;s presence for the specified source that is not specifically listed. The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="sourceId">Source</param>
+        /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>UserPresence</returns>
         UserPresence PatchUserPresence (string userId, string sourceId, UserPresence body);
@@ -151,14 +195,38 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Patch a user&#39;s Presence
         /// </summary>
         /// <remarks>
-        /// The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Patch a user&#39;s presence for the specified source that is not specifically listed. The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="sourceId">Source</param>
+        /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>ApiResponse of UserPresence</returns>
         ApiResponse<UserPresence> PatchUserPresenceWithHttpInfo (string userId, string sourceId, UserPresence body);
+        
+        /// <summary>
+        /// Patch a GenesysCloud user&#39;s presence
+        /// </summary>
+        /// <remarks>
+        /// The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <param name="body">User presence</param>
+        /// <returns>UserPresence</returns>
+        UserPresence PatchUserPresencesPurecloud (string userId, UserPresence body);
+
+        /// <summary>
+        /// Patch a GenesysCloud user&#39;s presence
+        /// </summary>
+        /// <remarks>
+        /// The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <param name="body">User presence</param>
+        /// <returns>ApiResponse of UserPresence</returns>
+        ApiResponse<UserPresence> PatchUserPresencesPurecloudWithHttpInfo (string userId, UserPresence body);
         
         /// <summary>
         /// Create a Presence Definition
@@ -330,11 +398,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user&#39;s Presence
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a user&#39;s presence for the specified source that is not specifically listed.  Used to support custom presence sources.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="sourceId">Source</param>
+        /// <param name="sourceId">Presence source ID</param>
         /// <returns>Task of UserPresence</returns>
         System.Threading.Tasks.Task<UserPresence> GetUserPresenceAsync (string userId, string sourceId);
 
@@ -342,23 +410,67 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user&#39;s Presence
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a user&#39;s presence for the specified source that is not specifically listed.  Used to support custom presence sources.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="sourceId">Source</param>
+        /// <param name="sourceId">Presence source ID</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserPresenceAsyncWithHttpInfo (string userId, string sourceId);
+        
+        /// <summary>
+        /// Get a user&#39;s Microsoft Teams presence.
+        /// </summary>
+        /// <remarks>
+        /// Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <returns>Task of PresenceExpand</returns>
+        System.Threading.Tasks.Task<PresenceExpand> GetUserPresencesMicrosoftteamsAsync (string userId);
+
+        /// <summary>
+        /// Get a user&#39;s Microsoft Teams presence.
+        /// </summary>
+        /// <remarks>
+        /// Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <returns>Task of ApiResponse (PresenceExpand)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PresenceExpand>> GetUserPresencesMicrosoftteamsAsyncWithHttpInfo (string userId);
+        
+        /// <summary>
+        /// Get a user&#39;s GenesysCloud presence.
+        /// </summary>
+        /// <remarks>
+        /// Get the default GenesysCloud user presence source PURECLOUD
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <returns>Task of UserPresence</returns>
+        System.Threading.Tasks.Task<UserPresence> GetUserPresencesPurecloudAsync (string userId);
+
+        /// <summary>
+        /// Get a user&#39;s GenesysCloud presence.
+        /// </summary>
+        /// <remarks>
+        /// Get the default GenesysCloud user presence source PURECLOUD
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <returns>Task of ApiResponse (UserPresence)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserPresencesPurecloudAsyncWithHttpInfo (string userId);
         
         /// <summary>
         /// Patch a user&#39;s Presence
         /// </summary>
         /// <remarks>
-        /// The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Patch a user&#39;s presence for the specified source that is not specifically listed. The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="sourceId">Source</param>
+        /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of UserPresence</returns>
         System.Threading.Tasks.Task<UserPresence> PatchUserPresenceAsync (string userId, string sourceId, UserPresence body);
@@ -367,14 +479,38 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Patch a user&#39;s Presence
         /// </summary>
         /// <remarks>
-        /// The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Patch a user&#39;s presence for the specified source that is not specifically listed. The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="sourceId">Source</param>
+        /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserPresenceAsyncWithHttpInfo (string userId, string sourceId, UserPresence body);
+        
+        /// <summary>
+        /// Patch a GenesysCloud user&#39;s presence
+        /// </summary>
+        /// <remarks>
+        /// The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <param name="body">User presence</param>
+        /// <returns>Task of UserPresence</returns>
+        System.Threading.Tasks.Task<UserPresence> PatchUserPresencesPurecloudAsync (string userId, UserPresence body);
+
+        /// <summary>
+        /// Patch a GenesysCloud user&#39;s presence
+        /// </summary>
+        /// <remarks>
+        /// The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <param name="body">User presence</param>
+        /// <returns>Task of ApiResponse (UserPresence)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserPresencesPurecloudAsyncWithHttpInfo (string userId, UserPresence body);
         
         /// <summary>
         /// Create a Presence Definition
@@ -1311,11 +1447,11 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get a user&#39;s Presence 
+        /// Get a user&#39;s Presence Get a user&#39;s presence for the specified source that is not specifically listed.  Used to support custom presence sources.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="sourceId">Source</param>
+        /// <param name="sourceId">Presence source ID</param>
         /// <returns>UserPresence</returns>
         public UserPresence GetUserPresence (string userId, string sourceId)
         {
@@ -1324,11 +1460,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user&#39;s Presence 
+        /// Get a user&#39;s Presence Get a user&#39;s presence for the specified source that is not specifically listed.  Used to support custom presence sources.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="sourceId">Source</param>
+        /// <param name="sourceId">Presence source ID</param>
         /// <returns>ApiResponse of UserPresence</returns>
         public ApiResponse< UserPresence > GetUserPresenceWithHttpInfo (string userId, string sourceId)
         { 
@@ -1412,11 +1548,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get a user&#39;s Presence 
+        /// Get a user&#39;s Presence Get a user&#39;s presence for the specified source that is not specifically listed.  Used to support custom presence sources.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="sourceId">Source</param>
+        /// <param name="sourceId">Presence source ID</param>
         /// <returns>Task of UserPresence</returns>
         public async System.Threading.Tasks.Task<UserPresence> GetUserPresenceAsync (string userId, string sourceId)
         {
@@ -1426,11 +1562,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user&#39;s Presence 
+        /// Get a user&#39;s Presence Get a user&#39;s presence for the specified source that is not specifically listed.  Used to support custom presence sources.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="sourceId">Source</param>
+        /// <param name="sourceId">Presence source ID</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserPresenceAsyncWithHttpInfo (string userId, string sourceId)
         { 
@@ -1517,11 +1653,397 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Patch a user&#39;s Presence The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Get a user&#39;s Microsoft Teams presence. Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="sourceId">Source</param>
+        /// <returns>PresenceExpand</returns>
+        public PresenceExpand GetUserPresencesMicrosoftteams (string userId)
+        {
+             ApiResponse<PresenceExpand> localVarResponse = GetUserPresencesMicrosoftteamsWithHttpInfo(userId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a user&#39;s Microsoft Teams presence. Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <returns>ApiResponse of PresenceExpand</returns>
+        public ApiResponse< PresenceExpand > GetUserPresencesMicrosoftteamsWithHttpInfo (string userId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserPresencesMicrosoftteams");
+
+            var localVarPath = "/api/v2/users/{userId}/presences/microsoftteams";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserPresencesMicrosoftteams: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserPresencesMicrosoftteams: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PresenceExpand>(localVarStatusCode,
+                localVarHeaders,
+                (PresenceExpand) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PresenceExpand)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a user&#39;s Microsoft Teams presence. Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <returns>Task of PresenceExpand</returns>
+        public async System.Threading.Tasks.Task<PresenceExpand> GetUserPresencesMicrosoftteamsAsync (string userId)
+        {
+             ApiResponse<PresenceExpand> localVarResponse = await GetUserPresencesMicrosoftteamsAsyncWithHttpInfo(userId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a user&#39;s Microsoft Teams presence. Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <returns>Task of ApiResponse (PresenceExpand)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PresenceExpand>> GetUserPresencesMicrosoftteamsAsyncWithHttpInfo (string userId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserPresencesMicrosoftteams");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/presences/microsoftteams";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserPresencesMicrosoftteams: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserPresencesMicrosoftteams: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PresenceExpand>(localVarStatusCode,
+                localVarHeaders,
+                (PresenceExpand) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PresenceExpand)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a user&#39;s GenesysCloud presence. Get the default GenesysCloud user presence source PURECLOUD
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <returns>UserPresence</returns>
+        public UserPresence GetUserPresencesPurecloud (string userId)
+        {
+             ApiResponse<UserPresence> localVarResponse = GetUserPresencesPurecloudWithHttpInfo(userId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a user&#39;s GenesysCloud presence. Get the default GenesysCloud user presence source PURECLOUD
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <returns>ApiResponse of UserPresence</returns>
+        public ApiResponse< UserPresence > GetUserPresencesPurecloudWithHttpInfo (string userId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserPresencesPurecloud");
+
+            var localVarPath = "/api/v2/users/{userId}/presences/purecloud";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserPresencesPurecloud: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserPresencesPurecloud: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserPresence>(localVarStatusCode,
+                localVarHeaders,
+                (UserPresence) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserPresence)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a user&#39;s GenesysCloud presence. Get the default GenesysCloud user presence source PURECLOUD
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <returns>Task of UserPresence</returns>
+        public async System.Threading.Tasks.Task<UserPresence> GetUserPresencesPurecloudAsync (string userId)
+        {
+             ApiResponse<UserPresence> localVarResponse = await GetUserPresencesPurecloudAsyncWithHttpInfo(userId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a user&#39;s GenesysCloud presence. Get the default GenesysCloud user presence source PURECLOUD
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <returns>Task of ApiResponse (UserPresence)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserPresencesPurecloudAsyncWithHttpInfo (string userId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserPresencesPurecloud");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/presences/purecloud";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserPresencesPurecloud: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserPresencesPurecloud: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserPresence>(localVarStatusCode,
+                localVarHeaders,
+                (UserPresence) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserPresence)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Patch a user&#39;s Presence Patch a user&#39;s presence for the specified source that is not specifically listed. The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>UserPresence</returns>
         public UserPresence PatchUserPresence (string userId, string sourceId, UserPresence body)
@@ -1531,11 +2053,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch a user&#39;s Presence The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Patch a user&#39;s Presence Patch a user&#39;s presence for the specified source that is not specifically listed. The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="sourceId">Source</param>
+        /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>ApiResponse of UserPresence</returns>
         public ApiResponse< UserPresence > PatchUserPresenceWithHttpInfo (string userId, string sourceId, UserPresence body)
@@ -1628,11 +2150,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Patch a user&#39;s Presence The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Patch a user&#39;s Presence Patch a user&#39;s presence for the specified source that is not specifically listed. The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="sourceId">Source</param>
+        /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of UserPresence</returns>
         public async System.Threading.Tasks.Task<UserPresence> PatchUserPresenceAsync (string userId, string sourceId, UserPresence body)
@@ -1643,11 +2165,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch a user&#39;s Presence The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Patch a user&#39;s Presence Patch a user&#39;s presence for the specified source that is not specifically listed. The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="sourceId">Source</param>
+        /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserPresenceAsyncWithHttpInfo (string userId, string sourceId, UserPresence body)
@@ -1733,6 +2255,220 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling PatchUserPresence: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchUserPresence: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserPresence>(localVarStatusCode,
+                localVarHeaders,
+                (UserPresence) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserPresence)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Patch a GenesysCloud user&#39;s presence The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <param name="body">User presence</param>
+        /// <returns>UserPresence</returns>
+        public UserPresence PatchUserPresencesPurecloud (string userId, UserPresence body)
+        {
+             ApiResponse<UserPresence> localVarResponse = PatchUserPresencesPurecloudWithHttpInfo(userId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Patch a GenesysCloud user&#39;s presence The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <param name="body">User presence</param>
+        /// <returns>ApiResponse of UserPresence</returns>
+        public ApiResponse< UserPresence > PatchUserPresencesPurecloudWithHttpInfo (string userId, UserPresence body)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->PatchUserPresencesPurecloud");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PatchUserPresencesPurecloud");
+
+            var localVarPath = "/api/v2/users/{userId}/presences/purecloud";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserPresencesPurecloud: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserPresencesPurecloud: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserPresence>(localVarStatusCode,
+                localVarHeaders,
+                (UserPresence) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserPresence)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Patch a GenesysCloud user&#39;s presence The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <param name="body">User presence</param>
+        /// <returns>Task of UserPresence</returns>
+        public async System.Threading.Tasks.Task<UserPresence> PatchUserPresencesPurecloudAsync (string userId, UserPresence body)
+        {
+             ApiResponse<UserPresence> localVarResponse = await PatchUserPresencesPurecloudAsyncWithHttpInfo(userId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Patch a GenesysCloud user&#39;s presence The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user Id</param>
+        /// <param name="body">User presence</param>
+        /// <returns>Task of ApiResponse (UserPresence)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserPresencesPurecloudAsyncWithHttpInfo (string userId, UserPresence body)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->PatchUserPresencesPurecloud");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PatchUserPresencesPurecloud");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/presences/purecloud";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserPresencesPurecloud: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserPresencesPurecloud: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserPresence>(localVarStatusCode,
                 localVarHeaders,

@@ -396,7 +396,7 @@ namespace Example
 
 <a name="getuserssearch"></a>
 
-## [**UsersSearchResponse**](UsersSearchResponse.html) GetUsersSearch (string q64, List<string> expand = null)
+## [**UsersSearchResponse**](UsersSearchResponse.html) GetUsersSearch (string q64, List<string> expand = null, string integrationPresenceSource = null)
 
 
 
@@ -427,11 +427,12 @@ namespace Example
             var apiInstance = new SearchApi();
             var q64 = q64_example;  // string | q64
             var expand = new List<string>(); // List<string> | expand (optional) 
+            var integrationPresenceSource = integrationPresenceSource_example;  // string | integrationPresenceSource (optional) 
 
             try
             { 
                 // Search users using the q64 value returned from a previous search
-                UsersSearchResponse result = apiInstance.GetUsersSearch(q64, expand);
+                UsersSearchResponse result = apiInstance.GetUsersSearch(q64, expand, integrationPresenceSource);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -450,6 +451,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
 | **expand** | [**List<string>**](string.html)| expand | [optional]  |
+| **integrationPresenceSource** | **string**| integrationPresenceSource | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone |
 {: class="table table-striped"}
 
 ### Return type

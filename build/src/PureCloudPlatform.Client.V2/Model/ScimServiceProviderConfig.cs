@@ -65,11 +65,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimServiceProviderConfig" /> class.
@@ -82,8 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Bulk">The \&quot;bulk\&quot; configuration options..</param>
         /// <param name="ChangePassword">The \&quot;changePassword\&quot; configuration options..</param>
         /// <param name="AuthenticationSchemes">The list of supported authentication schemes..</param>
-        /// <param name="Meta">The metadata of the SCIM resource..</param>
-        public ScimServiceProviderConfig(List<string> Schemas = null, ScimServiceProviderConfigSimpleFeature Patch = null, ScimServiceProviderConfigFilterFeature Filter = null, ScimServiceProviderConfigSimpleFeature Etag = null, ScimServiceProviderConfigSimpleFeature Sort = null, ScimServiceProviderConfigBulkFeature Bulk = null, ScimServiceProviderConfigSimpleFeature ChangePassword = null, List<ScimServiceProviderConfigAuthenticationScheme> AuthenticationSchemes = null, ScimMetadata Meta = null)
+        public ScimServiceProviderConfig(List<string> Schemas = null, ScimServiceProviderConfigSimpleFeature Patch = null, ScimServiceProviderConfigFilterFeature Filter = null, ScimServiceProviderConfigSimpleFeature Etag = null, ScimServiceProviderConfigSimpleFeature Sort = null, ScimServiceProviderConfigBulkFeature Bulk = null, ScimServiceProviderConfigSimpleFeature ChangePassword = null, List<ScimServiceProviderConfigAuthenticationScheme> AuthenticationSchemes = null)
         {
             this.Schemas = Schemas;
             this.Patch = Patch;
@@ -93,7 +87,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Bulk = Bulk;
             this.ChangePassword = ChangePassword;
             this.AuthenticationSchemes = AuthenticationSchemes;
-            this.Meta = Meta;
             
         }
         
@@ -179,15 +172,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ScimServiceProviderConfigAuthenticationScheme> AuthenticationSchemes { get; set; }
         
         
-        
-        /// <summary>
-        /// The metadata of the SCIM resource.
-        /// </summary>
-        /// <value>The metadata of the SCIM resource.</value>
-        [DataMember(Name="meta", EmitDefaultValue=false)]
-        public ScimMetadata Meta { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -206,7 +190,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Bulk: ").Append(Bulk).Append("\n");
             sb.Append("  ChangePassword: ").Append(ChangePassword).Append("\n");
             sb.Append("  AuthenticationSchemes: ").Append(AuthenticationSchemes).Append("\n");
-            sb.Append("  Meta: ").Append(Meta).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -287,11 +270,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AuthenticationSchemes == other.AuthenticationSchemes ||
                     this.AuthenticationSchemes != null &&
                     this.AuthenticationSchemes.SequenceEqual(other.AuthenticationSchemes)
-                ) &&
-                (
-                    this.Meta == other.Meta ||
-                    this.Meta != null &&
-                    this.Meta.Equals(other.Meta)
                 );
         }
 
@@ -333,9 +311,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AuthenticationSchemes != null)
                     hash = hash * 59 + this.AuthenticationSchemes.GetHashCode();
-                
-                if (this.Meta != null)
-                    hash = hash * 59 + this.Meta.GetHashCode();
                 
                 return hash;
             }

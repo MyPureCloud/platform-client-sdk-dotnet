@@ -12,7 +12,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetPresencedefinitions**](PresenceApi.html#getpresencedefinitions) | **GET** /api/v2/presencedefinitions | Get an Organization&#39;s list of Presence Definitions |
 | [**GetSystempresences**](PresenceApi.html#getsystempresences) | **GET** /api/v2/systempresences | Get the list of SystemPresences |
 | [**GetUserPresence**](PresenceApi.html#getuserpresence) | **GET** /api/v2/users/{userId}/presences/{sourceId} | Get a user&#39;s Presence |
+| [**GetUserPresencesMicrosoftteams**](PresenceApi.html#getuserpresencesmicrosoftteams) | **GET** /api/v2/users/{userId}/presences/microsoftteams | Get a user&#39;s Microsoft Teams presence. |
+| [**GetUserPresencesPurecloud**](PresenceApi.html#getuserpresencespurecloud) | **GET** /api/v2/users/{userId}/presences/purecloud | Get a user&#39;s GenesysCloud presence. |
 | [**PatchUserPresence**](PresenceApi.html#patchuserpresence) | **PATCH** /api/v2/users/{userId}/presences/{sourceId} | Patch a user&#39;s Presence |
+| [**PatchUserPresencesPurecloud**](PresenceApi.html#patchuserpresencespurecloud) | **PATCH** /api/v2/users/{userId}/presences/purecloud | Patch a GenesysCloud user&#39;s presence |
 | [**PostPresencedefinitions**](PresenceApi.html#postpresencedefinitions) | **POST** /api/v2/presencedefinitions | Create a Presence Definition |
 | [**PutPresencedefinition**](PresenceApi.html#putpresencedefinition) | **PUT** /api/v2/presencedefinitions/{presenceId} | Update a Presence Definition |
 | [**PutUsersPresencesBulk**](PresenceApi.html#putuserspresencesbulk) | **PUT** /api/v2/users/presences/bulk | Update bulk user Presences |
@@ -269,7 +272,7 @@ This endpoint does require any parameters.
 
 Get a user's Presence
 
-
+Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources.
 
 Requires NO permissions: 
 
@@ -293,7 +296,7 @@ namespace Example
 
             var apiInstance = new PresenceApi();
             var userId = userId_example;  // string | user Id
-            var sourceId = sourceId_example;  // string | Source
+            var sourceId = sourceId_example;  // string | Presence source ID
 
             try
             { 
@@ -316,7 +319,129 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| user Id |  |
-| **sourceId** | **string**| Source |  |
+| **sourceId** | **string**| Presence source ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserPresence**](UserPresence.html)
+
+<a name="getuserpresencesmicrosoftteams"></a>
+
+## [**PresenceExpand**](PresenceExpand.html) GetUserPresencesMicrosoftteams (string userId)
+
+
+
+Get a user's Microsoft Teams presence.
+
+Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
+
+Requires ANY permissions: 
+
+* integration:microsoftTeams:view
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUserPresencesMicrosoftteamsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new PresenceApi();
+            var userId = userId_example;  // string | user Id
+
+            try
+            { 
+                // Get a user's Microsoft Teams presence.
+                PresenceExpand result = apiInstance.GetUserPresencesMicrosoftteams(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.GetUserPresencesMicrosoftteams: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| user Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PresenceExpand**](PresenceExpand.html)
+
+<a name="getuserpresencespurecloud"></a>
+
+## [**UserPresence**](UserPresence.html) GetUserPresencesPurecloud (string userId)
+
+
+
+Get a user's GenesysCloud presence.
+
+Get the default GenesysCloud user presence source PURECLOUD
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUserPresencesPurecloudExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new PresenceApi();
+            var userId = userId_example;  // string | user Id
+
+            try
+            { 
+                // Get a user's GenesysCloud presence.
+                UserPresence result = apiInstance.GetUserPresencesPurecloud(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.GetUserPresencesPurecloud: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| user Id |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -331,7 +456,7 @@ namespace Example
 
 Patch a user's Presence
 
-The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+Patch a user's presence for the specified source that is not specifically listed. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
 
 Requires NO permissions: 
 
@@ -355,7 +480,7 @@ namespace Example
 
             var apiInstance = new PresenceApi();
             var userId = userId_example;  // string | user Id
-            var sourceId = sourceId_example;  // string | Source
+            var sourceId = sourceId_example;  // string | Presence source ID
             var body = new UserPresence(); // UserPresence | User presence
 
             try
@@ -379,7 +504,69 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| user Id |  |
-| **sourceId** | **string**| Source |  |
+| **sourceId** | **string**| Presence source ID |  |
+| **body** | [**UserPresence**](UserPresence.html)| User presence |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserPresence**](UserPresence.html)
+
+<a name="patchuserpresencespurecloud"></a>
+
+## [**UserPresence**](UserPresence.html) PatchUserPresencesPurecloud (string userId, UserPresence body)
+
+
+
+Patch a GenesysCloud user's presence
+
+The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchUserPresencesPurecloudExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new PresenceApi();
+            var userId = userId_example;  // string | user Id
+            var body = new UserPresence(); // UserPresence | User presence
+
+            try
+            { 
+                // Patch a GenesysCloud user's presence
+                UserPresence result = apiInstance.PatchUserPresencesPurecloud(userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.PatchUserPresencesPurecloud: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| user Id |  |
 | **body** | [**UserPresence**](UserPresence.html)| User presence |  |
 {: class="table table-striped"}
 

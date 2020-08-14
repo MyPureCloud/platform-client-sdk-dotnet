@@ -78,7 +78,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Other for "other"
             /// </summary>
             [EnumMember(Value = "other")]
-            Other
+            Other,
+            
+            /// <summary>
+            /// Enum Microsoftteams for "microsoftteams"
+            /// </summary>
+            [EnumMember(Value = "microsoftteams")]
+            Microsoftteams,
+            
+            /// <summary>
+            /// Enum Zoomphone for "zoomphone"
+            /// </summary>
+            [EnumMember(Value = "zoomphone")]
+            Zoomphone
         }
         
         

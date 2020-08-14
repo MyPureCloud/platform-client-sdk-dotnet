@@ -1066,7 +1066,7 @@ namespace Example
 
 <a name="getprofilesusers"></a>
 
-## [**UserProfileEntityListing**](UserProfileEntityListing.html) GetProfilesUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null)
+## [**UserProfileEntityListing**](UserProfileEntityListing.html) GetProfilesUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -1101,11 +1101,12 @@ namespace Example
             var jid = new List<string>(); // List<string> | jid (optional) 
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            var integrationPresenceSource = integrationPresenceSource_example;  // string | Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". (optional) 
 
             try
             { 
                 // Get a user profile listing
-                UserProfileEntityListing result = apiInstance.GetProfilesUsers(pageSize, pageNumber, id, jid, sortOrder, expand);
+                UserProfileEntityListing result = apiInstance.GetProfilesUsers(pageSize, pageNumber, id, jid, sortOrder, expand, integrationPresenceSource);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1128,6 +1129,7 @@ namespace Example
 | **jid** | [**List<string>**](string.html)| jid | [optional]  |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization |
+| **integrationPresenceSource** | **string**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone |
 {: class="table table-striped"}
 
 ### Return type
@@ -1198,7 +1200,7 @@ namespace Example
 
 <a name="getuser"></a>
 
-## [**User**](User.html) GetUser (string userId, List<string> expand = null, string state = null)
+## [**User**](User.html) GetUser (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null)
 
 
 
@@ -1229,12 +1231,13 @@ namespace Example
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            var integrationPresenceSource = integrationPresenceSource_example;  // string | Gets an integration presence for a user instead of their default. (optional) 
             var state = state_example;  // string | Search for a user with this state (optional)  (default to active)
 
             try
             { 
                 // Get user.
-                User result = apiInstance.GetUser(userId, expand, state);
+                User result = apiInstance.GetUser(userId, expand, integrationPresenceSource, state);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1253,6 +1256,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
+| **integrationPresenceSource** | **string**| Gets an integration presence for a user instead of their default. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone |
 | **state** | **string**| Search for a user with this state | [optional] [default to active]<br />**Values**: active, deleted |
 {: class="table table-striped"}
 
@@ -1636,7 +1640,7 @@ namespace Example
 
 <a name="getuserprofile"></a>
 
-## [**UserProfile**](UserProfile.html) GetUserProfile (string userId, List<string> expand = null)
+## [**UserProfile**](UserProfile.html) GetUserProfile (string userId, List<string> expand = null, string integrationPresenceSource = null)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -1667,11 +1671,12 @@ namespace Example
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | userId
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            var integrationPresenceSource = integrationPresenceSource_example;  // string | Gets an integration presence for a user instead of their default. (optional) 
 
             try
             { 
                 // Get user profile
-                UserProfile result = apiInstance.GetUserProfile(userId, expand);
+                UserProfile result = apiInstance.GetUserProfile(userId, expand, integrationPresenceSource);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1690,6 +1695,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| userId |  |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team |
+| **integrationPresenceSource** | **string**| Gets an integration presence for a user instead of their default. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone |
 {: class="table table-striped"}
 
 ### Return type
@@ -2269,7 +2275,7 @@ namespace Example
 
 <a name="getusers"></a>
 
-## [**UserEntityListing**](UserEntityListing.html) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string state = null)
+## [**UserEntityListing**](UserEntityListing.html) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
 
 
 
@@ -2304,12 +2310,13 @@ namespace Example
             var jabberId = new List<string>(); // List<string> | A list of jabberIds to fetch by bulk (cannot be used with the \"id\" parameter) (optional) 
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            var integrationPresenceSource = integrationPresenceSource_example;  // string | Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 10. (optional) 
             var state = state_example;  // string | Only list users of this state (optional)  (default to active)
 
             try
             { 
                 // Get the list of available users.
-                UserEntityListing result = apiInstance.GetUsers(pageSize, pageNumber, id, jabberId, sortOrder, expand, state);
+                UserEntityListing result = apiInstance.GetUsers(pageSize, pageNumber, id, jabberId, sortOrder, expand, integrationPresenceSource, state);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2332,6 +2339,7 @@ namespace Example
 | **jabberId** | [**List<string>**](string.html)| A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) | [optional]  |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
+| **integrationPresenceSource** | **string**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone |
 | **state** | **string**| Only list users of this state | [optional] [default to active]<br />**Values**: active, inactive, deleted, any |
 {: class="table table-striped"}
 
@@ -2341,7 +2349,7 @@ namespace Example
 
 <a name="getusersme"></a>
 
-## [**UserMe**](UserMe.html) GetUsersMe (List<string> expand = null)
+## [**UserMe**](UserMe.html) GetUsersMe (List<string> expand = null, string integrationPresenceSource = null)
 
 
 
@@ -2371,11 +2379,12 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
+            var integrationPresenceSource = integrationPresenceSource_example;  // string | Get your presence for a given integration. This parameter will only be used when presence is provided as an \"expand\". (optional) 
 
             try
             { 
                 // Get current user details.
-                UserMe result = apiInstance.GetUsersMe(expand);
+                UserMe result = apiInstance.GetUsersMe(expand, integrationPresenceSource);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2393,6 +2402,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, date, geolocationsettings, organization, presencedefinitions, locationdefinitions, orgauthorization, orgproducts, favorites, superiors, directreports, adjacents, routingskills, routinglanguages, fieldconfigs, token, trustors |
+| **integrationPresenceSource** | **string**| Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone |
 {: class="table table-striped"}
 
 ### Return type
@@ -2401,7 +2411,7 @@ namespace Example
 
 <a name="getuserssearch"></a>
 
-## [**UsersSearchResponse**](UsersSearchResponse.html) GetUsersSearch (string q64, List<string> expand = null)
+## [**UsersSearchResponse**](UsersSearchResponse.html) GetUsersSearch (string q64, List<string> expand = null, string integrationPresenceSource = null)
 
 
 
@@ -2432,11 +2442,12 @@ namespace Example
             var apiInstance = new UsersApi();
             var q64 = q64_example;  // string | q64
             var expand = new List<string>(); // List<string> | expand (optional) 
+            var integrationPresenceSource = integrationPresenceSource_example;  // string | integrationPresenceSource (optional) 
 
             try
             { 
                 // Search users using the q64 value returned from a previous search
-                UsersSearchResponse result = apiInstance.GetUsersSearch(q64, expand);
+                UsersSearchResponse result = apiInstance.GetUsersSearch(q64, expand, integrationPresenceSource);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2455,6 +2466,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
 | **expand** | [**List<string>**](string.html)| expand | [optional]  |
+| **integrationPresenceSource** | **string**| integrationPresenceSource | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone |
 {: class="table table-striped"}
 
 ### Return type

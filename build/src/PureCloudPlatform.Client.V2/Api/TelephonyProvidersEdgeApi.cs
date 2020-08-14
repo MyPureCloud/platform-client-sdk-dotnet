@@ -996,8 +996,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to number)</param>
+        /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>DIDPoolEntityListing</returns>
-        DIDPoolEntityListing GetTelephonyProvidersEdgesDidpools (int? pageSize = null, int? pageNumber = null, string sortBy = null);
+        DIDPoolEntityListing GetTelephonyProvidersEdgesDidpools (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null);
 
         /// <summary>
         /// Get a listing of DID Pools
@@ -1009,8 +1010,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to number)</param>
+        /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>ApiResponse of DIDPoolEntityListing</returns>
-        ApiResponse<DIDPoolEntityListing> GetTelephonyProvidersEdgesDidpoolsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null);
+        ApiResponse<DIDPoolEntityListing> GetTelephonyProvidersEdgesDidpoolsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null);
         
         /// <summary>
         /// Get a listing of DIDs
@@ -1026,8 +1028,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Filter by phoneNumber (optional)</param>
         /// <param name="ownerId">Filter by the owner of a phone number (optional)</param>
         /// <param name="didPoolId">Filter by the DID Pool assignment (optional)</param>
+        /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>DIDEntityListing</returns>
-        DIDEntityListing GetTelephonyProvidersEdgesDids (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null);
+        DIDEntityListing GetTelephonyProvidersEdgesDids (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null);
 
         /// <summary>
         /// Get a listing of DIDs
@@ -1043,8 +1046,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Filter by phoneNumber (optional)</param>
         /// <param name="ownerId">Filter by the owner of a phone number (optional)</param>
         /// <param name="didPoolId">Filter by the DID Pool assignment (optional)</param>
+        /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>ApiResponse of DIDEntityListing</returns>
-        ApiResponse<DIDEntityListing> GetTelephonyProvidersEdgesDidsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null);
+        ApiResponse<DIDEntityListing> GetTelephonyProvidersEdgesDidsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null);
         
         /// <summary>
         /// Get edge group.
@@ -4120,8 +4124,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to number)</param>
+        /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>Task of DIDPoolEntityListing</returns>
-        System.Threading.Tasks.Task<DIDPoolEntityListing> GetTelephonyProvidersEdgesDidpoolsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null);
+        System.Threading.Tasks.Task<DIDPoolEntityListing> GetTelephonyProvidersEdgesDidpoolsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null);
 
         /// <summary>
         /// Get a listing of DID Pools
@@ -4133,8 +4138,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to number)</param>
+        /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>Task of ApiResponse (DIDPoolEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DIDPoolEntityListing>> GetTelephonyProvidersEdgesDidpoolsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null);
+        System.Threading.Tasks.Task<ApiResponse<DIDPoolEntityListing>> GetTelephonyProvidersEdgesDidpoolsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null);
         
         /// <summary>
         /// Get a listing of DIDs
@@ -4150,8 +4156,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Filter by phoneNumber (optional)</param>
         /// <param name="ownerId">Filter by the owner of a phone number (optional)</param>
         /// <param name="didPoolId">Filter by the DID Pool assignment (optional)</param>
+        /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>Task of DIDEntityListing</returns>
-        System.Threading.Tasks.Task<DIDEntityListing> GetTelephonyProvidersEdgesDidsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null);
+        System.Threading.Tasks.Task<DIDEntityListing> GetTelephonyProvidersEdgesDidsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null);
 
         /// <summary>
         /// Get a listing of DIDs
@@ -4167,8 +4174,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Filter by phoneNumber (optional)</param>
         /// <param name="ownerId">Filter by the owner of a phone number (optional)</param>
         /// <param name="didPoolId">Filter by the DID Pool assignment (optional)</param>
+        /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>Task of ApiResponse (DIDEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DIDEntityListing>> GetTelephonyProvidersEdgesDidsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null);
+        System.Threading.Tasks.Task<ApiResponse<DIDEntityListing>> GetTelephonyProvidersEdgesDidsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null);
         
         /// <summary>
         /// Get edge group.
@@ -14513,10 +14521,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to number)</param>
+        /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>DIDPoolEntityListing</returns>
-        public DIDPoolEntityListing GetTelephonyProvidersEdgesDidpools (int? pageSize = null, int? pageNumber = null, string sortBy = null)
+        public DIDPoolEntityListing GetTelephonyProvidersEdgesDidpools (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null)
         {
-             ApiResponse<DIDPoolEntityListing> localVarResponse = GetTelephonyProvidersEdgesDidpoolsWithHttpInfo(pageSize, pageNumber, sortBy);
+             ApiResponse<DIDPoolEntityListing> localVarResponse = GetTelephonyProvidersEdgesDidpoolsWithHttpInfo(pageSize, pageNumber, sortBy, id);
              return localVarResponse.Data;
         }
 
@@ -14527,8 +14536,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to number)</param>
+        /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>ApiResponse of DIDPoolEntityListing</returns>
-        public ApiResponse< DIDPoolEntityListing > GetTelephonyProvidersEdgesDidpoolsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null)
+        public ApiResponse< DIDPoolEntityListing > GetTelephonyProvidersEdgesDidpoolsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null)
         { 
 
             var localVarPath = "/api/v2/telephony/providers/edges/didpools";
@@ -14567,6 +14577,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -14611,10 +14622,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to number)</param>
+        /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>Task of DIDPoolEntityListing</returns>
-        public async System.Threading.Tasks.Task<DIDPoolEntityListing> GetTelephonyProvidersEdgesDidpoolsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<DIDPoolEntityListing> GetTelephonyProvidersEdgesDidpoolsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null)
         {
-             ApiResponse<DIDPoolEntityListing> localVarResponse = await GetTelephonyProvidersEdgesDidpoolsAsyncWithHttpInfo(pageSize, pageNumber, sortBy);
+             ApiResponse<DIDPoolEntityListing> localVarResponse = await GetTelephonyProvidersEdgesDidpoolsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, id);
              return localVarResponse.Data;
 
         }
@@ -14626,8 +14638,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to number)</param>
+        /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>Task of ApiResponse (DIDPoolEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DIDPoolEntityListing>> GetTelephonyProvidersEdgesDidpoolsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DIDPoolEntityListing>> GetTelephonyProvidersEdgesDidpoolsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null)
         { 
 
             var localVarPath = "/api/v2/telephony/providers/edges/didpools";
@@ -14666,6 +14679,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -14715,10 +14729,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Filter by phoneNumber (optional)</param>
         /// <param name="ownerId">Filter by the owner of a phone number (optional)</param>
         /// <param name="didPoolId">Filter by the DID Pool assignment (optional)</param>
+        /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>DIDEntityListing</returns>
-        public DIDEntityListing GetTelephonyProvidersEdgesDids (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null)
+        public DIDEntityListing GetTelephonyProvidersEdgesDids (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null)
         {
-             ApiResponse<DIDEntityListing> localVarResponse = GetTelephonyProvidersEdgesDidsWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, phoneNumber, ownerId, didPoolId);
+             ApiResponse<DIDEntityListing> localVarResponse = GetTelephonyProvidersEdgesDidsWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, phoneNumber, ownerId, didPoolId, id);
              return localVarResponse.Data;
         }
 
@@ -14733,8 +14748,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Filter by phoneNumber (optional)</param>
         /// <param name="ownerId">Filter by the owner of a phone number (optional)</param>
         /// <param name="didPoolId">Filter by the DID Pool assignment (optional)</param>
+        /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>ApiResponse of DIDEntityListing</returns>
-        public ApiResponse< DIDEntityListing > GetTelephonyProvidersEdgesDidsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null)
+        public ApiResponse< DIDEntityListing > GetTelephonyProvidersEdgesDidsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null)
         { 
 
             var localVarPath = "/api/v2/telephony/providers/edges/dids";
@@ -14777,6 +14793,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (phoneNumber != null) localVarQueryParams.Add(new Tuple<string, string>("phoneNumber", this.Configuration.ApiClient.ParameterToString(phoneNumber)));
             if (ownerId != null) localVarQueryParams.Add(new Tuple<string, string>("owner.id", this.Configuration.ApiClient.ParameterToString(ownerId)));
             if (didPoolId != null) localVarQueryParams.Add(new Tuple<string, string>("didPool.id", this.Configuration.ApiClient.ParameterToString(didPoolId)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -14825,10 +14842,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Filter by phoneNumber (optional)</param>
         /// <param name="ownerId">Filter by the owner of a phone number (optional)</param>
         /// <param name="didPoolId">Filter by the DID Pool assignment (optional)</param>
+        /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>Task of DIDEntityListing</returns>
-        public async System.Threading.Tasks.Task<DIDEntityListing> GetTelephonyProvidersEdgesDidsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null)
+        public async System.Threading.Tasks.Task<DIDEntityListing> GetTelephonyProvidersEdgesDidsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null)
         {
-             ApiResponse<DIDEntityListing> localVarResponse = await GetTelephonyProvidersEdgesDidsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, phoneNumber, ownerId, didPoolId);
+             ApiResponse<DIDEntityListing> localVarResponse = await GetTelephonyProvidersEdgesDidsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, phoneNumber, ownerId, didPoolId, id);
              return localVarResponse.Data;
 
         }
@@ -14844,8 +14862,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Filter by phoneNumber (optional)</param>
         /// <param name="ownerId">Filter by the owner of a phone number (optional)</param>
         /// <param name="didPoolId">Filter by the DID Pool assignment (optional)</param>
+        /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>Task of ApiResponse (DIDEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DIDEntityListing>> GetTelephonyProvidersEdgesDidsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DIDEntityListing>> GetTelephonyProvidersEdgesDidsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null)
         { 
 
             var localVarPath = "/api/v2/telephony/providers/edges/dids";
@@ -14888,6 +14907,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (phoneNumber != null) localVarQueryParams.Add(new Tuple<string, string>("phoneNumber", this.Configuration.ApiClient.ParameterToString(phoneNumber)));
             if (ownerId != null) localVarQueryParams.Add(new Tuple<string, string>("owner.id", this.Configuration.ApiClient.ParameterToString(ownerId)));
             if (didPoolId != null) localVarQueryParams.Add(new Tuple<string, string>("didPool.id", this.Configuration.ApiClient.ParameterToString(didPoolId)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

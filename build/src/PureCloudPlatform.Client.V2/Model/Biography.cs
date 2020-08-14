@@ -40,6 +40,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Biography" /> class.
@@ -48,12 +53,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Interests">Interests.</param>
         /// <param name="Hobbies">Hobbies.</param>
         /// <param name="Spouse">Spouse.</param>
-        public Biography(string _Biography = null, List<string> Interests = null, List<string> Hobbies = null, string Spouse = null)
+        /// <param name="Education">User education details.</param>
+        public Biography(string _Biography = null, List<string> Interests = null, List<string> Hobbies = null, string Spouse = null, List<Education> Education = null)
         {
             this._Biography = _Biography;
             this.Interests = Interests;
             this.Hobbies = Hobbies;
             this.Spouse = Spouse;
+            this.Education = Education;
             
         }
         
@@ -91,6 +98,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Spouse { get; set; }
         
         
+        
+        /// <summary>
+        /// User education details
+        /// </summary>
+        /// <value>User education details</value>
+        [DataMember(Name="education", EmitDefaultValue=false)]
+        public List<Education> Education { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,6 +120,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Interests: ").Append(Interests).Append("\n");
             sb.Append("  Hobbies: ").Append(Hobbies).Append("\n");
             sb.Append("  Spouse: ").Append(Spouse).Append("\n");
+            sb.Append("  Education: ").Append(Education).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -159,6 +176,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Spouse == other.Spouse ||
                     this.Spouse != null &&
                     this.Spouse.Equals(other.Spouse)
+                ) &&
+                (
+                    this.Education == other.Education ||
+                    this.Education != null &&
+                    this.Education.SequenceEqual(other.Education)
                 );
         }
 
@@ -185,6 +207,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Spouse != null)
                     hash = hash * 59 + this.Spouse.GetHashCode();
+                
+                if (this.Education != null)
+                    hash = hash * 59 + this.Education.GetHashCode();
                 
                 return hash;
             }

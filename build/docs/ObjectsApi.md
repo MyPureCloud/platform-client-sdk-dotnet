@@ -143,7 +143,7 @@ namespace Example
 
 <a name="getauthorizationdivisions"></a>
 
-## [**AuthzDivisionEntityListing**](AuthzDivisionEntityListing.html) GetAuthorizationDivisions (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
+## [**AuthzDivisionEntityListing**](AuthzDivisionEntityListing.html) GetAuthorizationDivisions (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<Object> id = null, string name = null)
 
 
 
@@ -175,11 +175,11 @@ namespace Example
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
+            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
             var objectCount = true;  // bool? | Include the count of objects contained in the division (optional)  (default to false)
-            var id = new List<string>(); // List<string> | Optionally request specific divisions by their IDs (optional) 
+            var id = new List<Object>(); // List<Object> | Optionally request specific divisions by their IDs (optional) 
             var name = name_example;  // string | Search term to filter by division name (optional) 
 
             try
@@ -205,11 +205,11 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **objectCount** | **bool?**| Include the count of objects contained in the division | [optional] [default to false] |
-| **id** | [**List<string>**](string.html)| Optionally request specific divisions by their IDs | [optional]  |
+| **id** | [**List<Object>**](Object.html)| Optionally request specific divisions by their IDs | [optional]  |
 | **name** | **string**| Search term to filter by division name | [optional]  |
 {: class="table table-striped"}
 

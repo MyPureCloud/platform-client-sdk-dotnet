@@ -13,11 +13,16 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Defines a SCIM Genesys Cloud user.
+    /// Genesys Cloud user extensions to SCIM RFC.
     /// </summary>
     [DataContract]
     public partial class ScimUserExtensions :  IEquatable<ScimUserExtensions>
     {
+        
+        
+        
+        
+        
         
         
         
@@ -36,10 +41,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="RoutingSkills">The list of routing skills assigned to a user. Maximum 50 skills..</param>
         /// <param name="RoutingLanguages">The list of routing languages assigned to a user. Maximum 50 languages..</param>
-        public ScimUserExtensions(List<ScimUserRoutingSkill> RoutingSkills = null, List<ScimUserRoutingLanguage> RoutingLanguages = null)
+        /// <param name="ExternalIds">External Identifiers assigned to user. SCIM External ID will be visible here with authority prefix &#39;x-pc:scimv2:v1&#39; but will be immutable..</param>
+        public ScimUserExtensions(List<ScimUserRoutingSkill> RoutingSkills = null, List<ScimUserRoutingLanguage> RoutingLanguages = null, List<ScimGenesysUserExternalId> ExternalIds = null)
         {
             this.RoutingSkills = RoutingSkills;
             this.RoutingLanguages = RoutingLanguages;
+            this.ExternalIds = ExternalIds;
             
         }
         
@@ -62,6 +69,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ScimUserRoutingLanguage> RoutingLanguages { get; set; }
         
         
+        
+        /// <summary>
+        /// External Identifiers assigned to user. SCIM External ID will be visible here with authority prefix &#39;x-pc:scimv2:v1&#39; but will be immutable.
+        /// </summary>
+        /// <value>External Identifiers assigned to user. SCIM External ID will be visible here with authority prefix &#39;x-pc:scimv2:v1&#39; but will be immutable.</value>
+        [DataMember(Name="externalIds", EmitDefaultValue=false)]
+        public List<ScimGenesysUserExternalId> ExternalIds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -73,6 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  RoutingSkills: ").Append(RoutingSkills).Append("\n");
             sb.Append("  RoutingLanguages: ").Append(RoutingLanguages).Append("\n");
+            sb.Append("  ExternalIds: ").Append(ExternalIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -118,6 +135,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RoutingLanguages == other.RoutingLanguages ||
                     this.RoutingLanguages != null &&
                     this.RoutingLanguages.SequenceEqual(other.RoutingLanguages)
+                ) &&
+                (
+                    this.ExternalIds == other.ExternalIds ||
+                    this.ExternalIds != null &&
+                    this.ExternalIds.SequenceEqual(other.ExternalIds)
                 );
         }
 
@@ -138,6 +160,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RoutingLanguages != null)
                     hash = hash * 59 + this.RoutingLanguages.GetHashCode();
+                
+                if (this.ExternalIds != null)
+                    hash = hash * 59 + this.ExternalIds.GetHashCode();
                 
                 return hash;
             }

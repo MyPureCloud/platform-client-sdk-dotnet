@@ -97,6 +97,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Addressto,
             
             /// <summary>
+            /// Enum Agentassistantid for "agentAssistantId"
+            /// </summary>
+            [EnumMember(Value = "agentAssistantId")]
+            Agentassistantid,
+            
+            /// <summary>
             /// Enum Agentscore for "agentScore"
             /// </summary>
             [EnumMember(Value = "agentScore")]
@@ -359,6 +365,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "journeyCustomerSessionIdType")]
             Journeycustomersessionidtype,
+            
+            /// <summary>
+            /// Enum Journeysegmentscope for "journeySegmentScope"
+            /// </summary>
+            [EnumMember(Value = "journeySegmentScope")]
+            Journeysegmentscope,
             
             /// <summary>
             /// Enum Mediabridgeid for "mediaBridgeId"

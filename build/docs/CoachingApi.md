@@ -37,7 +37,7 @@ Permission not required if you are the creator of the appointment
 
 Requires ANY permissions: 
 
-* COACHING:APPOINTMENT:DELETE
+* coaching:appointment:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -98,8 +98,8 @@ You must have the appropriate permission for the type of annotation you are upda
 
 Requires ANY permissions: 
 
-* COACHING:ANNOTATION:DELETE
-* COACHING:PRIVATEANNOTATION:DELETE
+* coaching:annotation:delete
+* coaching:privateAnnotation:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -161,7 +161,7 @@ Permission not required if you are the attendee, creator or facilitator of the a
 
 Requires ANY permissions: 
 
-* COACHING:APPOINTMENT:VIEW
+* coaching:appointment:view
 
 ### Example
 ```{"language":"csharp"}
@@ -222,8 +222,8 @@ You must have the appropriate permission for the type of annotation you are crea
 
 Requires ANY permissions: 
 
-* COACHING:ANNOTATION:VIEW
-* COACHING:PRIVATEANNOTATION:VIEW
+* coaching:annotation:view
+* coaching:privateAnnotation:view
 
 ### Example
 ```{"language":"csharp"}
@@ -286,8 +286,8 @@ You must have the appropriate permission for the type of annotation you are crea
 
 Requires ANY permissions: 
 
-* COACHING:ANNOTATION:VIEW
-* COACHING:PRIVATEANNOTATION:VIEW
+* coaching:annotation:view
+* coaching:privateAnnotation:view
 
 ### Example
 ```{"language":"csharp"}
@@ -352,7 +352,7 @@ Permission not required if you are an attendee, creator or facilitator of the ap
 
 Requires ANY permissions: 
 
-* COACHING:APPOINTMENTSTATUS:VIEW
+* coaching:appointmentStatus:view
 
 ### Example
 ```{"language":"csharp"}
@@ -417,7 +417,7 @@ Get appointments for users and optional date range
 
 Requires ANY permissions: 
 
-* COACHING:APPOINTMENT:VIEW
+* coaching:appointment:view
 
 ### Example
 ```{"language":"csharp"}
@@ -560,7 +560,7 @@ Permission not required if you are the owner of the notification.
 
 Requires ANY permissions: 
 
-* COACHING:NOTIFICATION:VIEW
+* coaching:notification:view
 
 ### Example
 ```{"language":"csharp"}
@@ -683,7 +683,7 @@ Permission not required if you are the creator or facilitator of the appointment
 
 Requires ANY permissions: 
 
-* COACHING:APPOINTMENT:EDIT
+* coaching:appointment:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -746,8 +746,8 @@ You must have the appropriate permission for the type of annotation you are upda
 
 Requires ANY permissions: 
 
-* COACHING:ANNOTATION:EDIT
-* COACHING:PRIVATEANNOTATION:EDIT
+* coaching:annotation:edit
+* coaching:privateAnnotation:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -812,7 +812,7 @@ Permission not required if you are an attendee, creator or facilitator of the ap
 
 Requires ANY permissions: 
 
-* COACHING:APPOINTMENTSTATUS:EDIT
+* coaching:appointmentStatus:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -937,8 +937,8 @@ You must have the appropriate permission for the type of annotation you are crea
 
 Requires ANY permissions: 
 
-* COACHING:ANNOTATION:ADD
-* COACHING:PRIVATEANNOTATION:ADD
+* coaching:annotation:add
+* coaching:privateAnnotation:add
 
 ### Example
 ```{"language":"csharp"}
@@ -1001,7 +1001,7 @@ Create a new appointment
 
 Requires ANY permissions: 
 
-* COACHING:APPOINTMENT:ADD
+* coaching:appointment:add
 
 ### Example
 ```{"language":"csharp"}

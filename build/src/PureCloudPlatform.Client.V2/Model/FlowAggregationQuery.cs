@@ -58,6 +58,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Addressto,
             
             /// <summary>
+            /// Enum Agentassistantid for "agentAssistantId"
+            /// </summary>
+            [EnumMember(Value = "agentAssistantId")]
+            Agentassistantid,
+            
+            /// <summary>
             /// Enum Agentscore for "agentScore"
             /// </summary>
             [EnumMember(Value = "agentScore")]

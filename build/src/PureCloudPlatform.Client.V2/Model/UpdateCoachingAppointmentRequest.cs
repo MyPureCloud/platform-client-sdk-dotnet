@@ -38,6 +38,45 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The status of the coaching appointment.
+        /// </summary>
+        /// <value>The status of the coaching appointment.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Scheduled for "Scheduled"
+            /// </summary>
+            [EnumMember(Value = "Scheduled")]
+            Scheduled,
+            
+            /// <summary>
+            /// Enum Inprogress for "InProgress"
+            /// </summary>
+            [EnumMember(Value = "InProgress")]
+            Inprogress,
+            
+            /// <summary>
+            /// Enum Completed for "Completed"
+            /// </summary>
+            [EnumMember(Value = "Completed")]
+            Completed,
+            
+            /// <summary>
+            /// Enum Invalidschedule for "InvalidSchedule"
+            /// </summary>
+            [EnumMember(Value = "InvalidSchedule")]
+            Invalidschedule
+        }
         
         
         
@@ -48,6 +87,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The status of the coaching appointment.
+        /// </summary>
+        /// <value>The status of the coaching appointment.</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
         
         
     
@@ -60,7 +112,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LengthInMinutes">The duration of coaching appointment in minutes..</param>
         /// <param name="ConversationIds">IDs of conversations associated with this coaching appointment..</param>
         /// <param name="DocumentIds">IDs of documents associated with this coaching appointment..</param>
-        public UpdateCoachingAppointmentRequest(string Name = null, string Description = null, DateTime? DateStart = null, int? LengthInMinutes = null, List<string> ConversationIds = null, List<string> DocumentIds = null)
+        /// <param name="Status">The status of the coaching appointment..</param>
+        public UpdateCoachingAppointmentRequest(string Name = null, string Description = null, DateTime? DateStart = null, int? LengthInMinutes = null, List<string> ConversationIds = null, List<string> DocumentIds = null, StatusEnum? Status = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -68,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LengthInMinutes = LengthInMinutes;
             this.ConversationIds = ConversationIds;
             this.DocumentIds = DocumentIds;
+            this.Status = Status;
             
         }
         
@@ -126,6 +180,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> DocumentIds { get; set; }
         
         
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -141,6 +197,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
             sb.Append("  ConversationIds: ").Append(ConversationIds).Append("\n");
             sb.Append("  DocumentIds: ").Append(DocumentIds).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -206,6 +263,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DocumentIds == other.DocumentIds ||
                     this.DocumentIds != null &&
                     this.DocumentIds.SequenceEqual(other.DocumentIds)
+                ) &&
+                (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
                 );
         }
 
@@ -238,6 +300,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DocumentIds != null)
                     hash = hash * 59 + this.DocumentIds.GetHashCode();
+                
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
                 
                 return hash;
             }

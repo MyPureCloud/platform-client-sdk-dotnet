@@ -93,6 +93,43 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted.
+        /// </summary>
+        /// <value>The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Active for "active"
+            /// </summary>
+            [EnumMember(Value = "active")]
+            Active,
+            
+            /// <summary>
+            /// Enum Disabled for "disabled"
+            /// </summary>
+            [EnumMember(Value = "disabled")]
+            Disabled,
+            
+            /// <summary>
+            /// Enum Inactive for "inactive"
+            /// </summary>
+            [EnumMember(Value = "inactive")]
+            Inactive
+        }
+        
+        
+        
+        
         
         
         
@@ -122,6 +159,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted.
+        /// </summary>
+        /// <value>The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted.</value>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+        
+        
+        
         
     
         /// <summary>
@@ -141,8 +187,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AuthorizedGrantType">The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client.  (required).</param>
         /// <param name="Scope">The scope requested by this client. Scopes only apply to clients not using the client_credential grant.</param>
         /// <param name="RoleDivisions">Set of roles and their corresponding divisions associated with this client. Roles and divisions only apply to clients using the client_credential grant.</param>
+        /// <param name="State">The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted..</param>
         /// <param name="Organization">The  oauth client&#39;s organization..</param>
-        public OrgOAuthClient(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null, List<string> Scope = null, List<RoleDivision> RoleDivisions = null, NamedEntity Organization = null)
+        public OrgOAuthClient(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null, List<string> Scope = null, List<RoleDivision> RoleDivisions = null, StateEnum? State = null, NamedEntity Organization = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -152,6 +199,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AuthorizedGrantType = AuthorizedGrantType;
             this.Scope = Scope;
             this.RoleDivisions = RoleDivisions;
+            this.State = State;
             this.Organization = Organization;
             
         }
@@ -232,6 +280,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The  oauth client&#39;s organization.
         /// </summary>
@@ -258,6 +308,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AuthorizedGrantType: ").Append(AuthorizedGrantType).Append("\n");
             sb.Append("  Scope: ").Append(Scope).Append("\n");
             sb.Append("  RoleDivisions: ").Append(RoleDivisions).Append("\n");
+            sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Organization: ").Append(Organization).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -341,6 +392,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RoleDivisions.SequenceEqual(other.RoleDivisions)
                 ) &&
                 (
+                    this.State == other.State ||
+                    this.State != null &&
+                    this.State.Equals(other.State)
+                ) &&
+                (
                     this.Organization == other.Organization ||
                     this.Organization != null &&
                     this.Organization.Equals(other.Organization)
@@ -385,6 +441,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RoleDivisions != null)
                     hash = hash * 59 + this.RoleDivisions.GetHashCode();
+                
+                if (this.State != null)
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 if (this.Organization != null)
                     hash = hash * 59 + this.Organization.GetHashCode();

@@ -54,7 +54,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Messagingtemplate for "MessagingTemplate"
             /// </summary>
             [EnumMember(Value = "MessagingTemplate")]
-            Messagingtemplate
+            Messagingtemplate,
+            
+            /// <summary>
+            /// Enum Campaignsmstemplate for "CampaignSmsTemplate"
+            /// </summary>
+            [EnumMember(Value = "CampaignSmsTemplate")]
+            Campaignsmstemplate
         }
         
         

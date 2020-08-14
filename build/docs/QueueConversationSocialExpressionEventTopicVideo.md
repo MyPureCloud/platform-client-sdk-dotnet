@@ -22,6 +22,7 @@ title: QueueConversationSocialExpressionEventTopicVideo
 | **DisconnectedTime** | **DateTime?** |  | [optional] |
 | **Msids** | **List&lt;string&gt;** |  | [optional] |
 | **Wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup.html) |  | [optional] |
+| **AfterCallWork** | [**QueueConversationSocialExpressionEventTopicAfterCallWork**](QueueConversationSocialExpressionEventTopicAfterCallWork.html) |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

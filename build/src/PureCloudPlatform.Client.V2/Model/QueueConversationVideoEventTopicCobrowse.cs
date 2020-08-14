@@ -234,6 +234,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -247,6 +250,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
         
         
         
@@ -299,8 +304,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="Wrapup">Wrapup.</param>
+        /// <param name="AfterCallWork">AfterCallWork.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationVideoEventTopicCobrowse(StateEnum? State = null, DisconnectTypeEnum? DisconnectType = null, string Id = null, QueueConversationVideoEventTopicAddress Self = null, string RoomId = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ProviderEventTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationVideoEventTopicWrapup Wrapup = null, Object AdditionalProperties = null)
+        public QueueConversationVideoEventTopicCobrowse(StateEnum? State = null, DisconnectTypeEnum? DisconnectType = null, string Id = null, QueueConversationVideoEventTopicAddress Self = null, string RoomId = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ProviderEventTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationVideoEventTopicWrapup Wrapup = null, QueueConversationVideoEventTopicAfterCallWork AfterCallWork = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.DisconnectType = DisconnectType;
@@ -318,6 +324,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
             this.Wrapup = Wrapup;
+            this.AfterCallWork = AfterCallWork;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -441,6 +448,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets AfterCallWork
+        /// </summary>
+        [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
+        public QueueConversationVideoEventTopicAfterCallWork AfterCallWork { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -472,6 +487,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -590,6 +606,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Wrapup.Equals(other.Wrapup)
                 ) &&
                 (
+                    this.AfterCallWork == other.AfterCallWork ||
+                    this.AfterCallWork != null &&
+                    this.AfterCallWork.Equals(other.AfterCallWork)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -655,6 +676,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                
+                if (this.AfterCallWork != null)
+                    hash = hash * 59 + this.AfterCallWork.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

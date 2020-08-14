@@ -2680,7 +2680,7 @@ namespace Example
 
 <a name="gettelephonyprovidersedgesdidpools"></a>
 
-## [**DIDPoolEntityListing**](DIDPoolEntityListing.html) GetTelephonyProvidersEdgesDidpools (int? pageSize = null, int? pageNumber = null, string sortBy = null)
+## [**DIDPoolEntityListing**](DIDPoolEntityListing.html) GetTelephonyProvidersEdgesDidpools (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null)
 
 
 
@@ -2713,11 +2713,12 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to number)
+            var id = new List<string>(); // List<string> | Filter by a specific list of ID's (optional) 
 
             try
             { 
                 // Get a listing of DID Pools
-                DIDPoolEntityListing result = apiInstance.GetTelephonyProvidersEdgesDidpools(pageSize, pageNumber, sortBy);
+                DIDPoolEntityListing result = apiInstance.GetTelephonyProvidersEdgesDidpools(pageSize, pageNumber, sortBy, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2737,6 +2738,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Sort by | [optional] [default to number] |
+| **id** | [**List<string>**](string.html)| Filter by a specific list of ID&#39;s | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2745,7 +2747,7 @@ namespace Example
 
 <a name="gettelephonyprovidersedgesdids"></a>
 
-## [**DIDEntityListing**](DIDEntityListing.html) GetTelephonyProvidersEdgesDids (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null)
+## [**DIDEntityListing**](DIDEntityListing.html) GetTelephonyProvidersEdgesDids (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null)
 
 
 
@@ -2782,11 +2784,12 @@ namespace Example
             var phoneNumber = phoneNumber_example;  // string | Filter by phoneNumber (optional) 
             var ownerId = ownerId_example;  // string | Filter by the owner of a phone number (optional) 
             var didPoolId = didPoolId_example;  // string | Filter by the DID Pool assignment (optional) 
+            var id = new List<string>(); // List<string> | Filter by a specific list of ID's (optional) 
 
             try
             { 
                 // Get a listing of DIDs
-                DIDEntityListing result = apiInstance.GetTelephonyProvidersEdgesDids(pageSize, pageNumber, sortBy, sortOrder, phoneNumber, ownerId, didPoolId);
+                DIDEntityListing result = apiInstance.GetTelephonyProvidersEdgesDids(pageSize, pageNumber, sortBy, sortOrder, phoneNumber, ownerId, didPoolId, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2810,6 +2813,7 @@ namespace Example
 | **phoneNumber** | **string**| Filter by phoneNumber | [optional]  |
 | **ownerId** | **string**| Filter by the owner of a phone number | [optional]  |
 | **didPoolId** | **string**| Filter by the DID Pool assignment | [optional]  |
+| **id** | [**List<string>**](string.html)| Filter by a specific list of ID&#39;s | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

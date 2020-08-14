@@ -355,6 +355,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -434,6 +437,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Call" /> class.
@@ -464,7 +469,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Self">Address and name data for a call endpoint..</param>
         /// <param name="Other">Address and name data for a call endpoint..</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
-        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null, Address Self = null, Address Other = null, Wrapup Wrapup = null)
+        /// <param name="AfterCallWork">After-call work for the communication..</param>
+        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null, Address Self = null, Address Other = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null)
         {
             this.State = State;
             this.Id = Id;
@@ -492,6 +498,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Self = Self;
             this.Other = Other;
             this.Wrapup = Wrapup;
+            this.AfterCallWork = AfterCallWork;
             
         }
         
@@ -701,6 +708,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Wrapup Wrapup { get; set; }
         
         
+        
+        /// <summary>
+        /// After-call work for the communication.
+        /// </summary>
+        /// <value>After-call work for the communication.</value>
+        [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
+        public AfterCallWork AfterCallWork { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -736,6 +752,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Self: ").Append(Self).Append("\n");
             sb.Append("  Other: ").Append(Other).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -901,6 +918,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Wrapup == other.Wrapup ||
                     this.Wrapup != null &&
                     this.Wrapup.Equals(other.Wrapup)
+                ) &&
+                (
+                    this.AfterCallWork == other.AfterCallWork ||
+                    this.AfterCallWork != null &&
+                    this.AfterCallWork.Equals(other.AfterCallWork)
                 );
         }
 
@@ -993,6 +1015,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                
+                if (this.AfterCallWork != null)
+                    hash = hash * 59 + this.AfterCallWork.GetHashCode();
                 
                 return hash;
             }

@@ -403,8 +403,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jid">jid (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>UserProfileEntityListing</returns>
-        UserProfileEntityListing GetProfilesUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null);
+        UserProfileEntityListing GetProfilesUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
         /// Get a user profile listing
@@ -419,8 +420,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jid">jid (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>ApiResponse of UserProfileEntityListing</returns>
-        ApiResponse<UserProfileEntityListing> GetProfilesUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null);
+        ApiResponse<UserProfileEntityListing> GetProfilesUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null);
         
         /// <summary>
         /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
@@ -453,9 +455,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>User</returns>
-        User GetUser (string userId, List<string> expand = null, string state = null);
+        User GetUser (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null);
 
         /// <summary>
         /// Get user.
@@ -466,9 +469,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>ApiResponse of User</returns>
-        ApiResponse<User> GetUserWithHttpInfo (string userId, List<string> expand = null, string state = null);
+        ApiResponse<User> GetUserWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null);
         
         /// <summary>
         /// Get adjacents
@@ -625,8 +629,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <returns>UserProfile</returns>
-        UserProfile GetUserProfile (string userId, List<string> expand = null);
+        UserProfile GetUserProfile (string userId, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
         /// Get user profile
@@ -637,8 +642,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <returns>ApiResponse of UserProfile</returns>
-        ApiResponse<UserProfile> GetUserProfileWithHttpInfo (string userId, List<string> expand = null);
+        ApiResponse<UserProfile> GetUserProfileWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null);
         
         /// <summary>
         /// List profile skills for a user
@@ -877,9 +883,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>UserEntityListing</returns>
-        UserEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string state = null);
+        UserEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
 
         /// <summary>
         /// Get the list of available users.
@@ -894,9 +901,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
-        ApiResponse<UserEntityListing> GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string state = null);
+        ApiResponse<UserEntityListing> GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
         
         /// <summary>
         /// Get current user details.
@@ -906,8 +914,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>UserMe</returns>
-        UserMe GetUsersMe (List<string> expand = null);
+        UserMe GetUsersMe (List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
         /// Get current user details.
@@ -917,8 +926,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>ApiResponse of UserMe</returns>
-        ApiResponse<UserMe> GetUsersMeWithHttpInfo (List<string> expand = null);
+        ApiResponse<UserMe> GetUsersMeWithHttpInfo (List<string> expand = null, string integrationPresenceSource = null);
         
         /// <summary>
         /// Search users using the q64 value returned from a previous search
@@ -929,8 +939,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
+        /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>UsersSearchResponse</returns>
-        UsersSearchResponse GetUsersSearch (string q64, List<string> expand = null);
+        UsersSearchResponse GetUsersSearch (string q64, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
         /// Search users using the q64 value returned from a previous search
@@ -941,8 +952,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
+        /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
-        ApiResponse<UsersSearchResponse> GetUsersSearchWithHttpInfo (string q64, List<string> expand = null);
+        ApiResponse<UsersSearchResponse> GetUsersSearchWithHttpInfo (string q64, List<string> expand = null, string integrationPresenceSource = null);
         
         /// <summary>
         /// Update user
@@ -2127,8 +2139,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jid">jid (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>Task of UserProfileEntityListing</returns>
-        System.Threading.Tasks.Task<UserProfileEntityListing> GetProfilesUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null);
+        System.Threading.Tasks.Task<UserProfileEntityListing> GetProfilesUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
         /// Get a user profile listing
@@ -2143,8 +2156,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jid">jid (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>Task of ApiResponse (UserProfileEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserProfileEntityListing>> GetProfilesUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<UserProfileEntityListing>> GetProfilesUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null);
         
         /// <summary>
         /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
@@ -2177,9 +2191,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>Task of User</returns>
-        System.Threading.Tasks.Task<User> GetUserAsync (string userId, List<string> expand = null, string state = null);
+        System.Threading.Tasks.Task<User> GetUserAsync (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null);
 
         /// <summary>
         /// Get user.
@@ -2190,9 +2205,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        System.Threading.Tasks.Task<ApiResponse<User>> GetUserAsyncWithHttpInfo (string userId, List<string> expand = null, string state = null);
+        System.Threading.Tasks.Task<ApiResponse<User>> GetUserAsyncWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null);
         
         /// <summary>
         /// Get adjacents
@@ -2349,8 +2365,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <returns>Task of UserProfile</returns>
-        System.Threading.Tasks.Task<UserProfile> GetUserProfileAsync (string userId, List<string> expand = null);
+        System.Threading.Tasks.Task<UserProfile> GetUserProfileAsync (string userId, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
         /// Get user profile
@@ -2361,8 +2378,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <returns>Task of ApiResponse (UserProfile)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserProfile>> GetUserProfileAsyncWithHttpInfo (string userId, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<UserProfile>> GetUserProfileAsyncWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null);
         
         /// <summary>
         /// List profile skills for a user
@@ -2601,9 +2619,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of UserEntityListing</returns>
-        System.Threading.Tasks.Task<UserEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string state = null);
+        System.Threading.Tasks.Task<UserEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
 
         /// <summary>
         /// Get the list of available users.
@@ -2618,9 +2637,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string state = null);
+        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
         
         /// <summary>
         /// Get current user details.
@@ -2630,8 +2650,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>Task of UserMe</returns>
-        System.Threading.Tasks.Task<UserMe> GetUsersMeAsync (List<string> expand = null);
+        System.Threading.Tasks.Task<UserMe> GetUsersMeAsync (List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
         /// Get current user details.
@@ -2641,8 +2662,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>Task of ApiResponse (UserMe)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserMe>> GetUsersMeAsyncWithHttpInfo (List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<UserMe>> GetUsersMeAsyncWithHttpInfo (List<string> expand = null, string integrationPresenceSource = null);
         
         /// <summary>
         /// Search users using the q64 value returned from a previous search
@@ -2653,8 +2675,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
+        /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>Task of UsersSearchResponse</returns>
-        System.Threading.Tasks.Task<UsersSearchResponse> GetUsersSearchAsync (string q64, List<string> expand = null);
+        System.Threading.Tasks.Task<UsersSearchResponse> GetUsersSearchAsync (string q64, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
         /// Search users using the q64 value returned from a previous search
@@ -2665,8 +2688,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
+        /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetUsersSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetUsersSearchAsyncWithHttpInfo (string q64, List<string> expand = null, string integrationPresenceSource = null);
         
         /// <summary>
         /// Update user
@@ -6730,10 +6754,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jid">jid (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>UserProfileEntityListing</returns>
-        public UserProfileEntityListing GetProfilesUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null)
+        public UserProfileEntityListing GetProfilesUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null)
         {
-             ApiResponse<UserProfileEntityListing> localVarResponse = GetProfilesUsersWithHttpInfo(pageSize, pageNumber, id, jid, sortOrder, expand);
+             ApiResponse<UserProfileEntityListing> localVarResponse = GetProfilesUsersWithHttpInfo(pageSize, pageNumber, id, jid, sortOrder, expand, integrationPresenceSource);
              return localVarResponse.Data;
         }
 
@@ -6747,8 +6772,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jid">jid (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>ApiResponse of UserProfileEntityListing</returns>
-        public ApiResponse< UserProfileEntityListing > GetProfilesUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null)
+        public ApiResponse< UserProfileEntityListing > GetProfilesUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null)
         { 
 
             var localVarPath = "/api/v2/profiles/users";
@@ -6790,6 +6816,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (jid != null) jid.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("jid", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
 
             // Header params
 
@@ -6837,10 +6864,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jid">jid (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>Task of UserProfileEntityListing</returns>
-        public async System.Threading.Tasks.Task<UserProfileEntityListing> GetProfilesUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<UserProfileEntityListing> GetProfilesUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null)
         {
-             ApiResponse<UserProfileEntityListing> localVarResponse = await GetProfilesUsersAsyncWithHttpInfo(pageSize, pageNumber, id, jid, sortOrder, expand);
+             ApiResponse<UserProfileEntityListing> localVarResponse = await GetProfilesUsersAsyncWithHttpInfo(pageSize, pageNumber, id, jid, sortOrder, expand, integrationPresenceSource);
              return localVarResponse.Data;
 
         }
@@ -6855,8 +6883,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jid">jid (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>Task of ApiResponse (UserProfileEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserProfileEntityListing>> GetProfilesUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserProfileEntityListing>> GetProfilesUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null)
         { 
 
             var localVarPath = "/api/v2/profiles/users";
@@ -6898,6 +6927,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (jid != null) jid.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("jid", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
 
             // Header params
 
@@ -7135,11 +7165,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>User</returns>
-        public User GetUser (string userId, List<string> expand = null, string state = null)
+        public User GetUser (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null)
         {
-             ApiResponse<User> localVarResponse = GetUserWithHttpInfo(userId, expand, state);
+             ApiResponse<User> localVarResponse = GetUserWithHttpInfo(userId, expand, integrationPresenceSource, state);
              return localVarResponse.Data;
         }
 
@@ -7149,9 +7180,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>ApiResponse of User</returns>
-        public ApiResponse< User > GetUserWithHttpInfo (string userId, List<string> expand = null, string state = null)
+        public ApiResponse< User > GetUserWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -7192,6 +7224,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
             if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
 
             // Header params
@@ -7236,11 +7269,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>Task of User</returns>
-        public async System.Threading.Tasks.Task<User> GetUserAsync (string userId, List<string> expand = null, string state = null)
+        public async System.Threading.Tasks.Task<User> GetUserAsync (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null)
         {
-             ApiResponse<User> localVarResponse = await GetUserAsyncWithHttpInfo(userId, expand, state);
+             ApiResponse<User> localVarResponse = await GetUserAsyncWithHttpInfo(userId, expand, integrationPresenceSource, state);
              return localVarResponse.Data;
 
         }
@@ -7251,9 +7285,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<User>> GetUserAsyncWithHttpInfo (string userId, List<string> expand = null, string state = null)
+        public async System.Threading.Tasks.Task<ApiResponse<User>> GetUserAsyncWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -7295,6 +7330,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
             if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
 
             // Header params
@@ -8547,10 +8583,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <returns>UserProfile</returns>
-        public UserProfile GetUserProfile (string userId, List<string> expand = null)
+        public UserProfile GetUserProfile (string userId, List<string> expand = null, string integrationPresenceSource = null)
         {
-             ApiResponse<UserProfile> localVarResponse = GetUserProfileWithHttpInfo(userId, expand);
+             ApiResponse<UserProfile> localVarResponse = GetUserProfileWithHttpInfo(userId, expand, integrationPresenceSource);
              return localVarResponse.Data;
         }
 
@@ -8560,8 +8597,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <returns>ApiResponse of UserProfile</returns>
-        public ApiResponse< UserProfile > GetUserProfileWithHttpInfo (string userId, List<string> expand = null)
+        public ApiResponse< UserProfile > GetUserProfileWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -8602,6 +8640,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
 
             // Header params
 
@@ -8645,10 +8684,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <returns>Task of UserProfile</returns>
-        public async System.Threading.Tasks.Task<UserProfile> GetUserProfileAsync (string userId, List<string> expand = null)
+        public async System.Threading.Tasks.Task<UserProfile> GetUserProfileAsync (string userId, List<string> expand = null, string integrationPresenceSource = null)
         {
-             ApiResponse<UserProfile> localVarResponse = await GetUserProfileAsyncWithHttpInfo(userId, expand);
+             ApiResponse<UserProfile> localVarResponse = await GetUserProfileAsyncWithHttpInfo(userId, expand, integrationPresenceSource);
              return localVarResponse.Data;
 
         }
@@ -8659,8 +8699,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <returns>Task of ApiResponse (UserProfile)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserProfile>> GetUserProfileAsyncWithHttpInfo (string userId, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserProfile>> GetUserProfileAsyncWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -8702,6 +8743,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
 
             // Header params
 
@@ -10565,11 +10607,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>UserEntityListing</returns>
-        public UserEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string state = null)
+        public UserEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
         {
-             ApiResponse<UserEntityListing> localVarResponse = GetUsersWithHttpInfo(pageSize, pageNumber, id, jabberId, sortOrder, expand, state);
+             ApiResponse<UserEntityListing> localVarResponse = GetUsersWithHttpInfo(pageSize, pageNumber, id, jabberId, sortOrder, expand, integrationPresenceSource, state);
              return localVarResponse.Data;
         }
 
@@ -10583,9 +10626,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
-        public ApiResponse< UserEntityListing > GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string state = null)
+        public ApiResponse< UserEntityListing > GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
         { 
 
             var localVarPath = "/api/v2/users";
@@ -10627,6 +10671,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (jabberId != null) jabberId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("jabberId", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
             if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
 
             // Header params
@@ -10675,11 +10720,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of UserEntityListing</returns>
-        public async System.Threading.Tasks.Task<UserEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string state = null)
+        public async System.Threading.Tasks.Task<UserEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
         {
-             ApiResponse<UserEntityListing> localVarResponse = await GetUsersAsyncWithHttpInfo(pageSize, pageNumber, id, jabberId, sortOrder, expand, state);
+             ApiResponse<UserEntityListing> localVarResponse = await GetUsersAsyncWithHttpInfo(pageSize, pageNumber, id, jabberId, sortOrder, expand, integrationPresenceSource, state);
              return localVarResponse.Data;
 
         }
@@ -10694,9 +10740,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string state = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
         { 
 
             var localVarPath = "/api/v2/users";
@@ -10738,6 +10785,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (jabberId != null) jabberId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("jabberId", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
             if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
 
             // Header params
@@ -10782,10 +10830,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>UserMe</returns>
-        public UserMe GetUsersMe (List<string> expand = null)
+        public UserMe GetUsersMe (List<string> expand = null, string integrationPresenceSource = null)
         {
-             ApiResponse<UserMe> localVarResponse = GetUsersMeWithHttpInfo(expand);
+             ApiResponse<UserMe> localVarResponse = GetUsersMeWithHttpInfo(expand, integrationPresenceSource);
              return localVarResponse.Data;
         }
 
@@ -10794,8 +10843,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>ApiResponse of UserMe</returns>
-        public ApiResponse< UserMe > GetUsersMeWithHttpInfo (List<string> expand = null)
+        public ApiResponse< UserMe > GetUsersMeWithHttpInfo (List<string> expand = null, string integrationPresenceSource = null)
         { 
 
             var localVarPath = "/api/v2/users/me";
@@ -10832,6 +10882,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
 
             // Header params
 
@@ -10874,10 +10925,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>Task of UserMe</returns>
-        public async System.Threading.Tasks.Task<UserMe> GetUsersMeAsync (List<string> expand = null)
+        public async System.Threading.Tasks.Task<UserMe> GetUsersMeAsync (List<string> expand = null, string integrationPresenceSource = null)
         {
-             ApiResponse<UserMe> localVarResponse = await GetUsersMeAsyncWithHttpInfo(expand);
+             ApiResponse<UserMe> localVarResponse = await GetUsersMeAsyncWithHttpInfo(expand, integrationPresenceSource);
              return localVarResponse.Data;
 
         }
@@ -10887,8 +10939,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>Task of ApiResponse (UserMe)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserMe>> GetUsersMeAsyncWithHttpInfo (List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserMe>> GetUsersMeAsyncWithHttpInfo (List<string> expand = null, string integrationPresenceSource = null)
         { 
 
             var localVarPath = "/api/v2/users/me";
@@ -10925,6 +10978,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
 
             // Header params
 
@@ -10969,10 +11023,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
+        /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>UsersSearchResponse</returns>
-        public UsersSearchResponse GetUsersSearch (string q64, List<string> expand = null)
+        public UsersSearchResponse GetUsersSearch (string q64, List<string> expand = null, string integrationPresenceSource = null)
         {
-             ApiResponse<UsersSearchResponse> localVarResponse = GetUsersSearchWithHttpInfo(q64, expand);
+             ApiResponse<UsersSearchResponse> localVarResponse = GetUsersSearchWithHttpInfo(q64, expand, integrationPresenceSource);
              return localVarResponse.Data;
         }
 
@@ -10982,8 +11037,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
+        /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
-        public ApiResponse< UsersSearchResponse > GetUsersSearchWithHttpInfo (string q64, List<string> expand = null)
+        public ApiResponse< UsersSearchResponse > GetUsersSearchWithHttpInfo (string q64, List<string> expand = null, string integrationPresenceSource = null)
         { 
             // verify the required parameter 'q64' is set
             if (q64 == null)
@@ -11024,6 +11080,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (q64 != null) localVarQueryParams.Add(new Tuple<string, string>("q64", this.Configuration.ApiClient.ParameterToString(q64)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
 
             // Header params
 
@@ -11067,10 +11124,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
+        /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>Task of UsersSearchResponse</returns>
-        public async System.Threading.Tasks.Task<UsersSearchResponse> GetUsersSearchAsync (string q64, List<string> expand = null)
+        public async System.Threading.Tasks.Task<UsersSearchResponse> GetUsersSearchAsync (string q64, List<string> expand = null, string integrationPresenceSource = null)
         {
-             ApiResponse<UsersSearchResponse> localVarResponse = await GetUsersSearchAsyncWithHttpInfo(q64, expand);
+             ApiResponse<UsersSearchResponse> localVarResponse = await GetUsersSearchAsyncWithHttpInfo(q64, expand, integrationPresenceSource);
              return localVarResponse.Data;
 
         }
@@ -11081,8 +11139,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
+        /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetUsersSearchAsyncWithHttpInfo (string q64, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetUsersSearchAsyncWithHttpInfo (string q64, List<string> expand = null, string integrationPresenceSource = null)
         { 
             // verify the required parameter 'q64' is set
             if (q64 == null)
@@ -11124,6 +11183,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (q64 != null) localVarQueryParams.Add(new Tuple<string, string>("q64", this.Configuration.ApiClient.ParameterToString(q64)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
 
             // Header params
 

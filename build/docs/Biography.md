@@ -11,6 +11,7 @@ title: Biography
 | **Interests** | **List&lt;string&gt;** |  | [optional] |
 | **Hobbies** | **List&lt;string&gt;** |  | [optional] |
 | **Spouse** | **string** |  | [optional] |
+| **Education** | [**List&lt;Education&gt;**](Education.html) | User education details | [optional] |
 {: class="table table-striped"}
 
 

@@ -364,7 +364,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>OrphanRecordingListing</returns>
-        OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null);
+        OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null);
 
         /// <summary>
         /// Gets all orphan recordings
@@ -382,7 +382,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>ApiResponse of OrphanRecordingListing</returns>
-        ApiResponse<OrphanRecordingListing> GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null);
+        ApiResponse<OrphanRecordingListing> GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null);
         
         /// <summary>
         /// Get the status and results for a batch request job, only the user that submitted the job may retrieve results
@@ -520,7 +520,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>PolicyEntityListing</returns>
-        PolicyEntityListing GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        PolicyEntityListing GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
 
         /// <summary>
         /// Gets media retention policy list with query options to filter on name and enabled.
@@ -540,7 +540,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>ApiResponse of PolicyEntityListing</returns>
-        ApiResponse<PolicyEntityListing> GetRecordingMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        ApiResponse<PolicyEntityListing> GetRecordingMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
         
         /// <summary>
         /// Get a media retention policy
@@ -1450,7 +1450,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>Task of OrphanRecordingListing</returns>
-        System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null);
+        System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null);
 
         /// <summary>
         /// Gets all orphan recordings
@@ -1468,7 +1468,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null);
+        System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null);
         
         /// <summary>
         /// Get the status and results for a batch request job, only the user that submitted the job may retrieve results
@@ -1606,7 +1606,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>Task of PolicyEntityListing</returns>
-        System.Threading.Tasks.Task<PolicyEntityListing> GetRecordingMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        System.Threading.Tasks.Task<PolicyEntityListing> GetRecordingMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
 
         /// <summary>
         /// Gets media retention policy list with query options to filter on name and enabled.
@@ -1626,7 +1626,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
         
         /// <summary>
         /// Get a media retention policy
@@ -4977,7 +4977,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>OrphanRecordingListing</returns>
-        public OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
+        public OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
         {
              ApiResponse<OrphanRecordingListing> localVarResponse = GetOrphanrecordingsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, hasConversation, media);
              return localVarResponse.Data;
@@ -4996,7 +4996,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>ApiResponse of OrphanRecordingListing</returns>
-        public ApiResponse< OrphanRecordingListing > GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
+        public ApiResponse< OrphanRecordingListing > GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
         { 
 
             var localVarPath = "/api/v2/orphanrecordings";
@@ -5090,7 +5090,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>Task of OrphanRecordingListing</returns>
-        public async System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
+        public async System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
         {
              ApiResponse<OrphanRecordingListing> localVarResponse = await GetOrphanrecordingsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, hasConversation, media);
              return localVarResponse.Data;
@@ -5110,7 +5110,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
         { 
 
             var localVarPath = "/api/v2/orphanrecordings";
@@ -6182,7 +6182,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>PolicyEntityListing</returns>
-        public PolicyEntityListing GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public PolicyEntityListing GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
         {
              ApiResponse<PolicyEntityListing> localVarResponse = GetRecordingMediaretentionpoliciesWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors);
              return localVarResponse.Data;
@@ -6203,7 +6203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>ApiResponse of PolicyEntityListing</returns>
-        public ApiResponse< PolicyEntityListing > GetRecordingMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public ApiResponse< PolicyEntityListing > GetRecordingMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
         { 
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies";
@@ -6301,7 +6301,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>Task of PolicyEntityListing</returns>
-        public async System.Threading.Tasks.Task<PolicyEntityListing> GetRecordingMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public async System.Threading.Tasks.Task<PolicyEntityListing> GetRecordingMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
         {
              ApiResponse<PolicyEntityListing> localVarResponse = await GetRecordingMediaretentionpoliciesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors);
              return localVarResponse.Data;
@@ -6323,7 +6323,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
         { 
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies";

@@ -169,8 +169,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
+        /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>UsersSearchResponse</returns>
-        UsersSearchResponse GetUsersSearch (string q64, List<string> expand = null);
+        UsersSearchResponse GetUsersSearch (string q64, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
         /// Search users using the q64 value returned from a previous search
@@ -181,8 +182,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
+        /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
-        ApiResponse<UsersSearchResponse> GetUsersSearchWithHttpInfo (string q64, List<string> expand = null);
+        ApiResponse<UsersSearchResponse> GetUsersSearchWithHttpInfo (string q64, List<string> expand = null, string integrationPresenceSource = null);
         
         /// <summary>
         /// Search voicemails using the q64 value returned from a previous search
@@ -569,8 +571,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
+        /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>Task of UsersSearchResponse</returns>
-        System.Threading.Tasks.Task<UsersSearchResponse> GetUsersSearchAsync (string q64, List<string> expand = null);
+        System.Threading.Tasks.Task<UsersSearchResponse> GetUsersSearchAsync (string q64, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
         /// Search users using the q64 value returned from a previous search
@@ -581,8 +584,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
+        /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetUsersSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetUsersSearchAsyncWithHttpInfo (string q64, List<string> expand = null, string integrationPresenceSource = null);
         
         /// <summary>
         /// Search voicemails using the q64 value returned from a previous search
@@ -2080,10 +2084,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
+        /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>UsersSearchResponse</returns>
-        public UsersSearchResponse GetUsersSearch (string q64, List<string> expand = null)
+        public UsersSearchResponse GetUsersSearch (string q64, List<string> expand = null, string integrationPresenceSource = null)
         {
-             ApiResponse<UsersSearchResponse> localVarResponse = GetUsersSearchWithHttpInfo(q64, expand);
+             ApiResponse<UsersSearchResponse> localVarResponse = GetUsersSearchWithHttpInfo(q64, expand, integrationPresenceSource);
              return localVarResponse.Data;
         }
 
@@ -2093,8 +2098,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
+        /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
-        public ApiResponse< UsersSearchResponse > GetUsersSearchWithHttpInfo (string q64, List<string> expand = null)
+        public ApiResponse< UsersSearchResponse > GetUsersSearchWithHttpInfo (string q64, List<string> expand = null, string integrationPresenceSource = null)
         { 
             // verify the required parameter 'q64' is set
             if (q64 == null)
@@ -2135,6 +2141,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (q64 != null) localVarQueryParams.Add(new Tuple<string, string>("q64", this.Configuration.ApiClient.ParameterToString(q64)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
 
             // Header params
 
@@ -2178,10 +2185,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
+        /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>Task of UsersSearchResponse</returns>
-        public async System.Threading.Tasks.Task<UsersSearchResponse> GetUsersSearchAsync (string q64, List<string> expand = null)
+        public async System.Threading.Tasks.Task<UsersSearchResponse> GetUsersSearchAsync (string q64, List<string> expand = null, string integrationPresenceSource = null)
         {
-             ApiResponse<UsersSearchResponse> localVarResponse = await GetUsersSearchAsyncWithHttpInfo(q64, expand);
+             ApiResponse<UsersSearchResponse> localVarResponse = await GetUsersSearchAsyncWithHttpInfo(q64, expand, integrationPresenceSource);
              return localVarResponse.Data;
 
         }
@@ -2192,8 +2200,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
+        /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetUsersSearchAsyncWithHttpInfo (string q64, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetUsersSearchAsyncWithHttpInfo (string q64, List<string> expand = null, string integrationPresenceSource = null)
         { 
             // verify the required parameter 'q64' is set
             if (q64 == null)
@@ -2235,6 +2244,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (q64 != null) localVarQueryParams.Add(new Tuple<string, string>("q64", this.Configuration.ApiClient.ParameterToString(q64)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
 
             // Header params
 

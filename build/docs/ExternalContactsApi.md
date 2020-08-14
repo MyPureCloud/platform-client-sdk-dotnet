@@ -34,6 +34,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetExternalcontactsOrganizationsSchemas**](ExternalContactsApi.html#getexternalcontactsorganizationsschemas) | **GET** /api/v2/externalcontacts/organizations/schemas | Get a list of schemas. |
 | [**GetExternalcontactsRelationship**](ExternalContactsApi.html#getexternalcontactsrelationship) | **GET** /api/v2/externalcontacts/relationships/{relationshipId} | Fetch a relationship |
 | [**GetExternalcontactsReversewhitepageslookup**](ExternalContactsApi.html#getexternalcontactsreversewhitepageslookup) | **GET** /api/v2/externalcontacts/reversewhitepageslookup | Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned. |
+| [**GetExternalcontactsScanContacts**](ExternalContactsApi.html#getexternalcontactsscancontacts) | **GET** /api/v2/externalcontacts/scan/contacts | Scan for external contacts using paging |
+| [**GetExternalcontactsScanNotes**](ExternalContactsApi.html#getexternalcontactsscannotes) | **GET** /api/v2/externalcontacts/scan/notes | Scan for notes using paging |
+| [**GetExternalcontactsScanOrganizations**](ExternalContactsApi.html#getexternalcontactsscanorganizations) | **GET** /api/v2/externalcontacts/scan/organizations | Scan for external organizations using paging |
+| [**GetExternalcontactsScanRelationships**](ExternalContactsApi.html#getexternalcontactsscanrelationships) | **GET** /api/v2/externalcontacts/scan/relationships | Scan for relationships |
 | [**PostExternalcontactsContactNotes**](ExternalContactsApi.html#postexternalcontactscontactnotes) | **POST** /api/v2/externalcontacts/contacts/{contactId}/notes | Create a note for an external contact |
 | [**PostExternalcontactsContacts**](ExternalContactsApi.html#postexternalcontactscontacts) | **POST** /api/v2/externalcontacts/contacts | Create an external contact |
 | [**PostExternalcontactsContactsSchemas**](ExternalContactsApi.html#postexternalcontactscontactsschemas) | **POST** /api/v2/externalcontacts/contacts/schemas | Create a schema |
@@ -1772,6 +1776,258 @@ namespace Example
 
 [**ReverseWhitepagesLookupResult**](ReverseWhitepagesLookupResult.html)
 
+<a name="getexternalcontactsscancontacts"></a>
+
+## [**CursorContactListing**](CursorContactListing.html) GetExternalcontactsScanContacts (int? limit = null, string cursor = null)
+
+
+
+Scan for external contacts using paging
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsScanContactsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ExternalContactsApi();
+            var limit = 56;  // int? | The number of contacts per page; must be between 10 and 200, default is 100) (optional) 
+            var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional) 
+
+            try
+            { 
+                // Scan for external contacts using paging
+                CursorContactListing result = apiInstance.GetExternalcontactsScanContacts(limit, cursor);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsScanContacts: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **limit** | **int?**| The number of contacts per page; must be between 10 and 200, default is 100) | [optional]  |
+| **cursor** | **string**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CursorContactListing**](CursorContactListing.html)
+
+<a name="getexternalcontactsscannotes"></a>
+
+## [**CursorNoteListing**](CursorNoteListing.html) GetExternalcontactsScanNotes (int? limit = null, string cursor = null)
+
+
+
+Scan for notes using paging
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsScanNotesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ExternalContactsApi();
+            var limit = 56;  // int? | The number of notes per page; must be between 10 and 200, default is 100) (optional) 
+            var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional) 
+
+            try
+            { 
+                // Scan for notes using paging
+                CursorNoteListing result = apiInstance.GetExternalcontactsScanNotes(limit, cursor);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsScanNotes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **limit** | **int?**| The number of notes per page; must be between 10 and 200, default is 100) | [optional]  |
+| **cursor** | **string**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CursorNoteListing**](CursorNoteListing.html)
+
+<a name="getexternalcontactsscanorganizations"></a>
+
+## [**CursorOrganizationListing**](CursorOrganizationListing.html) GetExternalcontactsScanOrganizations (int? limit = null, string cursor = null)
+
+
+
+Scan for external organizations using paging
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsScanOrganizationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ExternalContactsApi();
+            var limit = 56;  // int? | The number of organizations per page; must be between 10 and 200, default is 100) (optional) 
+            var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional) 
+
+            try
+            { 
+                // Scan for external organizations using paging
+                CursorOrganizationListing result = apiInstance.GetExternalcontactsScanOrganizations(limit, cursor);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsScanOrganizations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **limit** | **int?**| The number of organizations per page; must be between 10 and 200, default is 100) | [optional]  |
+| **cursor** | **string**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CursorOrganizationListing**](CursorOrganizationListing.html)
+
+<a name="getexternalcontactsscanrelationships"></a>
+
+## [**CursorRelationshipListing**](CursorRelationshipListing.html) GetExternalcontactsScanRelationships (int? limit = null, string cursor = null)
+
+
+
+Scan for relationships
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsScanRelationshipsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ExternalContactsApi();
+            var limit = 56;  // int? | The number of relationships per page; must be between 10 and 200, default is 100) (optional) 
+            var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional) 
+
+            try
+            { 
+                // Scan for relationships
+                CursorRelationshipListing result = apiInstance.GetExternalcontactsScanRelationships(limit, cursor);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsScanRelationships: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **limit** | **int?**| The number of relationships per page; must be between 10 and 200, default is 100) | [optional]  |
+| **cursor** | **string**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CursorRelationshipListing**](CursorRelationshipListing.html)
+
 <a name="postexternalcontactscontactnotes"></a>
 
 ## [**Note**](Note.html) PostExternalcontactsContactNotes (string contactId, Note body)
@@ -2398,7 +2654,7 @@ namespace Example
 
 <a name="putexternalcontactsconversation"></a>
 
-## void PutExternalcontactsConversation (string conversationId, ConversationAssociation body)
+## void PutExternalcontactsConversation (ConversationAssociation body, string conversationId)
 
 
 
@@ -2428,13 +2684,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            var conversationId = conversationId_example;  // string | Conversation ID
             var body = new ConversationAssociation(); // ConversationAssociation | ConversationAssociation
+            var conversationId = conversationId_example;  // string | Conversation ID
 
             try
             { 
                 // Associate/disassociate an external contact with a conversation
-                apiInstance.PutExternalcontactsConversation(conversationId, body);
+                apiInstance.PutExternalcontactsConversation(body, conversationId);
             }
             catch (Exception e)
             {
@@ -2450,8 +2706,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **conversationId** | **string**| Conversation ID |  |
 | **body** | [**ConversationAssociation**](ConversationAssociation.html)| ConversationAssociation |  |
+| **conversationId** | **string**| Conversation ID |  |
 {: class="table table-striped"}
 
 ### Return type

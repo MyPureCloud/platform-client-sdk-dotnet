@@ -15,6 +15,7 @@ title: PhoneCapabilities
 | **NoRebalance** | **bool?** |  | [optional] |
 | **NoCloudProvisioning** | **bool?** |  | [optional] |
 | **MediaCodecs** | **List&lt;string&gt;** |  | [optional] |
+| **Cdm** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 

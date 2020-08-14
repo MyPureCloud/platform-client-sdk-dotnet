@@ -26,6 +26,7 @@ title: QueueConversationSocialExpressionEventTopicEmail
 | **DraftAttachments** | [**List&lt;QueueConversationSocialExpressionEventTopicAttachment&gt;**](QueueConversationSocialExpressionEventTopicAttachment.html) |  | [optional] |
 | **Spam** | **bool?** |  | [optional] |
 | **Wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup.html) |  | [optional] |
+| **AfterCallWork** | [**QueueConversationSocialExpressionEventTopicAfterCallWork**](QueueConversationSocialExpressionEventTopicAfterCallWork.html) |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

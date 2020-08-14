@@ -239,6 +239,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -256,6 +259,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
         
         
         
@@ -304,7 +309,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
         /// <param name="Segments">The time line of the participant&#39;s call, divided into activity segments..</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
-        public Cobrowsesession(StateEnum? State = null, string Id = null, DisconnectTypeEnum? DisconnectType = null, Address Self = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, DateTime? ProviderEventTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string PeerId = null, List<Segment> Segments = null, Wrapup Wrapup = null)
+        /// <param name="AfterCallWork">After-call work for the communication..</param>
+        public Cobrowsesession(StateEnum? State = null, string Id = null, DisconnectTypeEnum? DisconnectType = null, Address Self = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, DateTime? ProviderEventTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string PeerId = null, List<Segment> Segments = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null)
         {
             this.State = State;
             this.Id = Id;
@@ -322,6 +328,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PeerId = PeerId;
             this.Segments = Segments;
             this.Wrapup = Wrapup;
+            this.AfterCallWork = AfterCallWork;
             
         }
         
@@ -456,6 +463,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Wrapup Wrapup { get; set; }
         
         
+        
+        /// <summary>
+        /// After-call work for the communication.
+        /// </summary>
+        /// <value>After-call work for the communication.</value>
+        [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
+        public AfterCallWork AfterCallWork { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -481,6 +497,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
             sb.Append("  Segments: ").Append(Segments).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -596,6 +613,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Wrapup == other.Wrapup ||
                     this.Wrapup != null &&
                     this.Wrapup.Equals(other.Wrapup)
+                ) &&
+                (
+                    this.AfterCallWork == other.AfterCallWork ||
+                    this.AfterCallWork != null &&
+                    this.AfterCallWork.Equals(other.AfterCallWork)
                 );
         }
 
@@ -658,6 +680,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                
+                if (this.AfterCallWork != null)
+                    hash = hash * 59 + this.AfterCallWork.GetHashCode();
                 
                 return hash;
             }

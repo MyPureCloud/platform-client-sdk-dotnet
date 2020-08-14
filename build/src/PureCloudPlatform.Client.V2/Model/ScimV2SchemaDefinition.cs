@@ -40,21 +40,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2SchemaDefinition" /> class.
         /// </summary>
         /// <param name="Attributes">The list of service provider attributes..</param>
-        /// <param name="Meta">The metadata of the SCIM resource..</param>
-        public ScimV2SchemaDefinition(List<ScimV2SchemaAttribute> Attributes = null, ScimMetadata Meta = null)
+        public ScimV2SchemaDefinition(List<ScimV2SchemaAttribute> Attributes = null)
         {
             this.Attributes = Attributes;
-            this.Meta = Meta;
             
         }
         
@@ -95,15 +88,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ScimV2SchemaAttribute> Attributes { get; set; }
         
         
-        
-        /// <summary>
-        /// The metadata of the SCIM resource.
-        /// </summary>
-        /// <value>The metadata of the SCIM resource.</value>
-        [DataMember(Name="meta", EmitDefaultValue=false)]
-        public ScimMetadata Meta { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -117,7 +101,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
-            sb.Append("  Meta: ").Append(Meta).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -173,11 +156,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Attributes == other.Attributes ||
                     this.Attributes != null &&
                     this.Attributes.SequenceEqual(other.Attributes)
-                ) &&
-                (
-                    this.Meta == other.Meta ||
-                    this.Meta != null &&
-                    this.Meta.Equals(other.Meta)
                 );
         }
 
@@ -204,9 +182,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
-                
-                if (this.Meta != null)
-                    hash = hash * 59 + this.Meta.GetHashCode();
                 
                 return hash;
             }

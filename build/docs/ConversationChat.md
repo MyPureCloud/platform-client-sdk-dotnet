@@ -25,6 +25,7 @@ title: ConversationChat
 | **AvatarImageUrl** | **string** | If available, the URI to the avatar image of this communication. | [optional] |
 | **JourneyContext** | [**JourneyContext**](JourneyContext.html) | A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context). | [optional] |
 | **Wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
+| **AfterCallWork** | [**AfterCallWork**](AfterCallWork.html) | After-call work for the communication. | [optional] |
 {: class="table table-striped"}
 
 

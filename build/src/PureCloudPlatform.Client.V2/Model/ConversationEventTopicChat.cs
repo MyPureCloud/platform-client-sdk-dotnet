@@ -240,6 +240,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -281,6 +284,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationEventTopicChat" /> class.
@@ -299,8 +304,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="JourneyContext">JourneyContext.</param>
         /// <param name="Wrapup">Wrapup.</param>
+        /// <param name="AfterCallWork">AfterCallWork.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationEventTopicChat(StateEnum? State = null, string Id = null, string Provider = null, string ScriptId = null, string PeerId = null, string RoomId = null, string AvatarImageUrl = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, ConversationEventTopicJourneyContext JourneyContext = null, ConversationEventTopicWrapup Wrapup = null, Object AdditionalProperties = null)
+        public ConversationEventTopicChat(StateEnum? State = null, string Id = null, string Provider = null, string ScriptId = null, string PeerId = null, string RoomId = null, string AvatarImageUrl = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, ConversationEventTopicJourneyContext JourneyContext = null, ConversationEventTopicWrapup Wrapup = null, ConversationEventTopicAfterCallWork AfterCallWork = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Id = Id;
@@ -316,6 +322,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DisconnectedTime = DisconnectedTime;
             this.JourneyContext = JourneyContext;
             this.Wrapup = Wrapup;
+            this.AfterCallWork = AfterCallWork;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -423,6 +430,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets AfterCallWork
+        /// </summary>
+        [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
+        public ConversationEventTopicAfterCallWork AfterCallWork { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -452,6 +467,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -560,6 +576,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Wrapup.Equals(other.Wrapup)
                 ) &&
                 (
+                    this.AfterCallWork == other.AfterCallWork ||
+                    this.AfterCallWork != null &&
+                    this.AfterCallWork.Equals(other.AfterCallWork)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -619,6 +640,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                
+                if (this.AfterCallWork != null)
+                    hash = hash * 59 + this.AfterCallWork.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

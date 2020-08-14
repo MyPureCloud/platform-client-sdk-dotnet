@@ -29,6 +29,7 @@ title: Email
 | **DraftAttachments** | [**List&lt;Attachment&gt;**](Attachment.html) | A list of uploaded attachments on the email draft. | [optional] |
 | **Spam** | **bool?** | Indicates if the inbound email was marked as spam. | [optional] |
 | **Wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
+| **AfterCallWork** | [**AfterCallWork**](AfterCallWork.html) | After-call work for the communication. | [optional] |
 {: class="table table-striped"}
 
 

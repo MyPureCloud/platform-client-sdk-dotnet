@@ -176,7 +176,7 @@ namespace PureCloudPlatform.Client.V2.Tests
         [Test, Order(6)]
         public void GetUser()
         {
-            var user = usersApi.GetUser(userId, new List<string>() { "profileSkills" }, null);
+            var user = usersApi.GetUser(userId, new List<string>() { "profileSkills" }, null, null);
 
             Assert.AreEqual(user.Id, userId);
             Assert.AreEqual(user.Name, userName);

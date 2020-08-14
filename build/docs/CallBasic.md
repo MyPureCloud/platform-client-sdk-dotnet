@@ -33,6 +33,7 @@ title: CallBasic
 | **Self** | [**Address**](Address.html) | Address and name data for a call endpoint. | [optional] |
 | **Other** | [**Address**](Address.html) | Address and name data for a call endpoint. | [optional] |
 | **Wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
+| **AfterCallWork** | [**AfterCallWork**](AfterCallWork.html) | After-call work for the communication. | [optional] |
 {: class="table table-striped"}
 
 

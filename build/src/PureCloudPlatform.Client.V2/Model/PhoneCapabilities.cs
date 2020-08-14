@@ -107,6 +107,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneCapabilities" /> class.
@@ -119,7 +124,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NoRebalance">NoRebalance.</param>
         /// <param name="NoCloudProvisioning">NoCloudProvisioning.</param>
         /// <param name="MediaCodecs">MediaCodecs.</param>
-        public PhoneCapabilities(bool? Provisions = null, bool? Registers = null, bool? DualRegisters = null, string HardwareIdType = null, bool? AllowReboot = null, bool? NoRebalance = null, bool? NoCloudProvisioning = null, List<MediaCodecsEnum> MediaCodecs = null)
+        /// <param name="Cdm">Cdm.</param>
+        public PhoneCapabilities(bool? Provisions = null, bool? Registers = null, bool? DualRegisters = null, string HardwareIdType = null, bool? AllowReboot = null, bool? NoRebalance = null, bool? NoCloudProvisioning = null, List<MediaCodecsEnum> MediaCodecs = null, bool? Cdm = null)
         {
             this.Provisions = Provisions;
             this.Registers = Registers;
@@ -129,6 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.NoRebalance = NoRebalance;
             this.NoCloudProvisioning = NoCloudProvisioning;
             this.MediaCodecs = MediaCodecs;
+            this.Cdm = Cdm;
             
         }
         
@@ -197,6 +204,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<MediaCodecsEnum> MediaCodecs { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets Cdm
+        /// </summary>
+        [DataMember(Name="cdm", EmitDefaultValue=false)]
+        public bool? Cdm { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -214,6 +229,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  NoRebalance: ").Append(NoRebalance).Append("\n");
             sb.Append("  NoCloudProvisioning: ").Append(NoCloudProvisioning).Append("\n");
             sb.Append("  MediaCodecs: ").Append(MediaCodecs).Append("\n");
+            sb.Append("  Cdm: ").Append(Cdm).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -289,6 +305,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaCodecs == other.MediaCodecs ||
                     this.MediaCodecs != null &&
                     this.MediaCodecs.SequenceEqual(other.MediaCodecs)
+                ) &&
+                (
+                    this.Cdm == other.Cdm ||
+                    this.Cdm != null &&
+                    this.Cdm.Equals(other.Cdm)
                 );
         }
 
@@ -327,6 +348,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MediaCodecs != null)
                     hash = hash * 59 + this.MediaCodecs.GetHashCode();
+                
+                if (this.Cdm != null)
+                    hash = hash * 59 + this.Cdm.GetHashCode();
                 
                 return hash;
             }

@@ -136,6 +136,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
@@ -153,6 +156,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Contact" /> class.
@@ -161,12 +166,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaType">MediaType.</param>
         /// <param name="Type">Type.</param>
         /// <param name="Extension">Use internal extension instead of address. Mutually exclusive with the address field..</param>
-        public Contact(string Address = null, MediaTypeEnum? MediaType = null, TypeEnum? Type = null, string Extension = null)
+        /// <param name="CountryCode">CountryCode.</param>
+        public Contact(string Address = null, MediaTypeEnum? MediaType = null, TypeEnum? Type = null, string Extension = null, string CountryCode = null)
         {
             this.Address = Address;
             this.MediaType = MediaType;
             this.Type = Type;
             this.Extension = Extension;
+            this.CountryCode = CountryCode;
             
         }
         
@@ -202,6 +209,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Extension { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets CountryCode
+        /// </summary>
+        [DataMember(Name="countryCode", EmitDefaultValue=false)]
+        public string CountryCode { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -216,6 +231,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Extension: ").Append(Extension).Append("\n");
+            sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -276,6 +292,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Extension == other.Extension ||
                     this.Extension != null &&
                     this.Extension.Equals(other.Extension)
+                ) &&
+                (
+                    this.CountryCode == other.CountryCode ||
+                    this.CountryCode != null &&
+                    this.CountryCode.Equals(other.CountryCode)
                 );
         }
 
@@ -305,6 +326,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Extension != null)
                     hash = hash * 59 + this.Extension.GetHashCode();
+                
+                if (this.CountryCode != null)
+                    hash = hash * 59 + this.CountryCode.GetHashCode();
                 
                 return hash;
             }

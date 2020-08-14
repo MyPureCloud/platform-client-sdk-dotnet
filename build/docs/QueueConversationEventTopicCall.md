@@ -30,6 +30,7 @@ title: QueueConversationEventTopicCall
 | **FaxStatus** | [**QueueConversationEventTopicFaxStatus**](QueueConversationEventTopicFaxStatus.html) |  | [optional] |
 | **UuiData** | **string** |  | [optional] |
 | **Wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup.html) |  | [optional] |
+| **AfterCallWork** | [**QueueConversationEventTopicAfterCallWork**](QueueConversationEventTopicAfterCallWork.html) |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

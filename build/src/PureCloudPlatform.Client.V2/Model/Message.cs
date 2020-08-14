@@ -319,6 +319,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -390,6 +393,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Message" /> class.
@@ -416,7 +421,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FromAddress">Address and name data for a call endpoint..</param>
         /// <param name="Messages">The messages sent on this communication channel..</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
-        public Message(StateEnum? State = null, string Id = null, bool? Held = null, List<Segment> Segments = null, DirectionEnum? Direction = null, string RecordingId = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ScriptId = null, string PeerId = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, Wrapup Wrapup = null)
+        /// <param name="AfterCallWork">After-call work for the communication..</param>
+        public Message(StateEnum? State = null, string Id = null, bool? Held = null, List<Segment> Segments = null, DirectionEnum? Direction = null, string RecordingId = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ScriptId = null, string PeerId = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null)
         {
             this.State = State;
             this.Id = Id;
@@ -440,6 +446,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FromAddress = FromAddress;
             this.Messages = Messages;
             this.Wrapup = Wrapup;
+            this.AfterCallWork = AfterCallWork;
             
         }
         
@@ -613,6 +620,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Wrapup Wrapup { get; set; }
         
         
+        
+        /// <summary>
+        /// After-call work for the communication.
+        /// </summary>
+        /// <value>After-call work for the communication.</value>
+        [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
+        public AfterCallWork AfterCallWork { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -644,6 +660,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FromAddress: ").Append(FromAddress).Append("\n");
             sb.Append("  Messages: ").Append(Messages).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -789,6 +806,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Wrapup == other.Wrapup ||
                     this.Wrapup != null &&
                     this.Wrapup.Equals(other.Wrapup)
+                ) &&
+                (
+                    this.AfterCallWork == other.AfterCallWork ||
+                    this.AfterCallWork != null &&
+                    this.AfterCallWork.Equals(other.AfterCallWork)
                 );
         }
 
@@ -869,6 +891,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                
+                if (this.AfterCallWork != null)
+                    hash = hash * 59 + this.AfterCallWork.GetHashCode();
                 
                 return hash;
             }

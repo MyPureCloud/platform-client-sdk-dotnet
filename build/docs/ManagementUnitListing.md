@@ -14,8 +14,8 @@ title: ManagementUnitListing
 | **FirstUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-| **LastUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
+| **LastUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 {: class="table table-striped"}
 

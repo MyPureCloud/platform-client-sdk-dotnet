@@ -245,6 +245,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -290,6 +293,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Video" /> class.
@@ -310,7 +315,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Msids">List of media stream ids.</param>
         /// <param name="Self">Address and name data for a call endpoint..</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
-        public Video(StateEnum? State = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string PeerId = null, List<string> Msids = null, Address Self = null, Wrapup Wrapup = null)
+        /// <param name="AfterCallWork">After-call work for the communication..</param>
+        public Video(StateEnum? State = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string PeerId = null, List<string> Msids = null, Address Self = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null)
         {
             this.State = State;
             this.Id = Id;
@@ -328,6 +334,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Msids = Msids;
             this.Self = Self;
             this.Wrapup = Wrapup;
+            this.AfterCallWork = AfterCallWork;
             
         }
         
@@ -462,6 +469,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Wrapup Wrapup { get; set; }
         
         
+        
+        /// <summary>
+        /// After-call work for the communication.
+        /// </summary>
+        /// <value>After-call work for the communication.</value>
+        [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
+        public AfterCallWork AfterCallWork { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -487,6 +503,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Msids: ").Append(Msids).Append("\n");
             sb.Append("  Self: ").Append(Self).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -602,6 +619,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Wrapup == other.Wrapup ||
                     this.Wrapup != null &&
                     this.Wrapup.Equals(other.Wrapup)
+                ) &&
+                (
+                    this.AfterCallWork == other.AfterCallWork ||
+                    this.AfterCallWork != null &&
+                    this.AfterCallWork.Equals(other.AfterCallWork)
                 );
         }
 
@@ -664,6 +686,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                
+                if (this.AfterCallWork != null)
+                    hash = hash * 59 + this.AfterCallWork.GetHashCode();
                 
                 return hash;
             }

@@ -75,6 +75,37 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 10.
+        /// </summary>
+        /// <value>Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 10.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum IntegrationPresenceSourceEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Microsoftteams for "MicrosoftTeams"
+            /// </summary>
+            [EnumMember(Value = "MicrosoftTeams")]
+            Microsoftteams,
+            
+            /// <summary>
+            /// Enum Zoomphone for "ZoomPhone"
+            /// </summary>
+            [EnumMember(Value = "ZoomPhone")]
+            Zoomphone
+        }
+        
+        
+        
+        
         
         /// <summary>
         /// The sort order for results
@@ -96,6 +127,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 10.
+        /// </summary>
+        /// <value>Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 10.</value>
+        [DataMember(Name="integrationPresenceSource", EmitDefaultValue=false)]
+        public IntegrationPresenceSourceEnum? IntegrationPresenceSource { get; set; }
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserSearchRequest" /> class.
@@ -107,7 +147,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Sort">Multi-value sort order, list of multiple sort values.</param>
         /// <param name="Expand">Provides more details about a specified resource.</param>
         /// <param name="Query">Query.</param>
-        public UserSearchRequest(SortOrderEnum? SortOrder = null, string SortBy = null, int? PageSize = null, int? PageNumber = null, List<SearchSort> Sort = null, List<string> Expand = null, List<UserSearchCriteria> Query = null)
+        /// <param name="IntegrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10..</param>
+        public UserSearchRequest(SortOrderEnum? SortOrder = null, string SortBy = null, int? PageSize = null, int? PageNumber = null, List<SearchSort> Sort = null, List<string> Expand = null, List<UserSearchCriteria> Query = null, IntegrationPresenceSourceEnum? IntegrationPresenceSource = null)
         {
             this.SortOrder = SortOrder;
             this.SortBy = SortBy;
@@ -116,6 +157,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Sort = Sort;
             this.Expand = Expand;
             this.Query = Query;
+            this.IntegrationPresenceSource = IntegrationPresenceSource;
             
         }
         
@@ -175,6 +217,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<UserSearchCriteria> Query { get; set; }
         
         
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -191,6 +235,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Sort: ").Append(Sort).Append("\n");
             sb.Append("  Expand: ").Append(Expand).Append("\n");
             sb.Append("  Query: ").Append(Query).Append("\n");
+            sb.Append("  IntegrationPresenceSource: ").Append(IntegrationPresenceSource).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -261,6 +306,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Query == other.Query ||
                     this.Query != null &&
                     this.Query.SequenceEqual(other.Query)
+                ) &&
+                (
+                    this.IntegrationPresenceSource == other.IntegrationPresenceSource ||
+                    this.IntegrationPresenceSource != null &&
+                    this.IntegrationPresenceSource.Equals(other.IntegrationPresenceSource)
                 );
         }
 
@@ -296,6 +346,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Query != null)
                     hash = hash * 59 + this.Query.GetHashCode();
+                
+                if (this.IntegrationPresenceSource != null)
+                    hash = hash * 59 + this.IntegrationPresenceSource.GetHashCode();
                 
                 return hash;
             }
