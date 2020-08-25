@@ -55,16 +55,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimConfigResourceType" /> class.
         /// </summary>
         /// <param name="Schemas">The list of supported schemas..</param>
         /// <param name="SchemaExtensions">The list of schema extensions for the resource type..</param>
-        public ScimConfigResourceType(List<string> Schemas = null, List<ScimConfigResourceTypeSchemaExtension> SchemaExtensions = null)
+        /// <param name="Meta">The metadata of the SCIM resource. Only location and resourceType are set for ResourceType resources..</param>
+        public ScimConfigResourceType(List<string> Schemas = null, List<ScimConfigResourceTypeSchemaExtension> SchemaExtensions = null, ScimMetadata Meta = null)
         {
             this.Schemas = Schemas;
             this.SchemaExtensions = SchemaExtensions;
+            this.Meta = Meta;
             
         }
         
@@ -132,6 +139,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Endpoint { get; private set; }
         
         
+        
+        /// <summary>
+        /// The metadata of the SCIM resource. Only location and resourceType are set for ResourceType resources.
+        /// </summary>
+        /// <value>The metadata of the SCIM resource. Only location and resourceType are set for ResourceType resources.</value>
+        [DataMember(Name="meta", EmitDefaultValue=false)]
+        public ScimMetadata Meta { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -148,6 +164,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Schema: ").Append(Schema).Append("\n");
             sb.Append("  SchemaExtensions: ").Append(SchemaExtensions).Append("\n");
             sb.Append("  Endpoint: ").Append(Endpoint).Append("\n");
+            sb.Append("  Meta: ").Append(Meta).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -218,6 +235,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Endpoint == other.Endpoint ||
                     this.Endpoint != null &&
                     this.Endpoint.Equals(other.Endpoint)
+                ) &&
+                (
+                    this.Meta == other.Meta ||
+                    this.Meta != null &&
+                    this.Meta.Equals(other.Meta)
                 );
         }
 
@@ -253,6 +275,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Endpoint != null)
                     hash = hash * 59 + this.Endpoint.GetHashCode();
+                
+                if (this.Meta != null)
+                    hash = hash * 59 + this.Meta.GetHashCode();
                 
                 return hash;
             }

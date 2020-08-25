@@ -565,7 +565,7 @@ namespace Example
 
 <a name="getconversationrecordingmetadata"></a>
 
-## [**List&lt;Recording&gt;**](Recording.html) GetConversationRecordingmetadata (string conversationId)
+## [**List&lt;RecordingMetadata&gt;**](RecordingMetadata.html) GetConversationRecordingmetadata (string conversationId)
 
 
 
@@ -599,7 +599,7 @@ namespace Example
             try
             { 
                 // Get recording metadata for a conversation. Does not return playable media.
-                List&lt;Recording&gt; result = apiInstance.GetConversationRecordingmetadata(conversationId);
+                List&lt;RecordingMetadata&gt; result = apiInstance.GetConversationRecordingmetadata(conversationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -621,7 +621,7 @@ namespace Example
 
 ### Return type
 
-[**List<Recording>**](Recording.html)
+[**List<RecordingMetadata>**](RecordingMetadata.html)
 
 <a name="getconversationrecordingmetadatarecordingid"></a>
 
@@ -889,7 +889,7 @@ namespace Example
 
 <a name="getorphanrecordings"></a>
 
-## [**OrphanRecordingListing**](OrphanRecordingListing.html) GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
+## [**OrphanRecordingListing**](OrphanRecordingListing.html) GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
 
 
 
@@ -922,7 +922,7 @@ namespace Example
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
             var hasConversation = true;  // bool? | Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional)  (default to false)
@@ -951,7 +951,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **hasConversation** | **bool?**| Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. | [optional] [default to false] |
@@ -1273,7 +1273,7 @@ This endpoint does require any parameters.
 
 <a name="getrecordingmediaretentionpolicies"></a>
 
-## [**PolicyEntityListing**](PolicyEntityListing.html) GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+## [**PolicyEntityListing**](PolicyEntityListing.html) GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
 
 
 
@@ -1306,7 +1306,7 @@ namespace Example
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
             var name = name_example;  // string | the policy name - used for filtering results in searches. (optional) 
@@ -1337,7 +1337,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **name** | **string**| the policy name - used for filtering results in searches. | [optional]  |

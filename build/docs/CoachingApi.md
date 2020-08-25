@@ -550,7 +550,7 @@ namespace Example
 
 <a name="getcoachingnotification"></a>
 
-## [**CoachingNotification**](CoachingNotification.html) GetCoachingNotification (string notificationId)
+## [**CoachingNotification**](CoachingNotification.html) GetCoachingNotification (string notificationId, List<string> expand = null)
 
 
 
@@ -581,11 +581,12 @@ namespace Example
 
             var apiInstance = new CoachingApi();
             var notificationId = notificationId_example;  // string | The ID of the notification.
+            var expand = new List<string>(); // List<string> | Indicates a field in the response which should be expanded. (optional) 
 
             try
             { 
                 // Get an existing notification
-                CoachingNotification result = apiInstance.GetCoachingNotification(notificationId);
+                CoachingNotification result = apiInstance.GetCoachingNotification(notificationId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -603,6 +604,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **notificationId** | **string**| The ID of the notification. |  |
+| **expand** | [**List<string>**](string.html)| Indicates a field in the response which should be expanded. | [optional] <br />**Values**: appointment |
 {: class="table table-striped"}
 
 ### Return type
@@ -611,7 +613,7 @@ namespace Example
 
 <a name="getcoachingnotifications"></a>
 
-## [**CoachingNotificationList**](CoachingNotificationList.html) GetCoachingNotifications (int? pageNumber = null, int? pageSize = null)
+## [**CoachingNotificationList**](CoachingNotificationList.html) GetCoachingNotifications (int? pageNumber = null, int? pageSize = null, List<string> expand = null)
 
 
 
@@ -642,11 +644,12 @@ namespace Example
             var apiInstance = new CoachingApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var expand = new List<string>(); // List<string> | Indicates a field in the response which should be expanded. (optional) 
 
             try
             { 
                 // Retrieve the list of your notifications.
-                CoachingNotificationList result = apiInstance.GetCoachingNotifications(pageNumber, pageSize);
+                CoachingNotificationList result = apiInstance.GetCoachingNotifications(pageNumber, pageSize, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -665,6 +668,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **expand** | [**List<string>**](string.html)| Indicates a field in the response which should be expanded. | [optional] <br />**Values**: appointment |
 {: class="table table-striped"}
 
 ### Return type

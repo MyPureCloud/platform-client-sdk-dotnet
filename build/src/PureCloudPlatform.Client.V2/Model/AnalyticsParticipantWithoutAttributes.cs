@@ -194,9 +194,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// The participant's purpose
         /// </summary>
@@ -222,8 +219,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsParticipantWithoutAttributes" /> class.
@@ -236,9 +231,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalOrganizationId">External Organization Identifier.</param>
         /// <param name="FlaggedReason">Reason for which participant flagged conversation.</param>
         /// <param name="TeamId">The team id the user is a member of.</param>
-        /// <param name="AgentAssistantIds">Unique identifiers of the active virtual agent assistants.</param>
         /// <param name="Sessions">List of sessions associated to this participant.</param>
-        public AnalyticsParticipantWithoutAttributes(string ParticipantId = null, string ParticipantName = null, string UserId = null, PurposeEnum? Purpose = null, string ExternalContactId = null, string ExternalOrganizationId = null, FlaggedReasonEnum? FlaggedReason = null, string TeamId = null, List<string> AgentAssistantIds = null, List<AnalyticsSession> Sessions = null)
+        public AnalyticsParticipantWithoutAttributes(string ParticipantId = null, string ParticipantName = null, string UserId = null, PurposeEnum? Purpose = null, string ExternalContactId = null, string ExternalOrganizationId = null, FlaggedReasonEnum? FlaggedReason = null, string TeamId = null, List<AnalyticsSession> Sessions = null)
         {
             this.ParticipantId = ParticipantId;
             this.ParticipantName = ParticipantName;
@@ -248,7 +242,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalOrganizationId = ExternalOrganizationId;
             this.FlaggedReason = FlaggedReason;
             this.TeamId = TeamId;
-            this.AgentAssistantIds = AgentAssistantIds;
             this.Sessions = Sessions;
             
         }
@@ -314,15 +307,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Unique identifiers of the active virtual agent assistants
-        /// </summary>
-        /// <value>Unique identifiers of the active virtual agent assistants</value>
-        [DataMember(Name="agentAssistantIds", EmitDefaultValue=false)]
-        public List<string> AgentAssistantIds { get; set; }
-        
-        
-        
-        /// <summary>
         /// List of sessions associated to this participant
         /// </summary>
         /// <value>List of sessions associated to this participant</value>
@@ -347,7 +331,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             sb.Append("  TeamId: ").Append(TeamId).Append("\n");
-            sb.Append("  AgentAssistantIds: ").Append(AgentAssistantIds).Append("\n");
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -426,11 +409,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TeamId.Equals(other.TeamId)
                 ) &&
                 (
-                    this.AgentAssistantIds == other.AgentAssistantIds ||
-                    this.AgentAssistantIds != null &&
-                    this.AgentAssistantIds.SequenceEqual(other.AgentAssistantIds)
-                ) &&
-                (
                     this.Sessions == other.Sessions ||
                     this.Sessions != null &&
                     this.Sessions.SequenceEqual(other.Sessions)
@@ -472,9 +450,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TeamId != null)
                     hash = hash * 59 + this.TeamId.GetHashCode();
-                
-                if (this.AgentAssistantIds != null)
-                    hash = hash * 59 + this.AgentAssistantIds.GetHashCode();
                 
                 if (this.Sessions != null)
                     hash = hash * 59 + this.Sessions.GetHashCode();

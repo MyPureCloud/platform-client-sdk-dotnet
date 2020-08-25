@@ -1828,9 +1828,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -1838,9 +1838,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1931,9 +1931,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -1941,9 +1941,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2034,9 +2034,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -2044,9 +2044,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2138,9 +2138,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -2148,9 +2148,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2240,9 +2240,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -2250,9 +2250,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2343,9 +2343,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -2353,9 +2353,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2446,9 +2446,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -2456,9 +2456,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2550,9 +2550,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -2560,9 +2560,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2657,9 +2657,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -2667,9 +2667,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2767,9 +2767,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -2777,9 +2777,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2875,9 +2875,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -2885,9 +2885,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2984,9 +2984,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -2994,9 +2994,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3088,9 +3088,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -3098,9 +3098,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3189,9 +3189,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -3199,9 +3199,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3284,9 +3284,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -3294,9 +3294,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3378,9 +3378,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -3388,9 +3388,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3477,9 +3477,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -3487,9 +3487,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3578,9 +3578,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -3588,9 +3588,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3675,9 +3675,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -3685,9 +3685,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3772,9 +3772,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -3782,9 +3782,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3869,9 +3869,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -3879,9 +3879,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3966,9 +3966,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -3976,9 +3976,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4072,9 +4072,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -4082,9 +4082,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4182,9 +4182,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -4192,9 +4192,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4290,9 +4290,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -4300,9 +4300,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4399,9 +4399,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -4409,9 +4409,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4509,9 +4509,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -4519,9 +4519,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4619,9 +4619,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -4629,9 +4629,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4730,9 +4730,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -4740,9 +4740,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4843,9 +4843,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -4853,9 +4853,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4947,9 +4947,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -4957,9 +4957,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5048,9 +5048,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -5058,9 +5058,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5143,9 +5143,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -5153,9 +5153,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5237,9 +5237,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -5247,9 +5247,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5336,9 +5336,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -5346,9 +5346,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5437,9 +5437,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -5447,9 +5447,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5534,9 +5534,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -5544,9 +5544,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5631,9 +5631,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -5641,9 +5641,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5728,9 +5728,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -5738,9 +5738,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5825,9 +5825,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -5835,9 +5835,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5931,9 +5931,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -5941,9 +5941,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6041,9 +6041,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -6051,9 +6051,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6149,9 +6149,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -6159,9 +6159,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6258,9 +6258,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -6268,9 +6268,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6369,9 +6369,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -6379,9 +6379,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6484,9 +6484,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -6494,9 +6494,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6597,9 +6597,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -6607,9 +6607,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6712,9 +6712,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -6722,9 +6722,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6825,9 +6825,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -6835,9 +6835,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6940,9 +6940,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -6950,9 +6950,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7053,9 +7053,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -7063,9 +7063,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7168,9 +7168,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -7178,9 +7178,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7274,9 +7274,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -7284,9 +7284,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7379,9 +7379,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -7389,9 +7389,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7483,9 +7483,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -7493,9 +7493,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7588,9 +7588,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -7598,9 +7598,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7692,9 +7692,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -7702,9 +7702,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7797,9 +7797,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -7807,9 +7807,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7901,9 +7901,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -7911,9 +7911,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8006,9 +8006,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -8016,9 +8016,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8117,9 +8117,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -8127,9 +8127,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8232,9 +8232,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -8242,9 +8242,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8345,9 +8345,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -8355,9 +8355,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8460,9 +8460,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -8470,9 +8470,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8573,9 +8573,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -8583,9 +8583,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8688,9 +8688,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -8698,9 +8698,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8801,9 +8801,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -8811,9 +8811,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8916,9 +8916,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -8926,9 +8926,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 
-                "application/scim+json", 
+                "application/json", 
                 
-                "application/json"
+                "application/scim+json"
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);

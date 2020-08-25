@@ -16,7 +16,7 @@ title: CoachingNotification
 | **LengthInMinutes** | **int?** | The duration of the appointment on this notification | [optional] |
 | **Status** | **string** | The status of the appointment for this notification | [optional] |
 | **User** | [**UserReference**](UserReference.html) | The user of this notification | [optional] |
-| **Appointment** | [**CoachingAppointmentReference**](CoachingAppointmentReference.html) | The appointment | [optional] |
+| **Appointment** | [**CoachingAppointmentResponse**](CoachingAppointmentResponse.html) | The appointment | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

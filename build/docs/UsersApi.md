@@ -2672,7 +2672,7 @@ Join or unjoin a queue for a user
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:queue:join
 

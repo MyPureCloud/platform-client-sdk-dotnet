@@ -703,6 +703,122 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets UsedRoutingTypes
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum UsedRoutingTypesEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Predictive for "Predictive"
+            /// </summary>
+            [EnumMember(Value = "Predictive")]
+            Predictive,
+            
+            /// <summary>
+            /// Enum Preferred for "Preferred"
+            /// </summary>
+            [EnumMember(Value = "Preferred")]
+            Preferred,
+            
+            /// <summary>
+            /// Enum Manual for "Manual"
+            /// </summary>
+            [EnumMember(Value = "Manual")]
+            Manual,
+            
+            /// <summary>
+            /// Enum Last for "Last"
+            /// </summary>
+            [EnumMember(Value = "Last")]
+            Last,
+            
+            /// <summary>
+            /// Enum Bullseye for "Bullseye"
+            /// </summary>
+            [EnumMember(Value = "Bullseye")]
+            Bullseye,
+            
+            /// <summary>
+            /// Enum Standard for "Standard"
+            /// </summary>
+            [EnumMember(Value = "Standard")]
+            Standard
+        }
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets RequestedRoutingTypes
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum RequestedRoutingTypesEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Predictive for "Predictive"
+            /// </summary>
+            [EnumMember(Value = "Predictive")]
+            Predictive,
+            
+            /// <summary>
+            /// Enum Preferred for "Preferred"
+            /// </summary>
+            [EnumMember(Value = "Preferred")]
+            Preferred,
+            
+            /// <summary>
+            /// Enum Manual for "Manual"
+            /// </summary>
+            [EnumMember(Value = "Manual")]
+            Manual,
+            
+            /// <summary>
+            /// Enum Last for "Last"
+            /// </summary>
+            [EnumMember(Value = "Last")]
+            Last,
+            
+            /// <summary>
+            /// Enum Bullseye for "Bullseye"
+            /// </summary>
+            [EnumMember(Value = "Bullseye")]
+            Bullseye,
+            
+            /// <summary>
+            /// Enum Standard for "Standard"
+            /// </summary>
+            [EnumMember(Value = "Standard")]
+            Standard
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -945,7 +1061,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ProviderList">A list of providers.</param>
         /// <param name="CallbackNumberList">A list of callback numbers or substrings of numbers (ex: [\&quot;317\&quot;, \&quot;13172222222\&quot;]).</param>
         /// <param name="CallbackInterval">An interval of time to filter for scheduled callbacks. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null)
+        /// <param name="UsedRoutingTypes">A list of routing types used.</param>
+        /// <param name="RequestedRoutingTypes">A list of routing types requested.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -1027,6 +1145,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ProviderList = ProviderList;
             this.CallbackNumberList = CallbackNumberList;
             this.CallbackInterval = CallbackInterval;
+            this.UsedRoutingTypes = UsedRoutingTypes;
+            this.RequestedRoutingTypes = RequestedRoutingTypes;
             
         }
         
@@ -1751,6 +1871,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public string CallbackInterval { get; set; }
         
         
+        
+        /// <summary>
+        /// A list of routing types used
+        /// </summary>
+        /// <value>A list of routing types used</value>
+        [DataMember(Name="usedRoutingTypes", EmitDefaultValue=false)]
+        public List<UsedRoutingTypesEnum> UsedRoutingTypes { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A list of routing types requested
+        /// </summary>
+        /// <value>A list of routing types requested</value>
+        [DataMember(Name="requestedRoutingTypes", EmitDefaultValue=false)]
+        public List<RequestedRoutingTypesEnum> RequestedRoutingTypes { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1840,6 +1978,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ProviderList: ").Append(ProviderList).Append("\n");
             sb.Append("  CallbackNumberList: ").Append(CallbackNumberList).Append("\n");
             sb.Append("  CallbackInterval: ").Append(CallbackInterval).Append("\n");
+            sb.Append("  UsedRoutingTypes: ").Append(UsedRoutingTypes).Append("\n");
+            sb.Append("  RequestedRoutingTypes: ").Append(RequestedRoutingTypes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -2275,6 +2415,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CallbackInterval == other.CallbackInterval ||
                     this.CallbackInterval != null &&
                     this.CallbackInterval.Equals(other.CallbackInterval)
+                ) &&
+                (
+                    this.UsedRoutingTypes == other.UsedRoutingTypes ||
+                    this.UsedRoutingTypes != null &&
+                    this.UsedRoutingTypes.SequenceEqual(other.UsedRoutingTypes)
+                ) &&
+                (
+                    this.RequestedRoutingTypes == other.RequestedRoutingTypes ||
+                    this.RequestedRoutingTypes != null &&
+                    this.RequestedRoutingTypes.SequenceEqual(other.RequestedRoutingTypes)
                 );
         }
 
@@ -2529,6 +2679,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CallbackInterval != null)
                     hash = hash * 59 + this.CallbackInterval.GetHashCode();
+                
+                if (this.UsedRoutingTypes != null)
+                    hash = hash * 59 + this.UsedRoutingTypes.GetHashCode();
+                
+                if (this.RequestedRoutingTypes != null)
+                    hash = hash * 59 + this.RequestedRoutingTypes.GetHashCode();
                 
                 return hash;
             }

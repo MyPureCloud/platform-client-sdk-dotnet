@@ -234,8 +234,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="notificationId">The ID of the notification.</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>CoachingNotification</returns>
-        CoachingNotification GetCoachingNotification (string notificationId);
+        CoachingNotification GetCoachingNotification (string notificationId, List<string> expand = null);
 
         /// <summary>
         /// Get an existing notification
@@ -245,8 +246,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="notificationId">The ID of the notification.</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>ApiResponse of CoachingNotification</returns>
-        ApiResponse<CoachingNotification> GetCoachingNotificationWithHttpInfo (string notificationId);
+        ApiResponse<CoachingNotification> GetCoachingNotificationWithHttpInfo (string notificationId, List<string> expand = null);
         
         /// <summary>
         /// Retrieve the list of your notifications.
@@ -257,8 +259,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>CoachingNotificationList</returns>
-        CoachingNotificationList GetCoachingNotifications (int? pageNumber = null, int? pageSize = null);
+        CoachingNotificationList GetCoachingNotifications (int? pageNumber = null, int? pageSize = null, List<string> expand = null);
 
         /// <summary>
         /// Retrieve the list of your notifications.
@@ -269,8 +272,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>ApiResponse of CoachingNotificationList</returns>
-        ApiResponse<CoachingNotificationList> GetCoachingNotificationsWithHttpInfo (int? pageNumber = null, int? pageSize = null);
+        ApiResponse<CoachingNotificationList> GetCoachingNotificationsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> expand = null);
         
         /// <summary>
         /// Update an existing appointment
@@ -638,8 +642,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="notificationId">The ID of the notification.</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>Task of CoachingNotification</returns>
-        System.Threading.Tasks.Task<CoachingNotification> GetCoachingNotificationAsync (string notificationId);
+        System.Threading.Tasks.Task<CoachingNotification> GetCoachingNotificationAsync (string notificationId, List<string> expand = null);
 
         /// <summary>
         /// Get an existing notification
@@ -649,8 +654,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="notificationId">The ID of the notification.</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>Task of ApiResponse (CoachingNotification)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CoachingNotification>> GetCoachingNotificationAsyncWithHttpInfo (string notificationId);
+        System.Threading.Tasks.Task<ApiResponse<CoachingNotification>> GetCoachingNotificationAsyncWithHttpInfo (string notificationId, List<string> expand = null);
         
         /// <summary>
         /// Retrieve the list of your notifications.
@@ -661,8 +667,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>Task of CoachingNotificationList</returns>
-        System.Threading.Tasks.Task<CoachingNotificationList> GetCoachingNotificationsAsync (int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<CoachingNotificationList> GetCoachingNotificationsAsync (int? pageNumber = null, int? pageSize = null, List<string> expand = null);
 
         /// <summary>
         /// Retrieve the list of your notifications.
@@ -673,8 +680,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>Task of ApiResponse (CoachingNotificationList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CoachingNotificationList>> GetCoachingNotificationsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<CoachingNotificationList>> GetCoachingNotificationsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> expand = null);
         
         /// <summary>
         /// Update an existing appointment
@@ -2568,10 +2576,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="notificationId">The ID of the notification.</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>CoachingNotification</returns>
-        public CoachingNotification GetCoachingNotification (string notificationId)
+        public CoachingNotification GetCoachingNotification (string notificationId, List<string> expand = null)
         {
-             ApiResponse<CoachingNotification> localVarResponse = GetCoachingNotificationWithHttpInfo(notificationId);
+             ApiResponse<CoachingNotification> localVarResponse = GetCoachingNotificationWithHttpInfo(notificationId, expand);
              return localVarResponse.Data;
         }
 
@@ -2580,8 +2589,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="notificationId">The ID of the notification.</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>ApiResponse of CoachingNotification</returns>
-        public ApiResponse< CoachingNotification > GetCoachingNotificationWithHttpInfo (string notificationId)
+        public ApiResponse< CoachingNotification > GetCoachingNotificationWithHttpInfo (string notificationId, List<string> expand = null)
         { 
             // verify the required parameter 'notificationId' is set
             if (notificationId == null)
@@ -2621,6 +2631,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (notificationId != null) localVarPathParams.Add("notificationId", this.Configuration.ApiClient.ParameterToString(notificationId));
 
             // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -2663,10 +2674,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="notificationId">The ID of the notification.</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>Task of CoachingNotification</returns>
-        public async System.Threading.Tasks.Task<CoachingNotification> GetCoachingNotificationAsync (string notificationId)
+        public async System.Threading.Tasks.Task<CoachingNotification> GetCoachingNotificationAsync (string notificationId, List<string> expand = null)
         {
-             ApiResponse<CoachingNotification> localVarResponse = await GetCoachingNotificationAsyncWithHttpInfo(notificationId);
+             ApiResponse<CoachingNotification> localVarResponse = await GetCoachingNotificationAsyncWithHttpInfo(notificationId, expand);
              return localVarResponse.Data;
 
         }
@@ -2676,8 +2688,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="notificationId">The ID of the notification.</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>Task of ApiResponse (CoachingNotification)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CoachingNotification>> GetCoachingNotificationAsyncWithHttpInfo (string notificationId)
+        public async System.Threading.Tasks.Task<ApiResponse<CoachingNotification>> GetCoachingNotificationAsyncWithHttpInfo (string notificationId, List<string> expand = null)
         { 
             // verify the required parameter 'notificationId' is set
             if (notificationId == null)
@@ -2718,6 +2731,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (notificationId != null) localVarPathParams.Add("notificationId", this.Configuration.ApiClient.ParameterToString(notificationId));
 
             // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -2762,10 +2776,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>CoachingNotificationList</returns>
-        public CoachingNotificationList GetCoachingNotifications (int? pageNumber = null, int? pageSize = null)
+        public CoachingNotificationList GetCoachingNotifications (int? pageNumber = null, int? pageSize = null, List<string> expand = null)
         {
-             ApiResponse<CoachingNotificationList> localVarResponse = GetCoachingNotificationsWithHttpInfo(pageNumber, pageSize);
+             ApiResponse<CoachingNotificationList> localVarResponse = GetCoachingNotificationsWithHttpInfo(pageNumber, pageSize, expand);
              return localVarResponse.Data;
         }
 
@@ -2775,8 +2790,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>ApiResponse of CoachingNotificationList</returns>
-        public ApiResponse< CoachingNotificationList > GetCoachingNotificationsWithHttpInfo (int? pageNumber = null, int? pageSize = null)
+        public ApiResponse< CoachingNotificationList > GetCoachingNotificationsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/coaching/notifications";
@@ -2814,6 +2830,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -2857,10 +2874,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>Task of CoachingNotificationList</returns>
-        public async System.Threading.Tasks.Task<CoachingNotificationList> GetCoachingNotificationsAsync (int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<CoachingNotificationList> GetCoachingNotificationsAsync (int? pageNumber = null, int? pageSize = null, List<string> expand = null)
         {
-             ApiResponse<CoachingNotificationList> localVarResponse = await GetCoachingNotificationsAsyncWithHttpInfo(pageNumber, pageSize);
+             ApiResponse<CoachingNotificationList> localVarResponse = await GetCoachingNotificationsAsyncWithHttpInfo(pageNumber, pageSize, expand);
              return localVarResponse.Data;
 
         }
@@ -2871,8 +2889,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>Task of ApiResponse (CoachingNotificationList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CoachingNotificationList>> GetCoachingNotificationsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CoachingNotificationList>> GetCoachingNotificationsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/coaching/notifications";
@@ -2910,6 +2929,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

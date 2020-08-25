@@ -81,7 +81,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>AuthzDivisionEntityListing</returns>
-        AuthzDivisionEntityListing GetAuthorizationDivisions (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<Object> id = null, string name = null);
+        AuthzDivisionEntityListing GetAuthorizationDivisions (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null);
 
         /// <summary>
         /// Retrieve a list of all divisions defined for the organization
@@ -100,7 +100,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>ApiResponse of AuthzDivisionEntityListing</returns>
-        ApiResponse<AuthzDivisionEntityListing> GetAuthorizationDivisionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<Object> id = null, string name = null);
+        ApiResponse<AuthzDivisionEntityListing> GetAuthorizationDivisionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null);
         
         /// <summary>
         /// Retrieve the home division for the organization.
@@ -283,7 +283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of AuthzDivisionEntityListing</returns>
-        System.Threading.Tasks.Task<AuthzDivisionEntityListing> GetAuthorizationDivisionsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<Object> id = null, string name = null);
+        System.Threading.Tasks.Task<AuthzDivisionEntityListing> GetAuthorizationDivisionsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null);
 
         /// <summary>
         /// Retrieve a list of all divisions defined for the organization
@@ -302,7 +302,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of ApiResponse (AuthzDivisionEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuthzDivisionEntityListing>> GetAuthorizationDivisionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<Object> id = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<AuthzDivisionEntityListing>> GetAuthorizationDivisionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null);
         
         /// <summary>
         /// Retrieve the home division for the organization.
@@ -918,7 +918,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>AuthzDivisionEntityListing</returns>
-        public AuthzDivisionEntityListing GetAuthorizationDivisions (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<Object> id = null, string name = null)
+        public AuthzDivisionEntityListing GetAuthorizationDivisions (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
         {
              ApiResponse<AuthzDivisionEntityListing> localVarResponse = GetAuthorizationDivisionsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, objectCount, id, name);
              return localVarResponse.Data;
@@ -938,7 +938,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>ApiResponse of AuthzDivisionEntityListing</returns>
-        public ApiResponse< AuthzDivisionEntityListing > GetAuthorizationDivisionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<Object> id = null, string name = null)
+        public ApiResponse< AuthzDivisionEntityListing > GetAuthorizationDivisionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
         { 
 
             var localVarPath = "/api/v2/authorization/divisions";
@@ -1034,7 +1034,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of AuthzDivisionEntityListing</returns>
-        public async System.Threading.Tasks.Task<AuthzDivisionEntityListing> GetAuthorizationDivisionsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<Object> id = null, string name = null)
+        public async System.Threading.Tasks.Task<AuthzDivisionEntityListing> GetAuthorizationDivisionsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
         {
              ApiResponse<AuthzDivisionEntityListing> localVarResponse = await GetAuthorizationDivisionsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, objectCount, id, name);
              return localVarResponse.Data;
@@ -1055,7 +1055,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of ApiResponse (AuthzDivisionEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AuthzDivisionEntityListing>> GetAuthorizationDivisionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<Object> id = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AuthzDivisionEntityListing>> GetAuthorizationDivisionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
         { 
 
             var localVarPath = "/api/v2/authorization/divisions";

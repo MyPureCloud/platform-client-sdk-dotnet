@@ -138,7 +138,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user&#39;s Microsoft Teams presence.
         /// </summary>
         /// <remarks>
-        /// Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
+        /// Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to Genesys Cloud presence with additional activity details in the message field. This presence source is read-only.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -149,7 +149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user&#39;s Microsoft Teams presence.
         /// </summary>
         /// <remarks>
-        /// Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
+        /// Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to Genesys Cloud presence with additional activity details in the message field. This presence source is read-only.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -157,10 +157,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<PresenceExpand> GetUserPresencesMicrosoftteamsWithHttpInfo (string userId);
         
         /// <summary>
-        /// Get a user&#39;s GenesysCloud presence.
+        /// Get a user&#39;s Genesys Cloud presence.
         /// </summary>
         /// <remarks>
-        /// Get the default GenesysCloud user presence source PURECLOUD
+        /// Get the default Genesys Cloud user presence source PURECLOUD
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -168,10 +168,10 @@ namespace PureCloudPlatform.Client.V2.Api
         UserPresence GetUserPresencesPurecloud (string userId);
 
         /// <summary>
-        /// Get a user&#39;s GenesysCloud presence.
+        /// Get a user&#39;s Genesys Cloud presence.
         /// </summary>
         /// <remarks>
-        /// Get the default GenesysCloud user presence source PURECLOUD
+        /// Get the default Genesys Cloud user presence source PURECLOUD
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -205,7 +205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserPresence> PatchUserPresenceWithHttpInfo (string userId, string sourceId, UserPresence body);
         
         /// <summary>
-        /// Patch a GenesysCloud user&#39;s presence
+        /// Patch a Genesys Cloud user&#39;s presence
         /// </summary>
         /// <remarks>
         /// The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
@@ -217,7 +217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         UserPresence PatchUserPresencesPurecloud (string userId, UserPresence body);
 
         /// <summary>
-        /// Patch a GenesysCloud user&#39;s presence
+        /// Patch a Genesys Cloud user&#39;s presence
         /// </summary>
         /// <remarks>
         /// The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
@@ -422,7 +422,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user&#39;s Microsoft Teams presence.
         /// </summary>
         /// <remarks>
-        /// Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
+        /// Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to Genesys Cloud presence with additional activity details in the message field. This presence source is read-only.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -433,7 +433,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user&#39;s Microsoft Teams presence.
         /// </summary>
         /// <remarks>
-        /// Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
+        /// Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to Genesys Cloud presence with additional activity details in the message field. This presence source is read-only.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -441,10 +441,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<PresenceExpand>> GetUserPresencesMicrosoftteamsAsyncWithHttpInfo (string userId);
         
         /// <summary>
-        /// Get a user&#39;s GenesysCloud presence.
+        /// Get a user&#39;s Genesys Cloud presence.
         /// </summary>
         /// <remarks>
-        /// Get the default GenesysCloud user presence source PURECLOUD
+        /// Get the default Genesys Cloud user presence source PURECLOUD
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -452,10 +452,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UserPresence> GetUserPresencesPurecloudAsync (string userId);
 
         /// <summary>
-        /// Get a user&#39;s GenesysCloud presence.
+        /// Get a user&#39;s Genesys Cloud presence.
         /// </summary>
         /// <remarks>
-        /// Get the default GenesysCloud user presence source PURECLOUD
+        /// Get the default Genesys Cloud user presence source PURECLOUD
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -489,7 +489,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserPresenceAsyncWithHttpInfo (string userId, string sourceId, UserPresence body);
         
         /// <summary>
-        /// Patch a GenesysCloud user&#39;s presence
+        /// Patch a Genesys Cloud user&#39;s presence
         /// </summary>
         /// <remarks>
         /// The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
@@ -501,7 +501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UserPresence> PatchUserPresencesPurecloudAsync (string userId, UserPresence body);
 
         /// <summary>
-        /// Patch a GenesysCloud user&#39;s presence
+        /// Patch a Genesys Cloud user&#39;s presence
         /// </summary>
         /// <remarks>
         /// The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
@@ -1653,7 +1653,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get a user&#39;s Microsoft Teams presence. Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
+        /// Get a user&#39;s Microsoft Teams presence. Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to Genesys Cloud presence with additional activity details in the message field. This presence source is read-only.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -1665,7 +1665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user&#39;s Microsoft Teams presence. Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
+        /// Get a user&#39;s Microsoft Teams presence. Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to Genesys Cloud presence with additional activity details in the message field. This presence source is read-only.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -1748,7 +1748,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get a user&#39;s Microsoft Teams presence. Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
+        /// Get a user&#39;s Microsoft Teams presence. Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to Genesys Cloud presence with additional activity details in the message field. This presence source is read-only.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -1761,7 +1761,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user&#39;s Microsoft Teams presence. Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
+        /// Get a user&#39;s Microsoft Teams presence. Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to Genesys Cloud presence with additional activity details in the message field. This presence source is read-only.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -1846,7 +1846,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get a user&#39;s GenesysCloud presence. Get the default GenesysCloud user presence source PURECLOUD
+        /// Get a user&#39;s Genesys Cloud presence. Get the default Genesys Cloud user presence source PURECLOUD
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -1858,7 +1858,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user&#39;s GenesysCloud presence. Get the default GenesysCloud user presence source PURECLOUD
+        /// Get a user&#39;s Genesys Cloud presence. Get the default Genesys Cloud user presence source PURECLOUD
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -1941,7 +1941,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get a user&#39;s GenesysCloud presence. Get the default GenesysCloud user presence source PURECLOUD
+        /// Get a user&#39;s Genesys Cloud presence. Get the default Genesys Cloud user presence source PURECLOUD
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -1954,7 +1954,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user&#39;s GenesysCloud presence. Get the default GenesysCloud user presence source PURECLOUD
+        /// Get a user&#39;s Genesys Cloud presence. Get the default Genesys Cloud user presence source PURECLOUD
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -2266,7 +2266,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Patch a GenesysCloud user&#39;s presence The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Patch a Genesys Cloud user&#39;s presence The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -2279,7 +2279,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch a GenesysCloud user&#39;s presence The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Patch a Genesys Cloud user&#39;s presence The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -2371,7 +2371,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Patch a GenesysCloud user&#39;s presence The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Patch a Genesys Cloud user&#39;s presence The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
@@ -2385,7 +2385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch a GenesysCloud user&#39;s presence The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Patch a Genesys Cloud user&#39;s presence The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>

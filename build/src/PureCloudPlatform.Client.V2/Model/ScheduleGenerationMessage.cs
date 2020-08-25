@@ -84,6 +84,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Noneeddays,
             
             /// <summary>
+            /// Enum Unabletoproduceagentschedule for "UnableToProduceAgentSchedule"
+            /// </summary>
+            [EnumMember(Value = "UnableToProduceAgentSchedule")]
+            Unabletoproduceagentschedule,
+            
+            /// <summary>
             /// Enum Unabletoschedulemaxconsecutiveworkingdays for "UnableToScheduleMaxConsecutiveWorkingDays"
             /// </summary>
             [EnumMember(Value = "UnableToScheduleMaxConsecutiveWorkingDays")]

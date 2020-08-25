@@ -341,7 +341,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **intentName** | **string**| The top intent name to retrieve feedback for. | [optional]  |
-| **assessment** | **string**| The top assessment to retrieve feedback for. | [optional] <br />**Values**: Incorrect, Correct, Unknown |
+| **assessment** | **string**| The top assessment to retrieve feedback for. | [optional] <br />**Values**: Incorrect, Correct, Unknown, Disabled |
 | **dateStart** | **DateTime?**| Begin of time window as ISO-8601 date. | [optional]  |
 | **dateEnd** | **DateTime?**| End of time window as ISO-8601 date. | [optional]  |
 | **includeDeleted** | **bool?**| Whether to include soft-deleted items in the result. | [optional]  |

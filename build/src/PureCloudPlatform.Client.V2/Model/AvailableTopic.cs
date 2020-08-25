@@ -40,6 +40,46 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets Transports
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TransportsEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum All for "All"
+            /// </summary>
+            [EnumMember(Value = "All")]
+            All,
+            
+            /// <summary>
+            /// Enum Websocket for "Websocket"
+            /// </summary>
+            [EnumMember(Value = "Websocket")]
+            Websocket,
+            
+            /// <summary>
+            /// Enum Eventbridge for "EventBridge"
+            /// </summary>
+            [EnumMember(Value = "EventBridge")]
+            Eventbridge
+        }
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -60,7 +100,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Schema">Schema.</param>
         /// <param name="RequiresCurrentUser">True if the topic user ID is required to match the subscribing user ID.</param>
         /// <param name="RequiresCurrentUserOrPermission">True if permissions are only required when the topic user ID does not match the subscribing user ID.</param>
-        public AvailableTopic(string Description = null, string Id = null, List<string> RequiresPermissions = null, Dictionary<string, Object> Schema = null, bool? RequiresCurrentUser = null, bool? RequiresCurrentUserOrPermission = null)
+        /// <param name="Transports">Transports that support events for the topic.</param>
+        public AvailableTopic(string Description = null, string Id = null, List<string> RequiresPermissions = null, Dictionary<string, Object> Schema = null, bool? RequiresCurrentUser = null, bool? RequiresCurrentUserOrPermission = null, List<TransportsEnum> Transports = null)
         {
             this.Description = Description;
             this.Id = Id;
@@ -68,6 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Schema = Schema;
             this.RequiresCurrentUser = RequiresCurrentUser;
             this.RequiresCurrentUserOrPermission = RequiresCurrentUserOrPermission;
+            this.Transports = Transports;
             
         }
         
@@ -123,6 +165,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? RequiresCurrentUserOrPermission { get; set; }
         
         
+        
+        /// <summary>
+        /// Transports that support events for the topic
+        /// </summary>
+        /// <value>Transports that support events for the topic</value>
+        [DataMember(Name="transports", EmitDefaultValue=false)]
+        public List<TransportsEnum> Transports { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -138,6 +189,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Schema: ").Append(Schema).Append("\n");
             sb.Append("  RequiresCurrentUser: ").Append(RequiresCurrentUser).Append("\n");
             sb.Append("  RequiresCurrentUserOrPermission: ").Append(RequiresCurrentUserOrPermission).Append("\n");
+            sb.Append("  Transports: ").Append(Transports).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -203,6 +255,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RequiresCurrentUserOrPermission == other.RequiresCurrentUserOrPermission ||
                     this.RequiresCurrentUserOrPermission != null &&
                     this.RequiresCurrentUserOrPermission.Equals(other.RequiresCurrentUserOrPermission)
+                ) &&
+                (
+                    this.Transports == other.Transports ||
+                    this.Transports != null &&
+                    this.Transports.SequenceEqual(other.Transports)
                 );
         }
 
@@ -235,6 +292,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RequiresCurrentUserOrPermission != null)
                     hash = hash * 59 + this.RequiresCurrentUserOrPermission.GetHashCode();
+                
+                if (this.Transports != null)
+                    hash = hash * 59 + this.Transports.GetHashCode();
                 
                 return hash;
             }

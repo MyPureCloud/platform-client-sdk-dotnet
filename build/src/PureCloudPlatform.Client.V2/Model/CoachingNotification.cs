@@ -217,7 +217,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MarkedAsRead">Indicates if notification is read or unread.</param>
         /// <param name="User">The user of this notification.</param>
         /// <param name="Appointment">The appointment.</param>
-        public CoachingNotification(bool? MarkedAsRead = null, UserReference User = null, CoachingAppointmentReference Appointment = null)
+        public CoachingNotification(bool? MarkedAsRead = null, UserReference User = null, CoachingAppointmentResponse Appointment = null)
         {
             this.MarkedAsRead = MarkedAsRead;
             this.User = User;
@@ -292,7 +292,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The appointment</value>
         [DataMember(Name="appointment", EmitDefaultValue=false)]
-        public CoachingAppointmentReference Appointment { get; set; }
+        public CoachingAppointmentResponse Appointment { get; set; }
         
         
         

@@ -60,7 +60,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]
-            Unknown
+            Unknown,
+            
+            /// <summary>
+            /// Enum Disabled for "Disabled"
+            /// </summary>
+            [EnumMember(Value = "Disabled")]
+            Disabled
         }
         
         
