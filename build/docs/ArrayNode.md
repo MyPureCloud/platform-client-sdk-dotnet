@@ -12,11 +12,8 @@ title: ArrayNode
 | **Number** | **bool?** |  | [optional] |
 | **Boolean** | **bool?** |  | [optional] |
 | **_Object** | **bool?** |  | [optional] |
-| **ValueNode** | **bool?** |  | [optional] |
-| **ContainerNode** | **bool?** |  | [optional] |
-| **MissingNode** | **bool?** |  | [optional] |
-| **Pojo** | **bool?** |  | [optional] |
 | **FloatingPointNumber** | **bool?** |  | [optional] |
+| **Pojo** | **bool?** |  | [optional] |
 | **IntegralNumber** | **bool?** |  | [optional] |
 | **_Short** | **bool?** |  | [optional] |
 | **_Int** | **bool?** |  | [optional] |
@@ -26,6 +23,9 @@ title: ArrayNode
 | **BigInteger** | **bool?** |  | [optional] |
 | **Textual** | **bool?** |  | [optional] |
 | **Binary** | **bool?** |  | [optional] |
+| **ValueNode** | **bool?** |  | [optional] |
+| **ContainerNode** | **bool?** |  | [optional] |
+| **MissingNode** | **bool?** |  | [optional] |
 | **Array** | **bool?** |  | [optional] |
 | **_Null** | **bool?** |  | [optional] |
 {: class="table table-striped"}

@@ -26,6 +26,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -510,6 +513,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -558,6 +563,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ReportingDataExportTopicDataExportNotification" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
+        /// <param name="RunId">RunId.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Status">Status.</param>
         /// <param name="ExportFormat">ExportFormat.</param>
@@ -569,9 +575,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedDateTime">ModifiedDateTime.</param>
         /// <param name="PercentageComplete">PercentageComplete.</param>
         /// <param name="EmailStatuses">EmailStatuses.</param>
-        public ReportingDataExportTopicDataExportNotification(string Id = null, string Name = null, StatusEnum? Status = null, ExportFormatEnum? ExportFormat = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, double? PercentageComplete = null, Dictionary<string, string> EmailStatuses = null)
+        public ReportingDataExportTopicDataExportNotification(string Id = null, string RunId = null, string Name = null, StatusEnum? Status = null, ExportFormatEnum? ExportFormat = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, double? PercentageComplete = null, Dictionary<string, string> EmailStatuses = null)
         {
             this.Id = Id;
+            this.RunId = RunId;
             this.Name = Name;
             this.Status = Status;
             this.ExportFormat = ExportFormat;
@@ -593,6 +600,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets RunId
+        /// </summary>
+        [DataMember(Name="runId", EmitDefaultValue=false)]
+        public string RunId { get; set; }
         
         
         
@@ -669,6 +684,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ReportingDataExportTopicDataExportNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  RunId: ").Append(RunId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  ExportFormat: ").Append(ExportFormat).Append("\n");
@@ -720,6 +736,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.RunId == other.RunId ||
+                    this.RunId != null &&
+                    this.RunId.Equals(other.RunId)
                 ) &&
                 (
                     this.Name == other.Name ||
@@ -792,6 +813,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.RunId != null)
+                    hash = hash * 59 + this.RunId.GetHashCode();
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();

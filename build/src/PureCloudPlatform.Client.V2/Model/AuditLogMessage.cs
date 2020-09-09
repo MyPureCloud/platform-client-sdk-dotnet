@@ -93,7 +93,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Workforcemanagement for "WorkforceManagement"
             /// </summary>
             [EnumMember(Value = "WorkforceManagement")]
-            Workforcemanagement
+            Workforcemanagement,
+            
+            /// <summary>
+            /// Enum Triggers for "Triggers"
+            /// </summary>
+            [EnumMember(Value = "Triggers")]
+            Triggers
         }
         
         
@@ -215,6 +221,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Unpublish")]
             Unpublish,
+            
+            /// <summary>
+            /// Enum Enable for "Enable"
+            /// </summary>
+            [EnumMember(Value = "Enable")]
+            Enable,
+            
+            /// <summary>
+            /// Enum Disable for "Disable"
+            /// </summary>
+            [EnumMember(Value = "Disable")]
+            Disable,
             
             /// <summary>
             /// Enum Authorize for "Authorize"
@@ -374,7 +392,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Schedule for "Schedule"
             /// </summary>
             [EnumMember(Value = "Schedule")]
-            Schedule
+            Schedule,
+            
+            /// <summary>
+            /// Enum Trigger for "Trigger"
+            /// </summary>
+            [EnumMember(Value = "Trigger")]
+            Trigger
         }
         
         

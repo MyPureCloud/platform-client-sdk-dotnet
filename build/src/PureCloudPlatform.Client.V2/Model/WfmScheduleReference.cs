@@ -44,10 +44,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmScheduleReference" /> class.
         /// </summary>
-        /// <param name="BusinessUnit">A reference to a Workforce Management Business Unit.</param>
-        /// <param name="WeekDate">The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
-        public WfmScheduleReference(WfmBusinessUnitReference BusinessUnit = null, DateTime? WeekDate = null)
+        [JsonConstructorAttribute]
+        protected WfmScheduleReference() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WfmScheduleReference" /> class.
+        /// </summary>
+        /// <param name="Id">The ID of the WFM schedule (required).</param>
+        /// <param name="BusinessUnit">A reference to a Workforce Management Business Unit (required).</param>
+        /// <param name="WeekDate">The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
+        public WfmScheduleReference(string Id = null, WfmBusinessUnitReference BusinessUnit = null, DateTime? WeekDate = null)
         {
+            this.Id = Id;
             this.BusinessUnit = BusinessUnit;
             this.WeekDate = WeekDate;
             
@@ -56,11 +64,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The ID of the WFM schedule
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The ID of the WFM schedule</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         
         
         

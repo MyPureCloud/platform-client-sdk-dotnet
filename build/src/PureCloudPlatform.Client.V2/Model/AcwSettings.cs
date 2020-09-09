@@ -57,7 +57,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum MandatoryForcedTimeout for "MANDATORY_FORCED_TIMEOUT"
             /// </summary>
             [EnumMember(Value = "MANDATORY_FORCED_TIMEOUT")]
-            MandatoryForcedTimeout
+            MandatoryForcedTimeout,
+            
+            /// <summary>
+            /// Enum AgentRequested for "AGENT_REQUESTED"
+            /// </summary>
+            [EnumMember(Value = "AGENT_REQUESTED")]
+            AgentRequested
         }
         
         

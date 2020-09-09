@@ -34,19 +34,27 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBusinessUnitReference" /> class.
         /// </summary>
-        public WfmBusinessUnitReference()
+        [JsonConstructorAttribute]
+        protected WfmBusinessUnitReference() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WfmBusinessUnitReference" /> class.
+        /// </summary>
+        /// <param name="Id">The ID of the business unit (required).</param>
+        public WfmBusinessUnitReference(string Id = null)
         {
+            this.Id = Id;
             
         }
         
         
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The ID of the business unit
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The ID of the business unit</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         
         
         

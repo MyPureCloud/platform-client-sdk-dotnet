@@ -9,6 +9,7 @@ title: ReportingExportJobResponse
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
+| **RunId** | **string** | The unique run id of the export schedule execute | |
 | **Status** | **string** | The current status of the export request | |
 | **TimeZone** | **string** | The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London | |
 | **ExportFormat** | **string** | The requested format of the exported data | |

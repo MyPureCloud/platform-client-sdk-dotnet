@@ -91,6 +91,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Agentassistantid,
             
             /// <summary>
+            /// Enum Agentrank for "agentRank"
+            /// </summary>
+            [EnumMember(Value = "agentRank")]
+            Agentrank,
+            
+            /// <summary>
             /// Enum Agentscore for "agentScore"
             /// </summary>
             [EnumMember(Value = "agentScore")]
@@ -353,6 +359,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "peerId")]
             Peerid,
+            
+            /// <summary>
+            /// Enum Proposedagentid for "proposedAgentId"
+            /// </summary>
+            [EnumMember(Value = "proposedAgentId")]
+            Proposedagentid,
             
             /// <summary>
             /// Enum Provider for "provider"

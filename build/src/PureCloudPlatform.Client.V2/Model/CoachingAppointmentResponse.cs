@@ -116,12 +116,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The status of coaching appointment
         /// </summary>
         /// <value>The status of coaching appointment</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
+        
+        
         
         
         
@@ -285,6 +290,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Whether the appointment is overdue.
+        /// </summary>
+        /// <value>Whether the appointment is overdue.</value>
+        [DataMember(Name="isOverdue", EmitDefaultValue=false)]
+        public bool? IsOverdue { get; private set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -315,6 +329,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Conversations: ").Append(Conversations).Append("\n");
             sb.Append("  Documents: ").Append(Documents).Append("\n");
+            sb.Append("  IsOverdue: ").Append(IsOverdue).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -423,6 +438,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Documents.SequenceEqual(other.Documents)
                 ) &&
                 (
+                    this.IsOverdue == other.IsOverdue ||
+                    this.IsOverdue != null &&
+                    this.IsOverdue.Equals(other.IsOverdue)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -482,6 +502,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Documents != null)
                     hash = hash * 59 + this.Documents.GetHashCode();
+                
+                if (this.IsOverdue != null)
+                    hash = hash * 59 + this.IsOverdue.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

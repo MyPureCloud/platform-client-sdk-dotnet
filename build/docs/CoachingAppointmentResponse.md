@@ -21,6 +21,7 @@ title: CoachingAppointmentResponse
 | **DateModified** | **DateTime?** | The date/time the coaching appointment was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **Conversations** | [**List&lt;ConversationReference&gt;**](ConversationReference.html) | The list of conversations associated with coaching appointment. | [optional] |
 | **Documents** | [**List&lt;DocumentReference&gt;**](DocumentReference.html) | The list of documents associated with coaching appointment. | [optional] |
+| **IsOverdue** | **bool?** | Whether the appointment is overdue. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

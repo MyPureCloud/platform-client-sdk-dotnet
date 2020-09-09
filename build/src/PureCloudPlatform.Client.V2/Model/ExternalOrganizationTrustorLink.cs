@@ -40,11 +40,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalOrganizationTrustorLink" /> class.
@@ -59,15 +54,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateCreated = DateCreated;
             
         }
-        
-        
-        
-        /// <summary>
-        /// The globally unique identifier for the object.
-        /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
         
         
         
@@ -99,11 +85,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The URI for this object
+        /// The URI for the External Organization that is linked to the trustor org
         /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
+        /// <value>The URI for the External Organization that is linked to the trustor org</value>
+        [DataMember(Name="externalOrganizationUri", EmitDefaultValue=false)]
+        public string ExternalOrganizationUri { get; private set; }
         
         
         /// <summary>
@@ -115,11 +101,10 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ExternalOrganizationTrustorLink {\n");
             
-            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
             sb.Append("  TrustorOrgId: ").Append(TrustorOrgId).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  ExternalOrganizationUri: ").Append(ExternalOrganizationUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -157,11 +142,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
                     this.ExternalOrganizationId == other.ExternalOrganizationId ||
                     this.ExternalOrganizationId != null &&
                     this.ExternalOrganizationId.Equals(other.ExternalOrganizationId)
@@ -177,9 +157,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
+                    this.ExternalOrganizationUri == other.ExternalOrganizationUri ||
+                    this.ExternalOrganizationUri != null &&
+                    this.ExternalOrganizationUri.Equals(other.ExternalOrganizationUri)
                 );
         }
 
@@ -195,9 +175,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.ExternalOrganizationId != null)
                     hash = hash * 59 + this.ExternalOrganizationId.GetHashCode();
                 
@@ -207,8 +184,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
                 
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
+                if (this.ExternalOrganizationUri != null)
+                    hash = hash * 59 + this.ExternalOrganizationUri.GetHashCode();
                 
                 return hash;
             }

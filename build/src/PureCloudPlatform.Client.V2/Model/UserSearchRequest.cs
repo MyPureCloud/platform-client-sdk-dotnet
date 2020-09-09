@@ -107,6 +107,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The sort order for results
         /// </summary>
@@ -136,6 +139,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public IntegrationPresenceSourceEnum? IntegrationPresenceSource { get; set; }
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserSearchRequest" /> class.
@@ -148,7 +153,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Expand">Provides more details about a specified resource.</param>
         /// <param name="Query">Query.</param>
         /// <param name="IntegrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10..</param>
-        public UserSearchRequest(SortOrderEnum? SortOrder = null, string SortBy = null, int? PageSize = null, int? PageNumber = null, List<SearchSort> Sort = null, List<string> Expand = null, List<UserSearchCriteria> Query = null, IntegrationPresenceSourceEnum? IntegrationPresenceSource = null)
+        /// <param name="EnforcePermissions">Enforce view permission on request.</param>
+        public UserSearchRequest(SortOrderEnum? SortOrder = null, string SortBy = null, int? PageSize = null, int? PageNumber = null, List<SearchSort> Sort = null, List<string> Expand = null, List<UserSearchCriteria> Query = null, IntegrationPresenceSourceEnum? IntegrationPresenceSource = null, bool? EnforcePermissions = null)
         {
             this.SortOrder = SortOrder;
             this.SortBy = SortBy;
@@ -158,6 +164,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Expand = Expand;
             this.Query = Query;
             this.IntegrationPresenceSource = IntegrationPresenceSource;
+            this.EnforcePermissions = EnforcePermissions;
             
         }
         
@@ -219,6 +226,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// Enforce view permission on request
+        /// </summary>
+        /// <value>Enforce view permission on request</value>
+        [DataMember(Name="enforcePermissions", EmitDefaultValue=false)]
+        public bool? EnforcePermissions { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -236,6 +252,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Expand: ").Append(Expand).Append("\n");
             sb.Append("  Query: ").Append(Query).Append("\n");
             sb.Append("  IntegrationPresenceSource: ").Append(IntegrationPresenceSource).Append("\n");
+            sb.Append("  EnforcePermissions: ").Append(EnforcePermissions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -311,6 +328,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IntegrationPresenceSource == other.IntegrationPresenceSource ||
                     this.IntegrationPresenceSource != null &&
                     this.IntegrationPresenceSource.Equals(other.IntegrationPresenceSource)
+                ) &&
+                (
+                    this.EnforcePermissions == other.EnforcePermissions ||
+                    this.EnforcePermissions != null &&
+                    this.EnforcePermissions.Equals(other.EnforcePermissions)
                 );
         }
 
@@ -349,6 +371,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.IntegrationPresenceSource != null)
                     hash = hash * 59 + this.IntegrationPresenceSource.GetHashCode();
+                
+                if (this.EnforcePermissions != null)
+                    hash = hash * 59 + this.EnforcePermissions.GetHashCode();
                 
                 return hash;
             }

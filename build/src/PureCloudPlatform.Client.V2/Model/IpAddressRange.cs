@@ -41,7 +41,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Dataactions for "data-actions"
             /// </summary>
             [EnumMember(Value = "data-actions")]
-            Dataactions
+            Dataactions,
+            
+            /// <summary>
+            /// Enum Smtp for "smtp"
+            /// </summary>
+            [EnumMember(Value = "smtp")]
+            Smtp
         }
         
         

@@ -23,6 +23,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchCoachingNotification**](CoachingApi.html#patchcoachingnotification) | **PATCH** /api/v2/coaching/notifications/{notificationId} | Update an existing notification. |
 | [**PostCoachingAppointmentAnnotations**](CoachingApi.html#postcoachingappointmentannotations) | **POST** /api/v2/coaching/appointments/{appointmentId}/annotations | Create a new annotation. |
 | [**PostCoachingAppointments**](CoachingApi.html#postcoachingappointments) | **POST** /api/v2/coaching/appointments | Create a new appointment |
+| [**PostCoachingAppointmentsAggregatesQuery**](CoachingApi.html#postcoachingappointmentsaggregatesquery) | **POST** /api/v2/coaching/appointments/aggregates/query | Retrieve aggregated appointment data |
 {: class="table table-striped"}
 
 <a name="deletecoachingappointment"></a>
@@ -407,7 +408,7 @@ namespace Example
 
 <a name="getcoachingappointments"></a>
 
-## [**CoachingAppointmentResponseList**](CoachingAppointmentResponseList.html) GetCoachingAppointments (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null)
+## [**CoachingAppointmentResponseList**](CoachingAppointmentResponseList.html) GetCoachingAppointments (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
 
 
 
@@ -444,11 +445,14 @@ namespace Example
             var statuses = new List<string>(); // List<string> | Appointment Statuses to filter by (optional) 
             var facilitatorIds = new List<string>(); // List<string> | The facilitator IDs for which to retrieve appointments (optional) 
             var sortOrder = sortOrder_example;  // string | Sort (by due date) either Asc or Desc (optional) 
+            var relationships = new List<string>(); // List<string> | Relationships to filter by (optional) 
+            var completionInterval = completionInterval_example;  // string | Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
+            var overdue = overdue_example;  // string | Overdue status to filter by (optional) 
 
             try
             { 
                 // Get appointments for users and optional date range
-                CoachingAppointmentResponseList result = apiInstance.GetCoachingAppointments(userIds, interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder);
+                CoachingAppointmentResponseList result = apiInstance.GetCoachingAppointments(userIds, interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -472,6 +476,9 @@ namespace Example
 | **statuses** | [**List<string>**](string.html)| Appointment Statuses to filter by | [optional] <br />**Values**: Scheduled, InProgress, Completed, InvalidSchedule |
 | **facilitatorIds** | [**List<string>**](string.html)| The facilitator IDs for which to retrieve appointments | [optional]  |
 | **sortOrder** | **string**| Sort (by due date) either Asc or Desc | [optional] <br />**Values**: Desc, Asc |
+| **relationships** | [**List<string>**](string.html)| Relationships to filter by | [optional] <br />**Values**: Creator, Facilitator, Attendee |
+| **completionInterval** | **string**| Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
+| **overdue** | **string**| Overdue status to filter by | [optional] <br />**Values**: Any, True, False |
 {: class="table table-striped"}
 
 ### Return type
@@ -480,7 +487,7 @@ namespace Example
 
 <a name="getcoachingappointmentsme"></a>
 
-## [**CoachingAppointmentResponseList**](CoachingAppointmentResponseList.html) GetCoachingAppointmentsMe (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null)
+## [**CoachingAppointmentResponseList**](CoachingAppointmentResponseList.html) GetCoachingAppointmentsMe (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
 
 
 
@@ -515,11 +522,14 @@ namespace Example
             var statuses = new List<string>(); // List<string> | Appointment Statuses to filter by (optional) 
             var facilitatorIds = new List<string>(); // List<string> | The facilitator IDs for which to retrieve appointments (optional) 
             var sortOrder = sortOrder_example;  // string | Sort (by due date) either Asc or Desc (optional) 
+            var relationships = new List<string>(); // List<string> | Relationships to filter by (optional) 
+            var completionInterval = completionInterval_example;  // string | Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
+            var overdue = overdue_example;  // string | Overdue status to filter by (optional) 
 
             try
             { 
                 // Get my appointments for a given date range
-                CoachingAppointmentResponseList result = apiInstance.GetCoachingAppointmentsMe(interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder);
+                CoachingAppointmentResponseList result = apiInstance.GetCoachingAppointmentsMe(interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -542,6 +552,9 @@ namespace Example
 | **statuses** | [**List<string>**](string.html)| Appointment Statuses to filter by | [optional] <br />**Values**: Scheduled, InProgress, Completed |
 | **facilitatorIds** | [**List<string>**](string.html)| The facilitator IDs for which to retrieve appointments | [optional]  |
 | **sortOrder** | **string**| Sort (by due date) either Asc or Desc | [optional] <br />**Values**: Desc, Asc |
+| **relationships** | [**List<string>**](string.html)| Relationships to filter by | [optional] <br />**Values**: Creator, Facilitator, Attendee |
+| **completionInterval** | **string**| Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
+| **overdue** | **string**| Overdue status to filter by | [optional] <br />**Values**: Any, True, False |
 {: class="table table-striped"}
 
 ### Return type
@@ -1053,4 +1066,65 @@ namespace Example
 ### Return type
 
 [**CoachingAppointmentResponse**](CoachingAppointmentResponse.html)
+
+<a name="postcoachingappointmentsaggregatesquery"></a>
+
+## [**CoachingAppointmentAggregateResponse**](CoachingAppointmentAggregateResponse.html) PostCoachingAppointmentsAggregatesQuery (CoachingAppointmentAggregateRequest body)
+
+
+
+Retrieve aggregated appointment data
+
+
+
+Requires ANY permissions: 
+
+* coaching:appointment:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostCoachingAppointmentsAggregatesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new CoachingApi();
+            var body = new CoachingAppointmentAggregateRequest(); // CoachingAppointmentAggregateRequest | Aggregate Request
+
+            try
+            { 
+                // Retrieve aggregated appointment data
+                CoachingAppointmentAggregateResponse result = apiInstance.PostCoachingAppointmentsAggregatesQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CoachingApi.PostCoachingAppointmentsAggregatesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CoachingAppointmentAggregateRequest**](CoachingAppointmentAggregateRequest.html)| Aggregate Request |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CoachingAppointmentAggregateResponse**](CoachingAppointmentAggregateResponse.html)
 

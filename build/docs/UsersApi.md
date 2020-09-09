@@ -3864,8 +3864,9 @@ Search users
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* directory:user:view
 
 ### Example
 ```{"language":"csharp"}

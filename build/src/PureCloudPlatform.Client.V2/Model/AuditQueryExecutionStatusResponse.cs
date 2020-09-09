@@ -139,7 +139,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Workforcemanagement for "WorkforceManagement"
             /// </summary>
             [EnumMember(Value = "WorkforceManagement")]
-            Workforcemanagement
+            Workforcemanagement,
+            
+            /// <summary>
+            /// Enum Triggers for "Triggers"
+            /// </summary>
+            [EnumMember(Value = "Triggers")]
+            Triggers
         }
         
         

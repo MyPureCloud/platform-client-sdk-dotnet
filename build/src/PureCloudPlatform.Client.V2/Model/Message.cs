@@ -249,6 +249,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Unknown for "unknown"
+            /// </summary>
+            [EnumMember(Value = "unknown")]
+            Unknown,
+            
+            /// <summary>
             /// Enum Sms for "sms"
             /// </summary>
             [EnumMember(Value = "sms")]
@@ -288,7 +294,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Kakao for "kakao"
             /// </summary>
             [EnumMember(Value = "kakao")]
-            Kakao
+            Kakao,
+            
+            /// <summary>
+            /// Enum Webmessaging for "webmessaging"
+            /// </summary>
+            [EnumMember(Value = "webmessaging")]
+            Webmessaging
         }
         
         

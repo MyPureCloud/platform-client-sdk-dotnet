@@ -25,14 +25,21 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="BuAgentSchedulesQueryResponse" /> class.
         /// </summary>
         /// <param name="AgentSchedules">The requested agent schedules.</param>
-        public BuAgentSchedulesQueryResponse(List<BuAgentScheduleQueryResponse> AgentSchedules = null)
+        /// <param name="BusinessUnitTimeZone">The time zone configured for the business unit to which these schedules apply.</param>
+        public BuAgentSchedulesQueryResponse(List<BuAgentScheduleQueryResponse> AgentSchedules = null, string BusinessUnitTimeZone = null)
         {
             this.AgentSchedules = AgentSchedules;
+            this.BusinessUnitTimeZone = BusinessUnitTimeZone;
             
         }
         
@@ -46,6 +53,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<BuAgentScheduleQueryResponse> AgentSchedules { get; set; }
         
         
+        
+        /// <summary>
+        /// The time zone configured for the business unit to which these schedules apply
+        /// </summary>
+        /// <value>The time zone configured for the business unit to which these schedules apply</value>
+        [DataMember(Name="businessUnitTimeZone", EmitDefaultValue=false)]
+        public string BusinessUnitTimeZone { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -56,6 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class BuAgentSchedulesQueryResponse {\n");
             
             sb.Append("  AgentSchedules: ").Append(AgentSchedules).Append("\n");
+            sb.Append("  BusinessUnitTimeZone: ").Append(BusinessUnitTimeZone).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,6 +113,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentSchedules == other.AgentSchedules ||
                     this.AgentSchedules != null &&
                     this.AgentSchedules.SequenceEqual(other.AgentSchedules)
+                ) &&
+                (
+                    this.BusinessUnitTimeZone == other.BusinessUnitTimeZone ||
+                    this.BusinessUnitTimeZone != null &&
+                    this.BusinessUnitTimeZone.Equals(other.BusinessUnitTimeZone)
                 );
         }
 
@@ -113,6 +135,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AgentSchedules != null)
                     hash = hash * 59 + this.AgentSchedules.GetHashCode();
+                
+                if (this.BusinessUnitTimeZone != null)
+                    hash = hash * 59 + this.BusinessUnitTimeZone.GetHashCode();
                 
                 return hash;
             }

@@ -12,8 +12,11 @@ namespace PureCloudPlatform.Client.V2.Client
         {
             Topics = new Dictionary<string, Type>
             { 
+              {"v2.analytics.flow.{id}.aggregates", typeof(StatEventFlowTopicStatsNotification)},
+              {"v2.analytics.flowoutcome.{id}.aggregates", typeof(StatEventFlowOutcomeTopicStatsNotification)},
               {"v2.analytics.queues.{id}.observations", typeof(StatEventQueueTopicStatsNotification)},
               {"v2.analytics.users.{id}.aggregates", typeof(StatEventUserTopicStatsNotification)},
+              {"v2.analytics.wrapup.{id}.aggregates", typeof(StatEventWrapUpCodeTopicStatsNotification)},
               {"v2.architect.dependencytracking.build", typeof(ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification)},
               {"v2.architect.prompts.{id}", typeof(ArchitectPromptNotificationPromptNotification)},
               {"v2.architect.prompts.{id}.resources.{id}", typeof(ArchitectPromptResourceNotificationPromptResourceNotification)},
@@ -109,6 +112,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.workforcemanagement.managementunits.{id}.agents.sync", typeof(WfmUpdateAgentDetailsTopicWfmUpdateAgentDetailsComplete)},
               {"v2.workforcemanagement.managementunits.{id}.schedules", typeof(WfmScheduleTopicWfmScheduleNotification)},
               {"v2.workforcemanagement.managementunits.{id}.shifttrades.state.bulk", typeof(WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateNotification)},
+              {"v2.workforcemanagement.teams.{id}.adherence", typeof(WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate)},
               {"v2.workforcemanagement.users.{id}.schedules.query", typeof(WfmBuScheduleQueryResultTopicBuScheduleSearchResultNotification)},
               {"v2.workforcemanagement.users.{id}.schedules.search", typeof(WfmBuScheduleSearchResultTopicBuScheduleSearchResultNotification)},
             };

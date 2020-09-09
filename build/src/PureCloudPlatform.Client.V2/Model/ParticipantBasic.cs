@@ -114,6 +114,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Optional,
             
             /// <summary>
+            /// Enum Agentrequested for "agentRequested"
+            /// </summary>
+            [EnumMember(Value = "agentRequested")]
+            Agentrequested,
+            
+            /// <summary>
             /// Enum Timeout for "timeout"
             /// </summary>
             [EnumMember(Value = "timeout")]

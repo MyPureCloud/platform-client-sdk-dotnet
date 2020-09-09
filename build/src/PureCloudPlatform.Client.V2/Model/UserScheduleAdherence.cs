@@ -32,6 +32,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Activity for which the user is scheduled
         /// </summary>
@@ -431,6 +434,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Activity for which the user is scheduled
         /// </summary>
@@ -507,12 +512,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="User">The user for whom this status applies.</param>
         /// <param name="ManagementUnit">The management unit to which this user belongs.</param>
+        /// <param name="Team">The team to which this user belongs.</param>
         /// <param name="ActiveQueues">The list of queues to which this user is joined.</param>
-        public UserScheduleAdherence(string Name = null, UserReference User = null, ManagementUnit ManagementUnit = null, List<QueueReference> ActiveQueues = null)
+        public UserScheduleAdherence(string Name = null, UserReference User = null, ManagementUnit ManagementUnit = null, Team Team = null, List<QueueReference> ActiveQueues = null)
         {
             this.Name = Name;
             this.User = User;
             this.ManagementUnit = ManagementUnit;
+            this.Team = Team;
             this.ActiveQueues = ActiveQueues;
             
         }
@@ -551,6 +558,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The management unit to which this user belongs</value>
         [DataMember(Name="managementUnit", EmitDefaultValue=false)]
         public ManagementUnit ManagementUnit { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The team to which this user belongs
+        /// </summary>
+        /// <value>The team to which this user belongs</value>
+        [DataMember(Name="team", EmitDefaultValue=false)]
+        public Team Team { get; set; }
         
         
         
@@ -650,6 +666,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  ManagementUnit: ").Append(ManagementUnit).Append("\n");
+            sb.Append("  Team: ").Append(Team).Append("\n");
             sb.Append("  ScheduledActivityCategory: ").Append(ScheduledActivityCategory).Append("\n");
             sb.Append("  SystemPresence: ").Append(SystemPresence).Append("\n");
             sb.Append("  OrganizationSecondaryPresenceId: ").Append(OrganizationSecondaryPresenceId).Append("\n");
@@ -719,6 +736,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ManagementUnit == other.ManagementUnit ||
                     this.ManagementUnit != null &&
                     this.ManagementUnit.Equals(other.ManagementUnit)
+                ) &&
+                (
+                    this.Team == other.Team ||
+                    this.Team != null &&
+                    this.Team.Equals(other.Team)
                 ) &&
                 (
                     this.ScheduledActivityCategory == other.ScheduledActivityCategory ||
@@ -815,6 +837,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ManagementUnit != null)
                     hash = hash * 59 + this.ManagementUnit.GetHashCode();
+                
+                if (this.Team != null)
+                    hash = hash * 59 + this.Team.GetHashCode();
                 
                 if (this.ScheduledActivityCategory != null)
                     hash = hash * 59 + this.ScheduledActivityCategory.GetHashCode();

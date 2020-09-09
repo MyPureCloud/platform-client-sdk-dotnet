@@ -65,6 +65,18 @@ namespace PureCloudPlatform.Client.V2.Model
             AutomaticTimeZoneZipCodeInvalid,
             
             /// <summary>
+            /// Enum CampaignContentTemplateSubstitutionMismatch for "CAMPAIGN_CONTENT_TEMPLATE_SUBSTITUTION_MISMATCH"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_CONTENT_TEMPLATE_SUBSTITUTION_MISMATCH")]
+            CampaignContentTemplateSubstitutionMismatch,
+            
+            /// <summary>
+            /// Enum CampaignMessageCharacterLimitExceeded for "CAMPAIGN_MESSAGE_CHARACTER_LIMIT_EXCEEDED"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_MESSAGE_CHARACTER_LIMIT_EXCEEDED")]
+            CampaignMessageCharacterLimitExceeded,
+            
+            /// <summary>
             /// Enum CampaignStartError for "CAMPAIGN_START_ERROR"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_START_ERROR")]

@@ -149,6 +149,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -180,6 +183,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public ChangeTypeEnum? ChangeType { get; set; }
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WemCoachingAppointmentTopicCoachingAppointmentNotification" /> class.
@@ -198,7 +203,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Conversations">Conversations.</param>
         /// <param name="Documents">Documents.</param>
         /// <param name="ChangeType">ChangeType.</param>
-        public WemCoachingAppointmentTopicCoachingAppointmentNotification(string Id = null, string Name = null, DateTime? DateStart = null, int? LengthInMinutes = null, StatusEnum? Status = null, WemCoachingAppointmentTopicUserReference Facilitator = null, List<WemCoachingAppointmentTopicUserReference> Attendees = null, WemCoachingAppointmentTopicUserReference CreatedBy = null, DateTime? DateCreated = null, WemCoachingAppointmentTopicUserReference ModifiedBy = null, DateTime? DateModified = null, List<WemCoachingAppointmentTopicCoachingAppointmentConversation> Conversations = null, List<WemCoachingAppointmentTopicCoachingAppointmentDocument> Documents = null, ChangeTypeEnum? ChangeType = null)
+        /// <param name="DateCompleted">DateCompleted.</param>
+        public WemCoachingAppointmentTopicCoachingAppointmentNotification(string Id = null, string Name = null, DateTime? DateStart = null, int? LengthInMinutes = null, StatusEnum? Status = null, WemCoachingAppointmentTopicUserReference Facilitator = null, List<WemCoachingAppointmentTopicUserReference> Attendees = null, WemCoachingAppointmentTopicUserReference CreatedBy = null, DateTime? DateCreated = null, WemCoachingAppointmentTopicUserReference ModifiedBy = null, DateTime? DateModified = null, List<WemCoachingAppointmentTopicCoachingAppointmentConversation> Conversations = null, List<WemCoachingAppointmentTopicCoachingAppointmentDocument> Documents = null, ChangeTypeEnum? ChangeType = null, DateTime? DateCompleted = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -214,6 +220,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Conversations = Conversations;
             this.Documents = Documents;
             this.ChangeType = ChangeType;
+            this.DateCompleted = DateCompleted;
             
         }
         
@@ -318,6 +325,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// Gets or Sets DateCompleted
+        /// </summary>
+        [DataMember(Name="dateCompleted", EmitDefaultValue=false)]
+        public DateTime? DateCompleted { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -341,6 +356,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Conversations: ").Append(Conversations).Append("\n");
             sb.Append("  Documents: ").Append(Documents).Append("\n");
             sb.Append("  ChangeType: ").Append(ChangeType).Append("\n");
+            sb.Append("  DateCompleted: ").Append(DateCompleted).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -446,6 +462,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ChangeType == other.ChangeType ||
                     this.ChangeType != null &&
                     this.ChangeType.Equals(other.ChangeType)
+                ) &&
+                (
+                    this.DateCompleted == other.DateCompleted ||
+                    this.DateCompleted != null &&
+                    this.DateCompleted.Equals(other.DateCompleted)
                 );
         }
 
@@ -502,6 +523,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ChangeType != null)
                     hash = hash * 59 + this.ChangeType.GetHashCode();
+                
+                if (this.DateCompleted != null)
+                    hash = hash * 59 + this.DateCompleted.GetHashCode();
                 
                 return hash;
             }
