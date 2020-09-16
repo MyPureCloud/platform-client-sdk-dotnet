@@ -248,6 +248,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -295,6 +298,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Video" /> class.
@@ -316,7 +321,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Self">Address and name data for a call endpoint..</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
         /// <param name="AfterCallWork">After-call work for the communication..</param>
-        public Video(StateEnum? State = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string PeerId = null, List<string> Msids = null, Address Self = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null)
+        /// <param name="AfterCallWorkRequired">Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
+        public Video(StateEnum? State = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string PeerId = null, List<string> Msids = null, Address Self = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null)
         {
             this.State = State;
             this.Id = Id;
@@ -335,6 +341,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Self = Self;
             this.Wrapup = Wrapup;
             this.AfterCallWork = AfterCallWork;
+            this.AfterCallWorkRequired = AfterCallWorkRequired;
             
         }
         
@@ -478,6 +485,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public AfterCallWork AfterCallWork { get; set; }
         
         
+        
+        /// <summary>
+        /// Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested.
+        /// </summary>
+        /// <value>Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested.</value>
+        [DataMember(Name="afterCallWorkRequired", EmitDefaultValue=false)]
+        public bool? AfterCallWorkRequired { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -504,6 +520,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Self: ").Append(Self).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
+            sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -624,6 +641,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AfterCallWork == other.AfterCallWork ||
                     this.AfterCallWork != null &&
                     this.AfterCallWork.Equals(other.AfterCallWork)
+                ) &&
+                (
+                    this.AfterCallWorkRequired == other.AfterCallWorkRequired ||
+                    this.AfterCallWorkRequired != null &&
+                    this.AfterCallWorkRequired.Equals(other.AfterCallWorkRequired)
                 );
         }
 
@@ -689,6 +711,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AfterCallWork != null)
                     hash = hash * 59 + this.AfterCallWork.GetHashCode();
+                
+                if (this.AfterCallWorkRequired != null)
+                    hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();
                 
                 return hash;
             }

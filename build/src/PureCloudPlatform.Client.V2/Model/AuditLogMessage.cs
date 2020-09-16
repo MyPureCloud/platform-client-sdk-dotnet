@@ -99,7 +99,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Triggers for "Triggers"
             /// </summary>
             [EnumMember(Value = "Triggers")]
-            Triggers
+            Triggers,
+            
+            /// <summary>
+            /// Enum Responsemanagement for "ResponseManagement"
+            /// </summary>
+            [EnumMember(Value = "ResponseManagement")]
+            Responsemanagement
         }
         
         
@@ -383,6 +389,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Outcome,
             
             /// <summary>
+            /// Enum Sessiontype for "SessionType"
+            /// </summary>
+            [EnumMember(Value = "SessionType")]
+            Sessiontype,
+            
+            /// <summary>
+            /// Enum Eventtype for "EventType"
+            /// </summary>
+            [EnumMember(Value = "EventType")]
+            Eventtype,
+            
+            /// <summary>
             /// Enum Clickstreamsettings for "ClickstreamSettings"
             /// </summary>
             [EnumMember(Value = "ClickstreamSettings")]
@@ -398,7 +416,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Trigger for "Trigger"
             /// </summary>
             [EnumMember(Value = "Trigger")]
-            Trigger
+            Trigger,
+            
+            /// <summary>
+            /// Enum Response for "Response"
+            /// </summary>
+            [EnumMember(Value = "Response")]
+            Response
         }
         
         

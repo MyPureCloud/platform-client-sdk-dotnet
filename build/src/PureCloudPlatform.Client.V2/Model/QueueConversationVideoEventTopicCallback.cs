@@ -303,6 +303,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -328,6 +331,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
         
         
         
@@ -392,8 +397,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutomatedCallbackConfigId">AutomatedCallbackConfigId.</param>
         /// <param name="Wrapup">Wrapup.</param>
         /// <param name="AfterCallWork">AfterCallWork.</param>
+        /// <param name="AfterCallWorkRequired">AfterCallWorkRequired.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationVideoEventTopicCallback(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, QueueConversationVideoEventTopicDialerPreview DialerPreview = null, QueueConversationVideoEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, QueueConversationVideoEventTopicWrapup Wrapup = null, QueueConversationVideoEventTopicAfterCallWork AfterCallWork = null, Object AdditionalProperties = null)
+        public QueueConversationVideoEventTopicCallback(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, QueueConversationVideoEventTopicDialerPreview DialerPreview = null, QueueConversationVideoEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, QueueConversationVideoEventTopicWrapup Wrapup = null, QueueConversationVideoEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Id = Id;
@@ -417,6 +423,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
             this.Wrapup = Wrapup;
             this.AfterCallWork = AfterCallWork;
+            this.AfterCallWorkRequired = AfterCallWorkRequired;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -582,6 +589,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets AfterCallWorkRequired
+        /// </summary>
+        [DataMember(Name="afterCallWorkRequired", EmitDefaultValue=false)]
+        public bool? AfterCallWorkRequired { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -619,6 +634,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AutomatedCallbackConfigId: ").Append(AutomatedCallbackConfigId).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
+            sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -767,6 +783,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AfterCallWork.Equals(other.AfterCallWork)
                 ) &&
                 (
+                    this.AfterCallWorkRequired == other.AfterCallWorkRequired ||
+                    this.AfterCallWorkRequired != null &&
+                    this.AfterCallWorkRequired.Equals(other.AfterCallWorkRequired)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -850,6 +871,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AfterCallWork != null)
                     hash = hash * 59 + this.AfterCallWork.GetHashCode();
+                
+                if (this.AfterCallWorkRequired != null)
+                    hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

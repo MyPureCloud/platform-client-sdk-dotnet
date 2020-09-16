@@ -150,12 +150,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The skill evaluation method to use when routing conversations.
         /// </summary>
         /// <value>The skill evaluation method to use when routing conversations.</value>
         [DataMember(Name="skillEvaluationMethod", EmitDefaultValue=false)]
         public SkillEvaluationMethodEnum? SkillEvaluationMethod { get; set; }
+        
+        
+        
+        
         
         
         
@@ -194,13 +204,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SkillEvaluationMethod">The skill evaluation method to use when routing conversations..</param>
         /// <param name="QueueFlow">The in-queue flow to use for conversations waiting in queue..</param>
         /// <param name="WhisperPrompt">The prompt used for whisper on the queue, if configured..</param>
+        /// <param name="EnableTranscription">Indicates whether voice transcription is enabled for this queue..</param>
+        /// <param name="EnableManualAssignment">Indicates whether manual assignment is enabled for this queue..</param>
         /// <param name="CallingPartyName">The name to use for caller identification for outbound calls from this queue..</param>
         /// <param name="CallingPartyNumber">The phone number to use for caller identification for outbound calls from this queue..</param>
         /// <param name="DefaultScripts">The default script Ids for the communication types..</param>
         /// <param name="OutboundMessagingAddresses">The messaging addresses for the queue..</param>
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
         /// <param name="Joined">Joined.</param>
-        public UserQueue(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, Dictionary<string, MediaSetting> MediaSettings = null, List<RoutingRule> RoutingRules = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, DomainEntityRef QueueFlow = null, DomainEntityRef WhisperPrompt = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, bool? Joined = null)
+        public UserQueue(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, Dictionary<string, MediaSetting> MediaSettings = null, List<RoutingRule> RoutingRules = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, DomainEntityRef QueueFlow = null, DomainEntityRef WhisperPrompt = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, bool? Joined = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -216,6 +228,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SkillEvaluationMethod = SkillEvaluationMethod;
             this.QueueFlow = QueueFlow;
             this.WhisperPrompt = WhisperPrompt;
+            this.EnableTranscription = EnableTranscription;
+            this.EnableManualAssignment = EnableManualAssignment;
             this.CallingPartyName = CallingPartyName;
             this.CallingPartyNumber = CallingPartyNumber;
             this.DefaultScripts = DefaultScripts;
@@ -364,6 +378,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Indicates whether voice transcription is enabled for this queue.
+        /// </summary>
+        /// <value>Indicates whether voice transcription is enabled for this queue.</value>
+        [DataMember(Name="enableTranscription", EmitDefaultValue=false)]
+        public bool? EnableTranscription { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates whether manual assignment is enabled for this queue.
+        /// </summary>
+        /// <value>Indicates whether manual assignment is enabled for this queue.</value>
+        [DataMember(Name="enableManualAssignment", EmitDefaultValue=false)]
+        public bool? EnableManualAssignment { get; set; }
+        
+        
+        
+        /// <summary>
         /// The name to use for caller identification for outbound calls from this queue.
         /// </summary>
         /// <value>The name to use for caller identification for outbound calls from this queue.</value>
@@ -448,6 +480,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SkillEvaluationMethod: ").Append(SkillEvaluationMethod).Append("\n");
             sb.Append("  QueueFlow: ").Append(QueueFlow).Append("\n");
             sb.Append("  WhisperPrompt: ").Append(WhisperPrompt).Append("\n");
+            sb.Append("  EnableTranscription: ").Append(EnableTranscription).Append("\n");
+            sb.Append("  EnableManualAssignment: ").Append(EnableManualAssignment).Append("\n");
             sb.Append("  CallingPartyName: ").Append(CallingPartyName).Append("\n");
             sb.Append("  CallingPartyNumber: ").Append(CallingPartyNumber).Append("\n");
             sb.Append("  DefaultScripts: ").Append(DefaultScripts).Append("\n");
@@ -572,6 +606,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WhisperPrompt.Equals(other.WhisperPrompt)
                 ) &&
                 (
+                    this.EnableTranscription == other.EnableTranscription ||
+                    this.EnableTranscription != null &&
+                    this.EnableTranscription.Equals(other.EnableTranscription)
+                ) &&
+                (
+                    this.EnableManualAssignment == other.EnableManualAssignment ||
+                    this.EnableManualAssignment != null &&
+                    this.EnableManualAssignment.Equals(other.EnableManualAssignment)
+                ) &&
+                (
                     this.CallingPartyName == other.CallingPartyName ||
                     this.CallingPartyName != null &&
                     this.CallingPartyName.Equals(other.CallingPartyName)
@@ -667,6 +711,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.WhisperPrompt != null)
                     hash = hash * 59 + this.WhisperPrompt.GetHashCode();
+                
+                if (this.EnableTranscription != null)
+                    hash = hash * 59 + this.EnableTranscription.GetHashCode();
+                
+                if (this.EnableManualAssignment != null)
+                    hash = hash * 59 + this.EnableManualAssignment.GetHashCode();
                 
                 if (this.CallingPartyName != null)
                     hash = hash * 59 + this.CallingPartyName.GetHashCode();

@@ -31,6 +31,8 @@ title: QueueConversationSocialExpressionEventTopicCall
 | **UuiData** | **string** |  | [optional] |
 | **Wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup.html) |  | [optional] |
 | **AfterCallWork** | [**QueueConversationSocialExpressionEventTopicAfterCallWork**](QueueConversationSocialExpressionEventTopicAfterCallWork.html) |  | [optional] |
+| **AfterCallWorkRequired** | **bool?** |  | [optional] |
+| **AgentAssistantId** | **string** |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

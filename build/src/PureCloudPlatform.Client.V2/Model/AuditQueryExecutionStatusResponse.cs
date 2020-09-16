@@ -145,7 +145,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Triggers for "Triggers"
             /// </summary>
             [EnumMember(Value = "Triggers")]
-            Triggers
+            Triggers,
+            
+            /// <summary>
+            /// Enum Responsemanagement for "ResponseManagement"
+            /// </summary>
+            [EnumMember(Value = "ResponseManagement")]
+            Responsemanagement
         }
         
         

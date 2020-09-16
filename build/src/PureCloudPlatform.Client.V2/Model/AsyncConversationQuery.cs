@@ -35,9 +35,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// Sort the result set in ascending/descending order. Default is ascending
         /// </summary>
@@ -131,6 +128,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
         /// <summary>
         /// Sort the result set in ascending/descending order. Default is ascending
         /// </summary>
@@ -152,6 +150,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AsyncConversationQuery" /> class.
@@ -162,7 +162,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AsyncConversationQuery" /> class.
         /// </summary>
-        /// <param name="Interval">Specifies the date and time range of data being queried. Results will include conversations that both started on a day touched by the interval AND either started, ended, or any activity during the interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (required).</param>
         /// <param name="ConversationFilters">Filters that target conversation-level data.</param>
         /// <param name="SegmentFilters">Filters that target individual segments within a conversation.</param>
         /// <param name="EvaluationFilters">Filters that target evaluations.</param>
@@ -170,11 +169,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SurveyFilters">Filters that target surveys.</param>
         /// <param name="Order">Sort the result set in ascending/descending order. Default is ascending.</param>
         /// <param name="OrderBy">Specify which data element within the result set to use for sorting. The options  to use as a basis for sorting the results: conversationStart, segmentStart, and segmentEnd. If not specified, the default is conversationStart.</param>
+        /// <param name="Interval">Specifies the date and time range of data being queried. Results will include all conversations that had activity during the interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (required).</param>
         /// <param name="Limit">Specify number of results to be returned.</param>
         /// <param name="StartOfDayIntervalMatching">Add a filter to only include conversations that started after the beginning of the interval start date (UTC).</param>
-        public AsyncConversationQuery(string Interval = null, List<ConversationDetailQueryFilter> ConversationFilters = null, List<SegmentDetailQueryFilter> SegmentFilters = null, List<EvaluationDetailQueryFilter> EvaluationFilters = null, List<MediaEndpointStatDetailQueryFilter> MediaEndpointStatFilters = null, List<SurveyDetailQueryFilter> SurveyFilters = null, OrderEnum? Order = null, OrderByEnum? OrderBy = null, int? Limit = null, bool? StartOfDayIntervalMatching = null)
+        public AsyncConversationQuery(List<ConversationDetailQueryFilter> ConversationFilters = null, List<SegmentDetailQueryFilter> SegmentFilters = null, List<EvaluationDetailQueryFilter> EvaluationFilters = null, List<MediaEndpointStatDetailQueryFilter> MediaEndpointStatFilters = null, List<SurveyDetailQueryFilter> SurveyFilters = null, OrderEnum? Order = null, OrderByEnum? OrderBy = null, string Interval = null, int? Limit = null, bool? StartOfDayIntervalMatching = null)
         {
-            this.Interval = Interval;
             this.ConversationFilters = ConversationFilters;
             this.SegmentFilters = SegmentFilters;
             this.EvaluationFilters = EvaluationFilters;
@@ -182,19 +181,11 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SurveyFilters = SurveyFilters;
             this.Order = Order;
             this.OrderBy = OrderBy;
+            this.Interval = Interval;
             this.Limit = Limit;
             this.StartOfDayIntervalMatching = StartOfDayIntervalMatching;
             
         }
-        
-        
-        
-        /// <summary>
-        /// Specifies the date and time range of data being queried. Results will include conversations that both started on a day touched by the interval AND either started, ended, or any activity during the interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
-        /// </summary>
-        /// <value>Specifies the date and time range of data being queried. Results will include conversations that both started on a day touched by the interval AND either started, ended, or any activity during the interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
-        [DataMember(Name="interval", EmitDefaultValue=false)]
-        public string Interval { get; set; }
         
         
         
@@ -248,6 +239,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Specifies the date and time range of data being queried. Results will include all conversations that had activity during the interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+        /// </summary>
+        /// <value>Specifies the date and time range of data being queried. Results will include all conversations that had activity during the interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
+        [DataMember(Name="interval", EmitDefaultValue=false)]
+        public string Interval { get; set; }
+        
+        
+        
+        /// <summary>
         /// Specify number of results to be returned
         /// </summary>
         /// <value>Specify number of results to be returned</value>
@@ -273,7 +273,6 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AsyncConversationQuery {\n");
             
-            sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  ConversationFilters: ").Append(ConversationFilters).Append("\n");
             sb.Append("  SegmentFilters: ").Append(SegmentFilters).Append("\n");
             sb.Append("  EvaluationFilters: ").Append(EvaluationFilters).Append("\n");
@@ -281,6 +280,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SurveyFilters: ").Append(SurveyFilters).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  OrderBy: ").Append(OrderBy).Append("\n");
+            sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  Limit: ").Append(Limit).Append("\n");
             sb.Append("  StartOfDayIntervalMatching: ").Append(StartOfDayIntervalMatching).Append("\n");
             sb.Append("}\n");
@@ -320,11 +320,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Interval == other.Interval ||
-                    this.Interval != null &&
-                    this.Interval.Equals(other.Interval)
-                ) &&
-                (
                     this.ConversationFilters == other.ConversationFilters ||
                     this.ConversationFilters != null &&
                     this.ConversationFilters.SequenceEqual(other.ConversationFilters)
@@ -360,6 +355,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OrderBy.Equals(other.OrderBy)
                 ) &&
                 (
+                    this.Interval == other.Interval ||
+                    this.Interval != null &&
+                    this.Interval.Equals(other.Interval)
+                ) &&
+                (
                     this.Limit == other.Limit ||
                     this.Limit != null &&
                     this.Limit.Equals(other.Limit)
@@ -383,9 +383,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Interval != null)
-                    hash = hash * 59 + this.Interval.GetHashCode();
-                
                 if (this.ConversationFilters != null)
                     hash = hash * 59 + this.ConversationFilters.GetHashCode();
                 
@@ -406,6 +403,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.OrderBy != null)
                     hash = hash * 59 + this.OrderBy.GetHashCode();
+                
+                if (this.Interval != null)
+                    hash = hash * 59 + this.Interval.GetHashCode();
                 
                 if (this.Limit != null)
                     hash = hash * 59 + this.Limit.GetHashCode();

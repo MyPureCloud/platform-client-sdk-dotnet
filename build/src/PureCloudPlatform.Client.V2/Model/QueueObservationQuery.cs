@@ -46,6 +46,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Oactiveusers,
             
             /// <summary>
+            /// Enum Oalerting for "oAlerting"
+            /// </summary>
+            [EnumMember(Value = "oAlerting")]
+            Oalerting,
+            
+            /// <summary>
             /// Enum Ointeracting for "oInteracting"
             /// </summary>
             [EnumMember(Value = "oInteracting")]
@@ -112,6 +118,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "oActiveUsers")]
             Oactiveusers,
+            
+            /// <summary>
+            /// Enum Oalerting for "oAlerting"
+            /// </summary>
+            [EnumMember(Value = "oAlerting")]
+            Oalerting,
             
             /// <summary>
             /// Enum Ointeracting for "oInteracting"

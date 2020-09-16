@@ -243,6 +243,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -286,6 +289,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationVideoEventTopicChat" /> class.
@@ -305,8 +310,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="JourneyContext">JourneyContext.</param>
         /// <param name="Wrapup">Wrapup.</param>
         /// <param name="AfterCallWork">AfterCallWork.</param>
+        /// <param name="AfterCallWorkRequired">AfterCallWorkRequired.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationVideoEventTopicChat(StateEnum? State = null, string Id = null, string Provider = null, string ScriptId = null, string PeerId = null, string RoomId = null, string AvatarImageUrl = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationVideoEventTopicJourneyContext JourneyContext = null, QueueConversationVideoEventTopicWrapup Wrapup = null, QueueConversationVideoEventTopicAfterCallWork AfterCallWork = null, Object AdditionalProperties = null)
+        public QueueConversationVideoEventTopicChat(StateEnum? State = null, string Id = null, string Provider = null, string ScriptId = null, string PeerId = null, string RoomId = null, string AvatarImageUrl = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationVideoEventTopicJourneyContext JourneyContext = null, QueueConversationVideoEventTopicWrapup Wrapup = null, QueueConversationVideoEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Id = Id;
@@ -323,6 +329,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.JourneyContext = JourneyContext;
             this.Wrapup = Wrapup;
             this.AfterCallWork = AfterCallWork;
+            this.AfterCallWorkRequired = AfterCallWorkRequired;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -438,6 +445,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets AfterCallWorkRequired
+        /// </summary>
+        [DataMember(Name="afterCallWorkRequired", EmitDefaultValue=false)]
+        public bool? AfterCallWorkRequired { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -468,6 +483,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
+            sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -581,6 +597,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AfterCallWork.Equals(other.AfterCallWork)
                 ) &&
                 (
+                    this.AfterCallWorkRequired == other.AfterCallWorkRequired ||
+                    this.AfterCallWorkRequired != null &&
+                    this.AfterCallWorkRequired.Equals(other.AfterCallWorkRequired)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -643,6 +664,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AfterCallWork != null)
                     hash = hash * 59 + this.AfterCallWork.GetHashCode();
+                
+                if (this.AfterCallWorkRequired != null)
+                    hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

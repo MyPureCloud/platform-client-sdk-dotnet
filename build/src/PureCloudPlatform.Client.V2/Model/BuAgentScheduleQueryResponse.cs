@@ -45,6 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="BuAgentScheduleQueryResponse" /> class.
@@ -53,13 +58,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Shifts">The shift definitions for this agent schedule.</param>
         /// <param name="FullDayTimeOffMarkers">Full day time off markers which apply to this agent schedule.</param>
         /// <param name="WorkPlan">The work plan for this user.</param>
+        /// <param name="WorkPlansPerWeek">The work plans per week for this user from the work plan rotation. Null values in the list denotes that user is not part of any work plan for that week.</param>
         /// <param name="Metadata">Versioned entity metadata for this agent schedule.</param>
-        public BuAgentScheduleQueryResponse(UserReference User = null, List<BuAgentScheduleShift> Shifts = null, List<BuFullDayTimeOffMarker> FullDayTimeOffMarkers = null, WorkPlanReference WorkPlan = null, WfmVersionedEntityMetadata Metadata = null)
+        public BuAgentScheduleQueryResponse(UserReference User = null, List<BuAgentScheduleShift> Shifts = null, List<BuFullDayTimeOffMarker> FullDayTimeOffMarkers = null, WorkPlanReference WorkPlan = null, List<WorkPlanReference> WorkPlansPerWeek = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.User = User;
             this.Shifts = Shifts;
             this.FullDayTimeOffMarkers = FullDayTimeOffMarkers;
             this.WorkPlan = WorkPlan;
+            this.WorkPlansPerWeek = WorkPlansPerWeek;
             this.Metadata = Metadata;
             
         }
@@ -103,6 +110,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The work plans per week for this user from the work plan rotation. Null values in the list denotes that user is not part of any work plan for that week
+        /// </summary>
+        /// <value>The work plans per week for this user from the work plan rotation. Null values in the list denotes that user is not part of any work plan for that week</value>
+        [DataMember(Name="workPlansPerWeek", EmitDefaultValue=false)]
+        public List<WorkPlanReference> WorkPlansPerWeek { get; set; }
+        
+        
+        
+        /// <summary>
         /// Versioned entity metadata for this agent schedule
         /// </summary>
         /// <value>Versioned entity metadata for this agent schedule</value>
@@ -123,6 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Shifts: ").Append(Shifts).Append("\n");
             sb.Append("  FullDayTimeOffMarkers: ").Append(FullDayTimeOffMarkers).Append("\n");
             sb.Append("  WorkPlan: ").Append(WorkPlan).Append("\n");
+            sb.Append("  WorkPlansPerWeek: ").Append(WorkPlansPerWeek).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -181,6 +198,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WorkPlan.Equals(other.WorkPlan)
                 ) &&
                 (
+                    this.WorkPlansPerWeek == other.WorkPlansPerWeek ||
+                    this.WorkPlansPerWeek != null &&
+                    this.WorkPlansPerWeek.SequenceEqual(other.WorkPlansPerWeek)
+                ) &&
+                (
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
@@ -210,6 +232,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.WorkPlan != null)
                     hash = hash * 59 + this.WorkPlan.GetHashCode();
+                
+                if (this.WorkPlansPerWeek != null)
+                    hash = hash * 59 + this.WorkPlansPerWeek.GetHashCode();
                 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();

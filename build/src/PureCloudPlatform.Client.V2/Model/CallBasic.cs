@@ -358,6 +358,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -439,6 +445,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CallBasic" /> class.
@@ -470,7 +480,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Other">Address and name data for a call endpoint..</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
         /// <param name="AfterCallWork">After-call work for the communication..</param>
-        public CallBasic(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null, Address Self = null, Address Other = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null)
+        /// <param name="AfterCallWorkRequired">Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
+        /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
+        public CallBasic(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null, Address Self = null, Address Other = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
         {
             this.State = State;
             this.Id = Id;
@@ -499,6 +511,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Other = Other;
             this.Wrapup = Wrapup;
             this.AfterCallWork = AfterCallWork;
+            this.AfterCallWorkRequired = AfterCallWorkRequired;
+            this.AgentAssistantId = AgentAssistantId;
             
         }
         
@@ -717,6 +731,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public AfterCallWork AfterCallWork { get; set; }
         
         
+        
+        /// <summary>
+        /// Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested.
+        /// </summary>
+        /// <value>Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested.</value>
+        [DataMember(Name="afterCallWorkRequired", EmitDefaultValue=false)]
+        public bool? AfterCallWorkRequired { get; set; }
+        
+        
+        
+        /// <summary>
+        /// UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation.
+        /// </summary>
+        /// <value>UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation.</value>
+        [DataMember(Name="agentAssistantId", EmitDefaultValue=false)]
+        public string AgentAssistantId { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -753,6 +785,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Other: ").Append(Other).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
+            sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
+            sb.Append("  AgentAssistantId: ").Append(AgentAssistantId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -923,6 +957,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AfterCallWork == other.AfterCallWork ||
                     this.AfterCallWork != null &&
                     this.AfterCallWork.Equals(other.AfterCallWork)
+                ) &&
+                (
+                    this.AfterCallWorkRequired == other.AfterCallWorkRequired ||
+                    this.AfterCallWorkRequired != null &&
+                    this.AfterCallWorkRequired.Equals(other.AfterCallWorkRequired)
+                ) &&
+                (
+                    this.AgentAssistantId == other.AgentAssistantId ||
+                    this.AgentAssistantId != null &&
+                    this.AgentAssistantId.Equals(other.AgentAssistantId)
                 );
         }
 
@@ -1018,6 +1062,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AfterCallWork != null)
                     hash = hash * 59 + this.AfterCallWork.GetHashCode();
+                
+                if (this.AfterCallWorkRequired != null)
+                    hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();
+                
+                if (this.AgentAssistantId != null)
+                    hash = hash * 59 + this.AgentAssistantId.GetHashCode();
                 
                 return hash;
             }

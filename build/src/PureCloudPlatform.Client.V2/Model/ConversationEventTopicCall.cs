@@ -350,6 +350,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -421,6 +427,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationEventTopicCall" /> class.
@@ -449,8 +459,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UuiData">UuiData.</param>
         /// <param name="Wrapup">Wrapup.</param>
         /// <param name="AfterCallWork">AfterCallWork.</param>
+        /// <param name="AfterCallWorkRequired">AfterCallWorkRequired.</param>
+        /// <param name="AgentAssistantId">AgentAssistantId.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationEventTopicCall(string Id = null, StateEnum? State = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, ConversationEventTopicErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, ConversationEventTopicAddress Self = null, ConversationEventTopicAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<ConversationEventTopicDisconnectReason> DisconnectReasons = null, ConversationEventTopicFaxStatus FaxStatus = null, string UuiData = null, ConversationEventTopicWrapup Wrapup = null, ConversationEventTopicAfterCallWork AfterCallWork = null, Object AdditionalProperties = null)
+        public ConversationEventTopicCall(string Id = null, StateEnum? State = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, ConversationEventTopicErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, ConversationEventTopicAddress Self = null, ConversationEventTopicAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<ConversationEventTopicDisconnectReason> DisconnectReasons = null, ConversationEventTopicFaxStatus FaxStatus = null, string UuiData = null, ConversationEventTopicWrapup Wrapup = null, ConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.State = State;
@@ -476,6 +488,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.UuiData = UuiData;
             this.Wrapup = Wrapup;
             this.AfterCallWork = AfterCallWork;
+            this.AfterCallWorkRequired = AfterCallWorkRequired;
+            this.AgentAssistantId = AgentAssistantId;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -651,6 +665,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets AfterCallWorkRequired
+        /// </summary>
+        [DataMember(Name="afterCallWorkRequired", EmitDefaultValue=false)]
+        public bool? AfterCallWorkRequired { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets AgentAssistantId
+        /// </summary>
+        [DataMember(Name="agentAssistantId", EmitDefaultValue=false)]
+        public string AgentAssistantId { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -690,6 +720,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UuiData: ").Append(UuiData).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
+            sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
+            sb.Append("  AgentAssistantId: ").Append(AgentAssistantId).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -848,6 +880,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AfterCallWork.Equals(other.AfterCallWork)
                 ) &&
                 (
+                    this.AfterCallWorkRequired == other.AfterCallWorkRequired ||
+                    this.AfterCallWorkRequired != null &&
+                    this.AfterCallWorkRequired.Equals(other.AfterCallWorkRequired)
+                ) &&
+                (
+                    this.AgentAssistantId == other.AgentAssistantId ||
+                    this.AgentAssistantId != null &&
+                    this.AgentAssistantId.Equals(other.AgentAssistantId)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -937,6 +979,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AfterCallWork != null)
                     hash = hash * 59 + this.AfterCallWork.GetHashCode();
+                
+                if (this.AfterCallWorkRequired != null)
+                    hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();
+                
+                if (this.AgentAssistantId != null)
+                    hash = hash * 59 + this.AgentAssistantId.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
