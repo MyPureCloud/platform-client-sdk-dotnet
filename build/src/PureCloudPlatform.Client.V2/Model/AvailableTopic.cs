@@ -90,6 +90,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableTopic" /> class.
@@ -101,7 +106,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RequiresCurrentUser">True if the topic user ID is required to match the subscribing user ID.</param>
         /// <param name="RequiresCurrentUserOrPermission">True if permissions are only required when the topic user ID does not match the subscribing user ID.</param>
         /// <param name="Transports">Transports that support events for the topic.</param>
-        public AvailableTopic(string Description = null, string Id = null, List<string> RequiresPermissions = null, Dictionary<string, Object> Schema = null, bool? RequiresCurrentUser = null, bool? RequiresCurrentUserOrPermission = null, List<TransportsEnum> Transports = null)
+        /// <param name="PublicApiTemplateUriPaths">PublicApiTemplateUriPaths.</param>
+        public AvailableTopic(string Description = null, string Id = null, List<string> RequiresPermissions = null, Dictionary<string, Object> Schema = null, bool? RequiresCurrentUser = null, bool? RequiresCurrentUserOrPermission = null, List<TransportsEnum> Transports = null, List<string> PublicApiTemplateUriPaths = null)
         {
             this.Description = Description;
             this.Id = Id;
@@ -110,6 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RequiresCurrentUser = RequiresCurrentUser;
             this.RequiresCurrentUserOrPermission = RequiresCurrentUserOrPermission;
             this.Transports = Transports;
+            this.PublicApiTemplateUriPaths = PublicApiTemplateUriPaths;
             
         }
         
@@ -174,6 +181,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<TransportsEnum> Transports { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets PublicApiTemplateUriPaths
+        /// </summary>
+        [DataMember(Name="publicApiTemplateUriPaths", EmitDefaultValue=false)]
+        public List<string> PublicApiTemplateUriPaths { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -190,6 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RequiresCurrentUser: ").Append(RequiresCurrentUser).Append("\n");
             sb.Append("  RequiresCurrentUserOrPermission: ").Append(RequiresCurrentUserOrPermission).Append("\n");
             sb.Append("  Transports: ").Append(Transports).Append("\n");
+            sb.Append("  PublicApiTemplateUriPaths: ").Append(PublicApiTemplateUriPaths).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -260,6 +276,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Transports == other.Transports ||
                     this.Transports != null &&
                     this.Transports.SequenceEqual(other.Transports)
+                ) &&
+                (
+                    this.PublicApiTemplateUriPaths == other.PublicApiTemplateUriPaths ||
+                    this.PublicApiTemplateUriPaths != null &&
+                    this.PublicApiTemplateUriPaths.SequenceEqual(other.PublicApiTemplateUriPaths)
                 );
         }
 
@@ -295,6 +316,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Transports != null)
                     hash = hash * 59 + this.Transports.GetHashCode();
+                
+                if (this.PublicApiTemplateUriPaths != null)
+                    hash = hash * 59 + this.PublicApiTemplateUriPaths.GetHashCode();
                 
                 return hash;
             }

@@ -128,7 +128,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: description, requiresPermissions, schema, transports |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: description, requiresPermissions, schema, transports, publicApiTemplateUriPaths |
 {: class="table table-striped"}
 
 ### Return type

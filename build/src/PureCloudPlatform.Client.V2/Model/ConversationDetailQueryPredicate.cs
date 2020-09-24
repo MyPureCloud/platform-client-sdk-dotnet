@@ -164,6 +164,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Nflow,
             
             /// <summary>
+            /// Enum Nflowmilestone for "nFlowMilestone"
+            /// </summary>
+            [EnumMember(Value = "nFlowMilestone")]
+            Nflowmilestone,
+            
+            /// <summary>
             /// Enum Nflowoutcome for "nFlowOutcome"
             /// </summary>
             [EnumMember(Value = "nFlowOutcome")]
@@ -228,6 +234,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "oExternalMediaCount")]
             Oexternalmediacount,
+            
+            /// <summary>
+            /// Enum Oflowmilestone for "oFlowMilestone"
+            /// </summary>
+            [EnumMember(Value = "oFlowMilestone")]
+            Oflowmilestone,
             
             /// <summary>
             /// Enum Omediacount for "oMediaCount"

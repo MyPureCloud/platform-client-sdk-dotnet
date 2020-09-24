@@ -315,6 +315,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteFlowsDatatableRowWithHttpInfo (string datatableId, string rowId);
         
         /// <summary>
+        /// Delete a flow milestone.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <returns>Empty</returns>
+        Empty DeleteFlowsMilestone (string milestoneId);
+
+        /// <summary>
+        /// Delete a flow milestone.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <returns>ApiResponse of Empty</returns>
+        ApiResponse<Empty> DeleteFlowsMilestoneWithHttpInfo (string milestoneId);
+        
+        /// <summary>
         /// Get Dependency Tracking objects that have a given display name
         /// </summary>
         /// <remarks>
@@ -1547,6 +1569,64 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<FlowRuntimeExecution> GetFlowsExecutionWithHttpInfo (string flowExecutionId);
         
         /// <summary>
+        /// Get a flow milestone
+        /// </summary>
+        /// <remarks>
+        /// Returns a specified flow milestone
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <returns>FlowMilestone</returns>
+        FlowMilestone GetFlowsMilestone (string milestoneId);
+
+        /// <summary>
+        /// Get a flow milestone
+        /// </summary>
+        /// <remarks>
+        /// Returns a specified flow milestone
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <returns>ApiResponse of FlowMilestone</returns>
+        ApiResponse<FlowMilestone> GetFlowsMilestoneWithHttpInfo (string milestoneId);
+        
+        /// <summary>
+        /// Get a pageable list of flow milestones, filtered by query parameters
+        /// </summary>
+        /// <remarks>
+        /// Multiple IDs can be specified, in which case all matching flow milestones will be returned, and no other parameters will be evaluated.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="id">ID (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="description">Description (optional)</param>
+        /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <returns>FlowMilestoneListing</returns>
+        FlowMilestoneListing GetFlowsMilestones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null);
+
+        /// <summary>
+        /// Get a pageable list of flow milestones, filtered by query parameters
+        /// </summary>
+        /// <remarks>
+        /// Multiple IDs can be specified, in which case all matching flow milestones will be returned, and no other parameters will be evaluated.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="id">ID (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="description">Description (optional)</param>
+        /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <returns>ApiResponse of FlowMilestoneListing</returns>
+        ApiResponse<FlowMilestoneListing> GetFlowsMilestonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null);
+        
+        /// <summary>
         /// Get a flow outcome
         /// </summary>
         /// <remarks>
@@ -2121,6 +2201,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<FlowExecutionLaunchResponse> PostFlowsExecutionsWithHttpInfo (FlowExecutionLaunchRequest flowLaunchRequest);
         
         /// <summary>
+        /// Create a flow milestone
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>FlowMilestone</returns>
+        FlowMilestone PostFlowsMilestones (FlowMilestone body = null);
+
+        /// <summary>
+        /// Create a flow milestone
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of FlowMilestone</returns>
+        ApiResponse<FlowMilestone> PostFlowsMilestonesWithHttpInfo (FlowMilestone body = null);
+        
+        /// <summary>
         /// Create a flow outcome
         /// </summary>
         /// <remarks>
@@ -2389,6 +2491,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">datatable row (optional)</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
         ApiResponse<Dictionary<string, Object>> PutFlowsDatatableRowWithHttpInfo (string datatableId, string rowId, Object body = null);
+        
+        /// <summary>
+        /// Updates a flow milestone
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>FlowMilestone</returns>
+        FlowMilestone PutFlowsMilestone (string milestoneId, FlowMilestone body = null);
+
+        /// <summary>
+        /// Updates a flow milestone
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of FlowMilestone</returns>
+        ApiResponse<FlowMilestone> PutFlowsMilestoneWithHttpInfo (string milestoneId, FlowMilestone body = null);
         
         /// <summary>
         /// Updates a flow outcome
@@ -2715,6 +2841,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">the key for the row</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId);
+        
+        /// <summary>
+        /// Delete a flow milestone.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <returns>Task of Empty</returns>
+        System.Threading.Tasks.Task<Empty> DeleteFlowsMilestoneAsync (string milestoneId);
+
+        /// <summary>
+        /// Delete a flow milestone.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteFlowsMilestoneAsyncWithHttpInfo (string milestoneId);
         
         /// <summary>
         /// Get Dependency Tracking objects that have a given display name
@@ -3949,6 +4097,64 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<FlowRuntimeExecution>> GetFlowsExecutionAsyncWithHttpInfo (string flowExecutionId);
         
         /// <summary>
+        /// Get a flow milestone
+        /// </summary>
+        /// <remarks>
+        /// Returns a specified flow milestone
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <returns>Task of FlowMilestone</returns>
+        System.Threading.Tasks.Task<FlowMilestone> GetFlowsMilestoneAsync (string milestoneId);
+
+        /// <summary>
+        /// Get a flow milestone
+        /// </summary>
+        /// <remarks>
+        /// Returns a specified flow milestone
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <returns>Task of ApiResponse (FlowMilestone)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlowMilestone>> GetFlowsMilestoneAsyncWithHttpInfo (string milestoneId);
+        
+        /// <summary>
+        /// Get a pageable list of flow milestones, filtered by query parameters
+        /// </summary>
+        /// <remarks>
+        /// Multiple IDs can be specified, in which case all matching flow milestones will be returned, and no other parameters will be evaluated.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="id">ID (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="description">Description (optional)</param>
+        /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <returns>Task of FlowMilestoneListing</returns>
+        System.Threading.Tasks.Task<FlowMilestoneListing> GetFlowsMilestonesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null);
+
+        /// <summary>
+        /// Get a pageable list of flow milestones, filtered by query parameters
+        /// </summary>
+        /// <remarks>
+        /// Multiple IDs can be specified, in which case all matching flow milestones will be returned, and no other parameters will be evaluated.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="id">ID (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="description">Description (optional)</param>
+        /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <returns>Task of ApiResponse (FlowMilestoneListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlowMilestoneListing>> GetFlowsMilestonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null);
+        
+        /// <summary>
         /// Get a flow outcome
         /// </summary>
         /// <remarks>
@@ -4523,6 +4729,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<FlowExecutionLaunchResponse>> PostFlowsExecutionsAsyncWithHttpInfo (FlowExecutionLaunchRequest flowLaunchRequest);
         
         /// <summary>
+        /// Create a flow milestone
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of FlowMilestone</returns>
+        System.Threading.Tasks.Task<FlowMilestone> PostFlowsMilestonesAsync (FlowMilestone body = null);
+
+        /// <summary>
+        /// Create a flow milestone
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (FlowMilestone)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlowMilestone>> PostFlowsMilestonesAsyncWithHttpInfo (FlowMilestone body = null);
+        
+        /// <summary>
         /// Create a flow outcome
         /// </summary>
         /// <remarks>
@@ -4791,6 +5019,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">datatable row (optional)</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> PutFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId, Object body = null);
+        
+        /// <summary>
+        /// Updates a flow milestone
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of FlowMilestone</returns>
+        System.Threading.Tasks.Task<FlowMilestone> PutFlowsMilestoneAsync (string milestoneId, FlowMilestone body = null);
+
+        /// <summary>
+        /// Updates a flow milestone
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (FlowMilestone)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlowMilestone>> PutFlowsMilestoneAsyncWithHttpInfo (string milestoneId, FlowMilestone body = null);
         
         /// <summary>
         /// Updates a flow outcome
@@ -7453,6 +7705,199 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete a flow milestone. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <returns>Empty</returns>
+        public Empty DeleteFlowsMilestone (string milestoneId)
+        {
+             ApiResponse<Empty> localVarResponse = DeleteFlowsMilestoneWithHttpInfo(milestoneId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete a flow milestone. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <returns>ApiResponse of Empty</returns>
+        public ApiResponse< Empty > DeleteFlowsMilestoneWithHttpInfo (string milestoneId)
+        { 
+            // verify the required parameter 'milestoneId' is set
+            if (milestoneId == null)
+                throw new ApiException(400, "Missing required parameter 'milestoneId' when calling ArchitectApi->DeleteFlowsMilestone");
+
+            var localVarPath = "/api/v2/flows/milestones/{milestoneId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (milestoneId != null) localVarPathParams.Add("milestoneId", this.Configuration.ApiClient.ParameterToString(milestoneId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsMilestone: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsMilestone: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Empty>(localVarStatusCode,
+                localVarHeaders,
+                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete a flow milestone. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <returns>Task of Empty</returns>
+        public async System.Threading.Tasks.Task<Empty> DeleteFlowsMilestoneAsync (string milestoneId)
+        {
+             ApiResponse<Empty> localVarResponse = await DeleteFlowsMilestoneAsyncWithHttpInfo(milestoneId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete a flow milestone. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteFlowsMilestoneAsyncWithHttpInfo (string milestoneId)
+        { 
+            // verify the required parameter 'milestoneId' is set
+            if (milestoneId == null)
+                throw new ApiException(400, "Missing required parameter 'milestoneId' when calling ArchitectApi->DeleteFlowsMilestone");
+            
+
+            var localVarPath = "/api/v2/flows/milestones/{milestoneId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (milestoneId != null) localVarPathParams.Add("milestoneId", this.Configuration.ApiClient.ParameterToString(milestoneId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsMilestone: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsMilestone: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Empty>(localVarStatusCode,
+                localVarHeaders,
+                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -16617,6 +17062,427 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get a flow milestone Returns a specified flow milestone
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <returns>FlowMilestone</returns>
+        public FlowMilestone GetFlowsMilestone (string milestoneId)
+        {
+             ApiResponse<FlowMilestone> localVarResponse = GetFlowsMilestoneWithHttpInfo(milestoneId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a flow milestone Returns a specified flow milestone
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <returns>ApiResponse of FlowMilestone</returns>
+        public ApiResponse< FlowMilestone > GetFlowsMilestoneWithHttpInfo (string milestoneId)
+        { 
+            // verify the required parameter 'milestoneId' is set
+            if (milestoneId == null)
+                throw new ApiException(400, "Missing required parameter 'milestoneId' when calling ArchitectApi->GetFlowsMilestone");
+
+            var localVarPath = "/api/v2/flows/milestones/{milestoneId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (milestoneId != null) localVarPathParams.Add("milestoneId", this.Configuration.ApiClient.ParameterToString(milestoneId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsMilestone: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsMilestone: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowMilestone>(localVarStatusCode,
+                localVarHeaders,
+                (FlowMilestone) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowMilestone)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a flow milestone Returns a specified flow milestone
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <returns>Task of FlowMilestone</returns>
+        public async System.Threading.Tasks.Task<FlowMilestone> GetFlowsMilestoneAsync (string milestoneId)
+        {
+             ApiResponse<FlowMilestone> localVarResponse = await GetFlowsMilestoneAsyncWithHttpInfo(milestoneId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a flow milestone Returns a specified flow milestone
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <returns>Task of ApiResponse (FlowMilestone)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlowMilestone>> GetFlowsMilestoneAsyncWithHttpInfo (string milestoneId)
+        { 
+            // verify the required parameter 'milestoneId' is set
+            if (milestoneId == null)
+                throw new ApiException(400, "Missing required parameter 'milestoneId' when calling ArchitectApi->GetFlowsMilestone");
+            
+
+            var localVarPath = "/api/v2/flows/milestones/{milestoneId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (milestoneId != null) localVarPathParams.Add("milestoneId", this.Configuration.ApiClient.ParameterToString(milestoneId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsMilestone: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsMilestone: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowMilestone>(localVarStatusCode,
+                localVarHeaders,
+                (FlowMilestone) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowMilestone)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a pageable list of flow milestones, filtered by query parameters Multiple IDs can be specified, in which case all matching flow milestones will be returned, and no other parameters will be evaluated.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="id">ID (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="description">Description (optional)</param>
+        /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <returns>FlowMilestoneListing</returns>
+        public FlowMilestoneListing GetFlowsMilestones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null)
+        {
+             ApiResponse<FlowMilestoneListing> localVarResponse = GetFlowsMilestonesWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a pageable list of flow milestones, filtered by query parameters Multiple IDs can be specified, in which case all matching flow milestones will be returned, and no other parameters will be evaluated.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="id">ID (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="description">Description (optional)</param>
+        /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <returns>ApiResponse of FlowMilestoneListing</returns>
+        public ApiResponse< FlowMilestoneListing > GetFlowsMilestonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null)
+        { 
+
+            var localVarPath = "/api/v2/flows/milestones";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", this.Configuration.ApiClient.ParameterToString(description)));
+            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", this.Configuration.ApiClient.ParameterToString(nameOrDescription)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsMilestones: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsMilestones: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowMilestoneListing>(localVarStatusCode,
+                localVarHeaders,
+                (FlowMilestoneListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowMilestoneListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a pageable list of flow milestones, filtered by query parameters Multiple IDs can be specified, in which case all matching flow milestones will be returned, and no other parameters will be evaluated.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="id">ID (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="description">Description (optional)</param>
+        /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <returns>Task of FlowMilestoneListing</returns>
+        public async System.Threading.Tasks.Task<FlowMilestoneListing> GetFlowsMilestonesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null)
+        {
+             ApiResponse<FlowMilestoneListing> localVarResponse = await GetFlowsMilestonesAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a pageable list of flow milestones, filtered by query parameters Multiple IDs can be specified, in which case all matching flow milestones will be returned, and no other parameters will be evaluated.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="id">ID (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="description">Description (optional)</param>
+        /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <returns>Task of ApiResponse (FlowMilestoneListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlowMilestoneListing>> GetFlowsMilestonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null)
+        { 
+
+            var localVarPath = "/api/v2/flows/milestones";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", this.Configuration.ApiClient.ParameterToString(description)));
+            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", this.Configuration.ApiClient.ParameterToString(nameOrDescription)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsMilestones: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsMilestones: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowMilestoneListing>(localVarStatusCode,
+                localVarHeaders,
+                (FlowMilestoneListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowMilestoneListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get a flow outcome Returns a specified flow outcome
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -21637,6 +22503,200 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Create a flow milestone 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>FlowMilestone</returns>
+        public FlowMilestone PostFlowsMilestones (FlowMilestone body = null)
+        {
+             ApiResponse<FlowMilestone> localVarResponse = PostFlowsMilestonesWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a flow milestone 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of FlowMilestone</returns>
+        public ApiResponse< FlowMilestone > PostFlowsMilestonesWithHttpInfo (FlowMilestone body = null)
+        { 
+
+            var localVarPath = "/api/v2/flows/milestones";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsMilestones: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsMilestones: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowMilestone>(localVarStatusCode,
+                localVarHeaders,
+                (FlowMilestone) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowMilestone)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Create a flow milestone 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of FlowMilestone</returns>
+        public async System.Threading.Tasks.Task<FlowMilestone> PostFlowsMilestonesAsync (FlowMilestone body = null)
+        {
+             ApiResponse<FlowMilestone> localVarResponse = await PostFlowsMilestonesAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a flow milestone 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (FlowMilestone)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlowMilestone>> PostFlowsMilestonesAsyncWithHttpInfo (FlowMilestone body = null)
+        { 
+
+            var localVarPath = "/api/v2/flows/milestones";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsMilestones: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsMilestones: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowMilestone>(localVarStatusCode,
+                localVarHeaders,
+                (FlowMilestone) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowMilestone)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Create a flow outcome Asynchronous.  Notification topic: v2.flows.outcomes.{flowOutcomeId}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -23995,6 +25055,213 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
                 localVarHeaders,
                 (Dictionary<string, Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Updates a flow milestone 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>FlowMilestone</returns>
+        public FlowMilestone PutFlowsMilestone (string milestoneId, FlowMilestone body = null)
+        {
+             ApiResponse<FlowMilestone> localVarResponse = PutFlowsMilestoneWithHttpInfo(milestoneId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Updates a flow milestone 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of FlowMilestone</returns>
+        public ApiResponse< FlowMilestone > PutFlowsMilestoneWithHttpInfo (string milestoneId, FlowMilestone body = null)
+        { 
+            // verify the required parameter 'milestoneId' is set
+            if (milestoneId == null)
+                throw new ApiException(400, "Missing required parameter 'milestoneId' when calling ArchitectApi->PutFlowsMilestone");
+
+            var localVarPath = "/api/v2/flows/milestones/{milestoneId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (milestoneId != null) localVarPathParams.Add("milestoneId", this.Configuration.ApiClient.ParameterToString(milestoneId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowsMilestone: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowsMilestone: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowMilestone>(localVarStatusCode,
+                localVarHeaders,
+                (FlowMilestone) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowMilestone)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Updates a flow milestone 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of FlowMilestone</returns>
+        public async System.Threading.Tasks.Task<FlowMilestone> PutFlowsMilestoneAsync (string milestoneId, FlowMilestone body = null)
+        {
+             ApiResponse<FlowMilestone> localVarResponse = await PutFlowsMilestoneAsyncWithHttpInfo(milestoneId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Updates a flow milestone 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (FlowMilestone)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlowMilestone>> PutFlowsMilestoneAsyncWithHttpInfo (string milestoneId, FlowMilestone body = null)
+        { 
+            // verify the required parameter 'milestoneId' is set
+            if (milestoneId == null)
+                throw new ApiException(400, "Missing required parameter 'milestoneId' when calling ArchitectApi->PutFlowsMilestone");
+            
+
+            var localVarPath = "/api/v2/flows/milestones/{milestoneId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (milestoneId != null) localVarPathParams.Add("milestoneId", this.Configuration.ApiClient.ParameterToString(milestoneId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowsMilestone: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowsMilestone: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowMilestone>(localVarStatusCode,
+                localVarHeaders,
+                (FlowMilestone) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowMilestone)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

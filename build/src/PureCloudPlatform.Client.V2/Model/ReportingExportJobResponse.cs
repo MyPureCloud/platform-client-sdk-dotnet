@@ -474,7 +474,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum TooManyRequestsFromAnOrganization for "TOO_MANY_REQUESTS_FROM_AN_ORGANIZATION"
             /// </summary>
             [EnumMember(Value = "TOO_MANY_REQUESTS_FROM_AN_ORGANIZATION")]
-            TooManyRequestsFromAnOrganization
+            TooManyRequestsFromAnOrganization,
+            
+            /// <summary>
+            /// Enum FailedAsExportFileSizeIsGreaterThan10mb for "FAILED_AS_EXPORT_FILE_SIZE_IS_GREATER_THAN_10MB"
+            /// </summary>
+            [EnumMember(Value = "FAILED_AS_EXPORT_FILE_SIZE_IS_GREATER_THAN_10MB")]
+            FailedAsExportFileSizeIsGreaterThan10mb
         }
         
         
@@ -573,6 +579,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current status of the export request
         /// </summary>
@@ -648,6 +657,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingExportJobResponse" /> class.
@@ -682,8 +693,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HasCustomParticipantAttributes">Indicates if custom participant attributes will be exported.</param>
         /// <param name="RecipientEmails">The list of email recipients for the exports.</param>
         /// <param name="EmailStatuses">The status of individual email addresses as a map.</param>
+        /// <param name="EmailErrorDescription">The optional error message in case the export fail to email.</param>
         /// <param name="Enabled">Enabled.</param>
-        public ReportingExportJobResponse(string Name = null, string RunId = null, StatusEnum? Status = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, bool? ExcludeEmptyRows = null, bool? HasSplitByMedia = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null, Dictionary<string, string> EmailStatuses = null, bool? Enabled = null)
+        public ReportingExportJobResponse(string Name = null, string RunId = null, StatusEnum? Status = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, bool? ExcludeEmptyRows = null, bool? HasSplitByMedia = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null, Dictionary<string, string> EmailStatuses = null, string EmailErrorDescription = null, bool? Enabled = null)
         {
             this.Name = Name;
             this.RunId = RunId;
@@ -709,6 +721,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.HasCustomParticipantAttributes = HasCustomParticipantAttributes;
             this.RecipientEmails = RecipientEmails;
             this.EmailStatuses = EmailStatuses;
+            this.EmailErrorDescription = EmailErrorDescription;
             this.Enabled = Enabled;
             
         }
@@ -912,6 +925,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The optional error message in case the export fail to email
+        /// </summary>
+        /// <value>The optional error message in case the export fail to email</value>
+        [DataMember(Name="emailErrorDescription", EmitDefaultValue=false)]
+        public string EmailErrorDescription { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Enabled
         /// </summary>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
@@ -961,6 +983,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  HasCustomParticipantAttributes: ").Append(HasCustomParticipantAttributes).Append("\n");
             sb.Append("  RecipientEmails: ").Append(RecipientEmails).Append("\n");
             sb.Append("  EmailStatuses: ").Append(EmailStatuses).Append("\n");
+            sb.Append("  EmailErrorDescription: ").Append(EmailErrorDescription).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -1125,6 +1148,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EmailStatuses.SequenceEqual(other.EmailStatuses)
                 ) &&
                 (
+                    this.EmailErrorDescription == other.EmailErrorDescription ||
+                    this.EmailErrorDescription != null &&
+                    this.EmailErrorDescription.Equals(other.EmailErrorDescription)
+                ) &&
+                (
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
@@ -1222,6 +1250,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.EmailStatuses != null)
                     hash = hash * 59 + this.EmailStatuses.GetHashCode();
+                
+                if (this.EmailErrorDescription != null)
+                    hash = hash * 59 + this.EmailErrorDescription.GetHashCode();
                 
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();

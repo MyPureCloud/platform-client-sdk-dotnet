@@ -20,6 +20,8 @@ title: ReportingDataExportTopicDataExportNotification
 | **ModifiedDateTime** | **DateTime?** |  | [optional] |
 | **PercentageComplete** | **double?** |  | [optional] |
 | **EmailStatuses** | **Dictionary&lt;string, string&gt;** |  | [optional] |
+| **EmailErrorDescription** | **string** |  | [optional] |
+| **ScheduleExpression** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

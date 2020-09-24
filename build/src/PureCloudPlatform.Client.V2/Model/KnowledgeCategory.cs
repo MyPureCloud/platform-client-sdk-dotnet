@@ -51,7 +51,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Enus for "en-US"
             /// </summary>
             [EnumMember(Value = "en-US")]
-            Enus
+            Enus,
+            
+            /// <summary>
+            /// Enum Dede for "de-DE"
+            /// </summary>
+            [EnumMember(Value = "de-DE")]
+            Dede
         }
         
         

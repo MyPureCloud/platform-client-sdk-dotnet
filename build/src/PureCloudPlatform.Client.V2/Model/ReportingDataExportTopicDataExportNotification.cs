@@ -515,6 +515,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -558,6 +564,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingDataExportTopicDataExportNotification" /> class.
@@ -575,7 +585,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedDateTime">ModifiedDateTime.</param>
         /// <param name="PercentageComplete">PercentageComplete.</param>
         /// <param name="EmailStatuses">EmailStatuses.</param>
-        public ReportingDataExportTopicDataExportNotification(string Id = null, string RunId = null, string Name = null, StatusEnum? Status = null, ExportFormatEnum? ExportFormat = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, double? PercentageComplete = null, Dictionary<string, string> EmailStatuses = null)
+        /// <param name="EmailErrorDescription">EmailErrorDescription.</param>
+        /// <param name="ScheduleExpression">ScheduleExpression.</param>
+        public ReportingDataExportTopicDataExportNotification(string Id = null, string RunId = null, string Name = null, StatusEnum? Status = null, ExportFormatEnum? ExportFormat = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, double? PercentageComplete = null, Dictionary<string, string> EmailStatuses = null, string EmailErrorDescription = null, string ScheduleExpression = null)
         {
             this.Id = Id;
             this.RunId = RunId;
@@ -590,6 +602,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ModifiedDateTime = ModifiedDateTime;
             this.PercentageComplete = PercentageComplete;
             this.EmailStatuses = EmailStatuses;
+            this.EmailErrorDescription = EmailErrorDescription;
+            this.ScheduleExpression = ScheduleExpression;
             
         }
         
@@ -674,6 +688,22 @@ namespace PureCloudPlatform.Client.V2.Model
         public Dictionary<string, string> EmailStatuses { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets EmailErrorDescription
+        /// </summary>
+        [DataMember(Name="emailErrorDescription", EmitDefaultValue=false)]
+        public string EmailErrorDescription { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets ScheduleExpression
+        /// </summary>
+        [DataMember(Name="scheduleExpression", EmitDefaultValue=false)]
+        public string ScheduleExpression { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -696,6 +726,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ModifiedDateTime: ").Append(ModifiedDateTime).Append("\n");
             sb.Append("  PercentageComplete: ").Append(PercentageComplete).Append("\n");
             sb.Append("  EmailStatuses: ").Append(EmailStatuses).Append("\n");
+            sb.Append("  EmailErrorDescription: ").Append(EmailErrorDescription).Append("\n");
+            sb.Append("  ScheduleExpression: ").Append(ScheduleExpression).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -796,6 +828,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EmailStatuses == other.EmailStatuses ||
                     this.EmailStatuses != null &&
                     this.EmailStatuses.SequenceEqual(other.EmailStatuses)
+                ) &&
+                (
+                    this.EmailErrorDescription == other.EmailErrorDescription ||
+                    this.EmailErrorDescription != null &&
+                    this.EmailErrorDescription.Equals(other.EmailErrorDescription)
+                ) &&
+                (
+                    this.ScheduleExpression == other.ScheduleExpression ||
+                    this.ScheduleExpression != null &&
+                    this.ScheduleExpression.Equals(other.ScheduleExpression)
                 );
         }
 
@@ -849,6 +891,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.EmailStatuses != null)
                     hash = hash * 59 + this.EmailStatuses.GetHashCode();
+                
+                if (this.EmailErrorDescription != null)
+                    hash = hash * 59 + this.EmailErrorDescription.GetHashCode();
+                
+                if (this.ScheduleExpression != null)
+                    hash = hash * 59 + this.ScheduleExpression.GetHashCode();
                 
                 return hash;
             }

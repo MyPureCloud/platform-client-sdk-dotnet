@@ -149,7 +149,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **categoryId** | **string**| Category ID |  |
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
 {: class="table table-striped"}
 
 ### Return type
@@ -214,7 +214,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
 {: class="table table-striped"}
 
 ### Return type
@@ -342,7 +342,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **limit** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
@@ -411,7 +411,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **categoryId** | **string**| Category ID |  |
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
 {: class="table table-striped"}
 
 ### Return type
@@ -476,7 +476,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
 {: class="table table-striped"}
 
 ### Return type
@@ -544,7 +544,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **limit** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
@@ -613,7 +613,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
 | **trainingId** | **string**| Training ID |  |
 {: class="table table-striped"}
 
@@ -681,7 +681,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **limit** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
@@ -881,7 +881,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **categoryId** | **string**| Category ID |  |
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
 | **body** | [**KnowledgeCategoryRequest**](KnowledgeCategoryRequest.html)|  |  |
 {: class="table table-striped"}
 
@@ -948,7 +948,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
 | **body** | [**KnowledgeDocumentRequest**](KnowledgeDocumentRequest.html)|  |  |
 {: class="table table-striped"}
 
@@ -1013,7 +1013,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
 | **body** | [**List<KnowledgeDocumentBulkRequest>**](KnowledgeDocumentBulkRequest.html)|  |  |
 {: class="table table-striped"}
 
@@ -1078,7 +1078,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
 | **body** | [**KnowledgeCategoryRequest**](KnowledgeCategoryRequest.html)|  |  |
 {: class="table table-striped"}
 
@@ -1143,7 +1143,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
 | **body** | [**KnowledgeDocumentRequest**](KnowledgeDocumentRequest.html)|  |  |
 {: class="table table-striped"}
 
@@ -1208,7 +1208,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
 | **trainingId** | **string**| Training ID |  |
 {: class="table table-striped"}
 
@@ -1272,7 +1272,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
 {: class="table table-striped"}
 
 ### Return type
