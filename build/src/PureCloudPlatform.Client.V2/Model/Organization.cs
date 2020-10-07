@@ -106,6 +106,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Genesyscloud for "GenesysCloud"
+            /// </summary>
+            [EnumMember(Value = "GenesysCloud")]
+            Genesyscloud,
+            
+            /// <summary>
             /// Enum Purecloud for "PureCloud"
             /// </summary>
             [EnumMember(Value = "PureCloud")]

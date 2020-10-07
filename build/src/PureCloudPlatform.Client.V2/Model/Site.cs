@@ -140,12 +140,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Indicates if the resource is active, inactive, or deleted.
         /// </summary>
         /// <value>Indicates if the resource is active, inactive, or deleted.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -417,6 +422,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The core site
+        /// </summary>
+        /// <value>The core site</value>
+        [DataMember(Name="coreSite", EmitDefaultValue=false)]
+        public bool? CoreSite { get; private set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -455,6 +469,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Location: ").Append(Location).Append("\n");
             sb.Append("  Managed: ").Append(Managed).Append("\n");
             sb.Append("  NtpSettings: ").Append(NtpSettings).Append("\n");
+            sb.Append("  CoreSite: ").Append(CoreSite).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -603,6 +618,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.NtpSettings.Equals(other.NtpSettings)
                 ) &&
                 (
+                    this.CoreSite == other.CoreSite ||
+                    this.CoreSite != null &&
+                    this.CoreSite.Equals(other.CoreSite)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -686,6 +706,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.NtpSettings != null)
                     hash = hash * 59 + this.NtpSettings.GetHashCode();
+                
+                if (this.CoreSite != null)
+                    hash = hash * 59 + this.CoreSite.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

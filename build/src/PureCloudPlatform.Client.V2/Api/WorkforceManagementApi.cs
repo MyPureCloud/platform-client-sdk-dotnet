@@ -696,8 +696,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>BuScheduleMetadata</returns>
-        BuScheduleMetadata GetWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, DateTime? weekId, string scheduleId);
+        BuScheduleMetadata GetWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, DateTime? weekId, string scheduleId, string expand = null);
 
         /// <summary>
         /// Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route
@@ -709,8 +710,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of BuScheduleMetadata</returns>
-        ApiResponse<BuScheduleMetadata> GetWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId);
+        ApiResponse<BuScheduleMetadata> GetWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, string expand = null);
         
         /// <summary>
         /// Get the generation results for a generated schedule
@@ -3131,6 +3133,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WorkPlan> PostWorkforcemanagementManagementunitWorkplanCopyWithHttpInfo (string managementUnitId, string workPlanId, CopyWorkPlan body = null);
         
         /// <summary>
+        /// Validate Work Plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanId">The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID.</param>
+        /// <param name="body">body (optional)</param>
+        /// <param name="expand"> (optional)</param>
+        /// <returns>ValidateWorkPlanResponse</returns>
+        ValidateWorkPlanResponse PostWorkforcemanagementManagementunitWorkplanValidate (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null);
+
+        /// <summary>
+        /// Validate Work Plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanId">The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID.</param>
+        /// <param name="body">body (optional)</param>
+        /// <param name="expand"> (optional)</param>
+        /// <returns>ApiResponse of ValidateWorkPlanResponse</returns>
+        ApiResponse<ValidateWorkPlanResponse> PostWorkforcemanagementManagementunitWorkplanValidateWithHttpInfo (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null);
+        
+        /// <summary>
         /// Create a new work plan
         /// </summary>
         /// <remarks>
@@ -3926,8 +3956,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of BuScheduleMetadata</returns>
-        System.Threading.Tasks.Task<BuScheduleMetadata> GetWorkforcemanagementBusinessunitWeekScheduleAsync (string businessUnitId, DateTime? weekId, string scheduleId);
+        System.Threading.Tasks.Task<BuScheduleMetadata> GetWorkforcemanagementBusinessunitWeekScheduleAsync (string businessUnitId, DateTime? weekId, string scheduleId, string expand = null);
 
         /// <summary>
         /// Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route
@@ -3939,8 +3970,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (BuScheduleMetadata)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuScheduleMetadata>> GetWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId);
+        System.Threading.Tasks.Task<ApiResponse<BuScheduleMetadata>> GetWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, string expand = null);
         
         /// <summary>
         /// Get the generation results for a generated schedule
@@ -6359,6 +6391,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PostWorkforcemanagementManagementunitWorkplanCopyAsyncWithHttpInfo (string managementUnitId, string workPlanId, CopyWorkPlan body = null);
+        
+        /// <summary>
+        /// Validate Work Plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanId">The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID.</param>
+        /// <param name="body">body (optional)</param>
+        /// <param name="expand"> (optional)</param>
+        /// <returns>Task of ValidateWorkPlanResponse</returns>
+        System.Threading.Tasks.Task<ValidateWorkPlanResponse> PostWorkforcemanagementManagementunitWorkplanValidateAsync (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null);
+
+        /// <summary>
+        /// Validate Work Plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanId">The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID.</param>
+        /// <param name="body">body (optional)</param>
+        /// <param name="expand"> (optional)</param>
+        /// <returns>Task of ApiResponse (ValidateWorkPlanResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ValidateWorkPlanResponse>> PostWorkforcemanagementManagementunitWorkplanValidateAsyncWithHttpInfo (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null);
         
         /// <summary>
         /// Create a new work plan
@@ -12279,10 +12339,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>BuScheduleMetadata</returns>
-        public BuScheduleMetadata GetWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, DateTime? weekId, string scheduleId)
+        public BuScheduleMetadata GetWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, DateTime? weekId, string scheduleId, string expand = null)
         {
-             ApiResponse<BuScheduleMetadata> localVarResponse = GetWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo(businessUnitId, weekId, scheduleId);
+             ApiResponse<BuScheduleMetadata> localVarResponse = GetWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo(businessUnitId, weekId, scheduleId, expand);
              return localVarResponse.Data;
         }
 
@@ -12293,8 +12354,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of BuScheduleMetadata</returns>
-        public ApiResponse< BuScheduleMetadata > GetWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId)
+        public ApiResponse< BuScheduleMetadata > GetWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, string expand = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -12342,6 +12404,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -12386,10 +12449,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of BuScheduleMetadata</returns>
-        public async System.Threading.Tasks.Task<BuScheduleMetadata> GetWorkforcemanagementBusinessunitWeekScheduleAsync (string businessUnitId, DateTime? weekId, string scheduleId)
+        public async System.Threading.Tasks.Task<BuScheduleMetadata> GetWorkforcemanagementBusinessunitWeekScheduleAsync (string businessUnitId, DateTime? weekId, string scheduleId, string expand = null)
         {
-             ApiResponse<BuScheduleMetadata> localVarResponse = await GetWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo(businessUnitId, weekId, scheduleId);
+             ApiResponse<BuScheduleMetadata> localVarResponse = await GetWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, expand);
              return localVarResponse.Data;
 
         }
@@ -12401,8 +12465,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (BuScheduleMetadata)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BuScheduleMetadata>> GetWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId)
+        public async System.Threading.Tasks.Task<ApiResponse<BuScheduleMetadata>> GetWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, string expand = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -12453,6 +12518,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -32858,6 +32924,232 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<WorkPlan>(localVarStatusCode,
                 localVarHeaders,
                 (WorkPlan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkPlan)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Validate Work Plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanId">The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID.</param>
+        /// <param name="body">body (optional)</param>
+        /// <param name="expand"> (optional)</param>
+        /// <returns>ValidateWorkPlanResponse</returns>
+        public ValidateWorkPlanResponse PostWorkforcemanagementManagementunitWorkplanValidate (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null)
+        {
+             ApiResponse<ValidateWorkPlanResponse> localVarResponse = PostWorkforcemanagementManagementunitWorkplanValidateWithHttpInfo(managementUnitId, workPlanId, body, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate Work Plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanId">The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID.</param>
+        /// <param name="body">body (optional)</param>
+        /// <param name="expand"> (optional)</param>
+        /// <returns>ApiResponse of ValidateWorkPlanResponse</returns>
+        public ApiResponse< ValidateWorkPlanResponse > PostWorkforcemanagementManagementunitWorkplanValidateWithHttpInfo (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplanValidate");
+            // verify the required parameter 'workPlanId' is set
+            if (workPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'workPlanId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplanValidate");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/validate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (workPlanId != null) localVarPathParams.Add("workPlanId", this.Configuration.ApiClient.ParameterToString(workPlanId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWorkplanValidate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWorkplanValidate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ValidateWorkPlanResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ValidateWorkPlanResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateWorkPlanResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Validate Work Plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanId">The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID.</param>
+        /// <param name="body">body (optional)</param>
+        /// <param name="expand"> (optional)</param>
+        /// <returns>Task of ValidateWorkPlanResponse</returns>
+        public async System.Threading.Tasks.Task<ValidateWorkPlanResponse> PostWorkforcemanagementManagementunitWorkplanValidateAsync (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null)
+        {
+             ApiResponse<ValidateWorkPlanResponse> localVarResponse = await PostWorkforcemanagementManagementunitWorkplanValidateAsyncWithHttpInfo(managementUnitId, workPlanId, body, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate Work Plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanId">The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID.</param>
+        /// <param name="body">body (optional)</param>
+        /// <param name="expand"> (optional)</param>
+        /// <returns>Task of ApiResponse (ValidateWorkPlanResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ValidateWorkPlanResponse>> PostWorkforcemanagementManagementunitWorkplanValidateAsyncWithHttpInfo (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplanValidate");
+            
+            // verify the required parameter 'workPlanId' is set
+            if (workPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'workPlanId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplanValidate");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/validate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (workPlanId != null) localVarPathParams.Add("workPlanId", this.Configuration.ApiClient.ParameterToString(workPlanId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWorkplanValidate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWorkplanValidate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ValidateWorkPlanResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ValidateWorkPlanResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateWorkPlanResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

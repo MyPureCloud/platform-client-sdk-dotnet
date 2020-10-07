@@ -82,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DevelopmentActivityAggregateQueryRequestPredicate" /> class.
         /// </summary>
         /// <param name="Dimension">Each predicates specifies a dimension. (required).</param>
-        /// <param name="Value">Corresponding value for dimensions in predicates (required).</param>
+        /// <param name="Value">Corresponding value for dimensions in predicates. If the dimensions is type, Valid Values: Informational, Coaching (required).</param>
         public DevelopmentActivityAggregateQueryRequestPredicate(DimensionEnum? Dimension = null, string Value = null)
         {
             this.Dimension = Dimension;
@@ -95,9 +95,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Corresponding value for dimensions in predicates
+        /// Corresponding value for dimensions in predicates. If the dimensions is type, Valid Values: Informational, Coaching
         /// </summary>
-        /// <value>Corresponding value for dimensions in predicates</value>
+        /// <value>Corresponding value for dimensions in predicates. If the dimensions is type, Valid Values: Informational, Coaching</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
         

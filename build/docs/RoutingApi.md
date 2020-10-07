@@ -4820,7 +4820,6 @@ Update Transcription Settings
 
 Requires ANY permissions: 
 
-* routing:transcriptionSettings:add
 * routing:transcriptionSettings:edit
 
 ### Example

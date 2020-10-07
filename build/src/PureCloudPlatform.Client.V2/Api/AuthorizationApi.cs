@@ -113,6 +113,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AuthzDivision> GetAuthorizationDivisionWithHttpInfo (string divisionId, bool? objectCount = null);
         
         /// <summary>
+        /// Gets all grants for a given division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>AuthzDivisionGrantEntityListing</returns>
+        AuthzDivisionGrantEntityListing GetAuthorizationDivisionGrants (string divisionId, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Gets all grants for a given division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>ApiResponse of AuthzDivisionGrantEntityListing</returns>
+        ApiResponse<AuthzDivisionGrantEntityListing> GetAuthorizationDivisionGrantsWithHttpInfo (string divisionId, int? pageNumber = null, int? pageSize = null);
+        
+        /// <summary>
         /// Retrieve a list of all divisions defined for the organization
         /// </summary>
         /// <remarks>
@@ -1035,6 +1061,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
         System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> GetAuthorizationDivisionAsyncWithHttpInfo (string divisionId, bool? objectCount = null);
+        
+        /// <summary>
+        /// Gets all grants for a given division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of AuthzDivisionGrantEntityListing</returns>
+        System.Threading.Tasks.Task<AuthzDivisionGrantEntityListing> GetAuthorizationDivisionGrantsAsync (string divisionId, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Gets all grants for a given division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (AuthzDivisionGrantEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AuthzDivisionGrantEntityListing>> GetAuthorizationDivisionGrantsAsyncWithHttpInfo (string divisionId, int? pageNumber = null, int? pageSize = null);
         
         /// <summary>
         /// Retrieve a list of all divisions defined for the organization
@@ -2750,6 +2802,211 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AuthzDivision>(localVarStatusCode,
                 localVarHeaders,
                 (AuthzDivision) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzDivision)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Gets all grants for a given division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>AuthzDivisionGrantEntityListing</returns>
+        public AuthzDivisionGrantEntityListing GetAuthorizationDivisionGrants (string divisionId, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<AuthzDivisionGrantEntityListing> localVarResponse = GetAuthorizationDivisionGrantsWithHttpInfo(divisionId, pageNumber, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets all grants for a given division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>ApiResponse of AuthzDivisionGrantEntityListing</returns>
+        public ApiResponse< AuthzDivisionGrantEntityListing > GetAuthorizationDivisionGrantsWithHttpInfo (string divisionId, int? pageNumber = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'divisionId' is set
+            if (divisionId == null)
+                throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->GetAuthorizationDivisionGrants");
+
+            var localVarPath = "/api/v2/authorization/divisions/{divisionId}/grants";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (divisionId != null) localVarPathParams.Add("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionGrants: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionGrants: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzDivisionGrantEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (AuthzDivisionGrantEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzDivisionGrantEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Gets all grants for a given division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of AuthzDivisionGrantEntityListing</returns>
+        public async System.Threading.Tasks.Task<AuthzDivisionGrantEntityListing> GetAuthorizationDivisionGrantsAsync (string divisionId, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<AuthzDivisionGrantEntityListing> localVarResponse = await GetAuthorizationDivisionGrantsAsyncWithHttpInfo(divisionId, pageNumber, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets all grants for a given division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (AuthzDivisionGrantEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AuthzDivisionGrantEntityListing>> GetAuthorizationDivisionGrantsAsyncWithHttpInfo (string divisionId, int? pageNumber = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'divisionId' is set
+            if (divisionId == null)
+                throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->GetAuthorizationDivisionGrants");
+            
+
+            var localVarPath = "/api/v2/authorization/divisions/{divisionId}/grants";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (divisionId != null) localVarPathParams.Add("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionGrants: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionGrants: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzDivisionGrantEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (AuthzDivisionGrantEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzDivisionGrantEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

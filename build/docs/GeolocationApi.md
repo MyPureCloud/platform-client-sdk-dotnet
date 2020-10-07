@@ -142,7 +142,7 @@ Patch a organization's GeolocationSettings
 
 Requires ANY permissions: 
 
-* telephony:plugin:all
+* geolocation:settings:edit
 
 ### Example
 ```{"language":"csharp"}

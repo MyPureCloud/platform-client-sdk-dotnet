@@ -76,12 +76,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Core language for knowledge base in which initial content must be created first
         /// </summary>
         /// <value>Core language for knowledge base in which initial content must be created first</value>
         [DataMember(Name="coreLanguage", EmitDefaultValue=false)]
         public CoreLanguageEnum? CoreLanguage { get; set; }
+        
+        
         
         
         
@@ -103,11 +108,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Description">Knowledge base description.</param>
         /// <param name="CoreLanguage">Core language for knowledge base in which initial content must be created first (required).</param>
-        public KnowledgeBase(string Name = null, string Description = null, CoreLanguageEnum? CoreLanguage = null)
+        /// <param name="FaqCount">The count representing the number of documents of type FAQ per KnowledgeBase.</param>
+        public KnowledgeBase(string Name = null, string Description = null, CoreLanguageEnum? CoreLanguage = null, int? FaqCount = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.CoreLanguage = CoreLanguage;
+            this.FaqCount = FaqCount;
             
         }
         
@@ -160,6 +167,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The count representing the number of documents of type FAQ per KnowledgeBase
+        /// </summary>
+        /// <value>The count representing the number of documents of type FAQ per KnowledgeBase</value>
+        [DataMember(Name="faqCount", EmitDefaultValue=false)]
+        public int? FaqCount { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -182,6 +198,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CoreLanguage: ").Append(CoreLanguage).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  FaqCount: ").Append(FaqCount).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -250,6 +267,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateModified.Equals(other.DateModified)
                 ) &&
                 (
+                    this.FaqCount == other.FaqCount ||
+                    this.FaqCount != null &&
+                    this.FaqCount.Equals(other.FaqCount)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -285,6 +307,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
+                if (this.FaqCount != null)
+                    hash = hash * 59 + this.FaqCount.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

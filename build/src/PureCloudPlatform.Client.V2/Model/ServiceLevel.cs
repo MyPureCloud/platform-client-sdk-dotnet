@@ -34,8 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ServiceLevel" /> class.
         /// </summary>
-        /// <param name="Percentage">Percentage.</param>
-        /// <param name="DurationMs">DurationMs.</param>
+        /// <param name="Percentage">The desired Service Level. A value between 0 and 1..</param>
+        /// <param name="DurationMs">Service Level target in milliseconds..</param>
         public ServiceLevel(double? Percentage = null, long? DurationMs = null)
         {
             this.Percentage = Percentage;
@@ -46,16 +46,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Percentage
+        /// The desired Service Level. A value between 0 and 1.
         /// </summary>
+        /// <value>The desired Service Level. A value between 0 and 1.</value>
         [DataMember(Name="percentage", EmitDefaultValue=false)]
         public double? Percentage { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets DurationMs
+        /// Service Level target in milliseconds.
         /// </summary>
+        /// <value>Service Level target in milliseconds.</value>
         [DataMember(Name="durationMs", EmitDefaultValue=false)]
         public long? DurationMs { get; set; }
         

@@ -30,6 +30,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="BuQueryAgentSchedulesRequest" /> class.
@@ -41,11 +46,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="BuQueryAgentSchedulesRequest" /> class.
         /// </summary>
         /// <param name="ManagementUnitId">The ID of the management unit to query (required).</param>
-        /// <param name="UserIds">The IDs of the users to query.  Omit to query all user schedules in the management unit.</param>
-        public BuQueryAgentSchedulesRequest(string ManagementUnitId = null, List<string> UserIds = null)
+        /// <param name="UserIds">The IDs of the users to query.  Omit to query all user schedules in the management unit. Note: Only one of [teamIds, userIds] can be requested.</param>
+        /// <param name="TeamIds">The teamIds to report on. If null or not set, results will be queried for requested users if applicable or otherwise all users in the management unit. Note: Only one of [teamIds, userIds] can be requested.</param>
+        public BuQueryAgentSchedulesRequest(string ManagementUnitId = null, List<string> UserIds = null, List<string> TeamIds = null)
         {
             this.ManagementUnitId = ManagementUnitId;
             this.UserIds = UserIds;
+            this.TeamIds = TeamIds;
             
         }
         
@@ -61,11 +68,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The IDs of the users to query.  Omit to query all user schedules in the management unit
+        /// The IDs of the users to query.  Omit to query all user schedules in the management unit. Note: Only one of [teamIds, userIds] can be requested
         /// </summary>
-        /// <value>The IDs of the users to query.  Omit to query all user schedules in the management unit</value>
+        /// <value>The IDs of the users to query.  Omit to query all user schedules in the management unit. Note: Only one of [teamIds, userIds] can be requested</value>
         [DataMember(Name="userIds", EmitDefaultValue=false)]
         public List<string> UserIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The teamIds to report on. If null or not set, results will be queried for requested users if applicable or otherwise all users in the management unit. Note: Only one of [teamIds, userIds] can be requested
+        /// </summary>
+        /// <value>The teamIds to report on. If null or not set, results will be queried for requested users if applicable or otherwise all users in the management unit. Note: Only one of [teamIds, userIds] can be requested</value>
+        [DataMember(Name="teamIds", EmitDefaultValue=false)]
+        public List<string> TeamIds { get; set; }
         
         
         /// <summary>
@@ -79,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  ManagementUnitId: ").Append(ManagementUnitId).Append("\n");
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
+            sb.Append("  TeamIds: ").Append(TeamIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,6 +141,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UserIds == other.UserIds ||
                     this.UserIds != null &&
                     this.UserIds.SequenceEqual(other.UserIds)
+                ) &&
+                (
+                    this.TeamIds == other.TeamIds ||
+                    this.TeamIds != null &&
+                    this.TeamIds.SequenceEqual(other.TeamIds)
                 );
         }
 
@@ -144,6 +166,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.UserIds != null)
                     hash = hash * 59 + this.UserIds.GetHashCode();
+                
+                if (this.TeamIds != null)
+                    hash = hash * 59 + this.TeamIds.GetHashCode();
                 
                 return hash;
             }

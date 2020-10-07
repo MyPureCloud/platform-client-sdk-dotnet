@@ -346,6 +346,40 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request
+        /// </summary>
+        /// <value>The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CsvDelimiterEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Semicolon for "SEMICOLON"
+            /// </summary>
+            [EnumMember(Value = "SEMICOLON")]
+            Semicolon,
+            
+            /// <summary>
+            /// Enum Comma for "COMMA"
+            /// </summary>
+            [EnumMember(Value = "COMMA")]
+            Comma
+        }
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -395,6 +429,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request
+        /// </summary>
+        /// <value>The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request</value>
+        [DataMember(Name="csvDelimiter", EmitDefaultValue=false)]
+        public CsvDelimiterEnum? CsvDelimiter { get; set; }
+        
+        
+        
+        
+        
         
         
         
@@ -421,10 +466,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HasSplitFilters">Indicates if filters will be split in aggregate detail exports.</param>
         /// <param name="ExcludeEmptyRows">Excludes empty rows from the exports.</param>
         /// <param name="HasSplitByMedia">Indicates if media type will be split in aggregate detail exports.</param>
+        /// <param name="HasSummaryRow">Indicates if summary row needs to be present in exports.</param>
+        /// <param name="CsvDelimiter">The user supplied csv delimiter string value either of type &#39;comma&#39; or &#39;semicolon&#39; permitted for the export request.</param>
         /// <param name="SelectedColumns">The list of ordered selected columns from the export view by the user.</param>
         /// <param name="HasCustomParticipantAttributes">Indicates if custom participant attributes will be exported.</param>
         /// <param name="RecipientEmails">The list of email recipients for the exports.</param>
-        public ReportingExportJobRequest(string Name = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, bool? ExcludeEmptyRows = null, bool? HasSplitByMedia = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null)
+        public ReportingExportJobRequest(string Name = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, bool? ExcludeEmptyRows = null, bool? HasSplitByMedia = null, bool? HasSummaryRow = null, CsvDelimiterEnum? CsvDelimiter = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null)
         {
             this.Name = Name;
             this.TimeZone = TimeZone;
@@ -439,6 +486,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.HasSplitFilters = HasSplitFilters;
             this.ExcludeEmptyRows = ExcludeEmptyRows;
             this.HasSplitByMedia = HasSplitByMedia;
+            this.HasSummaryRow = HasSummaryRow;
+            this.CsvDelimiter = CsvDelimiter;
             this.SelectedColumns = SelectedColumns;
             this.HasCustomParticipantAttributes = HasCustomParticipantAttributes;
             this.RecipientEmails = RecipientEmails;
@@ -551,6 +600,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Indicates if summary row needs to be present in exports
+        /// </summary>
+        /// <value>Indicates if summary row needs to be present in exports</value>
+        [DataMember(Name="hasSummaryRow", EmitDefaultValue=false)]
+        public bool? HasSummaryRow { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
         /// The list of ordered selected columns from the export view by the user
         /// </summary>
         /// <value>The list of ordered selected columns from the export view by the user</value>
@@ -598,6 +658,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  HasSplitFilters: ").Append(HasSplitFilters).Append("\n");
             sb.Append("  ExcludeEmptyRows: ").Append(ExcludeEmptyRows).Append("\n");
             sb.Append("  HasSplitByMedia: ").Append(HasSplitByMedia).Append("\n");
+            sb.Append("  HasSummaryRow: ").Append(HasSummaryRow).Append("\n");
+            sb.Append("  CsvDelimiter: ").Append(CsvDelimiter).Append("\n");
             sb.Append("  SelectedColumns: ").Append(SelectedColumns).Append("\n");
             sb.Append("  HasCustomParticipantAttributes: ").Append(HasCustomParticipantAttributes).Append("\n");
             sb.Append("  RecipientEmails: ").Append(RecipientEmails).Append("\n");
@@ -703,6 +765,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HasSplitByMedia.Equals(other.HasSplitByMedia)
                 ) &&
                 (
+                    this.HasSummaryRow == other.HasSummaryRow ||
+                    this.HasSummaryRow != null &&
+                    this.HasSummaryRow.Equals(other.HasSummaryRow)
+                ) &&
+                (
+                    this.CsvDelimiter == other.CsvDelimiter ||
+                    this.CsvDelimiter != null &&
+                    this.CsvDelimiter.Equals(other.CsvDelimiter)
+                ) &&
+                (
                     this.SelectedColumns == other.SelectedColumns ||
                     this.SelectedColumns != null &&
                     this.SelectedColumns.SequenceEqual(other.SelectedColumns)
@@ -769,6 +841,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.HasSplitByMedia != null)
                     hash = hash * 59 + this.HasSplitByMedia.GetHashCode();
+                
+                if (this.HasSummaryRow != null)
+                    hash = hash * 59 + this.HasSummaryRow.GetHashCode();
+                
+                if (this.CsvDelimiter != null)
+                    hash = hash * 59 + this.CsvDelimiter.GetHashCode();
                 
                 if (this.SelectedColumns != null)
                     hash = hash * 59 + this.SelectedColumns.GetHashCode();

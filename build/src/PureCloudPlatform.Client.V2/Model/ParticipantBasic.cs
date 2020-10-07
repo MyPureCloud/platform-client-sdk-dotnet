@@ -186,6 +186,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current screen recording state for this participant.
         /// </summary>
@@ -360,6 +363,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The current screen recording state for this participant.
         /// </summary>
@@ -414,6 +419,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationRoutingData">Information on how a communication should be routed to an agent..</param>
         /// <param name="AlertingTimeoutMs">Specifies how long the agent has to answer an interaction before being marked as not responding..</param>
         /// <param name="MonitoredParticipantId">If this participant is a monitor, then this will be the id of the participant that is being monitored..</param>
+        /// <param name="CoachedParticipantId">If this participant is a coach, then this will be the id of the participant that is being coached..</param>
         /// <param name="Attributes">Additional participant attributes.</param>
         /// <param name="Calls">Calls.</param>
         /// <param name="Callbacks">Callbacks.</param>
@@ -429,7 +435,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlaggedReason">The reason specifying why participant flagged the conversation..</param>
         /// <param name="StartAcwTime">The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="EndAcwTime">The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public ParticipantBasic(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string TeamId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, ConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<CallBasic> Calls = null, List<CallbackBasic> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Message> Messages = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null)
+        public ParticipantBasic(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string TeamId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, ConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, Dictionary<string, string> Attributes = null, List<CallBasic> Calls = null, List<CallbackBasic> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Message> Messages = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null)
         {
             this.Id = Id;
             this.StartTime = StartTime;
@@ -460,6 +466,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConversationRoutingData = ConversationRoutingData;
             this.AlertingTimeoutMs = AlertingTimeoutMs;
             this.MonitoredParticipantId = MonitoredParticipantId;
+            this.CoachedParticipantId = CoachedParticipantId;
             this.Attributes = Attributes;
             this.Calls = Calls;
             this.Callbacks = Callbacks;
@@ -735,6 +742,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// If this participant is a coach, then this will be the id of the participant that is being coached.
+        /// </summary>
+        /// <value>If this participant is a coach, then this will be the id of the participant that is being coached.</value>
+        [DataMember(Name="coachedParticipantId", EmitDefaultValue=false)]
+        public string CoachedParticipantId { get; set; }
+        
+        
+        
+        /// <summary>
         /// Additional participant attributes
         /// </summary>
         /// <value>Additional participant attributes</value>
@@ -882,6 +898,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationRoutingData: ").Append(ConversationRoutingData).Append("\n");
             sb.Append("  AlertingTimeoutMs: ").Append(AlertingTimeoutMs).Append("\n");
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
+            sb.Append("  CoachedParticipantId: ").Append(CoachedParticipantId).Append("\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  Calls: ").Append(Calls).Append("\n");
             sb.Append("  Callbacks: ").Append(Callbacks).Append("\n");
@@ -1079,6 +1096,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MonitoredParticipantId.Equals(other.MonitoredParticipantId)
                 ) &&
                 (
+                    this.CoachedParticipantId == other.CoachedParticipantId ||
+                    this.CoachedParticipantId != null &&
+                    this.CoachedParticipantId.Equals(other.CoachedParticipantId)
+                ) &&
+                (
                     this.Attributes == other.Attributes ||
                     this.Attributes != null &&
                     this.Attributes.SequenceEqual(other.Attributes)
@@ -1253,6 +1275,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MonitoredParticipantId != null)
                     hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();
+                
+                if (this.CoachedParticipantId != null)
+                    hash = hash * 59 + this.CoachedParticipantId.GetHashCode();
                 
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();

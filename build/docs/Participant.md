@@ -36,6 +36,7 @@ title: Participant
 | **ConversationRoutingData** | [**ConversationRoutingData**](ConversationRoutingData.html) | Information on how a communication should be routed to an agent. | [optional] |
 | **AlertingTimeoutMs** | **int?** | Specifies how long the agent has to answer an interaction before being marked as not responding. | [optional] |
 | **MonitoredParticipantId** | **string** | If this participant is a monitor, then this will be the id of the participant that is being monitored. | [optional] |
+| **CoachedParticipantId** | **string** | If this participant is a coach, then this will be the id of the participant that is being coached. | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** | Additional participant attributes | [optional] |
 | **Calls** | [**List&lt;Call&gt;**](Call.html) |  | [optional] |
 | **Callbacks** | [**List&lt;Callback&gt;**](Callback.html) |  | [optional] |

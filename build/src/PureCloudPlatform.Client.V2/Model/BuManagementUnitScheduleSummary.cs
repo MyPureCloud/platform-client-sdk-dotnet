@@ -53,7 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AgentCount">The number of agents from this management unit that are in the schedule.</param>
         /// <param name="StartDate">The start of the schedule change in the management unit. Only populated in schedule update notifications. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="EndDate">The end of the schedule change in the management unit. Only populated in schedule update notifications. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="Agents">The changed agents in the management unit. Only populated in schedule update notifications.</param>
+        /// <param name="Agents">The agents in the management unit who are part of this schedule, or in schedule change notifications, the agents that were changed. Note this will come back as an empty list unless the appropriate expand query parameter is passed.</param>
         public BuManagementUnitScheduleSummary(ManagementUnitReference ManagementUnit = null, int? AgentCount = null, DateTime? StartDate = null, DateTime? EndDate = null, List<UserReference> Agents = null)
         {
             this.ManagementUnit = ManagementUnit;
@@ -103,9 +103,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The changed agents in the management unit. Only populated in schedule update notifications
+        /// The agents in the management unit who are part of this schedule, or in schedule change notifications, the agents that were changed. Note this will come back as an empty list unless the appropriate expand query parameter is passed
         /// </summary>
-        /// <value>The changed agents in the management unit. Only populated in schedule update notifications</value>
+        /// <value>The agents in the management unit who are part of this schedule, or in schedule change notifications, the agents that were changed. Note this will come back as an empty list unless the appropriate expand query parameter is passed</value>
         [DataMember(Name="agents", EmitDefaultValue=false)]
         public List<UserReference> Agents { get; set; }
         

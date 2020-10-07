@@ -133,6 +133,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshorttermforecastsgenerate) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/generate | Gone. Use equivalent business unit resource instead |
 | [**PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshorttermforecastspartialupload) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/partialupload | Gone. Use equivalent business unit resource instead |
 | [**PostWorkforcemanagementManagementunitWorkplanCopy**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitworkplancopy) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/copy | Create a copy of work plan |
+| [**PostWorkforcemanagementManagementunitWorkplanValidate**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitworkplanvalidate) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/validate | Validate Work Plan |
 | [**PostWorkforcemanagementManagementunitWorkplans**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitworkplans) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans | Create a new work plan |
 | [**PostWorkforcemanagementManagementunits**](WorkforceManagementApi.html#postworkforcemanagementmanagementunits) | **POST** /api/v2/workforcemanagement/managementunits | Add a management unit |
 | [**PostWorkforcemanagementNotificationsUpdate**](WorkforceManagementApi.html#postworkforcemanagementnotificationsupdate) | **POST** /api/v2/workforcemanagement/notifications/update | Mark a list of notifications as read or unread |
@@ -1992,7 +1993,7 @@ namespace Example
 
 <a name="getworkforcemanagementbusinessunitweekschedule"></a>
 
-## [**BuScheduleMetadata**](BuScheduleMetadata.html) GetWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, DateTime? weekId, string scheduleId)
+## [**BuScheduleMetadata**](BuScheduleMetadata.html) GetWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, DateTime? weekId, string scheduleId, string expand = null)
 
 
 
@@ -2026,11 +2027,12 @@ namespace Example
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
             var weekId = 2013-10-20;  // DateTime? | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var scheduleId = scheduleId_example;  // string | The ID of the schedule
+            var expand = expand_example;  // string | expand (optional) 
 
             try
             { 
                 // Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route
-                BuScheduleMetadata result = apiInstance.GetWorkforcemanagementBusinessunitWeekSchedule(businessUnitId, weekId, scheduleId);
+                BuScheduleMetadata result = apiInstance.GetWorkforcemanagementBusinessunitWeekSchedule(businessUnitId, weekId, scheduleId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2050,6 +2052,7 @@ namespace Example
 | **businessUnitId** | **string**| The ID of the business unit |  |
 | **weekId** | **DateTime?**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **scheduleId** | **string**| The ID of the schedule |  |
+| **expand** | **string**| expand | [optional] <br />**Values**: managementUnits.agents |
 {: class="table table-striped"}
 
 ### Return type
@@ -8317,6 +8320,74 @@ namespace Example
 ### Return type
 
 [**WorkPlan**](WorkPlan.html)
+
+<a name="postworkforcemanagementmanagementunitworkplanvalidate"></a>
+
+## [**ValidateWorkPlanResponse**](ValidateWorkPlanResponse.html) PostWorkforcemanagementManagementunitWorkplanValidate (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null)
+
+
+
+Validate Work Plan
+
+
+
+Requires ANY permissions: 
+
+* wfm:workPlan:add
+* wfm:workPlan:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementManagementunitWorkplanValidateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new WorkforceManagementApi();
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var workPlanId = workPlanId_example;  // string | The ID of the work plan to validate. For new work plan, use the word 'new' for the ID.
+            var body = new WorkPlanValidationRequest(); // WorkPlanValidationRequest | body (optional) 
+            var expand = new List<string>(); // List<string> |  (optional) 
+
+            try
+            { 
+                // Validate Work Plan
+                ValidateWorkPlanResponse result = apiInstance.PostWorkforcemanagementManagementunitWorkplanValidate(managementUnitId, workPlanId, body, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementManagementunitWorkplanValidate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **workPlanId** | **string**| The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID. |  |
+| **body** | [**WorkPlanValidationRequest**](WorkPlanValidationRequest.html)| body | [optional]  |
+| **expand** | [**List<string>**](string.html)|  | [optional] <br />**Values**: messages |
+{: class="table table-striped"}
+
+### Return type
+
+[**ValidateWorkPlanResponse**](ValidateWorkPlanResponse.html)
 
 <a name="postworkforcemanagementmanagementunitworkplans"></a>
 

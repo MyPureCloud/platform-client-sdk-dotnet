@@ -17,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteUserStationDefaultstation**](UsersApi.html#deleteuserstationdefaultstation) | **DELETE** /api/v2/users/{userId}/station/defaultstation | Clear default station |
 | [**GetAnalyticsUsersDetailsJob**](UsersApi.html#getanalyticsusersdetailsjob) | **GET** /api/v2/analytics/users/details/jobs/{jobId} | Get status for async query for user details |
 | [**GetAnalyticsUsersDetailsJobResults**](UsersApi.html#getanalyticsusersdetailsjobresults) | **GET** /api/v2/analytics/users/details/jobs/{jobId}/results | Fetch a page of results for an async query |
+| [**GetAnalyticsUsersDetailsJobsAvailability**](UsersApi.html#getanalyticsusersdetailsjobsavailability) | **GET** /api/v2/analytics/users/details/jobs/availability | Lookup the datalake availability date and time |
 | [**GetAuthorizationDivisionspermittedMe**](UsersApi.html#getauthorizationdivisionspermittedme) | **GET** /api/v2/authorization/divisionspermitted/me | Returns which divisions the current user has the given permission in. |
 | [**GetAuthorizationDivisionspermittedPagedMe**](UsersApi.html#getauthorizationdivisionspermittedpagedme) | **GET** /api/v2/authorization/divisionspermitted/paged/me | Returns which divisions the current user has the given permission in. |
 | [**GetAuthorizationDivisionspermittedPagedSubjectId**](UsersApi.html#getauthorizationdivisionspermittedpagedsubjectid) | **GET** /api/v2/authorization/divisionspermitted/paged/{subjectId} | Returns which divisions the specified user has the given permission in. |
@@ -695,6 +696,62 @@ namespace Example
 ### Return type
 
 [**AnalyticsUserDetailsAsyncQueryResponse**](AnalyticsUserDetailsAsyncQueryResponse.html)
+
+<a name="getanalyticsusersdetailsjobsavailability"></a>
+
+## [**DataAvailabilityResponse**](DataAvailabilityResponse.html) GetAnalyticsUsersDetailsJobsAvailability ()
+
+
+
+Lookup the datalake availability date and time
+
+
+
+Requires ANY permissions: 
+
+* analytics:userDetail:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsUsersDetailsJobsAvailabilityExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+
+            try
+            { 
+                // Lookup the datalake availability date and time
+                DataAvailabilityResponse result = apiInstance.GetAnalyticsUsersDetailsJobsAvailability();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetAnalyticsUsersDetailsJobsAvailability: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**DataAvailabilityResponse**](DataAvailabilityResponse.html)
 
 <a name="getauthorizationdivisionspermittedme"></a>
 

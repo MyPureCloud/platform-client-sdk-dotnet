@@ -40,6 +40,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="TokenInfo" /> class.
@@ -47,12 +52,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Organization">The current organization.</param>
         /// <param name="HomeOrganization">The token&#39;s home organization.</param>
         /// <param name="AuthorizedScope">The list of scopes authorized for the OAuth client.</param>
+        /// <param name="ClonedUser">Only present when a user is a clone of trustee user in the trustor org..</param>
         /// <param name="OAuthClient">OAuthClient.</param>
-        public TokenInfo(NamedEntity Organization = null, NamedEntity HomeOrganization = null, List<string> AuthorizedScope = null, OrgOAuthClient OAuthClient = null)
+        public TokenInfo(NamedEntity Organization = null, NamedEntity HomeOrganization = null, List<string> AuthorizedScope = null, TokenInfoClonedUser ClonedUser = null, OrgOAuthClient OAuthClient = null)
         {
             this.Organization = Organization;
             this.HomeOrganization = HomeOrganization;
             this.AuthorizedScope = AuthorizedScope;
+            this.ClonedUser = ClonedUser;
             this.OAuthClient = OAuthClient;
             
         }
@@ -87,6 +94,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Only present when a user is a clone of trustee user in the trustor org.
+        /// </summary>
+        /// <value>Only present when a user is a clone of trustee user in the trustor org.</value>
+        [DataMember(Name="clonedUser", EmitDefaultValue=false)]
+        public TokenInfoClonedUser ClonedUser { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets OAuthClient
         /// </summary>
         [DataMember(Name="OAuthClient", EmitDefaultValue=false)]
@@ -105,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Organization: ").Append(Organization).Append("\n");
             sb.Append("  HomeOrganization: ").Append(HomeOrganization).Append("\n");
             sb.Append("  AuthorizedScope: ").Append(AuthorizedScope).Append("\n");
+            sb.Append("  ClonedUser: ").Append(ClonedUser).Append("\n");
             sb.Append("  OAuthClient: ").Append(OAuthClient).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -158,6 +175,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AuthorizedScope.SequenceEqual(other.AuthorizedScope)
                 ) &&
                 (
+                    this.ClonedUser == other.ClonedUser ||
+                    this.ClonedUser != null &&
+                    this.ClonedUser.Equals(other.ClonedUser)
+                ) &&
+                (
                     this.OAuthClient == other.OAuthClient ||
                     this.OAuthClient != null &&
                     this.OAuthClient.Equals(other.OAuthClient)
@@ -184,6 +206,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AuthorizedScope != null)
                     hash = hash * 59 + this.AuthorizedScope.GetHashCode();
+                
+                if (this.ClonedUser != null)
+                    hash = hash * 59 + this.ClonedUser.GetHashCode();
                 
                 if (this.OAuthClient != null)
                     hash = hash * 59 + this.OAuthClient.GetHashCode();

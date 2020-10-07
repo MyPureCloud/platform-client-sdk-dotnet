@@ -299,8 +299,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
         /// <returns>KnowledgeBaseListing</returns>
-        KnowledgeBaseListing GetKnowledgeKnowledgebases (string before = null, string after = null, string limit = null, string pageSize = null);
+        KnowledgeBaseListing GetKnowledgeKnowledgebases (string before = null, string after = null, string limit = null, string pageSize = null, string name = null);
 
         /// <summary>
         /// Get knowledge bases
@@ -313,8 +314,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
         /// <returns>ApiResponse of KnowledgeBaseListing</returns>
-        ApiResponse<KnowledgeBaseListing> GetKnowledgeKnowledgebasesWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null);
+        ApiResponse<KnowledgeBaseListing> GetKnowledgeKnowledgebasesWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null);
         
         /// <summary>
         /// Update knowledge base
@@ -857,8 +859,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
         /// <returns>Task of KnowledgeBaseListing</returns>
-        System.Threading.Tasks.Task<KnowledgeBaseListing> GetKnowledgeKnowledgebasesAsync (string before = null, string after = null, string limit = null, string pageSize = null);
+        System.Threading.Tasks.Task<KnowledgeBaseListing> GetKnowledgeKnowledgebasesAsync (string before = null, string after = null, string limit = null, string pageSize = null, string name = null);
 
         /// <summary>
         /// Get knowledge bases
@@ -871,8 +874,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeBaseListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<KnowledgeBaseListing>> GetKnowledgeKnowledgebasesAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<KnowledgeBaseListing>> GetKnowledgeKnowledgebasesAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null);
         
         /// <summary>
         /// Update knowledge base
@@ -3405,10 +3409,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
         /// <returns>KnowledgeBaseListing</returns>
-        public KnowledgeBaseListing GetKnowledgeKnowledgebases (string before = null, string after = null, string limit = null, string pageSize = null)
+        public KnowledgeBaseListing GetKnowledgeKnowledgebases (string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
         {
-             ApiResponse<KnowledgeBaseListing> localVarResponse = GetKnowledgeKnowledgebasesWithHttpInfo(before, after, limit, pageSize);
+             ApiResponse<KnowledgeBaseListing> localVarResponse = GetKnowledgeKnowledgebasesWithHttpInfo(before, after, limit, pageSize, name);
              return localVarResponse.Data;
         }
 
@@ -3420,8 +3425,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
         /// <returns>ApiResponse of KnowledgeBaseListing</returns>
-        public ApiResponse< KnowledgeBaseListing > GetKnowledgeKnowledgebasesWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null)
+        public ApiResponse< KnowledgeBaseListing > GetKnowledgeKnowledgebasesWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
         { 
 
             var localVarPath = "/api/v2/knowledge/knowledgebases";
@@ -3461,6 +3467,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -3506,10 +3513,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
         /// <returns>Task of KnowledgeBaseListing</returns>
-        public async System.Threading.Tasks.Task<KnowledgeBaseListing> GetKnowledgeKnowledgebasesAsync (string before = null, string after = null, string limit = null, string pageSize = null)
+        public async System.Threading.Tasks.Task<KnowledgeBaseListing> GetKnowledgeKnowledgebasesAsync (string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
         {
-             ApiResponse<KnowledgeBaseListing> localVarResponse = await GetKnowledgeKnowledgebasesAsyncWithHttpInfo(before, after, limit, pageSize);
+             ApiResponse<KnowledgeBaseListing> localVarResponse = await GetKnowledgeKnowledgebasesAsyncWithHttpInfo(before, after, limit, pageSize, name);
              return localVarResponse.Data;
 
         }
@@ -3522,8 +3530,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeBaseListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeBaseListing>> GetKnowledgeKnowledgebasesAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeBaseListing>> GetKnowledgeKnowledgebasesAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
         { 
 
             var localVarPath = "/api/v2/knowledge/knowledgebases";
@@ -3563,6 +3572,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 

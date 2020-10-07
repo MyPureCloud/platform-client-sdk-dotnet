@@ -60,18 +60,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Informational,
             
             /// <summary>
-            /// Enum Assessedcontent for "AssessedContent"
-            /// </summary>
-            [EnumMember(Value = "AssessedContent")]
-            Assessedcontent,
-            
-            /// <summary>
-            /// Enum Questionnaire for "Questionnaire"
-            /// </summary>
-            [EnumMember(Value = "Questionnaire")]
-            Questionnaire,
-            
-            /// <summary>
             /// Enum Coaching for "Coaching"
             /// </summary>
             [EnumMember(Value = "Coaching")]

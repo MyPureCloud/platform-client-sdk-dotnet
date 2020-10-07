@@ -149,7 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecordingLocation">Offset of annotation (milliseconds) from start of recording, adjusted for any recording cuts.</param>
         /// <param name="RecordingDurationMs">Duration of annotation (milliseconds), adjusted for any recording cuts..</param>
         /// <param name="User">User that created this annotation (if any)..</param>
-        /// <param name="Description">Text of annotation..</param>
+        /// <param name="Description">Text of annotation. Maximum character limit is 300..</param>
         /// <param name="KeywordName">The word or phrase which is being looked for with speech recognition..</param>
         /// <param name="Confidence">Actual confidence that this is an accurate match..</param>
         /// <param name="KeywordSetId">A unique identifier for the keyword set to which this spotted keyword belongs..</param>
@@ -276,9 +276,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Text of annotation.
+        /// Text of annotation. Maximum character limit is 300.
         /// </summary>
-        /// <value>Text of annotation.</value>
+        /// <value>Text of annotation. Maximum character limit is 300.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
         

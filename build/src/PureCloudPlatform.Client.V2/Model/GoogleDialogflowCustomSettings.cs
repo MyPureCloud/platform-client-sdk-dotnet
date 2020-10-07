@@ -25,14 +25,35 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="GoogleDialogflowCustomSettings" /> class.
         /// </summary>
         /// <param name="Environment">If set this environment will be used to initiate the dialogflow bot, otherwise the default configuration will be used.  See https://cloud.google.com/dialogflow/docs/agents-versions.</param>
-        public GoogleDialogflowCustomSettings(string Environment = null)
+        /// <param name="EventName">If set this eventName will be used to initiate the dialogflow bot rather than language processing on the input text.  See https://cloud.google.com/dialogflow/es/docs/events-overview.</param>
+        /// <param name="WebhookQueryParameters">Parameters passed to the fulfillment webhook of the bot (if any)..</param>
+        /// <param name="EventInputParameters">Parameters passed to the event input of the bot..</param>
+        public GoogleDialogflowCustomSettings(string Environment = null, string EventName = null, Dictionary<string, string> WebhookQueryParameters = null, Dictionary<string, string> EventInputParameters = null)
         {
             this.Environment = Environment;
+            this.EventName = EventName;
+            this.WebhookQueryParameters = WebhookQueryParameters;
+            this.EventInputParameters = EventInputParameters;
             
         }
         
@@ -46,6 +67,33 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Environment { get; set; }
         
         
+        
+        /// <summary>
+        /// If set this eventName will be used to initiate the dialogflow bot rather than language processing on the input text.  See https://cloud.google.com/dialogflow/es/docs/events-overview
+        /// </summary>
+        /// <value>If set this eventName will be used to initiate the dialogflow bot rather than language processing on the input text.  See https://cloud.google.com/dialogflow/es/docs/events-overview</value>
+        [DataMember(Name="eventName", EmitDefaultValue=false)]
+        public string EventName { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Parameters passed to the fulfillment webhook of the bot (if any).
+        /// </summary>
+        /// <value>Parameters passed to the fulfillment webhook of the bot (if any).</value>
+        [DataMember(Name="webhookQueryParameters", EmitDefaultValue=false)]
+        public Dictionary<string, string> WebhookQueryParameters { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Parameters passed to the event input of the bot.
+        /// </summary>
+        /// <value>Parameters passed to the event input of the bot.</value>
+        [DataMember(Name="eventInputParameters", EmitDefaultValue=false)]
+        public Dictionary<string, string> EventInputParameters { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -56,6 +104,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class GoogleDialogflowCustomSettings {\n");
             
             sb.Append("  Environment: ").Append(Environment).Append("\n");
+            sb.Append("  EventName: ").Append(EventName).Append("\n");
+            sb.Append("  WebhookQueryParameters: ").Append(WebhookQueryParameters).Append("\n");
+            sb.Append("  EventInputParameters: ").Append(EventInputParameters).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,6 +147,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Environment == other.Environment ||
                     this.Environment != null &&
                     this.Environment.Equals(other.Environment)
+                ) &&
+                (
+                    this.EventName == other.EventName ||
+                    this.EventName != null &&
+                    this.EventName.Equals(other.EventName)
+                ) &&
+                (
+                    this.WebhookQueryParameters == other.WebhookQueryParameters ||
+                    this.WebhookQueryParameters != null &&
+                    this.WebhookQueryParameters.SequenceEqual(other.WebhookQueryParameters)
+                ) &&
+                (
+                    this.EventInputParameters == other.EventInputParameters ||
+                    this.EventInputParameters != null &&
+                    this.EventInputParameters.SequenceEqual(other.EventInputParameters)
                 );
         }
 
@@ -113,6 +179,15 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Environment != null)
                     hash = hash * 59 + this.Environment.GetHashCode();
+                
+                if (this.EventName != null)
+                    hash = hash * 59 + this.EventName.GetHashCode();
+                
+                if (this.WebhookQueryParameters != null)
+                    hash = hash * 59 + this.WebhookQueryParameters.GetHashCode();
+                
+                if (this.EventInputParameters != null)
+                    hash = hash * 59 + this.EventInputParameters.GetHashCode();
                 
                 return hash;
             }

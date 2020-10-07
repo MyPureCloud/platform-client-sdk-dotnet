@@ -11,6 +11,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteAuthorizationRole**](AuthorizationApi.html#deleteauthorizationrole) | **DELETE** /api/v2/authorization/roles/{roleId} | Delete an organization role. |
 | [**DeleteAuthorizationSubjectDivisionRole**](AuthorizationApi.html#deleteauthorizationsubjectdivisionrole) | **DELETE** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Delete a grant of a role in a division |
 | [**GetAuthorizationDivision**](AuthorizationApi.html#getauthorizationdivision) | **GET** /api/v2/authorization/divisions/{divisionId} | Returns an authorization division. |
+| [**GetAuthorizationDivisionGrants**](AuthorizationApi.html#getauthorizationdivisiongrants) | **GET** /api/v2/authorization/divisions/{divisionId}/grants | Gets all grants for a given division. |
 | [**GetAuthorizationDivisions**](AuthorizationApi.html#getauthorizationdivisions) | **GET** /api/v2/authorization/divisions | Retrieve a list of all divisions defined for the organization |
 | [**GetAuthorizationDivisionsHome**](AuthorizationApi.html#getauthorizationdivisionshome) | **GET** /api/v2/authorization/divisions/home | Retrieve the home division for the organization. |
 | [**GetAuthorizationDivisionsLimit**](AuthorizationApi.html#getauthorizationdivisionslimit) | **GET** /api/v2/authorization/divisions/limit | Returns the maximum allowed number of divisions. |
@@ -293,6 +294,71 @@ namespace Example
 ### Return type
 
 [**AuthzDivision**](AuthzDivision.html)
+
+<a name="getauthorizationdivisiongrants"></a>
+
+## [**AuthzDivisionGrantEntityListing**](AuthzDivisionGrantEntityListing.html) GetAuthorizationDivisionGrants (string divisionId, int? pageNumber = null, int? pageSize = null)
+
+
+
+Gets all grants for a given division.
+
+
+
+Requires ANY permissions: 
+
+* authorization:grant:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationDivisionGrantsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AuthorizationApi();
+            var divisionId = divisionId_example;  // string | Division ID
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            { 
+                // Gets all grants for a given division.
+                AuthzDivisionGrantEntityListing result = apiInstance.GetAuthorizationDivisionGrants(divisionId, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationDivisionGrants: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **divisionId** | **string**| Division ID |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+{: class="table table-striped"}
+
+### Return type
+
+[**AuthzDivisionGrantEntityListing**](AuthzDivisionGrantEntityListing.html)
 
 <a name="getauthorizationdivisions"></a>
 

@@ -99,7 +99,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Active">Indicates whether the user&#39;s administrative status is active..</param>
         /// <param name="UserName">The user&#39;s Genesys Cloud email address. Must be unique. (required).</param>
         /// <param name="DisplayName">The display name of the user. (required).</param>
-        /// <param name="Password">The new password for the Genesys Cloud user. Does not return an existing password..</param>
+        /// <param name="Password">The new password for the Genesys Cloud user. Does not return an existing password. When creating a user if a password is not supplied a password will be randomly generated which is 40 characters in length and will contain five characters from each of the password policy groups..</param>
         /// <param name="Title">The user&#39;s title..</param>
         /// <param name="PhoneNumbers">The list of the user&#39;s phone numbers..</param>
         /// <param name="Emails">The list of the user&#39;s email addresses..</param>
@@ -165,9 +165,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The new password for the Genesys Cloud user. Does not return an existing password.
+        /// The new password for the Genesys Cloud user. Does not return an existing password. When creating a user if a password is not supplied a password will be randomly generated which is 40 characters in length and will contain five characters from each of the password policy groups.
         /// </summary>
-        /// <value>The new password for the Genesys Cloud user. Does not return an existing password.</value>
+        /// <value>The new password for the Genesys Cloud user. Does not return an existing password. When creating a user if a password is not supplied a password will be randomly generated which is 40 characters in length and will contain five characters from each of the password policy groups.</value>
         [DataMember(Name="password", EmitDefaultValue=false)]
         public string Password { get; set; }
         

@@ -88,6 +88,111 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// If the channels list contains a 'Messaging' item and the messaging platform is known, include it here to get accurate analytics
+        /// </summary>
+        /// <value>If the channels list contains a 'Messaging' item and the messaging platform is known, include it here to get accurate analytics</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MessagingPlatformTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Phone for "Phone"
+            /// </summary>
+            [EnumMember(Value = "Phone")]
+            Phone,
+            
+            /// <summary>
+            /// Enum Sms for "SMS"
+            /// </summary>
+            [EnumMember(Value = "SMS")]
+            Sms,
+            
+            /// <summary>
+            /// Enum Genesyswebwidget for "GenesysWebWidget"
+            /// </summary>
+            [EnumMember(Value = "GenesysWebWidget")]
+            Genesyswebwidget,
+            
+            /// <summary>
+            /// Enum Facebookmessenger for "FacebookMessenger"
+            /// </summary>
+            [EnumMember(Value = "FacebookMessenger")]
+            Facebookmessenger,
+            
+            /// <summary>
+            /// Enum Wechat for "WeChat"
+            /// </summary>
+            [EnumMember(Value = "WeChat")]
+            Wechat,
+            
+            /// <summary>
+            /// Enum Whatsapp for "Whatsapp"
+            /// </summary>
+            [EnumMember(Value = "Whatsapp")]
+            Whatsapp,
+            
+            /// <summary>
+            /// Enum Applebusinesschat for "AppleBusinessChat"
+            /// </summary>
+            [EnumMember(Value = "AppleBusinessChat")]
+            Applebusinesschat,
+            
+            /// <summary>
+            /// Enum Telegram for "Telegram"
+            /// </summary>
+            [EnumMember(Value = "Telegram")]
+            Telegram,
+            
+            /// <summary>
+            /// Enum Slack for "Slack"
+            /// </summary>
+            [EnumMember(Value = "Slack")]
+            Slack,
+            
+            /// <summary>
+            /// Enum Signal for "Signal"
+            /// </summary>
+            [EnumMember(Value = "Signal")]
+            Signal,
+            
+            /// <summary>
+            /// Enum Line for "Line"
+            /// </summary>
+            [EnumMember(Value = "Line")]
+            Line,
+            
+            /// <summary>
+            /// Enum Discord for "Discord"
+            /// </summary>
+            [EnumMember(Value = "Discord")]
+            Discord,
+            
+            /// <summary>
+            /// Enum Twitterdirectmessage for "TwitterDirectMessage"
+            /// </summary>
+            [EnumMember(Value = "TwitterDirectMessage")]
+            Twitterdirectmessage,
+            
+            /// <summary>
+            /// Enum Other for "Other"
+            /// </summary>
+            [EnumMember(Value = "Other")]
+            Other,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown
+        }
         
         
         
@@ -110,6 +215,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// If the channels list contains a 'Messaging' item and the messaging platform is known, include it here to get accurate analytics
+        /// </summary>
+        /// <value>If the channels list contains a 'Messaging' item and the messaging platform is known, include it here to get accurate analytics</value>
+        [DataMember(Name="messagingPlatformType", EmitDefaultValue=false)]
+        public MessagingPlatformTypeEnum? MessagingPlatformType { get; set; }
         
         
         
@@ -135,9 +253,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BotSessionTimeoutMinutes">Override timeout for the bot session. This should be greater than 10 minutes..</param>
         /// <param name="BotChannels">The channels this bot is utilizing.</param>
         /// <param name="BotCorrelationId">Id for tracking the activity - this will be returned in the response.</param>
+        /// <param name="MessagingPlatformType">If the channels list contains a &#39;Messaging&#39; item and the messaging platform is known, include it here to get accurate analytics.</param>
         /// <param name="AmazonLexRequest">AmazonLexRequest.</param>
         /// <param name="GoogleDialogflow">GoogleDialogflow.</param>
-        public PostTextRequest(string BotId = null, string BotAlias = null, string IntegrationId = null, string BotSessionId = null, PostTextMessage PostTextMessage = null, string LanguageCode = null, int? BotSessionTimeoutMinutes = null, List<BotChannelsEnum> BotChannels = null, string BotCorrelationId = null, AmazonLexRequest AmazonLexRequest = null, GoogleDialogflowCustomSettings GoogleDialogflow = null)
+        public PostTextRequest(string BotId = null, string BotAlias = null, string IntegrationId = null, string BotSessionId = null, PostTextMessage PostTextMessage = null, string LanguageCode = null, int? BotSessionTimeoutMinutes = null, List<BotChannelsEnum> BotChannels = null, string BotCorrelationId = null, MessagingPlatformTypeEnum? MessagingPlatformType = null, AmazonLexRequest AmazonLexRequest = null, GoogleDialogflowCustomSettings GoogleDialogflow = null)
         {
             this.BotId = BotId;
             this.BotAlias = BotAlias;
@@ -148,6 +267,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.BotSessionTimeoutMinutes = BotSessionTimeoutMinutes;
             this.BotChannels = BotChannels;
             this.BotCorrelationId = BotCorrelationId;
+            this.MessagingPlatformType = MessagingPlatformType;
             this.AmazonLexRequest = AmazonLexRequest;
             this.GoogleDialogflow = GoogleDialogflow;
             
@@ -236,6 +356,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets AmazonLexRequest
         /// </summary>
@@ -269,6 +391,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  BotSessionTimeoutMinutes: ").Append(BotSessionTimeoutMinutes).Append("\n");
             sb.Append("  BotChannels: ").Append(BotChannels).Append("\n");
             sb.Append("  BotCorrelationId: ").Append(BotCorrelationId).Append("\n");
+            sb.Append("  MessagingPlatformType: ").Append(MessagingPlatformType).Append("\n");
             sb.Append("  AmazonLexRequest: ").Append(AmazonLexRequest).Append("\n");
             sb.Append("  GoogleDialogflow: ").Append(GoogleDialogflow).Append("\n");
             sb.Append("}\n");
@@ -353,6 +476,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.BotCorrelationId.Equals(other.BotCorrelationId)
                 ) &&
                 (
+                    this.MessagingPlatformType == other.MessagingPlatformType ||
+                    this.MessagingPlatformType != null &&
+                    this.MessagingPlatformType.Equals(other.MessagingPlatformType)
+                ) &&
+                (
                     this.AmazonLexRequest == other.AmazonLexRequest ||
                     this.AmazonLexRequest != null &&
                     this.AmazonLexRequest.Equals(other.AmazonLexRequest)
@@ -402,6 +530,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.BotCorrelationId != null)
                     hash = hash * 59 + this.BotCorrelationId.GetHashCode();
+                
+                if (this.MessagingPlatformType != null)
+                    hash = hash * 59 + this.MessagingPlatformType.GetHashCode();
                 
                 if (this.AmazonLexRequest != null)
                     hash = hash * 59 + this.AmazonLexRequest.GetHashCode();

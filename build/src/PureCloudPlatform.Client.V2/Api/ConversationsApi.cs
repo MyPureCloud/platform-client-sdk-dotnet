@@ -317,6 +317,26 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AnalyticsConversationAsyncQueryResponse> GetAnalyticsConversationsDetailsJobResultsWithHttpInfo (string jobId, string cursor = null, int? pageSize = null);
         
         /// <summary>
+        /// Lookup the datalake availability date and time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>DataAvailabilityResponse</returns>
+        DataAvailabilityResponse GetAnalyticsConversationsDetailsJobsAvailability ();
+
+        /// <summary>
+        /// Lookup the datalake availability date and time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of DataAvailabilityResponse</returns>
+        ApiResponse<DataAvailabilityResponse> GetAnalyticsConversationsDetailsJobsAvailabilityWithHttpInfo ();
+        
+        /// <summary>
         /// Get conversation
         /// </summary>
         /// <remarks>
@@ -3571,6 +3591,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>Task of ApiResponse (AnalyticsConversationAsyncQueryResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationAsyncQueryResponse>> GetAnalyticsConversationsDetailsJobResultsAsyncWithHttpInfo (string jobId, string cursor = null, int? pageSize = null);
+        
+        /// <summary>
+        /// Lookup the datalake availability date and time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of DataAvailabilityResponse</returns>
+        System.Threading.Tasks.Task<DataAvailabilityResponse> GetAnalyticsConversationsDetailsJobsAvailabilityAsync ();
+
+        /// <summary>
+        /// Lookup the datalake availability date and time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (DataAvailabilityResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataAvailabilityResponse>> GetAnalyticsConversationsDetailsJobsAvailabilityAsyncWithHttpInfo ();
         
         /// <summary>
         /// Get conversation
@@ -9173,6 +9213,186 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AnalyticsConversationAsyncQueryResponse>(localVarStatusCode,
                 localVarHeaders,
                 (AnalyticsConversationAsyncQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsConversationAsyncQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Lookup the datalake availability date and time 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>DataAvailabilityResponse</returns>
+        public DataAvailabilityResponse GetAnalyticsConversationsDetailsJobsAvailability ()
+        {
+             ApiResponse<DataAvailabilityResponse> localVarResponse = GetAnalyticsConversationsDetailsJobsAvailabilityWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lookup the datalake availability date and time 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of DataAvailabilityResponse</returns>
+        public ApiResponse< DataAvailabilityResponse > GetAnalyticsConversationsDetailsJobsAvailabilityWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/analytics/conversations/details/jobs/availability";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetailsJobsAvailability: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetailsJobsAvailability: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataAvailabilityResponse>(localVarStatusCode,
+                localVarHeaders,
+                (DataAvailabilityResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataAvailabilityResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Lookup the datalake availability date and time 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of DataAvailabilityResponse</returns>
+        public async System.Threading.Tasks.Task<DataAvailabilityResponse> GetAnalyticsConversationsDetailsJobsAvailabilityAsync ()
+        {
+             ApiResponse<DataAvailabilityResponse> localVarResponse = await GetAnalyticsConversationsDetailsJobsAvailabilityAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lookup the datalake availability date and time 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (DataAvailabilityResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataAvailabilityResponse>> GetAnalyticsConversationsDetailsJobsAvailabilityAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/analytics/conversations/details/jobs/availability";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetailsJobsAvailability: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetailsJobsAvailability: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataAvailabilityResponse>(localVarStatusCode,
+                localVarHeaders,
+                (DataAvailabilityResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataAvailabilityResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

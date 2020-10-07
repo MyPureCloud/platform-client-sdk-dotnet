@@ -240,6 +240,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets ProviderType
         /// </summary>
@@ -280,6 +283,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="OrphanRecording" /> class.
@@ -294,7 +299,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ProviderEndpoint">ProviderEndpoint.</param>
         /// <param name="Recording">Recording.</param>
         /// <param name="OrphanStatus">The status of the orphaned recording&#39;s conversation..</param>
-        public OrphanRecording(string Name = null, DateTime? CreatedTime = null, DateTime? RecoveredTime = null, ProviderTypeEnum? ProviderType = null, long? MediaSizeBytes = null, MediaTypeEnum? MediaType = null, FileStateEnum? FileState = null, Endpoint ProviderEndpoint = null, Recording Recording = null, OrphanStatusEnum? OrphanStatus = null)
+        /// <param name="SourceOrphaningId">An identifier used during recovery operations by the supplying hybrid platform to track back and determine which interaction this recording is associated with.</param>
+        public OrphanRecording(string Name = null, DateTime? CreatedTime = null, DateTime? RecoveredTime = null, ProviderTypeEnum? ProviderType = null, long? MediaSizeBytes = null, MediaTypeEnum? MediaType = null, FileStateEnum? FileState = null, Endpoint ProviderEndpoint = null, Recording Recording = null, OrphanStatusEnum? OrphanStatus = null, string SourceOrphaningId = null)
         {
             this.Name = Name;
             this.CreatedTime = CreatedTime;
@@ -306,6 +312,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ProviderEndpoint = ProviderEndpoint;
             this.Recording = Recording;
             this.OrphanStatus = OrphanStatus;
+            this.SourceOrphaningId = SourceOrphaningId;
             
         }
         
@@ -379,6 +386,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// An identifier used during recovery operations by the supplying hybrid platform to track back and determine which interaction this recording is associated with
+        /// </summary>
+        /// <value>An identifier used during recovery operations by the supplying hybrid platform to track back and determine which interaction this recording is associated with</value>
+        [DataMember(Name="sourceOrphaningId", EmitDefaultValue=false)]
+        public string SourceOrphaningId { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -406,6 +422,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ProviderEndpoint: ").Append(ProviderEndpoint).Append("\n");
             sb.Append("  Recording: ").Append(Recording).Append("\n");
             sb.Append("  OrphanStatus: ").Append(OrphanStatus).Append("\n");
+            sb.Append("  SourceOrphaningId: ").Append(SourceOrphaningId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -499,6 +516,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OrphanStatus.Equals(other.OrphanStatus)
                 ) &&
                 (
+                    this.SourceOrphaningId == other.SourceOrphaningId ||
+                    this.SourceOrphaningId != null &&
+                    this.SourceOrphaningId.Equals(other.SourceOrphaningId)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -549,6 +571,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.OrphanStatus != null)
                     hash = hash * 59 + this.OrphanStatus.GetHashCode();
+                
+                if (this.SourceOrphaningId != null)
+                    hash = hash * 59 + this.SourceOrphaningId.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
