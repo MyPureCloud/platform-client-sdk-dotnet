@@ -279,7 +279,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum ApiUsageView for "API_USAGE_VIEW"
             /// </summary>
             [EnumMember(Value = "API_USAGE_VIEW")]
-            ApiUsageView
+            ApiUsageView,
+            
+            /// <summary>
+            /// Enum ScheduledCallbacksView for "SCHEDULED_CALLBACKS_VIEW"
+            /// </summary>
+            [EnumMember(Value = "SCHEDULED_CALLBACKS_VIEW")]
+            ScheduledCallbacksView
         }
         
         

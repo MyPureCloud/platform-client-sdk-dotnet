@@ -15,7 +15,7 @@ title: AuditLogMessage
 | **EventDate** | **DateTime?** | Date and time of when the audit message was logged. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **Message** | [**MessageInfo**](MessageInfo.html) | Message describing the event being audited. | [optional] |
 | **Action** | **string** | Action that took place. | [optional] |
-| **Entity** | [**AddressableEntityRef**](AddressableEntityRef.html) | Entity that was impacted. | [optional] |
+| **Entity** | [**DomainEntityRef**](DomainEntityRef.html) | Entity that was impacted. | [optional] |
 | **EntityType** | **string** | Type of the entity that was impacted. | [optional] |
 | **PropertyChanges** | [**List&lt;PropertyChange&gt;**](PropertyChange.html) | List of properties that were changed and changes made to those properties. | [optional] |
 | **Context** | **Dictionary&lt;string, string&gt;** | Additional context for this message. | [optional] |

@@ -329,6 +329,12 @@ namespace PureCloudPlatform.Client.V2.Model
             ImportTooManyColumns,
             
             /// <summary>
+            /// Enum ImportTooManyExtraColumns for "IMPORT_TOO_MANY_EXTRA_COLUMNS"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_TOO_MANY_EXTRA_COLUMNS")]
+            ImportTooManyExtraColumns,
+            
+            /// <summary>
             /// Enum OrganizationHasNoDomainSet for "ORGANIZATION_HAS_NO_DOMAIN_SET"
             /// </summary>
             [EnumMember(Value = "ORGANIZATION_HAS_NO_DOMAIN_SET")]

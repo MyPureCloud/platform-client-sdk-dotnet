@@ -75,19 +75,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="GenericSAML" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="LogoImageData">LogoImageData.</param>
         /// <param name="RelyingPartyIdentifier">RelyingPartyIdentifier.</param>
         /// <param name="EndpointCompression">EndpointCompression.</param>
+        /// <param name="LogoImageData">LogoImageData.</param>
         /// <param name="Certificate">Certificate.</param>
         /// <param name="IssuerURI">IssuerURI.</param>
         /// <param name="SsoTargetURI">SsoTargetURI.</param>
         /// <param name="Disabled">Disabled.</param>
-        public GenericSAML(string Name = null, string LogoImageData = null, string RelyingPartyIdentifier = null, bool? EndpointCompression = null, string Certificate = null, string IssuerURI = null, string SsoTargetURI = null, bool? Disabled = null)
+        public GenericSAML(string Name = null, string RelyingPartyIdentifier = null, bool? EndpointCompression = null, string LogoImageData = null, string Certificate = null, string IssuerURI = null, string SsoTargetURI = null, bool? Disabled = null)
         {
             this.Name = Name;
-            this.LogoImageData = LogoImageData;
             this.RelyingPartyIdentifier = RelyingPartyIdentifier;
             this.EndpointCompression = EndpointCompression;
+            this.LogoImageData = LogoImageData;
             this.Certificate = Certificate;
             this.IssuerURI = IssuerURI;
             this.SsoTargetURI = SsoTargetURI;
@@ -115,14 +115,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets LogoImageData
-        /// </summary>
-        [DataMember(Name="logoImageData", EmitDefaultValue=false)]
-        public string LogoImageData { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets RelyingPartyIdentifier
         /// </summary>
         [DataMember(Name="relyingPartyIdentifier", EmitDefaultValue=false)]
@@ -135,6 +127,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="endpointCompression", EmitDefaultValue=false)]
         public bool? EndpointCompression { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets LogoImageData
+        /// </summary>
+        [DataMember(Name="logoImageData", EmitDefaultValue=false)]
+        public string LogoImageData { get; set; }
         
         
         
@@ -189,9 +189,9 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  LogoImageData: ").Append(LogoImageData).Append("\n");
             sb.Append("  RelyingPartyIdentifier: ").Append(RelyingPartyIdentifier).Append("\n");
             sb.Append("  EndpointCompression: ").Append(EndpointCompression).Append("\n");
+            sb.Append("  LogoImageData: ").Append(LogoImageData).Append("\n");
             sb.Append("  Certificate: ").Append(Certificate).Append("\n");
             sb.Append("  IssuerURI: ").Append(IssuerURI).Append("\n");
             sb.Append("  SsoTargetURI: ").Append(SsoTargetURI).Append("\n");
@@ -244,11 +244,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
-                    this.LogoImageData == other.LogoImageData ||
-                    this.LogoImageData != null &&
-                    this.LogoImageData.Equals(other.LogoImageData)
-                ) &&
-                (
                     this.RelyingPartyIdentifier == other.RelyingPartyIdentifier ||
                     this.RelyingPartyIdentifier != null &&
                     this.RelyingPartyIdentifier.Equals(other.RelyingPartyIdentifier)
@@ -257,6 +252,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EndpointCompression == other.EndpointCompression ||
                     this.EndpointCompression != null &&
                     this.EndpointCompression.Equals(other.EndpointCompression)
+                ) &&
+                (
+                    this.LogoImageData == other.LogoImageData ||
+                    this.LogoImageData != null &&
+                    this.LogoImageData.Equals(other.LogoImageData)
                 ) &&
                 (
                     this.Certificate == other.Certificate ||
@@ -303,14 +303,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 
-                if (this.LogoImageData != null)
-                    hash = hash * 59 + this.LogoImageData.GetHashCode();
-                
                 if (this.RelyingPartyIdentifier != null)
                     hash = hash * 59 + this.RelyingPartyIdentifier.GetHashCode();
                 
                 if (this.EndpointCompression != null)
                     hash = hash * 59 + this.EndpointCompression.GetHashCode();
+                
+                if (this.LogoImageData != null)
+                    hash = hash * 59 + this.LogoImageData.GetHashCode();
                 
                 if (this.Certificate != null)
                     hash = hash * 59 + this.Certificate.GetHashCode();

@@ -7,7 +7,7 @@ title: CoachingAppointmentAggregateRequest
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Interval** | **string** | Interval to aggregate across. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | |
+| **Interval** | **string** | Interval to aggregate across. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | |
 | **Metrics** | **List&lt;string&gt;** | A list of metrics to aggregate.  If omitted, all metrics are returned. | [optional] |
 | **GroupBy** | **List&lt;string&gt;** | An optional list of items by which to group the result data. | [optional] |
 | **Filter** | [**QueryRequestFilter**](QueryRequestFilter.html) | The filter applied to the data | |

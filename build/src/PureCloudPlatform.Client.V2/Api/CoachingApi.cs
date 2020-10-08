@@ -168,14 +168,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
-        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
         /// <param name="facilitatorIds">The facilitator IDs for which to retrieve appointments (optional)</param>
         /// <param name="sortOrder">Sort (by due date) either Asc or Desc (optional)</param>
         /// <param name="relationships">Relationships to filter by (optional)</param>
-        /// <param name="completionInterval">Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <returns>CoachingAppointmentResponseList</returns>
         CoachingAppointmentResponseList GetCoachingAppointments (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null);
@@ -188,14 +188,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
-        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
         /// <param name="facilitatorIds">The facilitator IDs for which to retrieve appointments (optional)</param>
         /// <param name="sortOrder">Sort (by due date) either Asc or Desc (optional)</param>
         /// <param name="relationships">Relationships to filter by (optional)</param>
-        /// <param name="completionInterval">Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <returns>ApiResponse of CoachingAppointmentResponseList</returns>
         ApiResponse<CoachingAppointmentResponseList> GetCoachingAppointmentsWithHttpInfo (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null);
@@ -207,14 +207,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
         /// <param name="facilitatorIds">The facilitator IDs for which to retrieve appointments (optional)</param>
         /// <param name="sortOrder">Sort (by due date) either Asc or Desc (optional)</param>
         /// <param name="relationships">Relationships to filter by (optional)</param>
-        /// <param name="completionInterval">Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <returns>CoachingAppointmentResponseList</returns>
         CoachingAppointmentResponseList GetCoachingAppointmentsMe (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null);
@@ -226,14 +226,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
         /// <param name="facilitatorIds">The facilitator IDs for which to retrieve appointments (optional)</param>
         /// <param name="sortOrder">Sort (by due date) either Asc or Desc (optional)</param>
         /// <param name="relationships">Relationships to filter by (optional)</param>
-        /// <param name="completionInterval">Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <returns>ApiResponse of CoachingAppointmentResponseList</returns>
         ApiResponse<CoachingAppointmentResponseList> GetCoachingAppointmentsMeWithHttpInfo (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null);
@@ -610,14 +610,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
-        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
         /// <param name="facilitatorIds">The facilitator IDs for which to retrieve appointments (optional)</param>
         /// <param name="sortOrder">Sort (by due date) either Asc or Desc (optional)</param>
         /// <param name="relationships">Relationships to filter by (optional)</param>
-        /// <param name="completionInterval">Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <returns>Task of CoachingAppointmentResponseList</returns>
         System.Threading.Tasks.Task<CoachingAppointmentResponseList> GetCoachingAppointmentsAsync (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null);
@@ -630,14 +630,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
-        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
         /// <param name="facilitatorIds">The facilitator IDs for which to retrieve appointments (optional)</param>
         /// <param name="sortOrder">Sort (by due date) either Asc or Desc (optional)</param>
         /// <param name="relationships">Relationships to filter by (optional)</param>
-        /// <param name="completionInterval">Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponseList)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsAsyncWithHttpInfo (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null);
@@ -649,14 +649,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
         /// <param name="facilitatorIds">The facilitator IDs for which to retrieve appointments (optional)</param>
         /// <param name="sortOrder">Sort (by due date) either Asc or Desc (optional)</param>
         /// <param name="relationships">Relationships to filter by (optional)</param>
-        /// <param name="completionInterval">Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <returns>Task of CoachingAppointmentResponseList</returns>
         System.Threading.Tasks.Task<CoachingAppointmentResponseList> GetCoachingAppointmentsMeAsync (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null);
@@ -668,14 +668,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
         /// <param name="facilitatorIds">The facilitator IDs for which to retrieve appointments (optional)</param>
         /// <param name="sortOrder">Sort (by due date) either Asc or Desc (optional)</param>
         /// <param name="relationships">Relationships to filter by (optional)</param>
-        /// <param name="completionInterval">Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponseList)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsMeAsyncWithHttpInfo (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null);
@@ -2199,14 +2199,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
-        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
         /// <param name="facilitatorIds">The facilitator IDs for which to retrieve appointments (optional)</param>
         /// <param name="sortOrder">Sort (by due date) either Asc or Desc (optional)</param>
         /// <param name="relationships">Relationships to filter by (optional)</param>
-        /// <param name="completionInterval">Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <returns>CoachingAppointmentResponseList</returns>
         public CoachingAppointmentResponseList GetCoachingAppointments (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
@@ -2220,14 +2220,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
-        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
         /// <param name="facilitatorIds">The facilitator IDs for which to retrieve appointments (optional)</param>
         /// <param name="sortOrder">Sort (by due date) either Asc or Desc (optional)</param>
         /// <param name="relationships">Relationships to filter by (optional)</param>
-        /// <param name="completionInterval">Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <returns>ApiResponse of CoachingAppointmentResponseList</returns>
         public ApiResponse< CoachingAppointmentResponseList > GetCoachingAppointmentsWithHttpInfo (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
@@ -2321,14 +2321,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
-        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
         /// <param name="facilitatorIds">The facilitator IDs for which to retrieve appointments (optional)</param>
         /// <param name="sortOrder">Sort (by due date) either Asc or Desc (optional)</param>
         /// <param name="relationships">Relationships to filter by (optional)</param>
-        /// <param name="completionInterval">Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <returns>Task of CoachingAppointmentResponseList</returns>
         public async System.Threading.Tasks.Task<CoachingAppointmentResponseList> GetCoachingAppointmentsAsync (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
@@ -2343,14 +2343,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
-        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
         /// <param name="facilitatorIds">The facilitator IDs for which to retrieve appointments (optional)</param>
         /// <param name="sortOrder">Sort (by due date) either Asc or Desc (optional)</param>
         /// <param name="relationships">Relationships to filter by (optional)</param>
-        /// <param name="completionInterval">Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponseList)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsAsyncWithHttpInfo (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
@@ -2445,14 +2445,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get my appointments for a given date range 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
         /// <param name="facilitatorIds">The facilitator IDs for which to retrieve appointments (optional)</param>
         /// <param name="sortOrder">Sort (by due date) either Asc or Desc (optional)</param>
         /// <param name="relationships">Relationships to filter by (optional)</param>
-        /// <param name="completionInterval">Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <returns>CoachingAppointmentResponseList</returns>
         public CoachingAppointmentResponseList GetCoachingAppointmentsMe (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
@@ -2465,14 +2465,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get my appointments for a given date range 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
         /// <param name="facilitatorIds">The facilitator IDs for which to retrieve appointments (optional)</param>
         /// <param name="sortOrder">Sort (by due date) either Asc or Desc (optional)</param>
         /// <param name="relationships">Relationships to filter by (optional)</param>
-        /// <param name="completionInterval">Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <returns>ApiResponse of CoachingAppointmentResponseList</returns>
         public ApiResponse< CoachingAppointmentResponseList > GetCoachingAppointmentsMeWithHttpInfo (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
@@ -2561,14 +2561,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get my appointments for a given date range 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
         /// <param name="facilitatorIds">The facilitator IDs for which to retrieve appointments (optional)</param>
         /// <param name="sortOrder">Sort (by due date) either Asc or Desc (optional)</param>
         /// <param name="relationships">Relationships to filter by (optional)</param>
-        /// <param name="completionInterval">Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <returns>Task of CoachingAppointmentResponseList</returns>
         public async System.Threading.Tasks.Task<CoachingAppointmentResponseList> GetCoachingAppointmentsMeAsync (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
@@ -2582,14 +2582,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get my appointments for a given date range 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="interval">Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="statuses">Appointment Statuses to filter by (optional)</param>
         /// <param name="facilitatorIds">The facilitator IDs for which to retrieve appointments (optional)</param>
         /// <param name="sortOrder">Sort (by due date) either Asc or Desc (optional)</param>
         /// <param name="relationships">Relationships to filter by (optional)</param>
-        /// <param name="completionInterval">Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponseList)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsMeAsyncWithHttpInfo (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)

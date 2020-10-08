@@ -439,14 +439,14 @@ namespace Example
 
             var apiInstance = new CoachingApi();
             var userIds = new List<string>(); // List<string> | The user IDs for which to retrieve appointments
-            var interval = interval_example;  // string | Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
+            var interval = interval_example;  // string | Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var statuses = new List<string>(); // List<string> | Appointment Statuses to filter by (optional) 
             var facilitatorIds = new List<string>(); // List<string> | The facilitator IDs for which to retrieve appointments (optional) 
             var sortOrder = sortOrder_example;  // string | Sort (by due date) either Asc or Desc (optional) 
             var relationships = new List<string>(); // List<string> | Relationships to filter by (optional) 
-            var completionInterval = completionInterval_example;  // string | Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
+            var completionInterval = completionInterval_example;  // string | Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
             var overdue = overdue_example;  // string | Overdue status to filter by (optional) 
 
             try
@@ -470,14 +470,14 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userIds** | [**List<string>**](string.html)| The user IDs for which to retrieve appointments |  |
-| **interval** | **string**| Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
+| **interval** | **string**| Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **statuses** | [**List<string>**](string.html)| Appointment Statuses to filter by | [optional] <br />**Values**: Scheduled, InProgress, Completed, InvalidSchedule |
 | **facilitatorIds** | [**List<string>**](string.html)| The facilitator IDs for which to retrieve appointments | [optional]  |
 | **sortOrder** | **string**| Sort (by due date) either Asc or Desc | [optional] <br />**Values**: Desc, Asc |
 | **relationships** | [**List<string>**](string.html)| Relationships to filter by | [optional] <br />**Values**: Creator, Facilitator, Attendee |
-| **completionInterval** | **string**| Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
+| **completionInterval** | **string**| Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
 | **overdue** | **string**| Overdue status to filter by | [optional] <br />**Values**: Any, True, False |
 {: class="table table-striped"}
 
@@ -516,14 +516,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new CoachingApi();
-            var interval = interval_example;  // string | Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
+            var interval = interval_example;  // string | Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var statuses = new List<string>(); // List<string> | Appointment Statuses to filter by (optional) 
             var facilitatorIds = new List<string>(); // List<string> | The facilitator IDs for which to retrieve appointments (optional) 
             var sortOrder = sortOrder_example;  // string | Sort (by due date) either Asc or Desc (optional) 
             var relationships = new List<string>(); // List<string> | Relationships to filter by (optional) 
-            var completionInterval = completionInterval_example;  // string | Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
+            var completionInterval = completionInterval_example;  // string | Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
             var overdue = overdue_example;  // string | Overdue status to filter by (optional) 
 
             try
@@ -546,14 +546,14 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **interval** | **string**| Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
+| **interval** | **string**| Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **statuses** | [**List<string>**](string.html)| Appointment Statuses to filter by | [optional] <br />**Values**: Scheduled, InProgress, Completed |
 | **facilitatorIds** | [**List<string>**](string.html)| The facilitator IDs for which to retrieve appointments | [optional]  |
 | **sortOrder** | **string**| Sort (by due date) either Asc or Desc | [optional] <br />**Values**: Desc, Asc |
 | **relationships** | [**List<string>**](string.html)| Relationships to filter by | [optional] <br />**Values**: Creator, Facilitator, Attendee |
-| **completionInterval** | **string**| Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
+| **completionInterval** | **string**| Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
 | **overdue** | **string**| Overdue status to filter by | [optional] <br />**Values**: Any, True, False |
 {: class="table table-striped"}
 
