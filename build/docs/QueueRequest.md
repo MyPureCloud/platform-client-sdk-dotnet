@@ -11,8 +11,8 @@ title: QueueRequest
 | **Name** | **string** | The queue name | |
 | **Division** | [**WritableDivision**](WritableDivision.html) | The division to which this entity belongs. | [optional] |
 | **Description** | **string** | The queue description. | [optional] |
-| **DateCreated** | **DateTime?** | The date the queue was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **DateModified** | **DateTime?** | The date of the last modification to the queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **DateCreated** | **DateTime?** | The date the queue was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **DateModified** | **DateTime?** | The date of the last modification to the queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ModifiedBy** | **string** | The ID of the user that last modified the queue. | [optional] |
 | **CreatedBy** | **string** | The ID of the user that created the queue. | [optional] |
 | **MemberCount** | **int?** | The number of users in the queue. | [optional] |

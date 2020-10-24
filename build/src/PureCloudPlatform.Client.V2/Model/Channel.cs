@@ -41,7 +41,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ConnectUri">ConnectUri.</param>
         /// <param name="Id">Id.</param>
-        /// <param name="Expires">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Expires">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public Channel(string ConnectUri = null, string Id = null, DateTime? Expires = null)
         {
             this.ConnectUri = ConnectUri;
@@ -69,9 +69,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="expires", EmitDefaultValue=false)]
         public DateTime? Expires { get; set; }
         

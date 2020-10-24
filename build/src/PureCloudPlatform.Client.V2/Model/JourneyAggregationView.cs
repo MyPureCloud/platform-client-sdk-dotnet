@@ -42,6 +42,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Njourneyoutcomesachieved,
             
             /// <summary>
+            /// Enum Njourneyoutcomesattributed for "nJourneyOutcomesAttributed"
+            /// </summary>
+            [EnumMember(Value = "nJourneyOutcomesAttributed")]
+            Njourneyoutcomesattributed,
+            
+            /// <summary>
             /// Enum Njourneysegmentsassigned for "nJourneySegmentsAssigned"
             /// </summary>
             [EnumMember(Value = "nJourneySegmentsAssigned")]

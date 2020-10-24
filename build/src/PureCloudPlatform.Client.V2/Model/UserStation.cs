@@ -62,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Type">Type.</param>
         /// <param name="AssociatedUser">AssociatedUser.</param>
-        /// <param name="AssociatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="AssociatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DefaultUser">DefaultUser.</param>
         /// <param name="ProviderInfo">Provider-specific info for this station, e.g. { \&quot;edgeGroupId\&quot;: \&quot;ffe7b15c-a9cc-4f4c-88f5-781327819a49\&quot; }.</param>
         public UserStation(string Name = null, string Type = null, User AssociatedUser = null, DateTime? AssociatedDate = null, User DefaultUser = null, Dictionary<string, string> ProviderInfo = null)
@@ -112,9 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="associatedDate", EmitDefaultValue=false)]
         public DateTime? AssociatedDate { get; set; }
         

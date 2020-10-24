@@ -9,7 +9,7 @@ title: CommandStatus
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Expiration** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **Expiration** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **UserId** | **string** |  | [optional] |
 | **StatusCode** | **string** |  | [optional] |
 | **CommandType** | **string** |  | [optional] |

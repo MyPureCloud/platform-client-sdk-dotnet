@@ -13,7 +13,7 @@ title: TestMessage
 | **Subject** | **string** | The subject of the email message. | [optional] |
 | **TextBody** | **string** | The text body of the email message. | |
 | **HtmlBody** | **string** | The html body of the email message | [optional] |
-| **Time** | **DateTime?** | The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **Time** | **DateTime?** | The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 {: class="table table-striped"}
 
 

@@ -11,8 +11,8 @@ title: DataTableImportJob
 | **Name** | **string** |  | [optional] |
 | **Owner** | [**AddressableEntityRef**](AddressableEntityRef.html) | The PureCloud user who started the import job | [optional] |
 | **Status** | **string** | The status of the import job | |
-| **DateCreated** | **DateTime?** | The timestamp of when the import began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **DateCompleted** | **DateTime?** | The timestamp of when the import stopped (either successfully or unsuccessfully). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **DateCreated** | **DateTime?** | The timestamp of when the import began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **DateCompleted** | **DateTime?** | The timestamp of when the import stopped (either successfully or unsuccessfully). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **UploadURI** | **string** | The URL of the location at which the caller can upload the file to be imported | [optional] |
 | **ImportMode** | **string** | The indication of whether the processing should remove rows that don&#39;t appear in the import file | [optional] |
 | **ErrorInformation** | [**ErrorBody**](ErrorBody.html) | Any error information, or null of the processing is not in an error state | [optional] |

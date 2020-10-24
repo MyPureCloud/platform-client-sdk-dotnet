@@ -59,7 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">Id.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Count">Count.</param>
-        /// <param name="Time">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Time">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public FacetTerm(string Term = null, long? Key = null, string Id = null, string Name = null, long? Count = null, DateTime? Time = null)
         {
             this.Term = Term;
@@ -114,9 +114,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="time", EmitDefaultValue=false)]
         public DateTime? Time { get; set; }
         

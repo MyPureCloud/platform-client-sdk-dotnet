@@ -9,7 +9,7 @@ title: Language
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The language name. | |
-| **DateModified** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **DateModified** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **State** | **string** |  | [optional] |
 | **Version** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

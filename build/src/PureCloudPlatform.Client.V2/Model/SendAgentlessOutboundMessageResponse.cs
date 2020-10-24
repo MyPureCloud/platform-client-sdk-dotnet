@@ -133,7 +133,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ToAddress">The recipient of the text message..</param>
         /// <param name="MessengerType">Type of text messenger..</param>
         /// <param name="TextBody">The body of the text message..</param>
-        /// <param name="Timestamp">The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Timestamp">The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="User">Details of the user created the job.</param>
         public SendAgentlessOutboundMessageResponse(string ConversationId = null, string FromAddress = null, string ToAddress = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, DateTime? Timestamp = null, AddressableEntityRef User = null)
         {
@@ -197,9 +197,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public DateTime? Timestamp { get; set; }
         

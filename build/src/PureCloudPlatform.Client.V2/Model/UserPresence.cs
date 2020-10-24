@@ -69,7 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Primary">A boolean used to tell whether or not to set this presence source as the primary on a PATCH.</param>
         /// <param name="PresenceDefinition">PresenceDefinition.</param>
         /// <param name="Message">Message.</param>
-        /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public UserPresence(string Name = null, string Source = null, bool? Primary = null, PresenceDefinition PresenceDefinition = null, string Message = null, DateTime? ModifiedDate = null)
         {
             this.Name = Name;
@@ -135,9 +135,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
         

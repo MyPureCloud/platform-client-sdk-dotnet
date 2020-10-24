@@ -17,14 +17,14 @@ title: Evaluation
 | **Status** | **string** |  | [optional] |
 | **Answers** | [**EvaluationScoringSet**](EvaluationScoringSet.html) |  | [optional] |
 | **AgentHasRead** | **bool?** |  | [optional] |
-| **ReleaseDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **AssignedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **ChangedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **ReleaseDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **AssignedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **ChangedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Queue** | [**Queue**](Queue.html) |  | [optional] |
 | **MediaType** | **List&lt;string&gt;** | List of different communication types used in conversation. | [optional] |
 | **Rescore** | **bool?** | Is only true when evaluation is re-scored. | [optional] |
-| **ConversationDate** | **DateTime?** | Date of conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **ConversationEndDate** | **DateTime?** | End date of conversation if it had completed before evaluation creation. Null if created before the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **ConversationDate** | **DateTime?** | Date of conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **ConversationEndDate** | **DateTime?** | End date of conversation if it had completed before evaluation creation. Null if created before the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **NeverRelease** | **bool?** | Signifies if the evaluation is never to be released. This cannot be set true if release date is also set. | [optional] |
 | **ResourceId** | **string** | Only used for email evaluations. Will be null for all other evaluations. | [optional] |
 | **ResourceType** | **string** | The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources. | [optional] |

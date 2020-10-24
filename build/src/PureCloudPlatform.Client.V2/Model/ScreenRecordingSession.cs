@@ -63,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="User">User.</param>
         /// <param name="CommunicationId">The id of the communication that is being recorded on the conversation.</param>
         /// <param name="Conversation">Conversation.</param>
-        /// <param name="StartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="StartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public ScreenRecordingSession(string Name = null, User User = null, string CommunicationId = null, Conversation Conversation = null, DateTime? StartTime = null)
         {
             this.Name = Name;
@@ -119,9 +119,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
         

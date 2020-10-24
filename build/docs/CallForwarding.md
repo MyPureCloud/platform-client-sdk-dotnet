@@ -14,7 +14,7 @@ title: CallForwarding
 | **PhoneNumber** | **string** | This property is deprecated. Please use the calls property | [optional] |
 | **Calls** | [**List&lt;CallRoute&gt;**](CallRoute.html) | An ordered list of CallRoutes to be executed when CallForwarding is enabled | [optional] |
 | **Voicemail** | **string** | The type of voicemail to use with the callForwarding configuration | [optional] |
-| **ModifiedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **ModifiedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

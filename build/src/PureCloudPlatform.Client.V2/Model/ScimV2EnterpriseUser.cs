@@ -47,7 +47,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Division">The division that the user belongs to..</param>
         /// <param name="Department">The department that the user belongs to..</param>
         /// <param name="Manager">The user&#39;s manager..</param>
-        /// <param name="EmployeeNumber">The users employee number..</param>
+        /// <param name="EmployeeNumber">The user&#39;s employee number..</param>
         public ScimV2EnterpriseUser(string Division = null, string Department = null, Manager Manager = null, string EmployeeNumber = null)
         {
             this.Division = Division;
@@ -87,9 +87,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The users employee number.
+        /// The user&#39;s employee number.
         /// </summary>
-        /// <value>The users employee number.</value>
+        /// <value>The user&#39;s employee number.</value>
         [DataMember(Name="employeeNumber", EmitDefaultValue=false)]
         public string EmployeeNumber { get; set; }
         

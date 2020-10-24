@@ -128,7 +128,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageURI">A URI for this message entity..</param>
         /// <param name="MessageStatus">Indicates the delivery status of the message..</param>
         /// <param name="MessageSegmentCount">The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits..</param>
-        /// <param name="MessageTime">The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="MessageTime">The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Media">The media (images, files, etc) associated with this message, if any.</param>
         /// <param name="Stickers">One or more stickers associated with this message, if any.</param>
         public MessageDetails(string MessageId = null, string MessageURI = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null, DateTime? MessageTime = null, List<MessageMedia> Media = null, List<MessageSticker> Stickers = null)
@@ -175,9 +175,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="messageTime", EmitDefaultValue=false)]
         public DateTime? MessageTime { get; set; }
         

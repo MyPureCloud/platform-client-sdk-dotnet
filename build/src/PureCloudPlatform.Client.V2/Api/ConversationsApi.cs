@@ -2960,7 +2960,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Send message
         /// </summary>
         /// <remarks>
-        /// 
+        /// Send message on existing conversation/communication. Only one message body field can be accepted, per request. Example: 1 textBody, 1 mediaId, 1 stickerId, or 1 messageTemplate.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -2973,7 +2973,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Send message
         /// </summary>
         /// <remarks>
-        /// 
+        /// Send message on existing conversation/communication. Only one message body field can be accepted, per request. Example: 1 textBody, 1 mediaId, 1 stickerId, or 1 messageTemplate.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -3108,8 +3108,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">FacebookIntegrationRequest</param>
+        /// <param name="async">Create a Facebook integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Facebook integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>FacebookIntegration</returns>
-        FacebookIntegration PostConversationsMessagingIntegrationsFacebook (FacebookIntegrationRequest body);
+        FacebookIntegration PostConversationsMessagingIntegrationsFacebook (FacebookIntegrationRequest body, bool? async = null);
 
         /// <summary>
         /// Create a Facebook Integration
@@ -3119,8 +3120,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">FacebookIntegrationRequest</param>
+        /// <param name="async">Create a Facebook integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Facebook integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>ApiResponse of FacebookIntegration</returns>
-        ApiResponse<FacebookIntegration> PostConversationsMessagingIntegrationsFacebookWithHttpInfo (FacebookIntegrationRequest body);
+        ApiResponse<FacebookIntegration> PostConversationsMessagingIntegrationsFacebookWithHttpInfo (FacebookIntegrationRequest body, bool? async = null);
         
         /// <summary>
         /// Create a LINE messenger Integration
@@ -3130,8 +3132,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LineIntegrationRequest</param>
+        /// <param name="async">Create a LINE integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new LINE integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>LineIntegration</returns>
-        LineIntegration PostConversationsMessagingIntegrationsLine (LineIntegrationRequest body);
+        LineIntegration PostConversationsMessagingIntegrationsLine (LineIntegrationRequest body, bool? async = null);
 
         /// <summary>
         /// Create a LINE messenger Integration
@@ -3141,8 +3144,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LineIntegrationRequest</param>
+        /// <param name="async">Create a LINE integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new LINE integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>ApiResponse of LineIntegration</returns>
-        ApiResponse<LineIntegration> PostConversationsMessagingIntegrationsLineWithHttpInfo (LineIntegrationRequest body);
+        ApiResponse<LineIntegration> PostConversationsMessagingIntegrationsLineWithHttpInfo (LineIntegrationRequest body, bool? async = null);
         
         /// <summary>
         /// Create a Twitter Integration
@@ -3152,8 +3156,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">TwitterIntegrationRequest</param>
+        /// <param name="async">Create a Twitter integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Twitter integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>TwitterIntegration</returns>
-        TwitterIntegration PostConversationsMessagingIntegrationsTwitter (TwitterIntegrationRequest body);
+        TwitterIntegration PostConversationsMessagingIntegrationsTwitter (TwitterIntegrationRequest body, bool? async = null);
 
         /// <summary>
         /// Create a Twitter Integration
@@ -3163,8 +3168,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">TwitterIntegrationRequest</param>
+        /// <param name="async">Create a Twitter integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Twitter integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>ApiResponse of TwitterIntegration</returns>
-        ApiResponse<TwitterIntegration> PostConversationsMessagingIntegrationsTwitterWithHttpInfo (TwitterIntegrationRequest body);
+        ApiResponse<TwitterIntegration> PostConversationsMessagingIntegrationsTwitterWithHttpInfo (TwitterIntegrationRequest body, bool? async = null);
         
         /// <summary>
         /// Create a WhatsApp Integration
@@ -3174,8 +3180,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WhatsAppIntegrationRequest</param>
+        /// <param name="async">Create a WhatsApp integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new WhatsApp integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>WhatsAppIntegration</returns>
-        WhatsAppIntegration PostConversationsMessagingIntegrationsWhatsapp (WhatsAppIntegrationRequest body);
+        WhatsAppIntegration PostConversationsMessagingIntegrationsWhatsapp (WhatsAppIntegrationRequest body, bool? async = null);
 
         /// <summary>
         /// Create a WhatsApp Integration
@@ -3185,8 +3192,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WhatsAppIntegrationRequest</param>
+        /// <param name="async">Create a WhatsApp integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new WhatsApp integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>ApiResponse of WhatsAppIntegration</returns>
-        ApiResponse<WhatsAppIntegration> PostConversationsMessagingIntegrationsWhatsappWithHttpInfo (WhatsAppIntegrationRequest body);
+        ApiResponse<WhatsAppIntegration> PostConversationsMessagingIntegrationsWhatsappWithHttpInfo (WhatsAppIntegrationRequest body, bool? async = null);
         
         /// <summary>
         /// Set flagged reason on conversation participant to indicate bad conversation quality.
@@ -6236,7 +6244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Send message
         /// </summary>
         /// <remarks>
-        /// 
+        /// Send message on existing conversation/communication. Only one message body field can be accepted, per request. Example: 1 textBody, 1 mediaId, 1 stickerId, or 1 messageTemplate.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -6249,7 +6257,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Send message
         /// </summary>
         /// <remarks>
-        /// 
+        /// Send message on existing conversation/communication. Only one message body field can be accepted, per request. Example: 1 textBody, 1 mediaId, 1 stickerId, or 1 messageTemplate.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -6384,8 +6392,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">FacebookIntegrationRequest</param>
+        /// <param name="async">Create a Facebook integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Facebook integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>Task of FacebookIntegration</returns>
-        System.Threading.Tasks.Task<FacebookIntegration> PostConversationsMessagingIntegrationsFacebookAsync (FacebookIntegrationRequest body);
+        System.Threading.Tasks.Task<FacebookIntegration> PostConversationsMessagingIntegrationsFacebookAsync (FacebookIntegrationRequest body, bool? async = null);
 
         /// <summary>
         /// Create a Facebook Integration
@@ -6395,8 +6404,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">FacebookIntegrationRequest</param>
+        /// <param name="async">Create a Facebook integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Facebook integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (FacebookIntegration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FacebookIntegration>> PostConversationsMessagingIntegrationsFacebookAsyncWithHttpInfo (FacebookIntegrationRequest body);
+        System.Threading.Tasks.Task<ApiResponse<FacebookIntegration>> PostConversationsMessagingIntegrationsFacebookAsyncWithHttpInfo (FacebookIntegrationRequest body, bool? async = null);
         
         /// <summary>
         /// Create a LINE messenger Integration
@@ -6406,8 +6416,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LineIntegrationRequest</param>
+        /// <param name="async">Create a LINE integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new LINE integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>Task of LineIntegration</returns>
-        System.Threading.Tasks.Task<LineIntegration> PostConversationsMessagingIntegrationsLineAsync (LineIntegrationRequest body);
+        System.Threading.Tasks.Task<LineIntegration> PostConversationsMessagingIntegrationsLineAsync (LineIntegrationRequest body, bool? async = null);
 
         /// <summary>
         /// Create a LINE messenger Integration
@@ -6417,8 +6428,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LineIntegrationRequest</param>
+        /// <param name="async">Create a LINE integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new LINE integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (LineIntegration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LineIntegration>> PostConversationsMessagingIntegrationsLineAsyncWithHttpInfo (LineIntegrationRequest body);
+        System.Threading.Tasks.Task<ApiResponse<LineIntegration>> PostConversationsMessagingIntegrationsLineAsyncWithHttpInfo (LineIntegrationRequest body, bool? async = null);
         
         /// <summary>
         /// Create a Twitter Integration
@@ -6428,8 +6440,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">TwitterIntegrationRequest</param>
+        /// <param name="async">Create a Twitter integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Twitter integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>Task of TwitterIntegration</returns>
-        System.Threading.Tasks.Task<TwitterIntegration> PostConversationsMessagingIntegrationsTwitterAsync (TwitterIntegrationRequest body);
+        System.Threading.Tasks.Task<TwitterIntegration> PostConversationsMessagingIntegrationsTwitterAsync (TwitterIntegrationRequest body, bool? async = null);
 
         /// <summary>
         /// Create a Twitter Integration
@@ -6439,8 +6452,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">TwitterIntegrationRequest</param>
+        /// <param name="async">Create a Twitter integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Twitter integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TwitterIntegration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> PostConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo (TwitterIntegrationRequest body);
+        System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> PostConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo (TwitterIntegrationRequest body, bool? async = null);
         
         /// <summary>
         /// Create a WhatsApp Integration
@@ -6450,8 +6464,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WhatsAppIntegrationRequest</param>
+        /// <param name="async">Create a WhatsApp integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new WhatsApp integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>Task of WhatsAppIntegration</returns>
-        System.Threading.Tasks.Task<WhatsAppIntegration> PostConversationsMessagingIntegrationsWhatsappAsync (WhatsAppIntegrationRequest body);
+        System.Threading.Tasks.Task<WhatsAppIntegration> PostConversationsMessagingIntegrationsWhatsappAsync (WhatsAppIntegrationRequest body, bool? async = null);
 
         /// <summary>
         /// Create a WhatsApp Integration
@@ -6461,8 +6476,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WhatsAppIntegrationRequest</param>
+        /// <param name="async">Create a WhatsApp integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new WhatsApp integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (WhatsAppIntegration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegration>> PostConversationsMessagingIntegrationsWhatsappAsyncWithHttpInfo (WhatsAppIntegrationRequest body);
+        System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegration>> PostConversationsMessagingIntegrationsWhatsappAsyncWithHttpInfo (WhatsAppIntegrationRequest body, bool? async = null);
         
         /// <summary>
         /// Set flagged reason on conversation participant to indicate bad conversation quality.
@@ -31972,7 +31988,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Send message 
+        /// Send message Send message on existing conversation/communication. Only one message body field can be accepted, per request. Example: 1 textBody, 1 mediaId, 1 stickerId, or 1 messageTemplate.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -31986,7 +32002,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Send message 
+        /// Send message Send message on existing conversation/communication. Only one message body field can be accepted, per request. Example: 1 textBody, 1 mediaId, 1 stickerId, or 1 messageTemplate.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -32083,7 +32099,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Send message 
+        /// Send message Send message on existing conversation/communication. Only one message body field can be accepted, per request. Example: 1 textBody, 1 mediaId, 1 stickerId, or 1 messageTemplate.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -32098,7 +32114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Send message 
+        /// Send message Send message on existing conversation/communication. Only one message body field can be accepted, per request. Example: 1 textBody, 1 mediaId, 1 stickerId, or 1 messageTemplate.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -33243,10 +33259,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">FacebookIntegrationRequest</param>
+        /// <param name="async">Create a Facebook integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Facebook integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>FacebookIntegration</returns>
-        public FacebookIntegration PostConversationsMessagingIntegrationsFacebook (FacebookIntegrationRequest body)
+        public FacebookIntegration PostConversationsMessagingIntegrationsFacebook (FacebookIntegrationRequest body, bool? async = null)
         {
-             ApiResponse<FacebookIntegration> localVarResponse = PostConversationsMessagingIntegrationsFacebookWithHttpInfo(body);
+             ApiResponse<FacebookIntegration> localVarResponse = PostConversationsMessagingIntegrationsFacebookWithHttpInfo(body, async);
              return localVarResponse.Data;
         }
 
@@ -33255,8 +33272,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">FacebookIntegrationRequest</param>
+        /// <param name="async">Create a Facebook integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Facebook integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>ApiResponse of FacebookIntegration</returns>
-        public ApiResponse< FacebookIntegration > PostConversationsMessagingIntegrationsFacebookWithHttpInfo (FacebookIntegrationRequest body)
+        public ApiResponse< FacebookIntegration > PostConversationsMessagingIntegrationsFacebookWithHttpInfo (FacebookIntegrationRequest body, bool? async = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -33295,6 +33313,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (async != null) localVarQueryParams.Add(new Tuple<string, string>("async", this.Configuration.ApiClient.ParameterToString(async)));
 
             // Header params
 
@@ -33342,10 +33361,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">FacebookIntegrationRequest</param>
+        /// <param name="async">Create a Facebook integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Facebook integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>Task of FacebookIntegration</returns>
-        public async System.Threading.Tasks.Task<FacebookIntegration> PostConversationsMessagingIntegrationsFacebookAsync (FacebookIntegrationRequest body)
+        public async System.Threading.Tasks.Task<FacebookIntegration> PostConversationsMessagingIntegrationsFacebookAsync (FacebookIntegrationRequest body, bool? async = null)
         {
-             ApiResponse<FacebookIntegration> localVarResponse = await PostConversationsMessagingIntegrationsFacebookAsyncWithHttpInfo(body);
+             ApiResponse<FacebookIntegration> localVarResponse = await PostConversationsMessagingIntegrationsFacebookAsyncWithHttpInfo(body, async);
              return localVarResponse.Data;
 
         }
@@ -33355,8 +33375,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">FacebookIntegrationRequest</param>
+        /// <param name="async">Create a Facebook integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Facebook integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (FacebookIntegration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FacebookIntegration>> PostConversationsMessagingIntegrationsFacebookAsyncWithHttpInfo (FacebookIntegrationRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<FacebookIntegration>> PostConversationsMessagingIntegrationsFacebookAsyncWithHttpInfo (FacebookIntegrationRequest body, bool? async = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -33396,6 +33417,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (async != null) localVarQueryParams.Add(new Tuple<string, string>("async", this.Configuration.ApiClient.ParameterToString(async)));
 
             // Header params
 
@@ -33444,10 +33466,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LineIntegrationRequest</param>
+        /// <param name="async">Create a LINE integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new LINE integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>LineIntegration</returns>
-        public LineIntegration PostConversationsMessagingIntegrationsLine (LineIntegrationRequest body)
+        public LineIntegration PostConversationsMessagingIntegrationsLine (LineIntegrationRequest body, bool? async = null)
         {
-             ApiResponse<LineIntegration> localVarResponse = PostConversationsMessagingIntegrationsLineWithHttpInfo(body);
+             ApiResponse<LineIntegration> localVarResponse = PostConversationsMessagingIntegrationsLineWithHttpInfo(body, async);
              return localVarResponse.Data;
         }
 
@@ -33456,8 +33479,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LineIntegrationRequest</param>
+        /// <param name="async">Create a LINE integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new LINE integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>ApiResponse of LineIntegration</returns>
-        public ApiResponse< LineIntegration > PostConversationsMessagingIntegrationsLineWithHttpInfo (LineIntegrationRequest body)
+        public ApiResponse< LineIntegration > PostConversationsMessagingIntegrationsLineWithHttpInfo (LineIntegrationRequest body, bool? async = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -33496,6 +33520,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (async != null) localVarQueryParams.Add(new Tuple<string, string>("async", this.Configuration.ApiClient.ParameterToString(async)));
 
             // Header params
 
@@ -33543,10 +33568,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LineIntegrationRequest</param>
+        /// <param name="async">Create a LINE integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new LINE integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>Task of LineIntegration</returns>
-        public async System.Threading.Tasks.Task<LineIntegration> PostConversationsMessagingIntegrationsLineAsync (LineIntegrationRequest body)
+        public async System.Threading.Tasks.Task<LineIntegration> PostConversationsMessagingIntegrationsLineAsync (LineIntegrationRequest body, bool? async = null)
         {
-             ApiResponse<LineIntegration> localVarResponse = await PostConversationsMessagingIntegrationsLineAsyncWithHttpInfo(body);
+             ApiResponse<LineIntegration> localVarResponse = await PostConversationsMessagingIntegrationsLineAsyncWithHttpInfo(body, async);
              return localVarResponse.Data;
 
         }
@@ -33556,8 +33582,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LineIntegrationRequest</param>
+        /// <param name="async">Create a LINE integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new LINE integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (LineIntegration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LineIntegration>> PostConversationsMessagingIntegrationsLineAsyncWithHttpInfo (LineIntegrationRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<LineIntegration>> PostConversationsMessagingIntegrationsLineAsyncWithHttpInfo (LineIntegrationRequest body, bool? async = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -33597,6 +33624,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (async != null) localVarQueryParams.Add(new Tuple<string, string>("async", this.Configuration.ApiClient.ParameterToString(async)));
 
             // Header params
 
@@ -33645,10 +33673,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">TwitterIntegrationRequest</param>
+        /// <param name="async">Create a Twitter integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Twitter integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>TwitterIntegration</returns>
-        public TwitterIntegration PostConversationsMessagingIntegrationsTwitter (TwitterIntegrationRequest body)
+        public TwitterIntegration PostConversationsMessagingIntegrationsTwitter (TwitterIntegrationRequest body, bool? async = null)
         {
-             ApiResponse<TwitterIntegration> localVarResponse = PostConversationsMessagingIntegrationsTwitterWithHttpInfo(body);
+             ApiResponse<TwitterIntegration> localVarResponse = PostConversationsMessagingIntegrationsTwitterWithHttpInfo(body, async);
              return localVarResponse.Data;
         }
 
@@ -33657,8 +33686,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">TwitterIntegrationRequest</param>
+        /// <param name="async">Create a Twitter integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Twitter integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>ApiResponse of TwitterIntegration</returns>
-        public ApiResponse< TwitterIntegration > PostConversationsMessagingIntegrationsTwitterWithHttpInfo (TwitterIntegrationRequest body)
+        public ApiResponse< TwitterIntegration > PostConversationsMessagingIntegrationsTwitterWithHttpInfo (TwitterIntegrationRequest body, bool? async = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -33697,6 +33727,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (async != null) localVarQueryParams.Add(new Tuple<string, string>("async", this.Configuration.ApiClient.ParameterToString(async)));
 
             // Header params
 
@@ -33744,10 +33775,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">TwitterIntegrationRequest</param>
+        /// <param name="async">Create a Twitter integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Twitter integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>Task of TwitterIntegration</returns>
-        public async System.Threading.Tasks.Task<TwitterIntegration> PostConversationsMessagingIntegrationsTwitterAsync (TwitterIntegrationRequest body)
+        public async System.Threading.Tasks.Task<TwitterIntegration> PostConversationsMessagingIntegrationsTwitterAsync (TwitterIntegrationRequest body, bool? async = null)
         {
-             ApiResponse<TwitterIntegration> localVarResponse = await PostConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo(body);
+             ApiResponse<TwitterIntegration> localVarResponse = await PostConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo(body, async);
              return localVarResponse.Data;
 
         }
@@ -33757,8 +33789,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">TwitterIntegrationRequest</param>
+        /// <param name="async">Create a Twitter integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Twitter integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TwitterIntegration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> PostConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo (TwitterIntegrationRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> PostConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo (TwitterIntegrationRequest body, bool? async = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -33798,6 +33831,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (async != null) localVarQueryParams.Add(new Tuple<string, string>("async", this.Configuration.ApiClient.ParameterToString(async)));
 
             // Header params
 
@@ -33846,10 +33880,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WhatsAppIntegrationRequest</param>
+        /// <param name="async">Create a WhatsApp integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new WhatsApp integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>WhatsAppIntegration</returns>
-        public WhatsAppIntegration PostConversationsMessagingIntegrationsWhatsapp (WhatsAppIntegrationRequest body)
+        public WhatsAppIntegration PostConversationsMessagingIntegrationsWhatsapp (WhatsAppIntegrationRequest body, bool? async = null)
         {
-             ApiResponse<WhatsAppIntegration> localVarResponse = PostConversationsMessagingIntegrationsWhatsappWithHttpInfo(body);
+             ApiResponse<WhatsAppIntegration> localVarResponse = PostConversationsMessagingIntegrationsWhatsappWithHttpInfo(body, async);
              return localVarResponse.Data;
         }
 
@@ -33858,8 +33893,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WhatsAppIntegrationRequest</param>
+        /// <param name="async">Create a WhatsApp integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new WhatsApp integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>ApiResponse of WhatsAppIntegration</returns>
-        public ApiResponse< WhatsAppIntegration > PostConversationsMessagingIntegrationsWhatsappWithHttpInfo (WhatsAppIntegrationRequest body)
+        public ApiResponse< WhatsAppIntegration > PostConversationsMessagingIntegrationsWhatsappWithHttpInfo (WhatsAppIntegrationRequest body, bool? async = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -33898,6 +33934,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (async != null) localVarQueryParams.Add(new Tuple<string, string>("async", this.Configuration.ApiClient.ParameterToString(async)));
 
             // Header params
 
@@ -33945,10 +33982,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WhatsAppIntegrationRequest</param>
+        /// <param name="async">Create a WhatsApp integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new WhatsApp integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>Task of WhatsAppIntegration</returns>
-        public async System.Threading.Tasks.Task<WhatsAppIntegration> PostConversationsMessagingIntegrationsWhatsappAsync (WhatsAppIntegrationRequest body)
+        public async System.Threading.Tasks.Task<WhatsAppIntegration> PostConversationsMessagingIntegrationsWhatsappAsync (WhatsAppIntegrationRequest body, bool? async = null)
         {
-             ApiResponse<WhatsAppIntegration> localVarResponse = await PostConversationsMessagingIntegrationsWhatsappAsyncWithHttpInfo(body);
+             ApiResponse<WhatsAppIntegration> localVarResponse = await PostConversationsMessagingIntegrationsWhatsappAsyncWithHttpInfo(body, async);
              return localVarResponse.Data;
 
         }
@@ -33958,8 +33996,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WhatsAppIntegrationRequest</param>
+        /// <param name="async">Create a WhatsApp integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new WhatsApp integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (WhatsAppIntegration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegration>> PostConversationsMessagingIntegrationsWhatsappAsyncWithHttpInfo (WhatsAppIntegrationRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegration>> PostConversationsMessagingIntegrationsWhatsappAsyncWithHttpInfo (WhatsAppIntegrationRequest body, bool? async = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -33999,6 +34038,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (async != null) localVarQueryParams.Add(new Tuple<string, string>("async", this.Configuration.ApiClient.ParameterToString(async)));
 
             // Header params
 

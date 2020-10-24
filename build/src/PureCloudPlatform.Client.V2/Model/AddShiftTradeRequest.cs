@@ -58,7 +58,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ScheduleId">The ID of the schedule to which the initiating and receiving shifts belong (required).</param>
         /// <param name="InitiatingShiftId">The ID of the shift that the initiating user wants to give up (required).</param>
         /// <param name="ReceivingUserId">The ID of the user to whom to send the request (for use in direct trade requests).</param>
-        /// <param name="Expiration">When this shift trade request should expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Expiration">When this shift trade request should expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="AcceptableIntervals">AcceptableIntervals.</param>
         public AddShiftTradeRequest(string ScheduleId = null, string InitiatingShiftId = null, string ReceivingUserId = null, DateTime? Expiration = null, List<string> AcceptableIntervals = null)
         {
@@ -100,9 +100,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// When this shift trade request should expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// When this shift trade request should expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>When this shift trade request should expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>When this shift trade request should expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="expiration", EmitDefaultValue=false)]
         public DateTime? Expiration { get; set; }
         

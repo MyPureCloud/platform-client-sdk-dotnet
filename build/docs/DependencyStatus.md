@@ -12,8 +12,8 @@ title: DependencyStatus
 | **User** | [**User**](User.html) | User that initiated the build. | [optional] |
 | **Client** | [**DomainEntityRef**](DomainEntityRef.html) | OAuth client that initiated the build. | [optional] |
 | **BuildId** | **string** |  | [optional] |
-| **DateStarted** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **DateCompleted** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **DateStarted** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **DateCompleted** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Status** | **string** |  | [optional] |
 | **FailedObjects** | [**List&lt;FailedObject&gt;**](FailedObject.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

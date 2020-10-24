@@ -44,8 +44,8 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new TelephonyApi();
-            var dateStart = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-            var dateEnd = 2013-10-20T19:20:30+01:00;  // DateTime? | End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+            var dateStart = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+            var dateEnd = 2013-10-20T19:20:30+01:00;  // DateTime? | End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
             var callId = callId_example;  // string | unique identification of the placed call (optional) 
             var toUser = toUser_example;  // string | User to who the call was placed (optional) 
             var fromUser = fromUser_example;  // string | user who placed the call (optional) 
@@ -71,8 +71,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **dateStart** | **DateTime?**| Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ |  |
-| **dateEnd** | **DateTime?**| End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ |  |
+| **dateStart** | **DateTime?**| Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z |  |
+| **dateEnd** | **DateTime?**| End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z |  |
 | **callId** | **string**| unique identification of the placed call | [optional]  |
 | **toUser** | **string**| User to who the call was placed | [optional]  |
 | **fromUser** | **string**| user who placed the call | [optional]  |

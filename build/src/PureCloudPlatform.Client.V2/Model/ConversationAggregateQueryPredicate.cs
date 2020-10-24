@@ -181,6 +181,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Flaggedreason,
             
             /// <summary>
+            /// Enum Flowintype for "flowInType"
+            /// </summary>
+            [EnumMember(Value = "flowInType")]
+            Flowintype,
+            
+            /// <summary>
             /// Enum Flowouttype for "flowOutType"
             /// </summary>
             [EnumMember(Value = "flowOutType")]

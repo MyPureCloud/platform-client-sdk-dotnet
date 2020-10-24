@@ -119,7 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AverageScore">AverageScore.</param>
         /// <param name="HighScore">HighScore.</param>
         /// <param name="LowScore">LowScore.</param>
-        /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Evaluations">Evaluations.</param>
         /// <param name="Evaluators">Evaluators.</param>
         /// <param name="ScoringIndex">ScoringIndex.</param>
@@ -228,9 +228,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
         

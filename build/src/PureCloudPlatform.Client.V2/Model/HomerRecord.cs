@@ -280,7 +280,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="HomerRecord" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Date">metadata associated to the SIP calls. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Date">metadata associated to the SIP calls. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="MilliTs">metadata associated to the SIP calls.</param>
         /// <param name="MicroTs">metadata associated to the SIP calls.</param>
         /// <param name="Method">metadata associated to the SIP calls.</param>
@@ -402,9 +402,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// metadata associated to the SIP calls. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// metadata associated to the SIP calls. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>metadata associated to the SIP calls. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>metadata associated to the SIP calls. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="date", EmitDefaultValue=false)]
         public DateTime? Date { get; set; }
         

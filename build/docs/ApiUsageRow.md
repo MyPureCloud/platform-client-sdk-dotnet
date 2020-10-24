@@ -19,7 +19,7 @@ title: ApiUsageRow
 | **Status500** | **long?** | Number of requests resulting in a 5xx HTTP status code | [optional] |
 | **Status429** | **long?** | Number of requests resulting in a 429 HTTP status code, this is a subset of the count returned with status400 | [optional] |
 | **Requests** | **long?** | Total number of requests | [optional] |
-| **Date** | **DateTime?** | Date of requests, based on granularity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **Date** | **DateTime?** | Date of requests, based on granularity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 {: class="table table-striped"}
 
 

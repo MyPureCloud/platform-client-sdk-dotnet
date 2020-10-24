@@ -41,7 +41,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="RoutingSkills">The list of routing skills assigned to a user. Maximum 50 skills..</param>
         /// <param name="RoutingLanguages">The list of routing languages assigned to a user. Maximum 50 languages..</param>
-        /// <param name="ExternalIds">External Identifiers assigned to user. SCIM External ID will be visible here with authority prefix &#39;x-pc:scimv2:v1&#39; but will be immutable..</param>
+        /// <param name="ExternalIds">The list of external identifiers assigned to user. Always includes an immutable SCIM authority prefixed with \&quot;x-pc:scimv2:v1\&quot;..</param>
         public ScimUserExtensions(List<ScimUserRoutingSkill> RoutingSkills = null, List<ScimUserRoutingLanguage> RoutingLanguages = null, List<ScimGenesysUserExternalId> ExternalIds = null)
         {
             this.RoutingSkills = RoutingSkills;
@@ -71,9 +71,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// External Identifiers assigned to user. SCIM External ID will be visible here with authority prefix &#39;x-pc:scimv2:v1&#39; but will be immutable.
+        /// The list of external identifiers assigned to user. Always includes an immutable SCIM authority prefixed with \&quot;x-pc:scimv2:v1\&quot;.
         /// </summary>
-        /// <value>External Identifiers assigned to user. SCIM External ID will be visible here with authority prefix &#39;x-pc:scimv2:v1&#39; but will be immutable.</value>
+        /// <value>The list of external identifiers assigned to user. Always includes an immutable SCIM authority prefixed with \&quot;x-pc:scimv2:v1\&quot;.</value>
         [DataMember(Name="externalIds", EmitDefaultValue=false)]
         public List<ScimGenesysUserExternalId> ExternalIds { get; set; }
         

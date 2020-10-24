@@ -128,9 +128,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OneSided">Whether this is a one sided shift trade.</param>
         /// <param name="NewState">The new state of the shift trade, null if there was no change.</param>
         /// <param name="InitiatingUser">The user who initiated the shift trade.</param>
-        /// <param name="InitiatingShiftDate">The start date and time of the initiating shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="InitiatingShiftDate">The start date and time of the initiating shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ReceivingUser">The user on the receiving side of this shift trade (null if not matched).</param>
-        /// <param name="ReceivingShiftDate">The start date and time of the receiving shift (null if not matched or if one-sided. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ReceivingShiftDate">The start date and time of the receiving shift (null if not matched or if one-sided. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public ShiftTradeNotification(string WeekDate = null, string TradeId = null, bool? OneSided = null, NewStateEnum? NewState = null, UserReference InitiatingUser = null, DateTime? InitiatingShiftDate = null, UserReference ReceivingUser = null, DateTime? ReceivingShiftDate = null)
         {
             this.WeekDate = WeekDate;
@@ -185,9 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The start date and time of the initiating shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The start date and time of the initiating shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The start date and time of the initiating shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The start date and time of the initiating shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="initiatingShiftDate", EmitDefaultValue=false)]
         public DateTime? InitiatingShiftDate { get; set; }
         
@@ -203,9 +203,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The start date and time of the receiving shift (null if not matched or if one-sided. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The start date and time of the receiving shift (null if not matched or if one-sided. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The start date and time of the receiving shift (null if not matched or if one-sided. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The start date and time of the receiving shift (null if not matched or if one-sided. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="receivingShiftDate", EmitDefaultValue=false)]
         public DateTime? ReceivingShiftDate { get; set; }
         

@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// UpdateSchedulingRunRequest
+    /// Intent
     /// </summary>
     [DataContract]
-    public partial class UpdateSchedulingRunRequest :  IEquatable<UpdateSchedulingRunRequest>
+    public partial class Intent :  IEquatable<Intent>
     {
         
         
@@ -27,23 +27,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="UpdateSchedulingRunRequest" /> class.
+        /// Initializes a new instance of the <see cref="Intent" /> class.
         /// </summary>
-        /// <param name="Applied">Mark the run as applied.  Request will be rejected if the value != true. Note: To discard a run without applying, you still need to mark it as applied so that other reschedule runs can be done.</param>
-        public UpdateSchedulingRunRequest(bool? Applied = null)
+        /// <param name="Name">Name.</param>
+        public Intent(string Name = null)
         {
-            this.Applied = Applied;
+            this.Name = Name;
             
         }
         
         
         
         /// <summary>
-        /// Mark the run as applied.  Request will be rejected if the value != true. Note: To discard a run without applying, you still need to mark it as applied so that other reschedule runs can be done
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>Mark the run as applied.  Request will be rejected if the value != true. Note: To discard a run without applying, you still need to mark it as applied so that other reschedule runs can be done</value>
-        [DataMember(Name="applied", EmitDefaultValue=false)]
-        public bool? Applied { get; set; }
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
         
         
         /// <summary>
@@ -53,9 +52,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UpdateSchedulingRunRequest {\n");
+            sb.Append("class Intent {\n");
             
-            sb.Append("  Applied: ").Append(Applied).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -77,15 +76,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as UpdateSchedulingRunRequest);
+            return this.Equals(obj as Intent);
         }
 
         /// <summary>
-        /// Returns true if UpdateSchedulingRunRequest instances are equal
+        /// Returns true if Intent instances are equal
         /// </summary>
-        /// <param name="other">Instance of UpdateSchedulingRunRequest to be compared</param>
+        /// <param name="other">Instance of Intent to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UpdateSchedulingRunRequest other)
+        public bool Equals(Intent other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -93,9 +92,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Applied == other.Applied ||
-                    this.Applied != null &&
-                    this.Applied.Equals(other.Applied)
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
                 );
         }
 
@@ -111,8 +110,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Applied != null)
-                    hash = hash * 59 + this.Applied.GetHashCode();
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 return hash;
             }

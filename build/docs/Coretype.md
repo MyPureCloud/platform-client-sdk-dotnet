@@ -10,7 +10,7 @@ title: Coretype
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Version** | **int?** | A positive integer denoting the core type&#39;s version | [optional] |
-| **DateCreated** | **DateTime?** | The date the core type was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **DateCreated** | **DateTime?** | The date the core type was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Schema** | [**Schema**](Schema.html) | The core type&#39;s built-in schema | [optional] |
 | **Current** | **bool?** | A boolean indicating if the core type&#39;s version is the current one in use by the system | [optional] |
 | **ValidationFields** | **List&lt;string&gt;** | An array of strings naming the fields of the core type subject to validation.  Validation constraints are specified by a schema author using the core type. | [optional] |

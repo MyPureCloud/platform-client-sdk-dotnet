@@ -154,6 +154,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Flaggedreason,
             
             /// <summary>
+            /// Enum Flowintype for "flowInType"
+            /// </summary>
+            [EnumMember(Value = "flowInType")]
+            Flowintype,
+            
+            /// <summary>
             /// Enum Flowouttype for "flowOutType"
             /// </summary>
             [EnumMember(Value = "flowOutType")]
@@ -415,6 +421,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "nBlindTransferred")]
             Nblindtransferred,
+            
+            /// <summary>
+            /// Enum Ncobrowsesessions for "nCobrowseSessions"
+            /// </summary>
+            [EnumMember(Value = "nCobrowseSessions")]
+            Ncobrowsesessions,
             
             /// <summary>
             /// Enum Nconnected for "nConnected"
@@ -725,7 +737,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeZone">Time zone context used to calculate response intervals (this allows resolving DST changes). The interval offset is used even when timeZone is specified. Default is UTC. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London.</param>
         /// <param name="GroupBy">Behaves like a SQL GROUPBY. Allows for multiple levels of grouping as a list of dimensions. Partitions resulting aggregate computations into distinct named subgroups rather than across the entire result set as if it were one group..</param>
         /// <param name="Filter">Behaves like a SQL WHERE clause. This is ANDed with the interval parameter. Expresses boolean logical predicates as well as dimensional filters.</param>
-        /// <param name="Metrics">Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *)..</param>
+        /// <param name="Metrics">Behaves like a SQL SELECT clause. Only named metrics will be retrieved. (required).</param>
         /// <param name="FlattenMultivaluedDimensions">Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;).</param>
         /// <param name="Views">Custom derived metric views.</param>
         /// <param name="AlternateTimeDimension">Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \&quot;eventTime\&quot; uses the actual time of the data event..</param>
@@ -791,9 +803,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *).
+        /// Behaves like a SQL SELECT clause. Only named metrics will be retrieved.
         /// </summary>
-        /// <value>Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *).</value>
+        /// <value>Behaves like a SQL SELECT clause. Only named metrics will be retrieved.</value>
         [DataMember(Name="metrics", EmitDefaultValue=false)]
         public List<MetricsEnum> Metrics { get; set; }
         

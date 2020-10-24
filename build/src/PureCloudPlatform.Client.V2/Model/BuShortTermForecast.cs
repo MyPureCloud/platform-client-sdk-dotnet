@@ -151,7 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreationMethod">The method by which this forecast was created.</param>
         /// <param name="Description">The description of this forecast.</param>
         /// <param name="Metadata">Metadata for this forecast.</param>
-        /// <param name="ReferenceStartDate">The reference start date for interval-based data for this forecast. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ReferenceStartDate">The reference start date for interval-based data for this forecast. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="SourceDays">The source day pointers for this forecast.</param>
         /// <param name="Modifications">Any manual modifications applied to this forecast.</param>
         /// <param name="GenerationResults">Generation result metadata.</param>
@@ -234,9 +234,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The reference start date for interval-based data for this forecast. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The reference start date for interval-based data for this forecast. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The reference start date for interval-based data for this forecast. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The reference start date for interval-based data for this forecast. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="referenceStartDate", EmitDefaultValue=false)]
         public DateTime? ReferenceStartDate { get; set; }
         

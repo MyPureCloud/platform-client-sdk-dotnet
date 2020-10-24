@@ -211,6 +211,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Flowid,
             
             /// <summary>
+            /// Enum Flowintype for "flowInType"
+            /// </summary>
+            [EnumMember(Value = "flowInType")]
+            Flowintype,
+            
+            /// <summary>
             /// Enum Flowmilestoneid for "flowMilestoneId"
             /// </summary>
             [EnumMember(Value = "flowMilestoneId")]

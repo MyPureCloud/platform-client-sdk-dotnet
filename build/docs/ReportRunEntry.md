@@ -10,7 +10,7 @@ title: ReportRunEntry
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
 | **ReportId** | **string** |  | [optional] |
-| **RunTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **RunTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **RunStatus** | **string** |  | [optional] |
 | **ErrorMessage** | **string** |  | [optional] |
 | **RunDurationMsec** | **long?** |  | [optional] |

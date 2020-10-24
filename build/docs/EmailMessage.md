@@ -17,7 +17,7 @@ title: EmailMessage
 | **Attachments** | [**List&lt;Attachment&gt;**](Attachment.html) | The attachments of the email message. | [optional] |
 | **TextBody** | **string** | The text body of the email message. | |
 | **HtmlBody** | **string** | The html body of the email message. | [optional] |
-| **Time** | **DateTime?** | The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **Time** | **DateTime?** | The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **HistoryIncluded** | **bool?** | Indicates whether the history of previous emails of the conversation is included within the email bodies of this message. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

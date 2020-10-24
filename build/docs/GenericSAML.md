@@ -10,11 +10,12 @@ title: GenericSAML
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
 | **LogoImageData** | **string** |  | [optional] |
-| **EndpointCompression** | **bool?** |  | [optional] |
 | **RelyingPartyIdentifier** | **string** |  | [optional] |
+| **EndpointCompression** | **bool?** |  | [optional] |
+| **NameIdentifierFormat** | **string** |  | [optional] |
 | **Certificate** | **string** |  | [optional] |
-| **IssuerURI** | **string** |  | [optional] |
 | **SsoTargetURI** | **string** |  | [optional] |
+| **IssuerURI** | **string** |  | [optional] |
 | **Disabled** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

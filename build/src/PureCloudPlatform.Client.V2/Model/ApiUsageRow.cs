@@ -101,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Status500">Number of requests resulting in a 5xx HTTP status code.</param>
         /// <param name="Status429">Number of requests resulting in a 429 HTTP status code, this is a subset of the count returned with status400.</param>
         /// <param name="Requests">Total number of requests.</param>
-        /// <param name="Date">Date of requests, based on granularity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Date">Date of requests, based on granularity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public ApiUsageRow(string ClientId = null, string ClientName = null, string OrganizationId = null, string UserId = null, string TemplateUri = null, string HttpMethod = null, long? Status200 = null, long? Status300 = null, long? Status400 = null, long? Status500 = null, long? Status429 = null, long? Requests = null, DateTime? Date = null)
         {
             this.ClientId = ClientId;
@@ -231,9 +231,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date of requests, based on granularity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date of requests, based on granularity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date of requests, based on granularity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date of requests, based on granularity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="date", EmitDefaultValue=false)]
         public DateTime? Date { get; set; }
         

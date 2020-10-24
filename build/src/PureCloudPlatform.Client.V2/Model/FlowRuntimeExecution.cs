@@ -147,9 +147,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The flow execution ID.</param>
         /// <param name="Name">The flow execution name..</param>
         /// <param name="FlowVersion">The Version of the flow definition of the flow execution. (required).</param>
-        /// <param name="DateLaunched">The time the flow was launched. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
+        /// <param name="DateLaunched">The time the flow was launched. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="Status">The flow&#39;s running status, which indicates whether the flow is running normally or completed, etc. (required).</param>
-        /// <param name="DateCompleted">The time the flow completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateCompleted">The time the flow completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CompletionReason">The completion reason set at the flow completion time, if applicable..</param>
         /// <param name="FlowErrorInfo">Additional information if the flow is in error.</param>
         /// <param name="OutputData">List of the flow&#39;s output variables, if any. Output variables are only supplied for Completed flows..</param>
@@ -199,9 +199,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The time the flow was launched. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The time the flow was launched. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The time the flow was launched. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The time the flow was launched. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateLaunched", EmitDefaultValue=false)]
         public DateTime? DateLaunched { get; set; }
         
@@ -210,9 +210,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The time the flow completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The time the flow completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The time the flow completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The time the flow completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCompleted", EmitDefaultValue=false)]
         public DateTime? DateCompleted { get; set; }
         

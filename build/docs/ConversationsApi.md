@@ -7724,7 +7724,7 @@ namespace Example
 
 Send message
 
-
+Send message on existing conversation/communication. Only one message body field can be accepted, per request. Example: 1 textBody, 1 mediaId, 1 stickerId, or 1 messageTemplate.
 
 Requires ALL permissions: 
 
@@ -8094,7 +8094,7 @@ namespace Example
 
 <a name="postconversationsmessagingintegrationsfacebook"></a>
 
-## [**FacebookIntegration**](FacebookIntegration.html) PostConversationsMessagingIntegrationsFacebook (FacebookIntegrationRequest body)
+## [**FacebookIntegration**](FacebookIntegration.html) PostConversationsMessagingIntegrationsFacebook (FacebookIntegrationRequest body, bool? async = null)
 
 
 
@@ -8125,11 +8125,12 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var body = new FacebookIntegrationRequest(); // FacebookIntegrationRequest | FacebookIntegrationRequest
+            var async = true;  // bool? | Create a Facebook integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Facebook integration. An integration ID is returned, it can be used to query the integration. Check the integration's createStatus for Completed or Error to detect the create is finished. (optional)  (default to false)
 
             try
             { 
                 // Create a Facebook Integration
-                FacebookIntegration result = apiInstance.PostConversationsMessagingIntegrationsFacebook(body);
+                FacebookIntegration result = apiInstance.PostConversationsMessagingIntegrationsFacebook(body, async);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -8147,6 +8148,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**FacebookIntegrationRequest**](FacebookIntegrationRequest.html)| FacebookIntegrationRequest |  |
+| **async** | **bool?**| Create a Facebook integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Facebook integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -8155,7 +8157,7 @@ namespace Example
 
 <a name="postconversationsmessagingintegrationsline"></a>
 
-## [**LineIntegration**](LineIntegration.html) PostConversationsMessagingIntegrationsLine (LineIntegrationRequest body)
+## [**LineIntegration**](LineIntegration.html) PostConversationsMessagingIntegrationsLine (LineIntegrationRequest body, bool? async = null)
 
 
 
@@ -8186,11 +8188,12 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var body = new LineIntegrationRequest(); // LineIntegrationRequest | LineIntegrationRequest
+            var async = true;  // bool? | Create a LINE integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new LINE integration. An integration ID is returned, it can be used to query the integration. Check the integration's createStatus for Completed or Error to detect the create is finished. (optional)  (default to false)
 
             try
             { 
                 // Create a LINE messenger Integration
-                LineIntegration result = apiInstance.PostConversationsMessagingIntegrationsLine(body);
+                LineIntegration result = apiInstance.PostConversationsMessagingIntegrationsLine(body, async);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -8208,6 +8211,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**LineIntegrationRequest**](LineIntegrationRequest.html)| LineIntegrationRequest |  |
+| **async** | **bool?**| Create a LINE integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new LINE integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -8216,7 +8220,7 @@ namespace Example
 
 <a name="postconversationsmessagingintegrationstwitter"></a>
 
-## [**TwitterIntegration**](TwitterIntegration.html) PostConversationsMessagingIntegrationsTwitter (TwitterIntegrationRequest body)
+## [**TwitterIntegration**](TwitterIntegration.html) PostConversationsMessagingIntegrationsTwitter (TwitterIntegrationRequest body, bool? async = null)
 
 
 
@@ -8247,11 +8251,12 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var body = new TwitterIntegrationRequest(); // TwitterIntegrationRequest | TwitterIntegrationRequest
+            var async = true;  // bool? | Create a Twitter integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Twitter integration. An integration ID is returned, it can be used to query the integration. Check the integration's createStatus for Completed or Error to detect the create is finished. (optional)  (default to false)
 
             try
             { 
                 // Create a Twitter Integration
-                TwitterIntegration result = apiInstance.PostConversationsMessagingIntegrationsTwitter(body);
+                TwitterIntegration result = apiInstance.PostConversationsMessagingIntegrationsTwitter(body, async);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -8269,6 +8274,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**TwitterIntegrationRequest**](TwitterIntegrationRequest.html)| TwitterIntegrationRequest |  |
+| **async** | **bool?**| Create a Twitter integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Twitter integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -8277,7 +8283,7 @@ namespace Example
 
 <a name="postconversationsmessagingintegrationswhatsapp"></a>
 
-## [**WhatsAppIntegration**](WhatsAppIntegration.html) PostConversationsMessagingIntegrationsWhatsapp (WhatsAppIntegrationRequest body)
+## [**WhatsAppIntegration**](WhatsAppIntegration.html) PostConversationsMessagingIntegrationsWhatsapp (WhatsAppIntegrationRequest body, bool? async = null)
 
 
 
@@ -8308,11 +8314,12 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var body = new WhatsAppIntegrationRequest(); // WhatsAppIntegrationRequest | WhatsAppIntegrationRequest
+            var async = true;  // bool? | Create a WhatsApp integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new WhatsApp integration. An integration ID is returned, it can be used to query the integration. Check the integration's createStatus for Completed or Error to detect the create is finished. (optional)  (default to false)
 
             try
             { 
                 // Create a WhatsApp Integration
-                WhatsAppIntegration result = apiInstance.PostConversationsMessagingIntegrationsWhatsapp(body);
+                WhatsAppIntegration result = apiInstance.PostConversationsMessagingIntegrationsWhatsapp(body, async);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -8330,6 +8337,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**WhatsAppIntegrationRequest**](WhatsAppIntegrationRequest.html)| WhatsAppIntegrationRequest |  |
+| **async** | **bool?**| Create a WhatsApp integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new WhatsApp integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type

@@ -10,8 +10,8 @@ title: OAuthAuthorization
 | **Client** | [**OAuthClient**](OAuthClient.html) |  | [optional] |
 | **Scope** | **List&lt;string&gt;** |  | [optional] |
 | **ResourceOwner** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **DateCreated** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **DateModified** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **DateCreated** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **DateModified** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CreatedBy** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **ModifiedBy** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **Pending** | **bool?** |  | [optional] |

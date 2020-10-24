@@ -14,9 +14,9 @@ title: Greeting
 | **Owner** | [**DomainEntity**](DomainEntity.html) | Greeting owner | |
 | **AudioFile** | [**GreetingAudioFile**](GreetingAudioFile.html) |  | [optional] |
 | **AudioTTS** | **string** |  | [optional] |
-| **CreatedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **CreatedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CreatedBy** | **string** |  | [optional] |
-| **ModifiedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **ModifiedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ModifiedBy** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

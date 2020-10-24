@@ -488,7 +488,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Client">Client associated with this audit message..</param>
         /// <param name="RemoteIp">List of IP addresses of systems that originated or handled the request..</param>
         /// <param name="ServiceName">Name of the service that logged this audit message..</param>
-        /// <param name="EventDate">Date and time of when the audit message was logged. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="EventDate">Date and time of when the audit message was logged. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Message">Message describing the event being audited..</param>
         /// <param name="Action">Action that took place..</param>
         /// <param name="Entity">Entity that was impacted..</param>
@@ -553,9 +553,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date and time of when the audit message was logged. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date and time of when the audit message was logged. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date and time of when the audit message was logged. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date and time of when the audit message was logged. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="eventDate", EmitDefaultValue=false)]
         public DateTime? EventDate { get; set; }
         

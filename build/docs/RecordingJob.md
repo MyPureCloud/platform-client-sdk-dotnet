@@ -10,7 +10,7 @@ title: RecordingJob
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **State** | **string** | The current state of the job. | |
 | **RecordingJobsQuery** | [**RecordingJobsQuery**](RecordingJobsQuery.html) | Original query of the job. | [optional] |
-| **DateCreated** | **DateTime?** | Date when the job was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **DateCreated** | **DateTime?** | Date when the job was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **TotalConversations** | **int?** | Total number of conversations affected. | [optional] |
 | **TotalRecordings** | **int?** | Total number of recordings affected. | [optional] |
 | **TotalProcessedRecordings** | **int?** | Total number of recordings have been processed. | [optional] |

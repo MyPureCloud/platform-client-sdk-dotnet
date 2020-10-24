@@ -24,9 +24,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The type of email address.
+        /// The type of email address. \"value\" is immutable if \"type\" is set to \"other\".
         /// </summary>
-        /// <value>The type of email address.</value>
+        /// <value>The type of email address. \"value\" is immutable if \"type\" is set to \"other\".</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -61,9 +61,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The type of email address.
+        /// The type of email address. \"value\" is immutable if \"type\" is set to \"other\".
         /// </summary>
-        /// <value>The type of email address.</value>
+        /// <value>The type of email address. \"value\" is immutable if \"type\" is set to \"other\".</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         
@@ -74,8 +74,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimEmail" /> class.
         /// </summary>
-        /// <param name="Value">The email address. Note value for type &#39;other&#39;is immutable..</param>
-        /// <param name="Type">The type of email address..</param>
+        /// <param name="Value">The email address. Is immutable if \&quot;type\&quot; is set to \&quot;other\&quot;..</param>
+        /// <param name="Type">The type of email address. \&quot;value\&quot; is immutable if \&quot;type\&quot; is set to \&quot;other\&quot;..</param>
         /// <param name="Primary">Indicates whether the email address is the primary email address..</param>
         public ScimEmail(string Value = null, TypeEnum? Type = null, bool? Primary = null)
         {
@@ -88,9 +88,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The email address. Note value for type &#39;other&#39;is immutable.
+        /// The email address. Is immutable if \&quot;type\&quot; is set to \&quot;other\&quot;.
         /// </summary>
-        /// <value>The email address. Note value for type &#39;other&#39;is immutable.</value>
+        /// <value>The email address. Is immutable if \&quot;type\&quot; is set to \&quot;other\&quot;.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
         

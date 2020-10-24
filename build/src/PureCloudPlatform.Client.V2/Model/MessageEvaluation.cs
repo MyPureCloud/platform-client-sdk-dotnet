@@ -47,7 +47,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContactColumn">ContactColumn.</param>
         /// <param name="ContactAddress">ContactAddress.</param>
         /// <param name="WrapupCodeId">WrapupCodeId.</param>
-        /// <param name="Timestamp">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Timestamp">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public MessageEvaluation(string ContactColumn = null, string ContactAddress = null, string WrapupCodeId = null, DateTime? Timestamp = null)
         {
             this.ContactColumn = ContactColumn;
@@ -84,9 +84,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public DateTime? Timestamp { get; set; }
         

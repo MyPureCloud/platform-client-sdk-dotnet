@@ -7,7 +7,7 @@ title: FacebookAppCredentials
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** | Genesys Facebook App Id | |
+| **Id** | **string** | Genesys Cloud Facebook App Id | |
 {: class="table table-striped"}
 
 

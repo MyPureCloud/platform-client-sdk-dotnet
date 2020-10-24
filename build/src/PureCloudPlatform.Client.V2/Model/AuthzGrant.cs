@@ -47,7 +47,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SubjectId">SubjectId.</param>
         /// <param name="Division">Division.</param>
         /// <param name="Role">Role.</param>
-        /// <param name="GrantMadeAt">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="GrantMadeAt">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public AuthzGrant(string SubjectId = null, AuthzDivision Division = null, AuthzGrantRole Role = null, DateTime? GrantMadeAt = null)
         {
             this.SubjectId = SubjectId;
@@ -84,9 +84,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="grantMadeAt", EmitDefaultValue=false)]
         public DateTime? GrantMadeAt { get; set; }
         

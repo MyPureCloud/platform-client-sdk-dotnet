@@ -89,6 +89,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets ScreenRecordingState
         /// </summary>
@@ -139,6 +142,8 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "TIMEOUT")]
             Timeout
         }
+        
+        
         
         
         
@@ -284,6 +289,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationRoutingData">ConversationRoutingData.</param>
         /// <param name="AlertingTimeoutMs">AlertingTimeoutMs.</param>
         /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
+        /// <param name="CoachedParticipantId">CoachedParticipantId.</param>
         /// <param name="ScreenRecordingState">ScreenRecordingState.</param>
         /// <param name="FlaggedReason">FlaggedReason.</param>
         /// <param name="Attributes">Attributes.</param>
@@ -297,7 +303,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SocialExpressions">SocialExpressions.</param>
         /// <param name="Videos">Videos.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationEventTopicParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string TeamId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, QueueConversationEventTopicWrapup Wrapup = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, QueueConversationEventTopicConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<QueueConversationEventTopicCall> Calls = null, List<QueueConversationEventTopicCallback> Callbacks = null, List<QueueConversationEventTopicChat> Chats = null, List<QueueConversationEventTopicCobrowse> Cobrowsesessions = null, List<QueueConversationEventTopicEmail> Emails = null, List<QueueConversationEventTopicMessage> Messages = null, List<QueueConversationEventTopicScreenshare> Screenshares = null, List<QueueConversationEventTopicSocialExpression> SocialExpressions = null, List<QueueConversationEventTopicVideo> Videos = null, Object AdditionalProperties = null)
+        public QueueConversationEventTopicParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string TeamId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, QueueConversationEventTopicWrapup Wrapup = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, QueueConversationEventTopicConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<QueueConversationEventTopicCall> Calls = null, List<QueueConversationEventTopicCallback> Callbacks = null, List<QueueConversationEventTopicChat> Chats = null, List<QueueConversationEventTopicCobrowse> Cobrowsesessions = null, List<QueueConversationEventTopicEmail> Emails = null, List<QueueConversationEventTopicMessage> Messages = null, List<QueueConversationEventTopicScreenshare> Screenshares = null, List<QueueConversationEventTopicSocialExpression> SocialExpressions = null, List<QueueConversationEventTopicVideo> Videos = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.ConnectedTime = ConnectedTime;
@@ -322,6 +328,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConversationRoutingData = ConversationRoutingData;
             this.AlertingTimeoutMs = AlertingTimeoutMs;
             this.MonitoredParticipantId = MonitoredParticipantId;
+            this.CoachedParticipantId = CoachedParticipantId;
             this.ScreenRecordingState = ScreenRecordingState;
             this.FlaggedReason = FlaggedReason;
             this.Attributes = Attributes;
@@ -524,6 +531,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets CoachedParticipantId
+        /// </summary>
+        [DataMember(Name="coachedParticipantId", EmitDefaultValue=false)]
+        public string CoachedParticipantId { get; set; }
+        
+        
+        
         
         
         /// <summary>
@@ -653,6 +668,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationRoutingData: ").Append(ConversationRoutingData).Append("\n");
             sb.Append("  AlertingTimeoutMs: ").Append(AlertingTimeoutMs).Append("\n");
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
+            sb.Append("  CoachedParticipantId: ").Append(CoachedParticipantId).Append("\n");
             sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
@@ -818,6 +834,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MonitoredParticipantId.Equals(other.MonitoredParticipantId)
                 ) &&
                 (
+                    this.CoachedParticipantId == other.CoachedParticipantId ||
+                    this.CoachedParticipantId != null &&
+                    this.CoachedParticipantId.Equals(other.CoachedParticipantId)
+                ) &&
+                (
                     this.ScreenRecordingState == other.ScreenRecordingState ||
                     this.ScreenRecordingState != null &&
                     this.ScreenRecordingState.Equals(other.ScreenRecordingState)
@@ -964,6 +985,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MonitoredParticipantId != null)
                     hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();
+                
+                if (this.CoachedParticipantId != null)
+                    hash = hash * 59 + this.CoachedParticipantId.GetHashCode();
                 
                 if (this.ScreenRecordingState != null)
                     hash = hash * 59 + this.ScreenRecordingState.GetHashCode();

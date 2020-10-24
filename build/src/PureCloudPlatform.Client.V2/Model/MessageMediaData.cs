@@ -29,40 +29,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <summary>
-        /// The optional internet media type of the the media object.  If null then the media type should be dictated by the url.
-        /// </summary>
-        /// <value>The optional internet media type of the the media object.  If null then the media type should be dictated by the url.</value>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum MediaTypeEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Imagepng for "image/png"
-            /// </summary>
-            [EnumMember(Value = "image/png")]
-            Imagepng,
-            
-            /// <summary>
-            /// Enum Imagejpeg for "image/jpeg"
-            /// </summary>
-            [EnumMember(Value = "image/jpeg")]
-            Imagejpeg,
-            
-            /// <summary>
-            /// Enum Imagegif for "image/gif"
-            /// </summary>
-            [EnumMember(Value = "image/gif")]
-            Imagegif
-        }
-        
         
         
         
@@ -119,13 +85,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <summary>
-        /// The optional internet media type of the the media object.  If null then the media type should be dictated by the url.
-        /// </summary>
-        /// <value>The optional internet media type of the the media object.  If null then the media type should be dictated by the url.</value>
-        [DataMember(Name="mediaType", EmitDefaultValue=false)]
-        public MediaTypeEnum? MediaType { get; set; }
-        
         
         
         
@@ -148,10 +107,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Url">The location of the media, useful for retrieving it.</param>
-        /// <param name="MediaType">The optional internet media type of the the media object.  If null then the media type should be dictated by the url..</param>
+        /// <param name="MediaType">The detected internet media type of the the media object.  If null then the media type should be dictated by the url..</param>
         /// <param name="ContentLengthBytes">The optional content length of the the media object, in bytes..</param>
         /// <param name="UploadUrl">The URL returned to upload an attachment.</param>
-        public MessageMediaData(string Name = null, string Url = null, MediaTypeEnum? MediaType = null, int? ContentLengthBytes = null, string UploadUrl = null)
+        public MessageMediaData(string Name = null, string Url = null, string MediaType = null, int? ContentLengthBytes = null, string UploadUrl = null)
         {
             this.Name = Name;
             this.Url = Url;
@@ -188,6 +147,13 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Url { get; set; }
         
         
+        
+        /// <summary>
+        /// The detected internet media type of the the media object.  If null then the media type should be dictated by the url.
+        /// </summary>
+        /// <value>The detected internet media type of the the media object.  If null then the media type should be dictated by the url.</value>
+        [DataMember(Name="mediaType", EmitDefaultValue=false)]
+        public string MediaType { get; set; }
         
         
         

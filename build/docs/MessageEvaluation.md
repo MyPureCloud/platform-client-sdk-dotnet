@@ -10,7 +10,7 @@ title: MessageEvaluation
 | **ContactColumn** | **string** |  | [optional] |
 | **ContactAddress** | **string** |  | [optional] |
 | **WrapupCodeId** | **string** |  | [optional] |
-| **Timestamp** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **Timestamp** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 {: class="table table-striped"}
 
 

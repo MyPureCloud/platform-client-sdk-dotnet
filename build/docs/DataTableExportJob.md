@@ -11,8 +11,8 @@ title: DataTableExportJob
 | **Name** | **string** |  | [optional] |
 | **Owner** | [**AddressableEntityRef**](AddressableEntityRef.html) | The PureCloud user who started the export job | [optional] |
 | **Status** | **string** | The status of the export job | |
-| **DateCreated** | **DateTime?** | The timestamp of when the export began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **DateCompleted** | **DateTime?** | The timestamp of when the export stopped (either successfully or unsuccessfully). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **DateCreated** | **DateTime?** | The timestamp of when the export began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **DateCompleted** | **DateTime?** | The timestamp of when the export stopped (either successfully or unsuccessfully). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DownloadURI** | **string** | The URL of the location at which the caller can download the export file, when available | [optional] |
 | **ErrorInformation** | [**ErrorBody**](ErrorBody.html) | Any error information, or null of the processing is not in an error state | [optional] |
 | **CountRecordsProcessed** | **int?** | The current count of the number of records processed | [optional] |

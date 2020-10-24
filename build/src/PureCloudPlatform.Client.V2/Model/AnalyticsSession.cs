@@ -313,6 +313,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets RequestedRoutings
         /// </summary>
@@ -564,6 +567,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Complete routing method
         /// </summary>
@@ -607,7 +612,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
         /// <param name="CallbackUserName">The name of the user requesting a call back.</param>
         /// <param name="CallbackNumbers">List of numbers to callback.</param>
-        /// <param name="CallbackScheduledTime">Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="CallbackScheduledTime">Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ScriptId">A unique identifier for a script.</param>
         /// <param name="PeerId">A unique identifier for a peer.</param>
         /// <param name="SkipEnabled">(Dialer) Whether the agent can skip the dialer contact.</param>
@@ -636,6 +641,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Provider">The source provider for the communication.</param>
         /// <param name="Remote">Name, phone number, or email address of the remote party..</param>
         /// <param name="MediaCount">Count of any media (images, files, etc) included in this session.</param>
+        /// <param name="FlowInType">Type of flow in that occurred, e.g. acd, ivr, etc..</param>
         /// <param name="FlowOutType">Type of flow out that occurred, e.g. voicemail, callback, or acd.</param>
         /// <param name="RequestedRoutings">All routing types for requested/attempted routing methods..</param>
         /// <param name="UsedRouting">Complete routing method.</param>
@@ -643,7 +649,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SelectedAgentRank">Selected agent GPR rank.</param>
         /// <param name="AgentAssistantId">Unique identifier of the active virtual agent assistant.</param>
         /// <param name="ProposedAgents">Proposed agents.</param>
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string SessionDnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, bool? Recording = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string JourneyActionId = null, string JourneyActionMapId = null, string JourneyActionMapVersion = null, string ProtocolCallId = null, string Provider = null, string Remote = null, int? MediaCount = null, string FlowOutType = null, List<RequestedRoutingsEnum> RequestedRoutings = null, UsedRoutingEnum? UsedRouting = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string AgentAssistantId = null, List<AnalyticsProposedAgent> ProposedAgents = null)
+        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string SessionDnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, bool? Recording = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string JourneyActionId = null, string JourneyActionMapId = null, string JourneyActionMapVersion = null, string ProtocolCallId = null, string Provider = null, string Remote = null, int? MediaCount = null, string FlowInType = null, string FlowOutType = null, List<RequestedRoutingsEnum> RequestedRoutings = null, UsedRoutingEnum? UsedRouting = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string AgentAssistantId = null, List<AnalyticsProposedAgent> ProposedAgents = null)
         {
             this.MediaType = MediaType;
             this.SessionId = SessionId;
@@ -697,6 +703,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Provider = Provider;
             this.Remote = Remote;
             this.MediaCount = MediaCount;
+            this.FlowInType = FlowInType;
             this.FlowOutType = FlowOutType;
             this.RequestedRoutings = RequestedRoutings;
             this.UsedRouting = UsedRouting;
@@ -890,9 +897,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
         public DateTime? CallbackScheduledTime { get; set; }
         
@@ -1150,6 +1157,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Type of flow in that occurred, e.g. acd, ivr, etc.
+        /// </summary>
+        /// <value>Type of flow in that occurred, e.g. acd, ivr, etc.</value>
+        [DataMember(Name="flowInType", EmitDefaultValue=false)]
+        public string FlowInType { get; set; }
+        
+        
+        
+        /// <summary>
         /// Type of flow out that occurred, e.g. voicemail, callback, or acd
         /// </summary>
         /// <value>Type of flow out that occurred, e.g. voicemail, callback, or acd</value>
@@ -1265,6 +1281,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  Remote: ").Append(Remote).Append("\n");
             sb.Append("  MediaCount: ").Append(MediaCount).Append("\n");
+            sb.Append("  FlowInType: ").Append(FlowInType).Append("\n");
             sb.Append("  FlowOutType: ").Append(FlowOutType).Append("\n");
             sb.Append("  RequestedRoutings: ").Append(RequestedRoutings).Append("\n");
             sb.Append("  UsedRouting: ").Append(UsedRouting).Append("\n");
@@ -1569,6 +1586,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaCount.Equals(other.MediaCount)
                 ) &&
                 (
+                    this.FlowInType == other.FlowInType ||
+                    this.FlowInType != null &&
+                    this.FlowInType.Equals(other.FlowInType)
+                ) &&
+                (
                     this.FlowOutType == other.FlowOutType ||
                     this.FlowOutType != null &&
                     this.FlowOutType.Equals(other.FlowOutType)
@@ -1772,6 +1794,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MediaCount != null)
                     hash = hash * 59 + this.MediaCount.GetHashCode();
+                
+                if (this.FlowInType != null)
+                    hash = hash * 59 + this.FlowInType.GetHashCode();
                 
                 if (this.FlowOutType != null)
                     hash = hash * 59 + this.FlowOutType.GetHashCode();

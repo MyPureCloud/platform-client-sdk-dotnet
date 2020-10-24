@@ -8,7 +8,7 @@ title: EdgeMetrics
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Edge** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **EventTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **EventTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **UpTimeMsec** | **long?** |  | [optional] |
 | **Processors** | [**List&lt;EdgeMetricsProcessor&gt;**](EdgeMetricsProcessor.html) |  | [optional] |
 | **Memory** | [**List&lt;EdgeMetricsMemory&gt;**](EdgeMetricsMemory.html) |  | [optional] |

@@ -92,7 +92,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EvaluationId">Unique identifier for the evaluation.</param>
         /// <param name="EvaluatorId">A unique identifier of the PureCloud user who evaluated the interaction.</param>
         /// <param name="UserId">Unique identifier for the user being evaluated.</param>
-        /// <param name="EventTime">Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="EventTime">Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="QueueId">Unique identifier for the queue the conversation was on.</param>
         /// <param name="FormId">Unique identifier for the form used to evaluate the conversation/agent.</param>
         /// <param name="ContextId">A unique identifier for an evaluation form, regardless of version.</param>
@@ -150,9 +150,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
         public DateTime? EventTime { get; set; }
         

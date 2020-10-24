@@ -12,9 +12,11 @@ namespace PureCloudPlatform.Client.V2.Client
         {
             Topics = new Dictionary<string, Type>
             { 
+              {"v2.analytics.conversations.details.jobs.availability", typeof(ConversationDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification)},
               {"v2.analytics.flow.{id}.aggregates", typeof(StatEventFlowTopicStatsNotification)},
               {"v2.analytics.flowoutcome.{id}.aggregates", typeof(StatEventFlowOutcomeTopicStatsNotification)},
               {"v2.analytics.queues.{id}.observations", typeof(StatEventQueueTopicStatsNotification)},
+              {"v2.analytics.users.details.jobs.availability", typeof(UserDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification)},
               {"v2.analytics.users.{id}.aggregates", typeof(StatEventUserTopicStatsNotification)},
               {"v2.analytics.wrapup.{id}.aggregates", typeof(StatEventWrapUpCodeTopicStatsNotification)},
               {"v2.architect.dependencytracking.build", typeof(ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification)},
@@ -80,6 +82,8 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.users.{id}.conversations.screenshares", typeof(ConversationScreenShareEventTopicScreenShareConversation)},
               {"v2.users.{id}.conversations.socialexpressions", typeof(ConversationSocialExpressionEventTopicSocialConversation)},
               {"v2.users.{id}.conversations.videos", typeof(ConversationVideoEventTopicVideoConversation)},
+              {"v2.users.{id}.conversations.{id}.recordings", typeof(RecordingEventRecording)},
+              {"v2.users.{id}.conversations.{id}.recordings.{id}", typeof(RecordingTranscodeCompleteTopicRecording)},
               {"v2.users.{id}.conversationsummary", typeof(UserConversationsEventUserConversationSummary)},
               {"v2.users.{id}.fax.documents", typeof(FaxTopicFaxDataV2)},
               {"v2.users.{id}.geolocation", typeof(GeolocationEventGeolocation)},
@@ -88,6 +92,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.users.{id}.outbound.dnclists.{id}.export", typeof(DnclistDownloadReadyExportUri)},
               {"v2.users.{id}.outofoffice", typeof(OutOfOfficeEventOutOfOffice)},
               {"v2.users.{id}.presence", typeof(PresenceEventUserPresence)},
+              {"v2.users.{id}.recordings", typeof(RecordingArchiveRestoreTopicRecording)},
               {"v2.users.{id}.routingStatus", typeof(UserRoutingStatusUserRoutingStatus)},
               {"v2.users.{id}.station", typeof(UserStationChangeTopicUserStations)},
               {"v2.users.{id}.tokens", typeof(UserTokensTopicTokenNotification)},

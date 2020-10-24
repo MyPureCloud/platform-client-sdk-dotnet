@@ -65,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="CorrelationId">CorrelationId.</param>
         /// <param name="UserParams">UserParams.</param>
-        /// <param name="InsertDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="InsertDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public PolicyErrorMessage(int? StatusCode = null, Object UserMessage = null, string UserParamsMessage = null, string ErrorCode = null, string CorrelationId = null, List<UserParam> UserParams = null, DateTime? InsertDate = null)
         {
             this.StatusCode = StatusCode;
@@ -129,9 +129,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="insertDate", EmitDefaultValue=false)]
         public DateTime? InsertDate { get; set; }
         

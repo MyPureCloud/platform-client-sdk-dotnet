@@ -136,7 +136,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Content">The text or html content for the documentation entity. Will be returned in responses for certain entities..</param>
         /// <param name="Excerpt">The excerpt of the documentation entity. Will be returned in responses for certain entities..</param>
         /// <param name="Link">URL link for the documentation entity. Will be returned in responses for certain entities..</param>
-        /// <param name="Modified">The modified date for the documentation entity. Will be returned in responses for certain entities. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Modified">The modified date for the documentation entity. Will be returned in responses for certain entities. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Name">The name of the documentation entity. Will be returned in responses for certain entities..</param>
         /// <param name="Service">The service of the documentation entity. Will be returned in responses for certain entities..</param>
         /// <param name="Slug">The slug of the documentation entity. Will be returned in responses for certain entities..</param>
@@ -232,9 +232,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The modified date for the documentation entity. Will be returned in responses for certain entities. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The modified date for the documentation entity. Will be returned in responses for certain entities. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The modified date for the documentation entity. Will be returned in responses for certain entities. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The modified date for the documentation entity. Will be returned in responses for certain entities. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="modified", EmitDefaultValue=false)]
         public DateTime? Modified { get; set; }
         

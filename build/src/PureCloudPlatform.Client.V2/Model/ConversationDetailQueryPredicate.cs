@@ -134,6 +134,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Nblindtransferred,
             
             /// <summary>
+            /// Enum Ncobrowsesessions for "nCobrowseSessions"
+            /// </summary>
+            [EnumMember(Value = "nCobrowseSessions")]
+            Ncobrowsesessions,
+            
+            /// <summary>
             /// Enum Nconnected for "nConnected"
             /// </summary>
             [EnumMember(Value = "nConnected")]

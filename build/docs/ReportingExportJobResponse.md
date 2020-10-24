@@ -20,8 +20,8 @@ title: ReportingExportJobResponse
 | **Period** | **string** | The Period of the request in which to break down the intervals. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H | |
 | **Filter** | [**ViewFilter**](ViewFilter.html) | Filters to apply to create the view | |
 | **Read** | **bool?** | Indicates if the request has been marked as read | |
-| **CreatedDateTime** | **DateTime?** | The created date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | |
-| **ModifiedDateTime** | **DateTime?** | The last modified date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | |
+| **CreatedDateTime** | **DateTime?** | The created date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
+| **ModifiedDateTime** | **DateTime?** | The last modified date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **Locale** | **string** | The locale use for localization of the exported data, i.e. en-us, es-mx   | |
 | **PercentageComplete** | **double?** | The percentage of the job that has completed processing | |
 | **HasFormatDurations** | **bool?** | Indicates if durations are formatted in hh:mm:ss format instead of ms | [optional] |

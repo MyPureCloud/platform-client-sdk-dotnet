@@ -22,8 +22,8 @@ title: ExternalOrganization
 | **Tickers** | [**List&lt;Ticker&gt;**](Ticker.html) |  | [optional] |
 | **TwitterId** | [**TwitterId**](TwitterId.html) |  | [optional] |
 | **ExternalSystemUrl** | **string** | A string that identifies an external system-of-record resource that may have more detailed information on the organization. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace. | [optional] |
-| **ModifyDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **CreateDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **ModifyDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **CreateDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Trustor** | [**Trustor**](Trustor.html) |  | [optional] |
 | **Schema** | [**DataSchema**](DataSchema.html) | The schema defining custom fields for this contact | [optional] |
 | **CustomFields** | **Dictionary&lt;string, Object&gt;** | Custom fields defined in the schema referenced by schemaId and schemaVersion. | [optional] |

@@ -12,7 +12,7 @@ title: AuditLogMessage
 | **Client** | [**AddressableEntityRef**](AddressableEntityRef.html) | Client associated with this audit message. | [optional] |
 | **RemoteIp** | **List&lt;string&gt;** | List of IP addresses of systems that originated or handled the request. | [optional] |
 | **ServiceName** | **string** | Name of the service that logged this audit message. | [optional] |
-| **EventDate** | **DateTime?** | Date and time of when the audit message was logged. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **EventDate** | **DateTime?** | Date and time of when the audit message was logged. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Message** | [**MessageInfo**](MessageInfo.html) | Message describing the event being audited. | [optional] |
 | **Action** | **string** | Action that took place. | [optional] |
 | **Entity** | [**DomainEntityRef**](DomainEntityRef.html) | Entity that was impacted. | [optional] |

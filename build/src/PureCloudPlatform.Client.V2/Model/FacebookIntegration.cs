@@ -53,6 +53,39 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Status of asynchronous create operation
+        /// </summary>
+        /// <value>Status of asynchronous create operation</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CreateStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Initiated for "Initiated"
+            /// </summary>
+            [EnumMember(Value = "Initiated")]
+            Initiated,
+            
+            /// <summary>
+            /// Enum Completed for "Completed"
+            /// </summary>
+            [EnumMember(Value = "Completed")]
+            Completed,
+            
+            /// <summary>
+            /// Enum Error for "Error"
+            /// </summary>
+            [EnumMember(Value = "Error")]
+            Error
+        }
         
         
         
@@ -74,6 +107,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Status of asynchronous create operation
+        /// </summary>
+        /// <value>Status of asynchronous create operation</value>
+        [DataMember(Name="createStatus", EmitDefaultValue=false)]
+        public CreateStatusEnum? CreateStatus { get; set; }
         
         
         
@@ -95,12 +146,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PageId">The Page Id from Facebook messenger.</param>
         /// <param name="Status">The status of the Facebook Integration.</param>
         /// <param name="Recipient">The recipient reference associated to the Facebook Integration. This recipient is used to associate a flow to an integration.</param>
-        /// <param name="DateCreated">Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DateModified">Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateCreated">Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="DateModified">Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreatedBy">User reference that created this Integration.</param>
         /// <param name="ModifiedBy">User reference that last modified this Integration.</param>
         /// <param name="Version">Version number required for updates. (required).</param>
-        public FacebookIntegration(string Name = null, string AppId = null, string PageId = null, string Status = null, DomainEntityRef Recipient = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, int? Version = null)
+        /// <param name="CreateError">Error information returned, if createStatus is set to Error.</param>
+        public FacebookIntegration(string Name = null, string AppId = null, string PageId = null, string Status = null, DomainEntityRef Recipient = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, int? Version = null, ErrorBody CreateError = null)
         {
             this.Name = Name;
             this.AppId = AppId;
@@ -112,6 +164,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CreatedBy = CreatedBy;
             this.ModifiedBy = ModifiedBy;
             this.Version = Version;
+            this.CreateError = CreateError;
             
         }
         
@@ -172,18 +225,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
         
         
         
         /// <summary>
-        /// Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
         
@@ -216,6 +269,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        /// <summary>
+        /// Error information returned, if createStatus is set to Error
+        /// </summary>
+        /// <value>Error information returned, if createStatus is set to Error</value>
+        [DataMember(Name="createError", EmitDefaultValue=false)]
+        public ErrorBody CreateError { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -244,6 +308,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  CreateStatus: ").Append(CreateStatus).Append("\n");
+            sb.Append("  CreateError: ").Append(CreateError).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -337,6 +403,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Version.Equals(other.Version)
                 ) &&
                 (
+                    this.CreateStatus == other.CreateStatus ||
+                    this.CreateStatus != null &&
+                    this.CreateStatus.Equals(other.CreateStatus)
+                ) &&
+                (
+                    this.CreateError == other.CreateError ||
+                    this.CreateError != null &&
+                    this.CreateError.Equals(other.CreateError)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -387,6 +463,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
+                if (this.CreateStatus != null)
+                    hash = hash * 59 + this.CreateStatus.GetHashCode();
+                
+                if (this.CreateError != null)
+                    hash = hash * 59 + this.CreateError.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

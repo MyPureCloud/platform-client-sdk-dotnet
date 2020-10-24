@@ -15,7 +15,7 @@ title: Survey
 | **Status** | **string** |  | [optional] |
 | **Queue** | [**QueueReference**](QueueReference.html) |  | [optional] |
 | **Answers** | [**SurveyScoringSet**](SurveyScoringSet.html) |  | [optional] |
-| **CompletedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **CompletedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SurveyErrorDetails** | [**SurveyErrorDetails**](SurveyErrorDetails.html) | Additional information about what happened when the survey is in Error status. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

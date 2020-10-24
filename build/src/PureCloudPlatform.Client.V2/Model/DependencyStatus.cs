@@ -129,8 +129,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="User">User that initiated the build..</param>
         /// <param name="Client">OAuth client that initiated the build..</param>
         /// <param name="BuildId">BuildId.</param>
-        /// <param name="DateStarted">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DateCompleted">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateStarted">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="DateCompleted">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Status">Status.</param>
         /// <param name="FailedObjects">FailedObjects.</param>
         public DependencyStatus(string Name = null, User User = null, DomainEntityRef Client = null, string BuildId = null, DateTime? DateStarted = null, DateTime? DateCompleted = null, StatusEnum? Status = null, List<FailedObject> FailedObjects = null)
@@ -192,18 +192,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateStarted", EmitDefaultValue=false)]
         public DateTime? DateStarted { get; set; }
         
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCompleted", EmitDefaultValue=false)]
         public DateTime? DateCompleted { get; set; }
         

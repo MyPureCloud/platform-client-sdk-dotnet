@@ -64,7 +64,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Notes">Text entered by the agent to describe the call or disposition..</param>
         /// <param name="Tags">List of tags selected by the agent to describe the call or disposition..</param>
         /// <param name="DurationSeconds">The length of time in seconds that the agent spent doing after call work..</param>
-        /// <param name="EndTime">The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="EndTime">The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Provisional">Indicates if this is a pending save and should not require a code to be specified.  This allows someone to save some temporary wrapup that will be used later..</param>
         public Wrapup(string Code = null, string Name = null, string Notes = null, List<string> Tags = null, int? DurationSeconds = null, DateTime? EndTime = null, bool? Provisional = null)
         {
@@ -126,9 +126,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
         

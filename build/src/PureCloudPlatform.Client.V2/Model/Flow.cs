@@ -173,11 +173,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
         
         
         
@@ -236,7 +241,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DebugVersion">DebugVersion.</param>
         /// <param name="PublishedBy">PublishedBy.</param>
         /// <param name="CurrentOperation">CurrentOperation.</param>
-        public Flow(string Id = null, string Name = null, WritableDivision Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, DomainEntityRef LockedClient = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, FlowVersion DebugVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
+        /// <param name="NluInfo">Information about the NLU domain version for the flow.</param>
+        public Flow(string Id = null, string Name = null, WritableDivision Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, DomainEntityRef LockedClient = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, FlowVersion DebugVersion = null, User PublishedBy = null, Operation CurrentOperation = null, NluInfo NluInfo = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -256,6 +262,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DebugVersion = DebugVersion;
             this.PublishedBy = PublishedBy;
             this.CurrentOperation = CurrentOperation;
+            this.NluInfo = NluInfo;
             
         }
         
@@ -407,6 +414,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Information about the NLU domain version for the flow
+        /// </summary>
+        /// <value>Information about the NLU domain version for the flow</value>
+        [DataMember(Name="nluInfo", EmitDefaultValue=false)]
+        public NluInfo NluInfo { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -441,6 +457,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DebugVersion: ").Append(DebugVersion).Append("\n");
             sb.Append("  PublishedBy: ").Append(PublishedBy).Append("\n");
             sb.Append("  CurrentOperation: ").Append(CurrentOperation).Append("\n");
+            sb.Append("  NluInfo: ").Append(NluInfo).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -569,6 +586,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CurrentOperation.Equals(other.CurrentOperation)
                 ) &&
                 (
+                    this.NluInfo == other.NluInfo ||
+                    this.NluInfo != null &&
+                    this.NluInfo.Equals(other.NluInfo)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -640,6 +662,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CurrentOperation != null)
                     hash = hash * 59 + this.CurrentOperation.GetHashCode();
+                
+                if (this.NluInfo != null)
+                    hash = hash * 59 + this.NluInfo.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

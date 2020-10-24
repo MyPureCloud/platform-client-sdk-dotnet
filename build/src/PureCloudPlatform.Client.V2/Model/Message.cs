@@ -337,6 +337,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -412,6 +415,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Message" /> class.
@@ -424,10 +429,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecordingId">A globally unique identifier for the recording associated with this message..</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
-        /// <param name="StartHoldTime">The timestamp the message was placed on hold in the cloud clock if the message is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="StartAlertingTime">The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="StartHoldTime">The timestamp the message was placed on hold in the cloud clock if the message is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="StartAlertingTime">The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Provider">The source provider for the message..</param>
         /// <param name="Type">Indicates the type of message platform from which the message originated..</param>
         /// <param name="RecipientCountry">Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format..</param>
@@ -437,10 +442,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ToAddress">Address and name data for a call endpoint..</param>
         /// <param name="FromAddress">Address and name data for a call endpoint..</param>
         /// <param name="Messages">The messages sent on this communication channel..</param>
+        /// <param name="JourneyContext">A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context)..</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
         /// <param name="AfterCallWork">After-call work for the communication..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
-        public Message(StateEnum? State = null, string Id = null, bool? Held = null, List<Segment> Segments = null, DirectionEnum? Direction = null, string RecordingId = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ScriptId = null, string PeerId = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null)
+        public Message(StateEnum? State = null, string Id = null, bool? Held = null, List<Segment> Segments = null, DirectionEnum? Direction = null, string RecordingId = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ScriptId = null, string PeerId = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, JourneyContext JourneyContext = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null)
         {
             this.State = State;
             this.Id = Id;
@@ -463,6 +469,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ToAddress = ToAddress;
             this.FromAddress = FromAddress;
             this.Messages = Messages;
+            this.JourneyContext = JourneyContext;
             this.Wrapup = Wrapup;
             this.AfterCallWork = AfterCallWork;
             this.AfterCallWorkRequired = AfterCallWorkRequired;
@@ -522,36 +529,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The timestamp the message was placed on hold in the cloud clock if the message is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The timestamp the message was placed on hold in the cloud clock if the message is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The timestamp the message was placed on hold in the cloud clock if the message is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The timestamp the message was placed on hold in the cloud clock if the message is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
         
         
         
         /// <summary>
-        /// The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startAlertingTime", EmitDefaultValue=false)]
         public DateTime? StartAlertingTime { get; set; }
         
         
         
         /// <summary>
-        /// The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
         
         
         
         /// <summary>
-        /// The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
         
@@ -632,6 +639,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context).
+        /// </summary>
+        /// <value>A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context).</value>
+        [DataMember(Name="journeyContext", EmitDefaultValue=false)]
+        public JourneyContext JourneyContext { get; set; }
+        
+        
+        
+        /// <summary>
         /// Call wrap up or disposition data.
         /// </summary>
         /// <value>Call wrap up or disposition data.</value>
@@ -687,6 +703,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ToAddress: ").Append(ToAddress).Append("\n");
             sb.Append("  FromAddress: ").Append(FromAddress).Append("\n");
             sb.Append("  Messages: ").Append(Messages).Append("\n");
+            sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
@@ -832,6 +849,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Messages.SequenceEqual(other.Messages)
                 ) &&
                 (
+                    this.JourneyContext == other.JourneyContext ||
+                    this.JourneyContext != null &&
+                    this.JourneyContext.Equals(other.JourneyContext)
+                ) &&
+                (
                     this.Wrapup == other.Wrapup ||
                     this.Wrapup != null &&
                     this.Wrapup.Equals(other.Wrapup)
@@ -922,6 +944,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Messages != null)
                     hash = hash * 59 + this.Messages.GetHashCode();
+                
+                if (this.JourneyContext != null)
+                    hash = hash * 59 + this.JourneyContext.GetHashCode();
                 
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();

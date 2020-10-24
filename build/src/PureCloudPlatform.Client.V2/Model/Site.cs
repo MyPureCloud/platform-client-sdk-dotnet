@@ -120,6 +120,37 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Media model for the site
+        /// </summary>
+        /// <value>Media model for the site</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MediaModelEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Premises for "Premises"
+            /// </summary>
+            [EnumMember(Value = "Premises")]
+            Premises,
+            
+            /// <summary>
+            /// Enum Cloud for "Cloud"
+            /// </summary>
+            [EnumMember(Value = "Cloud")]
+            Cloud
+        }
+        
+        
+        
+        
         
         
         
@@ -178,6 +209,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Media model for the site
+        /// </summary>
+        /// <value>Media model for the site</value>
+        [DataMember(Name="mediaModel", EmitDefaultValue=false)]
+        public MediaModelEnum? MediaModel { get; set; }
+        
+        
+        
         
         
         
@@ -194,8 +234,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The name of the entity. (required).</param>
         /// <param name="Description">The resource&#39;s description..</param>
         /// <param name="Version">The current version of the resource..</param>
-        /// <param name="DateCreated">The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DateModified">The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateCreated">The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="DateModified">The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ModifiedBy">The ID of the user that last modified the resource..</param>
         /// <param name="CreatedBy">The ID of the user that created the resource..</param>
         /// <param name="ModifiedByApp">The application that last modified the resource..</param>
@@ -211,7 +251,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Location">Location (required).</param>
         /// <param name="Managed">Managed.</param>
         /// <param name="NtpSettings">Network Time Protocol settings for the site.</param>
-        public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<DomainEntityRef> PrimarySites = null, List<DomainEntityRef> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<Contact> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, bool? MediaRegionsUseLatencyBased = null, LocationDefinition Location = null, bool? Managed = null, NTPSettings NtpSettings = null)
+        /// <param name="MediaModel">Media model for the site.</param>
+        public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<DomainEntityRef> PrimarySites = null, List<DomainEntityRef> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<Contact> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, bool? MediaRegionsUseLatencyBased = null, LocationDefinition Location = null, bool? Managed = null, NTPSettings NtpSettings = null, MediaModelEnum? MediaModel = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -233,6 +274,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Location = Location;
             this.Managed = Managed;
             this.NtpSettings = NtpSettings;
+            this.MediaModel = MediaModel;
             
         }
         
@@ -275,18 +317,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
         
         
         
         /// <summary>
-        /// The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
         
@@ -421,6 +463,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The core site
         /// </summary>
@@ -469,6 +513,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Location: ").Append(Location).Append("\n");
             sb.Append("  Managed: ").Append(Managed).Append("\n");
             sb.Append("  NtpSettings: ").Append(NtpSettings).Append("\n");
+            sb.Append("  MediaModel: ").Append(MediaModel).Append("\n");
             sb.Append("  CoreSite: ").Append(CoreSite).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -618,6 +663,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.NtpSettings.Equals(other.NtpSettings)
                 ) &&
                 (
+                    this.MediaModel == other.MediaModel ||
+                    this.MediaModel != null &&
+                    this.MediaModel.Equals(other.MediaModel)
+                ) &&
+                (
                     this.CoreSite == other.CoreSite ||
                     this.CoreSite != null &&
                     this.CoreSite.Equals(other.CoreSite)
@@ -706,6 +756,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.NtpSettings != null)
                     hash = hash * 59 + this.NtpSettings.GetHashCode();
+                
+                if (this.MediaModel != null)
+                    hash = hash * 59 + this.MediaModel.GetHashCode();
                 
                 if (this.CoreSite != null)
                     hash = hash * 59 + this.CoreSite.GetHashCode();

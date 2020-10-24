@@ -9,7 +9,7 @@ title: AnalyticsSessionMetric
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | Unique name of this metric | |
 | **Value** | **long?** | The metric value | |
-| **EmitDate** | **DateTime?** | Metric emission date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | |
+| **EmitDate** | **DateTime?** | Metric emission date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 {: class="table table-striped"}
 
 

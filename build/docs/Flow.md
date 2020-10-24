@@ -25,6 +25,7 @@ title: Flow
 | **DebugVersion** | [**FlowVersion**](FlowVersion.html) |  | [optional] |
 | **PublishedBy** | [**User**](User.html) |  | [optional] |
 | **CurrentOperation** | [**Operation**](Operation.html) |  | [optional] |
+| **NluInfo** | [**NluInfo**](NluInfo.html) | Information about the NLU domain version for the flow | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

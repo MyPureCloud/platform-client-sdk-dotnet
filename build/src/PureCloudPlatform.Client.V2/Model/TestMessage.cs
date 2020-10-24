@@ -70,7 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Subject">The subject of the email message..</param>
         /// <param name="TextBody">The text body of the email message. (required).</param>
         /// <param name="HtmlBody">The html body of the email message.</param>
-        /// <param name="Time">The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Time">The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public TestMessage(List<EmailAddress> To = null, EmailAddress From = null, string Subject = null, string TextBody = null, string HtmlBody = null, DateTime? Time = null)
         {
             this.To = To;
@@ -139,9 +139,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="time", EmitDefaultValue=false)]
         public DateTime? Time { get; set; }
         

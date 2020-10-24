@@ -285,9 +285,10 @@ Delete queue member
 
 
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * routing:queue:edit
+* routing:queueMember:manage
 
 ### Example
 ```{"language":"csharp"}
@@ -1628,9 +1629,10 @@ Get the members of this queue
 
 
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * routing:queue:view
+* routing:queueMember:manage
 
 ### Example
 ```{"language":"csharp"}
@@ -2925,6 +2927,7 @@ Requires ANY permissions:
 
 * routing:queue:view
 * routing:queue:join
+* routing:queueMember:manage
 
 ### Example
 ```{"language":"csharp"}
@@ -3186,9 +3189,10 @@ Update the ring number OR joined status for a User in a Queue
 
 
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * routing:queue:edit
+* routing:queueMember:manage
 
 ### Example
 ```{"language":"csharp"}
@@ -3251,9 +3255,10 @@ Join or unjoin a set of users for a queue
 
 
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * routing:queue:edit
+* routing:queueMember:manage
 
 ### Example
 ```{"language":"csharp"}
@@ -3374,9 +3379,10 @@ Join or unjoin a queue for a user
 
 
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * routing:queue:join
+* routing:queueMember:manage
 
 ### Example
 ```{"language":"csharp"}
@@ -3442,6 +3448,7 @@ Join or unjoin a set of queues for a user
 Requires ANY permissions: 
 
 * routing:queue:join
+* routing:queueMember:manage
 
 ### Example
 ```{"language":"csharp"}
@@ -4006,9 +4013,10 @@ Bulk add or delete up to 100 queue members
 
 
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * routing:queue:edit
+* routing:queueMember:manage
 
 ### Example
 ```{"language":"csharp"}

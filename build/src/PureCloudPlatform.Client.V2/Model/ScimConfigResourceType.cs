@@ -66,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Schemas">The list of supported schemas..</param>
         /// <param name="SchemaExtensions">The list of schema extensions for the resource type..</param>
-        /// <param name="Meta">The metadata of the SCIM resource. Only location and resourceType are set for ResourceType resources..</param>
+        /// <param name="Meta">The metadata of the SCIM resource. Only \&quot;location\&quot; and \&quot;resourceType\&quot; are set for \&quot;ResourceType\&quot; resources..</param>
         public ScimConfigResourceType(List<string> Schemas = null, List<ScimConfigResourceTypeSchemaExtension> SchemaExtensions = null, ScimMetadata Meta = null)
         {
             this.Schemas = Schemas;
@@ -141,9 +141,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The metadata of the SCIM resource. Only location and resourceType are set for ResourceType resources.
+        /// The metadata of the SCIM resource. Only \&quot;location\&quot; and \&quot;resourceType\&quot; are set for \&quot;ResourceType\&quot; resources.
         /// </summary>
-        /// <value>The metadata of the SCIM resource. Only location and resourceType are set for ResourceType resources.</value>
+        /// <value>The metadata of the SCIM resource. Only \&quot;location\&quot; and \&quot;resourceType\&quot; are set for \&quot;ResourceType\&quot; resources.</value>
         [DataMember(Name="meta", EmitDefaultValue=false)]
         public ScimMetadata Meta { get; set; }
         

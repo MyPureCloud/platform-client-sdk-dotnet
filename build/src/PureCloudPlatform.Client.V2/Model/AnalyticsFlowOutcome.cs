@@ -52,8 +52,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlowOutcomeId">Unique identifiers of a flow outcome.</param>
         /// <param name="FlowOutcomeValue">Flow outcome value, e.g. SUCCESS.</param>
         /// <param name="FlowOutcome">Colon-separated combinations of unique flow outcome identifier and value.</param>
-        /// <param name="FlowOutcomeStartTimestamp">Date/time the outcome started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="FlowOutcomeEndTimestamp">Date/time the outcome ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="FlowOutcomeStartTimestamp">Date/time the outcome started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="FlowOutcomeEndTimestamp">Date/time the outcome ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public AnalyticsFlowOutcome(string FlowOutcomeId = null, string FlowOutcomeValue = null, string FlowOutcome = null, DateTime? FlowOutcomeStartTimestamp = null, DateTime? FlowOutcomeEndTimestamp = null)
         {
             this.FlowOutcomeId = FlowOutcomeId;
@@ -94,18 +94,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date/time the outcome started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date/time the outcome started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date/time the outcome started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date/time the outcome started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="flowOutcomeStartTimestamp", EmitDefaultValue=false)]
         public DateTime? FlowOutcomeStartTimestamp { get; set; }
         
         
         
         /// <summary>
-        /// Date/time the outcome ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date/time the outcome ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date/time the outcome ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date/time the outcome ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="flowOutcomeEndTimestamp", EmitDefaultValue=false)]
         public DateTime? FlowOutcomeEndTimestamp { get; set; }
         

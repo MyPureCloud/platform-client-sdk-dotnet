@@ -18,8 +18,8 @@ title: InteractionStatsAlert
 | **Value** | **double?** | The threshold value. | |
 | **RuleId** | **string** | The id of the rule. | |
 | **Unread** | **bool?** | Indicates if the alert has been read. | |
-| **StartDate** | **DateTime?** | The date/time the alert was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | |
-| **EndDate** | **DateTime?** | The date/time the owning rule exiting in alarm status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **StartDate** | **DateTime?** | The date/time the alert was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
+| **EndDate** | **DateTime?** | The date/time the owning rule exiting in alarm status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **NotificationUsers** | [**List&lt;User&gt;**](User.html) | The ids of users who were notified of alarm state change. | |
 | **AlertTypes** | **List&lt;string&gt;** | A collection of notification methods. | |
 | **RuleUri** | **string** |  | [optional] |

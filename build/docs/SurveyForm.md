@@ -9,7 +9,7 @@ title: SurveyForm
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The survey form name | |
-| **ModifiedDate** | **DateTime?** | Last modified date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **ModifiedDate** | **DateTime?** | Last modified date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Published** | **bool?** | Is this form published | [optional] |
 | **Disabled** | **bool?** | Is this form disabled | [optional] |
 | **ContextId** | **string** | Unique Id for all versions of this form | |

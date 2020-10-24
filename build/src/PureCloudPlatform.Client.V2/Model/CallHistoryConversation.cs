@@ -129,7 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Direction">The direction of the call relating to the current user.</param>
         /// <param name="WentToVoicemail">Did the call end in the current user&#39;s voicemail.</param>
         /// <param name="MissedCall">Did the user not answer this conversation.</param>
-        /// <param name="StartTime">The time the user joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="StartTime">The time the user joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="WasConference">Was this conversation a conference.</param>
         /// <param name="WasCallback">Was this conversation a callback.</param>
         /// <param name="HadScreenShare">Did this conversation have a screen share session.</param>
@@ -200,9 +200,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The time the user joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The time the user joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The time the user joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The time the user joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
         

@@ -12,9 +12,9 @@ title: DefaultGreetingList
 | **Owner** | [**GreetingOwner**](GreetingOwner.html) |  | [optional] |
 | **OwnerType** | **string** |  | [optional] |
 | **Greetings** | [**Dictionary&lt;string, Greeting&gt;**](Greeting.html) |  | [optional] |
-| **CreatedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **CreatedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CreatedBy** | **string** |  | [optional] |
-| **ModifiedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **ModifiedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ModifiedBy** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

@@ -188,7 +188,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="QueueObservationQuery" /> class.
         /// </summary>
         /// <param name="Filter">Filter to return a subset of observations. Expresses boolean logical predicates as well as dimensional filters (required).</param>
-        /// <param name="Metrics">Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *)..</param>
+        /// <param name="Metrics">Behaves like a SQL SELECT clause. Only named metrics will be retrieved. (required).</param>
         /// <param name="DetailMetrics">Metrics for which to include additional detailed observations.</param>
         public QueueObservationQuery(QueueObservationQueryFilter Filter = null, List<MetricsEnum> Metrics = null, List<DetailMetricsEnum> DetailMetrics = null)
         {
@@ -210,9 +210,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *).
+        /// Behaves like a SQL SELECT clause. Only named metrics will be retrieved.
         /// </summary>
-        /// <value>Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *).</value>
+        /// <value>Behaves like a SQL SELECT clause. Only named metrics will be retrieved.</value>
         [DataMember(Name="metrics", EmitDefaultValue=false)]
         public List<MetricsEnum> Metrics { get; set; }
         

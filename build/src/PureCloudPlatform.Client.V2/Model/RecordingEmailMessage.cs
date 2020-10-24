@@ -83,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="From">From.</param>
         /// <param name="Subject">Subject.</param>
         /// <param name="Attachments">Attachments.</param>
-        /// <param name="Time">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Time">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public RecordingEmailMessage(string HtmlBody = null, string TextBody = null, string Id = null, List<EmailAddress> To = null, List<EmailAddress> Cc = null, List<EmailAddress> Bcc = null, EmailAddress From = null, string Subject = null, List<EmailAttachment> Attachments = null, DateTime? Time = null)
         {
             this.HtmlBody = HtmlBody;
@@ -174,9 +174,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="time", EmitDefaultValue=false)]
         public DateTime? Time { get; set; }
         

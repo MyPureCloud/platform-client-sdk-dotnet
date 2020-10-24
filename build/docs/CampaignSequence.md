@@ -9,8 +9,8 @@ title: CampaignSequence
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **DateCreated** | **DateTime?** | Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **DateModified** | **DateTime?** | Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **DateCreated** | **DateTime?** | Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **DateModified** | **DateTime?** | Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Version** | **int?** | Required for updates, must match the version number of the most recent update | [optional] |
 | **Campaigns** | [**List&lt;DomainEntityRef&gt;**](DomainEntityRef.html) | The ordered list of Campaigns that this CampaignSequence will run. | |
 | **CurrentCampaign** | **int?** | A zero-based index indicating which Campaign this CampaignSequence is currently on. | |

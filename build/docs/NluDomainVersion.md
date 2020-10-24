@@ -12,10 +12,10 @@ title: NluDomainVersion
 | **Description** | **string** | The description of the NLU domain version. | [optional] |
 | **Language** | **string** | The language that the NLU domain version supports. | |
 | **Published** | **bool?** | Whether this NLU domain version has been published. | [optional] |
-| **DateCreated** | **DateTime?** | The date when the NLU domain version was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **DateModified** | **DateTime?** | The date when the NLU domain version was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **DateTrained** | **DateTime?** | The date when the NLU domain version was trained. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **DatePublished** | **DateTime?** | The date when the NLU domain version was published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **DateCreated** | **DateTime?** | The date when the NLU domain version was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **DateModified** | **DateTime?** | The date when the NLU domain version was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **DateTrained** | **DateTime?** | The date when the NLU domain version was trained. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **DatePublished** | **DateTime?** | The date when the NLU domain version was published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **TrainingStatus** | **string** | The training status of the NLU domain version. | [optional] |
 | **EvaluationStatus** | **string** | The evaluation status of the NLU domain version. | [optional] |
 | **Intents** | [**List&lt;IntentDefinition&gt;**](IntentDefinition.html) | The intents defined for this NLU domain version. | [optional] |

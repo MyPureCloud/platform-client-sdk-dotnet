@@ -60,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="EncryptionKey" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="CreateDate">create date of the key pair. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="CreateDate">create date of the key pair. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="KeydataSummary">key data summary (base 64 encoded public key).</param>
         /// <param name="User">user that requested generation of public key.</param>
         /// <param name="LocalEncryptionConfiguration">Local configuration.</param>
@@ -94,9 +94,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// create date of the key pair. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// create date of the key pair. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>create date of the key pair. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>create date of the key pair. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="createDate", EmitDefaultValue=false)]
         public DateTime? CreateDate { get; set; }
         

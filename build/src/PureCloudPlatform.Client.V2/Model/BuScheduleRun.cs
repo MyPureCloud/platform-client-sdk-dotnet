@@ -176,13 +176,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TargetWeek">The start date of the target week. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="Schedule">The generated schedule.  Null unless the schedule run is complete.</param>
         /// <param name="ScheduleDescription">The description of the generated schedule.</param>
-        /// <param name="SchedulingStartTime">When the schedule generation run started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="SchedulingStartTime">When the schedule generation run started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="SchedulingStartedBy">The user who started the scheduling run.</param>
         /// <param name="SchedulingCanceledBy">The user who canceled the scheduling run, if applicable.</param>
-        /// <param name="SchedulingCompletedTime">When the scheduling run was completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="SchedulingCompletedTime">When the scheduling run was completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="MessageCount">The number of schedule generation messages for this schedule generation run.</param>
         /// <param name="ReschedulingOptions">Rescheduling options for this run.  Null unless intradayRescheduling is true.</param>
-        /// <param name="ReschedulingResultExpiration">When the reschedule result will expire.  Null unless intradayRescheduling is true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ReschedulingResultExpiration">When the reschedule result will expire.  Null unless intradayRescheduling is true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public BuScheduleRun(string SchedulerRunId = null, bool? IntradayRescheduling = null, StateEnum? State = null, int? WeekCount = null, double? PercentComplete = null, DateTime? TargetWeek = null, BuScheduleReference Schedule = null, string ScheduleDescription = null, DateTime? SchedulingStartTime = null, UserReference SchedulingStartedBy = null, UserReference SchedulingCanceledBy = null, DateTime? SchedulingCompletedTime = null, int? MessageCount = null, ReschedulingOptionsRunResponse ReschedulingOptions = null, DateTime? ReschedulingResultExpiration = null)
         {
             this.SchedulerRunId = SchedulerRunId;
@@ -280,9 +280,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// When the schedule generation run started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// When the schedule generation run started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>When the schedule generation run started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>When the schedule generation run started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="schedulingStartTime", EmitDefaultValue=false)]
         public DateTime? SchedulingStartTime { get; set; }
         
@@ -307,9 +307,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// When the scheduling run was completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// When the scheduling run was completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>When the scheduling run was completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>When the scheduling run was completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="schedulingCompletedTime", EmitDefaultValue=false)]
         public DateTime? SchedulingCompletedTime { get; set; }
         
@@ -334,9 +334,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// When the reschedule result will expire.  Null unless intradayRescheduling is true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// When the reschedule result will expire.  Null unless intradayRescheduling is true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>When the reschedule result will expire.  Null unless intradayRescheduling is true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>When the reschedule result will expire.  Null unless intradayRescheduling is true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="reschedulingResultExpiration", EmitDefaultValue=false)]
         public DateTime? ReschedulingResultExpiration { get; set; }
         

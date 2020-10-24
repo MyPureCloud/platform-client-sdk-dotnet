@@ -105,7 +105,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Phrase for "PHRASE"
             /// </summary>
             [EnumMember(Value = "PHRASE")]
-            Phrase
+            Phrase,
+            
+            /// <summary>
+            /// Enum DateRange for "DATE_RANGE"
+            /// </summary>
+            [EnumMember(Value = "DATE_RANGE")]
+            DateRange
         }
         
         

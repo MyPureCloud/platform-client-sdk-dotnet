@@ -83,12 +83,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SurveyFormId">Unique identifier for the survey form.</param>
         /// <param name="SurveyFormName">Name of the survey form.</param>
         /// <param name="SurveyFormContextId">Unique identifier for the survey form, regardless of version.</param>
-        /// <param name="EventTime">Specifies when a survey occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="EventTime">Specifies when a survey occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="UserId">A unique identifier of the PureCloud user.</param>
         /// <param name="QueueId">Unique identifier for the queue the conversation was on.</param>
         /// <param name="SurveyStatus">Survey status.</param>
         /// <param name="SurveyPromoterScore">Promoter score of the survey.</param>
-        /// <param name="SurveyCompletedDate">Completion date/time of the survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="SurveyCompletedDate">Completion date/time of the survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="OSurveyTotalScore">OSurveyTotalScore.</param>
         public AnalyticsSurvey(string SurveyId = null, string SurveyFormId = null, string SurveyFormName = null, string SurveyFormContextId = null, DateTime? EventTime = null, string UserId = null, string QueueId = null, string SurveyStatus = null, int? SurveyPromoterScore = null, DateTime? SurveyCompletedDate = null, long? OSurveyTotalScore = null)
         {
@@ -145,9 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Specifies when a survey occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Specifies when a survey occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Specifies when a survey occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Specifies when a survey occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
         public DateTime? EventTime { get; set; }
         
@@ -190,9 +190,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Completion date/time of the survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Completion date/time of the survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Completion date/time of the survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Completion date/time of the survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="surveyCompletedDate", EmitDefaultValue=false)]
         public DateTime? SurveyCompletedDate { get; set; }
         

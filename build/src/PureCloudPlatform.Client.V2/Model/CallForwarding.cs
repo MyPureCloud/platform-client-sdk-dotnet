@@ -116,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PhoneNumber">This property is deprecated. Please use the calls property.</param>
         /// <param name="Calls">An ordered list of CallRoutes to be executed when CallForwarding is enabled.</param>
         /// <param name="Voicemail">The type of voicemail to use with the callForwarding configuration.</param>
-        /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public CallForwarding(string Name = null, User User = null, bool? Enabled = null, string PhoneNumber = null, List<CallRoute> Calls = null, VoicemailEnum? Voicemail = null, DateTime? ModifiedDate = null)
         {
             this.Name = Name;
@@ -186,9 +186,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
         

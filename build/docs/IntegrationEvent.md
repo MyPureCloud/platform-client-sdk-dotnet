@@ -10,7 +10,7 @@ title: IntegrationEvent
 | **Id** | **string** | Unique ID for this event | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 | **CorrelationId** | **string** | Correlation ID for the event | [optional] |
-| **Timestamp** | **DateTime?** | Time the event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **Timestamp** | **DateTime?** | Time the event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Level** | **string** | Indicates the severity of the event. | [optional] |
 | **EventCode** | **string** | A classification for the event. Suitable for programmatic searching, sorting, or filtering | [optional] |
 | **Message** | [**MessageInfo**](MessageInfo.html) | Message indicating what happened | [optional] |

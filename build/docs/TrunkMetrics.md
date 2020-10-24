@@ -7,7 +7,7 @@ title: TrunkMetrics
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **EventTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **EventTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **LogicalInterface** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **Trunk** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **Calls** | [**TrunkMetricsCalls**](TrunkMetricsCalls.html) |  | [optional] |

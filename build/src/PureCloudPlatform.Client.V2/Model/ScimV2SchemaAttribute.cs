@@ -339,9 +339,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The attribute&#39;s name
+        /// The name of the attribute.
         /// </summary>
-        /// <value>The attribute&#39;s name</value>
+        /// <value>The name of the attribute.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; private set; }
         

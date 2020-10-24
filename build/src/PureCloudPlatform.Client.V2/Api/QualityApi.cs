@@ -189,8 +189,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="agentUserId">user id of agent requested (optional)</param>
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
@@ -211,8 +211,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="agentUserId">user id of agent requested (optional)</param>
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
@@ -261,8 +261,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversation id (optional)</param>
-        /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <returns>CalibrationEntityListing</returns>
         CalibrationEntityListing GetQualityCalibrations (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
 
@@ -281,8 +281,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversation id (optional)</param>
-        /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <returns>ApiResponse of CalibrationEntityListing</returns>
         ApiResponse<CalibrationEntityListing> GetQualityCalibrationsWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
         
@@ -441,8 +441,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="name">Evaluator name (optional)</param>
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
@@ -462,8 +462,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="name">Evaluator name (optional)</param>
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
@@ -1735,8 +1735,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="agentUserId">user id of agent requested (optional)</param>
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
@@ -1757,8 +1757,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="agentUserId">user id of agent requested (optional)</param>
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
@@ -1807,8 +1807,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversation id (optional)</param>
-        /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <returns>Task of CalibrationEntityListing</returns>
         System.Threading.Tasks.Task<CalibrationEntityListing> GetQualityCalibrationsAsync (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
 
@@ -1827,8 +1827,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversation id (optional)</param>
-        /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <returns>Task of ApiResponse (CalibrationEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<CalibrationEntityListing>> GetQualityCalibrationsAsyncWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
         
@@ -1987,8 +1987,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="name">Evaluator name (optional)</param>
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
@@ -2008,8 +2008,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="name">Evaluator name (optional)</param>
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
@@ -4579,8 +4579,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="agentUserId">user id of agent requested (optional)</param>
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
@@ -4602,8 +4602,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="agentUserId">user id of agent requested (optional)</param>
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
@@ -4704,8 +4704,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="agentUserId">user id of agent requested (optional)</param>
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
@@ -4728,8 +4728,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="agentUserId">user id of agent requested (optional)</param>
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
@@ -5038,8 +5038,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversation id (optional)</param>
-        /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <returns>CalibrationEntityListing</returns>
         public CalibrationEntityListing GetQualityCalibrations (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
         {
@@ -5059,8 +5059,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversation id (optional)</param>
-        /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <returns>ApiResponse of CalibrationEntityListing</returns>
         public ApiResponse< CalibrationEntityListing > GetQualityCalibrationsWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
         { 
@@ -5160,8 +5160,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversation id (optional)</param>
-        /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <returns>Task of CalibrationEntityListing</returns>
         public async System.Threading.Tasks.Task<CalibrationEntityListing> GetQualityCalibrationsAsync (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
         {
@@ -5182,8 +5182,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversation id (optional)</param>
-        /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <returns>Task of ApiResponse (CalibrationEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CalibrationEntityListing>> GetQualityCalibrationsAsyncWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
         { 
@@ -6217,8 +6217,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="name">Evaluator name (optional)</param>
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
@@ -6239,8 +6239,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="name">Evaluator name (optional)</param>
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
@@ -6339,8 +6339,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="name">Evaluator name (optional)</param>
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
@@ -6362,8 +6362,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
-        /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
+        /// <param name="startTime">The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="name">Evaluator name (optional)</param>
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>

@@ -15,8 +15,8 @@ title: ActionTarget
 | **Description** | **string** | Description of the target. | [optional] |
 | **ServiceLevel** | [**ServiceLevel**](ServiceLevel.html) | Service Level of the action target. Chat offers for the target will be throttled with the aim of achieving this service level. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-| **CreatedDate** | **DateTime?** | The date the target was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **ModifiedDate** | **DateTime?** | The date the target was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **CreatedDate** | **DateTime?** | The date the target was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **ModifiedDate** | **DateTime?** | The date the target was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 {: class="table table-striped"}
 
 

@@ -149,7 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Status">Status.</param>
         /// <param name="Queue">Queue.</param>
         /// <param name="Answers">Answers.</param>
-        /// <param name="CompletedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="CompletedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="SurveyErrorDetails">Additional information about what happened when the survey is in Error status..</param>
         public Survey(string Name = null, Conversation Conversation = null, SurveyForm SurveyForm = null, DomainEntityRef Agent = null, StatusEnum? Status = null, QueueReference Queue = null, SurveyScoringSet Answers = null, DateTime? CompletedDate = null, SurveyErrorDetails SurveyErrorDetails = null)
         {
@@ -228,9 +228,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="completedDate", EmitDefaultValue=false)]
         public DateTime? CompletedDate { get; set; }
         

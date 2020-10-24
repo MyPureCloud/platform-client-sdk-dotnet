@@ -9,8 +9,8 @@ title: Campaign
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The name of the Campaign. | |
-| **DateCreated** | **DateTime?** | Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **DateModified** | **DateTime?** | Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **DateCreated** | **DateTime?** | Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **DateModified** | **DateTime?** | Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Version** | **int?** | Required for updates, must match the version number of the most recent update | [optional] |
 | **ContactList** | [**DomainEntityRef**](DomainEntityRef.html) | The ContactList for this Campaign to dial. | |
 | **Queue** | [**DomainEntityRef**](DomainEntityRef.html) | The Queue for this Campaign to route calls to. Required for all dialing modes except agentless. | [optional] |

@@ -279,14 +279,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
         /// <param name="System">System.</param>
-        /// <param name="Started">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="Completed">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Started">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="Completed">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Entities">Entities.</param>
         /// <param name="Total">Total.</param>
-        /// <param name="PageSize">PageSize.</param>
         /// <param name="PageNumber">PageNumber.</param>
+        /// <param name="PageSize">PageSize.</param>
         /// <param name="PageCount">PageCount.</param>
-        public HistoryListing(string Id = null, bool? Complete = null, User User = null, DomainEntityRef Client = null, string ErrorMessage = null, string ErrorCode = null, List<Detail> ErrorDetails = null, Dictionary<string, string> ErrorMessageParams = null, ActionNameEnum? ActionName = null, ActionStatusEnum? ActionStatus = null, string Name = null, string Description = null, bool? System = null, DateTime? Started = null, DateTime? Completed = null, List<HistoryEntry> Entities = null, long? Total = null, int? PageSize = null, int? PageNumber = null, int? PageCount = null)
+        public HistoryListing(string Id = null, bool? Complete = null, User User = null, DomainEntityRef Client = null, string ErrorMessage = null, string ErrorCode = null, List<Detail> ErrorDetails = null, Dictionary<string, string> ErrorMessageParams = null, ActionNameEnum? ActionName = null, ActionStatusEnum? ActionStatus = null, string Name = null, string Description = null, bool? System = null, DateTime? Started = null, DateTime? Completed = null, List<HistoryEntry> Entities = null, long? Total = null, int? PageNumber = null, int? PageSize = null, int? PageCount = null)
         {
             this.Id = Id;
             this.Complete = Complete;
@@ -305,8 +305,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Completed = Completed;
             this.Entities = Entities;
             this.Total = Total;
-            this.PageSize = PageSize;
             this.PageNumber = PageNumber;
+            this.PageSize = PageSize;
             this.PageCount = PageCount;
             
         }
@@ -406,18 +406,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="started", EmitDefaultValue=false)]
         public DateTime? Started { get; set; }
         
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="completed", EmitDefaultValue=false)]
         public DateTime? Completed { get; set; }
         
@@ -440,18 +440,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets PageSize
-        /// </summary>
-        [DataMember(Name="pageSize", EmitDefaultValue=false)]
-        public int? PageSize { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets PageSize
+        /// </summary>
+        [DataMember(Name="pageSize", EmitDefaultValue=false)]
+        public int? PageSize { get; set; }
         
         
         
@@ -488,8 +488,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Completed: ").Append(Completed).Append("\n");
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
-            sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
+            sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -613,14 +613,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Total.Equals(other.Total)
                 ) &&
                 (
-                    this.PageSize == other.PageSize ||
-                    this.PageSize != null &&
-                    this.PageSize.Equals(other.PageSize)
-                ) &&
-                (
                     this.PageNumber == other.PageNumber ||
                     this.PageNumber != null &&
                     this.PageNumber.Equals(other.PageNumber)
+                ) &&
+                (
+                    this.PageSize == other.PageSize ||
+                    this.PageSize != null &&
+                    this.PageSize.Equals(other.PageSize)
                 ) &&
                 (
                     this.PageCount == other.PageCount ||
@@ -692,11 +692,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Total != null)
                     hash = hash * 59 + this.Total.GetHashCode();
                 
-                if (this.PageSize != null)
-                    hash = hash * 59 + this.PageSize.GetHashCode();
-                
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
+                
+                if (this.PageSize != null)
+                    hash = hash * 59 + this.PageSize.GetHashCode();
                 
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();

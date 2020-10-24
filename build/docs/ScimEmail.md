@@ -7,8 +7,8 @@ title: ScimEmail
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Value** | **string** | The email address. Note value for type &#39;other&#39;is immutable. | [optional] |
-| **Type** | **string** | The type of email address. | [optional] |
+| **Value** | **string** | The email address. Is immutable if \&quot;type\&quot; is set to \&quot;other\&quot;. | [optional] |
+| **Type** | **string** | The type of email address. \&quot;value\&quot; is immutable if \&quot;type\&quot; is set to \&quot;other\&quot;. | [optional] |
 | **Primary** | **bool?** | Indicates whether the email address is the primary email address. | [optional] |
 {: class="table table-striped"}
 

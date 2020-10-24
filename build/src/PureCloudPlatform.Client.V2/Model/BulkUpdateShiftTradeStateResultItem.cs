@@ -192,7 +192,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="State">The state of the shift trade after the update request is processed.</param>
         /// <param name="ReviewedBy">The user who reviewed the request, if applicable.</param>
-        /// <param name="ReviewedDate">The date the request was reviewed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ReviewedDate">The date the request was reviewed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="FailureReason">The reason the update failed, if applicable.</param>
         /// <param name="Metadata">Version metadata for the shift trade.</param>
         public BulkUpdateShiftTradeStateResultItem(StateEnum? State = null, UserReference ReviewedBy = null, DateTime? ReviewedDate = null, FailureReasonEnum? FailureReason = null, WfmVersionedEntityMetadata Metadata = null)
@@ -228,9 +228,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The date the request was reviewed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The date the request was reviewed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The date the request was reviewed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The date the request was reviewed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="reviewedDate", EmitDefaultValue=false)]
         public DateTime? ReviewedDate { get; set; }
         

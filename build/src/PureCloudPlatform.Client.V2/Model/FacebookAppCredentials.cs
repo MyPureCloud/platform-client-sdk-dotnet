@@ -37,9 +37,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Genesys Facebook App Id
+        /// Genesys Cloud Facebook App Id
         /// </summary>
-        /// <value>Genesys Facebook App Id</value>
+        /// <value>Genesys Cloud Facebook App Id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         

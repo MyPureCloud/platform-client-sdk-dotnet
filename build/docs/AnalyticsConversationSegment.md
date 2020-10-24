@@ -7,8 +7,8 @@ title: AnalyticsConversationSegment
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **SegmentStart** | **DateTime?** | The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **SegmentEnd** | **DateTime?** | The timestamp when this segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **SegmentStart** | **DateTime?** | The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **SegmentEnd** | **DateTime?** | The timestamp when this segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **QueueId** | **string** | Queue identifier | [optional] |
 | **WrapUpCode** | **string** | Wrapup Code id | [optional] |
 | **WrapUpNote** | **string** | Note entered by an agent during after-call work | [optional] |
