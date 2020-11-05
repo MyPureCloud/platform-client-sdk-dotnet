@@ -303,8 +303,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="queryType">Query filter type (optional)</param>
+        /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
         /// <returns>PermissionCollectionEntityListing</returns>
-        PermissionCollectionEntityListing GetAuthorizationPermissions (int? pageSize = null, int? pageNumber = null);
+        PermissionCollectionEntityListing GetAuthorizationPermissions (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null);
 
         /// <summary>
         /// Get all permissions.
@@ -315,8 +317,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="queryType">Query filter type (optional)</param>
+        /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
         /// <returns>ApiResponse of PermissionCollectionEntityListing</returns>
-        ApiResponse<PermissionCollectionEntityListing> GetAuthorizationPermissionsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<PermissionCollectionEntityListing> GetAuthorizationPermissionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null);
         
         /// <summary>
         /// Get the list of enabled products
@@ -1253,8 +1257,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="queryType">Query filter type (optional)</param>
+        /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
         /// <returns>Task of PermissionCollectionEntityListing</returns>
-        System.Threading.Tasks.Task<PermissionCollectionEntityListing> GetAuthorizationPermissionsAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<PermissionCollectionEntityListing> GetAuthorizationPermissionsAsync (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null);
 
         /// <summary>
         /// Get all permissions.
@@ -1265,8 +1271,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="queryType">Query filter type (optional)</param>
+        /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
         /// <returns>Task of ApiResponse (PermissionCollectionEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PermissionCollectionEntityListing>> GetAuthorizationPermissionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<PermissionCollectionEntityListing>> GetAuthorizationPermissionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null);
         
         /// <summary>
         /// Get the list of enabled products
@@ -4235,10 +4243,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="queryType">Query filter type (optional)</param>
+        /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
         /// <returns>PermissionCollectionEntityListing</returns>
-        public PermissionCollectionEntityListing GetAuthorizationPermissions (int? pageSize = null, int? pageNumber = null)
+        public PermissionCollectionEntityListing GetAuthorizationPermissions (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
         {
-             ApiResponse<PermissionCollectionEntityListing> localVarResponse = GetAuthorizationPermissionsWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<PermissionCollectionEntityListing> localVarResponse = GetAuthorizationPermissionsWithHttpInfo(pageSize, pageNumber, queryType, query);
              return localVarResponse.Data;
         }
 
@@ -4248,8 +4258,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="queryType">Query filter type (optional)</param>
+        /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
         /// <returns>ApiResponse of PermissionCollectionEntityListing</returns>
-        public ApiResponse< PermissionCollectionEntityListing > GetAuthorizationPermissionsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< PermissionCollectionEntityListing > GetAuthorizationPermissionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
         { 
 
             var localVarPath = "/api/v2/authorization/permissions";
@@ -4287,6 +4299,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (queryType != null) localVarQueryParams.Add(new Tuple<string, string>("queryType", this.Configuration.ApiClient.ParameterToString(queryType)));
+            if (query != null) localVarQueryParams.Add(new Tuple<string, string>("query", this.Configuration.ApiClient.ParameterToString(query)));
 
             // Header params
 
@@ -4330,10 +4344,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="queryType">Query filter type (optional)</param>
+        /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
         /// <returns>Task of PermissionCollectionEntityListing</returns>
-        public async System.Threading.Tasks.Task<PermissionCollectionEntityListing> GetAuthorizationPermissionsAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<PermissionCollectionEntityListing> GetAuthorizationPermissionsAsync (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
         {
-             ApiResponse<PermissionCollectionEntityListing> localVarResponse = await GetAuthorizationPermissionsAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<PermissionCollectionEntityListing> localVarResponse = await GetAuthorizationPermissionsAsyncWithHttpInfo(pageSize, pageNumber, queryType, query);
              return localVarResponse.Data;
 
         }
@@ -4344,8 +4360,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="queryType">Query filter type (optional)</param>
+        /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
         /// <returns>Task of ApiResponse (PermissionCollectionEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PermissionCollectionEntityListing>> GetAuthorizationPermissionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PermissionCollectionEntityListing>> GetAuthorizationPermissionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
         { 
 
             var localVarPath = "/api/v2/authorization/permissions";
@@ -4383,6 +4401,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (queryType != null) localVarQueryParams.Add(new Tuple<string, string>("queryType", this.Configuration.ApiClient.ParameterToString(queryType)));
+            if (query != null) localVarQueryParams.Add(new Tuple<string, string>("query", this.Configuration.ApiClient.ParameterToString(query)));
 
             // Header params
 

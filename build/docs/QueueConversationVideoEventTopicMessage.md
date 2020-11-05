@@ -25,6 +25,7 @@ title: QueueConversationVideoEventTopicMessage
 | **Type** | **string** |  | [optional] |
 | **RecipientCountry** | **string** |  | [optional] |
 | **RecipientType** | **string** |  | [optional] |
+| **JourneyContext** | [**QueueConversationVideoEventTopicJourneyContext**](QueueConversationVideoEventTopicJourneyContext.html) |  | [optional] |
 | **Wrapup** | [**QueueConversationVideoEventTopicWrapup**](QueueConversationVideoEventTopicWrapup.html) |  | [optional] |
 | **AfterCallWork** | [**QueueConversationVideoEventTopicAfterCallWork**](QueueConversationVideoEventTopicAfterCallWork.html) |  | [optional] |
 | **AfterCallWorkRequired** | **bool?** |  | [optional] |

@@ -55,6 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDomain" /> class.
@@ -66,11 +71,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="NluDomain" /> class.
         /// </summary>
         /// <param name="Name">The name of the NLU domain. (required).</param>
+        /// <param name="Language">The ISO 639-1 language code of the NLU domain, e.g. `en`..</param>
         /// <param name="DraftVersion">The draft version of that NLU domain..</param>
         /// <param name="LastPublishedVersion">The last published version of that NLU domain..</param>
-        public NluDomain(string Name = null, NluDomainVersion DraftVersion = null, NluDomainVersion LastPublishedVersion = null)
+        public NluDomain(string Name = null, string Language = null, NluDomainVersion DraftVersion = null, NluDomainVersion LastPublishedVersion = null)
         {
             this.Name = Name;
+            this.Language = Language;
             this.DraftVersion = DraftVersion;
             this.LastPublishedVersion = LastPublishedVersion;
             
@@ -93,6 +100,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The name of the NLU domain.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The ISO 639-1 language code of the NLU domain, e.g. `en`.
+        /// </summary>
+        /// <value>The ISO 639-1 language code of the NLU domain, e.g. `en`.</value>
+        [DataMember(Name="language", EmitDefaultValue=false)]
+        public string Language { get; set; }
         
         
         
@@ -151,6 +167,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  DraftVersion: ").Append(DraftVersion).Append("\n");
             sb.Append("  LastPublishedVersion: ").Append(LastPublishedVersion).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -203,6 +220,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.Language == other.Language ||
+                    this.Language != null &&
+                    this.Language.Equals(other.Language)
+                ) &&
+                (
                     this.DraftVersion == other.DraftVersion ||
                     this.DraftVersion != null &&
                     this.DraftVersion.Equals(other.DraftVersion)
@@ -246,6 +268,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.Language != null)
+                    hash = hash * 59 + this.Language.GetHashCode();
                 
                 if (this.DraftVersion != null)
                     hash = hash * 59 + this.DraftVersion.GetHashCode();

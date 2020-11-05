@@ -25,6 +25,7 @@ title: QueueConversationEventTopicMessage
 | **Type** | **string** |  | [optional] |
 | **RecipientCountry** | **string** |  | [optional] |
 | **RecipientType** | **string** |  | [optional] |
+| **JourneyContext** | [**QueueConversationEventTopicJourneyContext**](QueueConversationEventTopicJourneyContext.html) |  | [optional] |
 | **Wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup.html) |  | [optional] |
 | **AfterCallWork** | [**QueueConversationEventTopicAfterCallWork**](QueueConversationEventTopicAfterCallWork.html) |  | [optional] |
 | **AfterCallWorkRequired** | **bool?** |  | [optional] |

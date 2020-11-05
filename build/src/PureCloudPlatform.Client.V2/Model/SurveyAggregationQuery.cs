@@ -160,6 +160,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Surveystatus,
             
             /// <summary>
+            /// Enum Teamid for "teamId"
+            /// </summary>
+            [EnumMember(Value = "teamId")]
+            Teamid,
+            
+            /// <summary>
             /// Enum Userid for "userId"
             /// </summary>
             [EnumMember(Value = "userId")]

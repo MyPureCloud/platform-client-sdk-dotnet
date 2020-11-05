@@ -314,6 +314,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -373,6 +376,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationEventTopicMessage" /> class.
@@ -395,11 +400,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Type.</param>
         /// <param name="RecipientCountry">RecipientCountry.</param>
         /// <param name="RecipientType">RecipientType.</param>
+        /// <param name="JourneyContext">JourneyContext.</param>
         /// <param name="Wrapup">Wrapup.</param>
         /// <param name="AfterCallWork">AfterCallWork.</param>
         /// <param name="AfterCallWorkRequired">AfterCallWorkRequired.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationEventTopicMessage(string Id = null, StateEnum? State = null, bool? Held = null, ConversationEventTopicErrorDetails ErrorInfo = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, ConversationEventTopicAddress ToAddress = null, ConversationEventTopicAddress FromAddress = null, List<ConversationEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, ConversationEventTopicWrapup Wrapup = null, ConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, Object AdditionalProperties = null)
+        public ConversationEventTopicMessage(string Id = null, StateEnum? State = null, bool? Held = null, ConversationEventTopicErrorDetails ErrorInfo = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, ConversationEventTopicAddress ToAddress = null, ConversationEventTopicAddress FromAddress = null, List<ConversationEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, ConversationEventTopicJourneyContext JourneyContext = null, ConversationEventTopicWrapup Wrapup = null, ConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.State = State;
@@ -419,6 +425,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Type = Type;
             this.RecipientCountry = RecipientCountry;
             this.RecipientType = RecipientType;
+            this.JourneyContext = JourneyContext;
             this.Wrapup = Wrapup;
             this.AfterCallWork = AfterCallWork;
             this.AfterCallWorkRequired = AfterCallWorkRequired;
@@ -555,6 +562,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets JourneyContext
+        /// </summary>
+        [DataMember(Name="journeyContext", EmitDefaultValue=false)]
+        public ConversationEventTopicJourneyContext JourneyContext { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Wrapup
         /// </summary>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
@@ -612,6 +627,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  RecipientCountry: ").Append(RecipientCountry).Append("\n");
             sb.Append("  RecipientType: ").Append(RecipientType).Append("\n");
+            sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
@@ -743,6 +759,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RecipientType.Equals(other.RecipientType)
                 ) &&
                 (
+                    this.JourneyContext == other.JourneyContext ||
+                    this.JourneyContext != null &&
+                    this.JourneyContext.Equals(other.JourneyContext)
+                ) &&
+                (
                     this.Wrapup == other.Wrapup ||
                     this.Wrapup != null &&
                     this.Wrapup.Equals(other.Wrapup)
@@ -829,6 +850,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RecipientType != null)
                     hash = hash * 59 + this.RecipientType.GetHashCode();
+                
+                if (this.JourneyContext != null)
+                    hash = hash * 59 + this.JourneyContext.GetHashCode();
                 
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();

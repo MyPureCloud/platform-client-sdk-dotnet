@@ -45,8 +45,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ButtonComponent" /> class.
         /// </summary>
         /// <param name="Id">An ID assigned to this component.</param>
-        /// <param name="Text">Text to show inside the button.</param>
-        /// <param name="Title">Tooltip text to show when hovering over the button.</param>
+        /// <param name="Text">Deprecated - Use title instead.</param>
+        /// <param name="Title">Text to show inside the button.</param>
         /// <param name="Actions">User actions available on the content. All actions are optional and all actions are executed simultaneously..</param>
         public ButtonComponent(string Id = null, string Text = null, string Title = null, ContentActions Actions = null)
         {
@@ -69,18 +69,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Text to show inside the button
+        /// Deprecated - Use title instead
         /// </summary>
-        /// <value>Text to show inside the button</value>
+        /// <value>Deprecated - Use title instead</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
         
         
         
         /// <summary>
-        /// Tooltip text to show when hovering over the button
+        /// Text to show inside the button
         /// </summary>
-        /// <value>Tooltip text to show when hovering over the button</value>
+        /// <value>Text to show inside the button</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
         

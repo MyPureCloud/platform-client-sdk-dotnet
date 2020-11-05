@@ -25,6 +25,7 @@ title: ConversationEventTopicMessage
 | **Type** | **string** |  | [optional] |
 | **RecipientCountry** | **string** |  | [optional] |
 | **RecipientType** | **string** |  | [optional] |
+| **JourneyContext** | [**ConversationEventTopicJourneyContext**](ConversationEventTopicJourneyContext.html) |  | [optional] |
 | **Wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup.html) |  | [optional] |
 | **AfterCallWork** | [**ConversationEventTopicAfterCallWork**](ConversationEventTopicAfterCallWork.html) |  | [optional] |
 | **AfterCallWorkRequired** | **bool?** |  | [optional] |

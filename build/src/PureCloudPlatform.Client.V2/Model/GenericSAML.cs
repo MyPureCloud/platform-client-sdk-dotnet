@@ -154,10 +154,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndpointCompression">EndpointCompression.</param>
         /// <param name="NameIdentifierFormat">NameIdentifierFormat.</param>
         /// <param name="Certificate">Certificate.</param>
-        /// <param name="SsoTargetURI">SsoTargetURI.</param>
         /// <param name="IssuerURI">IssuerURI.</param>
+        /// <param name="SsoTargetURI">SsoTargetURI.</param>
         /// <param name="Disabled">Disabled.</param>
-        public GenericSAML(string Name = null, string LogoImageData = null, string RelyingPartyIdentifier = null, bool? EndpointCompression = null, NameIdentifierFormatEnum? NameIdentifierFormat = null, string Certificate = null, string SsoTargetURI = null, string IssuerURI = null, bool? Disabled = null)
+        public GenericSAML(string Name = null, string LogoImageData = null, string RelyingPartyIdentifier = null, bool? EndpointCompression = null, NameIdentifierFormatEnum? NameIdentifierFormat = null, string Certificate = null, string IssuerURI = null, string SsoTargetURI = null, bool? Disabled = null)
         {
             this.Name = Name;
             this.LogoImageData = LogoImageData;
@@ -165,8 +165,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EndpointCompression = EndpointCompression;
             this.NameIdentifierFormat = NameIdentifierFormat;
             this.Certificate = Certificate;
-            this.SsoTargetURI = SsoTargetURI;
             this.IssuerURI = IssuerURI;
+            this.SsoTargetURI = SsoTargetURI;
             this.Disabled = Disabled;
             
         }
@@ -225,18 +225,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets SsoTargetURI
-        /// </summary>
-        [DataMember(Name="ssoTargetURI", EmitDefaultValue=false)]
-        public string SsoTargetURI { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets IssuerURI
         /// </summary>
         [DataMember(Name="issuerURI", EmitDefaultValue=false)]
         public string IssuerURI { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets SsoTargetURI
+        /// </summary>
+        [DataMember(Name="ssoTargetURI", EmitDefaultValue=false)]
+        public string SsoTargetURI { get; set; }
         
         
         
@@ -272,8 +272,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EndpointCompression: ").Append(EndpointCompression).Append("\n");
             sb.Append("  NameIdentifierFormat: ").Append(NameIdentifierFormat).Append("\n");
             sb.Append("  Certificate: ").Append(Certificate).Append("\n");
-            sb.Append("  SsoTargetURI: ").Append(SsoTargetURI).Append("\n");
             sb.Append("  IssuerURI: ").Append(IssuerURI).Append("\n");
+            sb.Append("  SsoTargetURI: ").Append(SsoTargetURI).Append("\n");
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -348,14 +348,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Certificate.Equals(other.Certificate)
                 ) &&
                 (
-                    this.SsoTargetURI == other.SsoTargetURI ||
-                    this.SsoTargetURI != null &&
-                    this.SsoTargetURI.Equals(other.SsoTargetURI)
-                ) &&
-                (
                     this.IssuerURI == other.IssuerURI ||
                     this.IssuerURI != null &&
                     this.IssuerURI.Equals(other.IssuerURI)
+                ) &&
+                (
+                    this.SsoTargetURI == other.SsoTargetURI ||
+                    this.SsoTargetURI != null &&
+                    this.SsoTargetURI.Equals(other.SsoTargetURI)
                 ) &&
                 (
                     this.Disabled == other.Disabled ||
@@ -402,11 +402,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Certificate != null)
                     hash = hash * 59 + this.Certificate.GetHashCode();
                 
-                if (this.SsoTargetURI != null)
-                    hash = hash * 59 + this.SsoTargetURI.GetHashCode();
-                
                 if (this.IssuerURI != null)
                     hash = hash * 59 + this.IssuerURI.GetHashCode();
+                
+                if (this.SsoTargetURI != null)
+                    hash = hash * 59 + this.SsoTargetURI.GetHashCode();
                 
                 if (this.Disabled != null)
                     hash = hash * 59 + this.Disabled.GetHashCode();

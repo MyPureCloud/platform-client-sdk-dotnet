@@ -16,7 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetKnowledgeKnowledgebaseLanguageDocument**](KnowledgeApi.html#getknowledgeknowledgebaselanguagedocument) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId} | Get document |
 | [**GetKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeApi.html#getknowledgeknowledgebaselanguagedocuments) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents | Get documents |
 | [**GetKnowledgeKnowledgebaseLanguageTraining**](KnowledgeApi.html#getknowledgeknowledgebaselanguagetraining) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings/{trainingId} | Get training detail |
-| [**GetKnowledgeKnowledgebaseLanguageTrainings**](KnowledgeApi.html#getknowledgeknowledgebaselanguagetrainings) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings | Get All trainings information for a knowledgebase |
+| [**GetKnowledgeKnowledgebaseLanguageTrainings**](KnowledgeApi.html#getknowledgeknowledgebaselanguagetrainings) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings | Get all trainings information for a knowledgebase |
 | [**GetKnowledgeKnowledgebases**](KnowledgeApi.html#getknowledgeknowledgebases) | **GET** /api/v2/knowledge/knowledgebases | Get knowledge bases |
 | [**PatchKnowledgeKnowledgebase**](KnowledgeApi.html#patchknowledgeknowledgebase) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId} | Update knowledge base |
 | [**PatchKnowledgeKnowledgebaseLanguageCategory**](KnowledgeApi.html#patchknowledgeknowledgebaselanguagecategory) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId} | Update category |
@@ -623,11 +623,11 @@ namespace Example
 
 <a name="getknowledgeknowledgebaselanguagetrainings"></a>
 
-## [**TrainingListing**](TrainingListing.html) GetKnowledgeKnowledgebaseLanguageTrainings (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null)
+## [**TrainingListing**](TrainingListing.html) GetKnowledgeKnowledgebaseLanguageTrainings (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null)
 
 
 
-Get All trainings information for a knowledgebase
+Get all trainings information for a knowledgebase
 
 
 
@@ -659,11 +659,12 @@ namespace Example
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
             var limit = limit_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var knowledgeDocumentsState = knowledgeDocumentsState_example;  // string | Return the training with the specified state of the trained documents. (optional) 
 
             try
             { 
-                // Get All trainings information for a knowledgebase
-                TrainingListing result = apiInstance.GetKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId, languageCode, before, after, limit, pageSize);
+                // Get all trainings information for a knowledgebase
+                TrainingListing result = apiInstance.GetKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId, languageCode, before, after, limit, pageSize, knowledgeDocumentsState);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -686,6 +687,7 @@ namespace Example
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **limit** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **knowledgeDocumentsState** | **string**| Return the training with the specified state of the trained documents. | [optional] <br />**Values**: Draft, Active, Discarded, Archived |
 {: class="table table-striped"}
 
 ### Return type

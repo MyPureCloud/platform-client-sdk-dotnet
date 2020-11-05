@@ -257,7 +257,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<KnowledgeTraining> GetKnowledgeKnowledgebaseLanguageTrainingWithHttpInfo (string knowledgeBaseId, string languageCode, string trainingId);
         
         /// <summary>
-        /// Get All trainings information for a knowledgebase
+        /// Get all trainings information for a knowledgebase
         /// </summary>
         /// <remarks>
         /// 
@@ -269,11 +269,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>TrainingListing</returns>
-        TrainingListing GetKnowledgeKnowledgebaseLanguageTrainings (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null);
+        TrainingListing GetKnowledgeKnowledgebaseLanguageTrainings (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null);
 
         /// <summary>
-        /// Get All trainings information for a knowledgebase
+        /// Get all trainings information for a knowledgebase
         /// </summary>
         /// <remarks>
         /// 
@@ -285,8 +286,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>ApiResponse of TrainingListing</returns>
-        ApiResponse<TrainingListing> GetKnowledgeKnowledgebaseLanguageTrainingsWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null);
+        ApiResponse<TrainingListing> GetKnowledgeKnowledgebaseLanguageTrainingsWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null);
         
         /// <summary>
         /// Get knowledge bases
@@ -817,7 +819,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<KnowledgeTraining>> GetKnowledgeKnowledgebaseLanguageTrainingAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string trainingId);
         
         /// <summary>
-        /// Get All trainings information for a knowledgebase
+        /// Get all trainings information for a knowledgebase
         /// </summary>
         /// <remarks>
         /// 
@@ -829,11 +831,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>Task of TrainingListing</returns>
-        System.Threading.Tasks.Task<TrainingListing> GetKnowledgeKnowledgebaseLanguageTrainingsAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null);
+        System.Threading.Tasks.Task<TrainingListing> GetKnowledgeKnowledgebaseLanguageTrainingsAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null);
 
         /// <summary>
-        /// Get All trainings information for a knowledgebase
+        /// Get all trainings information for a knowledgebase
         /// </summary>
         /// <remarks>
         /// 
@@ -845,8 +848,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>Task of ApiResponse (TrainingListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrainingListing>> GetKnowledgeKnowledgebaseLanguageTrainingsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<TrainingListing>> GetKnowledgeKnowledgebaseLanguageTrainingsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null);
         
         /// <summary>
         /// Get knowledge bases
@@ -3172,7 +3176,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get All trainings information for a knowledgebase 
+        /// Get all trainings information for a knowledgebase 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -3181,15 +3185,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>TrainingListing</returns>
-        public TrainingListing GetKnowledgeKnowledgebaseLanguageTrainings (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null)
+        public TrainingListing GetKnowledgeKnowledgebaseLanguageTrainings (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null)
         {
-             ApiResponse<TrainingListing> localVarResponse = GetKnowledgeKnowledgebaseLanguageTrainingsWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize);
+             ApiResponse<TrainingListing> localVarResponse = GetKnowledgeKnowledgebaseLanguageTrainingsWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize, knowledgeDocumentsState);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get All trainings information for a knowledgebase 
+        /// Get all trainings information for a knowledgebase 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -3198,8 +3203,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>ApiResponse of TrainingListing</returns>
-        public ApiResponse< TrainingListing > GetKnowledgeKnowledgebaseLanguageTrainingsWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null)
+        public ApiResponse< TrainingListing > GetKnowledgeKnowledgebaseLanguageTrainingsWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -3247,6 +3253,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (knowledgeDocumentsState != null) localVarQueryParams.Add(new Tuple<string, string>("knowledgeDocumentsState", this.Configuration.ApiClient.ParameterToString(knowledgeDocumentsState)));
 
             // Header params
 
@@ -3285,7 +3292,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get All trainings information for a knowledgebase 
+        /// Get all trainings information for a knowledgebase 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -3294,16 +3301,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>Task of TrainingListing</returns>
-        public async System.Threading.Tasks.Task<TrainingListing> GetKnowledgeKnowledgebaseLanguageTrainingsAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null)
+        public async System.Threading.Tasks.Task<TrainingListing> GetKnowledgeKnowledgebaseLanguageTrainingsAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null)
         {
-             ApiResponse<TrainingListing> localVarResponse = await GetKnowledgeKnowledgebaseLanguageTrainingsAsyncWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize);
+             ApiResponse<TrainingListing> localVarResponse = await GetKnowledgeKnowledgebaseLanguageTrainingsAsyncWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize, knowledgeDocumentsState);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get All trainings information for a knowledgebase 
+        /// Get all trainings information for a knowledgebase 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -3312,8 +3320,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>Task of ApiResponse (TrainingListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrainingListing>> GetKnowledgeKnowledgebaseLanguageTrainingsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TrainingListing>> GetKnowledgeKnowledgebaseLanguageTrainingsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -3363,6 +3372,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (knowledgeDocumentsState != null) localVarQueryParams.Add(new Tuple<string, string>("knowledgeDocumentsState", this.Configuration.ApiClient.ParameterToString(knowledgeDocumentsState)));
 
             // Header params
 

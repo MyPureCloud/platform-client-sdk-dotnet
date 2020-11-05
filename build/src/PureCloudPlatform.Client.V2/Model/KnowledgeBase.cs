@@ -79,12 +79,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Core language for knowledge base in which initial content must be created first
         /// </summary>
         /// <value>Core language for knowledge base in which initial content must be created first</value>
         [DataMember(Name="coreLanguage", EmitDefaultValue=false)]
         public CoreLanguageEnum? CoreLanguage { get; set; }
+        
+        
         
         
         
@@ -108,13 +113,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Description">Knowledge base description.</param>
         /// <param name="CoreLanguage">Core language for knowledge base in which initial content must be created first (required).</param>
-        /// <param name="FaqCount">The count representing the number of documents of type FAQ per KnowledgeBase.</param>
-        public KnowledgeBase(string Name = null, string Description = null, CoreLanguageEnum? CoreLanguage = null, int? FaqCount = null)
+        public KnowledgeBase(string Name = null, string Description = null, CoreLanguageEnum? CoreLanguage = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.CoreLanguage = CoreLanguage;
-            this.FaqCount = FaqCount;
             
         }
         
@@ -171,7 +174,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The count representing the number of documents of type FAQ per KnowledgeBase</value>
         [DataMember(Name="faqCount", EmitDefaultValue=false)]
-        public int? FaqCount { get; set; }
+        public int? FaqCount { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The date representing when the last document is modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date representing when the last document is modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateDocumentLastModified", EmitDefaultValue=false)]
+        public DateTime? DateDocumentLastModified { get; private set; }
         
         
         
@@ -199,6 +211,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  FaqCount: ").Append(FaqCount).Append("\n");
+            sb.Append("  DateDocumentLastModified: ").Append(DateDocumentLastModified).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -272,6 +285,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FaqCount.Equals(other.FaqCount)
                 ) &&
                 (
+                    this.DateDocumentLastModified == other.DateDocumentLastModified ||
+                    this.DateDocumentLastModified != null &&
+                    this.DateDocumentLastModified.Equals(other.DateDocumentLastModified)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -310,6 +328,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.FaqCount != null)
                     hash = hash * 59 + this.FaqCount.GetHashCode();
+                
+                if (this.DateDocumentLastModified != null)
+                    hash = hash * 59 + this.DateDocumentLastModified.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

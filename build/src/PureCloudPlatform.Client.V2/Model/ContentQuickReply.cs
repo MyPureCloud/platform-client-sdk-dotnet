@@ -61,12 +61,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \"Message\" which sends a message using the quick reply text.
         /// </summary>
         /// <value>Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \"Message\" which sends a message using the quick reply text.</value>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
+        
+        
         
         
     
@@ -83,12 +88,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Text">Text to show inside the quick reply. This is also used as the response text after clicking on the quick reply. (required).</param>
         /// <param name="Image">Image associated with quick reply.</param>
         /// <param name="Action">Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \&quot;Message\&quot; which sends a message using the quick reply text..</param>
-        public ContentQuickReply(string Id = null, string Text = null, string Image = null, ActionEnum? Action = null)
+        /// <param name="Payload">Payload content for the quick reply..</param>
+        public ContentQuickReply(string Id = null, string Text = null, string Image = null, ActionEnum? Action = null, string Payload = null)
         {
             this.Id = Id;
             this.Text = Text;
             this.Image = Image;
             this.Action = Action;
+            this.Payload = Payload;
             
         }
         
@@ -122,6 +129,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// Payload content for the quick reply.
+        /// </summary>
+        /// <value>Payload content for the quick reply.</value>
+        [DataMember(Name="payload", EmitDefaultValue=false)]
+        public string Payload { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -135,6 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Image: ").Append(Image).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
+            sb.Append("  Payload: ").Append(Payload).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -190,6 +207,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Action == other.Action ||
                     this.Action != null &&
                     this.Action.Equals(other.Action)
+                ) &&
+                (
+                    this.Payload == other.Payload ||
+                    this.Payload != null &&
+                    this.Payload.Equals(other.Payload)
                 );
         }
 
@@ -216,6 +238,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
+                
+                if (this.Payload != null)
+                    hash = hash * 59 + this.Payload.GetHashCode();
                 
                 return hash;
             }

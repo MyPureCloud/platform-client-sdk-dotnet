@@ -112,6 +112,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Rescored,
             
             /// <summary>
+            /// Enum Teamid for "teamId"
+            /// </summary>
+            [EnumMember(Value = "teamId")]
+            Teamid,
+            
+            /// <summary>
             /// Enum Userid for "userId"
             /// </summary>
             [EnumMember(Value = "userId")]

@@ -14,6 +14,7 @@ title: GroupSearchCriteria
 | **Value** | **string** | A value for the search to match against | [optional] |
 | **_Operator** | **string** | How to apply this search criteria against other criteria | [optional] |
 | **Group** | [**List&lt;GroupSearchCriteria&gt;**](GroupSearchCriteria.html) | Groups multiple conditions | [optional] |
+| **DateFormat** | **string** | Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX. | [optional] |
 | **Type** | **string** | Search Type | |
 {: class="table table-striped"}
 

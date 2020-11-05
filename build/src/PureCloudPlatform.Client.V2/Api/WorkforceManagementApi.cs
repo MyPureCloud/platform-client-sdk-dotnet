@@ -233,6 +233,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId);
         
         /// <summary>
+        /// Delete a work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to be deleted</param>
+        /// <returns></returns>
+        void DeleteWorkforcemanagementManagementunitWorkplanrotation (string managementUnitId, string workPlanRotationId);
+
+        /// <summary>
+        /// Delete a work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to be deleted</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo (string managementUnitId, string workPlanRotationId);
+        
+        /// <summary>
         /// Get a list of UserScheduleAdherence records for the requested users
         /// </summary>
         /// <remarks>
@@ -1201,6 +1225,54 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WorkPlan> GetWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId);
         
         /// <summary>
+        /// Get a work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to fetch</param>
+        /// <returns>WorkPlanRotationResponse</returns>
+        WorkPlanRotationResponse GetWorkforcemanagementManagementunitWorkplanrotation (string managementUnitId, string workPlanRotationId);
+
+        /// <summary>
+        /// Get a work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to fetch</param>
+        /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
+        ApiResponse<WorkPlanRotationResponse> GetWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo (string managementUnitId, string workPlanRotationId);
+        
+        /// <summary>
+        /// Get work plan rotations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="expand"> (optional)</param>
+        /// <returns>WorkPlanRotationListResponse</returns>
+        WorkPlanRotationListResponse GetWorkforcemanagementManagementunitWorkplanrotations (string managementUnitId, List<string> expand = null);
+
+        /// <summary>
+        /// Get work plan rotations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="expand"> (optional)</param>
+        /// <returns>ApiResponse of WorkPlanRotationListResponse</returns>
+        ApiResponse<WorkPlanRotationListResponse> GetWorkforcemanagementManagementunitWorkplanrotationsWithHttpInfo (string managementUnitId, List<string> expand = null);
+        
+        /// <summary>
         /// Get work plans
         /// </summary>
         /// <remarks>
@@ -1615,6 +1687,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
         ApiResponse<WorkPlan> PatchWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId, WorkPlan body = null);
+        
+        /// <summary>
+        /// Update a work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>WorkPlanRotationResponse</returns>
+        WorkPlanRotationResponse PatchWorkforcemanagementManagementunitWorkplanrotation (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null);
+
+        /// <summary>
+        /// Update a work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
+        ApiResponse<WorkPlanRotationResponse> PatchWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null);
         
         /// <summary>
         /// Update a time off request for the current user
@@ -2341,6 +2439,56 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ValidateWorkPlanResponse> PostWorkforcemanagementManagementunitWorkplanValidateWithHttpInfo (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null);
         
         /// <summary>
+        /// Create a copy of work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to create a copy</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>WorkPlanRotationResponse</returns>
+        WorkPlanRotationResponse PostWorkforcemanagementManagementunitWorkplanrotationCopy (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null);
+
+        /// <summary>
+        /// Create a copy of work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to create a copy</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
+        ApiResponse<WorkPlanRotationResponse> PostWorkforcemanagementManagementunitWorkplanrotationCopyWithHttpInfo (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null);
+        
+        /// <summary>
+        /// Create a new work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>WorkPlanRotationResponse</returns>
+        WorkPlanRotationResponse PostWorkforcemanagementManagementunitWorkplanrotations (string managementUnitId, AddWorkPlanRotationRequest body = null);
+
+        /// <summary>
+        /// Create a new work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
+        ApiResponse<WorkPlanRotationResponse> PostWorkforcemanagementManagementunitWorkplanrotationsWithHttpInfo (string managementUnitId, AddWorkPlanRotationRequest body = null);
+        
+        /// <summary>
         /// Create a new work plan
         /// </summary>
         /// <remarks>
@@ -2671,6 +2819,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanId">The ID of the work plan to delete</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId);
+        
+        /// <summary>
+        /// Delete a work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to be deleted</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitWorkplanrotationAsync (string managementUnitId, string workPlanRotationId);
+
+        /// <summary>
+        /// Delete a work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to be deleted</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId);
         
         /// <summary>
         /// Get a list of UserScheduleAdherence records for the requested users
@@ -3641,6 +3813,54 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WorkPlan>> GetWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId);
         
         /// <summary>
+        /// Get a work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to fetch</param>
+        /// <returns>Task of WorkPlanRotationResponse</returns>
+        System.Threading.Tasks.Task<WorkPlanRotationResponse> GetWorkforcemanagementManagementunitWorkplanrotationAsync (string managementUnitId, string workPlanRotationId);
+
+        /// <summary>
+        /// Get a work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to fetch</param>
+        /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> GetWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId);
+        
+        /// <summary>
+        /// Get work plan rotations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="expand"> (optional)</param>
+        /// <returns>Task of WorkPlanRotationListResponse</returns>
+        System.Threading.Tasks.Task<WorkPlanRotationListResponse> GetWorkforcemanagementManagementunitWorkplanrotationsAsync (string managementUnitId, List<string> expand = null);
+
+        /// <summary>
+        /// Get work plan rotations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="expand"> (optional)</param>
+        /// <returns>Task of ApiResponse (WorkPlanRotationListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationListResponse>> GetWorkforcemanagementManagementunitWorkplanrotationsAsyncWithHttpInfo (string managementUnitId, List<string> expand = null);
+        
+        /// <summary>
         /// Get work plans
         /// </summary>
         /// <remarks>
@@ -4055,6 +4275,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PatchWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId, WorkPlan body = null);
+        
+        /// <summary>
+        /// Update a work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of WorkPlanRotationResponse</returns>
+        System.Threading.Tasks.Task<WorkPlanRotationResponse> PatchWorkforcemanagementManagementunitWorkplanrotationAsync (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null);
+
+        /// <summary>
+        /// Update a work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> PatchWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null);
         
         /// <summary>
         /// Update a time off request for the current user
@@ -4779,6 +5025,56 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (ValidateWorkPlanResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ValidateWorkPlanResponse>> PostWorkforcemanagementManagementunitWorkplanValidateAsyncWithHttpInfo (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null);
+        
+        /// <summary>
+        /// Create a copy of work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to create a copy</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of WorkPlanRotationResponse</returns>
+        System.Threading.Tasks.Task<WorkPlanRotationResponse> PostWorkforcemanagementManagementunitWorkplanrotationCopyAsync (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null);
+
+        /// <summary>
+        /// Create a copy of work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to create a copy</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> PostWorkforcemanagementManagementunitWorkplanrotationCopyAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null);
+        
+        /// <summary>
+        /// Create a new work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of WorkPlanRotationResponse</returns>
+        System.Threading.Tasks.Task<WorkPlanRotationResponse> PostWorkforcemanagementManagementunitWorkplanrotationsAsync (string managementUnitId, AddWorkPlanRotationRequest body = null);
+
+        /// <summary>
+        /// Create a new work plan rotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> PostWorkforcemanagementManagementunitWorkplanrotationsAsyncWithHttpInfo (string managementUnitId, AddWorkPlanRotationRequest body = null);
         
         /// <summary>
         /// Create a new work plan
@@ -6812,6 +7108,210 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementManagementunitWorkplan: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementManagementunitWorkplan: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete a work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to be deleted</param>
+        /// <returns></returns>
+        public void DeleteWorkforcemanagementManagementunitWorkplanrotation (string managementUnitId, string workPlanRotationId)
+        {
+             DeleteWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo(managementUnitId, workPlanRotationId);
+        }
+
+        /// <summary>
+        /// Delete a work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to be deleted</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo (string managementUnitId, string workPlanRotationId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitWorkplanrotation");
+            // verify the required parameter 'workPlanRotationId' is set
+            if (workPlanRotationId == null)
+                throw new ApiException(400, "Missing required parameter 'workPlanRotationId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitWorkplanrotation");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (workPlanRotationId != null) localVarPathParams.Add("workPlanRotationId", this.Configuration.ApiClient.ParameterToString(workPlanRotationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementManagementunitWorkplanrotation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementManagementunitWorkplanrotation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete a work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to be deleted</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitWorkplanrotationAsync (string managementUnitId, string workPlanRotationId)
+        {
+             await DeleteWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo(managementUnitId, workPlanRotationId);
+
+        }
+
+        /// <summary>
+        /// Delete a work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to be deleted</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitWorkplanrotation");
+            
+            // verify the required parameter 'workPlanRotationId' is set
+            if (workPlanRotationId == null)
+                throw new ApiException(400, "Missing required parameter 'workPlanRotationId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitWorkplanrotation");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (workPlanRotationId != null) localVarPathParams.Add("workPlanRotationId", this.Configuration.ApiClient.ParameterToString(workPlanRotationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementManagementunitWorkplanrotation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementManagementunitWorkplanrotation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -14904,6 +15404,411 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get a work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to fetch</param>
+        /// <returns>WorkPlanRotationResponse</returns>
+        public WorkPlanRotationResponse GetWorkforcemanagementManagementunitWorkplanrotation (string managementUnitId, string workPlanRotationId)
+        {
+             ApiResponse<WorkPlanRotationResponse> localVarResponse = GetWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo(managementUnitId, workPlanRotationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to fetch</param>
+        /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
+        public ApiResponse< WorkPlanRotationResponse > GetWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo (string managementUnitId, string workPlanRotationId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWorkplanrotation");
+            // verify the required parameter 'workPlanRotationId' is set
+            if (workPlanRotationId == null)
+                throw new ApiException(400, "Missing required parameter 'workPlanRotationId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWorkplanrotation");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (workPlanRotationId != null) localVarPathParams.Add("workPlanRotationId", this.Configuration.ApiClient.ParameterToString(workPlanRotationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitWorkplanrotation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitWorkplanrotation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkPlanRotationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WorkPlanRotationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkPlanRotationResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to fetch</param>
+        /// <returns>Task of WorkPlanRotationResponse</returns>
+        public async System.Threading.Tasks.Task<WorkPlanRotationResponse> GetWorkforcemanagementManagementunitWorkplanrotationAsync (string managementUnitId, string workPlanRotationId)
+        {
+             ApiResponse<WorkPlanRotationResponse> localVarResponse = await GetWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo(managementUnitId, workPlanRotationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to fetch</param>
+        /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> GetWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWorkplanrotation");
+            
+            // verify the required parameter 'workPlanRotationId' is set
+            if (workPlanRotationId == null)
+                throw new ApiException(400, "Missing required parameter 'workPlanRotationId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWorkplanrotation");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (workPlanRotationId != null) localVarPathParams.Add("workPlanRotationId", this.Configuration.ApiClient.ParameterToString(workPlanRotationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitWorkplanrotation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitWorkplanrotation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkPlanRotationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WorkPlanRotationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkPlanRotationResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get work plan rotations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="expand"> (optional)</param>
+        /// <returns>WorkPlanRotationListResponse</returns>
+        public WorkPlanRotationListResponse GetWorkforcemanagementManagementunitWorkplanrotations (string managementUnitId, List<string> expand = null)
+        {
+             ApiResponse<WorkPlanRotationListResponse> localVarResponse = GetWorkforcemanagementManagementunitWorkplanrotationsWithHttpInfo(managementUnitId, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get work plan rotations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="expand"> (optional)</param>
+        /// <returns>ApiResponse of WorkPlanRotationListResponse</returns>
+        public ApiResponse< WorkPlanRotationListResponse > GetWorkforcemanagementManagementunitWorkplanrotationsWithHttpInfo (string managementUnitId, List<string> expand = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWorkplanrotations");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitWorkplanrotations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitWorkplanrotations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkPlanRotationListResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WorkPlanRotationListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkPlanRotationListResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get work plan rotations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="expand"> (optional)</param>
+        /// <returns>Task of WorkPlanRotationListResponse</returns>
+        public async System.Threading.Tasks.Task<WorkPlanRotationListResponse> GetWorkforcemanagementManagementunitWorkplanrotationsAsync (string managementUnitId, List<string> expand = null)
+        {
+             ApiResponse<WorkPlanRotationListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWorkplanrotationsAsyncWithHttpInfo(managementUnitId, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get work plan rotations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="expand"> (optional)</param>
+        /// <returns>Task of ApiResponse (WorkPlanRotationListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationListResponse>> GetWorkforcemanagementManagementunitWorkplanrotationsAsyncWithHttpInfo (string managementUnitId, List<string> expand = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWorkplanrotations");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitWorkplanrotations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitWorkplanrotations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkPlanRotationListResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WorkPlanRotationListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkPlanRotationListResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get work plans 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -18409,6 +19314,226 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<WorkPlan>(localVarStatusCode,
                 localVarHeaders,
                 (WorkPlan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkPlan)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update a work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>WorkPlanRotationResponse</returns>
+        public WorkPlanRotationResponse PatchWorkforcemanagementManagementunitWorkplanrotation (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null)
+        {
+             ApiResponse<WorkPlanRotationResponse> localVarResponse = PatchWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo(managementUnitId, workPlanRotationId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
+        public ApiResponse< WorkPlanRotationResponse > PatchWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitWorkplanrotation");
+            // verify the required parameter 'workPlanRotationId' is set
+            if (workPlanRotationId == null)
+                throw new ApiException(400, "Missing required parameter 'workPlanRotationId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitWorkplanrotation");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (workPlanRotationId != null) localVarPathParams.Add("workPlanRotationId", this.Configuration.ApiClient.ParameterToString(workPlanRotationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitWorkplanrotation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitWorkplanrotation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkPlanRotationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WorkPlanRotationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkPlanRotationResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update a work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of WorkPlanRotationResponse</returns>
+        public async System.Threading.Tasks.Task<WorkPlanRotationResponse> PatchWorkforcemanagementManagementunitWorkplanrotationAsync (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null)
+        {
+             ApiResponse<WorkPlanRotationResponse> localVarResponse = await PatchWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo(managementUnitId, workPlanRotationId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> PatchWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitWorkplanrotation");
+            
+            // verify the required parameter 'workPlanRotationId' is set
+            if (workPlanRotationId == null)
+                throw new ApiException(400, "Missing required parameter 'workPlanRotationId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitWorkplanrotation");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (workPlanRotationId != null) localVarPathParams.Add("workPlanRotationId", this.Configuration.ApiClient.ParameterToString(workPlanRotationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitWorkplanrotation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitWorkplanrotation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkPlanRotationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WorkPlanRotationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkPlanRotationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -24543,6 +25668,433 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ValidateWorkPlanResponse>(localVarStatusCode,
                 localVarHeaders,
                 (ValidateWorkPlanResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateWorkPlanResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Create a copy of work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to create a copy</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>WorkPlanRotationResponse</returns>
+        public WorkPlanRotationResponse PostWorkforcemanagementManagementunitWorkplanrotationCopy (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null)
+        {
+             ApiResponse<WorkPlanRotationResponse> localVarResponse = PostWorkforcemanagementManagementunitWorkplanrotationCopyWithHttpInfo(managementUnitId, workPlanRotationId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a copy of work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to create a copy</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
+        public ApiResponse< WorkPlanRotationResponse > PostWorkforcemanagementManagementunitWorkplanrotationCopyWithHttpInfo (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplanrotationCopy");
+            // verify the required parameter 'workPlanRotationId' is set
+            if (workPlanRotationId == null)
+                throw new ApiException(400, "Missing required parameter 'workPlanRotationId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplanrotationCopy");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}/copy";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (workPlanRotationId != null) localVarPathParams.Add("workPlanRotationId", this.Configuration.ApiClient.ParameterToString(workPlanRotationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWorkplanrotationCopy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWorkplanrotationCopy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkPlanRotationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WorkPlanRotationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkPlanRotationResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Create a copy of work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to create a copy</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of WorkPlanRotationResponse</returns>
+        public async System.Threading.Tasks.Task<WorkPlanRotationResponse> PostWorkforcemanagementManagementunitWorkplanrotationCopyAsync (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null)
+        {
+             ApiResponse<WorkPlanRotationResponse> localVarResponse = await PostWorkforcemanagementManagementunitWorkplanrotationCopyAsyncWithHttpInfo(managementUnitId, workPlanRotationId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a copy of work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanRotationId">The ID of the work plan rotation to create a copy</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> PostWorkforcemanagementManagementunitWorkplanrotationCopyAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplanrotationCopy");
+            
+            // verify the required parameter 'workPlanRotationId' is set
+            if (workPlanRotationId == null)
+                throw new ApiException(400, "Missing required parameter 'workPlanRotationId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplanrotationCopy");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}/copy";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (workPlanRotationId != null) localVarPathParams.Add("workPlanRotationId", this.Configuration.ApiClient.ParameterToString(workPlanRotationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWorkplanrotationCopy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWorkplanrotationCopy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkPlanRotationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WorkPlanRotationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkPlanRotationResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Create a new work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>WorkPlanRotationResponse</returns>
+        public WorkPlanRotationResponse PostWorkforcemanagementManagementunitWorkplanrotations (string managementUnitId, AddWorkPlanRotationRequest body = null)
+        {
+             ApiResponse<WorkPlanRotationResponse> localVarResponse = PostWorkforcemanagementManagementunitWorkplanrotationsWithHttpInfo(managementUnitId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
+        public ApiResponse< WorkPlanRotationResponse > PostWorkforcemanagementManagementunitWorkplanrotationsWithHttpInfo (string managementUnitId, AddWorkPlanRotationRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplanrotations");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWorkplanrotations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWorkplanrotations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkPlanRotationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WorkPlanRotationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkPlanRotationResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Create a new work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of WorkPlanRotationResponse</returns>
+        public async System.Threading.Tasks.Task<WorkPlanRotationResponse> PostWorkforcemanagementManagementunitWorkplanrotationsAsync (string managementUnitId, AddWorkPlanRotationRequest body = null)
+        {
+             ApiResponse<WorkPlanRotationResponse> localVarResponse = await PostWorkforcemanagementManagementunitWorkplanrotationsAsyncWithHttpInfo(managementUnitId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a new work plan rotation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> PostWorkforcemanagementManagementunitWorkplanrotationsAsyncWithHttpInfo (string managementUnitId, AddWorkPlanRotationRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplanrotations");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWorkplanrotations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWorkplanrotations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkPlanRotationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WorkPlanRotationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkPlanRotationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

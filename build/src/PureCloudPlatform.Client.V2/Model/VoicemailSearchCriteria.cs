@@ -75,6 +75,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Search Type
         /// </summary>
@@ -164,6 +167,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Search Type
         /// </summary>
@@ -189,8 +194,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Value">A value for the search to match against.</param>
         /// <param name="_Operator">How to apply this search criteria against other criteria.</param>
         /// <param name="Group">Groups multiple conditions.</param>
+        /// <param name="DateFormat">Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX..</param>
         /// <param name="Type">Search Type (required).</param>
-        public VoicemailSearchCriteria(string EndValue = null, List<string> Values = null, string StartValue = null, List<string> Fields = null, string Value = null, OperatorEnum? _Operator = null, List<VoicemailSearchCriteria> Group = null, TypeEnum? Type = null)
+        public VoicemailSearchCriteria(string EndValue = null, List<string> Values = null, string StartValue = null, List<string> Fields = null, string Value = null, OperatorEnum? _Operator = null, List<VoicemailSearchCriteria> Group = null, string DateFormat = null, TypeEnum? Type = null)
         {
             this.EndValue = EndValue;
             this.Values = Values;
@@ -199,6 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Value = Value;
             this._Operator = _Operator;
             this.Group = Group;
+            this.DateFormat = DateFormat;
             this.Type = Type;
             
         }
@@ -261,6 +268,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX.
+        /// </summary>
+        /// <value>Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX.</value>
+        [DataMember(Name="dateFormat", EmitDefaultValue=false)]
+        public string DateFormat { get; set; }
+        
+        
+        
         
         /// <summary>
         /// Returns the string presentation of the object
@@ -278,6 +294,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
             sb.Append("  Group: ").Append(Group).Append("\n");
+            sb.Append("  DateFormat: ").Append(DateFormat).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -351,6 +368,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Group.SequenceEqual(other.Group)
                 ) &&
                 (
+                    this.DateFormat == other.DateFormat ||
+                    this.DateFormat != null &&
+                    this.DateFormat.Equals(other.DateFormat)
+                ) &&
+                (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
@@ -389,6 +411,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Group != null)
                     hash = hash * 59 + this.Group.GetHashCode();
+                
+                if (this.DateFormat != null)
+                    hash = hash * 59 + this.DateFormat.GetHashCode();
                 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();

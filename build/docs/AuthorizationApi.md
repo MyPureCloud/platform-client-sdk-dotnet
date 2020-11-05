@@ -740,7 +740,7 @@ namespace Example
 
 <a name="getauthorizationpermissions"></a>
 
-## [**PermissionCollectionEntityListing**](PermissionCollectionEntityListing.html) GetAuthorizationPermissions (int? pageSize = null, int? pageNumber = null)
+## [**PermissionCollectionEntityListing**](PermissionCollectionEntityListing.html) GetAuthorizationPermissions (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
 
 
 
@@ -771,11 +771,13 @@ namespace Example
             var apiInstance = new AuthorizationApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var queryType = queryType_example;  // string | Query filter type (optional) 
+            var query = query_example;  // string | Comma-separated list of permissions or domains to query (optional) 
 
             try
             { 
                 // Get all permissions.
-                PermissionCollectionEntityListing result = apiInstance.GetAuthorizationPermissions(pageSize, pageNumber);
+                PermissionCollectionEntityListing result = apiInstance.GetAuthorizationPermissions(pageSize, pageNumber, queryType, query);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -794,6 +796,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **queryType** | **string**| Query filter type | [optional] <br />**Values**: domain, permission |
+| **query** | **string**| Comma-separated list of permissions or domains to query | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

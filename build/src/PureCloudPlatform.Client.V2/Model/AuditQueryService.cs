@@ -36,6 +36,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Architect for "Architect"
+            /// </summary>
+            [EnumMember(Value = "Architect")]
+            Architect,
+            
+            /// <summary>
             /// Enum Contactcenter for "ContactCenter"
             /// </summary>
             [EnumMember(Value = "ContactCenter")]
@@ -93,7 +99,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Responsemanagement for "ResponseManagement"
             /// </summary>
             [EnumMember(Value = "ResponseManagement")]
-            Responsemanagement
+            Responsemanagement,
+            
+            /// <summary>
+            /// Enum Groups for "Groups"
+            /// </summary>
+            [EnumMember(Value = "Groups")]
+            Groups
         }
         
         

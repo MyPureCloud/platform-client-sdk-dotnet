@@ -109,6 +109,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Ani,
             
             /// <summary>
+            /// Enum Assignerid for "assignerId"
+            /// </summary>
+            [EnumMember(Value = "assignerId")]
+            Assignerid,
+            
+            /// <summary>
             /// Enum Conversationid for "conversationId"
             /// </summary>
             [EnumMember(Value = "conversationId")]
@@ -197,6 +203,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "externalOrganizationId")]
             Externalorganizationid,
+            
+            /// <summary>
+            /// Enum Firstqueue for "firstQueue"
+            /// </summary>
+            [EnumMember(Value = "firstQueue")]
+            Firstqueue,
             
             /// <summary>
             /// Enum Flaggedreason for "flaggedReason"

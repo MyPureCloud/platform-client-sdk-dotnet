@@ -438,6 +438,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The session media type
         /// </summary>
@@ -585,6 +591,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsSession" /> class.
@@ -649,7 +659,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SelectedAgentRank">Selected agent GPR rank.</param>
         /// <param name="AgentAssistantId">Unique identifier of the active virtual agent assistant.</param>
         /// <param name="ProposedAgents">Proposed agents.</param>
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string SessionDnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, bool? Recording = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string JourneyActionId = null, string JourneyActionMapId = null, string JourneyActionMapVersion = null, string ProtocolCallId = null, string Provider = null, string Remote = null, int? MediaCount = null, string FlowInType = null, string FlowOutType = null, List<RequestedRoutingsEnum> RequestedRoutings = null, UsedRoutingEnum? UsedRouting = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string AgentAssistantId = null, List<AnalyticsProposedAgent> ProposedAgents = null)
+        /// <param name="AssignerId">ID of the user that manually assigned a conversation.</param>
+        /// <param name="AcwSkipped">Marker for an agent that skipped after call work.</param>
+        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string SessionDnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, bool? Recording = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string JourneyActionId = null, string JourneyActionMapId = null, string JourneyActionMapVersion = null, string ProtocolCallId = null, string Provider = null, string Remote = null, int? MediaCount = null, string FlowInType = null, string FlowOutType = null, List<RequestedRoutingsEnum> RequestedRoutings = null, UsedRoutingEnum? UsedRouting = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string AgentAssistantId = null, List<AnalyticsProposedAgent> ProposedAgents = null, string AssignerId = null, bool? AcwSkipped = null)
         {
             this.MediaType = MediaType;
             this.SessionId = SessionId;
@@ -711,6 +723,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SelectedAgentRank = SelectedAgentRank;
             this.AgentAssistantId = AgentAssistantId;
             this.ProposedAgents = ProposedAgents;
+            this.AssignerId = AssignerId;
+            this.AcwSkipped = AcwSkipped;
             
         }
         
@@ -1220,6 +1234,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<AnalyticsProposedAgent> ProposedAgents { get; set; }
         
         
+        
+        /// <summary>
+        /// ID of the user that manually assigned a conversation
+        /// </summary>
+        /// <value>ID of the user that manually assigned a conversation</value>
+        [DataMember(Name="assignerId", EmitDefaultValue=false)]
+        public string AssignerId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Marker for an agent that skipped after call work
+        /// </summary>
+        /// <value>Marker for an agent that skipped after call work</value>
+        [DataMember(Name="acwSkipped", EmitDefaultValue=false)]
+        public bool? AcwSkipped { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1289,6 +1321,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SelectedAgentRank: ").Append(SelectedAgentRank).Append("\n");
             sb.Append("  AgentAssistantId: ").Append(AgentAssistantId).Append("\n");
             sb.Append("  ProposedAgents: ").Append(ProposedAgents).Append("\n");
+            sb.Append("  AssignerId: ").Append(AssignerId).Append("\n");
+            sb.Append("  AcwSkipped: ").Append(AcwSkipped).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1624,6 +1658,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ProposedAgents == other.ProposedAgents ||
                     this.ProposedAgents != null &&
                     this.ProposedAgents.SequenceEqual(other.ProposedAgents)
+                ) &&
+                (
+                    this.AssignerId == other.AssignerId ||
+                    this.AssignerId != null &&
+                    this.AssignerId.Equals(other.AssignerId)
+                ) &&
+                (
+                    this.AcwSkipped == other.AcwSkipped ||
+                    this.AcwSkipped != null &&
+                    this.AcwSkipped.Equals(other.AcwSkipped)
                 );
         }
 
@@ -1818,6 +1862,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ProposedAgents != null)
                     hash = hash * 59 + this.ProposedAgents.GetHashCode();
+                
+                if (this.AssignerId != null)
+                    hash = hash * 59 + this.AssignerId.GetHashCode();
+                
+                if (this.AcwSkipped != null)
+                    hash = hash * 59 + this.AcwSkipped.GetHashCode();
                 
                 return hash;
             }

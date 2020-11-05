@@ -29,13 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
-        /// Training status
+        /// Training status.
         /// </summary>
-        /// <value>Training status</value>
+        /// <value>Training status.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StatusEnum
         {
@@ -140,12 +137,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
         /// <summary>
-        /// Training status
+        /// Training status.
         /// </summary>
-        /// <value>Training status</value>
+        /// <value>Training status.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         
@@ -173,11 +168,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeTraining" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="KnowledgeBase">Knowledge base which Training does belong to.</param>
-        public KnowledgeTraining(string Name = null, KnowledgeBase KnowledgeBase = null)
+        /// <param name="KnowledgeBase">Knowledge Base that the training belongs to..</param>
+        public KnowledgeTraining(KnowledgeBase KnowledgeBase = null)
         {
-            this.Name = Name;
             this.KnowledgeBase = KnowledgeBase;
             
         }
@@ -190,14 +183,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
         
         
         
@@ -222,18 +207,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Actual language of the Training
+        /// Language of the documents that are trained.
         /// </summary>
-        /// <value>Actual language of the Training</value>
+        /// <value>Language of the documents that are trained.</value>
         [DataMember(Name="languageCode", EmitDefaultValue=false)]
         public string LanguageCode { get; private set; }
         
         
         
         /// <summary>
-        /// Knowledge base which Training does belong to
+        /// Knowledge Base that the training belongs to.
         /// </summary>
-        /// <value>Knowledge base which Training does belong to</value>
+        /// <value>Knowledge Base that the training belongs to.</value>
         [DataMember(Name="knowledgeBase", EmitDefaultValue=false)]
         public KnowledgeBase KnowledgeBase { get; set; }
         
@@ -277,7 +262,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class KnowledgeTraining {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateTriggered: ").Append(DateTriggered).Append("\n");
             sb.Append("  DateCompleted: ").Append(DateCompleted).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -327,11 +311,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
                 ) &&
                 (
                     this.DateTriggered == other.DateTriggered ||
@@ -394,9 +373,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.DateTriggered != null)
                     hash = hash * 59 + this.DateTriggered.GetHashCode();

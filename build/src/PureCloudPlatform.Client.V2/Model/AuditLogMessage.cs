@@ -48,6 +48,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Architect for "Architect"
+            /// </summary>
+            [EnumMember(Value = "Architect")]
+            Architect,
+            
+            /// <summary>
             /// Enum Contactcenter for "ContactCenter"
             /// </summary>
             [EnumMember(Value = "ContactCenter")]
@@ -105,7 +111,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Responsemanagement for "ResponseManagement"
             /// </summary>
             [EnumMember(Value = "ResponseManagement")]
-            Responsemanagement
+            Responsemanagement,
+            
+            /// <summary>
+            /// Enum Groups for "Groups"
+            /// </summary>
+            [EnumMember(Value = "Groups")]
+            Groups
         }
         
         
@@ -161,6 +173,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Download")]
             Download,
+            
+            /// <summary>
+            /// Enum Upload for "Upload"
+            /// </summary>
+            [EnumMember(Value = "Upload")]
+            Upload,
             
             /// <summary>
             /// Enum Memberadd for "MemberAdd"
@@ -227,6 +245,54 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Unpublish")]
             Unpublish,
+            
+            /// <summary>
+            /// Enum Activate for "Activate"
+            /// </summary>
+            [EnumMember(Value = "Activate")]
+            Activate,
+            
+            /// <summary>
+            /// Enum Checkin for "Checkin"
+            /// </summary>
+            [EnumMember(Value = "Checkin")]
+            Checkin,
+            
+            /// <summary>
+            /// Enum Checkout for "Checkout"
+            /// </summary>
+            [EnumMember(Value = "Checkout")]
+            Checkout,
+            
+            /// <summary>
+            /// Enum Deactivate for "Deactivate"
+            /// </summary>
+            [EnumMember(Value = "Deactivate")]
+            Deactivate,
+            
+            /// <summary>
+            /// Enum Debug for "Debug"
+            /// </summary>
+            [EnumMember(Value = "Debug")]
+            Debug,
+            
+            /// <summary>
+            /// Enum Save for "Save"
+            /// </summary>
+            [EnumMember(Value = "Save")]
+            Save,
+            
+            /// <summary>
+            /// Enum Revert for "Revert"
+            /// </summary>
+            [EnumMember(Value = "Revert")]
+            Revert,
+            
+            /// <summary>
+            /// Enum Transcode for "Transcode"
+            /// </summary>
+            [EnumMember(Value = "Transcode")]
+            Transcode,
             
             /// <summary>
             /// Enum Enable for "Enable"
@@ -422,7 +488,49 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Response for "Response"
             /// </summary>
             [EnumMember(Value = "Response")]
-            Response
+            Response,
+            
+            /// <summary>
+            /// Enum Dependencytrackingbuild for "DependencyTrackingBuild"
+            /// </summary>
+            [EnumMember(Value = "DependencyTrackingBuild")]
+            Dependencytrackingbuild,
+            
+            /// <summary>
+            /// Enum Flow for "Flow"
+            /// </summary>
+            [EnumMember(Value = "Flow")]
+            Flow,
+            
+            /// <summary>
+            /// Enum Prompt for "Prompt"
+            /// </summary>
+            [EnumMember(Value = "Prompt")]
+            Prompt,
+            
+            /// <summary>
+            /// Enum Promptresource for "PromptResource"
+            /// </summary>
+            [EnumMember(Value = "PromptResource")]
+            Promptresource,
+            
+            /// <summary>
+            /// Enum Flowoutcome for "FlowOutcome"
+            /// </summary>
+            [EnumMember(Value = "FlowOutcome")]
+            Flowoutcome,
+            
+            /// <summary>
+            /// Enum Flowmilestone for "FlowMilestone"
+            /// </summary>
+            [EnumMember(Value = "FlowMilestone")]
+            Flowmilestone,
+            
+            /// <summary>
+            /// Enum Team for "Team"
+            /// </summary>
+            [EnumMember(Value = "Team")]
+            Team
         }
         
         
