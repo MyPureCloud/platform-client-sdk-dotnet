@@ -210,8 +210,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
+        /// <param name="title">Filter by document title. (optional)</param>
         /// <returns>DocumentListing</returns>
-        DocumentListing GetKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null);
+        DocumentListing GetKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null);
 
         /// <summary>
         /// Get documents
@@ -227,8 +228,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
+        /// <param name="title">Filter by document title. (optional)</param>
         /// <returns>ApiResponse of DocumentListing</returns>
-        ApiResponse<DocumentListing> GetKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null);
+        ApiResponse<DocumentListing> GetKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null);
         
         /// <summary>
         /// Get training detail
@@ -772,8 +774,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
+        /// <param name="title">Filter by document title. (optional)</param>
         /// <returns>Task of DocumentListing</returns>
-        System.Threading.Tasks.Task<DocumentListing> GetKnowledgeKnowledgebaseLanguageDocumentsAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null);
+        System.Threading.Tasks.Task<DocumentListing> GetKnowledgeKnowledgebaseLanguageDocumentsAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null);
 
         /// <summary>
         /// Get documents
@@ -789,8 +792,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
+        /// <param name="title">Filter by document title. (optional)</param>
         /// <returns>Task of ApiResponse (DocumentListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentListing>> GetKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null);
+        System.Threading.Tasks.Task<ApiResponse<DocumentListing>> GetKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null);
         
         /// <summary>
         /// Get training detail
@@ -2731,10 +2735,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
+        /// <param name="title">Filter by document title. (optional)</param>
         /// <returns>DocumentListing</returns>
-        public DocumentListing GetKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null)
+        public DocumentListing GetKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null)
         {
-             ApiResponse<DocumentListing> localVarResponse = GetKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize, categories);
+             ApiResponse<DocumentListing> localVarResponse = GetKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize, categories, title);
              return localVarResponse.Data;
         }
 
@@ -2749,8 +2754,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
+        /// <param name="title">Filter by document title. (optional)</param>
         /// <returns>ApiResponse of DocumentListing</returns>
-        public ApiResponse< DocumentListing > GetKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null)
+        public ApiResponse< DocumentListing > GetKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -2799,6 +2805,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (categories != null) localVarQueryParams.Add(new Tuple<string, string>("categories", this.Configuration.ApiClient.ParameterToString(categories)));
+            if (title != null) localVarQueryParams.Add(new Tuple<string, string>("title", this.Configuration.ApiClient.ParameterToString(title)));
 
             // Header params
 
@@ -2847,10 +2854,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
+        /// <param name="title">Filter by document title. (optional)</param>
         /// <returns>Task of DocumentListing</returns>
-        public async System.Threading.Tasks.Task<DocumentListing> GetKnowledgeKnowledgebaseLanguageDocumentsAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null)
+        public async System.Threading.Tasks.Task<DocumentListing> GetKnowledgeKnowledgebaseLanguageDocumentsAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null)
         {
-             ApiResponse<DocumentListing> localVarResponse = await GetKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize, categories);
+             ApiResponse<DocumentListing> localVarResponse = await GetKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize, categories, title);
              return localVarResponse.Data;
 
         }
@@ -2866,8 +2874,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
+        /// <param name="title">Filter by document title. (optional)</param>
         /// <returns>Task of ApiResponse (DocumentListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentListing>> GetKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentListing>> GetKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -2918,6 +2927,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (categories != null) localVarQueryParams.Add(new Tuple<string, string>("categories", this.Configuration.ApiClient.ParameterToString(categories)));
+            if (title != null) localVarQueryParams.Add(new Tuple<string, string>("title", this.Configuration.ApiClient.ParameterToString(title)));
 
             // Header params
 

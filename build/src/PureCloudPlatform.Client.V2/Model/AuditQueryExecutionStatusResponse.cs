@@ -163,7 +163,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Groups for "Groups"
             /// </summary>
             [EnumMember(Value = "Groups")]
-            Groups
+            Groups,
+            
+            /// <summary>
+            /// Enum Telephony for "Telephony"
+            /// </summary>
+            [EnumMember(Value = "Telephony")]
+            Telephony
         }
         
         

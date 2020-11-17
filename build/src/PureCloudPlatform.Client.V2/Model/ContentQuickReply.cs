@@ -29,6 +29,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \"Message\" which sends a message using the quick reply text.
         /// </summary>
@@ -63,15 +66,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
         /// <summary>
         /// Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \"Message\" which sends a message using the quick reply text.
         /// </summary>
         /// <value>Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \"Message\" which sends a message using the quick reply text.</value>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
-        
-        
         
         
     
@@ -86,16 +86,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">An ID assigned to the quick reply. Each object inside the content array has a unique ID..</param>
         /// <param name="Text">Text to show inside the quick reply. This is also used as the response text after clicking on the quick reply. (required).</param>
+        /// <param name="Payload">Content of the textback payload after clicking a quick reply.</param>
         /// <param name="Image">Image associated with quick reply.</param>
         /// <param name="Action">Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \&quot;Message\&quot; which sends a message using the quick reply text..</param>
-        /// <param name="Payload">Payload content for the quick reply..</param>
-        public ContentQuickReply(string Id = null, string Text = null, string Image = null, ActionEnum? Action = null, string Payload = null)
+        public ContentQuickReply(string Id = null, string Text = null, string Payload = null, string Image = null, ActionEnum? Action = null)
         {
             this.Id = Id;
             this.Text = Text;
+            this.Payload = Payload;
             this.Image = Image;
             this.Action = Action;
-            this.Payload = Payload;
             
         }
         
@@ -120,6 +120,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Content of the textback payload after clicking a quick reply
+        /// </summary>
+        /// <value>Content of the textback payload after clicking a quick reply</value>
+        [DataMember(Name="payload", EmitDefaultValue=false)]
+        public string Payload { get; set; }
+        
+        
+        
+        /// <summary>
         /// Image associated with quick reply
         /// </summary>
         /// <value>Image associated with quick reply</value>
@@ -127,15 +136,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Image { get; set; }
         
         
-        
-        
-        
-        /// <summary>
-        /// Payload content for the quick reply.
-        /// </summary>
-        /// <value>Payload content for the quick reply.</value>
-        [DataMember(Name="payload", EmitDefaultValue=false)]
-        public string Payload { get; set; }
         
         
         /// <summary>
@@ -149,9 +149,9 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
+            sb.Append("  Payload: ").Append(Payload).Append("\n");
             sb.Append("  Image: ").Append(Image).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
-            sb.Append("  Payload: ").Append(Payload).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -199,6 +199,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Text.Equals(other.Text)
                 ) &&
                 (
+                    this.Payload == other.Payload ||
+                    this.Payload != null &&
+                    this.Payload.Equals(other.Payload)
+                ) &&
+                (
                     this.Image == other.Image ||
                     this.Image != null &&
                     this.Image.Equals(other.Image)
@@ -207,11 +212,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Action == other.Action ||
                     this.Action != null &&
                     this.Action.Equals(other.Action)
-                ) &&
-                (
-                    this.Payload == other.Payload ||
-                    this.Payload != null &&
-                    this.Payload.Equals(other.Payload)
                 );
         }
 
@@ -233,14 +233,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
                 
+                if (this.Payload != null)
+                    hash = hash * 59 + this.Payload.GetHashCode();
+                
                 if (this.Image != null)
                     hash = hash * 59 + this.Image.GetHashCode();
                 
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
-                if (this.Payload != null)
-                    hash = hash * 59 + this.Payload.GetHashCode();
                 
                 return hash;
             }

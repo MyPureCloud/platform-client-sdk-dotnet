@@ -162,6 +162,24 @@ namespace PureCloudPlatform.Client.V2.Model
             Schedule,
             
             /// <summary>
+            /// Enum Schedulegroup for "ScheduleGroup"
+            /// </summary>
+            [EnumMember(Value = "ScheduleGroup")]
+            Schedulegroup,
+            
+            /// <summary>
+            /// Enum Emergencygroup for "EmergencyGroup"
+            /// </summary>
+            [EnumMember(Value = "EmergencyGroup")]
+            Emergencygroup,
+            
+            /// <summary>
+            /// Enum Ivr for "IVR"
+            /// </summary>
+            [EnumMember(Value = "IVR")]
+            Ivr,
+            
+            /// <summary>
             /// Enum Trigger for "Trigger"
             /// </summary>
             [EnumMember(Value = "Trigger")]
@@ -213,7 +231,97 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Team for "Team"
             /// </summary>
             [EnumMember(Value = "Team")]
-            Team
+            Team,
+            
+            /// <summary>
+            /// Enum Edge for "Edge"
+            /// </summary>
+            [EnumMember(Value = "Edge")]
+            Edge,
+            
+            /// <summary>
+            /// Enum Edgegroup for "EdgeGroup"
+            /// </summary>
+            [EnumMember(Value = "EdgeGroup")]
+            Edgegroup,
+            
+            /// <summary>
+            /// Enum Trunk for "Trunk"
+            /// </summary>
+            [EnumMember(Value = "Trunk")]
+            Trunk,
+            
+            /// <summary>
+            /// Enum Trunkbase for "TrunkBase"
+            /// </summary>
+            [EnumMember(Value = "TrunkBase")]
+            Trunkbase,
+            
+            /// <summary>
+            /// Enum Did for "DID"
+            /// </summary>
+            [EnumMember(Value = "DID")]
+            Did,
+            
+            /// <summary>
+            /// Enum Didpool for "DIDPool"
+            /// </summary>
+            [EnumMember(Value = "DIDPool")]
+            Didpool,
+            
+            /// <summary>
+            /// Enum Extension for "Extension"
+            /// </summary>
+            [EnumMember(Value = "Extension")]
+            Extension,
+            
+            /// <summary>
+            /// Enum Extensionpool for "ExtensionPool"
+            /// </summary>
+            [EnumMember(Value = "ExtensionPool")]
+            Extensionpool,
+            
+            /// <summary>
+            /// Enum Phone for "Phone"
+            /// </summary>
+            [EnumMember(Value = "Phone")]
+            Phone,
+            
+            /// <summary>
+            /// Enum Phonebase for "PhoneBase"
+            /// </summary>
+            [EnumMember(Value = "PhoneBase")]
+            Phonebase,
+            
+            /// <summary>
+            /// Enum Line for "Line"
+            /// </summary>
+            [EnumMember(Value = "Line")]
+            Line,
+            
+            /// <summary>
+            /// Enum Linebase for "LineBase"
+            /// </summary>
+            [EnumMember(Value = "LineBase")]
+            Linebase,
+            
+            /// <summary>
+            /// Enum Outboundroute for "OutboundRoute"
+            /// </summary>
+            [EnumMember(Value = "OutboundRoute")]
+            Outboundroute,
+            
+            /// <summary>
+            /// Enum Numberplan for "NumberPlan"
+            /// </summary>
+            [EnumMember(Value = "NumberPlan")]
+            Numberplan,
+            
+            /// <summary>
+            /// Enum Site for "Site"
+            /// </summary>
+            [EnumMember(Value = "Site")]
+            Site
         }
         
         

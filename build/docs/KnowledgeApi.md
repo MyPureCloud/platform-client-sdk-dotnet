@@ -485,7 +485,7 @@ namespace Example
 
 <a name="getknowledgeknowledgebaselanguagedocuments"></a>
 
-## [**DocumentListing**](DocumentListing.html) GetKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null)
+## [**DocumentListing**](DocumentListing.html) GetKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null)
 
 
 
@@ -522,11 +522,12 @@ namespace Example
             var limit = limit_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var categories = categories_example;  // string | Filter by categories ids, comma separated values expected. (optional) 
+            var title = title_example;  // string | Filter by document title. (optional) 
 
             try
             { 
                 // Get documents
-                DocumentListing result = apiInstance.GetKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId, languageCode, before, after, limit, pageSize, categories);
+                DocumentListing result = apiInstance.GetKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId, languageCode, before, after, limit, pageSize, categories, title);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -550,6 +551,7 @@ namespace Example
 | **limit** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **categories** | **string**| Filter by categories ids, comma separated values expected. | [optional]  |
+| **title** | **string**| Filter by document title. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

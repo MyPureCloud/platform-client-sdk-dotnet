@@ -45,11 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmHistoricalAdherenceQueryForUsers" /> class.
@@ -63,16 +58,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartDate">Beginning of the date range to query in ISO-8601 format (required).</param>
         /// <param name="EndDate">End of the date range to query in ISO-8601 format. If it is not set, end date will be set to current time.</param>
         /// <param name="TimeZone">The time zone to use for returned results in olson format. If it is not set, the business unit time zone will be used to compute adherence.</param>
-        /// <param name="UserIds">The userIds to report on. Note: Only one of [teamIds, userIds] can be requested (required).</param>
-        /// <param name="TeamIds">The teamIds to report on. Note: Only one of [teamIds, userIds] can be requested (required).</param>
+        /// <param name="UserIds">The userIds to report on (required).</param>
         /// <param name="IncludeExceptions">Whether user exceptions should be returned as part of the results.</param>
-        public WfmHistoricalAdherenceQueryForUsers(DateTime? StartDate = null, DateTime? EndDate = null, string TimeZone = null, List<string> UserIds = null, List<string> TeamIds = null, bool? IncludeExceptions = null)
+        public WfmHistoricalAdherenceQueryForUsers(DateTime? StartDate = null, DateTime? EndDate = null, string TimeZone = null, List<string> UserIds = null, bool? IncludeExceptions = null)
         {
             this.StartDate = StartDate;
             this.EndDate = EndDate;
             this.TimeZone = TimeZone;
             this.UserIds = UserIds;
-            this.TeamIds = TeamIds;
             this.IncludeExceptions = IncludeExceptions;
             
         }
@@ -107,20 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The userIds to report on. Note: Only one of [teamIds, userIds] can be requested
+        /// The userIds to report on
         /// </summary>
-        /// <value>The userIds to report on. Note: Only one of [teamIds, userIds] can be requested</value>
+        /// <value>The userIds to report on</value>
         [DataMember(Name="userIds", EmitDefaultValue=false)]
         public List<string> UserIds { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The teamIds to report on. Note: Only one of [teamIds, userIds] can be requested
-        /// </summary>
-        /// <value>The teamIds to report on. Note: Only one of [teamIds, userIds] can be requested</value>
-        [DataMember(Name="teamIds", EmitDefaultValue=false)]
-        public List<string> TeamIds { get; set; }
         
         
         
@@ -145,7 +129,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
-            sb.Append("  TeamIds: ").Append(TeamIds).Append("\n");
             sb.Append("  IncludeExceptions: ").Append(IncludeExceptions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -204,11 +187,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UserIds.SequenceEqual(other.UserIds)
                 ) &&
                 (
-                    this.TeamIds == other.TeamIds ||
-                    this.TeamIds != null &&
-                    this.TeamIds.SequenceEqual(other.TeamIds)
-                ) &&
-                (
                     this.IncludeExceptions == other.IncludeExceptions ||
                     this.IncludeExceptions != null &&
                     this.IncludeExceptions.Equals(other.IncludeExceptions)
@@ -238,9 +216,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.UserIds != null)
                     hash = hash * 59 + this.UserIds.GetHashCode();
-                
-                if (this.TeamIds != null)
-                    hash = hash * 59 + this.TeamIds.GetHashCode();
                 
                 if (this.IncludeExceptions != null)
                     hash = hash * 59 + this.IncludeExceptions.GetHashCode();

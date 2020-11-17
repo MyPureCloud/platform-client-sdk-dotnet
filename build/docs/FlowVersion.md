@@ -22,7 +22,8 @@ title: FlowVersion
 | **PublishResultUri** | **string** |  | [optional] |
 | **InputSchema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) |  | [optional] |
 | **OutputSchema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) |  | [optional] |
-| **NluInfo** | [**NluInfo**](NluInfo.html) | Information about the NLU domain version for the flow version | [optional] |
+| **NluInfo** | [**NluInfo**](NluInfo.html) | Information about the natural language understanding configuration for the flow version | [optional] |
+| **SupportedLanguages** | [**List&lt;SupportedLanguage&gt;**](SupportedLanguage.html) | List of supported languages for this version of the flow | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

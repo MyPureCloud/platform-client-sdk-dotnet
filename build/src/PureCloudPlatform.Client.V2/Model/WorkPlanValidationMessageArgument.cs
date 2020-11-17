@@ -36,10 +36,64 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Activityid for "ActivityId"
+            /// </summary>
+            [EnumMember(Value = "ActivityId")]
+            Activityid,
+            
+            /// <summary>
+            /// Enum Activityid2 for "ActivityId2"
+            /// </summary>
+            [EnumMember(Value = "ActivityId2")]
+            Activityid2,
+            
+            /// <summary>
+            /// Enum Activitypaidtimeminutes for "ActivityPaidTimeMinutes"
+            /// </summary>
+            [EnumMember(Value = "ActivityPaidTimeMinutes")]
+            Activitypaidtimeminutes,
+            
+            /// <summary>
+            /// Enum Activitystarttimeminutes for "ActivityStartTimeMinutes"
+            /// </summary>
+            [EnumMember(Value = "ActivityStartTimeMinutes")]
+            Activitystarttimeminutes,
+            
+            /// <summary>
+            /// Enum Activityvalidationid for "ActivityValidationId"
+            /// </summary>
+            [EnumMember(Value = "ActivityValidationId")]
+            Activityvalidationid,
+            
+            /// <summary>
+            /// Enum Activityvalidationid2 for "ActivityValidationId2"
+            /// </summary>
+            [EnumMember(Value = "ActivityValidationId2")]
+            Activityvalidationid2,
+            
+            /// <summary>
+            /// Enum Applicabledays for "ApplicableDays"
+            /// </summary>
+            [EnumMember(Value = "ApplicableDays")]
+            Applicabledays,
+            
+            /// <summary>
             /// Enum Count for "Count"
             /// </summary>
             [EnumMember(Value = "Count")]
             Count,
+            
+            /// <summary>
+            /// Enum Dailypaidtimeminutes for "DailyPaidTimeMinutes"
+            /// </summary>
+            [EnumMember(Value = "DailyPaidTimeMinutes")]
+            Dailypaidtimeminutes,
+            
+            /// <summary>
+            /// Enum Maximumdays for "MaximumDays"
+            /// </summary>
+            [EnumMember(Value = "MaximumDays")]
+            Maximumdays,
             
             /// <summary>
             /// Enum Maxshiftcount for "MaxShiftCount"
@@ -54,10 +108,64 @@ namespace PureCloudPlatform.Client.V2.Model
             Minutes,
             
             /// <summary>
+            /// Enum Paidtimegranularityminutes for "PaidTimeGranularityMinutes"
+            /// </summary>
+            [EnumMember(Value = "PaidTimeGranularityMinutes")]
+            Paidtimegranularityminutes,
+            
+            /// <summary>
+            /// Enum Requireddays for "RequiredDays"
+            /// </summary>
+            [EnumMember(Value = "RequiredDays")]
+            Requireddays,
+            
+            /// <summary>
             /// Enum Shiftid for "ShiftId"
             /// </summary>
             [EnumMember(Value = "ShiftId")]
-            Shiftid
+            Shiftid,
+            
+            /// <summary>
+            /// Enum Shiftpaidtimeminutes for "ShiftPaidTimeMinutes"
+            /// </summary>
+            [EnumMember(Value = "ShiftPaidTimeMinutes")]
+            Shiftpaidtimeminutes,
+            
+            /// <summary>
+            /// Enum Shiftstarttimeminutes for "ShiftStartTimeMinutes"
+            /// </summary>
+            [EnumMember(Value = "ShiftStartTimeMinutes")]
+            Shiftstarttimeminutes,
+            
+            /// <summary>
+            /// Enum Shiftstoptimeminutes for "ShiftStopTimeMinutes"
+            /// </summary>
+            [EnumMember(Value = "ShiftStopTimeMinutes")]
+            Shiftstoptimeminutes,
+            
+            /// <summary>
+            /// Enum Shiftvalidationid for "ShiftValidationId"
+            /// </summary>
+            [EnumMember(Value = "ShiftValidationId")]
+            Shiftvalidationid,
+            
+            /// <summary>
+            /// Enum Weeklypaidtimeminutes for "WeeklyPaidTimeMinutes"
+            /// </summary>
+            [EnumMember(Value = "WeeklyPaidTimeMinutes")]
+            Weeklypaidtimeminutes,
+            
+            /// <summary>
+            /// Enum Weeks for "Weeks"
+            /// </summary>
+            [EnumMember(Value = "Weeks")]
+            Weeks,
+            
+            /// <summary>
+            /// Enum Worktimeminutes for "WorkTimeMinutes"
+            /// </summary>
+            [EnumMember(Value = "WorkTimeMinutes")]
+            Worktimeminutes
         }
         
         

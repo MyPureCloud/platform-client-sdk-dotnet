@@ -1672,8 +1672,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to update</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
         /// <returns>WorkPlan</returns>
-        WorkPlan PatchWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, WorkPlan body = null);
+        WorkPlan PatchWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, WorkPlan body = null, string validationMode = null);
 
         /// <summary>
         /// Update a work plan
@@ -1685,8 +1686,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to update</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
-        ApiResponse<WorkPlan> PatchWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId, WorkPlan body = null);
+        ApiResponse<WorkPlan> PatchWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId, WorkPlan body = null, string validationMode = null);
         
         /// <summary>
         /// Update a work plan rotation
@@ -2497,8 +2499,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
         /// <returns>WorkPlan</returns>
-        WorkPlan PostWorkforcemanagementManagementunitWorkplans (string managementUnitId, CreateWorkPlan body = null);
+        WorkPlan PostWorkforcemanagementManagementunitWorkplans (string managementUnitId, CreateWorkPlan body = null, string validationMode = null);
 
         /// <summary>
         /// Create a new work plan
@@ -2509,8 +2512,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
-        ApiResponse<WorkPlan> PostWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, CreateWorkPlan body = null);
+        ApiResponse<WorkPlan> PostWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, CreateWorkPlan body = null, string validationMode = null);
         
         /// <summary>
         /// Add a management unit
@@ -4260,8 +4264,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to update</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
         /// <returns>Task of WorkPlan</returns>
-        System.Threading.Tasks.Task<WorkPlan> PatchWorkforcemanagementManagementunitWorkplanAsync (string managementUnitId, string workPlanId, WorkPlan body = null);
+        System.Threading.Tasks.Task<WorkPlan> PatchWorkforcemanagementManagementunitWorkplanAsync (string managementUnitId, string workPlanId, WorkPlan body = null, string validationMode = null);
 
         /// <summary>
         /// Update a work plan
@@ -4273,8 +4278,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to update</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PatchWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId, WorkPlan body = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PatchWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId, WorkPlan body = null, string validationMode = null);
         
         /// <summary>
         /// Update a work plan rotation
@@ -5085,8 +5091,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
         /// <returns>Task of WorkPlan</returns>
-        System.Threading.Tasks.Task<WorkPlan> PostWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, CreateWorkPlan body = null);
+        System.Threading.Tasks.Task<WorkPlan> PostWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, CreateWorkPlan body = null, string validationMode = null);
 
         /// <summary>
         /// Create a new work plan
@@ -5097,8 +5104,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PostWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, CreateWorkPlan body = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PostWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, CreateWorkPlan body = null, string validationMode = null);
         
         /// <summary>
         /// Add a management unit
@@ -19107,10 +19115,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to update</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
         /// <returns>WorkPlan</returns>
-        public WorkPlan PatchWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, WorkPlan body = null)
+        public WorkPlan PatchWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, WorkPlan body = null, string validationMode = null)
         {
-             ApiResponse<WorkPlan> localVarResponse = PatchWorkforcemanagementManagementunitWorkplanWithHttpInfo(managementUnitId, workPlanId, body);
+             ApiResponse<WorkPlan> localVarResponse = PatchWorkforcemanagementManagementunitWorkplanWithHttpInfo(managementUnitId, workPlanId, body, validationMode);
              return localVarResponse.Data;
         }
 
@@ -19121,8 +19130,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to update</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
-        public ApiResponse< WorkPlan > PatchWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId, WorkPlan body = null)
+        public ApiResponse< WorkPlan > PatchWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId, WorkPlan body = null, string validationMode = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -19166,6 +19176,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (workPlanId != null) localVarPathParams.Add("workPlanId", this.Configuration.ApiClient.ParameterToString(workPlanId));
 
             // Query params
+            if (validationMode != null) localVarQueryParams.Add(new Tuple<string, string>("validationMode", this.Configuration.ApiClient.ParameterToString(validationMode)));
 
             // Header params
 
@@ -19215,10 +19226,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to update</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
         /// <returns>Task of WorkPlan</returns>
-        public async System.Threading.Tasks.Task<WorkPlan> PatchWorkforcemanagementManagementunitWorkplanAsync (string managementUnitId, string workPlanId, WorkPlan body = null)
+        public async System.Threading.Tasks.Task<WorkPlan> PatchWorkforcemanagementManagementunitWorkplanAsync (string managementUnitId, string workPlanId, WorkPlan body = null, string validationMode = null)
         {
-             ApiResponse<WorkPlan> localVarResponse = await PatchWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo(managementUnitId, workPlanId, body);
+             ApiResponse<WorkPlan> localVarResponse = await PatchWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo(managementUnitId, workPlanId, body, validationMode);
              return localVarResponse.Data;
 
         }
@@ -19230,8 +19242,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to update</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PatchWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId, WorkPlan body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PatchWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId, WorkPlan body = null, string validationMode = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -19277,6 +19290,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (workPlanId != null) localVarPathParams.Add("workPlanId", this.Configuration.ApiClient.ParameterToString(workPlanId));
 
             // Query params
+            if (validationMode != null) localVarQueryParams.Add(new Tuple<string, string>("validationMode", this.Configuration.ApiClient.ParameterToString(validationMode)));
 
             // Header params
 
@@ -26107,10 +26121,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
         /// <returns>WorkPlan</returns>
-        public WorkPlan PostWorkforcemanagementManagementunitWorkplans (string managementUnitId, CreateWorkPlan body = null)
+        public WorkPlan PostWorkforcemanagementManagementunitWorkplans (string managementUnitId, CreateWorkPlan body = null, string validationMode = null)
         {
-             ApiResponse<WorkPlan> localVarResponse = PostWorkforcemanagementManagementunitWorkplansWithHttpInfo(managementUnitId, body);
+             ApiResponse<WorkPlan> localVarResponse = PostWorkforcemanagementManagementunitWorkplansWithHttpInfo(managementUnitId, body, validationMode);
              return localVarResponse.Data;
         }
 
@@ -26120,8 +26135,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
-        public ApiResponse< WorkPlan > PostWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, CreateWorkPlan body = null)
+        public ApiResponse< WorkPlan > PostWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, CreateWorkPlan body = null, string validationMode = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -26161,6 +26177,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
+            if (validationMode != null) localVarQueryParams.Add(new Tuple<string, string>("validationMode", this.Configuration.ApiClient.ParameterToString(validationMode)));
 
             // Header params
 
@@ -26209,10 +26226,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
         /// <returns>Task of WorkPlan</returns>
-        public async System.Threading.Tasks.Task<WorkPlan> PostWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, CreateWorkPlan body = null)
+        public async System.Threading.Tasks.Task<WorkPlan> PostWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, CreateWorkPlan body = null, string validationMode = null)
         {
-             ApiResponse<WorkPlan> localVarResponse = await PostWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo(managementUnitId, body);
+             ApiResponse<WorkPlan> localVarResponse = await PostWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo(managementUnitId, body, validationMode);
              return localVarResponse.Data;
 
         }
@@ -26223,8 +26241,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PostWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, CreateWorkPlan body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PostWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, CreateWorkPlan body = null, string validationMode = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -26265,6 +26284,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
+            if (validationMode != null) localVarQueryParams.Add(new Tuple<string, string>("validationMode", this.Configuration.ApiClient.ParameterToString(validationMode)));
 
             // Header params
 

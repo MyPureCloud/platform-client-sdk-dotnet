@@ -113,11 +113,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
         
         
         
@@ -163,8 +168,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PublishResultUri">PublishResultUri.</param>
         /// <param name="InputSchema">InputSchema.</param>
         /// <param name="OutputSchema">OutputSchema.</param>
-        /// <param name="NluInfo">Information about the NLU domain version for the flow version.</param>
-        public FlowVersion(string Id = null, string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, bool? Secure = null, bool? Debug = null, User CreatedBy = null, DomainEntityRef CreatedByClient = null, string ConfigurationUri = null, long? DateCreated = null, string GenerationId = null, string PublishResultUri = null, JsonSchemaDocument InputSchema = null, JsonSchemaDocument OutputSchema = null, NluInfo NluInfo = null)
+        /// <param name="NluInfo">Information about the natural language understanding configuration for the flow version.</param>
+        /// <param name="SupportedLanguages">List of supported languages for this version of the flow.</param>
+        public FlowVersion(string Id = null, string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, bool? Secure = null, bool? Debug = null, User CreatedBy = null, DomainEntityRef CreatedByClient = null, string ConfigurationUri = null, long? DateCreated = null, string GenerationId = null, string PublishResultUri = null, JsonSchemaDocument InputSchema = null, JsonSchemaDocument OutputSchema = null, NluInfo NluInfo = null, List<SupportedLanguage> SupportedLanguages = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -182,6 +188,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.InputSchema = InputSchema;
             this.OutputSchema = OutputSchema;
             this.NluInfo = NluInfo;
+            this.SupportedLanguages = SupportedLanguages;
             
         }
         
@@ -303,11 +310,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Information about the NLU domain version for the flow version
+        /// Information about the natural language understanding configuration for the flow version
         /// </summary>
-        /// <value>Information about the NLU domain version for the flow version</value>
+        /// <value>Information about the natural language understanding configuration for the flow version</value>
         [DataMember(Name="nluInfo", EmitDefaultValue=false)]
         public NluInfo NluInfo { get; set; }
+        
+        
+        
+        /// <summary>
+        /// List of supported languages for this version of the flow
+        /// </summary>
+        /// <value>List of supported languages for this version of the flow</value>
+        [DataMember(Name="supportedLanguages", EmitDefaultValue=false)]
+        public List<SupportedLanguage> SupportedLanguages { get; set; }
         
         
         
@@ -344,6 +360,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  InputSchema: ").Append(InputSchema).Append("\n");
             sb.Append("  OutputSchema: ").Append(OutputSchema).Append("\n");
             sb.Append("  NluInfo: ").Append(NluInfo).Append("\n");
+            sb.Append("  SupportedLanguages: ").Append(SupportedLanguages).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -462,6 +479,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.NluInfo.Equals(other.NluInfo)
                 ) &&
                 (
+                    this.SupportedLanguages == other.SupportedLanguages ||
+                    this.SupportedLanguages != null &&
+                    this.SupportedLanguages.SequenceEqual(other.SupportedLanguages)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -527,6 +549,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.NluInfo != null)
                     hash = hash * 59 + this.NluInfo.GetHashCode();
+                
+                if (this.SupportedLanguages != null)
+                    hash = hash * 59 + this.SupportedLanguages.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

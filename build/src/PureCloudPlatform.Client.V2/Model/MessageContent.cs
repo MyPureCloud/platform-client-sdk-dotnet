@@ -69,8 +69,35 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Listtemplate for "ListTemplate"
             /// </summary>
             [EnumMember(Value = "ListTemplate")]
-            Listtemplate
+            Listtemplate,
+            
+            /// <summary>
+            /// Enum Postback for "Postback"
+            /// </summary>
+            [EnumMember(Value = "Postback")]
+            Postback,
+            
+            /// <summary>
+            /// Enum Reactions for "Reactions"
+            /// </summary>
+            [EnumMember(Value = "Reactions")]
+            Reactions,
+            
+            /// <summary>
+            /// Enum Mention for "Mention"
+            /// </summary>
+            [EnumMember(Value = "Mention")]
+            Mention
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -114,6 +141,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageContent" /> class.
@@ -131,7 +164,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Generic">Generic content object.</param>
         /// <param name="List">List content object.</param>
         /// <param name="Template">Template notification object.</param>
-        public MessageContent(ContentTypeEnum? ContentType = null, ContentLocation Location = null, ContentAttachment Attachment = null, ContentQuickReply QuickReply = null, ContentGeneric Generic = null, ContentList List = null, ContentNotificationTemplate Template = null)
+        /// <param name="Reactions">A list of reactions.</param>
+        /// <param name="Mention">This is used to identify who the message is sent to, as well as who it was sent from. This information is channel specific - depends on capabilities to describe party by the platform.</param>
+        /// <param name="Postback">The postback object result of a user clicking in a button.</param>
+        public MessageContent(ContentTypeEnum? ContentType = null, ContentLocation Location = null, ContentAttachment Attachment = null, ContentQuickReply QuickReply = null, ContentGeneric Generic = null, ContentList List = null, ContentNotificationTemplate Template = null, List<ContentReaction> Reactions = null, MessagingRecipient Mention = null, ContentPostback Postback = null)
         {
             this.ContentType = ContentType;
             this.Location = Location;
@@ -140,6 +176,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Generic = Generic;
             this.List = List;
             this.Template = Template;
+            this.Reactions = Reactions;
+            this.Mention = Mention;
+            this.Postback = Postback;
             
         }
         
@@ -200,6 +239,33 @@ namespace PureCloudPlatform.Client.V2.Model
         public ContentNotificationTemplate Template { get; set; }
         
         
+        
+        /// <summary>
+        /// A list of reactions
+        /// </summary>
+        /// <value>A list of reactions</value>
+        [DataMember(Name="reactions", EmitDefaultValue=false)]
+        public List<ContentReaction> Reactions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// This is used to identify who the message is sent to, as well as who it was sent from. This information is channel specific - depends on capabilities to describe party by the platform
+        /// </summary>
+        /// <value>This is used to identify who the message is sent to, as well as who it was sent from. This information is channel specific - depends on capabilities to describe party by the platform</value>
+        [DataMember(Name="mention", EmitDefaultValue=false)]
+        public MessagingRecipient Mention { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The postback object result of a user clicking in a button
+        /// </summary>
+        /// <value>The postback object result of a user clicking in a button</value>
+        [DataMember(Name="postback", EmitDefaultValue=false)]
+        public ContentPostback Postback { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -216,6 +282,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Generic: ").Append(Generic).Append("\n");
             sb.Append("  List: ").Append(List).Append("\n");
             sb.Append("  Template: ").Append(Template).Append("\n");
+            sb.Append("  Reactions: ").Append(Reactions).Append("\n");
+            sb.Append("  Mention: ").Append(Mention).Append("\n");
+            sb.Append("  Postback: ").Append(Postback).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -286,6 +355,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Template == other.Template ||
                     this.Template != null &&
                     this.Template.Equals(other.Template)
+                ) &&
+                (
+                    this.Reactions == other.Reactions ||
+                    this.Reactions != null &&
+                    this.Reactions.SequenceEqual(other.Reactions)
+                ) &&
+                (
+                    this.Mention == other.Mention ||
+                    this.Mention != null &&
+                    this.Mention.Equals(other.Mention)
+                ) &&
+                (
+                    this.Postback == other.Postback ||
+                    this.Postback != null &&
+                    this.Postback.Equals(other.Postback)
                 );
         }
 
@@ -321,6 +405,15 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Template != null)
                     hash = hash * 59 + this.Template.GetHashCode();
+                
+                if (this.Reactions != null)
+                    hash = hash * 59 + this.Reactions.GetHashCode();
+                
+                if (this.Mention != null)
+                    hash = hash * 59 + this.Mention.GetHashCode();
+                
+                if (this.Postback != null)
+                    hash = hash * 59 + this.Postback.GetHashCode();
                 
                 return hash;
             }

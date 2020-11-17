@@ -4584,7 +4584,7 @@ namespace Example
 
 <a name="patchworkforcemanagementmanagementunitworkplan"></a>
 
-## [**WorkPlan**](WorkPlan.html) PatchWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, WorkPlan body = null)
+## [**WorkPlan**](WorkPlan.html) PatchWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, WorkPlan body = null, string validationMode = null)
 
 
 
@@ -4617,11 +4617,12 @@ namespace Example
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var workPlanId = workPlanId_example;  // string | The ID of the work plan to update
             var body = new WorkPlan(); // WorkPlan | body (optional) 
+            var validationMode = validationMode_example;  // string | Allows to update work plan even if validation result is invalid (optional) 
 
             try
             { 
                 // Update a work plan
-                WorkPlan result = apiInstance.PatchWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, body);
+                WorkPlan result = apiInstance.PatchWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, body, validationMode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4641,6 +4642,7 @@ namespace Example
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **workPlanId** | **string**| The ID of the work plan to update |  |
 | **body** | [**WorkPlan**](WorkPlan.html)| body | [optional]  |
+| **validationMode** | **string**| Allows to update work plan even if validation result is invalid | [optional] <br />**Values**: Ignore |
 {: class="table table-striped"}
 
 ### Return type
@@ -6664,7 +6666,7 @@ namespace Example
 
 <a name="postworkforcemanagementmanagementunitworkplans"></a>
 
-## [**WorkPlan**](WorkPlan.html) PostWorkforcemanagementManagementunitWorkplans (string managementUnitId, CreateWorkPlan body = null)
+## [**WorkPlan**](WorkPlan.html) PostWorkforcemanagementManagementunitWorkplans (string managementUnitId, CreateWorkPlan body = null, string validationMode = null)
 
 
 
@@ -6696,11 +6698,12 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var body = new CreateWorkPlan(); // CreateWorkPlan | body (optional) 
+            var validationMode = validationMode_example;  // string | Allows to create work plan even if the validation result is invalid (optional) 
 
             try
             { 
                 // Create a new work plan
-                WorkPlan result = apiInstance.PostWorkforcemanagementManagementunitWorkplans(managementUnitId, body);
+                WorkPlan result = apiInstance.PostWorkforcemanagementManagementunitWorkplans(managementUnitId, body, validationMode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6719,6 +6722,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **body** | [**CreateWorkPlan**](CreateWorkPlan.html)| body | [optional]  |
+| **validationMode** | **string**| Allows to create work plan even if the validation result is invalid | [optional] <br />**Values**: Ignore |
 {: class="table table-striped"}
 
 ### Return type

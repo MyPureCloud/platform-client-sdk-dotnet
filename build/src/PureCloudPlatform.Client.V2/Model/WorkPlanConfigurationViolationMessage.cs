@@ -36,16 +36,142 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Activitiesoverlap for "ActivitiesOverlap"
+            /// </summary>
+            [EnumMember(Value = "ActivitiesOverlap")]
+            Activitiesoverlap,
+            
+            /// <summary>
+            /// Enum Activityendgreaterthanshiftstop for "ActivityEndGreaterThanShiftStop"
+            /// </summary>
+            [EnumMember(Value = "ActivityEndGreaterThanShiftStop")]
+            Activityendgreaterthanshiftstop,
+            
+            /// <summary>
+            /// Enum Activitypaidtimegreaterthanshiftpaidtime for "ActivityPaidTimeGreaterThanShiftPaidTime"
+            /// </summary>
+            [EnumMember(Value = "ActivityPaidTimeGreaterThanShiftPaidTime")]
+            Activitypaidtimegreaterthanshiftpaidtime,
+            
+            /// <summary>
+            /// Enum Activitystartbeforeshiftstart for "ActivityStartBeforeShiftStart"
+            /// </summary>
+            [EnumMember(Value = "ActivityStartBeforeShiftStart")]
+            Activitystartbeforeshiftstart,
+            
+            /// <summary>
+            /// Enum Activitystartgreaterthanequaltoshiftstop for "ActivityStartGreaterThanEqualToShiftStop"
+            /// </summary>
+            [EnumMember(Value = "ActivityStartGreaterThanEqualToShiftStop")]
+            Activitystartgreaterthanequaltoshiftstop,
+            
+            /// <summary>
+            /// Enum Activitystartincrementminutesnotdivisiblebyscheduleintervalminutes for "ActivityStartIncrementMinutesNotDivisibleByScheduleIntervalMinutes"
+            /// </summary>
+            [EnumMember(Value = "ActivityStartIncrementMinutesNotDivisibleByScheduleIntervalMinutes")]
+            Activitystartincrementminutesnotdivisiblebyscheduleintervalminutes,
+            
+            /// <summary>
             /// Enum Dailyexactpaidminutes for "DailyExactPaidMinutes"
             /// </summary>
             [EnumMember(Value = "DailyExactPaidMinutes")]
             Dailyexactpaidminutes,
             
             /// <summary>
-            /// Enum Dailyshiftmaximumpossibilitiesviolated for "DailyShiftMaximumPossibilitiesViolated"
+            /// Enum Dailymaxtotallessthanweeklymin for "DailyMaxTotalLessThanWeeklyMin"
             /// </summary>
-            [EnumMember(Value = "DailyShiftMaximumPossibilitiesViolated")]
-            Dailyshiftmaximumpossibilitiesviolated,
+            [EnumMember(Value = "DailyMaxTotalLessThanWeeklyMin")]
+            Dailymaxtotallessthanweeklymin,
+            
+            /// <summary>
+            /// Enum Dailymaxtotallessthanweeklyminwithoptional for "DailyMaxTotalLessThanWeeklyMinWithOptional"
+            /// </summary>
+            [EnumMember(Value = "DailyMaxTotalLessThanWeeklyMinWithOptional")]
+            Dailymaxtotallessthanweeklyminwithoptional,
+            
+            /// <summary>
+            /// Enum Dailymaxtotallessthanweeklyminwithoutoptional for "DailyMaxTotalLessThanWeeklyMinWithoutOptional"
+            /// </summary>
+            [EnumMember(Value = "DailyMaxTotalLessThanWeeklyMinWithoutOptional")]
+            Dailymaxtotallessthanweeklyminwithoutoptional,
+            
+            /// <summary>
+            /// Enum Dailymintotalgreaterthanweeklymax for "DailyMinTotalGreaterThanWeeklyMax"
+            /// </summary>
+            [EnumMember(Value = "DailyMinTotalGreaterThanWeeklyMax")]
+            Dailymintotalgreaterthanweeklymax,
+            
+            /// <summary>
+            /// Enum Dailymintotalgreaterthanweeklymaxwithoptional for "DailyMinTotalGreaterThanWeeklyMaxWithOptional"
+            /// </summary>
+            [EnumMember(Value = "DailyMinTotalGreaterThanWeeklyMaxWithOptional")]
+            Dailymintotalgreaterthanweeklymaxwithoptional,
+            
+            /// <summary>
+            /// Enum Dailymintotalgreaterthanweeklymaxwithoutoptional for "DailyMinTotalGreaterThanWeeklyMaxWithoutOptional"
+            /// </summary>
+            [EnumMember(Value = "DailyMinTotalGreaterThanWeeklyMaxWithoutOptional")]
+            Dailymintotalgreaterthanweeklymaxwithoutoptional,
+            
+            /// <summary>
+            /// Enum Dailyrequireddaysgreaterthanweeklymaxdays for "DailyRequiredDaysGreaterThanWeeklyMaxDays"
+            /// </summary>
+            [EnumMember(Value = "DailyRequiredDaysGreaterThanWeeklyMaxDays")]
+            Dailyrequireddaysgreaterthanweeklymaxdays,
+            
+            /// <summary>
+            /// Enum Dailyshifthasnodaysselected for "DailyShiftHasNoDaysSelected"
+            /// </summary>
+            [EnumMember(Value = "DailyShiftHasNoDaysSelected")]
+            Dailyshifthasnodaysselected,
+            
+            /// <summary>
+            /// Enum Dailyshiftmaxpossibilitiesviolated for "DailyShiftMaxPossibilitiesViolated"
+            /// </summary>
+            [EnumMember(Value = "DailyShiftMaxPossibilitiesViolated")]
+            Dailyshiftmaxpossibilitiesviolated,
+            
+            /// <summary>
+            /// Enum Earliestshiftstopistoolate for "EarliestShiftStopIsTooLate"
+            /// </summary>
+            [EnumMember(Value = "EarliestShiftStopIsTooLate")]
+            Earliestshiftstopistoolate,
+            
+            /// <summary>
+            /// Enum Exactpaidtimenotdivisiblebygranularity for "ExactPaidTimeNotDivisibleByGranularity"
+            /// </summary>
+            [EnumMember(Value = "ExactPaidTimeNotDivisibleByGranularity")]
+            Exactpaidtimenotdivisiblebygranularity,
+            
+            /// <summary>
+            /// Enum Maxconsecutiveworkingdaysnomorethandoublemaxworkingdaysperweek for "MaxConsecutiveWorkingDaysNoMoreThanDoubleMaxWorkingDaysPerWeek"
+            /// </summary>
+            [EnumMember(Value = "MaxConsecutiveWorkingDaysNoMoreThanDoubleMaxWorkingDaysPerWeek")]
+            Maxconsecutiveworkingdaysnomorethandoublemaxworkingdaysperweek,
+            
+            /// <summary>
+            /// Enum Maxdaysoffperplanningperiodnotcorrect for "MaxDaysOffPerPlanningPeriodNotCorrect"
+            /// </summary>
+            [EnumMember(Value = "MaxDaysOffPerPlanningPeriodNotCorrect")]
+            Maxdaysoffperplanningperiodnotcorrect,
+            
+            /// <summary>
+            /// Enum Maxpaidtimeismorethanshiftlength for "MaxPaidTimeIsMoreThanShiftLength"
+            /// </summary>
+            [EnumMember(Value = "MaxPaidTimeIsMoreThanShiftLength")]
+            Maxpaidtimeismorethanshiftlength,
+            
+            /// <summary>
+            /// Enum Maxpaidtimenotdivisiblebygranularity for "MaxPaidTimeNotDivisibleByGranularity"
+            /// </summary>
+            [EnumMember(Value = "MaxPaidTimeNotDivisibleByGranularity")]
+            Maxpaidtimenotdivisiblebygranularity,
+            
+            /// <summary>
+            /// Enum Maxpaidtimeperplanningperiod for "MaxPaidTimePerPlanningPeriod"
+            /// </summary>
+            [EnumMember(Value = "MaxPaidTimePerPlanningPeriod")]
+            Maxpaidtimeperplanningperiod,
             
             /// <summary>
             /// Enum Maxshifts for "MaxShifts"
@@ -54,10 +180,58 @@ namespace PureCloudPlatform.Client.V2.Model
             Maxshifts,
             
             /// <summary>
+            /// Enum Minpaidtimenotdivisiblebygranularity for "MinPaidTimeNotDivisibleByGranularity"
+            /// </summary>
+            [EnumMember(Value = "MinPaidTimeNotDivisibleByGranularity")]
+            Minpaidtimenotdivisiblebygranularity,
+            
+            /// <summary>
+            /// Enum Minpaidtimeperplanningperiod for "MinPaidTimePerPlanningPeriod"
+            /// </summary>
+            [EnumMember(Value = "MinPaidTimePerPlanningPeriod")]
+            Minpaidtimeperplanningperiod,
+            
+            /// <summary>
             /// Enum Noshifts for "NoShifts"
             /// </summary>
             [EnumMember(Value = "NoShifts")]
             Noshifts,
+            
+            /// <summary>
+            /// Enum Paidtimegreaterthanmaxworktime for "PaidTimeGreaterThanMaxWorkTime"
+            /// </summary>
+            [EnumMember(Value = "PaidTimeGreaterThanMaxWorkTime")]
+            Paidtimegreaterthanmaxworktime,
+            
+            /// <summary>
+            /// Enum Paidtimelessthanminworktime for "PaidTimeLessThanMinWorkTime"
+            /// </summary>
+            [EnumMember(Value = "PaidTimeLessThanMinWorkTime")]
+            Paidtimelessthanminworktime,
+            
+            /// <summary>
+            /// Enum Paidtimenotmetbyshiftstartstop for "PaidTimeNotMetByShiftStartStop"
+            /// </summary>
+            [EnumMember(Value = "PaidTimeNotMetByShiftStartStop")]
+            Paidtimenotmetbyshiftstartstop,
+            
+            /// <summary>
+            /// Enum Shiftdaysselectmorethanminworkingdays for "ShiftDaysSelectMoreThanMinWorkingDays"
+            /// </summary>
+            [EnumMember(Value = "ShiftDaysSelectMoreThanMinWorkingDays")]
+            Shiftdaysselectmorethanminworkingdays,
+            
+            /// <summary>
+            /// Enum Shiftstopearlierthanstart for "ShiftStopEarlierThanStart"
+            /// </summary>
+            [EnumMember(Value = "ShiftStopEarlierThanStart")]
+            Shiftstopearlierthanstart,
+            
+            /// <summary>
+            /// Enum Shiftvariancecannotbemet for "ShiftVarianceCannotBeMet"
+            /// </summary>
+            [EnumMember(Value = "ShiftVarianceCannotBeMet")]
+            Shiftvariancecannotbemet,
             
             /// <summary>
             /// Enum Weeklyexactpaidminutes for "WeeklyExactPaidMinutes"
@@ -68,6 +242,43 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        /// <summary>
+        /// Severity of the message. A message with Error severity indicates the scheduler won't be able to produce schedules and thus the work plan is invalid.
+        /// </summary>
+        /// <value>Severity of the message. A message with Error severity indicates the scheduler won't be able to produce schedules and thus the work plan is invalid.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SeverityEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Information for "Information"
+            /// </summary>
+            [EnumMember(Value = "Information")]
+            Information,
+            
+            /// <summary>
+            /// Enum Warning for "Warning"
+            /// </summary>
+            [EnumMember(Value = "Warning")]
+            Warning,
+            
+            /// <summary>
+            /// Enum Error for "Error"
+            /// </summary>
+            [EnumMember(Value = "Error")]
+            Error
+        }
         
         
         
@@ -83,16 +294,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// Severity of the message. A message with Error severity indicates the scheduler won't be able to produce schedules and thus the work plan is invalid.
+        /// </summary>
+        /// <value>Severity of the message. A message with Error severity indicates the scheduler won't be able to produce schedules and thus the work plan is invalid.</value>
+        [DataMember(Name="severity", EmitDefaultValue=false)]
+        public SeverityEnum? Severity { get; set; }
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkPlanConfigurationViolationMessage" /> class.
         /// </summary>
         /// <param name="Type">Type of configuration violation message for this work plan.</param>
         /// <param name="Arguments">Arguments of the message that provide information about the misconfigured value or the threshold that is exceeded by the misconfigured value.</param>
-        public WorkPlanConfigurationViolationMessage(TypeEnum? Type = null, List<WorkPlanValidationMessageArgument> Arguments = null)
+        /// <param name="Severity">Severity of the message. A message with Error severity indicates the scheduler won&#39;t be able to produce schedules and thus the work plan is invalid..</param>
+        public WorkPlanConfigurationViolationMessage(TypeEnum? Type = null, List<WorkPlanValidationMessageArgument> Arguments = null, SeverityEnum? Severity = null)
         {
             this.Type = Type;
             this.Arguments = Arguments;
+            this.Severity = Severity;
             
         }
         
@@ -108,6 +330,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<WorkPlanValidationMessageArgument> Arguments { get; set; }
         
         
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -119,6 +343,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Arguments: ").Append(Arguments).Append("\n");
+            sb.Append("  Severity: ").Append(Severity).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -164,6 +389,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Arguments == other.Arguments ||
                     this.Arguments != null &&
                     this.Arguments.SequenceEqual(other.Arguments)
+                ) &&
+                (
+                    this.Severity == other.Severity ||
+                    this.Severity != null &&
+                    this.Severity.Equals(other.Severity)
                 );
         }
 
@@ -184,6 +414,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Arguments != null)
                     hash = hash * 59 + this.Arguments.GetHashCode();
+                
+                if (this.Severity != null)
+                    hash = hash * 59 + this.Severity.GetHashCode();
                 
                 return hash;
             }

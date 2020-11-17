@@ -64,16 +64,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndDate">End of the date range to query in ISO-8601 format. If it is not set, end date will be set to current time.</param>
         /// <param name="TimeZone">The time zone to use for returned results in olson format. If it is not set, the business unit time zone will be used to compute adherence.</param>
         /// <param name="UserIds">The userIds to report on. If null or not set, adherence will be computed for all the users in management unit or requested teamIds. Note: Only one of [teamIds, userIds] can be requested.</param>
-        /// <param name="TeamIds">The teamIds to report on. If null or not set, adherence will be computed for requested users if applicable or otherwise all users in the management unit. Note: Only one of [teamIds, userIds] can be requested.</param>
         /// <param name="IncludeExceptions">Whether user exceptions should be returned as part of the results.</param>
-        public WfmHistoricalAdherenceQuery(DateTime? StartDate = null, DateTime? EndDate = null, string TimeZone = null, List<string> UserIds = null, List<string> TeamIds = null, bool? IncludeExceptions = null)
+        /// <param name="TeamIds">The teamIds to report on. If null or not set, adherence will be computed for requested users if applicable or otherwise all users in the management unit. Note: Only one of [teamIds, userIds] can be requested.</param>
+        public WfmHistoricalAdherenceQuery(DateTime? StartDate = null, DateTime? EndDate = null, string TimeZone = null, List<string> UserIds = null, bool? IncludeExceptions = null, List<string> TeamIds = null)
         {
             this.StartDate = StartDate;
             this.EndDate = EndDate;
             this.TimeZone = TimeZone;
             this.UserIds = UserIds;
-            this.TeamIds = TeamIds;
             this.IncludeExceptions = IncludeExceptions;
+            this.TeamIds = TeamIds;
             
         }
         
@@ -116,20 +116,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The teamIds to report on. If null or not set, adherence will be computed for requested users if applicable or otherwise all users in the management unit. Note: Only one of [teamIds, userIds] can be requested
-        /// </summary>
-        /// <value>The teamIds to report on. If null or not set, adherence will be computed for requested users if applicable or otherwise all users in the management unit. Note: Only one of [teamIds, userIds] can be requested</value>
-        [DataMember(Name="teamIds", EmitDefaultValue=false)]
-        public List<string> TeamIds { get; set; }
-        
-        
-        
-        /// <summary>
         /// Whether user exceptions should be returned as part of the results
         /// </summary>
         /// <value>Whether user exceptions should be returned as part of the results</value>
         [DataMember(Name="includeExceptions", EmitDefaultValue=false)]
         public bool? IncludeExceptions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The teamIds to report on. If null or not set, adherence will be computed for requested users if applicable or otherwise all users in the management unit. Note: Only one of [teamIds, userIds] can be requested
+        /// </summary>
+        /// <value>The teamIds to report on. If null or not set, adherence will be computed for requested users if applicable or otherwise all users in the management unit. Note: Only one of [teamIds, userIds] can be requested</value>
+        [DataMember(Name="teamIds", EmitDefaultValue=false)]
+        public List<string> TeamIds { get; set; }
         
         
         /// <summary>
@@ -145,8 +145,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
-            sb.Append("  TeamIds: ").Append(TeamIds).Append("\n");
             sb.Append("  IncludeExceptions: ").Append(IncludeExceptions).Append("\n");
+            sb.Append("  TeamIds: ").Append(TeamIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -204,14 +204,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UserIds.SequenceEqual(other.UserIds)
                 ) &&
                 (
-                    this.TeamIds == other.TeamIds ||
-                    this.TeamIds != null &&
-                    this.TeamIds.SequenceEqual(other.TeamIds)
-                ) &&
-                (
                     this.IncludeExceptions == other.IncludeExceptions ||
                     this.IncludeExceptions != null &&
                     this.IncludeExceptions.Equals(other.IncludeExceptions)
+                ) &&
+                (
+                    this.TeamIds == other.TeamIds ||
+                    this.TeamIds != null &&
+                    this.TeamIds.SequenceEqual(other.TeamIds)
                 );
         }
 
@@ -239,11 +239,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.UserIds != null)
                     hash = hash * 59 + this.UserIds.GetHashCode();
                 
-                if (this.TeamIds != null)
-                    hash = hash * 59 + this.TeamIds.GetHashCode();
-                
                 if (this.IncludeExceptions != null)
                     hash = hash * 59 + this.IncludeExceptions.GetHashCode();
+                
+                if (this.TeamIds != null)
+                    hash = hash * 59 + this.TeamIds.GetHashCode();
                 
                 return hash;
             }

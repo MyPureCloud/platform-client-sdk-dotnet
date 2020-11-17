@@ -1371,7 +1371,7 @@ namespace Example
 
 <a name="getqualityformsevaluationversions"></a>
 
-## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityFormsEvaluationVersions (string formId, int? pageSize = null, int? pageNumber = null)
+## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityFormsEvaluationVersions (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 
 
@@ -1404,11 +1404,12 @@ namespace Example
             var formId = formId_example;  // string | Form ID
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
 
             try
             { 
                 // Gets all the revisions for a specific evaluation.
-                EvaluationFormEntityListing result = apiInstance.GetQualityFormsEvaluationVersions(formId, pageSize, pageNumber);
+                EvaluationFormEntityListing result = apiInstance.GetQualityFormsEvaluationVersions(formId, pageSize, pageNumber, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1428,6 +1429,7 @@ namespace Example
 | **formId** | **string**| Form ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortOrder** | **string**| Sort order | [optional] [default to asc] |
 {: class="table table-striped"}
 
 ### Return type
