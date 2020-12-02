@@ -9,7 +9,7 @@ title: WfmScheduleReference
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of the WFM schedule | |
 | **BusinessUnit** | [**WfmBusinessUnitReference**](WfmBusinessUnitReference.html) | A reference to a Workforce Management Business Unit | |
-| **WeekDate** | **DateTime?** | The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **WeekDate** | **String** | The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

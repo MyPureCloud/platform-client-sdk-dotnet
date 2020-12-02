@@ -53,7 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The ID of the WFM schedule (required).</param>
         /// <param name="BusinessUnit">A reference to a Workforce Management Business Unit (required).</param>
         /// <param name="WeekDate">The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
-        public WfmScheduleReference(string Id = null, WfmBusinessUnitReference BusinessUnit = null, DateTime? WeekDate = null)
+        public WfmScheduleReference(string Id = null, WfmBusinessUnitReference BusinessUnit = null, String WeekDate = null)
         {
             this.Id = Id;
             this.BusinessUnit = BusinessUnit;
@@ -86,7 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="weekDate", EmitDefaultValue=false)]
-        public DateTime? WeekDate { get; set; }
+        public String WeekDate { get; set; }
         
         
         

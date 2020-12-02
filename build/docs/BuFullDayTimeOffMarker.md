@@ -7,7 +7,7 @@ title: BuFullDayTimeOffMarker
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **BusinessUnitDate** | **DateTime?** | The date of the time off marker, interpreted in the business unit&#39;s time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **BusinessUnitDate** | **String** | The date of the time off marker, interpreted in the business unit&#39;s time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **LengthMinutes** | **int?** | The length of the time off marker in minutes | [optional] |
 | **Description** | **string** | The description of the time off marker | [optional] |
 | **ActivityCodeId** | **string** | The ID of the activity code associated with the time off marker | [optional] |

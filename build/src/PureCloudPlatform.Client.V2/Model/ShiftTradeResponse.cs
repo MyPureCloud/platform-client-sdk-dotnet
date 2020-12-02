@@ -191,7 +191,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ReviewedBy">The user who reviewed this shift trade.</param>
         /// <param name="ReviewedDate">The timestamp when this shift trade was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Metadata">Version data for this trade.</param>
-        public ShiftTradeResponse(string Id = null, DateTime? WeekDate = null, BuScheduleReferenceForMuRoute Schedule = null, StateEnum? State = null, UserReference InitiatingUser = null, string InitiatingShiftId = null, DateTime? InitiatingShiftStart = null, DateTime? InitiatingShiftEnd = null, UserReference ReceivingUser = null, string ReceivingShiftId = null, DateTime? ReceivingShiftStart = null, DateTime? ReceivingShiftEnd = null, DateTime? Expiration = null, bool? OneSided = null, List<string> AcceptableIntervals = null, UserReference ReviewedBy = null, DateTime? ReviewedDate = null, WfmVersionedEntityMetadata Metadata = null)
+        public ShiftTradeResponse(string Id = null, String WeekDate = null, BuScheduleReferenceForMuRoute Schedule = null, StateEnum? State = null, UserReference InitiatingUser = null, string InitiatingShiftId = null, DateTime? InitiatingShiftStart = null, DateTime? InitiatingShiftEnd = null, UserReference ReceivingUser = null, string ReceivingShiftId = null, DateTime? ReceivingShiftStart = null, DateTime? ReceivingShiftEnd = null, DateTime? Expiration = null, bool? OneSided = null, List<string> AcceptableIntervals = null, UserReference ReviewedBy = null, DateTime? ReviewedDate = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Id = Id;
             this.WeekDate = WeekDate;
@@ -230,7 +230,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The start week date of the associated schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="weekDate", EmitDefaultValue=false)]
-        public DateTime? WeekDate { get; set; }
+        public String WeekDate { get; set; }
         
         
         

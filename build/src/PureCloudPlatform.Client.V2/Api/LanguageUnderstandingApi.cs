@@ -125,7 +125,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>NluFeedbackListing</returns>
-        NluFeedbackListing GetLanguageunderstandingDomainFeedback (string domainId, string intentName = null, string assessment = null, DateTime? dateStart = null, DateTime? dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null);
+        NluFeedbackListing GetLanguageunderstandingDomainFeedback (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null);
 
         /// <summary>
         /// Get all feedback in the given NLU Domain Version.
@@ -144,7 +144,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>ApiResponse of NluFeedbackListing</returns>
-        ApiResponse<NluFeedbackListing> GetLanguageunderstandingDomainFeedbackWithHttpInfo (string domainId, string intentName = null, string assessment = null, DateTime? dateStart = null, DateTime? dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null);
+        ApiResponse<NluFeedbackListing> GetLanguageunderstandingDomainFeedbackWithHttpInfo (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null);
         
         /// <summary>
         /// Find a Feedback
@@ -581,7 +581,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of NluFeedbackListing</returns>
-        System.Threading.Tasks.Task<NluFeedbackListing> GetLanguageunderstandingDomainFeedbackAsync (string domainId, string intentName = null, string assessment = null, DateTime? dateStart = null, DateTime? dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null);
+        System.Threading.Tasks.Task<NluFeedbackListing> GetLanguageunderstandingDomainFeedbackAsync (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null);
 
         /// <summary>
         /// Get all feedback in the given NLU Domain Version.
@@ -600,7 +600,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (NluFeedbackListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NluFeedbackListing>> GetLanguageunderstandingDomainFeedbackAsyncWithHttpInfo (string domainId, string intentName = null, string assessment = null, DateTime? dateStart = null, DateTime? dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null);
+        System.Threading.Tasks.Task<ApiResponse<NluFeedbackListing>> GetLanguageunderstandingDomainFeedbackAsyncWithHttpInfo (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null);
         
         /// <summary>
         /// Find a Feedback
@@ -1822,7 +1822,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>NluFeedbackListing</returns>
-        public NluFeedbackListing GetLanguageunderstandingDomainFeedback (string domainId, string intentName = null, string assessment = null, DateTime? dateStart = null, DateTime? dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null)
+        public NluFeedbackListing GetLanguageunderstandingDomainFeedback (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null)
         {
              ApiResponse<NluFeedbackListing> localVarResponse = GetLanguageunderstandingDomainFeedbackWithHttpInfo(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, pageNumber, pageSize, fields);
              return localVarResponse.Data;
@@ -1842,7 +1842,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>ApiResponse of NluFeedbackListing</returns>
-        public ApiResponse< NluFeedbackListing > GetLanguageunderstandingDomainFeedbackWithHttpInfo (string domainId, string intentName = null, string assessment = null, DateTime? dateStart = null, DateTime? dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null)
+        public ApiResponse< NluFeedbackListing > GetLanguageunderstandingDomainFeedbackWithHttpInfo (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null)
         { 
             // verify the required parameter 'domainId' is set
             if (domainId == null)
@@ -1941,7 +1941,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of NluFeedbackListing</returns>
-        public async System.Threading.Tasks.Task<NluFeedbackListing> GetLanguageunderstandingDomainFeedbackAsync (string domainId, string intentName = null, string assessment = null, DateTime? dateStart = null, DateTime? dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null)
+        public async System.Threading.Tasks.Task<NluFeedbackListing> GetLanguageunderstandingDomainFeedbackAsync (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null)
         {
              ApiResponse<NluFeedbackListing> localVarResponse = await GetLanguageunderstandingDomainFeedbackAsyncWithHttpInfo(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, pageNumber, pageSize, fields);
              return localVarResponse.Data;
@@ -1962,7 +1962,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (NluFeedbackListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<NluFeedbackListing>> GetLanguageunderstandingDomainFeedbackAsyncWithHttpInfo (string domainId, string intentName = null, string assessment = null, DateTime? dateStart = null, DateTime? dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null)
+        public async System.Threading.Tasks.Task<ApiResponse<NluFeedbackListing>> GetLanguageunderstandingDomainFeedbackAsyncWithHttpInfo (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null)
         { 
             // verify the required parameter 'domainId' is set
             if (domainId == null)

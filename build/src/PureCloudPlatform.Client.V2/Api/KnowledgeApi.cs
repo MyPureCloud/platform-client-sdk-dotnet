@@ -125,8 +125,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>CategoryListing</returns>
-        CategoryListing GetKnowledgeKnowledgebaseLanguageCategories (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null);
+        CategoryListing GetKnowledgeKnowledgebaseLanguageCategories (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null);
 
         /// <summary>
         /// Get categories
@@ -141,8 +142,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>ApiResponse of CategoryListing</returns>
-        ApiResponse<CategoryListing> GetKnowledgeKnowledgebaseLanguageCategoriesWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null);
+        ApiResponse<CategoryListing> GetKnowledgeKnowledgebaseLanguageCategoriesWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null);
         
         /// <summary>
         /// Get category
@@ -689,8 +691,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>Task of CategoryListing</returns>
-        System.Threading.Tasks.Task<CategoryListing> GetKnowledgeKnowledgebaseLanguageCategoriesAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null);
+        System.Threading.Tasks.Task<CategoryListing> GetKnowledgeKnowledgebaseLanguageCategoriesAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null);
 
         /// <summary>
         /// Get categories
@@ -705,8 +708,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>Task of ApiResponse (CategoryListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryListing>> GetKnowledgeKnowledgebaseLanguageCategoriesAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<CategoryListing>> GetKnowledgeKnowledgebaseLanguageCategoriesAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null);
         
         /// <summary>
         /// Get category
@@ -2066,10 +2070,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>CategoryListing</returns>
-        public CategoryListing GetKnowledgeKnowledgebaseLanguageCategories (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null)
+        public CategoryListing GetKnowledgeKnowledgebaseLanguageCategories (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
         {
-             ApiResponse<CategoryListing> localVarResponse = GetKnowledgeKnowledgebaseLanguageCategoriesWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize);
+             ApiResponse<CategoryListing> localVarResponse = GetKnowledgeKnowledgebaseLanguageCategoriesWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize, name);
              return localVarResponse.Data;
         }
 
@@ -2083,8 +2088,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>ApiResponse of CategoryListing</returns>
-        public ApiResponse< CategoryListing > GetKnowledgeKnowledgebaseLanguageCategoriesWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null)
+        public ApiResponse< CategoryListing > GetKnowledgeKnowledgebaseLanguageCategoriesWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -2132,6 +2138,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -2179,10 +2186,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>Task of CategoryListing</returns>
-        public async System.Threading.Tasks.Task<CategoryListing> GetKnowledgeKnowledgebaseLanguageCategoriesAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null)
+        public async System.Threading.Tasks.Task<CategoryListing> GetKnowledgeKnowledgebaseLanguageCategoriesAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
         {
-             ApiResponse<CategoryListing> localVarResponse = await GetKnowledgeKnowledgebaseLanguageCategoriesAsyncWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize);
+             ApiResponse<CategoryListing> localVarResponse = await GetKnowledgeKnowledgebaseLanguageCategoriesAsyncWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize, name);
              return localVarResponse.Data;
 
         }
@@ -2197,8 +2205,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>Task of ApiResponse (CategoryListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CategoryListing>> GetKnowledgeKnowledgebaseLanguageCategoriesAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CategoryListing>> GetKnowledgeKnowledgebaseLanguageCategoriesAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -2248,6 +2257,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 

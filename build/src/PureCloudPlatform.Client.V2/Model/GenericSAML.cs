@@ -149,24 +149,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="GenericSAML" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="RelyingPartyIdentifier">RelyingPartyIdentifier.</param>
         /// <param name="LogoImageData">LogoImageData.</param>
+        /// <param name="RelyingPartyIdentifier">RelyingPartyIdentifier.</param>
         /// <param name="EndpointCompression">EndpointCompression.</param>
         /// <param name="NameIdentifierFormat">NameIdentifierFormat.</param>
-        /// <param name="IssuerURI">IssuerURI.</param>
         /// <param name="Certificate">Certificate.</param>
         /// <param name="SsoTargetURI">SsoTargetURI.</param>
+        /// <param name="IssuerURI">IssuerURI.</param>
         /// <param name="Disabled">Disabled.</param>
-        public GenericSAML(string Name = null, string RelyingPartyIdentifier = null, string LogoImageData = null, bool? EndpointCompression = null, NameIdentifierFormatEnum? NameIdentifierFormat = null, string IssuerURI = null, string Certificate = null, string SsoTargetURI = null, bool? Disabled = null)
+        public GenericSAML(string Name = null, string LogoImageData = null, string RelyingPartyIdentifier = null, bool? EndpointCompression = null, NameIdentifierFormatEnum? NameIdentifierFormat = null, string Certificate = null, string SsoTargetURI = null, string IssuerURI = null, bool? Disabled = null)
         {
             this.Name = Name;
-            this.RelyingPartyIdentifier = RelyingPartyIdentifier;
             this.LogoImageData = LogoImageData;
+            this.RelyingPartyIdentifier = RelyingPartyIdentifier;
             this.EndpointCompression = EndpointCompression;
             this.NameIdentifierFormat = NameIdentifierFormat;
-            this.IssuerURI = IssuerURI;
             this.Certificate = Certificate;
             this.SsoTargetURI = SsoTargetURI;
+            this.IssuerURI = IssuerURI;
             this.Disabled = Disabled;
             
         }
@@ -191,18 +191,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets RelyingPartyIdentifier
-        /// </summary>
-        [DataMember(Name="relyingPartyIdentifier", EmitDefaultValue=false)]
-        public string RelyingPartyIdentifier { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets LogoImageData
         /// </summary>
         [DataMember(Name="logoImageData", EmitDefaultValue=false)]
         public string LogoImageData { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets RelyingPartyIdentifier
+        /// </summary>
+        [DataMember(Name="relyingPartyIdentifier", EmitDefaultValue=false)]
+        public string RelyingPartyIdentifier { get; set; }
         
         
         
@@ -213,14 +213,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? EndpointCompression { get; set; }
         
         
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets IssuerURI
-        /// </summary>
-        [DataMember(Name="issuerURI", EmitDefaultValue=false)]
-        public string IssuerURI { get; set; }
         
         
         
@@ -237,6 +229,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="ssoTargetURI", EmitDefaultValue=false)]
         public string SsoTargetURI { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets IssuerURI
+        /// </summary>
+        [DataMember(Name="issuerURI", EmitDefaultValue=false)]
+        public string IssuerURI { get; set; }
         
         
         
@@ -267,13 +267,13 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  RelyingPartyIdentifier: ").Append(RelyingPartyIdentifier).Append("\n");
             sb.Append("  LogoImageData: ").Append(LogoImageData).Append("\n");
+            sb.Append("  RelyingPartyIdentifier: ").Append(RelyingPartyIdentifier).Append("\n");
             sb.Append("  EndpointCompression: ").Append(EndpointCompression).Append("\n");
             sb.Append("  NameIdentifierFormat: ").Append(NameIdentifierFormat).Append("\n");
-            sb.Append("  IssuerURI: ").Append(IssuerURI).Append("\n");
             sb.Append("  Certificate: ").Append(Certificate).Append("\n");
             sb.Append("  SsoTargetURI: ").Append(SsoTargetURI).Append("\n");
+            sb.Append("  IssuerURI: ").Append(IssuerURI).Append("\n");
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -323,14 +323,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
-                    this.RelyingPartyIdentifier == other.RelyingPartyIdentifier ||
-                    this.RelyingPartyIdentifier != null &&
-                    this.RelyingPartyIdentifier.Equals(other.RelyingPartyIdentifier)
-                ) &&
-                (
                     this.LogoImageData == other.LogoImageData ||
                     this.LogoImageData != null &&
                     this.LogoImageData.Equals(other.LogoImageData)
+                ) &&
+                (
+                    this.RelyingPartyIdentifier == other.RelyingPartyIdentifier ||
+                    this.RelyingPartyIdentifier != null &&
+                    this.RelyingPartyIdentifier.Equals(other.RelyingPartyIdentifier)
                 ) &&
                 (
                     this.EndpointCompression == other.EndpointCompression ||
@@ -343,11 +343,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.NameIdentifierFormat.Equals(other.NameIdentifierFormat)
                 ) &&
                 (
-                    this.IssuerURI == other.IssuerURI ||
-                    this.IssuerURI != null &&
-                    this.IssuerURI.Equals(other.IssuerURI)
-                ) &&
-                (
                     this.Certificate == other.Certificate ||
                     this.Certificate != null &&
                     this.Certificate.Equals(other.Certificate)
@@ -356,6 +351,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SsoTargetURI == other.SsoTargetURI ||
                     this.SsoTargetURI != null &&
                     this.SsoTargetURI.Equals(other.SsoTargetURI)
+                ) &&
+                (
+                    this.IssuerURI == other.IssuerURI ||
+                    this.IssuerURI != null &&
+                    this.IssuerURI.Equals(other.IssuerURI)
                 ) &&
                 (
                     this.Disabled == other.Disabled ||
@@ -387,11 +387,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 
-                if (this.RelyingPartyIdentifier != null)
-                    hash = hash * 59 + this.RelyingPartyIdentifier.GetHashCode();
-                
                 if (this.LogoImageData != null)
                     hash = hash * 59 + this.LogoImageData.GetHashCode();
+                
+                if (this.RelyingPartyIdentifier != null)
+                    hash = hash * 59 + this.RelyingPartyIdentifier.GetHashCode();
                 
                 if (this.EndpointCompression != null)
                     hash = hash * 59 + this.EndpointCompression.GetHashCode();
@@ -399,14 +399,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.NameIdentifierFormat != null)
                     hash = hash * 59 + this.NameIdentifierFormat.GetHashCode();
                 
-                if (this.IssuerURI != null)
-                    hash = hash * 59 + this.IssuerURI.GetHashCode();
-                
                 if (this.Certificate != null)
                     hash = hash * 59 + this.Certificate.GetHashCode();
                 
                 if (this.SsoTargetURI != null)
                     hash = hash * 59 + this.SsoTargetURI.GetHashCode();
+                
+                if (this.IssuerURI != null)
+                    hash = hash * 59 + this.IssuerURI.GetHashCode();
                 
                 if (this.Disabled != null)
                     hash = hash * 59 + this.Disabled.GetHashCode();

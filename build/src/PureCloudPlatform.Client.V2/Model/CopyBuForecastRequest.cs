@@ -42,7 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Description">The description for the forecast (required).</param>
         /// <param name="WeekDate">The start date of the new forecast to create from the existing forecast. Must correspond to the start day of week for the business unit. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
-        public CopyBuForecastRequest(string Description = null, DateTime? WeekDate = null)
+        public CopyBuForecastRequest(string Description = null, String WeekDate = null)
         {
             this.Description = Description;
             this.WeekDate = WeekDate;
@@ -65,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The start date of the new forecast to create from the existing forecast. Must correspond to the start day of week for the business unit. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="weekDate", EmitDefaultValue=false)]
-        public DateTime? WeekDate { get; set; }
+        public String WeekDate { get; set; }
         
         
         /// <summary>

@@ -278,7 +278,7 @@ namespace Example
 
 <a name="getlanguageunderstandingdomainfeedback"></a>
 
-## [**NluFeedbackListing**](NluFeedbackListing.html) GetLanguageunderstandingDomainFeedback (string domainId, string intentName = null, string assessment = null, DateTime? dateStart = null, DateTime? dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null)
+## [**NluFeedbackListing**](NluFeedbackListing.html) GetLanguageunderstandingDomainFeedback (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null)
 
 
 
@@ -312,8 +312,8 @@ namespace Example
             var domainId = domainId_example;  // string | ID of the NLU domain.
             var intentName = intentName_example;  // string | The top intent name to retrieve feedback for. (optional) 
             var assessment = assessment_example;  // string | The top assessment to retrieve feedback for. (optional) 
-            var dateStart = 2013-10-20;  // DateTime? | Begin of time window as ISO-8601 date. (optional) 
-            var dateEnd = 2013-10-20;  // DateTime? | End of time window as ISO-8601 date. (optional) 
+            var dateStart = 2013-10-20;  // String | Begin of time window as ISO-8601 date. (optional) 
+            var dateEnd = 2013-10-20;  // String | End of time window as ISO-8601 date. (optional) 
             var includeDeleted = true;  // bool? | Whether to include soft-deleted items in the result. (optional) 
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
@@ -342,8 +342,8 @@ namespace Example
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **intentName** | **string**| The top intent name to retrieve feedback for. | [optional]  |
 | **assessment** | **string**| The top assessment to retrieve feedback for. | [optional] <br />**Values**: Incorrect, Correct, Unknown, Disabled |
-| **dateStart** | **DateTime?**| Begin of time window as ISO-8601 date. | [optional]  |
-| **dateEnd** | **DateTime?**| End of time window as ISO-8601 date. | [optional]  |
+| **dateStart** | **String**| Begin of time window as ISO-8601 date. | [optional]  |
+| **dateEnd** | **String**| End of time window as ISO-8601 date. | [optional]  |
 | **includeDeleted** | **bool?**| Whether to include soft-deleted items in the result. | [optional]  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |

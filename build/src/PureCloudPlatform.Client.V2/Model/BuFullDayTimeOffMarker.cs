@@ -60,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ActivityCodeId">The ID of the activity code associated with the time off marker.</param>
         /// <param name="Paid">Whether the time off marker is paid.</param>
         /// <param name="TimeOffRequestId">The ID of the time off request.</param>
-        public BuFullDayTimeOffMarker(DateTime? BusinessUnitDate = null, int? LengthMinutes = null, string Description = null, string ActivityCodeId = null, bool? Paid = null, string TimeOffRequestId = null)
+        public BuFullDayTimeOffMarker(String BusinessUnitDate = null, int? LengthMinutes = null, string Description = null, string ActivityCodeId = null, bool? Paid = null, string TimeOffRequestId = null)
         {
             this.BusinessUnitDate = BusinessUnitDate;
             this.LengthMinutes = LengthMinutes;
@@ -78,7 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The date of the time off marker, interpreted in the business unit&#39;s time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="businessUnitDate", EmitDefaultValue=false)]
-        public DateTime? BusinessUnitDate { get; set; }
+        public String BusinessUnitDate { get; set; }
         
         
         

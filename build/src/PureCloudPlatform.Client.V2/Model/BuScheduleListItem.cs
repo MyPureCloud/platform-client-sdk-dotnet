@@ -76,7 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ShortTermForecast">The forecast used for this schedule, if applicable.</param>
         /// <param name="GenerationResults">Generation result summary for this schedule, if applicable.</param>
         /// <param name="Metadata">Version metadata for this schedule.</param>
-        public BuScheduleListItem(DateTime? WeekDate = null, int? WeekCount = null, string Description = null, bool? Published = null, BuShortTermForecastReference ShortTermForecast = null, ScheduleGenerationResultSummary GenerationResults = null, WfmVersionedEntityMetadata Metadata = null)
+        public BuScheduleListItem(String WeekDate = null, int? WeekCount = null, string Description = null, bool? Published = null, BuShortTermForecastReference ShortTermForecast = null, ScheduleGenerationResultSummary GenerationResults = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.WeekDate = WeekDate;
             this.WeekCount = WeekCount;
@@ -104,7 +104,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="weekDate", EmitDefaultValue=false)]
-        public DateTime? WeekDate { get; set; }
+        public String WeekDate { get; set; }
         
         
         

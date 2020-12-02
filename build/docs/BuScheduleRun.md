@@ -13,7 +13,7 @@ title: BuScheduleRun
 | **State** | **string** | The state of the generation run | [optional] |
 | **WeekCount** | **int?** | The number of weeks spanned by the schedule | [optional] |
 | **PercentComplete** | **double?** | Percent completion of the schedule run | [optional] |
-| **TargetWeek** | **DateTime?** | The start date of the target week. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **TargetWeek** | **String** | The start date of the target week. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **Schedule** | [**BuScheduleReference**](BuScheduleReference.html) | The generated schedule.  Null unless the schedule run is complete | [optional] |
 | **ScheduleDescription** | **string** | The description of the generated schedule | [optional] |
 | **SchedulingStartTime** | **DateTime?** | When the schedule generation run started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |

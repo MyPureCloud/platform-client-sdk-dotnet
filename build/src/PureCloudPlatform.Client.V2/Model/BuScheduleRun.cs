@@ -183,7 +183,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageCount">The number of schedule generation messages for this schedule generation run.</param>
         /// <param name="ReschedulingOptions">Rescheduling options for this run.  Null unless intradayRescheduling is true.</param>
         /// <param name="ReschedulingResultExpiration">When the reschedule result will expire.  Null unless intradayRescheduling is true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public BuScheduleRun(string SchedulerRunId = null, bool? IntradayRescheduling = null, StateEnum? State = null, int? WeekCount = null, double? PercentComplete = null, DateTime? TargetWeek = null, BuScheduleReference Schedule = null, string ScheduleDescription = null, DateTime? SchedulingStartTime = null, UserReference SchedulingStartedBy = null, UserReference SchedulingCanceledBy = null, DateTime? SchedulingCompletedTime = null, int? MessageCount = null, ReschedulingOptionsRunResponse ReschedulingOptions = null, DateTime? ReschedulingResultExpiration = null)
+        public BuScheduleRun(string SchedulerRunId = null, bool? IntradayRescheduling = null, StateEnum? State = null, int? WeekCount = null, double? PercentComplete = null, String TargetWeek = null, BuScheduleReference Schedule = null, string ScheduleDescription = null, DateTime? SchedulingStartTime = null, UserReference SchedulingStartedBy = null, UserReference SchedulingCanceledBy = null, DateTime? SchedulingCompletedTime = null, int? MessageCount = null, ReschedulingOptionsRunResponse ReschedulingOptions = null, DateTime? ReschedulingResultExpiration = null)
         {
             this.SchedulerRunId = SchedulerRunId;
             this.IntradayRescheduling = IntradayRescheduling;
@@ -257,7 +257,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The start date of the target week. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="targetWeek", EmitDefaultValue=false)]
-        public DateTime? TargetWeek { get; set; }
+        public String TargetWeek { get; set; }
         
         
         

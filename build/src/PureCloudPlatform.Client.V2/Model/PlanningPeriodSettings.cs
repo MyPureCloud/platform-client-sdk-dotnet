@@ -42,7 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="WeekCount">Planning period length in weeks (required).</param>
         /// <param name="StartDate">Start date of the planning period in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
-        public PlanningPeriodSettings(int? WeekCount = null, DateTime? StartDate = null)
+        public PlanningPeriodSettings(int? WeekCount = null, String StartDate = null)
         {
             this.WeekCount = WeekCount;
             this.StartDate = StartDate;
@@ -65,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Start date of the planning period in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
-        public DateTime? StartDate { get; set; }
+        public String StartDate { get; set; }
         
         
         /// <summary>

@@ -40,7 +40,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="BuScheduleReference" /> class.
         /// </summary>
         /// <param name="WeekDate">The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
-        public BuScheduleReference(DateTime? WeekDate = null)
+        public BuScheduleReference(String WeekDate = null)
         {
             this.WeekDate = WeekDate;
             
@@ -62,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="weekDate", EmitDefaultValue=false)]
-        public DateTime? WeekDate { get; set; }
+        public String WeekDate { get; set; }
         
         
         

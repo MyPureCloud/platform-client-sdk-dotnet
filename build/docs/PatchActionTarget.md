@@ -10,6 +10,7 @@ title: PatchActionTarget
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
 | **ServiceLevel** | [**ServiceLevel**](ServiceLevel.html) | Service Level of the action target. Chat offers for the target will be throttled with the aim of achieving this service level. | [optional] |
+| **ShortAbandonThreshold** | **int?** | Indicates the non-default short abandon threshold | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

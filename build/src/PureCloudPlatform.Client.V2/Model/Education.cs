@@ -54,7 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Notes">Notes about education has a 2000 character limit.</param>
         /// <param name="DateStart">Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="DateEnd">Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
-        public Education(string School = null, string FieldOfStudy = null, string Notes = null, DateTime? DateStart = null, DateTime? DateEnd = null)
+        public Education(string School = null, string FieldOfStudy = null, string Notes = null, String DateStart = null, String DateEnd = null)
         {
             this.School = School;
             this.FieldOfStudy = FieldOfStudy;
@@ -96,7 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateStart", EmitDefaultValue=false)]
-        public DateTime? DateStart { get; set; }
+        public String DateStart { get; set; }
         
         
         
@@ -105,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateEnd", EmitDefaultValue=false)]
-        public DateTime? DateEnd { get; set; }
+        public String DateEnd { get; set; }
         
         
         /// <summary>

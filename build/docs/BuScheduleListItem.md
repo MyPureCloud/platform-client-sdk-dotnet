@@ -8,7 +8,7 @@ title: BuScheduleListItem
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **WeekDate** | **DateTime?** | The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **WeekDate** | **String** | The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **WeekCount** | **int?** | The number of weeks spanned by this schedule | [optional] |
 | **Description** | **string** | The description of this schedule | [optional] |
 | **Published** | **bool?** | Whether this schedule is published | [optional] |

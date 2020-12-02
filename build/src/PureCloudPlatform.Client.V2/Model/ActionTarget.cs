@@ -152,12 +152,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Indicates the state of the target.
         /// </summary>
         /// <value>Indicates the state of the target.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -180,9 +185,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="State">Indicates the state of the target..</param>
         /// <param name="Description">Description of the target..</param>
         /// <param name="ServiceLevel">Service Level of the action target. Chat offers for the target will be throttled with the aim of achieving this service level..</param>
+        /// <param name="ShortAbandonThreshold">Indicates the non-default short abandon threshold.</param>
         /// <param name="CreatedDate">The date the target was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ModifiedDate">The date the target was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public ActionTarget(string Name = null, List<KeyValue> UserData = null, List<SupportedMediaTypesEnum> SupportedMediaTypes = null, StateEnum? State = null, string Description = null, ServiceLevel ServiceLevel = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null)
+        public ActionTarget(string Name = null, List<KeyValue> UserData = null, List<SupportedMediaTypesEnum> SupportedMediaTypes = null, StateEnum? State = null, string Description = null, ServiceLevel ServiceLevel = null, int? ShortAbandonThreshold = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null)
         {
             this.Name = Name;
             this.UserData = UserData;
@@ -190,6 +196,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.State = State;
             this.Description = Description;
             this.ServiceLevel = ServiceLevel;
+            this.ShortAbandonThreshold = ShortAbandonThreshold;
             this.CreatedDate = CreatedDate;
             this.ModifiedDate = ModifiedDate;
             
@@ -253,6 +260,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Indicates the non-default short abandon threshold
+        /// </summary>
+        /// <value>Indicates the non-default short abandon threshold</value>
+        [DataMember(Name="shortAbandonThreshold", EmitDefaultValue=false)]
+        public int? ShortAbandonThreshold { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -294,6 +310,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  ServiceLevel: ").Append(ServiceLevel).Append("\n");
+            sb.Append("  ShortAbandonThreshold: ").Append(ShortAbandonThreshold).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
@@ -369,6 +386,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ServiceLevel.Equals(other.ServiceLevel)
                 ) &&
                 (
+                    this.ShortAbandonThreshold == other.ShortAbandonThreshold ||
+                    this.ShortAbandonThreshold != null &&
+                    this.ShortAbandonThreshold.Equals(other.ShortAbandonThreshold)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -417,6 +439,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ServiceLevel != null)
                     hash = hash * 59 + this.ServiceLevel.GetHashCode();
+                
+                if (this.ShortAbandonThreshold != null)
+                    hash = hash * 59 + this.ShortAbandonThreshold.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

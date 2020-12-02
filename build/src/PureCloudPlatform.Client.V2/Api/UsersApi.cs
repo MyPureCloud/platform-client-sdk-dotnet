@@ -1012,7 +1012,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a Development Activity
         /// </summary>
         /// <remarks>
-        /// 
+        /// Permission not required if you are the attendee, creator or facilitator of the coaching appointment or you are the assigned user of the learning assignment.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
@@ -1024,7 +1024,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a Development Activity
         /// </summary>
         /// <remarks>
-        /// 
+        /// Permission not required if you are the attendee, creator or facilitator of the coaching appointment or you are the assigned user of the learning assignment.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
@@ -2896,7 +2896,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a Development Activity
         /// </summary>
         /// <remarks>
-        /// 
+        /// Permission not required if you are the attendee, creator or facilitator of the coaching appointment or you are the assigned user of the learning assignment.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
@@ -2908,7 +2908,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a Development Activity
         /// </summary>
         /// <remarks>
-        /// 
+        /// Permission not required if you are the attendee, creator or facilitator of the coaching appointment or you are the assigned user of the learning assignment.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
@@ -11788,7 +11788,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get a Development Activity 
+        /// Get a Development Activity Permission not required if you are the attendee, creator or facilitator of the coaching appointment or you are the assigned user of the learning assignment.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
@@ -11801,7 +11801,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Development Activity 
+        /// Get a Development Activity Permission not required if you are the attendee, creator or facilitator of the coaching appointment or you are the assigned user of the learning assignment.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
@@ -11889,7 +11889,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get a Development Activity 
+        /// Get a Development Activity Permission not required if you are the attendee, creator or facilitator of the coaching appointment or you are the assigned user of the learning assignment.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
@@ -11903,7 +11903,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Development Activity 
+        /// Get a Development Activity Permission not required if you are the attendee, creator or facilitator of the coaching appointment or you are the assigned user of the learning assignment.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>

@@ -69,13 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Completed for "Completed"
             /// </summary>
             [EnumMember(Value = "Completed")]
-            Completed,
-            
-            /// <summary>
-            /// Enum Invalidschedule for "InvalidSchedule"
-            /// </summary>
-            [EnumMember(Value = "InvalidSchedule")]
-            Invalidschedule
+            Completed
         }
         
         

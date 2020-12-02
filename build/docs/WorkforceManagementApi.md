@@ -423,7 +423,7 @@ void (empty response body)
 
 <a name="deleteworkforcemanagementbusinessunitweekschedule"></a>
 
-## [**BuAsyncScheduleResponse**](BuAsyncScheduleResponse.html) DeleteWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, DateTime? weekId, string scheduleId)
+## [**BuAsyncScheduleResponse**](BuAsyncScheduleResponse.html) DeleteWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, String weekId, string scheduleId)
 
 
 
@@ -454,7 +454,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
-            var weekId = 2013-10-20;  // DateTime? | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekId = 2013-10-20;  // String | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var scheduleId = scheduleId_example;  // string | The ID of the schedule
 
             try
@@ -478,7 +478,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
-| **weekId** | **DateTime?**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **scheduleId** | **string**| The ID of the schedule |  |
 {: class="table table-striped"}
 
@@ -488,7 +488,7 @@ namespace Example
 
 <a name="deleteworkforcemanagementbusinessunitweekshorttermforecast"></a>
 
-## void DeleteWorkforcemanagementBusinessunitWeekShorttermforecast (string businessUnitId, DateTime? weekDateId, string forecastId)
+## void DeleteWorkforcemanagementBusinessunitWeekShorttermforecast (string businessUnitId, String weekDateId, string forecastId)
 
 
 
@@ -519,7 +519,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
-            var weekDateId = 2013-10-20;  // DateTime? | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var forecastId = forecastId_example;  // string | The ID of the forecast
 
             try
@@ -542,7 +542,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
-| **weekDateId** | **DateTime?**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **forecastId** | **string**| The ID of the forecast |  |
 {: class="table table-striped"}
 
@@ -1142,7 +1142,7 @@ namespace Example
 
 <a name="getworkforcemanagementbusinessunitintradayplanninggroups"></a>
 
-## [**WfmIntradayPlanningGroupListing**](WfmIntradayPlanningGroupListing.html) GetWorkforcemanagementBusinessunitIntradayPlanninggroups (string businessUnitId, DateTime? date)
+## [**WfmIntradayPlanningGroupListing**](WfmIntradayPlanningGroupListing.html) GetWorkforcemanagementBusinessunitIntradayPlanninggroups (string businessUnitId, String date)
 
 
 
@@ -1173,7 +1173,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit
-            var date = 2013-10-20;  // DateTime? | yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var date = 2013-10-20;  // String | yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 
             try
             { 
@@ -1196,7 +1196,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The business unit ID of the business unit |  |
-| **date** | **DateTime?**| yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **date** | **String**| yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1718,7 +1718,7 @@ namespace Example
 
 <a name="getworkforcemanagementbusinessunitweekschedule"></a>
 
-## [**BuScheduleMetadata**](BuScheduleMetadata.html) GetWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, DateTime? weekId, string scheduleId, string expand = null)
+## [**BuScheduleMetadata**](BuScheduleMetadata.html) GetWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, String weekId, string scheduleId, string expand = null)
 
 
 
@@ -1750,7 +1750,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
-            var weekId = 2013-10-20;  // DateTime? | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekId = 2013-10-20;  // String | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var scheduleId = scheduleId_example;  // string | The ID of the schedule
             var expand = expand_example;  // string | expand (optional) 
 
@@ -1775,7 +1775,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
-| **weekId** | **DateTime?**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **scheduleId** | **string**| The ID of the schedule |  |
 | **expand** | **string**| expand | [optional] <br />**Values**: managementUnits.agents |
 {: class="table table-striped"}
@@ -1786,7 +1786,7 @@ namespace Example
 
 <a name="getworkforcemanagementbusinessunitweekschedulegenerationresults"></a>
 
-## [**ScheduleGenerationResult**](ScheduleGenerationResult.html) GetWorkforcemanagementBusinessunitWeekScheduleGenerationresults (string businessUnitId, DateTime? weekId, string scheduleId)
+## [**ScheduleGenerationResult**](ScheduleGenerationResult.html) GetWorkforcemanagementBusinessunitWeekScheduleGenerationresults (string businessUnitId, String weekId, string scheduleId)
 
 
 
@@ -1818,7 +1818,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
-            var weekId = 2013-10-20;  // DateTime? | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekId = 2013-10-20;  // String | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var scheduleId = scheduleId_example;  // string | The ID of the schedule
 
             try
@@ -1842,7 +1842,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
-| **weekId** | **DateTime?**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **scheduleId** | **string**| The ID of the schedule |  |
 {: class="table table-striped"}
 
@@ -1852,7 +1852,7 @@ namespace Example
 
 <a name="getworkforcemanagementbusinessunitweekscheduleheadcountforecast"></a>
 
-## [**BuHeadcountForecastResponse**](BuHeadcountForecastResponse.html) GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast (string businessUnitId, DateTime? weekId, string scheduleId, bool? forceDownload = null)
+## [**BuHeadcountForecastResponse**](BuHeadcountForecastResponse.html) GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null)
 
 
 
@@ -1884,7 +1884,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
-            var weekId = 2013-10-20;  // DateTime? | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekId = 2013-10-20;  // String | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var scheduleId = scheduleId_example;  // string | The ID of the schedule
             var forceDownload = true;  // bool? | Whether to force the result to come via download url.  For testing purposes only (optional) 
 
@@ -1909,7 +1909,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
-| **weekId** | **DateTime?**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **scheduleId** | **string**| The ID of the schedule |  |
 | **forceDownload** | **bool?**| Whether to force the result to come via download url.  For testing purposes only | [optional]  |
 {: class="table table-striped"}
@@ -1988,7 +1988,7 @@ namespace Example
 
 <a name="getworkforcemanagementbusinessunitweekshorttermforecast"></a>
 
-## [**BuShortTermForecast**](BuShortTermForecast.html) GetWorkforcemanagementBusinessunitWeekShorttermforecast (string businessUnitId, DateTime? weekDateId, string forecastId, List<string> expand = null)
+## [**BuShortTermForecast**](BuShortTermForecast.html) GetWorkforcemanagementBusinessunitWeekShorttermforecast (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null)
 
 
 
@@ -2019,7 +2019,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
-            var weekDateId = 2013-10-20;  // DateTime? | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var forecastId = forecastId_example;  // string | The ID of the forecast
             var expand = new List<string>(); // List<string> |  (optional) 
 
@@ -2044,7 +2044,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
-| **weekDateId** | **DateTime?**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **forecastId** | **string**| The ID of the forecast |  |
 | **expand** | [**List<string>**](string.html)|  | [optional] <br />**Values**: planningGroups, generationResults |
 {: class="table table-striped"}
@@ -2055,7 +2055,7 @@ namespace Example
 
 <a name="getworkforcemanagementbusinessunitweekshorttermforecastdata"></a>
 
-## [**BuForecastResultResponse**](BuForecastResultResponse.html) GetWorkforcemanagementBusinessunitWeekShorttermforecastData (string businessUnitId, DateTime? weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null)
+## [**BuForecastResultResponse**](BuForecastResultResponse.html) GetWorkforcemanagementBusinessunitWeekShorttermforecastData (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null)
 
 
 
@@ -2086,7 +2086,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
-            var weekDateId = 2013-10-20;  // DateTime? | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var forecastId = forecastId_example;  // string | The ID of the forecast
             var weekNumber = 56;  // int? | The week number to fetch (for multi-week forecasts) (optional) 
             var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service.  For testing/app development purposes (optional) 
@@ -2112,7 +2112,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
-| **weekDateId** | **DateTime?**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **forecastId** | **string**| The ID of the forecast |  |
 | **weekNumber** | **int?**| The week number to fetch (for multi-week forecasts) | [optional]  |
 | **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional]  |
@@ -2124,7 +2124,7 @@ namespace Example
 
 <a name="getworkforcemanagementbusinessunitweekshorttermforecastgenerationresults"></a>
 
-## [**BuForecastGenerationResult**](BuForecastGenerationResult.html) GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults (string businessUnitId, DateTime? weekDateId, string forecastId)
+## [**BuForecastGenerationResult**](BuForecastGenerationResult.html) GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults (string businessUnitId, String weekDateId, string forecastId)
 
 
 
@@ -2155,7 +2155,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
-            var weekDateId = 2013-10-20;  // DateTime? | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var forecastId = forecastId_example;  // string | The ID of the forecast
 
             try
@@ -2179,7 +2179,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
-| **weekDateId** | **DateTime?**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **forecastId** | **string**| The ID of the forecast |  |
 {: class="table table-striped"}
 
@@ -2189,7 +2189,7 @@ namespace Example
 
 <a name="getworkforcemanagementbusinessunitweekshorttermforecastplanninggroups"></a>
 
-## [**ForecastPlanningGroupsResponse**](ForecastPlanningGroupsResponse.html) GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups (string businessUnitId, DateTime? weekDateId, string forecastId)
+## [**ForecastPlanningGroupsResponse**](ForecastPlanningGroupsResponse.html) GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups (string businessUnitId, String weekDateId, string forecastId)
 
 
 
@@ -2222,7 +2222,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
-            var weekDateId = 2013-10-20;  // DateTime? | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var forecastId = forecastId_example;  // string | The ID of the forecast
 
             try
@@ -2246,7 +2246,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
-| **weekDateId** | **DateTime?**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **forecastId** | **string**| The ID of the forecast |  |
 {: class="table table-striped"}
 
@@ -3313,7 +3313,7 @@ namespace Example
 
 <a name="getworkforcemanagementmanagementunitweekshifttrades"></a>
 
-## [**WeekShiftTradeListResponse**](WeekShiftTradeListResponse.html) GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null)
+## [**WeekShiftTradeListResponse**](WeekShiftTradeListResponse.html) GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, bool? evaluateMatches = null)
 
 
 
@@ -3345,7 +3345,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var weekDateId = 2013-10-20;  // DateTime? | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekDateId = 2013-10-20;  // String | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var evaluateMatches = true;  // bool? | Whether to evaluate the matches for violations (optional)  (default to true)
 
             try
@@ -3369,7 +3369,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **weekDateId** | **DateTime?**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekDateId** | **String**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **evaluateMatches** | **bool?**| Whether to evaluate the matches for violations | [optional] [default to true] |
 {: class="table table-striped"}
 
@@ -4517,7 +4517,7 @@ namespace Example
 
 <a name="patchworkforcemanagementmanagementunitweekshifttrade"></a>
 
-## [**ShiftTradeResponse**](ShiftTradeResponse.html) PatchWorkforcemanagementManagementunitWeekShifttrade (string managementUnitId, DateTime? weekDateId, PatchShiftTradeRequest body, string tradeId)
+## [**ShiftTradeResponse**](ShiftTradeResponse.html) PatchWorkforcemanagementManagementunitWeekShifttrade (string managementUnitId, String weekDateId, PatchShiftTradeRequest body, string tradeId)
 
 
 
@@ -4548,7 +4548,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var weekDateId = 2013-10-20;  // DateTime? | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekDateId = 2013-10-20;  // String | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var body = new PatchShiftTradeRequest(); // PatchShiftTradeRequest | body
             var tradeId = tradeId_example;  // string | The ID of the shift trade to update
 
@@ -4573,7 +4573,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **weekDateId** | **DateTime?**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekDateId** | **String**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **body** | [**PatchShiftTradeRequest**](PatchShiftTradeRequest.html)| body |  |
 | **tradeId** | **string**| The ID of the shift trade to update |  |
 {: class="table table-striped"}
@@ -5223,7 +5223,7 @@ namespace Example
 
 <a name="postworkforcemanagementbusinessunitweekscheduleagentschedulesquery"></a>
 
-## [**BuAsyncAgentSchedulesQueryResponse**](BuAsyncAgentSchedulesQueryResponse.html) PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery (string businessUnitId, DateTime? weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
+## [**BuAsyncAgentSchedulesQueryResponse**](BuAsyncAgentSchedulesQueryResponse.html) PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
 
 
 
@@ -5255,7 +5255,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
-            var weekId = 2013-10-20;  // DateTime? | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekId = 2013-10-20;  // String | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var scheduleId = scheduleId_example;  // string | The ID of the schedule
             var body = new BuQueryAgentSchedulesRequest(); // BuQueryAgentSchedulesRequest | body
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
@@ -5282,7 +5282,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
-| **weekId** | **DateTime?**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **scheduleId** | **string**| The ID of the schedule |  |
 | **body** | [**BuQueryAgentSchedulesRequest**](BuQueryAgentSchedulesRequest.html)| body |  |
 | **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
@@ -5295,7 +5295,7 @@ namespace Example
 
 <a name="postworkforcemanagementbusinessunitweekschedulecopy"></a>
 
-## [**BuAsyncScheduleResponse**](BuAsyncScheduleResponse.html) PostWorkforcemanagementBusinessunitWeekScheduleCopy (string businessUnitId, DateTime? weekId, string scheduleId, BuCopyScheduleRequest body)
+## [**BuAsyncScheduleResponse**](BuAsyncScheduleResponse.html) PostWorkforcemanagementBusinessunitWeekScheduleCopy (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body)
 
 
 
@@ -5326,7 +5326,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
-            var weekId = 2013-10-20;  // DateTime? | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekId = 2013-10-20;  // String | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var scheduleId = scheduleId_example;  // string | The ID of the schedule to copy
             var body = new BuCopyScheduleRequest(); // BuCopyScheduleRequest | body
 
@@ -5351,7 +5351,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
-| **weekId** | **DateTime?**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **scheduleId** | **string**| The ID of the schedule to copy |  |
 | **body** | [**BuCopyScheduleRequest**](BuCopyScheduleRequest.html)| body |  |
 {: class="table table-striped"}
@@ -5362,7 +5362,7 @@ namespace Example
 
 <a name="postworkforcemanagementbusinessunitweekschedulereschedule"></a>
 
-## [**BuAsyncScheduleRunResponse**](BuAsyncScheduleRunResponse.html) PostWorkforcemanagementBusinessunitWeekScheduleReschedule (string businessUnitId, DateTime? weekId, string scheduleId, BuRescheduleRequest body)
+## [**BuAsyncScheduleRunResponse**](BuAsyncScheduleRunResponse.html) PostWorkforcemanagementBusinessunitWeekScheduleReschedule (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body)
 
 
 
@@ -5393,7 +5393,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
-            var weekId = 2013-10-20;  // DateTime? | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekId = 2013-10-20;  // String | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var scheduleId = scheduleId_example;  // string | The ID of the schedule
             var body = new BuRescheduleRequest(); // BuRescheduleRequest | body
 
@@ -5418,7 +5418,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
-| **weekId** | **DateTime?**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **scheduleId** | **string**| The ID of the schedule |  |
 | **body** | [**BuRescheduleRequest**](BuRescheduleRequest.html)| body |  |
 {: class="table table-striped"}
@@ -5429,7 +5429,7 @@ namespace Example
 
 <a name="postworkforcemanagementbusinessunitweekschedules"></a>
 
-## [**BuScheduleMetadata**](BuScheduleMetadata.html) PostWorkforcemanagementBusinessunitWeekSchedules (string businessUnitId, DateTime? weekId, BuCreateBlankScheduleRequest body)
+## [**BuScheduleMetadata**](BuScheduleMetadata.html) PostWorkforcemanagementBusinessunitWeekSchedules (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body)
 
 
 
@@ -5460,7 +5460,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
-            var weekId = 2013-10-20;  // DateTime? | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekId = 2013-10-20;  // String | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var body = new BuCreateBlankScheduleRequest(); // BuCreateBlankScheduleRequest | body
 
             try
@@ -5484,7 +5484,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
-| **weekId** | **DateTime?**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **body** | [**BuCreateBlankScheduleRequest**](BuCreateBlankScheduleRequest.html)| body |  |
 {: class="table table-striped"}
 
@@ -5494,7 +5494,7 @@ namespace Example
 
 <a name="postworkforcemanagementbusinessunitweekschedulesgenerate"></a>
 
-## [**BuAsyncScheduleRunResponse**](BuAsyncScheduleRunResponse.html) PostWorkforcemanagementBusinessunitWeekSchedulesGenerate (string businessUnitId, DateTime? weekId, BuGenerateScheduleRequest body)
+## [**BuAsyncScheduleRunResponse**](BuAsyncScheduleRunResponse.html) PostWorkforcemanagementBusinessunitWeekSchedulesGenerate (string businessUnitId, String weekId, BuGenerateScheduleRequest body)
 
 
 
@@ -5525,7 +5525,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
-            var weekId = 2013-10-20;  // DateTime? | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekId = 2013-10-20;  // String | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var body = new BuGenerateScheduleRequest(); // BuGenerateScheduleRequest | body
 
             try
@@ -5549,7 +5549,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
-| **weekId** | **DateTime?**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **body** | [**BuGenerateScheduleRequest**](BuGenerateScheduleRequest.html)| body |  |
 {: class="table table-striped"}
 
@@ -5559,7 +5559,7 @@ namespace Example
 
 <a name="postworkforcemanagementbusinessunitweekshorttermforecastcopy"></a>
 
-## [**AsyncForecastOperationResult**](AsyncForecastOperationResult.html) PostWorkforcemanagementBusinessunitWeekShorttermforecastCopy (string businessUnitId, DateTime? weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null)
+## [**AsyncForecastOperationResult**](AsyncForecastOperationResult.html) PostWorkforcemanagementBusinessunitWeekShorttermforecastCopy (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null)
 
 
 
@@ -5590,7 +5590,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
-            var weekDateId = 2013-10-20;  // DateTime? | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var forecastId = forecastId_example;  // string | The ID of the forecast to copy
             var body = new CopyBuForecastRequest(); // CopyBuForecastRequest | body
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
@@ -5616,7 +5616,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
-| **weekDateId** | **DateTime?**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **forecastId** | **string**| The ID of the forecast to copy |  |
 | **body** | [**CopyBuForecastRequest**](CopyBuForecastRequest.html)| body |  |
 | **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
@@ -5628,7 +5628,7 @@ namespace Example
 
 <a name="postworkforcemanagementbusinessunitweekshorttermforecastsgenerate"></a>
 
-## [**AsyncForecastOperationResult**](AsyncForecastOperationResult.html) PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate (string businessUnitId, DateTime? weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null)
+## [**AsyncForecastOperationResult**](AsyncForecastOperationResult.html) PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null)
 
 
 
@@ -5659,7 +5659,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
-            var weekDateId = 2013-10-20;  // DateTime? | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var body = new GenerateBuForecastRequest(); // GenerateBuForecastRequest | 
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
 
@@ -5684,7 +5684,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
-| **weekDateId** | **DateTime?**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **body** | [**GenerateBuForecastRequest**](GenerateBuForecastRequest.html)|  |  |
 | **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
 {: class="table table-striped"}
@@ -6140,7 +6140,7 @@ namespace Example
 
 <a name="postworkforcemanagementmanagementunitweekshifttradematch"></a>
 
-## [**MatchShiftTradeResponse**](MatchShiftTradeResponse.html) PostWorkforcemanagementManagementunitWeekShifttradeMatch (string managementUnitId, DateTime? weekDateId, MatchShiftTradeRequest body, string tradeId)
+## [**MatchShiftTradeResponse**](MatchShiftTradeResponse.html) PostWorkforcemanagementManagementunitWeekShifttradeMatch (string managementUnitId, String weekDateId, MatchShiftTradeRequest body, string tradeId)
 
 
 
@@ -6171,7 +6171,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var weekDateId = 2013-10-20;  // DateTime? | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekDateId = 2013-10-20;  // String | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var body = new MatchShiftTradeRequest(); // MatchShiftTradeRequest | body
             var tradeId = tradeId_example;  // string | The ID of the shift trade to update
 
@@ -6196,7 +6196,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **weekDateId** | **DateTime?**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekDateId** | **String**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **body** | [**MatchShiftTradeRequest**](MatchShiftTradeRequest.html)| body |  |
 | **tradeId** | **string**| The ID of the shift trade to update |  |
 {: class="table table-striped"}
@@ -6207,7 +6207,7 @@ namespace Example
 
 <a name="postworkforcemanagementmanagementunitweekshifttrades"></a>
 
-## [**ShiftTradeResponse**](ShiftTradeResponse.html) PostWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, DateTime? weekDateId, AddShiftTradeRequest body)
+## [**ShiftTradeResponse**](ShiftTradeResponse.html) PostWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, AddShiftTradeRequest body)
 
 
 
@@ -6238,7 +6238,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var weekDateId = 2013-10-20;  // DateTime? | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekDateId = 2013-10-20;  // String | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var body = new AddShiftTradeRequest(); // AddShiftTradeRequest | body
 
             try
@@ -6262,7 +6262,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **weekDateId** | **DateTime?**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekDateId** | **String**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **body** | [**AddShiftTradeRequest**](AddShiftTradeRequest.html)| body |  |
 {: class="table table-striped"}
 
@@ -6272,7 +6272,7 @@ namespace Example
 
 <a name="postworkforcemanagementmanagementunitweekshifttradessearch"></a>
 
-## [**SearchShiftTradesResponse**](SearchShiftTradesResponse.html) PostWorkforcemanagementManagementunitWeekShifttradesSearch (string managementUnitId, DateTime? weekDateId, SearchShiftTradesRequest body)
+## [**SearchShiftTradesResponse**](SearchShiftTradesResponse.html) PostWorkforcemanagementManagementunitWeekShifttradesSearch (string managementUnitId, String weekDateId, SearchShiftTradesRequest body)
 
 
 
@@ -6303,7 +6303,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var weekDateId = 2013-10-20;  // DateTime? | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekDateId = 2013-10-20;  // String | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var body = new SearchShiftTradesRequest(); // SearchShiftTradesRequest | body
 
             try
@@ -6327,7 +6327,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **weekDateId** | **DateTime?**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekDateId** | **String**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **body** | [**SearchShiftTradesRequest**](SearchShiftTradesRequest.html)| body |  |
 {: class="table table-striped"}
 
@@ -6337,7 +6337,7 @@ namespace Example
 
 <a name="postworkforcemanagementmanagementunitweekshifttradesstatebulk"></a>
 
-## [**BulkUpdateShiftTradeStateResponse**](BulkUpdateShiftTradeStateResponse.html) PostWorkforcemanagementManagementunitWeekShifttradesStateBulk (string managementUnitId, DateTime? weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null)
+## [**BulkUpdateShiftTradeStateResponse**](BulkUpdateShiftTradeStateResponse.html) PostWorkforcemanagementManagementunitWeekShifttradesStateBulk (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null)
 
 
 
@@ -6369,7 +6369,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var weekDateId = 2013-10-20;  // DateTime? | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var weekDateId = 2013-10-20;  // String | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var body = new BulkShiftTradeStateUpdateRequest(); // BulkShiftTradeStateUpdateRequest | body
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
 
@@ -6394,7 +6394,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **weekDateId** | **DateTime?**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **weekDateId** | **String**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **body** | [**BulkShiftTradeStateUpdateRequest**](BulkShiftTradeStateUpdateRequest.html)| body |  |
 | **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
 {: class="table table-striped"}

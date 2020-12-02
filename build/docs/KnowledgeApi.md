@@ -284,7 +284,7 @@ namespace Example
 
 <a name="getknowledgeknowledgebaselanguagecategories"></a>
 
-## [**CategoryListing**](CategoryListing.html) GetKnowledgeKnowledgebaseLanguageCategories (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null)
+## [**CategoryListing**](CategoryListing.html) GetKnowledgeKnowledgebaseLanguageCategories (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
 
 
 
@@ -320,11 +320,12 @@ namespace Example
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
             var limit = limit_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var name = name_example;  // string | Filter to return the categories that starts with the given category name. (optional) 
 
             try
             { 
                 // Get categories
-                CategoryListing result = apiInstance.GetKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId, languageCode, before, after, limit, pageSize);
+                CategoryListing result = apiInstance.GetKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId, languageCode, before, after, limit, pageSize, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -347,6 +348,7 @@ namespace Example
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **limit** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **name** | **string**| Filter to return the categories that starts with the given category name. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

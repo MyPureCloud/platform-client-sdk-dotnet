@@ -144,8 +144,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>CoachingAppointmentStatusDtoList</returns>
-        CoachingAppointmentStatusDtoList GetCoachingAppointmentStatuses (string appointmentId, int? pageNumber = null, int? pageSize = null);
+        /// <returns>CoachingAppointmentStatusResponseList</returns>
+        CoachingAppointmentStatusResponseList GetCoachingAppointmentStatuses (string appointmentId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get the list of status changes for a coaching appointment.
@@ -157,8 +157,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>ApiResponse of CoachingAppointmentStatusDtoList</returns>
-        ApiResponse<CoachingAppointmentStatusDtoList> GetCoachingAppointmentStatusesWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null);
+        /// <returns>ApiResponse of CoachingAppointmentStatusResponseList</returns>
+        ApiResponse<CoachingAppointmentStatusResponseList> GetCoachingAppointmentStatusesWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null);
         
         /// <summary>
         /// Get appointments for users and optional date range
@@ -347,8 +347,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">Updated status of the coaching appointment</param>
-        /// <returns>CoachingAppointmentStatusDto</returns>
-        CoachingAppointmentStatusDto PatchCoachingAppointmentStatus (string appointmentId, CoachingAppointmentStatusDto body);
+        /// <returns>CoachingAppointmentStatusResponse</returns>
+        CoachingAppointmentStatusResponse PatchCoachingAppointmentStatus (string appointmentId, CoachingAppointmentStatusRequest body);
 
         /// <summary>
         /// Update the status of a coaching appointment
@@ -359,8 +359,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">Updated status of the coaching appointment</param>
-        /// <returns>ApiResponse of CoachingAppointmentStatusDto</returns>
-        ApiResponse<CoachingAppointmentStatusDto> PatchCoachingAppointmentStatusWithHttpInfo (string appointmentId, CoachingAppointmentStatusDto body);
+        /// <returns>ApiResponse of CoachingAppointmentStatusResponse</returns>
+        ApiResponse<CoachingAppointmentStatusResponse> PatchCoachingAppointmentStatusWithHttpInfo (string appointmentId, CoachingAppointmentStatusRequest body);
         
         /// <summary>
         /// Update an existing notification.
@@ -586,8 +586,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>Task of CoachingAppointmentStatusDtoList</returns>
-        System.Threading.Tasks.Task<CoachingAppointmentStatusDtoList> GetCoachingAppointmentStatusesAsync (string appointmentId, int? pageNumber = null, int? pageSize = null);
+        /// <returns>Task of CoachingAppointmentStatusResponseList</returns>
+        System.Threading.Tasks.Task<CoachingAppointmentStatusResponseList> GetCoachingAppointmentStatusesAsync (string appointmentId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get the list of status changes for a coaching appointment.
@@ -599,8 +599,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>Task of ApiResponse (CoachingAppointmentStatusDtoList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentStatusDtoList>> GetCoachingAppointmentStatusesAsyncWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null);
+        /// <returns>Task of ApiResponse (CoachingAppointmentStatusResponseList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentStatusResponseList>> GetCoachingAppointmentStatusesAsyncWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null);
         
         /// <summary>
         /// Get appointments for users and optional date range
@@ -789,8 +789,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">Updated status of the coaching appointment</param>
-        /// <returns>Task of CoachingAppointmentStatusDto</returns>
-        System.Threading.Tasks.Task<CoachingAppointmentStatusDto> PatchCoachingAppointmentStatusAsync (string appointmentId, CoachingAppointmentStatusDto body);
+        /// <returns>Task of CoachingAppointmentStatusResponse</returns>
+        System.Threading.Tasks.Task<CoachingAppointmentStatusResponse> PatchCoachingAppointmentStatusAsync (string appointmentId, CoachingAppointmentStatusRequest body);
 
         /// <summary>
         /// Update the status of a coaching appointment
@@ -801,8 +801,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">Updated status of the coaching appointment</param>
-        /// <returns>Task of ApiResponse (CoachingAppointmentStatusDto)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentStatusDto>> PatchCoachingAppointmentStatusAsyncWithHttpInfo (string appointmentId, CoachingAppointmentStatusDto body);
+        /// <returns>Task of ApiResponse (CoachingAppointmentStatusResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentStatusResponse>> PatchCoachingAppointmentStatusAsyncWithHttpInfo (string appointmentId, CoachingAppointmentStatusRequest body);
         
         /// <summary>
         /// Update an existing notification.
@@ -1996,10 +1996,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>CoachingAppointmentStatusDtoList</returns>
-        public CoachingAppointmentStatusDtoList GetCoachingAppointmentStatuses (string appointmentId, int? pageNumber = null, int? pageSize = null)
+        /// <returns>CoachingAppointmentStatusResponseList</returns>
+        public CoachingAppointmentStatusResponseList GetCoachingAppointmentStatuses (string appointmentId, int? pageNumber = null, int? pageSize = null)
         {
-             ApiResponse<CoachingAppointmentStatusDtoList> localVarResponse = GetCoachingAppointmentStatusesWithHttpInfo(appointmentId, pageNumber, pageSize);
+             ApiResponse<CoachingAppointmentStatusResponseList> localVarResponse = GetCoachingAppointmentStatusesWithHttpInfo(appointmentId, pageNumber, pageSize);
              return localVarResponse.Data;
         }
 
@@ -2010,8 +2010,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>ApiResponse of CoachingAppointmentStatusDtoList</returns>
-        public ApiResponse< CoachingAppointmentStatusDtoList > GetCoachingAppointmentStatusesWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null)
+        /// <returns>ApiResponse of CoachingAppointmentStatusResponseList</returns>
+        public ApiResponse< CoachingAppointmentStatusResponseList > GetCoachingAppointmentStatusesWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null)
         { 
             // verify the required parameter 'appointmentId' is set
             if (appointmentId == null)
@@ -2082,9 +2082,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetCoachingAppointmentStatuses: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<CoachingAppointmentStatusDtoList>(localVarStatusCode,
+            return new ApiResponse<CoachingAppointmentStatusResponseList>(localVarStatusCode,
                 localVarHeaders,
-                (CoachingAppointmentStatusDtoList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoachingAppointmentStatusDtoList)),
+                (CoachingAppointmentStatusResponseList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoachingAppointmentStatusResponseList)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -2097,10 +2097,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>Task of CoachingAppointmentStatusDtoList</returns>
-        public async System.Threading.Tasks.Task<CoachingAppointmentStatusDtoList> GetCoachingAppointmentStatusesAsync (string appointmentId, int? pageNumber = null, int? pageSize = null)
+        /// <returns>Task of CoachingAppointmentStatusResponseList</returns>
+        public async System.Threading.Tasks.Task<CoachingAppointmentStatusResponseList> GetCoachingAppointmentStatusesAsync (string appointmentId, int? pageNumber = null, int? pageSize = null)
         {
-             ApiResponse<CoachingAppointmentStatusDtoList> localVarResponse = await GetCoachingAppointmentStatusesAsyncWithHttpInfo(appointmentId, pageNumber, pageSize);
+             ApiResponse<CoachingAppointmentStatusResponseList> localVarResponse = await GetCoachingAppointmentStatusesAsyncWithHttpInfo(appointmentId, pageNumber, pageSize);
              return localVarResponse.Data;
 
         }
@@ -2112,8 +2112,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>Task of ApiResponse (CoachingAppointmentStatusDtoList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentStatusDtoList>> GetCoachingAppointmentStatusesAsyncWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null)
+        /// <returns>Task of ApiResponse (CoachingAppointmentStatusResponseList)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentStatusResponseList>> GetCoachingAppointmentStatusesAsyncWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null)
         { 
             // verify the required parameter 'appointmentId' is set
             if (appointmentId == null)
@@ -2185,9 +2185,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetCoachingAppointmentStatuses: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<CoachingAppointmentStatusDtoList>(localVarStatusCode,
+            return new ApiResponse<CoachingAppointmentStatusResponseList>(localVarStatusCode,
                 localVarHeaders,
-                (CoachingAppointmentStatusDtoList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoachingAppointmentStatusDtoList)),
+                (CoachingAppointmentStatusResponseList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoachingAppointmentStatusResponseList)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -3519,10 +3519,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">Updated status of the coaching appointment</param>
-        /// <returns>CoachingAppointmentStatusDto</returns>
-        public CoachingAppointmentStatusDto PatchCoachingAppointmentStatus (string appointmentId, CoachingAppointmentStatusDto body)
+        /// <returns>CoachingAppointmentStatusResponse</returns>
+        public CoachingAppointmentStatusResponse PatchCoachingAppointmentStatus (string appointmentId, CoachingAppointmentStatusRequest body)
         {
-             ApiResponse<CoachingAppointmentStatusDto> localVarResponse = PatchCoachingAppointmentStatusWithHttpInfo(appointmentId, body);
+             ApiResponse<CoachingAppointmentStatusResponse> localVarResponse = PatchCoachingAppointmentStatusWithHttpInfo(appointmentId, body);
              return localVarResponse.Data;
         }
 
@@ -3532,8 +3532,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">Updated status of the coaching appointment</param>
-        /// <returns>ApiResponse of CoachingAppointmentStatusDto</returns>
-        public ApiResponse< CoachingAppointmentStatusDto > PatchCoachingAppointmentStatusWithHttpInfo (string appointmentId, CoachingAppointmentStatusDto body)
+        /// <returns>ApiResponse of CoachingAppointmentStatusResponse</returns>
+        public ApiResponse< CoachingAppointmentStatusResponse > PatchCoachingAppointmentStatusWithHttpInfo (string appointmentId, CoachingAppointmentStatusRequest body)
         { 
             // verify the required parameter 'appointmentId' is set
             if (appointmentId == null)
@@ -3610,9 +3610,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchCoachingAppointmentStatus: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<CoachingAppointmentStatusDto>(localVarStatusCode,
+            return new ApiResponse<CoachingAppointmentStatusResponse>(localVarStatusCode,
                 localVarHeaders,
-                (CoachingAppointmentStatusDto) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoachingAppointmentStatusDto)),
+                (CoachingAppointmentStatusResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoachingAppointmentStatusResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -3624,10 +3624,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">Updated status of the coaching appointment</param>
-        /// <returns>Task of CoachingAppointmentStatusDto</returns>
-        public async System.Threading.Tasks.Task<CoachingAppointmentStatusDto> PatchCoachingAppointmentStatusAsync (string appointmentId, CoachingAppointmentStatusDto body)
+        /// <returns>Task of CoachingAppointmentStatusResponse</returns>
+        public async System.Threading.Tasks.Task<CoachingAppointmentStatusResponse> PatchCoachingAppointmentStatusAsync (string appointmentId, CoachingAppointmentStatusRequest body)
         {
-             ApiResponse<CoachingAppointmentStatusDto> localVarResponse = await PatchCoachingAppointmentStatusAsyncWithHttpInfo(appointmentId, body);
+             ApiResponse<CoachingAppointmentStatusResponse> localVarResponse = await PatchCoachingAppointmentStatusAsyncWithHttpInfo(appointmentId, body);
              return localVarResponse.Data;
 
         }
@@ -3638,8 +3638,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">Updated status of the coaching appointment</param>
-        /// <returns>Task of ApiResponse (CoachingAppointmentStatusDto)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentStatusDto>> PatchCoachingAppointmentStatusAsyncWithHttpInfo (string appointmentId, CoachingAppointmentStatusDto body)
+        /// <returns>Task of ApiResponse (CoachingAppointmentStatusResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentStatusResponse>> PatchCoachingAppointmentStatusAsyncWithHttpInfo (string appointmentId, CoachingAppointmentStatusRequest body)
         { 
             // verify the required parameter 'appointmentId' is set
             if (appointmentId == null)
@@ -3718,9 +3718,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchCoachingAppointmentStatus: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<CoachingAppointmentStatusDto>(localVarStatusCode,
+            return new ApiResponse<CoachingAppointmentStatusResponse>(localVarStatusCode,
                 localVarHeaders,
-                (CoachingAppointmentStatusDto) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoachingAppointmentStatusDto)),
+                (CoachingAppointmentStatusResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoachingAppointmentStatusResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

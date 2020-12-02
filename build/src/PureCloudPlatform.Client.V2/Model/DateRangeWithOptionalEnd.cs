@@ -42,7 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="StartBusinessUnitDate">The start date for work plan rotation or an agent, interpreted in the business unit&#39;s time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
         /// <param name="EndBusinessUnitDate">The end date for work plan rotation or an agent, interpreted in the business unit&#39;s time zone. Null denotes open ended date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
-        public DateRangeWithOptionalEnd(DateTime? StartBusinessUnitDate = null, DateTime? EndBusinessUnitDate = null)
+        public DateRangeWithOptionalEnd(String StartBusinessUnitDate = null, String EndBusinessUnitDate = null)
         {
             this.StartBusinessUnitDate = StartBusinessUnitDate;
             this.EndBusinessUnitDate = EndBusinessUnitDate;
@@ -56,7 +56,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The start date for work plan rotation or an agent, interpreted in the business unit&#39;s time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="startBusinessUnitDate", EmitDefaultValue=false)]
-        public DateTime? StartBusinessUnitDate { get; set; }
+        public String StartBusinessUnitDate { get; set; }
         
         
         
@@ -65,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The end date for work plan rotation or an agent, interpreted in the business unit&#39;s time zone. Null denotes open ended date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="endBusinessUnitDate", EmitDefaultValue=false)]
-        public DateTime? EndBusinessUnitDate { get; set; }
+        public String EndBusinessUnitDate { get; set; }
         
         
         /// <summary>

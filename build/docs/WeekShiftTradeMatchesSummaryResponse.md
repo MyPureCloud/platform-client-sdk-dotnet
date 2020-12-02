@@ -7,7 +7,7 @@ title: WeekShiftTradeMatchesSummaryResponse
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **WeekDate** | **DateTime?** | The schedule week date in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **WeekDate** | **String** | The schedule week date in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **Count** | **int?** | The number of trades in the Matched state for the given week | [optional] |
 {: class="table table-striped"}
 

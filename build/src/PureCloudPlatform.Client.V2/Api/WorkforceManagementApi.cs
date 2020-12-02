@@ -145,7 +145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>BuAsyncScheduleResponse</returns>
-        BuAsyncScheduleResponse DeleteWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, DateTime? weekId, string scheduleId);
+        BuAsyncScheduleResponse DeleteWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, String weekId, string scheduleId);
 
         /// <summary>
         /// Delete a schedule
@@ -158,7 +158,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>ApiResponse of BuAsyncScheduleResponse</returns>
-        ApiResponse<BuAsyncScheduleResponse> DeleteWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId);
+        ApiResponse<BuAsyncScheduleResponse> DeleteWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo (string businessUnitId, String weekId, string scheduleId);
         
         /// <summary>
         /// Delete a short term forecast
@@ -171,7 +171,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns></returns>
-        void DeleteWorkforcemanagementBusinessunitWeekShorttermforecast (string businessUnitId, DateTime? weekDateId, string forecastId);
+        void DeleteWorkforcemanagementBusinessunitWeekShorttermforecast (string businessUnitId, String weekDateId, string forecastId);
 
         /// <summary>
         /// Delete a short term forecast
@@ -184,7 +184,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId);
+        ApiResponse<Object> DeleteWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
         
         /// <summary>
         /// Delete management unit
@@ -380,7 +380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The business unit ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>WfmIntradayPlanningGroupListing</returns>
-        WfmIntradayPlanningGroupListing GetWorkforcemanagementBusinessunitIntradayPlanninggroups (string businessUnitId, DateTime? date);
+        WfmIntradayPlanningGroupListing GetWorkforcemanagementBusinessunitIntradayPlanninggroups (string businessUnitId, String date);
 
         /// <summary>
         /// Get intraday planning groups for the given date
@@ -392,7 +392,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The business unit ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of WfmIntradayPlanningGroupListing</returns>
-        ApiResponse<WfmIntradayPlanningGroupListing> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsWithHttpInfo (string businessUnitId, DateTime? date);
+        ApiResponse<WfmIntradayPlanningGroupListing> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsWithHttpInfo (string businessUnitId, String date);
         
         /// <summary>
         /// Get all authorized management units in the business unit
@@ -598,7 +598,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>BuScheduleMetadata</returns>
-        BuScheduleMetadata GetWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, DateTime? weekId, string scheduleId, string expand = null);
+        BuScheduleMetadata GetWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, String weekId, string scheduleId, string expand = null);
 
         /// <summary>
         /// Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route
@@ -612,7 +612,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of BuScheduleMetadata</returns>
-        ApiResponse<BuScheduleMetadata> GetWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, string expand = null);
+        ApiResponse<BuScheduleMetadata> GetWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string expand = null);
         
         /// <summary>
         /// Get the generation results for a generated schedule
@@ -625,7 +625,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>ScheduleGenerationResult</returns>
-        ScheduleGenerationResult GetWorkforcemanagementBusinessunitWeekScheduleGenerationresults (string businessUnitId, DateTime? weekId, string scheduleId);
+        ScheduleGenerationResult GetWorkforcemanagementBusinessunitWeekScheduleGenerationresults (string businessUnitId, String weekId, string scheduleId);
 
         /// <summary>
         /// Get the generation results for a generated schedule
@@ -638,7 +638,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>ApiResponse of ScheduleGenerationResult</returns>
-        ApiResponse<ScheduleGenerationResult> GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId);
+        ApiResponse<ScheduleGenerationResult> GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsWithHttpInfo (string businessUnitId, String weekId, string scheduleId);
         
         /// <summary>
         /// Get the headcount forecast by planning group for the schedule
@@ -652,7 +652,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>BuHeadcountForecastResponse</returns>
-        BuHeadcountForecastResponse GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast (string businessUnitId, DateTime? weekId, string scheduleId, bool? forceDownload = null);
+        BuHeadcountForecastResponse GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null);
 
         /// <summary>
         /// Get the headcount forecast by planning group for the schedule
@@ -666,7 +666,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>ApiResponse of BuHeadcountForecastResponse</returns>
-        ApiResponse<BuHeadcountForecastResponse> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, bool? forceDownload = null);
+        ApiResponse<BuHeadcountForecastResponse> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastWithHttpInfo (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null);
         
         /// <summary>
         /// Get the list of week schedules for the specified week
@@ -708,7 +708,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>BuShortTermForecast</returns>
-        BuShortTermForecast GetWorkforcemanagementBusinessunitWeekShorttermforecast (string businessUnitId, DateTime? weekDateId, string forecastId, List<string> expand = null);
+        BuShortTermForecast GetWorkforcemanagementBusinessunitWeekShorttermforecast (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null);
 
         /// <summary>
         /// Get a short term forecast
@@ -722,7 +722,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of BuShortTermForecast</returns>
-        ApiResponse<BuShortTermForecast> GetWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId, List<string> expand = null);
+        ApiResponse<BuShortTermForecast> GetWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null);
         
         /// <summary>
         /// Get the result of a short term forecast calculation
@@ -737,7 +737,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekNumber">The week number to fetch (for multi-week forecasts) (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>BuForecastResultResponse</returns>
-        BuForecastResultResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastData (string businessUnitId, DateTime? weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null);
+        BuForecastResultResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastData (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Get the result of a short term forecast calculation
@@ -752,7 +752,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekNumber">The week number to fetch (for multi-week forecasts) (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BuForecastResultResponse</returns>
-        ApiResponse<BuForecastResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastDataWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null);
+        ApiResponse<BuForecastResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastDataWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null);
         
         /// <summary>
         /// Gets the forecast generation results
@@ -765,7 +765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>BuForecastGenerationResult</returns>
-        BuForecastGenerationResult GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults (string businessUnitId, DateTime? weekDateId, string forecastId);
+        BuForecastGenerationResult GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults (string businessUnitId, String weekDateId, string forecastId);
 
         /// <summary>
         /// Gets the forecast generation results
@@ -778,7 +778,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of BuForecastGenerationResult</returns>
-        ApiResponse<BuForecastGenerationResult> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId);
+        ApiResponse<BuForecastGenerationResult> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
         
         /// <summary>
         /// Gets the forecast planning group snapshot
@@ -791,7 +791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ForecastPlanningGroupsResponse</returns>
-        ForecastPlanningGroupsResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups (string businessUnitId, DateTime? weekDateId, string forecastId);
+        ForecastPlanningGroupsResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups (string businessUnitId, String weekDateId, string forecastId);
 
         /// <summary>
         /// Gets the forecast planning group snapshot
@@ -804,7 +804,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of ForecastPlanningGroupsResponse</returns>
-        ApiResponse<ForecastPlanningGroupsResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId);
+        ApiResponse<ForecastPlanningGroupsResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
         
         /// <summary>
         /// Get short term forecasts
@@ -1185,7 +1185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>WeekShiftTradeListResponse</returns>
-        WeekShiftTradeListResponse GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null);
+        WeekShiftTradeListResponse GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, bool? evaluateMatches = null);
 
         /// <summary>
         /// Gets all the shift trades for a given week
@@ -1198,7 +1198,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>ApiResponse of WeekShiftTradeListResponse</returns>
-        ApiResponse<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null);
+        ApiResponse<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null);
         
         /// <summary>
         /// Get a work plan
@@ -1646,7 +1646,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <returns>ShiftTradeResponse</returns>
-        ShiftTradeResponse PatchWorkforcemanagementManagementunitWeekShifttrade (string managementUnitId, DateTime? weekDateId, PatchShiftTradeRequest body, string tradeId);
+        ShiftTradeResponse PatchWorkforcemanagementManagementunitWeekShifttrade (string managementUnitId, String weekDateId, PatchShiftTradeRequest body, string tradeId);
 
         /// <summary>
         /// Updates a shift trade. This route can only be called by the initiating agent
@@ -1660,7 +1660,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <returns>ApiResponse of ShiftTradeResponse</returns>
-        ApiResponse<ShiftTradeResponse> PatchWorkforcemanagementManagementunitWeekShifttradeWithHttpInfo (string managementUnitId, DateTime? weekDateId, PatchShiftTradeRequest body, string tradeId);
+        ApiResponse<ShiftTradeResponse> PatchWorkforcemanagementManagementunitWeekShifttradeWithHttpInfo (string managementUnitId, String weekDateId, PatchShiftTradeRequest body, string tradeId);
         
         /// <summary>
         /// Update a work plan
@@ -1924,7 +1924,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>BuAsyncAgentSchedulesQueryResponse</returns>
-        BuAsyncAgentSchedulesQueryResponse PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery (string businessUnitId, DateTime? weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
+        BuAsyncAgentSchedulesQueryResponse PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Loads agent schedule data from the schedule. Used in combination with the metadata route
@@ -1940,7 +1940,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BuAsyncAgentSchedulesQueryResponse</returns>
-        ApiResponse<BuAsyncAgentSchedulesQueryResponse> PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
+        ApiResponse<BuAsyncAgentSchedulesQueryResponse> PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
         
         /// <summary>
         /// Copy a schedule
@@ -1954,7 +1954,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule to copy</param>
         /// <param name="body">body</param>
         /// <returns>BuAsyncScheduleResponse</returns>
-        BuAsyncScheduleResponse PostWorkforcemanagementBusinessunitWeekScheduleCopy (string businessUnitId, DateTime? weekId, string scheduleId, BuCopyScheduleRequest body);
+        BuAsyncScheduleResponse PostWorkforcemanagementBusinessunitWeekScheduleCopy (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body);
 
         /// <summary>
         /// Copy a schedule
@@ -1968,7 +1968,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule to copy</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleResponse</returns>
-        ApiResponse<BuAsyncScheduleResponse> PostWorkforcemanagementBusinessunitWeekScheduleCopyWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, BuCopyScheduleRequest body);
+        ApiResponse<BuAsyncScheduleResponse> PostWorkforcemanagementBusinessunitWeekScheduleCopyWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body);
         
         /// <summary>
         /// Start a rescheduling run
@@ -1982,7 +1982,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>BuAsyncScheduleRunResponse</returns>
-        BuAsyncScheduleRunResponse PostWorkforcemanagementBusinessunitWeekScheduleReschedule (string businessUnitId, DateTime? weekId, string scheduleId, BuRescheduleRequest body);
+        BuAsyncScheduleRunResponse PostWorkforcemanagementBusinessunitWeekScheduleReschedule (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body);
 
         /// <summary>
         /// Start a rescheduling run
@@ -1996,7 +1996,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleRunResponse</returns>
-        ApiResponse<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, BuRescheduleRequest body);
+        ApiResponse<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body);
         
         /// <summary>
         /// Create a blank schedule
@@ -2009,7 +2009,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>BuScheduleMetadata</returns>
-        BuScheduleMetadata PostWorkforcemanagementBusinessunitWeekSchedules (string businessUnitId, DateTime? weekId, BuCreateBlankScheduleRequest body);
+        BuScheduleMetadata PostWorkforcemanagementBusinessunitWeekSchedules (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body);
 
         /// <summary>
         /// Create a blank schedule
@@ -2022,7 +2022,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuScheduleMetadata</returns>
-        ApiResponse<BuScheduleMetadata> PostWorkforcemanagementBusinessunitWeekSchedulesWithHttpInfo (string businessUnitId, DateTime? weekId, BuCreateBlankScheduleRequest body);
+        ApiResponse<BuScheduleMetadata> PostWorkforcemanagementBusinessunitWeekSchedulesWithHttpInfo (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body);
         
         /// <summary>
         /// Generate a schedule
@@ -2035,7 +2035,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>BuAsyncScheduleRunResponse</returns>
-        BuAsyncScheduleRunResponse PostWorkforcemanagementBusinessunitWeekSchedulesGenerate (string businessUnitId, DateTime? weekId, BuGenerateScheduleRequest body);
+        BuAsyncScheduleRunResponse PostWorkforcemanagementBusinessunitWeekSchedulesGenerate (string businessUnitId, String weekId, BuGenerateScheduleRequest body);
 
         /// <summary>
         /// Generate a schedule
@@ -2048,7 +2048,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleRunResponse</returns>
-        ApiResponse<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateWithHttpInfo (string businessUnitId, DateTime? weekId, BuGenerateScheduleRequest body);
+        ApiResponse<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateWithHttpInfo (string businessUnitId, String weekId, BuGenerateScheduleRequest body);
         
         /// <summary>
         /// Copy a short term forecast
@@ -2063,7 +2063,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>AsyncForecastOperationResult</returns>
-        AsyncForecastOperationResult PostWorkforcemanagementBusinessunitWeekShorttermforecastCopy (string businessUnitId, DateTime? weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null);
+        AsyncForecastOperationResult PostWorkforcemanagementBusinessunitWeekShorttermforecastCopy (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null);
 
         /// <summary>
         /// Copy a short term forecast
@@ -2078,7 +2078,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of AsyncForecastOperationResult</returns>
-        ApiResponse<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null);
+        ApiResponse<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null);
         
         /// <summary>
         /// Generate a short term forecast
@@ -2092,7 +2092,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>AsyncForecastOperationResult</returns>
-        AsyncForecastOperationResult PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate (string businessUnitId, DateTime? weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null);
+        AsyncForecastOperationResult PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null);
 
         /// <summary>
         /// Generate a short term forecast
@@ -2106,7 +2106,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of AsyncForecastOperationResult</returns>
-        ApiResponse<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateWithHttpInfo (string businessUnitId, DateTime? weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null);
+        ApiResponse<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateWithHttpInfo (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null);
         
         /// <summary>
         /// Add a new business unit
@@ -2290,7 +2290,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <returns>MatchShiftTradeResponse</returns>
-        MatchShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttradeMatch (string managementUnitId, DateTime? weekDateId, MatchShiftTradeRequest body, string tradeId);
+        MatchShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttradeMatch (string managementUnitId, String weekDateId, MatchShiftTradeRequest body, string tradeId);
 
         /// <summary>
         /// Matches a shift trade. This route can only be called by the receiving agent
@@ -2304,7 +2304,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <returns>ApiResponse of MatchShiftTradeResponse</returns>
-        ApiResponse<MatchShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeMatchWithHttpInfo (string managementUnitId, DateTime? weekDateId, MatchShiftTradeRequest body, string tradeId);
+        ApiResponse<MatchShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeMatchWithHttpInfo (string managementUnitId, String weekDateId, MatchShiftTradeRequest body, string tradeId);
         
         /// <summary>
         /// Adds a shift trade
@@ -2317,7 +2317,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ShiftTradeResponse</returns>
-        ShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, DateTime? weekDateId, AddShiftTradeRequest body);
+        ShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, AddShiftTradeRequest body);
 
         /// <summary>
         /// Adds a shift trade
@@ -2330,7 +2330,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ShiftTradeResponse</returns>
-        ApiResponse<ShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, DateTime? weekDateId, AddShiftTradeRequest body);
+        ApiResponse<ShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, String weekDateId, AddShiftTradeRequest body);
         
         /// <summary>
         /// Searches for potential shift trade matches for the current agent
@@ -2343,7 +2343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>SearchShiftTradesResponse</returns>
-        SearchShiftTradesResponse PostWorkforcemanagementManagementunitWeekShifttradesSearch (string managementUnitId, DateTime? weekDateId, SearchShiftTradesRequest body);
+        SearchShiftTradesResponse PostWorkforcemanagementManagementunitWeekShifttradesSearch (string managementUnitId, String weekDateId, SearchShiftTradesRequest body);
 
         /// <summary>
         /// Searches for potential shift trade matches for the current agent
@@ -2356,7 +2356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of SearchShiftTradesResponse</returns>
-        ApiResponse<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchWithHttpInfo (string managementUnitId, DateTime? weekDateId, SearchShiftTradesRequest body);
+        ApiResponse<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchWithHttpInfo (string managementUnitId, String weekDateId, SearchShiftTradesRequest body);
         
         /// <summary>
         /// Updates the state of a batch of shift trades
@@ -2370,7 +2370,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>BulkUpdateShiftTradeStateResponse</returns>
-        BulkUpdateShiftTradeStateResponse PostWorkforcemanagementManagementunitWeekShifttradesStateBulk (string managementUnitId, DateTime? weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null);
+        BulkUpdateShiftTradeStateResponse PostWorkforcemanagementManagementunitWeekShifttradesStateBulk (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null);
 
         /// <summary>
         /// Updates the state of a batch of shift trades
@@ -2384,7 +2384,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BulkUpdateShiftTradeStateResponse</returns>
-        ApiResponse<BulkUpdateShiftTradeStateResponse> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkWithHttpInfo (string managementUnitId, DateTime? weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null);
+        ApiResponse<BulkUpdateShiftTradeStateResponse> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkWithHttpInfo (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null);
         
         /// <summary>
         /// Create a copy of work plan
@@ -2737,7 +2737,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>Task of BuAsyncScheduleResponse</returns>
-        System.Threading.Tasks.Task<BuAsyncScheduleResponse> DeleteWorkforcemanagementBusinessunitWeekScheduleAsync (string businessUnitId, DateTime? weekId, string scheduleId);
+        System.Threading.Tasks.Task<BuAsyncScheduleResponse> DeleteWorkforcemanagementBusinessunitWeekScheduleAsync (string businessUnitId, String weekId, string scheduleId);
 
         /// <summary>
         /// Delete a schedule
@@ -2750,7 +2750,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> DeleteWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId);
+        System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> DeleteWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId);
         
         /// <summary>
         /// Delete a short term forecast
@@ -2763,7 +2763,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitWeekShorttermforecastAsync (string businessUnitId, DateTime? weekDateId, string forecastId);
+        System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitWeekShorttermforecastAsync (string businessUnitId, String weekDateId, string forecastId);
 
         /// <summary>
         /// Delete a short term forecast
@@ -2776,7 +2776,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
         
         /// <summary>
         /// Delete management unit
@@ -2972,7 +2972,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The business unit ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of WfmIntradayPlanningGroupListing</returns>
-        System.Threading.Tasks.Task<WfmIntradayPlanningGroupListing> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsync (string businessUnitId, DateTime? date);
+        System.Threading.Tasks.Task<WfmIntradayPlanningGroupListing> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsync (string businessUnitId, String date);
 
         /// <summary>
         /// Get intraday planning groups for the given date
@@ -2984,7 +2984,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The business unit ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (WfmIntradayPlanningGroupListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WfmIntradayPlanningGroupListing>> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsyncWithHttpInfo (string businessUnitId, DateTime? date);
+        System.Threading.Tasks.Task<ApiResponse<WfmIntradayPlanningGroupListing>> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsyncWithHttpInfo (string businessUnitId, String date);
         
         /// <summary>
         /// Get all authorized management units in the business unit
@@ -3190,7 +3190,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of BuScheduleMetadata</returns>
-        System.Threading.Tasks.Task<BuScheduleMetadata> GetWorkforcemanagementBusinessunitWeekScheduleAsync (string businessUnitId, DateTime? weekId, string scheduleId, string expand = null);
+        System.Threading.Tasks.Task<BuScheduleMetadata> GetWorkforcemanagementBusinessunitWeekScheduleAsync (string businessUnitId, String weekId, string scheduleId, string expand = null);
 
         /// <summary>
         /// Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route
@@ -3204,7 +3204,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (BuScheduleMetadata)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuScheduleMetadata>> GetWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<BuScheduleMetadata>> GetWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string expand = null);
         
         /// <summary>
         /// Get the generation results for a generated schedule
@@ -3217,7 +3217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>Task of ScheduleGenerationResult</returns>
-        System.Threading.Tasks.Task<ScheduleGenerationResult> GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsAsync (string businessUnitId, DateTime? weekId, string scheduleId);
+        System.Threading.Tasks.Task<ScheduleGenerationResult> GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsAsync (string businessUnitId, String weekId, string scheduleId);
 
         /// <summary>
         /// Get the generation results for a generated schedule
@@ -3230,7 +3230,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>Task of ApiResponse (ScheduleGenerationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScheduleGenerationResult>> GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId);
+        System.Threading.Tasks.Task<ApiResponse<ScheduleGenerationResult>> GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId);
         
         /// <summary>
         /// Get the headcount forecast by planning group for the schedule
@@ -3244,7 +3244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>Task of BuHeadcountForecastResponse</returns>
-        System.Threading.Tasks.Task<BuHeadcountForecastResponse> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastAsync (string businessUnitId, DateTime? weekId, string scheduleId, bool? forceDownload = null);
+        System.Threading.Tasks.Task<BuHeadcountForecastResponse> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastAsync (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null);
 
         /// <summary>
         /// Get the headcount forecast by planning group for the schedule
@@ -3258,7 +3258,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>Task of ApiResponse (BuHeadcountForecastResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuHeadcountForecastResponse>> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, bool? forceDownload = null);
+        System.Threading.Tasks.Task<ApiResponse<BuHeadcountForecastResponse>> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null);
         
         /// <summary>
         /// Get the list of week schedules for the specified week
@@ -3300,7 +3300,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of BuShortTermForecast</returns>
-        System.Threading.Tasks.Task<BuShortTermForecast> GetWorkforcemanagementBusinessunitWeekShorttermforecastAsync (string businessUnitId, DateTime? weekDateId, string forecastId, List<string> expand = null);
+        System.Threading.Tasks.Task<BuShortTermForecast> GetWorkforcemanagementBusinessunitWeekShorttermforecastAsync (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null);
 
         /// <summary>
         /// Get a short term forecast
@@ -3314,7 +3314,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (BuShortTermForecast)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuShortTermForecast>> GetWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<BuShortTermForecast>> GetWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null);
         
         /// <summary>
         /// Get the result of a short term forecast calculation
@@ -3329,7 +3329,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekNumber">The week number to fetch (for multi-week forecasts) (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of BuForecastResultResponse</returns>
-        System.Threading.Tasks.Task<BuForecastResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastDataAsync (string businessUnitId, DateTime? weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null);
+        System.Threading.Tasks.Task<BuForecastResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastDataAsync (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Get the result of a short term forecast calculation
@@ -3344,7 +3344,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekNumber">The week number to fetch (for multi-week forecasts) (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BuForecastResultResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuForecastResultResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastDataAsyncWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null);
+        System.Threading.Tasks.Task<ApiResponse<BuForecastResultResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastDataAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null);
         
         /// <summary>
         /// Gets the forecast generation results
@@ -3357,7 +3357,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of BuForecastGenerationResult</returns>
-        System.Threading.Tasks.Task<BuForecastGenerationResult> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsAsync (string businessUnitId, DateTime? weekDateId, string forecastId);
+        System.Threading.Tasks.Task<BuForecastGenerationResult> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsAsync (string businessUnitId, String weekDateId, string forecastId);
 
         /// <summary>
         /// Gets the forecast generation results
@@ -3370,7 +3370,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse (BuForecastGenerationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuForecastGenerationResult>> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsAsyncWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId);
+        System.Threading.Tasks.Task<ApiResponse<BuForecastGenerationResult>> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
         
         /// <summary>
         /// Gets the forecast planning group snapshot
@@ -3383,7 +3383,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ForecastPlanningGroupsResponse</returns>
-        System.Threading.Tasks.Task<ForecastPlanningGroupsResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsAsync (string businessUnitId, DateTime? weekDateId, string forecastId);
+        System.Threading.Tasks.Task<ForecastPlanningGroupsResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsAsync (string businessUnitId, String weekDateId, string forecastId);
 
         /// <summary>
         /// Gets the forecast planning group snapshot
@@ -3396,7 +3396,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse (ForecastPlanningGroupsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ForecastPlanningGroupsResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsAsyncWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId);
+        System.Threading.Tasks.Task<ApiResponse<ForecastPlanningGroupsResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
         
         /// <summary>
         /// Get short term forecasts
@@ -3777,7 +3777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>Task of WeekShiftTradeListResponse</returns>
-        System.Threading.Tasks.Task<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null);
+        System.Threading.Tasks.Task<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, String weekDateId, bool? evaluateMatches = null);
 
         /// <summary>
         /// Gets all the shift trades for a given week
@@ -3790,7 +3790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>Task of ApiResponse (WeekShiftTradeListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WeekShiftTradeListResponse>> GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null);
+        System.Threading.Tasks.Task<ApiResponse<WeekShiftTradeListResponse>> GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null);
         
         /// <summary>
         /// Get a work plan
@@ -4238,7 +4238,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <returns>Task of ShiftTradeResponse</returns>
-        System.Threading.Tasks.Task<ShiftTradeResponse> PatchWorkforcemanagementManagementunitWeekShifttradeAsync (string managementUnitId, DateTime? weekDateId, PatchShiftTradeRequest body, string tradeId);
+        System.Threading.Tasks.Task<ShiftTradeResponse> PatchWorkforcemanagementManagementunitWeekShifttradeAsync (string managementUnitId, String weekDateId, PatchShiftTradeRequest body, string tradeId);
 
         /// <summary>
         /// Updates a shift trade. This route can only be called by the initiating agent
@@ -4252,7 +4252,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PatchWorkforcemanagementManagementunitWeekShifttradeAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, PatchShiftTradeRequest body, string tradeId);
+        System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PatchWorkforcemanagementManagementunitWeekShifttradeAsyncWithHttpInfo (string managementUnitId, String weekDateId, PatchShiftTradeRequest body, string tradeId);
         
         /// <summary>
         /// Update a work plan
@@ -4516,7 +4516,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of BuAsyncAgentSchedulesQueryResponse</returns>
-        System.Threading.Tasks.Task<BuAsyncAgentSchedulesQueryResponse> PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryAsync (string businessUnitId, DateTime? weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
+        System.Threading.Tasks.Task<BuAsyncAgentSchedulesQueryResponse> PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryAsync (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Loads agent schedule data from the schedule. Used in combination with the metadata route
@@ -4532,7 +4532,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BuAsyncAgentSchedulesQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesQueryResponse>> PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
+        System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesQueryResponse>> PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
         
         /// <summary>
         /// Copy a schedule
@@ -4546,7 +4546,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule to copy</param>
         /// <param name="body">body</param>
         /// <returns>Task of BuAsyncScheduleResponse</returns>
-        System.Threading.Tasks.Task<BuAsyncScheduleResponse> PostWorkforcemanagementBusinessunitWeekScheduleCopyAsync (string businessUnitId, DateTime? weekId, string scheduleId, BuCopyScheduleRequest body);
+        System.Threading.Tasks.Task<BuAsyncScheduleResponse> PostWorkforcemanagementBusinessunitWeekScheduleCopyAsync (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body);
 
         /// <summary>
         /// Copy a schedule
@@ -4560,7 +4560,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule to copy</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> PostWorkforcemanagementBusinessunitWeekScheduleCopyAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, BuCopyScheduleRequest body);
+        System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> PostWorkforcemanagementBusinessunitWeekScheduleCopyAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body);
         
         /// <summary>
         /// Start a rescheduling run
@@ -4574,7 +4574,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>Task of BuAsyncScheduleRunResponse</returns>
-        System.Threading.Tasks.Task<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleAsync (string businessUnitId, DateTime? weekId, string scheduleId, BuRescheduleRequest body);
+        System.Threading.Tasks.Task<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleAsync (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body);
 
         /// <summary>
         /// Start a rescheduling run
@@ -4588,7 +4588,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleRunResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleRunResponse>> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, BuRescheduleRequest body);
+        System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleRunResponse>> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body);
         
         /// <summary>
         /// Create a blank schedule
@@ -4601,7 +4601,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of BuScheduleMetadata</returns>
-        System.Threading.Tasks.Task<BuScheduleMetadata> PostWorkforcemanagementBusinessunitWeekSchedulesAsync (string businessUnitId, DateTime? weekId, BuCreateBlankScheduleRequest body);
+        System.Threading.Tasks.Task<BuScheduleMetadata> PostWorkforcemanagementBusinessunitWeekSchedulesAsync (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body);
 
         /// <summary>
         /// Create a blank schedule
@@ -4614,7 +4614,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuScheduleMetadata)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuScheduleMetadata>> PostWorkforcemanagementBusinessunitWeekSchedulesAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, BuCreateBlankScheduleRequest body);
+        System.Threading.Tasks.Task<ApiResponse<BuScheduleMetadata>> PostWorkforcemanagementBusinessunitWeekSchedulesAsyncWithHttpInfo (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body);
         
         /// <summary>
         /// Generate a schedule
@@ -4627,7 +4627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of BuAsyncScheduleRunResponse</returns>
-        System.Threading.Tasks.Task<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateAsync (string businessUnitId, DateTime? weekId, BuGenerateScheduleRequest body);
+        System.Threading.Tasks.Task<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateAsync (string businessUnitId, String weekId, BuGenerateScheduleRequest body);
 
         /// <summary>
         /// Generate a schedule
@@ -4640,7 +4640,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleRunResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleRunResponse>> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, BuGenerateScheduleRequest body);
+        System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleRunResponse>> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateAsyncWithHttpInfo (string businessUnitId, String weekId, BuGenerateScheduleRequest body);
         
         /// <summary>
         /// Copy a short term forecast
@@ -4655,7 +4655,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of AsyncForecastOperationResult</returns>
-        System.Threading.Tasks.Task<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyAsync (string businessUnitId, DateTime? weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null);
+        System.Threading.Tasks.Task<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyAsync (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null);
 
         /// <summary>
         /// Copy a short term forecast
@@ -4670,7 +4670,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (AsyncForecastOperationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AsyncForecastOperationResult>> PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyAsyncWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null);
+        System.Threading.Tasks.Task<ApiResponse<AsyncForecastOperationResult>> PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null);
         
         /// <summary>
         /// Generate a short term forecast
@@ -4684,7 +4684,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of AsyncForecastOperationResult</returns>
-        System.Threading.Tasks.Task<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateAsync (string businessUnitId, DateTime? weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null);
+        System.Threading.Tasks.Task<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateAsync (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null);
 
         /// <summary>
         /// Generate a short term forecast
@@ -4698,7 +4698,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (AsyncForecastOperationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AsyncForecastOperationResult>> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateAsyncWithHttpInfo (string businessUnitId, DateTime? weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null);
+        System.Threading.Tasks.Task<ApiResponse<AsyncForecastOperationResult>> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateAsyncWithHttpInfo (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null);
         
         /// <summary>
         /// Add a new business unit
@@ -4882,7 +4882,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <returns>Task of MatchShiftTradeResponse</returns>
-        System.Threading.Tasks.Task<MatchShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsync (string managementUnitId, DateTime? weekDateId, MatchShiftTradeRequest body, string tradeId);
+        System.Threading.Tasks.Task<MatchShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsync (string managementUnitId, String weekDateId, MatchShiftTradeRequest body, string tradeId);
 
         /// <summary>
         /// Matches a shift trade. This route can only be called by the receiving agent
@@ -4896,7 +4896,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <returns>Task of ApiResponse (MatchShiftTradeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MatchShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, MatchShiftTradeRequest body, string tradeId);
+        System.Threading.Tasks.Task<ApiResponse<MatchShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsyncWithHttpInfo (string managementUnitId, String weekDateId, MatchShiftTradeRequest body, string tradeId);
         
         /// <summary>
         /// Adds a shift trade
@@ -4909,7 +4909,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ShiftTradeResponse</returns>
-        System.Threading.Tasks.Task<ShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, DateTime? weekDateId, AddShiftTradeRequest body);
+        System.Threading.Tasks.Task<ShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, String weekDateId, AddShiftTradeRequest body);
 
         /// <summary>
         /// Adds a shift trade
@@ -4922,7 +4922,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, AddShiftTradeRequest body);
+        System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, String weekDateId, AddShiftTradeRequest body);
         
         /// <summary>
         /// Searches for potential shift trade matches for the current agent
@@ -4935,7 +4935,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of SearchShiftTradesResponse</returns>
-        System.Threading.Tasks.Task<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsync (string managementUnitId, DateTime? weekDateId, SearchShiftTradesRequest body);
+        System.Threading.Tasks.Task<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsync (string managementUnitId, String weekDateId, SearchShiftTradesRequest body);
 
         /// <summary>
         /// Searches for potential shift trade matches for the current agent
@@ -4948,7 +4948,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (SearchShiftTradesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SearchShiftTradesResponse>> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, SearchShiftTradesRequest body);
+        System.Threading.Tasks.Task<ApiResponse<SearchShiftTradesResponse>> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsyncWithHttpInfo (string managementUnitId, String weekDateId, SearchShiftTradesRequest body);
         
         /// <summary>
         /// Updates the state of a batch of shift trades
@@ -4962,7 +4962,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of BulkUpdateShiftTradeStateResponse</returns>
-        System.Threading.Tasks.Task<BulkUpdateShiftTradeStateResponse> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkAsync (string managementUnitId, DateTime? weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null);
+        System.Threading.Tasks.Task<BulkUpdateShiftTradeStateResponse> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkAsync (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null);
 
         /// <summary>
         /// Updates the state of a batch of shift trades
@@ -4976,7 +4976,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BulkUpdateShiftTradeStateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BulkUpdateShiftTradeStateResponse>> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null);
+        System.Threading.Tasks.Task<ApiResponse<BulkUpdateShiftTradeStateResponse>> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkAsyncWithHttpInfo (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null);
         
         /// <summary>
         /// Create a copy of work plan
@@ -6303,7 +6303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>BuAsyncScheduleResponse</returns>
-        public BuAsyncScheduleResponse DeleteWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, DateTime? weekId, string scheduleId)
+        public BuAsyncScheduleResponse DeleteWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, String weekId, string scheduleId)
         {
              ApiResponse<BuAsyncScheduleResponse> localVarResponse = DeleteWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo(businessUnitId, weekId, scheduleId);
              return localVarResponse.Data;
@@ -6317,7 +6317,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>ApiResponse of BuAsyncScheduleResponse</returns>
-        public ApiResponse< BuAsyncScheduleResponse > DeleteWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId)
+        public ApiResponse< BuAsyncScheduleResponse > DeleteWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo (string businessUnitId, String weekId, string scheduleId)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -6410,7 +6410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>Task of BuAsyncScheduleResponse</returns>
-        public async System.Threading.Tasks.Task<BuAsyncScheduleResponse> DeleteWorkforcemanagementBusinessunitWeekScheduleAsync (string businessUnitId, DateTime? weekId, string scheduleId)
+        public async System.Threading.Tasks.Task<BuAsyncScheduleResponse> DeleteWorkforcemanagementBusinessunitWeekScheduleAsync (string businessUnitId, String weekId, string scheduleId)
         {
              ApiResponse<BuAsyncScheduleResponse> localVarResponse = await DeleteWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo(businessUnitId, weekId, scheduleId);
              return localVarResponse.Data;
@@ -6425,7 +6425,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> DeleteWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId)
+        public async System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> DeleteWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -6522,7 +6522,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns></returns>
-        public void DeleteWorkforcemanagementBusinessunitWeekShorttermforecast (string businessUnitId, DateTime? weekDateId, string forecastId)
+        public void DeleteWorkforcemanagementBusinessunitWeekShorttermforecast (string businessUnitId, String weekDateId, string forecastId)
         {
              DeleteWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo(businessUnitId, weekDateId, forecastId);
         }
@@ -6535,7 +6535,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId)
+        public ApiResponse<Object> DeleteWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo (string businessUnitId, String weekDateId, string forecastId)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -6628,7 +6628,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitWeekShorttermforecastAsync (string businessUnitId, DateTime? weekDateId, string forecastId)
+        public async System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitWeekShorttermforecastAsync (string businessUnitId, String weekDateId, string forecastId)
         {
              await DeleteWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo(businessUnitId, weekDateId, forecastId);
 
@@ -6642,7 +6642,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -8321,7 +8321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The business unit ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>WfmIntradayPlanningGroupListing</returns>
-        public WfmIntradayPlanningGroupListing GetWorkforcemanagementBusinessunitIntradayPlanninggroups (string businessUnitId, DateTime? date)
+        public WfmIntradayPlanningGroupListing GetWorkforcemanagementBusinessunitIntradayPlanninggroups (string businessUnitId, String date)
         {
              ApiResponse<WfmIntradayPlanningGroupListing> localVarResponse = GetWorkforcemanagementBusinessunitIntradayPlanninggroupsWithHttpInfo(businessUnitId, date);
              return localVarResponse.Data;
@@ -8334,7 +8334,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The business unit ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of WfmIntradayPlanningGroupListing</returns>
-        public ApiResponse< WfmIntradayPlanningGroupListing > GetWorkforcemanagementBusinessunitIntradayPlanninggroupsWithHttpInfo (string businessUnitId, DateTime? date)
+        public ApiResponse< WfmIntradayPlanningGroupListing > GetWorkforcemanagementBusinessunitIntradayPlanninggroupsWithHttpInfo (string businessUnitId, String date)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -8422,7 +8422,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The business unit ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of WfmIntradayPlanningGroupListing</returns>
-        public async System.Threading.Tasks.Task<WfmIntradayPlanningGroupListing> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsync (string businessUnitId, DateTime? date)
+        public async System.Threading.Tasks.Task<WfmIntradayPlanningGroupListing> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsync (string businessUnitId, String date)
         {
              ApiResponse<WfmIntradayPlanningGroupListing> localVarResponse = await GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsyncWithHttpInfo(businessUnitId, date);
              return localVarResponse.Data;
@@ -8436,7 +8436,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The business unit ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (WfmIntradayPlanningGroupListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WfmIntradayPlanningGroupListing>> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsyncWithHttpInfo (string businessUnitId, DateTime? date)
+        public async System.Threading.Tasks.Task<ApiResponse<WfmIntradayPlanningGroupListing>> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsyncWithHttpInfo (string businessUnitId, String date)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -10163,7 +10163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>BuScheduleMetadata</returns>
-        public BuScheduleMetadata GetWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, DateTime? weekId, string scheduleId, string expand = null)
+        public BuScheduleMetadata GetWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, String weekId, string scheduleId, string expand = null)
         {
              ApiResponse<BuScheduleMetadata> localVarResponse = GetWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo(businessUnitId, weekId, scheduleId, expand);
              return localVarResponse.Data;
@@ -10178,7 +10178,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of BuScheduleMetadata</returns>
-        public ApiResponse< BuScheduleMetadata > GetWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, string expand = null)
+        public ApiResponse< BuScheduleMetadata > GetWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string expand = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -10273,7 +10273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of BuScheduleMetadata</returns>
-        public async System.Threading.Tasks.Task<BuScheduleMetadata> GetWorkforcemanagementBusinessunitWeekScheduleAsync (string businessUnitId, DateTime? weekId, string scheduleId, string expand = null)
+        public async System.Threading.Tasks.Task<BuScheduleMetadata> GetWorkforcemanagementBusinessunitWeekScheduleAsync (string businessUnitId, String weekId, string scheduleId, string expand = null)
         {
              ApiResponse<BuScheduleMetadata> localVarResponse = await GetWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, expand);
              return localVarResponse.Data;
@@ -10289,7 +10289,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (BuScheduleMetadata)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BuScheduleMetadata>> GetWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<BuScheduleMetadata>> GetWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string expand = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -10387,7 +10387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>ScheduleGenerationResult</returns>
-        public ScheduleGenerationResult GetWorkforcemanagementBusinessunitWeekScheduleGenerationresults (string businessUnitId, DateTime? weekId, string scheduleId)
+        public ScheduleGenerationResult GetWorkforcemanagementBusinessunitWeekScheduleGenerationresults (string businessUnitId, String weekId, string scheduleId)
         {
              ApiResponse<ScheduleGenerationResult> localVarResponse = GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsWithHttpInfo(businessUnitId, weekId, scheduleId);
              return localVarResponse.Data;
@@ -10401,7 +10401,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>ApiResponse of ScheduleGenerationResult</returns>
-        public ApiResponse< ScheduleGenerationResult > GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId)
+        public ApiResponse< ScheduleGenerationResult > GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsWithHttpInfo (string businessUnitId, String weekId, string scheduleId)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -10494,7 +10494,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>Task of ScheduleGenerationResult</returns>
-        public async System.Threading.Tasks.Task<ScheduleGenerationResult> GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsAsync (string businessUnitId, DateTime? weekId, string scheduleId)
+        public async System.Threading.Tasks.Task<ScheduleGenerationResult> GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsAsync (string businessUnitId, String weekId, string scheduleId)
         {
              ApiResponse<ScheduleGenerationResult> localVarResponse = await GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsAsyncWithHttpInfo(businessUnitId, weekId, scheduleId);
              return localVarResponse.Data;
@@ -10509,7 +10509,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>Task of ApiResponse (ScheduleGenerationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScheduleGenerationResult>> GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId)
+        public async System.Threading.Tasks.Task<ApiResponse<ScheduleGenerationResult>> GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -10607,7 +10607,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>BuHeadcountForecastResponse</returns>
-        public BuHeadcountForecastResponse GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast (string businessUnitId, DateTime? weekId, string scheduleId, bool? forceDownload = null)
+        public BuHeadcountForecastResponse GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null)
         {
              ApiResponse<BuHeadcountForecastResponse> localVarResponse = GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastWithHttpInfo(businessUnitId, weekId, scheduleId, forceDownload);
              return localVarResponse.Data;
@@ -10622,7 +10622,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>ApiResponse of BuHeadcountForecastResponse</returns>
-        public ApiResponse< BuHeadcountForecastResponse > GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, bool? forceDownload = null)
+        public ApiResponse< BuHeadcountForecastResponse > GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastWithHttpInfo (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -10717,7 +10717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>Task of BuHeadcountForecastResponse</returns>
-        public async System.Threading.Tasks.Task<BuHeadcountForecastResponse> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastAsync (string businessUnitId, DateTime? weekId, string scheduleId, bool? forceDownload = null)
+        public async System.Threading.Tasks.Task<BuHeadcountForecastResponse> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastAsync (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null)
         {
              ApiResponse<BuHeadcountForecastResponse> localVarResponse = await GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, forceDownload);
              return localVarResponse.Data;
@@ -10733,7 +10733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>Task of ApiResponse (BuHeadcountForecastResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BuHeadcountForecastResponse>> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, bool? forceDownload = null)
+        public async System.Threading.Tasks.Task<ApiResponse<BuHeadcountForecastResponse>> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -11050,7 +11050,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>BuShortTermForecast</returns>
-        public BuShortTermForecast GetWorkforcemanagementBusinessunitWeekShorttermforecast (string businessUnitId, DateTime? weekDateId, string forecastId, List<string> expand = null)
+        public BuShortTermForecast GetWorkforcemanagementBusinessunitWeekShorttermforecast (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null)
         {
              ApiResponse<BuShortTermForecast> localVarResponse = GetWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo(businessUnitId, weekDateId, forecastId, expand);
              return localVarResponse.Data;
@@ -11065,7 +11065,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of BuShortTermForecast</returns>
-        public ApiResponse< BuShortTermForecast > GetWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId, List<string> expand = null)
+        public ApiResponse< BuShortTermForecast > GetWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -11160,7 +11160,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of BuShortTermForecast</returns>
-        public async System.Threading.Tasks.Task<BuShortTermForecast> GetWorkforcemanagementBusinessunitWeekShorttermforecastAsync (string businessUnitId, DateTime? weekDateId, string forecastId, List<string> expand = null)
+        public async System.Threading.Tasks.Task<BuShortTermForecast> GetWorkforcemanagementBusinessunitWeekShorttermforecastAsync (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null)
         {
              ApiResponse<BuShortTermForecast> localVarResponse = await GetWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo(businessUnitId, weekDateId, forecastId, expand);
              return localVarResponse.Data;
@@ -11176,7 +11176,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (BuShortTermForecast)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BuShortTermForecast>> GetWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<BuShortTermForecast>> GetWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -11276,7 +11276,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekNumber">The week number to fetch (for multi-week forecasts) (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>BuForecastResultResponse</returns>
-        public BuForecastResultResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastData (string businessUnitId, DateTime? weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null)
+        public BuForecastResultResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastData (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null)
         {
              ApiResponse<BuForecastResultResponse> localVarResponse = GetWorkforcemanagementBusinessunitWeekShorttermforecastDataWithHttpInfo(businessUnitId, weekDateId, forecastId, weekNumber, forceDownloadService);
              return localVarResponse.Data;
@@ -11292,7 +11292,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekNumber">The week number to fetch (for multi-week forecasts) (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BuForecastResultResponse</returns>
-        public ApiResponse< BuForecastResultResponse > GetWorkforcemanagementBusinessunitWeekShorttermforecastDataWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null)
+        public ApiResponse< BuForecastResultResponse > GetWorkforcemanagementBusinessunitWeekShorttermforecastDataWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -11389,7 +11389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekNumber">The week number to fetch (for multi-week forecasts) (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of BuForecastResultResponse</returns>
-        public async System.Threading.Tasks.Task<BuForecastResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastDataAsync (string businessUnitId, DateTime? weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null)
+        public async System.Threading.Tasks.Task<BuForecastResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastDataAsync (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null)
         {
              ApiResponse<BuForecastResultResponse> localVarResponse = await GetWorkforcemanagementBusinessunitWeekShorttermforecastDataAsyncWithHttpInfo(businessUnitId, weekDateId, forecastId, weekNumber, forceDownloadService);
              return localVarResponse.Data;
@@ -11406,7 +11406,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekNumber">The week number to fetch (for multi-week forecasts) (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BuForecastResultResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BuForecastResultResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastDataAsyncWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null)
+        public async System.Threading.Tasks.Task<ApiResponse<BuForecastResultResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastDataAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -11505,7 +11505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>BuForecastGenerationResult</returns>
-        public BuForecastGenerationResult GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults (string businessUnitId, DateTime? weekDateId, string forecastId)
+        public BuForecastGenerationResult GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults (string businessUnitId, String weekDateId, string forecastId)
         {
              ApiResponse<BuForecastGenerationResult> localVarResponse = GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsWithHttpInfo(businessUnitId, weekDateId, forecastId);
              return localVarResponse.Data;
@@ -11519,7 +11519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of BuForecastGenerationResult</returns>
-        public ApiResponse< BuForecastGenerationResult > GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId)
+        public ApiResponse< BuForecastGenerationResult > GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsWithHttpInfo (string businessUnitId, String weekDateId, string forecastId)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -11612,7 +11612,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of BuForecastGenerationResult</returns>
-        public async System.Threading.Tasks.Task<BuForecastGenerationResult> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsAsync (string businessUnitId, DateTime? weekDateId, string forecastId)
+        public async System.Threading.Tasks.Task<BuForecastGenerationResult> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsAsync (string businessUnitId, String weekDateId, string forecastId)
         {
              ApiResponse<BuForecastGenerationResult> localVarResponse = await GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsAsyncWithHttpInfo(businessUnitId, weekDateId, forecastId);
              return localVarResponse.Data;
@@ -11627,7 +11627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse (BuForecastGenerationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BuForecastGenerationResult>> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsAsyncWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId)
+        public async System.Threading.Tasks.Task<ApiResponse<BuForecastGenerationResult>> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -11724,7 +11724,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ForecastPlanningGroupsResponse</returns>
-        public ForecastPlanningGroupsResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups (string businessUnitId, DateTime? weekDateId, string forecastId)
+        public ForecastPlanningGroupsResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups (string businessUnitId, String weekDateId, string forecastId)
         {
              ApiResponse<ForecastPlanningGroupsResponse> localVarResponse = GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsWithHttpInfo(businessUnitId, weekDateId, forecastId);
              return localVarResponse.Data;
@@ -11738,7 +11738,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of ForecastPlanningGroupsResponse</returns>
-        public ApiResponse< ForecastPlanningGroupsResponse > GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId)
+        public ApiResponse< ForecastPlanningGroupsResponse > GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsWithHttpInfo (string businessUnitId, String weekDateId, string forecastId)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -11831,7 +11831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ForecastPlanningGroupsResponse</returns>
-        public async System.Threading.Tasks.Task<ForecastPlanningGroupsResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsAsync (string businessUnitId, DateTime? weekDateId, string forecastId)
+        public async System.Threading.Tasks.Task<ForecastPlanningGroupsResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsAsync (string businessUnitId, String weekDateId, string forecastId)
         {
              ApiResponse<ForecastPlanningGroupsResponse> localVarResponse = await GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsAsyncWithHttpInfo(businessUnitId, weekDateId, forecastId);
              return localVarResponse.Data;
@@ -11846,7 +11846,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse (ForecastPlanningGroupsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ForecastPlanningGroupsResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsAsyncWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId)
+        public async System.Threading.Tasks.Task<ApiResponse<ForecastPlanningGroupsResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -15001,7 +15001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>WeekShiftTradeListResponse</returns>
-        public WeekShiftTradeListResponse GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null)
+        public WeekShiftTradeListResponse GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, bool? evaluateMatches = null)
         {
              ApiResponse<WeekShiftTradeListResponse> localVarResponse = GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo(managementUnitId, weekDateId, evaluateMatches);
              return localVarResponse.Data;
@@ -15015,7 +15015,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>ApiResponse of WeekShiftTradeListResponse</returns>
-        public ApiResponse< WeekShiftTradeListResponse > GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null)
+        public ApiResponse< WeekShiftTradeListResponse > GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -15105,7 +15105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>Task of WeekShiftTradeListResponse</returns>
-        public async System.Threading.Tasks.Task<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null)
+        public async System.Threading.Tasks.Task<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, String weekDateId, bool? evaluateMatches = null)
         {
              ApiResponse<WeekShiftTradeListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo(managementUnitId, weekDateId, evaluateMatches);
              return localVarResponse.Data;
@@ -15120,7 +15120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>Task of ApiResponse (WeekShiftTradeListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WeekShiftTradeListResponse>> GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WeekShiftTradeListResponse>> GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -18877,7 +18877,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <returns>ShiftTradeResponse</returns>
-        public ShiftTradeResponse PatchWorkforcemanagementManagementunitWeekShifttrade (string managementUnitId, DateTime? weekDateId, PatchShiftTradeRequest body, string tradeId)
+        public ShiftTradeResponse PatchWorkforcemanagementManagementunitWeekShifttrade (string managementUnitId, String weekDateId, PatchShiftTradeRequest body, string tradeId)
         {
              ApiResponse<ShiftTradeResponse> localVarResponse = PatchWorkforcemanagementManagementunitWeekShifttradeWithHttpInfo(managementUnitId, weekDateId, body, tradeId);
              return localVarResponse.Data;
@@ -18892,7 +18892,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <returns>ApiResponse of ShiftTradeResponse</returns>
-        public ApiResponse< ShiftTradeResponse > PatchWorkforcemanagementManagementunitWeekShifttradeWithHttpInfo (string managementUnitId, DateTime? weekDateId, PatchShiftTradeRequest body, string tradeId)
+        public ApiResponse< ShiftTradeResponse > PatchWorkforcemanagementManagementunitWeekShifttradeWithHttpInfo (string managementUnitId, String weekDateId, PatchShiftTradeRequest body, string tradeId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -18994,7 +18994,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <returns>Task of ShiftTradeResponse</returns>
-        public async System.Threading.Tasks.Task<ShiftTradeResponse> PatchWorkforcemanagementManagementunitWeekShifttradeAsync (string managementUnitId, DateTime? weekDateId, PatchShiftTradeRequest body, string tradeId)
+        public async System.Threading.Tasks.Task<ShiftTradeResponse> PatchWorkforcemanagementManagementunitWeekShifttradeAsync (string managementUnitId, String weekDateId, PatchShiftTradeRequest body, string tradeId)
         {
              ApiResponse<ShiftTradeResponse> localVarResponse = await PatchWorkforcemanagementManagementunitWeekShifttradeAsyncWithHttpInfo(managementUnitId, weekDateId, body, tradeId);
              return localVarResponse.Data;
@@ -19010,7 +19010,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PatchWorkforcemanagementManagementunitWeekShifttradeAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, PatchShiftTradeRequest body, string tradeId)
+        public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PatchWorkforcemanagementManagementunitWeekShifttradeAsyncWithHttpInfo (string managementUnitId, String weekDateId, PatchShiftTradeRequest body, string tradeId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -21213,7 +21213,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>BuAsyncAgentSchedulesQueryResponse</returns>
-        public BuAsyncAgentSchedulesQueryResponse PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery (string businessUnitId, DateTime? weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
+        public BuAsyncAgentSchedulesQueryResponse PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         {
              ApiResponse<BuAsyncAgentSchedulesQueryResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryWithHttpInfo(businessUnitId, weekId, scheduleId, body, forceAsync, forceDownloadService);
              return localVarResponse.Data;
@@ -21230,7 +21230,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BuAsyncAgentSchedulesQueryResponse</returns>
-        public ApiResponse< BuAsyncAgentSchedulesQueryResponse > PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
+        public ApiResponse< BuAsyncAgentSchedulesQueryResponse > PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -21336,7 +21336,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of BuAsyncAgentSchedulesQueryResponse</returns>
-        public async System.Threading.Tasks.Task<BuAsyncAgentSchedulesQueryResponse> PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryAsync (string businessUnitId, DateTime? weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
+        public async System.Threading.Tasks.Task<BuAsyncAgentSchedulesQueryResponse> PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryAsync (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         {
              ApiResponse<BuAsyncAgentSchedulesQueryResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, body, forceAsync, forceDownloadService);
              return localVarResponse.Data;
@@ -21354,7 +21354,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BuAsyncAgentSchedulesQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesQueryResponse>> PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
+        public async System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesQueryResponse>> PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -21463,7 +21463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule to copy</param>
         /// <param name="body">body</param>
         /// <returns>BuAsyncScheduleResponse</returns>
-        public BuAsyncScheduleResponse PostWorkforcemanagementBusinessunitWeekScheduleCopy (string businessUnitId, DateTime? weekId, string scheduleId, BuCopyScheduleRequest body)
+        public BuAsyncScheduleResponse PostWorkforcemanagementBusinessunitWeekScheduleCopy (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body)
         {
              ApiResponse<BuAsyncScheduleResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekScheduleCopyWithHttpInfo(businessUnitId, weekId, scheduleId, body);
              return localVarResponse.Data;
@@ -21478,7 +21478,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule to copy</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleResponse</returns>
-        public ApiResponse< BuAsyncScheduleResponse > PostWorkforcemanagementBusinessunitWeekScheduleCopyWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, BuCopyScheduleRequest body)
+        public ApiResponse< BuAsyncScheduleResponse > PostWorkforcemanagementBusinessunitWeekScheduleCopyWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -21580,7 +21580,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule to copy</param>
         /// <param name="body">body</param>
         /// <returns>Task of BuAsyncScheduleResponse</returns>
-        public async System.Threading.Tasks.Task<BuAsyncScheduleResponse> PostWorkforcemanagementBusinessunitWeekScheduleCopyAsync (string businessUnitId, DateTime? weekId, string scheduleId, BuCopyScheduleRequest body)
+        public async System.Threading.Tasks.Task<BuAsyncScheduleResponse> PostWorkforcemanagementBusinessunitWeekScheduleCopyAsync (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body)
         {
              ApiResponse<BuAsyncScheduleResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekScheduleCopyAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, body);
              return localVarResponse.Data;
@@ -21596,7 +21596,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule to copy</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> PostWorkforcemanagementBusinessunitWeekScheduleCopyAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, BuCopyScheduleRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> PostWorkforcemanagementBusinessunitWeekScheduleCopyAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -21703,7 +21703,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>BuAsyncScheduleRunResponse</returns>
-        public BuAsyncScheduleRunResponse PostWorkforcemanagementBusinessunitWeekScheduleReschedule (string businessUnitId, DateTime? weekId, string scheduleId, BuRescheduleRequest body)
+        public BuAsyncScheduleRunResponse PostWorkforcemanagementBusinessunitWeekScheduleReschedule (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body)
         {
              ApiResponse<BuAsyncScheduleRunResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekScheduleRescheduleWithHttpInfo(businessUnitId, weekId, scheduleId, body);
              return localVarResponse.Data;
@@ -21718,7 +21718,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleRunResponse</returns>
-        public ApiResponse< BuAsyncScheduleRunResponse > PostWorkforcemanagementBusinessunitWeekScheduleRescheduleWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, BuRescheduleRequest body)
+        public ApiResponse< BuAsyncScheduleRunResponse > PostWorkforcemanagementBusinessunitWeekScheduleRescheduleWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -21820,7 +21820,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>Task of BuAsyncScheduleRunResponse</returns>
-        public async System.Threading.Tasks.Task<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleAsync (string businessUnitId, DateTime? weekId, string scheduleId, BuRescheduleRequest body)
+        public async System.Threading.Tasks.Task<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleAsync (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body)
         {
              ApiResponse<BuAsyncScheduleRunResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekScheduleRescheduleAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, body);
              return localVarResponse.Data;
@@ -21836,7 +21836,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleRunResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleRunResponse>> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, string scheduleId, BuRescheduleRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleRunResponse>> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -21942,7 +21942,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>BuScheduleMetadata</returns>
-        public BuScheduleMetadata PostWorkforcemanagementBusinessunitWeekSchedules (string businessUnitId, DateTime? weekId, BuCreateBlankScheduleRequest body)
+        public BuScheduleMetadata PostWorkforcemanagementBusinessunitWeekSchedules (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body)
         {
              ApiResponse<BuScheduleMetadata> localVarResponse = PostWorkforcemanagementBusinessunitWeekSchedulesWithHttpInfo(businessUnitId, weekId, body);
              return localVarResponse.Data;
@@ -21956,7 +21956,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuScheduleMetadata</returns>
-        public ApiResponse< BuScheduleMetadata > PostWorkforcemanagementBusinessunitWeekSchedulesWithHttpInfo (string businessUnitId, DateTime? weekId, BuCreateBlankScheduleRequest body)
+        public ApiResponse< BuScheduleMetadata > PostWorkforcemanagementBusinessunitWeekSchedulesWithHttpInfo (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -22053,7 +22053,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of BuScheduleMetadata</returns>
-        public async System.Threading.Tasks.Task<BuScheduleMetadata> PostWorkforcemanagementBusinessunitWeekSchedulesAsync (string businessUnitId, DateTime? weekId, BuCreateBlankScheduleRequest body)
+        public async System.Threading.Tasks.Task<BuScheduleMetadata> PostWorkforcemanagementBusinessunitWeekSchedulesAsync (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body)
         {
              ApiResponse<BuScheduleMetadata> localVarResponse = await PostWorkforcemanagementBusinessunitWeekSchedulesAsyncWithHttpInfo(businessUnitId, weekId, body);
              return localVarResponse.Data;
@@ -22068,7 +22068,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuScheduleMetadata)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BuScheduleMetadata>> PostWorkforcemanagementBusinessunitWeekSchedulesAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, BuCreateBlankScheduleRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<BuScheduleMetadata>> PostWorkforcemanagementBusinessunitWeekSchedulesAsyncWithHttpInfo (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -22169,7 +22169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>BuAsyncScheduleRunResponse</returns>
-        public BuAsyncScheduleRunResponse PostWorkforcemanagementBusinessunitWeekSchedulesGenerate (string businessUnitId, DateTime? weekId, BuGenerateScheduleRequest body)
+        public BuAsyncScheduleRunResponse PostWorkforcemanagementBusinessunitWeekSchedulesGenerate (string businessUnitId, String weekId, BuGenerateScheduleRequest body)
         {
              ApiResponse<BuAsyncScheduleRunResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekSchedulesGenerateWithHttpInfo(businessUnitId, weekId, body);
              return localVarResponse.Data;
@@ -22183,7 +22183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleRunResponse</returns>
-        public ApiResponse< BuAsyncScheduleRunResponse > PostWorkforcemanagementBusinessunitWeekSchedulesGenerateWithHttpInfo (string businessUnitId, DateTime? weekId, BuGenerateScheduleRequest body)
+        public ApiResponse< BuAsyncScheduleRunResponse > PostWorkforcemanagementBusinessunitWeekSchedulesGenerateWithHttpInfo (string businessUnitId, String weekId, BuGenerateScheduleRequest body)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -22280,7 +22280,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of BuAsyncScheduleRunResponse</returns>
-        public async System.Threading.Tasks.Task<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateAsync (string businessUnitId, DateTime? weekId, BuGenerateScheduleRequest body)
+        public async System.Threading.Tasks.Task<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateAsync (string businessUnitId, String weekId, BuGenerateScheduleRequest body)
         {
              ApiResponse<BuAsyncScheduleRunResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekSchedulesGenerateAsyncWithHttpInfo(businessUnitId, weekId, body);
              return localVarResponse.Data;
@@ -22295,7 +22295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleRunResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleRunResponse>> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateAsyncWithHttpInfo (string businessUnitId, DateTime? weekId, BuGenerateScheduleRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleRunResponse>> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateAsyncWithHttpInfo (string businessUnitId, String weekId, BuGenerateScheduleRequest body)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -22398,7 +22398,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>AsyncForecastOperationResult</returns>
-        public AsyncForecastOperationResult PostWorkforcemanagementBusinessunitWeekShorttermforecastCopy (string businessUnitId, DateTime? weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null)
+        public AsyncForecastOperationResult PostWorkforcemanagementBusinessunitWeekShorttermforecastCopy (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null)
         {
              ApiResponse<AsyncForecastOperationResult> localVarResponse = PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyWithHttpInfo(businessUnitId, weekDateId, forecastId, body, forceAsync);
              return localVarResponse.Data;
@@ -22414,7 +22414,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of AsyncForecastOperationResult</returns>
-        public ApiResponse< AsyncForecastOperationResult > PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null)
+        public ApiResponse< AsyncForecastOperationResult > PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -22518,7 +22518,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of AsyncForecastOperationResult</returns>
-        public async System.Threading.Tasks.Task<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyAsync (string businessUnitId, DateTime? weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null)
+        public async System.Threading.Tasks.Task<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyAsync (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null)
         {
              ApiResponse<AsyncForecastOperationResult> localVarResponse = await PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyAsyncWithHttpInfo(businessUnitId, weekDateId, forecastId, body, forceAsync);
              return localVarResponse.Data;
@@ -22535,7 +22535,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (AsyncForecastOperationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AsyncForecastOperationResult>> PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyAsyncWithHttpInfo (string businessUnitId, DateTime? weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AsyncForecastOperationResult>> PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -22643,7 +22643,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>AsyncForecastOperationResult</returns>
-        public AsyncForecastOperationResult PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate (string businessUnitId, DateTime? weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null)
+        public AsyncForecastOperationResult PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null)
         {
              ApiResponse<AsyncForecastOperationResult> localVarResponse = PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateWithHttpInfo(businessUnitId, weekDateId, body, forceAsync);
              return localVarResponse.Data;
@@ -22658,7 +22658,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of AsyncForecastOperationResult</returns>
-        public ApiResponse< AsyncForecastOperationResult > PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateWithHttpInfo (string businessUnitId, DateTime? weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null)
+        public ApiResponse< AsyncForecastOperationResult > PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateWithHttpInfo (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -22757,7 +22757,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of AsyncForecastOperationResult</returns>
-        public async System.Threading.Tasks.Task<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateAsync (string businessUnitId, DateTime? weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null)
+        public async System.Threading.Tasks.Task<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateAsync (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null)
         {
              ApiResponse<AsyncForecastOperationResult> localVarResponse = await PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateAsyncWithHttpInfo(businessUnitId, weekDateId, body, forceAsync);
              return localVarResponse.Data;
@@ -22773,7 +22773,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (AsyncForecastOperationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AsyncForecastOperationResult>> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateAsyncWithHttpInfo (string businessUnitId, DateTime? weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AsyncForecastOperationResult>> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateAsyncWithHttpInfo (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -24324,7 +24324,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <returns>MatchShiftTradeResponse</returns>
-        public MatchShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttradeMatch (string managementUnitId, DateTime? weekDateId, MatchShiftTradeRequest body, string tradeId)
+        public MatchShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttradeMatch (string managementUnitId, String weekDateId, MatchShiftTradeRequest body, string tradeId)
         {
              ApiResponse<MatchShiftTradeResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShifttradeMatchWithHttpInfo(managementUnitId, weekDateId, body, tradeId);
              return localVarResponse.Data;
@@ -24339,7 +24339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <returns>ApiResponse of MatchShiftTradeResponse</returns>
-        public ApiResponse< MatchShiftTradeResponse > PostWorkforcemanagementManagementunitWeekShifttradeMatchWithHttpInfo (string managementUnitId, DateTime? weekDateId, MatchShiftTradeRequest body, string tradeId)
+        public ApiResponse< MatchShiftTradeResponse > PostWorkforcemanagementManagementunitWeekShifttradeMatchWithHttpInfo (string managementUnitId, String weekDateId, MatchShiftTradeRequest body, string tradeId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -24441,7 +24441,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <returns>Task of MatchShiftTradeResponse</returns>
-        public async System.Threading.Tasks.Task<MatchShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsync (string managementUnitId, DateTime? weekDateId, MatchShiftTradeRequest body, string tradeId)
+        public async System.Threading.Tasks.Task<MatchShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsync (string managementUnitId, String weekDateId, MatchShiftTradeRequest body, string tradeId)
         {
              ApiResponse<MatchShiftTradeResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShifttradeMatchAsyncWithHttpInfo(managementUnitId, weekDateId, body, tradeId);
              return localVarResponse.Data;
@@ -24457,7 +24457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <returns>Task of ApiResponse (MatchShiftTradeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MatchShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, MatchShiftTradeRequest body, string tradeId)
+        public async System.Threading.Tasks.Task<ApiResponse<MatchShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsyncWithHttpInfo (string managementUnitId, String weekDateId, MatchShiftTradeRequest body, string tradeId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -24563,7 +24563,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ShiftTradeResponse</returns>
-        public ShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, DateTime? weekDateId, AddShiftTradeRequest body)
+        public ShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, AddShiftTradeRequest body)
         {
              ApiResponse<ShiftTradeResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo(managementUnitId, weekDateId, body);
              return localVarResponse.Data;
@@ -24577,7 +24577,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ShiftTradeResponse</returns>
-        public ApiResponse< ShiftTradeResponse > PostWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, DateTime? weekDateId, AddShiftTradeRequest body)
+        public ApiResponse< ShiftTradeResponse > PostWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, String weekDateId, AddShiftTradeRequest body)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -24674,7 +24674,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ShiftTradeResponse</returns>
-        public async System.Threading.Tasks.Task<ShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, DateTime? weekDateId, AddShiftTradeRequest body)
+        public async System.Threading.Tasks.Task<ShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, String weekDateId, AddShiftTradeRequest body)
         {
              ApiResponse<ShiftTradeResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo(managementUnitId, weekDateId, body);
              return localVarResponse.Data;
@@ -24689,7 +24689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, AddShiftTradeRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, String weekDateId, AddShiftTradeRequest body)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -24790,7 +24790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>SearchShiftTradesResponse</returns>
-        public SearchShiftTradesResponse PostWorkforcemanagementManagementunitWeekShifttradesSearch (string managementUnitId, DateTime? weekDateId, SearchShiftTradesRequest body)
+        public SearchShiftTradesResponse PostWorkforcemanagementManagementunitWeekShifttradesSearch (string managementUnitId, String weekDateId, SearchShiftTradesRequest body)
         {
              ApiResponse<SearchShiftTradesResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShifttradesSearchWithHttpInfo(managementUnitId, weekDateId, body);
              return localVarResponse.Data;
@@ -24804,7 +24804,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of SearchShiftTradesResponse</returns>
-        public ApiResponse< SearchShiftTradesResponse > PostWorkforcemanagementManagementunitWeekShifttradesSearchWithHttpInfo (string managementUnitId, DateTime? weekDateId, SearchShiftTradesRequest body)
+        public ApiResponse< SearchShiftTradesResponse > PostWorkforcemanagementManagementunitWeekShifttradesSearchWithHttpInfo (string managementUnitId, String weekDateId, SearchShiftTradesRequest body)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -24901,7 +24901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of SearchShiftTradesResponse</returns>
-        public async System.Threading.Tasks.Task<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsync (string managementUnitId, DateTime? weekDateId, SearchShiftTradesRequest body)
+        public async System.Threading.Tasks.Task<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsync (string managementUnitId, String weekDateId, SearchShiftTradesRequest body)
         {
              ApiResponse<SearchShiftTradesResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShifttradesSearchAsyncWithHttpInfo(managementUnitId, weekDateId, body);
              return localVarResponse.Data;
@@ -24916,7 +24916,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (SearchShiftTradesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SearchShiftTradesResponse>> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, SearchShiftTradesRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<SearchShiftTradesResponse>> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsyncWithHttpInfo (string managementUnitId, String weekDateId, SearchShiftTradesRequest body)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -25018,7 +25018,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>BulkUpdateShiftTradeStateResponse</returns>
-        public BulkUpdateShiftTradeStateResponse PostWorkforcemanagementManagementunitWeekShifttradesStateBulk (string managementUnitId, DateTime? weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null)
+        public BulkUpdateShiftTradeStateResponse PostWorkforcemanagementManagementunitWeekShifttradesStateBulk (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null)
         {
              ApiResponse<BulkUpdateShiftTradeStateResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShifttradesStateBulkWithHttpInfo(managementUnitId, weekDateId, body, forceAsync);
              return localVarResponse.Data;
@@ -25033,7 +25033,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BulkUpdateShiftTradeStateResponse</returns>
-        public ApiResponse< BulkUpdateShiftTradeStateResponse > PostWorkforcemanagementManagementunitWeekShifttradesStateBulkWithHttpInfo (string managementUnitId, DateTime? weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null)
+        public ApiResponse< BulkUpdateShiftTradeStateResponse > PostWorkforcemanagementManagementunitWeekShifttradesStateBulkWithHttpInfo (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -25132,7 +25132,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of BulkUpdateShiftTradeStateResponse</returns>
-        public async System.Threading.Tasks.Task<BulkUpdateShiftTradeStateResponse> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkAsync (string managementUnitId, DateTime? weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null)
+        public async System.Threading.Tasks.Task<BulkUpdateShiftTradeStateResponse> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkAsync (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null)
         {
              ApiResponse<BulkUpdateShiftTradeStateResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShifttradesStateBulkAsyncWithHttpInfo(managementUnitId, weekDateId, body, forceAsync);
              return localVarResponse.Data;
@@ -25148,7 +25148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BulkUpdateShiftTradeStateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BulkUpdateShiftTradeStateResponse>> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null)
+        public async System.Threading.Tasks.Task<ApiResponse<BulkUpdateShiftTradeStateResponse>> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkAsyncWithHttpInfo (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)

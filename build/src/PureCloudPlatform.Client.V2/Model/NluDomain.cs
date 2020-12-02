@@ -71,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="NluDomain" /> class.
         /// </summary>
         /// <param name="Name">The name of the NLU domain. (required).</param>
-        /// <param name="Language">The ISO 639-1 language code of the NLU domain, e.g. `en`..</param>
+        /// <param name="Language">The language culture of the NLU domain, e.g. `en-us`, `de-de`..</param>
         /// <param name="DraftVersion">The draft version of that NLU domain..</param>
         /// <param name="LastPublishedVersion">The last published version of that NLU domain..</param>
         public NluDomain(string Name = null, string Language = null, NluDomainVersion DraftVersion = null, NluDomainVersion LastPublishedVersion = null)
@@ -104,9 +104,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The ISO 639-1 language code of the NLU domain, e.g. `en`.
+        /// The language culture of the NLU domain, e.g. `en-us`, `de-de`.
         /// </summary>
-        /// <value>The ISO 639-1 language code of the NLU domain, e.g. `en`.</value>
+        /// <value>The language culture of the NLU domain, e.g. `en-us`, `de-de`.</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
         

@@ -343,7 +343,7 @@ namespace Example
 
 <a name="getcoachingappointmentstatuses"></a>
 
-## [**CoachingAppointmentStatusDtoList**](CoachingAppointmentStatusDtoList.html) GetCoachingAppointmentStatuses (string appointmentId, int? pageNumber = null, int? pageSize = null)
+## [**CoachingAppointmentStatusResponseList**](CoachingAppointmentStatusResponseList.html) GetCoachingAppointmentStatuses (string appointmentId, int? pageNumber = null, int? pageSize = null)
 
 
 
@@ -380,7 +380,7 @@ namespace Example
             try
             { 
                 // Get the list of status changes for a coaching appointment.
-                CoachingAppointmentStatusDtoList result = apiInstance.GetCoachingAppointmentStatuses(appointmentId, pageNumber, pageSize);
+                CoachingAppointmentStatusResponseList result = apiInstance.GetCoachingAppointmentStatuses(appointmentId, pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -404,7 +404,7 @@ namespace Example
 
 ### Return type
 
-[**CoachingAppointmentStatusDtoList**](CoachingAppointmentStatusDtoList.html)
+[**CoachingAppointmentStatusResponseList**](CoachingAppointmentStatusResponseList.html)
 
 <a name="getcoachingappointments"></a>
 
@@ -819,7 +819,7 @@ namespace Example
 
 <a name="patchcoachingappointmentstatus"></a>
 
-## [**CoachingAppointmentStatusDto**](CoachingAppointmentStatusDto.html) PatchCoachingAppointmentStatus (string appointmentId, CoachingAppointmentStatusDto body)
+## [**CoachingAppointmentStatusResponse**](CoachingAppointmentStatusResponse.html) PatchCoachingAppointmentStatus (string appointmentId, CoachingAppointmentStatusRequest body)
 
 
 
@@ -850,12 +850,12 @@ namespace Example
 
             var apiInstance = new CoachingApi();
             var appointmentId = appointmentId_example;  // string | The ID of the coaching appointment.
-            var body = new CoachingAppointmentStatusDto(); // CoachingAppointmentStatusDto | Updated status of the coaching appointment
+            var body = new CoachingAppointmentStatusRequest(); // CoachingAppointmentStatusRequest | Updated status of the coaching appointment
 
             try
             { 
                 // Update the status of a coaching appointment
-                CoachingAppointmentStatusDto result = apiInstance.PatchCoachingAppointmentStatus(appointmentId, body);
+                CoachingAppointmentStatusResponse result = apiInstance.PatchCoachingAppointmentStatus(appointmentId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -873,12 +873,12 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **appointmentId** | **string**| The ID of the coaching appointment. |  |
-| **body** | [**CoachingAppointmentStatusDto**](CoachingAppointmentStatusDto.html)| Updated status of the coaching appointment |  |
+| **body** | [**CoachingAppointmentStatusRequest**](CoachingAppointmentStatusRequest.html)| Updated status of the coaching appointment |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**CoachingAppointmentStatusDto**](CoachingAppointmentStatusDto.html)
+[**CoachingAppointmentStatusResponse**](CoachingAppointmentStatusResponse.html)
 
 <a name="patchcoachingnotification"></a>
 

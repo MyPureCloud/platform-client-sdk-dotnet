@@ -30,18 +30,33 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuthAuthorizationListing" /> class.
         /// </summary>
+        /// <param name="Total">Total.</param>
         /// <param name="Entities">Entities.</param>
         /// <param name="SelfUri">SelfUri.</param>
-        public OAuthAuthorizationListing(List<OAuthAuthorization> Entities = null, string SelfUri = null)
+        public OAuthAuthorizationListing(long? Total = null, List<OAuthAuthorization> Entities = null, string SelfUri = null)
         {
+            this.Total = Total;
             this.Entities = Entities;
             this.SelfUri = SelfUri;
             
         }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Total
+        /// </summary>
+        [DataMember(Name="total", EmitDefaultValue=false)]
+        public long? Total { get; set; }
         
         
         
@@ -69,6 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class OAuthAuthorizationListing {\n");
             
+            sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -108,6 +124,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Total == other.Total ||
+                    this.Total != null &&
+                    this.Total.Equals(other.Total)
+                ) &&
+                (
                     this.Entities == other.Entities ||
                     this.Entities != null &&
                     this.Entities.SequenceEqual(other.Entities)
@@ -130,6 +151,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.Total != null)
+                    hash = hash * 59 + this.Total.GetHashCode();
                 
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();

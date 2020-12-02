@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="WeekDate">The schedule week date in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="Count">The number of trades in the Matched state for the given week.</param>
-        public WeekShiftTradeMatchesSummaryResponse(DateTime? WeekDate = null, int? Count = null)
+        public WeekShiftTradeMatchesSummaryResponse(String WeekDate = null, int? Count = null)
         {
             this.WeekDate = WeekDate;
             this.Count = Count;
@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The schedule week date in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="weekDate", EmitDefaultValue=false)]
-        public DateTime? WeekDate { get; set; }
+        public String WeekDate { get; set; }
         
         
         

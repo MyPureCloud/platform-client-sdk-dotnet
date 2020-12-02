@@ -116,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreationMethod">The method by which this forecast was created.</param>
         /// <param name="Description">The description of this forecast.</param>
         /// <param name="Metadata">Metadata for this forecast.</param>
-        public BuShortTermForecastListItem(DateTime? WeekDate = null, int? WeekCount = null, CreationMethodEnum? CreationMethod = null, string Description = null, WfmVersionedEntityMetadata Metadata = null)
+        public BuShortTermForecastListItem(String WeekDate = null, int? WeekCount = null, CreationMethodEnum? CreationMethod = null, string Description = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.WeekDate = WeekDate;
             this.WeekCount = WeekCount;
@@ -142,7 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The start week date of this forecast in yyyy-MM-dd.  Must fall on the start day of week for the associated business unit. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="weekDate", EmitDefaultValue=false)]
-        public DateTime? WeekDate { get; set; }
+        public String WeekDate { get; set; }
         
         
         

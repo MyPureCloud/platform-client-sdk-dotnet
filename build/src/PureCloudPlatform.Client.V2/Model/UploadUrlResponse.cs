@@ -30,6 +30,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UploadUrlResponse" /> class.
@@ -44,11 +49,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Presigned url to PUT the file to
+        /// Presigned URL to PUT the file to
         /// </summary>
-        /// <value>Presigned url to PUT the file to</value>
+        /// <value>Presigned URL to PUT the file to</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// Key that identifies the file in the storage including the file name
+        /// </summary>
+        /// <value>Key that identifies the file in the storage including the file name</value>
+        [DataMember(Name="uploadKey", EmitDefaultValue=false)]
+        public string UploadKey { get; private set; }
         
         
         
@@ -70,6 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class UploadUrlResponse {\n");
             
             sb.Append("  Url: ").Append(Url).Append("\n");
+            sb.Append("  UploadKey: ").Append(UploadKey).Append("\n");
             sb.Append("  Headers: ").Append(Headers).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -113,6 +128,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Url.Equals(other.Url)
                 ) &&
                 (
+                    this.UploadKey == other.UploadKey ||
+                    this.UploadKey != null &&
+                    this.UploadKey.Equals(other.UploadKey)
+                ) &&
+                (
                     this.Headers == other.Headers ||
                     this.Headers != null &&
                     this.Headers.SequenceEqual(other.Headers)
@@ -133,6 +153,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
+                
+                if (this.UploadKey != null)
+                    hash = hash * 59 + this.UploadKey.GetHashCode();
                 
                 if (this.Headers != null)
                     hash = hash * 59 + this.Headers.GetHashCode();

@@ -40,16 +40,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchActionTarget" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="ServiceLevel">Service Level of the action target. Chat offers for the target will be throttled with the aim of achieving this service level..</param>
-        public PatchActionTarget(string Name = null, ServiceLevel ServiceLevel = null)
+        /// <param name="ShortAbandonThreshold">Indicates the non-default short abandon threshold.</param>
+        public PatchActionTarget(string Name = null, ServiceLevel ServiceLevel = null, int? ShortAbandonThreshold = null)
         {
             this.Name = Name;
             this.ServiceLevel = ServiceLevel;
+            this.ShortAbandonThreshold = ShortAbandonThreshold;
             
         }
         
@@ -82,6 +89,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Indicates the non-default short abandon threshold
+        /// </summary>
+        /// <value>Indicates the non-default short abandon threshold</value>
+        [DataMember(Name="shortAbandonThreshold", EmitDefaultValue=false)]
+        public int? ShortAbandonThreshold { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -101,6 +117,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ServiceLevel: ").Append(ServiceLevel).Append("\n");
+            sb.Append("  ShortAbandonThreshold: ").Append(ShortAbandonThreshold).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -154,6 +171,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ServiceLevel.Equals(other.ServiceLevel)
                 ) &&
                 (
+                    this.ShortAbandonThreshold == other.ShortAbandonThreshold ||
+                    this.ShortAbandonThreshold != null &&
+                    this.ShortAbandonThreshold.Equals(other.ShortAbandonThreshold)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -180,6 +202,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ServiceLevel != null)
                     hash = hash * 59 + this.ServiceLevel.GetHashCode();
+                
+                if (this.ShortAbandonThreshold != null)
+                    hash = hash * 59 + this.ShortAbandonThreshold.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
