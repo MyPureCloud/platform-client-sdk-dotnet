@@ -184,7 +184,7 @@ namespace PureCloudPlatform.Client.V2.Client
             RestClient.UserAgent = Configuration.UserAgent;
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "108.0.1");
+            request.AddHeader("purecloud-sdk", "108.0.2");
 
             Retry retry = new Retry(this.RetryConfig);
             IRestResponse response;
