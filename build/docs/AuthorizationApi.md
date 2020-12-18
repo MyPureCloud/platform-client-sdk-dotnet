@@ -303,7 +303,7 @@ namespace Example
 
 Gets all grants for a given division.
 
-
+Returns all grants assigned to a given division. Maximum page size is 500.
 
 Requires ANY permissions: 
 

@@ -65,6 +65,50 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<OrphanRecording> DeleteOrphanrecordingWithHttpInfo (string orphanId);
         
         /// <summary>
+        /// Delete media retention policies
+        /// </summary>
+        /// <remarks>
+        /// Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids"></param>
+        /// <returns></returns>
+        void DeleteRecordingCrossplatformMediaretentionpolicies (string ids);
+
+        /// <summary>
+        /// Delete media retention policies
+        /// </summary>
+        /// <remarks>
+        /// Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteRecordingCrossplatformMediaretentionpoliciesWithHttpInfo (string ids);
+        
+        /// <summary>
+        /// Delete a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns></returns>
+        void DeleteRecordingCrossplatformMediaretentionpolicy (string policyId);
+
+        /// <summary>
+        /// Delete a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId);
+        
+        /// <summary>
         /// Delete the recording bulk job
         /// </summary>
         /// <remarks>
@@ -407,6 +451,68 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<BatchDownloadJobStatusResult> GetRecordingBatchrequestWithHttpInfo (string jobId);
         
         /// <summary>
+        /// Gets media retention policy list with query options to filter on name and enabled.
+        /// </summary>
+        /// <remarks>
+        /// for a less verbose response, add summary=true to this endpoint
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="name">the policy name - used for filtering results in searches. (optional)</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
+        /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
+        /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <returns>PolicyEntityListing</returns>
+        PolicyEntityListing GetRecordingCrossplatformMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+
+        /// <summary>
+        /// Gets media retention policy list with query options to filter on name and enabled.
+        /// </summary>
+        /// <remarks>
+        /// for a less verbose response, add summary=true to this endpoint
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="name">the policy name - used for filtering results in searches. (optional)</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
+        /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
+        /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <returns>ApiResponse of PolicyEntityListing</returns>
+        ApiResponse<PolicyEntityListing> GetRecordingCrossplatformMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        
+        /// <summary>
+        /// Get a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>CrossPlatformPolicy</returns>
+        CrossPlatformPolicy GetRecordingCrossplatformMediaretentionpolicy (string policyId);
+
+        /// <summary>
+        /// Get a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>ApiResponse of CrossPlatformPolicy</returns>
+        ApiResponse<CrossPlatformPolicy> GetRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId);
+        
+        /// <summary>
         /// Get the status of the job associated with the job id.
         /// </summary>
         /// <remarks>
@@ -663,6 +769,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
+        /// <returns>CrossPlatformPolicy</returns>
+        CrossPlatformPolicy PatchRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicy body);
+
+        /// <summary>
+        /// Patch a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>ApiResponse of CrossPlatformPolicy</returns>
+        ApiResponse<CrossPlatformPolicy> PatchRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId, CrossPlatformPolicy body);
+        
+        /// <summary>
+        /// Patch a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
         Policy PatchRecordingMediaretentionpolicy (string policyId, Policy body);
 
@@ -749,6 +879,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Job submission criteria</param>
         /// <returns>ApiResponse of BatchDownloadJobSubmissionResult</returns>
         ApiResponse<BatchDownloadJobSubmissionResult> PostRecordingBatchrequestsWithHttpInfo (BatchDownloadJobSubmission body);
+        
+        /// <summary>
+        /// Create media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Policy</param>
+        /// <returns>CrossPlatformPolicy</returns>
+        CrossPlatformPolicy PostRecordingCrossplatformMediaretentionpolicies (CrossPlatformPolicyCreate body);
+
+        /// <summary>
+        /// Create media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Policy</param>
+        /// <returns>ApiResponse of CrossPlatformPolicy</returns>
+        ApiResponse<CrossPlatformPolicy> PostRecordingCrossplatformMediaretentionpoliciesWithHttpInfo (CrossPlatformPolicyCreate body);
         
         /// <summary>
         /// Create a recording bulk job
@@ -959,6 +1111,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Recording> PutOrphanrecordingWithHttpInfo (string orphanId, OrphanUpdateRequest body = null);
         
         /// <summary>
+        /// Update a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>CrossPlatformPolicy</returns>
+        CrossPlatformPolicy PutRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicy body);
+
+        /// <summary>
+        /// Update a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>ApiResponse of CrossPlatformPolicy</returns>
+        ApiResponse<CrossPlatformPolicy> PutRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId, CrossPlatformPolicy body);
+        
+        /// <summary>
         /// Execute the recording bulk job.
         /// </summary>
         /// <remarks>
@@ -1149,6 +1325,50 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> DeleteOrphanrecordingAsyncWithHttpInfo (string orphanId);
+        
+        /// <summary>
+        /// Delete media retention policies
+        /// </summary>
+        /// <remarks>
+        /// Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteRecordingCrossplatformMediaretentionpoliciesAsync (string ids);
+
+        /// <summary>
+        /// Delete media retention policies
+        /// </summary>
+        /// <remarks>
+        /// Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo (string ids);
+        
+        /// <summary>
+        /// Delete a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteRecordingCrossplatformMediaretentionpolicyAsync (string policyId);
+
+        /// <summary>
+        /// Delete a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId);
         
         /// <summary>
         /// Delete the recording bulk job
@@ -1493,6 +1713,68 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<BatchDownloadJobStatusResult>> GetRecordingBatchrequestAsyncWithHttpInfo (string jobId);
         
         /// <summary>
+        /// Gets media retention policy list with query options to filter on name and enabled.
+        /// </summary>
+        /// <remarks>
+        /// for a less verbose response, add summary=true to this endpoint
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="name">the policy name - used for filtering results in searches. (optional)</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
+        /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
+        /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <returns>Task of PolicyEntityListing</returns>
+        System.Threading.Tasks.Task<PolicyEntityListing> GetRecordingCrossplatformMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+
+        /// <summary>
+        /// Gets media retention policy list with query options to filter on name and enabled.
+        /// </summary>
+        /// <remarks>
+        /// for a less verbose response, add summary=true to this endpoint
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="name">the policy name - used for filtering results in searches. (optional)</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
+        /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
+        /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        
+        /// <summary>
+        /// Get a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>Task of CrossPlatformPolicy</returns>
+        System.Threading.Tasks.Task<CrossPlatformPolicy> GetRecordingCrossplatformMediaretentionpolicyAsync (string policyId);
+
+        /// <summary>
+        /// Get a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>Task of ApiResponse (CrossPlatformPolicy)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> GetRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId);
+        
+        /// <summary>
         /// Get the status of the job associated with the job id.
         /// </summary>
         /// <remarks>
@@ -1749,6 +2031,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
+        /// <returns>Task of CrossPlatformPolicy</returns>
+        System.Threading.Tasks.Task<CrossPlatformPolicy> PatchRecordingCrossplatformMediaretentionpolicyAsync (string policyId, CrossPlatformPolicy body);
+
+        /// <summary>
+        /// Patch a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of ApiResponse (CrossPlatformPolicy)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> PatchRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId, CrossPlatformPolicy body);
+        
+        /// <summary>
+        /// Patch a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
         System.Threading.Tasks.Task<Policy> PatchRecordingMediaretentionpolicyAsync (string policyId, Policy body);
 
@@ -1835,6 +2141,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Job submission criteria</param>
         /// <returns>Task of ApiResponse (BatchDownloadJobSubmissionResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<BatchDownloadJobSubmissionResult>> PostRecordingBatchrequestsAsyncWithHttpInfo (BatchDownloadJobSubmission body);
+        
+        /// <summary>
+        /// Create media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of CrossPlatformPolicy</returns>
+        System.Threading.Tasks.Task<CrossPlatformPolicy> PostRecordingCrossplatformMediaretentionpoliciesAsync (CrossPlatformPolicyCreate body);
+
+        /// <summary>
+        /// Create media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of ApiResponse (CrossPlatformPolicy)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> PostRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo (CrossPlatformPolicyCreate body);
         
         /// <summary>
         /// Create a recording bulk job
@@ -2043,6 +2371,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
         System.Threading.Tasks.Task<ApiResponse<Recording>> PutOrphanrecordingAsyncWithHttpInfo (string orphanId, OrphanUpdateRequest body = null);
+        
+        /// <summary>
+        /// Update a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of CrossPlatformPolicy</returns>
+        System.Threading.Tasks.Task<CrossPlatformPolicy> PutRecordingCrossplatformMediaretentionpolicyAsync (string policyId, CrossPlatformPolicy body);
+
+        /// <summary>
+        /// Update a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of ApiResponse (CrossPlatformPolicy)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> PutRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId, CrossPlatformPolicy body);
         
         /// <summary>
         /// Execute the recording bulk job.
@@ -2680,6 +3032,388 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<OrphanRecording>(localVarStatusCode,
                 localVarHeaders,
                 (OrphanRecording) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrphanRecording)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete media retention policies Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids"></param>
+        /// <returns></returns>
+        public void DeleteRecordingCrossplatformMediaretentionpolicies (string ids)
+        {
+             DeleteRecordingCrossplatformMediaretentionpoliciesWithHttpInfo(ids);
+        }
+
+        /// <summary>
+        /// Delete media retention policies Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteRecordingCrossplatformMediaretentionpoliciesWithHttpInfo (string ids)
+        { 
+            // verify the required parameter 'ids' is set
+            if (ids == null)
+                throw new ApiException(400, "Missing required parameter 'ids' when calling RecordingApi->DeleteRecordingCrossplatformMediaretentionpolicies");
+
+            var localVarPath = "/api/v2/recording/crossplatform/mediaretentionpolicies";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (ids != null) localVarQueryParams.Add(new Tuple<string, string>("ids", this.Configuration.ApiClient.ParameterToString(ids)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRecordingCrossplatformMediaretentionpolicies: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRecordingCrossplatformMediaretentionpolicies: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete media retention policies Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteRecordingCrossplatformMediaretentionpoliciesAsync (string ids)
+        {
+             await DeleteRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo(ids);
+
+        }
+
+        /// <summary>
+        /// Delete media retention policies Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo (string ids)
+        { 
+            // verify the required parameter 'ids' is set
+            if (ids == null)
+                throw new ApiException(400, "Missing required parameter 'ids' when calling RecordingApi->DeleteRecordingCrossplatformMediaretentionpolicies");
+            
+
+            var localVarPath = "/api/v2/recording/crossplatform/mediaretentionpolicies";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (ids != null) localVarQueryParams.Add(new Tuple<string, string>("ids", this.Configuration.ApiClient.ParameterToString(ids)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRecordingCrossplatformMediaretentionpolicies: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRecordingCrossplatformMediaretentionpolicies: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete a media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns></returns>
+        public void DeleteRecordingCrossplatformMediaretentionpolicy (string policyId)
+        {
+             DeleteRecordingCrossplatformMediaretentionpolicyWithHttpInfo(policyId);
+        }
+
+        /// <summary>
+        /// Delete a media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId)
+        { 
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->DeleteRecordingCrossplatformMediaretentionpolicy");
+
+            var localVarPath = "/api/v2/recording/crossplatform/mediaretentionpolicies/{policyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (policyId != null) localVarPathParams.Add("policyId", this.Configuration.ApiClient.ParameterToString(policyId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRecordingCrossplatformMediaretentionpolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRecordingCrossplatformMediaretentionpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete a media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteRecordingCrossplatformMediaretentionpolicyAsync (string policyId)
+        {
+             await DeleteRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo(policyId);
+
+        }
+
+        /// <summary>
+        /// Delete a media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId)
+        { 
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->DeleteRecordingCrossplatformMediaretentionpolicy");
+            
+
+            var localVarPath = "/api/v2/recording/crossplatform/mediaretentionpolicies/{policyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (policyId != null) localVarPathParams.Add("policyId", this.Configuration.ApiClient.ParameterToString(policyId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRecordingCrossplatformMediaretentionpolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRecordingCrossplatformMediaretentionpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -5386,6 +6120,439 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Gets media retention policy list with query options to filter on name and enabled. for a less verbose response, add summary=true to this endpoint
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="name">the policy name - used for filtering results in searches. (optional)</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
+        /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
+        /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <returns>PolicyEntityListing</returns>
+        public PolicyEntityListing GetRecordingCrossplatformMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        {
+             ApiResponse<PolicyEntityListing> localVarResponse = GetRecordingCrossplatformMediaretentionpoliciesWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets media retention policy list with query options to filter on name and enabled. for a less verbose response, add summary=true to this endpoint
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="name">the policy name - used for filtering results in searches. (optional)</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
+        /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
+        /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <returns>ApiResponse of PolicyEntityListing</returns>
+        public ApiResponse< PolicyEntityListing > GetRecordingCrossplatformMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        { 
+
+            var localVarPath = "/api/v2/recording/crossplatform/mediaretentionpolicies";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
+            if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (enabled != null) localVarQueryParams.Add(new Tuple<string, string>("enabled", this.Configuration.ApiClient.ParameterToString(enabled)));
+            if (summary != null) localVarQueryParams.Add(new Tuple<string, string>("summary", this.Configuration.ApiClient.ParameterToString(summary)));
+            if (hasErrors != null) localVarQueryParams.Add(new Tuple<string, string>("hasErrors", this.Configuration.ApiClient.ParameterToString(hasErrors)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingCrossplatformMediaretentionpolicies: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingCrossplatformMediaretentionpolicies: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PolicyEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (PolicyEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PolicyEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Gets media retention policy list with query options to filter on name and enabled. for a less verbose response, add summary=true to this endpoint
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="name">the policy name - used for filtering results in searches. (optional)</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
+        /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
+        /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <returns>Task of PolicyEntityListing</returns>
+        public async System.Threading.Tasks.Task<PolicyEntityListing> GetRecordingCrossplatformMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        {
+             ApiResponse<PolicyEntityListing> localVarResponse = await GetRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets media retention policy list with query options to filter on name and enabled. for a less verbose response, add summary=true to this endpoint
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="name">the policy name - used for filtering results in searches. (optional)</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
+        /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
+        /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        { 
+
+            var localVarPath = "/api/v2/recording/crossplatform/mediaretentionpolicies";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
+            if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (enabled != null) localVarQueryParams.Add(new Tuple<string, string>("enabled", this.Configuration.ApiClient.ParameterToString(enabled)));
+            if (summary != null) localVarQueryParams.Add(new Tuple<string, string>("summary", this.Configuration.ApiClient.ParameterToString(summary)));
+            if (hasErrors != null) localVarQueryParams.Add(new Tuple<string, string>("hasErrors", this.Configuration.ApiClient.ParameterToString(hasErrors)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingCrossplatformMediaretentionpolicies: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingCrossplatformMediaretentionpolicies: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PolicyEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (PolicyEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PolicyEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>CrossPlatformPolicy</returns>
+        public CrossPlatformPolicy GetRecordingCrossplatformMediaretentionpolicy (string policyId)
+        {
+             ApiResponse<CrossPlatformPolicy> localVarResponse = GetRecordingCrossplatformMediaretentionpolicyWithHttpInfo(policyId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>ApiResponse of CrossPlatformPolicy</returns>
+        public ApiResponse< CrossPlatformPolicy > GetRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId)
+        { 
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->GetRecordingCrossplatformMediaretentionpolicy");
+
+            var localVarPath = "/api/v2/recording/crossplatform/mediaretentionpolicies/{policyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (policyId != null) localVarPathParams.Add("policyId", this.Configuration.ApiClient.ParameterToString(policyId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingCrossplatformMediaretentionpolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingCrossplatformMediaretentionpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CrossPlatformPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (CrossPlatformPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CrossPlatformPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>Task of CrossPlatformPolicy</returns>
+        public async System.Threading.Tasks.Task<CrossPlatformPolicy> GetRecordingCrossplatformMediaretentionpolicyAsync (string policyId)
+        {
+             ApiResponse<CrossPlatformPolicy> localVarResponse = await GetRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo(policyId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>Task of ApiResponse (CrossPlatformPolicy)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> GetRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId)
+        { 
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->GetRecordingCrossplatformMediaretentionpolicy");
+            
+
+            var localVarPath = "/api/v2/recording/crossplatform/mediaretentionpolicies/{policyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (policyId != null) localVarPathParams.Add("policyId", this.Configuration.ApiClient.ParameterToString(policyId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingCrossplatformMediaretentionpolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingCrossplatformMediaretentionpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CrossPlatformPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (CrossPlatformPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CrossPlatformPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get the status of the job associated with the job id. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7356,6 +8523,220 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
+        /// <returns>CrossPlatformPolicy</returns>
+        public CrossPlatformPolicy PatchRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicy body)
+        {
+             ApiResponse<CrossPlatformPolicy> localVarResponse = PatchRecordingCrossplatformMediaretentionpolicyWithHttpInfo(policyId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Patch a media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>ApiResponse of CrossPlatformPolicy</returns>
+        public ApiResponse< CrossPlatformPolicy > PatchRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId, CrossPlatformPolicy body)
+        { 
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PatchRecordingCrossplatformMediaretentionpolicy");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PatchRecordingCrossplatformMediaretentionpolicy");
+
+            var localVarPath = "/api/v2/recording/crossplatform/mediaretentionpolicies/{policyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (policyId != null) localVarPathParams.Add("policyId", this.Configuration.ApiClient.ParameterToString(policyId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRecordingCrossplatformMediaretentionpolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRecordingCrossplatformMediaretentionpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CrossPlatformPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (CrossPlatformPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CrossPlatformPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Patch a media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of CrossPlatformPolicy</returns>
+        public async System.Threading.Tasks.Task<CrossPlatformPolicy> PatchRecordingCrossplatformMediaretentionpolicyAsync (string policyId, CrossPlatformPolicy body)
+        {
+             ApiResponse<CrossPlatformPolicy> localVarResponse = await PatchRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo(policyId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Patch a media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of ApiResponse (CrossPlatformPolicy)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> PatchRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId, CrossPlatformPolicy body)
+        { 
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PatchRecordingCrossplatformMediaretentionpolicy");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PatchRecordingCrossplatformMediaretentionpolicy");
+            
+
+            var localVarPath = "/api/v2/recording/crossplatform/mediaretentionpolicies/{policyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (policyId != null) localVarPathParams.Add("policyId", this.Configuration.ApiClient.ParameterToString(policyId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRecordingCrossplatformMediaretentionpolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRecordingCrossplatformMediaretentionpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CrossPlatformPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (CrossPlatformPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CrossPlatformPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Patch a media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
         public Policy PatchRecordingMediaretentionpolicy (string policyId, Policy body)
         {
@@ -8191,6 +9572,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<BatchDownloadJobSubmissionResult>(localVarStatusCode,
                 localVarHeaders,
                 (BatchDownloadJobSubmissionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BatchDownloadJobSubmissionResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Create media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Policy</param>
+        /// <returns>CrossPlatformPolicy</returns>
+        public CrossPlatformPolicy PostRecordingCrossplatformMediaretentionpolicies (CrossPlatformPolicyCreate body)
+        {
+             ApiResponse<CrossPlatformPolicy> localVarResponse = PostRecordingCrossplatformMediaretentionpoliciesWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Policy</param>
+        /// <returns>ApiResponse of CrossPlatformPolicy</returns>
+        public ApiResponse< CrossPlatformPolicy > PostRecordingCrossplatformMediaretentionpoliciesWithHttpInfo (CrossPlatformPolicyCreate body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostRecordingCrossplatformMediaretentionpolicies");
+
+            var localVarPath = "/api/v2/recording/crossplatform/mediaretentionpolicies";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingCrossplatformMediaretentionpolicies: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingCrossplatformMediaretentionpolicies: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CrossPlatformPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (CrossPlatformPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CrossPlatformPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Create media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of CrossPlatformPolicy</returns>
+        public async System.Threading.Tasks.Task<CrossPlatformPolicy> PostRecordingCrossplatformMediaretentionpoliciesAsync (CrossPlatformPolicyCreate body)
+        {
+             ApiResponse<CrossPlatformPolicy> localVarResponse = await PostRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of ApiResponse (CrossPlatformPolicy)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> PostRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo (CrossPlatformPolicyCreate body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostRecordingCrossplatformMediaretentionpolicies");
+            
+
+            var localVarPath = "/api/v2/recording/crossplatform/mediaretentionpolicies";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingCrossplatformMediaretentionpolicies: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingCrossplatformMediaretentionpolicies: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CrossPlatformPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (CrossPlatformPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CrossPlatformPolicy)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -10050,6 +11632,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Recording>(localVarStatusCode,
                 localVarHeaders,
                 (Recording) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Recording)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update a media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>CrossPlatformPolicy</returns>
+        public CrossPlatformPolicy PutRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicy body)
+        {
+             ApiResponse<CrossPlatformPolicy> localVarResponse = PutRecordingCrossplatformMediaretentionpolicyWithHttpInfo(policyId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>ApiResponse of CrossPlatformPolicy</returns>
+        public ApiResponse< CrossPlatformPolicy > PutRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId, CrossPlatformPolicy body)
+        { 
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PutRecordingCrossplatformMediaretentionpolicy");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutRecordingCrossplatformMediaretentionpolicy");
+
+            var localVarPath = "/api/v2/recording/crossplatform/mediaretentionpolicies/{policyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (policyId != null) localVarPathParams.Add("policyId", this.Configuration.ApiClient.ParameterToString(policyId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRecordingCrossplatformMediaretentionpolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRecordingCrossplatformMediaretentionpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CrossPlatformPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (CrossPlatformPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CrossPlatformPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update a media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of CrossPlatformPolicy</returns>
+        public async System.Threading.Tasks.Task<CrossPlatformPolicy> PutRecordingCrossplatformMediaretentionpolicyAsync (string policyId, CrossPlatformPolicy body)
+        {
+             ApiResponse<CrossPlatformPolicy> localVarResponse = await PutRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo(policyId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a media retention policy 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of ApiResponse (CrossPlatformPolicy)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> PutRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId, CrossPlatformPolicy body)
+        { 
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PutRecordingCrossplatformMediaretentionpolicy");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutRecordingCrossplatformMediaretentionpolicy");
+            
+
+            var localVarPath = "/api/v2/recording/crossplatform/mediaretentionpolicies/{policyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (policyId != null) localVarPathParams.Add("policyId", this.Configuration.ApiClient.ParameterToString(policyId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRecordingCrossplatformMediaretentionpolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRecordingCrossplatformMediaretentionpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CrossPlatformPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (CrossPlatformPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CrossPlatformPolicy)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

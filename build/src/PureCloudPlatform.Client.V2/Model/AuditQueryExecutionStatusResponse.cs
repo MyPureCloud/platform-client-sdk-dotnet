@@ -118,6 +118,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Peoplepermissions,
             
             /// <summary>
+            /// Enum Presence for "Presence"
+            /// </summary>
+            [EnumMember(Value = "Presence")]
+            Presence,
+            
+            /// <summary>
             /// Enum Quality for "Quality"
             /// </summary>
             [EnumMember(Value = "Quality")]

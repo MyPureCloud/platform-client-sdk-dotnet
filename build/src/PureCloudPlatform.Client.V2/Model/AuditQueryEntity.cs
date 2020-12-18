@@ -66,10 +66,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Voicemailuserpolicy,
             
             /// <summary>
+            /// Enum Userpresence for "UserPresence"
+            /// </summary>
+            [EnumMember(Value = "UserPresence")]
+            Userpresence,
+            
+            /// <summary>
             /// Enum Wrapupcode for "WrapupCode"
             /// </summary>
             [EnumMember(Value = "WrapupCode")]
             Wrapupcode,
+            
+            /// <summary>
+            /// Enum Maxorgroutingutilizationcapacity for "MaxOrgRoutingUtilizationCapacity"
+            /// </summary>
+            [EnumMember(Value = "MaxOrgRoutingUtilizationCapacity")]
+            Maxorgroutingutilizationcapacity,
             
             /// <summary>
             /// Enum Accesstoken for "AccessToken"
@@ -100,6 +112,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "AuthUser")]
             Authuser,
+            
+            /// <summary>
+            /// Enum Organizationauthorizationtrust for "OrganizationAuthorizationTrust"
+            /// </summary>
+            [EnumMember(Value = "OrganizationAuthorizationTrust")]
+            Organizationauthorizationtrust,
+            
+            /// <summary>
+            /// Enum Organizationauthorizationusertrust for "OrganizationAuthorizationUserTrust"
+            /// </summary>
+            [EnumMember(Value = "OrganizationAuthorizationUserTrust")]
+            Organizationauthorizationusertrust,
             
             /// <summary>
             /// Enum Bulkactions for "BulkActions"
@@ -527,7 +551,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Changepassword for "ChangePassword"
             /// </summary>
             [EnumMember(Value = "ChangePassword")]
-            Changepassword
+            Changepassword,
+            
+            /// <summary>
+            /// Enum Revoke for "Revoke"
+            /// </summary>
+            [EnumMember(Value = "Revoke")]
+            Revoke
         }
         
         

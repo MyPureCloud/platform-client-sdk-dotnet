@@ -10,6 +10,8 @@ title: StatisticalSummary
 | **Max** | **double?** |  | [optional] |
 | **Min** | **double?** |  | [optional] |
 | **Count** | **long?** |  | [optional] |
+| **CountNegative** | **long?** |  | [optional] |
+| **CountPositive** | **long?** |  | [optional] |
 | **Sum** | **double?** |  | [optional] |
 | **Current** | **double?** |  | [optional] |
 | **Ratio** | **double?** |  | [optional] |

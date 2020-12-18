@@ -30,18 +30,53 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="FacebookIntegrationUpdateRequest" /> class.
         /// </summary>
+        /// <param name="Name">The name of the Facebook Integration.</param>
         /// <param name="PageAccessToken">The long-lived Page Access Token of a facebook page.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  Either pageAccessToken or userAccessToken should be provided..</param>
         /// <param name="UserAccessToken">The short-lived User Access Token of the facebook user logged into the facebook app.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  Either pageAccessToken or userAccessToken should be provided..</param>
-        public FacebookIntegrationUpdateRequest(string PageAccessToken = null, string UserAccessToken = null)
+        public FacebookIntegrationUpdateRequest(string Name = null, string PageAccessToken = null, string UserAccessToken = null)
         {
+            this.Name = Name;
             this.PageAccessToken = PageAccessToken;
             this.UserAccessToken = UserAccessToken;
             
         }
+        
+        
+        
+        /// <summary>
+        /// The globally unique identifier for the object.
+        /// </summary>
+        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The name of the Facebook Integration
+        /// </summary>
+        /// <value>The name of the Facebook Integration</value>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
         
         
         
@@ -62,6 +97,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string UserAccessToken { get; set; }
         
         
+        
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -71,8 +115,11 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class FacebookIntegrationUpdateRequest {\n");
             
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  PageAccessToken: ").Append(PageAccessToken).Append("\n");
             sb.Append("  UserAccessToken: ").Append(UserAccessToken).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,6 +157,16 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                ) &&
+                (
                     this.PageAccessToken == other.PageAccessToken ||
                     this.PageAccessToken != null &&
                     this.PageAccessToken.Equals(other.PageAccessToken)
@@ -118,6 +175,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UserAccessToken == other.UserAccessToken ||
                     this.UserAccessToken != null &&
                     this.UserAccessToken.Equals(other.UserAccessToken)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -133,11 +195,20 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.PageAccessToken != null)
                     hash = hash * 59 + this.PageAccessToken.GetHashCode();
                 
                 if (this.UserAccessToken != null)
                     hash = hash * 59 + this.UserAccessToken.GetHashCode();
+                
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

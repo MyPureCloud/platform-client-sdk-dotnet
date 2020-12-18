@@ -62,6 +62,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Acdwrapupcode,
             
             /// <summary>
+            /// Enum Botconnectorbot for "BOTCONNECTORBOT"
+            /// </summary>
+            [EnumMember(Value = "BOTCONNECTORBOT")]
+            Botconnectorbot,
+            
+            /// <summary>
+            /// Enum Botconnectorbotversion for "BOTCONNECTORBOTVERSION"
+            /// </summary>
+            [EnumMember(Value = "BOTCONNECTORBOTVERSION")]
+            Botconnectorbotversion,
+            
+            /// <summary>
             /// Enum Botflow for "BOTFLOW"
             /// </summary>
             [EnumMember(Value = "BOTFLOW")]

@@ -14,8 +14,8 @@ title: DevelopmentActivityListing
 | **FirstUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-| **LastUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
+| **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 

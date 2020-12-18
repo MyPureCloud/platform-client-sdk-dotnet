@@ -2882,7 +2882,7 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
-            var name = name_example;  // string | Name (optional) 
+            var name = name_example;  // string | Wrapup code's name ('Sort by' param is ignored unless this field is provided) (optional) 
 
             try
             { 
@@ -2908,7 +2908,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Sort by | [optional] [default to name]<br />**Values**: name, id |
 | **sortOrder** | **string**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
-| **name** | **string**| Name | [optional]  |
+| **name** | **string**| Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

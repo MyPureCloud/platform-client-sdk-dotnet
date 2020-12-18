@@ -65,6 +65,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="StatisticalSummary" /> class.
@@ -72,17 +82,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Max">Max.</param>
         /// <param name="Min">Min.</param>
         /// <param name="Count">Count.</param>
+        /// <param name="CountNegative">CountNegative.</param>
+        /// <param name="CountPositive">CountPositive.</param>
         /// <param name="Sum">Sum.</param>
         /// <param name="Current">Current.</param>
         /// <param name="Ratio">Ratio.</param>
         /// <param name="Numerator">Numerator.</param>
         /// <param name="Denominator">Denominator.</param>
         /// <param name="Target">Target.</param>
-        public StatisticalSummary(double? Max = null, double? Min = null, long? Count = null, double? Sum = null, double? Current = null, double? Ratio = null, double? Numerator = null, double? Denominator = null, double? Target = null)
+        public StatisticalSummary(double? Max = null, double? Min = null, long? Count = null, long? CountNegative = null, long? CountPositive = null, double? Sum = null, double? Current = null, double? Ratio = null, double? Numerator = null, double? Denominator = null, double? Target = null)
         {
             this.Max = Max;
             this.Min = Min;
             this.Count = Count;
+            this.CountNegative = CountNegative;
+            this.CountPositive = CountPositive;
             this.Sum = Sum;
             this.Current = Current;
             this.Ratio = Ratio;
@@ -115,6 +129,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public long? Count { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets CountNegative
+        /// </summary>
+        [DataMember(Name="countNegative", EmitDefaultValue=false)]
+        public long? CountNegative { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets CountPositive
+        /// </summary>
+        [DataMember(Name="countPositive", EmitDefaultValue=false)]
+        public long? CountPositive { get; set; }
         
         
         
@@ -177,6 +207,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Max: ").Append(Max).Append("\n");
             sb.Append("  Min: ").Append(Min).Append("\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
+            sb.Append("  CountNegative: ").Append(CountNegative).Append("\n");
+            sb.Append("  CountPositive: ").Append(CountPositive).Append("\n");
             sb.Append("  Sum: ").Append(Sum).Append("\n");
             sb.Append("  Current: ").Append(Current).Append("\n");
             sb.Append("  Ratio: ").Append(Ratio).Append("\n");
@@ -235,6 +267,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Count.Equals(other.Count)
                 ) &&
                 (
+                    this.CountNegative == other.CountNegative ||
+                    this.CountNegative != null &&
+                    this.CountNegative.Equals(other.CountNegative)
+                ) &&
+                (
+                    this.CountPositive == other.CountPositive ||
+                    this.CountPositive != null &&
+                    this.CountPositive.Equals(other.CountPositive)
+                ) &&
+                (
                     this.Sum == other.Sum ||
                     this.Sum != null &&
                     this.Sum.Equals(other.Sum)
@@ -286,6 +328,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
+                
+                if (this.CountNegative != null)
+                    hash = hash * 59 + this.CountNegative.GetHashCode();
+                
+                if (this.CountPositive != null)
+                    hash = hash * 59 + this.CountPositive.GetHashCode();
                 
                 if (this.Sum != null)
                     hash = hash * 59 + this.Sum.GetHashCode();

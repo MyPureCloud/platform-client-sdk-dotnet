@@ -830,6 +830,65 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets ParticipantPurposes
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ParticipantPurposesEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Internal for "internal"
+            /// </summary>
+            [EnumMember(Value = "internal")]
+            Internal,
+            
+            /// <summary>
+            /// Enum External for "external"
+            /// </summary>
+            [EnumMember(Value = "external")]
+            External
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1075,7 +1134,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UsedRoutingTypes">A list of routing types used.</param>
         /// <param name="RequestedRoutingTypes">A list of routing types requested.</param>
         /// <param name="HasAgentAssistId">Indicates filtering for agent assist id.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null)
+        /// <param name="Transcripts">A list of transcript contents requested.</param>
+        /// <param name="TranscriptLanguages">A list of transcript languages requested.</param>
+        /// <param name="ParticipantPurposes">A list of participant purpose requested.</param>
+        /// <param name="ShowFirstQueue">Indicates filtering for first queue data.</param>
+        /// <param name="TeamIds">The team ids used to filter the view data.</param>
+        /// <param name="FilterUsersByTeamIds">The team ids are used to fetch associated users for the view.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -1160,6 +1225,12 @@ namespace PureCloudPlatform.Client.V2.Model
             this.UsedRoutingTypes = UsedRoutingTypes;
             this.RequestedRoutingTypes = RequestedRoutingTypes;
             this.HasAgentAssistId = HasAgentAssistId;
+            this.Transcripts = Transcripts;
+            this.TranscriptLanguages = TranscriptLanguages;
+            this.ParticipantPurposes = ParticipantPurposes;
+            this.ShowFirstQueue = ShowFirstQueue;
+            this.TeamIds = TeamIds;
+            this.FilterUsersByTeamIds = FilterUsersByTeamIds;
             
         }
         
@@ -1911,6 +1982,60 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? HasAgentAssistId { get; set; }
         
         
+        
+        /// <summary>
+        /// A list of transcript contents requested
+        /// </summary>
+        /// <value>A list of transcript contents requested</value>
+        [DataMember(Name="transcripts", EmitDefaultValue=false)]
+        public List<Transcripts> Transcripts { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A list of transcript languages requested
+        /// </summary>
+        /// <value>A list of transcript languages requested</value>
+        [DataMember(Name="transcriptLanguages", EmitDefaultValue=false)]
+        public List<string> TranscriptLanguages { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A list of participant purpose requested
+        /// </summary>
+        /// <value>A list of participant purpose requested</value>
+        [DataMember(Name="participantPurposes", EmitDefaultValue=false)]
+        public List<ParticipantPurposesEnum> ParticipantPurposes { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates filtering for first queue data
+        /// </summary>
+        /// <value>Indicates filtering for first queue data</value>
+        [DataMember(Name="showFirstQueue", EmitDefaultValue=false)]
+        public bool? ShowFirstQueue { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The team ids used to filter the view data
+        /// </summary>
+        /// <value>The team ids used to filter the view data</value>
+        [DataMember(Name="teamIds", EmitDefaultValue=false)]
+        public List<string> TeamIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The team ids are used to fetch associated users for the view
+        /// </summary>
+        /// <value>The team ids are used to fetch associated users for the view</value>
+        [DataMember(Name="filterUsersByTeamIds", EmitDefaultValue=false)]
+        public List<string> FilterUsersByTeamIds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -2003,6 +2128,12 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UsedRoutingTypes: ").Append(UsedRoutingTypes).Append("\n");
             sb.Append("  RequestedRoutingTypes: ").Append(RequestedRoutingTypes).Append("\n");
             sb.Append("  HasAgentAssistId: ").Append(HasAgentAssistId).Append("\n");
+            sb.Append("  Transcripts: ").Append(Transcripts).Append("\n");
+            sb.Append("  TranscriptLanguages: ").Append(TranscriptLanguages).Append("\n");
+            sb.Append("  ParticipantPurposes: ").Append(ParticipantPurposes).Append("\n");
+            sb.Append("  ShowFirstQueue: ").Append(ShowFirstQueue).Append("\n");
+            sb.Append("  TeamIds: ").Append(TeamIds).Append("\n");
+            sb.Append("  FilterUsersByTeamIds: ").Append(FilterUsersByTeamIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -2453,6 +2584,36 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HasAgentAssistId == other.HasAgentAssistId ||
                     this.HasAgentAssistId != null &&
                     this.HasAgentAssistId.Equals(other.HasAgentAssistId)
+                ) &&
+                (
+                    this.Transcripts == other.Transcripts ||
+                    this.Transcripts != null &&
+                    this.Transcripts.SequenceEqual(other.Transcripts)
+                ) &&
+                (
+                    this.TranscriptLanguages == other.TranscriptLanguages ||
+                    this.TranscriptLanguages != null &&
+                    this.TranscriptLanguages.SequenceEqual(other.TranscriptLanguages)
+                ) &&
+                (
+                    this.ParticipantPurposes == other.ParticipantPurposes ||
+                    this.ParticipantPurposes != null &&
+                    this.ParticipantPurposes.SequenceEqual(other.ParticipantPurposes)
+                ) &&
+                (
+                    this.ShowFirstQueue == other.ShowFirstQueue ||
+                    this.ShowFirstQueue != null &&
+                    this.ShowFirstQueue.Equals(other.ShowFirstQueue)
+                ) &&
+                (
+                    this.TeamIds == other.TeamIds ||
+                    this.TeamIds != null &&
+                    this.TeamIds.SequenceEqual(other.TeamIds)
+                ) &&
+                (
+                    this.FilterUsersByTeamIds == other.FilterUsersByTeamIds ||
+                    this.FilterUsersByTeamIds != null &&
+                    this.FilterUsersByTeamIds.SequenceEqual(other.FilterUsersByTeamIds)
                 );
         }
 
@@ -2716,6 +2877,24 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.HasAgentAssistId != null)
                     hash = hash * 59 + this.HasAgentAssistId.GetHashCode();
+                
+                if (this.Transcripts != null)
+                    hash = hash * 59 + this.Transcripts.GetHashCode();
+                
+                if (this.TranscriptLanguages != null)
+                    hash = hash * 59 + this.TranscriptLanguages.GetHashCode();
+                
+                if (this.ParticipantPurposes != null)
+                    hash = hash * 59 + this.ParticipantPurposes.GetHashCode();
+                
+                if (this.ShowFirstQueue != null)
+                    hash = hash * 59 + this.ShowFirstQueue.GetHashCode();
+                
+                if (this.TeamIds != null)
+                    hash = hash * 59 + this.TeamIds.GetHashCode();
+                
+                if (this.FilterUsersByTeamIds != null)
+                    hash = hash * 59 + this.FilterUsersByTeamIds.GetHashCode();
                 
                 return hash;
             }

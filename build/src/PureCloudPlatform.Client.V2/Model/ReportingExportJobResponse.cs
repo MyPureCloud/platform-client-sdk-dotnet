@@ -389,7 +389,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum ScheduledCallbacksView for "SCHEDULED_CALLBACKS_VIEW"
             /// </summary>
             [EnumMember(Value = "SCHEDULED_CALLBACKS_VIEW")]
-            ScheduledCallbacksView
+            ScheduledCallbacksView,
+            
+            /// <summary>
+            /// Enum ContentSearchView for "CONTENT_SEARCH_VIEW"
+            /// </summary>
+            [EnumMember(Value = "CONTENT_SEARCH_VIEW")]
+            ContentSearchView,
+            
+            /// <summary>
+            /// Enum LandingPage for "LANDING_PAGE"
+            /// </summary>
+            [EnumMember(Value = "LANDING_PAGE")]
+            LandingPage,
+            
+            /// <summary>
+            /// Enum DashboardSummary for "DASHBOARD_SUMMARY"
+            /// </summary>
+            [EnumMember(Value = "DASHBOARD_SUMMARY")]
+            DashboardSummary,
+            
+            /// <summary>
+            /// Enum DashboardDetail for "DASHBOARD_DETAIL"
+            /// </summary>
+            [EnumMember(Value = "DASHBOARD_DETAIL")]
+            DashboardDetail
         }
         
         

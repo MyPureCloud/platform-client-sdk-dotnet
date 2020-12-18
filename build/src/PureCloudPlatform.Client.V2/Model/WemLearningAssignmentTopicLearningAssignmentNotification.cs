@@ -62,7 +62,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Completed for "Completed"
             /// </summary>
             [EnumMember(Value = "Completed")]
-            Completed
+            Completed,
+            
+            /// <summary>
+            /// Enum Deleted for "Deleted"
+            /// </summary>
+            [EnumMember(Value = "Deleted")]
+            Deleted
         }
         
         

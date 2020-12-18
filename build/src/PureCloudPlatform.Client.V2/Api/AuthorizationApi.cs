@@ -116,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets all grants for a given division.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns all grants assigned to a given division. Maximum page size is 500.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
@@ -129,7 +129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets all grants for a given division.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns all grants assigned to a given division. Maximum page size is 500.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
@@ -1070,7 +1070,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets all grants for a given division.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns all grants assigned to a given division. Maximum page size is 500.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
@@ -1083,7 +1083,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets all grants for a given division.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns all grants assigned to a given division. Maximum page size is 500.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
@@ -2817,7 +2817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Gets all grants for a given division. 
+        /// Gets all grants for a given division. Returns all grants assigned to a given division. Maximum page size is 500.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
@@ -2831,7 +2831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets all grants for a given division. 
+        /// Gets all grants for a given division. Returns all grants assigned to a given division. Maximum page size is 500.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
@@ -2918,7 +2918,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Gets all grants for a given division. 
+        /// Gets all grants for a given division. Returns all grants assigned to a given division. Maximum page size is 500.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
@@ -2933,7 +2933,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets all grants for a given division. 
+        /// Gets all grants for a given division. Returns all grants assigned to a given division. Maximum page size is 500.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>

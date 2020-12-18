@@ -124,13 +124,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WhatsAppIntegrationUpdateRequest" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected WhatsAppIntegrationUpdateRequest() { }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WhatsAppIntegrationUpdateRequest" /> class.
-        /// </summary>
-        /// <param name="Action">The action used to activate and then confirm a WhatsApp Integration. (required).</param>
+        /// <param name="Action">The action used to activate and then confirm a WhatsApp Integration..</param>
         /// <param name="AuthenticationMethod">The authentication method used to confirm a WhatsApp Integration activation. If action is set to Activate, then authenticationMethod is a required field. .</param>
         /// <param name="ConfirmationCode">The confirmation code sent by Whatsapp to you during the activation step. If action is set to Confirm, then confirmationCode is a required field..</param>
         public WhatsAppIntegrationUpdateRequest(ActionEnum? Action = null, AuthenticationMethodEnum? AuthenticationMethod = null, string ConfirmationCode = null)

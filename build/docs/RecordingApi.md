@@ -9,6 +9,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteConversationRecordingAnnotation**](RecordingApi.html#deleteconversationrecordingannotation) | **DELETE** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Delete annotation |
 | [**DeleteOrphanrecording**](RecordingApi.html#deleteorphanrecording) | **DELETE** /api/v2/orphanrecordings/{orphanId} | Deletes a single orphan recording |
+| [**DeleteRecordingCrossplatformMediaretentionpolicies**](RecordingApi.html#deleterecordingcrossplatformmediaretentionpolicies) | **DELETE** /api/v2/recording/crossplatform/mediaretentionpolicies | Delete media retention policies |
+| [**DeleteRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#deleterecordingcrossplatformmediaretentionpolicy) | **DELETE** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Delete a media retention policy |
 | [**DeleteRecordingJob**](RecordingApi.html#deleterecordingjob) | **DELETE** /api/v2/recording/jobs/{jobId} | Delete the recording bulk job |
 | [**DeleteRecordingMediaretentionpolicies**](RecordingApi.html#deleterecordingmediaretentionpolicies) | **DELETE** /api/v2/recording/mediaretentionpolicies | Delete media retention policies |
 | [**DeleteRecordingMediaretentionpolicy**](RecordingApi.html#deleterecordingmediaretentionpolicy) | **DELETE** /api/v2/recording/mediaretentionpolicies/{policyId} | Delete a media retention policy |
@@ -22,6 +24,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOrphanrecordingMedia**](RecordingApi.html#getorphanrecordingmedia) | **GET** /api/v2/orphanrecordings/{orphanId}/media | Gets the media of a single orphan recording |
 | [**GetOrphanrecordings**](RecordingApi.html#getorphanrecordings) | **GET** /api/v2/orphanrecordings | Gets all orphan recordings |
 | [**GetRecordingBatchrequest**](RecordingApi.html#getrecordingbatchrequest) | **GET** /api/v2/recording/batchrequests/{jobId} | Get the status and results for a batch request job, only the user that submitted the job may retrieve results |
+| [**GetRecordingCrossplatformMediaretentionpolicies**](RecordingApi.html#getrecordingcrossplatformmediaretentionpolicies) | **GET** /api/v2/recording/crossplatform/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
+| [**GetRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#getrecordingcrossplatformmediaretentionpolicy) | **GET** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Get a media retention policy |
 | [**GetRecordingJob**](RecordingApi.html#getrecordingjob) | **GET** /api/v2/recording/jobs/{jobId} | Get the status of the job associated with the job id. |
 | [**GetRecordingJobs**](RecordingApi.html#getrecordingjobs) | **GET** /api/v2/recording/jobs | Get the status of all jobs within the user&#39;s organization |
 | [**GetRecordingLocalkeysSetting**](RecordingApi.html#getrecordinglocalkeyssetting) | **GET** /api/v2/recording/localkeys/settings/{settingsId} | Get the local encryption settings |
@@ -32,10 +36,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRecordingRecordingkeysRotationschedule**](RecordingApi.html#getrecordingrecordingkeysrotationschedule) | **GET** /api/v2/recording/recordingkeys/rotationschedule | Get key rotation schedule |
 | [**GetRecordingSettings**](RecordingApi.html#getrecordingsettings) | **GET** /api/v2/recording/settings | Get the Recording Settings for the Organization |
 | [**GetRecordingsScreensessions**](RecordingApi.html#getrecordingsscreensessions) | **GET** /api/v2/recordings/screensessions | Retrieves a paged listing of screen recording sessions |
+| [**PatchRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#patchrecordingcrossplatformmediaretentionpolicy) | **PATCH** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Patch a media retention policy |
 | [**PatchRecordingMediaretentionpolicy**](RecordingApi.html#patchrecordingmediaretentionpolicy) | **PATCH** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
 | [**PatchRecordingsScreensession**](RecordingApi.html#patchrecordingsscreensession) | **PATCH** /api/v2/recordings/screensessions/{recordingSessionId} | Update a screen recording session |
 | [**PostConversationRecordingAnnotations**](RecordingApi.html#postconversationrecordingannotations) | **POST** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Create annotation |
 | [**PostRecordingBatchrequests**](RecordingApi.html#postrecordingbatchrequests) | **POST** /api/v2/recording/batchrequests | Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. |
+| [**PostRecordingCrossplatformMediaretentionpolicies**](RecordingApi.html#postrecordingcrossplatformmediaretentionpolicies) | **POST** /api/v2/recording/crossplatform/mediaretentionpolicies | Create media retention policy |
 | [**PostRecordingJobs**](RecordingApi.html#postrecordingjobs) | **POST** /api/v2/recording/jobs | Create a recording bulk job |
 | [**PostRecordingLocalkeys**](RecordingApi.html#postrecordinglocalkeys) | **POST** /api/v2/recording/localkeys | create a local recording key |
 | [**PostRecordingLocalkeysSettings**](RecordingApi.html#postrecordinglocalkeyssettings) | **POST** /api/v2/recording/localkeys/settings | create settings for local key creation |
@@ -45,6 +51,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutConversationRecording**](RecordingApi.html#putconversationrecording) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Updates the retention records on a recording. |
 | [**PutConversationRecordingAnnotation**](RecordingApi.html#putconversationrecordingannotation) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Update annotation |
 | [**PutOrphanrecording**](RecordingApi.html#putorphanrecording) | **PUT** /api/v2/orphanrecordings/{orphanId} | Updates an orphan recording to a regular recording with retention values |
+| [**PutRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#putrecordingcrossplatformmediaretentionpolicy) | **PUT** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Update a media retention policy |
 | [**PutRecordingJob**](RecordingApi.html#putrecordingjob) | **PUT** /api/v2/recording/jobs/{jobId} | Execute the recording bulk job. |
 | [**PutRecordingLocalkeysSetting**](RecordingApi.html#putrecordinglocalkeyssetting) | **PUT** /api/v2/recording/localkeys/settings/{settingsId} | Update the local encryption settings |
 | [**PutRecordingMediaretentionpolicy**](RecordingApi.html#putrecordingmediaretentionpolicy) | **PUT** /api/v2/recording/mediaretentionpolicies/{policyId} | Update a media retention policy |
@@ -177,6 +184,126 @@ namespace Example
 ### Return type
 
 [**OrphanRecording**](OrphanRecording.html)
+
+<a name="deleterecordingcrossplatformmediaretentionpolicies"></a>
+
+## void DeleteRecordingCrossplatformMediaretentionpolicies (string ids)
+
+
+
+Delete media retention policies
+
+Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+
+Requires ANY permissions: 
+
+* recording:crossPlatformRetentionPolicy:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteRecordingCrossplatformMediaretentionpoliciesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RecordingApi();
+            var ids = ids_example;  // string | 
+
+            try
+            { 
+                // Delete media retention policies
+                apiInstance.DeleteRecordingCrossplatformMediaretentionpolicies(ids);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.DeleteRecordingCrossplatformMediaretentionpolicies: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ids** | **string**|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleterecordingcrossplatformmediaretentionpolicy"></a>
+
+## void DeleteRecordingCrossplatformMediaretentionpolicy (string policyId)
+
+
+
+Delete a media retention policy
+
+
+
+Requires ANY permissions: 
+
+* recording:crossPlatformRetentionPolicy:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteRecordingCrossplatformMediaretentionpolicyExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RecordingApi();
+            var policyId = policyId_example;  // string | Policy ID
+
+            try
+            { 
+                // Delete a media retention policy
+                apiInstance.DeleteRecordingCrossplatformMediaretentionpolicy(policyId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.DeleteRecordingCrossplatformMediaretentionpolicy: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **policyId** | **string**| Policy ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="deleterecordingjob"></a>
 
@@ -1022,6 +1149,146 @@ namespace Example
 
 [**BatchDownloadJobStatusResult**](BatchDownloadJobStatusResult.html)
 
+<a name="getrecordingcrossplatformmediaretentionpolicies"></a>
+
+## [**PolicyEntityListing**](PolicyEntityListing.html) GetRecordingCrossplatformMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+
+
+
+Gets media retention policy list with query options to filter on name and enabled.
+
+for a less verbose response, add summary=true to this endpoint
+
+Requires ANY permissions: 
+
+* recording:crossPlatformRetentionPolicy:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRecordingCrossplatformMediaretentionpoliciesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RecordingApi();
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
+            var nextPage = nextPage_example;  // string | next page token (optional) 
+            var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            var name = name_example;  // string | the policy name - used for filtering results in searches. (optional) 
+            var enabled = true;  // bool? | checks to see if policy is enabled - use enabled = true or enabled = false (optional) 
+            var summary = true;  // bool? | provides a less verbose response of policy lists. (optional)  (default to false)
+            var hasErrors = true;  // bool? | provides a way to fetch all policies with errors or policies that do not have errors (optional) 
+
+            try
+            { 
+                // Gets media retention policy list with query options to filter on name and enabled.
+                PolicyEntityListing result = apiInstance.GetRecordingCrossplatformMediaretentionpolicies(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetRecordingCrossplatformMediaretentionpolicies: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
+| **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
+| **sortBy** | **string**| variable name requested to sort by | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **nextPage** | **string**| next page token | [optional]  |
+| **previousPage** | **string**| Previous page token | [optional]  |
+| **name** | **string**| the policy name - used for filtering results in searches. | [optional]  |
+| **enabled** | **bool?**| checks to see if policy is enabled - use enabled = true or enabled = false | [optional]  |
+| **summary** | **bool?**| provides a less verbose response of policy lists. | [optional] [default to false] |
+| **hasErrors** | **bool?**| provides a way to fetch all policies with errors or policies that do not have errors | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PolicyEntityListing**](PolicyEntityListing.html)
+
+<a name="getrecordingcrossplatformmediaretentionpolicy"></a>
+
+## [**CrossPlatformPolicy**](CrossPlatformPolicy.html) GetRecordingCrossplatformMediaretentionpolicy (string policyId)
+
+
+
+Get a media retention policy
+
+
+
+Requires ANY permissions: 
+
+* recording:crossPlatformRetentionPolicy:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRecordingCrossplatformMediaretentionpolicyExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RecordingApi();
+            var policyId = policyId_example;  // string | Policy ID
+
+            try
+            { 
+                // Get a media retention policy
+                CrossPlatformPolicy result = apiInstance.GetRecordingCrossplatformMediaretentionpolicy(policyId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetRecordingCrossplatformMediaretentionpolicy: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **policyId** | **string**| Policy ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CrossPlatformPolicy**](CrossPlatformPolicy.html)
+
 <a name="getrecordingjob"></a>
 
 ## [**RecordingJob**](RecordingJob.html) GetRecordingJob (string jobId)
@@ -1655,6 +1922,69 @@ namespace Example
 
 [**ScreenRecordingSessionListing**](ScreenRecordingSessionListing.html)
 
+<a name="patchrecordingcrossplatformmediaretentionpolicy"></a>
+
+## [**CrossPlatformPolicy**](CrossPlatformPolicy.html) PatchRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicy body)
+
+
+
+Patch a media retention policy
+
+
+
+Requires ANY permissions: 
+
+* recording:crossPlatformRetentionPolicy:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchRecordingCrossplatformMediaretentionpolicyExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RecordingApi();
+            var policyId = policyId_example;  // string | Policy ID
+            var body = new CrossPlatformPolicy(); // CrossPlatformPolicy | Policy
+
+            try
+            { 
+                // Patch a media retention policy
+                CrossPlatformPolicy result = apiInstance.PatchRecordingCrossplatformMediaretentionpolicy(policyId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PatchRecordingCrossplatformMediaretentionpolicy: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **policyId** | **string**| Policy ID |  |
+| **body** | [**CrossPlatformPolicy**](CrossPlatformPolicy.html)| Policy |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CrossPlatformPolicy**](CrossPlatformPolicy.html)
+
 <a name="patchrecordingmediaretentionpolicy"></a>
 
 ## [**Policy**](Policy.html) PatchRecordingMediaretentionpolicy (string policyId, Policy body)
@@ -1904,6 +2234,67 @@ namespace Example
 ### Return type
 
 [**BatchDownloadJobSubmissionResult**](BatchDownloadJobSubmissionResult.html)
+
+<a name="postrecordingcrossplatformmediaretentionpolicies"></a>
+
+## [**CrossPlatformPolicy**](CrossPlatformPolicy.html) PostRecordingCrossplatformMediaretentionpolicies (CrossPlatformPolicyCreate body)
+
+
+
+Create media retention policy
+
+
+
+Requires ANY permissions: 
+
+* recording:crossPlatformRetentionPolicy:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRecordingCrossplatformMediaretentionpoliciesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RecordingApi();
+            var body = new CrossPlatformPolicyCreate(); // CrossPlatformPolicyCreate | Policy
+
+            try
+            { 
+                // Create media retention policy
+                CrossPlatformPolicy result = apiInstance.PostRecordingCrossplatformMediaretentionpolicies(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PostRecordingCrossplatformMediaretentionpolicies: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CrossPlatformPolicyCreate**](CrossPlatformPolicyCreate.html)| Policy |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CrossPlatformPolicy**](CrossPlatformPolicy.html)
 
 <a name="postrecordingjobs"></a>
 
@@ -2461,6 +2852,69 @@ namespace Example
 ### Return type
 
 [**Recording**](Recording.html)
+
+<a name="putrecordingcrossplatformmediaretentionpolicy"></a>
+
+## [**CrossPlatformPolicy**](CrossPlatformPolicy.html) PutRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicy body)
+
+
+
+Update a media retention policy
+
+
+
+Requires ANY permissions: 
+
+* recording:crossPlatformRetentionPolicy:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutRecordingCrossplatformMediaretentionpolicyExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RecordingApi();
+            var policyId = policyId_example;  // string | Policy ID
+            var body = new CrossPlatformPolicy(); // CrossPlatformPolicy | Policy
+
+            try
+            { 
+                // Update a media retention policy
+                CrossPlatformPolicy result = apiInstance.PutRecordingCrossplatformMediaretentionpolicy(policyId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PutRecordingCrossplatformMediaretentionpolicy: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **policyId** | **string**| Policy ID |  |
+| **body** | [**CrossPlatformPolicy**](CrossPlatformPolicy.html)| Policy |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CrossPlatformPolicy**](CrossPlatformPolicy.html)
 
 <a name="putrecordingjob"></a>
 

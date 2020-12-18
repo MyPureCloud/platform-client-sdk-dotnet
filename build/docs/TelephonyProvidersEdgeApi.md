@@ -1557,7 +1557,7 @@ namespace Example
 
 ## [**EdgeLine**](EdgeLine.html) GetTelephonyProvidersEdgeLine (string edgeId, string lineId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get line
 
@@ -1620,7 +1620,7 @@ namespace Example
 
 ## [**EdgeLineEntityListing**](EdgeLineEntityListing.html) GetTelephonyProvidersEdgeLines (string edgeId, int? pageSize = null, int? pageNumber = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get the list of lines.
 
@@ -7203,7 +7203,7 @@ namespace Example
 
 ## [**EdgeLine**](EdgeLine.html) PutTelephonyProvidersEdgeLine (string edgeId, string lineId, EdgeLine body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update a line.
 
@@ -7396,7 +7396,7 @@ namespace Example
 
 ## [**DID**](DID.html) PutTelephonyProvidersEdgesDid (string didId, DID body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update a DID by ID.
 
@@ -7650,7 +7650,7 @@ namespace Example
 
 ## [**Extension**](Extension.html) PutTelephonyProvidersEdgesExtension (string extensionId, Extension body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update an extension by ID.
 

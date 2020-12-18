@@ -246,7 +246,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Nwebactionstimedout for "nWebActionsTimedout"
             /// </summary>
             [EnumMember(Value = "nWebActionsTimedout")]
-            Nwebactionstimedout
+            Nwebactionstimedout,
+            
+            /// <summary>
+            /// Enum Nwebactionsfrequencycapreached for "nWebActionsFrequencyCapReached"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsFrequencyCapReached")]
+            Nwebactionsfrequencycapreached
         }
         
         

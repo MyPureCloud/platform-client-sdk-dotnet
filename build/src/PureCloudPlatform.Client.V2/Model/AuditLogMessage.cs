@@ -32,6 +32,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Name of the service that logged this audit message.
         /// </summary>
@@ -70,6 +73,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "PeoplePermissions")]
             Peoplepermissions,
+            
+            /// <summary>
+            /// Enum Presence for "Presence"
+            /// </summary>
+            [EnumMember(Value = "Presence")]
+            Presence,
             
             /// <summary>
             /// Enum Quality for "Quality"
@@ -334,7 +343,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Changepassword for "ChangePassword"
             /// </summary>
             [EnumMember(Value = "ChangePassword")]
-            Changepassword
+            Changepassword,
+            
+            /// <summary>
+            /// Enum Revoke for "Revoke"
+            /// </summary>
+            [EnumMember(Value = "Revoke")]
+            Revoke
         }
         
         
@@ -389,10 +404,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Voicemailuserpolicy,
             
             /// <summary>
+            /// Enum Userpresence for "UserPresence"
+            /// </summary>
+            [EnumMember(Value = "UserPresence")]
+            Userpresence,
+            
+            /// <summary>
             /// Enum Wrapupcode for "WrapupCode"
             /// </summary>
             [EnumMember(Value = "WrapupCode")]
             Wrapupcode,
+            
+            /// <summary>
+            /// Enum Maxorgroutingutilizationcapacity for "MaxOrgRoutingUtilizationCapacity"
+            /// </summary>
+            [EnumMember(Value = "MaxOrgRoutingUtilizationCapacity")]
+            Maxorgroutingutilizationcapacity,
             
             /// <summary>
             /// Enum Accesstoken for "AccessToken"
@@ -423,6 +450,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "AuthUser")]
             Authuser,
+            
+            /// <summary>
+            /// Enum Organizationauthorizationtrust for "OrganizationAuthorizationTrust"
+            /// </summary>
+            [EnumMember(Value = "OrganizationAuthorizationTrust")]
+            Organizationauthorizationtrust,
+            
+            /// <summary>
+            /// Enum Organizationauthorizationusertrust for "OrganizationAuthorizationUserTrust"
+            /// </summary>
+            [EnumMember(Value = "OrganizationAuthorizationUserTrust")]
+            Organizationauthorizationusertrust,
             
             /// <summary>
             /// Enum Bulkactions for "BulkActions"
@@ -665,6 +704,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Name of the service that logged this audit message.
         /// </summary>
@@ -706,6 +747,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="AuditLogMessage" /> class.
         /// </summary>
         /// <param name="Id">Id of the audit message..</param>
+        /// <param name="UserHomeOrgId">Home Organization Id associated with this audit message..</param>
         /// <param name="User">User associated with this audit message..</param>
         /// <param name="Client">Client associated with this audit message..</param>
         /// <param name="RemoteIp">List of IP addresses of systems that originated or handled the request..</param>
@@ -717,9 +759,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EntityType">Type of the entity that was impacted..</param>
         /// <param name="PropertyChanges">List of properties that were changed and changes made to those properties..</param>
         /// <param name="Context">Additional context for this message..</param>
-        public AuditLogMessage(string Id = null, DomainEntityRef User = null, AddressableEntityRef Client = null, List<string> RemoteIp = null, ServiceNameEnum? ServiceName = null, DateTime? EventDate = null, MessageInfo Message = null, ActionEnum? Action = null, DomainEntityRef Entity = null, EntityTypeEnum? EntityType = null, List<PropertyChange> PropertyChanges = null, Dictionary<string, string> Context = null)
+        public AuditLogMessage(string Id = null, string UserHomeOrgId = null, DomainEntityRef User = null, AddressableEntityRef Client = null, List<string> RemoteIp = null, ServiceNameEnum? ServiceName = null, DateTime? EventDate = null, MessageInfo Message = null, ActionEnum? Action = null, DomainEntityRef Entity = null, EntityTypeEnum? EntityType = null, List<PropertyChange> PropertyChanges = null, Dictionary<string, string> Context = null)
         {
             this.Id = Id;
+            this.UserHomeOrgId = UserHomeOrgId;
             this.User = User;
             this.Client = Client;
             this.RemoteIp = RemoteIp;
@@ -742,6 +785,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Id of the audit message.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Home Organization Id associated with this audit message.
+        /// </summary>
+        /// <value>Home Organization Id associated with this audit message.</value>
+        [DataMember(Name="userHomeOrgId", EmitDefaultValue=false)]
+        public string UserHomeOrgId { get; set; }
         
         
         
@@ -832,6 +884,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class AuditLogMessage {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  UserHomeOrgId: ").Append(UserHomeOrgId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Client: ").Append(Client).Append("\n");
             sb.Append("  RemoteIp: ").Append(RemoteIp).Append("\n");
@@ -883,6 +936,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.UserHomeOrgId == other.UserHomeOrgId ||
+                    this.UserHomeOrgId != null &&
+                    this.UserHomeOrgId.Equals(other.UserHomeOrgId)
                 ) &&
                 (
                     this.User == other.User ||
@@ -955,6 +1013,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.UserHomeOrgId != null)
+                    hash = hash * 59 + this.UserHomeOrgId.GetHashCode();
                 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
