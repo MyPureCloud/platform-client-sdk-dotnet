@@ -278,7 +278,7 @@ namespace Example
 
 <a name="getlanguageunderstandingdomainfeedback"></a>
 
-## [**NluFeedbackListing**](NluFeedbackListing.html) GetLanguageunderstandingDomainFeedback (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null)
+## [**NluFeedbackListing**](NluFeedbackListing.html) GetLanguageunderstandingDomainFeedback (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, string after = null, List<string> fields = null)
 
 
 
@@ -317,12 +317,14 @@ namespace Example
             var includeDeleted = true;  // bool? | Whether to include soft-deleted items in the result. (optional) 
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var enableCursorPagination = true;  // bool? | Enable Cursor Pagination (optional)  (default to false)
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true (optional) 
             var fields = new List<string>(); // List<string> | Fields and properties to get, comma-separated (optional) 
 
             try
             { 
                 // Get all feedback in the given NLU Domain Version.
-                NluFeedbackListing result = apiInstance.GetLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, pageNumber, pageSize, fields);
+                NluFeedbackListing result = apiInstance.GetLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, pageNumber, pageSize, enableCursorPagination, after, fields);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -347,6 +349,8 @@ namespace Example
 | **includeDeleted** | **bool?**| Whether to include soft-deleted items in the result. | [optional]  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **enableCursorPagination** | **bool?**| Enable Cursor Pagination | [optional] [default to false] |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true | [optional]  |
 | **fields** | [**List<string>**](string.html)| Fields and properties to get, comma-separated | [optional] <br />**Values**: version, dateCreated, text, intents |
 {: class="table table-striped"}
 

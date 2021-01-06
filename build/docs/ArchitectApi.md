@@ -117,8 +117,9 @@ Deletes a emergency group by ID
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:emergencyGroup:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -176,8 +177,9 @@ Delete an IVR Config.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:callRoute:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -482,8 +484,9 @@ Delete a schedule by id
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:schedule:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -541,8 +544,9 @@ Deletes a schedule group by ID
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:scheduleGroup:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -1586,8 +1590,9 @@ Gets a emergency group by ID
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:emergencyGroup:view
 
 ### Example
 ```{"language":"csharp"}
@@ -1646,8 +1651,9 @@ Get a list of emergency groups.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:emergencyGroup:view
 
 ### Example
 ```{"language":"csharp"}
@@ -1714,8 +1720,9 @@ Get an IVR config.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:callRoute:view
 
 ### Example
 ```{"language":"csharp"}
@@ -1774,8 +1781,9 @@ Get IVR configs.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:callRoute:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2177,8 +2185,9 @@ Get a schedule by ID
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:schedule:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2237,8 +2246,9 @@ Gets a schedule group by ID
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:scheduleGroup:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2297,8 +2307,9 @@ Get a list of schedule groups.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:scheduleGroup:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2367,8 +2378,9 @@ Get a list of schedules.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:schedule:view
 
 ### Example
 ```{"language":"csharp"}
@@ -4193,8 +4205,9 @@ Creates a new emergency group
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:emergencyGroup:add
 
 ### Example
 ```{"language":"csharp"}
@@ -4253,8 +4266,9 @@ Create IVR config.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:callRoute:add
 
 ### Example
 ```{"language":"csharp"}
@@ -4498,8 +4512,9 @@ Creates a new schedule group
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:scheduleGroup:add
 
 ### Example
 ```{"language":"csharp"}
@@ -4558,8 +4573,9 @@ Create a new schedule.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:schedule:add
 
 ### Example
 ```{"language":"csharp"}
@@ -5667,8 +5683,9 @@ Updates a emergency group by ID
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:emergencyGroup:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -5729,8 +5746,9 @@ Update an IVR Config.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:callRoute:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -5919,8 +5937,9 @@ Update schedule by ID
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:schedule:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -5981,8 +6000,9 @@ Updates a schedule group by ID
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:scheduleGroup:edit
 
 ### Example
 ```{"language":"csharp"}

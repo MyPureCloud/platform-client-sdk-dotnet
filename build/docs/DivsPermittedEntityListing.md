@@ -14,9 +14,9 @@ title: DivsPermittedEntityListing
 | **AllDivsPermitted** | **bool?** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 

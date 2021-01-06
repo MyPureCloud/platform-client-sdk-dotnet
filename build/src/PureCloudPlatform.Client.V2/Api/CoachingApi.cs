@@ -411,6 +411,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<CoachingAnnotation> PostCoachingAppointmentAnnotationsWithHttpInfo (string appointmentId, CoachingAnnotationCreateRequest body);
         
         /// <summary>
+        /// Add a conversation to an appointment
+        /// </summary>
+        /// <remarks>
+        /// Permission not required if you are the creator or facilitator of the appointment
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appointmentId">The ID of the coaching appointment.</param>
+        /// <param name="body">body</param>
+        /// <returns>AddConversationResponse</returns>
+        AddConversationResponse PostCoachingAppointmentConversations (string appointmentId, AddConversationRequest body);
+
+        /// <summary>
+        /// Add a conversation to an appointment
+        /// </summary>
+        /// <remarks>
+        /// Permission not required if you are the creator or facilitator of the appointment
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appointmentId">The ID of the coaching appointment.</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of AddConversationResponse</returns>
+        ApiResponse<AddConversationResponse> PostCoachingAppointmentConversationsWithHttpInfo (string appointmentId, AddConversationRequest body);
+        
+        /// <summary>
         /// Create a new appointment
         /// </summary>
         /// <remarks>
@@ -851,6 +875,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The annotation to add</param>
         /// <returns>Task of ApiResponse (CoachingAnnotation)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingAnnotation>> PostCoachingAppointmentAnnotationsAsyncWithHttpInfo (string appointmentId, CoachingAnnotationCreateRequest body);
+        
+        /// <summary>
+        /// Add a conversation to an appointment
+        /// </summary>
+        /// <remarks>
+        /// Permission not required if you are the creator or facilitator of the appointment
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appointmentId">The ID of the coaching appointment.</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of AddConversationResponse</returns>
+        System.Threading.Tasks.Task<AddConversationResponse> PostCoachingAppointmentConversationsAsync (string appointmentId, AddConversationRequest body);
+
+        /// <summary>
+        /// Add a conversation to an appointment
+        /// </summary>
+        /// <remarks>
+        /// Permission not required if you are the creator or facilitator of the appointment
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appointmentId">The ID of the coaching appointment.</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (AddConversationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AddConversationResponse>> PostCoachingAppointmentConversationsAsyncWithHttpInfo (string appointmentId, AddConversationRequest body);
         
         /// <summary>
         /// Create a new appointment
@@ -4149,6 +4197,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<CoachingAnnotation>(localVarStatusCode,
                 localVarHeaders,
                 (CoachingAnnotation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoachingAnnotation)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Add a conversation to an appointment Permission not required if you are the creator or facilitator of the appointment
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appointmentId">The ID of the coaching appointment.</param>
+        /// <param name="body">body</param>
+        /// <returns>AddConversationResponse</returns>
+        public AddConversationResponse PostCoachingAppointmentConversations (string appointmentId, AddConversationRequest body)
+        {
+             ApiResponse<AddConversationResponse> localVarResponse = PostCoachingAppointmentConversationsWithHttpInfo(appointmentId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add a conversation to an appointment Permission not required if you are the creator or facilitator of the appointment
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appointmentId">The ID of the coaching appointment.</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of AddConversationResponse</returns>
+        public ApiResponse< AddConversationResponse > PostCoachingAppointmentConversationsWithHttpInfo (string appointmentId, AddConversationRequest body)
+        { 
+            // verify the required parameter 'appointmentId' is set
+            if (appointmentId == null)
+                throw new ApiException(400, "Missing required parameter 'appointmentId' when calling CoachingApi->PostCoachingAppointmentConversations");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PostCoachingAppointmentConversations");
+
+            var localVarPath = "/api/v2/coaching/appointments/{appointmentId}/conversations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (appointmentId != null) localVarPathParams.Add("appointmentId", this.Configuration.ApiClient.ParameterToString(appointmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCoachingAppointmentConversations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCoachingAppointmentConversations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AddConversationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AddConversationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddConversationResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Add a conversation to an appointment Permission not required if you are the creator or facilitator of the appointment
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appointmentId">The ID of the coaching appointment.</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of AddConversationResponse</returns>
+        public async System.Threading.Tasks.Task<AddConversationResponse> PostCoachingAppointmentConversationsAsync (string appointmentId, AddConversationRequest body)
+        {
+             ApiResponse<AddConversationResponse> localVarResponse = await PostCoachingAppointmentConversationsAsyncWithHttpInfo(appointmentId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add a conversation to an appointment Permission not required if you are the creator or facilitator of the appointment
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appointmentId">The ID of the coaching appointment.</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (AddConversationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AddConversationResponse>> PostCoachingAppointmentConversationsAsyncWithHttpInfo (string appointmentId, AddConversationRequest body)
+        { 
+            // verify the required parameter 'appointmentId' is set
+            if (appointmentId == null)
+                throw new ApiException(400, "Missing required parameter 'appointmentId' when calling CoachingApi->PostCoachingAppointmentConversations");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PostCoachingAppointmentConversations");
+            
+
+            var localVarPath = "/api/v2/coaching/appointments/{appointmentId}/conversations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (appointmentId != null) localVarPathParams.Add("appointmentId", this.Configuration.ApiClient.ParameterToString(appointmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCoachingAppointmentConversations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCoachingAppointmentConversations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AddConversationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AddConversationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddConversationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

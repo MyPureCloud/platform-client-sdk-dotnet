@@ -252,7 +252,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Nwebactionsfrequencycapreached for "nWebActionsFrequencyCapReached"
             /// </summary>
             [EnumMember(Value = "nWebActionsFrequencyCapReached")]
-            Nwebactionsfrequencycapreached
+            Nwebactionsfrequencycapreached,
+            
+            /// <summary>
+            /// Enum Nwebactionsofferedoutsideschedule for "nWebActionsOfferedOutsideSchedule"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsOfferedOutsideSchedule")]
+            Nwebactionsofferedoutsideschedule
         }
         
         

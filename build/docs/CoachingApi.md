@@ -22,6 +22,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchCoachingAppointmentStatus**](CoachingApi.html#patchcoachingappointmentstatus) | **PATCH** /api/v2/coaching/appointments/{appointmentId}/status | Update the status of a coaching appointment |
 | [**PatchCoachingNotification**](CoachingApi.html#patchcoachingnotification) | **PATCH** /api/v2/coaching/notifications/{notificationId} | Update an existing notification. |
 | [**PostCoachingAppointmentAnnotations**](CoachingApi.html#postcoachingappointmentannotations) | **POST** /api/v2/coaching/appointments/{appointmentId}/annotations | Create a new annotation. |
+| [**PostCoachingAppointmentConversations**](CoachingApi.html#postcoachingappointmentconversations) | **POST** /api/v2/coaching/appointments/{appointmentId}/conversations | Add a conversation to an appointment |
 | [**PostCoachingAppointments**](CoachingApi.html#postcoachingappointments) | **POST** /api/v2/coaching/appointments | Create a new appointment |
 | [**PostCoachingAppointmentsAggregatesQuery**](CoachingApi.html#postcoachingappointmentsaggregatesquery) | **POST** /api/v2/coaching/appointments/aggregates/query | Retrieve aggregated appointment data |
 {: class="table table-striped"}
@@ -1005,6 +1006,70 @@ namespace Example
 ### Return type
 
 [**CoachingAnnotation**](CoachingAnnotation.html)
+
+<a name="postcoachingappointmentconversations"></a>
+
+## [**AddConversationResponse**](AddConversationResponse.html) PostCoachingAppointmentConversations (string appointmentId, AddConversationRequest body)
+
+
+
+Add a conversation to an appointment
+
+Permission not required if you are the creator or facilitator of the appointment
+
+Requires ANY permissions: 
+
+* coaching:appointment:edit
+* coaching:appointmentConversation:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostCoachingAppointmentConversationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new CoachingApi();
+            var appointmentId = appointmentId_example;  // string | The ID of the coaching appointment.
+            var body = new AddConversationRequest(); // AddConversationRequest | body
+
+            try
+            { 
+                // Add a conversation to an appointment
+                AddConversationResponse result = apiInstance.PostCoachingAppointmentConversations(appointmentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CoachingApi.PostCoachingAppointmentConversations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **appointmentId** | **string**| The ID of the coaching appointment. |  |
+| **body** | [**AddConversationRequest**](AddConversationRequest.html)| body |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AddConversationResponse**](AddConversationResponse.html)
 
 <a name="postcoachingappointments"></a>
 

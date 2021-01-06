@@ -123,9 +123,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeDeleted">Whether to include soft-deleted items in the result. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="enableCursorPagination">Enable Cursor Pagination (optional, default to false)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>NluFeedbackListing</returns>
-        NluFeedbackListing GetLanguageunderstandingDomainFeedback (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null);
+        NluFeedbackListing GetLanguageunderstandingDomainFeedback (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, string after = null, List<string> fields = null);
 
         /// <summary>
         /// Get all feedback in the given NLU Domain Version.
@@ -142,9 +144,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeDeleted">Whether to include soft-deleted items in the result. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="enableCursorPagination">Enable Cursor Pagination (optional, default to false)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>ApiResponse of NluFeedbackListing</returns>
-        ApiResponse<NluFeedbackListing> GetLanguageunderstandingDomainFeedbackWithHttpInfo (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null);
+        ApiResponse<NluFeedbackListing> GetLanguageunderstandingDomainFeedbackWithHttpInfo (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, string after = null, List<string> fields = null);
         
         /// <summary>
         /// Find a Feedback
@@ -579,9 +583,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeDeleted">Whether to include soft-deleted items in the result. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="enableCursorPagination">Enable Cursor Pagination (optional, default to false)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of NluFeedbackListing</returns>
-        System.Threading.Tasks.Task<NluFeedbackListing> GetLanguageunderstandingDomainFeedbackAsync (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null);
+        System.Threading.Tasks.Task<NluFeedbackListing> GetLanguageunderstandingDomainFeedbackAsync (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, string after = null, List<string> fields = null);
 
         /// <summary>
         /// Get all feedback in the given NLU Domain Version.
@@ -598,9 +604,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeDeleted">Whether to include soft-deleted items in the result. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="enableCursorPagination">Enable Cursor Pagination (optional, default to false)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (NluFeedbackListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NluFeedbackListing>> GetLanguageunderstandingDomainFeedbackAsyncWithHttpInfo (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null);
+        System.Threading.Tasks.Task<ApiResponse<NluFeedbackListing>> GetLanguageunderstandingDomainFeedbackAsyncWithHttpInfo (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, string after = null, List<string> fields = null);
         
         /// <summary>
         /// Find a Feedback
@@ -1820,11 +1828,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeDeleted">Whether to include soft-deleted items in the result. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="enableCursorPagination">Enable Cursor Pagination (optional, default to false)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>NluFeedbackListing</returns>
-        public NluFeedbackListing GetLanguageunderstandingDomainFeedback (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null)
+        public NluFeedbackListing GetLanguageunderstandingDomainFeedback (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, string after = null, List<string> fields = null)
         {
-             ApiResponse<NluFeedbackListing> localVarResponse = GetLanguageunderstandingDomainFeedbackWithHttpInfo(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, pageNumber, pageSize, fields);
+             ApiResponse<NluFeedbackListing> localVarResponse = GetLanguageunderstandingDomainFeedbackWithHttpInfo(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, pageNumber, pageSize, enableCursorPagination, after, fields);
              return localVarResponse.Data;
         }
 
@@ -1840,9 +1850,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeDeleted">Whether to include soft-deleted items in the result. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="enableCursorPagination">Enable Cursor Pagination (optional, default to false)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>ApiResponse of NluFeedbackListing</returns>
-        public ApiResponse< NluFeedbackListing > GetLanguageunderstandingDomainFeedbackWithHttpInfo (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null)
+        public ApiResponse< NluFeedbackListing > GetLanguageunderstandingDomainFeedbackWithHttpInfo (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, string after = null, List<string> fields = null)
         { 
             // verify the required parameter 'domainId' is set
             if (domainId == null)
@@ -1889,6 +1901,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (includeDeleted != null) localVarQueryParams.Add(new Tuple<string, string>("includeDeleted", this.Configuration.ApiClient.ParameterToString(includeDeleted)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (enableCursorPagination != null) localVarQueryParams.Add(new Tuple<string, string>("enableCursorPagination", this.Configuration.ApiClient.ParameterToString(enableCursorPagination)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (fields != null) fields.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("fields", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
@@ -1939,11 +1953,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeDeleted">Whether to include soft-deleted items in the result. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="enableCursorPagination">Enable Cursor Pagination (optional, default to false)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of NluFeedbackListing</returns>
-        public async System.Threading.Tasks.Task<NluFeedbackListing> GetLanguageunderstandingDomainFeedbackAsync (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null)
+        public async System.Threading.Tasks.Task<NluFeedbackListing> GetLanguageunderstandingDomainFeedbackAsync (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, string after = null, List<string> fields = null)
         {
-             ApiResponse<NluFeedbackListing> localVarResponse = await GetLanguageunderstandingDomainFeedbackAsyncWithHttpInfo(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, pageNumber, pageSize, fields);
+             ApiResponse<NluFeedbackListing> localVarResponse = await GetLanguageunderstandingDomainFeedbackAsyncWithHttpInfo(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, pageNumber, pageSize, enableCursorPagination, after, fields);
              return localVarResponse.Data;
 
         }
@@ -1960,9 +1976,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeDeleted">Whether to include soft-deleted items in the result. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="enableCursorPagination">Enable Cursor Pagination (optional, default to false)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (NluFeedbackListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<NluFeedbackListing>> GetLanguageunderstandingDomainFeedbackAsyncWithHttpInfo (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, List<string> fields = null)
+        public async System.Threading.Tasks.Task<ApiResponse<NluFeedbackListing>> GetLanguageunderstandingDomainFeedbackAsyncWithHttpInfo (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, string after = null, List<string> fields = null)
         { 
             // verify the required parameter 'domainId' is set
             if (domainId == null)
@@ -2010,6 +2028,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (includeDeleted != null) localVarQueryParams.Add(new Tuple<string, string>("includeDeleted", this.Configuration.ApiClient.ParameterToString(includeDeleted)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (enableCursorPagination != null) localVarQueryParams.Add(new Tuple<string, string>("enableCursorPagination", this.Configuration.ApiClient.ParameterToString(enableCursorPagination)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (fields != null) fields.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("fields", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params

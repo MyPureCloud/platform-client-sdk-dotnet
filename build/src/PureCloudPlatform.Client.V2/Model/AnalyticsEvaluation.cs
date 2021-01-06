@@ -100,9 +100,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CalibrationId">The calibration id used for the purpose of training evaluators.</param>
         /// <param name="Rescored">Whether this evaluation has ever been rescored.</param>
         /// <param name="Deleted">Whether this evaluation has been deleted.</param>
-        /// <param name="OTotalScore">OTotalScore.</param>
         /// <param name="OTotalCriticalScore">OTotalCriticalScore.</param>
-        public AnalyticsEvaluation(string EvaluationId = null, string EvaluatorId = null, string UserId = null, DateTime? EventTime = null, string QueueId = null, string FormId = null, string ContextId = null, string FormName = null, string CalibrationId = null, bool? Rescored = null, bool? Deleted = null, long? OTotalScore = null, long? OTotalCriticalScore = null)
+        /// <param name="OTotalScore">OTotalScore.</param>
+        public AnalyticsEvaluation(string EvaluationId = null, string EvaluatorId = null, string UserId = null, DateTime? EventTime = null, string QueueId = null, string FormId = null, string ContextId = null, string FormName = null, string CalibrationId = null, bool? Rescored = null, bool? Deleted = null, long? OTotalCriticalScore = null, long? OTotalScore = null)
         {
             this.EvaluationId = EvaluationId;
             this.EvaluatorId = EvaluatorId;
@@ -115,8 +115,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CalibrationId = CalibrationId;
             this.Rescored = Rescored;
             this.Deleted = Deleted;
-            this.OTotalScore = OTotalScore;
             this.OTotalCriticalScore = OTotalCriticalScore;
+            this.OTotalScore = OTotalScore;
             
         }
         
@@ -222,18 +222,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets OTotalScore
-        /// </summary>
-        [DataMember(Name="oTotalScore", EmitDefaultValue=false)]
-        public long? OTotalScore { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets OTotalCriticalScore
         /// </summary>
         [DataMember(Name="oTotalCriticalScore", EmitDefaultValue=false)]
         public long? OTotalCriticalScore { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets OTotalScore
+        /// </summary>
+        [DataMember(Name="oTotalScore", EmitDefaultValue=false)]
+        public long? OTotalScore { get; set; }
         
         
         /// <summary>
@@ -256,8 +256,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CalibrationId: ").Append(CalibrationId).Append("\n");
             sb.Append("  Rescored: ").Append(Rescored).Append("\n");
             sb.Append("  Deleted: ").Append(Deleted).Append("\n");
-            sb.Append("  OTotalScore: ").Append(OTotalScore).Append("\n");
             sb.Append("  OTotalCriticalScore: ").Append(OTotalCriticalScore).Append("\n");
+            sb.Append("  OTotalScore: ").Append(OTotalScore).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -350,14 +350,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Deleted.Equals(other.Deleted)
                 ) &&
                 (
-                    this.OTotalScore == other.OTotalScore ||
-                    this.OTotalScore != null &&
-                    this.OTotalScore.Equals(other.OTotalScore)
-                ) &&
-                (
                     this.OTotalCriticalScore == other.OTotalCriticalScore ||
                     this.OTotalCriticalScore != null &&
                     this.OTotalCriticalScore.Equals(other.OTotalCriticalScore)
+                ) &&
+                (
+                    this.OTotalScore == other.OTotalScore ||
+                    this.OTotalScore != null &&
+                    this.OTotalScore.Equals(other.OTotalScore)
                 );
         }
 
@@ -406,11 +406,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Deleted != null)
                     hash = hash * 59 + this.Deleted.GetHashCode();
                 
-                if (this.OTotalScore != null)
-                    hash = hash * 59 + this.OTotalScore.GetHashCode();
-                
                 if (this.OTotalCriticalScore != null)
                     hash = hash * 59 + this.OTotalCriticalScore.GetHashCode();
+                
+                if (this.OTotalScore != null)
+                    hash = hash * 59 + this.OTotalScore.GetHashCode();
                 
                 return hash;
             }
