@@ -136,7 +136,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var emergencyGroupId = emergencyGroupId_example;  // string | Emergency group ID
@@ -196,7 +200,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var ivrId = ivrId_example;  // string | IVR id
@@ -256,7 +264,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | Prompt ID
@@ -318,7 +330,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | Prompt ID
@@ -380,7 +396,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | Prompt ID
@@ -442,7 +462,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var id = new List<string>(); // List<string> | List of Prompt IDs
@@ -503,7 +527,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var scheduleId = scheduleId_example;  // string | Schedule ID
@@ -563,7 +591,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var scheduleGroupId = scheduleGroupId_example;  // string | Schedule group ID
@@ -623,7 +655,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | Prompt ID
@@ -685,7 +721,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flowId = flowId_example;  // string | Flow ID
@@ -745,7 +785,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var id = new List<string>(); // List<string> | List of Flow IDs
@@ -806,7 +850,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var datatableId = datatableId_example;  // string | id of datatable
@@ -868,7 +916,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var datatableId = datatableId_example;  // string | id of datatable
@@ -930,7 +982,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var milestoneId = milestoneId_example;  // string | flow milestone ID
@@ -991,7 +1047,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var name = name_example;  // string | Object name to search for
@@ -1066,7 +1126,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
 
@@ -1122,7 +1186,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var id = id_example;  // string | Consuming object ID
@@ -1193,7 +1261,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var id = id_example;  // string | Consumed object ID
@@ -1266,7 +1338,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var name = name_example;  // string | Name to search for (optional) 
@@ -1339,7 +1415,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var id = id_example;  // string | Object ID
@@ -1414,7 +1494,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var typeId = typeId_example;  // string | Type ID
@@ -1475,7 +1559,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
@@ -1538,7 +1626,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var name = name_example;  // string | Name to search for (optional) 
@@ -1609,7 +1701,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var emergencyGroupId = emergencyGroupId_example;  // string | Emergency group ID
@@ -1670,7 +1766,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
@@ -1739,7 +1839,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var ivrId = ivrId_example;  // string | IVR id
@@ -1800,7 +1904,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
@@ -1869,7 +1977,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | Prompt ID
@@ -1930,7 +2042,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | Prompt ID
@@ -2003,7 +2119,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | Prompt ID
@@ -2066,7 +2186,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | Prompt ID
@@ -2131,7 +2255,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
@@ -2204,7 +2332,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var scheduleId = scheduleId_example;  // string | Schedule ID
@@ -2265,7 +2397,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var scheduleGroupId = scheduleGroupId_example;  // string | Schedule group ID
@@ -2326,7 +2462,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
@@ -2397,7 +2537,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
@@ -2466,7 +2610,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | promptId
@@ -2527,7 +2675,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | promptId
@@ -2600,7 +2752,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | Prompt ID
@@ -2663,7 +2819,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | Prompt ID
@@ -2732,7 +2892,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
@@ -2805,11 +2969,15 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flowId = flowId_example;  // string | Flow ID
-            var deleted = true;  // bool? | Include deleted flows (optional)  (default to false)
+            var deleted = true;  // bool? | Deleted flows (optional)  (default to false)
 
             try
             { 
@@ -2832,7 +3000,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **flowId** | **string**| Flow ID |  |
-| **deleted** | **bool?**| Include deleted flows | [optional] [default to false] |
+| **deleted** | **bool?**| Deleted flows | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -2868,7 +3036,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flowId = flowId_example;  // string | Flow ID
@@ -2941,11 +3113,15 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flowId = flowId_example;  // string | Flow ID
-            var deleted = true;  // bool? | Include deleted flows (optional)  (default to false)
+            var deleted = true;  // bool? | Deleted flows (optional)  (default to false)
 
             try
             { 
@@ -2968,7 +3144,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **flowId** | **string**| Flow ID |  |
-| **deleted** | **bool?**| Include deleted flows | [optional] [default to false] |
+| **deleted** | **bool?**| Deleted flows | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -3004,12 +3180,16 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flowId = flowId_example;  // string | Flow ID
             var versionId = versionId_example;  // string | Version ID
-            var deleted = deleted_example;  // string | Include deleted flows (optional) 
+            var deleted = deleted_example;  // string | Deleted flows (optional) 
 
             try
             { 
@@ -3033,7 +3213,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **flowId** | **string**| Flow ID |  |
 | **versionId** | **string**| Version ID |  |
-| **deleted** | **string**| Include deleted flows | [optional]  |
+| **deleted** | **string**| Deleted flows | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3069,12 +3249,16 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flowId = flowId_example;  // string | Flow ID
             var versionId = versionId_example;  // string | Version ID
-            var deleted = deleted_example;  // string | Include deleted flows (optional) 
+            var deleted = deleted_example;  // string | Deleted flows (optional) 
 
             try
             { 
@@ -3098,7 +3282,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **flowId** | **string**| Flow ID |  |
 | **versionId** | **string**| Version ID |  |
-| **deleted** | **string**| Include deleted flows | [optional]  |
+| **deleted** | **string**| Deleted flows | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3134,13 +3318,17 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flowId = flowId_example;  // string | Flow ID
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var deleted = true;  // bool? | Include deleted flows (optional) 
+            var deleted = true;  // bool? | Include Deleted flows (optional) 
 
             try
             { 
@@ -3165,7 +3353,7 @@ namespace Example
 | **flowId** | **string**| Flow ID |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **deleted** | **bool?**| Include deleted flows | [optional]  |
+| **deleted** | **bool?**| Include Deleted flows | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3201,7 +3389,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var type = new List<string>(); // List<string> | Type (optional) 
@@ -3298,7 +3490,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var datatableId = datatableId_example;  // string | id of datatable
@@ -3361,7 +3557,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var datatableId = datatableId_example;  // string | id of datatable
@@ -3424,7 +3624,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var datatableId = datatableId_example;  // string | id of datatable
@@ -3487,7 +3691,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var datatableId = datatableId_example;  // string | id of datatable
@@ -3552,7 +3760,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var datatableId = datatableId_example;  // string | id of datatable
@@ -3617,7 +3829,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var datatableId = datatableId_example;  // string | id of datatable
@@ -3684,7 +3900,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var expand = expand_example;  // string | Expand instructions for the result (optional) 
@@ -3753,7 +3973,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var type = new List<string>(); // List<string> | Type (optional) 
@@ -3836,7 +4060,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flowExecutionId = flowExecutionId_example;  // string | flow execution ID
@@ -3897,7 +4125,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var milestoneId = milestoneId_example;  // string | flow milestone ID
@@ -3958,7 +4190,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
@@ -4033,7 +4269,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flowOutcomeId = flowOutcomeId_example;  // string | flow outcome ID
@@ -4094,7 +4334,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
@@ -4169,7 +4413,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
 
@@ -4224,7 +4472,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var body = new EmergencyGroup(); // EmergencyGroup | 
@@ -4285,7 +4537,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var body = new IVR(); // IVR | 
@@ -4346,7 +4602,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | Prompt ID
@@ -4407,7 +4667,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | Prompt ID
@@ -4470,7 +4734,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var body = new Prompt(); // Prompt | 
@@ -4531,7 +4799,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var body = new ScheduleGroup(); // ScheduleGroup | 
@@ -4592,7 +4864,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var body = new Schedule(); // Schedule | 
@@ -4653,7 +4929,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | promptId
@@ -4714,7 +4994,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | Prompt ID
@@ -4777,7 +5061,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flowId = flowId_example;  // string | Flow ID
@@ -4840,7 +5128,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var body = new Flow(); // Flow | 
@@ -4902,7 +5194,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flow = flow_example;  // string | Flow ID
@@ -4963,7 +5259,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flow = flow_example;  // string | Flow ID
@@ -5024,7 +5324,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flow = flow_example;  // string | Flow ID
@@ -5086,7 +5390,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flow = flow_example;  // string | Flow ID
@@ -5149,7 +5457,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flow = flow_example;  // string | Flow ID
@@ -5210,7 +5522,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flow = flow_example;  // string | Flow ID
@@ -5271,7 +5587,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var datatableId = datatableId_example;  // string | id of datatable
@@ -5332,7 +5652,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var datatableId = datatableId_example;  // string | id of datatable
@@ -5395,7 +5719,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var datatableId = datatableId_example;  // string | id of datatable
@@ -5458,7 +5786,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var body = new DataTable(); // DataTable | datatable json-schema
@@ -5519,7 +5851,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flowLaunchRequest = new FlowExecutionLaunchRequest(); // FlowExecutionLaunchRequest | 
@@ -5580,7 +5916,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var body = new FlowMilestone(); // FlowMilestone |  (optional) 
@@ -5641,7 +5981,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var body = new FlowOutcome(); // FlowOutcome |  (optional) 
@@ -5702,7 +6046,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var emergencyGroupId = emergencyGroupId_example;  // string | Emergency group ID
@@ -5765,7 +6113,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var ivrId = ivrId_example;  // string | IVR id
@@ -5828,7 +6180,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | Prompt ID
@@ -5891,7 +6247,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | Prompt ID
@@ -5956,7 +6316,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var scheduleId = scheduleId_example;  // string | Schedule ID
@@ -6019,7 +6383,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var scheduleGroupId = scheduleGroupId_example;  // string | Schedule group ID
@@ -6082,7 +6450,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | Prompt ID
@@ -6147,7 +6519,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flowId = flowId_example;  // string | Flow ID
@@ -6210,7 +6586,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var datatableId = datatableId_example;  // string | id of datatable
@@ -6275,7 +6655,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var datatableId = datatableId_example;  // string | id of datatable
@@ -6340,7 +6724,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var milestoneId = milestoneId_example;  // string | flow milestone ID
@@ -6403,7 +6791,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
             var flowOutcomeId = flowOutcomeId_example;  // string | flow outcome ID

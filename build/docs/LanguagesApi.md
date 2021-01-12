@@ -48,7 +48,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new LanguagesApi();
             var languageId = languageId_example;  // string | Language ID
@@ -108,7 +112,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new LanguagesApi();
             var languageId = languageId_example;  // string | Language ID
@@ -168,7 +176,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new LanguagesApi();
             var languageId = languageId_example;  // string | Language ID
@@ -229,7 +241,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new LanguagesApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
@@ -295,7 +311,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new LanguagesApi();
 
@@ -350,7 +370,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new LanguagesApi();
             var language = language_example;  // string | The language of the builtin translation to retrieve
@@ -410,7 +434,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new LanguagesApi();
             var language = language_example;  // string | The language of the translation to retrieve for the organization
@@ -470,7 +498,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new LanguagesApi();
             var userId = userId_example;  // string | The user id
@@ -530,7 +562,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new LanguagesApi();
             var languageId = languageId_example;  // string | Language ID
@@ -591,7 +627,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new LanguagesApi();
             var body = new Language(); // Language | Language

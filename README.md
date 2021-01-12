@@ -74,7 +74,30 @@ var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4
   "http://redirecturi.com/",
   "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
-Configuration.Default.AccessToken = accessTokenInfo.AccessToken;
+```
+
+By default the SDK will transparently request a new access token using the refresh token when the access token expires. If you wish to implement the refresh logic set _ShouldRefreshAccessToken_ to false and store the refresh token from the auth response:
+
+```{"language":"csharp"}
+var refreshToken = accessTokenInfo.RefreshToken;
+Configuration.Default.ShouldRefreshAccessToken = false;
+```
+
+You can use the _ExpiresIn_ value to determine how long the token will live and proactively request a new one before it expires.
+
+```{"language":"csharp"}
+var tokenTimeToLive = authTokenInfo.ExpiresIn;
+```
+
+When the access token expires refresh it using the _PostToken_ method using the same clientId and clientSecret as used to request it.
+
+```{"language":"csharp"}
+var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+  "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+  authorizationCode: refreshToken,
+  isRefreshRequest: true);
+Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
+refreshToken = accessTokenInfo.RefreshToken;
 ```
 
 #### OAuth2 SAML2 Bearer Grant
@@ -91,13 +114,12 @@ using PureCloudPlatform.Client.V2.Client;
 using PureCloudPlatform.Client.V2.Extensions;
 ```
 
-Then call the _PostTokenSaml2Bearer_ extension method of _ApiClient_ with your orgName and encodedSamlaAsertion
+Then call the _PostTokenSaml2Bearer_ extension method of _ApiClient_ with your orgName and encodedSamlAssertion
 
 ```{"language":"csharp"}
 var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
   "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",orgName, encodedSamlAssertion);
 Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
-Configuration.Default.AccessToken = accessTokenInfo.AccessToken;
 ```
 
 #### Client Credentials Grant
@@ -122,7 +144,6 @@ Then call the _PostToken_ extension method of _ApiClient_, leaving the redirect 
 var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
   "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo");
 Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
-Configuration.Default.AccessToken = accessTokenInfo.AccessToken;
 ```
 
 ### Making Requests
@@ -134,14 +155,6 @@ If connecting to a Genesys Cloud environment other than mypurecloud.com (e.g. my
 ```{"language":"csharp"}
 PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1;
 Configuration.Default.ApiClient.setBasePath(region);
-```
-
-#### Setting the Access Token
-
-Once an access token has been obtained from one of the OAuth methods, it must be set in the SDK's configuration.
-
-```{"language":"csharp"}
-PureCloudPlatform.Client.V2.Client.Configuration.Default.AccessToken = "BL4Cb3EQIQFlqIItaj-zf5eIhAiP96zk3333QImd24P99ojbFHtpgUTJdRIkuUYfXMy0afEnZcWnEQ";
 ```
 
 #### Setting the max retry time

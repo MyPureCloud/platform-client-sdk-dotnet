@@ -41,7 +41,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new TelephonyApi();
             var dateStart = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
@@ -112,7 +116,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new TelephonyApi();
             var downloadId = downloadId_example;  // string | unique id for the downloaded file in S3
@@ -173,7 +181,11 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new TelephonyApi();
             var sIPSearchPublicRequest = new SIPSearchPublicRequest(); // SIPSearchPublicRequest | 

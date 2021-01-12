@@ -120,7 +120,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Telephony for "Telephony"
             /// </summary>
             [EnumMember(Value = "Telephony")]
-            Telephony
+            Telephony,
+            
+            /// <summary>
+            /// Enum Outbound for "Outbound"
+            /// </summary>
+            [EnumMember(Value = "Outbound")]
+            Outbound
         }
         
         

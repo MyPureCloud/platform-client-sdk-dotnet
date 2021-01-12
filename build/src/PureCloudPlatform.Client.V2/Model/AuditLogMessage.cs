@@ -132,7 +132,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Telephony for "Telephony"
             /// </summary>
             [EnumMember(Value = "Telephony")]
-            Telephony
+            Telephony,
+            
+            /// <summary>
+            /// Enum Outbound for "Outbound"
+            /// </summary>
+            [EnumMember(Value = "Outbound")]
+            Outbound
         }
         
         
@@ -349,7 +355,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Revoke for "Revoke"
             /// </summary>
             [EnumMember(Value = "Revoke")]
-            Revoke
+            Revoke,
+            
+            /// <summary>
+            /// Enum Export for "Export"
+            /// </summary>
+            [EnumMember(Value = "Export")]
+            Export,
+            
+            /// <summary>
+            /// Enum Append for "Append"
+            /// </summary>
+            [EnumMember(Value = "Append")]
+            Append,
+            
+            /// <summary>
+            /// Enum Recycle for "Recycle"
+            /// </summary>
+            [EnumMember(Value = "Recycle")]
+            Recycle
         }
         
         
@@ -683,7 +707,67 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Site for "Site"
             /// </summary>
             [EnumMember(Value = "Site")]
-            Site
+            Site,
+            
+            /// <summary>
+            /// Enum Attemptlimits for "AttemptLimits"
+            /// </summary>
+            [EnumMember(Value = "AttemptLimits")]
+            Attemptlimits,
+            
+            /// <summary>
+            /// Enum Callabletimeset for "CallableTimeSet"
+            /// </summary>
+            [EnumMember(Value = "CallableTimeSet")]
+            Callabletimeset,
+            
+            /// <summary>
+            /// Enum Campaign for "Campaign"
+            /// </summary>
+            [EnumMember(Value = "Campaign")]
+            Campaign,
+            
+            /// <summary>
+            /// Enum Campaignrule for "CampaignRule"
+            /// </summary>
+            [EnumMember(Value = "CampaignRule")]
+            Campaignrule,
+            
+            /// <summary>
+            /// Enum Sequence for "Sequence"
+            /// </summary>
+            [EnumMember(Value = "Sequence")]
+            Sequence,
+            
+            /// <summary>
+            /// Enum Contactlist for "ContactList"
+            /// </summary>
+            [EnumMember(Value = "ContactList")]
+            Contactlist,
+            
+            /// <summary>
+            /// Enum Contactlistfilter for "ContactListFilter"
+            /// </summary>
+            [EnumMember(Value = "ContactListFilter")]
+            Contactlistfilter,
+            
+            /// <summary>
+            /// Enum Dnclist for "DNCList"
+            /// </summary>
+            [EnumMember(Value = "DNCList")]
+            Dnclist,
+            
+            /// <summary>
+            /// Enum Callanalysisresponseset for "CallAnalysisResponseSet"
+            /// </summary>
+            [EnumMember(Value = "CallAnalysisResponseSet")]
+            Callanalysisresponseset,
+            
+            /// <summary>
+            /// Enum Ruleset for "RuleSet"
+            /// </summary>
+            [EnumMember(Value = "RuleSet")]
+            Ruleset
         }
         
         

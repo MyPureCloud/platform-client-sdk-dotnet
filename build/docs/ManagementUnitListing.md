@@ -12,10 +12,10 @@ title: ManagementUnitListing
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
-| **NextUri** | **string** |  | [optional] |
-| **PageCount** | **int?** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
+| **NextUri** | **string** |  | [optional] |
+| **PageCount** | **int?** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 {: class="table table-striped"}
 

@@ -128,9 +128,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallerAddress">CallerAddress.</param>
         /// <param name="ReceiverAddress">ReceiverAddress.</param>
         /// <param name="Thumbnails">Thumbnails.</param>
-        /// <param name="DownloadSharingUri">DownloadSharingUri.</param>
         /// <param name="SharingUri">SharingUri.</param>
-        public FaxDocument(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ContentUri = null, DomainEntityRef Workspace = null, DomainEntityRef CreatedBy = null, string ContentType = null, long? ContentLength = null, string Filename = null, bool? Read = null, long? PageCount = null, string CallerAddress = null, string ReceiverAddress = null, List<DocumentThumbnail> Thumbnails = null, string DownloadSharingUri = null, string SharingUri = null)
+        /// <param name="DownloadSharingUri">DownloadSharingUri.</param>
+        public FaxDocument(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ContentUri = null, DomainEntityRef Workspace = null, DomainEntityRef CreatedBy = null, string ContentType = null, long? ContentLength = null, string Filename = null, bool? Read = null, long? PageCount = null, string CallerAddress = null, string ReceiverAddress = null, List<DocumentThumbnail> Thumbnails = null, string SharingUri = null, string DownloadSharingUri = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -146,8 +146,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CallerAddress = CallerAddress;
             this.ReceiverAddress = ReceiverAddress;
             this.Thumbnails = Thumbnails;
-            this.DownloadSharingUri = DownloadSharingUri;
             this.SharingUri = SharingUri;
+            this.DownloadSharingUri = DownloadSharingUri;
             
         }
         
@@ -277,18 +277,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets DownloadSharingUri
-        /// </summary>
-        [DataMember(Name="downloadSharingUri", EmitDefaultValue=false)]
-        public string DownloadSharingUri { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets SharingUri
         /// </summary>
         [DataMember(Name="sharingUri", EmitDefaultValue=false)]
         public string SharingUri { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets DownloadSharingUri
+        /// </summary>
+        [DataMember(Name="downloadSharingUri", EmitDefaultValue=false)]
+        public string DownloadSharingUri { get; set; }
         
         
         
@@ -324,8 +324,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CallerAddress: ").Append(CallerAddress).Append("\n");
             sb.Append("  ReceiverAddress: ").Append(ReceiverAddress).Append("\n");
             sb.Append("  Thumbnails: ").Append(Thumbnails).Append("\n");
-            sb.Append("  DownloadSharingUri: ").Append(DownloadSharingUri).Append("\n");
             sb.Append("  SharingUri: ").Append(SharingUri).Append("\n");
+            sb.Append("  DownloadSharingUri: ").Append(DownloadSharingUri).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -439,14 +439,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Thumbnails.SequenceEqual(other.Thumbnails)
                 ) &&
                 (
-                    this.DownloadSharingUri == other.DownloadSharingUri ||
-                    this.DownloadSharingUri != null &&
-                    this.DownloadSharingUri.Equals(other.DownloadSharingUri)
-                ) &&
-                (
                     this.SharingUri == other.SharingUri ||
                     this.SharingUri != null &&
                     this.SharingUri.Equals(other.SharingUri)
+                ) &&
+                (
+                    this.DownloadSharingUri == other.DownloadSharingUri ||
+                    this.DownloadSharingUri != null &&
+                    this.DownloadSharingUri.Equals(other.DownloadSharingUri)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -512,11 +512,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Thumbnails != null)
                     hash = hash * 59 + this.Thumbnails.GetHashCode();
                 
-                if (this.DownloadSharingUri != null)
-                    hash = hash * 59 + this.DownloadSharingUri.GetHashCode();
-                
                 if (this.SharingUri != null)
                     hash = hash * 59 + this.SharingUri.GetHashCode();
+                
+                if (this.DownloadSharingUri != null)
+                    hash = hash * 59 + this.DownloadSharingUri.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

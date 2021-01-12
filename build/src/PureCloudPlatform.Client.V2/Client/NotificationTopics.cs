@@ -105,6 +105,8 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.users.{id}.workforcemanagement.notifications", typeof(WfmUserNotificationTopicWfmUserNotification)},
               {"v2.users.{id}.workforcemanagement.schedules", typeof(WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdateNotification)},
               {"v2.users.{id}.workforcemanagement.timeoffrequests", typeof(WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate)},
+              {"v2.webdeployments.configurations.{id}", typeof(WebDeploymentsConfigTopicWebMessagingConfigChangeEventBody)},
+              {"v2.webdeployments.deployments.{id}", typeof(WebDeploymentsDeploymentTopicWebMessagingDeploymentChangeEventBody)},
               {"v2.wem.learning.assignments.modules.{id}", typeof(WemLearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification)},
               {"v2.workforcemanagement.agents", typeof(WfmMoveAgentsCompleteTopicWfmMoveAgentsComplete)},
               {"v2.workforcemanagement.businessunits.{id}.schedules", typeof(WfmBuScheduleTopicBuScheduleNotification)},
