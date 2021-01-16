@@ -109,18 +109,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Maxlatencyms,
             
             /// <summary>
-            /// Enum Minmos for "minMos"
-            /// </summary>
-            [EnumMember(Value = "minMos")]
-            Minmos,
-            
-            /// <summary>
-            /// Enum Minrfactor for "minRFactor"
-            /// </summary>
-            [EnumMember(Value = "minRFactor")]
-            Minrfactor,
-            
-            /// <summary>
             /// Enum Overrunpackets for "overrunPackets"
             /// </summary>
             [EnumMember(Value = "overrunPackets")]

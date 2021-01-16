@@ -79,18 +79,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Addressfrom,
             
             /// <summary>
-            /// Enum Addressother for "addressOther"
-            /// </summary>
-            [EnumMember(Value = "addressOther")]
-            Addressother,
-            
-            /// <summary>
-            /// Enum Addressself for "addressSelf"
-            /// </summary>
-            [EnumMember(Value = "addressSelf")]
-            Addressself,
-            
-            /// <summary>
             /// Enum Addressto for "addressTo"
             /// </summary>
             [EnumMember(Value = "addressTo")]
@@ -103,28 +91,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Agentassistantid,
             
             /// <summary>
-            /// Enum Agentrank for "agentRank"
-            /// </summary>
-            [EnumMember(Value = "agentRank")]
-            Agentrank,
-            
-            /// <summary>
-            /// Enum Agentscore for "agentScore"
-            /// </summary>
-            [EnumMember(Value = "agentScore")]
-            Agentscore,
-            
-            /// <summary>
             /// Enum Ani for "ani"
             /// </summary>
             [EnumMember(Value = "ani")]
             Ani,
-            
-            /// <summary>
-            /// Enum Audiomuted for "audioMuted"
-            /// </summary>
-            [EnumMember(Value = "audioMuted")]
-            Audiomuted,
             
             /// <summary>
             /// Enum Callbacknumber for "callbackNumber"
@@ -139,24 +109,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Callbackscheduledtime,
             
             /// <summary>
-            /// Enum Callbackusername for "callbackUserName"
-            /// </summary>
-            [EnumMember(Value = "callbackUserName")]
-            Callbackusername,
-            
-            /// <summary>
-            /// Enum Cobrowserole for "cobrowseRole"
-            /// </summary>
-            [EnumMember(Value = "cobrowseRole")]
-            Cobrowserole,
-            
-            /// <summary>
-            /// Enum Cobrowseroomid for "cobrowseRoomId"
-            /// </summary>
-            [EnumMember(Value = "cobrowseRoomId")]
-            Cobrowseroomid,
-            
-            /// <summary>
             /// Enum Conference for "conference"
             /// </summary>
             [EnumMember(Value = "conference")]
@@ -167,12 +119,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "destinationConversationId")]
             Destinationconversationid,
-            
-            /// <summary>
-            /// Enum Destinationsessionid for "destinationSessionId"
-            /// </summary>
-            [EnumMember(Value = "destinationSessionId")]
-            Destinationsessionid,
             
             /// <summary>
             /// Enum Direction for "direction"
@@ -187,18 +133,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Disconnecttype,
             
             /// <summary>
-            /// Enum Dispositionanalyzer for "dispositionAnalyzer"
-            /// </summary>
-            [EnumMember(Value = "dispositionAnalyzer")]
-            Dispositionanalyzer,
-            
-            /// <summary>
-            /// Enum Dispositionname for "dispositionName"
-            /// </summary>
-            [EnumMember(Value = "dispositionName")]
-            Dispositionname,
-            
-            /// <summary>
             /// Enum Dnis for "dnis"
             /// </summary>
             [EnumMember(Value = "dnis")]
@@ -209,24 +143,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "edgeId")]
             Edgeid,
-            
-            /// <summary>
-            /// Enum Endinglanguage for "endingLanguage"
-            /// </summary>
-            [EnumMember(Value = "endingLanguage")]
-            Endinglanguage,
-            
-            /// <summary>
-            /// Enum Entryreason for "entryReason"
-            /// </summary>
-            [EnumMember(Value = "entryReason")]
-            Entryreason,
-            
-            /// <summary>
-            /// Enum Entrytype for "entryType"
-            /// </summary>
-            [EnumMember(Value = "entryType")]
-            Entrytype,
             
             /// <summary>
             /// Enum Errorcode for "errorCode"
@@ -283,34 +199,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Flowoutcome,
             
             /// <summary>
-            /// Enum Flowoutcomeendtimestamp for "flowOutcomeEndTimestamp"
-            /// </summary>
-            [EnumMember(Value = "flowOutcomeEndTimestamp")]
-            Flowoutcomeendtimestamp,
-            
-            /// <summary>
             /// Enum Flowoutcomeid for "flowOutcomeId"
             /// </summary>
             [EnumMember(Value = "flowOutcomeId")]
             Flowoutcomeid,
             
             /// <summary>
-            /// Enum Flowoutcomestarttimestamp for "flowOutcomeStartTimestamp"
-            /// </summary>
-            [EnumMember(Value = "flowOutcomeStartTimestamp")]
-            Flowoutcomestarttimestamp,
-            
-            /// <summary>
             /// Enum Flowoutcomevalue for "flowOutcomeValue"
             /// </summary>
             [EnumMember(Value = "flowOutcomeValue")]
             Flowoutcomevalue,
-            
-            /// <summary>
-            /// Enum Flowtype for "flowType"
-            /// </summary>
-            [EnumMember(Value = "flowType")]
-            Flowtype,
             
             /// <summary>
             /// Enum Flowversion for "flowVersion"
@@ -325,12 +223,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Groupid,
             
             /// <summary>
-            /// Enum Issuedcallback for "issuedCallback"
-            /// </summary>
-            [EnumMember(Value = "issuedCallback")]
-            Issuedcallback,
-            
-            /// <summary>
             /// Enum Journeyactionid for "journeyActionId"
             /// </summary>
             [EnumMember(Value = "journeyActionId")]
@@ -341,12 +233,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "journeyActionMapId")]
             Journeyactionmapid,
-            
-            /// <summary>
-            /// Enum Journeyactionmapversion for "journeyActionMapVersion"
-            /// </summary>
-            [EnumMember(Value = "journeyActionMapVersion")]
-            Journeyactionmapversion,
             
             /// <summary>
             /// Enum Journeycustomerid for "journeyCustomerId"
@@ -365,24 +251,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "journeyCustomerSessionId")]
             Journeycustomersessionid,
-            
-            /// <summary>
-            /// Enum Journeycustomersessionidtype for "journeyCustomerSessionIdType"
-            /// </summary>
-            [EnumMember(Value = "journeyCustomerSessionIdType")]
-            Journeycustomersessionidtype,
-            
-            /// <summary>
-            /// Enum Journeysegmentscope for "journeySegmentScope"
-            /// </summary>
-            [EnumMember(Value = "journeySegmentScope")]
-            Journeysegmentscope,
-            
-            /// <summary>
-            /// Enum Mediabridgeid for "mediaBridgeId"
-            /// </summary>
-            [EnumMember(Value = "mediaBridgeId")]
-            Mediabridgeid,
             
             /// <summary>
             /// Enum Mediacount for "mediaCount"
@@ -427,28 +295,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Outboundcontactlistid,
             
             /// <summary>
-            /// Enum Participantid for "participantId"
-            /// </summary>
-            [EnumMember(Value = "participantId")]
-            Participantid,
-            
-            /// <summary>
             /// Enum Participantname for "participantName"
             /// </summary>
             [EnumMember(Value = "participantName")]
             Participantname,
-            
-            /// <summary>
-            /// Enum Peerid for "peerId"
-            /// </summary>
-            [EnumMember(Value = "peerId")]
-            Peerid,
-            
-            /// <summary>
-            /// Enum Proposedagentid for "proposedAgentId"
-            /// </summary>
-            [EnumMember(Value = "proposedAgentId")]
-            Proposedagentid,
             
             /// <summary>
             /// Enum Protocolcallid for "protocolCallId"
@@ -467,12 +317,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "purpose")]
             Purpose,
-            
-            /// <summary>
-            /// Enum Q850responsecode for "q850ResponseCode"
-            /// </summary>
-            [EnumMember(Value = "q850ResponseCode")]
-            Q850responsecode,
             
             /// <summary>
             /// Enum Queueid for "queueId"
@@ -517,34 +361,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Requestedroutingskillid,
             
             /// <summary>
-            /// Enum Requestedroutinguserid for "requestedRoutingUserId"
-            /// </summary>
-            [EnumMember(Value = "requestedRoutingUserId")]
-            Requestedroutinguserid,
-            
-            /// <summary>
-            /// Enum Roomid for "roomId"
-            /// </summary>
-            [EnumMember(Value = "roomId")]
-            Roomid,
-            
-            /// <summary>
             /// Enum Scoredagentid for "scoredAgentId"
             /// </summary>
             [EnumMember(Value = "scoredAgentId")]
             Scoredagentid,
-            
-            /// <summary>
-            /// Enum Screenshareaddressself for "screenShareAddressSelf"
-            /// </summary>
-            [EnumMember(Value = "screenShareAddressSelf")]
-            Screenshareaddressself,
-            
-            /// <summary>
-            /// Enum Screenshareroomid for "screenShareRoomId"
-            /// </summary>
-            [EnumMember(Value = "screenShareRoomId")]
-            Screenshareroomid,
             
             /// <summary>
             /// Enum Scriptid for "scriptId"
@@ -565,64 +385,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Segmenttype,
             
             /// <summary>
-            /// Enum Selectedagentid for "selectedAgentId"
-            /// </summary>
-            [EnumMember(Value = "selectedAgentId")]
-            Selectedagentid,
-            
-            /// <summary>
-            /// Enum Selectedagentrank for "selectedAgentRank"
-            /// </summary>
-            [EnumMember(Value = "selectedAgentRank")]
-            Selectedagentrank,
-            
-            /// <summary>
             /// Enum Sessiondnis for "sessionDnis"
             /// </summary>
             [EnumMember(Value = "sessionDnis")]
             Sessiondnis,
             
             /// <summary>
-            /// Enum Sessionid for "sessionId"
-            /// </summary>
-            [EnumMember(Value = "sessionId")]
-            Sessionid,
-            
-            /// <summary>
-            /// Enum Sharingscreen for "sharingScreen"
-            /// </summary>
-            [EnumMember(Value = "sharingScreen")]
-            Sharingscreen,
-            
-            /// <summary>
             /// Enum Sipresponsecode for "sipResponseCode"
             /// </summary>
             [EnumMember(Value = "sipResponseCode")]
             Sipresponsecode,
-            
-            /// <summary>
-            /// Enum Skipenabled for "skipEnabled"
-            /// </summary>
-            [EnumMember(Value = "skipEnabled")]
-            Skipenabled,
-            
-            /// <summary>
-            /// Enum Sourceconversationid for "sourceConversationId"
-            /// </summary>
-            [EnumMember(Value = "sourceConversationId")]
-            Sourceconversationid,
-            
-            /// <summary>
-            /// Enum Sourcesessionid for "sourceSessionId"
-            /// </summary>
-            [EnumMember(Value = "sourceSessionId")]
-            Sourcesessionid,
-            
-            /// <summary>
-            /// Enum Startinglanguage for "startingLanguage"
-            /// </summary>
-            [EnumMember(Value = "startingLanguage")]
-            Startinglanguage,
             
             /// <summary>
             /// Enum Subject for "subject"
@@ -635,12 +407,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "teamId")]
             Teamid,
-            
-            /// <summary>
-            /// Enum Timeoutseconds for "timeoutSeconds"
-            /// </summary>
-            [EnumMember(Value = "timeoutSeconds")]
-            Timeoutseconds,
             
             /// <summary>
             /// Enum Transfertargetaddress for "transferTargetAddress"
@@ -673,24 +439,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Userid,
             
             /// <summary>
-            /// Enum Videoaddressself for "videoAddressSelf"
-            /// </summary>
-            [EnumMember(Value = "videoAddressSelf")]
-            Videoaddressself,
-            
-            /// <summary>
-            /// Enum Videomuted for "videoMuted"
-            /// </summary>
-            [EnumMember(Value = "videoMuted")]
-            Videomuted,
-            
-            /// <summary>
-            /// Enum Videoroomid for "videoRoomId"
-            /// </summary>
-            [EnumMember(Value = "videoRoomId")]
-            Videoroomid,
-            
-            /// <summary>
             /// Enum Wrapupcode for "wrapUpCode"
             /// </summary>
             [EnumMember(Value = "wrapUpCode")]
@@ -700,13 +448,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Wrapupnote for "wrapUpNote"
             /// </summary>
             [EnumMember(Value = "wrapUpNote")]
-            Wrapupnote,
-            
-            /// <summary>
-            /// Enum Wrapuptag for "wrapUpTag"
-            /// </summary>
-            [EnumMember(Value = "wrapUpTag")]
-            Wrapuptag
+            Wrapupnote
         }
         
         

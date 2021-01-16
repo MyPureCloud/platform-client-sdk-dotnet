@@ -12,7 +12,6 @@ using System.Net;
 using System.Text;
 using Newtonsoft.Json;
 using RestSharp;
-using PureCloudPlatform.Client.V2.Extensions;
 
 namespace PureCloudPlatform.Client.V2.Client
 {
@@ -109,11 +108,6 @@ namespace PureCloudPlatform.Client.V2.Client
         public RetryConfiguration RetryConfig { get; set; }
         private static readonly RetryConfiguration DEFAULT_RETRY_CONFIG = new RetryConfiguration();
 
-        // These fields are only applicable to the Code Authorization OAuth flow:
-        public bool UsingCodeAuth { get; set; }
-        public string ClientId { get; set; }
-        public string ClientSecret { get; set; }
-
         // Creates and sets up a RestRequest prior to a call.
         private RestRequest PrepareRequest(
             String path, RestSharp.Method method, List<Tuple<String, String>> queryParams, Object postBody,
@@ -160,36 +154,6 @@ namespace PureCloudPlatform.Client.V2.Client
             return request;
         }
 
-        private void HandleExpiredAccessToken()
-        {
-            if (Monitor.TryEnter(Configuration, 0))
-            {
-                try
-                {
-                    Extensions.AuthExtensions.PostToken(this, ClientId, ClientSecret, authorizationCode: Configuration.AuthTokenInfo.RefreshToken, isRefreshRequest: true);
-                }
-                catch (Exception e)
-                {
-                    throw new ApiException(500, e.Message);
-                }
-                finally
-                {
-                    Monitor.Exit(Configuration);
-                }
-            }
-            else
-            {
-                // Abort with error if we have waited the configured time and refresh still isn't complete
-                if (!Monitor.TryEnter(Configuration, TimeSpan.FromSeconds(Configuration.RefreshTokenWaitTime))) {
-                    throw new ApiException(500, $"Token refresh took longer than {Configuration.RefreshTokenWaitTime} seconds");
-                }
-                else
-                {
-                    Monitor.Exit(Configuration);
-                }
-            }
-        }
-
         /// <summary>
         /// Makes the HTTP request (Sync).
         /// </summary>
@@ -220,7 +184,7 @@ namespace PureCloudPlatform.Client.V2.Client
             RestClient.UserAgent = Configuration.UserAgent;
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "111.0.0");
+            request.AddHeader("purecloud-sdk", "112.0.0");
 
             Retry retry = new Retry(this.RetryConfig);
             IRestResponse response;
@@ -231,17 +195,6 @@ namespace PureCloudPlatform.Client.V2.Client
             
             
             }while(retry.ShouldRetry(response));
-
-            if (UsingCodeAuth && Configuration.ShouldRefreshAccessToken)
-            {
-                int statusCode = (int) response.StatusCode;
-                if (statusCode == 401)
-                {
-                    HandleExpiredAccessToken();
-                    return CallApi(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams, contentType);
-                }
-            }
-
             return (Object) response;
         }
         
@@ -274,16 +227,6 @@ namespace PureCloudPlatform.Client.V2.Client
             {
                 response = await RestClient.ExecuteTaskAsync(request);
             }while(retry.ShouldRetry(response));
-
-            if (UsingCodeAuth && Configuration.ShouldRefreshAccessToken)
-            {
-                int statusCode = (int) response.StatusCode;
-                if (statusCode == 401)
-                {
-                    HandleExpiredAccessToken();
-                    return await CallApiAsync(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams, contentType);
-                }
-            }
 
             return (Object)response;
         }

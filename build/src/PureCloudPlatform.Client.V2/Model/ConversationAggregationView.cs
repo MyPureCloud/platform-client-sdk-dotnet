@@ -126,12 +126,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Oexternalmediacount,
             
             /// <summary>
-            /// Enum Ointeracting for "oInteracting"
-            /// </summary>
-            [EnumMember(Value = "oInteracting")]
-            Ointeracting,
-            
-            /// <summary>
             /// Enum Omediacount for "oMediaCount"
             /// </summary>
             [EnumMember(Value = "oMediaCount")]
@@ -148,12 +142,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "oServiceTarget")]
             Oservicetarget,
-            
-            /// <summary>
-            /// Enum Owaiting for "oWaiting"
-            /// </summary>
-            [EnumMember(Value = "oWaiting")]
-            Owaiting,
             
             /// <summary>
             /// Enum Tabandon for "tAbandon"

@@ -127,12 +127,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Queueid,
             
             /// <summary>
-            /// Enum Rescind for "rescind"
-            /// </summary>
-            [EnumMember(Value = "rescind")]
-            Rescind,
-            
-            /// <summary>
             /// Enum Rescored for "rescored"
             /// </summary>
             [EnumMember(Value = "rescored")]

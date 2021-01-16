@@ -103,12 +103,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Surveyformid,
             
             /// <summary>
-            /// Enum Surveyformname for "surveyFormName"
-            /// </summary>
-            [EnumMember(Value = "surveyFormName")]
-            Surveyformname,
-            
-            /// <summary>
             /// Enum Surveyid for "surveyId"
             /// </summary>
             [EnumMember(Value = "surveyId")]

@@ -103,12 +103,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Mediastatsminconversationmos,
             
             /// <summary>
-            /// Enum Mediastatsminconversationrfactor for "mediaStatsMinConversationRFactor"
-            /// </summary>
-            [EnumMember(Value = "mediaStatsMinConversationRFactor")]
-            Mediastatsminconversationrfactor,
-            
-            /// <summary>
             /// Enum Originatingdirection for "originatingDirection"
             /// </summary>
             [EnumMember(Value = "originatingDirection")]

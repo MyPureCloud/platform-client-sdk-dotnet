@@ -73,24 +73,6 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Organizationpresenceid for "organizationPresenceId"
-            /// </summary>
-            [EnumMember(Value = "organizationPresenceId")]
-            Organizationpresenceid,
-            
-            /// <summary>
-            /// Enum Routingstatus for "routingStatus"
-            /// </summary>
-            [EnumMember(Value = "routingStatus")]
-            Routingstatus,
-            
-            /// <summary>
-            /// Enum Systempresence for "systemPresence"
-            /// </summary>
-            [EnumMember(Value = "systemPresence")]
-            Systempresence,
-            
-            /// <summary>
             /// Enum Userid for "userId"
             /// </summary>
             [EnumMember(Value = "userId")]

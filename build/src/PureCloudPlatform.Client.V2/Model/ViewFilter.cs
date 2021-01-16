@@ -880,6 +880,73 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets JourneyActionMapTypes
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum JourneyActionMapTypesEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Webchat for "webchat"
+            /// </summary>
+            [EnumMember(Value = "webchat")]
+            Webchat,
+            
+            /// <summary>
+            /// Enum Webmessagingoffer for "webMessagingOffer"
+            /// </summary>
+            [EnumMember(Value = "webMessagingOffer")]
+            Webmessagingoffer,
+            
+            /// <summary>
+            /// Enum Contentoffer for "contentOffer"
+            /// </summary>
+            [EnumMember(Value = "contentOffer")]
+            Contentoffer,
+            
+            /// <summary>
+            /// Enum Integrationaction for "integrationAction"
+            /// </summary>
+            [EnumMember(Value = "integrationAction")]
+            Integrationaction,
+            
+            /// <summary>
+            /// Enum Architectflow for "architectFlow"
+            /// </summary>
+            [EnumMember(Value = "architectFlow")]
+            Architectflow
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1140,7 +1207,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ShowFirstQueue">Indicates filtering for first queue data.</param>
         /// <param name="TeamIds">The team ids used to filter the view data.</param>
         /// <param name="FilterUsersByTeamIds">The team ids are used to fetch associated users for the view.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null)
+        /// <param name="JourneyActionMapIds">The journey action map ids are used to fetch action maps for the associated view.</param>
+        /// <param name="JourneyOutcomeIds">The journey outcome ids are used to fetch outcomes for the associated view.</param>
+        /// <param name="JourneySegmentIds">The journey segment ids are used to fetch segments for the associated view.</param>
+        /// <param name="JourneyActionMapTypes">The journey action map types are used to filter action map data for the associated view.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -1231,6 +1302,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ShowFirstQueue = ShowFirstQueue;
             this.TeamIds = TeamIds;
             this.FilterUsersByTeamIds = FilterUsersByTeamIds;
+            this.JourneyActionMapIds = JourneyActionMapIds;
+            this.JourneyOutcomeIds = JourneyOutcomeIds;
+            this.JourneySegmentIds = JourneySegmentIds;
+            this.JourneyActionMapTypes = JourneyActionMapTypes;
             
         }
         
@@ -2036,6 +2111,42 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> FilterUsersByTeamIds { get; set; }
         
         
+        
+        /// <summary>
+        /// The journey action map ids are used to fetch action maps for the associated view
+        /// </summary>
+        /// <value>The journey action map ids are used to fetch action maps for the associated view</value>
+        [DataMember(Name="journeyActionMapIds", EmitDefaultValue=false)]
+        public List<string> JourneyActionMapIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The journey outcome ids are used to fetch outcomes for the associated view
+        /// </summary>
+        /// <value>The journey outcome ids are used to fetch outcomes for the associated view</value>
+        [DataMember(Name="journeyOutcomeIds", EmitDefaultValue=false)]
+        public List<string> JourneyOutcomeIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The journey segment ids are used to fetch segments for the associated view
+        /// </summary>
+        /// <value>The journey segment ids are used to fetch segments for the associated view</value>
+        [DataMember(Name="journeySegmentIds", EmitDefaultValue=false)]
+        public List<string> JourneySegmentIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The journey action map types are used to filter action map data for the associated view
+        /// </summary>
+        /// <value>The journey action map types are used to filter action map data for the associated view</value>
+        [DataMember(Name="journeyActionMapTypes", EmitDefaultValue=false)]
+        public List<JourneyActionMapTypesEnum> JourneyActionMapTypes { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -2134,6 +2245,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ShowFirstQueue: ").Append(ShowFirstQueue).Append("\n");
             sb.Append("  TeamIds: ").Append(TeamIds).Append("\n");
             sb.Append("  FilterUsersByTeamIds: ").Append(FilterUsersByTeamIds).Append("\n");
+            sb.Append("  JourneyActionMapIds: ").Append(JourneyActionMapIds).Append("\n");
+            sb.Append("  JourneyOutcomeIds: ").Append(JourneyOutcomeIds).Append("\n");
+            sb.Append("  JourneySegmentIds: ").Append(JourneySegmentIds).Append("\n");
+            sb.Append("  JourneyActionMapTypes: ").Append(JourneyActionMapTypes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -2614,6 +2729,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FilterUsersByTeamIds == other.FilterUsersByTeamIds ||
                     this.FilterUsersByTeamIds != null &&
                     this.FilterUsersByTeamIds.SequenceEqual(other.FilterUsersByTeamIds)
+                ) &&
+                (
+                    this.JourneyActionMapIds == other.JourneyActionMapIds ||
+                    this.JourneyActionMapIds != null &&
+                    this.JourneyActionMapIds.SequenceEqual(other.JourneyActionMapIds)
+                ) &&
+                (
+                    this.JourneyOutcomeIds == other.JourneyOutcomeIds ||
+                    this.JourneyOutcomeIds != null &&
+                    this.JourneyOutcomeIds.SequenceEqual(other.JourneyOutcomeIds)
+                ) &&
+                (
+                    this.JourneySegmentIds == other.JourneySegmentIds ||
+                    this.JourneySegmentIds != null &&
+                    this.JourneySegmentIds.SequenceEqual(other.JourneySegmentIds)
+                ) &&
+                (
+                    this.JourneyActionMapTypes == other.JourneyActionMapTypes ||
+                    this.JourneyActionMapTypes != null &&
+                    this.JourneyActionMapTypes.SequenceEqual(other.JourneyActionMapTypes)
                 );
         }
 
@@ -2895,6 +3030,18 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.FilterUsersByTeamIds != null)
                     hash = hash * 59 + this.FilterUsersByTeamIds.GetHashCode();
+                
+                if (this.JourneyActionMapIds != null)
+                    hash = hash * 59 + this.JourneyActionMapIds.GetHashCode();
+                
+                if (this.JourneyOutcomeIds != null)
+                    hash = hash * 59 + this.JourneyOutcomeIds.GetHashCode();
+                
+                if (this.JourneySegmentIds != null)
+                    hash = hash * 59 + this.JourneySegmentIds.GetHashCode();
+                
+                if (this.JourneyActionMapTypes != null)
+                    hash = hash * 59 + this.JourneyActionMapTypes.GetHashCode();
                 
                 return hash;
             }

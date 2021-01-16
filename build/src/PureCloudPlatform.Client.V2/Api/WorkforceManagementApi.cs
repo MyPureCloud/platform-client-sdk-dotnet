@@ -669,6 +669,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<BuHeadcountForecastResponse> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastWithHttpInfo (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null);
         
         /// <summary>
+        /// Loads agent&#39;s schedule history.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="agentId">THe ID of the agent</param>
+        /// <returns>BuAgentScheduleHistoryResponse</returns>
+        BuAgentScheduleHistoryResponse GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent (string businessUnitId, String weekId, string scheduleId, string agentId);
+
+        /// <summary>
+        /// Loads agent&#39;s schedule history.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="agentId">THe ID of the agent</param>
+        /// <returns>ApiResponse of BuAgentScheduleHistoryResponse</returns>
+        ApiResponse<BuAgentScheduleHistoryResponse> GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string agentId);
+        
+        /// <summary>
         /// Get the list of week schedules for the specified week
         /// </summary>
         /// <remarks>
@@ -3259,6 +3287,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>Task of ApiResponse (BuHeadcountForecastResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuHeadcountForecastResponse>> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null);
+        
+        /// <summary>
+        /// Loads agent&#39;s schedule history.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="agentId">THe ID of the agent</param>
+        /// <returns>Task of BuAgentScheduleHistoryResponse</returns>
+        System.Threading.Tasks.Task<BuAgentScheduleHistoryResponse> GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentAsync (string businessUnitId, String weekId, string scheduleId, string agentId);
+
+        /// <summary>
+        /// Loads agent&#39;s schedule history.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="agentId">THe ID of the agent</param>
+        /// <returns>Task of ApiResponse (BuAgentScheduleHistoryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BuAgentScheduleHistoryResponse>> GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string agentId);
         
         /// <summary>
         /// Get the list of week schedules for the specified week
@@ -10817,6 +10873,238 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<BuHeadcountForecastResponse>(localVarStatusCode,
                 localVarHeaders,
                 (BuHeadcountForecastResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuHeadcountForecastResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Loads agent&#39;s schedule history. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="agentId">THe ID of the agent</param>
+        /// <returns>BuAgentScheduleHistoryResponse</returns>
+        public BuAgentScheduleHistoryResponse GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent (string businessUnitId, String weekId, string scheduleId, string agentId)
+        {
+             ApiResponse<BuAgentScheduleHistoryResponse> localVarResponse = GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentWithHttpInfo(businessUnitId, weekId, scheduleId, agentId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Loads agent&#39;s schedule history. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="agentId">THe ID of the agent</param>
+        /// <returns>ApiResponse of BuAgentScheduleHistoryResponse</returns>
+        public ApiResponse< BuAgentScheduleHistoryResponse > GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string agentId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent");
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent");
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent");
+            // verify the required parameter 'agentId' is set
+            if (agentId == null)
+                throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/history/agents/{agentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
+            if (agentId != null) localVarPathParams.Add("agentId", this.Configuration.ApiClient.ParameterToString(agentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BuAgentScheduleHistoryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BuAgentScheduleHistoryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuAgentScheduleHistoryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Loads agent&#39;s schedule history. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="agentId">THe ID of the agent</param>
+        /// <returns>Task of BuAgentScheduleHistoryResponse</returns>
+        public async System.Threading.Tasks.Task<BuAgentScheduleHistoryResponse> GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentAsync (string businessUnitId, String weekId, string scheduleId, string agentId)
+        {
+             ApiResponse<BuAgentScheduleHistoryResponse> localVarResponse = await GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, agentId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Loads agent&#39;s schedule history. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="agentId">THe ID of the agent</param>
+        /// <returns>Task of ApiResponse (BuAgentScheduleHistoryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BuAgentScheduleHistoryResponse>> GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string agentId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent");
+            
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent");
+            
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent");
+            
+            // verify the required parameter 'agentId' is set
+            if (agentId == null)
+                throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/history/agents/{agentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
+            if (agentId != null) localVarPathParams.Add("agentId", this.Configuration.ApiClient.ParameterToString(agentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BuAgentScheduleHistoryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BuAgentScheduleHistoryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuAgentScheduleHistoryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

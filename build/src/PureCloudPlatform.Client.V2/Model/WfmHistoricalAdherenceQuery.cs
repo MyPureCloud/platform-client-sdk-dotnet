@@ -63,9 +63,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartDate">Beginning of the date range to query in ISO-8601 format (required).</param>
         /// <param name="EndDate">End of the date range to query in ISO-8601 format. If it is not set, end date will be set to current time.</param>
         /// <param name="TimeZone">The time zone to use for returned results in olson format. If it is not set, the business unit time zone will be used to compute adherence.</param>
-        /// <param name="UserIds">The userIds to report on. If null or not set, adherence will be computed for all the users in management unit or requested teamIds. Note: Only one of [teamIds, userIds] can be requested.</param>
+        /// <param name="UserIds">The userIds to report on. If null or not set, adherence will be computed for all the users in management unit or requested teamIds.</param>
         /// <param name="IncludeExceptions">Whether user exceptions should be returned as part of the results.</param>
-        /// <param name="TeamIds">The teamIds to report on. If null or not set, adherence will be computed for requested users if applicable or otherwise all users in the management unit. Note: Only one of [teamIds, userIds] can be requested.</param>
+        /// <param name="TeamIds">The teamIds to report on. If null or not set, adherence will be computed for requested users if applicable or otherwise all users in the management unit. Note: If teamIds is also specified, only adherence for users in the requested teams will be returned.</param>
         public WfmHistoricalAdherenceQuery(DateTime? StartDate = null, DateTime? EndDate = null, string TimeZone = null, List<string> UserIds = null, bool? IncludeExceptions = null, List<string> TeamIds = null)
         {
             this.StartDate = StartDate;
@@ -107,9 +107,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The userIds to report on. If null or not set, adherence will be computed for all the users in management unit or requested teamIds. Note: Only one of [teamIds, userIds] can be requested
+        /// The userIds to report on. If null or not set, adherence will be computed for all the users in management unit or requested teamIds
         /// </summary>
-        /// <value>The userIds to report on. If null or not set, adherence will be computed for all the users in management unit or requested teamIds. Note: Only one of [teamIds, userIds] can be requested</value>
+        /// <value>The userIds to report on. If null or not set, adherence will be computed for all the users in management unit or requested teamIds</value>
         [DataMember(Name="userIds", EmitDefaultValue=false)]
         public List<string> UserIds { get; set; }
         
@@ -125,9 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The teamIds to report on. If null or not set, adherence will be computed for requested users if applicable or otherwise all users in the management unit. Note: Only one of [teamIds, userIds] can be requested
+        /// The teamIds to report on. If null or not set, adherence will be computed for requested users if applicable or otherwise all users in the management unit. Note: If teamIds is also specified, only adherence for users in the requested teams will be returned
         /// </summary>
-        /// <value>The teamIds to report on. If null or not set, adherence will be computed for requested users if applicable or otherwise all users in the management unit. Note: Only one of [teamIds, userIds] can be requested</value>
+        /// <value>The teamIds to report on. If null or not set, adherence will be computed for requested users if applicable or otherwise all users in the management unit. Note: If teamIds is also specified, only adherence for users in the requested teams will be returned</value>
         [DataMember(Name="teamIds", EmitDefaultValue=false)]
         public List<string> TeamIds { get; set; }
         

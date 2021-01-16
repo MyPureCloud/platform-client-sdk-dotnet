@@ -60,12 +60,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Nflowoutcomefailed,
             
             /// <summary>
-            /// Enum Oflow for "oFlow"
-            /// </summary>
-            [EnumMember(Value = "oFlow")]
-            Oflow,
-            
-            /// <summary>
             /// Enum Oflowmilestone for "oFlowMilestone"
             /// </summary>
             [EnumMember(Value = "oFlowMilestone")]

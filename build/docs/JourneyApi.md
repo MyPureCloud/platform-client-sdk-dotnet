@@ -7,11 +7,76 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteJourneySegment**](JourneyApi.html#deletejourneysegment) | **DELETE** /api/v2/journey/segments/{segmentId} | Delete a segment. |
 | [**GetJourneyActiontarget**](JourneyApi.html#getjourneyactiontarget) | **GET** /api/v2/journey/actiontargets/{actionTargetId} | Retrieve a single action target. |
 | [**GetJourneyActiontargets**](JourneyApi.html#getjourneyactiontargets) | **GET** /api/v2/journey/actiontargets | Retrieve all action targets. |
+| [**GetJourneySegment**](JourneyApi.html#getjourneysegment) | **GET** /api/v2/journey/segments/{segmentId} | Retrieve a single segment. |
+| [**GetJourneySegments**](JourneyApi.html#getjourneysegments) | **GET** /api/v2/journey/segments | Retrieve all segments. |
 | [**PatchJourneyActiontarget**](JourneyApi.html#patchjourneyactiontarget) | **PATCH** /api/v2/journey/actiontargets/{actionTargetId} | Update a single action target. |
+| [**PatchJourneySegment**](JourneyApi.html#patchjourneysegment) | **PATCH** /api/v2/journey/segments/{segmentId} | Update a segment. |
 | [**PostAnalyticsJourneysAggregatesQuery**](JourneyApi.html#postanalyticsjourneysaggregatesquery) | **POST** /api/v2/analytics/journeys/aggregates/query | Query for journey aggregates |
+| [**PostJourneySegments**](JourneyApi.html#postjourneysegments) | **POST** /api/v2/journey/segments | Create a segment. |
 {: class="table table-striped"}
+
+<a name="deletejourneysegment"></a>
+
+## void DeleteJourneySegment (string segmentId)
+
+
+
+Delete a segment.
+
+
+
+Requires ANY permissions: 
+
+* journey:segment:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteJourneySegmentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new JourneyApi();
+            var segmentId = segmentId_example;  // string | ID of the segment.
+
+            try
+            { 
+                // Delete a segment.
+                apiInstance.DeleteJourneySegment(segmentId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.DeleteJourneySegment: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **segmentId** | **string**| ID of the segment. |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="getjourneyactiontarget"></a>
 
@@ -42,11 +107,7 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new JourneyApi();
             var actionTargetId = actionTargetId_example;  // string | ID of the action target.
@@ -107,11 +168,7 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new JourneyApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
@@ -145,6 +202,134 @@ namespace Example
 
 [**ActionTargetListing**](ActionTargetListing.html)
 
+<a name="getjourneysegment"></a>
+
+## [**JourneySegment**](JourneySegment.html) GetJourneySegment (string segmentId)
+
+
+
+Retrieve a single segment.
+
+
+
+Requires ANY permissions: 
+
+* journey:segment:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneySegmentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new JourneyApi();
+            var segmentId = segmentId_example;  // string | ID of the segment.
+
+            try
+            { 
+                // Retrieve a single segment.
+                JourneySegment result = apiInstance.GetJourneySegment(segmentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneySegment: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **segmentId** | **string**| ID of the segment. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JourneySegment**](JourneySegment.html)
+
+<a name="getjourneysegments"></a>
+
+## [**SegmentListing**](SegmentListing.html) GetJourneySegments (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null)
+
+
+
+Retrieve all segments.
+
+
+
+Requires ANY permissions: 
+
+* journey:segment:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneySegmentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new JourneyApi();
+            var sortBy = sortBy_example;  // string | Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with '-' for descending (e.g. sortBy=displayName,-createdDate). (optional) 
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var isActive = true;  // bool? | Determines whether or not to show only active segments. (optional) 
+
+            try
+            { 
+                // Retrieve all segments.
+                SegmentListing result = apiInstance.GetJourneySegments(sortBy, pageSize, pageNumber, isActive);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneySegments: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sortBy** | **string**| Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). | [optional]  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **isActive** | **bool?**| Determines whether or not to show only active segments. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SegmentListing**](SegmentListing.html)
+
 <a name="patchjourneyactiontarget"></a>
 
 ## [**ActionTarget**](ActionTarget.html) PatchJourneyActiontarget (string actionTargetId, PatchActionTarget body = null)
@@ -174,11 +359,7 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new JourneyApi();
             var actionTargetId = actionTargetId_example;  // string | ID of the action target.
@@ -212,6 +393,69 @@ namespace Example
 
 [**ActionTarget**](ActionTarget.html)
 
+<a name="patchjourneysegment"></a>
+
+## [**JourneySegment**](JourneySegment.html) PatchJourneySegment (string segmentId, PatchSegment body = null)
+
+
+
+Update a segment.
+
+
+
+Requires ANY permissions: 
+
+* journey:segment:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchJourneySegmentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new JourneyApi();
+            var segmentId = segmentId_example;  // string | ID of the segment.
+            var body = new PatchSegment(); // PatchSegment |  (optional) 
+
+            try
+            { 
+                // Update a segment.
+                JourneySegment result = apiInstance.PatchJourneySegment(segmentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.PatchJourneySegment: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **segmentId** | **string**| ID of the segment. |  |
+| **body** | [**PatchSegment**](PatchSegment.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JourneySegment**](JourneySegment.html)
+
 <a name="postanalyticsjourneysaggregatesquery"></a>
 
 ## [**JourneyAggregateQueryResponse**](JourneyAggregateQueryResponse.html) PostAnalyticsJourneysAggregatesQuery (JourneyAggregationQuery body)
@@ -241,11 +485,7 @@ namespace Example
         public void main()
         { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new JourneyApi();
             var body = new JourneyAggregationQuery(); // JourneyAggregationQuery | query
@@ -276,4 +516,65 @@ namespace Example
 ### Return type
 
 [**JourneyAggregateQueryResponse**](JourneyAggregateQueryResponse.html)
+
+<a name="postjourneysegments"></a>
+
+## [**JourneySegment**](JourneySegment.html) PostJourneySegments (JourneySegment body = null)
+
+
+
+Create a segment.
+
+
+
+Requires ANY permissions: 
+
+* journey:segment:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostJourneySegmentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new JourneyApi();
+            var body = new JourneySegment(); // JourneySegment |  (optional) 
+
+            try
+            { 
+                // Create a segment.
+                JourneySegment result = apiInstance.PostJourneySegments(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.PostJourneySegments: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**JourneySegment**](JourneySegment.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JourneySegment**](JourneySegment.html)
 

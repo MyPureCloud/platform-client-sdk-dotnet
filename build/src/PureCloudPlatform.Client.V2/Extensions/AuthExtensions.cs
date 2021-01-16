@@ -21,27 +21,20 @@ namespace PureCloudPlatform.Client.V2.Extensions
         /// <param name="redirectUri"></param>
         /// <param name="authorizationCode"></param>
         /// <returns></returns>
-        public static AuthTokenInfo PostToken(this ApiClient apiClient, string clientId, string clientSecret,string redirectUri = "", string authorizationCode = "", bool isRefreshRequest = false)
+        public static AuthTokenInfo PostToken(this ApiClient apiClient, string clientId, string clientSecret,string redirectUri = "", string authorizationCode = "")
         {
-            var response = apiClient.PostTokenWithHttpInfo(clientId, clientSecret, redirectUri, authorizationCode, isRefreshRequest);
+            var response = apiClient.PostTokenWithHttpInfo(clientId, clientSecret, redirectUri, authorizationCode);
             return response.Data;
         }
 
         public static ApiResponse<AuthTokenInfo> PostTokenWithHttpInfo(this ApiClient apiClient, string clientId,
-            string clientSecret, string redirectUri = "", string authorizationCode = "", bool isRefreshRequest = false)
+            string clientSecret, string redirectUri = "", string authorizationCode = "")
         {
             var path_ = "/token";
 
             // This may be uninitialized if no API classes have been constructed yet
             if (apiClient.Configuration == null)
                 apiClient.Configuration = new Configuration(apiClient);
-
-            // If redirectUri is not null this is a Code Authorization grant and we need to save the clientId and clientSecret for a transparent token refresh
-            if (!string.IsNullOrEmpty(redirectUri)) {
-                apiClient.UsingCodeAuth = true;
-                apiClient.ClientId = clientId;
-                apiClient.ClientSecret = clientSecret;
-            }
 
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -67,15 +60,10 @@ namespace PureCloudPlatform.Client.V2.Extensions
                 headerParams.Add("Accept", httpHeaderAccept);
 
             // Add form params
-            if (isRefreshRequest) {
-                formParams.Add("grant_type", "refresh_token");
-                formParams.Add("refresh_token", authorizationCode);
-            } else {
-                formParams.Add("grant_type",
-                    string.IsNullOrEmpty(authorizationCode) ? "client_credentials" : "authorization_code");
-                if (!string.IsNullOrEmpty(authorizationCode))
-                    formParams.Add("code", apiClient.ParameterToString(authorizationCode));
-            }
+            formParams.Add("grant_type",
+                string.IsNullOrEmpty(authorizationCode) ? "client_credentials" : "authorization_code");
+            if (!string.IsNullOrEmpty(authorizationCode))
+                formParams.Add("code", apiClient.ParameterToString(authorizationCode));
             if (!string.IsNullOrEmpty(redirectUri))
                 formParams.Add("redirect_uri", apiClient.ParameterToString(redirectUri));
 
@@ -97,12 +85,9 @@ namespace PureCloudPlatform.Client.V2.Extensions
                 throw new ApiException(statusCode, "Error calling PostToken: " + response.ErrorMessage,
                     response.ErrorMessage);
 
-            var authTokenInfo = (AuthTokenInfo) apiClient.Deserialize(response, typeof (AuthTokenInfo));
-            apiClient.Configuration.AuthTokenInfo = authTokenInfo;
-
             return new ApiResponse<AuthTokenInfo>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                authTokenInfo,
+                (AuthTokenInfo) apiClient.Deserialize(response, typeof (AuthTokenInfo)),
                 response.Content,
                 response.StatusDescription);
         }
