@@ -346,7 +346,43 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum DashboardDetail for "DASHBOARD_DETAIL"
             /// </summary>
             [EnumMember(Value = "DASHBOARD_DETAIL")]
-            DashboardDetail
+            DashboardDetail,
+            
+            /// <summary>
+            /// Enum JourneyActionMapSummaryView for "JOURNEY_ACTION_MAP_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "JOURNEY_ACTION_MAP_SUMMARY_VIEW")]
+            JourneyActionMapSummaryView,
+            
+            /// <summary>
+            /// Enum JourneyOutcomeSummaryView for "JOURNEY_OUTCOME_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "JOURNEY_OUTCOME_SUMMARY_VIEW")]
+            JourneyOutcomeSummaryView,
+            
+            /// <summary>
+            /// Enum JourneySegmentSummaryView for "JOURNEY_SEGMENT_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "JOURNEY_SEGMENT_SUMMARY_VIEW")]
+            JourneySegmentSummaryView,
+            
+            /// <summary>
+            /// Enum AgentDevelopmentDetailView for "AGENT_DEVELOPMENT_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_DEVELOPMENT_DETAIL_VIEW")]
+            AgentDevelopmentDetailView,
+            
+            /// <summary>
+            /// Enum AgentDevelopmentDetailMeView for "AGENT_DEVELOPMENT_DETAIL_ME_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_DEVELOPMENT_DETAIL_ME_VIEW")]
+            AgentDevelopmentDetailMeView,
+            
+            /// <summary>
+            /// Enum AgentDevelopmentSummaryView for "AGENT_DEVELOPMENT_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_DEVELOPMENT_SUMMARY_VIEW")]
+            AgentDevelopmentSummaryView
         }
         
         

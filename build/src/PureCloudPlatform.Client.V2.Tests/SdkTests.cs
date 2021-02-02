@@ -68,8 +68,7 @@ namespace PureCloudPlatform.Client.V2.Tests
                 PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.setBasePath(regionval);
             }
            
-            var accessTokenInfo = PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.PostToken(clientId, clientSecret);
-            PureCloudPlatform.Client.V2.Client.Configuration.Default.AccessToken = accessTokenInfo.AccessToken;
+            PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.PostToken(clientId, clientSecret);
 
             Assert.IsNotEmpty(PureCloudPlatform.Client.V2.Client.Configuration.Default.AccessToken);
         }

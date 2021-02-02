@@ -148,7 +148,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CountsAsPaidTime">Whether an agent is paid while performing this activity.</param>
         /// <param name="CountsAsWorkTime">Indicates whether or not the activity should be counted as work time.</param>
         /// <param name="AgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request.</param>
-        /// <param name="Metadata">Version metadata for the associated management unit&#39;s list of activity codes (required).</param>
+        /// <param name="Metadata">Version metadata for the associated business unit&#39;s list of activity codes (required).</param>
         public UpdateActivityCodeRequest(string Name = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Name = Name;
@@ -211,9 +211,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Version metadata for the associated management unit&#39;s list of activity codes
+        /// Version metadata for the associated business unit&#39;s list of activity codes
         /// </summary>
-        /// <value>Version metadata for the associated management unit&#39;s list of activity codes</value>
+        /// <value>Version metadata for the associated business unit&#39;s list of activity codes</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
         

@@ -16,6 +16,7 @@ title: PatchSegment
 | **ShouldDisplayToAgent** | **bool?** | Whether or not the segment should be displayed to agent/supervisor users. | [optional] |
 | **Context** | [**Context**](Context.html) | The context of the segment. | [optional] |
 | **Journey** | [**Journey**](Journey.html) | The pattern of rules defining the segment. | [optional] |
+| **AssignmentExpirationDays** | **int?** | Time, in days, from when the segment is assigned until it is automatically unassigned. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 | **CreatedDate** | **DateTime?** | Timestamp indicating when the segment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ModifiedDate** | **DateTime?** | Timestamp indicating when the the segment was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |

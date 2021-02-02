@@ -304,7 +304,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Webmessaging for "webmessaging"
             /// </summary>
             [EnumMember(Value = "webmessaging")]
-            Webmessaging
+            Webmessaging,
+            
+            /// <summary>
+            /// Enum General for "general"
+            /// </summary>
+            [EnumMember(Value = "general")]
+            General
         }
         
         

@@ -87,7 +87,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteRoutingQueueWithHttpInfo (string queueId, bool? forceDelete = null);
         
         /// <summary>
-        /// Delete queue member
+        /// DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member.
         /// </summary>
         /// <remarks>
         /// 
@@ -99,7 +99,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteRoutingQueueUser (string queueId, string memberId);
 
         /// <summary>
-        /// Delete queue member
+        /// DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member.
         /// </summary>
         /// <remarks>
         /// 
@@ -595,14 +595,14 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EstimatedWaitTimePredictions> GetRoutingQueueMediatypeEstimatedwaittimeWithHttpInfo (string queueId, string mediaType);
         
         /// <summary>
-        /// Get the members of this queue
+        /// DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Page size [max 100] (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
@@ -617,14 +617,14 @@ namespace PureCloudPlatform.Client.V2.Api
         QueueMemberEntityListing GetRoutingQueueUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
 
         /// <summary>
-        /// Get the members of this queue
+        /// DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Page size [max 100] (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
@@ -1235,7 +1235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<InboundDomain> PatchRoutingEmailDomainWithHttpInfo (string domainId, InboundDomainPatchRequest body);
         
         /// <summary>
-        /// Update the ring number OR joined status for a User in a Queue
+        /// DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue.
         /// </summary>
         /// <remarks>
         /// 
@@ -1248,7 +1248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         QueueMember PatchRoutingQueueUser (string queueId, string memberId, QueueMember body);
 
         /// <summary>
-        /// Update the ring number OR joined status for a User in a Queue
+        /// DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue.
         /// </summary>
         /// <remarks>
         /// 
@@ -1261,7 +1261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<QueueMember> PatchRoutingQueueUserWithHttpInfo (string queueId, string memberId, QueueMember body);
         
         /// <summary>
-        /// Join or unjoin a set of users for a queue
+        /// DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue.
         /// </summary>
         /// <remarks>
         /// 
@@ -1273,7 +1273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         QueueMemberEntityListing PatchRoutingQueueUsers (string queueId, List<QueueMember> body);
 
         /// <summary>
-        /// Join or unjoin a set of users for a queue
+        /// DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue.
         /// </summary>
         /// <remarks>
         /// 
@@ -1547,7 +1547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Language> PostRoutingLanguagesWithHttpInfo (Language body);
         
         /// <summary>
-        /// Bulk add or delete up to 100 queue members
+        /// DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members.
         /// </summary>
         /// <remarks>
         /// 
@@ -1560,7 +1560,7 @@ namespace PureCloudPlatform.Client.V2.Api
         string PostRoutingQueueUsers (string queueId, List<WritableEntity> body, bool? delete = null);
 
         /// <summary>
-        /// Bulk add or delete up to 100 queue members
+        /// DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members.
         /// </summary>
         /// <remarks>
         /// 
@@ -2091,7 +2091,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueAsyncWithHttpInfo (string queueId, bool? forceDelete = null);
         
         /// <summary>
-        /// Delete queue member
+        /// DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member.
         /// </summary>
         /// <remarks>
         /// 
@@ -2103,7 +2103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteRoutingQueueUserAsync (string queueId, string memberId);
 
         /// <summary>
-        /// Delete queue member
+        /// DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member.
         /// </summary>
         /// <remarks>
         /// 
@@ -2599,14 +2599,14 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EstimatedWaitTimePredictions>> GetRoutingQueueMediatypeEstimatedwaittimeAsyncWithHttpInfo (string queueId, string mediaType);
         
         /// <summary>
-        /// Get the members of this queue
+        /// DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Page size [max 100] (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
@@ -2621,14 +2621,14 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<QueueMemberEntityListing> GetRoutingQueueUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
 
         /// <summary>
-        /// Get the members of this queue
+        /// DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Page size [max 100] (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
@@ -3239,7 +3239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<InboundDomain>> PatchRoutingEmailDomainAsyncWithHttpInfo (string domainId, InboundDomainPatchRequest body);
         
         /// <summary>
-        /// Update the ring number OR joined status for a User in a Queue
+        /// DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue.
         /// </summary>
         /// <remarks>
         /// 
@@ -3252,7 +3252,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<QueueMember> PatchRoutingQueueUserAsync (string queueId, string memberId, QueueMember body);
 
         /// <summary>
-        /// Update the ring number OR joined status for a User in a Queue
+        /// DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue.
         /// </summary>
         /// <remarks>
         /// 
@@ -3265,7 +3265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<QueueMember>> PatchRoutingQueueUserAsyncWithHttpInfo (string queueId, string memberId, QueueMember body);
         
         /// <summary>
-        /// Join or unjoin a set of users for a queue
+        /// DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue.
         /// </summary>
         /// <remarks>
         /// 
@@ -3277,7 +3277,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<QueueMemberEntityListing> PatchRoutingQueueUsersAsync (string queueId, List<QueueMember> body);
 
         /// <summary>
-        /// Join or unjoin a set of users for a queue
+        /// DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue.
         /// </summary>
         /// <remarks>
         /// 
@@ -3551,7 +3551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Language>> PostRoutingLanguagesAsyncWithHttpInfo (Language body);
         
         /// <summary>
-        /// Bulk add or delete up to 100 queue members
+        /// DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members.
         /// </summary>
         /// <remarks>
         /// 
@@ -3564,7 +3564,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<string> PostRoutingQueueUsersAsync (string queueId, List<WritableEntity> body, bool? delete = null);
 
         /// <summary>
-        /// Bulk add or delete up to 100 queue members
+        /// DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members.
         /// </summary>
         /// <remarks>
         /// 
@@ -4705,7 +4705,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Delete queue member 
+        /// DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -4717,7 +4717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete queue member 
+        /// DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -4805,7 +4805,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Delete queue member 
+        /// DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -4818,7 +4818,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete queue member 
+        /// DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -9001,11 +9001,11 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get the members of this queue 
+        /// DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Page size [max 100] (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
@@ -9024,11 +9024,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the members of this queue 
+        /// DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Page size [max 100] (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
@@ -9129,11 +9129,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get the members of this queue 
+        /// DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Page size [max 100] (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
@@ -9153,11 +9153,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the members of this queue 
+        /// DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Page size [max 100] (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
@@ -13907,7 +13907,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update the ring number OR joined status for a User in a Queue 
+        /// DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -13921,7 +13921,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the ring number OR joined status for a User in a Queue 
+        /// DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -14018,7 +14018,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update the ring number OR joined status for a User in a Queue 
+        /// DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -14033,7 +14033,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the ring number OR joined status for a User in a Queue 
+        /// DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -14134,7 +14134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Join or unjoin a set of users for a queue 
+        /// DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -14147,7 +14147,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Join or unjoin a set of users for a queue 
+        /// DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -14239,7 +14239,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Join or unjoin a set of users for a queue 
+        /// DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -14253,7 +14253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Join or unjoin a set of users for a queue 
+        /// DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -16673,7 +16673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Bulk add or delete up to 100 queue members 
+        /// DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -16687,7 +16687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Bulk add or delete up to 100 queue members 
+        /// DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -16781,7 +16781,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Bulk add or delete up to 100 queue members 
+        /// DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -16796,7 +16796,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Bulk add or delete up to 100 queue members 
+        /// DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>

@@ -227,6 +227,12 @@ namespace PureCloudPlatform.Client.V2.Model
             ExceededContactLimit,
             
             /// <summary>
+            /// Enum ExceededDncRecordLimit for "EXCEEDED_DNC_RECORD_LIMIT"
+            /// </summary>
+            [EnumMember(Value = "EXCEEDED_DNC_RECORD_LIMIT")]
+            ExceededDncRecordLimit,
+            
+            /// <summary>
             /// Enum InactiveEdgesFailedPlaceCalls for "INACTIVE_EDGES_FAILED_PLACE_CALLS"
             /// </summary>
             [EnumMember(Value = "INACTIVE_EDGES_FAILED_PLACE_CALLS")]

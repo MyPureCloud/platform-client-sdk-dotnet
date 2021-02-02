@@ -25,6 +25,9 @@ namespace PureCloudPlatform.Client.V2.Extensions
         [DataMember(Name = "access_token", EmitDefaultValue = false)]
         public string AccessToken { get; set; }
 
+        [DataMember(Name = "refresh_token", EmitDefaultValue = false)]
+        public string RefreshToken { get; set; }
+
         [DataMember(Name = "token_type", EmitDefaultValue = false)]
         public string TokenType { get; set; }
 
@@ -45,6 +48,7 @@ namespace PureCloudPlatform.Client.V2.Extensions
             var sb = new StringBuilder();
             sb.Append("class AuthTokenInfo {\n");
             sb.Append("  AccessToken: ").Append(AccessToken).Append("\n");
+            sb.Append("  RefreshToken: ").Append(RefreshToken).Append("\n");
             sb.Append("  TokenType: ").Append(TokenType).Append("\n");
             sb.Append("  ExpiresIn: ").Append(ExpiresIn).Append("\n");
             sb.Append("  Error: ").Append(Error).Append("\n");
@@ -74,9 +78,9 @@ namespace PureCloudPlatform.Client.V2.Extensions
         }
 
         /// <summary>
-        /// Returns true if AssociatedDocument instances are equal
+        /// Returns true if AuthTokenInfo instances are equal
         /// </summary>
-        /// <param name="other">Instance of AssociatedDocument to be compared</param>
+        /// <param name="other">Instance of AuthTokenInfo to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(AuthTokenInfo other)
         {
@@ -89,6 +93,11 @@ namespace PureCloudPlatform.Client.V2.Extensions
                     this.AccessToken == other.AccessToken ||
                     this.AccessToken != null &&
                     this.AccessToken.Equals(other.AccessToken)
+                ) &&
+                (
+                    this.RefreshToken == other.RefreshToken ||
+                    this.RefreshToken != null &&
+                    this.RefreshToken.Equals(other.RefreshToken)
                 ) &&
                 (
                     this.TokenType == other.TokenType ||
@@ -121,6 +130,9 @@ namespace PureCloudPlatform.Client.V2.Extensions
 
                 if (this.AccessToken != null)
                     hash = hash * 59 + this.AccessToken.GetHashCode();
+
+                if (this.RefreshToken != null)
+                    hash = hash * 59 + this.RefreshToken.GetHashCode();
 
                 if (this.TokenType != null)
                     hash = hash * 59 + this.TokenType.GetHashCode();

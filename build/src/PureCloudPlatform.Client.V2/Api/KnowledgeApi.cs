@@ -123,7 +123,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>CategoryListing</returns>
@@ -140,7 +140,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>ApiResponse of CategoryListing</returns>
@@ -209,7 +209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
         /// <param name="title">Filter by document title. (optional)</param>
@@ -227,7 +227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
         /// <param name="title">Filter by document title. (optional)</param>
@@ -271,7 +271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>TrainingListing</returns>
@@ -288,7 +288,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>ApiResponse of TrainingListing</returns>
@@ -303,7 +303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
         /// <returns>KnowledgeBaseListing</returns>
@@ -318,7 +318,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
         /// <returns>ApiResponse of KnowledgeBaseListing</returns>
@@ -689,7 +689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>Task of CategoryListing</returns>
@@ -706,7 +706,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>Task of ApiResponse (CategoryListing)</returns>
@@ -775,7 +775,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
         /// <param name="title">Filter by document title. (optional)</param>
@@ -793,7 +793,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
         /// <param name="title">Filter by document title. (optional)</param>
@@ -837,7 +837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>Task of TrainingListing</returns>
@@ -854,7 +854,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>Task of ApiResponse (TrainingListing)</returns>
@@ -869,7 +869,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
         /// <returns>Task of KnowledgeBaseListing</returns>
@@ -884,7 +884,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeBaseListing)</returns>
@@ -2068,7 +2068,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>CategoryListing</returns>
@@ -2086,7 +2086,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>ApiResponse of CategoryListing</returns>
@@ -2184,7 +2184,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>Task of CategoryListing</returns>
@@ -2203,7 +2203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>Task of ApiResponse (CategoryListing)</returns>
@@ -2742,7 +2742,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
         /// <param name="title">Filter by document title. (optional)</param>
@@ -2761,7 +2761,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
         /// <param name="title">Filter by document title. (optional)</param>
@@ -2861,7 +2861,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
         /// <param name="title">Filter by document title. (optional)</param>
@@ -2881,7 +2881,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
         /// <param name="title">Filter by document title. (optional)</param>
@@ -3203,7 +3203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>TrainingListing</returns>
@@ -3221,7 +3221,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>ApiResponse of TrainingListing</returns>
@@ -3319,7 +3319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>Task of TrainingListing</returns>
@@ -3338,7 +3338,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>Task of ApiResponse (TrainingListing)</returns>
@@ -3437,7 +3437,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
         /// <returns>KnowledgeBaseListing</returns>
@@ -3453,7 +3453,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
         /// <returns>ApiResponse of KnowledgeBaseListing</returns>
@@ -3541,7 +3541,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
         /// <returns>Task of KnowledgeBaseListing</returns>
@@ -3558,7 +3558,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeBaseListing)</returns>

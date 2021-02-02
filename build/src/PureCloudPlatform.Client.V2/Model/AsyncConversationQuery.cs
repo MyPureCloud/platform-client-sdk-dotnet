@@ -35,6 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Sort the result set in ascending/descending order. Default is ascending
         /// </summary>
@@ -129,6 +132,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Sort the result set in ascending/descending order. Default is ascending
         /// </summary>
@@ -167,18 +172,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EvaluationFilters">Filters that target evaluations.</param>
         /// <param name="MediaEndpointStatFilters">Filters that target mediaEndpointStats.</param>
         /// <param name="SurveyFilters">Filters that target surveys.</param>
+        /// <param name="ResolutionFilters">Filters that target resolutions.</param>
         /// <param name="Order">Sort the result set in ascending/descending order. Default is ascending.</param>
         /// <param name="OrderBy">Specify which data element within the result set to use for sorting. The options  to use as a basis for sorting the results: conversationStart, segmentStart, and segmentEnd. If not specified, the default is conversationStart.</param>
         /// <param name="Interval">Specifies the date and time range of data being queried. Results will include all conversations that had activity during the interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (required).</param>
         /// <param name="Limit">Specify number of results to be returned.</param>
         /// <param name="StartOfDayIntervalMatching">Add a filter to only include conversations that started after the beginning of the interval start date (UTC).</param>
-        public AsyncConversationQuery(List<ConversationDetailQueryFilter> ConversationFilters = null, List<SegmentDetailQueryFilter> SegmentFilters = null, List<EvaluationDetailQueryFilter> EvaluationFilters = null, List<MediaEndpointStatDetailQueryFilter> MediaEndpointStatFilters = null, List<SurveyDetailQueryFilter> SurveyFilters = null, OrderEnum? Order = null, OrderByEnum? OrderBy = null, string Interval = null, int? Limit = null, bool? StartOfDayIntervalMatching = null)
+        public AsyncConversationQuery(List<ConversationDetailQueryFilter> ConversationFilters = null, List<SegmentDetailQueryFilter> SegmentFilters = null, List<EvaluationDetailQueryFilter> EvaluationFilters = null, List<MediaEndpointStatDetailQueryFilter> MediaEndpointStatFilters = null, List<SurveyDetailQueryFilter> SurveyFilters = null, List<ResolutionDetailQueryFilter> ResolutionFilters = null, OrderEnum? Order = null, OrderByEnum? OrderBy = null, string Interval = null, int? Limit = null, bool? StartOfDayIntervalMatching = null)
         {
             this.ConversationFilters = ConversationFilters;
             this.SegmentFilters = SegmentFilters;
             this.EvaluationFilters = EvaluationFilters;
             this.MediaEndpointStatFilters = MediaEndpointStatFilters;
             this.SurveyFilters = SurveyFilters;
+            this.ResolutionFilters = ResolutionFilters;
             this.Order = Order;
             this.OrderBy = OrderBy;
             this.Interval = Interval;
@@ -234,6 +241,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Filters that target resolutions
+        /// </summary>
+        /// <value>Filters that target resolutions</value>
+        [DataMember(Name="resolutionFilters", EmitDefaultValue=false)]
+        public List<ResolutionDetailQueryFilter> ResolutionFilters { get; set; }
+        
+        
+        
         
         
         
@@ -278,6 +294,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EvaluationFilters: ").Append(EvaluationFilters).Append("\n");
             sb.Append("  MediaEndpointStatFilters: ").Append(MediaEndpointStatFilters).Append("\n");
             sb.Append("  SurveyFilters: ").Append(SurveyFilters).Append("\n");
+            sb.Append("  ResolutionFilters: ").Append(ResolutionFilters).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  OrderBy: ").Append(OrderBy).Append("\n");
             sb.Append("  Interval: ").Append(Interval).Append("\n");
@@ -345,6 +362,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SurveyFilters.SequenceEqual(other.SurveyFilters)
                 ) &&
                 (
+                    this.ResolutionFilters == other.ResolutionFilters ||
+                    this.ResolutionFilters != null &&
+                    this.ResolutionFilters.SequenceEqual(other.ResolutionFilters)
+                ) &&
+                (
                     this.Order == other.Order ||
                     this.Order != null &&
                     this.Order.Equals(other.Order)
@@ -397,6 +419,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SurveyFilters != null)
                     hash = hash * 59 + this.SurveyFilters.GetHashCode();
+                
+                if (this.ResolutionFilters != null)
+                    hash = hash * 59 + this.ResolutionFilters.GetHashCode();
                 
                 if (this.Order != null)
                     hash = hash * 59 + this.Order.GetHashCode();

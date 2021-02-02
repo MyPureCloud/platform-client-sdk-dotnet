@@ -45,10 +45,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to delete</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to delete</param>
         /// <returns></returns>
-        void DeleteWorkforcemanagementBusinessunitActivitycode (string buId, string acId);
+        void DeleteWorkforcemanagementBusinessunitActivitycode (string businessUnitId, string activityCodeId);
 
         /// <summary>
         /// Deletes an activity code
@@ -57,10 +57,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to delete</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string buId, string acId);
+        ApiResponse<Object> DeleteWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string businessUnitId, string activityCodeId);
         
         /// <summary>
         /// Deletes the planning group
@@ -193,9 +193,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns></returns>
-        void DeleteWorkforcemanagementManagementunit (string muId);
+        void DeleteWorkforcemanagementManagementunit (string managementUnitId);
 
         /// <summary>
         /// Delete management unit
@@ -204,9 +204,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteWorkforcemanagementManagementunitWithHttpInfo (string muId);
+        ApiResponse<Object> DeleteWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId);
         
         /// <summary>
         /// Delete a work plan
@@ -331,10 +331,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to fetch</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to fetch</param>
         /// <returns>BusinessUnitActivityCode</returns>
-        BusinessUnitActivityCode GetWorkforcemanagementBusinessunitActivitycode (string buId, string acId);
+        BusinessUnitActivityCode GetWorkforcemanagementBusinessunitActivitycode (string businessUnitId, string activityCodeId);
 
         /// <summary>
         /// Get an activity code
@@ -343,10 +343,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to fetch</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to fetch</param>
         /// <returns>ApiResponse of BusinessUnitActivityCode</returns>
-        ApiResponse<BusinessUnitActivityCode> GetWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string buId, string acId);
+        ApiResponse<BusinessUnitActivityCode> GetWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string businessUnitId, string activityCodeId);
         
         /// <summary>
         /// Get activity codes
@@ -355,9 +355,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>BusinessUnitActivityCodeListing</returns>
-        BusinessUnitActivityCodeListing GetWorkforcemanagementBusinessunitActivitycodes (string buId);
+        BusinessUnitActivityCodeListing GetWorkforcemanagementBusinessunitActivitycodes (string businessUnitId);
 
         /// <summary>
         /// Get activity codes
@@ -366,9 +366,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>ApiResponse of BusinessUnitActivityCodeListing</returns>
-        ApiResponse<BusinessUnitActivityCodeListing> GetWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string buId);
+        ApiResponse<BusinessUnitActivityCodeListing> GetWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string businessUnitId);
         
         /// <summary>
         /// Get intraday planning groups for the given date
@@ -911,10 +911,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ManagementUnit</returns>
-        ManagementUnit GetWorkforcemanagementManagementunit (string muId, List<string> expand = null);
+        ManagementUnit GetWorkforcemanagementManagementunit (string managementUnitId, List<string> expand = null);
 
         /// <summary>
         /// Get management unit
@@ -923,10 +923,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of ManagementUnit</returns>
-        ApiResponse<ManagementUnit> GetWorkforcemanagementManagementunitWithHttpInfo (string muId, List<string> expand = null);
+        ApiResponse<ManagementUnit> GetWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId, List<string> expand = null);
         
         /// <summary>
         /// Get activity codes
@@ -935,9 +935,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ActivityCodeContainer</returns>
-        ActivityCodeContainer GetWorkforcemanagementManagementunitActivitycodes (string muId);
+        ActivityCodeContainer GetWorkforcemanagementManagementunitActivitycodes (string managementUnitId);
 
         /// <summary>
         /// Get activity codes
@@ -946,9 +946,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of ActivityCodeContainer</returns>
-        ApiResponse<ActivityCodeContainer> GetWorkforcemanagementManagementunitActivitycodesWithHttpInfo (string muId);
+        ApiResponse<ActivityCodeContainer> GetWorkforcemanagementManagementunitActivitycodesWithHttpInfo (string managementUnitId);
         
         /// <summary>
         /// Get a list of user schedule adherence records for the requested management unit
@@ -1031,9 +1031,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ShiftTradeMatchesSummaryResponse</returns>
-        ShiftTradeMatchesSummaryResponse GetWorkforcemanagementManagementunitShifttradesMatched (string muId);
+        ShiftTradeMatchesSummaryResponse GetWorkforcemanagementManagementunitShifttradesMatched (string managementUnitId);
 
         /// <summary>
         /// Gets a summary of all shift trades in the matched state
@@ -1042,9 +1042,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of ShiftTradeMatchesSummaryResponse</returns>
-        ApiResponse<ShiftTradeMatchesSummaryResponse> GetWorkforcemanagementManagementunitShifttradesMatchedWithHttpInfo (string muId);
+        ApiResponse<ShiftTradeMatchesSummaryResponse> GetWorkforcemanagementManagementunitShifttradesMatchedWithHttpInfo (string managementUnitId);
         
         /// <summary>
         /// Gets list of users available for whom you can send direct shift trade requests
@@ -1053,9 +1053,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>WfmUserEntityListing</returns>
-        WfmUserEntityListing GetWorkforcemanagementManagementunitShifttradesUsers (string muId);
+        WfmUserEntityListing GetWorkforcemanagementManagementunitShifttradesUsers (string managementUnitId);
 
         /// <summary>
         /// Gets list of users available for whom you can send direct shift trade requests
@@ -1064,9 +1064,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of WfmUserEntityListing</returns>
-        ApiResponse<WfmUserEntityListing> GetWorkforcemanagementManagementunitShifttradesUsersWithHttpInfo (string muId);
+        ApiResponse<WfmUserEntityListing> GetWorkforcemanagementManagementunitShifttradesUsersWithHttpInfo (string managementUnitId);
         
         /// <summary>
         /// Get a time off request
@@ -1075,11 +1075,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>TimeOffRequestResponse</returns>
-        TimeOffRequestResponse GetWorkforcemanagementManagementunitUserTimeoffrequest (string muId, string userId, string timeOffRequestId);
+        TimeOffRequestResponse GetWorkforcemanagementManagementunitUserTimeoffrequest (string managementUnitId, string userId, string timeOffRequestId);
 
         /// <summary>
         /// Get a time off request
@@ -1088,11 +1088,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
-        ApiResponse<TimeOffRequestResponse> GetWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo (string muId, string userId, string timeOffRequestId);
+        ApiResponse<TimeOffRequestResponse> GetWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId);
         
         /// <summary>
         /// Get a list of time off requests for a given user
@@ -1101,11 +1101,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>TimeOffRequestList</returns>
-        TimeOffRequestList GetWorkforcemanagementManagementunitUserTimeoffrequests (string muId, string userId, bool? recentlyReviewed = null);
+        TimeOffRequestList GetWorkforcemanagementManagementunitUserTimeoffrequests (string managementUnitId, string userId, bool? recentlyReviewed = null);
 
         /// <summary>
         /// Get a list of time off requests for a given user
@@ -1114,11 +1114,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
-        ApiResponse<TimeOffRequestList> GetWorkforcemanagementManagementunitUserTimeoffrequestsWithHttpInfo (string muId, string userId, bool? recentlyReviewed = null);
+        ApiResponse<TimeOffRequestList> GetWorkforcemanagementManagementunitUserTimeoffrequestsWithHttpInfo (string managementUnitId, string userId, bool? recentlyReviewed = null);
         
         /// <summary>
         /// Get users in the management unit
@@ -1127,9 +1127,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>WfmUserEntityListing</returns>
-        WfmUserEntityListing GetWorkforcemanagementManagementunitUsers (string muId);
+        WfmUserEntityListing GetWorkforcemanagementManagementunitUsers (string managementUnitId);
 
         /// <summary>
         /// Get users in the management unit
@@ -1138,9 +1138,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of WfmUserEntityListing</returns>
-        ApiResponse<WfmUserEntityListing> GetWorkforcemanagementManagementunitUsersWithHttpInfo (string muId);
+        ApiResponse<WfmUserEntityListing> GetWorkforcemanagementManagementunitUsersWithHttpInfo (string managementUnitId);
         
         /// <summary>
         /// Deprecated.  Use the equivalent business unit resource instead. Get a week schedule
@@ -1513,11 +1513,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to update</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>BusinessUnitActivityCode</returns>
-        BusinessUnitActivityCode PatchWorkforcemanagementBusinessunitActivitycode (string buId, string acId, UpdateActivityCodeRequest body = null);
+        BusinessUnitActivityCode PatchWorkforcemanagementBusinessunitActivitycode (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null);
 
         /// <summary>
         /// Update an activity code
@@ -1526,11 +1526,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to update</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BusinessUnitActivityCode</returns>
-        ApiResponse<BusinessUnitActivityCode> PatchWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string buId, string acId, UpdateActivityCodeRequest body = null);
+        ApiResponse<BusinessUnitActivityCode> PatchWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null);
         
         /// <summary>
         /// Updates the planning group
@@ -1617,10 +1617,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ManagementUnit</returns>
-        ManagementUnit PatchWorkforcemanagementManagementunit (string muId, UpdateManagementUnitRequest body = null);
+        ManagementUnit PatchWorkforcemanagementManagementunit (string managementUnitId, UpdateManagementUnitRequest body = null);
 
         /// <summary>
         /// Update the requested management unit
@@ -1629,10 +1629,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ManagementUnit</returns>
-        ApiResponse<ManagementUnit> PatchWorkforcemanagementManagementunitWithHttpInfo (string muId, UpdateManagementUnitRequest body = null);
+        ApiResponse<ManagementUnit> PatchWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId, UpdateManagementUnitRequest body = null);
         
         /// <summary>
         /// Update a time off request
@@ -1641,12 +1641,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The id of the user the requested time off request belongs to</param>
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestResponse</returns>
-        TimeOffRequestResponse PatchWorkforcemanagementManagementunitUserTimeoffrequest (string muId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null);
+        TimeOffRequestResponse PatchWorkforcemanagementManagementunitUserTimeoffrequest (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null);
 
         /// <summary>
         /// Update a time off request
@@ -1655,12 +1655,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The id of the user the requested time off request belongs to</param>
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
-        ApiResponse<TimeOffRequestResponse> PatchWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo (string muId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null);
+        ApiResponse<TimeOffRequestResponse> PatchWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null);
         
         /// <summary>
         /// Updates a shift trade. This route can only be called by the initiating agent
@@ -1819,10 +1819,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>BusinessUnitActivityCode</returns>
-        BusinessUnitActivityCode PostWorkforcemanagementBusinessunitActivitycodes (string buId, CreateActivityCodeRequest body = null);
+        BusinessUnitActivityCode PostWorkforcemanagementBusinessunitActivitycodes (string businessUnitId, CreateActivityCodeRequest body = null);
 
         /// <summary>
         /// Create a new activity code
@@ -1831,10 +1831,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BusinessUnitActivityCode</returns>
-        ApiResponse<BusinessUnitActivityCode> PostWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string buId, CreateActivityCodeRequest body = null);
+        ApiResponse<BusinessUnitActivityCode> PostWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string businessUnitId, CreateActivityCodeRequest body = null);
         
         /// <summary>
         /// Search published schedules
@@ -2165,12 +2165,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>BuAsyncAgentSchedulesSearchResponse</returns>
-        BuAsyncAgentSchedulesSearchResponse PostWorkforcemanagementManagementunitAgentschedulesSearch (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
+        BuAsyncAgentSchedulesSearchResponse PostWorkforcemanagementManagementunitAgentschedulesSearch (string managementUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Query published schedules for given given time range for set of users
@@ -2179,12 +2179,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BuAsyncAgentSchedulesSearchResponse</returns>
-        ApiResponse<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
+        ApiResponse<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo (string managementUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
         
         /// <summary>
         /// Request a historical adherence report
@@ -2193,10 +2193,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>WfmHistoricalAdherenceResponse</returns>
-        WfmHistoricalAdherenceResponse PostWorkforcemanagementManagementunitHistoricaladherencequery (string muId, WfmHistoricalAdherenceQuery body = null);
+        WfmHistoricalAdherenceResponse PostWorkforcemanagementManagementunitHistoricaladherencequery (string managementUnitId, WfmHistoricalAdherenceQuery body = null);
 
         /// <summary>
         /// Request a historical adherence report
@@ -2205,10 +2205,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceResponse</returns>
-        ApiResponse<WfmHistoricalAdherenceResponse> PostWorkforcemanagementManagementunitHistoricaladherencequeryWithHttpInfo (string muId, WfmHistoricalAdherenceQuery body = null);
+        ApiResponse<WfmHistoricalAdherenceResponse> PostWorkforcemanagementManagementunitHistoricaladherencequeryWithHttpInfo (string managementUnitId, WfmHistoricalAdherenceQuery body = null);
         
         /// <summary>
         /// Move the requested management unit to a new business unit
@@ -2217,10 +2217,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns status 200 if the management unit is already in the requested business unit
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>MoveManagementUnitResponse</returns>
-        MoveManagementUnitResponse PostWorkforcemanagementManagementunitMove (string muId, MoveManagementUnitRequest body = null);
+        MoveManagementUnitResponse PostWorkforcemanagementManagementunitMove (string managementUnitId, MoveManagementUnitRequest body = null);
 
         /// <summary>
         /// Move the requested management unit to a new business unit
@@ -2229,10 +2229,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns status 200 if the management unit is already in the requested business unit
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of MoveManagementUnitResponse</returns>
-        ApiResponse<MoveManagementUnitResponse> PostWorkforcemanagementManagementunitMoveWithHttpInfo (string muId, MoveManagementUnitRequest body = null);
+        ApiResponse<MoveManagementUnitResponse> PostWorkforcemanagementManagementunitMoveWithHttpInfo (string managementUnitId, MoveManagementUnitRequest body = null);
         
         /// <summary>
         /// Query published schedules for given given time range for set of users
@@ -2241,10 +2241,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>UserScheduleContainer</returns>
-        UserScheduleContainer PostWorkforcemanagementManagementunitSchedulesSearch (string muId, UserListScheduleRequestBody body = null);
+        UserScheduleContainer PostWorkforcemanagementManagementunitSchedulesSearch (string managementUnitId, UserListScheduleRequestBody body = null);
 
         /// <summary>
         /// Query published schedules for given given time range for set of users
@@ -2253,10 +2253,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of UserScheduleContainer</returns>
-        ApiResponse<UserScheduleContainer> PostWorkforcemanagementManagementunitSchedulesSearchWithHttpInfo (string muId, UserListScheduleRequestBody body = null);
+        ApiResponse<UserScheduleContainer> PostWorkforcemanagementManagementunitSchedulesSearchWithHttpInfo (string managementUnitId, UserListScheduleRequestBody body = null);
         
         /// <summary>
         /// Create a new time off request
@@ -2265,10 +2265,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestList</returns>
-        TimeOffRequestList PostWorkforcemanagementManagementunitTimeoffrequests (string muId, CreateAdminTimeOffRequest body = null);
+        TimeOffRequestList PostWorkforcemanagementManagementunitTimeoffrequests (string managementUnitId, CreateAdminTimeOffRequest body = null);
 
         /// <summary>
         /// Create a new time off request
@@ -2277,10 +2277,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
-        ApiResponse<TimeOffRequestList> PostWorkforcemanagementManagementunitTimeoffrequestsWithHttpInfo (string muId, CreateAdminTimeOffRequest body = null);
+        ApiResponse<TimeOffRequestList> PostWorkforcemanagementManagementunitTimeoffrequestsWithHttpInfo (string managementUnitId, CreateAdminTimeOffRequest body = null);
         
         /// <summary>
         /// Gets the lookup ids to fetch the specified set of requests
@@ -2289,10 +2289,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestListing</returns>
-        TimeOffRequestListing PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string muId, TimeOffRequestQueryBody body = null);
+        TimeOffRequestListing PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string managementUnitId, TimeOffRequestQueryBody body = null);
 
         /// <summary>
         /// Gets the lookup ids to fetch the specified set of requests
@@ -2301,10 +2301,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestListing</returns>
-        ApiResponse<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo (string muId, TimeOffRequestQueryBody body = null);
+        ApiResponse<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null);
         
         /// <summary>
         /// Matches a shift trade. This route can only be called by the receiving agent
@@ -2665,10 +2665,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to delete</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to delete</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitActivitycodeAsync (string buId, string acId);
+        System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitActivitycodeAsync (string businessUnitId, string activityCodeId);
 
         /// <summary>
         /// Deletes an activity code
@@ -2677,10 +2677,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to delete</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to delete</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string buId, string acId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string businessUnitId, string activityCodeId);
         
         /// <summary>
         /// Deletes the planning group
@@ -2813,9 +2813,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitAsync (string muId);
+        System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitAsync (string managementUnitId);
 
         /// <summary>
         /// Delete management unit
@@ -2824,9 +2824,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitAsyncWithHttpInfo (string muId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId);
         
         /// <summary>
         /// Delete a work plan
@@ -2951,10 +2951,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to fetch</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to fetch</param>
         /// <returns>Task of BusinessUnitActivityCode</returns>
-        System.Threading.Tasks.Task<BusinessUnitActivityCode> GetWorkforcemanagementBusinessunitActivitycodeAsync (string buId, string acId);
+        System.Threading.Tasks.Task<BusinessUnitActivityCode> GetWorkforcemanagementBusinessunitActivitycodeAsync (string businessUnitId, string activityCodeId);
 
         /// <summary>
         /// Get an activity code
@@ -2963,10 +2963,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to fetch</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to fetch</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> GetWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string buId, string acId);
+        System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> GetWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string businessUnitId, string activityCodeId);
         
         /// <summary>
         /// Get activity codes
@@ -2975,9 +2975,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>Task of BusinessUnitActivityCodeListing</returns>
-        System.Threading.Tasks.Task<BusinessUnitActivityCodeListing> GetWorkforcemanagementBusinessunitActivitycodesAsync (string buId);
+        System.Threading.Tasks.Task<BusinessUnitActivityCodeListing> GetWorkforcemanagementBusinessunitActivitycodesAsync (string businessUnitId);
 
         /// <summary>
         /// Get activity codes
@@ -2986,9 +2986,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCodeListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCodeListing>> GetWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string buId);
+        System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCodeListing>> GetWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string businessUnitId);
         
         /// <summary>
         /// Get intraday planning groups for the given date
@@ -3531,10 +3531,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ManagementUnit</returns>
-        System.Threading.Tasks.Task<ManagementUnit> GetWorkforcemanagementManagementunitAsync (string muId, List<string> expand = null);
+        System.Threading.Tasks.Task<ManagementUnit> GetWorkforcemanagementManagementunitAsync (string managementUnitId, List<string> expand = null);
 
         /// <summary>
         /// Get management unit
@@ -3543,10 +3543,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnit)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> GetWorkforcemanagementManagementunitAsyncWithHttpInfo (string muId, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> GetWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId, List<string> expand = null);
         
         /// <summary>
         /// Get activity codes
@@ -3555,9 +3555,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ActivityCodeContainer</returns>
-        System.Threading.Tasks.Task<ActivityCodeContainer> GetWorkforcemanagementManagementunitActivitycodesAsync (string muId);
+        System.Threading.Tasks.Task<ActivityCodeContainer> GetWorkforcemanagementManagementunitActivitycodesAsync (string managementUnitId);
 
         /// <summary>
         /// Get activity codes
@@ -3566,9 +3566,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (ActivityCodeContainer)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ActivityCodeContainer>> GetWorkforcemanagementManagementunitActivitycodesAsyncWithHttpInfo (string muId);
+        System.Threading.Tasks.Task<ApiResponse<ActivityCodeContainer>> GetWorkforcemanagementManagementunitActivitycodesAsyncWithHttpInfo (string managementUnitId);
         
         /// <summary>
         /// Get a list of user schedule adherence records for the requested management unit
@@ -3651,9 +3651,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ShiftTradeMatchesSummaryResponse</returns>
-        System.Threading.Tasks.Task<ShiftTradeMatchesSummaryResponse> GetWorkforcemanagementManagementunitShifttradesMatchedAsync (string muId);
+        System.Threading.Tasks.Task<ShiftTradeMatchesSummaryResponse> GetWorkforcemanagementManagementunitShifttradesMatchedAsync (string managementUnitId);
 
         /// <summary>
         /// Gets a summary of all shift trades in the matched state
@@ -3662,9 +3662,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (ShiftTradeMatchesSummaryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ShiftTradeMatchesSummaryResponse>> GetWorkforcemanagementManagementunitShifttradesMatchedAsyncWithHttpInfo (string muId);
+        System.Threading.Tasks.Task<ApiResponse<ShiftTradeMatchesSummaryResponse>> GetWorkforcemanagementManagementunitShifttradesMatchedAsyncWithHttpInfo (string managementUnitId);
         
         /// <summary>
         /// Gets list of users available for whom you can send direct shift trade requests
@@ -3673,9 +3673,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of WfmUserEntityListing</returns>
-        System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitShifttradesUsersAsync (string muId);
+        System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitShifttradesUsersAsync (string managementUnitId);
 
         /// <summary>
         /// Gets list of users available for whom you can send direct shift trade requests
@@ -3684,9 +3684,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitShifttradesUsersAsyncWithHttpInfo (string muId);
+        System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitShifttradesUsersAsyncWithHttpInfo (string managementUnitId);
         
         /// <summary>
         /// Get a time off request
@@ -3695,11 +3695,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
-        System.Threading.Tasks.Task<TimeOffRequestResponse> GetWorkforcemanagementManagementunitUserTimeoffrequestAsync (string muId, string userId, string timeOffRequestId);
+        System.Threading.Tasks.Task<TimeOffRequestResponse> GetWorkforcemanagementManagementunitUserTimeoffrequestAsync (string managementUnitId, string userId, string timeOffRequestId);
 
         /// <summary>
         /// Get a time off request
@@ -3708,11 +3708,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> GetWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo (string muId, string userId, string timeOffRequestId);
+        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> GetWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId);
         
         /// <summary>
         /// Get a list of time off requests for a given user
@@ -3721,11 +3721,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of TimeOffRequestList</returns>
-        System.Threading.Tasks.Task<TimeOffRequestList> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsync (string muId, string userId, bool? recentlyReviewed = null);
+        System.Threading.Tasks.Task<TimeOffRequestList> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsync (string managementUnitId, string userId, bool? recentlyReviewed = null);
 
         /// <summary>
         /// Get a list of time off requests for a given user
@@ -3734,11 +3734,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsyncWithHttpInfo (string muId, string userId, bool? recentlyReviewed = null);
+        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsyncWithHttpInfo (string managementUnitId, string userId, bool? recentlyReviewed = null);
         
         /// <summary>
         /// Get users in the management unit
@@ -3747,9 +3747,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of WfmUserEntityListing</returns>
-        System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitUsersAsync (string muId);
+        System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitUsersAsync (string managementUnitId);
 
         /// <summary>
         /// Get users in the management unit
@@ -3758,9 +3758,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitUsersAsyncWithHttpInfo (string muId);
+        System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitUsersAsyncWithHttpInfo (string managementUnitId);
         
         /// <summary>
         /// Deprecated.  Use the equivalent business unit resource instead. Get a week schedule
@@ -4133,11 +4133,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to update</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of BusinessUnitActivityCode</returns>
-        System.Threading.Tasks.Task<BusinessUnitActivityCode> PatchWorkforcemanagementBusinessunitActivitycodeAsync (string buId, string acId, UpdateActivityCodeRequest body = null);
+        System.Threading.Tasks.Task<BusinessUnitActivityCode> PatchWorkforcemanagementBusinessunitActivitycodeAsync (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null);
 
         /// <summary>
         /// Update an activity code
@@ -4146,11 +4146,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to update</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> PatchWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string buId, string acId, UpdateActivityCodeRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> PatchWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null);
         
         /// <summary>
         /// Updates the planning group
@@ -4237,10 +4237,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ManagementUnit</returns>
-        System.Threading.Tasks.Task<ManagementUnit> PatchWorkforcemanagementManagementunitAsync (string muId, UpdateManagementUnitRequest body = null);
+        System.Threading.Tasks.Task<ManagementUnit> PatchWorkforcemanagementManagementunitAsync (string managementUnitId, UpdateManagementUnitRequest body = null);
 
         /// <summary>
         /// Update the requested management unit
@@ -4249,10 +4249,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnit)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> PatchWorkforcemanagementManagementunitAsyncWithHttpInfo (string muId, UpdateManagementUnitRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> PatchWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId, UpdateManagementUnitRequest body = null);
         
         /// <summary>
         /// Update a time off request
@@ -4261,12 +4261,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The id of the user the requested time off request belongs to</param>
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
-        System.Threading.Tasks.Task<TimeOffRequestResponse> PatchWorkforcemanagementManagementunitUserTimeoffrequestAsync (string muId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null);
+        System.Threading.Tasks.Task<TimeOffRequestResponse> PatchWorkforcemanagementManagementunitUserTimeoffrequestAsync (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null);
 
         /// <summary>
         /// Update a time off request
@@ -4275,12 +4275,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The id of the user the requested time off request belongs to</param>
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> PatchWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo (string muId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null);
+        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> PatchWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null);
         
         /// <summary>
         /// Updates a shift trade. This route can only be called by the initiating agent
@@ -4439,10 +4439,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of BusinessUnitActivityCode</returns>
-        System.Threading.Tasks.Task<BusinessUnitActivityCode> PostWorkforcemanagementBusinessunitActivitycodesAsync (string buId, CreateActivityCodeRequest body = null);
+        System.Threading.Tasks.Task<BusinessUnitActivityCode> PostWorkforcemanagementBusinessunitActivitycodesAsync (string businessUnitId, CreateActivityCodeRequest body = null);
 
         /// <summary>
         /// Create a new activity code
@@ -4451,10 +4451,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> PostWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string buId, CreateActivityCodeRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> PostWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string businessUnitId, CreateActivityCodeRequest body = null);
         
         /// <summary>
         /// Search published schedules
@@ -4785,12 +4785,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of BuAsyncAgentSchedulesSearchResponse</returns>
-        System.Threading.Tasks.Task<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementManagementunitAgentschedulesSearchAsync (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
+        System.Threading.Tasks.Task<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementManagementunitAgentschedulesSearchAsync (string managementUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Query published schedules for given given time range for set of users
@@ -4799,12 +4799,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BuAsyncAgentSchedulesSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesSearchResponse>> PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
+        System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesSearchResponse>> PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo (string managementUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
         
         /// <summary>
         /// Request a historical adherence report
@@ -4813,10 +4813,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WfmHistoricalAdherenceResponse</returns>
-        System.Threading.Tasks.Task<WfmHistoricalAdherenceResponse> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsync (string muId, WfmHistoricalAdherenceQuery body = null);
+        System.Threading.Tasks.Task<WfmHistoricalAdherenceResponse> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsync (string managementUnitId, WfmHistoricalAdherenceQuery body = null);
 
         /// <summary>
         /// Request a historical adherence report
@@ -4825,10 +4825,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsyncWithHttpInfo (string muId, WfmHistoricalAdherenceQuery body = null);
+        System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsyncWithHttpInfo (string managementUnitId, WfmHistoricalAdherenceQuery body = null);
         
         /// <summary>
         /// Move the requested management unit to a new business unit
@@ -4837,10 +4837,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns status 200 if the management unit is already in the requested business unit
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of MoveManagementUnitResponse</returns>
-        System.Threading.Tasks.Task<MoveManagementUnitResponse> PostWorkforcemanagementManagementunitMoveAsync (string muId, MoveManagementUnitRequest body = null);
+        System.Threading.Tasks.Task<MoveManagementUnitResponse> PostWorkforcemanagementManagementunitMoveAsync (string managementUnitId, MoveManagementUnitRequest body = null);
 
         /// <summary>
         /// Move the requested management unit to a new business unit
@@ -4849,10 +4849,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns status 200 if the management unit is already in the requested business unit
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (MoveManagementUnitResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MoveManagementUnitResponse>> PostWorkforcemanagementManagementunitMoveAsyncWithHttpInfo (string muId, MoveManagementUnitRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<MoveManagementUnitResponse>> PostWorkforcemanagementManagementunitMoveAsyncWithHttpInfo (string managementUnitId, MoveManagementUnitRequest body = null);
         
         /// <summary>
         /// Query published schedules for given given time range for set of users
@@ -4861,10 +4861,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of UserScheduleContainer</returns>
-        System.Threading.Tasks.Task<UserScheduleContainer> PostWorkforcemanagementManagementunitSchedulesSearchAsync (string muId, UserListScheduleRequestBody body = null);
+        System.Threading.Tasks.Task<UserScheduleContainer> PostWorkforcemanagementManagementunitSchedulesSearchAsync (string managementUnitId, UserListScheduleRequestBody body = null);
 
         /// <summary>
         /// Query published schedules for given given time range for set of users
@@ -4873,10 +4873,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitSchedulesSearchAsyncWithHttpInfo (string muId, UserListScheduleRequestBody body = null);
+        System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitSchedulesSearchAsyncWithHttpInfo (string managementUnitId, UserListScheduleRequestBody body = null);
         
         /// <summary>
         /// Create a new time off request
@@ -4885,10 +4885,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestList</returns>
-        System.Threading.Tasks.Task<TimeOffRequestList> PostWorkforcemanagementManagementunitTimeoffrequestsAsync (string muId, CreateAdminTimeOffRequest body = null);
+        System.Threading.Tasks.Task<TimeOffRequestList> PostWorkforcemanagementManagementunitTimeoffrequestsAsync (string managementUnitId, CreateAdminTimeOffRequest body = null);
 
         /// <summary>
         /// Create a new time off request
@@ -4897,10 +4897,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> PostWorkforcemanagementManagementunitTimeoffrequestsAsyncWithHttpInfo (string muId, CreateAdminTimeOffRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> PostWorkforcemanagementManagementunitTimeoffrequestsAsyncWithHttpInfo (string managementUnitId, CreateAdminTimeOffRequest body = null);
         
         /// <summary>
         /// Gets the lookup ids to fetch the specified set of requests
@@ -4909,10 +4909,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestListing</returns>
-        System.Threading.Tasks.Task<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsync (string muId, TimeOffRequestQueryBody body = null);
+        System.Threading.Tasks.Task<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsync (string managementUnitId, TimeOffRequestQueryBody body = null);
 
         /// <summary>
         /// Gets the lookup ids to fetch the specified set of requests
@@ -4921,10 +4921,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestListing>> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo (string muId, TimeOffRequestQueryBody body = null);
+        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestListing>> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null);
         
         /// <summary>
         /// Matches a shift trade. This route can only be called by the receiving agent
@@ -5539,31 +5539,31 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Deletes an activity code 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to delete</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to delete</param>
         /// <returns></returns>
-        public void DeleteWorkforcemanagementBusinessunitActivitycode (string buId, string acId)
+        public void DeleteWorkforcemanagementBusinessunitActivitycode (string businessUnitId, string activityCodeId)
         {
-             DeleteWorkforcemanagementBusinessunitActivitycodeWithHttpInfo(buId, acId);
+             DeleteWorkforcemanagementBusinessunitActivitycodeWithHttpInfo(businessUnitId, activityCodeId);
         }
 
         /// <summary>
         /// Deletes an activity code 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to delete</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string buId, string acId)
+        public ApiResponse<Object> DeleteWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string businessUnitId, string activityCodeId)
         { 
-            // verify the required parameter 'buId' is set
-            if (buId == null)
-                throw new ApiException(400, "Missing required parameter 'buId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitActivitycode");
-            // verify the required parameter 'acId' is set
-            if (acId == null)
-                throw new ApiException(400, "Missing required parameter 'acId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitActivitycode");
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitActivitycode");
+            // verify the required parameter 'activityCodeId' is set
+            if (activityCodeId == null)
+                throw new ApiException(400, "Missing required parameter 'activityCodeId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitActivitycode");
 
-            var localVarPath = "/api/v2/workforcemanagement/businessunits/{buId}/activitycodes/{acId}";
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5594,8 +5594,8 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (buId != null) localVarPathParams.Add("buId", this.Configuration.ApiClient.ParameterToString(buId));
-            if (acId != null) localVarPathParams.Add("acId", this.Configuration.ApiClient.ParameterToString(acId));
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityCodeId != null) localVarPathParams.Add("activityCodeId", this.Configuration.ApiClient.ParameterToString(activityCodeId));
 
             // Query params
 
@@ -5639,12 +5639,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Deletes an activity code 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to delete</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to delete</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitActivitycodeAsync (string buId, string acId)
+        public async System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitActivitycodeAsync (string businessUnitId, string activityCodeId)
         {
-             await DeleteWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo(buId, acId);
+             await DeleteWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo(businessUnitId, activityCodeId);
 
         }
 
@@ -5652,21 +5652,21 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Deletes an activity code 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to delete</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to delete</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string buId, string acId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string businessUnitId, string activityCodeId)
         { 
-            // verify the required parameter 'buId' is set
-            if (buId == null)
-                throw new ApiException(400, "Missing required parameter 'buId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitActivitycode");
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitActivitycode");
             
-            // verify the required parameter 'acId' is set
-            if (acId == null)
-                throw new ApiException(400, "Missing required parameter 'acId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitActivitycode");
+            // verify the required parameter 'activityCodeId' is set
+            if (activityCodeId == null)
+                throw new ApiException(400, "Missing required parameter 'activityCodeId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitActivitycode");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/businessunits/{buId}/activitycodes/{acId}";
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5697,8 +5697,8 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (buId != null) localVarPathParams.Add("buId", this.Configuration.ApiClient.ParameterToString(buId));
-            if (acId != null) localVarPathParams.Add("acId", this.Configuration.ApiClient.ParameterToString(acId));
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityCodeId != null) localVarPathParams.Add("activityCodeId", this.Configuration.ApiClient.ParameterToString(activityCodeId));
 
             // Query params
 
@@ -6791,26 +6791,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns></returns>
-        public void DeleteWorkforcemanagementManagementunit (string muId)
+        public void DeleteWorkforcemanagementManagementunit (string managementUnitId)
         {
-             DeleteWorkforcemanagementManagementunitWithHttpInfo(muId);
+             DeleteWorkforcemanagementManagementunitWithHttpInfo(managementUnitId);
         }
 
         /// <summary>
         /// Delete management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteWorkforcemanagementManagementunitWithHttpInfo (string muId)
+        public ApiResponse<Object> DeleteWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunit");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunit");
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6841,7 +6841,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -6885,11 +6885,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitAsync (string muId)
+        public async System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitAsync (string managementUnitId)
         {
-             await DeleteWorkforcemanagementManagementunitAsyncWithHttpInfo(muId);
+             await DeleteWorkforcemanagementManagementunitAsyncWithHttpInfo(managementUnitId);
 
         }
 
@@ -6897,16 +6897,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitAsyncWithHttpInfo (string muId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunit");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunit");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6937,7 +6937,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -7975,12 +7975,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get an activity code 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to fetch</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to fetch</param>
         /// <returns>BusinessUnitActivityCode</returns>
-        public BusinessUnitActivityCode GetWorkforcemanagementBusinessunitActivitycode (string buId, string acId)
+        public BusinessUnitActivityCode GetWorkforcemanagementBusinessunitActivitycode (string businessUnitId, string activityCodeId)
         {
-             ApiResponse<BusinessUnitActivityCode> localVarResponse = GetWorkforcemanagementBusinessunitActivitycodeWithHttpInfo(buId, acId);
+             ApiResponse<BusinessUnitActivityCode> localVarResponse = GetWorkforcemanagementBusinessunitActivitycodeWithHttpInfo(businessUnitId, activityCodeId);
              return localVarResponse.Data;
         }
 
@@ -7988,19 +7988,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get an activity code 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to fetch</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to fetch</param>
         /// <returns>ApiResponse of BusinessUnitActivityCode</returns>
-        public ApiResponse< BusinessUnitActivityCode > GetWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string buId, string acId)
+        public ApiResponse< BusinessUnitActivityCode > GetWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string businessUnitId, string activityCodeId)
         { 
-            // verify the required parameter 'buId' is set
-            if (buId == null)
-                throw new ApiException(400, "Missing required parameter 'buId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivitycode");
-            // verify the required parameter 'acId' is set
-            if (acId == null)
-                throw new ApiException(400, "Missing required parameter 'acId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivitycode");
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivitycode");
+            // verify the required parameter 'activityCodeId' is set
+            if (activityCodeId == null)
+                throw new ApiException(400, "Missing required parameter 'activityCodeId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivitycode");
 
-            var localVarPath = "/api/v2/workforcemanagement/businessunits/{buId}/activitycodes/{acId}";
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8031,8 +8031,8 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (buId != null) localVarPathParams.Add("buId", this.Configuration.ApiClient.ParameterToString(buId));
-            if (acId != null) localVarPathParams.Add("acId", this.Configuration.ApiClient.ParameterToString(acId));
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityCodeId != null) localVarPathParams.Add("activityCodeId", this.Configuration.ApiClient.ParameterToString(activityCodeId));
 
             // Query params
 
@@ -8076,12 +8076,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get an activity code 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to fetch</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to fetch</param>
         /// <returns>Task of BusinessUnitActivityCode</returns>
-        public async System.Threading.Tasks.Task<BusinessUnitActivityCode> GetWorkforcemanagementBusinessunitActivitycodeAsync (string buId, string acId)
+        public async System.Threading.Tasks.Task<BusinessUnitActivityCode> GetWorkforcemanagementBusinessunitActivitycodeAsync (string businessUnitId, string activityCodeId)
         {
-             ApiResponse<BusinessUnitActivityCode> localVarResponse = await GetWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo(buId, acId);
+             ApiResponse<BusinessUnitActivityCode> localVarResponse = await GetWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo(businessUnitId, activityCodeId);
              return localVarResponse.Data;
 
         }
@@ -8090,21 +8090,21 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get an activity code 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to fetch</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to fetch</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> GetWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string buId, string acId)
+        public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> GetWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string businessUnitId, string activityCodeId)
         { 
-            // verify the required parameter 'buId' is set
-            if (buId == null)
-                throw new ApiException(400, "Missing required parameter 'buId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivitycode");
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivitycode");
             
-            // verify the required parameter 'acId' is set
-            if (acId == null)
-                throw new ApiException(400, "Missing required parameter 'acId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivitycode");
+            // verify the required parameter 'activityCodeId' is set
+            if (activityCodeId == null)
+                throw new ApiException(400, "Missing required parameter 'activityCodeId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivitycode");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/businessunits/{buId}/activitycodes/{acId}";
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8135,8 +8135,8 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (buId != null) localVarPathParams.Add("buId", this.Configuration.ApiClient.ParameterToString(buId));
-            if (acId != null) localVarPathParams.Add("acId", this.Configuration.ApiClient.ParameterToString(acId));
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityCodeId != null) localVarPathParams.Add("activityCodeId", this.Configuration.ApiClient.ParameterToString(activityCodeId));
 
             // Query params
 
@@ -8181,11 +8181,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get activity codes 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>BusinessUnitActivityCodeListing</returns>
-        public BusinessUnitActivityCodeListing GetWorkforcemanagementBusinessunitActivitycodes (string buId)
+        public BusinessUnitActivityCodeListing GetWorkforcemanagementBusinessunitActivitycodes (string businessUnitId)
         {
-             ApiResponse<BusinessUnitActivityCodeListing> localVarResponse = GetWorkforcemanagementBusinessunitActivitycodesWithHttpInfo(buId);
+             ApiResponse<BusinessUnitActivityCodeListing> localVarResponse = GetWorkforcemanagementBusinessunitActivitycodesWithHttpInfo(businessUnitId);
              return localVarResponse.Data;
         }
 
@@ -8193,15 +8193,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get activity codes 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>ApiResponse of BusinessUnitActivityCodeListing</returns>
-        public ApiResponse< BusinessUnitActivityCodeListing > GetWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string buId)
+        public ApiResponse< BusinessUnitActivityCodeListing > GetWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string businessUnitId)
         { 
-            // verify the required parameter 'buId' is set
-            if (buId == null)
-                throw new ApiException(400, "Missing required parameter 'buId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivitycodes");
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivitycodes");
 
-            var localVarPath = "/api/v2/workforcemanagement/businessunits/{buId}/activitycodes";
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8232,7 +8232,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (buId != null) localVarPathParams.Add("buId", this.Configuration.ApiClient.ParameterToString(buId));
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
 
             // Query params
 
@@ -8276,11 +8276,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get activity codes 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>Task of BusinessUnitActivityCodeListing</returns>
-        public async System.Threading.Tasks.Task<BusinessUnitActivityCodeListing> GetWorkforcemanagementBusinessunitActivitycodesAsync (string buId)
+        public async System.Threading.Tasks.Task<BusinessUnitActivityCodeListing> GetWorkforcemanagementBusinessunitActivitycodesAsync (string businessUnitId)
         {
-             ApiResponse<BusinessUnitActivityCodeListing> localVarResponse = await GetWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo(buId);
+             ApiResponse<BusinessUnitActivityCodeListing> localVarResponse = await GetWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo(businessUnitId);
              return localVarResponse.Data;
 
         }
@@ -8289,16 +8289,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get activity codes 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCodeListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCodeListing>> GetWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string buId)
+        public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCodeListing>> GetWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string businessUnitId)
         { 
-            // verify the required parameter 'buId' is set
-            if (buId == null)
-                throw new ApiException(400, "Missing required parameter 'buId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivitycodes");
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivitycodes");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/businessunits/{buId}/activitycodes";
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8329,7 +8329,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (buId != null) localVarPathParams.Add("buId", this.Configuration.ApiClient.ParameterToString(buId));
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
 
             // Query params
 
@@ -12811,12 +12811,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ManagementUnit</returns>
-        public ManagementUnit GetWorkforcemanagementManagementunit (string muId, List<string> expand = null)
+        public ManagementUnit GetWorkforcemanagementManagementunit (string managementUnitId, List<string> expand = null)
         {
-             ApiResponse<ManagementUnit> localVarResponse = GetWorkforcemanagementManagementunitWithHttpInfo(muId, expand);
+             ApiResponse<ManagementUnit> localVarResponse = GetWorkforcemanagementManagementunitWithHttpInfo(managementUnitId, expand);
              return localVarResponse.Data;
         }
 
@@ -12824,16 +12824,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of ManagementUnit</returns>
-        public ApiResponse< ManagementUnit > GetWorkforcemanagementManagementunitWithHttpInfo (string muId, List<string> expand = null)
+        public ApiResponse< ManagementUnit > GetWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId, List<string> expand = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunit");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunit");
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -12864,7 +12864,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
@@ -12909,12 +12909,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ManagementUnit</returns>
-        public async System.Threading.Tasks.Task<ManagementUnit> GetWorkforcemanagementManagementunitAsync (string muId, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ManagementUnit> GetWorkforcemanagementManagementunitAsync (string managementUnitId, List<string> expand = null)
         {
-             ApiResponse<ManagementUnit> localVarResponse = await GetWorkforcemanagementManagementunitAsyncWithHttpInfo(muId, expand);
+             ApiResponse<ManagementUnit> localVarResponse = await GetWorkforcemanagementManagementunitAsyncWithHttpInfo(managementUnitId, expand);
              return localVarResponse.Data;
 
         }
@@ -12923,17 +12923,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnit)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> GetWorkforcemanagementManagementunitAsyncWithHttpInfo (string muId, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> GetWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId, List<string> expand = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunit");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunit");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -12964,7 +12964,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
@@ -13010,11 +13010,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get activity codes 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ActivityCodeContainer</returns>
-        public ActivityCodeContainer GetWorkforcemanagementManagementunitActivitycodes (string muId)
+        public ActivityCodeContainer GetWorkforcemanagementManagementunitActivitycodes (string managementUnitId)
         {
-             ApiResponse<ActivityCodeContainer> localVarResponse = GetWorkforcemanagementManagementunitActivitycodesWithHttpInfo(muId);
+             ApiResponse<ActivityCodeContainer> localVarResponse = GetWorkforcemanagementManagementunitActivitycodesWithHttpInfo(managementUnitId);
              return localVarResponse.Data;
         }
 
@@ -13022,15 +13022,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get activity codes 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of ActivityCodeContainer</returns>
-        public ApiResponse< ActivityCodeContainer > GetWorkforcemanagementManagementunitActivitycodesWithHttpInfo (string muId)
+        public ApiResponse< ActivityCodeContainer > GetWorkforcemanagementManagementunitActivitycodesWithHttpInfo (string managementUnitId)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitActivitycodes");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitActivitycodes");
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/activitycodes";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/activitycodes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -13061,7 +13061,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -13105,11 +13105,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get activity codes 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ActivityCodeContainer</returns>
-        public async System.Threading.Tasks.Task<ActivityCodeContainer> GetWorkforcemanagementManagementunitActivitycodesAsync (string muId)
+        public async System.Threading.Tasks.Task<ActivityCodeContainer> GetWorkforcemanagementManagementunitActivitycodesAsync (string managementUnitId)
         {
-             ApiResponse<ActivityCodeContainer> localVarResponse = await GetWorkforcemanagementManagementunitActivitycodesAsyncWithHttpInfo(muId);
+             ApiResponse<ActivityCodeContainer> localVarResponse = await GetWorkforcemanagementManagementunitActivitycodesAsyncWithHttpInfo(managementUnitId);
              return localVarResponse.Data;
 
         }
@@ -13118,16 +13118,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get activity codes 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (ActivityCodeContainer)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ActivityCodeContainer>> GetWorkforcemanagementManagementunitActivitycodesAsyncWithHttpInfo (string muId)
+        public async System.Threading.Tasks.Task<ApiResponse<ActivityCodeContainer>> GetWorkforcemanagementManagementunitActivitycodesAsyncWithHttpInfo (string managementUnitId)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitActivitycodes");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitActivitycodes");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/activitycodes";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/activitycodes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -13158,7 +13158,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -13820,11 +13820,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a summary of all shift trades in the matched state 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ShiftTradeMatchesSummaryResponse</returns>
-        public ShiftTradeMatchesSummaryResponse GetWorkforcemanagementManagementunitShifttradesMatched (string muId)
+        public ShiftTradeMatchesSummaryResponse GetWorkforcemanagementManagementunitShifttradesMatched (string managementUnitId)
         {
-             ApiResponse<ShiftTradeMatchesSummaryResponse> localVarResponse = GetWorkforcemanagementManagementunitShifttradesMatchedWithHttpInfo(muId);
+             ApiResponse<ShiftTradeMatchesSummaryResponse> localVarResponse = GetWorkforcemanagementManagementunitShifttradesMatchedWithHttpInfo(managementUnitId);
              return localVarResponse.Data;
         }
 
@@ -13832,15 +13832,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a summary of all shift trades in the matched state 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of ShiftTradeMatchesSummaryResponse</returns>
-        public ApiResponse< ShiftTradeMatchesSummaryResponse > GetWorkforcemanagementManagementunitShifttradesMatchedWithHttpInfo (string muId)
+        public ApiResponse< ShiftTradeMatchesSummaryResponse > GetWorkforcemanagementManagementunitShifttradesMatchedWithHttpInfo (string managementUnitId)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitShifttradesMatched");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitShifttradesMatched");
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/shifttrades/matched";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/shifttrades/matched";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -13871,7 +13871,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -13915,11 +13915,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a summary of all shift trades in the matched state 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ShiftTradeMatchesSummaryResponse</returns>
-        public async System.Threading.Tasks.Task<ShiftTradeMatchesSummaryResponse> GetWorkforcemanagementManagementunitShifttradesMatchedAsync (string muId)
+        public async System.Threading.Tasks.Task<ShiftTradeMatchesSummaryResponse> GetWorkforcemanagementManagementunitShifttradesMatchedAsync (string managementUnitId)
         {
-             ApiResponse<ShiftTradeMatchesSummaryResponse> localVarResponse = await GetWorkforcemanagementManagementunitShifttradesMatchedAsyncWithHttpInfo(muId);
+             ApiResponse<ShiftTradeMatchesSummaryResponse> localVarResponse = await GetWorkforcemanagementManagementunitShifttradesMatchedAsyncWithHttpInfo(managementUnitId);
              return localVarResponse.Data;
 
         }
@@ -13928,16 +13928,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a summary of all shift trades in the matched state 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (ShiftTradeMatchesSummaryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeMatchesSummaryResponse>> GetWorkforcemanagementManagementunitShifttradesMatchedAsyncWithHttpInfo (string muId)
+        public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeMatchesSummaryResponse>> GetWorkforcemanagementManagementunitShifttradesMatchedAsyncWithHttpInfo (string managementUnitId)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitShifttradesMatched");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitShifttradesMatched");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/shifttrades/matched";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/shifttrades/matched";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -13968,7 +13968,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -14013,11 +14013,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets list of users available for whom you can send direct shift trade requests 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>WfmUserEntityListing</returns>
-        public WfmUserEntityListing GetWorkforcemanagementManagementunitShifttradesUsers (string muId)
+        public WfmUserEntityListing GetWorkforcemanagementManagementunitShifttradesUsers (string managementUnitId)
         {
-             ApiResponse<WfmUserEntityListing> localVarResponse = GetWorkforcemanagementManagementunitShifttradesUsersWithHttpInfo(muId);
+             ApiResponse<WfmUserEntityListing> localVarResponse = GetWorkforcemanagementManagementunitShifttradesUsersWithHttpInfo(managementUnitId);
              return localVarResponse.Data;
         }
 
@@ -14025,15 +14025,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets list of users available for whom you can send direct shift trade requests 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of WfmUserEntityListing</returns>
-        public ApiResponse< WfmUserEntityListing > GetWorkforcemanagementManagementunitShifttradesUsersWithHttpInfo (string muId)
+        public ApiResponse< WfmUserEntityListing > GetWorkforcemanagementManagementunitShifttradesUsersWithHttpInfo (string managementUnitId)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitShifttradesUsers");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitShifttradesUsers");
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/shifttrades/users";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/shifttrades/users";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -14064,7 +14064,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -14108,11 +14108,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets list of users available for whom you can send direct shift trade requests 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of WfmUserEntityListing</returns>
-        public async System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitShifttradesUsersAsync (string muId)
+        public async System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitShifttradesUsersAsync (string managementUnitId)
         {
-             ApiResponse<WfmUserEntityListing> localVarResponse = await GetWorkforcemanagementManagementunitShifttradesUsersAsyncWithHttpInfo(muId);
+             ApiResponse<WfmUserEntityListing> localVarResponse = await GetWorkforcemanagementManagementunitShifttradesUsersAsyncWithHttpInfo(managementUnitId);
              return localVarResponse.Data;
 
         }
@@ -14121,16 +14121,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets list of users available for whom you can send direct shift trade requests 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitShifttradesUsersAsyncWithHttpInfo (string muId)
+        public async System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitShifttradesUsersAsyncWithHttpInfo (string managementUnitId)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitShifttradesUsers");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitShifttradesUsers");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/shifttrades/users";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/shifttrades/users";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -14161,7 +14161,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -14206,13 +14206,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>TimeOffRequestResponse</returns>
-        public TimeOffRequestResponse GetWorkforcemanagementManagementunitUserTimeoffrequest (string muId, string userId, string timeOffRequestId)
+        public TimeOffRequestResponse GetWorkforcemanagementManagementunitUserTimeoffrequest (string managementUnitId, string userId, string timeOffRequestId)
         {
-             ApiResponse<TimeOffRequestResponse> localVarResponse = GetWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo(muId, userId, timeOffRequestId);
+             ApiResponse<TimeOffRequestResponse> localVarResponse = GetWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo(managementUnitId, userId, timeOffRequestId);
              return localVarResponse.Data;
         }
 
@@ -14220,15 +14220,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
-        public ApiResponse< TimeOffRequestResponse > GetWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo (string muId, string userId, string timeOffRequestId)
+        public ApiResponse< TimeOffRequestResponse > GetWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequest");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequest");
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequest");
@@ -14236,7 +14236,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (timeOffRequestId == null)
                 throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequest");
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId}";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -14267,7 +14267,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
             if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
             if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", this.Configuration.ApiClient.ParameterToString(timeOffRequestId));
 
@@ -14313,13 +14313,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
-        public async System.Threading.Tasks.Task<TimeOffRequestResponse> GetWorkforcemanagementManagementunitUserTimeoffrequestAsync (string muId, string userId, string timeOffRequestId)
+        public async System.Threading.Tasks.Task<TimeOffRequestResponse> GetWorkforcemanagementManagementunitUserTimeoffrequestAsync (string managementUnitId, string userId, string timeOffRequestId)
         {
-             ApiResponse<TimeOffRequestResponse> localVarResponse = await GetWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo(muId, userId, timeOffRequestId);
+             ApiResponse<TimeOffRequestResponse> localVarResponse = await GetWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo(managementUnitId, userId, timeOffRequestId);
              return localVarResponse.Data;
 
         }
@@ -14328,15 +14328,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> GetWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo (string muId, string userId, string timeOffRequestId)
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> GetWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequest");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequest");
             
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -14347,7 +14347,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequest");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId}";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -14378,7 +14378,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
             if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
             if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", this.Configuration.ApiClient.ParameterToString(timeOffRequestId));
 
@@ -14425,13 +14425,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of time off requests for a given user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>TimeOffRequestList</returns>
-        public TimeOffRequestList GetWorkforcemanagementManagementunitUserTimeoffrequests (string muId, string userId, bool? recentlyReviewed = null)
+        public TimeOffRequestList GetWorkforcemanagementManagementunitUserTimeoffrequests (string managementUnitId, string userId, bool? recentlyReviewed = null)
         {
-             ApiResponse<TimeOffRequestList> localVarResponse = GetWorkforcemanagementManagementunitUserTimeoffrequestsWithHttpInfo(muId, userId, recentlyReviewed);
+             ApiResponse<TimeOffRequestList> localVarResponse = GetWorkforcemanagementManagementunitUserTimeoffrequestsWithHttpInfo(managementUnitId, userId, recentlyReviewed);
              return localVarResponse.Data;
         }
 
@@ -14439,20 +14439,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of time off requests for a given user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
-        public ApiResponse< TimeOffRequestList > GetWorkforcemanagementManagementunitUserTimeoffrequestsWithHttpInfo (string muId, string userId, bool? recentlyReviewed = null)
+        public ApiResponse< TimeOffRequestList > GetWorkforcemanagementManagementunitUserTimeoffrequestsWithHttpInfo (string managementUnitId, string userId, bool? recentlyReviewed = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequests");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequests");
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequests");
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -14483,7 +14483,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
             if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
 
             // Query params
@@ -14529,13 +14529,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of time off requests for a given user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of TimeOffRequestList</returns>
-        public async System.Threading.Tasks.Task<TimeOffRequestList> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsync (string muId, string userId, bool? recentlyReviewed = null)
+        public async System.Threading.Tasks.Task<TimeOffRequestList> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsync (string managementUnitId, string userId, bool? recentlyReviewed = null)
         {
-             ApiResponse<TimeOffRequestList> localVarResponse = await GetWorkforcemanagementManagementunitUserTimeoffrequestsAsyncWithHttpInfo(muId, userId, recentlyReviewed);
+             ApiResponse<TimeOffRequestList> localVarResponse = await GetWorkforcemanagementManagementunitUserTimeoffrequestsAsyncWithHttpInfo(managementUnitId, userId, recentlyReviewed);
              return localVarResponse.Data;
 
         }
@@ -14544,22 +14544,22 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of time off requests for a given user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsyncWithHttpInfo (string muId, string userId, bool? recentlyReviewed = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsyncWithHttpInfo (string managementUnitId, string userId, bool? recentlyReviewed = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequests");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequests");
             
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequests");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -14590,7 +14590,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
             if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
 
             // Query params
@@ -14637,11 +14637,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get users in the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>WfmUserEntityListing</returns>
-        public WfmUserEntityListing GetWorkforcemanagementManagementunitUsers (string muId)
+        public WfmUserEntityListing GetWorkforcemanagementManagementunitUsers (string managementUnitId)
         {
-             ApiResponse<WfmUserEntityListing> localVarResponse = GetWorkforcemanagementManagementunitUsersWithHttpInfo(muId);
+             ApiResponse<WfmUserEntityListing> localVarResponse = GetWorkforcemanagementManagementunitUsersWithHttpInfo(managementUnitId);
              return localVarResponse.Data;
         }
 
@@ -14649,15 +14649,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get users in the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of WfmUserEntityListing</returns>
-        public ApiResponse< WfmUserEntityListing > GetWorkforcemanagementManagementunitUsersWithHttpInfo (string muId)
+        public ApiResponse< WfmUserEntityListing > GetWorkforcemanagementManagementunitUsersWithHttpInfo (string managementUnitId)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUsers");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUsers");
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/users";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -14688,7 +14688,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -14732,11 +14732,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get users in the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of WfmUserEntityListing</returns>
-        public async System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitUsersAsync (string muId)
+        public async System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitUsersAsync (string managementUnitId)
         {
-             ApiResponse<WfmUserEntityListing> localVarResponse = await GetWorkforcemanagementManagementunitUsersAsyncWithHttpInfo(muId);
+             ApiResponse<WfmUserEntityListing> localVarResponse = await GetWorkforcemanagementManagementunitUsersAsyncWithHttpInfo(managementUnitId);
              return localVarResponse.Data;
 
         }
@@ -14745,16 +14745,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get users in the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitUsersAsyncWithHttpInfo (string muId)
+        public async System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitUsersAsyncWithHttpInfo (string managementUnitId)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUsers");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUsers");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/users";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -14785,7 +14785,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -17842,13 +17842,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update an activity code 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to update</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>BusinessUnitActivityCode</returns>
-        public BusinessUnitActivityCode PatchWorkforcemanagementBusinessunitActivitycode (string buId, string acId, UpdateActivityCodeRequest body = null)
+        public BusinessUnitActivityCode PatchWorkforcemanagementBusinessunitActivitycode (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null)
         {
-             ApiResponse<BusinessUnitActivityCode> localVarResponse = PatchWorkforcemanagementBusinessunitActivitycodeWithHttpInfo(buId, acId, body);
+             ApiResponse<BusinessUnitActivityCode> localVarResponse = PatchWorkforcemanagementBusinessunitActivitycodeWithHttpInfo(businessUnitId, activityCodeId, body);
              return localVarResponse.Data;
         }
 
@@ -17856,20 +17856,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update an activity code 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to update</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BusinessUnitActivityCode</returns>
-        public ApiResponse< BusinessUnitActivityCode > PatchWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string buId, string acId, UpdateActivityCodeRequest body = null)
+        public ApiResponse< BusinessUnitActivityCode > PatchWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null)
         { 
-            // verify the required parameter 'buId' is set
-            if (buId == null)
-                throw new ApiException(400, "Missing required parameter 'buId' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitActivitycode");
-            // verify the required parameter 'acId' is set
-            if (acId == null)
-                throw new ApiException(400, "Missing required parameter 'acId' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitActivitycode");
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitActivitycode");
+            // verify the required parameter 'activityCodeId' is set
+            if (activityCodeId == null)
+                throw new ApiException(400, "Missing required parameter 'activityCodeId' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitActivitycode");
 
-            var localVarPath = "/api/v2/workforcemanagement/businessunits/{buId}/activitycodes/{acId}";
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -17900,8 +17900,8 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (buId != null) localVarPathParams.Add("buId", this.Configuration.ApiClient.ParameterToString(buId));
-            if (acId != null) localVarPathParams.Add("acId", this.Configuration.ApiClient.ParameterToString(acId));
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityCodeId != null) localVarPathParams.Add("activityCodeId", this.Configuration.ApiClient.ParameterToString(activityCodeId));
 
             // Query params
 
@@ -17950,13 +17950,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update an activity code 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to update</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of BusinessUnitActivityCode</returns>
-        public async System.Threading.Tasks.Task<BusinessUnitActivityCode> PatchWorkforcemanagementBusinessunitActivitycodeAsync (string buId, string acId, UpdateActivityCodeRequest body = null)
+        public async System.Threading.Tasks.Task<BusinessUnitActivityCode> PatchWorkforcemanagementBusinessunitActivitycodeAsync (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null)
         {
-             ApiResponse<BusinessUnitActivityCode> localVarResponse = await PatchWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo(buId, acId, body);
+             ApiResponse<BusinessUnitActivityCode> localVarResponse = await PatchWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo(businessUnitId, activityCodeId, body);
              return localVarResponse.Data;
 
         }
@@ -17965,22 +17965,22 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update an activity code 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="acId">The ID of the activity code to update</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="activityCodeId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> PatchWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string buId, string acId, UpdateActivityCodeRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> PatchWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null)
         { 
-            // verify the required parameter 'buId' is set
-            if (buId == null)
-                throw new ApiException(400, "Missing required parameter 'buId' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitActivitycode");
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitActivitycode");
             
-            // verify the required parameter 'acId' is set
-            if (acId == null)
-                throw new ApiException(400, "Missing required parameter 'acId' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitActivitycode");
+            // verify the required parameter 'activityCodeId' is set
+            if (activityCodeId == null)
+                throw new ApiException(400, "Missing required parameter 'activityCodeId' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitActivitycode");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/businessunits/{buId}/activitycodes/{acId}";
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -18011,8 +18011,8 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (buId != null) localVarPathParams.Add("buId", this.Configuration.ApiClient.ParameterToString(buId));
-            if (acId != null) localVarPathParams.Add("acId", this.Configuration.ApiClient.ParameterToString(acId));
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityCodeId != null) localVarPathParams.Add("activityCodeId", this.Configuration.ApiClient.ParameterToString(activityCodeId));
 
             // Query params
 
@@ -18720,12 +18720,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update the requested management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ManagementUnit</returns>
-        public ManagementUnit PatchWorkforcemanagementManagementunit (string muId, UpdateManagementUnitRequest body = null)
+        public ManagementUnit PatchWorkforcemanagementManagementunit (string managementUnitId, UpdateManagementUnitRequest body = null)
         {
-             ApiResponse<ManagementUnit> localVarResponse = PatchWorkforcemanagementManagementunitWithHttpInfo(muId, body);
+             ApiResponse<ManagementUnit> localVarResponse = PatchWorkforcemanagementManagementunitWithHttpInfo(managementUnitId, body);
              return localVarResponse.Data;
         }
 
@@ -18733,16 +18733,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update the requested management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ManagementUnit</returns>
-        public ApiResponse< ManagementUnit > PatchWorkforcemanagementManagementunitWithHttpInfo (string muId, UpdateManagementUnitRequest body = null)
+        public ApiResponse< ManagementUnit > PatchWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId, UpdateManagementUnitRequest body = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunit");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunit");
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -18773,7 +18773,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -18822,12 +18822,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update the requested management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ManagementUnit</returns>
-        public async System.Threading.Tasks.Task<ManagementUnit> PatchWorkforcemanagementManagementunitAsync (string muId, UpdateManagementUnitRequest body = null)
+        public async System.Threading.Tasks.Task<ManagementUnit> PatchWorkforcemanagementManagementunitAsync (string managementUnitId, UpdateManagementUnitRequest body = null)
         {
-             ApiResponse<ManagementUnit> localVarResponse = await PatchWorkforcemanagementManagementunitAsyncWithHttpInfo(muId, body);
+             ApiResponse<ManagementUnit> localVarResponse = await PatchWorkforcemanagementManagementunitAsyncWithHttpInfo(managementUnitId, body);
              return localVarResponse.Data;
 
         }
@@ -18836,17 +18836,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update the requested management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnit)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> PatchWorkforcemanagementManagementunitAsyncWithHttpInfo (string muId, UpdateManagementUnitRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> PatchWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId, UpdateManagementUnitRequest body = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunit");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunit");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -18877,7 +18877,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -18927,14 +18927,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The id of the user the requested time off request belongs to</param>
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestResponse</returns>
-        public TimeOffRequestResponse PatchWorkforcemanagementManagementunitUserTimeoffrequest (string muId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null)
+        public TimeOffRequestResponse PatchWorkforcemanagementManagementunitUserTimeoffrequest (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null)
         {
-             ApiResponse<TimeOffRequestResponse> localVarResponse = PatchWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo(muId, userId, timeOffRequestId, body);
+             ApiResponse<TimeOffRequestResponse> localVarResponse = PatchWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo(managementUnitId, userId, timeOffRequestId, body);
              return localVarResponse.Data;
         }
 
@@ -18942,16 +18942,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The id of the user the requested time off request belongs to</param>
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
-        public ApiResponse< TimeOffRequestResponse > PatchWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo (string muId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null)
+        public ApiResponse< TimeOffRequestResponse > PatchWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitUserTimeoffrequest");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitUserTimeoffrequest");
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitUserTimeoffrequest");
@@ -18959,7 +18959,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (timeOffRequestId == null)
                 throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitUserTimeoffrequest");
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId}";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -18990,7 +18990,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
             if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
             if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", this.Configuration.ApiClient.ParameterToString(timeOffRequestId));
 
@@ -19041,14 +19041,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The id of the user the requested time off request belongs to</param>
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
-        public async System.Threading.Tasks.Task<TimeOffRequestResponse> PatchWorkforcemanagementManagementunitUserTimeoffrequestAsync (string muId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null)
+        public async System.Threading.Tasks.Task<TimeOffRequestResponse> PatchWorkforcemanagementManagementunitUserTimeoffrequestAsync (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null)
         {
-             ApiResponse<TimeOffRequestResponse> localVarResponse = await PatchWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo(muId, userId, timeOffRequestId, body);
+             ApiResponse<TimeOffRequestResponse> localVarResponse = await PatchWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo(managementUnitId, userId, timeOffRequestId, body);
              return localVarResponse.Data;
 
         }
@@ -19057,16 +19057,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The id of the user the requested time off request belongs to</param>
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> PatchWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo (string muId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> PatchWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitUserTimeoffrequest");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitUserTimeoffrequest");
             
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -19077,7 +19077,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitUserTimeoffrequest");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId}";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -19108,7 +19108,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
             if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
             if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", this.Configuration.ApiClient.ParameterToString(timeOffRequestId));
 
@@ -20441,12 +20441,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new activity code 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>BusinessUnitActivityCode</returns>
-        public BusinessUnitActivityCode PostWorkforcemanagementBusinessunitActivitycodes (string buId, CreateActivityCodeRequest body = null)
+        public BusinessUnitActivityCode PostWorkforcemanagementBusinessunitActivitycodes (string businessUnitId, CreateActivityCodeRequest body = null)
         {
-             ApiResponse<BusinessUnitActivityCode> localVarResponse = PostWorkforcemanagementBusinessunitActivitycodesWithHttpInfo(buId, body);
+             ApiResponse<BusinessUnitActivityCode> localVarResponse = PostWorkforcemanagementBusinessunitActivitycodesWithHttpInfo(businessUnitId, body);
              return localVarResponse.Data;
         }
 
@@ -20454,16 +20454,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new activity code 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BusinessUnitActivityCode</returns>
-        public ApiResponse< BusinessUnitActivityCode > PostWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string buId, CreateActivityCodeRequest body = null)
+        public ApiResponse< BusinessUnitActivityCode > PostWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string businessUnitId, CreateActivityCodeRequest body = null)
         { 
-            // verify the required parameter 'buId' is set
-            if (buId == null)
-                throw new ApiException(400, "Missing required parameter 'buId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivitycodes");
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivitycodes");
 
-            var localVarPath = "/api/v2/workforcemanagement/businessunits/{buId}/activitycodes";
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -20494,7 +20494,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (buId != null) localVarPathParams.Add("buId", this.Configuration.ApiClient.ParameterToString(buId));
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
 
             // Query params
 
@@ -20543,12 +20543,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new activity code 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of BusinessUnitActivityCode</returns>
-        public async System.Threading.Tasks.Task<BusinessUnitActivityCode> PostWorkforcemanagementBusinessunitActivitycodesAsync (string buId, CreateActivityCodeRequest body = null)
+        public async System.Threading.Tasks.Task<BusinessUnitActivityCode> PostWorkforcemanagementBusinessunitActivitycodesAsync (string businessUnitId, CreateActivityCodeRequest body = null)
         {
-             ApiResponse<BusinessUnitActivityCode> localVarResponse = await PostWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo(buId, body);
+             ApiResponse<BusinessUnitActivityCode> localVarResponse = await PostWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo(businessUnitId, body);
              return localVarResponse.Data;
 
         }
@@ -20557,17 +20557,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new activity code 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="buId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> PostWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string buId, CreateActivityCodeRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> PostWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string businessUnitId, CreateActivityCodeRequest body = null)
         { 
-            // verify the required parameter 'buId' is set
-            if (buId == null)
-                throw new ApiException(400, "Missing required parameter 'buId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivitycodes");
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivitycodes");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/businessunits/{buId}/activitycodes";
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -20598,7 +20598,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (buId != null) localVarPathParams.Add("buId", this.Configuration.ApiClient.ParameterToString(buId));
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
 
             // Query params
 
@@ -23353,14 +23353,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query published schedules for given given time range for set of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>BuAsyncAgentSchedulesSearchResponse</returns>
-        public BuAsyncAgentSchedulesSearchResponse PostWorkforcemanagementManagementunitAgentschedulesSearch (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+        public BuAsyncAgentSchedulesSearchResponse PostWorkforcemanagementManagementunitAgentschedulesSearch (string managementUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
         {
-             ApiResponse<BuAsyncAgentSchedulesSearchResponse> localVarResponse = PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo(muId, body, forceAsync, forceDownloadService);
+             ApiResponse<BuAsyncAgentSchedulesSearchResponse> localVarResponse = PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo(managementUnitId, body, forceAsync, forceDownloadService);
              return localVarResponse.Data;
         }
 
@@ -23368,18 +23368,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query published schedules for given given time range for set of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BuAsyncAgentSchedulesSearchResponse</returns>
-        public ApiResponse< BuAsyncAgentSchedulesSearchResponse > PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+        public ApiResponse< BuAsyncAgentSchedulesSearchResponse > PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo (string managementUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitAgentschedulesSearch");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitAgentschedulesSearch");
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/agentschedules/search";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agentschedules/search";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -23410,7 +23410,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
             if (forceAsync != null) localVarQueryParams.Add(new Tuple<string, string>("forceAsync", this.Configuration.ApiClient.ParameterToString(forceAsync)));
@@ -23461,14 +23461,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query published schedules for given given time range for set of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of BuAsyncAgentSchedulesSearchResponse</returns>
-        public async System.Threading.Tasks.Task<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementManagementunitAgentschedulesSearchAsync (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+        public async System.Threading.Tasks.Task<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementManagementunitAgentschedulesSearchAsync (string managementUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
         {
-             ApiResponse<BuAsyncAgentSchedulesSearchResponse> localVarResponse = await PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo(muId, body, forceAsync, forceDownloadService);
+             ApiResponse<BuAsyncAgentSchedulesSearchResponse> localVarResponse = await PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo(managementUnitId, body, forceAsync, forceDownloadService);
              return localVarResponse.Data;
 
         }
@@ -23477,19 +23477,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query published schedules for given given time range for set of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BuAsyncAgentSchedulesSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesSearchResponse>> PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+        public async System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesSearchResponse>> PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo (string managementUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitAgentschedulesSearch");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitAgentschedulesSearch");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/agentschedules/search";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agentschedules/search";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -23520,7 +23520,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
             if (forceAsync != null) localVarQueryParams.Add(new Tuple<string, string>("forceAsync", this.Configuration.ApiClient.ParameterToString(forceAsync)));
@@ -23572,12 +23572,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Request a historical adherence report The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>WfmHistoricalAdherenceResponse</returns>
-        public WfmHistoricalAdherenceResponse PostWorkforcemanagementManagementunitHistoricaladherencequery (string muId, WfmHistoricalAdherenceQuery body = null)
+        public WfmHistoricalAdherenceResponse PostWorkforcemanagementManagementunitHistoricaladherencequery (string managementUnitId, WfmHistoricalAdherenceQuery body = null)
         {
-             ApiResponse<WfmHistoricalAdherenceResponse> localVarResponse = PostWorkforcemanagementManagementunitHistoricaladherencequeryWithHttpInfo(muId, body);
+             ApiResponse<WfmHistoricalAdherenceResponse> localVarResponse = PostWorkforcemanagementManagementunitHistoricaladherencequeryWithHttpInfo(managementUnitId, body);
              return localVarResponse.Data;
         }
 
@@ -23585,16 +23585,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Request a historical adherence report The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceResponse</returns>
-        public ApiResponse< WfmHistoricalAdherenceResponse > PostWorkforcemanagementManagementunitHistoricaladherencequeryWithHttpInfo (string muId, WfmHistoricalAdherenceQuery body = null)
+        public ApiResponse< WfmHistoricalAdherenceResponse > PostWorkforcemanagementManagementunitHistoricaladherencequeryWithHttpInfo (string managementUnitId, WfmHistoricalAdherenceQuery body = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitHistoricaladherencequery");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitHistoricaladherencequery");
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/historicaladherencequery";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/historicaladherencequery";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -23625,7 +23625,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -23674,12 +23674,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Request a historical adherence report The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WfmHistoricalAdherenceResponse</returns>
-        public async System.Threading.Tasks.Task<WfmHistoricalAdherenceResponse> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsync (string muId, WfmHistoricalAdherenceQuery body = null)
+        public async System.Threading.Tasks.Task<WfmHistoricalAdherenceResponse> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsync (string managementUnitId, WfmHistoricalAdherenceQuery body = null)
         {
-             ApiResponse<WfmHistoricalAdherenceResponse> localVarResponse = await PostWorkforcemanagementManagementunitHistoricaladherencequeryAsyncWithHttpInfo(muId, body);
+             ApiResponse<WfmHistoricalAdherenceResponse> localVarResponse = await PostWorkforcemanagementManagementunitHistoricaladherencequeryAsyncWithHttpInfo(managementUnitId, body);
              return localVarResponse.Data;
 
         }
@@ -23688,17 +23688,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Request a historical adherence report The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsyncWithHttpInfo (string muId, WfmHistoricalAdherenceQuery body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsyncWithHttpInfo (string managementUnitId, WfmHistoricalAdherenceQuery body = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitHistoricaladherencequery");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitHistoricaladherencequery");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/historicaladherencequery";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/historicaladherencequery";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -23729,7 +23729,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -23779,12 +23779,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Move the requested management unit to a new business unit Returns status 200 if the management unit is already in the requested business unit
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>MoveManagementUnitResponse</returns>
-        public MoveManagementUnitResponse PostWorkforcemanagementManagementunitMove (string muId, MoveManagementUnitRequest body = null)
+        public MoveManagementUnitResponse PostWorkforcemanagementManagementunitMove (string managementUnitId, MoveManagementUnitRequest body = null)
         {
-             ApiResponse<MoveManagementUnitResponse> localVarResponse = PostWorkforcemanagementManagementunitMoveWithHttpInfo(muId, body);
+             ApiResponse<MoveManagementUnitResponse> localVarResponse = PostWorkforcemanagementManagementunitMoveWithHttpInfo(managementUnitId, body);
              return localVarResponse.Data;
         }
 
@@ -23792,16 +23792,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Move the requested management unit to a new business unit Returns status 200 if the management unit is already in the requested business unit
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of MoveManagementUnitResponse</returns>
-        public ApiResponse< MoveManagementUnitResponse > PostWorkforcemanagementManagementunitMoveWithHttpInfo (string muId, MoveManagementUnitRequest body = null)
+        public ApiResponse< MoveManagementUnitResponse > PostWorkforcemanagementManagementunitMoveWithHttpInfo (string managementUnitId, MoveManagementUnitRequest body = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitMove");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitMove");
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/move";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/move";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -23832,7 +23832,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -23881,12 +23881,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Move the requested management unit to a new business unit Returns status 200 if the management unit is already in the requested business unit
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of MoveManagementUnitResponse</returns>
-        public async System.Threading.Tasks.Task<MoveManagementUnitResponse> PostWorkforcemanagementManagementunitMoveAsync (string muId, MoveManagementUnitRequest body = null)
+        public async System.Threading.Tasks.Task<MoveManagementUnitResponse> PostWorkforcemanagementManagementunitMoveAsync (string managementUnitId, MoveManagementUnitRequest body = null)
         {
-             ApiResponse<MoveManagementUnitResponse> localVarResponse = await PostWorkforcemanagementManagementunitMoveAsyncWithHttpInfo(muId, body);
+             ApiResponse<MoveManagementUnitResponse> localVarResponse = await PostWorkforcemanagementManagementunitMoveAsyncWithHttpInfo(managementUnitId, body);
              return localVarResponse.Data;
 
         }
@@ -23895,17 +23895,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Move the requested management unit to a new business unit Returns status 200 if the management unit is already in the requested business unit
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (MoveManagementUnitResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MoveManagementUnitResponse>> PostWorkforcemanagementManagementunitMoveAsyncWithHttpInfo (string muId, MoveManagementUnitRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<MoveManagementUnitResponse>> PostWorkforcemanagementManagementunitMoveAsyncWithHttpInfo (string managementUnitId, MoveManagementUnitRequest body = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitMove");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitMove");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/move";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/move";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -23936,7 +23936,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -23986,12 +23986,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query published schedules for given given time range for set of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>UserScheduleContainer</returns>
-        public UserScheduleContainer PostWorkforcemanagementManagementunitSchedulesSearch (string muId, UserListScheduleRequestBody body = null)
+        public UserScheduleContainer PostWorkforcemanagementManagementunitSchedulesSearch (string managementUnitId, UserListScheduleRequestBody body = null)
         {
-             ApiResponse<UserScheduleContainer> localVarResponse = PostWorkforcemanagementManagementunitSchedulesSearchWithHttpInfo(muId, body);
+             ApiResponse<UserScheduleContainer> localVarResponse = PostWorkforcemanagementManagementunitSchedulesSearchWithHttpInfo(managementUnitId, body);
              return localVarResponse.Data;
         }
 
@@ -23999,16 +23999,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query published schedules for given given time range for set of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of UserScheduleContainer</returns>
-        public ApiResponse< UserScheduleContainer > PostWorkforcemanagementManagementunitSchedulesSearchWithHttpInfo (string muId, UserListScheduleRequestBody body = null)
+        public ApiResponse< UserScheduleContainer > PostWorkforcemanagementManagementunitSchedulesSearchWithHttpInfo (string managementUnitId, UserListScheduleRequestBody body = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitSchedulesSearch");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitSchedulesSearch");
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/schedules/search";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/schedules/search";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -24039,7 +24039,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -24088,12 +24088,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query published schedules for given given time range for set of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of UserScheduleContainer</returns>
-        public async System.Threading.Tasks.Task<UserScheduleContainer> PostWorkforcemanagementManagementunitSchedulesSearchAsync (string muId, UserListScheduleRequestBody body = null)
+        public async System.Threading.Tasks.Task<UserScheduleContainer> PostWorkforcemanagementManagementunitSchedulesSearchAsync (string managementUnitId, UserListScheduleRequestBody body = null)
         {
-             ApiResponse<UserScheduleContainer> localVarResponse = await PostWorkforcemanagementManagementunitSchedulesSearchAsyncWithHttpInfo(muId, body);
+             ApiResponse<UserScheduleContainer> localVarResponse = await PostWorkforcemanagementManagementunitSchedulesSearchAsyncWithHttpInfo(managementUnitId, body);
              return localVarResponse.Data;
 
         }
@@ -24102,17 +24102,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query published schedules for given given time range for set of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitSchedulesSearchAsyncWithHttpInfo (string muId, UserListScheduleRequestBody body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitSchedulesSearchAsyncWithHttpInfo (string managementUnitId, UserListScheduleRequestBody body = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitSchedulesSearch");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitSchedulesSearch");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/schedules/search";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/schedules/search";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -24143,7 +24143,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -24193,12 +24193,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestList</returns>
-        public TimeOffRequestList PostWorkforcemanagementManagementunitTimeoffrequests (string muId, CreateAdminTimeOffRequest body = null)
+        public TimeOffRequestList PostWorkforcemanagementManagementunitTimeoffrequests (string managementUnitId, CreateAdminTimeOffRequest body = null)
         {
-             ApiResponse<TimeOffRequestList> localVarResponse = PostWorkforcemanagementManagementunitTimeoffrequestsWithHttpInfo(muId, body);
+             ApiResponse<TimeOffRequestList> localVarResponse = PostWorkforcemanagementManagementunitTimeoffrequestsWithHttpInfo(managementUnitId, body);
              return localVarResponse.Data;
         }
 
@@ -24206,16 +24206,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
-        public ApiResponse< TimeOffRequestList > PostWorkforcemanagementManagementunitTimeoffrequestsWithHttpInfo (string muId, CreateAdminTimeOffRequest body = null)
+        public ApiResponse< TimeOffRequestList > PostWorkforcemanagementManagementunitTimeoffrequestsWithHttpInfo (string managementUnitId, CreateAdminTimeOffRequest body = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffrequests");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffrequests");
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -24246,7 +24246,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -24295,12 +24295,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestList</returns>
-        public async System.Threading.Tasks.Task<TimeOffRequestList> PostWorkforcemanagementManagementunitTimeoffrequestsAsync (string muId, CreateAdminTimeOffRequest body = null)
+        public async System.Threading.Tasks.Task<TimeOffRequestList> PostWorkforcemanagementManagementunitTimeoffrequestsAsync (string managementUnitId, CreateAdminTimeOffRequest body = null)
         {
-             ApiResponse<TimeOffRequestList> localVarResponse = await PostWorkforcemanagementManagementunitTimeoffrequestsAsyncWithHttpInfo(muId, body);
+             ApiResponse<TimeOffRequestList> localVarResponse = await PostWorkforcemanagementManagementunitTimeoffrequestsAsyncWithHttpInfo(managementUnitId, body);
              return localVarResponse.Data;
 
         }
@@ -24309,17 +24309,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> PostWorkforcemanagementManagementunitTimeoffrequestsAsyncWithHttpInfo (string muId, CreateAdminTimeOffRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> PostWorkforcemanagementManagementunitTimeoffrequestsAsyncWithHttpInfo (string managementUnitId, CreateAdminTimeOffRequest body = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffrequests");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffrequests");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -24350,7 +24350,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -24400,12 +24400,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets the lookup ids to fetch the specified set of requests 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestListing</returns>
-        public TimeOffRequestListing PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string muId, TimeOffRequestQueryBody body = null)
+        public TimeOffRequestListing PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string managementUnitId, TimeOffRequestQueryBody body = null)
         {
-             ApiResponse<TimeOffRequestListing> localVarResponse = PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo(muId, body);
+             ApiResponse<TimeOffRequestListing> localVarResponse = PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo(managementUnitId, body);
              return localVarResponse.Data;
         }
 
@@ -24413,16 +24413,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets the lookup ids to fetch the specified set of requests 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestListing</returns>
-        public ApiResponse< TimeOffRequestListing > PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo (string muId, TimeOffRequestQueryBody body = null)
+        public ApiResponse< TimeOffRequestListing > PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffrequestsQuery");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffrequestsQuery");
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests/query";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/query";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -24453,7 +24453,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 
@@ -24502,12 +24502,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets the lookup ids to fetch the specified set of requests 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestListing</returns>
-        public async System.Threading.Tasks.Task<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsync (string muId, TimeOffRequestQueryBody body = null)
+        public async System.Threading.Tasks.Task<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsync (string managementUnitId, TimeOffRequestQueryBody body = null)
         {
-             ApiResponse<TimeOffRequestListing> localVarResponse = await PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo(muId, body);
+             ApiResponse<TimeOffRequestListing> localVarResponse = await PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo(managementUnitId, body);
              return localVarResponse.Data;
 
         }
@@ -24516,17 +24516,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets the lookup ids to fetch the specified set of requests 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestListing>> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo (string muId, TimeOffRequestQueryBody body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestListing>> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null)
         { 
-            // verify the required parameter 'muId' is set
-            if (muId == null)
-                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffrequestsQuery");
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffrequestsQuery");
             
 
-            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests/query";
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/query";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -24557,7 +24557,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
 

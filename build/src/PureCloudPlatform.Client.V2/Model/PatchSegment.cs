@@ -80,6 +80,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchSegment" /> class.
@@ -98,9 +103,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ShouldDisplayToAgent">Whether or not the segment should be displayed to agent/supervisor users..</param>
         /// <param name="Context">The context of the segment..</param>
         /// <param name="Journey">The pattern of rules defining the segment..</param>
+        /// <param name="AssignmentExpirationDays">Time, in days, from when the segment is assigned until it is automatically unassigned..</param>
         /// <param name="CreatedDate">Timestamp indicating when the segment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ModifiedDate">Timestamp indicating when the the segment was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public PatchSegment(bool? IsActive = null, string DisplayName = null, int? Version = null, string Description = null, string Color = null, bool? ShouldDisplayToAgent = null, Context Context = null, Journey Journey = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null)
+        public PatchSegment(bool? IsActive = null, string DisplayName = null, int? Version = null, string Description = null, string Color = null, bool? ShouldDisplayToAgent = null, Context Context = null, Journey Journey = null, int? AssignmentExpirationDays = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null)
         {
             this.IsActive = IsActive;
             this.DisplayName = DisplayName;
@@ -110,6 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ShouldDisplayToAgent = ShouldDisplayToAgent;
             this.Context = Context;
             this.Journey = Journey;
+            this.AssignmentExpirationDays = AssignmentExpirationDays;
             this.CreatedDate = CreatedDate;
             this.ModifiedDate = ModifiedDate;
             
@@ -199,6 +206,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Time, in days, from when the segment is assigned until it is automatically unassigned.
+        /// </summary>
+        /// <value>Time, in days, from when the segment is assigned until it is automatically unassigned.</value>
+        [DataMember(Name="assignmentExpirationDays", EmitDefaultValue=false)]
+        public int? AssignmentExpirationDays { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -242,6 +258,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ShouldDisplayToAgent: ").Append(ShouldDisplayToAgent).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("  Journey: ").Append(Journey).Append("\n");
+            sb.Append("  AssignmentExpirationDays: ").Append(AssignmentExpirationDays).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
@@ -327,6 +344,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Journey.Equals(other.Journey)
                 ) &&
                 (
+                    this.AssignmentExpirationDays == other.AssignmentExpirationDays ||
+                    this.AssignmentExpirationDays != null &&
+                    this.AssignmentExpirationDays.Equals(other.AssignmentExpirationDays)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -381,6 +403,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Journey != null)
                     hash = hash * 59 + this.Journey.GetHashCode();
+                
+                if (this.AssignmentExpirationDays != null)
+                    hash = hash * 59 + this.AssignmentExpirationDays.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

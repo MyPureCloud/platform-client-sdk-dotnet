@@ -17,7 +17,7 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Get service mapping information used in audits.
+        /// Get service mapping information used in realtime audits.
         /// </summary>
         /// <remarks>
         /// 
@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AuditQueryServiceMapping GetAuditsQueryRealtimeServicemapping ();
 
         /// <summary>
-        /// Get service mapping information used in audits.
+        /// Get service mapping information used in realtime audits.
         /// </summary>
         /// <remarks>
         /// 
@@ -157,7 +157,7 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Get service mapping information used in audits.
+        /// Get service mapping information used in realtime audits.
         /// </summary>
         /// <remarks>
         /// 
@@ -167,7 +167,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AuditQueryServiceMapping> GetAuditsQueryRealtimeServicemappingAsync ();
 
         /// <summary>
-        /// Get service mapping information used in audits.
+        /// Get service mapping information used in realtime audits.
         /// </summary>
         /// <remarks>
         /// 
@@ -385,7 +385,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get service mapping information used in audits. 
+        /// Get service mapping information used in realtime audits. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AuditQueryServiceMapping</returns>
@@ -396,7 +396,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get service mapping information used in audits. 
+        /// Get service mapping information used in realtime audits. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AuditQueryServiceMapping</returns>
@@ -474,7 +474,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get service mapping information used in audits. 
+        /// Get service mapping information used in realtime audits. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AuditQueryServiceMapping</returns>
@@ -486,7 +486,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get service mapping information used in audits. 
+        /// Get service mapping information used in realtime audits. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AuditQueryServiceMapping)</returns>

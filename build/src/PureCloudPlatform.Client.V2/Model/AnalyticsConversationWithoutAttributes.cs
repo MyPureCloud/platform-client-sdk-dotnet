@@ -89,12 +89,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The original direction of the conversation
         /// </summary>
         /// <value>The original direction of the conversation</value>
         [DataMember(Name="originatingDirection", EmitDefaultValue=false)]
         public OriginatingDirectionEnum? OriginatingDirection { get; set; }
+        
+        
         
         
         
@@ -117,9 +122,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OriginatingDirection">The original direction of the conversation.</param>
         /// <param name="Evaluations">Evaluations tied to this conversation.</param>
         /// <param name="Surveys">Surveys tied to this conversation.</param>
+        /// <param name="Resolutions">Resolutions tied to this conversation.</param>
         /// <param name="DivisionIds">Identifiers of divisions associated with this conversation.</param>
         /// <param name="Participants">Participants in the conversation.</param>
-        public AnalyticsConversationWithoutAttributes(string ConversationId = null, DateTime? ConversationStart = null, DateTime? ConversationEnd = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<string> DivisionIds = null, List<AnalyticsParticipantWithoutAttributes> Participants = null)
+        public AnalyticsConversationWithoutAttributes(string ConversationId = null, DateTime? ConversationStart = null, DateTime? ConversationEnd = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<AnalyticsResolution> Resolutions = null, List<string> DivisionIds = null, List<AnalyticsParticipantWithoutAttributes> Participants = null)
         {
             this.ConversationId = ConversationId;
             this.ConversationStart = ConversationStart;
@@ -129,6 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.OriginatingDirection = OriginatingDirection;
             this.Evaluations = Evaluations;
             this.Surveys = Surveys;
+            this.Resolutions = Resolutions;
             this.DivisionIds = DivisionIds;
             this.Participants = Participants;
             
@@ -202,6 +209,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Resolutions tied to this conversation
+        /// </summary>
+        /// <value>Resolutions tied to this conversation</value>
+        [DataMember(Name="resolutions", EmitDefaultValue=false)]
+        public List<AnalyticsResolution> Resolutions { get; set; }
+        
+        
+        
+        /// <summary>
         /// Identifiers of divisions associated with this conversation
         /// </summary>
         /// <value>Identifiers of divisions associated with this conversation</value>
@@ -235,6 +251,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OriginatingDirection: ").Append(OriginatingDirection).Append("\n");
             sb.Append("  Evaluations: ").Append(Evaluations).Append("\n");
             sb.Append("  Surveys: ").Append(Surveys).Append("\n");
+            sb.Append("  Resolutions: ").Append(Resolutions).Append("\n");
             sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("}\n");
@@ -314,6 +331,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Surveys.SequenceEqual(other.Surveys)
                 ) &&
                 (
+                    this.Resolutions == other.Resolutions ||
+                    this.Resolutions != null &&
+                    this.Resolutions.SequenceEqual(other.Resolutions)
+                ) &&
+                (
                     this.DivisionIds == other.DivisionIds ||
                     this.DivisionIds != null &&
                     this.DivisionIds.SequenceEqual(other.DivisionIds)
@@ -360,6 +382,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Surveys != null)
                     hash = hash * 59 + this.Surveys.GetHashCode();
+                
+                if (this.Resolutions != null)
+                    hash = hash * 59 + this.Resolutions.GetHashCode();
                 
                 if (this.DivisionIds != null)
                     hash = hash * 59 + this.DivisionIds.GetHashCode();

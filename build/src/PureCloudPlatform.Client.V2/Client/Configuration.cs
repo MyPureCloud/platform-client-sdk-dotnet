@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using PureCloudPlatform.Client.V2.Extensions;
 
 namespace PureCloudPlatform.Client.V2.Client
 {
@@ -36,6 +37,8 @@ namespace PureCloudPlatform.Client.V2.Client
                              string tempFolderPath = null,
                              string dateTimeFormat = null,
                              int timeout = 100000,
+                             bool shouldRefreshAccessToken = true,
+                             int refreshTokenWaitTime = 10,
                              string userAgent = "PureCloud SDK/dotnet"
                             )
         {
@@ -43,6 +46,7 @@ namespace PureCloudPlatform.Client.V2.Client
 
             Username = username;
             Password = password;
+            AuthTokenInfo = new AuthTokenInfo();
             AccessToken = accessToken;
             UserAgent = userAgent;
 
@@ -56,6 +60,8 @@ namespace PureCloudPlatform.Client.V2.Client
             TempFolderPath = tempFolderPath;
             DateTimeFormat = dateTimeFormat;
             Timeout = timeout;
+            ShouldRefreshAccessToken = shouldRefreshAccessToken;
+            RefreshTokenWaitTime = refreshTokenWaitTime;
         }
 
         /// <summary>
@@ -71,7 +77,7 @@ namespace PureCloudPlatform.Client.V2.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "112.0.0";
+        public const string Version = "113.0.0";
 
         /// <summary>
         /// Gets or sets the default Configuration.
@@ -107,12 +113,13 @@ namespace PureCloudPlatform.Client.V2.Client
         /// <returns></returns>
         public void setApiClientUsingDefault (ApiClient apiClient = null)
         {
+            AuthTokenInfo = new AuthTokenInfo();
             if (apiClient == null)
             {
                 if (Default != null && Default.ApiClient == null)
-                    Default.ApiClient = new ApiClient();
+                    Default.ApiClient = new ApiClient(this);
 
-                ApiClient = Default != null ? Default.ApiClient : new ApiClient();
+                ApiClient = Default != null ? Default.ApiClient : new ApiClient(this);
             }
             else
             {
@@ -168,10 +175,39 @@ namespace PureCloudPlatform.Client.V2.Client
         public String Password { get; set; }
 
         /// <summary>
+        /// Gets or sets the AuthTokenInfo for OAuth2 authentication.
+        /// </summary>
+        /// <value>The access token.</value>
+        public AuthTokenInfo AuthTokenInfo { get; set; }
+
+        /// <summary>
         /// Gets or sets the access token for OAuth2 authentication.
         /// </summary>
         /// <value>The access token.</value>
-        public String AccessToken { get; set; }
+        public String AccessToken
+        {
+            get
+            { 
+                return AuthTokenInfo.AccessToken;
+            }
+
+            set
+            {
+                AuthTokenInfo.AccessToken = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the flag to indicate whether the access token should be refreshed transparently when using the Code Authorization flow.
+        /// </summary>
+        /// <value>The access token transparent refresh flag.</value>
+        public bool ShouldRefreshAccessToken { get; set; }
+
+        /// <summary>
+        /// The amount of time other threads will wait for a thread to request a new access token when it expires.
+        /// </summary>
+        /// <value>The access token transparent refresh flag.</value>
+        public int RefreshTokenWaitTime { get; set; }
 
         /// <summary>
         /// Gets or sets the API key based on the authentication name.
@@ -278,7 +314,7 @@ namespace PureCloudPlatform.Client.V2.Client
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
             
             report += "    Version of the API: v2\n";
-            report += "    SDK Package Version: 112.0.0\n";
+            report += "    SDK Package Version: 113.0.0\n";
 
             return report;
         }

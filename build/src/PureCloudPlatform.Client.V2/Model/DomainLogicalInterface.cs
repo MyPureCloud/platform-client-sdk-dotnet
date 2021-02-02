@@ -270,6 +270,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Indicates if the resource is active, inactive, or deleted.
         /// </summary>
@@ -323,6 +326,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="currentState", EmitDefaultValue=false)]
         public CurrentStateEnum? CurrentState { get; set; }
+        
+        
         
         
         
@@ -721,6 +726,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// This interface will be used for all communication with the internet.
+        /// </summary>
+        /// <value>This interface will be used for all communication with the internet.</value>
+        [DataMember(Name="useForWanInterface", EmitDefaultValue=false)]
+        public bool? UseForWanInterface { get; private set; }
+        
+        
+        
+        /// <summary>
         /// External trunk base settings to use for external communication from this interface.
         /// </summary>
         /// <value>External trunk base settings to use for external communication from this interface.</value>
@@ -815,6 +829,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UseForInternalEdgeCommunication: ").Append(UseForInternalEdgeCommunication).Append("\n");
             sb.Append("  UseForIndirectEdgeCommunication: ").Append(UseForIndirectEdgeCommunication).Append("\n");
             sb.Append("  UseForCloudProxyEdgeCommunication: ").Append(UseForCloudProxyEdgeCommunication).Append("\n");
+            sb.Append("  UseForWanInterface: ").Append(UseForWanInterface).Append("\n");
             sb.Append("  ExternalTrunkBaseAssignments: ").Append(ExternalTrunkBaseAssignments).Append("\n");
             sb.Append("  PhoneTrunkBaseAssignments: ").Append(PhoneTrunkBaseAssignments).Append("\n");
             sb.Append("  TraceEnabled: ").Append(TraceEnabled).Append("\n");
@@ -1028,6 +1043,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UseForCloudProxyEdgeCommunication.Equals(other.UseForCloudProxyEdgeCommunication)
                 ) &&
                 (
+                    this.UseForWanInterface == other.UseForWanInterface ||
+                    this.UseForWanInterface != null &&
+                    this.UseForWanInterface.Equals(other.UseForWanInterface)
+                ) &&
+                (
                     this.ExternalTrunkBaseAssignments == other.ExternalTrunkBaseAssignments ||
                     this.ExternalTrunkBaseAssignments != null &&
                     this.ExternalTrunkBaseAssignments.SequenceEqual(other.ExternalTrunkBaseAssignments)
@@ -1172,6 +1192,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.UseForCloudProxyEdgeCommunication != null)
                     hash = hash * 59 + this.UseForCloudProxyEdgeCommunication.GetHashCode();
+                
+                if (this.UseForWanInterface != null)
+                    hash = hash * 59 + this.UseForWanInterface.GetHashCode();
                 
                 if (this.ExternalTrunkBaseAssignments != null)
                     hash = hash * 59 + this.ExternalTrunkBaseAssignments.GetHashCode();

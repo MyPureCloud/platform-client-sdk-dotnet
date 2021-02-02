@@ -60,24 +60,31 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="PureEngage" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="AutoProvisionUsers">AutoProvisionUsers.</param>
-        /// <param name="Certificate">Certificate.</param>
+        /// <param name="Disabled">Disabled.</param>
         /// <param name="IssuerURI">IssuerURI.</param>
         /// <param name="SsoTargetURI">SsoTargetURI.</param>
-        /// <param name="Disabled">Disabled.</param>
-        public PureEngage(string Name = null, bool? AutoProvisionUsers = null, string Certificate = null, string IssuerURI = null, string SsoTargetURI = null, bool? Disabled = null)
+        /// <param name="Certificate">Certificate.</param>
+        /// <param name="Certificates">Certificates.</param>
+        /// <param name="AutoProvisionUsers">AutoProvisionUsers.</param>
+        public PureEngage(string Name = null, bool? Disabled = null, string IssuerURI = null, string SsoTargetURI = null, string Certificate = null, List<string> Certificates = null, bool? AutoProvisionUsers = null)
         {
             this.Name = Name;
-            this.AutoProvisionUsers = AutoProvisionUsers;
-            this.Certificate = Certificate;
+            this.Disabled = Disabled;
             this.IssuerURI = IssuerURI;
             this.SsoTargetURI = SsoTargetURI;
-            this.Disabled = Disabled;
+            this.Certificate = Certificate;
+            this.Certificates = Certificates;
+            this.AutoProvisionUsers = AutoProvisionUsers;
             
         }
         
@@ -101,18 +108,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets AutoProvisionUsers
+        /// Gets or Sets Disabled
         /// </summary>
-        [DataMember(Name="autoProvisionUsers", EmitDefaultValue=false)]
-        public bool? AutoProvisionUsers { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Certificate
-        /// </summary>
-        [DataMember(Name="certificate", EmitDefaultValue=false)]
-        public string Certificate { get; set; }
+        [DataMember(Name="disabled", EmitDefaultValue=false)]
+        public bool? Disabled { get; set; }
         
         
         
@@ -133,10 +132,26 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Disabled
+        /// Gets or Sets Certificate
         /// </summary>
-        [DataMember(Name="disabled", EmitDefaultValue=false)]
-        public bool? Disabled { get; set; }
+        [DataMember(Name="certificate", EmitDefaultValue=false)]
+        public string Certificate { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Certificates
+        /// </summary>
+        [DataMember(Name="certificates", EmitDefaultValue=false)]
+        public List<string> Certificates { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets AutoProvisionUsers
+        /// </summary>
+        [DataMember(Name="autoProvisionUsers", EmitDefaultValue=false)]
+        public bool? AutoProvisionUsers { get; set; }
         
         
         
@@ -159,11 +174,12 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  AutoProvisionUsers: ").Append(AutoProvisionUsers).Append("\n");
-            sb.Append("  Certificate: ").Append(Certificate).Append("\n");
+            sb.Append("  Disabled: ").Append(Disabled).Append("\n");
             sb.Append("  IssuerURI: ").Append(IssuerURI).Append("\n");
             sb.Append("  SsoTargetURI: ").Append(SsoTargetURI).Append("\n");
-            sb.Append("  Disabled: ").Append(Disabled).Append("\n");
+            sb.Append("  Certificate: ").Append(Certificate).Append("\n");
+            sb.Append("  Certificates: ").Append(Certificates).Append("\n");
+            sb.Append("  AutoProvisionUsers: ").Append(AutoProvisionUsers).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -212,14 +228,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
-                    this.AutoProvisionUsers == other.AutoProvisionUsers ||
-                    this.AutoProvisionUsers != null &&
-                    this.AutoProvisionUsers.Equals(other.AutoProvisionUsers)
-                ) &&
-                (
-                    this.Certificate == other.Certificate ||
-                    this.Certificate != null &&
-                    this.Certificate.Equals(other.Certificate)
+                    this.Disabled == other.Disabled ||
+                    this.Disabled != null &&
+                    this.Disabled.Equals(other.Disabled)
                 ) &&
                 (
                     this.IssuerURI == other.IssuerURI ||
@@ -232,9 +243,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SsoTargetURI.Equals(other.SsoTargetURI)
                 ) &&
                 (
-                    this.Disabled == other.Disabled ||
-                    this.Disabled != null &&
-                    this.Disabled.Equals(other.Disabled)
+                    this.Certificate == other.Certificate ||
+                    this.Certificate != null &&
+                    this.Certificate.Equals(other.Certificate)
+                ) &&
+                (
+                    this.Certificates == other.Certificates ||
+                    this.Certificates != null &&
+                    this.Certificates.SequenceEqual(other.Certificates)
+                ) &&
+                (
+                    this.AutoProvisionUsers == other.AutoProvisionUsers ||
+                    this.AutoProvisionUsers != null &&
+                    this.AutoProvisionUsers.Equals(other.AutoProvisionUsers)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -261,11 +282,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 
-                if (this.AutoProvisionUsers != null)
-                    hash = hash * 59 + this.AutoProvisionUsers.GetHashCode();
-                
-                if (this.Certificate != null)
-                    hash = hash * 59 + this.Certificate.GetHashCode();
+                if (this.Disabled != null)
+                    hash = hash * 59 + this.Disabled.GetHashCode();
                 
                 if (this.IssuerURI != null)
                     hash = hash * 59 + this.IssuerURI.GetHashCode();
@@ -273,8 +291,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SsoTargetURI != null)
                     hash = hash * 59 + this.SsoTargetURI.GetHashCode();
                 
-                if (this.Disabled != null)
-                    hash = hash * 59 + this.Disabled.GetHashCode();
+                if (this.Certificate != null)
+                    hash = hash * 59 + this.Certificate.GetHashCode();
+                
+                if (this.Certificates != null)
+                    hash = hash * 59 + this.Certificates.GetHashCode();
+                
+                if (this.AutoProvisionUsers != null)
+                    hash = hash * 59 + this.AutoProvisionUsers.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

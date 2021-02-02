@@ -9,11 +9,12 @@ title: PureEngage
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **AutoProvisionUsers** | **bool?** |  | [optional] |
-| **Certificate** | **string** |  | [optional] |
+| **Disabled** | **bool?** |  | [optional] |
 | **IssuerURI** | **string** |  | [optional] |
 | **SsoTargetURI** | **string** |  | [optional] |
-| **Disabled** | **bool?** |  | [optional] |
+| **Certificate** | **string** |  | [optional] |
+| **Certificates** | **List&lt;string&gt;** |  | [optional] |
+| **AutoProvisionUsers** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 
