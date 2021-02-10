@@ -220,7 +220,7 @@ namespace PureCloudPlatform.Client.V2.Client
             RestClient.UserAgent = Configuration.UserAgent;
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "113.0.0");
+            request.AddHeader("purecloud-sdk", "113.0.1");
 
             Retry retry = new Retry(this.RetryConfig);
             IRestResponse response;
@@ -238,6 +238,7 @@ namespace PureCloudPlatform.Client.V2.Client
                 if (statusCode == 401)
                 {
                     HandleExpiredAccessToken();
+                    headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
                     return CallApi(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams, contentType);
                 }
             }
@@ -281,6 +282,7 @@ namespace PureCloudPlatform.Client.V2.Client
                 if (statusCode == 401)
                 {
                     HandleExpiredAccessToken();
+                    headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
                     return await CallApiAsync(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams, contentType);
                 }
             }
