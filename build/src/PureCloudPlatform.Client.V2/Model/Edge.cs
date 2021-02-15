@@ -314,8 +314,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets CallDrainingState
+        /// The current state of the Edge's call draining process before it can be safely rebooted or updated.
         /// </summary>
+        /// <value>The current state of the Edge's call draining process before it can be safely rebooted or updated.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum CallDrainingStateEnum
         {
@@ -474,8 +475,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets CallDrainingState
+        /// The current state of the Edge's call draining process before it can be safely rebooted or updated.
         /// </summary>
+        /// <value>The current state of the Edge's call draining process before it can be safely rebooted or updated.</value>
         [DataMember(Name="callDrainingState", EmitDefaultValue=false)]
         public CallDrainingStateEnum? CallDrainingState { get; set; }
         
@@ -533,10 +535,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PhysicalEdge">PhysicalEdge.</param>
         /// <param name="Managed">Managed.</param>
         /// <param name="EdgeDeploymentType">EdgeDeploymentType.</param>
-        /// <param name="CallDrainingState">CallDrainingState.</param>
-        /// <param name="ConversationCount">ConversationCount.</param>
         /// <param name="Proxy">Edge HTTP proxy configuration for the WAN port. The field can be a hostname, FQDN, IPv4 or IPv6 address. If port is not included, port 80 is assumed..</param>
-        public Edge(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, Site Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null, EdgeDeploymentTypeEnum? EdgeDeploymentType = null, CallDrainingStateEnum? CallDrainingState = null, int? ConversationCount = null, string Proxy = null)
+        public Edge(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, Site Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null, EdgeDeploymentTypeEnum? EdgeDeploymentType = null, string Proxy = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -571,8 +571,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PhysicalEdge = PhysicalEdge;
             this.Managed = Managed;
             this.EdgeDeploymentType = EdgeDeploymentType;
-            this.CallDrainingState = CallDrainingState;
-            this.ConversationCount = ConversationCount;
             this.Proxy = Proxy;
             
         }
@@ -852,10 +850,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets ConversationCount
+        /// The remaining number of conversations the Edge has to drain before it can be safely rebooted or updated. When an Edge is not draining conversations, this will be NULL or 0.
         /// </summary>
+        /// <value>The remaining number of conversations the Edge has to drain before it can be safely rebooted or updated. When an Edge is not draining conversations, this will be NULL or 0.</value>
         [DataMember(Name="conversationCount", EmitDefaultValue=false)]
-        public int? ConversationCount { get; set; }
+        public int? ConversationCount { get; private set; }
         
         
         

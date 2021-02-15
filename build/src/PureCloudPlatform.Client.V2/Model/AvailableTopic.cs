@@ -35,6 +35,43 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Visibility of this topic (Public or Preview)
+        /// </summary>
+        /// <value>Visibility of this topic (Public or Preview)</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum VisibilityEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Public for "Public"
+            /// </summary>
+            [EnumMember(Value = "Public")]
+            Public,
+            
+            /// <summary>
+            /// Enum Preview for "Preview"
+            /// </summary>
+            [EnumMember(Value = "Preview")]
+            Preview
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -90,6 +127,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Visibility of this topic (Public or Preview)
+        /// </summary>
+        /// <value>Visibility of this topic (Public or Preview)</value>
+        [DataMember(Name="visibility", EmitDefaultValue=false)]
+        public VisibilityEnum? Visibility { get; set; }
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -102,16 +152,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">Description.</param>
         /// <param name="Id">Id.</param>
         /// <param name="RequiresPermissions">Permissions required to subscribe to the topic.</param>
+        /// <param name="RequiresDivisionPermissions">True if the subscribing user must belong to the same division as the topic object ID.</param>
+        /// <param name="Enforced">Whether or not the permissions on this topic are enforced.</param>
+        /// <param name="Visibility">Visibility of this topic (Public or Preview).</param>
         /// <param name="Schema">Schema.</param>
         /// <param name="RequiresCurrentUser">True if the topic user ID is required to match the subscribing user ID.</param>
         /// <param name="RequiresCurrentUserOrPermission">True if permissions are only required when the topic user ID does not match the subscribing user ID.</param>
         /// <param name="Transports">Transports that support events for the topic.</param>
         /// <param name="PublicApiTemplateUriPaths">PublicApiTemplateUriPaths.</param>
-        public AvailableTopic(string Description = null, string Id = null, List<string> RequiresPermissions = null, Dictionary<string, Object> Schema = null, bool? RequiresCurrentUser = null, bool? RequiresCurrentUserOrPermission = null, List<TransportsEnum> Transports = null, List<string> PublicApiTemplateUriPaths = null)
+        public AvailableTopic(string Description = null, string Id = null, List<string> RequiresPermissions = null, bool? RequiresDivisionPermissions = null, bool? Enforced = null, VisibilityEnum? Visibility = null, Dictionary<string, Object> Schema = null, bool? RequiresCurrentUser = null, bool? RequiresCurrentUserOrPermission = null, List<TransportsEnum> Transports = null, List<string> PublicApiTemplateUriPaths = null)
         {
             this.Description = Description;
             this.Id = Id;
             this.RequiresPermissions = RequiresPermissions;
+            this.RequiresDivisionPermissions = RequiresDivisionPermissions;
+            this.Enforced = Enforced;
+            this.Visibility = Visibility;
             this.Schema = Schema;
             this.RequiresCurrentUser = RequiresCurrentUser;
             this.RequiresCurrentUserOrPermission = RequiresCurrentUserOrPermission;
@@ -144,6 +200,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Permissions required to subscribe to the topic</value>
         [DataMember(Name="requiresPermissions", EmitDefaultValue=false)]
         public List<string> RequiresPermissions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// True if the subscribing user must belong to the same division as the topic object ID
+        /// </summary>
+        /// <value>True if the subscribing user must belong to the same division as the topic object ID</value>
+        [DataMember(Name="requiresDivisionPermissions", EmitDefaultValue=false)]
+        public bool? RequiresDivisionPermissions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Whether or not the permissions on this topic are enforced
+        /// </summary>
+        /// <value>Whether or not the permissions on this topic are enforced</value>
+        [DataMember(Name="enforced", EmitDefaultValue=false)]
+        public bool? Enforced { get; set; }
+        
+        
         
         
         
@@ -201,6 +277,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  RequiresPermissions: ").Append(RequiresPermissions).Append("\n");
+            sb.Append("  RequiresDivisionPermissions: ").Append(RequiresDivisionPermissions).Append("\n");
+            sb.Append("  Enforced: ").Append(Enforced).Append("\n");
+            sb.Append("  Visibility: ").Append(Visibility).Append("\n");
             sb.Append("  Schema: ").Append(Schema).Append("\n");
             sb.Append("  RequiresCurrentUser: ").Append(RequiresCurrentUser).Append("\n");
             sb.Append("  RequiresCurrentUserOrPermission: ").Append(RequiresCurrentUserOrPermission).Append("\n");
@@ -258,6 +337,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RequiresPermissions.SequenceEqual(other.RequiresPermissions)
                 ) &&
                 (
+                    this.RequiresDivisionPermissions == other.RequiresDivisionPermissions ||
+                    this.RequiresDivisionPermissions != null &&
+                    this.RequiresDivisionPermissions.Equals(other.RequiresDivisionPermissions)
+                ) &&
+                (
+                    this.Enforced == other.Enforced ||
+                    this.Enforced != null &&
+                    this.Enforced.Equals(other.Enforced)
+                ) &&
+                (
+                    this.Visibility == other.Visibility ||
+                    this.Visibility != null &&
+                    this.Visibility.Equals(other.Visibility)
+                ) &&
+                (
                     this.Schema == other.Schema ||
                     this.Schema != null &&
                     this.Schema.SequenceEqual(other.Schema)
@@ -304,6 +398,15 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RequiresPermissions != null)
                     hash = hash * 59 + this.RequiresPermissions.GetHashCode();
+                
+                if (this.RequiresDivisionPermissions != null)
+                    hash = hash * 59 + this.RequiresDivisionPermissions.GetHashCode();
+                
+                if (this.Enforced != null)
+                    hash = hash * 59 + this.Enforced.GetHashCode();
+                
+                if (this.Visibility != null)
+                    hash = hash * 59 + this.Visibility.GetHashCode();
                 
                 if (this.Schema != null)
                     hash = hash * 59 + this.Schema.GetHashCode();

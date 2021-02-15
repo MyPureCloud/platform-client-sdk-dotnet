@@ -500,7 +500,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum TooManyRequestsFromAnOrganization for "TOO_MANY_REQUESTS_FROM_AN_ORGANIZATION"
             /// </summary>
             [EnumMember(Value = "TOO_MANY_REQUESTS_FROM_AN_ORGANIZATION")]
-            TooManyRequestsFromAnOrganization
+            TooManyRequestsFromAnOrganization,
+            
+            /// <summary>
+            /// Enum NotAuthorizedToViewExport for "NOT_AUTHORIZED_TO_VIEW_EXPORT"
+            /// </summary>
+            [EnumMember(Value = "NOT_AUTHORIZED_TO_VIEW_EXPORT")]
+            NotAuthorizedToViewExport
         }
         
         

@@ -55,6 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentEvaluatorActivity" /> class.
@@ -64,13 +69,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Evaluator">Evaluator.</param>
         /// <param name="NumEvaluations">NumEvaluations.</param>
         /// <param name="AverageEvaluationScore">AverageEvaluationScore.</param>
-        public AgentEvaluatorActivity(string Name = null, User Agent = null, User Evaluator = null, int? NumEvaluations = null, int? AverageEvaluationScore = null)
+        /// <param name="NumEvaluationsWithoutViewPermission">NumEvaluationsWithoutViewPermission.</param>
+        public AgentEvaluatorActivity(string Name = null, User Agent = null, User Evaluator = null, int? NumEvaluations = null, int? AverageEvaluationScore = null, int? NumEvaluationsWithoutViewPermission = null)
         {
             this.Name = Name;
             this.Agent = Agent;
             this.Evaluator = Evaluator;
             this.NumEvaluations = NumEvaluations;
             this.AverageEvaluationScore = AverageEvaluationScore;
+            this.NumEvaluationsWithoutViewPermission = NumEvaluationsWithoutViewPermission;
             
         }
         
@@ -126,6 +133,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets NumEvaluationsWithoutViewPermission
+        /// </summary>
+        [DataMember(Name="numEvaluationsWithoutViewPermission", EmitDefaultValue=false)]
+        public int? NumEvaluationsWithoutViewPermission { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -148,6 +163,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Evaluator: ").Append(Evaluator).Append("\n");
             sb.Append("  NumEvaluations: ").Append(NumEvaluations).Append("\n");
             sb.Append("  AverageEvaluationScore: ").Append(AverageEvaluationScore).Append("\n");
+            sb.Append("  NumEvaluationsWithoutViewPermission: ").Append(NumEvaluationsWithoutViewPermission).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -216,6 +232,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AverageEvaluationScore.Equals(other.AverageEvaluationScore)
                 ) &&
                 (
+                    this.NumEvaluationsWithoutViewPermission == other.NumEvaluationsWithoutViewPermission ||
+                    this.NumEvaluationsWithoutViewPermission != null &&
+                    this.NumEvaluationsWithoutViewPermission.Equals(other.NumEvaluationsWithoutViewPermission)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -251,6 +272,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AverageEvaluationScore != null)
                     hash = hash * 59 + this.AverageEvaluationScore.GetHashCode();
+                
+                if (this.NumEvaluationsWithoutViewPermission != null)
+                    hash = hash * 59 + this.NumEvaluationsWithoutViewPermission.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -13,6 +13,7 @@ title: AgentEvaluatorActivity
 | **Evaluator** | [**User**](User.html) |  | [optional] |
 | **NumEvaluations** | **int?** |  | [optional] |
 | **AverageEvaluationScore** | **int?** |  | [optional] |
+| **NumEvaluationsWithoutViewPermission** | **int?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

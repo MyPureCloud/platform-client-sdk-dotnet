@@ -449,7 +449,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum AgentDevelopmentSummaryView for "AGENT_DEVELOPMENT_SUMMARY_VIEW"
             /// </summary>
             [EnumMember(Value = "AGENT_DEVELOPMENT_SUMMARY_VIEW")]
-            AgentDevelopmentSummaryView
+            AgentDevelopmentSummaryView,
+            
+            /// <summary>
+            /// Enum AgentPerformanceMeView for "AGENT_PERFORMANCE_ME_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_PERFORMANCE_ME_VIEW")]
+            AgentPerformanceMeView,
+            
+            /// <summary>
+            /// Enum AgentStatusMeView for "AGENT_STATUS_ME_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_STATUS_ME_VIEW")]
+            AgentStatusMeView,
+            
+            /// <summary>
+            /// Enum AgentEvaluationMeView for "AGENT_EVALUATION_ME_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_EVALUATION_ME_VIEW")]
+            AgentEvaluationMeView
         }
         
         
@@ -546,7 +564,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum FailedAsExportFileSizeIsGreaterThan10mb for "FAILED_AS_EXPORT_FILE_SIZE_IS_GREATER_THAN_10MB"
             /// </summary>
             [EnumMember(Value = "FAILED_AS_EXPORT_FILE_SIZE_IS_GREATER_THAN_10MB")]
-            FailedAsExportFileSizeIsGreaterThan10mb
+            FailedAsExportFileSizeIsGreaterThan10mb,
+            
+            /// <summary>
+            /// Enum NotAuthorizedToViewExport for "NOT_AUTHORIZED_TO_VIEW_EXPORT"
+            /// </summary>
+            [EnumMember(Value = "NOT_AUTHORIZED_TO_VIEW_EXPORT")]
+            NotAuthorizedToViewExport
         }
         
         

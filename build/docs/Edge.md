@@ -42,8 +42,8 @@ title: Edge
 | **PhysicalEdge** | **bool?** |  | [optional] |
 | **Managed** | **bool?** |  | [optional] |
 | **EdgeDeploymentType** | **string** |  | [optional] |
-| **CallDrainingState** | **string** |  | [optional] |
-| **ConversationCount** | **int?** |  | [optional] |
+| **CallDrainingState** | **string** | The current state of the Edge&#39;s call draining process before it can be safely rebooted or updated. | [optional] |
+| **ConversationCount** | **int?** | The remaining number of conversations the Edge has to drain before it can be safely rebooted or updated. When an Edge is not draining conversations, this will be NULL or 0. | [optional] |
 | **Proxy** | **string** | Edge HTTP proxy configuration for the WAN port. The field can be a hostname, FQDN, IPv4 or IPv6 address. If port is not included, port 80 is assumed. | [optional] |
 | **OfflineConfigCalled** | **bool?** | True if the offline edge configuration endpoint has been called for this edge. | [optional] |
 | **OsName** | **string** | The name provided by the operating system of the Edge. | [optional] |

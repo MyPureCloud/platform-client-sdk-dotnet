@@ -85,6 +85,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentActivity" /> class.
@@ -100,7 +105,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HighestCriticalScore">HighestCriticalScore.</param>
         /// <param name="LowestCriticalScore">LowestCriticalScore.</param>
         /// <param name="AgentEvaluatorActivityList">AgentEvaluatorActivityList.</param>
-        public AgentActivity(string Name = null, User Agent = null, int? NumEvaluations = null, int? AverageEvaluationScore = null, int? NumCriticalEvaluations = null, float? AverageCriticalScore = null, float? HighestEvaluationScore = null, float? LowestEvaluationScore = null, float? HighestCriticalScore = null, float? LowestCriticalScore = null, List<AgentEvaluatorActivity> AgentEvaluatorActivityList = null)
+        /// <param name="NumEvaluationsWithoutViewPermission">NumEvaluationsWithoutViewPermission.</param>
+        public AgentActivity(string Name = null, User Agent = null, int? NumEvaluations = null, int? AverageEvaluationScore = null, int? NumCriticalEvaluations = null, float? AverageCriticalScore = null, float? HighestEvaluationScore = null, float? LowestEvaluationScore = null, float? HighestCriticalScore = null, float? LowestCriticalScore = null, List<AgentEvaluatorActivity> AgentEvaluatorActivityList = null, int? NumEvaluationsWithoutViewPermission = null)
         {
             this.Name = Name;
             this.Agent = Agent;
@@ -113,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.HighestCriticalScore = HighestCriticalScore;
             this.LowestCriticalScore = LowestCriticalScore;
             this.AgentEvaluatorActivityList = AgentEvaluatorActivityList;
+            this.NumEvaluationsWithoutViewPermission = NumEvaluationsWithoutViewPermission;
             
         }
         
@@ -216,6 +223,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets NumEvaluationsWithoutViewPermission
+        /// </summary>
+        [DataMember(Name="numEvaluationsWithoutViewPermission", EmitDefaultValue=false)]
+        public int? NumEvaluationsWithoutViewPermission { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -244,6 +259,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  HighestCriticalScore: ").Append(HighestCriticalScore).Append("\n");
             sb.Append("  LowestCriticalScore: ").Append(LowestCriticalScore).Append("\n");
             sb.Append("  AgentEvaluatorActivityList: ").Append(AgentEvaluatorActivityList).Append("\n");
+            sb.Append("  NumEvaluationsWithoutViewPermission: ").Append(NumEvaluationsWithoutViewPermission).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -342,6 +358,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentEvaluatorActivityList.SequenceEqual(other.AgentEvaluatorActivityList)
                 ) &&
                 (
+                    this.NumEvaluationsWithoutViewPermission == other.NumEvaluationsWithoutViewPermission ||
+                    this.NumEvaluationsWithoutViewPermission != null &&
+                    this.NumEvaluationsWithoutViewPermission.Equals(other.NumEvaluationsWithoutViewPermission)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -395,6 +416,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AgentEvaluatorActivityList != null)
                     hash = hash * 59 + this.AgentEvaluatorActivityList.GetHashCode();
+                
+                if (this.NumEvaluationsWithoutViewPermission != null)
+                    hash = hash * 59 + this.NumEvaluationsWithoutViewPermission.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

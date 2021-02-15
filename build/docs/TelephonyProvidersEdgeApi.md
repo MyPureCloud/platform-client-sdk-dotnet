@@ -49,6 +49,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgesDid**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesdid) | **GET** /api/v2/telephony/providers/edges/dids/{didId} | Get a DID by ID. |
 | [**GetTelephonyProvidersEdgesDidpool**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesdidpool) | **GET** /api/v2/telephony/providers/edges/didpools/{didPoolId} | Get a DID Pool by ID. |
 | [**GetTelephonyProvidersEdgesDidpools**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesdidpools) | **GET** /api/v2/telephony/providers/edges/didpools | Get a listing of DID Pools |
+| [**GetTelephonyProvidersEdgesDidpoolsDids**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesdidpoolsdids) | **GET** /api/v2/telephony/providers/edges/didpools/dids | Get a listing of unassigned and/or assigned numbers in a set of DID Pools. |
 | [**GetTelephonyProvidersEdgesDids**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesdids) | **GET** /api/v2/telephony/providers/edges/dids | Get a listing of DIDs |
 | [**GetTelephonyProvidersEdgesEdgegroup**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesedgegroup) | **GET** /api/v2/telephony/providers/edges/edgegroups/{edgeGroupId} | Get edge group. |
 | [**GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesedgegroupedgetrunkbase) | **GET** /api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId} | Gets the edge trunk base associated with the edge group |
@@ -2912,6 +2913,81 @@ namespace Example
 ### Return type
 
 [**DIDPoolEntityListing**](DIDPoolEntityListing.html)
+
+<a name="gettelephonyprovidersedgesdidpoolsdids"></a>
+
+## [**DIDNumberEntityListing**](DIDNumberEntityListing.html) GetTelephonyProvidersEdgesDidpoolsDids (string type, List<string> id = null, string numberMatch = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+
+
+
+Get a listing of unassigned and/or assigned numbers in a set of DID Pools.
+
+
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyProvidersEdgesDidpoolsDidsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var type = type_example;  // string | The type of numbers to return.
+            var id = new List<string>(); // List<string> | Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned. (optional) 
+            var numberMatch = numberMatch_example;  // string | A number to filter the results by. (optional) 
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
+
+            try
+            { 
+                // Get a listing of unassigned and/or assigned numbers in a set of DID Pools.
+                DIDNumberEntityListing result = apiInstance.GetTelephonyProvidersEdgesDidpoolsDids(type, id, numberMatch, pageSize, pageNumber, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgesDidpoolsDids: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **type** | **string**| The type of numbers to return. | <br />**Values**: ASSIGNED_AND_UNASSIGNED, UNASSIGNED |
+| **id** | [**List<string>**](string.html)| Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned. | [optional]  |
+| **numberMatch** | **string**| A number to filter the results by. | [optional]  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortOrder** | **string**| Sort order | [optional] [default to ascending] |
+{: class="table table-striped"}
+
+### Return type
+
+[**DIDNumberEntityListing**](DIDNumberEntityListing.html)
 
 <a name="gettelephonyprovidersedgesdids"></a>
 

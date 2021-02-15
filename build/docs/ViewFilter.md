@@ -100,6 +100,12 @@ title: ViewFilter
 | **JourneyOutcomeIds** | **List&lt;string&gt;** | The journey outcome ids are used to fetch outcomes for the associated view | [optional] |
 | **JourneySegmentIds** | **List&lt;string&gt;** | The journey segment ids are used to fetch segments for the associated view | [optional] |
 | **JourneyActionMapTypes** | **List&lt;string&gt;** | The journey action map types are used to filter action map data for the associated view | [optional] |
+| **DevelopmentRoleList** | **List&lt;string&gt;** | The list of development roles used to filter agent development view | [optional] |
+| **DevelopmentTypeList** | **List&lt;string&gt;** | The list of development types used to filter agent development view | [optional] |
+| **DevelopmentStatusList** | **List&lt;string&gt;** | The list of development status used to filter agent development view | [optional] |
+| **DevelopmentModuleIds** | **List&lt;string&gt;** | The list of development moduleIds used to filter agent development view | [optional] |
+| **DevelopmentKeyType** | **string** | Represents due or completed to filter agent development view | [optional] |
+| **DevelopmentActivityOverdue** | **bool?** | Indicates filtering for development activities | [optional] |
 {: class="table table-striped"}
 
 

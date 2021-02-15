@@ -89,7 +89,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Purged for "Purged"
             /// </summary>
             [EnumMember(Value = "Purged")]
-            Purged
+            Purged,
+            
+            /// <summary>
+            /// Enum Purgepending for "PurgePending"
+            /// </summary>
+            [EnumMember(Value = "PurgePending")]
+            Purgepending
         }
         
         

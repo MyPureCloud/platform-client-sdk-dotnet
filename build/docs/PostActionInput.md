@@ -7,8 +7,8 @@ title: PostActionInput
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Category** | **string** | Category of action | |
-| **Name** | **string** | Name of action | |
+| **Category** | **string** | Category of action, Can be up to 256 characters long | |
+| **Name** | **string** | Name of action, Can be up to 256 characters long | |
 | **IntegrationId** | **string** | The ID of the integration this action is associated to | |
 | **Config** | [**ActionConfig**](ActionConfig.html) | Configuration to support request and response processing | |
 | **Contract** | [**ActionContractInput**](ActionContractInput.html) | Action contract | |

@@ -100,11 +100,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets CreationMethod
         /// </summary>
         [DataMember(Name="creationMethod", EmitDefaultValue=false)]
         public CreationMethodEnum? CreationMethod { get; set; }
+        
+        
         
         
         
@@ -141,7 +146,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PlanningGroupsVersion">PlanningGroupsVersion.</param>
         /// <param name="WeekCount">WeekCount.</param>
         /// <param name="Metadata">Metadata.</param>
-        public WfmBuShortTermForecastImportCompleteTopicBuShortTermForecast(string Id = null, string WeekDate = null, CreationMethodEnum? CreationMethod = null, string Description = null, bool? Legacy = null, DateTime? ReferenceStartDate = null, List<WfmBuShortTermForecastImportCompleteTopicForecastSourceDayPointer> SourceDays = null, List<WfmBuShortTermForecastImportCompleteTopicBuForecastModification> Modifications = null, string TimeZone = null, int? PlanningGroupsVersion = null, int? WeekCount = null, WfmBuShortTermForecastImportCompleteTopicWfmVersionedEntityMetadata Metadata = null)
+        /// <param name="CanUseForScheduling">CanUseForScheduling.</param>
+        public WfmBuShortTermForecastImportCompleteTopicBuShortTermForecast(string Id = null, string WeekDate = null, CreationMethodEnum? CreationMethod = null, string Description = null, bool? Legacy = null, DateTime? ReferenceStartDate = null, List<WfmBuShortTermForecastImportCompleteTopicForecastSourceDayPointer> SourceDays = null, List<WfmBuShortTermForecastImportCompleteTopicBuForecastModification> Modifications = null, string TimeZone = null, int? PlanningGroupsVersion = null, int? WeekCount = null, WfmBuShortTermForecastImportCompleteTopicWfmVersionedEntityMetadata Metadata = null, bool? CanUseForScheduling = null)
         {
             this.Id = Id;
             this.WeekDate = WeekDate;
@@ -155,6 +161,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PlanningGroupsVersion = PlanningGroupsVersion;
             this.WeekCount = WeekCount;
             this.Metadata = Metadata;
+            this.CanUseForScheduling = CanUseForScheduling;
             
         }
         
@@ -249,6 +256,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public WfmBuShortTermForecastImportCompleteTopicWfmVersionedEntityMetadata Metadata { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets CanUseForScheduling
+        /// </summary>
+        [DataMember(Name="canUseForScheduling", EmitDefaultValue=false)]
+        public bool? CanUseForScheduling { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -270,6 +285,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PlanningGroupsVersion: ").Append(PlanningGroupsVersion).Append("\n");
             sb.Append("  WeekCount: ").Append(WeekCount).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  CanUseForScheduling: ").Append(CanUseForScheduling).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -365,6 +381,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
+                ) &&
+                (
+                    this.CanUseForScheduling == other.CanUseForScheduling ||
+                    this.CanUseForScheduling != null &&
+                    this.CanUseForScheduling.Equals(other.CanUseForScheduling)
                 );
         }
 
@@ -415,6 +436,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
+                
+                if (this.CanUseForScheduling != null)
+                    hash = hash * 59 + this.CanUseForScheduling.GetHashCode();
                 
                 return hash;
             }

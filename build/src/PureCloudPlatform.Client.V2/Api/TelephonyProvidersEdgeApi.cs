@@ -1015,6 +1015,38 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DIDPoolEntityListing> GetTelephonyProvidersEdgesDidpoolsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null);
         
         /// <summary>
+        /// Get a listing of unassigned and/or assigned numbers in a set of DID Pools.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">The type of numbers to return.</param>
+        /// <param name="id">Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned. (optional)</param>
+        /// <param name="numberMatch">A number to filter the results by. (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <returns>DIDNumberEntityListing</returns>
+        DIDNumberEntityListing GetTelephonyProvidersEdgesDidpoolsDids (string type, List<string> id = null, string numberMatch = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get a listing of unassigned and/or assigned numbers in a set of DID Pools.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">The type of numbers to return.</param>
+        /// <param name="id">Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned. (optional)</param>
+        /// <param name="numberMatch">A number to filter the results by. (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <returns>ApiResponse of DIDNumberEntityListing</returns>
+        ApiResponse<DIDNumberEntityListing> GetTelephonyProvidersEdgesDidpoolsDidsWithHttpInfo (string type, List<string> id = null, string numberMatch = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        
+        /// <summary>
         /// Get a listing of DIDs
         /// </summary>
         /// <remarks>
@@ -4141,6 +4173,38 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>Task of ApiResponse (DIDPoolEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DIDPoolEntityListing>> GetTelephonyProvidersEdgesDidpoolsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null);
+        
+        /// <summary>
+        /// Get a listing of unassigned and/or assigned numbers in a set of DID Pools.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">The type of numbers to return.</param>
+        /// <param name="id">Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned. (optional)</param>
+        /// <param name="numberMatch">A number to filter the results by. (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <returns>Task of DIDNumberEntityListing</returns>
+        System.Threading.Tasks.Task<DIDNumberEntityListing> GetTelephonyProvidersEdgesDidpoolsDidsAsync (string type, List<string> id = null, string numberMatch = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get a listing of unassigned and/or assigned numbers in a set of DID Pools.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">The type of numbers to return.</param>
+        /// <param name="id">Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned. (optional)</param>
+        /// <param name="numberMatch">A number to filter the results by. (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <returns>Task of ApiResponse (DIDNumberEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DIDNumberEntityListing>> GetTelephonyProvidersEdgesDidpoolsDidsAsyncWithHttpInfo (string type, List<string> id = null, string numberMatch = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         
         /// <summary>
         /// Get a listing of DIDs
@@ -14712,6 +14776,229 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DIDPoolEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (DIDPoolEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DIDPoolEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a listing of unassigned and/or assigned numbers in a set of DID Pools. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">The type of numbers to return.</param>
+        /// <param name="id">Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned. (optional)</param>
+        /// <param name="numberMatch">A number to filter the results by. (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <returns>DIDNumberEntityListing</returns>
+        public DIDNumberEntityListing GetTelephonyProvidersEdgesDidpoolsDids (string type, List<string> id = null, string numberMatch = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        {
+             ApiResponse<DIDNumberEntityListing> localVarResponse = GetTelephonyProvidersEdgesDidpoolsDidsWithHttpInfo(type, id, numberMatch, pageSize, pageNumber, sortOrder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a listing of unassigned and/or assigned numbers in a set of DID Pools. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">The type of numbers to return.</param>
+        /// <param name="id">Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned. (optional)</param>
+        /// <param name="numberMatch">A number to filter the results by. (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <returns>ApiResponse of DIDNumberEntityListing</returns>
+        public ApiResponse< DIDNumberEntityListing > GetTelephonyProvidersEdgesDidpoolsDidsWithHttpInfo (string type, List<string> id = null, string numberMatch = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        { 
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesDidpoolsDids");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/didpools/dids";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", this.Configuration.ApiClient.ParameterToString(type)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (numberMatch != null) localVarQueryParams.Add(new Tuple<string, string>("numberMatch", this.Configuration.ApiClient.ParameterToString(numberMatch)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesDidpoolsDids: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesDidpoolsDids: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DIDNumberEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (DIDNumberEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DIDNumberEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a listing of unassigned and/or assigned numbers in a set of DID Pools. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">The type of numbers to return.</param>
+        /// <param name="id">Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned. (optional)</param>
+        /// <param name="numberMatch">A number to filter the results by. (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <returns>Task of DIDNumberEntityListing</returns>
+        public async System.Threading.Tasks.Task<DIDNumberEntityListing> GetTelephonyProvidersEdgesDidpoolsDidsAsync (string type, List<string> id = null, string numberMatch = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        {
+             ApiResponse<DIDNumberEntityListing> localVarResponse = await GetTelephonyProvidersEdgesDidpoolsDidsAsyncWithHttpInfo(type, id, numberMatch, pageSize, pageNumber, sortOrder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a listing of unassigned and/or assigned numbers in a set of DID Pools. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">The type of numbers to return.</param>
+        /// <param name="id">Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned. (optional)</param>
+        /// <param name="numberMatch">A number to filter the results by. (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <returns>Task of ApiResponse (DIDNumberEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DIDNumberEntityListing>> GetTelephonyProvidersEdgesDidpoolsDidsAsyncWithHttpInfo (string type, List<string> id = null, string numberMatch = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        { 
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesDidpoolsDids");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/didpools/dids";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", this.Configuration.ApiClient.ParameterToString(type)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (numberMatch != null) localVarQueryParams.Add(new Tuple<string, string>("numberMatch", this.Configuration.ApiClient.ParameterToString(numberMatch)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesDidpoolsDids: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesDidpoolsDids: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DIDNumberEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (DIDNumberEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DIDNumberEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

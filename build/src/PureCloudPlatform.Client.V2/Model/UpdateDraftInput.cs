@@ -60,8 +60,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateDraftInput" /> class.
         /// </summary>
-        /// <param name="Category">Category of action.</param>
-        /// <param name="Name">Name of action.</param>
+        /// <param name="Category">Category of action, Can be up to 256 characters long.</param>
+        /// <param name="Name">Name of action, Can be up to 256 characters long.</param>
         /// <param name="Config">Configuration to support request and response processing.</param>
         /// <param name="Contract">Action contract.</param>
         /// <param name="Secure">Indication of whether or not the action is designed to accept sensitive data.</param>
@@ -80,18 +80,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Category of action
+        /// Category of action, Can be up to 256 characters long
         /// </summary>
-        /// <value>Category of action</value>
+        /// <value>Category of action, Can be up to 256 characters long</value>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public string Category { get; set; }
         
         
         
         /// <summary>
-        /// Name of action
+        /// Name of action, Can be up to 256 characters long
         /// </summary>
-        /// <value>Name of action</value>
+        /// <value>Name of action, Can be up to 256 characters long</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         

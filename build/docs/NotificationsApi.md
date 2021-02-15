@@ -81,7 +81,7 @@ void (empty response body)
 
 <a name="getnotificationsavailabletopics"></a>
 
-## [**AvailableTopicEntityListing**](AvailableTopicEntityListing.html) GetNotificationsAvailabletopics (List<string> expand = null)
+## [**AvailableTopicEntityListing**](AvailableTopicEntityListing.html) GetNotificationsAvailabletopics (List<string> expand = null, bool? includePreview = null)
 
 
 
@@ -115,11 +115,12 @@ namespace Example
 
             var apiInstance = new NotificationsApi();
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            var includePreview = true;  // bool? | Whether or not to include Preview topics (optional)  (default to true)
 
             try
             { 
                 // Get available notification topics.
-                AvailableTopicEntityListing result = apiInstance.GetNotificationsAvailabletopics(expand);
+                AvailableTopicEntityListing result = apiInstance.GetNotificationsAvailabletopics(expand, includePreview);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -136,7 +137,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: description, requiresPermissions, schema, transports, publicApiTemplateUriPaths |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: description, requiresPermissions, enforced, schema, visibility, transports, publicApiTemplateUriPaths |
+| **includePreview** | **bool?**| Whether or not to include Preview topics | [optional] [default to true] |
 {: class="table table-striped"}
 
 ### Return type

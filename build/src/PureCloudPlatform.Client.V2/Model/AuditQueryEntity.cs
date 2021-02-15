@@ -405,7 +405,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Ruleset for "RuleSet"
             /// </summary>
             [EnumMember(Value = "RuleSet")]
-            Ruleset
+            Ruleset,
+            
+            /// <summary>
+            /// Enum Transcriptionsettings for "TranscriptionSettings"
+            /// </summary>
+            [EnumMember(Value = "TranscriptionSettings")]
+            Transcriptionsettings,
+            
+            /// <summary>
+            /// Enum Speechtextanalyticssettings for "SpeechTextAnalyticsSettings"
+            /// </summary>
+            [EnumMember(Value = "SpeechTextAnalyticsSettings")]
+            Speechtextanalyticssettings
         }
         
         

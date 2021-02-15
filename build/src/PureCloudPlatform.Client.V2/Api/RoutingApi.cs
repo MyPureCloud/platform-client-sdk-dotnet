@@ -87,6 +87,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteRoutingQueueWithHttpInfo (string queueId, bool? forceDelete = null);
         
         /// <summary>
+        /// Delete a queue member.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <returns></returns>
+        void DeleteRoutingQueueMember (string queueId, string memberId);
+
+        /// <summary>
+        /// Delete a queue member.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteRoutingQueueMemberWithHttpInfo (string queueId, string memberId);
+        
+        /// <summary>
         /// DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member.
         /// </summary>
         /// <remarks>
@@ -593,6 +617,50 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">mediaType</param>
         /// <returns>ApiResponse of EstimatedWaitTimePredictions</returns>
         ApiResponse<EstimatedWaitTimePredictions> GetRoutingQueueMediatypeEstimatedwaittimeWithHttpInfo (string queueId, string mediaType);
+        
+        /// <summary>
+        /// Get the members of this queue.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size [max 100] (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="profileSkills">Filter by profile skill (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
+        /// <returns>QueueMemberEntityListing</returns>
+        QueueMemberEntityListing GetRoutingQueueMembers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
+
+        /// <summary>
+        /// Get the members of this queue.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size [max 100] (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="profileSkills">Filter by profile skill (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
+        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
+        ApiResponse<QueueMemberEntityListing> GetRoutingQueueMembersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
         
         /// <summary>
         /// DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue.
@@ -1235,6 +1303,80 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<InboundDomain> PatchRoutingEmailDomainWithHttpInfo (string domainId, InboundDomainPatchRequest body);
         
         /// <summary>
+        /// Validate domain settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Domain settings</param>
+        /// <returns>InboundDomain</returns>
+        InboundDomain PatchRoutingEmailDomainValidate (string domainId, InboundDomainPatchRequest body);
+
+        /// <summary>
+        /// Validate domain settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Domain settings</param>
+        /// <returns>ApiResponse of InboundDomain</returns>
+        ApiResponse<InboundDomain> PatchRoutingEmailDomainValidateWithHttpInfo (string domainId, InboundDomainPatchRequest body);
+        
+        /// <summary>
+        /// Update the ring number OR joined status for a queue member.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <param name="body">Queue Member</param>
+        /// <returns>QueueMember</returns>
+        QueueMember PatchRoutingQueueMember (string queueId, string memberId, QueueMember body);
+
+        /// <summary>
+        /// Update the ring number OR joined status for a queue member.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <param name="body">Queue Member</param>
+        /// <returns>ApiResponse of QueueMember</returns>
+        ApiResponse<QueueMember> PatchRoutingQueueMemberWithHttpInfo (string queueId, string memberId, QueueMember body);
+        
+        /// <summary>
+        /// Join or unjoin a set of users for a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <returns>QueueMemberEntityListing</returns>
+        QueueMemberEntityListing PatchRoutingQueueMembers (string queueId, List<QueueMember> body);
+
+        /// <summary>
+        /// Join or unjoin a set of users for a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
+        ApiResponse<QueueMemberEntityListing> PatchRoutingQueueMembersWithHttpInfo (string queueId, List<QueueMember> body);
+        
+        /// <summary>
         /// DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue.
         /// </summary>
         /// <remarks>
@@ -1545,6 +1687,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of Language</returns>
         ApiResponse<Language> PostRoutingLanguagesWithHttpInfo (Language body);
+        
+        /// <summary>
+        /// Bulk add or delete up to 100 queue members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <param name="delete">True to delete queue members (optional, default to false)</param>
+        /// <returns>string</returns>
+        string PostRoutingQueueMembers (string queueId, List<WritableEntity> body, bool? delete = null);
+
+        /// <summary>
+        /// Bulk add or delete up to 100 queue members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <param name="delete">True to delete queue members (optional, default to false)</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> PostRoutingQueueMembersWithHttpInfo (string queueId, List<WritableEntity> body, bool? delete = null);
         
         /// <summary>
         /// DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members.
@@ -2091,6 +2259,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueAsyncWithHttpInfo (string queueId, bool? forceDelete = null);
         
         /// <summary>
+        /// Delete a queue member.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteRoutingQueueMemberAsync (string queueId, string memberId);
+
+        /// <summary>
+        /// Delete a queue member.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueMemberAsyncWithHttpInfo (string queueId, string memberId);
+        
+        /// <summary>
         /// DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member.
         /// </summary>
         /// <remarks>
@@ -2597,6 +2789,50 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">mediaType</param>
         /// <returns>Task of ApiResponse (EstimatedWaitTimePredictions)</returns>
         System.Threading.Tasks.Task<ApiResponse<EstimatedWaitTimePredictions>> GetRoutingQueueMediatypeEstimatedwaittimeAsyncWithHttpInfo (string queueId, string mediaType);
+        
+        /// <summary>
+        /// Get the members of this queue.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size [max 100] (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="profileSkills">Filter by profile skill (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
+        /// <returns>Task of QueueMemberEntityListing</returns>
+        System.Threading.Tasks.Task<QueueMemberEntityListing> GetRoutingQueueMembersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
+
+        /// <summary>
+        /// Get the members of this queue.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size [max 100] (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="profileSkills">Filter by profile skill (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
+        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetRoutingQueueMembersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
         
         /// <summary>
         /// DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue.
@@ -3239,6 +3475,80 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<InboundDomain>> PatchRoutingEmailDomainAsyncWithHttpInfo (string domainId, InboundDomainPatchRequest body);
         
         /// <summary>
+        /// Validate domain settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Domain settings</param>
+        /// <returns>Task of InboundDomain</returns>
+        System.Threading.Tasks.Task<InboundDomain> PatchRoutingEmailDomainValidateAsync (string domainId, InboundDomainPatchRequest body);
+
+        /// <summary>
+        /// Validate domain settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Domain settings</param>
+        /// <returns>Task of ApiResponse (InboundDomain)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InboundDomain>> PatchRoutingEmailDomainValidateAsyncWithHttpInfo (string domainId, InboundDomainPatchRequest body);
+        
+        /// <summary>
+        /// Update the ring number OR joined status for a queue member.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <param name="body">Queue Member</param>
+        /// <returns>Task of QueueMember</returns>
+        System.Threading.Tasks.Task<QueueMember> PatchRoutingQueueMemberAsync (string queueId, string memberId, QueueMember body);
+
+        /// <summary>
+        /// Update the ring number OR joined status for a queue member.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <param name="body">Queue Member</param>
+        /// <returns>Task of ApiResponse (QueueMember)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QueueMember>> PatchRoutingQueueMemberAsyncWithHttpInfo (string queueId, string memberId, QueueMember body);
+        
+        /// <summary>
+        /// Join or unjoin a set of users for a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <returns>Task of QueueMemberEntityListing</returns>
+        System.Threading.Tasks.Task<QueueMemberEntityListing> PatchRoutingQueueMembersAsync (string queueId, List<QueueMember> body);
+
+        /// <summary>
+        /// Join or unjoin a set of users for a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> PatchRoutingQueueMembersAsyncWithHttpInfo (string queueId, List<QueueMember> body);
+        
+        /// <summary>
         /// DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue.
         /// </summary>
         /// <remarks>
@@ -3549,6 +3859,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (Language)</returns>
         System.Threading.Tasks.Task<ApiResponse<Language>> PostRoutingLanguagesAsyncWithHttpInfo (Language body);
+        
+        /// <summary>
+        /// Bulk add or delete up to 100 queue members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <param name="delete">True to delete queue members (optional, default to false)</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> PostRoutingQueueMembersAsync (string queueId, List<WritableEntity> body, bool? delete = null);
+
+        /// <summary>
+        /// Bulk add or delete up to 100 queue members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <param name="delete">True to delete queue members (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> PostRoutingQueueMembersAsyncWithHttpInfo (string queueId, List<WritableEntity> body, bool? delete = null);
         
         /// <summary>
         /// DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members.
@@ -4694,6 +5030,210 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingQueue: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingQueue: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete a queue member. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <returns></returns>
+        public void DeleteRoutingQueueMember (string queueId, string memberId)
+        {
+             DeleteRoutingQueueMemberWithHttpInfo(queueId, memberId);
+        }
+
+        /// <summary>
+        /// Delete a queue member. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteRoutingQueueMemberWithHttpInfo (string queueId, string memberId)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->DeleteRoutingQueueMember");
+            // verify the required parameter 'memberId' is set
+            if (memberId == null)
+                throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingApi->DeleteRoutingQueueMember");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/members/{memberId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+            if (memberId != null) localVarPathParams.Add("memberId", this.Configuration.ApiClient.ParameterToString(memberId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingQueueMember: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingQueueMember: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete a queue member. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteRoutingQueueMemberAsync (string queueId, string memberId)
+        {
+             await DeleteRoutingQueueMemberAsyncWithHttpInfo(queueId, memberId);
+
+        }
+
+        /// <summary>
+        /// Delete a queue member. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueMemberAsyncWithHttpInfo (string queueId, string memberId)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->DeleteRoutingQueueMember");
+            
+            // verify the required parameter 'memberId' is set
+            if (memberId == null)
+                throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingApi->DeleteRoutingQueueMember");
+            
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/members/{memberId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+            if (memberId != null) localVarPathParams.Add("memberId", this.Configuration.ApiClient.ParameterToString(memberId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingQueueMember: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingQueueMember: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -8994,6 +9534,265 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<EstimatedWaitTimePredictions>(localVarStatusCode,
                 localVarHeaders,
                 (EstimatedWaitTimePredictions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EstimatedWaitTimePredictions)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get the members of this queue. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size [max 100] (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="profileSkills">Filter by profile skill (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
+        /// <returns>QueueMemberEntityListing</returns>
+        public QueueMemberEntityListing GetRoutingQueueMembers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+        {
+             ApiResponse<QueueMemberEntityListing> localVarResponse = GetRoutingQueueMembersWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, joined, name, profileSkills, skills, languages, routingStatus, presence);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the members of this queue. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size [max 100] (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="profileSkills">Filter by profile skill (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
+        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
+        public ApiResponse< QueueMemberEntityListing > GetRoutingQueueMembersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetRoutingQueueMembers");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/members";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (joined != null) localVarQueryParams.Add(new Tuple<string, string>("joined", this.Configuration.ApiClient.ParameterToString(joined)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (profileSkills != null) profileSkills.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("profileSkills", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (skills != null) skills.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("skills", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (languages != null) languages.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("languages", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (routingStatus != null) routingStatus.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("routingStatus", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (presence != null) presence.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("presence", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueueMembers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueueMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (QueueMemberEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the members of this queue. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size [max 100] (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="profileSkills">Filter by profile skill (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
+        /// <returns>Task of QueueMemberEntityListing</returns>
+        public async System.Threading.Tasks.Task<QueueMemberEntityListing> GetRoutingQueueMembersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+        {
+             ApiResponse<QueueMemberEntityListing> localVarResponse = await GetRoutingQueueMembersAsyncWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, joined, name, profileSkills, skills, languages, routingStatus, presence);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the members of this queue. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size [max 100] (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="profileSkills">Filter by profile skill (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
+        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetRoutingQueueMembersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetRoutingQueueMembers");
+            
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/members";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (joined != null) localVarQueryParams.Add(new Tuple<string, string>("joined", this.Configuration.ApiClient.ParameterToString(joined)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (profileSkills != null) profileSkills.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("profileSkills", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (skills != null) skills.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("skills", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (languages != null) languages.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("languages", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (routingStatus != null) routingStatus.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("routingStatus", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (presence != null) presence.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("presence", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueueMembers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueueMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (QueueMemberEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -13907,6 +14706,661 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Validate domain settings 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Domain settings</param>
+        /// <returns>InboundDomain</returns>
+        public InboundDomain PatchRoutingEmailDomainValidate (string domainId, InboundDomainPatchRequest body)
+        {
+             ApiResponse<InboundDomain> localVarResponse = PatchRoutingEmailDomainValidateWithHttpInfo(domainId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate domain settings 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Domain settings</param>
+        /// <returns>ApiResponse of InboundDomain</returns>
+        public ApiResponse< InboundDomain > PatchRoutingEmailDomainValidateWithHttpInfo (string domainId, InboundDomainPatchRequest body)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->PatchRoutingEmailDomainValidate");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchRoutingEmailDomainValidate");
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainId}/validate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingEmailDomainValidate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingEmailDomainValidate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<InboundDomain>(localVarStatusCode,
+                localVarHeaders,
+                (InboundDomain) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InboundDomain)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Validate domain settings 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Domain settings</param>
+        /// <returns>Task of InboundDomain</returns>
+        public async System.Threading.Tasks.Task<InboundDomain> PatchRoutingEmailDomainValidateAsync (string domainId, InboundDomainPatchRequest body)
+        {
+             ApiResponse<InboundDomain> localVarResponse = await PatchRoutingEmailDomainValidateAsyncWithHttpInfo(domainId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate domain settings 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Domain settings</param>
+        /// <returns>Task of ApiResponse (InboundDomain)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InboundDomain>> PatchRoutingEmailDomainValidateAsyncWithHttpInfo (string domainId, InboundDomainPatchRequest body)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->PatchRoutingEmailDomainValidate");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchRoutingEmailDomainValidate");
+            
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainId}/validate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingEmailDomainValidate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingEmailDomainValidate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<InboundDomain>(localVarStatusCode,
+                localVarHeaders,
+                (InboundDomain) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InboundDomain)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update the ring number OR joined status for a queue member. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <param name="body">Queue Member</param>
+        /// <returns>QueueMember</returns>
+        public QueueMember PatchRoutingQueueMember (string queueId, string memberId, QueueMember body)
+        {
+             ApiResponse<QueueMember> localVarResponse = PatchRoutingQueueMemberWithHttpInfo(queueId, memberId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update the ring number OR joined status for a queue member. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <param name="body">Queue Member</param>
+        /// <returns>ApiResponse of QueueMember</returns>
+        public ApiResponse< QueueMember > PatchRoutingQueueMemberWithHttpInfo (string queueId, string memberId, QueueMember body)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PatchRoutingQueueMember");
+            // verify the required parameter 'memberId' is set
+            if (memberId == null)
+                throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingApi->PatchRoutingQueueMember");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchRoutingQueueMember");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/members/{memberId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+            if (memberId != null) localVarPathParams.Add("memberId", this.Configuration.ApiClient.ParameterToString(memberId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingQueueMember: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingQueueMember: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QueueMember>(localVarStatusCode,
+                localVarHeaders,
+                (QueueMember) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMember)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update the ring number OR joined status for a queue member. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <param name="body">Queue Member</param>
+        /// <returns>Task of QueueMember</returns>
+        public async System.Threading.Tasks.Task<QueueMember> PatchRoutingQueueMemberAsync (string queueId, string memberId, QueueMember body)
+        {
+             ApiResponse<QueueMember> localVarResponse = await PatchRoutingQueueMemberAsyncWithHttpInfo(queueId, memberId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update the ring number OR joined status for a queue member. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <param name="body">Queue Member</param>
+        /// <returns>Task of ApiResponse (QueueMember)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> PatchRoutingQueueMemberAsyncWithHttpInfo (string queueId, string memberId, QueueMember body)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PatchRoutingQueueMember");
+            
+            // verify the required parameter 'memberId' is set
+            if (memberId == null)
+                throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingApi->PatchRoutingQueueMember");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchRoutingQueueMember");
+            
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/members/{memberId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+            if (memberId != null) localVarPathParams.Add("memberId", this.Configuration.ApiClient.ParameterToString(memberId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingQueueMember: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingQueueMember: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QueueMember>(localVarStatusCode,
+                localVarHeaders,
+                (QueueMember) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMember)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Join or unjoin a set of users for a queue 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <returns>QueueMemberEntityListing</returns>
+        public QueueMemberEntityListing PatchRoutingQueueMembers (string queueId, List<QueueMember> body)
+        {
+             ApiResponse<QueueMemberEntityListing> localVarResponse = PatchRoutingQueueMembersWithHttpInfo(queueId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Join or unjoin a set of users for a queue 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
+        public ApiResponse< QueueMemberEntityListing > PatchRoutingQueueMembersWithHttpInfo (string queueId, List<QueueMember> body)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PatchRoutingQueueMembers");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchRoutingQueueMembers");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/members";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingQueueMembers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingQueueMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (QueueMemberEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Join or unjoin a set of users for a queue 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <returns>Task of QueueMemberEntityListing</returns>
+        public async System.Threading.Tasks.Task<QueueMemberEntityListing> PatchRoutingQueueMembersAsync (string queueId, List<QueueMember> body)
+        {
+             ApiResponse<QueueMemberEntityListing> localVarResponse = await PatchRoutingQueueMembersAsyncWithHttpInfo(queueId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Join or unjoin a set of users for a queue 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> PatchRoutingQueueMembersAsyncWithHttpInfo (string queueId, List<QueueMember> body)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PatchRoutingQueueMembers");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchRoutingQueueMembers");
+            
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/members";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingQueueMembers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingQueueMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (QueueMemberEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16666,6 +18120,226 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Language>(localVarStatusCode,
                 localVarHeaders,
                 (Language) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Language)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Bulk add or delete up to 100 queue members 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <param name="delete">True to delete queue members (optional, default to false)</param>
+        /// <returns>string</returns>
+        public string PostRoutingQueueMembers (string queueId, List<WritableEntity> body, bool? delete = null)
+        {
+             ApiResponse<string> localVarResponse = PostRoutingQueueMembersWithHttpInfo(queueId, body, delete);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk add or delete up to 100 queue members 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <param name="delete">True to delete queue members (optional, default to false)</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > PostRoutingQueueMembersWithHttpInfo (string queueId, List<WritableEntity> body, bool? delete = null)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PostRoutingQueueMembers");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingQueueMembers");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/members";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+
+            // Query params
+            if (delete != null) localVarQueryParams.Add(new Tuple<string, string>("delete", this.Configuration.ApiClient.ParameterToString(delete)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingQueueMembers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingQueueMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarHeaders,
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Bulk add or delete up to 100 queue members 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <param name="delete">True to delete queue members (optional, default to false)</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> PostRoutingQueueMembersAsync (string queueId, List<WritableEntity> body, bool? delete = null)
+        {
+             ApiResponse<string> localVarResponse = await PostRoutingQueueMembersAsyncWithHttpInfo(queueId, body, delete);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Bulk add or delete up to 100 queue members 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <param name="delete">True to delete queue members (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PostRoutingQueueMembersAsyncWithHttpInfo (string queueId, List<WritableEntity> body, bool? delete = null)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PostRoutingQueueMembers");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingQueueMembers");
+            
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/members";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+
+            // Query params
+            if (delete != null) localVarQueryParams.Add(new Tuple<string, string>("delete", this.Configuration.ApiClient.ParameterToString(delete)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingQueueMembers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingQueueMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarHeaders,
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

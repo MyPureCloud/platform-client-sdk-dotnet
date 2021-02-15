@@ -181,7 +181,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Outbound for "Outbound"
             /// </summary>
             [EnumMember(Value = "Outbound")]
-            Outbound
+            Outbound,
+            
+            /// <summary>
+            /// Enum Speechandtextanalytics for "SpeechAndTextAnalytics"
+            /// </summary>
+            [EnumMember(Value = "SpeechAndTextAnalytics")]
+            Speechandtextanalytics
         }
         
         

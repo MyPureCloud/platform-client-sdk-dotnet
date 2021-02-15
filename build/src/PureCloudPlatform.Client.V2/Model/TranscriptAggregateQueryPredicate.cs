@@ -151,12 +151,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Teamid,
             
             /// <summary>
-            /// Enum Topic for "topic"
-            /// </summary>
-            [EnumMember(Value = "topic")]
-            Topic,
-            
-            /// <summary>
             /// Enum Userid for "userId"
             /// </summary>
             [EnumMember(Value = "userId")]

@@ -68,7 +68,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum ScreenRecording for "SCREEN_RECORDING"
             /// </summary>
             [EnumMember(Value = "SCREEN_RECORDING")]
-            ScreenRecording
+            ScreenRecording,
+            
+            /// <summary>
+            /// Enum Pureengage for "PUREENGAGE"
+            /// </summary>
+            [EnumMember(Value = "PUREENGAGE")]
+            Pureengage,
+            
+            /// <summary>
+            /// Enum Pureconnect for "PURECONNECT"
+            /// </summary>
+            [EnumMember(Value = "PURECONNECT")]
+            Pureconnect
         }
         
         

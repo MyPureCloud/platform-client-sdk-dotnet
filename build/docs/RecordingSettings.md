@@ -7,7 +7,8 @@ title: RecordingSettings
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **MaxSimultaneousStreams** | **int?** |  | [optional] |
+| **MaxSimultaneousStreams** | **int?** | Maximum number of simultaneous screen recording streams | [optional] |
+| **MaxConfigurableScreenRecordingStreams** | **int?** | Upper limit that maxSimultaneousStreams can be configured | [optional] |
 {: class="table table-striped"}
 
 

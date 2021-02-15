@@ -579,6 +579,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Tanswered,
             
             /// <summary>
+            /// Enum Tcallback for "tCallback"
+            /// </summary>
+            [EnumMember(Value = "tCallback")]
+            Tcallback,
+            
+            /// <summary>
+            /// Enum Tcallbackcomplete for "tCallbackComplete"
+            /// </summary>
+            [EnumMember(Value = "tCallbackComplete")]
+            Tcallbackcomplete,
+            
+            /// <summary>
             /// Enum Tcontacting for "tContacting"
             /// </summary>
             [EnumMember(Value = "tContacting")]

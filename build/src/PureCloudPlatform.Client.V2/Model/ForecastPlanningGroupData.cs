@@ -39,7 +39,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ForecastPlanningGroupData" /> class.
         /// </summary>
-        /// <param name="PlanningGroupId">The id of the planning group to which this data applies.</param>
+        /// <param name="PlanningGroupId">The ID of the planning group to which this data applies. Note this is a snapshot of the planning group at the time of forecast creation and may not correspond to the current configuration.</param>
         /// <param name="OfferedPerInterval">Forecast offered counts per interval for this week of the forecast.</param>
         /// <param name="AverageHandleTimeSecondsPerInterval">Forecast average handle time per interval in seconds.</param>
         public ForecastPlanningGroupData(string PlanningGroupId = null, List<double?> OfferedPerInterval = null, List<double?> AverageHandleTimeSecondsPerInterval = null)
@@ -53,9 +53,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The id of the planning group to which this data applies
+        /// The ID of the planning group to which this data applies. Note this is a snapshot of the planning group at the time of forecast creation and may not correspond to the current configuration
         /// </summary>
-        /// <value>The id of the planning group to which this data applies</value>
+        /// <value>The ID of the planning group to which this data applies. Note this is a snapshot of the planning group at the time of forecast creation and may not correspond to the current configuration</value>
         [DataMember(Name="planningGroupId", EmitDefaultValue=false)]
         public string PlanningGroupId { get; set; }
         

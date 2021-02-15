@@ -265,7 +265,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Sharing for "sharing"
             /// </summary>
             [EnumMember(Value = "sharing")]
-            Sharing
+            Sharing,
+            
+            /// <summary>
+            /// Enum Callback for "callback"
+            /// </summary>
+            [EnumMember(Value = "callback")]
+            Callback
         }
         
         

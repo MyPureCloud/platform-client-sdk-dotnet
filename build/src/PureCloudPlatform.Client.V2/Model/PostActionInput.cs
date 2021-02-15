@@ -60,8 +60,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PostActionInput" /> class.
         /// </summary>
-        /// <param name="Category">Category of action (required).</param>
-        /// <param name="Name">Name of action (required).</param>
+        /// <param name="Category">Category of action, Can be up to 256 characters long (required).</param>
+        /// <param name="Name">Name of action, Can be up to 256 characters long (required).</param>
         /// <param name="IntegrationId">The ID of the integration this action is associated to (required).</param>
         /// <param name="Config">Configuration to support request and response processing (required).</param>
         /// <param name="Contract">Action contract (required).</param>
@@ -80,18 +80,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Category of action
+        /// Category of action, Can be up to 256 characters long
         /// </summary>
-        /// <value>Category of action</value>
+        /// <value>Category of action, Can be up to 256 characters long</value>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public string Category { get; set; }
         
         
         
         /// <summary>
-        /// Name of action
+        /// Name of action, Can be up to 256 characters long
         /// </summary>
-        /// <value>Name of action</value>
+        /// <value>Name of action, Can be up to 256 characters long</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         

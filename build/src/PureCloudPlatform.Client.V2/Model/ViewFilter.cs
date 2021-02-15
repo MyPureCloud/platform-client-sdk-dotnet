@@ -936,6 +936,120 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets DevelopmentRoleList
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum DevelopmentRoleListEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Creator for "Creator"
+            /// </summary>
+            [EnumMember(Value = "Creator")]
+            Creator,
+            
+            /// <summary>
+            /// Enum Facilitator for "Facilitator"
+            /// </summary>
+            [EnumMember(Value = "Facilitator")]
+            Facilitator,
+            
+            /// <summary>
+            /// Enum Attendee for "Attendee"
+            /// </summary>
+            [EnumMember(Value = "Attendee")]
+            Attendee
+        }
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets DevelopmentTypeList
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum DevelopmentTypeListEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Informational for "Informational"
+            /// </summary>
+            [EnumMember(Value = "Informational")]
+            Informational,
+            
+            /// <summary>
+            /// Enum Coaching for "Coaching"
+            /// </summary>
+            [EnumMember(Value = "Coaching")]
+            Coaching
+        }
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets DevelopmentStatusList
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum DevelopmentStatusListEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Planned for "Planned"
+            /// </summary>
+            [EnumMember(Value = "Planned")]
+            Planned,
+            
+            /// <summary>
+            /// Enum Scheduled for "Scheduled"
+            /// </summary>
+            [EnumMember(Value = "Scheduled")]
+            Scheduled,
+            
+            /// <summary>
+            /// Enum Invalidschedule for "InvalidSchedule"
+            /// </summary>
+            [EnumMember(Value = "InvalidSchedule")]
+            Invalidschedule,
+            
+            /// <summary>
+            /// Enum Inprogress for "InProgress"
+            /// </summary>
+            [EnumMember(Value = "InProgress")]
+            Inprogress,
+            
+            /// <summary>
+            /// Enum Completed for "Completed"
+            /// </summary>
+            [EnumMember(Value = "Completed")]
+            Completed
+        }
         
         
         
@@ -943,6 +1057,33 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Represents due or completed to filter agent development view
+        /// </summary>
+        /// <value>Represents due or completed to filter agent development view</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum DevelopmentKeyTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Due for "Due"
+            /// </summary>
+            [EnumMember(Value = "Due")]
+            Due,
+            
+            /// <summary>
+            /// Enum Completed for "Completed"
+            /// </summary>
+            [EnumMember(Value = "Completed")]
+            Completed
+        }
         
         
         
@@ -1116,6 +1257,41 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Represents due or completed to filter agent development view
+        /// </summary>
+        /// <value>Represents due or completed to filter agent development view</value>
+        [DataMember(Name="developmentKeyType", EmitDefaultValue=false)]
+        public DevelopmentKeyTypeEnum? DevelopmentKeyType { get; set; }
         
         
         
@@ -1217,7 +1393,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="JourneyOutcomeIds">The journey outcome ids are used to fetch outcomes for the associated view.</param>
         /// <param name="JourneySegmentIds">The journey segment ids are used to fetch segments for the associated view.</param>
         /// <param name="JourneyActionMapTypes">The journey action map types are used to filter action map data for the associated view.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null)
+        /// <param name="DevelopmentRoleList">The list of development roles used to filter agent development view.</param>
+        /// <param name="DevelopmentTypeList">The list of development types used to filter agent development view.</param>
+        /// <param name="DevelopmentStatusList">The list of development status used to filter agent development view.</param>
+        /// <param name="DevelopmentModuleIds">The list of development moduleIds used to filter agent development view.</param>
+        /// <param name="DevelopmentKeyType">Represents due or completed to filter agent development view.</param>
+        /// <param name="DevelopmentActivityOverdue">Indicates filtering for development activities.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null, List<DevelopmentRoleListEnum> DevelopmentRoleList = null, List<DevelopmentTypeListEnum> DevelopmentTypeList = null, List<DevelopmentStatusListEnum> DevelopmentStatusList = null, List<string> DevelopmentModuleIds = null, DevelopmentKeyTypeEnum? DevelopmentKeyType = null, bool? DevelopmentActivityOverdue = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -1312,6 +1494,12 @@ namespace PureCloudPlatform.Client.V2.Model
             this.JourneyOutcomeIds = JourneyOutcomeIds;
             this.JourneySegmentIds = JourneySegmentIds;
             this.JourneyActionMapTypes = JourneyActionMapTypes;
+            this.DevelopmentRoleList = DevelopmentRoleList;
+            this.DevelopmentTypeList = DevelopmentTypeList;
+            this.DevelopmentStatusList = DevelopmentStatusList;
+            this.DevelopmentModuleIds = DevelopmentModuleIds;
+            this.DevelopmentKeyType = DevelopmentKeyType;
+            this.DevelopmentActivityOverdue = DevelopmentActivityOverdue;
             
         }
         
@@ -2153,6 +2341,53 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<JourneyActionMapTypesEnum> JourneyActionMapTypes { get; set; }
         
         
+        
+        /// <summary>
+        /// The list of development roles used to filter agent development view
+        /// </summary>
+        /// <value>The list of development roles used to filter agent development view</value>
+        [DataMember(Name="developmentRoleList", EmitDefaultValue=false)]
+        public List<DevelopmentRoleListEnum> DevelopmentRoleList { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of development types used to filter agent development view
+        /// </summary>
+        /// <value>The list of development types used to filter agent development view</value>
+        [DataMember(Name="developmentTypeList", EmitDefaultValue=false)]
+        public List<DevelopmentTypeListEnum> DevelopmentTypeList { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of development status used to filter agent development view
+        /// </summary>
+        /// <value>The list of development status used to filter agent development view</value>
+        [DataMember(Name="developmentStatusList", EmitDefaultValue=false)]
+        public List<DevelopmentStatusListEnum> DevelopmentStatusList { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of development moduleIds used to filter agent development view
+        /// </summary>
+        /// <value>The list of development moduleIds used to filter agent development view</value>
+        [DataMember(Name="developmentModuleIds", EmitDefaultValue=false)]
+        public List<string> DevelopmentModuleIds { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Indicates filtering for development activities
+        /// </summary>
+        /// <value>Indicates filtering for development activities</value>
+        [DataMember(Name="developmentActivityOverdue", EmitDefaultValue=false)]
+        public bool? DevelopmentActivityOverdue { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -2255,6 +2490,12 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  JourneyOutcomeIds: ").Append(JourneyOutcomeIds).Append("\n");
             sb.Append("  JourneySegmentIds: ").Append(JourneySegmentIds).Append("\n");
             sb.Append("  JourneyActionMapTypes: ").Append(JourneyActionMapTypes).Append("\n");
+            sb.Append("  DevelopmentRoleList: ").Append(DevelopmentRoleList).Append("\n");
+            sb.Append("  DevelopmentTypeList: ").Append(DevelopmentTypeList).Append("\n");
+            sb.Append("  DevelopmentStatusList: ").Append(DevelopmentStatusList).Append("\n");
+            sb.Append("  DevelopmentModuleIds: ").Append(DevelopmentModuleIds).Append("\n");
+            sb.Append("  DevelopmentKeyType: ").Append(DevelopmentKeyType).Append("\n");
+            sb.Append("  DevelopmentActivityOverdue: ").Append(DevelopmentActivityOverdue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -2755,6 +2996,36 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.JourneyActionMapTypes == other.JourneyActionMapTypes ||
                     this.JourneyActionMapTypes != null &&
                     this.JourneyActionMapTypes.SequenceEqual(other.JourneyActionMapTypes)
+                ) &&
+                (
+                    this.DevelopmentRoleList == other.DevelopmentRoleList ||
+                    this.DevelopmentRoleList != null &&
+                    this.DevelopmentRoleList.SequenceEqual(other.DevelopmentRoleList)
+                ) &&
+                (
+                    this.DevelopmentTypeList == other.DevelopmentTypeList ||
+                    this.DevelopmentTypeList != null &&
+                    this.DevelopmentTypeList.SequenceEqual(other.DevelopmentTypeList)
+                ) &&
+                (
+                    this.DevelopmentStatusList == other.DevelopmentStatusList ||
+                    this.DevelopmentStatusList != null &&
+                    this.DevelopmentStatusList.SequenceEqual(other.DevelopmentStatusList)
+                ) &&
+                (
+                    this.DevelopmentModuleIds == other.DevelopmentModuleIds ||
+                    this.DevelopmentModuleIds != null &&
+                    this.DevelopmentModuleIds.SequenceEqual(other.DevelopmentModuleIds)
+                ) &&
+                (
+                    this.DevelopmentKeyType == other.DevelopmentKeyType ||
+                    this.DevelopmentKeyType != null &&
+                    this.DevelopmentKeyType.Equals(other.DevelopmentKeyType)
+                ) &&
+                (
+                    this.DevelopmentActivityOverdue == other.DevelopmentActivityOverdue ||
+                    this.DevelopmentActivityOverdue != null &&
+                    this.DevelopmentActivityOverdue.Equals(other.DevelopmentActivityOverdue)
                 );
         }
 
@@ -3048,6 +3319,24 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.JourneyActionMapTypes != null)
                     hash = hash * 59 + this.JourneyActionMapTypes.GetHashCode();
+                
+                if (this.DevelopmentRoleList != null)
+                    hash = hash * 59 + this.DevelopmentRoleList.GetHashCode();
+                
+                if (this.DevelopmentTypeList != null)
+                    hash = hash * 59 + this.DevelopmentTypeList.GetHashCode();
+                
+                if (this.DevelopmentStatusList != null)
+                    hash = hash * 59 + this.DevelopmentStatusList.GetHashCode();
+                
+                if (this.DevelopmentModuleIds != null)
+                    hash = hash * 59 + this.DevelopmentModuleIds.GetHashCode();
+                
+                if (this.DevelopmentKeyType != null)
+                    hash = hash * 59 + this.DevelopmentKeyType.GetHashCode();
+                
+                if (this.DevelopmentActivityOverdue != null)
+                    hash = hash * 59 + this.DevelopmentActivityOverdue.GetHashCode();
                 
                 return hash;
             }

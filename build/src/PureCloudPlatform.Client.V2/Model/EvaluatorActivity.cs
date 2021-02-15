@@ -70,6 +70,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluatorActivity" /> class.
@@ -82,7 +87,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NumCalibrationsAssigned">NumCalibrationsAssigned.</param>
         /// <param name="NumCalibrationsStarted">NumCalibrationsStarted.</param>
         /// <param name="NumCalibrationsCompleted">NumCalibrationsCompleted.</param>
-        public EvaluatorActivity(string Name = null, User Evaluator = null, int? NumEvaluationsAssigned = null, int? NumEvaluationsStarted = null, int? NumEvaluationsCompleted = null, int? NumCalibrationsAssigned = null, int? NumCalibrationsStarted = null, int? NumCalibrationsCompleted = null)
+        /// <param name="NumEvaluationsWithoutViewPermission">NumEvaluationsWithoutViewPermission.</param>
+        public EvaluatorActivity(string Name = null, User Evaluator = null, int? NumEvaluationsAssigned = null, int? NumEvaluationsStarted = null, int? NumEvaluationsCompleted = null, int? NumCalibrationsAssigned = null, int? NumCalibrationsStarted = null, int? NumCalibrationsCompleted = null, int? NumEvaluationsWithoutViewPermission = null)
         {
             this.Name = Name;
             this.Evaluator = Evaluator;
@@ -92,6 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.NumCalibrationsAssigned = NumCalibrationsAssigned;
             this.NumCalibrationsStarted = NumCalibrationsStarted;
             this.NumCalibrationsCompleted = NumCalibrationsCompleted;
+            this.NumEvaluationsWithoutViewPermission = NumEvaluationsWithoutViewPermission;
             
         }
         
@@ -171,6 +178,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets NumEvaluationsWithoutViewPermission
+        /// </summary>
+        [DataMember(Name="numEvaluationsWithoutViewPermission", EmitDefaultValue=false)]
+        public int? NumEvaluationsWithoutViewPermission { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -196,6 +211,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  NumCalibrationsAssigned: ").Append(NumCalibrationsAssigned).Append("\n");
             sb.Append("  NumCalibrationsStarted: ").Append(NumCalibrationsStarted).Append("\n");
             sb.Append("  NumCalibrationsCompleted: ").Append(NumCalibrationsCompleted).Append("\n");
+            sb.Append("  NumEvaluationsWithoutViewPermission: ").Append(NumEvaluationsWithoutViewPermission).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -279,6 +295,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.NumCalibrationsCompleted.Equals(other.NumCalibrationsCompleted)
                 ) &&
                 (
+                    this.NumEvaluationsWithoutViewPermission == other.NumEvaluationsWithoutViewPermission ||
+                    this.NumEvaluationsWithoutViewPermission != null &&
+                    this.NumEvaluationsWithoutViewPermission.Equals(other.NumEvaluationsWithoutViewPermission)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -323,6 +344,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.NumCalibrationsCompleted != null)
                     hash = hash * 59 + this.NumCalibrationsCompleted.GetHashCode();
+                
+                if (this.NumEvaluationsWithoutViewPermission != null)
+                    hash = hash * 59 + this.NumEvaluationsWithoutViewPermission.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

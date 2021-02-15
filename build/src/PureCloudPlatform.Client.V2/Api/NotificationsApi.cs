@@ -46,8 +46,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="includePreview">Whether or not to include Preview topics (optional, default to true)</param>
         /// <returns>AvailableTopicEntityListing</returns>
-        AvailableTopicEntityListing GetNotificationsAvailabletopics (List<string> expand = null);
+        AvailableTopicEntityListing GetNotificationsAvailabletopics (List<string> expand = null, bool? includePreview = null);
 
         /// <summary>
         /// Get available notification topics.
@@ -57,8 +58,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="includePreview">Whether or not to include Preview topics (optional, default to true)</param>
         /// <returns>ApiResponse of AvailableTopicEntityListing</returns>
-        ApiResponse<AvailableTopicEntityListing> GetNotificationsAvailabletopicsWithHttpInfo (List<string> expand = null);
+        ApiResponse<AvailableTopicEntityListing> GetNotificationsAvailabletopicsWithHttpInfo (List<string> expand = null, bool? includePreview = null);
         
         /// <summary>
         /// The list of all subscriptions for this channel
@@ -206,8 +208,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="includePreview">Whether or not to include Preview topics (optional, default to true)</param>
         /// <returns>Task of AvailableTopicEntityListing</returns>
-        System.Threading.Tasks.Task<AvailableTopicEntityListing> GetNotificationsAvailabletopicsAsync (List<string> expand = null);
+        System.Threading.Tasks.Task<AvailableTopicEntityListing> GetNotificationsAvailabletopicsAsync (List<string> expand = null, bool? includePreview = null);
 
         /// <summary>
         /// Get available notification topics.
@@ -217,8 +220,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="includePreview">Whether or not to include Preview topics (optional, default to true)</param>
         /// <returns>Task of ApiResponse (AvailableTopicEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AvailableTopicEntityListing>> GetNotificationsAvailabletopicsAsyncWithHttpInfo (List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<AvailableTopicEntityListing>> GetNotificationsAvailabletopicsAsyncWithHttpInfo (List<string> expand = null, bool? includePreview = null);
         
         /// <summary>
         /// The list of all subscriptions for this channel
@@ -620,10 +624,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="includePreview">Whether or not to include Preview topics (optional, default to true)</param>
         /// <returns>AvailableTopicEntityListing</returns>
-        public AvailableTopicEntityListing GetNotificationsAvailabletopics (List<string> expand = null)
+        public AvailableTopicEntityListing GetNotificationsAvailabletopics (List<string> expand = null, bool? includePreview = null)
         {
-             ApiResponse<AvailableTopicEntityListing> localVarResponse = GetNotificationsAvailabletopicsWithHttpInfo(expand);
+             ApiResponse<AvailableTopicEntityListing> localVarResponse = GetNotificationsAvailabletopicsWithHttpInfo(expand, includePreview);
              return localVarResponse.Data;
         }
 
@@ -632,8 +637,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="includePreview">Whether or not to include Preview topics (optional, default to true)</param>
         /// <returns>ApiResponse of AvailableTopicEntityListing</returns>
-        public ApiResponse< AvailableTopicEntityListing > GetNotificationsAvailabletopicsWithHttpInfo (List<string> expand = null)
+        public ApiResponse< AvailableTopicEntityListing > GetNotificationsAvailabletopicsWithHttpInfo (List<string> expand = null, bool? includePreview = null)
         { 
 
             var localVarPath = "/api/v2/notifications/availabletopics";
@@ -670,6 +676,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (includePreview != null) localVarQueryParams.Add(new Tuple<string, string>("includePreview", this.Configuration.ApiClient.ParameterToString(includePreview)));
 
             // Header params
 
@@ -712,10 +719,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="includePreview">Whether or not to include Preview topics (optional, default to true)</param>
         /// <returns>Task of AvailableTopicEntityListing</returns>
-        public async System.Threading.Tasks.Task<AvailableTopicEntityListing> GetNotificationsAvailabletopicsAsync (List<string> expand = null)
+        public async System.Threading.Tasks.Task<AvailableTopicEntityListing> GetNotificationsAvailabletopicsAsync (List<string> expand = null, bool? includePreview = null)
         {
-             ApiResponse<AvailableTopicEntityListing> localVarResponse = await GetNotificationsAvailabletopicsAsyncWithHttpInfo(expand);
+             ApiResponse<AvailableTopicEntityListing> localVarResponse = await GetNotificationsAvailabletopicsAsyncWithHttpInfo(expand, includePreview);
              return localVarResponse.Data;
 
         }
@@ -725,8 +733,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="includePreview">Whether or not to include Preview topics (optional, default to true)</param>
         /// <returns>Task of ApiResponse (AvailableTopicEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AvailableTopicEntityListing>> GetNotificationsAvailabletopicsAsyncWithHttpInfo (List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AvailableTopicEntityListing>> GetNotificationsAvailabletopicsAsyncWithHttpInfo (List<string> expand = null, bool? includePreview = null)
         { 
 
             var localVarPath = "/api/v2/notifications/availabletopics";
@@ -763,6 +772,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (includePreview != null) localVarQueryParams.Add(new Tuple<string, string>("includePreview", this.Configuration.ApiClient.ParameterToString(includePreview)));
 
             // Header params
 

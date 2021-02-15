@@ -25,24 +25,41 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingSettings" /> class.
         /// </summary>
-        /// <param name="MaxSimultaneousStreams">MaxSimultaneousStreams.</param>
-        public RecordingSettings(int? MaxSimultaneousStreams = null)
+        /// <param name="MaxSimultaneousStreams">Maximum number of simultaneous screen recording streams.</param>
+        /// <param name="MaxConfigurableScreenRecordingStreams">Upper limit that maxSimultaneousStreams can be configured.</param>
+        public RecordingSettings(int? MaxSimultaneousStreams = null, int? MaxConfigurableScreenRecordingStreams = null)
         {
             this.MaxSimultaneousStreams = MaxSimultaneousStreams;
+            this.MaxConfigurableScreenRecordingStreams = MaxConfigurableScreenRecordingStreams;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets MaxSimultaneousStreams
+        /// Maximum number of simultaneous screen recording streams
         /// </summary>
+        /// <value>Maximum number of simultaneous screen recording streams</value>
         [DataMember(Name="maxSimultaneousStreams", EmitDefaultValue=false)]
         public int? MaxSimultaneousStreams { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Upper limit that maxSimultaneousStreams can be configured
+        /// </summary>
+        /// <value>Upper limit that maxSimultaneousStreams can be configured</value>
+        [DataMember(Name="maxConfigurableScreenRecordingStreams", EmitDefaultValue=false)]
+        public int? MaxConfigurableScreenRecordingStreams { get; set; }
         
         
         /// <summary>
@@ -55,6 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class RecordingSettings {\n");
             
             sb.Append("  MaxSimultaneousStreams: ").Append(MaxSimultaneousStreams).Append("\n");
+            sb.Append("  MaxConfigurableScreenRecordingStreams: ").Append(MaxConfigurableScreenRecordingStreams).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,6 +113,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaxSimultaneousStreams == other.MaxSimultaneousStreams ||
                     this.MaxSimultaneousStreams != null &&
                     this.MaxSimultaneousStreams.Equals(other.MaxSimultaneousStreams)
+                ) &&
+                (
+                    this.MaxConfigurableScreenRecordingStreams == other.MaxConfigurableScreenRecordingStreams ||
+                    this.MaxConfigurableScreenRecordingStreams != null &&
+                    this.MaxConfigurableScreenRecordingStreams.Equals(other.MaxConfigurableScreenRecordingStreams)
                 );
         }
 
@@ -112,6 +135,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MaxSimultaneousStreams != null)
                     hash = hash * 59 + this.MaxSimultaneousStreams.GetHashCode();
+                
+                if (this.MaxConfigurableScreenRecordingStreams != null)
+                    hash = hash * 59 + this.MaxConfigurableScreenRecordingStreams.GetHashCode();
                 
                 return hash;
             }
