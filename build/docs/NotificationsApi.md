@@ -137,7 +137,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: description, requiresPermissions, enforced, schema, visibility, transports, publicApiTemplateUriPaths |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: description, enforced, schema, visibility, transports, publicApiTemplateUriPaths, requiresPermissions, permissionDetails |
 | **includePreview** | **bool?**| Whether or not to include Preview topics | [optional] [default to true] |
 {: class="table table-striped"}
 

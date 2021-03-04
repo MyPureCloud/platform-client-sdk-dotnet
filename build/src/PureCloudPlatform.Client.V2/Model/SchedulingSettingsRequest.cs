@@ -32,7 +32,82 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Start day of weekend for scheduling
+        /// </summary>
+        /// <value>Start day of weekend for scheduling</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StartDayOfWeekendEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Sunday for "Sunday"
+            /// </summary>
+            [EnumMember(Value = "Sunday")]
+            Sunday,
+            
+            /// <summary>
+            /// Enum Monday for "Monday"
+            /// </summary>
+            [EnumMember(Value = "Monday")]
+            Monday,
+            
+            /// <summary>
+            /// Enum Tuesday for "Tuesday"
+            /// </summary>
+            [EnumMember(Value = "Tuesday")]
+            Tuesday,
+            
+            /// <summary>
+            /// Enum Wednesday for "Wednesday"
+            /// </summary>
+            [EnumMember(Value = "Wednesday")]
+            Wednesday,
+            
+            /// <summary>
+            /// Enum Thursday for "Thursday"
+            /// </summary>
+            [EnumMember(Value = "Thursday")]
+            Thursday,
+            
+            /// <summary>
+            /// Enum Friday for "Friday"
+            /// </summary>
+            [EnumMember(Value = "Friday")]
+            Friday,
+            
+            /// <summary>
+            /// Enum Saturday for "Saturday"
+            /// </summary>
+            [EnumMember(Value = "Saturday")]
+            Saturday
+        }
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Start day of weekend for scheduling
+        /// </summary>
+        /// <value>Start day of weekend for scheduling</value>
+        [DataMember(Name="startDayOfWeekend", EmitDefaultValue=false)]
+        public StartDayOfWeekendEnum? StartDayOfWeekend { get; set; }
         
         
     
@@ -42,11 +117,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MaxOccupancyPercentForDeferredWork">Max occupancy percent for deferred work.</param>
         /// <param name="DefaultShrinkagePercent">Default shrinkage percent for scheduling.</param>
         /// <param name="ShrinkageOverrides">Shrinkage overrides for scheduling.</param>
-        public SchedulingSettingsRequest(int? MaxOccupancyPercentForDeferredWork = null, double? DefaultShrinkagePercent = null, ShrinkageOverrides ShrinkageOverrides = null)
+        /// <param name="PlanningPeriod">Planning period settings for scheduling.</param>
+        /// <param name="StartDayOfWeekend">Start day of weekend for scheduling.</param>
+        public SchedulingSettingsRequest(int? MaxOccupancyPercentForDeferredWork = null, double? DefaultShrinkagePercent = null, ShrinkageOverrides ShrinkageOverrides = null, ValueWrapperPlanningPeriodSettings PlanningPeriod = null, StartDayOfWeekendEnum? StartDayOfWeekend = null)
         {
             this.MaxOccupancyPercentForDeferredWork = MaxOccupancyPercentForDeferredWork;
             this.DefaultShrinkagePercent = DefaultShrinkagePercent;
             this.ShrinkageOverrides = ShrinkageOverrides;
+            this.PlanningPeriod = PlanningPeriod;
+            this.StartDayOfWeekend = StartDayOfWeekend;
             
         }
         
@@ -78,6 +157,17 @@ namespace PureCloudPlatform.Client.V2.Model
         public ShrinkageOverrides ShrinkageOverrides { get; set; }
         
         
+        
+        /// <summary>
+        /// Planning period settings for scheduling
+        /// </summary>
+        /// <value>Planning period settings for scheduling</value>
+        [DataMember(Name="planningPeriod", EmitDefaultValue=false)]
+        public ValueWrapperPlanningPeriodSettings PlanningPeriod { get; set; }
+        
+        
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,6 +180,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MaxOccupancyPercentForDeferredWork: ").Append(MaxOccupancyPercentForDeferredWork).Append("\n");
             sb.Append("  DefaultShrinkagePercent: ").Append(DefaultShrinkagePercent).Append("\n");
             sb.Append("  ShrinkageOverrides: ").Append(ShrinkageOverrides).Append("\n");
+            sb.Append("  PlanningPeriod: ").Append(PlanningPeriod).Append("\n");
+            sb.Append("  StartDayOfWeekend: ").Append(StartDayOfWeekend).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -140,6 +232,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ShrinkageOverrides == other.ShrinkageOverrides ||
                     this.ShrinkageOverrides != null &&
                     this.ShrinkageOverrides.Equals(other.ShrinkageOverrides)
+                ) &&
+                (
+                    this.PlanningPeriod == other.PlanningPeriod ||
+                    this.PlanningPeriod != null &&
+                    this.PlanningPeriod.Equals(other.PlanningPeriod)
+                ) &&
+                (
+                    this.StartDayOfWeekend == other.StartDayOfWeekend ||
+                    this.StartDayOfWeekend != null &&
+                    this.StartDayOfWeekend.Equals(other.StartDayOfWeekend)
                 );
         }
 
@@ -163,6 +265,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ShrinkageOverrides != null)
                     hash = hash * 59 + this.ShrinkageOverrides.GetHashCode();
+                
+                if (this.PlanningPeriod != null)
+                    hash = hash * 59 + this.PlanningPeriod.GetHashCode();
+                
+                if (this.StartDayOfWeekend != null)
+                    hash = hash * 59 + this.StartDayOfWeekend.GetHashCode();
                 
                 return hash;
             }

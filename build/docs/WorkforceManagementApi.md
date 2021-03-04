@@ -1328,7 +1328,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. |  |
-| **feature** | **string**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, Coaching, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalGroups, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlanRotations, WorkPlans |
+| **feature** | **string**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, Coaching, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlanRotations, WorkPlans |
 | **divisionId** | **string**|  | [optional]  |
 {: class="table table-striped"}
 
@@ -2580,7 +2580,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **feature** | **string**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, Coaching, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalGroups, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlanRotations, WorkPlans |
+| **feature** | **string**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, Coaching, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlanRotations, WorkPlans |
 | **divisionId** | **string**|  | [optional]  |
 {: class="table table-striped"}
 
@@ -2661,7 +2661,7 @@ namespace Example
 
 Get management unit
 
-
+settings.shortTermForecasting is deprecated and now lives on the business unit
 
 Requires ANY permissions: 
 
@@ -2690,10 +2690,6 @@ Requires ANY permissions:
 * wfm:schedule:edit
 * wfm:schedule:generate
 * wfm:schedule:view
-* wfm:serviceGoalGroup:add
-* wfm:serviceGoalGroup:delete
-* wfm:serviceGoalGroup:edit
-* wfm:serviceGoalGroup:view
 * wfm:serviceGoalTemplate:add
 * wfm:serviceGoalTemplate:delete
 * wfm:serviceGoalTemplate:edit
@@ -2811,10 +2807,6 @@ Requires ANY permissions:
 * wfm:schedule:edit
 * wfm:schedule:generate
 * wfm:schedule:view
-* wfm:serviceGoalGroup:add
-* wfm:serviceGoalGroup:delete
-* wfm:serviceGoalGroup:edit
-* wfm:serviceGoalGroup:view
 * wfm:shortTermForecast:add
 * wfm:shortTermForecast:delete
 * wfm:shortTermForecast:edit
@@ -3951,9 +3943,9 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var pageSize = 56;  // int? |  (optional) 
-            var pageNumber = 56;  // int? |  (optional) 
-            var expand = expand_example;  // string |  (optional) 
+            var pageSize = 56;  // int? | Deprecated, paging is not supported (optional) 
+            var pageNumber = 56;  // int? | Deprecated, paging is not supported (optional) 
+            var expand = expand_example;  // string | Deprecated, expand settings on the single MU route (optional) 
             var feature = feature_example;  // string |  (optional) 
             var divisionId = divisionId_example;  // string |  (optional) 
 
@@ -3977,10 +3969,10 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**|  | [optional]  |
-| **pageNumber** | **int?**|  | [optional]  |
-| **expand** | **string**|  | [optional] <br />**Values**: details |
-| **feature** | **string**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, Coaching, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalGroups, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlanRotations, WorkPlans |
+| **pageSize** | **int?**| Deprecated, paging is not supported | [optional]  |
+| **pageNumber** | **int?**| Deprecated, paging is not supported | [optional]  |
+| **expand** | **string**| Deprecated, expand settings on the single MU route | [optional] <br />**Values**: details |
+| **feature** | **string**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, Coaching, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlanRotations, WorkPlans |
 | **divisionId** | **string**|  | [optional]  |
 {: class="table table-striped"}
 

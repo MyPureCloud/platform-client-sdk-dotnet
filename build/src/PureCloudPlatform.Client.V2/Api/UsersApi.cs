@@ -943,7 +943,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="types">Specifies the activity types. (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
-        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)</param>
+        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>DevelopmentActivityListing</returns>
         DevelopmentActivityListing GetUsersDevelopmentActivities (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
@@ -964,7 +964,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="types">Specifies the activity types. (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
-        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)</param>
+        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>ApiResponse of DevelopmentActivityListing</returns>
         ApiResponse<DevelopmentActivityListing> GetUsersDevelopmentActivitiesWithHttpInfo (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
         
@@ -984,7 +984,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="types">Specifies the activity types. (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
-        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)</param>
+        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>DevelopmentActivityListing</returns>
         DevelopmentActivityListing GetUsersDevelopmentActivitiesMe (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
@@ -1004,7 +1004,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="types">Specifies the activity types. (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
-        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)</param>
+        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>ApiResponse of DevelopmentActivityListing</returns>
         ApiResponse<DevelopmentActivityListing> GetUsersDevelopmentActivitiesMeWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
         
@@ -2827,7 +2827,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="types">Specifies the activity types. (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
-        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)</param>
+        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of DevelopmentActivityListing</returns>
         System.Threading.Tasks.Task<DevelopmentActivityListing> GetUsersDevelopmentActivitiesAsync (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
@@ -2848,7 +2848,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="types">Specifies the activity types. (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
-        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)</param>
+        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of ApiResponse (DevelopmentActivityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityListing>> GetUsersDevelopmentActivitiesAsyncWithHttpInfo (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
         
@@ -2868,7 +2868,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="types">Specifies the activity types. (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
-        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)</param>
+        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of DevelopmentActivityListing</returns>
         System.Threading.Tasks.Task<DevelopmentActivityListing> GetUsersDevelopmentActivitiesMeAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
@@ -2888,7 +2888,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="types">Specifies the activity types. (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
-        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)</param>
+        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of ApiResponse (DevelopmentActivityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityListing>> GetUsersDevelopmentActivitiesMeAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
         
@@ -11315,7 +11315,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="types">Specifies the activity types. (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
-        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)</param>
+        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>DevelopmentActivityListing</returns>
         public DevelopmentActivityListing GetUsersDevelopmentActivities (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         {
@@ -11337,7 +11337,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="types">Specifies the activity types. (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
-        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)</param>
+        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>ApiResponse of DevelopmentActivityListing</returns>
         public ApiResponse< DevelopmentActivityListing > GetUsersDevelopmentActivitiesWithHttpInfo (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         { 
@@ -11437,7 +11437,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="types">Specifies the activity types. (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
-        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)</param>
+        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of DevelopmentActivityListing</returns>
         public async System.Threading.Tasks.Task<DevelopmentActivityListing> GetUsersDevelopmentActivitiesAsync (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         {
@@ -11460,7 +11460,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="types">Specifies the activity types. (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
-        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)</param>
+        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of ApiResponse (DevelopmentActivityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityListing>> GetUsersDevelopmentActivitiesAsyncWithHttpInfo (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         { 
@@ -11560,7 +11560,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="types">Specifies the activity types. (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
-        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)</param>
+        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>DevelopmentActivityListing</returns>
         public DevelopmentActivityListing GetUsersDevelopmentActivitiesMe (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         {
@@ -11581,7 +11581,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="types">Specifies the activity types. (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
-        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)</param>
+        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>ApiResponse of DevelopmentActivityListing</returns>
         public ApiResponse< DevelopmentActivityListing > GetUsersDevelopmentActivitiesMeWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         { 
@@ -11679,7 +11679,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="types">Specifies the activity types. (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
-        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)</param>
+        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of DevelopmentActivityListing</returns>
         public async System.Threading.Tasks.Task<DevelopmentActivityListing> GetUsersDevelopmentActivitiesMeAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         {
@@ -11701,7 +11701,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="types">Specifies the activity types. (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
-        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)</param>
+        /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of ApiResponse (DevelopmentActivityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityListing>> GetUsersDevelopmentActivitiesMeAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         { 

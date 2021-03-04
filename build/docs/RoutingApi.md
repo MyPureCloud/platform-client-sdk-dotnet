@@ -4621,7 +4621,7 @@ namespace Example
 
 <a name="postroutingqueuemembers"></a>
 
-## **string** PostRoutingQueueMembers (string queueId, List<WritableEntity> body, bool? delete = null)
+## void PostRoutingQueueMembers (string queueId, List<WritableEntity> body, bool? delete = null)
 
 
 
@@ -4663,8 +4663,7 @@ namespace Example
             try
             { 
                 // Bulk add or delete up to 100 queue members
-                string result = apiInstance.PostRoutingQueueMembers(queueId, body, delete);
-                Debug.WriteLine(result);
+                apiInstance.PostRoutingQueueMembers(queueId, body, delete);
             }
             catch (Exception e)
             {
@@ -4687,11 +4686,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="postroutingqueueusers"></a>
 
-## **string** PostRoutingQueueUsers (string queueId, List<WritableEntity> body, bool? delete = null)
+## void PostRoutingQueueUsers (string queueId, List<WritableEntity> body, bool? delete = null)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -4733,8 +4732,7 @@ namespace Example
             try
             { 
                 // DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members.
-                string result = apiInstance.PostRoutingQueueUsers(queueId, body, delete);
-                Debug.WriteLine(result);
+                apiInstance.PostRoutingQueueUsers(queueId, body, delete);
             }
             catch (Exception e)
             {
@@ -4757,7 +4755,7 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="postroutingqueuewrapupcodes"></a>
 

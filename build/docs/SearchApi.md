@@ -1130,9 +1130,8 @@ Search users
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* directory:user:view
 
 ### Example
 ```{"language":"csharp"}

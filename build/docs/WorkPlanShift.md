@@ -16,6 +16,8 @@ title: WorkPlanShift
 | **ConstrainStopTime** | **bool?** | Whether the latest stop time constraint for the shift is enabled.  Deprecated, use constrainLatestStopTime instead | [optional] |
 | **ConstrainLatestStopTime** | **bool?** | Whether the latest stop time constraint for the shift is enabled | [optional] |
 | **LatestStopTimeMinutesFromMidnight** | **int?** | Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime == true | [optional] |
+| **ConstrainEarliestStopTime** | **bool?** | Whether the earliest stop time constraint for the shift is enabled | [optional] |
+| **EarliestStopTimeMinutesFromMidnight** | **int?** | This is the earliest time a shift can end | [optional] |
 | **StartIncrementMinutes** | **int?** | Increment in offset minutes that would contribute to different possible start times for the shift. Used if flexibleStartTime == true | [optional] |
 | **FlexiblePaidTime** | **bool?** | Whether the paid time setting for the shift is flexible | [optional] |
 | **ExactPaidTimeMinutes** | **int?** | Exact paid time in minutes configured for the shift. Used if flexiblePaidTime == false | [optional] |

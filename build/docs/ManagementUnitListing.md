@@ -8,14 +8,14 @@ title: ManagementUnitListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Entities** | [**List&lt;ManagementUnit&gt;**](ManagementUnit.html) |  | [optional] |
-| **PageSize** | **int?** |  | [optional] |
-| **PageNumber** | **int?** |  | [optional] |
-| **Total** | **long?** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
-| **NextUri** | **string** |  | [optional] |
-| **PageCount** | **int?** |  | [optional] |
-| **LastUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
+| **PageSize** | **int?** | Deprecated, paging is not supported | [optional] |
+| **PageNumber** | **int?** | Deprecated, paging is not supported | [optional] |
+| **Total** | **long?** | Deprecated, paging is not supported | [optional] |
+| **FirstUri** | **string** | Deprecated, paging is not supported | [optional] |
+| **NextUri** | **string** | Deprecated, paging is not supported | [optional] |
+| **PageCount** | **int?** | Deprecated, paging is not supported | [optional] |
+| **LastUri** | **string** | Deprecated, paging is not supported | [optional] |
+| **PreviousUri** | **string** | Deprecated, paging is not supported | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 {: class="table table-striped"}
 

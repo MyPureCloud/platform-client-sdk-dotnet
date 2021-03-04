@@ -1484,8 +1484,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>DataTablesDomainEntityListing</returns>
-        DataTablesDomainEntityListing GetFlowsDatatables (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        DataTablesDomainEntityListing GetFlowsDatatables (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null);
 
         /// <summary>
         /// Retrieve a list of datatables for the org
@@ -1499,8 +1500,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>ApiResponse of DataTablesDomainEntityListing</returns>
-        ApiResponse<DataTablesDomainEntityListing> GetFlowsDatatablesWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<DataTablesDomainEntityListing> GetFlowsDatatablesWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null);
         
         /// <summary>
         /// Get a pageable list of basic flow information objects filterable by query parameters.
@@ -4012,8 +4014,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of DataTablesDomainEntityListing</returns>
-        System.Threading.Tasks.Task<DataTablesDomainEntityListing> GetFlowsDatatablesAsync (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<DataTablesDomainEntityListing> GetFlowsDatatablesAsync (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null);
 
         /// <summary>
         /// Retrieve a list of datatables for the org
@@ -4027,8 +4030,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (DataTablesDomainEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DataTablesDomainEntityListing>> GetFlowsDatatablesAsyncWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<DataTablesDomainEntityListing>> GetFlowsDatatablesAsyncWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null);
         
         /// <summary>
         /// Get a pageable list of basic flow information objects filterable by query parameters.
@@ -16415,10 +16419,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>DataTablesDomainEntityListing</returns>
-        public DataTablesDomainEntityListing GetFlowsDatatables (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public DataTablesDomainEntityListing GetFlowsDatatables (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null)
         {
-             ApiResponse<DataTablesDomainEntityListing> localVarResponse = GetFlowsDatatablesWithHttpInfo(expand, pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<DataTablesDomainEntityListing> localVarResponse = GetFlowsDatatablesWithHttpInfo(expand, pageNumber, pageSize, sortBy, sortOrder, divisionId);
              return localVarResponse.Data;
         }
 
@@ -16431,8 +16436,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>ApiResponse of DataTablesDomainEntityListing</returns>
-        public ApiResponse< DataTablesDomainEntityListing > GetFlowsDatatablesWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< DataTablesDomainEntityListing > GetFlowsDatatablesWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null)
         { 
 
             var localVarPath = "/api/v2/flows/datatables";
@@ -16473,6 +16479,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -16519,10 +16526,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of DataTablesDomainEntityListing</returns>
-        public async System.Threading.Tasks.Task<DataTablesDomainEntityListing> GetFlowsDatatablesAsync (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<DataTablesDomainEntityListing> GetFlowsDatatablesAsync (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null)
         {
-             ApiResponse<DataTablesDomainEntityListing> localVarResponse = await GetFlowsDatatablesAsyncWithHttpInfo(expand, pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<DataTablesDomainEntityListing> localVarResponse = await GetFlowsDatatablesAsyncWithHttpInfo(expand, pageNumber, pageSize, sortBy, sortOrder, divisionId);
              return localVarResponse.Data;
 
         }
@@ -16536,8 +16544,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (DataTablesDomainEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DataTablesDomainEntityListing>> GetFlowsDatatablesAsyncWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DataTablesDomainEntityListing>> GetFlowsDatatablesAsyncWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null)
         { 
 
             var localVarPath = "/api/v2/flows/datatables";
@@ -16578,6 +16587,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

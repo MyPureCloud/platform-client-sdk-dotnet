@@ -45,6 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingData" /> class.
@@ -60,13 +65,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Priority">The priority for routing.</param>
         /// <param name="SkillIds">A list of skill identifiers to be considered in routing.</param>
         /// <param name="PreferredAgentIds">A list of agents to be preferred in routing.</param>
-        public RoutingData(string QueueId = null, string LanguageId = null, int? Priority = null, List<string> SkillIds = null, List<string> PreferredAgentIds = null)
+        /// <param name="ScoredAgents">A list of scored agents for routing decisions.</param>
+        public RoutingData(string QueueId = null, string LanguageId = null, int? Priority = null, List<string> SkillIds = null, List<string> PreferredAgentIds = null, List<ScoredAgent> ScoredAgents = null)
         {
             this.QueueId = QueueId;
             this.LanguageId = LanguageId;
             this.Priority = Priority;
             this.SkillIds = SkillIds;
             this.PreferredAgentIds = PreferredAgentIds;
+            this.ScoredAgents = ScoredAgents;
             
         }
         
@@ -116,6 +123,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> PreferredAgentIds { get; set; }
         
         
+        
+        /// <summary>
+        /// A list of scored agents for routing decisions
+        /// </summary>
+        /// <value>A list of scored agents for routing decisions</value>
+        [DataMember(Name="scoredAgents", EmitDefaultValue=false)]
+        public List<ScoredAgent> ScoredAgents { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -130,6 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Priority: ").Append(Priority).Append("\n");
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
             sb.Append("  PreferredAgentIds: ").Append(PreferredAgentIds).Append("\n");
+            sb.Append("  ScoredAgents: ").Append(ScoredAgents).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -190,6 +207,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PreferredAgentIds == other.PreferredAgentIds ||
                     this.PreferredAgentIds != null &&
                     this.PreferredAgentIds.SequenceEqual(other.PreferredAgentIds)
+                ) &&
+                (
+                    this.ScoredAgents == other.ScoredAgents ||
+                    this.ScoredAgents != null &&
+                    this.ScoredAgents.SequenceEqual(other.ScoredAgents)
                 );
         }
 
@@ -219,6 +241,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PreferredAgentIds != null)
                     hash = hash * 59 + this.PreferredAgentIds.GetHashCode();
+                
+                if (this.ScoredAgents != null)
+                    hash = hash * 59 + this.ScoredAgents.GetHashCode();
                 
                 return hash;
             }

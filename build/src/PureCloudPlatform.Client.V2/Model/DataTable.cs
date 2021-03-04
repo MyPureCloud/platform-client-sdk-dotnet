@@ -45,16 +45,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DataTable" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
+        /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Description">The description from the JSON schema (equates to the Description field on the JSON schema.).</param>
         /// <param name="Schema">the schema as stored in the system..</param>
-        public DataTable(string Name = null, string Description = null, JsonSchemaDocument Schema = null)
+        public DataTable(string Name = null, Division Division = null, string Description = null, JsonSchemaDocument Schema = null)
         {
             this.Name = Name;
+            this.Division = Division;
             this.Description = Description;
             this.Schema = Schema;
             
@@ -76,6 +83,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The division to which this entity belongs.
+        /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public Division Division { get; set; }
         
         
         
@@ -116,6 +132,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Schema: ").Append(Schema).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -166,6 +183,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
@@ -199,6 +221,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();

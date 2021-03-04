@@ -132,7 +132,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Speechandtextanalytics for "SpeechAndTextAnalytics"
             /// </summary>
             [EnumMember(Value = "SpeechAndTextAnalytics")]
-            Speechandtextanalytics
+            Speechandtextanalytics,
+            
+            /// <summary>
+            /// Enum Routing for "Routing"
+            /// </summary>
+            [EnumMember(Value = "Routing")]
+            Routing
         }
         
         

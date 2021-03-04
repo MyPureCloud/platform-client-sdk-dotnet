@@ -144,7 +144,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Speechandtextanalytics for "SpeechAndTextAnalytics"
             /// </summary>
             [EnumMember(Value = "SpeechAndTextAnalytics")]
-            Speechandtextanalytics
+            Speechandtextanalytics,
+            
+            /// <summary>
+            /// Enum Routing for "Routing"
+            /// </summary>
+            [EnumMember(Value = "Routing")]
+            Routing
         }
         
         
@@ -776,6 +782,36 @@ namespace PureCloudPlatform.Client.V2.Model
             Ruleset,
             
             /// <summary>
+            /// Enum Campaignschedule for "CampaignSchedule"
+            /// </summary>
+            [EnumMember(Value = "CampaignSchedule")]
+            Campaignschedule,
+            
+            /// <summary>
+            /// Enum Sequenceschedule for "SequenceSchedule"
+            /// </summary>
+            [EnumMember(Value = "SequenceSchedule")]
+            Sequenceschedule,
+            
+            /// <summary>
+            /// Enum Organizationproperties for "OrganizationProperties"
+            /// </summary>
+            [EnumMember(Value = "OrganizationProperties")]
+            Organizationproperties,
+            
+            /// <summary>
+            /// Enum Wrapupcodemapping for "WrapUpCodeMapping"
+            /// </summary>
+            [EnumMember(Value = "WrapUpCodeMapping")]
+            Wrapupcodemapping,
+            
+            /// <summary>
+            /// Enum Messagingcampaign for "MessagingCampaign"
+            /// </summary>
+            [EnumMember(Value = "MessagingCampaign")]
+            Messagingcampaign,
+            
+            /// <summary>
             /// Enum Transcriptionsettings for "TranscriptionSettings"
             /// </summary>
             [EnumMember(Value = "TranscriptionSettings")]
@@ -785,7 +821,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Speechtextanalyticssettings for "SpeechTextAnalyticsSettings"
             /// </summary>
             [EnumMember(Value = "SpeechTextAnalyticsSettings")]
-            Speechtextanalyticssettings
+            Speechtextanalyticssettings,
+            
+            /// <summary>
+            /// Enum Predictor for "Predictor"
+            /// </summary>
+            [EnumMember(Value = "Predictor")]
+            Predictor
         }
         
         

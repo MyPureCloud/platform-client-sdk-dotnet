@@ -130,7 +130,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartDayOfWeek">The configured first day of the week for scheduling and forecasting purposes. Moving to Business Unit.</param>
         /// <param name="Settings">The configuration for the management unit.  If omitted, reasonable defaults will be assigned.</param>
         /// <param name="DivisionId">The id of the division to which this management unit belongs.  Defaults to home division ID.</param>
-        /// <param name="BusinessUnitId">The id of the business unit to which this management unit belongs.  Required after business unit launch (required).</param>
+        /// <param name="BusinessUnitId">The id of the business unit to which this management unit belongs (required).</param>
         public CreateManagementUnitApiRequest(string Name = null, string TimeZone = null, StartDayOfWeekEnum? StartDayOfWeek = null, CreateManagementUnitSettingsRequest Settings = null, string DivisionId = null, string BusinessUnitId = null)
         {
             this.Name = Name;
@@ -183,9 +183,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The id of the business unit to which this management unit belongs.  Required after business unit launch
+        /// The id of the business unit to which this management unit belongs
         /// </summary>
-        /// <value>The id of the business unit to which this management unit belongs.  Required after business unit launch</value>
+        /// <value>The id of the business unit to which this management unit belongs</value>
         [DataMember(Name="businessUnitId", EmitDefaultValue=false)]
         public string BusinessUnitId { get; set; }
         

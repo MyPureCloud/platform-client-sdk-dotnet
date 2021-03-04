@@ -159,7 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Expand">Provides more details about a specified resource.</param>
         /// <param name="Query">Query.</param>
         /// <param name="IntegrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10..</param>
-        /// <param name="EnforcePermissions">Enforce view permission on request.</param>
+        /// <param name="EnforcePermissions">When set to true add additional search criteria to filter users by directory:user:view.</param>
         public UserSearchRequest(SortOrderEnum? SortOrder = null, string SortBy = null, int? PageSize = null, int? PageNumber = null, List<SearchSort> Sort = null, List<string> Expand = null, List<UserSearchCriteria> Query = null, IntegrationPresenceSourceEnum? IntegrationPresenceSource = null, bool? EnforcePermissions = null)
         {
             this.SortOrder = SortOrder;
@@ -234,9 +234,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Enforce view permission on request
+        /// When set to true add additional search criteria to filter users by directory:user:view
         /// </summary>
-        /// <value>Enforce view permission on request</value>
+        /// <value>When set to true add additional search criteria to filter users by directory:user:view</value>
         [DataMember(Name="enforcePermissions", EmitDefaultValue=false)]
         public bool? EnforcePermissions { get; set; }
         

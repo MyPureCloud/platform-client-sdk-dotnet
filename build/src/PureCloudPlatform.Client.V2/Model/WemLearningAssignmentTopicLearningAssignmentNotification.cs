@@ -98,11 +98,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -129,7 +134,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">DateCreated.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
         /// <param name="DateModified">DateModified.</param>
-        public WemLearningAssignmentTopicLearningAssignmentNotification(string Id = null, WemLearningAssignmentTopicUserReference User = null, WemLearningAssignmentTopicLearningModuleReference Module = null, int? Version = null, StateEnum? State = null, DateTime? DateRecommendedForCompletion = null, WemLearningAssignmentTopicUserReference CreatedBy = null, DateTime? DateCreated = null, WemLearningAssignmentTopicUserReference ModifiedBy = null, DateTime? DateModified = null)
+        /// <param name="IsOverdue">IsOverdue.</param>
+        public WemLearningAssignmentTopicLearningAssignmentNotification(string Id = null, WemLearningAssignmentTopicUserReference User = null, WemLearningAssignmentTopicLearningModuleReference Module = null, int? Version = null, StateEnum? State = null, DateTime? DateRecommendedForCompletion = null, WemLearningAssignmentTopicUserReference CreatedBy = null, DateTime? DateCreated = null, WemLearningAssignmentTopicUserReference ModifiedBy = null, DateTime? DateModified = null, bool? IsOverdue = null)
         {
             this.Id = Id;
             this.User = User;
@@ -141,6 +147,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateCreated = DateCreated;
             this.ModifiedBy = ModifiedBy;
             this.DateModified = DateModified;
+            this.IsOverdue = IsOverdue;
             
         }
         
@@ -219,6 +226,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? DateModified { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets IsOverdue
+        /// </summary>
+        [DataMember(Name="isOverdue", EmitDefaultValue=false)]
+        public bool? IsOverdue { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -238,6 +253,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  IsOverdue: ").Append(IsOverdue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -323,6 +339,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
+                ) &&
+                (
+                    this.IsOverdue == other.IsOverdue ||
+                    this.IsOverdue != null &&
+                    this.IsOverdue.Equals(other.IsOverdue)
                 );
         }
 
@@ -367,6 +388,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
+                if (this.IsOverdue != null)
+                    hash = hash * 59 + this.IsOverdue.GetHashCode();
                 
                 return hash;
             }

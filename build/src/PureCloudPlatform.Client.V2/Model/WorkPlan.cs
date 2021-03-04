@@ -95,6 +95,33 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// This constraint ensures that an agent starts each workday within a user-defined time threshold
+        /// </summary>
+        /// <value>This constraint ensures that an agent starts each workday within a user-defined time threshold</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ShiftStartVarianceTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Shiftstart for "ShiftStart"
+            /// </summary>
+            [EnumMember(Value = "ShiftStart")]
+            Shiftstart,
+            
+            /// <summary>
+            /// Enum Shiftstartandpaidduration for "ShiftStartAndPaidDuration"
+            /// </summary>
+            [EnumMember(Value = "ShiftStartAndPaidDuration")]
+            Shiftstartandpaidduration
+        }
         
         
         
@@ -108,6 +135,69 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// This constraint ensures that an agent starts each workday within a user-defined time threshold
+        /// </summary>
+        /// <value>This constraint ensures that an agent starts each workday within a user-defined time threshold</value>
+        [DataMember(Name="shiftStartVarianceType", EmitDefaultValue=false)]
+        public ShiftStartVarianceTypeEnum? ShiftStartVarianceType { get; set; }
         
         
         
@@ -137,18 +227,29 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WeeklyExactPaidMinutes">Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == false.</param>
         /// <param name="WeeklyMinimumPaidMinutes">Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true.</param>
         /// <param name="WeeklyMaximumPaidMinutes">Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true.</param>
-        /// <param name="ConstrainPaidTimeGranularity">Whether paid time granularity is constrained for this workplan.</param>
+        /// <param name="ConstrainPaidTimeGranularity">Whether paid time granularity is constrained for this work plan.</param>
         /// <param name="PaidTimeGranularityMinutes">Granularity in minutes allowed for shift paid time in this work plan. Used if constrainPaidTimeGranularity == true.</param>
         /// <param name="ConstrainMinimumTimeBetweenShifts">Whether the minimum time between shifts constraint is enabled for this work plan.</param>
         /// <param name="MinimumTimeBetweenShiftsMinutes">Minimum time between shifts in minutes defined in this work plan. Used if constrainMinimumTimeBetweenShifts == true.</param>
         /// <param name="MaximumDays">Maximum number days in a week allowed to be scheduled for this work plan.</param>
+        /// <param name="MinimumConsecutiveNonWorkingMinutesPerWeek">Minimum amount of consecutive non working minutes per week that agents who are assigned this work plan are allowed to have off.</param>
+        /// <param name="ConstrainMaximumConsecutiveWorkingWeekends">Whether to constrain the maximum consecutive working weekends.</param>
+        /// <param name="MaximumConsecutiveWorkingWeekends">The maximum number of consecutive weekends that agents who are assigned to this work plan are allowed to work.</param>
         /// <param name="MinimumWorkingDaysPerWeek">The minimum number of days that agents assigned to a work plan must work per week.</param>
+        /// <param name="ConstrainMaximumConsecutiveWorkingDays">Whether to constrain the maximum consecutive working days.</param>
+        /// <param name="MaximumConsecutiveWorkingDays">The maximum number of consecutive days that agents assigned to this work plan are allowed to work. Used if constrainMaximumConsecutiveWorkingDays == true.</param>
+        /// <param name="MinimumShiftStartDistanceMinutes">The time period in minutes for the duration between the start times of two consecutive working days.</param>
+        /// <param name="MinimumDaysOffPerPlanningPeriod">Minimum days off in the planning period.</param>
+        /// <param name="MaximumDaysOffPerPlanningPeriod">Maximum days off in the planning period.</param>
+        /// <param name="MinimumPaidMinutesPerPlanningPeriod">Minimum paid minutes in the planning period.</param>
+        /// <param name="MaximumPaidMinutesPerPlanningPeriod">Maximum paid minutes in the planning period.</param>
         /// <param name="OptionalDays">Optional days to schedule for this work plan.</param>
+        /// <param name="ShiftStartVarianceType">This constraint ensures that an agent starts each workday within a user-defined time threshold.</param>
         /// <param name="ShiftStartVariances">Variance in minutes among start times of shifts in this work plan.</param>
         /// <param name="Shifts">Shifts in this work plan.</param>
         /// <param name="Agents">Agents in this work plan.</param>
         /// <param name="Metadata">Version metadata for this work plan (required).</param>
-        public WorkPlan(string Name = null, bool? Enabled = null, bool? ConstrainWeeklyPaidTime = null, bool? FlexibleWeeklyPaidTime = null, int? WeeklyExactPaidMinutes = null, int? WeeklyMinimumPaidMinutes = null, int? WeeklyMaximumPaidMinutes = null, bool? ConstrainPaidTimeGranularity = null, int? PaidTimeGranularityMinutes = null, bool? ConstrainMinimumTimeBetweenShifts = null, int? MinimumTimeBetweenShiftsMinutes = null, int? MaximumDays = null, int? MinimumWorkingDaysPerWeek = null, SetWrapperDayOfWeek OptionalDays = null, ListWrapperShiftStartVariance ShiftStartVariances = null, List<WorkPlanShift> Shifts = null, List<DeletableUserReference> Agents = null, WfmVersionedEntityMetadata Metadata = null)
+        public WorkPlan(string Name = null, bool? Enabled = null, bool? ConstrainWeeklyPaidTime = null, bool? FlexibleWeeklyPaidTime = null, int? WeeklyExactPaidMinutes = null, int? WeeklyMinimumPaidMinutes = null, int? WeeklyMaximumPaidMinutes = null, bool? ConstrainPaidTimeGranularity = null, int? PaidTimeGranularityMinutes = null, bool? ConstrainMinimumTimeBetweenShifts = null, int? MinimumTimeBetweenShiftsMinutes = null, int? MaximumDays = null, int? MinimumConsecutiveNonWorkingMinutesPerWeek = null, bool? ConstrainMaximumConsecutiveWorkingWeekends = null, int? MaximumConsecutiveWorkingWeekends = null, int? MinimumWorkingDaysPerWeek = null, bool? ConstrainMaximumConsecutiveWorkingDays = null, int? MaximumConsecutiveWorkingDays = null, int? MinimumShiftStartDistanceMinutes = null, int? MinimumDaysOffPerPlanningPeriod = null, int? MaximumDaysOffPerPlanningPeriod = null, int? MinimumPaidMinutesPerPlanningPeriod = null, int? MaximumPaidMinutesPerPlanningPeriod = null, SetWrapperDayOfWeek OptionalDays = null, ShiftStartVarianceTypeEnum? ShiftStartVarianceType = null, ListWrapperShiftStartVariance ShiftStartVariances = null, List<WorkPlanShift> Shifts = null, List<DeletableUserReference> Agents = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Name = Name;
             this.Enabled = Enabled;
@@ -162,8 +263,19 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConstrainMinimumTimeBetweenShifts = ConstrainMinimumTimeBetweenShifts;
             this.MinimumTimeBetweenShiftsMinutes = MinimumTimeBetweenShiftsMinutes;
             this.MaximumDays = MaximumDays;
+            this.MinimumConsecutiveNonWorkingMinutesPerWeek = MinimumConsecutiveNonWorkingMinutesPerWeek;
+            this.ConstrainMaximumConsecutiveWorkingWeekends = ConstrainMaximumConsecutiveWorkingWeekends;
+            this.MaximumConsecutiveWorkingWeekends = MaximumConsecutiveWorkingWeekends;
             this.MinimumWorkingDaysPerWeek = MinimumWorkingDaysPerWeek;
+            this.ConstrainMaximumConsecutiveWorkingDays = ConstrainMaximumConsecutiveWorkingDays;
+            this.MaximumConsecutiveWorkingDays = MaximumConsecutiveWorkingDays;
+            this.MinimumShiftStartDistanceMinutes = MinimumShiftStartDistanceMinutes;
+            this.MinimumDaysOffPerPlanningPeriod = MinimumDaysOffPerPlanningPeriod;
+            this.MaximumDaysOffPerPlanningPeriod = MaximumDaysOffPerPlanningPeriod;
+            this.MinimumPaidMinutesPerPlanningPeriod = MinimumPaidMinutesPerPlanningPeriod;
+            this.MaximumPaidMinutesPerPlanningPeriod = MaximumPaidMinutesPerPlanningPeriod;
             this.OptionalDays = OptionalDays;
+            this.ShiftStartVarianceType = ShiftStartVarianceType;
             this.ShiftStartVariances = ShiftStartVariances;
             this.Shifts = Shifts;
             this.Agents = Agents;
@@ -245,9 +357,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Whether paid time granularity is constrained for this workplan
+        /// Whether paid time granularity is constrained for this work plan
         /// </summary>
-        /// <value>Whether paid time granularity is constrained for this workplan</value>
+        /// <value>Whether paid time granularity is constrained for this work plan</value>
         [DataMember(Name="constrainPaidTimeGranularity", EmitDefaultValue=false)]
         public bool? ConstrainPaidTimeGranularity { get; set; }
         
@@ -290,6 +402,33 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Minimum amount of consecutive non working minutes per week that agents who are assigned this work plan are allowed to have off
+        /// </summary>
+        /// <value>Minimum amount of consecutive non working minutes per week that agents who are assigned this work plan are allowed to have off</value>
+        [DataMember(Name="minimumConsecutiveNonWorkingMinutesPerWeek", EmitDefaultValue=false)]
+        public int? MinimumConsecutiveNonWorkingMinutesPerWeek { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Whether to constrain the maximum consecutive working weekends
+        /// </summary>
+        /// <value>Whether to constrain the maximum consecutive working weekends</value>
+        [DataMember(Name="constrainMaximumConsecutiveWorkingWeekends", EmitDefaultValue=false)]
+        public bool? ConstrainMaximumConsecutiveWorkingWeekends { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The maximum number of consecutive weekends that agents who are assigned to this work plan are allowed to work
+        /// </summary>
+        /// <value>The maximum number of consecutive weekends that agents who are assigned to this work plan are allowed to work</value>
+        [DataMember(Name="maximumConsecutiveWorkingWeekends", EmitDefaultValue=false)]
+        public int? MaximumConsecutiveWorkingWeekends { get; set; }
+        
+        
+        
+        /// <summary>
         /// The minimum number of days that agents assigned to a work plan must work per week
         /// </summary>
         /// <value>The minimum number of days that agents assigned to a work plan must work per week</value>
@@ -299,11 +438,76 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Whether to constrain the maximum consecutive working days
+        /// </summary>
+        /// <value>Whether to constrain the maximum consecutive working days</value>
+        [DataMember(Name="constrainMaximumConsecutiveWorkingDays", EmitDefaultValue=false)]
+        public bool? ConstrainMaximumConsecutiveWorkingDays { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The maximum number of consecutive days that agents assigned to this work plan are allowed to work. Used if constrainMaximumConsecutiveWorkingDays == true
+        /// </summary>
+        /// <value>The maximum number of consecutive days that agents assigned to this work plan are allowed to work. Used if constrainMaximumConsecutiveWorkingDays == true</value>
+        [DataMember(Name="maximumConsecutiveWorkingDays", EmitDefaultValue=false)]
+        public int? MaximumConsecutiveWorkingDays { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The time period in minutes for the duration between the start times of two consecutive working days
+        /// </summary>
+        /// <value>The time period in minutes for the duration between the start times of two consecutive working days</value>
+        [DataMember(Name="minimumShiftStartDistanceMinutes", EmitDefaultValue=false)]
+        public int? MinimumShiftStartDistanceMinutes { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Minimum days off in the planning period
+        /// </summary>
+        /// <value>Minimum days off in the planning period</value>
+        [DataMember(Name="minimumDaysOffPerPlanningPeriod", EmitDefaultValue=false)]
+        public int? MinimumDaysOffPerPlanningPeriod { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Maximum days off in the planning period
+        /// </summary>
+        /// <value>Maximum days off in the planning period</value>
+        [DataMember(Name="maximumDaysOffPerPlanningPeriod", EmitDefaultValue=false)]
+        public int? MaximumDaysOffPerPlanningPeriod { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Minimum paid minutes in the planning period
+        /// </summary>
+        /// <value>Minimum paid minutes in the planning period</value>
+        [DataMember(Name="minimumPaidMinutesPerPlanningPeriod", EmitDefaultValue=false)]
+        public int? MinimumPaidMinutesPerPlanningPeriod { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Maximum paid minutes in the planning period
+        /// </summary>
+        /// <value>Maximum paid minutes in the planning period</value>
+        [DataMember(Name="maximumPaidMinutesPerPlanningPeriod", EmitDefaultValue=false)]
+        public int? MaximumPaidMinutesPerPlanningPeriod { get; set; }
+        
+        
+        
+        /// <summary>
         /// Optional days to schedule for this work plan
         /// </summary>
         /// <value>Optional days to schedule for this work plan</value>
         [DataMember(Name="optionalDays", EmitDefaultValue=false)]
         public SetWrapperDayOfWeek OptionalDays { get; set; }
+        
+        
         
         
         
@@ -373,8 +577,19 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConstrainMinimumTimeBetweenShifts: ").Append(ConstrainMinimumTimeBetweenShifts).Append("\n");
             sb.Append("  MinimumTimeBetweenShiftsMinutes: ").Append(MinimumTimeBetweenShiftsMinutes).Append("\n");
             sb.Append("  MaximumDays: ").Append(MaximumDays).Append("\n");
+            sb.Append("  MinimumConsecutiveNonWorkingMinutesPerWeek: ").Append(MinimumConsecutiveNonWorkingMinutesPerWeek).Append("\n");
+            sb.Append("  ConstrainMaximumConsecutiveWorkingWeekends: ").Append(ConstrainMaximumConsecutiveWorkingWeekends).Append("\n");
+            sb.Append("  MaximumConsecutiveWorkingWeekends: ").Append(MaximumConsecutiveWorkingWeekends).Append("\n");
             sb.Append("  MinimumWorkingDaysPerWeek: ").Append(MinimumWorkingDaysPerWeek).Append("\n");
+            sb.Append("  ConstrainMaximumConsecutiveWorkingDays: ").Append(ConstrainMaximumConsecutiveWorkingDays).Append("\n");
+            sb.Append("  MaximumConsecutiveWorkingDays: ").Append(MaximumConsecutiveWorkingDays).Append("\n");
+            sb.Append("  MinimumShiftStartDistanceMinutes: ").Append(MinimumShiftStartDistanceMinutes).Append("\n");
+            sb.Append("  MinimumDaysOffPerPlanningPeriod: ").Append(MinimumDaysOffPerPlanningPeriod).Append("\n");
+            sb.Append("  MaximumDaysOffPerPlanningPeriod: ").Append(MaximumDaysOffPerPlanningPeriod).Append("\n");
+            sb.Append("  MinimumPaidMinutesPerPlanningPeriod: ").Append(MinimumPaidMinutesPerPlanningPeriod).Append("\n");
+            sb.Append("  MaximumPaidMinutesPerPlanningPeriod: ").Append(MaximumPaidMinutesPerPlanningPeriod).Append("\n");
             sb.Append("  OptionalDays: ").Append(OptionalDays).Append("\n");
+            sb.Append("  ShiftStartVarianceType: ").Append(ShiftStartVarianceType).Append("\n");
             sb.Append("  ShiftStartVariances: ").Append(ShiftStartVariances).Append("\n");
             sb.Append("  Shifts: ").Append(Shifts).Append("\n");
             sb.Append("  Agents: ").Append(Agents).Append("\n");
@@ -482,14 +697,69 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaximumDays.Equals(other.MaximumDays)
                 ) &&
                 (
+                    this.MinimumConsecutiveNonWorkingMinutesPerWeek == other.MinimumConsecutiveNonWorkingMinutesPerWeek ||
+                    this.MinimumConsecutiveNonWorkingMinutesPerWeek != null &&
+                    this.MinimumConsecutiveNonWorkingMinutesPerWeek.Equals(other.MinimumConsecutiveNonWorkingMinutesPerWeek)
+                ) &&
+                (
+                    this.ConstrainMaximumConsecutiveWorkingWeekends == other.ConstrainMaximumConsecutiveWorkingWeekends ||
+                    this.ConstrainMaximumConsecutiveWorkingWeekends != null &&
+                    this.ConstrainMaximumConsecutiveWorkingWeekends.Equals(other.ConstrainMaximumConsecutiveWorkingWeekends)
+                ) &&
+                (
+                    this.MaximumConsecutiveWorkingWeekends == other.MaximumConsecutiveWorkingWeekends ||
+                    this.MaximumConsecutiveWorkingWeekends != null &&
+                    this.MaximumConsecutiveWorkingWeekends.Equals(other.MaximumConsecutiveWorkingWeekends)
+                ) &&
+                (
                     this.MinimumWorkingDaysPerWeek == other.MinimumWorkingDaysPerWeek ||
                     this.MinimumWorkingDaysPerWeek != null &&
                     this.MinimumWorkingDaysPerWeek.Equals(other.MinimumWorkingDaysPerWeek)
                 ) &&
                 (
+                    this.ConstrainMaximumConsecutiveWorkingDays == other.ConstrainMaximumConsecutiveWorkingDays ||
+                    this.ConstrainMaximumConsecutiveWorkingDays != null &&
+                    this.ConstrainMaximumConsecutiveWorkingDays.Equals(other.ConstrainMaximumConsecutiveWorkingDays)
+                ) &&
+                (
+                    this.MaximumConsecutiveWorkingDays == other.MaximumConsecutiveWorkingDays ||
+                    this.MaximumConsecutiveWorkingDays != null &&
+                    this.MaximumConsecutiveWorkingDays.Equals(other.MaximumConsecutiveWorkingDays)
+                ) &&
+                (
+                    this.MinimumShiftStartDistanceMinutes == other.MinimumShiftStartDistanceMinutes ||
+                    this.MinimumShiftStartDistanceMinutes != null &&
+                    this.MinimumShiftStartDistanceMinutes.Equals(other.MinimumShiftStartDistanceMinutes)
+                ) &&
+                (
+                    this.MinimumDaysOffPerPlanningPeriod == other.MinimumDaysOffPerPlanningPeriod ||
+                    this.MinimumDaysOffPerPlanningPeriod != null &&
+                    this.MinimumDaysOffPerPlanningPeriod.Equals(other.MinimumDaysOffPerPlanningPeriod)
+                ) &&
+                (
+                    this.MaximumDaysOffPerPlanningPeriod == other.MaximumDaysOffPerPlanningPeriod ||
+                    this.MaximumDaysOffPerPlanningPeriod != null &&
+                    this.MaximumDaysOffPerPlanningPeriod.Equals(other.MaximumDaysOffPerPlanningPeriod)
+                ) &&
+                (
+                    this.MinimumPaidMinutesPerPlanningPeriod == other.MinimumPaidMinutesPerPlanningPeriod ||
+                    this.MinimumPaidMinutesPerPlanningPeriod != null &&
+                    this.MinimumPaidMinutesPerPlanningPeriod.Equals(other.MinimumPaidMinutesPerPlanningPeriod)
+                ) &&
+                (
+                    this.MaximumPaidMinutesPerPlanningPeriod == other.MaximumPaidMinutesPerPlanningPeriod ||
+                    this.MaximumPaidMinutesPerPlanningPeriod != null &&
+                    this.MaximumPaidMinutesPerPlanningPeriod.Equals(other.MaximumPaidMinutesPerPlanningPeriod)
+                ) &&
+                (
                     this.OptionalDays == other.OptionalDays ||
                     this.OptionalDays != null &&
                     this.OptionalDays.Equals(other.OptionalDays)
+                ) &&
+                (
+                    this.ShiftStartVarianceType == other.ShiftStartVarianceType ||
+                    this.ShiftStartVarianceType != null &&
+                    this.ShiftStartVarianceType.Equals(other.ShiftStartVarianceType)
                 ) &&
                 (
                     this.ShiftStartVariances == other.ShiftStartVariances ||
@@ -569,11 +839,44 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.MaximumDays != null)
                     hash = hash * 59 + this.MaximumDays.GetHashCode();
                 
+                if (this.MinimumConsecutiveNonWorkingMinutesPerWeek != null)
+                    hash = hash * 59 + this.MinimumConsecutiveNonWorkingMinutesPerWeek.GetHashCode();
+                
+                if (this.ConstrainMaximumConsecutiveWorkingWeekends != null)
+                    hash = hash * 59 + this.ConstrainMaximumConsecutiveWorkingWeekends.GetHashCode();
+                
+                if (this.MaximumConsecutiveWorkingWeekends != null)
+                    hash = hash * 59 + this.MaximumConsecutiveWorkingWeekends.GetHashCode();
+                
                 if (this.MinimumWorkingDaysPerWeek != null)
                     hash = hash * 59 + this.MinimumWorkingDaysPerWeek.GetHashCode();
                 
+                if (this.ConstrainMaximumConsecutiveWorkingDays != null)
+                    hash = hash * 59 + this.ConstrainMaximumConsecutiveWorkingDays.GetHashCode();
+                
+                if (this.MaximumConsecutiveWorkingDays != null)
+                    hash = hash * 59 + this.MaximumConsecutiveWorkingDays.GetHashCode();
+                
+                if (this.MinimumShiftStartDistanceMinutes != null)
+                    hash = hash * 59 + this.MinimumShiftStartDistanceMinutes.GetHashCode();
+                
+                if (this.MinimumDaysOffPerPlanningPeriod != null)
+                    hash = hash * 59 + this.MinimumDaysOffPerPlanningPeriod.GetHashCode();
+                
+                if (this.MaximumDaysOffPerPlanningPeriod != null)
+                    hash = hash * 59 + this.MaximumDaysOffPerPlanningPeriod.GetHashCode();
+                
+                if (this.MinimumPaidMinutesPerPlanningPeriod != null)
+                    hash = hash * 59 + this.MinimumPaidMinutesPerPlanningPeriod.GetHashCode();
+                
+                if (this.MaximumPaidMinutesPerPlanningPeriod != null)
+                    hash = hash * 59 + this.MaximumPaidMinutesPerPlanningPeriod.GetHashCode();
+                
                 if (this.OptionalDays != null)
                     hash = hash * 59 + this.OptionalDays.GetHashCode();
+                
+                if (this.ShiftStartVarianceType != null)
+                    hash = hash * 59 + this.ShiftStartVarianceType.GetHashCode();
                 
                 if (this.ShiftStartVariances != null)
                     hash = hash * 59 + this.ShiftStartVariances.GetHashCode();

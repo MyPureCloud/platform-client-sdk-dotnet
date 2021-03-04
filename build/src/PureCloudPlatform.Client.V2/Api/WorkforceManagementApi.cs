@@ -908,7 +908,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get management unit
         /// </summary>
         /// <remarks>
-        /// 
+        /// settings.shortTermForecasting is deprecated and now lives on the business unit
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -920,7 +920,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get management unit
         /// </summary>
         /// <remarks>
-        /// 
+        /// settings.shortTermForecasting is deprecated and now lives on the business unit
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -1331,9 +1331,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize"> (optional)</param>
-        /// <param name="pageNumber"> (optional)</param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="pageSize">Deprecated, paging is not supported (optional)</param>
+        /// <param name="pageNumber">Deprecated, paging is not supported (optional)</param>
+        /// <param name="expand">Deprecated, expand settings on the single MU route (optional)</param>
         /// <param name="feature"> (optional)</param>
         /// <param name="divisionId"> (optional)</param>
         /// <returns>ManagementUnitListing</returns>
@@ -1346,9 +1346,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize"> (optional)</param>
-        /// <param name="pageNumber"> (optional)</param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="pageSize">Deprecated, paging is not supported (optional)</param>
+        /// <param name="pageNumber">Deprecated, paging is not supported (optional)</param>
+        /// <param name="expand">Deprecated, expand settings on the single MU route (optional)</param>
         /// <param name="feature"> (optional)</param>
         /// <param name="divisionId"> (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
@@ -3528,7 +3528,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get management unit
         /// </summary>
         /// <remarks>
-        /// 
+        /// settings.shortTermForecasting is deprecated and now lives on the business unit
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -3540,7 +3540,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get management unit
         /// </summary>
         /// <remarks>
-        /// 
+        /// settings.shortTermForecasting is deprecated and now lives on the business unit
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -3951,9 +3951,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize"> (optional)</param>
-        /// <param name="pageNumber"> (optional)</param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="pageSize">Deprecated, paging is not supported (optional)</param>
+        /// <param name="pageNumber">Deprecated, paging is not supported (optional)</param>
+        /// <param name="expand">Deprecated, expand settings on the single MU route (optional)</param>
         /// <param name="feature"> (optional)</param>
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of ManagementUnitListing</returns>
@@ -3966,9 +3966,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize"> (optional)</param>
-        /// <param name="pageNumber"> (optional)</param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="pageSize">Deprecated, paging is not supported (optional)</param>
+        /// <param name="pageNumber">Deprecated, paging is not supported (optional)</param>
+        /// <param name="expand">Deprecated, expand settings on the single MU route (optional)</param>
         /// <param name="feature"> (optional)</param>
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
@@ -12808,7 +12808,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get management unit 
+        /// Get management unit settings.shortTermForecasting is deprecated and now lives on the business unit
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -12821,7 +12821,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get management unit 
+        /// Get management unit settings.shortTermForecasting is deprecated and now lives on the business unit
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -12906,7 +12906,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get management unit 
+        /// Get management unit settings.shortTermForecasting is deprecated and now lives on the business unit
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -12920,7 +12920,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get management unit 
+        /// Get management unit settings.shortTermForecasting is deprecated and now lives on the business unit
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -16307,9 +16307,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get management units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize"> (optional)</param>
-        /// <param name="pageNumber"> (optional)</param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="pageSize">Deprecated, paging is not supported (optional)</param>
+        /// <param name="pageNumber">Deprecated, paging is not supported (optional)</param>
+        /// <param name="expand">Deprecated, expand settings on the single MU route (optional)</param>
         /// <param name="feature"> (optional)</param>
         /// <param name="divisionId"> (optional)</param>
         /// <returns>ManagementUnitListing</returns>
@@ -16323,9 +16323,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get management units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize"> (optional)</param>
-        /// <param name="pageNumber"> (optional)</param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="pageSize">Deprecated, paging is not supported (optional)</param>
+        /// <param name="pageNumber">Deprecated, paging is not supported (optional)</param>
+        /// <param name="expand">Deprecated, expand settings on the single MU route (optional)</param>
         /// <param name="feature"> (optional)</param>
         /// <param name="divisionId"> (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
@@ -16411,9 +16411,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get management units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize"> (optional)</param>
-        /// <param name="pageNumber"> (optional)</param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="pageSize">Deprecated, paging is not supported (optional)</param>
+        /// <param name="pageNumber">Deprecated, paging is not supported (optional)</param>
+        /// <param name="expand">Deprecated, expand settings on the single MU route (optional)</param>
         /// <param name="feature"> (optional)</param>
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of ManagementUnitListing</returns>
@@ -16428,9 +16428,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get management units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize"> (optional)</param>
-        /// <param name="pageNumber"> (optional)</param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="pageSize">Deprecated, paging is not supported (optional)</param>
+        /// <param name="pageNumber">Deprecated, paging is not supported (optional)</param>
+        /// <param name="expand">Deprecated, expand settings on the single MU route (optional)</param>
         /// <param name="feature"> (optional)</param>
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>

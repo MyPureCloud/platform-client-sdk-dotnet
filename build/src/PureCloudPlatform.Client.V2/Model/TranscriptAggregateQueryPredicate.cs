@@ -127,6 +127,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Flowid,
             
             /// <summary>
+            /// Enum Flowversion for "flowVersion"
+            /// </summary>
+            [EnumMember(Value = "flowVersion")]
+            Flowversion,
+            
+            /// <summary>
             /// Enum Mediatype for "mediaType"
             /// </summary>
             [EnumMember(Value = "mediaType")]
@@ -149,6 +155,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "teamId")]
             Teamid,
+            
+            /// <summary>
+            /// Enum Topicid for "topicId"
+            /// </summary>
+            [EnumMember(Value = "topicId")]
+            Topicid,
             
             /// <summary>
             /// Enum Userid for "userId"

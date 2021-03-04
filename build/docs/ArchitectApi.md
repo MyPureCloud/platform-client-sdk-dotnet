@@ -3873,7 +3873,7 @@ namespace Example
 
 <a name="getflowsdatatables"></a>
 
-## [**DataTablesDomainEntityListing**](DataTablesDomainEntityListing.html) GetFlowsDatatables (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+## [**DataTablesDomainEntityListing**](DataTablesDomainEntityListing.html) GetFlowsDatatables (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null)
 
 
 
@@ -3912,11 +3912,12 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
+            var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
 
             try
             { 
                 // Retrieve a list of datatables for the org
-                DataTablesDomainEntityListing result = apiInstance.GetFlowsDatatables(expand, pageNumber, pageSize, sortBy, sortOrder);
+                DataTablesDomainEntityListing result = apiInstance.GetFlowsDatatables(expand, pageNumber, pageSize, sortBy, sortOrder, divisionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3938,6 +3939,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Sort by | [optional] [default to id]<br />**Values**: id, name |
 | **sortOrder** | **string**| Sort order | [optional] [default to ascending] |
+| **divisionId** | [**List<string>**](string.html)| division ID(s) | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

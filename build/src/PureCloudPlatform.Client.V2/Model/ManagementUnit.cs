@@ -29,6 +29,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Start day of week for scheduling and forecasting purposes. Moving to Business Unit
         /// </summary>
@@ -118,6 +121,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Start day of week for scheduling and forecasting purposes. Moving to Business Unit
         /// </summary>
@@ -146,15 +151,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Division">The division to which this entity belongs..</param>
+        /// <param name="BusinessUnit">The business unit to which this management unit belongs.</param>
         /// <param name="StartDayOfWeek">Start day of week for scheduling and forecasting purposes. Moving to Business Unit.</param>
         /// <param name="TimeZone">The time zone for the management unit in standard Olson format.  Moving to Business Unit.</param>
         /// <param name="Settings">The configuration settings for this management unit.</param>
         /// <param name="Metadata">Version info metadata for this management unit. Deprecated, use settings.metadata.</param>
         /// <param name="ModifiedBy">The user who last modified this entity.  Deprecated, use field from settings.metadata instead.</param>
-        public ManagementUnit(string Name = null, Division Division = null, StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, ManagementUnitSettingsResponse Settings = null, WfmVersionedEntityMetadata Metadata = null, UserReference ModifiedBy = null)
+        public ManagementUnit(string Name = null, Division Division = null, BusinessUnitReference BusinessUnit = null, StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, ManagementUnitSettingsResponse Settings = null, WfmVersionedEntityMetadata Metadata = null, UserReference ModifiedBy = null)
         {
             this.Name = Name;
             this.Division = Division;
+            this.BusinessUnit = BusinessUnit;
             this.StartDayOfWeek = StartDayOfWeek;
             this.TimeZone = TimeZone;
             this.Settings = Settings;
@@ -188,6 +195,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public Division Division { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The business unit to which this management unit belongs
+        /// </summary>
+        /// <value>The business unit to which this management unit belongs</value>
+        [DataMember(Name="businessUnit", EmitDefaultValue=false)]
+        public BusinessUnitReference BusinessUnit { get; set; }
         
         
         
@@ -267,6 +283,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
+            sb.Append("  BusinessUnit: ").Append(BusinessUnit).Append("\n");
             sb.Append("  StartDayOfWeek: ").Append(StartDayOfWeek).Append("\n");
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  Settings: ").Append(Settings).Append("\n");
@@ -325,6 +342,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Division == other.Division ||
                     this.Division != null &&
                     this.Division.Equals(other.Division)
+                ) &&
+                (
+                    this.BusinessUnit == other.BusinessUnit ||
+                    this.BusinessUnit != null &&
+                    this.BusinessUnit.Equals(other.BusinessUnit)
                 ) &&
                 (
                     this.StartDayOfWeek == other.StartDayOfWeek ||
@@ -388,6 +410,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
+                
+                if (this.BusinessUnit != null)
+                    hash = hash * 59 + this.BusinessUnit.GetHashCode();
                 
                 if (this.StartDayOfWeek != null)
                     hash = hash * 59 + this.StartDayOfWeek.GetHashCode();

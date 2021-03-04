@@ -35,6 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Visibility of this topic (Public or Preview)
         /// </summary>
@@ -127,6 +130,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Visibility of this topic (Public or Preview)
         /// </summary>
@@ -151,6 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Description">Description.</param>
         /// <param name="Id">Id.</param>
+        /// <param name="PermissionDetails">Full detailed permissions required to subscribe to the topic.</param>
         /// <param name="RequiresPermissions">Permissions required to subscribe to the topic.</param>
         /// <param name="RequiresDivisionPermissions">True if the subscribing user must belong to the same division as the topic object ID.</param>
         /// <param name="Enforced">Whether or not the permissions on this topic are enforced.</param>
@@ -160,10 +166,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RequiresCurrentUserOrPermission">True if permissions are only required when the topic user ID does not match the subscribing user ID.</param>
         /// <param name="Transports">Transports that support events for the topic.</param>
         /// <param name="PublicApiTemplateUriPaths">PublicApiTemplateUriPaths.</param>
-        public AvailableTopic(string Description = null, string Id = null, List<string> RequiresPermissions = null, bool? RequiresDivisionPermissions = null, bool? Enforced = null, VisibilityEnum? Visibility = null, Dictionary<string, Object> Schema = null, bool? RequiresCurrentUser = null, bool? RequiresCurrentUserOrPermission = null, List<TransportsEnum> Transports = null, List<string> PublicApiTemplateUriPaths = null)
+        public AvailableTopic(string Description = null, string Id = null, List<PermissionDetails> PermissionDetails = null, List<string> RequiresPermissions = null, bool? RequiresDivisionPermissions = null, bool? Enforced = null, VisibilityEnum? Visibility = null, Dictionary<string, Object> Schema = null, bool? RequiresCurrentUser = null, bool? RequiresCurrentUserOrPermission = null, List<TransportsEnum> Transports = null, List<string> PublicApiTemplateUriPaths = null)
         {
             this.Description = Description;
             this.Id = Id;
+            this.PermissionDetails = PermissionDetails;
             this.RequiresPermissions = RequiresPermissions;
             this.RequiresDivisionPermissions = RequiresDivisionPermissions;
             this.Enforced = Enforced;
@@ -191,6 +198,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Full detailed permissions required to subscribe to the topic
+        /// </summary>
+        /// <value>Full detailed permissions required to subscribe to the topic</value>
+        [DataMember(Name="permissionDetails", EmitDefaultValue=false)]
+        public List<PermissionDetails> PermissionDetails { get; set; }
         
         
         
@@ -276,6 +292,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  PermissionDetails: ").Append(PermissionDetails).Append("\n");
             sb.Append("  RequiresPermissions: ").Append(RequiresPermissions).Append("\n");
             sb.Append("  RequiresDivisionPermissions: ").Append(RequiresDivisionPermissions).Append("\n");
             sb.Append("  Enforced: ").Append(Enforced).Append("\n");
@@ -330,6 +347,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.PermissionDetails == other.PermissionDetails ||
+                    this.PermissionDetails != null &&
+                    this.PermissionDetails.SequenceEqual(other.PermissionDetails)
                 ) &&
                 (
                     this.RequiresPermissions == other.RequiresPermissions ||
@@ -395,6 +417,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.PermissionDetails != null)
+                    hash = hash * 59 + this.PermissionDetails.GetHashCode();
                 
                 if (this.RequiresPermissions != null)
                     hash = hash * 59 + this.RequiresPermissions.GetHashCode();

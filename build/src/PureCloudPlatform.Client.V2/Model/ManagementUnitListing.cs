@@ -75,14 +75,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ManagementUnitListing" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
-        /// <param name="PageSize">PageSize.</param>
-        /// <param name="PageNumber">PageNumber.</param>
-        /// <param name="Total">Total.</param>
-        /// <param name="FirstUri">FirstUri.</param>
-        /// <param name="NextUri">NextUri.</param>
-        /// <param name="PageCount">PageCount.</param>
-        /// <param name="LastUri">LastUri.</param>
-        /// <param name="PreviousUri">PreviousUri.</param>
+        /// <param name="PageSize">Deprecated, paging is not supported.</param>
+        /// <param name="PageNumber">Deprecated, paging is not supported.</param>
+        /// <param name="Total">Deprecated, paging is not supported.</param>
+        /// <param name="FirstUri">Deprecated, paging is not supported.</param>
+        /// <param name="NextUri">Deprecated, paging is not supported.</param>
+        /// <param name="PageCount">Deprecated, paging is not supported.</param>
+        /// <param name="LastUri">Deprecated, paging is not supported.</param>
+        /// <param name="PreviousUri">Deprecated, paging is not supported.</param>
         /// <param name="SelfUri">SelfUri.</param>
         public ManagementUnitListing(List<ManagementUnit> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string FirstUri = null, string NextUri = null, int? PageCount = null, string LastUri = null, string PreviousUri = null, string SelfUri = null)
         {
@@ -110,64 +110,72 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets PageSize
+        /// Deprecated, paging is not supported
         /// </summary>
+        /// <value>Deprecated, paging is not supported</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets PageNumber
+        /// Deprecated, paging is not supported
         /// </summary>
+        /// <value>Deprecated, paging is not supported</value>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Total
+        /// Deprecated, paging is not supported
         /// </summary>
+        /// <value>Deprecated, paging is not supported</value>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public long? Total { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets FirstUri
+        /// Deprecated, paging is not supported
         /// </summary>
+        /// <value>Deprecated, paging is not supported</value>
         [DataMember(Name="firstUri", EmitDefaultValue=false)]
         public string FirstUri { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets NextUri
+        /// Deprecated, paging is not supported
         /// </summary>
+        /// <value>Deprecated, paging is not supported</value>
         [DataMember(Name="nextUri", EmitDefaultValue=false)]
         public string NextUri { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets PageCount
+        /// Deprecated, paging is not supported
         /// </summary>
+        /// <value>Deprecated, paging is not supported</value>
         [DataMember(Name="pageCount", EmitDefaultValue=false)]
         public int? PageCount { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets LastUri
+        /// Deprecated, paging is not supported
         /// </summary>
+        /// <value>Deprecated, paging is not supported</value>
         [DataMember(Name="lastUri", EmitDefaultValue=false)]
         public string LastUri { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets PreviousUri
+        /// Deprecated, paging is not supported
         /// </summary>
+        /// <value>Deprecated, paging is not supported</value>
         [DataMember(Name="previousUri", EmitDefaultValue=false)]
         public string PreviousUri { get; set; }
         

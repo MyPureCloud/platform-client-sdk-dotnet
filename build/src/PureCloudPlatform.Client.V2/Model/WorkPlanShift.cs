@@ -120,6 +120,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkPlanShift" /> class.
@@ -139,6 +149,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConstrainStopTime">Whether the latest stop time constraint for the shift is enabled.  Deprecated, use constrainLatestStopTime instead.</param>
         /// <param name="ConstrainLatestStopTime">Whether the latest stop time constraint for the shift is enabled.</param>
         /// <param name="LatestStopTimeMinutesFromMidnight">Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime == true.</param>
+        /// <param name="ConstrainEarliestStopTime">Whether the earliest stop time constraint for the shift is enabled.</param>
+        /// <param name="EarliestStopTimeMinutesFromMidnight">This is the earliest time a shift can end.</param>
         /// <param name="StartIncrementMinutes">Increment in offset minutes that would contribute to different possible start times for the shift. Used if flexibleStartTime == true.</param>
         /// <param name="FlexiblePaidTime">Whether the paid time setting for the shift is flexible.</param>
         /// <param name="ExactPaidTimeMinutes">Exact paid time in minutes configured for the shift. Used if flexiblePaidTime == false.</param>
@@ -150,7 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Activities">Activities configured for this shift.</param>
         /// <param name="Id">ID of the shift. This is required only for the case of updating an existing shift.</param>
         /// <param name="Delete">If marked true for updating an existing shift, the shift will be permanently deleted.</param>
-        public WorkPlanShift(string Name = null, SetWrapperDayOfWeek Days = null, bool? FlexibleStartTime = null, int? ExactStartTimeMinutesFromMidnight = null, int? EarliestStartTimeMinutesFromMidnight = null, int? LatestStartTimeMinutesFromMidnight = null, bool? ConstrainStopTime = null, bool? ConstrainLatestStopTime = null, int? LatestStopTimeMinutesFromMidnight = null, int? StartIncrementMinutes = null, bool? FlexiblePaidTime = null, int? ExactPaidTimeMinutes = null, int? MinimumPaidTimeMinutes = null, int? MaximumPaidTimeMinutes = null, bool? ConstrainContiguousWorkTime = null, int? MinimumContiguousWorkTimeMinutes = null, int? MaximumContiguousWorkTimeMinutes = null, List<WorkPlanActivity> Activities = null, string Id = null, bool? Delete = null)
+        public WorkPlanShift(string Name = null, SetWrapperDayOfWeek Days = null, bool? FlexibleStartTime = null, int? ExactStartTimeMinutesFromMidnight = null, int? EarliestStartTimeMinutesFromMidnight = null, int? LatestStartTimeMinutesFromMidnight = null, bool? ConstrainStopTime = null, bool? ConstrainLatestStopTime = null, int? LatestStopTimeMinutesFromMidnight = null, bool? ConstrainEarliestStopTime = null, int? EarliestStopTimeMinutesFromMidnight = null, int? StartIncrementMinutes = null, bool? FlexiblePaidTime = null, int? ExactPaidTimeMinutes = null, int? MinimumPaidTimeMinutes = null, int? MaximumPaidTimeMinutes = null, bool? ConstrainContiguousWorkTime = null, int? MinimumContiguousWorkTimeMinutes = null, int? MaximumContiguousWorkTimeMinutes = null, List<WorkPlanActivity> Activities = null, string Id = null, bool? Delete = null)
         {
             this.Name = Name;
             this.Days = Days;
@@ -161,6 +173,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConstrainStopTime = ConstrainStopTime;
             this.ConstrainLatestStopTime = ConstrainLatestStopTime;
             this.LatestStopTimeMinutesFromMidnight = LatestStopTimeMinutesFromMidnight;
+            this.ConstrainEarliestStopTime = ConstrainEarliestStopTime;
+            this.EarliestStopTimeMinutesFromMidnight = EarliestStopTimeMinutesFromMidnight;
             this.StartIncrementMinutes = StartIncrementMinutes;
             this.FlexiblePaidTime = FlexiblePaidTime;
             this.ExactPaidTimeMinutes = ExactPaidTimeMinutes;
@@ -255,6 +269,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime == true</value>
         [DataMember(Name="latestStopTimeMinutesFromMidnight", EmitDefaultValue=false)]
         public int? LatestStopTimeMinutesFromMidnight { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Whether the earliest stop time constraint for the shift is enabled
+        /// </summary>
+        /// <value>Whether the earliest stop time constraint for the shift is enabled</value>
+        [DataMember(Name="constrainEarliestStopTime", EmitDefaultValue=false)]
+        public bool? ConstrainEarliestStopTime { get; set; }
+        
+        
+        
+        /// <summary>
+        /// This is the earliest time a shift can end
+        /// </summary>
+        /// <value>This is the earliest time a shift can end</value>
+        [DataMember(Name="earliestStopTimeMinutesFromMidnight", EmitDefaultValue=false)]
+        public int? EarliestStopTimeMinutesFromMidnight { get; set; }
         
         
         
@@ -374,6 +406,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConstrainStopTime: ").Append(ConstrainStopTime).Append("\n");
             sb.Append("  ConstrainLatestStopTime: ").Append(ConstrainLatestStopTime).Append("\n");
             sb.Append("  LatestStopTimeMinutesFromMidnight: ").Append(LatestStopTimeMinutesFromMidnight).Append("\n");
+            sb.Append("  ConstrainEarliestStopTime: ").Append(ConstrainEarliestStopTime).Append("\n");
+            sb.Append("  EarliestStopTimeMinutesFromMidnight: ").Append(EarliestStopTimeMinutesFromMidnight).Append("\n");
             sb.Append("  StartIncrementMinutes: ").Append(StartIncrementMinutes).Append("\n");
             sb.Append("  FlexiblePaidTime: ").Append(FlexiblePaidTime).Append("\n");
             sb.Append("  ExactPaidTimeMinutes: ").Append(ExactPaidTimeMinutes).Append("\n");
@@ -465,6 +499,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LatestStopTimeMinutesFromMidnight == other.LatestStopTimeMinutesFromMidnight ||
                     this.LatestStopTimeMinutesFromMidnight != null &&
                     this.LatestStopTimeMinutesFromMidnight.Equals(other.LatestStopTimeMinutesFromMidnight)
+                ) &&
+                (
+                    this.ConstrainEarliestStopTime == other.ConstrainEarliestStopTime ||
+                    this.ConstrainEarliestStopTime != null &&
+                    this.ConstrainEarliestStopTime.Equals(other.ConstrainEarliestStopTime)
+                ) &&
+                (
+                    this.EarliestStopTimeMinutesFromMidnight == other.EarliestStopTimeMinutesFromMidnight ||
+                    this.EarliestStopTimeMinutesFromMidnight != null &&
+                    this.EarliestStopTimeMinutesFromMidnight.Equals(other.EarliestStopTimeMinutesFromMidnight)
                 ) &&
                 (
                     this.StartIncrementMinutes == other.StartIncrementMinutes ||
@@ -561,6 +605,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.LatestStopTimeMinutesFromMidnight != null)
                     hash = hash * 59 + this.LatestStopTimeMinutesFromMidnight.GetHashCode();
+                
+                if (this.ConstrainEarliestStopTime != null)
+                    hash = hash * 59 + this.ConstrainEarliestStopTime.GetHashCode();
+                
+                if (this.EarliestStopTimeMinutesFromMidnight != null)
+                    hash = hash * 59 + this.EarliestStopTimeMinutesFromMidnight.GetHashCode();
                 
                 if (this.StartIncrementMinutes != null)
                     hash = hash * 59 + this.StartIncrementMinutes.GetHashCode();

@@ -10,6 +10,7 @@ title: ManagementUnit
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
+| **BusinessUnit** | [**BusinessUnitReference**](BusinessUnitReference.html) | The business unit to which this management unit belongs | [optional] |
 | **StartDayOfWeek** | **string** | Start day of week for scheduling and forecasting purposes. Moving to Business Unit | [optional] |
 | **TimeZone** | **string** | The time zone for the management unit in standard Olson format.  Moving to Business Unit | [optional] |
 | **Settings** | [**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html) | The configuration settings for this management unit | [optional] |
