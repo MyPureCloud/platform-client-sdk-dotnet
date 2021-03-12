@@ -12,11 +12,11 @@ title: ArrayNode
 | **Number** | **bool?** |  | [optional] |
 | **Boolean** | **bool?** |  | [optional] |
 | **_Object** | **bool?** |  | [optional] |
-| **FloatingPointNumber** | **bool?** |  | [optional] |
-| **IntegralNumber** | **bool?** |  | [optional] |
 | **ValueNode** | **bool?** |  | [optional] |
-| **MissingNode** | **bool?** |  | [optional] |
 | **ContainerNode** | **bool?** |  | [optional] |
+| **FloatingPointNumber** | **bool?** |  | [optional] |
+| **Pojo** | **bool?** |  | [optional] |
+| **IntegralNumber** | **bool?** |  | [optional] |
 | **_Short** | **bool?** |  | [optional] |
 | **_Int** | **bool?** |  | [optional] |
 | **_Long** | **bool?** |  | [optional] |
@@ -25,7 +25,7 @@ title: ArrayNode
 | **BigInteger** | **bool?** |  | [optional] |
 | **Textual** | **bool?** |  | [optional] |
 | **Binary** | **bool?** |  | [optional] |
-| **Pojo** | **bool?** |  | [optional] |
+| **MissingNode** | **bool?** |  | [optional] |
 | **Array** | **bool?** |  | [optional] |
 | **_Null** | **bool?** |  | [optional] |
 {: class="table table-striped"}

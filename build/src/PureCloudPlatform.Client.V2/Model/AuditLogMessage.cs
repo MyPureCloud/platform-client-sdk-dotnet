@@ -434,6 +434,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Role,
             
             /// <summary>
+            /// Enum Voicemailpolicy for "VoicemailPolicy"
+            /// </summary>
+            [EnumMember(Value = "VoicemailPolicy")]
+            Voicemailpolicy,
+            
+            /// <summary>
             /// Enum Voicemailuserpolicy for "VoicemailUserPolicy"
             /// </summary>
             [EnumMember(Value = "VoicemailUserPolicy")]
@@ -794,10 +800,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Sequenceschedule,
             
             /// <summary>
-            /// Enum Organizationproperties for "OrganizationProperties"
+            /// Enum Organizationsettings for "OrganizationSettings"
             /// </summary>
-            [EnumMember(Value = "OrganizationProperties")]
-            Organizationproperties,
+            [EnumMember(Value = "OrganizationSettings")]
+            Organizationsettings,
             
             /// <summary>
             /// Enum Wrapupcodemapping for "WrapUpCodeMapping"
@@ -816,6 +822,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "TranscriptionSettings")]
             Transcriptionsettings,
+            
+            /// <summary>
+            /// Enum Routingtranscriptionsettings for "RoutingTranscriptionSettings"
+            /// </summary>
+            [EnumMember(Value = "RoutingTranscriptionSettings")]
+            Routingtranscriptionsettings,
             
             /// <summary>
             /// Enum Speechtextanalyticssettings for "SpeechTextAnalyticsSettings"

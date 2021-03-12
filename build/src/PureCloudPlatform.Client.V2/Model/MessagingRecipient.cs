@@ -26,6 +26,39 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The recipient identifier type. This is used to indicate the format used by the recipient identifier.
+        /// </summary>
+        /// <value>The recipient identifier type. This is used to indicate the format used by the recipient identifier.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum IdTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Email for "Email"
+            /// </summary>
+            [EnumMember(Value = "Email")]
+            Email,
+            
+            /// <summary>
+            /// Enum Phone for "Phone"
+            /// </summary>
+            [EnumMember(Value = "Phone")]
+            Phone,
+            
+            /// <summary>
+            /// Enum Opaque for "Opaque"
+            /// </summary>
+            [EnumMember(Value = "Opaque")]
+            Opaque
+        }
         
         
         
@@ -40,6 +73,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The recipient identifier type. This is used to indicate the format used by the recipient identifier.
+        /// </summary>
+        /// <value>The recipient identifier type. This is used to indicate the format used by the recipient identifier.</value>
+        [DataMember(Name="idType", EmitDefaultValue=false)]
+        public IdTypeEnum? IdType { get; set; }
         
         
         
@@ -61,9 +107,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="MessagingRecipient" /> class.
         /// </summary>
         /// <param name="Id">The recipient identifier specific for particular channel/integration. This is required when sending a message. (required).</param>
-        public MessagingRecipient(string Id = null)
+        /// <param name="IdType">The recipient identifier type. This is used to indicate the format used by the recipient identifier..</param>
+        public MessagingRecipient(string Id = null, IdTypeEnum? IdType = null)
         {
             this.Id = Id;
+            this.IdType = IdType;
             
         }
         
@@ -84,6 +132,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The recipient identifier specific for particular channel/integration. This is required when sending a message.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
         
         
         
@@ -133,6 +183,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Nickname: ").Append(Nickname).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  IdType: ").Append(IdType).Append("\n");
             sb.Append("  Image: ").Append(Image).Append("\n");
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
             sb.Append("  LastName: ").Append(LastName).Append("\n");
@@ -184,6 +235,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.IdType == other.IdType ||
+                    this.IdType != null &&
+                    this.IdType.Equals(other.IdType)
+                ) &&
+                (
                     this.Image == other.Image ||
                     this.Image != null &&
                     this.Image.Equals(other.Image)
@@ -222,6 +278,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.IdType != null)
+                    hash = hash * 59 + this.IdType.GetHashCode();
                 
                 if (this.Image != null)
                     hash = hash * 59 + this.Image.GetHashCode();

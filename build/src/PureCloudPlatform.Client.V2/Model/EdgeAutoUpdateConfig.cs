@@ -44,10 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeAutoUpdateConfig" /> class.
         /// </summary>
-        /// <param name="TimeZone">TimeZone.</param>
-        /// <param name="Rrule">Rrule.</param>
-        /// <param name="Start">Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS.</param>
-        /// <param name="End">Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS.</param>
+        [JsonConstructorAttribute]
+        protected EdgeAutoUpdateConfig() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EdgeAutoUpdateConfig" /> class.
+        /// </summary>
+        /// <param name="TimeZone">The timezone of the window in which any updates to the edges assigned to the site can be applied. The minimum size of the window is 2 hours. (required).</param>
+        /// <param name="Rrule">The recurrence rule for updating the Edges assigned to the site. The only supported frequencies are daily and weekly. Weekly frequencies require a day list with at least oneday specified. All other configurations are not supported. (required).</param>
+        /// <param name="Start">Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS (required).</param>
+        /// <param name="End">Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS (required).</param>
         public EdgeAutoUpdateConfig(string TimeZone = null, string Rrule = null, DateTime? Start = null, DateTime? End = null)
         {
             this.TimeZone = TimeZone;
@@ -60,16 +66,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets TimeZone
+        /// The timezone of the window in which any updates to the edges assigned to the site can be applied. The minimum size of the window is 2 hours.
         /// </summary>
+        /// <value>The timezone of the window in which any updates to the edges assigned to the site can be applied. The minimum size of the window is 2 hours.</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Rrule
+        /// The recurrence rule for updating the Edges assigned to the site. The only supported frequencies are daily and weekly. Weekly frequencies require a day list with at least oneday specified. All other configurations are not supported.
         /// </summary>
+        /// <value>The recurrence rule for updating the Edges assigned to the site. The only supported frequencies are daily and weekly. Weekly frequencies require a day list with at least oneday specified. All other configurations are not supported.</value>
         [DataMember(Name="rrule", EmitDefaultValue=false)]
         public string Rrule { get; set; }
         

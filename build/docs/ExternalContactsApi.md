@@ -38,6 +38,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetExternalcontactsScanNotes**](ExternalContactsApi.html#getexternalcontactsscannotes) | **GET** /api/v2/externalcontacts/scan/notes | Scan for notes using paging |
 | [**GetExternalcontactsScanOrganizations**](ExternalContactsApi.html#getexternalcontactsscanorganizations) | **GET** /api/v2/externalcontacts/scan/organizations | Scan for external organizations using paging |
 | [**GetExternalcontactsScanRelationships**](ExternalContactsApi.html#getexternalcontactsscanrelationships) | **GET** /api/v2/externalcontacts/scan/relationships | Scan for relationships |
+| [**PostExternalcontactsBulkContacts**](ExternalContactsApi.html#postexternalcontactsbulkcontacts) | **POST** /api/v2/externalcontacts/bulk/contacts | Bulk fetch contacts |
+| [**PostExternalcontactsBulkContactsAdd**](ExternalContactsApi.html#postexternalcontactsbulkcontactsadd) | **POST** /api/v2/externalcontacts/bulk/contacts/add | Bulk add contacts |
+| [**PostExternalcontactsBulkContactsRemove**](ExternalContactsApi.html#postexternalcontactsbulkcontactsremove) | **POST** /api/v2/externalcontacts/bulk/contacts/remove | Bulk remove contacts |
+| [**PostExternalcontactsBulkContactsUpdate**](ExternalContactsApi.html#postexternalcontactsbulkcontactsupdate) | **POST** /api/v2/externalcontacts/bulk/contacts/update | Bulk update contacts |
+| [**PostExternalcontactsBulkOrganizations**](ExternalContactsApi.html#postexternalcontactsbulkorganizations) | **POST** /api/v2/externalcontacts/bulk/organizations | Bulk fetch organizations |
+| [**PostExternalcontactsBulkOrganizationsAdd**](ExternalContactsApi.html#postexternalcontactsbulkorganizationsadd) | **POST** /api/v2/externalcontacts/bulk/organizations/add | Bulk add organizations |
+| [**PostExternalcontactsBulkOrganizationsRemove**](ExternalContactsApi.html#postexternalcontactsbulkorganizationsremove) | **POST** /api/v2/externalcontacts/bulk/organizations/remove | Bulk remove organizations |
+| [**PostExternalcontactsBulkOrganizationsUpdate**](ExternalContactsApi.html#postexternalcontactsbulkorganizationsupdate) | **POST** /api/v2/externalcontacts/bulk/organizations/update | Bulk update organizations |
 | [**PostExternalcontactsContactNotes**](ExternalContactsApi.html#postexternalcontactscontactnotes) | **POST** /api/v2/externalcontacts/contacts/{contactId}/notes | Create a note for an external contact |
 | [**PostExternalcontactsContacts**](ExternalContactsApi.html#postexternalcontactscontacts) | **POST** /api/v2/externalcontacts/contacts | Create an external contact |
 | [**PostExternalcontactsContactsSchemas**](ExternalContactsApi.html#postexternalcontactscontactsschemas) | **POST** /api/v2/externalcontacts/contacts/schemas | Create a schema |
@@ -2151,6 +2159,526 @@ namespace Example
 ### Return type
 
 [**CursorRelationshipListing**](CursorRelationshipListing.html)
+
+<a name="postexternalcontactsbulkcontacts"></a>
+
+## [**BulkFetchContactsResponse**](BulkFetchContactsResponse.html) PostExternalcontactsBulkContacts (BulkIdsRequest body)
+
+
+
+Bulk fetch contacts
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsBulkContactsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new BulkIdsRequest(); // BulkIdsRequest | Contact ids
+
+            try
+            { 
+                // Bulk fetch contacts
+                BulkFetchContactsResponse result = apiInstance.PostExternalcontactsBulkContacts(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsBulkContacts: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkIdsRequest**](BulkIdsRequest.html)| Contact ids |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkFetchContactsResponse**](BulkFetchContactsResponse.html)
+
+<a name="postexternalcontactsbulkcontactsadd"></a>
+
+## [**BulkContactsResponse**](BulkContactsResponse.html) PostExternalcontactsBulkContactsAdd (BulkContactsRequest body)
+
+
+
+Bulk add contacts
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:contact:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsBulkContactsAddExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new BulkContactsRequest(); // BulkContactsRequest | Contacts
+
+            try
+            { 
+                // Bulk add contacts
+                BulkContactsResponse result = apiInstance.PostExternalcontactsBulkContactsAdd(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsBulkContactsAdd: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkContactsRequest**](BulkContactsRequest.html)| Contacts |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkContactsResponse**](BulkContactsResponse.html)
+
+<a name="postexternalcontactsbulkcontactsremove"></a>
+
+## [**BulkDeleteResponse**](BulkDeleteResponse.html) PostExternalcontactsBulkContactsRemove (BulkIdsRequest body)
+
+
+
+Bulk remove contacts
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:contact:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsBulkContactsRemoveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new BulkIdsRequest(); // BulkIdsRequest | Contact ids
+
+            try
+            { 
+                // Bulk remove contacts
+                BulkDeleteResponse result = apiInstance.PostExternalcontactsBulkContactsRemove(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsBulkContactsRemove: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkIdsRequest**](BulkIdsRequest.html)| Contact ids |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkDeleteResponse**](BulkDeleteResponse.html)
+
+<a name="postexternalcontactsbulkcontactsupdate"></a>
+
+## [**BulkContactsResponse**](BulkContactsResponse.html) PostExternalcontactsBulkContactsUpdate (BulkContactsRequest body)
+
+
+
+Bulk update contacts
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:contact:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsBulkContactsUpdateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new BulkContactsRequest(); // BulkContactsRequest | Contacts
+
+            try
+            { 
+                // Bulk update contacts
+                BulkContactsResponse result = apiInstance.PostExternalcontactsBulkContactsUpdate(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsBulkContactsUpdate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkContactsRequest**](BulkContactsRequest.html)| Contacts |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkContactsResponse**](BulkContactsResponse.html)
+
+<a name="postexternalcontactsbulkorganizations"></a>
+
+## [**BulkFetchOrganizationsResponse**](BulkFetchOrganizationsResponse.html) PostExternalcontactsBulkOrganizations (BulkIdsRequest body)
+
+
+
+Bulk fetch organizations
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsBulkOrganizationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new BulkIdsRequest(); // BulkIdsRequest | Organizations ids
+
+            try
+            { 
+                // Bulk fetch organizations
+                BulkFetchOrganizationsResponse result = apiInstance.PostExternalcontactsBulkOrganizations(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsBulkOrganizations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkIdsRequest**](BulkIdsRequest.html)| Organizations ids |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkFetchOrganizationsResponse**](BulkFetchOrganizationsResponse.html)
+
+<a name="postexternalcontactsbulkorganizationsadd"></a>
+
+## [**BulkOrganizationsResponse**](BulkOrganizationsResponse.html) PostExternalcontactsBulkOrganizationsAdd (BulkOrganizationsRequest body)
+
+
+
+Bulk add organizations
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsBulkOrganizationsAddExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new BulkOrganizationsRequest(); // BulkOrganizationsRequest | Organizations
+
+            try
+            { 
+                // Bulk add organizations
+                BulkOrganizationsResponse result = apiInstance.PostExternalcontactsBulkOrganizationsAdd(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsBulkOrganizationsAdd: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkOrganizationsRequest**](BulkOrganizationsRequest.html)| Organizations |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkOrganizationsResponse**](BulkOrganizationsResponse.html)
+
+<a name="postexternalcontactsbulkorganizationsremove"></a>
+
+## [**BulkDeleteResponse**](BulkDeleteResponse.html) PostExternalcontactsBulkOrganizationsRemove (BulkIdsRequest body)
+
+
+
+Bulk remove organizations
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsBulkOrganizationsRemoveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new BulkIdsRequest(); // BulkIdsRequest | Organization ids
+
+            try
+            { 
+                // Bulk remove organizations
+                BulkDeleteResponse result = apiInstance.PostExternalcontactsBulkOrganizationsRemove(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsBulkOrganizationsRemove: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkIdsRequest**](BulkIdsRequest.html)| Organization ids |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkDeleteResponse**](BulkDeleteResponse.html)
+
+<a name="postexternalcontactsbulkorganizationsupdate"></a>
+
+## [**BulkOrganizationsResponse**](BulkOrganizationsResponse.html) PostExternalcontactsBulkOrganizationsUpdate (BulkOrganizationsRequest body)
+
+
+
+Bulk update organizations
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsBulkOrganizationsUpdateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new BulkOrganizationsRequest(); // BulkOrganizationsRequest | Organizations
+
+            try
+            { 
+                // Bulk update organizations
+                BulkOrganizationsResponse result = apiInstance.PostExternalcontactsBulkOrganizationsUpdate(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsBulkOrganizationsUpdate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkOrganizationsRequest**](BulkOrganizationsRequest.html)| Organizations |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkOrganizationsResponse**](BulkOrganizationsResponse.html)
 
 <a name="postexternalcontactscontactnotes"></a>
 

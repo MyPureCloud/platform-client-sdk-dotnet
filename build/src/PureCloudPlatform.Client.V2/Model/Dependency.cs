@@ -68,10 +68,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Botconnectorbot,
             
             /// <summary>
-            /// Enum Botconnectorbotversion for "BOTCONNECTORBOTVERSION"
+            /// Enum Botconnectorintegration for "BOTCONNECTORINTEGRATION"
             /// </summary>
-            [EnumMember(Value = "BOTCONNECTORBOTVERSION")]
-            Botconnectorbotversion,
+            [EnumMember(Value = "BOTCONNECTORINTEGRATION")]
+            Botconnectorintegration,
             
             /// <summary>
             /// Enum Botflow for "BOTFLOW"

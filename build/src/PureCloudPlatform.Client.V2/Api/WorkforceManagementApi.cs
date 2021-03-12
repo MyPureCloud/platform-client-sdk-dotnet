@@ -2283,10 +2283,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TimeOffRequestList> PostWorkforcemanagementManagementunitTimeoffrequestsWithHttpInfo (string managementUnitId, CreateAdminTimeOffRequest body = null);
         
         /// <summary>
-        /// Gets the lookup ids to fetch the specified set of requests
+        /// Fetches time off requests matching the conditions specified in the request body
         /// </summary>
         /// <remarks>
-        /// 
+        /// Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -2295,10 +2295,10 @@ namespace PureCloudPlatform.Client.V2.Api
         TimeOffRequestListing PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string managementUnitId, TimeOffRequestQueryBody body = null);
 
         /// <summary>
-        /// Gets the lookup ids to fetch the specified set of requests
+        /// Fetches time off requests matching the conditions specified in the request body
         /// </summary>
         /// <remarks>
-        /// 
+        /// Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -4903,10 +4903,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> PostWorkforcemanagementManagementunitTimeoffrequestsAsyncWithHttpInfo (string managementUnitId, CreateAdminTimeOffRequest body = null);
         
         /// <summary>
-        /// Gets the lookup ids to fetch the specified set of requests
+        /// Fetches time off requests matching the conditions specified in the request body
         /// </summary>
         /// <remarks>
-        /// 
+        /// Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -4915,10 +4915,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsync (string managementUnitId, TimeOffRequestQueryBody body = null);
 
         /// <summary>
-        /// Gets the lookup ids to fetch the specified set of requests
+        /// Fetches time off requests matching the conditions specified in the request body
         /// </summary>
         /// <remarks>
-        /// 
+        /// Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -24397,7 +24397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Gets the lookup ids to fetch the specified set of requests 
+        /// Fetches time off requests matching the conditions specified in the request body Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -24410,7 +24410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets the lookup ids to fetch the specified set of requests 
+        /// Fetches time off requests matching the conditions specified in the request body Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -24499,7 +24499,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Gets the lookup ids to fetch the specified set of requests 
+        /// Fetches time off requests matching the conditions specified in the request body Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -24513,7 +24513,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets the lookup ids to fetch the specified set of requests 
+        /// Fetches time off requests matching the conditions specified in the request body Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>

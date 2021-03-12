@@ -42,12 +42,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Ntopiccommunications,
             
             /// <summary>
-            /// Enum Ntopicsegments for "nTopicSegments"
-            /// </summary>
-            [EnumMember(Value = "nTopicSegments")]
-            Ntopicsegments,
-            
-            /// <summary>
             /// Enum Ocustomersentiment for "oCustomerSentiment"
             /// </summary>
             [EnumMember(Value = "oCustomerSentiment")]

@@ -3004,8 +3004,9 @@ Patch a user's CallForwarding
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:callForwarding:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -4605,8 +4606,9 @@ Update a user's CallForwarding
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:callForwarding:edit
 
 ### Example
 ```{"language":"csharp"}
