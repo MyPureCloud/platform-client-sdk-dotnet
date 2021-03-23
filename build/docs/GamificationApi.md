@@ -1866,6 +1866,7 @@ Requires ANY permissions:
 
 * gamification:profile:view
 * gamification:profile:update
+* gamification:scorecard:view
 
 ### Example
 ```{"language":"csharp"}

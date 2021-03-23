@@ -169,6 +169,98 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets CompatibleFlowTypes
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CompatibleFlowTypesEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Bot for "BOT"
+            /// </summary>
+            [EnumMember(Value = "BOT")]
+            Bot,
+            
+            /// <summary>
+            /// Enum Commonmodule for "COMMONMODULE"
+            /// </summary>
+            [EnumMember(Value = "COMMONMODULE")]
+            Commonmodule,
+            
+            /// <summary>
+            /// Enum Inboundcall for "INBOUNDCALL"
+            /// </summary>
+            [EnumMember(Value = "INBOUNDCALL")]
+            Inboundcall,
+            
+            /// <summary>
+            /// Enum Inboundchat for "INBOUNDCHAT"
+            /// </summary>
+            [EnumMember(Value = "INBOUNDCHAT")]
+            Inboundchat,
+            
+            /// <summary>
+            /// Enum Inboundemail for "INBOUNDEMAIL"
+            /// </summary>
+            [EnumMember(Value = "INBOUNDEMAIL")]
+            Inboundemail,
+            
+            /// <summary>
+            /// Enum Inboundshortmessage for "INBOUNDSHORTMESSAGE"
+            /// </summary>
+            [EnumMember(Value = "INBOUNDSHORTMESSAGE")]
+            Inboundshortmessage,
+            
+            /// <summary>
+            /// Enum Inqueuecall for "INQUEUECALL"
+            /// </summary>
+            [EnumMember(Value = "INQUEUECALL")]
+            Inqueuecall,
+            
+            /// <summary>
+            /// Enum Outboundcall for "OUTBOUNDCALL"
+            /// </summary>
+            [EnumMember(Value = "OUTBOUNDCALL")]
+            Outboundcall,
+            
+            /// <summary>
+            /// Enum Securecall for "SECURECALL"
+            /// </summary>
+            [EnumMember(Value = "SECURECALL")]
+            Securecall,
+            
+            /// <summary>
+            /// Enum Speech for "SPEECH"
+            /// </summary>
+            [EnumMember(Value = "SPEECH")]
+            Speech,
+            
+            /// <summary>
+            /// Enum Surveyinvite for "SURVEYINVITE"
+            /// </summary>
+            [EnumMember(Value = "SURVEYINVITE")]
+            Surveyinvite,
+            
+            /// <summary>
+            /// Enum Workflow for "WORKFLOW"
+            /// </summary>
+            [EnumMember(Value = "WORKFLOW")]
+            Workflow
+        }
+        
+        
+        
+        
+        
+        
         
         
         
@@ -184,6 +276,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
         
         
         
@@ -248,7 +342,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CurrentOperation">CurrentOperation.</param>
         /// <param name="NluInfo">Information about the natural language understanding configuration for the published version of the flow.</param>
         /// <param name="SupportedLanguages">List of supported languages for the published version of the flow..</param>
-        public Flow(string Id = null, string Name = null, WritableDivision Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, DomainEntityRef LockedClient = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, FlowVersion DebugVersion = null, User PublishedBy = null, Operation CurrentOperation = null, NluInfo NluInfo = null, List<SupportedLanguage> SupportedLanguages = null)
+        /// <param name="CompatibleFlowTypes">Compatible flow types designate which flow types are allowed to embed a flow’s configuration within their own flow configuration.  Currently the only flows that can be embedded are Common Module flows and the embedding flow can invoke them using the Call Common Module action..</param>
+        public Flow(string Id = null, string Name = null, WritableDivision Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, DomainEntityRef LockedClient = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, FlowVersion DebugVersion = null, User PublishedBy = null, Operation CurrentOperation = null, NluInfo NluInfo = null, List<SupportedLanguage> SupportedLanguages = null, List<CompatibleFlowTypesEnum> CompatibleFlowTypes = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -270,6 +365,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CurrentOperation = CurrentOperation;
             this.NluInfo = NluInfo;
             this.SupportedLanguages = SupportedLanguages;
+            this.CompatibleFlowTypes = CompatibleFlowTypes;
             
         }
         
@@ -439,6 +535,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Compatible flow types designate which flow types are allowed to embed a flow’s configuration within their own flow configuration.  Currently the only flows that can be embedded are Common Module flows and the embedding flow can invoke them using the Call Common Module action.
+        /// </summary>
+        /// <value>Compatible flow types designate which flow types are allowed to embed a flow’s configuration within their own flow configuration.  Currently the only flows that can be embedded are Common Module flows and the embedding flow can invoke them using the Call Common Module action.</value>
+        [DataMember(Name="compatibleFlowTypes", EmitDefaultValue=false)]
+        public List<CompatibleFlowTypesEnum> CompatibleFlowTypes { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -475,6 +580,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CurrentOperation: ").Append(CurrentOperation).Append("\n");
             sb.Append("  NluInfo: ").Append(NluInfo).Append("\n");
             sb.Append("  SupportedLanguages: ").Append(SupportedLanguages).Append("\n");
+            sb.Append("  CompatibleFlowTypes: ").Append(CompatibleFlowTypes).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -613,6 +719,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SupportedLanguages.SequenceEqual(other.SupportedLanguages)
                 ) &&
                 (
+                    this.CompatibleFlowTypes == other.CompatibleFlowTypes ||
+                    this.CompatibleFlowTypes != null &&
+                    this.CompatibleFlowTypes.SequenceEqual(other.CompatibleFlowTypes)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -690,6 +801,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SupportedLanguages != null)
                     hash = hash * 59 + this.SupportedLanguages.GetHashCode();
+                
+                if (this.CompatibleFlowTypes != null)
+                    hash = hash * 59 + this.CompatibleFlowTypes.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -307,10 +307,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Webmessaging,
             
             /// <summary>
-            /// Enum General for "general"
+            /// Enum Open for "open"
             /// </summary>
-            [EnumMember(Value = "general")]
-            General
+            [EnumMember(Value = "open")]
+            Open
         }
         
         

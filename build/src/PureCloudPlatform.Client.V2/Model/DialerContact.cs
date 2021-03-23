@@ -65,6 +65,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerContact" /> class.
@@ -82,7 +87,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Callable">Indicates whether or not the contact can be called..</param>
         /// <param name="PhoneNumberStatus">A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not..</param>
         /// <param name="ContactColumnTimeZones">Map containing data about the timezone the contact is mapped to. This will only be populated if the contact list has automatic timezone mapping turned on. The key is the column name. The value is the timezone it mapped to and the type of column: Phone or Zip.</param>
-        public DialerContact(string Name = null, string ContactListId = null, Dictionary<string, Object> Data = null, Dictionary<string, CallRecord> CallRecords = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null, Dictionary<string, ContactColumnTimeZone> ContactColumnTimeZones = null)
+        /// <param name="ConfigurationOverrides">the priority property within ConfigurationOverides indicates whether or not the contact to be placed in front of the queue or at the end of the queue.</param>
+        public DialerContact(string Name = null, string ContactListId = null, Dictionary<string, Object> Data = null, Dictionary<string, CallRecord> CallRecords = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null, Dictionary<string, ContactColumnTimeZone> ContactColumnTimeZones = null, ConfigurationOverrides ConfigurationOverrides = null)
         {
             this.Name = Name;
             this.ContactListId = ContactListId;
@@ -91,6 +97,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Callable = Callable;
             this.PhoneNumberStatus = PhoneNumberStatus;
             this.ContactColumnTimeZones = ContactColumnTimeZones;
+            this.ConfigurationOverrides = ConfigurationOverrides;
             
         }
         
@@ -168,6 +175,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// the priority property within ConfigurationOverides indicates whether or not the contact to be placed in front of the queue or at the end of the queue
+        /// </summary>
+        /// <value>the priority property within ConfigurationOverides indicates whether or not the contact to be placed in front of the queue or at the end of the queue</value>
+        [DataMember(Name="configurationOverrides", EmitDefaultValue=false)]
+        public ConfigurationOverrides ConfigurationOverrides { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -192,6 +208,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Callable: ").Append(Callable).Append("\n");
             sb.Append("  PhoneNumberStatus: ").Append(PhoneNumberStatus).Append("\n");
             sb.Append("  ContactColumnTimeZones: ").Append(ContactColumnTimeZones).Append("\n");
+            sb.Append("  ConfigurationOverrides: ").Append(ConfigurationOverrides).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -270,6 +287,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContactColumnTimeZones.SequenceEqual(other.ContactColumnTimeZones)
                 ) &&
                 (
+                    this.ConfigurationOverrides == other.ConfigurationOverrides ||
+                    this.ConfigurationOverrides != null &&
+                    this.ConfigurationOverrides.Equals(other.ConfigurationOverrides)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -311,6 +333,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ContactColumnTimeZones != null)
                     hash = hash * 59 + this.ContactColumnTimeZones.GetHashCode();
+                
+                if (this.ConfigurationOverrides != null)
+                    hash = hash * 59 + this.ConfigurationOverrides.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

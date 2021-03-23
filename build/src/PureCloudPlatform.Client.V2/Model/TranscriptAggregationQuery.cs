@@ -124,12 +124,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Queueid,
             
             /// <summary>
-            /// Enum Resultsby for "resultsBy"
-            /// </summary>
-            [EnumMember(Value = "resultsBy")]
-            Resultsby,
-            
-            /// <summary>
             /// Enum Teamid for "teamId"
             /// </summary>
             [EnumMember(Value = "teamId")]

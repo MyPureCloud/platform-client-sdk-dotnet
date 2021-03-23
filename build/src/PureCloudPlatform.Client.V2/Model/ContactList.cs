@@ -114,7 +114,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="Division">The division this entity belongs to..</param>
         /// <param name="ColumnNames">The names of the contact data columns. (required).</param>
-        /// <param name="PhoneColumns">Indicates which columns are phone numbers. (required).</param>
+        /// <param name="PhoneColumns">Indicates which columns are phone numbers..</param>
         /// <param name="ImportStatus">The status of the import process..</param>
         /// <param name="PreviewModeColumnName">A column to check if a contact should always be dialed in preview mode..</param>
         /// <param name="PreviewModeAcceptedValues">The values in the previewModeColumnName column that indicate a contact should always be dialed in preview mode..</param>

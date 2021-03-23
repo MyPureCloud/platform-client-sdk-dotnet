@@ -24,6 +24,7 @@ title: FlowVersion
 | **OutputSchema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) |  | [optional] |
 | **NluInfo** | [**NluInfo**](NluInfo.html) | Information about the natural language understanding configuration for the flow version | [optional] |
 | **SupportedLanguages** | [**List&lt;SupportedLanguage&gt;**](SupportedLanguage.html) | List of supported languages for this version of the flow | [optional] |
+| **CompatibleFlowTypes** | **List&lt;string&gt;** | Compatible flow types designate which flow types are allowed to embed a flow’s configuration within their own flow configuration.  Currently the only flows that can be embedded are Common Module flows and the embedding flow can invoke them using the Call Common Module action. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

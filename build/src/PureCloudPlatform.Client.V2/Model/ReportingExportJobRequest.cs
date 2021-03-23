@@ -400,7 +400,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum AgentEvaluationMeView for "AGENT_EVALUATION_ME_VIEW"
             /// </summary>
             [EnumMember(Value = "AGENT_EVALUATION_ME_VIEW")]
-            AgentEvaluationMeView
+            AgentEvaluationMeView,
+            
+            /// <summary>
+            /// Enum AgentScorecardView for "AGENT_SCORECARD_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_SCORECARD_VIEW")]
+            AgentScorecardView,
+            
+            /// <summary>
+            /// Enum AgentScorecardMeView for "AGENT_SCORECARD_ME_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_SCORECARD_ME_VIEW")]
+            AgentScorecardMeView,
+            
+            /// <summary>
+            /// Enum AgentGamificationLeadershipView for "AGENT_GAMIFICATION_LEADERSHIP_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_GAMIFICATION_LEADERSHIP_VIEW")]
+            AgentGamificationLeadershipView
         }
         
         

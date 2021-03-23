@@ -57,7 +57,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Offline for "OFFLINE"
             /// </summary>
             [EnumMember(Value = "OFFLINE")]
-            Offline
+            Offline,
+            
+            /// <summary>
+            /// Enum Unknown for "UNKNOWN"
+            /// </summary>
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown
         }
         
         

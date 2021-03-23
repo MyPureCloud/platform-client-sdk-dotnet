@@ -4558,7 +4558,7 @@ namespace Example
 
 <a name="gettelephonyprovidersedgesphones"></a>
 
-## [**PhoneEntityListing**](PhoneEntityListing.html) GetTelephonyProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, string name = null, List<string> expand = null, List<string> fields = null)
+## [**PhoneEntityListing**](PhoneEntityListing.html) GetTelephonyProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, string name = null, string statusOperationalStatus = null, string secondaryStatusOperationalStatus = null, List<string> expand = null, List<string> fields = null)
 
 
 
@@ -4594,7 +4594,7 @@ namespace Example
             var apiInstance = new TelephonyProvidersEdgeApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to name)
+            var sortBy = sortBy_example;  // string | The field to sort by (optional)  (default to name)
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
             var siteId = siteId_example;  // string | Filter by site.id (optional) 
             var webRtcUserId = webRtcUserId_example;  // string | Filter by webRtcUser.id (optional) 
@@ -4605,13 +4605,15 @@ namespace Example
             var linesId = linesId_example;  // string | Filter by lines.id (optional) 
             var linesName = linesName_example;  // string | Filter by lines.name (optional) 
             var name = name_example;  // string | Name of the Phone to filter by (optional) 
+            var statusOperationalStatus = statusOperationalStatus_example;  // string | The primary status to filter by (optional) 
+            var secondaryStatusOperationalStatus = secondaryStatusOperationalStatus_example;  // string | The secondary status to filter by (optional) 
             var expand = new List<string>(); // List<string> | Fields to expand in the response, comma-separated (optional) 
             var fields = new List<string>(); // List<string> | Fields and properties to get, comma-separated (optional) 
 
             try
             { 
                 // Get a list of Phone Instances
-                PhoneEntityListing result = apiInstance.GetTelephonyProvidersEdgesPhones(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, linesDefaultForUserId, phoneHardwareId, linesId, linesName, name, expand, fields);
+                PhoneEntityListing result = apiInstance.GetTelephonyProvidersEdgesPhones(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, linesDefaultForUserId, phoneHardwareId, linesId, linesName, name, statusOperationalStatus, secondaryStatusOperationalStatus, expand, fields);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4630,7 +4632,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **sortBy** | **string**| Value by which to sort | [optional] [default to name] |
+| **sortBy** | **string**| The field to sort by | [optional] [default to name]<br />**Values**: name, status.operationalStatus, secondaryStatus.operationalStatus |
 | **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
 | **siteId** | **string**| Filter by site.id | [optional]  |
 | **webRtcUserId** | **string**| Filter by webRtcUser.id | [optional]  |
@@ -4641,6 +4643,8 @@ namespace Example
 | **linesId** | **string**| Filter by lines.id | [optional]  |
 | **linesName** | **string**| Filter by lines.name | [optional]  |
 | **name** | **string**| Name of the Phone to filter by | [optional]  |
+| **statusOperationalStatus** | **string**| The primary status to filter by | [optional]  |
+| **secondaryStatusOperationalStatus** | **string**| The secondary status to filter by | [optional]  |
 | **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional] <br />**Values**: properties, site, status, status.primaryEdgesStatus, status.secondaryEdgesStatus, phoneBaseSettings, lines |
 | **fields** | [**List<string>**](string.html)| Fields and properties to get, comma-separated | [optional] <br />**Values**: webRtcUser, properties.*, lines.loggedInUser, lines.defaultForUser |
 {: class="table table-striped"}

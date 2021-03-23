@@ -839,7 +839,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Predictor for "Predictor"
             /// </summary>
             [EnumMember(Value = "Predictor")]
-            Predictor
+            Predictor,
+            
+            /// <summary>
+            /// Enum Workplan for "WorkPlan"
+            /// </summary>
+            [EnumMember(Value = "WorkPlan")]
+            Workplan
         }
         
         
