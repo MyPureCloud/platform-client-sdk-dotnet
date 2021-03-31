@@ -14,7 +14,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunitservicegoaltemplate) | **DELETE** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId} | Delete a service goal template |
 | [**DeleteWorkforcemanagementBusinessunitWeekSchedule**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunitweekschedule) | **DELETE** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId} | Delete a schedule |
 | [**DeleteWorkforcemanagementBusinessunitWeekShorttermforecast**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunitweekshorttermforecast) | **DELETE** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId} | Delete a short term forecast |
-| [**DeleteWorkforcemanagementManagementunit**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunit) | **DELETE** /api/v2/workforcemanagement/managementunits/{managementUnitId} | Delete management unit |
 | [**DeleteWorkforcemanagementManagementunitWorkplan**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunitworkplan) | **DELETE** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId} | Delete a work plan |
 | [**DeleteWorkforcemanagementManagementunitWorkplanrotation**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunitworkplanrotation) | **DELETE** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId} | Delete a work plan rotation |
 | [**GetWorkforcemanagementAdherence**](WorkforceManagementApi.html#getworkforcemanagementadherence) | **GET** /api/v2/workforcemanagement/adherence | Get a list of UserScheduleAdherence records for the requested users |
@@ -43,7 +42,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementBusinessunitWeekShorttermforecasts**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekshorttermforecasts) | **GET** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts | Get short term forecasts |
 | [**GetWorkforcemanagementBusinessunits**](WorkforceManagementApi.html#getworkforcemanagementbusinessunits) | **GET** /api/v2/workforcemanagement/businessunits | Get business units |
 | [**GetWorkforcemanagementBusinessunitsDivisionviews**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitsdivisionviews) | **GET** /api/v2/workforcemanagement/businessunits/divisionviews | Get business units across divisions |
-| [**GetWorkforcemanagementManagementunit**](WorkforceManagementApi.html#getworkforcemanagementmanagementunit) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId} | Get management unit |
+| [**GetWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementApi.html#getworkforcemanagementhistoricaldatadeletejob) | **GET** /api/v2/workforcemanagement/historicaldata/deletejob | Retrieves delete job status for historical data imports of the organization |
+| [**GetWorkforcemanagementHistoricaldataImportstatus**](WorkforceManagementApi.html#getworkforcemanagementhistoricaldataimportstatus) | **GET** /api/v2/workforcemanagement/historicaldata/importstatus | Retrieves status of the historical data imports of the organization |
 | [**GetWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitactivitycodes) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/activitycodes | Get activity codes |
 | [**GetWorkforcemanagementManagementunitAdherence**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitadherence) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/adherence | Get a list of user schedule adherence records for the requested management unit |
 | [**GetWorkforcemanagementManagementunitAgent**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitagent) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId} | Get data for agent in the management unit |
@@ -72,7 +72,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitplanninggroup) | **PATCH** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId} | Updates the planning group |
 | [**PatchWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitschedulingrun) | **PATCH** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId} | Mark a schedule run as applied |
 | [**PatchWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitservicegoaltemplate) | **PATCH** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId} | Updates a service goal template |
-| [**PatchWorkforcemanagementManagementunit**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunit) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId} | Update the requested management unit |
 | [**PatchWorkforcemanagementManagementunitUserTimeoffrequest**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitusertimeoffrequest) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId} | Update a time off request |
 | [**PatchWorkforcemanagementManagementunitWeekShifttrade**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitweekshifttrade) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId} | Updates a shift trade. This route can only be called by the initiating agent |
 | [**PatchWorkforcemanagementManagementunitWorkplan**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitworkplan) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId} | Update a work plan |
@@ -93,6 +92,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementBusinessunitWeekShorttermforecastCopy**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekshorttermforecastcopy) | **POST** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/copy | Copy a short term forecast |
 | [**PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekshorttermforecastsgenerate) | **POST** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/generate | Generate a short term forecast |
 | [**PostWorkforcemanagementBusinessunits**](WorkforceManagementApi.html#postworkforcemanagementbusinessunits) | **POST** /api/v2/workforcemanagement/businessunits | Add a new business unit |
+| [**PostWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementApi.html#postworkforcemanagementhistoricaldatadeletejob) | **POST** /api/v2/workforcemanagement/historicaldata/deletejob | Delete the entries of the historical data imports in the organization |
+| [**PostWorkforcemanagementHistoricaldataValidate**](WorkforceManagementApi.html#postworkforcemanagementhistoricaldatavalidate) | **POST** /api/v2/workforcemanagement/historicaldata/validate | Trigger validation process for historical import |
 | [**PostWorkforcemanagementManagementunitAgentschedulesSearch**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitagentschedulessearch) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agentschedules/search | Query published schedules for given given time range for set of users |
 | [**PostWorkforcemanagementManagementunitHistoricaladherencequery**](WorkforceManagementApi.html#postworkforcemanagementmanagementunithistoricaladherencequery) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/historicaladherencequery | Request a historical adherence report |
 | [**PostWorkforcemanagementManagementunitMove**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitmove) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/move | Move the requested management unit to a new business unit |
@@ -573,70 +574,6 @@ namespace Example
 | **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
 | **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **forecastId** | **string**| The ID of the forecast |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="deleteworkforcemanagementmanagementunit"></a>
-
-## void DeleteWorkforcemanagementManagementunit (string managementUnitId)
-
-
-
-Delete management unit
-
-
-
-Requires ANY permissions: 
-
-* wfm:managementUnit:delete
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class DeleteWorkforcemanagementManagementunitExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-
-            try
-            { 
-                // Delete management unit
-                apiInstance.DeleteWorkforcemanagementManagementunit(managementUnitId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WorkforceManagementApi.DeleteWorkforcemanagementManagementunit: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2059,6 +1996,7 @@ Loads agent's schedule history.
 Requires ANY permissions: 
 
 * wfm:schedule:view
+* wfm:publishedSchedule:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2672,77 +2610,19 @@ namespace Example
 
 [**BusinessUnitListing**](BusinessUnitListing.html)
 
-<a name="getworkforcemanagementmanagementunit"></a>
+<a name="getworkforcemanagementhistoricaldatadeletejob"></a>
 
-## [**ManagementUnit**](ManagementUnit.html) GetWorkforcemanagementManagementunit (string managementUnitId, List<string> expand = null)
+## [**HistoricalImportDeleteJobResponse**](HistoricalImportDeleteJobResponse.html) GetWorkforcemanagementHistoricaldataDeletejob ()
 
 
 
-Get management unit
+Retrieves delete job status for historical data imports of the organization
 
-settings.shortTermForecasting is deprecated and now lives on the business unit
 
-Requires ANY permissions: 
 
-* wfm:activityCode:add
-* wfm:activityCode:delete
-* wfm:activityCode:edit
-* wfm:activityCode:view
-* wfm:agent:edit
-* wfm:agentSchedule:view
-* wfm:agentTimeOffRequest:submit
-* wfm:agent:view
-* wfm:businessUnit:add
-* wfm:businessUnit:delete
-* wfm:businessUnit:edit
-* wfm:businessUnit:view
-* wfm:historicalAdherence:view
-* wfm:intraday:view
-* wfm:managementUnit:add
-* wfm:managementUnit:delete
-* wfm:managementUnit:edit
-* wfm:managementUnit:view
-* wfm:publishedSchedule:view
-* wfm:realtimeAdherence:view
-* wfm:schedule:add
-* wfm:schedule:delete
-* wfm:schedule:edit
-* wfm:schedule:generate
-* wfm:schedule:view
-* wfm:serviceGoalTemplate:add
-* wfm:serviceGoalTemplate:delete
-* wfm:serviceGoalTemplate:edit
-* wfm:serviceGoalTemplate:view
-* wfm:planningGroup:add
-* wfm:planningGroup:delete
-* wfm:planningGroup:edit
-* wfm:planningGroup:view
-* wfm:shiftTradeRequest:edit
-* wfm:shiftTradeRequest:view
-* wfm:agentShiftTradeRequest:participate
-* wfm:shortTermForecast:add
-* wfm:shortTermForecast:delete
-* wfm:shortTermForecast:edit
-* wfm:shortTermForecast:view
-* wfm:timeOffLimit:add
-* wfm:timeOffLimit:delete
-* wfm:timeOffLimit:edit
-* wfm:timeOffLimit:view
-* wfm:timeOffPlan:add
-* wfm:timeOffPlan:delete
-* wfm:timeOffPlan:edit
-* wfm:timeOffPlan:view
-* wfm:timeOffRequest:add
-* wfm:timeOffRequest:edit
-* wfm:timeOffRequest:view
-* wfm:workPlan:add
-* wfm:workPlan:delete
-* wfm:workPlan:edit
-* wfm:workPlan:view
-* wfm:workPlanRotation:add
-* wfm:workPlanRotation:delete
-* wfm:workPlanRotation:edit
-* wfm:workPlanRotation:view
+Requires ALL permissions: 
+
+* wfm:historicalData:upload
 
 ### Example
 ```{"language":"csharp"}
@@ -2754,7 +2634,7 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace Example
 {
-    public class GetWorkforcemanagementManagementunitExample
+    public class GetWorkforcemanagementHistoricaldataDeletejobExample
     {
         public void main()
         { 
@@ -2766,18 +2646,16 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var expand = new List<string>(); // List<string> |  (optional) 
 
             try
             { 
-                // Get management unit
-                ManagementUnit result = apiInstance.GetWorkforcemanagementManagementunit(managementUnitId, expand);
+                // Retrieves delete job status for historical data imports of the organization
+                HistoricalImportDeleteJobResponse result = apiInstance.GetWorkforcemanagementHistoricaldataDeletejob();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementManagementunit: " + e.Message );
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementHistoricaldataDeletejob: " + e.Message );
             }
         }
     }
@@ -2785,17 +2663,72 @@ namespace Example
 ```
 
 ### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **expand** | [**List<string>**](string.html)|  | [optional] <br />**Values**: settings, settings.adherence, settings.timeOff, settings.scheduling, settings.shortTermForecasting, settings.shiftTrading |
+This endpoint does require any parameters.
 {: class="table table-striped"}
 
 ### Return type
 
-[**ManagementUnit**](ManagementUnit.html)
+[**HistoricalImportDeleteJobResponse**](HistoricalImportDeleteJobResponse.html)
+
+<a name="getworkforcemanagementhistoricaldataimportstatus"></a>
+
+## [**HistoricalImportStatusListing**](HistoricalImportStatusListing.html) GetWorkforcemanagementHistoricaldataImportstatus ()
+
+
+
+Retrieves status of the historical data imports of the organization
+
+
+
+Requires ALL permissions: 
+
+* wfm:historicalData:upload
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementHistoricaldataImportstatusExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+
+            try
+            { 
+                // Retrieves status of the historical data imports of the organization
+                HistoricalImportStatusListing result = apiInstance.GetWorkforcemanagementHistoricaldataImportstatus();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementHistoricaldataImportstatus: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**HistoricalImportStatusListing**](HistoricalImportStatusListing.html)
 
 <a name="getworkforcemanagementmanagementunitactivitycodes"></a>
 
@@ -4732,73 +4665,6 @@ namespace Example
 
 [**ServiceGoalTemplate**](ServiceGoalTemplate.html)
 
-<a name="patchworkforcemanagementmanagementunit"></a>
-
-## [**ManagementUnit**](ManagementUnit.html) PatchWorkforcemanagementManagementunit (string managementUnitId, UpdateManagementUnitRequest body = null)
-
-
-
-Update the requested management unit
-
-
-
-Requires ANY permissions: 
-
-* wfm:managementUnit:edit
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PatchWorkforcemanagementManagementunitExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var body = new UpdateManagementUnitRequest(); // UpdateManagementUnitRequest | body (optional) 
-
-            try
-            { 
-                // Update the requested management unit
-                ManagementUnit result = apiInstance.PatchWorkforcemanagementManagementunit(managementUnitId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementManagementunit: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **body** | [**UpdateManagementUnitRequest**](UpdateManagementUnitRequest.html)| body | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ManagementUnit**](ManagementUnit.html)
-
 <a name="patchworkforcemanagementmanagementunitusertimeoffrequest"></a>
 
 ## [**TimeOffRequestResponse**](TimeOffRequestResponse.html) PatchWorkforcemanagementManagementunitUserTimeoffrequest (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null)
@@ -6184,6 +6050,130 @@ namespace Example
 ### Return type
 
 [**BusinessUnit**](BusinessUnit.html)
+
+<a name="postworkforcemanagementhistoricaldatadeletejob"></a>
+
+## [**HistoricalImportDeleteJobResponse**](HistoricalImportDeleteJobResponse.html) PostWorkforcemanagementHistoricaldataDeletejob ()
+
+
+
+Delete the entries of the historical data imports in the organization
+
+
+
+Requires ALL permissions: 
+
+* wfm:historicalData:upload
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementHistoricaldataDeletejobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+
+            try
+            { 
+                // Delete the entries of the historical data imports in the organization
+                HistoricalImportDeleteJobResponse result = apiInstance.PostWorkforcemanagementHistoricaldataDeletejob();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementHistoricaldataDeletejob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**HistoricalImportDeleteJobResponse**](HistoricalImportDeleteJobResponse.html)
+
+<a name="postworkforcemanagementhistoricaldatavalidate"></a>
+
+## void PostWorkforcemanagementHistoricaldataValidate (ValidationServiceRequest body = null)
+
+
+
+Trigger validation process for historical import
+
+
+
+Requires ALL permissions: 
+
+* wfm:historicalData:upload
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementHistoricaldataValidateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new ValidationServiceRequest(); // ValidationServiceRequest | body (optional) 
+
+            try
+            { 
+                // Trigger validation process for historical import
+                apiInstance.PostWorkforcemanagementHistoricaldataValidate(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementHistoricaldataValidate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ValidationServiceRequest**](ValidationServiceRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="postworkforcemanagementmanagementunitagentschedulessearch"></a>
 

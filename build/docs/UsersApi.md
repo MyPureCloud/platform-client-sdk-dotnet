@@ -1271,7 +1271,7 @@ namespace Example
 
 <a name="getroutinguserutilization"></a>
 
-## [**Utilization**](Utilization.html) GetRoutingUserUtilization (string userId)
+## [**AgentMaxUtilization**](AgentMaxUtilization.html) GetRoutingUserUtilization (string userId)
 
 
 
@@ -1311,7 +1311,7 @@ namespace Example
             try
             { 
                 // Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
-                Utilization result = apiInstance.GetRoutingUserUtilization(userId);
+                AgentMaxUtilization result = apiInstance.GetRoutingUserUtilization(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1333,7 +1333,7 @@ namespace Example
 
 ### Return type
 
-[**Utilization**](Utilization.html)
+[**AgentMaxUtilization**](AgentMaxUtilization.html)
 
 <a name="getuser"></a>
 
@@ -4531,7 +4531,7 @@ namespace Example
 
 <a name="putroutinguserutilization"></a>
 
-## [**Utilization**](Utilization.html) PutRoutingUserUtilization (string userId, Utilization body)
+## [**AgentMaxUtilization**](AgentMaxUtilization.html) PutRoutingUserUtilization (string userId, Utilization body)
 
 
 
@@ -4571,7 +4571,7 @@ namespace Example
             try
             { 
                 // Update the user's max utilization settings.  Include only those media types requiring custom configuration.
-                Utilization result = apiInstance.PutRoutingUserUtilization(userId, body);
+                AgentMaxUtilization result = apiInstance.PutRoutingUserUtilization(userId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4594,7 +4594,7 @@ namespace Example
 
 ### Return type
 
-[**Utilization**](Utilization.html)
+[**AgentMaxUtilization**](AgentMaxUtilization.html)
 
 <a name="putusercallforwarding"></a>
 

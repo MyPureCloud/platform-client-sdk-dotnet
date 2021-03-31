@@ -100,6 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerContactlistConfigChangeContactList" /> class.
@@ -111,6 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">Version.</param>
         /// <param name="ColumnNames">ColumnNames.</param>
         /// <param name="PhoneColumns">PhoneColumns.</param>
+        /// <param name="EmailColumns">EmailColumns.</param>
         /// <param name="ImportStatus">ImportStatus.</param>
         /// <param name="PreviewModeColumnName">PreviewModeColumnName.</param>
         /// <param name="PreviewModeAcceptedValues">PreviewModeAcceptedValues.</param>
@@ -120,7 +126,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ZipCodeColumnName">ZipCodeColumnName.</param>
         /// <param name="Division">Division.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerContactlistConfigChangeContactList(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> ColumnNames = null, List<DialerContactlistConfigChangeContactPhoneNumberColumn> PhoneColumns = null, DialerContactlistConfigChangeImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, int? Size = null, DialerContactlistConfigChangeUriReference AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null, DialerContactlistConfigChangeUriReference Division = null, Object AdditionalProperties = null)
+        public DialerContactlistConfigChangeContactList(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> ColumnNames = null, List<DialerContactlistConfigChangeContactPhoneNumberColumn> PhoneColumns = null, List<DialerContactlistConfigChangeEmailColumn> EmailColumns = null, DialerContactlistConfigChangeImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, int? Size = null, DialerContactlistConfigChangeUriReference AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null, DialerContactlistConfigChangeUriReference Division = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -129,6 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Version = Version;
             this.ColumnNames = ColumnNames;
             this.PhoneColumns = PhoneColumns;
+            this.EmailColumns = EmailColumns;
             this.ImportStatus = ImportStatus;
             this.PreviewModeColumnName = PreviewModeColumnName;
             this.PreviewModeAcceptedValues = PreviewModeAcceptedValues;
@@ -196,6 +203,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="phoneColumns", EmitDefaultValue=false)]
         public List<DialerContactlistConfigChangeContactPhoneNumberColumn> PhoneColumns { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets EmailColumns
+        /// </summary>
+        [DataMember(Name="emailColumns", EmitDefaultValue=false)]
+        public List<DialerContactlistConfigChangeEmailColumn> EmailColumns { get; set; }
         
         
         
@@ -286,6 +301,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  ColumnNames: ").Append(ColumnNames).Append("\n");
             sb.Append("  PhoneColumns: ").Append(PhoneColumns).Append("\n");
+            sb.Append("  EmailColumns: ").Append(EmailColumns).Append("\n");
             sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
             sb.Append("  PreviewModeColumnName: ").Append(PreviewModeColumnName).Append("\n");
             sb.Append("  PreviewModeAcceptedValues: ").Append(PreviewModeAcceptedValues).Append("\n");
@@ -367,6 +383,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PhoneColumns.SequenceEqual(other.PhoneColumns)
                 ) &&
                 (
+                    this.EmailColumns == other.EmailColumns ||
+                    this.EmailColumns != null &&
+                    this.EmailColumns.SequenceEqual(other.EmailColumns)
+                ) &&
+                (
                     this.ImportStatus == other.ImportStatus ||
                     this.ImportStatus != null &&
                     this.ImportStatus.Equals(other.ImportStatus)
@@ -445,6 +466,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PhoneColumns != null)
                     hash = hash * 59 + this.PhoneColumns.GetHashCode();
+                
+                if (this.EmailColumns != null)
+                    hash = hash * 59 + this.EmailColumns.GetHashCode();
                 
                 if (this.ImportStatus != null)
                     hash = hash * 59 + this.ImportStatus.GetHashCode();

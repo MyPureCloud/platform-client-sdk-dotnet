@@ -73,6 +73,42 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Containsallcondition for "containsAllCondition"
+            /// </summary>
+            [EnumMember(Value = "containsAllCondition")]
+            Containsallcondition,
+            
+            /// <summary>
+            /// Enum Containsanycondition for "containsAnyCondition"
+            /// </summary>
+            [EnumMember(Value = "containsAnyCondition")]
+            Containsanycondition,
+            
+            /// <summary>
+            /// Enum Endswithcondition for "endsWithCondition"
+            /// </summary>
+            [EnumMember(Value = "endsWithCondition")]
+            Endswithcondition,
+            
+            /// <summary>
+            /// Enum Equalcondition for "equalCondition"
+            /// </summary>
+            [EnumMember(Value = "equalCondition")]
+            Equalcondition,
+            
+            /// <summary>
+            /// Enum Greaterthancondition for "greaterThanCondition"
+            /// </summary>
+            [EnumMember(Value = "greaterThanCondition")]
+            Greaterthancondition,
+            
+            /// <summary>
+            /// Enum Greaterthanorequalcondition for "greaterThanOrEqualCondition"
+            /// </summary>
+            [EnumMember(Value = "greaterThanOrEqualCondition")]
+            Greaterthanorequalcondition,
+            
+            /// <summary>
             /// Enum Journeyactionid for "journeyActionId"
             /// </summary>
             [EnumMember(Value = "journeyActionId")]
@@ -97,10 +133,34 @@ namespace PureCloudPlatform.Client.V2.Model
             Journeyactionmediatype,
             
             /// <summary>
+            /// Enum Journeyactiontargetid for "journeyActionTargetId"
+            /// </summary>
+            [EnumMember(Value = "journeyActionTargetId")]
+            Journeyactiontargetid,
+            
+            /// <summary>
             /// Enum Journeyactiontemplateid for "journeyActionTemplateId"
             /// </summary>
             [EnumMember(Value = "journeyActionTemplateId")]
             Journeyactiontemplateid,
+            
+            /// <summary>
+            /// Enum Journeyblockingactionmapid for "journeyBlockingActionMapId"
+            /// </summary>
+            [EnumMember(Value = "journeyBlockingActionMapId")]
+            Journeyblockingactionmapid,
+            
+            /// <summary>
+            /// Enum Journeyblockingreason for "journeyBlockingReason"
+            /// </summary>
+            [EnumMember(Value = "journeyBlockingReason")]
+            Journeyblockingreason,
+            
+            /// <summary>
+            /// Enum Journeyblockingschedulegroupid for "journeyBlockingScheduleGroupId"
+            /// </summary>
+            [EnumMember(Value = "journeyBlockingScheduleGroupId")]
+            Journeyblockingschedulegroupid,
             
             /// <summary>
             /// Enum Journeycustomerid for "journeyCustomerId"
@@ -125,6 +185,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "journeyDeviceType")]
             Journeydevicetype,
+            
+            /// <summary>
+            /// Enum Journeyfrequencycapreason for "journeyFrequencyCapReason"
+            /// </summary>
+            [EnumMember(Value = "journeyFrequencyCapReason")]
+            Journeyfrequencycapreason,
             
             /// <summary>
             /// Enum Journeyoutcomeid for "journeyOutcomeId"
@@ -155,6 +221,42 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "journeySessionType")]
             Journeysessiontype,
+            
+            /// <summary>
+            /// Enum Lessthancondition for "lessThanCondition"
+            /// </summary>
+            [EnumMember(Value = "lessThanCondition")]
+            Lessthancondition,
+            
+            /// <summary>
+            /// Enum Lessthanorequalcondition for "lessThanOrEqualCondition"
+            /// </summary>
+            [EnumMember(Value = "lessThanOrEqualCondition")]
+            Lessthanorequalcondition,
+            
+            /// <summary>
+            /// Enum Notcontainsallcondition for "notContainsAllCondition"
+            /// </summary>
+            [EnumMember(Value = "notContainsAllCondition")]
+            Notcontainsallcondition,
+            
+            /// <summary>
+            /// Enum Notcontainsanycondition for "notContainsAnyCondition"
+            /// </summary>
+            [EnumMember(Value = "notContainsAnyCondition")]
+            Notcontainsanycondition,
+            
+            /// <summary>
+            /// Enum Notequalcondition for "notEqualCondition"
+            /// </summary>
+            [EnumMember(Value = "notEqualCondition")]
+            Notequalcondition,
+            
+            /// <summary>
+            /// Enum Startswithcondition for "startsWithCondition"
+            /// </summary>
+            [EnumMember(Value = "startsWithCondition")]
+            Startswithcondition,
             
             /// <summary>
             /// Enum Touchpointactionmapid for "touchpointActionMapId"

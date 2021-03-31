@@ -7,7 +7,6 @@ title: ConversationDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotific
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **DataAvailabilityDate** | [**ConversationDetailsDatalakeAvailabilityTopicDateTime**](ConversationDetailsDatalakeAvailabilityTopicDateTime.html) |  | [optional] |
 {: class="table table-striped"}
 
 

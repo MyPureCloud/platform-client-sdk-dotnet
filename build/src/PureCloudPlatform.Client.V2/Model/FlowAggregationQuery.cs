@@ -46,6 +46,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Activeskillid for "activeSkillId"
+            /// </summary>
+            [EnumMember(Value = "activeSkillId")]
+            Activeskillid,
+            
+            /// <summary>
             /// Enum Addressfrom for "addressFrom"
             /// </summary>
             [EnumMember(Value = "addressFrom")]
@@ -62,6 +68,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "agentAssistantId")]
             Agentassistantid,
+            
+            /// <summary>
+            /// Enum Agentbullseyering for "agentBullseyeRing"
+            /// </summary>
+            [EnumMember(Value = "agentBullseyeRing")]
+            Agentbullseyering,
             
             /// <summary>
             /// Enum Agentrank for "agentRank"
@@ -86,6 +98,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "assignerId")]
             Assignerid,
+            
+            /// <summary>
+            /// Enum Bullseyering for "bullseyeRing"
+            /// </summary>
+            [EnumMember(Value = "bullseyeRing")]
+            Bullseyering,
             
             /// <summary>
             /// Enum Conversationid for "conversationId"
@@ -388,6 +406,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Remote,
             
             /// <summary>
+            /// Enum Removedskillid for "removedSkillId"
+            /// </summary>
+            [EnumMember(Value = "removedSkillId")]
+            Removedskillid,
+            
+            /// <summary>
             /// Enum Reoffered for "reoffered"
             /// </summary>
             [EnumMember(Value = "reoffered")]
@@ -422,6 +446,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "routingPriority")]
             Routingpriority,
+            
+            /// <summary>
+            /// Enum Routingrule for "routingRule"
+            /// </summary>
+            [EnumMember(Value = "routingRule")]
+            Routingrule,
             
             /// <summary>
             /// Enum Scoredagentid for "scoredAgentId"

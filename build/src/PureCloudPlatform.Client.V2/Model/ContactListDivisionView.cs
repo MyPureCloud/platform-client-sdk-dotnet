@@ -73,7 +73,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="ColumnNames">The names of the contact data columns. (required).</param>
-        /// <param name="PhoneColumns">Indicates which columns are phone numbers. (required).</param>
+        /// <param name="PhoneColumns">Indicates which columns are phone numbers..</param>
         /// <param name="ImportStatus">The status of the import process..</param>
         public ContactListDivisionView(string Name = null, Division Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null)
         {

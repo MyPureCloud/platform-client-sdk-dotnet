@@ -3652,7 +3652,7 @@ This endpoint does require any parameters.
 
 <a name="getconversationsmessagingintegrations"></a>
 
-## [**MessagingIntegrationEntityListing**](MessagingIntegrationEntityListing.html) GetConversationsMessagingIntegrations (int? pageSize = null, int? pageNumber = null)
+## [**MessagingIntegrationEntityListing**](MessagingIntegrationEntityListing.html) GetConversationsMessagingIntegrations (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
 
 
 
@@ -3688,11 +3688,13 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
+            var supportedContentId = supportedContentId_example;  // string | Filter integrations returned based on the supported content ID (optional) 
 
             try
             { 
                 // Get a list of Integrations
-                MessagingIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrations(pageSize, pageNumber);
+                MessagingIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrations(pageSize, pageNumber, expand, supportedContentId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3711,6 +3713,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
+| **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3719,7 +3723,7 @@ namespace Example
 
 <a name="getconversationsmessagingintegrationsfacebook"></a>
 
-## [**FacebookIntegrationEntityListing**](FacebookIntegrationEntityListing.html) GetConversationsMessagingIntegrationsFacebook (int? pageSize = null, int? pageNumber = null)
+## [**FacebookIntegrationEntityListing**](FacebookIntegrationEntityListing.html) GetConversationsMessagingIntegrationsFacebook (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
 
 
 
@@ -3755,11 +3759,13 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
+            var supportedContentId = supportedContentId_example;  // string | Filter integrations returned based on the supported content ID (optional) 
 
             try
             { 
                 // Get a list of Facebook Integrations
-                FacebookIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsFacebook(pageSize, pageNumber);
+                FacebookIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsFacebook(pageSize, pageNumber, expand, supportedContentId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3778,6 +3784,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
+| **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3786,7 +3794,7 @@ namespace Example
 
 <a name="getconversationsmessagingintegrationsfacebookintegrationid"></a>
 
-## [**FacebookIntegration**](FacebookIntegration.html) GetConversationsMessagingIntegrationsFacebookIntegrationId (string integrationId)
+## [**FacebookIntegration**](FacebookIntegration.html) GetConversationsMessagingIntegrationsFacebookIntegrationId (string integrationId, string expand = null)
 
 
 
@@ -3821,11 +3829,12 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var integrationId = integrationId_example;  // string | Integration ID
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
 
             try
             { 
                 // Get a Facebook messaging integration
-                FacebookIntegration result = apiInstance.GetConversationsMessagingIntegrationsFacebookIntegrationId(integrationId);
+                FacebookIntegration result = apiInstance.GetConversationsMessagingIntegrationsFacebookIntegrationId(integrationId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3843,6 +3852,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
 {: class="table table-striped"}
 
 ### Return type
@@ -3851,7 +3861,7 @@ namespace Example
 
 <a name="getconversationsmessagingintegrationsline"></a>
 
-## [**LineIntegrationEntityListing**](LineIntegrationEntityListing.html) GetConversationsMessagingIntegrationsLine (int? pageSize = null, int? pageNumber = null)
+## [**LineIntegrationEntityListing**](LineIntegrationEntityListing.html) GetConversationsMessagingIntegrationsLine (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
 
 
 
@@ -3887,11 +3897,13 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
+            var supportedContentId = supportedContentId_example;  // string | Filter integrations returned based on the supported content ID (optional) 
 
             try
             { 
                 // Get a list of LINE messenger Integrations
-                LineIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsLine(pageSize, pageNumber);
+                LineIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsLine(pageSize, pageNumber, expand, supportedContentId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3910,6 +3922,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
+| **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3918,7 +3932,7 @@ namespace Example
 
 <a name="getconversationsmessagingintegrationslineintegrationid"></a>
 
-## [**LineIntegration**](LineIntegration.html) GetConversationsMessagingIntegrationsLineIntegrationId (string integrationId)
+## [**LineIntegration**](LineIntegration.html) GetConversationsMessagingIntegrationsLineIntegrationId (string integrationId, string expand = null)
 
 
 
@@ -3953,11 +3967,12 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var integrationId = integrationId_example;  // string | Integration ID
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
 
             try
             { 
                 // Get a LINE messenger integration
-                LineIntegration result = apiInstance.GetConversationsMessagingIntegrationsLineIntegrationId(integrationId);
+                LineIntegration result = apiInstance.GetConversationsMessagingIntegrationsLineIntegrationId(integrationId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3975,6 +3990,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
 {: class="table table-striped"}
 
 ### Return type
@@ -3983,7 +3999,7 @@ namespace Example
 
 <a name="getconversationsmessagingintegrationstwitter"></a>
 
-## [**TwitterIntegrationEntityListing**](TwitterIntegrationEntityListing.html) GetConversationsMessagingIntegrationsTwitter (int? pageSize = null, int? pageNumber = null)
+## [**TwitterIntegrationEntityListing**](TwitterIntegrationEntityListing.html) GetConversationsMessagingIntegrationsTwitter (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
 
 
 
@@ -4019,11 +4035,13 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
+            var supportedContentId = supportedContentId_example;  // string | Filter integrations returned based on the supported content ID (optional) 
 
             try
             { 
                 // Get a list of Twitter Integrations
-                TwitterIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsTwitter(pageSize, pageNumber);
+                TwitterIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsTwitter(pageSize, pageNumber, expand, supportedContentId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4042,6 +4060,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
+| **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4050,7 +4070,7 @@ namespace Example
 
 <a name="getconversationsmessagingintegrationstwitterintegrationid"></a>
 
-## [**TwitterIntegration**](TwitterIntegration.html) GetConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId)
+## [**TwitterIntegration**](TwitterIntegration.html) GetConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId, string expand = null)
 
 
 
@@ -4085,11 +4105,12 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var integrationId = integrationId_example;  // string | Integration ID
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
 
             try
             { 
                 // Get a Twitter messaging integration
-                TwitterIntegration result = apiInstance.GetConversationsMessagingIntegrationsTwitterIntegrationId(integrationId);
+                TwitterIntegration result = apiInstance.GetConversationsMessagingIntegrationsTwitterIntegrationId(integrationId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4107,6 +4128,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
 {: class="table table-striped"}
 
 ### Return type
@@ -4115,7 +4137,7 @@ namespace Example
 
 <a name="getconversationsmessagingintegrationswhatsapp"></a>
 
-## [**WhatsAppIntegrationEntityListing**](WhatsAppIntegrationEntityListing.html) GetConversationsMessagingIntegrationsWhatsapp (int? pageSize = null, int? pageNumber = null)
+## [**WhatsAppIntegrationEntityListing**](WhatsAppIntegrationEntityListing.html) GetConversationsMessagingIntegrationsWhatsapp (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
 
 
 
@@ -4151,11 +4173,13 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
+            var supportedContentId = supportedContentId_example;  // string | Filter integrations returned based on the supported content ID (optional) 
 
             try
             { 
                 // Get a list of WhatsApp Integrations
-                WhatsAppIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsWhatsapp(pageSize, pageNumber);
+                WhatsAppIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsWhatsapp(pageSize, pageNumber, expand, supportedContentId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4174,6 +4198,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
+| **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4182,7 +4208,7 @@ namespace Example
 
 <a name="getconversationsmessagingintegrationswhatsappintegrationid"></a>
 
-## [**WhatsAppIntegration**](WhatsAppIntegration.html) GetConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId)
+## [**WhatsAppIntegration**](WhatsAppIntegration.html) GetConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId, string expand = null)
 
 
 
@@ -4217,11 +4243,12 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var integrationId = integrationId_example;  // string | Integration ID
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
 
             try
             { 
                 // Get a WhatsApp messaging integration
-                WhatsAppIntegration result = apiInstance.GetConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId);
+                WhatsAppIntegration result = apiInstance.GetConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4239,6 +4266,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
 {: class="table table-striped"}
 
 ### Return type

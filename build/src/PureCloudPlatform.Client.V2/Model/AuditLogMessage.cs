@@ -202,6 +202,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Delete,
             
             /// <summary>
+            /// Enum Deleteall for "DeleteAll"
+            /// </summary>
+            [EnumMember(Value = "DeleteAll")]
+            Deleteall,
+            
+            /// <summary>
             /// Enum Download for "Download"
             /// </summary>
             [EnumMember(Value = "Download")]
@@ -845,7 +851,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Workplan for "WorkPlan"
             /// </summary>
             [EnumMember(Value = "WorkPlan")]
-            Workplan
+            Workplan,
+            
+            /// <summary>
+            /// Enum Sentimentfeedback for "SentimentFeedback"
+            /// </summary>
+            [EnumMember(Value = "SentimentFeedback")]
+            Sentimentfeedback
         }
         
         

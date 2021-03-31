@@ -20,29 +20,14 @@ namespace PureCloudPlatform.Client.V2.Model
     {
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification" /> class.
         /// </summary>
-        /// <param name="DataAvailabilityDate">DataAvailabilityDate.</param>
-        public ConversationDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification(ConversationDetailsDatalakeAvailabilityTopicDateTime DataAvailabilityDate = null)
+        public ConversationDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification()
         {
-            this.DataAvailabilityDate = DataAvailabilityDate;
             
         }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DataAvailabilityDate
-        /// </summary>
-        [DataMember(Name="dataAvailabilityDate", EmitDefaultValue=false)]
-        public ConversationDetailsDatalakeAvailabilityTopicDateTime DataAvailabilityDate { get; set; }
         
         
         /// <summary>
@@ -54,7 +39,6 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ConversationDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification {\n");
             
-            sb.Append("  DataAvailabilityDate: ").Append(DataAvailabilityDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -90,12 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true &&
-                (
-                    this.DataAvailabilityDate == other.DataAvailabilityDate ||
-                    this.DataAvailabilityDate != null &&
-                    this.DataAvailabilityDate.Equals(other.DataAvailabilityDate)
-                );
+            return true && false;
         }
 
         /// <summary>
@@ -109,9 +88,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.DataAvailabilityDate != null)
-                    hash = hash * 59 + this.DataAvailabilityDate.GetHashCode();
                 
                 return hash;
             }

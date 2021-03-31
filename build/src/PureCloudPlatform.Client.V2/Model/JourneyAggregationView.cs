@@ -36,6 +36,18 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Ndistinctjourneyactions for "nDistinctJourneyActions"
+            /// </summary>
+            [EnumMember(Value = "nDistinctJourneyActions")]
+            Ndistinctjourneyactions,
+            
+            /// <summary>
+            /// Enum Njourneyactionsblocked for "nJourneyActionsBlocked"
+            /// </summary>
+            [EnumMember(Value = "nJourneyActionsBlocked")]
+            Njourneyactionsblocked,
+            
+            /// <summary>
             /// Enum Njourneyoutcomesachieved for "nJourneyOutcomesAchieved"
             /// </summary>
             [EnumMember(Value = "nJourneyOutcomesAchieved")]

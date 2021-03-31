@@ -55,27 +55,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeMetricsTopicEdgeMetrics" /> class.
         /// </summary>
         /// <param name="Edge">Edge.</param>
-        /// <param name="EventTime">EventTime.</param>
         /// <param name="UpTimeMsec">UpTimeMsec.</param>
         /// <param name="Processors">Processors.</param>
         /// <param name="Memory">Memory.</param>
         /// <param name="Disks">Disks.</param>
         /// <param name="Subsystems">Subsystems.</param>
         /// <param name="Networks">Networks.</param>
-        public EdgeMetricsTopicEdgeMetrics(EdgeMetricsTopicUriReference Edge = null, EdgeMetricsTopicOffsetDateTime EventTime = null, int? UpTimeMsec = null, List<EdgeMetricsTopicEdgeMetricProcessor> Processors = null, List<EdgeMetricsTopicEdgeMetricMemory> Memory = null, List<EdgeMetricsTopicEdgeMetricDisk> Disks = null, List<EdgeMetricsTopicEdgeMetricSubsystem> Subsystems = null, List<EdgeMetricsTopicEdgeMetricNetworks> Networks = null)
+        public EdgeMetricsTopicEdgeMetrics(EdgeMetricsTopicUriReference Edge = null, int? UpTimeMsec = null, List<EdgeMetricsTopicEdgeMetricProcessor> Processors = null, List<EdgeMetricsTopicEdgeMetricMemory> Memory = null, List<EdgeMetricsTopicEdgeMetricDisk> Disks = null, List<EdgeMetricsTopicEdgeMetricSubsystem> Subsystems = null, List<EdgeMetricsTopicEdgeMetricNetworks> Networks = null)
         {
             this.Edge = Edge;
-            this.EventTime = EventTime;
             this.UpTimeMsec = UpTimeMsec;
             this.Processors = Processors;
             this.Memory = Memory;
@@ -92,14 +85,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="edge", EmitDefaultValue=false)]
         public EdgeMetricsTopicUriReference Edge { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets EventTime
-        /// </summary>
-        [DataMember(Name="eventTime", EmitDefaultValue=false)]
-        public EdgeMetricsTopicOffsetDateTime EventTime { get; set; }
         
         
         
@@ -160,7 +145,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class EdgeMetricsTopicEdgeMetrics {\n");
             
             sb.Append("  Edge: ").Append(Edge).Append("\n");
-            sb.Append("  EventTime: ").Append(EventTime).Append("\n");
             sb.Append("  UpTimeMsec: ").Append(UpTimeMsec).Append("\n");
             sb.Append("  Processors: ").Append(Processors).Append("\n");
             sb.Append("  Memory: ").Append(Memory).Append("\n");
@@ -209,11 +193,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Edge.Equals(other.Edge)
                 ) &&
                 (
-                    this.EventTime == other.EventTime ||
-                    this.EventTime != null &&
-                    this.EventTime.Equals(other.EventTime)
-                ) &&
-                (
                     this.UpTimeMsec == other.UpTimeMsec ||
                     this.UpTimeMsec != null &&
                     this.UpTimeMsec.Equals(other.UpTimeMsec)
@@ -259,9 +238,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Edge != null)
                     hash = hash * 59 + this.Edge.GetHashCode();
-                
-                if (this.EventTime != null)
-                    hash = hash * 59 + this.EventTime.GetHashCode();
                 
                 if (this.UpTimeMsec != null)
                     hash = hash * 59 + this.UpTimeMsec.GetHashCode();

@@ -1281,8 +1281,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>MessagingIntegrationEntityListing</returns>
-        MessagingIntegrationEntityListing GetConversationsMessagingIntegrations (int? pageSize = null, int? pageNumber = null);
+        MessagingIntegrationEntityListing GetConversationsMessagingIntegrations (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
 
         /// <summary>
         /// Get a list of Integrations
@@ -1293,8 +1295,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>ApiResponse of MessagingIntegrationEntityListing</returns>
-        ApiResponse<MessagingIntegrationEntityListing> GetConversationsMessagingIntegrationsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<MessagingIntegrationEntityListing> GetConversationsMessagingIntegrationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
         
         /// <summary>
         /// Get a list of Facebook Integrations
@@ -1305,8 +1309,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>FacebookIntegrationEntityListing</returns>
-        FacebookIntegrationEntityListing GetConversationsMessagingIntegrationsFacebook (int? pageSize = null, int? pageNumber = null);
+        FacebookIntegrationEntityListing GetConversationsMessagingIntegrationsFacebook (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
 
         /// <summary>
         /// Get a list of Facebook Integrations
@@ -1317,8 +1323,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>ApiResponse of FacebookIntegrationEntityListing</returns>
-        ApiResponse<FacebookIntegrationEntityListing> GetConversationsMessagingIntegrationsFacebookWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<FacebookIntegrationEntityListing> GetConversationsMessagingIntegrationsFacebookWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
         
         /// <summary>
         /// Get a Facebook messaging integration
@@ -1328,8 +1336,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>FacebookIntegration</returns>
-        FacebookIntegration GetConversationsMessagingIntegrationsFacebookIntegrationId (string integrationId);
+        FacebookIntegration GetConversationsMessagingIntegrationsFacebookIntegrationId (string integrationId, string expand = null);
 
         /// <summary>
         /// Get a Facebook messaging integration
@@ -1339,8 +1348,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of FacebookIntegration</returns>
-        ApiResponse<FacebookIntegration> GetConversationsMessagingIntegrationsFacebookIntegrationIdWithHttpInfo (string integrationId);
+        ApiResponse<FacebookIntegration> GetConversationsMessagingIntegrationsFacebookIntegrationIdWithHttpInfo (string integrationId, string expand = null);
         
         /// <summary>
         /// Get a list of LINE messenger Integrations
@@ -1351,8 +1361,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>LineIntegrationEntityListing</returns>
-        LineIntegrationEntityListing GetConversationsMessagingIntegrationsLine (int? pageSize = null, int? pageNumber = null);
+        LineIntegrationEntityListing GetConversationsMessagingIntegrationsLine (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
 
         /// <summary>
         /// Get a list of LINE messenger Integrations
@@ -1363,8 +1375,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>ApiResponse of LineIntegrationEntityListing</returns>
-        ApiResponse<LineIntegrationEntityListing> GetConversationsMessagingIntegrationsLineWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<LineIntegrationEntityListing> GetConversationsMessagingIntegrationsLineWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
         
         /// <summary>
         /// Get a LINE messenger integration
@@ -1374,8 +1388,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>LineIntegration</returns>
-        LineIntegration GetConversationsMessagingIntegrationsLineIntegrationId (string integrationId);
+        LineIntegration GetConversationsMessagingIntegrationsLineIntegrationId (string integrationId, string expand = null);
 
         /// <summary>
         /// Get a LINE messenger integration
@@ -1385,8 +1400,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of LineIntegration</returns>
-        ApiResponse<LineIntegration> GetConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo (string integrationId);
+        ApiResponse<LineIntegration> GetConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo (string integrationId, string expand = null);
         
         /// <summary>
         /// Get a list of Twitter Integrations
@@ -1397,8 +1413,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>TwitterIntegrationEntityListing</returns>
-        TwitterIntegrationEntityListing GetConversationsMessagingIntegrationsTwitter (int? pageSize = null, int? pageNumber = null);
+        TwitterIntegrationEntityListing GetConversationsMessagingIntegrationsTwitter (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
 
         /// <summary>
         /// Get a list of Twitter Integrations
@@ -1409,8 +1427,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>ApiResponse of TwitterIntegrationEntityListing</returns>
-        ApiResponse<TwitterIntegrationEntityListing> GetConversationsMessagingIntegrationsTwitterWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<TwitterIntegrationEntityListing> GetConversationsMessagingIntegrationsTwitterWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
         
         /// <summary>
         /// Get a Twitter messaging integration
@@ -1420,8 +1440,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>TwitterIntegration</returns>
-        TwitterIntegration GetConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId);
+        TwitterIntegration GetConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId, string expand = null);
 
         /// <summary>
         /// Get a Twitter messaging integration
@@ -1431,8 +1452,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of TwitterIntegration</returns>
-        ApiResponse<TwitterIntegration> GetConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId);
+        ApiResponse<TwitterIntegration> GetConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId, string expand = null);
         
         /// <summary>
         /// Get a list of WhatsApp Integrations
@@ -1443,8 +1465,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>WhatsAppIntegrationEntityListing</returns>
-        WhatsAppIntegrationEntityListing GetConversationsMessagingIntegrationsWhatsapp (int? pageSize = null, int? pageNumber = null);
+        WhatsAppIntegrationEntityListing GetConversationsMessagingIntegrationsWhatsapp (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
 
         /// <summary>
         /// Get a list of WhatsApp Integrations
@@ -1455,8 +1479,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>ApiResponse of WhatsAppIntegrationEntityListing</returns>
-        ApiResponse<WhatsAppIntegrationEntityListing> GetConversationsMessagingIntegrationsWhatsappWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<WhatsAppIntegrationEntityListing> GetConversationsMessagingIntegrationsWhatsappWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
         
         /// <summary>
         /// Get a WhatsApp messaging integration
@@ -1466,8 +1492,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>WhatsAppIntegration</returns>
-        WhatsAppIntegration GetConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId);
+        WhatsAppIntegration GetConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId, string expand = null);
 
         /// <summary>
         /// Get a WhatsApp messaging integration
@@ -1477,8 +1504,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of WhatsAppIntegration</returns>
-        ApiResponse<WhatsAppIntegration> GetConversationsMessagingIntegrationsWhatsappIntegrationIdWithHttpInfo (string integrationId);
+        ApiResponse<WhatsAppIntegration> GetConversationsMessagingIntegrationsWhatsappIntegrationIdWithHttpInfo (string integrationId, string expand = null);
         
         /// <summary>
         /// Get a list of Messaging Stickers
@@ -4605,8 +4633,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of MessagingIntegrationEntityListing</returns>
-        System.Threading.Tasks.Task<MessagingIntegrationEntityListing> GetConversationsMessagingIntegrationsAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<MessagingIntegrationEntityListing> GetConversationsMessagingIntegrationsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
 
         /// <summary>
         /// Get a list of Integrations
@@ -4617,8 +4647,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of ApiResponse (MessagingIntegrationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MessagingIntegrationEntityListing>> GetConversationsMessagingIntegrationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<MessagingIntegrationEntityListing>> GetConversationsMessagingIntegrationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
         
         /// <summary>
         /// Get a list of Facebook Integrations
@@ -4629,8 +4661,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of FacebookIntegrationEntityListing</returns>
-        System.Threading.Tasks.Task<FacebookIntegrationEntityListing> GetConversationsMessagingIntegrationsFacebookAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<FacebookIntegrationEntityListing> GetConversationsMessagingIntegrationsFacebookAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
 
         /// <summary>
         /// Get a list of Facebook Integrations
@@ -4641,8 +4675,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of ApiResponse (FacebookIntegrationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FacebookIntegrationEntityListing>> GetConversationsMessagingIntegrationsFacebookAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<FacebookIntegrationEntityListing>> GetConversationsMessagingIntegrationsFacebookAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
         
         /// <summary>
         /// Get a Facebook messaging integration
@@ -4652,8 +4688,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of FacebookIntegration</returns>
-        System.Threading.Tasks.Task<FacebookIntegration> GetConversationsMessagingIntegrationsFacebookIntegrationIdAsync (string integrationId);
+        System.Threading.Tasks.Task<FacebookIntegration> GetConversationsMessagingIntegrationsFacebookIntegrationIdAsync (string integrationId, string expand = null);
 
         /// <summary>
         /// Get a Facebook messaging integration
@@ -4663,8 +4700,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (FacebookIntegration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FacebookIntegration>> GetConversationsMessagingIntegrationsFacebookIntegrationIdAsyncWithHttpInfo (string integrationId);
+        System.Threading.Tasks.Task<ApiResponse<FacebookIntegration>> GetConversationsMessagingIntegrationsFacebookIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null);
         
         /// <summary>
         /// Get a list of LINE messenger Integrations
@@ -4675,8 +4713,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of LineIntegrationEntityListing</returns>
-        System.Threading.Tasks.Task<LineIntegrationEntityListing> GetConversationsMessagingIntegrationsLineAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<LineIntegrationEntityListing> GetConversationsMessagingIntegrationsLineAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
 
         /// <summary>
         /// Get a list of LINE messenger Integrations
@@ -4687,8 +4727,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of ApiResponse (LineIntegrationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LineIntegrationEntityListing>> GetConversationsMessagingIntegrationsLineAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<LineIntegrationEntityListing>> GetConversationsMessagingIntegrationsLineAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
         
         /// <summary>
         /// Get a LINE messenger integration
@@ -4698,8 +4740,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of LineIntegration</returns>
-        System.Threading.Tasks.Task<LineIntegration> GetConversationsMessagingIntegrationsLineIntegrationIdAsync (string integrationId);
+        System.Threading.Tasks.Task<LineIntegration> GetConversationsMessagingIntegrationsLineIntegrationIdAsync (string integrationId, string expand = null);
 
         /// <summary>
         /// Get a LINE messenger integration
@@ -4709,8 +4752,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (LineIntegration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LineIntegration>> GetConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo (string integrationId);
+        System.Threading.Tasks.Task<ApiResponse<LineIntegration>> GetConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null);
         
         /// <summary>
         /// Get a list of Twitter Integrations
@@ -4721,8 +4765,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of TwitterIntegrationEntityListing</returns>
-        System.Threading.Tasks.Task<TwitterIntegrationEntityListing> GetConversationsMessagingIntegrationsTwitterAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<TwitterIntegrationEntityListing> GetConversationsMessagingIntegrationsTwitterAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
 
         /// <summary>
         /// Get a list of Twitter Integrations
@@ -4733,8 +4779,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of ApiResponse (TwitterIntegrationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TwitterIntegrationEntityListing>> GetConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<TwitterIntegrationEntityListing>> GetConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
         
         /// <summary>
         /// Get a Twitter messaging integration
@@ -4744,8 +4792,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of TwitterIntegration</returns>
-        System.Threading.Tasks.Task<TwitterIntegration> GetConversationsMessagingIntegrationsTwitterIntegrationIdAsync (string integrationId);
+        System.Threading.Tasks.Task<TwitterIntegration> GetConversationsMessagingIntegrationsTwitterIntegrationIdAsync (string integrationId, string expand = null);
 
         /// <summary>
         /// Get a Twitter messaging integration
@@ -4755,8 +4804,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (TwitterIntegration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> GetConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId);
+        System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> GetConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null);
         
         /// <summary>
         /// Get a list of WhatsApp Integrations
@@ -4767,8 +4817,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of WhatsAppIntegrationEntityListing</returns>
-        System.Threading.Tasks.Task<WhatsAppIntegrationEntityListing> GetConversationsMessagingIntegrationsWhatsappAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<WhatsAppIntegrationEntityListing> GetConversationsMessagingIntegrationsWhatsappAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
 
         /// <summary>
         /// Get a list of WhatsApp Integrations
@@ -4779,8 +4831,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of ApiResponse (WhatsAppIntegrationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegrationEntityListing>> GetConversationsMessagingIntegrationsWhatsappAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegrationEntityListing>> GetConversationsMessagingIntegrationsWhatsappAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
         
         /// <summary>
         /// Get a WhatsApp messaging integration
@@ -4790,8 +4844,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of WhatsAppIntegration</returns>
-        System.Threading.Tasks.Task<WhatsAppIntegration> GetConversationsMessagingIntegrationsWhatsappIntegrationIdAsync (string integrationId);
+        System.Threading.Tasks.Task<WhatsAppIntegration> GetConversationsMessagingIntegrationsWhatsappIntegrationIdAsync (string integrationId, string expand = null);
 
         /// <summary>
         /// Get a WhatsApp messaging integration
@@ -4801,8 +4856,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (WhatsAppIntegration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegration>> GetConversationsMessagingIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo (string integrationId);
+        System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegration>> GetConversationsMessagingIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null);
         
         /// <summary>
         /// Get a list of Messaging Stickers
@@ -17473,10 +17529,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>MessagingIntegrationEntityListing</returns>
-        public MessagingIntegrationEntityListing GetConversationsMessagingIntegrations (int? pageSize = null, int? pageNumber = null)
+        public MessagingIntegrationEntityListing GetConversationsMessagingIntegrations (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         {
-             ApiResponse<MessagingIntegrationEntityListing> localVarResponse = GetConversationsMessagingIntegrationsWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<MessagingIntegrationEntityListing> localVarResponse = GetConversationsMessagingIntegrationsWithHttpInfo(pageSize, pageNumber, expand, supportedContentId);
              return localVarResponse.Data;
         }
 
@@ -17486,8 +17544,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>ApiResponse of MessagingIntegrationEntityListing</returns>
-        public ApiResponse< MessagingIntegrationEntityListing > GetConversationsMessagingIntegrationsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< MessagingIntegrationEntityListing > GetConversationsMessagingIntegrationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         { 
 
             var localVarPath = "/api/v2/conversations/messaging/integrations";
@@ -17525,6 +17585,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (supportedContentId != null) localVarQueryParams.Add(new Tuple<string, string>("supportedContent.id", this.Configuration.ApiClient.ParameterToString(supportedContentId)));
 
             // Header params
 
@@ -17568,10 +17630,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of MessagingIntegrationEntityListing</returns>
-        public async System.Threading.Tasks.Task<MessagingIntegrationEntityListing> GetConversationsMessagingIntegrationsAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<MessagingIntegrationEntityListing> GetConversationsMessagingIntegrationsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         {
-             ApiResponse<MessagingIntegrationEntityListing> localVarResponse = await GetConversationsMessagingIntegrationsAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<MessagingIntegrationEntityListing> localVarResponse = await GetConversationsMessagingIntegrationsAsyncWithHttpInfo(pageSize, pageNumber, expand, supportedContentId);
              return localVarResponse.Data;
 
         }
@@ -17582,8 +17646,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of ApiResponse (MessagingIntegrationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MessagingIntegrationEntityListing>> GetConversationsMessagingIntegrationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<MessagingIntegrationEntityListing>> GetConversationsMessagingIntegrationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         { 
 
             var localVarPath = "/api/v2/conversations/messaging/integrations";
@@ -17621,6 +17687,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (supportedContentId != null) localVarQueryParams.Add(new Tuple<string, string>("supportedContent.id", this.Configuration.ApiClient.ParameterToString(supportedContentId)));
 
             // Header params
 
@@ -17665,10 +17733,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>FacebookIntegrationEntityListing</returns>
-        public FacebookIntegrationEntityListing GetConversationsMessagingIntegrationsFacebook (int? pageSize = null, int? pageNumber = null)
+        public FacebookIntegrationEntityListing GetConversationsMessagingIntegrationsFacebook (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         {
-             ApiResponse<FacebookIntegrationEntityListing> localVarResponse = GetConversationsMessagingIntegrationsFacebookWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<FacebookIntegrationEntityListing> localVarResponse = GetConversationsMessagingIntegrationsFacebookWithHttpInfo(pageSize, pageNumber, expand, supportedContentId);
              return localVarResponse.Data;
         }
 
@@ -17678,8 +17748,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>ApiResponse of FacebookIntegrationEntityListing</returns>
-        public ApiResponse< FacebookIntegrationEntityListing > GetConversationsMessagingIntegrationsFacebookWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< FacebookIntegrationEntityListing > GetConversationsMessagingIntegrationsFacebookWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         { 
 
             var localVarPath = "/api/v2/conversations/messaging/integrations/facebook";
@@ -17717,6 +17789,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (supportedContentId != null) localVarQueryParams.Add(new Tuple<string, string>("supportedContent.id", this.Configuration.ApiClient.ParameterToString(supportedContentId)));
 
             // Header params
 
@@ -17760,10 +17834,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of FacebookIntegrationEntityListing</returns>
-        public async System.Threading.Tasks.Task<FacebookIntegrationEntityListing> GetConversationsMessagingIntegrationsFacebookAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<FacebookIntegrationEntityListing> GetConversationsMessagingIntegrationsFacebookAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         {
-             ApiResponse<FacebookIntegrationEntityListing> localVarResponse = await GetConversationsMessagingIntegrationsFacebookAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<FacebookIntegrationEntityListing> localVarResponse = await GetConversationsMessagingIntegrationsFacebookAsyncWithHttpInfo(pageSize, pageNumber, expand, supportedContentId);
              return localVarResponse.Data;
 
         }
@@ -17774,8 +17850,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of ApiResponse (FacebookIntegrationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FacebookIntegrationEntityListing>> GetConversationsMessagingIntegrationsFacebookAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<FacebookIntegrationEntityListing>> GetConversationsMessagingIntegrationsFacebookAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         { 
 
             var localVarPath = "/api/v2/conversations/messaging/integrations/facebook";
@@ -17813,6 +17891,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (supportedContentId != null) localVarQueryParams.Add(new Tuple<string, string>("supportedContent.id", this.Configuration.ApiClient.ParameterToString(supportedContentId)));
 
             // Header params
 
@@ -17856,10 +17936,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>FacebookIntegration</returns>
-        public FacebookIntegration GetConversationsMessagingIntegrationsFacebookIntegrationId (string integrationId)
+        public FacebookIntegration GetConversationsMessagingIntegrationsFacebookIntegrationId (string integrationId, string expand = null)
         {
-             ApiResponse<FacebookIntegration> localVarResponse = GetConversationsMessagingIntegrationsFacebookIntegrationIdWithHttpInfo(integrationId);
+             ApiResponse<FacebookIntegration> localVarResponse = GetConversationsMessagingIntegrationsFacebookIntegrationIdWithHttpInfo(integrationId, expand);
              return localVarResponse.Data;
         }
 
@@ -17868,8 +17949,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of FacebookIntegration</returns>
-        public ApiResponse< FacebookIntegration > GetConversationsMessagingIntegrationsFacebookIntegrationIdWithHttpInfo (string integrationId)
+        public ApiResponse< FacebookIntegration > GetConversationsMessagingIntegrationsFacebookIntegrationIdWithHttpInfo (string integrationId, string expand = null)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -17909,6 +17991,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -17951,10 +18034,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of FacebookIntegration</returns>
-        public async System.Threading.Tasks.Task<FacebookIntegration> GetConversationsMessagingIntegrationsFacebookIntegrationIdAsync (string integrationId)
+        public async System.Threading.Tasks.Task<FacebookIntegration> GetConversationsMessagingIntegrationsFacebookIntegrationIdAsync (string integrationId, string expand = null)
         {
-             ApiResponse<FacebookIntegration> localVarResponse = await GetConversationsMessagingIntegrationsFacebookIntegrationIdAsyncWithHttpInfo(integrationId);
+             ApiResponse<FacebookIntegration> localVarResponse = await GetConversationsMessagingIntegrationsFacebookIntegrationIdAsyncWithHttpInfo(integrationId, expand);
              return localVarResponse.Data;
 
         }
@@ -17964,8 +18048,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (FacebookIntegration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FacebookIntegration>> GetConversationsMessagingIntegrationsFacebookIntegrationIdAsyncWithHttpInfo (string integrationId)
+        public async System.Threading.Tasks.Task<ApiResponse<FacebookIntegration>> GetConversationsMessagingIntegrationsFacebookIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -18006,6 +18091,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -18050,10 +18136,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>LineIntegrationEntityListing</returns>
-        public LineIntegrationEntityListing GetConversationsMessagingIntegrationsLine (int? pageSize = null, int? pageNumber = null)
+        public LineIntegrationEntityListing GetConversationsMessagingIntegrationsLine (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         {
-             ApiResponse<LineIntegrationEntityListing> localVarResponse = GetConversationsMessagingIntegrationsLineWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<LineIntegrationEntityListing> localVarResponse = GetConversationsMessagingIntegrationsLineWithHttpInfo(pageSize, pageNumber, expand, supportedContentId);
              return localVarResponse.Data;
         }
 
@@ -18063,8 +18151,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>ApiResponse of LineIntegrationEntityListing</returns>
-        public ApiResponse< LineIntegrationEntityListing > GetConversationsMessagingIntegrationsLineWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< LineIntegrationEntityListing > GetConversationsMessagingIntegrationsLineWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         { 
 
             var localVarPath = "/api/v2/conversations/messaging/integrations/line";
@@ -18102,6 +18192,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (supportedContentId != null) localVarQueryParams.Add(new Tuple<string, string>("supportedContent.id", this.Configuration.ApiClient.ParameterToString(supportedContentId)));
 
             // Header params
 
@@ -18145,10 +18237,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of LineIntegrationEntityListing</returns>
-        public async System.Threading.Tasks.Task<LineIntegrationEntityListing> GetConversationsMessagingIntegrationsLineAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<LineIntegrationEntityListing> GetConversationsMessagingIntegrationsLineAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         {
-             ApiResponse<LineIntegrationEntityListing> localVarResponse = await GetConversationsMessagingIntegrationsLineAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<LineIntegrationEntityListing> localVarResponse = await GetConversationsMessagingIntegrationsLineAsyncWithHttpInfo(pageSize, pageNumber, expand, supportedContentId);
              return localVarResponse.Data;
 
         }
@@ -18159,8 +18253,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of ApiResponse (LineIntegrationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LineIntegrationEntityListing>> GetConversationsMessagingIntegrationsLineAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LineIntegrationEntityListing>> GetConversationsMessagingIntegrationsLineAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         { 
 
             var localVarPath = "/api/v2/conversations/messaging/integrations/line";
@@ -18198,6 +18294,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (supportedContentId != null) localVarQueryParams.Add(new Tuple<string, string>("supportedContent.id", this.Configuration.ApiClient.ParameterToString(supportedContentId)));
 
             // Header params
 
@@ -18241,10 +18339,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>LineIntegration</returns>
-        public LineIntegration GetConversationsMessagingIntegrationsLineIntegrationId (string integrationId)
+        public LineIntegration GetConversationsMessagingIntegrationsLineIntegrationId (string integrationId, string expand = null)
         {
-             ApiResponse<LineIntegration> localVarResponse = GetConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo(integrationId);
+             ApiResponse<LineIntegration> localVarResponse = GetConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo(integrationId, expand);
              return localVarResponse.Data;
         }
 
@@ -18253,8 +18352,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of LineIntegration</returns>
-        public ApiResponse< LineIntegration > GetConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo (string integrationId)
+        public ApiResponse< LineIntegration > GetConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo (string integrationId, string expand = null)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -18294,6 +18394,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -18336,10 +18437,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of LineIntegration</returns>
-        public async System.Threading.Tasks.Task<LineIntegration> GetConversationsMessagingIntegrationsLineIntegrationIdAsync (string integrationId)
+        public async System.Threading.Tasks.Task<LineIntegration> GetConversationsMessagingIntegrationsLineIntegrationIdAsync (string integrationId, string expand = null)
         {
-             ApiResponse<LineIntegration> localVarResponse = await GetConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo(integrationId);
+             ApiResponse<LineIntegration> localVarResponse = await GetConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo(integrationId, expand);
              return localVarResponse.Data;
 
         }
@@ -18349,8 +18451,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (LineIntegration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LineIntegration>> GetConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo (string integrationId)
+        public async System.Threading.Tasks.Task<ApiResponse<LineIntegration>> GetConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -18391,6 +18494,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -18435,10 +18539,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>TwitterIntegrationEntityListing</returns>
-        public TwitterIntegrationEntityListing GetConversationsMessagingIntegrationsTwitter (int? pageSize = null, int? pageNumber = null)
+        public TwitterIntegrationEntityListing GetConversationsMessagingIntegrationsTwitter (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         {
-             ApiResponse<TwitterIntegrationEntityListing> localVarResponse = GetConversationsMessagingIntegrationsTwitterWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<TwitterIntegrationEntityListing> localVarResponse = GetConversationsMessagingIntegrationsTwitterWithHttpInfo(pageSize, pageNumber, expand, supportedContentId);
              return localVarResponse.Data;
         }
 
@@ -18448,8 +18554,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>ApiResponse of TwitterIntegrationEntityListing</returns>
-        public ApiResponse< TwitterIntegrationEntityListing > GetConversationsMessagingIntegrationsTwitterWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< TwitterIntegrationEntityListing > GetConversationsMessagingIntegrationsTwitterWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         { 
 
             var localVarPath = "/api/v2/conversations/messaging/integrations/twitter";
@@ -18487,6 +18595,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (supportedContentId != null) localVarQueryParams.Add(new Tuple<string, string>("supportedContent.id", this.Configuration.ApiClient.ParameterToString(supportedContentId)));
 
             // Header params
 
@@ -18530,10 +18640,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of TwitterIntegrationEntityListing</returns>
-        public async System.Threading.Tasks.Task<TwitterIntegrationEntityListing> GetConversationsMessagingIntegrationsTwitterAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<TwitterIntegrationEntityListing> GetConversationsMessagingIntegrationsTwitterAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         {
-             ApiResponse<TwitterIntegrationEntityListing> localVarResponse = await GetConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<TwitterIntegrationEntityListing> localVarResponse = await GetConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo(pageSize, pageNumber, expand, supportedContentId);
              return localVarResponse.Data;
 
         }
@@ -18544,8 +18656,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of ApiResponse (TwitterIntegrationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TwitterIntegrationEntityListing>> GetConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TwitterIntegrationEntityListing>> GetConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         { 
 
             var localVarPath = "/api/v2/conversations/messaging/integrations/twitter";
@@ -18583,6 +18697,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (supportedContentId != null) localVarQueryParams.Add(new Tuple<string, string>("supportedContent.id", this.Configuration.ApiClient.ParameterToString(supportedContentId)));
 
             // Header params
 
@@ -18626,10 +18742,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>TwitterIntegration</returns>
-        public TwitterIntegration GetConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId)
+        public TwitterIntegration GetConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId, string expand = null)
         {
-             ApiResponse<TwitterIntegration> localVarResponse = GetConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo(integrationId);
+             ApiResponse<TwitterIntegration> localVarResponse = GetConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo(integrationId, expand);
              return localVarResponse.Data;
         }
 
@@ -18638,8 +18755,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of TwitterIntegration</returns>
-        public ApiResponse< TwitterIntegration > GetConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId)
+        public ApiResponse< TwitterIntegration > GetConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId, string expand = null)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -18679,6 +18797,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -18721,10 +18840,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of TwitterIntegration</returns>
-        public async System.Threading.Tasks.Task<TwitterIntegration> GetConversationsMessagingIntegrationsTwitterIntegrationIdAsync (string integrationId)
+        public async System.Threading.Tasks.Task<TwitterIntegration> GetConversationsMessagingIntegrationsTwitterIntegrationIdAsync (string integrationId, string expand = null)
         {
-             ApiResponse<TwitterIntegration> localVarResponse = await GetConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo(integrationId);
+             ApiResponse<TwitterIntegration> localVarResponse = await GetConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo(integrationId, expand);
              return localVarResponse.Data;
 
         }
@@ -18734,8 +18854,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (TwitterIntegration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> GetConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId)
+        public async System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> GetConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -18776,6 +18897,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -18820,10 +18942,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>WhatsAppIntegrationEntityListing</returns>
-        public WhatsAppIntegrationEntityListing GetConversationsMessagingIntegrationsWhatsapp (int? pageSize = null, int? pageNumber = null)
+        public WhatsAppIntegrationEntityListing GetConversationsMessagingIntegrationsWhatsapp (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         {
-             ApiResponse<WhatsAppIntegrationEntityListing> localVarResponse = GetConversationsMessagingIntegrationsWhatsappWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<WhatsAppIntegrationEntityListing> localVarResponse = GetConversationsMessagingIntegrationsWhatsappWithHttpInfo(pageSize, pageNumber, expand, supportedContentId);
              return localVarResponse.Data;
         }
 
@@ -18833,8 +18957,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>ApiResponse of WhatsAppIntegrationEntityListing</returns>
-        public ApiResponse< WhatsAppIntegrationEntityListing > GetConversationsMessagingIntegrationsWhatsappWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< WhatsAppIntegrationEntityListing > GetConversationsMessagingIntegrationsWhatsappWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         { 
 
             var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp";
@@ -18872,6 +18998,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (supportedContentId != null) localVarQueryParams.Add(new Tuple<string, string>("supportedContent.id", this.Configuration.ApiClient.ParameterToString(supportedContentId)));
 
             // Header params
 
@@ -18915,10 +19043,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of WhatsAppIntegrationEntityListing</returns>
-        public async System.Threading.Tasks.Task<WhatsAppIntegrationEntityListing> GetConversationsMessagingIntegrationsWhatsappAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<WhatsAppIntegrationEntityListing> GetConversationsMessagingIntegrationsWhatsappAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         {
-             ApiResponse<WhatsAppIntegrationEntityListing> localVarResponse = await GetConversationsMessagingIntegrationsWhatsappAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<WhatsAppIntegrationEntityListing> localVarResponse = await GetConversationsMessagingIntegrationsWhatsappAsyncWithHttpInfo(pageSize, pageNumber, expand, supportedContentId);
              return localVarResponse.Data;
 
         }
@@ -18929,8 +19059,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <returns>Task of ApiResponse (WhatsAppIntegrationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegrationEntityListing>> GetConversationsMessagingIntegrationsWhatsappAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegrationEntityListing>> GetConversationsMessagingIntegrationsWhatsappAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
         { 
 
             var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp";
@@ -18968,6 +19100,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (supportedContentId != null) localVarQueryParams.Add(new Tuple<string, string>("supportedContent.id", this.Configuration.ApiClient.ParameterToString(supportedContentId)));
 
             // Header params
 
@@ -19011,10 +19145,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>WhatsAppIntegration</returns>
-        public WhatsAppIntegration GetConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId)
+        public WhatsAppIntegration GetConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId, string expand = null)
         {
-             ApiResponse<WhatsAppIntegration> localVarResponse = GetConversationsMessagingIntegrationsWhatsappIntegrationIdWithHttpInfo(integrationId);
+             ApiResponse<WhatsAppIntegration> localVarResponse = GetConversationsMessagingIntegrationsWhatsappIntegrationIdWithHttpInfo(integrationId, expand);
              return localVarResponse.Data;
         }
 
@@ -19023,8 +19158,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of WhatsAppIntegration</returns>
-        public ApiResponse< WhatsAppIntegration > GetConversationsMessagingIntegrationsWhatsappIntegrationIdWithHttpInfo (string integrationId)
+        public ApiResponse< WhatsAppIntegration > GetConversationsMessagingIntegrationsWhatsappIntegrationIdWithHttpInfo (string integrationId, string expand = null)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -19064,6 +19200,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -19106,10 +19243,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of WhatsAppIntegration</returns>
-        public async System.Threading.Tasks.Task<WhatsAppIntegration> GetConversationsMessagingIntegrationsWhatsappIntegrationIdAsync (string integrationId)
+        public async System.Threading.Tasks.Task<WhatsAppIntegration> GetConversationsMessagingIntegrationsWhatsappIntegrationIdAsync (string integrationId, string expand = null)
         {
-             ApiResponse<WhatsAppIntegration> localVarResponse = await GetConversationsMessagingIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo(integrationId);
+             ApiResponse<WhatsAppIntegration> localVarResponse = await GetConversationsMessagingIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo(integrationId, expand);
              return localVarResponse.Data;
 
         }
@@ -19119,8 +19257,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (WhatsAppIntegration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegration>> GetConversationsMessagingIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo (string integrationId)
+        public async System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegration>> GetConversationsMessagingIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -19161,6 +19300,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 

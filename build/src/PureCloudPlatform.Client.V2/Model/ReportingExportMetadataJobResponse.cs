@@ -381,7 +381,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum AgentGamificationLeadershipView for "AGENT_GAMIFICATION_LEADERSHIP_VIEW"
             /// </summary>
             [EnumMember(Value = "AGENT_GAMIFICATION_LEADERSHIP_VIEW")]
-            AgentGamificationLeadershipView
+            AgentGamificationLeadershipView,
+            
+            /// <summary>
+            /// Enum AgentScheduleMeView for "AGENT_SCHEDULE_ME_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_SCHEDULE_ME_VIEW")]
+            AgentScheduleMeView
         }
         
         

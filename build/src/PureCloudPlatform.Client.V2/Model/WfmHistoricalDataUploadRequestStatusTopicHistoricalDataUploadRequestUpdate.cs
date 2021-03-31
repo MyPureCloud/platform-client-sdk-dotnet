@@ -23,18 +23,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -107,10 +95,32 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Csv for "Csv"
+            /// </summary>
+            [EnumMember(Value = "Csv")]
+            Csv,
+            
+            /// <summary>
+            /// Enum Json for "Json"
+            /// </summary>
+            [EnumMember(Value = "Json")]
+            Json
+        }
         
         
         
@@ -129,28 +139,30 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate" /> class.
         /// </summary>
         /// <param name="RequestId">RequestId.</param>
-        /// <param name="DateImportStarted">DateImportStarted.</param>
-        /// <param name="DateImportEnded">DateImportEnded.</param>
-        /// <param name="DateCreated">DateCreated.</param>
-        /// <param name="DateModified">DateModified.</param>
         /// <param name="Status">Status.</param>
         /// <param name="Error">Error.</param>
         /// <param name="Active">Active.</param>
-        public WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate(string RequestId = null, WfmHistoricalDataUploadRequestStatusTopicDateTime DateImportStarted = null, WfmHistoricalDataUploadRequestStatusTopicDateTime DateImportEnded = null, WfmHistoricalDataUploadRequestStatusTopicDateTime DateCreated = null, WfmHistoricalDataUploadRequestStatusTopicDateTime DateModified = null, StatusEnum? Status = null, string Error = null, bool? Active = null)
+        /// <param name="Type">Type.</param>
+        public WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate(string RequestId = null, StatusEnum? Status = null, string Error = null, bool? Active = null, TypeEnum? Type = null)
         {
             this.RequestId = RequestId;
-            this.DateImportStarted = DateImportStarted;
-            this.DateImportEnded = DateImportEnded;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
             this.Status = Status;
             this.Error = Error;
             this.Active = Active;
+            this.Type = Type;
             
         }
         
@@ -161,38 +173,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="requestId", EmitDefaultValue=false)]
         public string RequestId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateImportStarted
-        /// </summary>
-        [DataMember(Name="dateImportStarted", EmitDefaultValue=false)]
-        public WfmHistoricalDataUploadRequestStatusTopicDateTime DateImportStarted { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateImportEnded
-        /// </summary>
-        [DataMember(Name="dateImportEnded", EmitDefaultValue=false)]
-        public WfmHistoricalDataUploadRequestStatusTopicDateTime DateImportEnded { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateCreated
-        /// </summary>
-        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public WfmHistoricalDataUploadRequestStatusTopicDateTime DateCreated { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateModified
-        /// </summary>
-        [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public WfmHistoricalDataUploadRequestStatusTopicDateTime DateModified { get; set; }
         
         
         
@@ -213,6 +193,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Active { get; set; }
         
         
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -223,13 +205,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate {\n");
             
             sb.Append("  RequestId: ").Append(RequestId).Append("\n");
-            sb.Append("  DateImportStarted: ").Append(DateImportStarted).Append("\n");
-            sb.Append("  DateImportEnded: ").Append(DateImportEnded).Append("\n");
-            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("  Active: ").Append(Active).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -272,26 +251,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RequestId.Equals(other.RequestId)
                 ) &&
                 (
-                    this.DateImportStarted == other.DateImportStarted ||
-                    this.DateImportStarted != null &&
-                    this.DateImportStarted.Equals(other.DateImportStarted)
-                ) &&
-                (
-                    this.DateImportEnded == other.DateImportEnded ||
-                    this.DateImportEnded != null &&
-                    this.DateImportEnded.Equals(other.DateImportEnded)
-                ) &&
-                (
-                    this.DateCreated == other.DateCreated ||
-                    this.DateCreated != null &&
-                    this.DateCreated.Equals(other.DateCreated)
-                ) &&
-                (
-                    this.DateModified == other.DateModified ||
-                    this.DateModified != null &&
-                    this.DateModified.Equals(other.DateModified)
-                ) &&
-                (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
@@ -305,6 +264,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Active == other.Active ||
                     this.Active != null &&
                     this.Active.Equals(other.Active)
+                ) &&
+                (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
                 );
         }
 
@@ -323,18 +287,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.RequestId != null)
                     hash = hash * 59 + this.RequestId.GetHashCode();
                 
-                if (this.DateImportStarted != null)
-                    hash = hash * 59 + this.DateImportStarted.GetHashCode();
-                
-                if (this.DateImportEnded != null)
-                    hash = hash * 59 + this.DateImportEnded.GetHashCode();
-                
-                if (this.DateCreated != null)
-                    hash = hash * 59 + this.DateCreated.GetHashCode();
-                
-                if (this.DateModified != null)
-                    hash = hash * 59 + this.DateModified.GetHashCode();
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
                 
@@ -343,6 +295,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
+                
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 return hash;
             }

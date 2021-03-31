@@ -30,16 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsConversationQueryResponse" /> class.
         /// </summary>
         /// <param name="Aggregations">Aggregations.</param>
         /// <param name="Conversations">Conversations.</param>
-        public AnalyticsConversationQueryResponse(List<AggregationResult> Aggregations = null, List<AnalyticsConversationWithoutAttributes> Conversations = null)
+        /// <param name="TotalHits">TotalHits.</param>
+        public AnalyticsConversationQueryResponse(List<AggregationResult> Aggregations = null, List<AnalyticsConversationWithoutAttributes> Conversations = null, int? TotalHits = null)
         {
             this.Aggregations = Aggregations;
             this.Conversations = Conversations;
+            this.TotalHits = TotalHits;
             
         }
         
@@ -60,6 +67,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<AnalyticsConversationWithoutAttributes> Conversations { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets TotalHits
+        /// </summary>
+        [DataMember(Name="totalHits", EmitDefaultValue=false)]
+        public int? TotalHits { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -71,6 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Aggregations: ").Append(Aggregations).Append("\n");
             sb.Append("  Conversations: ").Append(Conversations).Append("\n");
+            sb.Append("  TotalHits: ").Append(TotalHits).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -116,6 +132,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Conversations == other.Conversations ||
                     this.Conversations != null &&
                     this.Conversations.SequenceEqual(other.Conversations)
+                ) &&
+                (
+                    this.TotalHits == other.TotalHits ||
+                    this.TotalHits != null &&
+                    this.TotalHits.Equals(other.TotalHits)
                 );
         }
 
@@ -136,6 +157,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Conversations != null)
                     hash = hash * 59 + this.Conversations.GetHashCode();
+                
+                if (this.TotalHits != null)
+                    hash = hash * 59 + this.TotalHits.GetHashCode();
                 
                 return hash;
             }

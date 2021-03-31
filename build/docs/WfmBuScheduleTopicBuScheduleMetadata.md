@@ -8,7 +8,6 @@ title: WfmBuScheduleTopicBuScheduleMetadata
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **WeekDate** | [**WfmBuScheduleTopicLocalDate**](WfmBuScheduleTopicLocalDate.html) |  | [optional] |
 | **WeekCount** | **int?** |  | [optional] |
 | **Description** | **string** |  | [optional] |
 | **Published** | **bool?** |  | [optional] |

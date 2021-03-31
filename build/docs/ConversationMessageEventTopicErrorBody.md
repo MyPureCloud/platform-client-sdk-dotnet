@@ -7,11 +7,11 @@ title: ConversationMessageEventTopicErrorBody
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Status** | **int?** |  | [optional] |
+| **Message** | **string** |  | [optional] |
 | **Code** | **string** |  | [optional] |
+| **Status** | **int?** |  | [optional] |
 | **EntityId** | **string** |  | [optional] |
 | **EntityName** | **string** |  | [optional] |
-| **Message** | **string** |  | [optional] |
 | **MessageWithParams** | **string** |  | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ContextId** | **string** |  | [optional] |

@@ -27,9 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The recipient messaging address messenger type. Currently SMS is the only supported type.
+        /// The recipient messaging address messenger type. Currently SMS and WhatsApp is the only supported type.
         /// </summary>
-        /// <value>The recipient messaging address messenger type. Currently SMS is the only supported type.</value>
+        /// <value>The recipient messaging address messenger type. Currently SMS and WhatsApp is the only supported type.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ToAddressMessengerTypeEnum
         {
@@ -95,12 +95,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
-        /// The recipient messaging address messenger type. Currently SMS is the only supported type.
+        /// The recipient messaging address messenger type. Currently SMS and WhatsApp is the only supported type.
         /// </summary>
-        /// <value>The recipient messaging address messenger type. Currently SMS is the only supported type.</value>
+        /// <value>The recipient messaging address messenger type. Currently SMS and WhatsApp is the only supported type.</value>
         [DataMember(Name="toAddressMessengerType", EmitDefaultValue=false)]
         public ToAddressMessengerTypeEnum? ToAddressMessengerType { get; set; }
+        
+        
         
         
         
@@ -115,25 +120,27 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SendAgentlessOutboundMessageRequest" /> class.
         /// </summary>
-        /// <param name="FromAddress">The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned sms phone number. (required).</param>
+        /// <param name="FromAddress">The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned SMS phone number. For a WhatsApp messenger type use the provisioned WhatsApp integration’s ID (required).</param>
         /// <param name="ToAddress">The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234. (required).</param>
-        /// <param name="ToAddressMessengerType">The recipient messaging address messenger type. Currently SMS is the only supported type. (required).</param>
-        /// <param name="TextBody">The text of the message to send (required).</param>
-        public SendAgentlessOutboundMessageRequest(string FromAddress = null, string ToAddress = null, ToAddressMessengerTypeEnum? ToAddressMessengerType = null, string TextBody = null)
+        /// <param name="ToAddressMessengerType">The recipient messaging address messenger type. Currently SMS and WhatsApp is the only supported type. (required).</param>
+        /// <param name="TextBody">The text of the message to send. This field is required in the case of SMS messenger type.</param>
+        /// <param name="MessagingTemplate">The messaging template to use in the case of WhatsApp messenger type. This field is required when using WhatsApp messenger type.</param>
+        public SendAgentlessOutboundMessageRequest(string FromAddress = null, string ToAddress = null, ToAddressMessengerTypeEnum? ToAddressMessengerType = null, string TextBody = null, MessagingTemplateRequest MessagingTemplate = null)
         {
             this.FromAddress = FromAddress;
             this.ToAddress = ToAddress;
             this.ToAddressMessengerType = ToAddressMessengerType;
             this.TextBody = TextBody;
+            this.MessagingTemplate = MessagingTemplate;
             
         }
         
         
         
         /// <summary>
-        /// The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned sms phone number.
+        /// The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned SMS phone number. For a WhatsApp messenger type use the provisioned WhatsApp integration’s ID
         /// </summary>
-        /// <value>The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned sms phone number.</value>
+        /// <value>The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned SMS phone number. For a WhatsApp messenger type use the provisioned WhatsApp integration’s ID</value>
         [DataMember(Name="fromAddress", EmitDefaultValue=false)]
         public string FromAddress { get; set; }
         
@@ -151,11 +158,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The text of the message to send
+        /// The text of the message to send. This field is required in the case of SMS messenger type
         /// </summary>
-        /// <value>The text of the message to send</value>
+        /// <value>The text of the message to send. This field is required in the case of SMS messenger type</value>
         [DataMember(Name="textBody", EmitDefaultValue=false)]
         public string TextBody { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The messaging template to use in the case of WhatsApp messenger type. This field is required when using WhatsApp messenger type
+        /// </summary>
+        /// <value>The messaging template to use in the case of WhatsApp messenger type. This field is required when using WhatsApp messenger type</value>
+        [DataMember(Name="messagingTemplate", EmitDefaultValue=false)]
+        public MessagingTemplateRequest MessagingTemplate { get; set; }
         
         
         /// <summary>
@@ -171,6 +187,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ToAddress: ").Append(ToAddress).Append("\n");
             sb.Append("  ToAddressMessengerType: ").Append(ToAddressMessengerType).Append("\n");
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
+            sb.Append("  MessagingTemplate: ").Append(MessagingTemplate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -226,6 +243,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TextBody == other.TextBody ||
                     this.TextBody != null &&
                     this.TextBody.Equals(other.TextBody)
+                ) &&
+                (
+                    this.MessagingTemplate == other.MessagingTemplate ||
+                    this.MessagingTemplate != null &&
+                    this.MessagingTemplate.Equals(other.MessagingTemplate)
                 );
         }
 
@@ -252,6 +274,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TextBody != null)
                     hash = hash * 59 + this.TextBody.GetHashCode();
+                
+                if (this.MessagingTemplate != null)
+                    hash = hash * 59 + this.MessagingTemplate.GetHashCode();
                 
                 return hash;
             }

@@ -12,7 +12,9 @@ title: WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate
 | **IsFullDayRequest** | **bool?** |  | [optional] |
 | **MarkedAsRead** | **bool?** |  | [optional] |
 | **ActivityCodeId** | **string** |  | [optional] |
+| **Paid** | **bool?** |  | [optional] |
 | **Status** | **string** |  | [optional] |
+| **Substatus** | **string** |  | [optional] |
 | **PartialDayStartDateTimes** | **List&lt;string&gt;** |  | [optional] |
 | **FullDayManagementUnitDates** | **List&lt;string&gt;** |  | [optional] |
 | **DailyDurationMinutes** | **int?** |  | [optional] |

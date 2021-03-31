@@ -25,21 +25,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuScheduleRunTopicBuScheduleReference" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        /// <param name="WeekDate">WeekDate.</param>
-        public WfmBuScheduleRunTopicBuScheduleReference(string Id = null, WfmBuScheduleRunTopicLocalDate WeekDate = null)
+        public WfmBuScheduleRunTopicBuScheduleReference(string Id = null)
         {
             this.Id = Id;
-            this.WeekDate = WeekDate;
             
         }
         
@@ -52,14 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Id { get; set; }
         
         
-        
-        /// <summary>
-        /// Gets or Sets WeekDate
-        /// </summary>
-        [DataMember(Name="weekDate", EmitDefaultValue=false)]
-        public WfmBuScheduleRunTopicLocalDate WeekDate { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +55,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class WfmBuScheduleRunTopicBuScheduleReference {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -111,11 +95,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.WeekDate == other.WeekDate ||
-                    this.WeekDate != null &&
-                    this.WeekDate.Equals(other.WeekDate)
                 );
         }
 
@@ -133,9 +112,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.WeekDate != null)
-                    hash = hash * 59 + this.WeekDate.GetHashCode();
                 
                 return hash;
             }

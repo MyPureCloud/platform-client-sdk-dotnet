@@ -33,9 +33,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Type of text messenger.
+        /// Type of messenger.
         /// </summary>
-        /// <value>Type of text messenger.</value>
+        /// <value>Type of messenger.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum MessengerTypeEnum
         {
@@ -114,12 +114,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
-        /// Type of text messenger.
+        /// Type of messenger.
         /// </summary>
-        /// <value>Type of text messenger.</value>
+        /// <value>Type of messenger.</value>
         [DataMember(Name="messengerType", EmitDefaultValue=false)]
         public MessengerTypeEnum? MessengerType { get; set; }
+        
+        
         
         
         
@@ -135,19 +140,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="SendAgentlessOutboundMessageResponse" /> class.
         /// </summary>
         /// <param name="ConversationId">The identifier of the conversation..</param>
-        /// <param name="FromAddress">The sender of the text message..</param>
-        /// <param name="ToAddress">The recipient of the text message..</param>
-        /// <param name="MessengerType">Type of text messenger..</param>
+        /// <param name="FromAddress">The sender of the message..</param>
+        /// <param name="ToAddress">The recipient of the message..</param>
+        /// <param name="MessengerType">Type of messenger..</param>
         /// <param name="TextBody">The body of the text message..</param>
+        /// <param name="MessagingTemplate">The messaging template sent.</param>
         /// <param name="Timestamp">The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="User">Details of the user created the job.</param>
-        public SendAgentlessOutboundMessageResponse(string ConversationId = null, string FromAddress = null, string ToAddress = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, DateTime? Timestamp = null, AddressableEntityRef User = null)
+        public SendAgentlessOutboundMessageResponse(string ConversationId = null, string FromAddress = null, string ToAddress = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, MessagingTemplateRequest MessagingTemplate = null, DateTime? Timestamp = null, AddressableEntityRef User = null)
         {
             this.ConversationId = ConversationId;
             this.FromAddress = FromAddress;
             this.ToAddress = ToAddress;
             this.MessengerType = MessengerType;
             this.TextBody = TextBody;
+            this.MessagingTemplate = MessagingTemplate;
             this.Timestamp = Timestamp;
             this.User = User;
             
@@ -174,18 +181,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The sender of the text message.
+        /// The sender of the message.
         /// </summary>
-        /// <value>The sender of the text message.</value>
+        /// <value>The sender of the message.</value>
         [DataMember(Name="fromAddress", EmitDefaultValue=false)]
         public string FromAddress { get; set; }
         
         
         
         /// <summary>
-        /// The recipient of the text message.
+        /// The recipient of the message.
         /// </summary>
-        /// <value>The recipient of the text message.</value>
+        /// <value>The recipient of the message.</value>
         [DataMember(Name="toAddress", EmitDefaultValue=false)]
         public string ToAddress { get; set; }
         
@@ -199,6 +206,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The body of the text message.</value>
         [DataMember(Name="textBody", EmitDefaultValue=false)]
         public string TextBody { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The messaging template sent
+        /// </summary>
+        /// <value>The messaging template sent</value>
+        [DataMember(Name="messagingTemplate", EmitDefaultValue=false)]
+        public MessagingTemplateRequest MessagingTemplate { get; set; }
         
         
         
@@ -243,6 +259,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ToAddress: ").Append(ToAddress).Append("\n");
             sb.Append("  MessengerType: ").Append(MessengerType).Append("\n");
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
+            sb.Append("  MessagingTemplate: ").Append(MessagingTemplate).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
@@ -313,6 +330,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TextBody.Equals(other.TextBody)
                 ) &&
                 (
+                    this.MessagingTemplate == other.MessagingTemplate ||
+                    this.MessagingTemplate != null &&
+                    this.MessagingTemplate.Equals(other.MessagingTemplate)
+                ) &&
+                (
                     this.Timestamp == other.Timestamp ||
                     this.Timestamp != null &&
                     this.Timestamp.Equals(other.Timestamp)
@@ -358,6 +380,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TextBody != null)
                     hash = hash * 59 + this.TextBody.GetHashCode();
+                
+                if (this.MessagingTemplate != null)
+                    hash = hash * 59 + this.MessagingTemplate.GetHashCode();
                 
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();

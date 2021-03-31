@@ -35,6 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -73,6 +76,56 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CANCELED")]
             Canceled
         }
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Substatus
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SubstatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Advancetimeelapsed for "AdvanceTimeElapsed"
+            /// </summary>
+            [EnumMember(Value = "AdvanceTimeElapsed")]
+            Advancetimeelapsed,
+            
+            /// <summary>
+            /// Enum Autoapproved for "AutoApproved"
+            /// </summary>
+            [EnumMember(Value = "AutoApproved")]
+            Autoapproved,
+            
+            /// <summary>
+            /// Enum Invaliddailyduration for "InvalidDailyDuration"
+            /// </summary>
+            [EnumMember(Value = "InvalidDailyDuration")]
+            Invaliddailyduration,
+            
+            /// <summary>
+            /// Enum Outsideshift for "OutsideShift"
+            /// </summary>
+            [EnumMember(Value = "OutsideShift")]
+            Outsideshift,
+            
+            /// <summary>
+            /// Enum Waitlisted for "Waitlisted"
+            /// </summary>
+            [EnumMember(Value = "Waitlisted")]
+            Waitlisted
+        }
+        
+        
         
         
         
@@ -126,6 +179,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets Substatus
+        /// </summary>
+        [DataMember(Name="substatus", EmitDefaultValue=false)]
+        public SubstatusEnum? Substatus { get; set; }
+        
+        
+        
         
         
         
@@ -154,7 +215,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsFullDayRequest">IsFullDayRequest.</param>
         /// <param name="MarkedAsRead">MarkedAsRead.</param>
         /// <param name="ActivityCodeId">ActivityCodeId.</param>
+        /// <param name="Paid">Paid.</param>
         /// <param name="Status">Status.</param>
+        /// <param name="Substatus">Substatus.</param>
         /// <param name="PartialDayStartDateTimes">PartialDayStartDateTimes.</param>
         /// <param name="FullDayManagementUnitDates">FullDayManagementUnitDates.</param>
         /// <param name="DailyDurationMinutes">DailyDurationMinutes.</param>
@@ -165,14 +228,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SubmittedBy">SubmittedBy.</param>
         /// <param name="ModifiedDate">ModifiedDate.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
-        public WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate(string Id = null, WfmTimeOffRequestUpdateTopicUserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, StatusEnum? Status = null, List<string> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, string Notes = null, string ReviewedDate = null, string ReviewedBy = null, string SubmittedDate = null, string SubmittedBy = null, string ModifiedDate = null, string ModifiedBy = null)
+        public WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate(string Id = null, WfmTimeOffRequestUpdateTopicUserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, bool? Paid = null, StatusEnum? Status = null, SubstatusEnum? Substatus = null, List<string> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, string Notes = null, string ReviewedDate = null, string ReviewedBy = null, string SubmittedDate = null, string SubmittedBy = null, string ModifiedDate = null, string ModifiedBy = null)
         {
             this.Id = Id;
             this.User = User;
             this.IsFullDayRequest = IsFullDayRequest;
             this.MarkedAsRead = MarkedAsRead;
             this.ActivityCodeId = ActivityCodeId;
+            this.Paid = Paid;
             this.Status = Status;
+            this.Substatus = Substatus;
             this.PartialDayStartDateTimes = PartialDayStartDateTimes;
             this.FullDayManagementUnitDates = FullDayManagementUnitDates;
             this.DailyDurationMinutes = DailyDurationMinutes;
@@ -225,6 +290,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="activityCodeId", EmitDefaultValue=false)]
         public string ActivityCodeId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Paid
+        /// </summary>
+        [DataMember(Name="paid", EmitDefaultValue=false)]
+        public bool? Paid { get; set; }
+        
+        
         
         
         
@@ -323,7 +398,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IsFullDayRequest: ").Append(IsFullDayRequest).Append("\n");
             sb.Append("  MarkedAsRead: ").Append(MarkedAsRead).Append("\n");
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
+            sb.Append("  Paid: ").Append(Paid).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  Substatus: ").Append(Substatus).Append("\n");
             sb.Append("  PartialDayStartDateTimes: ").Append(PartialDayStartDateTimes).Append("\n");
             sb.Append("  FullDayManagementUnitDates: ").Append(FullDayManagementUnitDates).Append("\n");
             sb.Append("  DailyDurationMinutes: ").Append(DailyDurationMinutes).Append("\n");
@@ -396,9 +473,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ActivityCodeId.Equals(other.ActivityCodeId)
                 ) &&
                 (
+                    this.Paid == other.Paid ||
+                    this.Paid != null &&
+                    this.Paid.Equals(other.Paid)
+                ) &&
+                (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
+                ) &&
+                (
+                    this.Substatus == other.Substatus ||
+                    this.Substatus != null &&
+                    this.Substatus.Equals(other.Substatus)
                 ) &&
                 (
                     this.PartialDayStartDateTimes == other.PartialDayStartDateTimes ||
@@ -479,8 +566,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.ActivityCodeId != null)
                     hash = hash * 59 + this.ActivityCodeId.GetHashCode();
                 
+                if (this.Paid != null)
+                    hash = hash * 59 + this.Paid.GetHashCode();
+                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+                
+                if (this.Substatus != null)
+                    hash = hash * 59 + this.Substatus.GetHashCode();
                 
                 if (this.PartialDayStartDateTimes != null)
                     hash = hash * 59 + this.PartialDayStartDateTimes.GetHashCode();

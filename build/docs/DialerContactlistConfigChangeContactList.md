@@ -14,6 +14,7 @@ title: DialerContactlistConfigChangeContactList
 | **Version** | **int?** |  | [optional] |
 | **ColumnNames** | **List&lt;string&gt;** |  | [optional] |
 | **PhoneColumns** | [**List&lt;DialerContactlistConfigChangeContactPhoneNumberColumn&gt;**](DialerContactlistConfigChangeContactPhoneNumberColumn.html) |  | [optional] |
+| **EmailColumns** | [**List&lt;DialerContactlistConfigChangeEmailColumn&gt;**](DialerContactlistConfigChangeEmailColumn.html) |  | [optional] |
 | **ImportStatus** | [**DialerContactlistConfigChangeImportStatus**](DialerContactlistConfigChangeImportStatus.html) |  | [optional] |
 | **PreviewModeColumnName** | **string** |  | [optional] |
 | **PreviewModeAcceptedValues** | **List&lt;string&gt;** |  | [optional] |

@@ -304,6 +304,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Cdm,
             
             /// <summary>
+            /// Enum Byoh for "BYOH"
+            /// </summary>
+            [EnumMember(Value = "BYOH")]
+            Byoh,
+            
+            /// <summary>
             /// Enum Invalid for "INVALID"
             /// </summary>
             [EnumMember(Value = "INVALID")]

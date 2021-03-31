@@ -69,16 +69,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
         
         
         
@@ -92,13 +87,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Status">Status.</param>
         /// <param name="OperationId">OperationId.</param>
         /// <param name="Result">Result.</param>
-        /// <param name="WeekDate">WeekDate.</param>
-        public WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateNotification(StatusEnum? Status = null, string OperationId = null, WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResultListing Result = null, WfmBulkShiftTradeStateUpdateNotificationTopicLocalDate WeekDate = null)
+        public WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateNotification(StatusEnum? Status = null, string OperationId = null, WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResultListing Result = null)
         {
             this.Status = Status;
             this.OperationId = OperationId;
             this.Result = Result;
-            this.WeekDate = WeekDate;
             
         }
         
@@ -121,14 +114,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResultListing Result { get; set; }
         
         
-        
-        /// <summary>
-        /// Gets or Sets WeekDate
-        /// </summary>
-        [DataMember(Name="weekDate", EmitDefaultValue=false)]
-        public WfmBulkShiftTradeStateUpdateNotificationTopicLocalDate WeekDate { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -141,7 +126,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  OperationId: ").Append(OperationId).Append("\n");
             sb.Append("  Result: ").Append(Result).Append("\n");
-            sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -192,11 +176,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Result == other.Result ||
                     this.Result != null &&
                     this.Result.Equals(other.Result)
-                ) &&
-                (
-                    this.WeekDate == other.WeekDate ||
-                    this.WeekDate != null &&
-                    this.WeekDate.Equals(other.WeekDate)
                 );
         }
 
@@ -220,9 +199,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Result != null)
                     hash = hash * 59 + this.Result.GetHashCode();
-                
-                if (this.WeekDate != null)
-                    hash = hash * 59 + this.WeekDate.GetHashCode();
                 
                 return hash;
             }

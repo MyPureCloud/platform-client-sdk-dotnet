@@ -138,9 +138,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Avatar image
+        /// Path or URI to an image file containing an avatar
         /// </summary>
-        /// <value>Avatar image</value>
+        /// <value>Path or URI to an image file containing an avatar</value>
         [DataMember(Name="image", EmitDefaultValue=false)]
         public string Image { get; private set; }
         

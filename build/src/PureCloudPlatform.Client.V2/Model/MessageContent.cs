@@ -54,6 +54,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Quickreply,
             
             /// <summary>
+            /// Enum Buttonresponse for "ButtonResponse"
+            /// </summary>
+            [EnumMember(Value = "ButtonResponse")]
+            Buttonresponse,
+            
+            /// <summary>
             /// Enum Notification for "Notification"
             /// </summary>
             [EnumMember(Value = "Notification")]
@@ -121,12 +127,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Type of this content element. If contentType = \"Attachment\" only one item is allowed.
         /// </summary>
         /// <value>Type of this content element. If contentType = \"Attachment\" only one item is allowed.</value>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public ContentTypeEnum? ContentType { get; set; }
+        
+        
         
         
         
@@ -161,18 +172,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Location">Location object.</param>
         /// <param name="Attachment">Attachment object.</param>
         /// <param name="QuickReply">Quick reply object.</param>
+        /// <param name="ButtonResponse">Button response object.</param>
         /// <param name="Generic">Generic content object.</param>
         /// <param name="List">List content object.</param>
         /// <param name="Template">Template notification object.</param>
         /// <param name="Reactions">A list of reactions.</param>
         /// <param name="Mention">This is used to identify who the message is sent to, as well as who it was sent from. This information is channel specific - depends on capabilities to describe party by the platform.</param>
         /// <param name="Postback">The postback object result of a user clicking in a button.</param>
-        public MessageContent(ContentTypeEnum? ContentType = null, ContentLocation Location = null, ContentAttachment Attachment = null, ContentQuickReply QuickReply = null, ContentGeneric Generic = null, ContentList List = null, ContentNotificationTemplate Template = null, List<ContentReaction> Reactions = null, MessagingRecipient Mention = null, ContentPostback Postback = null)
+        public MessageContent(ContentTypeEnum? ContentType = null, ContentLocation Location = null, ContentAttachment Attachment = null, ContentQuickReply QuickReply = null, ContentButtonResponse ButtonResponse = null, ContentGeneric Generic = null, ContentList List = null, ContentNotificationTemplate Template = null, List<ContentReaction> Reactions = null, MessagingRecipient Mention = null, ContentPostback Postback = null)
         {
             this.ContentType = ContentType;
             this.Location = Location;
             this.Attachment = Attachment;
             this.QuickReply = QuickReply;
+            this.ButtonResponse = ButtonResponse;
             this.Generic = Generic;
             this.List = List;
             this.Template = Template;
@@ -210,6 +223,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Quick reply object</value>
         [DataMember(Name="quickReply", EmitDefaultValue=false)]
         public ContentQuickReply QuickReply { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Button response object
+        /// </summary>
+        /// <value>Button response object</value>
+        [DataMember(Name="buttonResponse", EmitDefaultValue=false)]
+        public ContentButtonResponse ButtonResponse { get; set; }
         
         
         
@@ -279,6 +301,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Location: ").Append(Location).Append("\n");
             sb.Append("  Attachment: ").Append(Attachment).Append("\n");
             sb.Append("  QuickReply: ").Append(QuickReply).Append("\n");
+            sb.Append("  ButtonResponse: ").Append(ButtonResponse).Append("\n");
             sb.Append("  Generic: ").Append(Generic).Append("\n");
             sb.Append("  List: ").Append(List).Append("\n");
             sb.Append("  Template: ").Append(Template).Append("\n");
@@ -342,6 +365,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QuickReply.Equals(other.QuickReply)
                 ) &&
                 (
+                    this.ButtonResponse == other.ButtonResponse ||
+                    this.ButtonResponse != null &&
+                    this.ButtonResponse.Equals(other.ButtonResponse)
+                ) &&
+                (
                     this.Generic == other.Generic ||
                     this.Generic != null &&
                     this.Generic.Equals(other.Generic)
@@ -396,6 +424,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.QuickReply != null)
                     hash = hash * 59 + this.QuickReply.GetHashCode();
+                
+                if (this.ButtonResponse != null)
+                    hash = hash * 59 + this.ButtonResponse.GetHashCode();
                 
                 if (this.Generic != null)
                     hash = hash * 59 + this.Generic.GetHashCode();

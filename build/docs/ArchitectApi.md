@@ -66,8 +66,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlowsExecution**](ArchitectApi.html#getflowsexecution) | **GET** /api/v2/flows/executions/{flowExecutionId} | Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. |
 | [**GetFlowsMilestone**](ArchitectApi.html#getflowsmilestone) | **GET** /api/v2/flows/milestones/{milestoneId} | Get a flow milestone |
 | [**GetFlowsMilestones**](ArchitectApi.html#getflowsmilestones) | **GET** /api/v2/flows/milestones | Get a pageable list of flow milestones, filtered by query parameters |
+| [**GetFlowsMilestonesDivisionviews**](ArchitectApi.html#getflowsmilestonesdivisionviews) | **GET** /api/v2/flows/milestones/divisionviews | Get a pageable list of basic flow milestone information objects filterable by query parameters. |
 | [**GetFlowsOutcome**](ArchitectApi.html#getflowsoutcome) | **GET** /api/v2/flows/outcomes/{flowOutcomeId} | Get a flow outcome |
 | [**GetFlowsOutcomes**](ArchitectApi.html#getflowsoutcomes) | **GET** /api/v2/flows/outcomes | Get a pageable list of flow outcomes, filtered by query parameters |
+| [**GetFlowsOutcomesDivisionviews**](ArchitectApi.html#getflowsoutcomesdivisionviews) | **GET** /api/v2/flows/outcomes/divisionviews | Get a pageable list of basic flow outcome information objects filterable by query parameters. |
 | [**PostArchitectDependencytrackingBuild**](ArchitectApi.html#postarchitectdependencytrackingbuild) | **POST** /api/v2/architect/dependencytracking/build | Rebuild Dependency Tracking data for an organization |
 | [**PostArchitectEmergencygroups**](ArchitectApi.html#postarchitectemergencygroups) | **POST** /api/v2/architect/emergencygroups | Creates a new emergency group |
 | [**PostArchitectIvrs**](ArchitectApi.html#postarchitectivrs) | **POST** /api/v2/architect/ivrs | Create IVR config. |
@@ -4165,7 +4167,7 @@ namespace Example
 
 <a name="getflowsmilestones"></a>
 
-## [**FlowMilestoneListing**](FlowMilestoneListing.html) GetFlowsMilestones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null)
+## [**FlowMilestoneListing**](FlowMilestoneListing.html) GetFlowsMilestones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null)
 
 
 
@@ -4207,11 +4209,12 @@ namespace Example
             var name = name_example;  // string | Name (optional) 
             var description = description_example;  // string | Description (optional) 
             var nameOrDescription = nameOrDescription_example;  // string | Name or description (optional) 
+            var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
 
             try
             { 
                 // Get a pageable list of flow milestones, filtered by query parameters
-                FlowMilestoneListing result = apiInstance.GetFlowsMilestones(pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription);
+                FlowMilestoneListing result = apiInstance.GetFlowsMilestones(pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, divisionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4236,11 +4239,89 @@ namespace Example
 | **name** | **string**| Name | [optional]  |
 | **description** | **string**| Description | [optional]  |
 | **nameOrDescription** | **string**| Name or description | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| division ID(s) | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 [**FlowMilestoneListing**](FlowMilestoneListing.html)
+
+<a name="getflowsmilestonesdivisionviews"></a>
+
+## [**FlowMilestoneDivisionViewEntityListing**](FlowMilestoneDivisionViewEntityListing.html) GetFlowsMilestonesDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+
+
+
+Get a pageable list of basic flow milestone information objects filterable by query parameters.
+
+This returns flow milestones consisting of name and division. If one or more IDs are specified, the search will fetch flow milestones that match the given ID(s) and not use any additional supplied query parameters in the search.
+
+Requires ALL permissions: 
+
+* architect:flowMilestone:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsMilestonesDivisionviewsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            var id = new List<string>(); // List<string> | ID (optional) 
+            var name = name_example;  // string | Name (optional) 
+            var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
+
+            try
+            { 
+                // Get a pageable list of basic flow milestone information objects filterable by query parameters.
+                FlowMilestoneDivisionViewEntityListing result = apiInstance.GetFlowsMilestonesDivisionviews(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsMilestonesDivisionviews: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortBy** | **string**| Sort by | [optional] [default to id] |
+| **sortOrder** | **string**| Sort order | [optional] [default to asc] |
+| **id** | [**List<string>**](string.html)| ID | [optional]  |
+| **name** | **string**| Name | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| division ID(s) | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FlowMilestoneDivisionViewEntityListing**](FlowMilestoneDivisionViewEntityListing.html)
 
 <a name="getflowsoutcome"></a>
 
@@ -4309,7 +4390,7 @@ namespace Example
 
 <a name="getflowsoutcomes"></a>
 
-## [**FlowOutcomeListing**](FlowOutcomeListing.html) GetFlowsOutcomes (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null)
+## [**FlowOutcomeListing**](FlowOutcomeListing.html) GetFlowsOutcomes (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null)
 
 
 
@@ -4351,11 +4432,12 @@ namespace Example
             var name = name_example;  // string | Name (optional) 
             var description = description_example;  // string | Description (optional) 
             var nameOrDescription = nameOrDescription_example;  // string | Name or description (optional) 
+            var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
 
             try
             { 
                 // Get a pageable list of flow outcomes, filtered by query parameters
-                FlowOutcomeListing result = apiInstance.GetFlowsOutcomes(pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription);
+                FlowOutcomeListing result = apiInstance.GetFlowsOutcomes(pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, divisionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4380,11 +4462,89 @@ namespace Example
 | **name** | **string**| Name | [optional]  |
 | **description** | **string**| Description | [optional]  |
 | **nameOrDescription** | **string**| Name or description | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| division ID(s) | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 [**FlowOutcomeListing**](FlowOutcomeListing.html)
+
+<a name="getflowsoutcomesdivisionviews"></a>
+
+## [**FlowOutcomeDivisionViewEntityListing**](FlowOutcomeDivisionViewEntityListing.html) GetFlowsOutcomesDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+
+
+
+Get a pageable list of basic flow outcome information objects filterable by query parameters.
+
+This returns flow outcomes consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+
+Requires ALL permissions: 
+
+* architect:flowOutcome:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsOutcomesDivisionviewsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            var id = new List<string>(); // List<string> | ID (optional) 
+            var name = name_example;  // string | Name (optional) 
+            var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
+
+            try
+            { 
+                // Get a pageable list of basic flow outcome information objects filterable by query parameters.
+                FlowOutcomeDivisionViewEntityListing result = apiInstance.GetFlowsOutcomesDivisionviews(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsOutcomesDivisionviews: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortBy** | **string**| Sort by | [optional] [default to id] |
+| **sortOrder** | **string**| Sort order | [optional] [default to asc] |
+| **id** | [**List<string>**](string.html)| ID | [optional]  |
+| **name** | **string**| Name | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| division ID(s) | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FlowOutcomeDivisionViewEntityListing**](FlowOutcomeDivisionViewEntityListing.html)
 
 <a name="postarchitectdependencytrackingbuild"></a>
 

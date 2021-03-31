@@ -9,6 +9,7 @@ title: AnalyticsUserDetailsQueryResponse
 |------------ | ------------- | ------------- | -------------|
 | **UserDetails** | [**List&lt;AnalyticsUserDetail&gt;**](AnalyticsUserDetail.html) |  | [optional] |
 | **Aggregations** | [**List&lt;AggregationResult&gt;**](AggregationResult.html) |  | [optional] |
+| **TotalHits** | **int?** |  | [optional] |
 {: class="table table-striped"}
 
 

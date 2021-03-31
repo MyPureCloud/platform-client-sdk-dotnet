@@ -11,6 +11,7 @@ title: MessageContent
 | **Location** | [**ContentLocation**](ContentLocation.html) | Location object | [optional] |
 | **Attachment** | [**ContentAttachment**](ContentAttachment.html) | Attachment object | [optional] |
 | **QuickReply** | [**ContentQuickReply**](ContentQuickReply.html) | Quick reply object | [optional] |
+| **ButtonResponse** | [**ContentButtonResponse**](ContentButtonResponse.html) | Button response object | [optional] |
 | **Generic** | [**ContentGeneric**](ContentGeneric.html) | Generic content object | [optional] |
 | **List** | [**ContentList**](ContentList.html) | List content object | [optional] |
 | **Template** | [**ContentNotificationTemplate**](ContentNotificationTemplate.html) | Template notification object | [optional] |

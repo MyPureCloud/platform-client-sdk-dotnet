@@ -416,7 +416,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum AgentDevelopmentSummaryView for "AGENT_DEVELOPMENT_SUMMARY_VIEW"
             /// </summary>
             [EnumMember(Value = "AGENT_DEVELOPMENT_SUMMARY_VIEW")]
-            AgentDevelopmentSummaryView
+            AgentDevelopmentSummaryView,
+            
+            /// <summary>
+            /// Enum AgentScorecardView for "AGENT_SCORECARD_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_SCORECARD_VIEW")]
+            AgentScorecardView,
+            
+            /// <summary>
+            /// Enum AgentScorecardMeView for "AGENT_SCORECARD_ME_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_SCORECARD_ME_VIEW")]
+            AgentScorecardMeView,
+            
+            /// <summary>
+            /// Enum AgentGamificationLeadershipView for "AGENT_GAMIFICATION_LEADERSHIP_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_GAMIFICATION_LEADERSHIP_VIEW")]
+            AgentGamificationLeadershipView,
+            
+            /// <summary>
+            /// Enum AgentScheduleMeView for "AGENT_SCHEDULE_ME_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_SCHEDULE_ME_VIEW")]
+            AgentScheduleMeView
         }
         
         

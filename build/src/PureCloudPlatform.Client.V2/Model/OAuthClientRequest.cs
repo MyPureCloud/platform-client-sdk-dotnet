@@ -57,12 +57,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Code,
             
             /// <summary>
-            /// Enum CodePkce for "CODE_PKCE"
-            /// </summary>
-            [EnumMember(Value = "CODE_PKCE")]
-            CodePkce,
-            
-            /// <summary>
             /// Enum Token for "TOKEN"
             /// </summary>
             [EnumMember(Value = "TOKEN")]

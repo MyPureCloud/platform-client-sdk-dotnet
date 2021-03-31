@@ -313,9 +313,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// Gets or Sets RequestedRoutings
         /// </summary>
@@ -421,6 +418,21 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Standard")]
             Standard
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -573,14 +585,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
         /// <summary>
         /// Complete routing method
         /// </summary>
         /// <value>Complete routing method</value>
         [DataMember(Name="usedRouting", EmitDefaultValue=false)]
         public UsedRoutingEnum? UsedRouting { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -618,7 +638,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EdgeId">Unique identifier of the edge device.</param>
         /// <param name="RemoteNameDisplayable">RemoteNameDisplayable.</param>
         /// <param name="RoomId">Unique identifier for the room.</param>
-        /// <param name="MonitoredSessionId">The sessionID being monitored.</param>
         /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
         /// <param name="CallbackUserName">The name of the user requesting a call back.</param>
         /// <param name="CallbackNumbers">List of numbers to callback.</param>
@@ -661,7 +680,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ProposedAgents">Proposed agents.</param>
         /// <param name="AssignerId">ID of the user that manually assigned a conversation.</param>
         /// <param name="AcwSkipped">Marker for an agent that skipped after call work.</param>
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string SessionDnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, bool? Recording = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string JourneyActionId = null, string JourneyActionMapId = null, string JourneyActionMapVersion = null, string ProtocolCallId = null, string Provider = null, string Remote = null, int? MediaCount = null, string FlowInType = null, string FlowOutType = null, List<RequestedRoutingsEnum> RequestedRoutings = null, UsedRoutingEnum? UsedRouting = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string AgentAssistantId = null, List<AnalyticsProposedAgent> ProposedAgents = null, string AssignerId = null, bool? AcwSkipped = null)
+        /// <param name="BullseyeRing">Bullseye ring of the conversation.</param>
+        /// <param name="AgentBullseyeRing">Bullseye ring of the targeted agent.</param>
+        /// <param name="RoutingRule">Routing rule the conversation is in for preferred agent routing.</param>
+        /// <param name="RemovedSkillIds">IDs of skills that have been removed by bullseye routing.</param>
+        /// <param name="ActiveSkillIds">IDs of Skills that are active on the conversation.</param>
+        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string SessionDnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, bool? Recording = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string JourneyActionId = null, string JourneyActionMapId = null, string JourneyActionMapVersion = null, string ProtocolCallId = null, string Provider = null, string Remote = null, int? MediaCount = null, string FlowInType = null, string FlowOutType = null, List<RequestedRoutingsEnum> RequestedRoutings = null, UsedRoutingEnum? UsedRouting = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string AgentAssistantId = null, List<AnalyticsProposedAgent> ProposedAgents = null, string AssignerId = null, bool? AcwSkipped = null, int? BullseyeRing = null, int? AgentBullseyeRing = null, int? RoutingRule = null, List<string> RemovedSkillIds = null, List<string> ActiveSkillIds = null)
         {
             this.MediaType = MediaType;
             this.SessionId = SessionId;
@@ -682,7 +706,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EdgeId = EdgeId;
             this.RemoteNameDisplayable = RemoteNameDisplayable;
             this.RoomId = RoomId;
-            this.MonitoredSessionId = MonitoredSessionId;
             this.MonitoredParticipantId = MonitoredParticipantId;
             this.CallbackUserName = CallbackUserName;
             this.CallbackNumbers = CallbackNumbers;
@@ -725,6 +748,11 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ProposedAgents = ProposedAgents;
             this.AssignerId = AssignerId;
             this.AcwSkipped = AcwSkipped;
+            this.BullseyeRing = BullseyeRing;
+            this.AgentBullseyeRing = AgentBullseyeRing;
+            this.RoutingRule = RoutingRule;
+            this.RemovedSkillIds = RemovedSkillIds;
+            this.ActiveSkillIds = ActiveSkillIds;
             
         }
         
@@ -872,15 +900,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Unique identifier for the room</value>
         [DataMember(Name="roomId", EmitDefaultValue=false)]
         public string RoomId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The sessionID being monitored
-        /// </summary>
-        /// <value>The sessionID being monitored</value>
-        [DataMember(Name="monitoredSessionId", EmitDefaultValue=false)]
-        public string MonitoredSessionId { get; set; }
         
         
         
@@ -1252,6 +1271,51 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? AcwSkipped { get; set; }
         
         
+        
+        /// <summary>
+        /// Bullseye ring of the conversation
+        /// </summary>
+        /// <value>Bullseye ring of the conversation</value>
+        [DataMember(Name="bullseyeRing", EmitDefaultValue=false)]
+        public int? BullseyeRing { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Bullseye ring of the targeted agent
+        /// </summary>
+        /// <value>Bullseye ring of the targeted agent</value>
+        [DataMember(Name="agentBullseyeRing", EmitDefaultValue=false)]
+        public int? AgentBullseyeRing { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Routing rule the conversation is in for preferred agent routing
+        /// </summary>
+        /// <value>Routing rule the conversation is in for preferred agent routing</value>
+        [DataMember(Name="routingRule", EmitDefaultValue=false)]
+        public int? RoutingRule { get; set; }
+        
+        
+        
+        /// <summary>
+        /// IDs of skills that have been removed by bullseye routing
+        /// </summary>
+        /// <value>IDs of skills that have been removed by bullseye routing</value>
+        [DataMember(Name="removedSkillIds", EmitDefaultValue=false)]
+        public List<string> RemovedSkillIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// IDs of Skills that are active on the conversation
+        /// </summary>
+        /// <value>IDs of Skills that are active on the conversation</value>
+        [DataMember(Name="activeSkillIds", EmitDefaultValue=false)]
+        public List<string> ActiveSkillIds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1280,7 +1344,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EdgeId: ").Append(EdgeId).Append("\n");
             sb.Append("  RemoteNameDisplayable: ").Append(RemoteNameDisplayable).Append("\n");
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
-            sb.Append("  MonitoredSessionId: ").Append(MonitoredSessionId).Append("\n");
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
             sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
@@ -1323,6 +1386,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ProposedAgents: ").Append(ProposedAgents).Append("\n");
             sb.Append("  AssignerId: ").Append(AssignerId).Append("\n");
             sb.Append("  AcwSkipped: ").Append(AcwSkipped).Append("\n");
+            sb.Append("  BullseyeRing: ").Append(BullseyeRing).Append("\n");
+            sb.Append("  AgentBullseyeRing: ").Append(AgentBullseyeRing).Append("\n");
+            sb.Append("  RoutingRule: ").Append(RoutingRule).Append("\n");
+            sb.Append("  RemovedSkillIds: ").Append(RemovedSkillIds).Append("\n");
+            sb.Append("  ActiveSkillIds: ").Append(ActiveSkillIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1453,11 +1521,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RoomId == other.RoomId ||
                     this.RoomId != null &&
                     this.RoomId.Equals(other.RoomId)
-                ) &&
-                (
-                    this.MonitoredSessionId == other.MonitoredSessionId ||
-                    this.MonitoredSessionId != null &&
-                    this.MonitoredSessionId.Equals(other.MonitoredSessionId)
                 ) &&
                 (
                     this.MonitoredParticipantId == other.MonitoredParticipantId ||
@@ -1668,6 +1731,31 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AcwSkipped == other.AcwSkipped ||
                     this.AcwSkipped != null &&
                     this.AcwSkipped.Equals(other.AcwSkipped)
+                ) &&
+                (
+                    this.BullseyeRing == other.BullseyeRing ||
+                    this.BullseyeRing != null &&
+                    this.BullseyeRing.Equals(other.BullseyeRing)
+                ) &&
+                (
+                    this.AgentBullseyeRing == other.AgentBullseyeRing ||
+                    this.AgentBullseyeRing != null &&
+                    this.AgentBullseyeRing.Equals(other.AgentBullseyeRing)
+                ) &&
+                (
+                    this.RoutingRule == other.RoutingRule ||
+                    this.RoutingRule != null &&
+                    this.RoutingRule.Equals(other.RoutingRule)
+                ) &&
+                (
+                    this.RemovedSkillIds == other.RemovedSkillIds ||
+                    this.RemovedSkillIds != null &&
+                    this.RemovedSkillIds.SequenceEqual(other.RemovedSkillIds)
+                ) &&
+                (
+                    this.ActiveSkillIds == other.ActiveSkillIds ||
+                    this.ActiveSkillIds != null &&
+                    this.ActiveSkillIds.SequenceEqual(other.ActiveSkillIds)
                 );
         }
 
@@ -1739,9 +1827,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RoomId != null)
                     hash = hash * 59 + this.RoomId.GetHashCode();
-                
-                if (this.MonitoredSessionId != null)
-                    hash = hash * 59 + this.MonitoredSessionId.GetHashCode();
                 
                 if (this.MonitoredParticipantId != null)
                     hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();
@@ -1868,6 +1953,21 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AcwSkipped != null)
                     hash = hash * 59 + this.AcwSkipped.GetHashCode();
+                
+                if (this.BullseyeRing != null)
+                    hash = hash * 59 + this.BullseyeRing.GetHashCode();
+                
+                if (this.AgentBullseyeRing != null)
+                    hash = hash * 59 + this.AgentBullseyeRing.GetHashCode();
+                
+                if (this.RoutingRule != null)
+                    hash = hash * 59 + this.RoutingRule.GetHashCode();
+                
+                if (this.RemovedSkillIds != null)
+                    hash = hash * 59 + this.RemovedSkillIds.GetHashCode();
+                
+                if (this.ActiveSkillIds != null)
+                    hash = hash * 59 + this.ActiveSkillIds.GetHashCode();
                 
                 return hash;
             }

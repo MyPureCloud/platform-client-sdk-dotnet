@@ -7,7 +7,6 @@ title: UserDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **DataAvailabilityDate** | [**UserDetailsDatalakeAvailabilityTopicDateTime**](UserDetailsDatalakeAvailabilityTopicDateTime.html) |  | [optional] |
 {: class="table table-striped"}
 
 

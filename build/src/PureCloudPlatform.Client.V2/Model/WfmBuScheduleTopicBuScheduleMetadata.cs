@@ -60,17 +60,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuScheduleTopicBuScheduleMetadata" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        /// <param name="WeekDate">WeekDate.</param>
         /// <param name="WeekCount">WeekCount.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Published">Published.</param>
@@ -78,10 +72,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ManagementUnits">ManagementUnits.</param>
         /// <param name="GenerationResults">GenerationResults.</param>
         /// <param name="Metadata">Metadata.</param>
-        public WfmBuScheduleTopicBuScheduleMetadata(string Id = null, WfmBuScheduleTopicLocalDate WeekDate = null, int? WeekCount = null, string Description = null, bool? Published = null, WfmBuScheduleTopicBuShortTermForecastReference ShortTermForecast = null, List<WfmBuScheduleTopicBuManagementUnitScheduleSummary> ManagementUnits = null, WfmBuScheduleTopicBuScheduleGenerationResultSummary GenerationResults = null, WfmBuScheduleTopicWfmVersionedEntityMetadata Metadata = null)
+        public WfmBuScheduleTopicBuScheduleMetadata(string Id = null, int? WeekCount = null, string Description = null, bool? Published = null, WfmBuScheduleTopicBuShortTermForecastReference ShortTermForecast = null, List<WfmBuScheduleTopicBuManagementUnitScheduleSummary> ManagementUnits = null, WfmBuScheduleTopicBuScheduleGenerationResultSummary GenerationResults = null, WfmBuScheduleTopicWfmVersionedEntityMetadata Metadata = null)
         {
             this.Id = Id;
-            this.WeekDate = WeekDate;
             this.WeekCount = WeekCount;
             this.Description = Description;
             this.Published = Published;
@@ -99,14 +92,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets WeekDate
-        /// </summary>
-        [DataMember(Name="weekDate", EmitDefaultValue=false)]
-        public WfmBuScheduleTopicLocalDate WeekDate { get; set; }
         
         
         
@@ -175,7 +160,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class WfmBuScheduleTopicBuScheduleMetadata {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
             sb.Append("  WeekCount: ").Append(WeekCount).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Published: ").Append(Published).Append("\n");
@@ -223,11 +207,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.WeekDate == other.WeekDate ||
-                    this.WeekDate != null &&
-                    this.WeekDate.Equals(other.WeekDate)
                 ) &&
                 (
                     this.WeekCount == other.WeekCount ||
@@ -280,9 +259,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.WeekDate != null)
-                    hash = hash * 59 + this.WeekDate.GetHashCode();
                 
                 if (this.WeekCount != null)
                     hash = hash * 59 + this.WeekCount.GetHashCode();
