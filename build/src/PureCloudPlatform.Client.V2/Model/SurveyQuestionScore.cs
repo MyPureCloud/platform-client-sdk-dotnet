@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="QuestionId">QuestionId.</param>
         /// <param name="AnswerId">AnswerId.</param>
-        /// <param name="Score">Score.</param>
+        /// <param name="Score">Unweighted score of the question.</param>
         /// <param name="MarkedNA">MarkedNA.</param>
         /// <param name="NpsScore">NpsScore.</param>
         /// <param name="NpsTextAnswer">NpsTextAnswer.</param>
@@ -97,8 +97,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Score
+        /// Unweighted score of the question
         /// </summary>
+        /// <value>Unweighted score of the question</value>
         [DataMember(Name="score", EmitDefaultValue=false)]
         public int? Score { get; set; }
         

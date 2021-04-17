@@ -3675,7 +3675,7 @@ namespace Example
 
 <a name="patchroutingqueuemember"></a>
 
-## [**QueueMember**](QueueMember.html) PatchRoutingQueueMember (string queueId, string memberId, QueueMember body)
+## void PatchRoutingQueueMember (string queueId, string memberId, QueueMember body)
 
 
 
@@ -3717,8 +3717,7 @@ namespace Example
             try
             { 
                 // Update the ring number OR joined status for a queue member.
-                QueueMember result = apiInstance.PatchRoutingQueueMember(queueId, memberId, body);
-                Debug.WriteLine(result);
+                apiInstance.PatchRoutingQueueMember(queueId, memberId, body);
             }
             catch (Exception e)
             {
@@ -3741,7 +3740,7 @@ namespace Example
 
 ### Return type
 
-[**QueueMember**](QueueMember.html)
+void (empty response body)
 
 <a name="patchroutingqueuemembers"></a>
 
@@ -3813,7 +3812,7 @@ namespace Example
 
 <a name="patchroutingqueueuser"></a>
 
-## [**QueueMember**](QueueMember.html) PatchRoutingQueueUser (string queueId, string memberId, QueueMember body)
+## void PatchRoutingQueueUser (string queueId, string memberId, QueueMember body)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -3855,8 +3854,7 @@ namespace Example
             try
             { 
                 // DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue.
-                QueueMember result = apiInstance.PatchRoutingQueueUser(queueId, memberId, body);
-                Debug.WriteLine(result);
+                apiInstance.PatchRoutingQueueUser(queueId, memberId, body);
             }
             catch (Exception e)
             {
@@ -3879,7 +3877,7 @@ namespace Example
 
 ### Return type
 
-[**QueueMember**](QueueMember.html)
+void (empty response body)
 
 <a name="patchroutingqueueusers"></a>
 

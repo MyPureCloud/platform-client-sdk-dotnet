@@ -7,17 +7,17 @@ title: AnalyticsEvaluation
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **EvaluationId** | **string** | Unique identifier for the evaluation | [optional] |
-| **EvaluatorId** | **string** | A unique identifier of the PureCloud user who evaluated the interaction | [optional] |
-| **UserId** | **string** | Unique identifier for the user being evaluated | [optional] |
-| **EventTime** | **DateTime?** | Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **QueueId** | **string** | Unique identifier for the queue the conversation was on | [optional] |
-| **FormId** | **string** | Unique identifier for the form used to evaluate the conversation/agent | [optional] |
+| **CalibrationId** | **string** | The calibration ID used for the purpose of training evaluators | [optional] |
 | **ContextId** | **string** | A unique identifier for an evaluation form, regardless of version | [optional] |
-| **FormName** | **string** | Name of the evaluation form | [optional] |
-| **CalibrationId** | **string** | The calibration id used for the purpose of training evaluators | [optional] |
-| **Rescored** | **bool?** | Whether this evaluation has ever been rescored | [optional] |
-| **Deleted** | **bool?** | Whether this evaluation has been deleted | [optional] |
+| **Deleted** | **bool?** | Whether the evaluation has been deleted | [optional] |
+| **EvaluationId** | **string** | Unique identifier for the evaluation | [optional] |
+| **EvaluatorId** | **string** | A unique identifier of the user who evaluated the interaction | [optional] |
+| **EventTime** | **DateTime?** | Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **FormId** | **string** | ID of the evaluation form used | [optional] |
+| **FormName** | **string** | Name of the evaluation form used | [optional] |
+| **QueueId** | **string** | The ID of the associated queue | [optional] |
+| **Rescored** | **bool?** | Whether the evaluation has been rescored at least once | [optional] |
+| **UserId** | **string** | ID of the agent the evaluation was performed against | [optional] |
 | **OTotalCriticalScore** | **long?** |  | [optional] |
 | **OTotalScore** | **long?** |  | [optional] |
 {: class="table table-striped"}

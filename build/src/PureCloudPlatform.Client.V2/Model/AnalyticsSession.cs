@@ -20,69 +20,35 @@ namespace PureCloudPlatform.Client.V2.Model
     {
         
         
-        /// <summary>
-        /// The session media type
-        /// </summary>
-        /// <value>The session media type</value>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum MediaTypeEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Voice for "voice"
-            /// </summary>
-            [EnumMember(Value = "voice")]
-            Voice,
-            
-            /// <summary>
-            /// Enum Chat for "chat"
-            /// </summary>
-            [EnumMember(Value = "chat")]
-            Chat,
-            
-            /// <summary>
-            /// Enum Email for "email"
-            /// </summary>
-            [EnumMember(Value = "email")]
-            Email,
-            
-            /// <summary>
-            /// Enum Callback for "callback"
-            /// </summary>
-            [EnumMember(Value = "callback")]
-            Callback,
-            
-            /// <summary>
-            /// Enum Cobrowse for "cobrowse"
-            /// </summary>
-            [EnumMember(Value = "cobrowse")]
-            Cobrowse,
-            
-            /// <summary>
-            /// Enum Video for "video"
-            /// </summary>
-            [EnumMember(Value = "video")]
-            Video,
-            
-            /// <summary>
-            /// Enum Screenshare for "screenshare"
-            /// </summary>
-            [EnumMember(Value = "screenshare")]
-            Screenshare,
-            
-            /// <summary>
-            /// Enum Message for "message"
-            /// </summary>
-            [EnumMember(Value = "message")]
-            Message
-        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -103,55 +69,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Message type for messaging services such as sms
+        /// The direction of the communication
         /// </summary>
-        /// <value>Message type for messaging services such as sms</value>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum MessageTypeEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Sms for "sms"
-            /// </summary>
-            [EnumMember(Value = "sms")]
-            Sms,
-            
-            /// <summary>
-            /// Enum Facebook for "facebook"
-            /// </summary>
-            [EnumMember(Value = "facebook")]
-            Facebook,
-            
-            /// <summary>
-            /// Enum Twitter for "twitter"
-            /// </summary>
-            [EnumMember(Value = "twitter")]
-            Twitter,
-            
-            /// <summary>
-            /// Enum Line for "line"
-            /// </summary>
-            [EnumMember(Value = "line")]
-            Line
-        }
-        
-        
-        
-        
-        
-        
-        
-        /// <summary>
-        /// Direction
-        /// </summary>
-        /// <value>Direction</value>
+        /// <value>The direction of the communication</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DirectionEnum
         {
@@ -224,53 +144,69 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        /// <summary>
+        /// The session media type
+        /// </summary>
+        /// <value>The session media type</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MediaTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Callback for "callback"
+            /// </summary>
+            [EnumMember(Value = "callback")]
+            Callback,
+            
+            /// <summary>
+            /// Enum Chat for "chat"
+            /// </summary>
+            [EnumMember(Value = "chat")]
+            Chat,
+            
+            /// <summary>
+            /// Enum Cobrowse for "cobrowse"
+            /// </summary>
+            [EnumMember(Value = "cobrowse")]
+            Cobrowse,
+            
+            /// <summary>
+            /// Enum Email for "email"
+            /// </summary>
+            [EnumMember(Value = "email")]
+            Email,
+            
+            /// <summary>
+            /// Enum Message for "message"
+            /// </summary>
+            [EnumMember(Value = "message")]
+            Message,
+            
+            /// <summary>
+            /// Enum Screenshare for "screenshare"
+            /// </summary>
+            [EnumMember(Value = "screenshare")]
+            Screenshare,
+            
+            /// <summary>
+            /// Enum Video for "video"
+            /// </summary>
+            [EnumMember(Value = "video")]
+            Video,
+            
+            /// <summary>
+            /// Enum Voice for "voice"
+            /// </summary>
+            [EnumMember(Value = "voice")]
+            Voice
+        }
         
         
         
@@ -328,6 +264,24 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Bullseye for "Bullseye"
+            /// </summary>
+            [EnumMember(Value = "Bullseye")]
+            Bullseye,
+            
+            /// <summary>
+            /// Enum Last for "Last"
+            /// </summary>
+            [EnumMember(Value = "Last")]
+            Last,
+            
+            /// <summary>
+            /// Enum Manual for "Manual"
+            /// </summary>
+            [EnumMember(Value = "Manual")]
+            Manual,
+            
+            /// <summary>
             /// Enum Predictive for "Predictive"
             /// </summary>
             [EnumMember(Value = "Predictive")]
@@ -340,29 +294,47 @@ namespace PureCloudPlatform.Client.V2.Model
             Preferred,
             
             /// <summary>
-            /// Enum Manual for "Manual"
-            /// </summary>
-            [EnumMember(Value = "Manual")]
-            Manual,
-            
-            /// <summary>
-            /// Enum Last for "Last"
-            /// </summary>
-            [EnumMember(Value = "Last")]
-            Last,
-            
-            /// <summary>
-            /// Enum Bullseye for "Bullseye"
-            /// </summary>
-            [EnumMember(Value = "Bullseye")]
-            Bullseye,
-            
-            /// <summary>
             /// Enum Standard for "Standard"
             /// </summary>
             [EnumMember(Value = "Standard")]
             Standard
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -383,6 +355,24 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Bullseye for "Bullseye"
+            /// </summary>
+            [EnumMember(Value = "Bullseye")]
+            Bullseye,
+            
+            /// <summary>
+            /// Enum Last for "Last"
+            /// </summary>
+            [EnumMember(Value = "Last")]
+            Last,
+            
+            /// <summary>
+            /// Enum Manual for "Manual"
+            /// </summary>
+            [EnumMember(Value = "Manual")]
+            Manual,
+            
+            /// <summary>
             /// Enum Predictive for "Predictive"
             /// </summary>
             [EnumMember(Value = "Predictive")]
@@ -395,24 +385,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Preferred,
             
             /// <summary>
-            /// Enum Manual for "Manual"
-            /// </summary>
-            [EnumMember(Value = "Manual")]
-            Manual,
-            
-            /// <summary>
-            /// Enum Last for "Last"
-            /// </summary>
-            [EnumMember(Value = "Last")]
-            Last,
-            
-            /// <summary>
-            /// Enum Bullseye for "Bullseye"
-            /// </summary>
-            [EnumMember(Value = "Bullseye")]
-            Bullseye,
-            
-            /// <summary>
             /// Enum Standard for "Standard"
             /// </summary>
             [EnumMember(Value = "Standard")]
@@ -423,6 +395,65 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The direction of the communication
+        /// </summary>
+        /// <value>The direction of the communication</value>
+        [DataMember(Name="direction", EmitDefaultValue=false)]
+        public DirectionEnum? Direction { get; set; }
         
         
         
@@ -462,76 +493,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The session media type</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        /// <summary>
-        /// Message type for messaging services such as sms
-        /// </summary>
-        /// <value>Message type for messaging services such as sms</value>
-        [DataMember(Name="messageType", EmitDefaultValue=false)]
-        public MessageTypeEnum? MessageType { get; set; }
-        
-        
-        
-        
-        
-        /// <summary>
-        /// Direction
-        /// </summary>
-        /// <value>Direction</value>
-        [DataMember(Name="direction", EmitDefaultValue=false)]
-        public DirectionEnum? Direction { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -607,199 +568,218 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsSession" /> class.
         /// </summary>
-        /// <param name="MediaType">The session media type.</param>
-        /// <param name="SessionId">The unique identifier of this session.</param>
-        /// <param name="AddressOther">AddressOther.</param>
-        /// <param name="AddressSelf">AddressSelf.</param>
-        /// <param name="AddressFrom">AddressFrom.</param>
-        /// <param name="AddressTo">AddressTo.</param>
-        /// <param name="MessageType">Message type for messaging services such as sms.</param>
+        /// <param name="ActiveSkillIds">ID(s) of Skill(s) that are active on the conversation.</param>
+        /// <param name="AcwSkipped">Marker for an agent that skipped after call work.</param>
+        /// <param name="AddressFrom">The address that initiated an action.</param>
+        /// <param name="AddressOther">The email address for the participant on the other side of the email conversation.</param>
+        /// <param name="AddressSelf">The email address for the participant on this side of the email conversation.</param>
+        /// <param name="AddressTo">The address receiving an action.</param>
+        /// <param name="AgentAssistantId">Unique identifier of the active virtual agent assistant.</param>
+        /// <param name="AgentBullseyeRing">Bullseye ring of the targeted agent.</param>
         /// <param name="Ani">Automatic Number Identification (caller&#39;s number).</param>
-        /// <param name="Direction">Direction.</param>
+        /// <param name="AssignerId">ID of the user that manually assigned a conversation.</param>
+        /// <param name="Authenticated">Flag that indicates that the identity of the customer has been asserted as verified by the provider..</param>
+        /// <param name="CallbackNumbers">Callback phone number(s).</param>
+        /// <param name="CallbackScheduledTime">Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="CallbackUserName">The name of the user requesting a call back.</param>
+        /// <param name="CobrowseRole">Describes side of the cobrowse (sharer or viewer).</param>
+        /// <param name="CobrowseRoomId">A unique identifier for a PureCloud cobrowse room.</param>
+        /// <param name="Direction">The direction of the communication.</param>
+        /// <param name="DispositionAnalyzer">(Dialer) Analyzer (for example speech.person).</param>
+        /// <param name="DispositionName">(Dialer) Result of the analysis (for example disposition.classification.callable.machine).</param>
         /// <param name="Dnis">Dialed number identification service (number dialed by the calling party).</param>
-        /// <param name="SessionDnis">Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred.</param>
+        /// <param name="EdgeId">Unique identifier of the edge device.</param>
+        /// <param name="FlowInType">Type of flow in that occurred when entering ACD..</param>
+        /// <param name="FlowOutType">Type of flow out that occurred when emitting tFlowOut..</param>
+        /// <param name="JourneyActionId">Identifier of the journey action..</param>
+        /// <param name="JourneyActionMapId">Identifier of the journey action map that triggered the action..</param>
+        /// <param name="JourneyActionMapVersion">Version of the journey action map that triggered the action..</param>
+        /// <param name="JourneyCustomerId">Primary identifier of the journey customer in the source where the activities originate from..</param>
+        /// <param name="JourneyCustomerIdType">Type of primary identifier of the journey customer (e.g. cookie)..</param>
+        /// <param name="JourneyCustomerSessionId">Unique identifier of the journey session..</param>
+        /// <param name="JourneyCustomerSessionIdType">Type or category of journey sessions (e.g. web, ticket, delivery, atm)..</param>
+        /// <param name="MediaBridgeId">Media bridge ID for the conference session consistent across all participants.</param>
+        /// <param name="MediaCount">Count of any media (images, files, etc) included in this session.</param>
+        /// <param name="MediaType">The session media type.</param>
+        /// <param name="MessageType">Message type for messaging services. E.g.: sms, facebook, twitter, line.</param>
+        /// <param name="MonitoredParticipantId">The participantId being monitored (if someone (e.g. an agent) is being monitored, this would be the ID of the participant that was monitored that would correspond to other participantIds present in the conversation).</param>
         /// <param name="OutboundCampaignId">(Dialer) Unique identifier of the outbound campaign.</param>
         /// <param name="OutboundContactId">(Dialer) Unique identifier of the contact.</param>
         /// <param name="OutboundContactListId">(Dialer) Unique identifier of the contact list that this contact belongs to.</param>
-        /// <param name="DispositionAnalyzer">(Dialer) Unique identifier of the contact list that this contact belongs to.</param>
-        /// <param name="DispositionName">(Dialer) Result of the analysis.</param>
-        /// <param name="EdgeId">Unique identifier of the edge device.</param>
-        /// <param name="RemoteNameDisplayable">RemoteNameDisplayable.</param>
-        /// <param name="RoomId">Unique identifier for the room.</param>
-        /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
-        /// <param name="CallbackUserName">The name of the user requesting a call back.</param>
-        /// <param name="CallbackNumbers">List of numbers to callback.</param>
-        /// <param name="CallbackScheduledTime">Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ScriptId">A unique identifier for a script.</param>
-        /// <param name="PeerId">A unique identifier for a peer.</param>
-        /// <param name="SkipEnabled">(Dialer) Whether the agent can skip the dialer contact.</param>
-        /// <param name="TimeoutSeconds">The number of seconds before PureCloud begins the call for a call back. 0 disables automatic calling.</param>
-        /// <param name="CobrowseRole">Describe side of the cobrowse (sharer or viewer).</param>
-        /// <param name="CobrowseRoomId">A unique identifier for a PureCloud Cobrowse room..</param>
-        /// <param name="MediaBridgeId">MediaBridgeId.</param>
-        /// <param name="ScreenShareAddressSelf">Direct ScreenShare address.</param>
-        /// <param name="SharingScreen">Flag determining if screenShare is started or not (true/false).</param>
-        /// <param name="ScreenShareRoomId">A unique identifier for a PureCloud ScreenShare room..</param>
-        /// <param name="VideoRoomId">A unique identifier for a PureCloud video room..</param>
-        /// <param name="VideoAddressSelf">Direct Video address.</param>
-        /// <param name="Segments">List of segments for this session.</param>
-        /// <param name="Metrics">List of metrics for this session.</param>
-        /// <param name="Flow">IVR flow execution associated with this session.</param>
-        /// <param name="MediaEndpointStats">Media endpoint stats associated with this session.</param>
-        /// <param name="Recording">Flag determining if an audio recording was started or not.</param>
-        /// <param name="JourneyCustomerId">ID of the journey customer.</param>
-        /// <param name="JourneyCustomerIdType">Type of the journey customer ID.</param>
-        /// <param name="JourneyCustomerSessionId">ID of the journey customer session.</param>
-        /// <param name="JourneyCustomerSessionIdType">Type of the journey customer session ID.</param>
-        /// <param name="JourneyActionId">Journey action ID.</param>
-        /// <param name="JourneyActionMapId">Journey action map ID.</param>
-        /// <param name="JourneyActionMapVersion">Journey action map version.</param>
+        /// <param name="PeerId">This identifies pairs of related sessions on a conversation. E.g. an external session’s peerId will be the session that the call originally connected to, e.g. if an IVR was dialed, the IVR session, which will also have the external session’s ID as its peer. After that point, any transfers of that session to other internal components (acd, agent, etc.) will all spawn new sessions whose peerIds point back to that original external session..</param>
         /// <param name="ProtocolCallId">The original voice protocol call ID, e.g. a SIP call ID.</param>
-        /// <param name="Provider">The source provider for the communication.</param>
+        /// <param name="Provider">The source provider for the communication..</param>
+        /// <param name="Recording">Flag determining if an audio recording was started or not.</param>
         /// <param name="Remote">Name, phone number, or email address of the remote party..</param>
-        /// <param name="MediaCount">Count of any media (images, files, etc) included in this session.</param>
-        /// <param name="FlowInType">Type of flow in that occurred, e.g. acd, ivr, etc..</param>
-        /// <param name="FlowOutType">Type of flow out that occurred, e.g. voicemail, callback, or acd.</param>
-        /// <param name="RequestedRoutings">All routing types for requested/attempted routing methods..</param>
-        /// <param name="UsedRouting">Complete routing method.</param>
-        /// <param name="SelectedAgentId">Selected agent id.</param>
+        /// <param name="RemoteNameDisplayable">Unique identifier for the remote party.</param>
+        /// <param name="RemovedSkillIds">ID(s) of Skill(s) that have been removed by bullseye routing.</param>
+        /// <param name="RequestedRoutings">Routing type(s) for requested/attempted routing methods..</param>
+        /// <param name="RoomId">Unique identifier for the room.</param>
+        /// <param name="RoutingRing">Routing ring for bullseye or preferred agent routing.</param>
+        /// <param name="ScreenShareAddressSelf">Direct ScreenShare address.</param>
+        /// <param name="ScreenShareRoomId">A unique identifier for a PureCloud ScreenShare room.</param>
+        /// <param name="ScriptId">A unique identifier for a script.</param>
+        /// <param name="SelectedAgentId">Selected agent ID.</param>
         /// <param name="SelectedAgentRank">Selected agent GPR rank.</param>
-        /// <param name="AgentAssistantId">Unique identifier of the active virtual agent assistant.</param>
+        /// <param name="SessionDnis">Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred.</param>
+        /// <param name="SessionId">The unique identifier of this session.</param>
+        /// <param name="SharingScreen">Flag determining if screenShare is started or not (true/false).</param>
+        /// <param name="SkipEnabled">(Dialer) Whether the agent can skip the dialer contact.</param>
+        /// <param name="TimeoutSeconds">The number of seconds before PureCloud begins the call for a call back (0 disables automatic calling).</param>
+        /// <param name="UsedRouting">Complete routing method.</param>
+        /// <param name="VideoAddressSelf">Direct Video address.</param>
+        /// <param name="VideoRoomId">A unique identifier for a PureCloud video room.</param>
         /// <param name="ProposedAgents">Proposed agents.</param>
-        /// <param name="AssignerId">ID of the user that manually assigned a conversation.</param>
-        /// <param name="AcwSkipped">Marker for an agent that skipped after call work.</param>
-        /// <param name="BullseyeRing">Bullseye ring of the conversation.</param>
-        /// <param name="AgentBullseyeRing">Bullseye ring of the targeted agent.</param>
-        /// <param name="RoutingRule">Routing rule the conversation is in for preferred agent routing.</param>
-        /// <param name="RemovedSkillIds">IDs of skills that have been removed by bullseye routing.</param>
-        /// <param name="ActiveSkillIds">IDs of Skills that are active on the conversation.</param>
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string SessionDnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, bool? Recording = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string JourneyActionId = null, string JourneyActionMapId = null, string JourneyActionMapVersion = null, string ProtocolCallId = null, string Provider = null, string Remote = null, int? MediaCount = null, string FlowInType = null, string FlowOutType = null, List<RequestedRoutingsEnum> RequestedRoutings = null, UsedRoutingEnum? UsedRouting = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string AgentAssistantId = null, List<AnalyticsProposedAgent> ProposedAgents = null, string AssignerId = null, bool? AcwSkipped = null, int? BullseyeRing = null, int? AgentBullseyeRing = null, int? RoutingRule = null, List<string> RemovedSkillIds = null, List<string> ActiveSkillIds = null)
+        /// <param name="MediaEndpointStats">MediaEndpointStats associated with this session.</param>
+        /// <param name="Flow">IVR flow execution associated with this session.</param>
+        /// <param name="Metrics">List of metrics for this session.</param>
+        /// <param name="Segments">List of segments for this session.</param>
+        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, string CobrowseRole = null, string CobrowseRoomId = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null)
         {
-            this.MediaType = MediaType;
-            this.SessionId = SessionId;
+            this.ActiveSkillIds = ActiveSkillIds;
+            this.AcwSkipped = AcwSkipped;
+            this.AddressFrom = AddressFrom;
             this.AddressOther = AddressOther;
             this.AddressSelf = AddressSelf;
-            this.AddressFrom = AddressFrom;
             this.AddressTo = AddressTo;
-            this.MessageType = MessageType;
+            this.AgentAssistantId = AgentAssistantId;
+            this.AgentBullseyeRing = AgentBullseyeRing;
             this.Ani = Ani;
-            this.Direction = Direction;
-            this.Dnis = Dnis;
-            this.SessionDnis = SessionDnis;
-            this.OutboundCampaignId = OutboundCampaignId;
-            this.OutboundContactId = OutboundContactId;
-            this.OutboundContactListId = OutboundContactListId;
-            this.DispositionAnalyzer = DispositionAnalyzer;
-            this.DispositionName = DispositionName;
-            this.EdgeId = EdgeId;
-            this.RemoteNameDisplayable = RemoteNameDisplayable;
-            this.RoomId = RoomId;
-            this.MonitoredParticipantId = MonitoredParticipantId;
-            this.CallbackUserName = CallbackUserName;
+            this.AssignerId = AssignerId;
+            this.Authenticated = Authenticated;
             this.CallbackNumbers = CallbackNumbers;
             this.CallbackScheduledTime = CallbackScheduledTime;
-            this.ScriptId = ScriptId;
-            this.PeerId = PeerId;
-            this.SkipEnabled = SkipEnabled;
-            this.TimeoutSeconds = TimeoutSeconds;
+            this.CallbackUserName = CallbackUserName;
             this.CobrowseRole = CobrowseRole;
             this.CobrowseRoomId = CobrowseRoomId;
-            this.MediaBridgeId = MediaBridgeId;
-            this.ScreenShareAddressSelf = ScreenShareAddressSelf;
-            this.SharingScreen = SharingScreen;
-            this.ScreenShareRoomId = ScreenShareRoomId;
-            this.VideoRoomId = VideoRoomId;
-            this.VideoAddressSelf = VideoAddressSelf;
-            this.Segments = Segments;
-            this.Metrics = Metrics;
-            this.Flow = Flow;
-            this.MediaEndpointStats = MediaEndpointStats;
-            this.Recording = Recording;
+            this.Direction = Direction;
+            this.DispositionAnalyzer = DispositionAnalyzer;
+            this.DispositionName = DispositionName;
+            this.Dnis = Dnis;
+            this.EdgeId = EdgeId;
+            this.FlowInType = FlowInType;
+            this.FlowOutType = FlowOutType;
+            this.JourneyActionId = JourneyActionId;
+            this.JourneyActionMapId = JourneyActionMapId;
+            this.JourneyActionMapVersion = JourneyActionMapVersion;
             this.JourneyCustomerId = JourneyCustomerId;
             this.JourneyCustomerIdType = JourneyCustomerIdType;
             this.JourneyCustomerSessionId = JourneyCustomerSessionId;
             this.JourneyCustomerSessionIdType = JourneyCustomerSessionIdType;
-            this.JourneyActionId = JourneyActionId;
-            this.JourneyActionMapId = JourneyActionMapId;
-            this.JourneyActionMapVersion = JourneyActionMapVersion;
+            this.MediaBridgeId = MediaBridgeId;
+            this.MediaCount = MediaCount;
+            this.MediaType = MediaType;
+            this.MessageType = MessageType;
+            this.MonitoredParticipantId = MonitoredParticipantId;
+            this.OutboundCampaignId = OutboundCampaignId;
+            this.OutboundContactId = OutboundContactId;
+            this.OutboundContactListId = OutboundContactListId;
+            this.PeerId = PeerId;
             this.ProtocolCallId = ProtocolCallId;
             this.Provider = Provider;
+            this.Recording = Recording;
             this.Remote = Remote;
-            this.MediaCount = MediaCount;
-            this.FlowInType = FlowInType;
-            this.FlowOutType = FlowOutType;
+            this.RemoteNameDisplayable = RemoteNameDisplayable;
+            this.RemovedSkillIds = RemovedSkillIds;
             this.RequestedRoutings = RequestedRoutings;
-            this.UsedRouting = UsedRouting;
+            this.RoomId = RoomId;
+            this.RoutingRing = RoutingRing;
+            this.ScreenShareAddressSelf = ScreenShareAddressSelf;
+            this.ScreenShareRoomId = ScreenShareRoomId;
+            this.ScriptId = ScriptId;
             this.SelectedAgentId = SelectedAgentId;
             this.SelectedAgentRank = SelectedAgentRank;
-            this.AgentAssistantId = AgentAssistantId;
+            this.SessionDnis = SessionDnis;
+            this.SessionId = SessionId;
+            this.SharingScreen = SharingScreen;
+            this.SkipEnabled = SkipEnabled;
+            this.TimeoutSeconds = TimeoutSeconds;
+            this.UsedRouting = UsedRouting;
+            this.VideoAddressSelf = VideoAddressSelf;
+            this.VideoRoomId = VideoRoomId;
             this.ProposedAgents = ProposedAgents;
-            this.AssignerId = AssignerId;
-            this.AcwSkipped = AcwSkipped;
-            this.BullseyeRing = BullseyeRing;
-            this.AgentBullseyeRing = AgentBullseyeRing;
-            this.RoutingRule = RoutingRule;
-            this.RemovedSkillIds = RemovedSkillIds;
-            this.ActiveSkillIds = ActiveSkillIds;
+            this.MediaEndpointStats = MediaEndpointStats;
+            this.Flow = Flow;
+            this.Metrics = Metrics;
+            this.Segments = Segments;
             
         }
         
         
         
-        
-        
         /// <summary>
-        /// The unique identifier of this session
+        /// ID(s) of Skill(s) that are active on the conversation
         /// </summary>
-        /// <value>The unique identifier of this session</value>
-        [DataMember(Name="sessionId", EmitDefaultValue=false)]
-        public string SessionId { get; set; }
+        /// <value>ID(s) of Skill(s) that are active on the conversation</value>
+        [DataMember(Name="activeSkillIds", EmitDefaultValue=false)]
+        public List<string> ActiveSkillIds { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AddressOther
+        /// Marker for an agent that skipped after call work
         /// </summary>
-        [DataMember(Name="addressOther", EmitDefaultValue=false)]
-        public string AddressOther { get; set; }
+        /// <value>Marker for an agent that skipped after call work</value>
+        [DataMember(Name="acwSkipped", EmitDefaultValue=false)]
+        public bool? AcwSkipped { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AddressSelf
+        /// The address that initiated an action
         /// </summary>
-        [DataMember(Name="addressSelf", EmitDefaultValue=false)]
-        public string AddressSelf { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AddressFrom
-        /// </summary>
+        /// <value>The address that initiated an action</value>
         [DataMember(Name="addressFrom", EmitDefaultValue=false)]
         public string AddressFrom { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AddressTo
+        /// The email address for the participant on the other side of the email conversation
         /// </summary>
+        /// <value>The email address for the participant on the other side of the email conversation</value>
+        [DataMember(Name="addressOther", EmitDefaultValue=false)]
+        public string AddressOther { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The email address for the participant on this side of the email conversation
+        /// </summary>
+        /// <value>The email address for the participant on this side of the email conversation</value>
+        [DataMember(Name="addressSelf", EmitDefaultValue=false)]
+        public string AddressSelf { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The address receiving an action
+        /// </summary>
+        /// <value>The address receiving an action</value>
         [DataMember(Name="addressTo", EmitDefaultValue=false)]
         public string AddressTo { get; set; }
         
         
+        
+        /// <summary>
+        /// Unique identifier of the active virtual agent assistant
+        /// </summary>
+        /// <value>Unique identifier of the active virtual agent assistant</value>
+        [DataMember(Name="agentAssistantId", EmitDefaultValue=false)]
+        public string AgentAssistantId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Bullseye ring of the targeted agent
+        /// </summary>
+        /// <value>Bullseye ring of the targeted agent</value>
+        [DataMember(Name="agentBullseyeRing", EmitDefaultValue=false)]
+        public int? AgentBullseyeRing { get; set; }
         
         
         
@@ -811,6 +791,87 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Ani { get; set; }
         
         
+        
+        /// <summary>
+        /// ID of the user that manually assigned a conversation
+        /// </summary>
+        /// <value>ID of the user that manually assigned a conversation</value>
+        [DataMember(Name="assignerId", EmitDefaultValue=false)]
+        public string AssignerId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Flag that indicates that the identity of the customer has been asserted as verified by the provider.
+        /// </summary>
+        /// <value>Flag that indicates that the identity of the customer has been asserted as verified by the provider.</value>
+        [DataMember(Name="authenticated", EmitDefaultValue=false)]
+        public bool? Authenticated { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Callback phone number(s)
+        /// </summary>
+        /// <value>Callback phone number(s)</value>
+        [DataMember(Name="callbackNumbers", EmitDefaultValue=false)]
+        public List<string> CallbackNumbers { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
+        public DateTime? CallbackScheduledTime { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The name of the user requesting a call back
+        /// </summary>
+        /// <value>The name of the user requesting a call back</value>
+        [DataMember(Name="callbackUserName", EmitDefaultValue=false)]
+        public string CallbackUserName { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Describes side of the cobrowse (sharer or viewer)
+        /// </summary>
+        /// <value>Describes side of the cobrowse (sharer or viewer)</value>
+        [DataMember(Name="cobrowseRole", EmitDefaultValue=false)]
+        public string CobrowseRole { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A unique identifier for a PureCloud cobrowse room
+        /// </summary>
+        /// <value>A unique identifier for a PureCloud cobrowse room</value>
+        [DataMember(Name="cobrowseRoomId", EmitDefaultValue=false)]
+        public string CobrowseRoomId { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// (Dialer) Analyzer (for example speech.person)
+        /// </summary>
+        /// <value>(Dialer) Analyzer (for example speech.person)</value>
+        [DataMember(Name="dispositionAnalyzer", EmitDefaultValue=false)]
+        public string DispositionAnalyzer { get; set; }
+        
+        
+        
+        /// <summary>
+        /// (Dialer) Result of the analysis (for example disposition.classification.callable.machine)
+        /// </summary>
+        /// <value>(Dialer) Result of the analysis (for example disposition.classification.callable.machine)</value>
+        [DataMember(Name="dispositionName", EmitDefaultValue=false)]
+        public string DispositionName { get; set; }
         
         
         
@@ -824,11 +885,130 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred
+        /// Unique identifier of the edge device
         /// </summary>
-        /// <value>Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred</value>
-        [DataMember(Name="sessionDnis", EmitDefaultValue=false)]
-        public string SessionDnis { get; set; }
+        /// <value>Unique identifier of the edge device</value>
+        [DataMember(Name="edgeId", EmitDefaultValue=false)]
+        public string EdgeId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Type of flow in that occurred when entering ACD.
+        /// </summary>
+        /// <value>Type of flow in that occurred when entering ACD.</value>
+        [DataMember(Name="flowInType", EmitDefaultValue=false)]
+        public string FlowInType { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Type of flow out that occurred when emitting tFlowOut.
+        /// </summary>
+        /// <value>Type of flow out that occurred when emitting tFlowOut.</value>
+        [DataMember(Name="flowOutType", EmitDefaultValue=false)]
+        public string FlowOutType { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Identifier of the journey action.
+        /// </summary>
+        /// <value>Identifier of the journey action.</value>
+        [DataMember(Name="journeyActionId", EmitDefaultValue=false)]
+        public string JourneyActionId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Identifier of the journey action map that triggered the action.
+        /// </summary>
+        /// <value>Identifier of the journey action map that triggered the action.</value>
+        [DataMember(Name="journeyActionMapId", EmitDefaultValue=false)]
+        public string JourneyActionMapId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Version of the journey action map that triggered the action.
+        /// </summary>
+        /// <value>Version of the journey action map that triggered the action.</value>
+        [DataMember(Name="journeyActionMapVersion", EmitDefaultValue=false)]
+        public int? JourneyActionMapVersion { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Primary identifier of the journey customer in the source where the activities originate from.
+        /// </summary>
+        /// <value>Primary identifier of the journey customer in the source where the activities originate from.</value>
+        [DataMember(Name="journeyCustomerId", EmitDefaultValue=false)]
+        public string JourneyCustomerId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Type of primary identifier of the journey customer (e.g. cookie).
+        /// </summary>
+        /// <value>Type of primary identifier of the journey customer (e.g. cookie).</value>
+        [DataMember(Name="journeyCustomerIdType", EmitDefaultValue=false)]
+        public string JourneyCustomerIdType { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Unique identifier of the journey session.
+        /// </summary>
+        /// <value>Unique identifier of the journey session.</value>
+        [DataMember(Name="journeyCustomerSessionId", EmitDefaultValue=false)]
+        public string JourneyCustomerSessionId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Type or category of journey sessions (e.g. web, ticket, delivery, atm).
+        /// </summary>
+        /// <value>Type or category of journey sessions (e.g. web, ticket, delivery, atm).</value>
+        [DataMember(Name="journeyCustomerSessionIdType", EmitDefaultValue=false)]
+        public string JourneyCustomerSessionIdType { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Media bridge ID for the conference session consistent across all participants
+        /// </summary>
+        /// <value>Media bridge ID for the conference session consistent across all participants</value>
+        [DataMember(Name="mediaBridgeId", EmitDefaultValue=false)]
+        public string MediaBridgeId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Count of any media (images, files, etc) included in this session
+        /// </summary>
+        /// <value>Count of any media (images, files, etc) included in this session</value>
+        [DataMember(Name="mediaCount", EmitDefaultValue=false)]
+        public int? MediaCount { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Message type for messaging services. E.g.: sms, facebook, twitter, line
+        /// </summary>
+        /// <value>Message type for messaging services. E.g.: sms, facebook, twitter, line</value>
+        [DataMember(Name="messageType", EmitDefaultValue=false)]
+        public string MessageType { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The participantId being monitored (if someone (e.g. an agent) is being monitored, this would be the ID of the participant that was monitored that would correspond to other participantIds present in the conversation)
+        /// </summary>
+        /// <value>The participantId being monitored (if someone (e.g. an agent) is being monitored, this would be the ID of the participant that was monitored that would correspond to other participantIds present in the conversation)</value>
+        [DataMember(Name="monitoredParticipantId", EmitDefaultValue=false)]
+        public string MonitoredParticipantId { get; set; }
         
         
         
@@ -860,296 +1040,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// (Dialer) Unique identifier of the contact list that this contact belongs to
+        /// This identifies pairs of related sessions on a conversation. E.g. an external session’s peerId will be the session that the call originally connected to, e.g. if an IVR was dialed, the IVR session, which will also have the external session’s ID as its peer. After that point, any transfers of that session to other internal components (acd, agent, etc.) will all spawn new sessions whose peerIds point back to that original external session.
         /// </summary>
-        /// <value>(Dialer) Unique identifier of the contact list that this contact belongs to</value>
-        [DataMember(Name="dispositionAnalyzer", EmitDefaultValue=false)]
-        public string DispositionAnalyzer { get; set; }
-        
-        
-        
-        /// <summary>
-        /// (Dialer) Result of the analysis
-        /// </summary>
-        /// <value>(Dialer) Result of the analysis</value>
-        [DataMember(Name="dispositionName", EmitDefaultValue=false)]
-        public string DispositionName { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Unique identifier of the edge device
-        /// </summary>
-        /// <value>Unique identifier of the edge device</value>
-        [DataMember(Name="edgeId", EmitDefaultValue=false)]
-        public string EdgeId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets RemoteNameDisplayable
-        /// </summary>
-        [DataMember(Name="remoteNameDisplayable", EmitDefaultValue=false)]
-        public string RemoteNameDisplayable { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Unique identifier for the room
-        /// </summary>
-        /// <value>Unique identifier for the room</value>
-        [DataMember(Name="roomId", EmitDefaultValue=false)]
-        public string RoomId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets MonitoredParticipantId
-        /// </summary>
-        [DataMember(Name="monitoredParticipantId", EmitDefaultValue=false)]
-        public string MonitoredParticipantId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The name of the user requesting a call back
-        /// </summary>
-        /// <value>The name of the user requesting a call back</value>
-        [DataMember(Name="callbackUserName", EmitDefaultValue=false)]
-        public string CallbackUserName { get; set; }
-        
-        
-        
-        /// <summary>
-        /// List of numbers to callback
-        /// </summary>
-        /// <value>List of numbers to callback</value>
-        [DataMember(Name="callbackNumbers", EmitDefaultValue=false)]
-        public List<string> CallbackNumbers { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
-        public DateTime? CallbackScheduledTime { get; set; }
-        
-        
-        
-        /// <summary>
-        /// A unique identifier for a script
-        /// </summary>
-        /// <value>A unique identifier for a script</value>
-        [DataMember(Name="scriptId", EmitDefaultValue=false)]
-        public string ScriptId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// A unique identifier for a peer
-        /// </summary>
-        /// <value>A unique identifier for a peer</value>
+        /// <value>This identifies pairs of related sessions on a conversation. E.g. an external session’s peerId will be the session that the call originally connected to, e.g. if an IVR was dialed, the IVR session, which will also have the external session’s ID as its peer. After that point, any transfers of that session to other internal components (acd, agent, etc.) will all spawn new sessions whose peerIds point back to that original external session.</value>
         [DataMember(Name="peerId", EmitDefaultValue=false)]
         public string PeerId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// (Dialer) Whether the agent can skip the dialer contact
-        /// </summary>
-        /// <value>(Dialer) Whether the agent can skip the dialer contact</value>
-        [DataMember(Name="skipEnabled", EmitDefaultValue=false)]
-        public bool? SkipEnabled { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The number of seconds before PureCloud begins the call for a call back. 0 disables automatic calling
-        /// </summary>
-        /// <value>The number of seconds before PureCloud begins the call for a call back. 0 disables automatic calling</value>
-        [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
-        public int? TimeoutSeconds { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Describe side of the cobrowse (sharer or viewer)
-        /// </summary>
-        /// <value>Describe side of the cobrowse (sharer or viewer)</value>
-        [DataMember(Name="cobrowseRole", EmitDefaultValue=false)]
-        public string CobrowseRole { get; set; }
-        
-        
-        
-        /// <summary>
-        /// A unique identifier for a PureCloud Cobrowse room.
-        /// </summary>
-        /// <value>A unique identifier for a PureCloud Cobrowse room.</value>
-        [DataMember(Name="cobrowseRoomId", EmitDefaultValue=false)]
-        public string CobrowseRoomId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets MediaBridgeId
-        /// </summary>
-        [DataMember(Name="mediaBridgeId", EmitDefaultValue=false)]
-        public string MediaBridgeId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Direct ScreenShare address
-        /// </summary>
-        /// <value>Direct ScreenShare address</value>
-        [DataMember(Name="screenShareAddressSelf", EmitDefaultValue=false)]
-        public string ScreenShareAddressSelf { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Flag determining if screenShare is started or not (true/false)
-        /// </summary>
-        /// <value>Flag determining if screenShare is started or not (true/false)</value>
-        [DataMember(Name="sharingScreen", EmitDefaultValue=false)]
-        public bool? SharingScreen { get; set; }
-        
-        
-        
-        /// <summary>
-        /// A unique identifier for a PureCloud ScreenShare room.
-        /// </summary>
-        /// <value>A unique identifier for a PureCloud ScreenShare room.</value>
-        [DataMember(Name="screenShareRoomId", EmitDefaultValue=false)]
-        public string ScreenShareRoomId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// A unique identifier for a PureCloud video room.
-        /// </summary>
-        /// <value>A unique identifier for a PureCloud video room.</value>
-        [DataMember(Name="videoRoomId", EmitDefaultValue=false)]
-        public string VideoRoomId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Direct Video address
-        /// </summary>
-        /// <value>Direct Video address</value>
-        [DataMember(Name="videoAddressSelf", EmitDefaultValue=false)]
-        public string VideoAddressSelf { get; set; }
-        
-        
-        
-        /// <summary>
-        /// List of segments for this session
-        /// </summary>
-        /// <value>List of segments for this session</value>
-        [DataMember(Name="segments", EmitDefaultValue=false)]
-        public List<AnalyticsConversationSegment> Segments { get; set; }
-        
-        
-        
-        /// <summary>
-        /// List of metrics for this session
-        /// </summary>
-        /// <value>List of metrics for this session</value>
-        [DataMember(Name="metrics", EmitDefaultValue=false)]
-        public List<AnalyticsSessionMetric> Metrics { get; set; }
-        
-        
-        
-        /// <summary>
-        /// IVR flow execution associated with this session
-        /// </summary>
-        /// <value>IVR flow execution associated with this session</value>
-        [DataMember(Name="flow", EmitDefaultValue=false)]
-        public AnalyticsFlow Flow { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Media endpoint stats associated with this session
-        /// </summary>
-        /// <value>Media endpoint stats associated with this session</value>
-        [DataMember(Name="mediaEndpointStats", EmitDefaultValue=false)]
-        public List<AnalyticsMediaEndpointStat> MediaEndpointStats { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Flag determining if an audio recording was started or not
-        /// </summary>
-        /// <value>Flag determining if an audio recording was started or not</value>
-        [DataMember(Name="recording", EmitDefaultValue=false)]
-        public bool? Recording { get; set; }
-        
-        
-        
-        /// <summary>
-        /// ID of the journey customer
-        /// </summary>
-        /// <value>ID of the journey customer</value>
-        [DataMember(Name="journeyCustomerId", EmitDefaultValue=false)]
-        public string JourneyCustomerId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Type of the journey customer ID
-        /// </summary>
-        /// <value>Type of the journey customer ID</value>
-        [DataMember(Name="journeyCustomerIdType", EmitDefaultValue=false)]
-        public string JourneyCustomerIdType { get; set; }
-        
-        
-        
-        /// <summary>
-        /// ID of the journey customer session
-        /// </summary>
-        /// <value>ID of the journey customer session</value>
-        [DataMember(Name="journeyCustomerSessionId", EmitDefaultValue=false)]
-        public string JourneyCustomerSessionId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Type of the journey customer session ID
-        /// </summary>
-        /// <value>Type of the journey customer session ID</value>
-        [DataMember(Name="journeyCustomerSessionIdType", EmitDefaultValue=false)]
-        public string JourneyCustomerSessionIdType { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Journey action ID
-        /// </summary>
-        /// <value>Journey action ID</value>
-        [DataMember(Name="journeyActionId", EmitDefaultValue=false)]
-        public string JourneyActionId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Journey action map ID
-        /// </summary>
-        /// <value>Journey action map ID</value>
-        [DataMember(Name="journeyActionMapId", EmitDefaultValue=false)]
-        public string JourneyActionMapId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Journey action map version
-        /// </summary>
-        /// <value>Journey action map version</value>
-        [DataMember(Name="journeyActionMapVersion", EmitDefaultValue=false)]
-        public string JourneyActionMapVersion { get; set; }
         
         
         
@@ -1163,11 +1058,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The source provider for the communication
+        /// The source provider for the communication.
         /// </summary>
-        /// <value>The source provider for the communication</value>
+        /// <value>The source provider for the communication.</value>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Flag determining if an audio recording was started or not
+        /// </summary>
+        /// <value>Flag determining if an audio recording was started or not</value>
+        [DataMember(Name="recording", EmitDefaultValue=false)]
+        public bool? Recording { get; set; }
         
         
         
@@ -1181,47 +1085,81 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Count of any media (images, files, etc) included in this session
+        /// Unique identifier for the remote party
         /// </summary>
-        /// <value>Count of any media (images, files, etc) included in this session</value>
-        [DataMember(Name="mediaCount", EmitDefaultValue=false)]
-        public int? MediaCount { get; set; }
+        /// <value>Unique identifier for the remote party</value>
+        [DataMember(Name="remoteNameDisplayable", EmitDefaultValue=false)]
+        public string RemoteNameDisplayable { get; set; }
         
         
         
         /// <summary>
-        /// Type of flow in that occurred, e.g. acd, ivr, etc.
+        /// ID(s) of Skill(s) that have been removed by bullseye routing
         /// </summary>
-        /// <value>Type of flow in that occurred, e.g. acd, ivr, etc.</value>
-        [DataMember(Name="flowInType", EmitDefaultValue=false)]
-        public string FlowInType { get; set; }
+        /// <value>ID(s) of Skill(s) that have been removed by bullseye routing</value>
+        [DataMember(Name="removedSkillIds", EmitDefaultValue=false)]
+        public List<string> RemovedSkillIds { get; set; }
         
         
         
         /// <summary>
-        /// Type of flow out that occurred, e.g. voicemail, callback, or acd
+        /// Routing type(s) for requested/attempted routing methods.
         /// </summary>
-        /// <value>Type of flow out that occurred, e.g. voicemail, callback, or acd</value>
-        [DataMember(Name="flowOutType", EmitDefaultValue=false)]
-        public string FlowOutType { get; set; }
-        
-        
-        
-        /// <summary>
-        /// All routing types for requested/attempted routing methods.
-        /// </summary>
-        /// <value>All routing types for requested/attempted routing methods.</value>
+        /// <value>Routing type(s) for requested/attempted routing methods.</value>
         [DataMember(Name="requestedRoutings", EmitDefaultValue=false)]
         public List<RequestedRoutingsEnum> RequestedRoutings { get; set; }
         
         
         
+        /// <summary>
+        /// Unique identifier for the room
+        /// </summary>
+        /// <value>Unique identifier for the room</value>
+        [DataMember(Name="roomId", EmitDefaultValue=false)]
+        public string RoomId { get; set; }
+        
         
         
         /// <summary>
-        /// Selected agent id
+        /// Routing ring for bullseye or preferred agent routing
         /// </summary>
-        /// <value>Selected agent id</value>
+        /// <value>Routing ring for bullseye or preferred agent routing</value>
+        [DataMember(Name="routingRing", EmitDefaultValue=false)]
+        public int? RoutingRing { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Direct ScreenShare address
+        /// </summary>
+        /// <value>Direct ScreenShare address</value>
+        [DataMember(Name="screenShareAddressSelf", EmitDefaultValue=false)]
+        public string ScreenShareAddressSelf { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A unique identifier for a PureCloud ScreenShare room
+        /// </summary>
+        /// <value>A unique identifier for a PureCloud ScreenShare room</value>
+        [DataMember(Name="screenShareRoomId", EmitDefaultValue=false)]
+        public string ScreenShareRoomId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A unique identifier for a script
+        /// </summary>
+        /// <value>A unique identifier for a script</value>
+        [DataMember(Name="scriptId", EmitDefaultValue=false)]
+        public string ScriptId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Selected agent ID
+        /// </summary>
+        /// <value>Selected agent ID</value>
         [DataMember(Name="selectedAgentId", EmitDefaultValue=false)]
         public string SelectedAgentId { get; set; }
         
@@ -1237,11 +1175,67 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Unique identifier of the active virtual agent assistant
+        /// Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred
         /// </summary>
-        /// <value>Unique identifier of the active virtual agent assistant</value>
-        [DataMember(Name="agentAssistantId", EmitDefaultValue=false)]
-        public string AgentAssistantId { get; set; }
+        /// <value>Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred</value>
+        [DataMember(Name="sessionDnis", EmitDefaultValue=false)]
+        public string SessionDnis { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The unique identifier of this session
+        /// </summary>
+        /// <value>The unique identifier of this session</value>
+        [DataMember(Name="sessionId", EmitDefaultValue=false)]
+        public string SessionId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Flag determining if screenShare is started or not (true/false)
+        /// </summary>
+        /// <value>Flag determining if screenShare is started or not (true/false)</value>
+        [DataMember(Name="sharingScreen", EmitDefaultValue=false)]
+        public bool? SharingScreen { get; set; }
+        
+        
+        
+        /// <summary>
+        /// (Dialer) Whether the agent can skip the dialer contact
+        /// </summary>
+        /// <value>(Dialer) Whether the agent can skip the dialer contact</value>
+        [DataMember(Name="skipEnabled", EmitDefaultValue=false)]
+        public bool? SkipEnabled { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The number of seconds before PureCloud begins the call for a call back (0 disables automatic calling)
+        /// </summary>
+        /// <value>The number of seconds before PureCloud begins the call for a call back (0 disables automatic calling)</value>
+        [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
+        public int? TimeoutSeconds { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Direct Video address
+        /// </summary>
+        /// <value>Direct Video address</value>
+        [DataMember(Name="videoAddressSelf", EmitDefaultValue=false)]
+        public string VideoAddressSelf { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A unique identifier for a PureCloud video room
+        /// </summary>
+        /// <value>A unique identifier for a PureCloud video room</value>
+        [DataMember(Name="videoRoomId", EmitDefaultValue=false)]
+        public string VideoRoomId { get; set; }
         
         
         
@@ -1255,65 +1249,38 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// ID of the user that manually assigned a conversation
+        /// MediaEndpointStats associated with this session
         /// </summary>
-        /// <value>ID of the user that manually assigned a conversation</value>
-        [DataMember(Name="assignerId", EmitDefaultValue=false)]
-        public string AssignerId { get; set; }
+        /// <value>MediaEndpointStats associated with this session</value>
+        [DataMember(Name="mediaEndpointStats", EmitDefaultValue=false)]
+        public List<AnalyticsMediaEndpointStat> MediaEndpointStats { get; set; }
         
         
         
         /// <summary>
-        /// Marker for an agent that skipped after call work
+        /// IVR flow execution associated with this session
         /// </summary>
-        /// <value>Marker for an agent that skipped after call work</value>
-        [DataMember(Name="acwSkipped", EmitDefaultValue=false)]
-        public bool? AcwSkipped { get; set; }
+        /// <value>IVR flow execution associated with this session</value>
+        [DataMember(Name="flow", EmitDefaultValue=false)]
+        public AnalyticsFlow Flow { get; set; }
         
         
         
         /// <summary>
-        /// Bullseye ring of the conversation
+        /// List of metrics for this session
         /// </summary>
-        /// <value>Bullseye ring of the conversation</value>
-        [DataMember(Name="bullseyeRing", EmitDefaultValue=false)]
-        public int? BullseyeRing { get; set; }
+        /// <value>List of metrics for this session</value>
+        [DataMember(Name="metrics", EmitDefaultValue=false)]
+        public List<AnalyticsSessionMetric> Metrics { get; set; }
         
         
         
         /// <summary>
-        /// Bullseye ring of the targeted agent
+        /// List of segments for this session
         /// </summary>
-        /// <value>Bullseye ring of the targeted agent</value>
-        [DataMember(Name="agentBullseyeRing", EmitDefaultValue=false)]
-        public int? AgentBullseyeRing { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Routing rule the conversation is in for preferred agent routing
-        /// </summary>
-        /// <value>Routing rule the conversation is in for preferred agent routing</value>
-        [DataMember(Name="routingRule", EmitDefaultValue=false)]
-        public int? RoutingRule { get; set; }
-        
-        
-        
-        /// <summary>
-        /// IDs of skills that have been removed by bullseye routing
-        /// </summary>
-        /// <value>IDs of skills that have been removed by bullseye routing</value>
-        [DataMember(Name="removedSkillIds", EmitDefaultValue=false)]
-        public List<string> RemovedSkillIds { get; set; }
-        
-        
-        
-        /// <summary>
-        /// IDs of Skills that are active on the conversation
-        /// </summary>
-        /// <value>IDs of Skills that are active on the conversation</value>
-        [DataMember(Name="activeSkillIds", EmitDefaultValue=false)]
-        public List<string> ActiveSkillIds { get; set; }
+        /// <value>List of segments for this session</value>
+        [DataMember(Name="segments", EmitDefaultValue=false)]
+        public List<AnalyticsConversationSegment> Segments { get; set; }
         
         
         /// <summary>
@@ -1325,72 +1292,72 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AnalyticsSession {\n");
             
-            sb.Append("  MediaType: ").Append(MediaType).Append("\n");
-            sb.Append("  SessionId: ").Append(SessionId).Append("\n");
+            sb.Append("  ActiveSkillIds: ").Append(ActiveSkillIds).Append("\n");
+            sb.Append("  AcwSkipped: ").Append(AcwSkipped).Append("\n");
+            sb.Append("  AddressFrom: ").Append(AddressFrom).Append("\n");
             sb.Append("  AddressOther: ").Append(AddressOther).Append("\n");
             sb.Append("  AddressSelf: ").Append(AddressSelf).Append("\n");
-            sb.Append("  AddressFrom: ").Append(AddressFrom).Append("\n");
             sb.Append("  AddressTo: ").Append(AddressTo).Append("\n");
-            sb.Append("  MessageType: ").Append(MessageType).Append("\n");
+            sb.Append("  AgentAssistantId: ").Append(AgentAssistantId).Append("\n");
+            sb.Append("  AgentBullseyeRing: ").Append(AgentBullseyeRing).Append("\n");
             sb.Append("  Ani: ").Append(Ani).Append("\n");
-            sb.Append("  Direction: ").Append(Direction).Append("\n");
-            sb.Append("  Dnis: ").Append(Dnis).Append("\n");
-            sb.Append("  SessionDnis: ").Append(SessionDnis).Append("\n");
-            sb.Append("  OutboundCampaignId: ").Append(OutboundCampaignId).Append("\n");
-            sb.Append("  OutboundContactId: ").Append(OutboundContactId).Append("\n");
-            sb.Append("  OutboundContactListId: ").Append(OutboundContactListId).Append("\n");
-            sb.Append("  DispositionAnalyzer: ").Append(DispositionAnalyzer).Append("\n");
-            sb.Append("  DispositionName: ").Append(DispositionName).Append("\n");
-            sb.Append("  EdgeId: ").Append(EdgeId).Append("\n");
-            sb.Append("  RemoteNameDisplayable: ").Append(RemoteNameDisplayable).Append("\n");
-            sb.Append("  RoomId: ").Append(RoomId).Append("\n");
-            sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
-            sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
+            sb.Append("  AssignerId: ").Append(AssignerId).Append("\n");
+            sb.Append("  Authenticated: ").Append(Authenticated).Append("\n");
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
-            sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
-            sb.Append("  PeerId: ").Append(PeerId).Append("\n");
-            sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
-            sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
+            sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
             sb.Append("  CobrowseRole: ").Append(CobrowseRole).Append("\n");
             sb.Append("  CobrowseRoomId: ").Append(CobrowseRoomId).Append("\n");
-            sb.Append("  MediaBridgeId: ").Append(MediaBridgeId).Append("\n");
-            sb.Append("  ScreenShareAddressSelf: ").Append(ScreenShareAddressSelf).Append("\n");
-            sb.Append("  SharingScreen: ").Append(SharingScreen).Append("\n");
-            sb.Append("  ScreenShareRoomId: ").Append(ScreenShareRoomId).Append("\n");
-            sb.Append("  VideoRoomId: ").Append(VideoRoomId).Append("\n");
-            sb.Append("  VideoAddressSelf: ").Append(VideoAddressSelf).Append("\n");
-            sb.Append("  Segments: ").Append(Segments).Append("\n");
-            sb.Append("  Metrics: ").Append(Metrics).Append("\n");
-            sb.Append("  Flow: ").Append(Flow).Append("\n");
-            sb.Append("  MediaEndpointStats: ").Append(MediaEndpointStats).Append("\n");
-            sb.Append("  Recording: ").Append(Recording).Append("\n");
+            sb.Append("  Direction: ").Append(Direction).Append("\n");
+            sb.Append("  DispositionAnalyzer: ").Append(DispositionAnalyzer).Append("\n");
+            sb.Append("  DispositionName: ").Append(DispositionName).Append("\n");
+            sb.Append("  Dnis: ").Append(Dnis).Append("\n");
+            sb.Append("  EdgeId: ").Append(EdgeId).Append("\n");
+            sb.Append("  FlowInType: ").Append(FlowInType).Append("\n");
+            sb.Append("  FlowOutType: ").Append(FlowOutType).Append("\n");
+            sb.Append("  JourneyActionId: ").Append(JourneyActionId).Append("\n");
+            sb.Append("  JourneyActionMapId: ").Append(JourneyActionMapId).Append("\n");
+            sb.Append("  JourneyActionMapVersion: ").Append(JourneyActionMapVersion).Append("\n");
             sb.Append("  JourneyCustomerId: ").Append(JourneyCustomerId).Append("\n");
             sb.Append("  JourneyCustomerIdType: ").Append(JourneyCustomerIdType).Append("\n");
             sb.Append("  JourneyCustomerSessionId: ").Append(JourneyCustomerSessionId).Append("\n");
             sb.Append("  JourneyCustomerSessionIdType: ").Append(JourneyCustomerSessionIdType).Append("\n");
-            sb.Append("  JourneyActionId: ").Append(JourneyActionId).Append("\n");
-            sb.Append("  JourneyActionMapId: ").Append(JourneyActionMapId).Append("\n");
-            sb.Append("  JourneyActionMapVersion: ").Append(JourneyActionMapVersion).Append("\n");
+            sb.Append("  MediaBridgeId: ").Append(MediaBridgeId).Append("\n");
+            sb.Append("  MediaCount: ").Append(MediaCount).Append("\n");
+            sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            sb.Append("  MessageType: ").Append(MessageType).Append("\n");
+            sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
+            sb.Append("  OutboundCampaignId: ").Append(OutboundCampaignId).Append("\n");
+            sb.Append("  OutboundContactId: ").Append(OutboundContactId).Append("\n");
+            sb.Append("  OutboundContactListId: ").Append(OutboundContactListId).Append("\n");
+            sb.Append("  PeerId: ").Append(PeerId).Append("\n");
             sb.Append("  ProtocolCallId: ").Append(ProtocolCallId).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            sb.Append("  Recording: ").Append(Recording).Append("\n");
             sb.Append("  Remote: ").Append(Remote).Append("\n");
-            sb.Append("  MediaCount: ").Append(MediaCount).Append("\n");
-            sb.Append("  FlowInType: ").Append(FlowInType).Append("\n");
-            sb.Append("  FlowOutType: ").Append(FlowOutType).Append("\n");
+            sb.Append("  RemoteNameDisplayable: ").Append(RemoteNameDisplayable).Append("\n");
+            sb.Append("  RemovedSkillIds: ").Append(RemovedSkillIds).Append("\n");
             sb.Append("  RequestedRoutings: ").Append(RequestedRoutings).Append("\n");
-            sb.Append("  UsedRouting: ").Append(UsedRouting).Append("\n");
+            sb.Append("  RoomId: ").Append(RoomId).Append("\n");
+            sb.Append("  RoutingRing: ").Append(RoutingRing).Append("\n");
+            sb.Append("  ScreenShareAddressSelf: ").Append(ScreenShareAddressSelf).Append("\n");
+            sb.Append("  ScreenShareRoomId: ").Append(ScreenShareRoomId).Append("\n");
+            sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  SelectedAgentId: ").Append(SelectedAgentId).Append("\n");
             sb.Append("  SelectedAgentRank: ").Append(SelectedAgentRank).Append("\n");
-            sb.Append("  AgentAssistantId: ").Append(AgentAssistantId).Append("\n");
+            sb.Append("  SessionDnis: ").Append(SessionDnis).Append("\n");
+            sb.Append("  SessionId: ").Append(SessionId).Append("\n");
+            sb.Append("  SharingScreen: ").Append(SharingScreen).Append("\n");
+            sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
+            sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
+            sb.Append("  UsedRouting: ").Append(UsedRouting).Append("\n");
+            sb.Append("  VideoAddressSelf: ").Append(VideoAddressSelf).Append("\n");
+            sb.Append("  VideoRoomId: ").Append(VideoRoomId).Append("\n");
             sb.Append("  ProposedAgents: ").Append(ProposedAgents).Append("\n");
-            sb.Append("  AssignerId: ").Append(AssignerId).Append("\n");
-            sb.Append("  AcwSkipped: ").Append(AcwSkipped).Append("\n");
-            sb.Append("  BullseyeRing: ").Append(BullseyeRing).Append("\n");
-            sb.Append("  AgentBullseyeRing: ").Append(AgentBullseyeRing).Append("\n");
-            sb.Append("  RoutingRule: ").Append(RoutingRule).Append("\n");
-            sb.Append("  RemovedSkillIds: ").Append(RemovedSkillIds).Append("\n");
-            sb.Append("  ActiveSkillIds: ").Append(ActiveSkillIds).Append("\n");
+            sb.Append("  MediaEndpointStats: ").Append(MediaEndpointStats).Append("\n");
+            sb.Append("  Flow: ").Append(Flow).Append("\n");
+            sb.Append("  Metrics: ").Append(Metrics).Append("\n");
+            sb.Append("  Segments: ").Append(Segments).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1428,14 +1395,19 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.MediaType == other.MediaType ||
-                    this.MediaType != null &&
-                    this.MediaType.Equals(other.MediaType)
+                    this.ActiveSkillIds == other.ActiveSkillIds ||
+                    this.ActiveSkillIds != null &&
+                    this.ActiveSkillIds.SequenceEqual(other.ActiveSkillIds)
                 ) &&
                 (
-                    this.SessionId == other.SessionId ||
-                    this.SessionId != null &&
-                    this.SessionId.Equals(other.SessionId)
+                    this.AcwSkipped == other.AcwSkipped ||
+                    this.AcwSkipped != null &&
+                    this.AcwSkipped.Equals(other.AcwSkipped)
+                ) &&
+                (
+                    this.AddressFrom == other.AddressFrom ||
+                    this.AddressFrom != null &&
+                    this.AddressFrom.Equals(other.AddressFrom)
                 ) &&
                 (
                     this.AddressOther == other.AddressOther ||
@@ -1448,19 +1420,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AddressSelf.Equals(other.AddressSelf)
                 ) &&
                 (
-                    this.AddressFrom == other.AddressFrom ||
-                    this.AddressFrom != null &&
-                    this.AddressFrom.Equals(other.AddressFrom)
-                ) &&
-                (
                     this.AddressTo == other.AddressTo ||
                     this.AddressTo != null &&
                     this.AddressTo.Equals(other.AddressTo)
                 ) &&
                 (
-                    this.MessageType == other.MessageType ||
-                    this.MessageType != null &&
-                    this.MessageType.Equals(other.MessageType)
+                    this.AgentAssistantId == other.AgentAssistantId ||
+                    this.AgentAssistantId != null &&
+                    this.AgentAssistantId.Equals(other.AgentAssistantId)
+                ) &&
+                (
+                    this.AgentBullseyeRing == other.AgentBullseyeRing ||
+                    this.AgentBullseyeRing != null &&
+                    this.AgentBullseyeRing.Equals(other.AgentBullseyeRing)
                 ) &&
                 (
                     this.Ani == other.Ani ||
@@ -1468,69 +1440,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Ani.Equals(other.Ani)
                 ) &&
                 (
-                    this.Direction == other.Direction ||
-                    this.Direction != null &&
-                    this.Direction.Equals(other.Direction)
+                    this.AssignerId == other.AssignerId ||
+                    this.AssignerId != null &&
+                    this.AssignerId.Equals(other.AssignerId)
                 ) &&
                 (
-                    this.Dnis == other.Dnis ||
-                    this.Dnis != null &&
-                    this.Dnis.Equals(other.Dnis)
-                ) &&
-                (
-                    this.SessionDnis == other.SessionDnis ||
-                    this.SessionDnis != null &&
-                    this.SessionDnis.Equals(other.SessionDnis)
-                ) &&
-                (
-                    this.OutboundCampaignId == other.OutboundCampaignId ||
-                    this.OutboundCampaignId != null &&
-                    this.OutboundCampaignId.Equals(other.OutboundCampaignId)
-                ) &&
-                (
-                    this.OutboundContactId == other.OutboundContactId ||
-                    this.OutboundContactId != null &&
-                    this.OutboundContactId.Equals(other.OutboundContactId)
-                ) &&
-                (
-                    this.OutboundContactListId == other.OutboundContactListId ||
-                    this.OutboundContactListId != null &&
-                    this.OutboundContactListId.Equals(other.OutboundContactListId)
-                ) &&
-                (
-                    this.DispositionAnalyzer == other.DispositionAnalyzer ||
-                    this.DispositionAnalyzer != null &&
-                    this.DispositionAnalyzer.Equals(other.DispositionAnalyzer)
-                ) &&
-                (
-                    this.DispositionName == other.DispositionName ||
-                    this.DispositionName != null &&
-                    this.DispositionName.Equals(other.DispositionName)
-                ) &&
-                (
-                    this.EdgeId == other.EdgeId ||
-                    this.EdgeId != null &&
-                    this.EdgeId.Equals(other.EdgeId)
-                ) &&
-                (
-                    this.RemoteNameDisplayable == other.RemoteNameDisplayable ||
-                    this.RemoteNameDisplayable != null &&
-                    this.RemoteNameDisplayable.Equals(other.RemoteNameDisplayable)
-                ) &&
-                (
-                    this.RoomId == other.RoomId ||
-                    this.RoomId != null &&
-                    this.RoomId.Equals(other.RoomId)
-                ) &&
-                (
-                    this.MonitoredParticipantId == other.MonitoredParticipantId ||
-                    this.MonitoredParticipantId != null &&
-                    this.MonitoredParticipantId.Equals(other.MonitoredParticipantId)
-                ) &&
-                (
-                    this.CallbackUserName == other.CallbackUserName ||
-                    this.CallbackUserName != null &&
-                    this.CallbackUserName.Equals(other.CallbackUserName)
+                    this.Authenticated == other.Authenticated ||
+                    this.Authenticated != null &&
+                    this.Authenticated.Equals(other.Authenticated)
                 ) &&
                 (
                     this.CallbackNumbers == other.CallbackNumbers ||
@@ -1543,24 +1460,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CallbackScheduledTime.Equals(other.CallbackScheduledTime)
                 ) &&
                 (
-                    this.ScriptId == other.ScriptId ||
-                    this.ScriptId != null &&
-                    this.ScriptId.Equals(other.ScriptId)
-                ) &&
-                (
-                    this.PeerId == other.PeerId ||
-                    this.PeerId != null &&
-                    this.PeerId.Equals(other.PeerId)
-                ) &&
-                (
-                    this.SkipEnabled == other.SkipEnabled ||
-                    this.SkipEnabled != null &&
-                    this.SkipEnabled.Equals(other.SkipEnabled)
-                ) &&
-                (
-                    this.TimeoutSeconds == other.TimeoutSeconds ||
-                    this.TimeoutSeconds != null &&
-                    this.TimeoutSeconds.Equals(other.TimeoutSeconds)
+                    this.CallbackUserName == other.CallbackUserName ||
+                    this.CallbackUserName != null &&
+                    this.CallbackUserName.Equals(other.CallbackUserName)
                 ) &&
                 (
                     this.CobrowseRole == other.CobrowseRole ||
@@ -1573,59 +1475,54 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CobrowseRoomId.Equals(other.CobrowseRoomId)
                 ) &&
                 (
-                    this.MediaBridgeId == other.MediaBridgeId ||
-                    this.MediaBridgeId != null &&
-                    this.MediaBridgeId.Equals(other.MediaBridgeId)
+                    this.Direction == other.Direction ||
+                    this.Direction != null &&
+                    this.Direction.Equals(other.Direction)
                 ) &&
                 (
-                    this.ScreenShareAddressSelf == other.ScreenShareAddressSelf ||
-                    this.ScreenShareAddressSelf != null &&
-                    this.ScreenShareAddressSelf.Equals(other.ScreenShareAddressSelf)
+                    this.DispositionAnalyzer == other.DispositionAnalyzer ||
+                    this.DispositionAnalyzer != null &&
+                    this.DispositionAnalyzer.Equals(other.DispositionAnalyzer)
                 ) &&
                 (
-                    this.SharingScreen == other.SharingScreen ||
-                    this.SharingScreen != null &&
-                    this.SharingScreen.Equals(other.SharingScreen)
+                    this.DispositionName == other.DispositionName ||
+                    this.DispositionName != null &&
+                    this.DispositionName.Equals(other.DispositionName)
                 ) &&
                 (
-                    this.ScreenShareRoomId == other.ScreenShareRoomId ||
-                    this.ScreenShareRoomId != null &&
-                    this.ScreenShareRoomId.Equals(other.ScreenShareRoomId)
+                    this.Dnis == other.Dnis ||
+                    this.Dnis != null &&
+                    this.Dnis.Equals(other.Dnis)
                 ) &&
                 (
-                    this.VideoRoomId == other.VideoRoomId ||
-                    this.VideoRoomId != null &&
-                    this.VideoRoomId.Equals(other.VideoRoomId)
+                    this.EdgeId == other.EdgeId ||
+                    this.EdgeId != null &&
+                    this.EdgeId.Equals(other.EdgeId)
                 ) &&
                 (
-                    this.VideoAddressSelf == other.VideoAddressSelf ||
-                    this.VideoAddressSelf != null &&
-                    this.VideoAddressSelf.Equals(other.VideoAddressSelf)
+                    this.FlowInType == other.FlowInType ||
+                    this.FlowInType != null &&
+                    this.FlowInType.Equals(other.FlowInType)
                 ) &&
                 (
-                    this.Segments == other.Segments ||
-                    this.Segments != null &&
-                    this.Segments.SequenceEqual(other.Segments)
+                    this.FlowOutType == other.FlowOutType ||
+                    this.FlowOutType != null &&
+                    this.FlowOutType.Equals(other.FlowOutType)
                 ) &&
                 (
-                    this.Metrics == other.Metrics ||
-                    this.Metrics != null &&
-                    this.Metrics.SequenceEqual(other.Metrics)
+                    this.JourneyActionId == other.JourneyActionId ||
+                    this.JourneyActionId != null &&
+                    this.JourneyActionId.Equals(other.JourneyActionId)
                 ) &&
                 (
-                    this.Flow == other.Flow ||
-                    this.Flow != null &&
-                    this.Flow.Equals(other.Flow)
+                    this.JourneyActionMapId == other.JourneyActionMapId ||
+                    this.JourneyActionMapId != null &&
+                    this.JourneyActionMapId.Equals(other.JourneyActionMapId)
                 ) &&
                 (
-                    this.MediaEndpointStats == other.MediaEndpointStats ||
-                    this.MediaEndpointStats != null &&
-                    this.MediaEndpointStats.SequenceEqual(other.MediaEndpointStats)
-                ) &&
-                (
-                    this.Recording == other.Recording ||
-                    this.Recording != null &&
-                    this.Recording.Equals(other.Recording)
+                    this.JourneyActionMapVersion == other.JourneyActionMapVersion ||
+                    this.JourneyActionMapVersion != null &&
+                    this.JourneyActionMapVersion.Equals(other.JourneyActionMapVersion)
                 ) &&
                 (
                     this.JourneyCustomerId == other.JourneyCustomerId ||
@@ -1648,19 +1545,49 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.JourneyCustomerSessionIdType.Equals(other.JourneyCustomerSessionIdType)
                 ) &&
                 (
-                    this.JourneyActionId == other.JourneyActionId ||
-                    this.JourneyActionId != null &&
-                    this.JourneyActionId.Equals(other.JourneyActionId)
+                    this.MediaBridgeId == other.MediaBridgeId ||
+                    this.MediaBridgeId != null &&
+                    this.MediaBridgeId.Equals(other.MediaBridgeId)
                 ) &&
                 (
-                    this.JourneyActionMapId == other.JourneyActionMapId ||
-                    this.JourneyActionMapId != null &&
-                    this.JourneyActionMapId.Equals(other.JourneyActionMapId)
+                    this.MediaCount == other.MediaCount ||
+                    this.MediaCount != null &&
+                    this.MediaCount.Equals(other.MediaCount)
                 ) &&
                 (
-                    this.JourneyActionMapVersion == other.JourneyActionMapVersion ||
-                    this.JourneyActionMapVersion != null &&
-                    this.JourneyActionMapVersion.Equals(other.JourneyActionMapVersion)
+                    this.MediaType == other.MediaType ||
+                    this.MediaType != null &&
+                    this.MediaType.Equals(other.MediaType)
+                ) &&
+                (
+                    this.MessageType == other.MessageType ||
+                    this.MessageType != null &&
+                    this.MessageType.Equals(other.MessageType)
+                ) &&
+                (
+                    this.MonitoredParticipantId == other.MonitoredParticipantId ||
+                    this.MonitoredParticipantId != null &&
+                    this.MonitoredParticipantId.Equals(other.MonitoredParticipantId)
+                ) &&
+                (
+                    this.OutboundCampaignId == other.OutboundCampaignId ||
+                    this.OutboundCampaignId != null &&
+                    this.OutboundCampaignId.Equals(other.OutboundCampaignId)
+                ) &&
+                (
+                    this.OutboundContactId == other.OutboundContactId ||
+                    this.OutboundContactId != null &&
+                    this.OutboundContactId.Equals(other.OutboundContactId)
+                ) &&
+                (
+                    this.OutboundContactListId == other.OutboundContactListId ||
+                    this.OutboundContactListId != null &&
+                    this.OutboundContactListId.Equals(other.OutboundContactListId)
+                ) &&
+                (
+                    this.PeerId == other.PeerId ||
+                    this.PeerId != null &&
+                    this.PeerId.Equals(other.PeerId)
                 ) &&
                 (
                     this.ProtocolCallId == other.ProtocolCallId ||
@@ -1673,24 +1600,24 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Provider.Equals(other.Provider)
                 ) &&
                 (
+                    this.Recording == other.Recording ||
+                    this.Recording != null &&
+                    this.Recording.Equals(other.Recording)
+                ) &&
+                (
                     this.Remote == other.Remote ||
                     this.Remote != null &&
                     this.Remote.Equals(other.Remote)
                 ) &&
                 (
-                    this.MediaCount == other.MediaCount ||
-                    this.MediaCount != null &&
-                    this.MediaCount.Equals(other.MediaCount)
+                    this.RemoteNameDisplayable == other.RemoteNameDisplayable ||
+                    this.RemoteNameDisplayable != null &&
+                    this.RemoteNameDisplayable.Equals(other.RemoteNameDisplayable)
                 ) &&
                 (
-                    this.FlowInType == other.FlowInType ||
-                    this.FlowInType != null &&
-                    this.FlowInType.Equals(other.FlowInType)
-                ) &&
-                (
-                    this.FlowOutType == other.FlowOutType ||
-                    this.FlowOutType != null &&
-                    this.FlowOutType.Equals(other.FlowOutType)
+                    this.RemovedSkillIds == other.RemovedSkillIds ||
+                    this.RemovedSkillIds != null &&
+                    this.RemovedSkillIds.SequenceEqual(other.RemovedSkillIds)
                 ) &&
                 (
                     this.RequestedRoutings == other.RequestedRoutings ||
@@ -1698,9 +1625,29 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RequestedRoutings.SequenceEqual(other.RequestedRoutings)
                 ) &&
                 (
-                    this.UsedRouting == other.UsedRouting ||
-                    this.UsedRouting != null &&
-                    this.UsedRouting.Equals(other.UsedRouting)
+                    this.RoomId == other.RoomId ||
+                    this.RoomId != null &&
+                    this.RoomId.Equals(other.RoomId)
+                ) &&
+                (
+                    this.RoutingRing == other.RoutingRing ||
+                    this.RoutingRing != null &&
+                    this.RoutingRing.Equals(other.RoutingRing)
+                ) &&
+                (
+                    this.ScreenShareAddressSelf == other.ScreenShareAddressSelf ||
+                    this.ScreenShareAddressSelf != null &&
+                    this.ScreenShareAddressSelf.Equals(other.ScreenShareAddressSelf)
+                ) &&
+                (
+                    this.ScreenShareRoomId == other.ScreenShareRoomId ||
+                    this.ScreenShareRoomId != null &&
+                    this.ScreenShareRoomId.Equals(other.ScreenShareRoomId)
+                ) &&
+                (
+                    this.ScriptId == other.ScriptId ||
+                    this.ScriptId != null &&
+                    this.ScriptId.Equals(other.ScriptId)
                 ) &&
                 (
                     this.SelectedAgentId == other.SelectedAgentId ||
@@ -1713,9 +1660,44 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SelectedAgentRank.Equals(other.SelectedAgentRank)
                 ) &&
                 (
-                    this.AgentAssistantId == other.AgentAssistantId ||
-                    this.AgentAssistantId != null &&
-                    this.AgentAssistantId.Equals(other.AgentAssistantId)
+                    this.SessionDnis == other.SessionDnis ||
+                    this.SessionDnis != null &&
+                    this.SessionDnis.Equals(other.SessionDnis)
+                ) &&
+                (
+                    this.SessionId == other.SessionId ||
+                    this.SessionId != null &&
+                    this.SessionId.Equals(other.SessionId)
+                ) &&
+                (
+                    this.SharingScreen == other.SharingScreen ||
+                    this.SharingScreen != null &&
+                    this.SharingScreen.Equals(other.SharingScreen)
+                ) &&
+                (
+                    this.SkipEnabled == other.SkipEnabled ||
+                    this.SkipEnabled != null &&
+                    this.SkipEnabled.Equals(other.SkipEnabled)
+                ) &&
+                (
+                    this.TimeoutSeconds == other.TimeoutSeconds ||
+                    this.TimeoutSeconds != null &&
+                    this.TimeoutSeconds.Equals(other.TimeoutSeconds)
+                ) &&
+                (
+                    this.UsedRouting == other.UsedRouting ||
+                    this.UsedRouting != null &&
+                    this.UsedRouting.Equals(other.UsedRouting)
+                ) &&
+                (
+                    this.VideoAddressSelf == other.VideoAddressSelf ||
+                    this.VideoAddressSelf != null &&
+                    this.VideoAddressSelf.Equals(other.VideoAddressSelf)
+                ) &&
+                (
+                    this.VideoRoomId == other.VideoRoomId ||
+                    this.VideoRoomId != null &&
+                    this.VideoRoomId.Equals(other.VideoRoomId)
                 ) &&
                 (
                     this.ProposedAgents == other.ProposedAgents ||
@@ -1723,39 +1705,24 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ProposedAgents.SequenceEqual(other.ProposedAgents)
                 ) &&
                 (
-                    this.AssignerId == other.AssignerId ||
-                    this.AssignerId != null &&
-                    this.AssignerId.Equals(other.AssignerId)
+                    this.MediaEndpointStats == other.MediaEndpointStats ||
+                    this.MediaEndpointStats != null &&
+                    this.MediaEndpointStats.SequenceEqual(other.MediaEndpointStats)
                 ) &&
                 (
-                    this.AcwSkipped == other.AcwSkipped ||
-                    this.AcwSkipped != null &&
-                    this.AcwSkipped.Equals(other.AcwSkipped)
+                    this.Flow == other.Flow ||
+                    this.Flow != null &&
+                    this.Flow.Equals(other.Flow)
                 ) &&
                 (
-                    this.BullseyeRing == other.BullseyeRing ||
-                    this.BullseyeRing != null &&
-                    this.BullseyeRing.Equals(other.BullseyeRing)
+                    this.Metrics == other.Metrics ||
+                    this.Metrics != null &&
+                    this.Metrics.SequenceEqual(other.Metrics)
                 ) &&
                 (
-                    this.AgentBullseyeRing == other.AgentBullseyeRing ||
-                    this.AgentBullseyeRing != null &&
-                    this.AgentBullseyeRing.Equals(other.AgentBullseyeRing)
-                ) &&
-                (
-                    this.RoutingRule == other.RoutingRule ||
-                    this.RoutingRule != null &&
-                    this.RoutingRule.Equals(other.RoutingRule)
-                ) &&
-                (
-                    this.RemovedSkillIds == other.RemovedSkillIds ||
-                    this.RemovedSkillIds != null &&
-                    this.RemovedSkillIds.SequenceEqual(other.RemovedSkillIds)
-                ) &&
-                (
-                    this.ActiveSkillIds == other.ActiveSkillIds ||
-                    this.ActiveSkillIds != null &&
-                    this.ActiveSkillIds.SequenceEqual(other.ActiveSkillIds)
+                    this.Segments == other.Segments ||
+                    this.Segments != null &&
+                    this.Segments.SequenceEqual(other.Segments)
                 );
         }
 
@@ -1771,11 +1738,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.MediaType != null)
-                    hash = hash * 59 + this.MediaType.GetHashCode();
+                if (this.ActiveSkillIds != null)
+                    hash = hash * 59 + this.ActiveSkillIds.GetHashCode();
                 
-                if (this.SessionId != null)
-                    hash = hash * 59 + this.SessionId.GetHashCode();
+                if (this.AcwSkipped != null)
+                    hash = hash * 59 + this.AcwSkipped.GetHashCode();
+                
+                if (this.AddressFrom != null)
+                    hash = hash * 59 + this.AddressFrom.GetHashCode();
                 
                 if (this.AddressOther != null)
                     hash = hash * 59 + this.AddressOther.GetHashCode();
@@ -1783,56 +1753,23 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.AddressSelf != null)
                     hash = hash * 59 + this.AddressSelf.GetHashCode();
                 
-                if (this.AddressFrom != null)
-                    hash = hash * 59 + this.AddressFrom.GetHashCode();
-                
                 if (this.AddressTo != null)
                     hash = hash * 59 + this.AddressTo.GetHashCode();
                 
-                if (this.MessageType != null)
-                    hash = hash * 59 + this.MessageType.GetHashCode();
+                if (this.AgentAssistantId != null)
+                    hash = hash * 59 + this.AgentAssistantId.GetHashCode();
+                
+                if (this.AgentBullseyeRing != null)
+                    hash = hash * 59 + this.AgentBullseyeRing.GetHashCode();
                 
                 if (this.Ani != null)
                     hash = hash * 59 + this.Ani.GetHashCode();
                 
-                if (this.Direction != null)
-                    hash = hash * 59 + this.Direction.GetHashCode();
+                if (this.AssignerId != null)
+                    hash = hash * 59 + this.AssignerId.GetHashCode();
                 
-                if (this.Dnis != null)
-                    hash = hash * 59 + this.Dnis.GetHashCode();
-                
-                if (this.SessionDnis != null)
-                    hash = hash * 59 + this.SessionDnis.GetHashCode();
-                
-                if (this.OutboundCampaignId != null)
-                    hash = hash * 59 + this.OutboundCampaignId.GetHashCode();
-                
-                if (this.OutboundContactId != null)
-                    hash = hash * 59 + this.OutboundContactId.GetHashCode();
-                
-                if (this.OutboundContactListId != null)
-                    hash = hash * 59 + this.OutboundContactListId.GetHashCode();
-                
-                if (this.DispositionAnalyzer != null)
-                    hash = hash * 59 + this.DispositionAnalyzer.GetHashCode();
-                
-                if (this.DispositionName != null)
-                    hash = hash * 59 + this.DispositionName.GetHashCode();
-                
-                if (this.EdgeId != null)
-                    hash = hash * 59 + this.EdgeId.GetHashCode();
-                
-                if (this.RemoteNameDisplayable != null)
-                    hash = hash * 59 + this.RemoteNameDisplayable.GetHashCode();
-                
-                if (this.RoomId != null)
-                    hash = hash * 59 + this.RoomId.GetHashCode();
-                
-                if (this.MonitoredParticipantId != null)
-                    hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();
-                
-                if (this.CallbackUserName != null)
-                    hash = hash * 59 + this.CallbackUserName.GetHashCode();
+                if (this.Authenticated != null)
+                    hash = hash * 59 + this.Authenticated.GetHashCode();
                 
                 if (this.CallbackNumbers != null)
                     hash = hash * 59 + this.CallbackNumbers.GetHashCode();
@@ -1840,17 +1777,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.CallbackScheduledTime != null)
                     hash = hash * 59 + this.CallbackScheduledTime.GetHashCode();
                 
-                if (this.ScriptId != null)
-                    hash = hash * 59 + this.ScriptId.GetHashCode();
-                
-                if (this.PeerId != null)
-                    hash = hash * 59 + this.PeerId.GetHashCode();
-                
-                if (this.SkipEnabled != null)
-                    hash = hash * 59 + this.SkipEnabled.GetHashCode();
-                
-                if (this.TimeoutSeconds != null)
-                    hash = hash * 59 + this.TimeoutSeconds.GetHashCode();
+                if (this.CallbackUserName != null)
+                    hash = hash * 59 + this.CallbackUserName.GetHashCode();
                 
                 if (this.CobrowseRole != null)
                     hash = hash * 59 + this.CobrowseRole.GetHashCode();
@@ -1858,38 +1786,35 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.CobrowseRoomId != null)
                     hash = hash * 59 + this.CobrowseRoomId.GetHashCode();
                 
-                if (this.MediaBridgeId != null)
-                    hash = hash * 59 + this.MediaBridgeId.GetHashCode();
+                if (this.Direction != null)
+                    hash = hash * 59 + this.Direction.GetHashCode();
                 
-                if (this.ScreenShareAddressSelf != null)
-                    hash = hash * 59 + this.ScreenShareAddressSelf.GetHashCode();
+                if (this.DispositionAnalyzer != null)
+                    hash = hash * 59 + this.DispositionAnalyzer.GetHashCode();
                 
-                if (this.SharingScreen != null)
-                    hash = hash * 59 + this.SharingScreen.GetHashCode();
+                if (this.DispositionName != null)
+                    hash = hash * 59 + this.DispositionName.GetHashCode();
                 
-                if (this.ScreenShareRoomId != null)
-                    hash = hash * 59 + this.ScreenShareRoomId.GetHashCode();
+                if (this.Dnis != null)
+                    hash = hash * 59 + this.Dnis.GetHashCode();
                 
-                if (this.VideoRoomId != null)
-                    hash = hash * 59 + this.VideoRoomId.GetHashCode();
+                if (this.EdgeId != null)
+                    hash = hash * 59 + this.EdgeId.GetHashCode();
                 
-                if (this.VideoAddressSelf != null)
-                    hash = hash * 59 + this.VideoAddressSelf.GetHashCode();
+                if (this.FlowInType != null)
+                    hash = hash * 59 + this.FlowInType.GetHashCode();
                 
-                if (this.Segments != null)
-                    hash = hash * 59 + this.Segments.GetHashCode();
+                if (this.FlowOutType != null)
+                    hash = hash * 59 + this.FlowOutType.GetHashCode();
                 
-                if (this.Metrics != null)
-                    hash = hash * 59 + this.Metrics.GetHashCode();
+                if (this.JourneyActionId != null)
+                    hash = hash * 59 + this.JourneyActionId.GetHashCode();
                 
-                if (this.Flow != null)
-                    hash = hash * 59 + this.Flow.GetHashCode();
+                if (this.JourneyActionMapId != null)
+                    hash = hash * 59 + this.JourneyActionMapId.GetHashCode();
                 
-                if (this.MediaEndpointStats != null)
-                    hash = hash * 59 + this.MediaEndpointStats.GetHashCode();
-                
-                if (this.Recording != null)
-                    hash = hash * 59 + this.Recording.GetHashCode();
+                if (this.JourneyActionMapVersion != null)
+                    hash = hash * 59 + this.JourneyActionMapVersion.GetHashCode();
                 
                 if (this.JourneyCustomerId != null)
                     hash = hash * 59 + this.JourneyCustomerId.GetHashCode();
@@ -1903,14 +1828,32 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.JourneyCustomerSessionIdType != null)
                     hash = hash * 59 + this.JourneyCustomerSessionIdType.GetHashCode();
                 
-                if (this.JourneyActionId != null)
-                    hash = hash * 59 + this.JourneyActionId.GetHashCode();
+                if (this.MediaBridgeId != null)
+                    hash = hash * 59 + this.MediaBridgeId.GetHashCode();
                 
-                if (this.JourneyActionMapId != null)
-                    hash = hash * 59 + this.JourneyActionMapId.GetHashCode();
+                if (this.MediaCount != null)
+                    hash = hash * 59 + this.MediaCount.GetHashCode();
                 
-                if (this.JourneyActionMapVersion != null)
-                    hash = hash * 59 + this.JourneyActionMapVersion.GetHashCode();
+                if (this.MediaType != null)
+                    hash = hash * 59 + this.MediaType.GetHashCode();
+                
+                if (this.MessageType != null)
+                    hash = hash * 59 + this.MessageType.GetHashCode();
+                
+                if (this.MonitoredParticipantId != null)
+                    hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();
+                
+                if (this.OutboundCampaignId != null)
+                    hash = hash * 59 + this.OutboundCampaignId.GetHashCode();
+                
+                if (this.OutboundContactId != null)
+                    hash = hash * 59 + this.OutboundContactId.GetHashCode();
+                
+                if (this.OutboundContactListId != null)
+                    hash = hash * 59 + this.OutboundContactListId.GetHashCode();
+                
+                if (this.PeerId != null)
+                    hash = hash * 59 + this.PeerId.GetHashCode();
                 
                 if (this.ProtocolCallId != null)
                     hash = hash * 59 + this.ProtocolCallId.GetHashCode();
@@ -1918,23 +1861,35 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
                 
+                if (this.Recording != null)
+                    hash = hash * 59 + this.Recording.GetHashCode();
+                
                 if (this.Remote != null)
                     hash = hash * 59 + this.Remote.GetHashCode();
                 
-                if (this.MediaCount != null)
-                    hash = hash * 59 + this.MediaCount.GetHashCode();
+                if (this.RemoteNameDisplayable != null)
+                    hash = hash * 59 + this.RemoteNameDisplayable.GetHashCode();
                 
-                if (this.FlowInType != null)
-                    hash = hash * 59 + this.FlowInType.GetHashCode();
-                
-                if (this.FlowOutType != null)
-                    hash = hash * 59 + this.FlowOutType.GetHashCode();
+                if (this.RemovedSkillIds != null)
+                    hash = hash * 59 + this.RemovedSkillIds.GetHashCode();
                 
                 if (this.RequestedRoutings != null)
                     hash = hash * 59 + this.RequestedRoutings.GetHashCode();
                 
-                if (this.UsedRouting != null)
-                    hash = hash * 59 + this.UsedRouting.GetHashCode();
+                if (this.RoomId != null)
+                    hash = hash * 59 + this.RoomId.GetHashCode();
+                
+                if (this.RoutingRing != null)
+                    hash = hash * 59 + this.RoutingRing.GetHashCode();
+                
+                if (this.ScreenShareAddressSelf != null)
+                    hash = hash * 59 + this.ScreenShareAddressSelf.GetHashCode();
+                
+                if (this.ScreenShareRoomId != null)
+                    hash = hash * 59 + this.ScreenShareRoomId.GetHashCode();
+                
+                if (this.ScriptId != null)
+                    hash = hash * 59 + this.ScriptId.GetHashCode();
                 
                 if (this.SelectedAgentId != null)
                     hash = hash * 59 + this.SelectedAgentId.GetHashCode();
@@ -1942,32 +1897,44 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SelectedAgentRank != null)
                     hash = hash * 59 + this.SelectedAgentRank.GetHashCode();
                 
-                if (this.AgentAssistantId != null)
-                    hash = hash * 59 + this.AgentAssistantId.GetHashCode();
+                if (this.SessionDnis != null)
+                    hash = hash * 59 + this.SessionDnis.GetHashCode();
+                
+                if (this.SessionId != null)
+                    hash = hash * 59 + this.SessionId.GetHashCode();
+                
+                if (this.SharingScreen != null)
+                    hash = hash * 59 + this.SharingScreen.GetHashCode();
+                
+                if (this.SkipEnabled != null)
+                    hash = hash * 59 + this.SkipEnabled.GetHashCode();
+                
+                if (this.TimeoutSeconds != null)
+                    hash = hash * 59 + this.TimeoutSeconds.GetHashCode();
+                
+                if (this.UsedRouting != null)
+                    hash = hash * 59 + this.UsedRouting.GetHashCode();
+                
+                if (this.VideoAddressSelf != null)
+                    hash = hash * 59 + this.VideoAddressSelf.GetHashCode();
+                
+                if (this.VideoRoomId != null)
+                    hash = hash * 59 + this.VideoRoomId.GetHashCode();
                 
                 if (this.ProposedAgents != null)
                     hash = hash * 59 + this.ProposedAgents.GetHashCode();
                 
-                if (this.AssignerId != null)
-                    hash = hash * 59 + this.AssignerId.GetHashCode();
+                if (this.MediaEndpointStats != null)
+                    hash = hash * 59 + this.MediaEndpointStats.GetHashCode();
                 
-                if (this.AcwSkipped != null)
-                    hash = hash * 59 + this.AcwSkipped.GetHashCode();
+                if (this.Flow != null)
+                    hash = hash * 59 + this.Flow.GetHashCode();
                 
-                if (this.BullseyeRing != null)
-                    hash = hash * 59 + this.BullseyeRing.GetHashCode();
+                if (this.Metrics != null)
+                    hash = hash * 59 + this.Metrics.GetHashCode();
                 
-                if (this.AgentBullseyeRing != null)
-                    hash = hash * 59 + this.AgentBullseyeRing.GetHashCode();
-                
-                if (this.RoutingRule != null)
-                    hash = hash * 59 + this.RoutingRule.GetHashCode();
-                
-                if (this.RemovedSkillIds != null)
-                    hash = hash * 59 + this.RemovedSkillIds.GetHashCode();
-                
-                if (this.ActiveSkillIds != null)
-                    hash = hash * 59 + this.ActiveSkillIds.GetHashCode();
+                if (this.Segments != null)
+                    hash = hash * 59 + this.Segments.GetHashCode();
                 
                 return hash;
             }

@@ -20,6 +20,9 @@ namespace PureCloudPlatform.Client.V2.Model
     {
         
         
+        
+        
+        
         /// <summary>
         /// Indicates what the data type is (e.g. integer vs string) and therefore how to evaluate what would constitute a match
         /// </summary>
@@ -81,7 +84,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
         /// <summary>
         /// Indicates what the data type is (e.g. integer vs string) and therefore how to evaluate what would constitute a match
         /// </summary>
@@ -92,30 +94,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsProperty" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected AnalyticsProperty() { }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AnalyticsProperty" /> class.
-        /// </summary>
-        /// <param name="PropertyType">Indicates what the data type is (e.g. integer vs string) and therefore how to evaluate what would constitute a match (required).</param>
-        /// <param name="Property">User-defined rather than intrinsic system-observed values. These are tagged onto segments by other components within PureCloud or by API users directly.  This is the name of the user-defined property. (required).</param>
-        /// <param name="Value">What property value to match against (required).</param>
-        public AnalyticsProperty(PropertyTypeEnum? PropertyType = null, string Property = null, string Value = null)
+        /// <param name="Property">User-defined rather than intrinsic system-observed values. These are tagged onto segments by other components within PureCloud or by API users directly.  This is the name of the user-defined property..</param>
+        /// <param name="PropertyType">Indicates what the data type is (e.g. integer vs string) and therefore how to evaluate what would constitute a match.</param>
+        /// <param name="Value">What property value to match against.</param>
+        public AnalyticsProperty(string Property = null, PropertyTypeEnum? PropertyType = null, string Value = null)
         {
-            this.PropertyType = PropertyType;
             this.Property = Property;
+            this.PropertyType = PropertyType;
             this.Value = Value;
             
         }
-        
-        
         
         
         
@@ -125,6 +117,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>User-defined rather than intrinsic system-observed values. These are tagged onto segments by other components within PureCloud or by API users directly.  This is the name of the user-defined property.</value>
         [DataMember(Name="property", EmitDefaultValue=false)]
         public string Property { get; set; }
+        
+        
         
         
         
@@ -145,8 +139,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AnalyticsProperty {\n");
             
-            sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
             sb.Append("  Property: ").Append(Property).Append("\n");
+            sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -185,14 +179,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.PropertyType == other.PropertyType ||
-                    this.PropertyType != null &&
-                    this.PropertyType.Equals(other.PropertyType)
-                ) &&
-                (
                     this.Property == other.Property ||
                     this.Property != null &&
                     this.Property.Equals(other.Property)
+                ) &&
+                (
+                    this.PropertyType == other.PropertyType ||
+                    this.PropertyType != null &&
+                    this.PropertyType.Equals(other.PropertyType)
                 ) &&
                 (
                     this.Value == other.Value ||
@@ -213,11 +207,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.PropertyType != null)
-                    hash = hash * 59 + this.PropertyType.GetHashCode();
-                
                 if (this.Property != null)
                     hash = hash * 59 + this.Property.GetHashCode();
+                
+                if (this.PropertyType != null)
+                    hash = hash * 59 + this.PropertyType.GetHashCode();
                 
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();

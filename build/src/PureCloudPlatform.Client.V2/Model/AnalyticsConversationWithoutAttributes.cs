@@ -35,6 +35,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The original direction of the conversation
         /// </summary>
@@ -92,6 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
         /// <summary>
         /// The original direction of the conversation
         /// </summary>
@@ -108,38 +115,47 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsConversationWithoutAttributes" /> class.
         /// </summary>
+        /// <param name="ConversationEnd">The end time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ConversationId">Unique identifier for the conversation.</param>
-        /// <param name="ConversationStart">Date/time the conversation started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ConversationEnd">Date/time the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="ConversationStart">The start time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="DivisionIds">Identifier(s) of division(s) associated with a conversation.</param>
+        /// <param name="ExternalTag">External tag for the conversation.</param>
         /// <param name="MediaStatsMinConversationMos">The lowest estimated average MOS among all the audio streams belonging to this conversation.</param>
         /// <param name="MediaStatsMinConversationRFactor">The lowest R-factor value among all of the audio streams belonging to this conversation.</param>
         /// <param name="OriginatingDirection">The original direction of the conversation.</param>
-        /// <param name="Evaluations">Evaluations tied to this conversation.</param>
-        /// <param name="Surveys">Surveys tied to this conversation.</param>
-        /// <param name="Resolutions">Resolutions tied to this conversation.</param>
-        /// <param name="DivisionIds">Identifiers of divisions associated with this conversation.</param>
+        /// <param name="Evaluations">Evaluations associated with this conversation.</param>
+        /// <param name="Surveys">Surveys associated with this conversation.</param>
+        /// <param name="Resolutions">Resolutions associated with this conversation.</param>
         /// <param name="Participants">Participants in the conversation.</param>
-        public AnalyticsConversationWithoutAttributes(string ConversationId = null, DateTime? ConversationStart = null, DateTime? ConversationEnd = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<AnalyticsResolution> Resolutions = null, List<string> DivisionIds = null, List<AnalyticsParticipantWithoutAttributes> Participants = null)
+        public AnalyticsConversationWithoutAttributes(DateTime? ConversationEnd = null, string ConversationId = null, DateTime? ConversationStart = null, List<string> DivisionIds = null, string ExternalTag = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<AnalyticsResolution> Resolutions = null, List<AnalyticsParticipantWithoutAttributes> Participants = null)
         {
+            this.ConversationEnd = ConversationEnd;
             this.ConversationId = ConversationId;
             this.ConversationStart = ConversationStart;
-            this.ConversationEnd = ConversationEnd;
+            this.DivisionIds = DivisionIds;
+            this.ExternalTag = ExternalTag;
             this.MediaStatsMinConversationMos = MediaStatsMinConversationMos;
             this.MediaStatsMinConversationRFactor = MediaStatsMinConversationRFactor;
             this.OriginatingDirection = OriginatingDirection;
             this.Evaluations = Evaluations;
             this.Surveys = Surveys;
             this.Resolutions = Resolutions;
-            this.DivisionIds = DivisionIds;
             this.Participants = Participants;
             
         }
+        
+        
+        
+        /// <summary>
+        /// The end time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The end time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="conversationEnd", EmitDefaultValue=false)]
+        public DateTime? ConversationEnd { get; set; }
         
         
         
@@ -153,20 +169,29 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Date/time the conversation started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// The start time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date/time the conversation started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>The start time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="conversationStart", EmitDefaultValue=false)]
         public DateTime? ConversationStart { get; set; }
         
         
         
         /// <summary>
-        /// Date/time the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// Identifier(s) of division(s) associated with a conversation
         /// </summary>
-        /// <value>Date/time the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="conversationEnd", EmitDefaultValue=false)]
-        public DateTime? ConversationEnd { get; set; }
+        /// <value>Identifier(s) of division(s) associated with a conversation</value>
+        [DataMember(Name="divisionIds", EmitDefaultValue=false)]
+        public List<string> DivisionIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// External tag for the conversation
+        /// </summary>
+        /// <value>External tag for the conversation</value>
+        [DataMember(Name="externalTag", EmitDefaultValue=false)]
+        public string ExternalTag { get; set; }
         
         
         
@@ -191,38 +216,29 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Evaluations tied to this conversation
+        /// Evaluations associated with this conversation
         /// </summary>
-        /// <value>Evaluations tied to this conversation</value>
+        /// <value>Evaluations associated with this conversation</value>
         [DataMember(Name="evaluations", EmitDefaultValue=false)]
         public List<AnalyticsEvaluation> Evaluations { get; set; }
         
         
         
         /// <summary>
-        /// Surveys tied to this conversation
+        /// Surveys associated with this conversation
         /// </summary>
-        /// <value>Surveys tied to this conversation</value>
+        /// <value>Surveys associated with this conversation</value>
         [DataMember(Name="surveys", EmitDefaultValue=false)]
         public List<AnalyticsSurvey> Surveys { get; set; }
         
         
         
         /// <summary>
-        /// Resolutions tied to this conversation
+        /// Resolutions associated with this conversation
         /// </summary>
-        /// <value>Resolutions tied to this conversation</value>
+        /// <value>Resolutions associated with this conversation</value>
         [DataMember(Name="resolutions", EmitDefaultValue=false)]
         public List<AnalyticsResolution> Resolutions { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Identifiers of divisions associated with this conversation
-        /// </summary>
-        /// <value>Identifiers of divisions associated with this conversation</value>
-        [DataMember(Name="divisionIds", EmitDefaultValue=false)]
-        public List<string> DivisionIds { get; set; }
         
         
         
@@ -243,16 +259,17 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AnalyticsConversationWithoutAttributes {\n");
             
+            sb.Append("  ConversationEnd: ").Append(ConversationEnd).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  ConversationStart: ").Append(ConversationStart).Append("\n");
-            sb.Append("  ConversationEnd: ").Append(ConversationEnd).Append("\n");
+            sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
+            sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
             sb.Append("  MediaStatsMinConversationMos: ").Append(MediaStatsMinConversationMos).Append("\n");
             sb.Append("  MediaStatsMinConversationRFactor: ").Append(MediaStatsMinConversationRFactor).Append("\n");
             sb.Append("  OriginatingDirection: ").Append(OriginatingDirection).Append("\n");
             sb.Append("  Evaluations: ").Append(Evaluations).Append("\n");
             sb.Append("  Surveys: ").Append(Surveys).Append("\n");
             sb.Append("  Resolutions: ").Append(Resolutions).Append("\n");
-            sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -291,6 +308,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.ConversationEnd == other.ConversationEnd ||
+                    this.ConversationEnd != null &&
+                    this.ConversationEnd.Equals(other.ConversationEnd)
+                ) &&
+                (
                     this.ConversationId == other.ConversationId ||
                     this.ConversationId != null &&
                     this.ConversationId.Equals(other.ConversationId)
@@ -301,9 +323,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationStart.Equals(other.ConversationStart)
                 ) &&
                 (
-                    this.ConversationEnd == other.ConversationEnd ||
-                    this.ConversationEnd != null &&
-                    this.ConversationEnd.Equals(other.ConversationEnd)
+                    this.DivisionIds == other.DivisionIds ||
+                    this.DivisionIds != null &&
+                    this.DivisionIds.SequenceEqual(other.DivisionIds)
+                ) &&
+                (
+                    this.ExternalTag == other.ExternalTag ||
+                    this.ExternalTag != null &&
+                    this.ExternalTag.Equals(other.ExternalTag)
                 ) &&
                 (
                     this.MediaStatsMinConversationMos == other.MediaStatsMinConversationMos ||
@@ -336,11 +363,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Resolutions.SequenceEqual(other.Resolutions)
                 ) &&
                 (
-                    this.DivisionIds == other.DivisionIds ||
-                    this.DivisionIds != null &&
-                    this.DivisionIds.SequenceEqual(other.DivisionIds)
-                ) &&
-                (
                     this.Participants == other.Participants ||
                     this.Participants != null &&
                     this.Participants.SequenceEqual(other.Participants)
@@ -359,14 +381,20 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.ConversationEnd != null)
+                    hash = hash * 59 + this.ConversationEnd.GetHashCode();
+                
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
                 
                 if (this.ConversationStart != null)
                     hash = hash * 59 + this.ConversationStart.GetHashCode();
                 
-                if (this.ConversationEnd != null)
-                    hash = hash * 59 + this.ConversationEnd.GetHashCode();
+                if (this.DivisionIds != null)
+                    hash = hash * 59 + this.DivisionIds.GetHashCode();
+                
+                if (this.ExternalTag != null)
+                    hash = hash * 59 + this.ExternalTag.GetHashCode();
                 
                 if (this.MediaStatsMinConversationMos != null)
                     hash = hash * 59 + this.MediaStatsMinConversationMos.GetHashCode();
@@ -385,9 +413,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Resolutions != null)
                     hash = hash * 59 + this.Resolutions.GetHashCode();
-                
-                if (this.DivisionIds != null)
-                    hash = hash * 59 + this.DivisionIds.GetHashCode();
                 
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();

@@ -14,8 +14,8 @@ title: ManagementUnitListing
 | **FirstUri** | **string** | Deprecated, paging is not supported | [optional] |
 | **NextUri** | **string** | Deprecated, paging is not supported | [optional] |
 | **PageCount** | **int?** | Deprecated, paging is not supported | [optional] |
-| **PreviousUri** | **string** | Deprecated, paging is not supported | [optional] |
 | **LastUri** | **string** | Deprecated, paging is not supported | [optional] |
+| **PreviousUri** | **string** | Deprecated, paging is not supported | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 {: class="table table-striped"}
 

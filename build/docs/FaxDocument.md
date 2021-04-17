@@ -22,8 +22,8 @@ title: FaxDocument
 | **CallerAddress** | **string** |  | [optional] |
 | **ReceiverAddress** | **string** |  | [optional] |
 | **Thumbnails** | [**List&lt;DocumentThumbnail&gt;**](DocumentThumbnail.html) |  | [optional] |
-| **SharingUri** | **string** |  | [optional] |
 | **DownloadSharingUri** | **string** |  | [optional] |
+| **SharingUri** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

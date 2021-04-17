@@ -97,6 +97,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Divisionid,
             
             /// <summary>
+            /// Enum Externaltag for "externalTag"
+            /// </summary>
+            [EnumMember(Value = "externalTag")]
+            Externaltag,
+            
+            /// <summary>
             /// Enum Mediastatsminconversationmos for "mediaStatsMinConversationMos"
             /// </summary>
             [EnumMember(Value = "mediaStatsMinConversationMos")]

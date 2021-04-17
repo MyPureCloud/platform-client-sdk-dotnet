@@ -2207,7 +2207,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DomainEntityRef> PostOutboundDnclistExportWithHttpInfo (string dncListId);
         
         /// <summary>
-        /// Add phone numbers to a Dialer DNC list.
+        /// Add phone numbers to a DNC list.
         /// </summary>
         /// <remarks>
         /// Only Internal DNC lists may be appended to
@@ -2219,7 +2219,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void PostOutboundDnclistPhonenumbers (string dncListId, List<string> body);
 
         /// <summary>
-        /// Add phone numbers to a Dialer DNC list.
+        /// Add phone numbers to a DNC list.
         /// </summary>
         /// <remarks>
         /// Only Internal DNC lists may be appended to
@@ -4921,7 +4921,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DomainEntityRef>> PostOutboundDnclistExportAsyncWithHttpInfo (string dncListId);
         
         /// <summary>
-        /// Add phone numbers to a Dialer DNC list.
+        /// Add phone numbers to a DNC list.
         /// </summary>
         /// <remarks>
         /// Only Internal DNC lists may be appended to
@@ -4933,7 +4933,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task PostOutboundDnclistPhonenumbersAsync (string dncListId, List<string> body);
 
         /// <summary>
-        /// Add phone numbers to a Dialer DNC list.
+        /// Add phone numbers to a DNC list.
         /// </summary>
         /// <remarks>
         /// Only Internal DNC lists may be appended to
@@ -22989,7 +22989,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Add phone numbers to a Dialer DNC list. Only Internal DNC lists may be appended to
+        /// Add phone numbers to a DNC list. Only Internal DNC lists may be appended to
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
@@ -23001,7 +23001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add phone numbers to a Dialer DNC list. Only Internal DNC lists may be appended to
+        /// Add phone numbers to a DNC list. Only Internal DNC lists may be appended to
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
@@ -23093,7 +23093,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Add phone numbers to a Dialer DNC list. Only Internal DNC lists may be appended to
+        /// Add phone numbers to a DNC list. Only Internal DNC lists may be appended to
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
@@ -23106,7 +23106,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add phone numbers to a Dialer DNC list. Only Internal DNC lists may be appended to
+        /// Add phone numbers to a DNC list. Only Internal DNC lists may be appended to
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>

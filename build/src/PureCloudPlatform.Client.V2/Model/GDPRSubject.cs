@@ -65,6 +65,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="GDPRSubject" /> class.
@@ -75,10 +80,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DialerContactId">DialerContactId.</param>
         /// <param name="JourneyCustomer">JourneyCustomer.</param>
         /// <param name="SocialHandle">SocialHandle.</param>
+        /// <param name="ExternalId">ExternalId.</param>
         /// <param name="Addresses">Addresses.</param>
         /// <param name="PhoneNumbers">PhoneNumbers.</param>
         /// <param name="EmailAddresses">EmailAddresses.</param>
-        public GDPRSubject(string Name = null, string UserId = null, string ExternalContactId = null, DialerContactId DialerContactId = null, GDPRJourneyCustomer JourneyCustomer = null, SocialHandle SocialHandle = null, List<string> Addresses = null, List<string> PhoneNumbers = null, List<string> EmailAddresses = null)
+        public GDPRSubject(string Name = null, string UserId = null, string ExternalContactId = null, DialerContactId DialerContactId = null, GDPRJourneyCustomer JourneyCustomer = null, SocialHandle SocialHandle = null, string ExternalId = null, List<string> Addresses = null, List<string> PhoneNumbers = null, List<string> EmailAddresses = null)
         {
             this.Name = Name;
             this.UserId = UserId;
@@ -86,6 +92,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DialerContactId = DialerContactId;
             this.JourneyCustomer = JourneyCustomer;
             this.SocialHandle = SocialHandle;
+            this.ExternalId = ExternalId;
             this.Addresses = Addresses;
             this.PhoneNumbers = PhoneNumbers;
             this.EmailAddresses = EmailAddresses;
@@ -143,6 +150,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets ExternalId
+        /// </summary>
+        [DataMember(Name="externalId", EmitDefaultValue=false)]
+        public string ExternalId { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Addresses
         /// </summary>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
@@ -180,6 +195,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DialerContactId: ").Append(DialerContactId).Append("\n");
             sb.Append("  JourneyCustomer: ").Append(JourneyCustomer).Append("\n");
             sb.Append("  SocialHandle: ").Append(SocialHandle).Append("\n");
+            sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
             sb.Append("  PhoneNumbers: ").Append(PhoneNumbers).Append("\n");
             sb.Append("  EmailAddresses: ").Append(EmailAddresses).Append("\n");
@@ -250,6 +266,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SocialHandle.Equals(other.SocialHandle)
                 ) &&
                 (
+                    this.ExternalId == other.ExternalId ||
+                    this.ExternalId != null &&
+                    this.ExternalId.Equals(other.ExternalId)
+                ) &&
+                (
                     this.Addresses == other.Addresses ||
                     this.Addresses != null &&
                     this.Addresses.SequenceEqual(other.Addresses)
@@ -295,6 +316,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SocialHandle != null)
                     hash = hash * 59 + this.SocialHandle.GetHashCode();
+                
+                if (this.ExternalId != null)
+                    hash = hash * 59 + this.ExternalId.GetHashCode();
                 
                 if (this.Addresses != null)
                     hash = hash * 59 + this.Addresses.GetHashCode();

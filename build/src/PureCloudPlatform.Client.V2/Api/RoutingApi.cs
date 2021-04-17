@@ -1360,8 +1360,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
-        /// <returns>QueueMember</returns>
-        QueueMember PatchRoutingQueueMember (string queueId, string memberId, QueueMember body);
+        /// <returns></returns>
+        void PatchRoutingQueueMember (string queueId, string memberId, QueueMember body);
 
         /// <summary>
         /// Update the ring number OR joined status for a queue member.
@@ -1373,8 +1373,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
-        /// <returns>ApiResponse of QueueMember</returns>
-        ApiResponse<QueueMember> PatchRoutingQueueMemberWithHttpInfo (string queueId, string memberId, QueueMember body);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchRoutingQueueMemberWithHttpInfo (string queueId, string memberId, QueueMember body);
         
         /// <summary>
         /// Join or unjoin a set of users for a queue
@@ -1410,8 +1410,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
-        /// <returns>QueueMember</returns>
-        QueueMember PatchRoutingQueueUser (string queueId, string memberId, QueueMember body);
+        /// <returns></returns>
+        void PatchRoutingQueueUser (string queueId, string memberId, QueueMember body);
 
         /// <summary>
         /// DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue.
@@ -1423,8 +1423,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
-        /// <returns>ApiResponse of QueueMember</returns>
-        ApiResponse<QueueMember> PatchRoutingQueueUserWithHttpInfo (string queueId, string memberId, QueueMember body);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchRoutingQueueUserWithHttpInfo (string queueId, string memberId, QueueMember body);
         
         /// <summary>
         /// DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue.
@@ -3556,8 +3556,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
-        /// <returns>Task of QueueMember</returns>
-        System.Threading.Tasks.Task<QueueMember> PatchRoutingQueueMemberAsync (string queueId, string memberId, QueueMember body);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchRoutingQueueMemberAsync (string queueId, string memberId, QueueMember body);
 
         /// <summary>
         /// Update the ring number OR joined status for a queue member.
@@ -3569,8 +3569,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
-        /// <returns>Task of ApiResponse (QueueMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMember>> PatchRoutingQueueMemberAsyncWithHttpInfo (string queueId, string memberId, QueueMember body);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchRoutingQueueMemberAsyncWithHttpInfo (string queueId, string memberId, QueueMember body);
         
         /// <summary>
         /// Join or unjoin a set of users for a queue
@@ -3606,8 +3606,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
-        /// <returns>Task of QueueMember</returns>
-        System.Threading.Tasks.Task<QueueMember> PatchRoutingQueueUserAsync (string queueId, string memberId, QueueMember body);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchRoutingQueueUserAsync (string queueId, string memberId, QueueMember body);
 
         /// <summary>
         /// DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue.
@@ -3619,8 +3619,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
-        /// <returns>Task of ApiResponse (QueueMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMember>> PatchRoutingQueueUserAsyncWithHttpInfo (string queueId, string memberId, QueueMember body);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchRoutingQueueUserAsyncWithHttpInfo (string queueId, string memberId, QueueMember body);
         
         /// <summary>
         /// DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue.
@@ -15188,11 +15188,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
-        /// <returns>QueueMember</returns>
-        public QueueMember PatchRoutingQueueMember (string queueId, string memberId, QueueMember body)
+        /// <returns></returns>
+        public void PatchRoutingQueueMember (string queueId, string memberId, QueueMember body)
         {
-             ApiResponse<QueueMember> localVarResponse = PatchRoutingQueueMemberWithHttpInfo(queueId, memberId, body);
-             return localVarResponse.Data;
+             PatchRoutingQueueMemberWithHttpInfo(queueId, memberId, body);
         }
 
         /// <summary>
@@ -15202,8 +15201,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
-        /// <returns>ApiResponse of QueueMember</returns>
-        public ApiResponse< QueueMember > PatchRoutingQueueMemberWithHttpInfo (string queueId, string memberId, QueueMember body)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchRoutingQueueMemberWithHttpInfo (string queueId, string memberId, QueueMember body)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -15284,9 +15283,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchRoutingQueueMember: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QueueMember>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (QueueMember) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMember)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15299,11 +15298,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
-        /// <returns>Task of QueueMember</returns>
-        public async System.Threading.Tasks.Task<QueueMember> PatchRoutingQueueMemberAsync (string queueId, string memberId, QueueMember body)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchRoutingQueueMemberAsync (string queueId, string memberId, QueueMember body)
         {
-             ApiResponse<QueueMember> localVarResponse = await PatchRoutingQueueMemberAsyncWithHttpInfo(queueId, memberId, body);
-             return localVarResponse.Data;
+             await PatchRoutingQueueMemberAsyncWithHttpInfo(queueId, memberId, body);
 
         }
 
@@ -15314,8 +15312,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
-        /// <returns>Task of ApiResponse (QueueMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> PatchRoutingQueueMemberAsyncWithHttpInfo (string queueId, string memberId, QueueMember body)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchRoutingQueueMemberAsyncWithHttpInfo (string queueId, string memberId, QueueMember body)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -15399,9 +15397,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchRoutingQueueMember: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QueueMember>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (QueueMember) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMember)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15629,11 +15627,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
-        /// <returns>QueueMember</returns>
-        public QueueMember PatchRoutingQueueUser (string queueId, string memberId, QueueMember body)
+        /// <returns></returns>
+        public void PatchRoutingQueueUser (string queueId, string memberId, QueueMember body)
         {
-             ApiResponse<QueueMember> localVarResponse = PatchRoutingQueueUserWithHttpInfo(queueId, memberId, body);
-             return localVarResponse.Data;
+             PatchRoutingQueueUserWithHttpInfo(queueId, memberId, body);
         }
 
         /// <summary>
@@ -15643,8 +15640,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
-        /// <returns>ApiResponse of QueueMember</returns>
-        public ApiResponse< QueueMember > PatchRoutingQueueUserWithHttpInfo (string queueId, string memberId, QueueMember body)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchRoutingQueueUserWithHttpInfo (string queueId, string memberId, QueueMember body)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -15725,9 +15722,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchRoutingQueueUser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QueueMember>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (QueueMember) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMember)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15740,11 +15737,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
-        /// <returns>Task of QueueMember</returns>
-        public async System.Threading.Tasks.Task<QueueMember> PatchRoutingQueueUserAsync (string queueId, string memberId, QueueMember body)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchRoutingQueueUserAsync (string queueId, string memberId, QueueMember body)
         {
-             ApiResponse<QueueMember> localVarResponse = await PatchRoutingQueueUserAsyncWithHttpInfo(queueId, memberId, body);
-             return localVarResponse.Data;
+             await PatchRoutingQueueUserAsyncWithHttpInfo(queueId, memberId, body);
 
         }
 
@@ -15755,8 +15751,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
-        /// <returns>Task of ApiResponse (QueueMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> PatchRoutingQueueUserAsyncWithHttpInfo (string queueId, string memberId, QueueMember body)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchRoutingQueueUserAsyncWithHttpInfo (string queueId, string memberId, QueueMember body)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -15840,9 +15836,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchRoutingQueueUser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QueueMember>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (QueueMember) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMember)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

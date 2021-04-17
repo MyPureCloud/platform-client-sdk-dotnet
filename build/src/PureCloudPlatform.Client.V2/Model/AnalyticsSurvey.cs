@@ -79,29 +79,29 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsSurvey" /> class.
         /// </summary>
-        /// <param name="SurveyId">Unique identifier for the survey.</param>
-        /// <param name="SurveyFormId">Unique identifier for the survey form.</param>
-        /// <param name="SurveyFormName">Name of the survey form.</param>
+        /// <param name="EventTime">Specifies when an event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="QueueId">The ID of the associated queue.</param>
+        /// <param name="SurveyCompletedDate">Completion datetime of the survey in ISO 8601 format.</param>
         /// <param name="SurveyFormContextId">Unique identifier for the survey form, regardless of version.</param>
-        /// <param name="EventTime">Specifies when a survey occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="UserId">A unique identifier of the PureCloud user.</param>
-        /// <param name="QueueId">Unique identifier for the queue the conversation was on.</param>
-        /// <param name="SurveyStatus">Survey status.</param>
-        /// <param name="SurveyPromoterScore">Promoter score of the survey.</param>
-        /// <param name="SurveyCompletedDate">Completion date/time of the survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="SurveyFormId">ID of the survey form used.</param>
+        /// <param name="SurveyFormName">Name of the survey form used.</param>
+        /// <param name="SurveyId">ID of the survey.</param>
+        /// <param name="SurveyPromoterScore">Score of the survey used with NPS.</param>
+        /// <param name="SurveyStatus">The status of the survey.</param>
+        /// <param name="UserId">ID of the agent the survey was performed against.</param>
         /// <param name="OSurveyTotalScore">OSurveyTotalScore.</param>
-        public AnalyticsSurvey(string SurveyId = null, string SurveyFormId = null, string SurveyFormName = null, string SurveyFormContextId = null, DateTime? EventTime = null, string UserId = null, string QueueId = null, string SurveyStatus = null, int? SurveyPromoterScore = null, DateTime? SurveyCompletedDate = null, long? OSurveyTotalScore = null)
+        public AnalyticsSurvey(DateTime? EventTime = null, string QueueId = null, DateTime? SurveyCompletedDate = null, string SurveyFormContextId = null, string SurveyFormId = null, string SurveyFormName = null, string SurveyId = null, int? SurveyPromoterScore = null, string SurveyStatus = null, string UserId = null, long? OSurveyTotalScore = null)
         {
-            this.SurveyId = SurveyId;
+            this.EventTime = EventTime;
+            this.QueueId = QueueId;
+            this.SurveyCompletedDate = SurveyCompletedDate;
+            this.SurveyFormContextId = SurveyFormContextId;
             this.SurveyFormId = SurveyFormId;
             this.SurveyFormName = SurveyFormName;
-            this.SurveyFormContextId = SurveyFormContextId;
-            this.EventTime = EventTime;
-            this.UserId = UserId;
-            this.QueueId = QueueId;
-            this.SurveyStatus = SurveyStatus;
+            this.SurveyId = SurveyId;
             this.SurveyPromoterScore = SurveyPromoterScore;
-            this.SurveyCompletedDate = SurveyCompletedDate;
+            this.SurveyStatus = SurveyStatus;
+            this.UserId = UserId;
             this.OSurveyTotalScore = OSurveyTotalScore;
             
         }
@@ -109,29 +109,29 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Unique identifier for the survey
+        /// Specifies when an event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Unique identifier for the survey</value>
-        [DataMember(Name="surveyId", EmitDefaultValue=false)]
-        public string SurveyId { get; set; }
+        /// <value>Specifies when an event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="eventTime", EmitDefaultValue=false)]
+        public DateTime? EventTime { get; set; }
         
         
         
         /// <summary>
-        /// Unique identifier for the survey form
+        /// The ID of the associated queue
         /// </summary>
-        /// <value>Unique identifier for the survey form</value>
-        [DataMember(Name="surveyFormId", EmitDefaultValue=false)]
-        public string SurveyFormId { get; set; }
+        /// <value>The ID of the associated queue</value>
+        [DataMember(Name="queueId", EmitDefaultValue=false)]
+        public string QueueId { get; set; }
         
         
         
         /// <summary>
-        /// Name of the survey form
+        /// Completion datetime of the survey in ISO 8601 format
         /// </summary>
-        /// <value>Name of the survey form</value>
-        [DataMember(Name="surveyFormName", EmitDefaultValue=false)]
-        public string SurveyFormName { get; set; }
+        /// <value>Completion datetime of the survey in ISO 8601 format</value>
+        [DataMember(Name="surveyCompletedDate", EmitDefaultValue=false)]
+        public DateTime? SurveyCompletedDate { get; set; }
         
         
         
@@ -145,56 +145,56 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Specifies when a survey occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// ID of the survey form used
         /// </summary>
-        /// <value>Specifies when a survey occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="eventTime", EmitDefaultValue=false)]
-        public DateTime? EventTime { get; set; }
+        /// <value>ID of the survey form used</value>
+        [DataMember(Name="surveyFormId", EmitDefaultValue=false)]
+        public string SurveyFormId { get; set; }
         
         
         
         /// <summary>
-        /// A unique identifier of the PureCloud user
+        /// Name of the survey form used
         /// </summary>
-        /// <value>A unique identifier of the PureCloud user</value>
-        [DataMember(Name="userId", EmitDefaultValue=false)]
-        public string UserId { get; set; }
+        /// <value>Name of the survey form used</value>
+        [DataMember(Name="surveyFormName", EmitDefaultValue=false)]
+        public string SurveyFormName { get; set; }
         
         
         
         /// <summary>
-        /// Unique identifier for the queue the conversation was on
+        /// ID of the survey
         /// </summary>
-        /// <value>Unique identifier for the queue the conversation was on</value>
-        [DataMember(Name="queueId", EmitDefaultValue=false)]
-        public string QueueId { get; set; }
+        /// <value>ID of the survey</value>
+        [DataMember(Name="surveyId", EmitDefaultValue=false)]
+        public string SurveyId { get; set; }
         
         
         
         /// <summary>
-        /// Survey status
+        /// Score of the survey used with NPS
         /// </summary>
-        /// <value>Survey status</value>
-        [DataMember(Name="surveyStatus", EmitDefaultValue=false)]
-        public string SurveyStatus { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Promoter score of the survey
-        /// </summary>
-        /// <value>Promoter score of the survey</value>
+        /// <value>Score of the survey used with NPS</value>
         [DataMember(Name="surveyPromoterScore", EmitDefaultValue=false)]
         public int? SurveyPromoterScore { get; set; }
         
         
         
         /// <summary>
-        /// Completion date/time of the survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// The status of the survey
         /// </summary>
-        /// <value>Completion date/time of the survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="surveyCompletedDate", EmitDefaultValue=false)]
-        public DateTime? SurveyCompletedDate { get; set; }
+        /// <value>The status of the survey</value>
+        [DataMember(Name="surveyStatus", EmitDefaultValue=false)]
+        public string SurveyStatus { get; set; }
+        
+        
+        
+        /// <summary>
+        /// ID of the agent the survey was performed against
+        /// </summary>
+        /// <value>ID of the agent the survey was performed against</value>
+        [DataMember(Name="userId", EmitDefaultValue=false)]
+        public string UserId { get; set; }
         
         
         
@@ -214,16 +214,16 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AnalyticsSurvey {\n");
             
-            sb.Append("  SurveyId: ").Append(SurveyId).Append("\n");
+            sb.Append("  EventTime: ").Append(EventTime).Append("\n");
+            sb.Append("  QueueId: ").Append(QueueId).Append("\n");
+            sb.Append("  SurveyCompletedDate: ").Append(SurveyCompletedDate).Append("\n");
+            sb.Append("  SurveyFormContextId: ").Append(SurveyFormContextId).Append("\n");
             sb.Append("  SurveyFormId: ").Append(SurveyFormId).Append("\n");
             sb.Append("  SurveyFormName: ").Append(SurveyFormName).Append("\n");
-            sb.Append("  SurveyFormContextId: ").Append(SurveyFormContextId).Append("\n");
-            sb.Append("  EventTime: ").Append(EventTime).Append("\n");
-            sb.Append("  UserId: ").Append(UserId).Append("\n");
-            sb.Append("  QueueId: ").Append(QueueId).Append("\n");
-            sb.Append("  SurveyStatus: ").Append(SurveyStatus).Append("\n");
+            sb.Append("  SurveyId: ").Append(SurveyId).Append("\n");
             sb.Append("  SurveyPromoterScore: ").Append(SurveyPromoterScore).Append("\n");
-            sb.Append("  SurveyCompletedDate: ").Append(SurveyCompletedDate).Append("\n");
+            sb.Append("  SurveyStatus: ").Append(SurveyStatus).Append("\n");
+            sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  OSurveyTotalScore: ").Append(OSurveyTotalScore).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -262,9 +262,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.SurveyId == other.SurveyId ||
-                    this.SurveyId != null &&
-                    this.SurveyId.Equals(other.SurveyId)
+                    this.EventTime == other.EventTime ||
+                    this.EventTime != null &&
+                    this.EventTime.Equals(other.EventTime)
+                ) &&
+                (
+                    this.QueueId == other.QueueId ||
+                    this.QueueId != null &&
+                    this.QueueId.Equals(other.QueueId)
+                ) &&
+                (
+                    this.SurveyCompletedDate == other.SurveyCompletedDate ||
+                    this.SurveyCompletedDate != null &&
+                    this.SurveyCompletedDate.Equals(other.SurveyCompletedDate)
+                ) &&
+                (
+                    this.SurveyFormContextId == other.SurveyFormContextId ||
+                    this.SurveyFormContextId != null &&
+                    this.SurveyFormContextId.Equals(other.SurveyFormContextId)
                 ) &&
                 (
                     this.SurveyFormId == other.SurveyFormId ||
@@ -277,29 +292,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SurveyFormName.Equals(other.SurveyFormName)
                 ) &&
                 (
-                    this.SurveyFormContextId == other.SurveyFormContextId ||
-                    this.SurveyFormContextId != null &&
-                    this.SurveyFormContextId.Equals(other.SurveyFormContextId)
-                ) &&
-                (
-                    this.EventTime == other.EventTime ||
-                    this.EventTime != null &&
-                    this.EventTime.Equals(other.EventTime)
-                ) &&
-                (
-                    this.UserId == other.UserId ||
-                    this.UserId != null &&
-                    this.UserId.Equals(other.UserId)
-                ) &&
-                (
-                    this.QueueId == other.QueueId ||
-                    this.QueueId != null &&
-                    this.QueueId.Equals(other.QueueId)
-                ) &&
-                (
-                    this.SurveyStatus == other.SurveyStatus ||
-                    this.SurveyStatus != null &&
-                    this.SurveyStatus.Equals(other.SurveyStatus)
+                    this.SurveyId == other.SurveyId ||
+                    this.SurveyId != null &&
+                    this.SurveyId.Equals(other.SurveyId)
                 ) &&
                 (
                     this.SurveyPromoterScore == other.SurveyPromoterScore ||
@@ -307,9 +302,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SurveyPromoterScore.Equals(other.SurveyPromoterScore)
                 ) &&
                 (
-                    this.SurveyCompletedDate == other.SurveyCompletedDate ||
-                    this.SurveyCompletedDate != null &&
-                    this.SurveyCompletedDate.Equals(other.SurveyCompletedDate)
+                    this.SurveyStatus == other.SurveyStatus ||
+                    this.SurveyStatus != null &&
+                    this.SurveyStatus.Equals(other.SurveyStatus)
+                ) &&
+                (
+                    this.UserId == other.UserId ||
+                    this.UserId != null &&
+                    this.UserId.Equals(other.UserId)
                 ) &&
                 (
                     this.OSurveyTotalScore == other.OSurveyTotalScore ||
@@ -330,8 +330,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.SurveyId != null)
-                    hash = hash * 59 + this.SurveyId.GetHashCode();
+                if (this.EventTime != null)
+                    hash = hash * 59 + this.EventTime.GetHashCode();
+                
+                if (this.QueueId != null)
+                    hash = hash * 59 + this.QueueId.GetHashCode();
+                
+                if (this.SurveyCompletedDate != null)
+                    hash = hash * 59 + this.SurveyCompletedDate.GetHashCode();
+                
+                if (this.SurveyFormContextId != null)
+                    hash = hash * 59 + this.SurveyFormContextId.GetHashCode();
                 
                 if (this.SurveyFormId != null)
                     hash = hash * 59 + this.SurveyFormId.GetHashCode();
@@ -339,26 +348,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SurveyFormName != null)
                     hash = hash * 59 + this.SurveyFormName.GetHashCode();
                 
-                if (this.SurveyFormContextId != null)
-                    hash = hash * 59 + this.SurveyFormContextId.GetHashCode();
-                
-                if (this.EventTime != null)
-                    hash = hash * 59 + this.EventTime.GetHashCode();
-                
-                if (this.UserId != null)
-                    hash = hash * 59 + this.UserId.GetHashCode();
-                
-                if (this.QueueId != null)
-                    hash = hash * 59 + this.QueueId.GetHashCode();
-                
-                if (this.SurveyStatus != null)
-                    hash = hash * 59 + this.SurveyStatus.GetHashCode();
+                if (this.SurveyId != null)
+                    hash = hash * 59 + this.SurveyId.GetHashCode();
                 
                 if (this.SurveyPromoterScore != null)
                     hash = hash * 59 + this.SurveyPromoterScore.GetHashCode();
                 
-                if (this.SurveyCompletedDate != null)
-                    hash = hash * 59 + this.SurveyCompletedDate.GetHashCode();
+                if (this.SurveyStatus != null)
+                    hash = hash * 59 + this.SurveyStatus.GetHashCode();
+                
+                if (this.UserId != null)
+                    hash = hash * 59 + this.UserId.GetHashCode();
                 
                 if (this.OSurveyTotalScore != null)
                     hash = hash * 59 + this.OSurveyTotalScore.GetHashCode();

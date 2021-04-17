@@ -477,7 +477,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Sentimentfeedback for "SentimentFeedback"
             /// </summary>
             [EnumMember(Value = "SentimentFeedback")]
-            Sentimentfeedback
+            Sentimentfeedback,
+            
+            /// <summary>
+            /// Enum Integration for "Integration"
+            /// </summary>
+            [EnumMember(Value = "Integration")]
+            Integration
         }
         
         

@@ -10,8 +10,8 @@ title: WebChatMessageEntityList
 | **PageSize** | **int?** |  | [optional] |
 | **Entities** | [**List&lt;WebChatMessage&gt;**](WebChatMessage.html) |  | [optional] |
 | **PreviousPage** | **string** |  | [optional] |
-| **Next** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **Next** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

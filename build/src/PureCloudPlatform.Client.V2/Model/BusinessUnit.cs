@@ -50,13 +50,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="BusinessUnit" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Settings">Settings for this business unit.</param>
-        public BusinessUnit(string Name = null, Division Division = null, BusinessUnitSettings Settings = null)
+        /// <param name="Division">The division to which this entity belongs..</param>
+        public BusinessUnit(string Name = null, BusinessUnitSettings Settings = null, DivisionReference Division = null)
         {
             this.Name = Name;
-            this.Division = Division;
             this.Settings = Settings;
+            this.Division = Division;
             
         }
         
@@ -80,20 +80,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The division to which this entity belongs.
-        /// </summary>
-        /// <value>The division to which this entity belongs.</value>
-        [DataMember(Name="division", EmitDefaultValue=false)]
-        public Division Division { get; set; }
-        
-        
-        
-        /// <summary>
         /// Settings for this business unit
         /// </summary>
         /// <value>Settings for this business unit</value>
         [DataMember(Name="settings", EmitDefaultValue=false)]
         public BusinessUnitSettings Settings { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The division to which this entity belongs.
+        /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public DivisionReference Division { get; set; }
         
         
         
@@ -116,8 +116,8 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Settings: ").Append(Settings).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -166,14 +166,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
-                    this.Division == other.Division ||
-                    this.Division != null &&
-                    this.Division.Equals(other.Division)
-                ) &&
-                (
                     this.Settings == other.Settings ||
                     this.Settings != null &&
                     this.Settings.Equals(other.Settings)
+                ) &&
+                (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -200,11 +200,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 
-                if (this.Division != null)
-                    hash = hash * 59 + this.Division.GetHashCode();
-                
                 if (this.Settings != null)
                     hash = hash * 59 + this.Settings.GetHashCode();
+                
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

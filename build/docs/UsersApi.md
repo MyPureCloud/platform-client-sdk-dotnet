@@ -64,6 +64,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsUsersObservationsQuery**](UsersApi.html#postanalyticsusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
 | [**PostAuthorizationSubjectBulkadd**](UsersApi.html#postauthorizationsubjectbulkadd) | **POST** /api/v2/authorization/subjects/{subjectId}/bulkadd | Bulk-grant roles and divisions to a subject. |
 | [**PostAuthorizationSubjectBulkremove**](UsersApi.html#postauthorizationsubjectbulkremove) | **POST** /api/v2/authorization/subjects/{subjectId}/bulkremove | Bulk-remove grants from a subject. |
+| [**PostAuthorizationSubjectBulkreplace**](UsersApi.html#postauthorizationsubjectbulkreplace) | **POST** /api/v2/authorization/subjects/{subjectId}/bulkreplace | Replace subject&#39;s roles and divisions with the exact list supplied in the request. |
 | [**PostAuthorizationSubjectDivisionRole**](UsersApi.html#postauthorizationsubjectdivisionrole) | **POST** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Make a grant of a role in a division |
 | [**PostUserInvite**](UsersApi.html#postuserinvite) | **POST** /api/v2/users/{userId}/invite | Send an activation email to the user |
 | [**PostUserPassword**](UsersApi.html#postuserpassword) | **POST** /api/v2/users/{userId}/password | Change a users password |
@@ -2634,7 +2635,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: Asc, Desc |
-| **types** | [**List<string>**](string.html)| Specifies the activity types. | [optional] <br />**Values**: Informational, Coaching |
+| **types** | [**List<string>**](string.html)| Specifies the activity types. | [optional] <br />**Values**: Informational, Coaching, AssessedContent, Questionnaire |
 | **statuses** | [**List<string>**](string.html)| Specifies the activity statuses to filter by | [optional] <br />**Values**: Planned, InProgress, Completed, InvalidSchedule |
 | **relationship** | [**List<string>**](string.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional] <br />**Values**: Creator, Facilitator, Attendee |
 {: class="table table-striped"}
@@ -2716,7 +2717,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: Asc, Desc |
-| **types** | [**List<string>**](string.html)| Specifies the activity types. | [optional] <br />**Values**: Informational, Coaching |
+| **types** | [**List<string>**](string.html)| Specifies the activity types. | [optional] <br />**Values**: Informational, Coaching, AssessedContent, Questionnaire |
 | **statuses** | [**List<string>**](string.html)| Specifies the activity statuses to filter by | [optional] <br />**Values**: Planned, InProgress, Completed, InvalidSchedule |
 | **relationship** | [**List<string>**](string.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional] <br />**Values**: Creator, Facilitator, Attendee |
 {: class="table table-striped"}
@@ -2786,7 +2787,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **activityId** | **string**| Specifies the activity ID, maps to either assignment or appointment ID |  |
-| **type** | **string**| Specifies the activity type. | <br />**Values**: Informational, Coaching |
+| **type** | **string**| Specifies the activity type. | <br />**Values**: Informational, Coaching, AssessedContent, Questionnaire |
 {: class="table table-striped"}
 
 ### Return type
@@ -3928,6 +3929,75 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="postauthorizationsubjectbulkreplace"></a>
+
+## void PostAuthorizationSubjectBulkreplace (string subjectId, RoleDivisionGrants body, string subjectType = null)
+
+
+
+Replace subject's roles and divisions with the exact list supplied in the request.
+
+This operation will not remove grants that are inherited from group membership. It will only set the grants directly applied to the subject.
+
+Requires ALL permissions: 
+
+* authorization:grant:add
+* authorization:grant:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAuthorizationSubjectBulkreplaceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var subjectId = subjectId_example;  // string | Subject ID (user or group)
+            var body = new RoleDivisionGrants(); // RoleDivisionGrants | Pairs of role and division IDs
+            var subjectType = subjectType_example;  // string | what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional)  (default to PC_USER)
+
+            try
+            { 
+                // Replace subject's roles and divisions with the exact list supplied in the request.
+                apiInstance.PostAuthorizationSubjectBulkreplace(subjectId, body, subjectType);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PostAuthorizationSubjectBulkreplace: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **subjectId** | **string**| Subject ID (user or group) |  |
+| **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs |  |
+| **subjectType** | **string**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
 {: class="table table-striped"}
 
 ### Return type

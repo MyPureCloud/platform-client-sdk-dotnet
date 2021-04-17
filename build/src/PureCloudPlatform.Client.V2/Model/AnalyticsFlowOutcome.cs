@@ -49,29 +49,56 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsFlowOutcome" /> class.
         /// </summary>
-        /// <param name="FlowOutcomeId">Unique identifiers of a flow outcome.</param>
+        /// <param name="FlowOutcome">Combination of unique flow outcome identifier and its value separated by colon.</param>
+        /// <param name="FlowOutcomeEndTimestamp">The outcome ending timestamp in ISO 8601 format. This may be null if the outcome did not succeed..</param>
+        /// <param name="FlowOutcomeId">Unique identifier of a flow outcome.</param>
+        /// <param name="FlowOutcomeStartTimestamp">The outcome starting timestamp in ISO 8601 format.</param>
         /// <param name="FlowOutcomeValue">Flow outcome value, e.g. SUCCESS.</param>
-        /// <param name="FlowOutcome">Colon-separated combinations of unique flow outcome identifier and value.</param>
-        /// <param name="FlowOutcomeStartTimestamp">Date/time the outcome started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="FlowOutcomeEndTimestamp">Date/time the outcome ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public AnalyticsFlowOutcome(string FlowOutcomeId = null, string FlowOutcomeValue = null, string FlowOutcome = null, DateTime? FlowOutcomeStartTimestamp = null, DateTime? FlowOutcomeEndTimestamp = null)
+        public AnalyticsFlowOutcome(string FlowOutcome = null, DateTime? FlowOutcomeEndTimestamp = null, string FlowOutcomeId = null, DateTime? FlowOutcomeStartTimestamp = null, string FlowOutcomeValue = null)
         {
-            this.FlowOutcomeId = FlowOutcomeId;
-            this.FlowOutcomeValue = FlowOutcomeValue;
             this.FlowOutcome = FlowOutcome;
-            this.FlowOutcomeStartTimestamp = FlowOutcomeStartTimestamp;
             this.FlowOutcomeEndTimestamp = FlowOutcomeEndTimestamp;
+            this.FlowOutcomeId = FlowOutcomeId;
+            this.FlowOutcomeStartTimestamp = FlowOutcomeStartTimestamp;
+            this.FlowOutcomeValue = FlowOutcomeValue;
             
         }
         
         
         
         /// <summary>
-        /// Unique identifiers of a flow outcome
+        /// Combination of unique flow outcome identifier and its value separated by colon
         /// </summary>
-        /// <value>Unique identifiers of a flow outcome</value>
+        /// <value>Combination of unique flow outcome identifier and its value separated by colon</value>
+        [DataMember(Name="flowOutcome", EmitDefaultValue=false)]
+        public string FlowOutcome { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The outcome ending timestamp in ISO 8601 format. This may be null if the outcome did not succeed.
+        /// </summary>
+        /// <value>The outcome ending timestamp in ISO 8601 format. This may be null if the outcome did not succeed.</value>
+        [DataMember(Name="flowOutcomeEndTimestamp", EmitDefaultValue=false)]
+        public DateTime? FlowOutcomeEndTimestamp { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Unique identifier of a flow outcome
+        /// </summary>
+        /// <value>Unique identifier of a flow outcome</value>
         [DataMember(Name="flowOutcomeId", EmitDefaultValue=false)]
         public string FlowOutcomeId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The outcome starting timestamp in ISO 8601 format
+        /// </summary>
+        /// <value>The outcome starting timestamp in ISO 8601 format</value>
+        [DataMember(Name="flowOutcomeStartTimestamp", EmitDefaultValue=false)]
+        public DateTime? FlowOutcomeStartTimestamp { get; set; }
         
         
         
@@ -83,33 +110,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string FlowOutcomeValue { get; set; }
         
         
-        
-        /// <summary>
-        /// Colon-separated combinations of unique flow outcome identifier and value
-        /// </summary>
-        /// <value>Colon-separated combinations of unique flow outcome identifier and value</value>
-        [DataMember(Name="flowOutcome", EmitDefaultValue=false)]
-        public string FlowOutcome { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Date/time the outcome started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>Date/time the outcome started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="flowOutcomeStartTimestamp", EmitDefaultValue=false)]
-        public DateTime? FlowOutcomeStartTimestamp { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Date/time the outcome ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>Date/time the outcome ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="flowOutcomeEndTimestamp", EmitDefaultValue=false)]
-        public DateTime? FlowOutcomeEndTimestamp { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -119,11 +119,11 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AnalyticsFlowOutcome {\n");
             
-            sb.Append("  FlowOutcomeId: ").Append(FlowOutcomeId).Append("\n");
-            sb.Append("  FlowOutcomeValue: ").Append(FlowOutcomeValue).Append("\n");
             sb.Append("  FlowOutcome: ").Append(FlowOutcome).Append("\n");
-            sb.Append("  FlowOutcomeStartTimestamp: ").Append(FlowOutcomeStartTimestamp).Append("\n");
             sb.Append("  FlowOutcomeEndTimestamp: ").Append(FlowOutcomeEndTimestamp).Append("\n");
+            sb.Append("  FlowOutcomeId: ").Append(FlowOutcomeId).Append("\n");
+            sb.Append("  FlowOutcomeStartTimestamp: ").Append(FlowOutcomeStartTimestamp).Append("\n");
+            sb.Append("  FlowOutcomeValue: ").Append(FlowOutcomeValue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -161,19 +161,19 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.FlowOutcomeId == other.FlowOutcomeId ||
-                    this.FlowOutcomeId != null &&
-                    this.FlowOutcomeId.Equals(other.FlowOutcomeId)
-                ) &&
-                (
-                    this.FlowOutcomeValue == other.FlowOutcomeValue ||
-                    this.FlowOutcomeValue != null &&
-                    this.FlowOutcomeValue.Equals(other.FlowOutcomeValue)
-                ) &&
-                (
                     this.FlowOutcome == other.FlowOutcome ||
                     this.FlowOutcome != null &&
                     this.FlowOutcome.Equals(other.FlowOutcome)
+                ) &&
+                (
+                    this.FlowOutcomeEndTimestamp == other.FlowOutcomeEndTimestamp ||
+                    this.FlowOutcomeEndTimestamp != null &&
+                    this.FlowOutcomeEndTimestamp.Equals(other.FlowOutcomeEndTimestamp)
+                ) &&
+                (
+                    this.FlowOutcomeId == other.FlowOutcomeId ||
+                    this.FlowOutcomeId != null &&
+                    this.FlowOutcomeId.Equals(other.FlowOutcomeId)
                 ) &&
                 (
                     this.FlowOutcomeStartTimestamp == other.FlowOutcomeStartTimestamp ||
@@ -181,9 +181,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FlowOutcomeStartTimestamp.Equals(other.FlowOutcomeStartTimestamp)
                 ) &&
                 (
-                    this.FlowOutcomeEndTimestamp == other.FlowOutcomeEndTimestamp ||
-                    this.FlowOutcomeEndTimestamp != null &&
-                    this.FlowOutcomeEndTimestamp.Equals(other.FlowOutcomeEndTimestamp)
+                    this.FlowOutcomeValue == other.FlowOutcomeValue ||
+                    this.FlowOutcomeValue != null &&
+                    this.FlowOutcomeValue.Equals(other.FlowOutcomeValue)
                 );
         }
 
@@ -199,20 +199,20 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.FlowOutcomeId != null)
-                    hash = hash * 59 + this.FlowOutcomeId.GetHashCode();
-                
-                if (this.FlowOutcomeValue != null)
-                    hash = hash * 59 + this.FlowOutcomeValue.GetHashCode();
-                
                 if (this.FlowOutcome != null)
                     hash = hash * 59 + this.FlowOutcome.GetHashCode();
+                
+                if (this.FlowOutcomeEndTimestamp != null)
+                    hash = hash * 59 + this.FlowOutcomeEndTimestamp.GetHashCode();
+                
+                if (this.FlowOutcomeId != null)
+                    hash = hash * 59 + this.FlowOutcomeId.GetHashCode();
                 
                 if (this.FlowOutcomeStartTimestamp != null)
                     hash = hash * 59 + this.FlowOutcomeStartTimestamp.GetHashCode();
                 
-                if (this.FlowOutcomeEndTimestamp != null)
-                    hash = hash * 59 + this.FlowOutcomeEndTimestamp.GetHashCode();
+                if (this.FlowOutcomeValue != null)
+                    hash = hash * 59 + this.FlowOutcomeValue.GetHashCode();
                 
                 return hash;
             }

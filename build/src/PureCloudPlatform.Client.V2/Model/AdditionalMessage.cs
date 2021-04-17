@@ -51,7 +51,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="AdditionalMessage" /> class.
         /// </summary>
         /// <param name="TextBody">The body of the text message. (required).</param>
-        /// <param name="MediaIds">The media ids associated with the text message..</param>
+        /// <param name="MediaIds">The media ids associated with the text message. See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage..</param>
         /// <param name="StickerIds">The sticker ids associated with the text message..</param>
         /// <param name="MessagingTemplate">The messaging template use to send a predefined canned response with the message.</param>
         public AdditionalMessage(string TextBody = null, List<string> MediaIds = null, List<string> StickerIds = null, MessagingTemplateRequest MessagingTemplate = null)
@@ -75,9 +75,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The media ids associated with the text message.
+        /// The media ids associated with the text message. See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
         /// </summary>
-        /// <value>The media ids associated with the text message.</value>
+        /// <value>The media ids associated with the text message. See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.</value>
         [DataMember(Name="mediaIds", EmitDefaultValue=false)]
         public List<string> MediaIds { get; set; }
         

@@ -8,7 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteToken**](TokensApi.html#deletetoken) | **DELETE** /api/v2/tokens/{userId} | Delete all auth tokens for the specified user. |
-| [**DeleteTokensMe**](TokensApi.html#deletetokensme) | **DELETE** /api/v2/tokens/me | Delete  auth token used to make the request. |
+| [**DeleteTokensMe**](TokensApi.html#deletetokensme) | **DELETE** /api/v2/tokens/me | Delete auth token used to make the request. |
 | [**GetTokensMe**](TokensApi.html#gettokensme) | **GET** /api/v2/tokens/me | Fetch information about the current token |
 {: class="table table-striped"}
 
@@ -82,7 +82,7 @@ void (empty response body)
 
 
 
-Delete  auth token used to make the request.
+Delete auth token used to make the request.
 
 
 
@@ -114,7 +114,7 @@ namespace Example
 
             try
             { 
-                // Delete  auth token used to make the request.
+                // Delete auth token used to make the request.
                 apiInstance.DeleteTokensMe();
             }
             catch (Exception e)

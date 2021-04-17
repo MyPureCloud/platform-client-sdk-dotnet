@@ -34,23 +34,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsProposedAgent" /> class.
         /// </summary>
-        /// <param name="ProposedAgentId">Unique identifier of an agent that was proposed by predictive routing.</param>
         /// <param name="AgentRank">Proposed agent rank for this conversation from predictive routing (lower is better).</param>
-        public AnalyticsProposedAgent(string ProposedAgentId = null, int? AgentRank = null)
+        /// <param name="ProposedAgentId">Unique identifier for the agent that was proposed by predictive routing.</param>
+        public AnalyticsProposedAgent(int? AgentRank = null, string ProposedAgentId = null)
         {
-            this.ProposedAgentId = ProposedAgentId;
             this.AgentRank = AgentRank;
+            this.ProposedAgentId = ProposedAgentId;
             
         }
-        
-        
-        
-        /// <summary>
-        /// Unique identifier of an agent that was proposed by predictive routing
-        /// </summary>
-        /// <value>Unique identifier of an agent that was proposed by predictive routing</value>
-        [DataMember(Name="proposedAgentId", EmitDefaultValue=false)]
-        public string ProposedAgentId { get; set; }
         
         
         
@@ -62,6 +53,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? AgentRank { get; set; }
         
         
+        
+        /// <summary>
+        /// Unique identifier for the agent that was proposed by predictive routing
+        /// </summary>
+        /// <value>Unique identifier for the agent that was proposed by predictive routing</value>
+        [DataMember(Name="proposedAgentId", EmitDefaultValue=false)]
+        public string ProposedAgentId { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -71,8 +71,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AnalyticsProposedAgent {\n");
             
-            sb.Append("  ProposedAgentId: ").Append(ProposedAgentId).Append("\n");
             sb.Append("  AgentRank: ").Append(AgentRank).Append("\n");
+            sb.Append("  ProposedAgentId: ").Append(ProposedAgentId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,14 +110,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.ProposedAgentId == other.ProposedAgentId ||
-                    this.ProposedAgentId != null &&
-                    this.ProposedAgentId.Equals(other.ProposedAgentId)
-                ) &&
-                (
                     this.AgentRank == other.AgentRank ||
                     this.AgentRank != null &&
                     this.AgentRank.Equals(other.AgentRank)
+                ) &&
+                (
+                    this.ProposedAgentId == other.ProposedAgentId ||
+                    this.ProposedAgentId != null &&
+                    this.ProposedAgentId.Equals(other.ProposedAgentId)
                 );
         }
 
@@ -133,11 +133,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.ProposedAgentId != null)
-                    hash = hash * 59 + this.ProposedAgentId.GetHashCode();
-                
                 if (this.AgentRank != null)
                     hash = hash * 59 + this.AgentRank.GetHashCode();
+                
+                if (this.ProposedAgentId != null)
+                    hash = hash * 59 + this.ProposedAgentId.GetHashCode();
                 
                 return hash;
             }

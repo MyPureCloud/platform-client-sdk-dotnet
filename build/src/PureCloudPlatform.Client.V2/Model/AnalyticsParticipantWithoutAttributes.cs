@@ -26,136 +26,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        /// <summary>
-        /// The participant's purpose
-        /// </summary>
-        /// <value>The participant's purpose</value>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum PurposeEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Manual for "manual"
-            /// </summary>
-            [EnumMember(Value = "manual")]
-            Manual,
-            
-            /// <summary>
-            /// Enum Dialer for "dialer"
-            /// </summary>
-            [EnumMember(Value = "dialer")]
-            Dialer,
-            
-            /// <summary>
-            /// Enum Inbound for "inbound"
-            /// </summary>
-            [EnumMember(Value = "inbound")]
-            Inbound,
-            
-            /// <summary>
-            /// Enum Acd for "acd"
-            /// </summary>
-            [EnumMember(Value = "acd")]
-            Acd,
-            
-            /// <summary>
-            /// Enum Ivr for "ivr"
-            /// </summary>
-            [EnumMember(Value = "ivr")]
-            Ivr,
-            
-            /// <summary>
-            /// Enum Voicemail for "voicemail"
-            /// </summary>
-            [EnumMember(Value = "voicemail")]
-            Voicemail,
-            
-            /// <summary>
-            /// Enum Outbound for "outbound"
-            /// </summary>
-            [EnumMember(Value = "outbound")]
-            Outbound,
-            
-            /// <summary>
-            /// Enum Agent for "agent"
-            /// </summary>
-            [EnumMember(Value = "agent")]
-            Agent,
-            
-            /// <summary>
-            /// Enum User for "user"
-            /// </summary>
-            [EnumMember(Value = "user")]
-            User,
-            
-            /// <summary>
-            /// Enum Station for "station"
-            /// </summary>
-            [EnumMember(Value = "station")]
-            Station,
-            
-            /// <summary>
-            /// Enum Group for "group"
-            /// </summary>
-            [EnumMember(Value = "group")]
-            Group,
-            
-            /// <summary>
-            /// Enum Customer for "customer"
-            /// </summary>
-            [EnumMember(Value = "customer")]
-            Customer,
-            
-            /// <summary>
-            /// Enum External for "external"
-            /// </summary>
-            [EnumMember(Value = "external")]
-            External,
-            
-            /// <summary>
-            /// Enum Fax for "fax"
-            /// </summary>
-            [EnumMember(Value = "fax")]
-            Fax,
-            
-            /// <summary>
-            /// Enum Workflow for "workflow"
-            /// </summary>
-            [EnumMember(Value = "workflow")]
-            Workflow,
-            
-            /// <summary>
-            /// Enum Campaign for "campaign"
-            /// </summary>
-            [EnumMember(Value = "campaign")]
-            Campaign,
-            
-            /// <summary>
-            /// Enum Api for "api"
-            /// </summary>
-            [EnumMember(Value = "api")]
-            Api
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Reason for which participant flagged conversation
         /// </summary>
@@ -187,6 +57,147 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The participant's purpose
+        /// </summary>
+        /// <value>The participant's purpose</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum PurposeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Acd for "acd"
+            /// </summary>
+            [EnumMember(Value = "acd")]
+            Acd,
+            
+            /// <summary>
+            /// Enum Agent for "agent"
+            /// </summary>
+            [EnumMember(Value = "agent")]
+            Agent,
+            
+            /// <summary>
+            /// Enum Api for "api"
+            /// </summary>
+            [EnumMember(Value = "api")]
+            Api,
+            
+            /// <summary>
+            /// Enum Campaign for "campaign"
+            /// </summary>
+            [EnumMember(Value = "campaign")]
+            Campaign,
+            
+            /// <summary>
+            /// Enum Customer for "customer"
+            /// </summary>
+            [EnumMember(Value = "customer")]
+            Customer,
+            
+            /// <summary>
+            /// Enum Dialer for "dialer"
+            /// </summary>
+            [EnumMember(Value = "dialer")]
+            Dialer,
+            
+            /// <summary>
+            /// Enum External for "external"
+            /// </summary>
+            [EnumMember(Value = "external")]
+            External,
+            
+            /// <summary>
+            /// Enum Fax for "fax"
+            /// </summary>
+            [EnumMember(Value = "fax")]
+            Fax,
+            
+            /// <summary>
+            /// Enum Group for "group"
+            /// </summary>
+            [EnumMember(Value = "group")]
+            Group,
+            
+            /// <summary>
+            /// Enum Inbound for "inbound"
+            /// </summary>
+            [EnumMember(Value = "inbound")]
+            Inbound,
+            
+            /// <summary>
+            /// Enum Ivr for "ivr"
+            /// </summary>
+            [EnumMember(Value = "ivr")]
+            Ivr,
+            
+            /// <summary>
+            /// Enum Manual for "manual"
+            /// </summary>
+            [EnumMember(Value = "manual")]
+            Manual,
+            
+            /// <summary>
+            /// Enum Outbound for "outbound"
+            /// </summary>
+            [EnumMember(Value = "outbound")]
+            Outbound,
+            
+            /// <summary>
+            /// Enum Station for "station"
+            /// </summary>
+            [EnumMember(Value = "station")]
+            Station,
+            
+            /// <summary>
+            /// Enum User for "user"
+            /// </summary>
+            [EnumMember(Value = "user")]
+            User,
+            
+            /// <summary>
+            /// Enum Voicemail for "voicemail"
+            /// </summary>
+            [EnumMember(Value = "voicemail")]
+            Voicemail,
+            
+            /// <summary>
+            /// Enum Workflow for "workflow"
+            /// </summary>
+            [EnumMember(Value = "workflow")]
+            Workflow
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Reason for which participant flagged conversation
+        /// </summary>
+        /// <value>Reason for which participant flagged conversation</value>
+        [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
+        public FlaggedReasonEnum? FlaggedReason { get; set; }
         
         
         
@@ -207,44 +218,53 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <summary>
-        /// Reason for which participant flagged conversation
-        /// </summary>
-        /// <value>Reason for which participant flagged conversation</value>
-        [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
-        public FlaggedReasonEnum? FlaggedReason { get; set; }
-        
-        
-        
-        
-        
         
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsParticipantWithoutAttributes" /> class.
         /// </summary>
+        /// <param name="ExternalContactId">External contact identifier.</param>
+        /// <param name="ExternalOrganizationId">External organization identifier.</param>
+        /// <param name="FlaggedReason">Reason for which participant flagged conversation.</param>
         /// <param name="ParticipantId">Unique identifier for the participant.</param>
         /// <param name="ParticipantName">A human readable name identifying the participant.</param>
-        /// <param name="UserId">If a user, then this will be the unique identifier for the user.</param>
         /// <param name="Purpose">The participant&#39;s purpose.</param>
-        /// <param name="ExternalContactId">External Contact Identifier.</param>
-        /// <param name="ExternalOrganizationId">External Organization Identifier.</param>
-        /// <param name="FlaggedReason">Reason for which participant flagged conversation.</param>
-        /// <param name="TeamId">The team id the user is a member of.</param>
+        /// <param name="TeamId">The team ID the user is a member of.</param>
+        /// <param name="UserId">Unique identifier for the user.</param>
         /// <param name="Sessions">List of sessions associated to this participant.</param>
-        public AnalyticsParticipantWithoutAttributes(string ParticipantId = null, string ParticipantName = null, string UserId = null, PurposeEnum? Purpose = null, string ExternalContactId = null, string ExternalOrganizationId = null, FlaggedReasonEnum? FlaggedReason = null, string TeamId = null, List<AnalyticsSession> Sessions = null)
+        public AnalyticsParticipantWithoutAttributes(string ExternalContactId = null, string ExternalOrganizationId = null, FlaggedReasonEnum? FlaggedReason = null, string ParticipantId = null, string ParticipantName = null, PurposeEnum? Purpose = null, string TeamId = null, string UserId = null, List<AnalyticsSession> Sessions = null)
         {
-            this.ParticipantId = ParticipantId;
-            this.ParticipantName = ParticipantName;
-            this.UserId = UserId;
-            this.Purpose = Purpose;
             this.ExternalContactId = ExternalContactId;
             this.ExternalOrganizationId = ExternalOrganizationId;
             this.FlaggedReason = FlaggedReason;
+            this.ParticipantId = ParticipantId;
+            this.ParticipantName = ParticipantName;
+            this.Purpose = Purpose;
             this.TeamId = TeamId;
+            this.UserId = UserId;
             this.Sessions = Sessions;
             
         }
+        
+        
+        
+        /// <summary>
+        /// External contact identifier
+        /// </summary>
+        /// <value>External contact identifier</value>
+        [DataMember(Name="externalContactId", EmitDefaultValue=false)]
+        public string ExternalContactId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// External organization identifier
+        /// </summary>
+        /// <value>External organization identifier</value>
+        [DataMember(Name="externalOrganizationId", EmitDefaultValue=false)]
+        public string ExternalOrganizationId { get; set; }
+        
+        
         
         
         
@@ -266,43 +286,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <summary>
-        /// If a user, then this will be the unique identifier for the user
-        /// </summary>
-        /// <value>If a user, then this will be the unique identifier for the user</value>
-        [DataMember(Name="userId", EmitDefaultValue=false)]
-        public string UserId { get; set; }
-        
-        
-        
         
         
         /// <summary>
-        /// External Contact Identifier
+        /// The team ID the user is a member of
         /// </summary>
-        /// <value>External Contact Identifier</value>
-        [DataMember(Name="externalContactId", EmitDefaultValue=false)]
-        public string ExternalContactId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// External Organization Identifier
-        /// </summary>
-        /// <value>External Organization Identifier</value>
-        [DataMember(Name="externalOrganizationId", EmitDefaultValue=false)]
-        public string ExternalOrganizationId { get; set; }
-        
-        
-        
-        
-        
-        /// <summary>
-        /// The team id the user is a member of
-        /// </summary>
-        /// <value>The team id the user is a member of</value>
+        /// <value>The team ID the user is a member of</value>
         [DataMember(Name="teamId", EmitDefaultValue=false)]
         public string TeamId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Unique identifier for the user
+        /// </summary>
+        /// <value>Unique identifier for the user</value>
+        [DataMember(Name="userId", EmitDefaultValue=false)]
+        public string UserId { get; set; }
         
         
         
@@ -323,14 +323,14 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AnalyticsParticipantWithoutAttributes {\n");
             
-            sb.Append("  ParticipantId: ").Append(ParticipantId).Append("\n");
-            sb.Append("  ParticipantName: ").Append(ParticipantName).Append("\n");
-            sb.Append("  UserId: ").Append(UserId).Append("\n");
-            sb.Append("  Purpose: ").Append(Purpose).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
+            sb.Append("  ParticipantId: ").Append(ParticipantId).Append("\n");
+            sb.Append("  ParticipantName: ").Append(ParticipantName).Append("\n");
+            sb.Append("  Purpose: ").Append(Purpose).Append("\n");
             sb.Append("  TeamId: ").Append(TeamId).Append("\n");
+            sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -369,26 +369,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.ParticipantId == other.ParticipantId ||
-                    this.ParticipantId != null &&
-                    this.ParticipantId.Equals(other.ParticipantId)
-                ) &&
-                (
-                    this.ParticipantName == other.ParticipantName ||
-                    this.ParticipantName != null &&
-                    this.ParticipantName.Equals(other.ParticipantName)
-                ) &&
-                (
-                    this.UserId == other.UserId ||
-                    this.UserId != null &&
-                    this.UserId.Equals(other.UserId)
-                ) &&
-                (
-                    this.Purpose == other.Purpose ||
-                    this.Purpose != null &&
-                    this.Purpose.Equals(other.Purpose)
-                ) &&
-                (
                     this.ExternalContactId == other.ExternalContactId ||
                     this.ExternalContactId != null &&
                     this.ExternalContactId.Equals(other.ExternalContactId)
@@ -404,9 +384,29 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FlaggedReason.Equals(other.FlaggedReason)
                 ) &&
                 (
+                    this.ParticipantId == other.ParticipantId ||
+                    this.ParticipantId != null &&
+                    this.ParticipantId.Equals(other.ParticipantId)
+                ) &&
+                (
+                    this.ParticipantName == other.ParticipantName ||
+                    this.ParticipantName != null &&
+                    this.ParticipantName.Equals(other.ParticipantName)
+                ) &&
+                (
+                    this.Purpose == other.Purpose ||
+                    this.Purpose != null &&
+                    this.Purpose.Equals(other.Purpose)
+                ) &&
+                (
                     this.TeamId == other.TeamId ||
                     this.TeamId != null &&
                     this.TeamId.Equals(other.TeamId)
+                ) &&
+                (
+                    this.UserId == other.UserId ||
+                    this.UserId != null &&
+                    this.UserId.Equals(other.UserId)
                 ) &&
                 (
                     this.Sessions == other.Sessions ||
@@ -427,18 +427,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.ParticipantId != null)
-                    hash = hash * 59 + this.ParticipantId.GetHashCode();
-                
-                if (this.ParticipantName != null)
-                    hash = hash * 59 + this.ParticipantName.GetHashCode();
-                
-                if (this.UserId != null)
-                    hash = hash * 59 + this.UserId.GetHashCode();
-                
-                if (this.Purpose != null)
-                    hash = hash * 59 + this.Purpose.GetHashCode();
-                
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
                 
@@ -448,8 +436,20 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.FlaggedReason != null)
                     hash = hash * 59 + this.FlaggedReason.GetHashCode();
                 
+                if (this.ParticipantId != null)
+                    hash = hash * 59 + this.ParticipantId.GetHashCode();
+                
+                if (this.ParticipantName != null)
+                    hash = hash * 59 + this.ParticipantName.GetHashCode();
+                
+                if (this.Purpose != null)
+                    hash = hash * 59 + this.Purpose.GetHashCode();
+                
                 if (this.TeamId != null)
                     hash = hash * 59 + this.TeamId.GetHashCode();
+                
+                if (this.UserId != null)
+                    hash = hash * 59 + this.UserId.GetHashCode();
                 
                 if (this.Sessions != null)
                     hash = hash * 59 + this.Sessions.GetHashCode();

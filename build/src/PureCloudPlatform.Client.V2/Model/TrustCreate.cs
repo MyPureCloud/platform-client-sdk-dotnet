@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustCreate" /> class.
         /// </summary>
-        /// <param name="PairingId">The pairing Id created by the trustee. This is required to prove that the trustee agrees to the relationship. (required).</param>
+        /// <param name="PairingId">The pairing Id created by the trustee. This is required to prove that the trustee agrees to the relationship.  Not required when creating a default pairing with Customer Care..</param>
         /// <param name="Enabled">If disabled no trustee user will have access, even if they were previously added. (required).</param>
         /// <param name="Users">The list of users and their roles to which access will be granted. The users are from the trustee and the roles are from the trustor. If no users are specified, at least one group is required..</param>
         /// <param name="Groups">The list of groups and their roles to which access will be granted. The groups are from the trustee and the roles are from the trustor. If no groups are specified, at least one user is required..</param>
@@ -66,9 +66,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The pairing Id created by the trustee. This is required to prove that the trustee agrees to the relationship.
+        /// The pairing Id created by the trustee. This is required to prove that the trustee agrees to the relationship.  Not required when creating a default pairing with Customer Care.
         /// </summary>
-        /// <value>The pairing Id created by the trustee. This is required to prove that the trustee agrees to the relationship.</value>
+        /// <value>The pairing Id created by the trustee. This is required to prove that the trustee agrees to the relationship.  Not required when creating a default pairing with Customer Care.</value>
         [DataMember(Name="pairingId", EmitDefaultValue=false)]
         public string PairingId { get; set; }
         

@@ -104,8 +104,11 @@ title: ViewFilter
 | **DevelopmentTypeList** | **List&lt;string&gt;** | The list of development types used to filter agent development view | [optional] |
 | **DevelopmentStatusList** | **List&lt;string&gt;** | The list of development status used to filter agent development view | [optional] |
 | **DevelopmentModuleIds** | **List&lt;string&gt;** | The list of development moduleIds used to filter agent development view | [optional] |
-| **DevelopmentKeyType** | **string** | Represents due or completed to filter agent development view | [optional] |
 | **DevelopmentActivityOverdue** | **bool?** | Indicates filtering for development activities | [optional] |
+| **CustomerSentimentScore** | [**NumericRange**](NumericRange.html) | The customer sentiment score used to filter the view | [optional] |
+| **CustomerSentimentTrend** | [**NumericRange**](NumericRange.html) | The customer sentiment trend used to filter the view | [optional] |
+| **FlowTransferTargets** | **List&lt;string&gt;** | The list of transfer targets used to filter flow data | [optional] |
+| **DevelopmentName** | **string** | Filter for development name | [optional] |
 {: class="table table-striped"}
 
 

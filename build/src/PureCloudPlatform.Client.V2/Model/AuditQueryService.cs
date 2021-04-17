@@ -54,6 +54,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Contentmanagement,
             
             /// <summary>
+            /// Enum Integrations for "Integrations"
+            /// </summary>
+            [EnumMember(Value = "Integrations")]
+            Integrations,
+            
+            /// <summary>
             /// Enum Peoplepermissions for "PeoplePermissions"
             /// </summary>
             [EnumMember(Value = "PeoplePermissions")]

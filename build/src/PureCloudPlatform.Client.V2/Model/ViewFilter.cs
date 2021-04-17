@@ -37,10 +37,10 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Voice for "voice"
+            /// Enum Callback for "callback"
             /// </summary>
-            [EnumMember(Value = "voice")]
-            Voice,
+            [EnumMember(Value = "callback")]
+            Callback,
             
             /// <summary>
             /// Enum Chat for "chat"
@@ -49,28 +49,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Chat,
             
             /// <summary>
-            /// Enum Email for "email"
-            /// </summary>
-            [EnumMember(Value = "email")]
-            Email,
-            
-            /// <summary>
-            /// Enum Callback for "callback"
-            /// </summary>
-            [EnumMember(Value = "callback")]
-            Callback,
-            
-            /// <summary>
             /// Enum Cobrowse for "cobrowse"
             /// </summary>
             [EnumMember(Value = "cobrowse")]
             Cobrowse,
             
             /// <summary>
-            /// Enum Video for "video"
+            /// Enum Email for "email"
             /// </summary>
-            [EnumMember(Value = "video")]
-            Video,
+            [EnumMember(Value = "email")]
+            Email,
+            
+            /// <summary>
+            /// Enum Message for "message"
+            /// </summary>
+            [EnumMember(Value = "message")]
+            Message,
             
             /// <summary>
             /// Enum Screenshare for "screenshare"
@@ -79,10 +73,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Screenshare,
             
             /// <summary>
-            /// Enum Message for "message"
+            /// Enum Video for "video"
             /// </summary>
-            [EnumMember(Value = "message")]
-            Message
+            [EnumMember(Value = "video")]
+            Video,
+            
+            /// <summary>
+            /// Enum Voice for "voice"
+            /// </summary>
+            [EnumMember(Value = "voice")]
+            Voice
         }
         
         
@@ -638,10 +638,10 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Dnis for "dnis"
+            /// Enum Agent for "agent"
             /// </summary>
-            [EnumMember(Value = "dnis")]
-            Dnis,
+            [EnumMember(Value = "agent")]
+            Agent,
             
             /// <summary>
             /// Enum Direct for "direct"
@@ -650,16 +650,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Direct,
             
             /// <summary>
+            /// Enum Dnis for "dnis"
+            /// </summary>
+            [EnumMember(Value = "dnis")]
+            Dnis,
+            
+            /// <summary>
             /// Enum Flow for "flow"
             /// </summary>
             [EnumMember(Value = "flow")]
             Flow,
-            
-            /// <summary>
-            /// Enum Agent for "agent"
-            /// </summary>
-            [EnumMember(Value = "agent")]
-            Agent,
             
             /// <summary>
             /// Enum Outbound for "outbound"
@@ -730,6 +730,24 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Bullseye for "Bullseye"
+            /// </summary>
+            [EnumMember(Value = "Bullseye")]
+            Bullseye,
+            
+            /// <summary>
+            /// Enum Last for "Last"
+            /// </summary>
+            [EnumMember(Value = "Last")]
+            Last,
+            
+            /// <summary>
+            /// Enum Manual for "Manual"
+            /// </summary>
+            [EnumMember(Value = "Manual")]
+            Manual,
+            
+            /// <summary>
             /// Enum Predictive for "Predictive"
             /// </summary>
             [EnumMember(Value = "Predictive")]
@@ -740,24 +758,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Preferred")]
             Preferred,
-            
-            /// <summary>
-            /// Enum Manual for "Manual"
-            /// </summary>
-            [EnumMember(Value = "Manual")]
-            Manual,
-            
-            /// <summary>
-            /// Enum Last for "Last"
-            /// </summary>
-            [EnumMember(Value = "Last")]
-            Last,
-            
-            /// <summary>
-            /// Enum Bullseye for "Bullseye"
-            /// </summary>
-            [EnumMember(Value = "Bullseye")]
-            Bullseye,
             
             /// <summary>
             /// Enum Standard for "Standard"
@@ -786,6 +786,24 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Bullseye for "Bullseye"
+            /// </summary>
+            [EnumMember(Value = "Bullseye")]
+            Bullseye,
+            
+            /// <summary>
+            /// Enum Last for "Last"
+            /// </summary>
+            [EnumMember(Value = "Last")]
+            Last,
+            
+            /// <summary>
+            /// Enum Manual for "Manual"
+            /// </summary>
+            [EnumMember(Value = "Manual")]
+            Manual,
+            
+            /// <summary>
             /// Enum Predictive for "Predictive"
             /// </summary>
             [EnumMember(Value = "Predictive")]
@@ -796,24 +814,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Preferred")]
             Preferred,
-            
-            /// <summary>
-            /// Enum Manual for "Manual"
-            /// </summary>
-            [EnumMember(Value = "Manual")]
-            Manual,
-            
-            /// <summary>
-            /// Enum Last for "Last"
-            /// </summary>
-            [EnumMember(Value = "Last")]
-            Last,
-            
-            /// <summary>
-            /// Enum Bullseye for "Bullseye"
-            /// </summary>
-            [EnumMember(Value = "Bullseye")]
-            Bullseye,
             
             /// <summary>
             /// Enum Standard for "Standard"
@@ -1057,33 +1057,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <summary>
-        /// Represents due or completed to filter agent development view
-        /// </summary>
-        /// <value>Represents due or completed to filter agent development view</value>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum DevelopmentKeyTypeEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Due for "Due"
-            /// </summary>
-            [EnumMember(Value = "Due")]
-            Due,
-            
-            /// <summary>
-            /// Enum Completed for "Completed"
-            /// </summary>
-            [EnumMember(Value = "Completed")]
-            Completed
-        }
         
         
         
@@ -1286,12 +1259,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <summary>
-        /// Represents due or completed to filter agent development view
-        /// </summary>
-        /// <value>Represents due or completed to filter agent development view</value>
-        [DataMember(Name="developmentKeyType", EmitDefaultValue=false)]
-        public DevelopmentKeyTypeEnum? DevelopmentKeyType { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1397,9 +1377,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DevelopmentTypeList">The list of development types used to filter agent development view.</param>
         /// <param name="DevelopmentStatusList">The list of development status used to filter agent development view.</param>
         /// <param name="DevelopmentModuleIds">The list of development moduleIds used to filter agent development view.</param>
-        /// <param name="DevelopmentKeyType">Represents due or completed to filter agent development view.</param>
         /// <param name="DevelopmentActivityOverdue">Indicates filtering for development activities.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null, List<DevelopmentRoleListEnum> DevelopmentRoleList = null, List<DevelopmentTypeListEnum> DevelopmentTypeList = null, List<DevelopmentStatusListEnum> DevelopmentStatusList = null, List<string> DevelopmentModuleIds = null, DevelopmentKeyTypeEnum? DevelopmentKeyType = null, bool? DevelopmentActivityOverdue = null)
+        /// <param name="CustomerSentimentScore">The customer sentiment score used to filter the view.</param>
+        /// <param name="CustomerSentimentTrend">The customer sentiment trend used to filter the view.</param>
+        /// <param name="FlowTransferTargets">The list of transfer targets used to filter flow data.</param>
+        /// <param name="DevelopmentName">Filter for development name.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null, List<DevelopmentRoleListEnum> DevelopmentRoleList = null, List<DevelopmentTypeListEnum> DevelopmentTypeList = null, List<DevelopmentStatusListEnum> DevelopmentStatusList = null, List<string> DevelopmentModuleIds = null, bool? DevelopmentActivityOverdue = null, NumericRange CustomerSentimentScore = null, NumericRange CustomerSentimentTrend = null, List<string> FlowTransferTargets = null, string DevelopmentName = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -1498,8 +1481,11 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DevelopmentTypeList = DevelopmentTypeList;
             this.DevelopmentStatusList = DevelopmentStatusList;
             this.DevelopmentModuleIds = DevelopmentModuleIds;
-            this.DevelopmentKeyType = DevelopmentKeyType;
             this.DevelopmentActivityOverdue = DevelopmentActivityOverdue;
+            this.CustomerSentimentScore = CustomerSentimentScore;
+            this.CustomerSentimentTrend = CustomerSentimentTrend;
+            this.FlowTransferTargets = FlowTransferTargets;
+            this.DevelopmentName = DevelopmentName;
             
         }
         
@@ -2378,14 +2364,48 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
         /// <summary>
         /// Indicates filtering for development activities
         /// </summary>
         /// <value>Indicates filtering for development activities</value>
         [DataMember(Name="developmentActivityOverdue", EmitDefaultValue=false)]
         public bool? DevelopmentActivityOverdue { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The customer sentiment score used to filter the view
+        /// </summary>
+        /// <value>The customer sentiment score used to filter the view</value>
+        [DataMember(Name="customerSentimentScore", EmitDefaultValue=false)]
+        public NumericRange CustomerSentimentScore { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The customer sentiment trend used to filter the view
+        /// </summary>
+        /// <value>The customer sentiment trend used to filter the view</value>
+        [DataMember(Name="customerSentimentTrend", EmitDefaultValue=false)]
+        public NumericRange CustomerSentimentTrend { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of transfer targets used to filter flow data
+        /// </summary>
+        /// <value>The list of transfer targets used to filter flow data</value>
+        [DataMember(Name="flowTransferTargets", EmitDefaultValue=false)]
+        public List<string> FlowTransferTargets { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Filter for development name
+        /// </summary>
+        /// <value>Filter for development name</value>
+        [DataMember(Name="developmentName", EmitDefaultValue=false)]
+        public string DevelopmentName { get; set; }
         
         
         /// <summary>
@@ -2494,8 +2514,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DevelopmentTypeList: ").Append(DevelopmentTypeList).Append("\n");
             sb.Append("  DevelopmentStatusList: ").Append(DevelopmentStatusList).Append("\n");
             sb.Append("  DevelopmentModuleIds: ").Append(DevelopmentModuleIds).Append("\n");
-            sb.Append("  DevelopmentKeyType: ").Append(DevelopmentKeyType).Append("\n");
             sb.Append("  DevelopmentActivityOverdue: ").Append(DevelopmentActivityOverdue).Append("\n");
+            sb.Append("  CustomerSentimentScore: ").Append(CustomerSentimentScore).Append("\n");
+            sb.Append("  CustomerSentimentTrend: ").Append(CustomerSentimentTrend).Append("\n");
+            sb.Append("  FlowTransferTargets: ").Append(FlowTransferTargets).Append("\n");
+            sb.Append("  DevelopmentName: ").Append(DevelopmentName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -3018,14 +3041,29 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DevelopmentModuleIds.SequenceEqual(other.DevelopmentModuleIds)
                 ) &&
                 (
-                    this.DevelopmentKeyType == other.DevelopmentKeyType ||
-                    this.DevelopmentKeyType != null &&
-                    this.DevelopmentKeyType.Equals(other.DevelopmentKeyType)
-                ) &&
-                (
                     this.DevelopmentActivityOverdue == other.DevelopmentActivityOverdue ||
                     this.DevelopmentActivityOverdue != null &&
                     this.DevelopmentActivityOverdue.Equals(other.DevelopmentActivityOverdue)
+                ) &&
+                (
+                    this.CustomerSentimentScore == other.CustomerSentimentScore ||
+                    this.CustomerSentimentScore != null &&
+                    this.CustomerSentimentScore.Equals(other.CustomerSentimentScore)
+                ) &&
+                (
+                    this.CustomerSentimentTrend == other.CustomerSentimentTrend ||
+                    this.CustomerSentimentTrend != null &&
+                    this.CustomerSentimentTrend.Equals(other.CustomerSentimentTrend)
+                ) &&
+                (
+                    this.FlowTransferTargets == other.FlowTransferTargets ||
+                    this.FlowTransferTargets != null &&
+                    this.FlowTransferTargets.SequenceEqual(other.FlowTransferTargets)
+                ) &&
+                (
+                    this.DevelopmentName == other.DevelopmentName ||
+                    this.DevelopmentName != null &&
+                    this.DevelopmentName.Equals(other.DevelopmentName)
                 );
         }
 
@@ -3332,11 +3370,20 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.DevelopmentModuleIds != null)
                     hash = hash * 59 + this.DevelopmentModuleIds.GetHashCode();
                 
-                if (this.DevelopmentKeyType != null)
-                    hash = hash * 59 + this.DevelopmentKeyType.GetHashCode();
-                
                 if (this.DevelopmentActivityOverdue != null)
                     hash = hash * 59 + this.DevelopmentActivityOverdue.GetHashCode();
+                
+                if (this.CustomerSentimentScore != null)
+                    hash = hash * 59 + this.CustomerSentimentScore.GetHashCode();
+                
+                if (this.CustomerSentimentTrend != null)
+                    hash = hash * 59 + this.CustomerSentimentTrend.GetHashCode();
+                
+                if (this.FlowTransferTargets != null)
+                    hash = hash * 59 + this.FlowTransferTargets.GetHashCode();
+                
+                if (this.DevelopmentName != null)
+                    hash = hash * 59 + this.DevelopmentName.GetHashCode();
                 
                 return hash;
             }

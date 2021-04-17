@@ -59,13 +59,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationScoringSet" /> class.
         /// </summary>
-        /// <param name="TotalScore">TotalScore.</param>
-        /// <param name="TotalCriticalScore">TotalCriticalScore.</param>
-        /// <param name="TotalNonCriticalScore">TotalNonCriticalScore.</param>
+        /// <param name="TotalScore">Score of all questions.</param>
+        /// <param name="TotalCriticalScore">Score of only the critical questions.</param>
+        /// <param name="TotalNonCriticalScore">Score of only the non-critical questions.</param>
         /// <param name="QuestionGroupScores">QuestionGroupScores.</param>
-        /// <param name="AnyFailedKillQuestions">AnyFailedKillQuestions.</param>
-        /// <param name="Comments">Comments.</param>
-        /// <param name="AgentComments">AgentComments.</param>
+        /// <param name="AnyFailedKillQuestions">Indicates that at least one fatal question was answered without having the highest score available for the question.</param>
+        /// <param name="Comments">Overall comments from the evaluator.</param>
+        /// <param name="AgentComments">Comments from the agent while reviewing evaluation results.</param>
         public EvaluationScoringSet(float? TotalScore = null, float? TotalCriticalScore = null, float? TotalNonCriticalScore = null, List<EvaluationQuestionGroupScore> QuestionGroupScores = null, bool? AnyFailedKillQuestions = null, string Comments = null, string AgentComments = null)
         {
             this.TotalScore = TotalScore;
@@ -81,24 +81,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets TotalScore
+        /// Score of all questions
         /// </summary>
+        /// <value>Score of all questions</value>
         [DataMember(Name="totalScore", EmitDefaultValue=false)]
         public float? TotalScore { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets TotalCriticalScore
+        /// Score of only the critical questions
         /// </summary>
+        /// <value>Score of only the critical questions</value>
         [DataMember(Name="totalCriticalScore", EmitDefaultValue=false)]
         public float? TotalCriticalScore { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets TotalNonCriticalScore
+        /// Score of only the non-critical questions
         /// </summary>
+        /// <value>Score of only the non-critical questions</value>
         [DataMember(Name="totalNonCriticalScore", EmitDefaultValue=false)]
         public float? TotalNonCriticalScore { get; set; }
         
@@ -113,24 +116,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets AnyFailedKillQuestions
+        /// Indicates that at least one fatal question was answered without having the highest score available for the question
         /// </summary>
+        /// <value>Indicates that at least one fatal question was answered without having the highest score available for the question</value>
         [DataMember(Name="anyFailedKillQuestions", EmitDefaultValue=false)]
         public bool? AnyFailedKillQuestions { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Comments
+        /// Overall comments from the evaluator
         /// </summary>
+        /// <value>Overall comments from the evaluator</value>
         [DataMember(Name="comments", EmitDefaultValue=false)]
         public string Comments { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AgentComments
+        /// Comments from the agent while reviewing evaluation results
         /// </summary>
+        /// <value>Comments from the agent while reviewing evaluation results</value>
         [DataMember(Name="agentComments", EmitDefaultValue=false)]
         public string AgentComments { get; set; }
         

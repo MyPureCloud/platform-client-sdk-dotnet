@@ -32,19 +32,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
-        /// A description of the event that disconnected the segment
+        /// The session disconnect type
         /// </summary>
-        /// <value>A description of the event that disconnected the segment</value>
+        /// <value>The session disconnect type</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DisconnectTypeEnum
         {
@@ -57,58 +48,10 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Endpoint for "endpoint"
-            /// </summary>
-            [EnumMember(Value = "endpoint")]
-            Endpoint,
-            
-            /// <summary>
             /// Enum Client for "client"
             /// </summary>
             [EnumMember(Value = "client")]
             Client,
-            
-            /// <summary>
-            /// Enum System for "system"
-            /// </summary>
-            [EnumMember(Value = "system")]
-            System,
-            
-            /// <summary>
-            /// Enum Transfer for "transfer"
-            /// </summary>
-            [EnumMember(Value = "transfer")]
-            Transfer,
-            
-            /// <summary>
-            /// Enum Error for "error"
-            /// </summary>
-            [EnumMember(Value = "error")]
-            Error,
-            
-            /// <summary>
-            /// Enum Peer for "peer"
-            /// </summary>
-            [EnumMember(Value = "peer")]
-            Peer,
-            
-            /// <summary>
-            /// Enum Other for "other"
-            /// </summary>
-            [EnumMember(Value = "other")]
-            Other,
-            
-            /// <summary>
-            /// Enum Spam for "spam"
-            /// </summary>
-            [EnumMember(Value = "spam")]
-            Spam,
-            
-            /// <summary>
-            /// Enum Transportfailure for "transportFailure"
-            /// </summary>
-            [EnumMember(Value = "transportFailure")]
-            Transportfailure,
             
             /// <summary>
             /// Enum Conferencetransfer for "conferenceTransfer"
@@ -123,16 +66,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Consulttransfer,
             
             /// <summary>
+            /// Enum Endpoint for "endpoint"
+            /// </summary>
+            [EnumMember(Value = "endpoint")]
+            Endpoint,
+            
+            /// <summary>
+            /// Enum Error for "error"
+            /// </summary>
+            [EnumMember(Value = "error")]
+            Error,
+            
+            /// <summary>
             /// Enum Forwardtransfer for "forwardTransfer"
             /// </summary>
             [EnumMember(Value = "forwardTransfer")]
             Forwardtransfer,
-            
-            /// <summary>
-            /// Enum Timeout for "timeout"
-            /// </summary>
-            [EnumMember(Value = "timeout")]
-            Timeout,
             
             /// <summary>
             /// Enum Noanswertransfer for "noAnswerTransfer"
@@ -147,6 +96,48 @@ namespace PureCloudPlatform.Client.V2.Model
             Notavailabletransfer,
             
             /// <summary>
+            /// Enum Other for "other"
+            /// </summary>
+            [EnumMember(Value = "other")]
+            Other,
+            
+            /// <summary>
+            /// Enum Peer for "peer"
+            /// </summary>
+            [EnumMember(Value = "peer")]
+            Peer,
+            
+            /// <summary>
+            /// Enum Spam for "spam"
+            /// </summary>
+            [EnumMember(Value = "spam")]
+            Spam,
+            
+            /// <summary>
+            /// Enum System for "system"
+            /// </summary>
+            [EnumMember(Value = "system")]
+            System,
+            
+            /// <summary>
+            /// Enum Timeout for "timeout"
+            /// </summary>
+            [EnumMember(Value = "timeout")]
+            Timeout,
+            
+            /// <summary>
+            /// Enum Transfer for "transfer"
+            /// </summary>
+            [EnumMember(Value = "transfer")]
+            Transfer,
+            
+            /// <summary>
+            /// Enum Transportfailure for "transportFailure"
+            /// </summary>
+            [EnumMember(Value = "transportFailure")]
+            Transportfailure,
+            
+            /// <summary>
             /// Enum Uncallable for "uncallable"
             /// </summary>
             [EnumMember(Value = "uncallable")]
@@ -156,10 +147,37 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
-        /// The activity taking place for the participant in the segment
+        /// The activity that takes place in the segment, such as hold or interact
         /// </summary>
-        /// <value>The activity taking place for the participant in the segment</value>
+        /// <value>The activity that takes place in the segment, such as hold or interact</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum SegmentTypeEnum
         {
@@ -172,28 +190,40 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Unknown for "unknown"
-            /// </summary>
-            [EnumMember(Value = "unknown")]
-            Unknown,
-            
-            /// <summary>
             /// Enum Alert for "alert"
             /// </summary>
             [EnumMember(Value = "alert")]
             Alert,
             
             /// <summary>
-            /// Enum System for "system"
+            /// Enum Callback for "callback"
             /// </summary>
-            [EnumMember(Value = "system")]
-            System,
+            [EnumMember(Value = "callback")]
+            Callback,
+            
+            /// <summary>
+            /// Enum Contacting for "contacting"
+            /// </summary>
+            [EnumMember(Value = "contacting")]
+            Contacting,
+            
+            /// <summary>
+            /// Enum Converting for "converting"
+            /// </summary>
+            [EnumMember(Value = "converting")]
+            Converting,
             
             /// <summary>
             /// Enum Delay for "delay"
             /// </summary>
             [EnumMember(Value = "delay")]
             Delay,
+            
+            /// <summary>
+            /// Enum Dialing for "dialing"
+            /// </summary>
+            [EnumMember(Value = "dialing")]
+            Dialing,
             
             /// <summary>
             /// Enum Hold for "hold"
@@ -214,52 +244,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Ivr,
             
             /// <summary>
-            /// Enum Dialing for "dialing"
-            /// </summary>
-            [EnumMember(Value = "dialing")]
-            Dialing,
-            
-            /// <summary>
-            /// Enum Wrapup for "wrapup"
-            /// </summary>
-            [EnumMember(Value = "wrapup")]
-            Wrapup,
-            
-            /// <summary>
-            /// Enum Voicemail for "voicemail"
-            /// </summary>
-            [EnumMember(Value = "voicemail")]
-            Voicemail,
-            
-            /// <summary>
             /// Enum Scheduled for "scheduled"
             /// </summary>
             [EnumMember(Value = "scheduled")]
             Scheduled,
-            
-            /// <summary>
-            /// Enum Contacting for "contacting"
-            /// </summary>
-            [EnumMember(Value = "contacting")]
-            Contacting,
-            
-            /// <summary>
-            /// Enum Transmitting for "transmitting"
-            /// </summary>
-            [EnumMember(Value = "transmitting")]
-            Transmitting,
-            
-            /// <summary>
-            /// Enum Converting for "converting"
-            /// </summary>
-            [EnumMember(Value = "converting")]
-            Converting,
-            
-            /// <summary>
-            /// Enum Uploading for "uploading"
-            /// </summary>
-            [EnumMember(Value = "uploading")]
-            Uploading,
             
             /// <summary>
             /// Enum Sharing for "sharing"
@@ -268,10 +256,40 @@ namespace PureCloudPlatform.Client.V2.Model
             Sharing,
             
             /// <summary>
-            /// Enum Callback for "callback"
+            /// Enum System for "system"
             /// </summary>
-            [EnumMember(Value = "callback")]
-            Callback
+            [EnumMember(Value = "system")]
+            System,
+            
+            /// <summary>
+            /// Enum Transmitting for "transmitting"
+            /// </summary>
+            [EnumMember(Value = "transmitting")]
+            Transmitting,
+            
+            /// <summary>
+            /// Enum Unknown for "unknown"
+            /// </summary>
+            [EnumMember(Value = "unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Uploading for "uploading"
+            /// </summary>
+            [EnumMember(Value = "uploading")]
+            Uploading,
+            
+            /// <summary>
+            /// Enum Voicemail for "voicemail"
+            /// </summary>
+            [EnumMember(Value = "voicemail")]
+            Voicemail,
+            
+            /// <summary>
+            /// Enum Wrapup for "wrapup"
+            /// </summary>
+            [EnumMember(Value = "wrapup")]
+            Wrapup
         }
         
         
@@ -316,57 +334,39 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
-        /// A description of the event that disconnected the segment
+        /// The session disconnect type
         /// </summary>
-        /// <value>A description of the event that disconnected the segment</value>
+        /// <value>The session disconnect type</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
-        /// The activity taking place for the participant in the segment
+        /// The activity that takes place in the segment, such as hold or interact
         /// </summary>
-        /// <value>The activity taking place for the participant in the segment</value>
+        /// <value>The activity that takes place in the segment, such as hold or interact</value>
         [DataMember(Name="segmentType", EmitDefaultValue=false)]
         public SegmentTypeEnum? SegmentType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -393,78 +393,125 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsConversationSegment" /> class.
         /// </summary>
-        /// <param name="SegmentStart">The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="SegmentEnd">The timestamp when this segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="QueueId">Queue identifier.</param>
-        /// <param name="WrapUpCode">Wrapup Code id.</param>
-        /// <param name="WrapUpNote">Note entered by an agent during after-call work.</param>
-        /// <param name="WrapUpTags">WrapUpTags.</param>
-        /// <param name="ErrorCode">ErrorCode.</param>
-        /// <param name="DisconnectType">A description of the event that disconnected the segment.</param>
-        /// <param name="SegmentType">The activity taking place for the participant in the segment.</param>
-        /// <param name="RequestedRoutingUserIds">RequestedRoutingUserIds.</param>
-        /// <param name="RequestedRoutingSkillIds">RequestedRoutingSkillIds.</param>
-        /// <param name="RequestedLanguageId">A unique identifier for the language requested for an interaction..</param>
-        /// <param name="ScoredAgents">ScoredAgents.</param>
-        /// <param name="Properties">Properties.</param>
-        /// <param name="SourceConversationId">SourceConversationId.</param>
-        /// <param name="DestinationConversationId">DestinationConversationId.</param>
-        /// <param name="SourceSessionId">SourceSessionId.</param>
-        /// <param name="DestinationSessionId">DestinationSessionId.</param>
-        /// <param name="SipResponseCodes">SipResponseCodes.</param>
-        /// <param name="Q850ResponseCodes">Q850ResponseCodes.</param>
+        /// <param name="AudioMuted">Flag indicating if audio is muted or not (true/false).</param>
         /// <param name="Conference">Indicates whether the segment was a conference.</param>
-        /// <param name="GroupId">GroupId.</param>
-        /// <param name="Subject">Subject.</param>
-        /// <param name="AudioMuted">AudioMuted.</param>
-        /// <param name="VideoMuted">VideoMuted.</param>
-        public AnalyticsConversationSegment(DateTime? SegmentStart = null, DateTime? SegmentEnd = null, string QueueId = null, string WrapUpCode = null, string WrapUpNote = null, List<string> WrapUpTags = null, string ErrorCode = null, DisconnectTypeEnum? DisconnectType = null, SegmentTypeEnum? SegmentType = null, List<string> RequestedRoutingUserIds = null, List<string> RequestedRoutingSkillIds = null, string RequestedLanguageId = null, List<AnalyticsScoredAgent> ScoredAgents = null, List<AnalyticsProperty> Properties = null, string SourceConversationId = null, string DestinationConversationId = null, string SourceSessionId = null, string DestinationSessionId = null, List<long?> SipResponseCodes = null, List<long?> Q850ResponseCodes = null, bool? Conference = null, string GroupId = null, string Subject = null, bool? AudioMuted = null, bool? VideoMuted = null)
+        /// <param name="DestinationConversationId">The unique identifier of a new conversation when a conversation is ended for a conference.</param>
+        /// <param name="DestinationSessionId">The unique identifier of a new session when a session is ended for a conference.</param>
+        /// <param name="DisconnectType">The session disconnect type.</param>
+        /// <param name="ErrorCode">A code corresponding to the error that occurred.</param>
+        /// <param name="GroupId">Unique identifier for a PureCloud group.</param>
+        /// <param name="Q850ResponseCodes">Q.850 response code(s).</param>
+        /// <param name="QueueId">Queue identifier.</param>
+        /// <param name="RequestedLanguageId">Unique identifier for the language requested for an interaction.</param>
+        /// <param name="RequestedRoutingSkillIds">Unique identifier(s) for skill(s) requested for an interaction.</param>
+        /// <param name="RequestedRoutingUserIds">Unique identifier(s) for agent(s) requested for an interaction.</param>
+        /// <param name="SegmentEnd">The end time of a segment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="SegmentStart">The start time of a segment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="SegmentType">The activity that takes place in the segment, such as hold or interact.</param>
+        /// <param name="SipResponseCodes">SIP response code(s).</param>
+        /// <param name="SourceConversationId">The unique identifier of the previous conversation when a new conversation is created for a conference.</param>
+        /// <param name="SourceSessionId">The unique identifier of the previous session when a new session is created for a conference.</param>
+        /// <param name="Subject">The subject for the initial email that started this conversation.</param>
+        /// <param name="VideoMuted">Flag indicating if video is muted/paused or not (true/false).</param>
+        /// <param name="WrapUpCode">Wrap up code.</param>
+        /// <param name="WrapUpNote">Note entered by an agent during after-call work.</param>
+        /// <param name="WrapUpTags">Tag(s) assigned during after-call work.</param>
+        /// <param name="ScoredAgents">Scored agents.</param>
+        /// <param name="Properties">Additional segment properties.</param>
+        public AnalyticsConversationSegment(bool? AudioMuted = null, bool? Conference = null, string DestinationConversationId = null, string DestinationSessionId = null, DisconnectTypeEnum? DisconnectType = null, string ErrorCode = null, string GroupId = null, List<long?> Q850ResponseCodes = null, string QueueId = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<string> RequestedRoutingUserIds = null, DateTime? SegmentEnd = null, DateTime? SegmentStart = null, SegmentTypeEnum? SegmentType = null, List<long?> SipResponseCodes = null, string SourceConversationId = null, string SourceSessionId = null, string Subject = null, bool? VideoMuted = null, string WrapUpCode = null, string WrapUpNote = null, List<string> WrapUpTags = null, List<AnalyticsScoredAgent> ScoredAgents = null, List<AnalyticsProperty> Properties = null)
         {
-            this.SegmentStart = SegmentStart;
-            this.SegmentEnd = SegmentEnd;
+            this.AudioMuted = AudioMuted;
+            this.Conference = Conference;
+            this.DestinationConversationId = DestinationConversationId;
+            this.DestinationSessionId = DestinationSessionId;
+            this.DisconnectType = DisconnectType;
+            this.ErrorCode = ErrorCode;
+            this.GroupId = GroupId;
+            this.Q850ResponseCodes = Q850ResponseCodes;
             this.QueueId = QueueId;
+            this.RequestedLanguageId = RequestedLanguageId;
+            this.RequestedRoutingSkillIds = RequestedRoutingSkillIds;
+            this.RequestedRoutingUserIds = RequestedRoutingUserIds;
+            this.SegmentEnd = SegmentEnd;
+            this.SegmentStart = SegmentStart;
+            this.SegmentType = SegmentType;
+            this.SipResponseCodes = SipResponseCodes;
+            this.SourceConversationId = SourceConversationId;
+            this.SourceSessionId = SourceSessionId;
+            this.Subject = Subject;
+            this.VideoMuted = VideoMuted;
             this.WrapUpCode = WrapUpCode;
             this.WrapUpNote = WrapUpNote;
             this.WrapUpTags = WrapUpTags;
-            this.ErrorCode = ErrorCode;
-            this.DisconnectType = DisconnectType;
-            this.SegmentType = SegmentType;
-            this.RequestedRoutingUserIds = RequestedRoutingUserIds;
-            this.RequestedRoutingSkillIds = RequestedRoutingSkillIds;
-            this.RequestedLanguageId = RequestedLanguageId;
             this.ScoredAgents = ScoredAgents;
             this.Properties = Properties;
-            this.SourceConversationId = SourceConversationId;
-            this.DestinationConversationId = DestinationConversationId;
-            this.SourceSessionId = SourceSessionId;
-            this.DestinationSessionId = DestinationSessionId;
-            this.SipResponseCodes = SipResponseCodes;
-            this.Q850ResponseCodes = Q850ResponseCodes;
-            this.Conference = Conference;
-            this.GroupId = GroupId;
-            this.Subject = Subject;
-            this.AudioMuted = AudioMuted;
-            this.VideoMuted = VideoMuted;
             
         }
         
         
         
         /// <summary>
-        /// The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// Flag indicating if audio is muted or not (true/false)
         /// </summary>
-        /// <value>The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="segmentStart", EmitDefaultValue=false)]
-        public DateTime? SegmentStart { get; set; }
+        /// <value>Flag indicating if audio is muted or not (true/false)</value>
+        [DataMember(Name="audioMuted", EmitDefaultValue=false)]
+        public bool? AudioMuted { get; set; }
         
         
         
         /// <summary>
-        /// The timestamp when this segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// Indicates whether the segment was a conference
         /// </summary>
-        /// <value>The timestamp when this segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="segmentEnd", EmitDefaultValue=false)]
-        public DateTime? SegmentEnd { get; set; }
+        /// <value>Indicates whether the segment was a conference</value>
+        [DataMember(Name="conference", EmitDefaultValue=false)]
+        public bool? Conference { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The unique identifier of a new conversation when a conversation is ended for a conference
+        /// </summary>
+        /// <value>The unique identifier of a new conversation when a conversation is ended for a conference</value>
+        [DataMember(Name="destinationConversationId", EmitDefaultValue=false)]
+        public string DestinationConversationId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The unique identifier of a new session when a session is ended for a conference
+        /// </summary>
+        /// <value>The unique identifier of a new session when a session is ended for a conference</value>
+        [DataMember(Name="destinationSessionId", EmitDefaultValue=false)]
+        public string DestinationSessionId { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// A code corresponding to the error that occurred
+        /// </summary>
+        /// <value>A code corresponding to the error that occurred</value>
+        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        public string ErrorCode { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Unique identifier for a PureCloud group
+        /// </summary>
+        /// <value>Unique identifier for a PureCloud group</value>
+        [DataMember(Name="groupId", EmitDefaultValue=false)]
+        public string GroupId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Q.850 response code(s)
+        /// </summary>
+        /// <value>Q.850 response code(s)</value>
+        [DataMember(Name="q850ResponseCodes", EmitDefaultValue=false)]
+        public List<long?> Q850ResponseCodes { get; set; }
         
         
         
@@ -478,9 +525,101 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Wrapup Code id
+        /// Unique identifier for the language requested for an interaction
         /// </summary>
-        /// <value>Wrapup Code id</value>
+        /// <value>Unique identifier for the language requested for an interaction</value>
+        [DataMember(Name="requestedLanguageId", EmitDefaultValue=false)]
+        public string RequestedLanguageId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Unique identifier(s) for skill(s) requested for an interaction
+        /// </summary>
+        /// <value>Unique identifier(s) for skill(s) requested for an interaction</value>
+        [DataMember(Name="requestedRoutingSkillIds", EmitDefaultValue=false)]
+        public List<string> RequestedRoutingSkillIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Unique identifier(s) for agent(s) requested for an interaction
+        /// </summary>
+        /// <value>Unique identifier(s) for agent(s) requested for an interaction</value>
+        [DataMember(Name="requestedRoutingUserIds", EmitDefaultValue=false)]
+        public List<string> RequestedRoutingUserIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The end time of a segment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The end time of a segment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="segmentEnd", EmitDefaultValue=false)]
+        public DateTime? SegmentEnd { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The start time of a segment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The start time of a segment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="segmentStart", EmitDefaultValue=false)]
+        public DateTime? SegmentStart { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// SIP response code(s)
+        /// </summary>
+        /// <value>SIP response code(s)</value>
+        [DataMember(Name="sipResponseCodes", EmitDefaultValue=false)]
+        public List<long?> SipResponseCodes { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The unique identifier of the previous conversation when a new conversation is created for a conference
+        /// </summary>
+        /// <value>The unique identifier of the previous conversation when a new conversation is created for a conference</value>
+        [DataMember(Name="sourceConversationId", EmitDefaultValue=false)]
+        public string SourceConversationId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The unique identifier of the previous session when a new session is created for a conference
+        /// </summary>
+        /// <value>The unique identifier of the previous session when a new session is created for a conference</value>
+        [DataMember(Name="sourceSessionId", EmitDefaultValue=false)]
+        public string SourceSessionId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The subject for the initial email that started this conversation
+        /// </summary>
+        /// <value>The subject for the initial email that started this conversation</value>
+        [DataMember(Name="subject", EmitDefaultValue=false)]
+        public string Subject { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Flag indicating if video is muted/paused or not (true/false)
+        /// </summary>
+        /// <value>Flag indicating if video is muted/paused or not (true/false)</value>
+        [DataMember(Name="videoMuted", EmitDefaultValue=false)]
+        public bool? VideoMuted { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Wrap up code
+        /// </summary>
+        /// <value>Wrap up code</value>
         [DataMember(Name="wrapUpCode", EmitDefaultValue=false)]
         public string WrapUpCode { get; set; }
         
@@ -496,152 +635,29 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets WrapUpTags
+        /// Tag(s) assigned during after-call work
         /// </summary>
+        /// <value>Tag(s) assigned during after-call work</value>
         [DataMember(Name="wrapUpTags", EmitDefaultValue=false)]
         public List<string> WrapUpTags { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ErrorCode
+        /// Scored agents
         /// </summary>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
-        public string ErrorCode { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets RequestedRoutingUserIds
-        /// </summary>
-        [DataMember(Name="requestedRoutingUserIds", EmitDefaultValue=false)]
-        public List<string> RequestedRoutingUserIds { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets RequestedRoutingSkillIds
-        /// </summary>
-        [DataMember(Name="requestedRoutingSkillIds", EmitDefaultValue=false)]
-        public List<string> RequestedRoutingSkillIds { get; set; }
-        
-        
-        
-        /// <summary>
-        /// A unique identifier for the language requested for an interaction.
-        /// </summary>
-        /// <value>A unique identifier for the language requested for an interaction.</value>
-        [DataMember(Name="requestedLanguageId", EmitDefaultValue=false)]
-        public string RequestedLanguageId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets ScoredAgents
-        /// </summary>
+        /// <value>Scored agents</value>
         [DataMember(Name="scoredAgents", EmitDefaultValue=false)]
         public List<AnalyticsScoredAgent> ScoredAgents { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Properties
+        /// Additional segment properties
         /// </summary>
+        /// <value>Additional segment properties</value>
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public List<AnalyticsProperty> Properties { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets SourceConversationId
-        /// </summary>
-        [DataMember(Name="sourceConversationId", EmitDefaultValue=false)]
-        public string SourceConversationId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DestinationConversationId
-        /// </summary>
-        [DataMember(Name="destinationConversationId", EmitDefaultValue=false)]
-        public string DestinationConversationId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets SourceSessionId
-        /// </summary>
-        [DataMember(Name="sourceSessionId", EmitDefaultValue=false)]
-        public string SourceSessionId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DestinationSessionId
-        /// </summary>
-        [DataMember(Name="destinationSessionId", EmitDefaultValue=false)]
-        public string DestinationSessionId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets SipResponseCodes
-        /// </summary>
-        [DataMember(Name="sipResponseCodes", EmitDefaultValue=false)]
-        public List<long?> SipResponseCodes { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Q850ResponseCodes
-        /// </summary>
-        [DataMember(Name="q850ResponseCodes", EmitDefaultValue=false)]
-        public List<long?> Q850ResponseCodes { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Indicates whether the segment was a conference
-        /// </summary>
-        /// <value>Indicates whether the segment was a conference</value>
-        [DataMember(Name="conference", EmitDefaultValue=false)]
-        public bool? Conference { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets GroupId
-        /// </summary>
-        [DataMember(Name="groupId", EmitDefaultValue=false)]
-        public string GroupId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Subject
-        /// </summary>
-        [DataMember(Name="subject", EmitDefaultValue=false)]
-        public string Subject { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AudioMuted
-        /// </summary>
-        [DataMember(Name="audioMuted", EmitDefaultValue=false)]
-        public bool? AudioMuted { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets VideoMuted
-        /// </summary>
-        [DataMember(Name="videoMuted", EmitDefaultValue=false)]
-        public bool? VideoMuted { get; set; }
         
         
         /// <summary>
@@ -653,31 +669,31 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AnalyticsConversationSegment {\n");
             
-            sb.Append("  SegmentStart: ").Append(SegmentStart).Append("\n");
-            sb.Append("  SegmentEnd: ").Append(SegmentEnd).Append("\n");
+            sb.Append("  AudioMuted: ").Append(AudioMuted).Append("\n");
+            sb.Append("  Conference: ").Append(Conference).Append("\n");
+            sb.Append("  DestinationConversationId: ").Append(DestinationConversationId).Append("\n");
+            sb.Append("  DestinationSessionId: ").Append(DestinationSessionId).Append("\n");
+            sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  GroupId: ").Append(GroupId).Append("\n");
+            sb.Append("  Q850ResponseCodes: ").Append(Q850ResponseCodes).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
+            sb.Append("  RequestedLanguageId: ").Append(RequestedLanguageId).Append("\n");
+            sb.Append("  RequestedRoutingSkillIds: ").Append(RequestedRoutingSkillIds).Append("\n");
+            sb.Append("  RequestedRoutingUserIds: ").Append(RequestedRoutingUserIds).Append("\n");
+            sb.Append("  SegmentEnd: ").Append(SegmentEnd).Append("\n");
+            sb.Append("  SegmentStart: ").Append(SegmentStart).Append("\n");
+            sb.Append("  SegmentType: ").Append(SegmentType).Append("\n");
+            sb.Append("  SipResponseCodes: ").Append(SipResponseCodes).Append("\n");
+            sb.Append("  SourceConversationId: ").Append(SourceConversationId).Append("\n");
+            sb.Append("  SourceSessionId: ").Append(SourceSessionId).Append("\n");
+            sb.Append("  Subject: ").Append(Subject).Append("\n");
+            sb.Append("  VideoMuted: ").Append(VideoMuted).Append("\n");
             sb.Append("  WrapUpCode: ").Append(WrapUpCode).Append("\n");
             sb.Append("  WrapUpNote: ").Append(WrapUpNote).Append("\n");
             sb.Append("  WrapUpTags: ").Append(WrapUpTags).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            sb.Append("  SegmentType: ").Append(SegmentType).Append("\n");
-            sb.Append("  RequestedRoutingUserIds: ").Append(RequestedRoutingUserIds).Append("\n");
-            sb.Append("  RequestedRoutingSkillIds: ").Append(RequestedRoutingSkillIds).Append("\n");
-            sb.Append("  RequestedLanguageId: ").Append(RequestedLanguageId).Append("\n");
             sb.Append("  ScoredAgents: ").Append(ScoredAgents).Append("\n");
             sb.Append("  Properties: ").Append(Properties).Append("\n");
-            sb.Append("  SourceConversationId: ").Append(SourceConversationId).Append("\n");
-            sb.Append("  DestinationConversationId: ").Append(DestinationConversationId).Append("\n");
-            sb.Append("  SourceSessionId: ").Append(SourceSessionId).Append("\n");
-            sb.Append("  DestinationSessionId: ").Append(DestinationSessionId).Append("\n");
-            sb.Append("  SipResponseCodes: ").Append(SipResponseCodes).Append("\n");
-            sb.Append("  Q850ResponseCodes: ").Append(Q850ResponseCodes).Append("\n");
-            sb.Append("  Conference: ").Append(Conference).Append("\n");
-            sb.Append("  GroupId: ").Append(GroupId).Append("\n");
-            sb.Append("  Subject: ").Append(Subject).Append("\n");
-            sb.Append("  AudioMuted: ").Append(AudioMuted).Append("\n");
-            sb.Append("  VideoMuted: ").Append(VideoMuted).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -715,9 +731,64 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.SegmentStart == other.SegmentStart ||
-                    this.SegmentStart != null &&
-                    this.SegmentStart.Equals(other.SegmentStart)
+                    this.AudioMuted == other.AudioMuted ||
+                    this.AudioMuted != null &&
+                    this.AudioMuted.Equals(other.AudioMuted)
+                ) &&
+                (
+                    this.Conference == other.Conference ||
+                    this.Conference != null &&
+                    this.Conference.Equals(other.Conference)
+                ) &&
+                (
+                    this.DestinationConversationId == other.DestinationConversationId ||
+                    this.DestinationConversationId != null &&
+                    this.DestinationConversationId.Equals(other.DestinationConversationId)
+                ) &&
+                (
+                    this.DestinationSessionId == other.DestinationSessionId ||
+                    this.DestinationSessionId != null &&
+                    this.DestinationSessionId.Equals(other.DestinationSessionId)
+                ) &&
+                (
+                    this.DisconnectType == other.DisconnectType ||
+                    this.DisconnectType != null &&
+                    this.DisconnectType.Equals(other.DisconnectType)
+                ) &&
+                (
+                    this.ErrorCode == other.ErrorCode ||
+                    this.ErrorCode != null &&
+                    this.ErrorCode.Equals(other.ErrorCode)
+                ) &&
+                (
+                    this.GroupId == other.GroupId ||
+                    this.GroupId != null &&
+                    this.GroupId.Equals(other.GroupId)
+                ) &&
+                (
+                    this.Q850ResponseCodes == other.Q850ResponseCodes ||
+                    this.Q850ResponseCodes != null &&
+                    this.Q850ResponseCodes.SequenceEqual(other.Q850ResponseCodes)
+                ) &&
+                (
+                    this.QueueId == other.QueueId ||
+                    this.QueueId != null &&
+                    this.QueueId.Equals(other.QueueId)
+                ) &&
+                (
+                    this.RequestedLanguageId == other.RequestedLanguageId ||
+                    this.RequestedLanguageId != null &&
+                    this.RequestedLanguageId.Equals(other.RequestedLanguageId)
+                ) &&
+                (
+                    this.RequestedRoutingSkillIds == other.RequestedRoutingSkillIds ||
+                    this.RequestedRoutingSkillIds != null &&
+                    this.RequestedRoutingSkillIds.SequenceEqual(other.RequestedRoutingSkillIds)
+                ) &&
+                (
+                    this.RequestedRoutingUserIds == other.RequestedRoutingUserIds ||
+                    this.RequestedRoutingUserIds != null &&
+                    this.RequestedRoutingUserIds.SequenceEqual(other.RequestedRoutingUserIds)
                 ) &&
                 (
                     this.SegmentEnd == other.SegmentEnd ||
@@ -725,9 +796,39 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SegmentEnd.Equals(other.SegmentEnd)
                 ) &&
                 (
-                    this.QueueId == other.QueueId ||
-                    this.QueueId != null &&
-                    this.QueueId.Equals(other.QueueId)
+                    this.SegmentStart == other.SegmentStart ||
+                    this.SegmentStart != null &&
+                    this.SegmentStart.Equals(other.SegmentStart)
+                ) &&
+                (
+                    this.SegmentType == other.SegmentType ||
+                    this.SegmentType != null &&
+                    this.SegmentType.Equals(other.SegmentType)
+                ) &&
+                (
+                    this.SipResponseCodes == other.SipResponseCodes ||
+                    this.SipResponseCodes != null &&
+                    this.SipResponseCodes.SequenceEqual(other.SipResponseCodes)
+                ) &&
+                (
+                    this.SourceConversationId == other.SourceConversationId ||
+                    this.SourceConversationId != null &&
+                    this.SourceConversationId.Equals(other.SourceConversationId)
+                ) &&
+                (
+                    this.SourceSessionId == other.SourceSessionId ||
+                    this.SourceSessionId != null &&
+                    this.SourceSessionId.Equals(other.SourceSessionId)
+                ) &&
+                (
+                    this.Subject == other.Subject ||
+                    this.Subject != null &&
+                    this.Subject.Equals(other.Subject)
+                ) &&
+                (
+                    this.VideoMuted == other.VideoMuted ||
+                    this.VideoMuted != null &&
+                    this.VideoMuted.Equals(other.VideoMuted)
                 ) &&
                 (
                     this.WrapUpCode == other.WrapUpCode ||
@@ -745,36 +846,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WrapUpTags.SequenceEqual(other.WrapUpTags)
                 ) &&
                 (
-                    this.ErrorCode == other.ErrorCode ||
-                    this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
-                ) &&
-                (
-                    this.DisconnectType == other.DisconnectType ||
-                    this.DisconnectType != null &&
-                    this.DisconnectType.Equals(other.DisconnectType)
-                ) &&
-                (
-                    this.SegmentType == other.SegmentType ||
-                    this.SegmentType != null &&
-                    this.SegmentType.Equals(other.SegmentType)
-                ) &&
-                (
-                    this.RequestedRoutingUserIds == other.RequestedRoutingUserIds ||
-                    this.RequestedRoutingUserIds != null &&
-                    this.RequestedRoutingUserIds.SequenceEqual(other.RequestedRoutingUserIds)
-                ) &&
-                (
-                    this.RequestedRoutingSkillIds == other.RequestedRoutingSkillIds ||
-                    this.RequestedRoutingSkillIds != null &&
-                    this.RequestedRoutingSkillIds.SequenceEqual(other.RequestedRoutingSkillIds)
-                ) &&
-                (
-                    this.RequestedLanguageId == other.RequestedLanguageId ||
-                    this.RequestedLanguageId != null &&
-                    this.RequestedLanguageId.Equals(other.RequestedLanguageId)
-                ) &&
-                (
                     this.ScoredAgents == other.ScoredAgents ||
                     this.ScoredAgents != null &&
                     this.ScoredAgents.SequenceEqual(other.ScoredAgents)
@@ -783,61 +854,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Properties == other.Properties ||
                     this.Properties != null &&
                     this.Properties.SequenceEqual(other.Properties)
-                ) &&
-                (
-                    this.SourceConversationId == other.SourceConversationId ||
-                    this.SourceConversationId != null &&
-                    this.SourceConversationId.Equals(other.SourceConversationId)
-                ) &&
-                (
-                    this.DestinationConversationId == other.DestinationConversationId ||
-                    this.DestinationConversationId != null &&
-                    this.DestinationConversationId.Equals(other.DestinationConversationId)
-                ) &&
-                (
-                    this.SourceSessionId == other.SourceSessionId ||
-                    this.SourceSessionId != null &&
-                    this.SourceSessionId.Equals(other.SourceSessionId)
-                ) &&
-                (
-                    this.DestinationSessionId == other.DestinationSessionId ||
-                    this.DestinationSessionId != null &&
-                    this.DestinationSessionId.Equals(other.DestinationSessionId)
-                ) &&
-                (
-                    this.SipResponseCodes == other.SipResponseCodes ||
-                    this.SipResponseCodes != null &&
-                    this.SipResponseCodes.SequenceEqual(other.SipResponseCodes)
-                ) &&
-                (
-                    this.Q850ResponseCodes == other.Q850ResponseCodes ||
-                    this.Q850ResponseCodes != null &&
-                    this.Q850ResponseCodes.SequenceEqual(other.Q850ResponseCodes)
-                ) &&
-                (
-                    this.Conference == other.Conference ||
-                    this.Conference != null &&
-                    this.Conference.Equals(other.Conference)
-                ) &&
-                (
-                    this.GroupId == other.GroupId ||
-                    this.GroupId != null &&
-                    this.GroupId.Equals(other.GroupId)
-                ) &&
-                (
-                    this.Subject == other.Subject ||
-                    this.Subject != null &&
-                    this.Subject.Equals(other.Subject)
-                ) &&
-                (
-                    this.AudioMuted == other.AudioMuted ||
-                    this.AudioMuted != null &&
-                    this.AudioMuted.Equals(other.AudioMuted)
-                ) &&
-                (
-                    this.VideoMuted == other.VideoMuted ||
-                    this.VideoMuted != null &&
-                    this.VideoMuted.Equals(other.VideoMuted)
                 );
         }
 
@@ -853,14 +869,65 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.SegmentStart != null)
-                    hash = hash * 59 + this.SegmentStart.GetHashCode();
+                if (this.AudioMuted != null)
+                    hash = hash * 59 + this.AudioMuted.GetHashCode();
+                
+                if (this.Conference != null)
+                    hash = hash * 59 + this.Conference.GetHashCode();
+                
+                if (this.DestinationConversationId != null)
+                    hash = hash * 59 + this.DestinationConversationId.GetHashCode();
+                
+                if (this.DestinationSessionId != null)
+                    hash = hash * 59 + this.DestinationSessionId.GetHashCode();
+                
+                if (this.DisconnectType != null)
+                    hash = hash * 59 + this.DisconnectType.GetHashCode();
+                
+                if (this.ErrorCode != null)
+                    hash = hash * 59 + this.ErrorCode.GetHashCode();
+                
+                if (this.GroupId != null)
+                    hash = hash * 59 + this.GroupId.GetHashCode();
+                
+                if (this.Q850ResponseCodes != null)
+                    hash = hash * 59 + this.Q850ResponseCodes.GetHashCode();
+                
+                if (this.QueueId != null)
+                    hash = hash * 59 + this.QueueId.GetHashCode();
+                
+                if (this.RequestedLanguageId != null)
+                    hash = hash * 59 + this.RequestedLanguageId.GetHashCode();
+                
+                if (this.RequestedRoutingSkillIds != null)
+                    hash = hash * 59 + this.RequestedRoutingSkillIds.GetHashCode();
+                
+                if (this.RequestedRoutingUserIds != null)
+                    hash = hash * 59 + this.RequestedRoutingUserIds.GetHashCode();
                 
                 if (this.SegmentEnd != null)
                     hash = hash * 59 + this.SegmentEnd.GetHashCode();
                 
-                if (this.QueueId != null)
-                    hash = hash * 59 + this.QueueId.GetHashCode();
+                if (this.SegmentStart != null)
+                    hash = hash * 59 + this.SegmentStart.GetHashCode();
+                
+                if (this.SegmentType != null)
+                    hash = hash * 59 + this.SegmentType.GetHashCode();
+                
+                if (this.SipResponseCodes != null)
+                    hash = hash * 59 + this.SipResponseCodes.GetHashCode();
+                
+                if (this.SourceConversationId != null)
+                    hash = hash * 59 + this.SourceConversationId.GetHashCode();
+                
+                if (this.SourceSessionId != null)
+                    hash = hash * 59 + this.SourceSessionId.GetHashCode();
+                
+                if (this.Subject != null)
+                    hash = hash * 59 + this.Subject.GetHashCode();
+                
+                if (this.VideoMuted != null)
+                    hash = hash * 59 + this.VideoMuted.GetHashCode();
                 
                 if (this.WrapUpCode != null)
                     hash = hash * 59 + this.WrapUpCode.GetHashCode();
@@ -871,62 +938,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.WrapUpTags != null)
                     hash = hash * 59 + this.WrapUpTags.GetHashCode();
                 
-                if (this.ErrorCode != null)
-                    hash = hash * 59 + this.ErrorCode.GetHashCode();
-                
-                if (this.DisconnectType != null)
-                    hash = hash * 59 + this.DisconnectType.GetHashCode();
-                
-                if (this.SegmentType != null)
-                    hash = hash * 59 + this.SegmentType.GetHashCode();
-                
-                if (this.RequestedRoutingUserIds != null)
-                    hash = hash * 59 + this.RequestedRoutingUserIds.GetHashCode();
-                
-                if (this.RequestedRoutingSkillIds != null)
-                    hash = hash * 59 + this.RequestedRoutingSkillIds.GetHashCode();
-                
-                if (this.RequestedLanguageId != null)
-                    hash = hash * 59 + this.RequestedLanguageId.GetHashCode();
-                
                 if (this.ScoredAgents != null)
                     hash = hash * 59 + this.ScoredAgents.GetHashCode();
                 
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
-                
-                if (this.SourceConversationId != null)
-                    hash = hash * 59 + this.SourceConversationId.GetHashCode();
-                
-                if (this.DestinationConversationId != null)
-                    hash = hash * 59 + this.DestinationConversationId.GetHashCode();
-                
-                if (this.SourceSessionId != null)
-                    hash = hash * 59 + this.SourceSessionId.GetHashCode();
-                
-                if (this.DestinationSessionId != null)
-                    hash = hash * 59 + this.DestinationSessionId.GetHashCode();
-                
-                if (this.SipResponseCodes != null)
-                    hash = hash * 59 + this.SipResponseCodes.GetHashCode();
-                
-                if (this.Q850ResponseCodes != null)
-                    hash = hash * 59 + this.Q850ResponseCodes.GetHashCode();
-                
-                if (this.Conference != null)
-                    hash = hash * 59 + this.Conference.GetHashCode();
-                
-                if (this.GroupId != null)
-                    hash = hash * 59 + this.GroupId.GetHashCode();
-                
-                if (this.Subject != null)
-                    hash = hash * 59 + this.Subject.GetHashCode();
-                
-                if (this.AudioMuted != null)
-                    hash = hash * 59 + this.AudioMuted.GetHashCode();
-                
-                if (this.VideoMuted != null)
-                    hash = hash * 59 + this.VideoMuted.GetHashCode();
                 
                 return hash;
             }

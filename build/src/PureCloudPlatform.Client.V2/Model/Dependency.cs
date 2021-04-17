@@ -230,6 +230,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Lexbotalias,
             
             /// <summary>
+            /// Enum Lexv2bot for "LEXV2BOT"
+            /// </summary>
+            [EnumMember(Value = "LEXV2BOT")]
+            Lexv2bot,
+            
+            /// <summary>
+            /// Enum Lexv2botalias for "LEXV2BOTALIAS"
+            /// </summary>
+            [EnumMember(Value = "LEXV2BOTALIAS")]
+            Lexv2botalias,
+            
+            /// <summary>
             /// Enum Nludomain for "NLUDOMAIN"
             /// </summary>
             [EnumMember(Value = "NLUDOMAIN")]

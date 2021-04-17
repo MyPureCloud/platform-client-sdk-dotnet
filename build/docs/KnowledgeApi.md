@@ -515,7 +515,7 @@ namespace Example
 
 <a name="getknowledgeknowledgebaselanguagedocuments"></a>
 
-## [**DocumentListing**](DocumentListing.html) GetKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null)
+## [**DocumentListing**](DocumentListing.html) GetKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, List<string> documentIds = null)
 
 
 
@@ -557,11 +557,12 @@ namespace Example
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var categories = categories_example;  // string | Filter by categories ids, comma separated values expected. (optional) 
             var title = title_example;  // string | Filter by document title. (optional) 
+            var documentIds = new List<string>(); // List<string> | Comma-separated list of document identifiers to fetch by. (optional) 
 
             try
             { 
                 // Get documents
-                DocumentListing result = apiInstance.GetKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId, languageCode, before, after, limit, pageSize, categories, title);
+                DocumentListing result = apiInstance.GetKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId, languageCode, before, after, limit, pageSize, categories, title, documentIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -586,6 +587,7 @@ namespace Example
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **categories** | **string**| Filter by categories ids, comma separated values expected. | [optional]  |
 | **title** | **string**| Filter by document title. | [optional]  |
+| **documentIds** | [**List<string>**](string.html)| Comma-separated list of document identifiers to fetch by. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

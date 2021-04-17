@@ -97,6 +97,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Ani,
             
             /// <summary>
+            /// Enum Authenticated for "authenticated"
+            /// </summary>
+            [EnumMember(Value = "authenticated")]
+            Authenticated,
+            
+            /// <summary>
             /// Enum Callbacknumber for "callbackNumber"
             /// </summary>
             [EnumMember(Value = "callbackNumber")]

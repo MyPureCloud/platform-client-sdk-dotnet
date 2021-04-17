@@ -3269,7 +3269,7 @@ namespace Example
 
 Get media
 
-
+See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
 
 Requires ANY permissions: 
 
@@ -8444,7 +8444,7 @@ namespace Example
 
 Create media
 
-
+See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
 
 Requires ALL permissions: 
 

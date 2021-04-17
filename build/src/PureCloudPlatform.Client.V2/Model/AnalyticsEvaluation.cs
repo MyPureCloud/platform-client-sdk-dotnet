@@ -89,32 +89,32 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsEvaluation" /> class.
         /// </summary>
-        /// <param name="EvaluationId">Unique identifier for the evaluation.</param>
-        /// <param name="EvaluatorId">A unique identifier of the PureCloud user who evaluated the interaction.</param>
-        /// <param name="UserId">Unique identifier for the user being evaluated.</param>
-        /// <param name="EventTime">Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="QueueId">Unique identifier for the queue the conversation was on.</param>
-        /// <param name="FormId">Unique identifier for the form used to evaluate the conversation/agent.</param>
+        /// <param name="CalibrationId">The calibration ID used for the purpose of training evaluators.</param>
         /// <param name="ContextId">A unique identifier for an evaluation form, regardless of version.</param>
-        /// <param name="FormName">Name of the evaluation form.</param>
-        /// <param name="CalibrationId">The calibration id used for the purpose of training evaluators.</param>
-        /// <param name="Rescored">Whether this evaluation has ever been rescored.</param>
-        /// <param name="Deleted">Whether this evaluation has been deleted.</param>
+        /// <param name="Deleted">Whether the evaluation has been deleted.</param>
+        /// <param name="EvaluationId">Unique identifier for the evaluation.</param>
+        /// <param name="EvaluatorId">A unique identifier of the user who evaluated the interaction.</param>
+        /// <param name="EventTime">Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="FormId">ID of the evaluation form used.</param>
+        /// <param name="FormName">Name of the evaluation form used.</param>
+        /// <param name="QueueId">The ID of the associated queue.</param>
+        /// <param name="Rescored">Whether the evaluation has been rescored at least once.</param>
+        /// <param name="UserId">ID of the agent the evaluation was performed against.</param>
         /// <param name="OTotalCriticalScore">OTotalCriticalScore.</param>
         /// <param name="OTotalScore">OTotalScore.</param>
-        public AnalyticsEvaluation(string EvaluationId = null, string EvaluatorId = null, string UserId = null, DateTime? EventTime = null, string QueueId = null, string FormId = null, string ContextId = null, string FormName = null, string CalibrationId = null, bool? Rescored = null, bool? Deleted = null, long? OTotalCriticalScore = null, long? OTotalScore = null)
+        public AnalyticsEvaluation(string CalibrationId = null, string ContextId = null, bool? Deleted = null, string EvaluationId = null, string EvaluatorId = null, DateTime? EventTime = null, string FormId = null, string FormName = null, string QueueId = null, bool? Rescored = null, string UserId = null, long? OTotalCriticalScore = null, long? OTotalScore = null)
         {
+            this.CalibrationId = CalibrationId;
+            this.ContextId = ContextId;
+            this.Deleted = Deleted;
             this.EvaluationId = EvaluationId;
             this.EvaluatorId = EvaluatorId;
-            this.UserId = UserId;
             this.EventTime = EventTime;
-            this.QueueId = QueueId;
             this.FormId = FormId;
-            this.ContextId = ContextId;
             this.FormName = FormName;
-            this.CalibrationId = CalibrationId;
+            this.QueueId = QueueId;
             this.Rescored = Rescored;
-            this.Deleted = Deleted;
+            this.UserId = UserId;
             this.OTotalCriticalScore = OTotalCriticalScore;
             this.OTotalScore = OTotalScore;
             
@@ -123,56 +123,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Unique identifier for the evaluation
+        /// The calibration ID used for the purpose of training evaluators
         /// </summary>
-        /// <value>Unique identifier for the evaluation</value>
-        [DataMember(Name="evaluationId", EmitDefaultValue=false)]
-        public string EvaluationId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// A unique identifier of the PureCloud user who evaluated the interaction
-        /// </summary>
-        /// <value>A unique identifier of the PureCloud user who evaluated the interaction</value>
-        [DataMember(Name="evaluatorId", EmitDefaultValue=false)]
-        public string EvaluatorId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Unique identifier for the user being evaluated
-        /// </summary>
-        /// <value>Unique identifier for the user being evaluated</value>
-        [DataMember(Name="userId", EmitDefaultValue=false)]
-        public string UserId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="eventTime", EmitDefaultValue=false)]
-        public DateTime? EventTime { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Unique identifier for the queue the conversation was on
-        /// </summary>
-        /// <value>Unique identifier for the queue the conversation was on</value>
-        [DataMember(Name="queueId", EmitDefaultValue=false)]
-        public string QueueId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Unique identifier for the form used to evaluate the conversation/agent
-        /// </summary>
-        /// <value>Unique identifier for the form used to evaluate the conversation/agent</value>
-        [DataMember(Name="formId", EmitDefaultValue=false)]
-        public string FormId { get; set; }
+        /// <value>The calibration ID used for the purpose of training evaluators</value>
+        [DataMember(Name="calibrationId", EmitDefaultValue=false)]
+        public string CalibrationId { get; set; }
         
         
         
@@ -186,38 +141,83 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Name of the evaluation form
+        /// Whether the evaluation has been deleted
         /// </summary>
-        /// <value>Name of the evaluation form</value>
+        /// <value>Whether the evaluation has been deleted</value>
+        [DataMember(Name="deleted", EmitDefaultValue=false)]
+        public bool? Deleted { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Unique identifier for the evaluation
+        /// </summary>
+        /// <value>Unique identifier for the evaluation</value>
+        [DataMember(Name="evaluationId", EmitDefaultValue=false)]
+        public string EvaluationId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A unique identifier of the user who evaluated the interaction
+        /// </summary>
+        /// <value>A unique identifier of the user who evaluated the interaction</value>
+        [DataMember(Name="evaluatorId", EmitDefaultValue=false)]
+        public string EvaluatorId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="eventTime", EmitDefaultValue=false)]
+        public DateTime? EventTime { get; set; }
+        
+        
+        
+        /// <summary>
+        /// ID of the evaluation form used
+        /// </summary>
+        /// <value>ID of the evaluation form used</value>
+        [DataMember(Name="formId", EmitDefaultValue=false)]
+        public string FormId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Name of the evaluation form used
+        /// </summary>
+        /// <value>Name of the evaluation form used</value>
         [DataMember(Name="formName", EmitDefaultValue=false)]
         public string FormName { get; set; }
         
         
         
         /// <summary>
-        /// The calibration id used for the purpose of training evaluators
+        /// The ID of the associated queue
         /// </summary>
-        /// <value>The calibration id used for the purpose of training evaluators</value>
-        [DataMember(Name="calibrationId", EmitDefaultValue=false)]
-        public string CalibrationId { get; set; }
+        /// <value>The ID of the associated queue</value>
+        [DataMember(Name="queueId", EmitDefaultValue=false)]
+        public string QueueId { get; set; }
         
         
         
         /// <summary>
-        /// Whether this evaluation has ever been rescored
+        /// Whether the evaluation has been rescored at least once
         /// </summary>
-        /// <value>Whether this evaluation has ever been rescored</value>
+        /// <value>Whether the evaluation has been rescored at least once</value>
         [DataMember(Name="rescored", EmitDefaultValue=false)]
         public bool? Rescored { get; set; }
         
         
         
         /// <summary>
-        /// Whether this evaluation has been deleted
+        /// ID of the agent the evaluation was performed against
         /// </summary>
-        /// <value>Whether this evaluation has been deleted</value>
-        [DataMember(Name="deleted", EmitDefaultValue=false)]
-        public bool? Deleted { get; set; }
+        /// <value>ID of the agent the evaluation was performed against</value>
+        [DataMember(Name="userId", EmitDefaultValue=false)]
+        public string UserId { get; set; }
         
         
         
@@ -245,17 +245,17 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AnalyticsEvaluation {\n");
             
+            sb.Append("  CalibrationId: ").Append(CalibrationId).Append("\n");
+            sb.Append("  ContextId: ").Append(ContextId).Append("\n");
+            sb.Append("  Deleted: ").Append(Deleted).Append("\n");
             sb.Append("  EvaluationId: ").Append(EvaluationId).Append("\n");
             sb.Append("  EvaluatorId: ").Append(EvaluatorId).Append("\n");
-            sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  EventTime: ").Append(EventTime).Append("\n");
-            sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  FormId: ").Append(FormId).Append("\n");
-            sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  FormName: ").Append(FormName).Append("\n");
-            sb.Append("  CalibrationId: ").Append(CalibrationId).Append("\n");
+            sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  Rescored: ").Append(Rescored).Append("\n");
-            sb.Append("  Deleted: ").Append(Deleted).Append("\n");
+            sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  OTotalCriticalScore: ").Append(OTotalCriticalScore).Append("\n");
             sb.Append("  OTotalScore: ").Append(OTotalScore).Append("\n");
             sb.Append("}\n");
@@ -295,6 +295,21 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.CalibrationId == other.CalibrationId ||
+                    this.CalibrationId != null &&
+                    this.CalibrationId.Equals(other.CalibrationId)
+                ) &&
+                (
+                    this.ContextId == other.ContextId ||
+                    this.ContextId != null &&
+                    this.ContextId.Equals(other.ContextId)
+                ) &&
+                (
+                    this.Deleted == other.Deleted ||
+                    this.Deleted != null &&
+                    this.Deleted.Equals(other.Deleted)
+                ) &&
+                (
                     this.EvaluationId == other.EvaluationId ||
                     this.EvaluationId != null &&
                     this.EvaluationId.Equals(other.EvaluationId)
@@ -305,19 +320,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EvaluatorId.Equals(other.EvaluatorId)
                 ) &&
                 (
-                    this.UserId == other.UserId ||
-                    this.UserId != null &&
-                    this.UserId.Equals(other.UserId)
-                ) &&
-                (
                     this.EventTime == other.EventTime ||
                     this.EventTime != null &&
                     this.EventTime.Equals(other.EventTime)
-                ) &&
-                (
-                    this.QueueId == other.QueueId ||
-                    this.QueueId != null &&
-                    this.QueueId.Equals(other.QueueId)
                 ) &&
                 (
                     this.FormId == other.FormId ||
@@ -325,19 +330,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FormId.Equals(other.FormId)
                 ) &&
                 (
-                    this.ContextId == other.ContextId ||
-                    this.ContextId != null &&
-                    this.ContextId.Equals(other.ContextId)
-                ) &&
-                (
                     this.FormName == other.FormName ||
                     this.FormName != null &&
                     this.FormName.Equals(other.FormName)
                 ) &&
                 (
-                    this.CalibrationId == other.CalibrationId ||
-                    this.CalibrationId != null &&
-                    this.CalibrationId.Equals(other.CalibrationId)
+                    this.QueueId == other.QueueId ||
+                    this.QueueId != null &&
+                    this.QueueId.Equals(other.QueueId)
                 ) &&
                 (
                     this.Rescored == other.Rescored ||
@@ -345,9 +345,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Rescored.Equals(other.Rescored)
                 ) &&
                 (
-                    this.Deleted == other.Deleted ||
-                    this.Deleted != null &&
-                    this.Deleted.Equals(other.Deleted)
+                    this.UserId == other.UserId ||
+                    this.UserId != null &&
+                    this.UserId.Equals(other.UserId)
                 ) &&
                 (
                     this.OTotalCriticalScore == other.OTotalCriticalScore ||
@@ -373,38 +373,38 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.CalibrationId != null)
+                    hash = hash * 59 + this.CalibrationId.GetHashCode();
+                
+                if (this.ContextId != null)
+                    hash = hash * 59 + this.ContextId.GetHashCode();
+                
+                if (this.Deleted != null)
+                    hash = hash * 59 + this.Deleted.GetHashCode();
+                
                 if (this.EvaluationId != null)
                     hash = hash * 59 + this.EvaluationId.GetHashCode();
                 
                 if (this.EvaluatorId != null)
                     hash = hash * 59 + this.EvaluatorId.GetHashCode();
                 
-                if (this.UserId != null)
-                    hash = hash * 59 + this.UserId.GetHashCode();
-                
                 if (this.EventTime != null)
                     hash = hash * 59 + this.EventTime.GetHashCode();
-                
-                if (this.QueueId != null)
-                    hash = hash * 59 + this.QueueId.GetHashCode();
                 
                 if (this.FormId != null)
                     hash = hash * 59 + this.FormId.GetHashCode();
                 
-                if (this.ContextId != null)
-                    hash = hash * 59 + this.ContextId.GetHashCode();
-                
                 if (this.FormName != null)
                     hash = hash * 59 + this.FormName.GetHashCode();
                 
-                if (this.CalibrationId != null)
-                    hash = hash * 59 + this.CalibrationId.GetHashCode();
+                if (this.QueueId != null)
+                    hash = hash * 59 + this.QueueId.GetHashCode();
                 
                 if (this.Rescored != null)
                     hash = hash * 59 + this.Rescored.GetHashCode();
                 
-                if (this.Deleted != null)
-                    hash = hash * 59 + this.Deleted.GetHashCode();
+                if (this.UserId != null)
+                    hash = hash * 59 + this.UserId.GetHashCode();
                 
                 if (this.OTotalCriticalScore != null)
                     hash = hash * 59 + this.OTotalCriticalScore.GetHashCode();

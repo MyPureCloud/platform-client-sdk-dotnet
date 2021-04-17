@@ -50,8 +50,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="SurveyQuestionGroupScore" /> class.
         /// </summary>
         /// <param name="QuestionGroupId">QuestionGroupId.</param>
-        /// <param name="TotalScore">TotalScore.</param>
-        /// <param name="MaxTotalScore">MaxTotalScore.</param>
+        /// <param name="TotalScore">Score of all questions in the group.</param>
+        /// <param name="MaxTotalScore">Maximum possible score of all questions in the group.</param>
         /// <param name="MarkedNA">MarkedNA.</param>
         /// <param name="QuestionScores">QuestionScores.</param>
         public SurveyQuestionGroupScore(string QuestionGroupId = null, float? TotalScore = null, float? MaxTotalScore = null, bool? MarkedNA = null, List<SurveyQuestionScore> QuestionScores = null)
@@ -75,16 +75,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets TotalScore
+        /// Score of all questions in the group
         /// </summary>
+        /// <value>Score of all questions in the group</value>
         [DataMember(Name="totalScore", EmitDefaultValue=false)]
         public float? TotalScore { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MaxTotalScore
+        /// Maximum possible score of all questions in the group
         /// </summary>
+        /// <value>Maximum possible score of all questions in the group</value>
         [DataMember(Name="maxTotalScore", EmitDefaultValue=false)]
         public float? MaxTotalScore { get; set; }
         

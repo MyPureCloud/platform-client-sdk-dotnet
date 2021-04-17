@@ -79,12 +79,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The state of the bot after completion of the request
         /// </summary>
         /// <value>The state of the bot after completion of the request</value>
         [DataMember(Name="botState", EmitDefaultValue=false)]
         public BotStateEnum? BotState { get; set; }
+        
+        
         
         
         
@@ -119,7 +124,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AmazonLex">Raw data response from AWS (if called).</param>
         /// <param name="GoogleDialogFlow">Raw data response from Google Dialogflow (if called).</param>
         /// <param name="GenesysDialogEngine">Raw data response from Genesys&#39; Dialogengine (if called).</param>
-        public PostTextResponse(BotStateEnum? BotState = null, List<PostTextMessage> ReplyMessages = null, string IntentName = null, Dictionary<string, string> Slots = null, string BotCorrelationId = null, Dictionary<string, Object> AmazonLex = null, Dictionary<string, Object> GoogleDialogFlow = null, Dictionary<string, Object> GenesysDialogEngine = null)
+        /// <param name="GenesysBotConnector">Raw data response from Genesys&#39; BotConnector (if called).</param>
+        public PostTextResponse(BotStateEnum? BotState = null, List<PostTextMessage> ReplyMessages = null, string IntentName = null, Dictionary<string, string> Slots = null, string BotCorrelationId = null, Dictionary<string, Object> AmazonLex = null, Dictionary<string, Object> GoogleDialogFlow = null, Dictionary<string, Object> GenesysDialogEngine = null, Dictionary<string, Object> GenesysBotConnector = null)
         {
             this.BotState = BotState;
             this.ReplyMessages = ReplyMessages;
@@ -129,6 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AmazonLex = AmazonLex;
             this.GoogleDialogFlow = GoogleDialogFlow;
             this.GenesysDialogEngine = GenesysDialogEngine;
+            this.GenesysBotConnector = GenesysBotConnector;
             
         }
         
@@ -198,6 +205,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Dictionary<string, Object> GenesysDialogEngine { get; set; }
         
         
+        
+        /// <summary>
+        /// Raw data response from Genesys&#39; BotConnector (if called)
+        /// </summary>
+        /// <value>Raw data response from Genesys&#39; BotConnector (if called)</value>
+        [DataMember(Name="genesysBotConnector", EmitDefaultValue=false)]
+        public Dictionary<string, Object> GenesysBotConnector { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -215,6 +231,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AmazonLex: ").Append(AmazonLex).Append("\n");
             sb.Append("  GoogleDialogFlow: ").Append(GoogleDialogFlow).Append("\n");
             sb.Append("  GenesysDialogEngine: ").Append(GenesysDialogEngine).Append("\n");
+            sb.Append("  GenesysBotConnector: ").Append(GenesysBotConnector).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -290,6 +307,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.GenesysDialogEngine == other.GenesysDialogEngine ||
                     this.GenesysDialogEngine != null &&
                     this.GenesysDialogEngine.SequenceEqual(other.GenesysDialogEngine)
+                ) &&
+                (
+                    this.GenesysBotConnector == other.GenesysBotConnector ||
+                    this.GenesysBotConnector != null &&
+                    this.GenesysBotConnector.SequenceEqual(other.GenesysBotConnector)
                 );
         }
 
@@ -328,6 +350,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.GenesysDialogEngine != null)
                     hash = hash * 59 + this.GenesysDialogEngine.GetHashCode();
+                
+                if (this.GenesysBotConnector != null)
+                    hash = hash * 59 + this.GenesysBotConnector.GetHashCode();
                 
                 return hash;
             }

@@ -39,22 +39,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsSessionMetric" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected AnalyticsSessionMetric() { }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AnalyticsSessionMetric" /> class.
-        /// </summary>
-        /// <param name="Name">Unique name of this metric (required).</param>
-        /// <param name="Value">The metric value (required).</param>
-        /// <param name="EmitDate">Metric emission date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
-        public AnalyticsSessionMetric(string Name = null, long? Value = null, DateTime? EmitDate = null)
+        /// <param name="EmitDate">Metric emission date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="Name">Unique name of this metric.</param>
+        /// <param name="Value">The metric value.</param>
+        public AnalyticsSessionMetric(DateTime? EmitDate = null, string Name = null, long? Value = null)
         {
+            this.EmitDate = EmitDate;
             this.Name = Name;
             this.Value = Value;
-            this.EmitDate = EmitDate;
             
         }
+        
+        
+        
+        /// <summary>
+        /// Metric emission date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Metric emission date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="emitDate", EmitDefaultValue=false)]
+        public DateTime? EmitDate { get; set; }
         
         
         
@@ -75,15 +78,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public long? Value { get; set; }
         
         
-        
-        /// <summary>
-        /// Metric emission date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>Metric emission date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="emitDate", EmitDefaultValue=false)]
-        public DateTime? EmitDate { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -93,9 +87,9 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AnalyticsSessionMetric {\n");
             
+            sb.Append("  EmitDate: ").Append(EmitDate).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
-            sb.Append("  EmitDate: ").Append(EmitDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -133,6 +127,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.EmitDate == other.EmitDate ||
+                    this.EmitDate != null &&
+                    this.EmitDate.Equals(other.EmitDate)
+                ) &&
+                (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
@@ -141,11 +140,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Value == other.Value ||
                     this.Value != null &&
                     this.Value.Equals(other.Value)
-                ) &&
-                (
-                    this.EmitDate == other.EmitDate ||
-                    this.EmitDate != null &&
-                    this.EmitDate.Equals(other.EmitDate)
                 );
         }
 
@@ -161,14 +155,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.EmitDate != null)
+                    hash = hash * 59 + this.EmitDate.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
-                if (this.EmitDate != null)
-                    hash = hash * 59 + this.EmitDate.GetHashCode();
                 
                 return hash;
             }

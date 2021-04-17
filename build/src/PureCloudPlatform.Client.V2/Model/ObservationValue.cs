@@ -113,6 +113,24 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Bullseye for "Bullseye"
+            /// </summary>
+            [EnumMember(Value = "Bullseye")]
+            Bullseye,
+            
+            /// <summary>
+            /// Enum Last for "Last"
+            /// </summary>
+            [EnumMember(Value = "Last")]
+            Last,
+            
+            /// <summary>
+            /// Enum Manual for "Manual"
+            /// </summary>
+            [EnumMember(Value = "Manual")]
+            Manual,
+            
+            /// <summary>
             /// Enum Predictive for "Predictive"
             /// </summary>
             [EnumMember(Value = "Predictive")]
@@ -123,24 +141,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Preferred")]
             Preferred,
-            
-            /// <summary>
-            /// Enum Manual for "Manual"
-            /// </summary>
-            [EnumMember(Value = "Manual")]
-            Manual,
-            
-            /// <summary>
-            /// Enum Last for "Last"
-            /// </summary>
-            [EnumMember(Value = "Last")]
-            Last,
-            
-            /// <summary>
-            /// Enum Bullseye for "Bullseye"
-            /// </summary>
-            [EnumMember(Value = "Bullseye")]
-            Bullseye,
             
             /// <summary>
             /// Enum Standard for "Standard"
@@ -168,6 +168,24 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Bullseye for "Bullseye"
+            /// </summary>
+            [EnumMember(Value = "Bullseye")]
+            Bullseye,
+            
+            /// <summary>
+            /// Enum Last for "Last"
+            /// </summary>
+            [EnumMember(Value = "Last")]
+            Last,
+            
+            /// <summary>
+            /// Enum Manual for "Manual"
+            /// </summary>
+            [EnumMember(Value = "Manual")]
+            Manual,
+            
+            /// <summary>
             /// Enum Predictive for "Predictive"
             /// </summary>
             [EnumMember(Value = "Predictive")]
@@ -178,24 +196,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Preferred")]
             Preferred,
-            
-            /// <summary>
-            /// Enum Manual for "Manual"
-            /// </summary>
-            [EnumMember(Value = "Manual")]
-            Manual,
-            
-            /// <summary>
-            /// Enum Last for "Last"
-            /// </summary>
-            [EnumMember(Value = "Last")]
-            Last,
-            
-            /// <summary>
-            /// Enum Bullseye for "Bullseye"
-            /// </summary>
-            [EnumMember(Value = "Bullseye")]
-            Bullseye,
             
             /// <summary>
             /// Enum Standard for "Standard"

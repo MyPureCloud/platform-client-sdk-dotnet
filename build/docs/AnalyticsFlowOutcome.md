@@ -7,11 +7,11 @@ title: AnalyticsFlowOutcome
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **FlowOutcomeId** | **string** | Unique identifiers of a flow outcome | [optional] |
+| **FlowOutcome** | **string** | Combination of unique flow outcome identifier and its value separated by colon | [optional] |
+| **FlowOutcomeEndTimestamp** | **DateTime?** | The outcome ending timestamp in ISO 8601 format. This may be null if the outcome did not succeed. | [optional] |
+| **FlowOutcomeId** | **string** | Unique identifier of a flow outcome | [optional] |
+| **FlowOutcomeStartTimestamp** | **DateTime?** | The outcome starting timestamp in ISO 8601 format | [optional] |
 | **FlowOutcomeValue** | **string** | Flow outcome value, e.g. SUCCESS | [optional] |
-| **FlowOutcome** | **string** | Colon-separated combinations of unique flow outcome identifier and value | [optional] |
-| **FlowOutcomeStartTimestamp** | **DateTime?** | Date/time the outcome started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **FlowOutcomeEndTimestamp** | **DateTime?** | Date/time the outcome ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 {: class="table table-striped"}
 
 

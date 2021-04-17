@@ -39,7 +39,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteTokenWithHttpInfo (string userId);
         
         /// <summary>
-        /// Delete  auth token used to make the request.
+        /// Delete auth token used to make the request.
         /// </summary>
         /// <remarks>
         /// 
@@ -49,7 +49,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteTokensMe ();
 
         /// <summary>
-        /// Delete  auth token used to make the request.
+        /// Delete auth token used to make the request.
         /// </summary>
         /// <remarks>
         /// 
@@ -105,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTokenAsyncWithHttpInfo (string userId);
         
         /// <summary>
-        /// Delete  auth token used to make the request.
+        /// Delete auth token used to make the request.
         /// </summary>
         /// <remarks>
         /// 
@@ -115,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteTokensMeAsync ();
 
         /// <summary>
-        /// Delete  auth token used to make the request.
+        /// Delete auth token used to make the request.
         /// </summary>
         /// <remarks>
         /// 
@@ -428,7 +428,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Delete  auth token used to make the request. 
+        /// Delete auth token used to make the request. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
@@ -438,7 +438,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete  auth token used to make the request. 
+        /// Delete auth token used to make the request. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -516,7 +516,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Delete  auth token used to make the request. 
+        /// Delete auth token used to make the request. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
@@ -527,7 +527,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete  auth token used to make the request. 
+        /// Delete auth token used to make the request. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>

@@ -50,6 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Trustee" /> class.
@@ -61,11 +66,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Trustee" /> class.
         /// </summary>
         /// <param name="Enabled">If disabled no trustee user will have access, even if they were previously added. (required).</param>
+        /// <param name="UsesDefaultRole">Denotes if trustee uses admin role by default..</param>
         /// <param name="CreatedBy">User that created trust..</param>
         /// <param name="Organization">Organization associated with this trust..</param>
-        public Trustee(bool? Enabled = null, OrgUser CreatedBy = null, Organization Organization = null)
+        public Trustee(bool? Enabled = null, bool? UsesDefaultRole = null, OrgUser CreatedBy = null, Organization Organization = null)
         {
             this.Enabled = Enabled;
+            this.UsesDefaultRole = UsesDefaultRole;
             this.CreatedBy = CreatedBy;
             this.Organization = Organization;
             
@@ -88,6 +95,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>If disabled no trustee user will have access, even if they were previously added.</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Denotes if trustee uses admin role by default.
+        /// </summary>
+        /// <value>Denotes if trustee uses admin role by default.</value>
+        [DataMember(Name="usesDefaultRole", EmitDefaultValue=false)]
+        public bool? UsesDefaultRole { get; set; }
         
         
         
@@ -137,6 +153,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  UsesDefaultRole: ").Append(UsesDefaultRole).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  Organization: ").Append(Organization).Append("\n");
@@ -188,6 +205,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Enabled.Equals(other.Enabled)
                 ) &&
                 (
+                    this.UsesDefaultRole == other.UsesDefaultRole ||
+                    this.UsesDefaultRole != null &&
+                    this.UsesDefaultRole.Equals(other.UsesDefaultRole)
+                ) &&
+                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -226,6 +248,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+                
+                if (this.UsesDefaultRole != null)
+                    hash = hash * 59 + this.UsesDefaultRole.GetHashCode();
                 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();

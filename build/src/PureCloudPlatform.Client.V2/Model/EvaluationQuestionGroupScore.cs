@@ -100,19 +100,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="EvaluationQuestionGroupScore" /> class.
         /// </summary>
         /// <param name="QuestionGroupId">QuestionGroupId.</param>
-        /// <param name="TotalScore">TotalScore.</param>
-        /// <param name="MaxTotalScore">MaxTotalScore.</param>
+        /// <param name="TotalScore">Score of all questions in the group.</param>
+        /// <param name="MaxTotalScore">Maximum possible score of all questions in the group.</param>
         /// <param name="MarkedNA">MarkedNA.</param>
-        /// <param name="TotalCriticalScore">TotalCriticalScore.</param>
-        /// <param name="MaxTotalCriticalScore">MaxTotalCriticalScore.</param>
-        /// <param name="TotalNonCriticalScore">TotalNonCriticalScore.</param>
-        /// <param name="MaxTotalNonCriticalScore">MaxTotalNonCriticalScore.</param>
-        /// <param name="TotalScoreUnweighted">TotalScoreUnweighted.</param>
-        /// <param name="MaxTotalScoreUnweighted">MaxTotalScoreUnweighted.</param>
-        /// <param name="TotalCriticalScoreUnweighted">TotalCriticalScoreUnweighted.</param>
-        /// <param name="MaxTotalCriticalScoreUnweighted">MaxTotalCriticalScoreUnweighted.</param>
-        /// <param name="TotalNonCriticalScoreUnweighted">TotalNonCriticalScoreUnweighted.</param>
-        /// <param name="MaxTotalNonCriticalScoreUnweighted">MaxTotalNonCriticalScoreUnweighted.</param>
+        /// <param name="TotalCriticalScore">Score of only the critical questions in the group.</param>
+        /// <param name="MaxTotalCriticalScore">Maximum possible score of only the critical questions in the group.</param>
+        /// <param name="TotalNonCriticalScore">Score of only the non critical questions in the group.</param>
+        /// <param name="MaxTotalNonCriticalScore">Maximum possible score of only the non critical questions in the group.</param>
+        /// <param name="TotalScoreUnweighted">Unweighted score of all questions in the group.</param>
+        /// <param name="MaxTotalScoreUnweighted">Maximum possible unweighted score of all questions in the group.</param>
+        /// <param name="TotalCriticalScoreUnweighted">Unweighted score of only the critical questions in the group.</param>
+        /// <param name="MaxTotalCriticalScoreUnweighted">Maximum possible unweighted score of only the critical questions in the group.</param>
+        /// <param name="TotalNonCriticalScoreUnweighted">Unweighted score of only the non critical questions in the group.</param>
+        /// <param name="MaxTotalNonCriticalScoreUnweighted">Maximum possible unweighted score of only the non critical questions in the group.</param>
         /// <param name="QuestionScores">QuestionScores.</param>
         public EvaluationQuestionGroupScore(string QuestionGroupId = null, float? TotalScore = null, float? MaxTotalScore = null, bool? MarkedNA = null, float? TotalCriticalScore = null, float? MaxTotalCriticalScore = null, float? TotalNonCriticalScore = null, float? MaxTotalNonCriticalScore = null, float? TotalScoreUnweighted = null, float? MaxTotalScoreUnweighted = null, float? TotalCriticalScoreUnweighted = null, float? MaxTotalCriticalScoreUnweighted = null, float? TotalNonCriticalScoreUnweighted = null, float? MaxTotalNonCriticalScoreUnweighted = null, List<EvaluationQuestionScore> QuestionScores = null)
         {
@@ -145,16 +145,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets TotalScore
+        /// Score of all questions in the group
         /// </summary>
+        /// <value>Score of all questions in the group</value>
         [DataMember(Name="totalScore", EmitDefaultValue=false)]
         public float? TotalScore { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MaxTotalScore
+        /// Maximum possible score of all questions in the group
         /// </summary>
+        /// <value>Maximum possible score of all questions in the group</value>
         [DataMember(Name="maxTotalScore", EmitDefaultValue=false)]
         public float? MaxTotalScore { get; set; }
         
@@ -169,80 +171,90 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets TotalCriticalScore
+        /// Score of only the critical questions in the group
         /// </summary>
+        /// <value>Score of only the critical questions in the group</value>
         [DataMember(Name="totalCriticalScore", EmitDefaultValue=false)]
         public float? TotalCriticalScore { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MaxTotalCriticalScore
+        /// Maximum possible score of only the critical questions in the group
         /// </summary>
+        /// <value>Maximum possible score of only the critical questions in the group</value>
         [DataMember(Name="maxTotalCriticalScore", EmitDefaultValue=false)]
         public float? MaxTotalCriticalScore { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets TotalNonCriticalScore
+        /// Score of only the non critical questions in the group
         /// </summary>
+        /// <value>Score of only the non critical questions in the group</value>
         [DataMember(Name="totalNonCriticalScore", EmitDefaultValue=false)]
         public float? TotalNonCriticalScore { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MaxTotalNonCriticalScore
+        /// Maximum possible score of only the non critical questions in the group
         /// </summary>
+        /// <value>Maximum possible score of only the non critical questions in the group</value>
         [DataMember(Name="maxTotalNonCriticalScore", EmitDefaultValue=false)]
         public float? MaxTotalNonCriticalScore { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets TotalScoreUnweighted
+        /// Unweighted score of all questions in the group
         /// </summary>
+        /// <value>Unweighted score of all questions in the group</value>
         [DataMember(Name="totalScoreUnweighted", EmitDefaultValue=false)]
         public float? TotalScoreUnweighted { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MaxTotalScoreUnweighted
+        /// Maximum possible unweighted score of all questions in the group
         /// </summary>
+        /// <value>Maximum possible unweighted score of all questions in the group</value>
         [DataMember(Name="maxTotalScoreUnweighted", EmitDefaultValue=false)]
         public float? MaxTotalScoreUnweighted { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets TotalCriticalScoreUnweighted
+        /// Unweighted score of only the critical questions in the group
         /// </summary>
+        /// <value>Unweighted score of only the critical questions in the group</value>
         [DataMember(Name="totalCriticalScoreUnweighted", EmitDefaultValue=false)]
         public float? TotalCriticalScoreUnweighted { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MaxTotalCriticalScoreUnweighted
+        /// Maximum possible unweighted score of only the critical questions in the group
         /// </summary>
+        /// <value>Maximum possible unweighted score of only the critical questions in the group</value>
         [DataMember(Name="maxTotalCriticalScoreUnweighted", EmitDefaultValue=false)]
         public float? MaxTotalCriticalScoreUnweighted { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets TotalNonCriticalScoreUnweighted
+        /// Unweighted score of only the non critical questions in the group
         /// </summary>
+        /// <value>Unweighted score of only the non critical questions in the group</value>
         [DataMember(Name="totalNonCriticalScoreUnweighted", EmitDefaultValue=false)]
         public float? TotalNonCriticalScoreUnweighted { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MaxTotalNonCriticalScoreUnweighted
+        /// Maximum possible unweighted score of only the non critical questions in the group
         /// </summary>
+        /// <value>Maximum possible unweighted score of only the non critical questions in the group</value>
         [DataMember(Name="maxTotalNonCriticalScoreUnweighted", EmitDefaultValue=false)]
         public float? MaxTotalNonCriticalScoreUnweighted { get; set; }
         

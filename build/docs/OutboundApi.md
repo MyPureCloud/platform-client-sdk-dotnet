@@ -93,7 +93,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundContactlists**](OutboundApi.html#postoutboundcontactlists) | **POST** /api/v2/outbound/contactlists | Create a contact List. |
 | [**PostOutboundConversationDnc**](OutboundApi.html#postoutboundconversationdnc) | **POST** /api/v2/outbound/conversations/{conversationId}/dnc | Add phone numbers to a Dialer DNC list. |
 | [**PostOutboundDnclistExport**](OutboundApi.html#postoutbounddnclistexport) | **POST** /api/v2/outbound/dnclists/{dncListId}/export | Initiate the export of a dnc list. |
-| [**PostOutboundDnclistPhonenumbers**](OutboundApi.html#postoutbounddnclistphonenumbers) | **POST** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add phone numbers to a Dialer DNC list. |
+| [**PostOutboundDnclistPhonenumbers**](OutboundApi.html#postoutbounddnclistphonenumbers) | **POST** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add phone numbers to a DNC list. |
 | [**PostOutboundDnclists**](OutboundApi.html#postoutbounddnclists) | **POST** /api/v2/outbound/dnclists | Create dialer DNC list |
 | [**PostOutboundMessagingcampaigns**](OutboundApi.html#postoutboundmessagingcampaigns) | **POST** /api/v2/outbound/messagingcampaigns | Create a Messaging Campaign |
 | [**PostOutboundMessagingcampaignsProgress**](OutboundApi.html#postoutboundmessagingcampaignsprogress) | **POST** /api/v2/outbound/messagingcampaigns/progress | Get progress for a list of messaging campaigns |
@@ -5986,7 +5986,7 @@ namespace Example
 
 
 
-Add phone numbers to a Dialer DNC list.
+Add phone numbers to a DNC list.
 
 Only Internal DNC lists may be appended to
 
@@ -6021,7 +6021,7 @@ namespace Example
 
             try
             { 
-                // Add phone numbers to a Dialer DNC list.
+                // Add phone numbers to a DNC list.
                 apiInstance.PostOutboundDnclistPhonenumbers(dncListId, body);
             }
             catch (Exception e)

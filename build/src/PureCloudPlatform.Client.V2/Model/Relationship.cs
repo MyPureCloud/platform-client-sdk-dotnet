@@ -50,11 +50,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Relationship" /> class.
@@ -65,14 +60,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Relationship" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="User">The user associated with the external organization (required).</param>
+        /// <param name="User">The user associated with the external organization. When creating or updating a relationship, only User.id is required. User object is fully populated when expanding a note. (required).</param>
         /// <param name="ExternalOrganization">The external organization this relationship is attached to (required).</param>
         /// <param name="_Relationship">The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant (required).</param>
         /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
-        public Relationship(string Name = null, User User = null, ExternalOrganization ExternalOrganization = null, string _Relationship = null, List<ExternalDataSource> ExternalDataSources = null)
+        public Relationship(User User = null, ExternalOrganization ExternalOrganization = null, string _Relationship = null, List<ExternalDataSource> ExternalDataSources = null)
         {
-            this.Name = Name;
             this.User = User;
             this.ExternalOrganization = ExternalOrganization;
             this._Relationship = _Relationship;
@@ -92,17 +85,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The user associated with the external organization. When creating or updating a relationship, only User.id is required. User object is fully populated when expanding a note.
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The user associated with the external organization
-        /// </summary>
-        /// <value>The user associated with the external organization</value>
+        /// <value>The user associated with the external organization. When creating or updating a relationship, only User.id is required. User object is fully populated when expanding a note.</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
         
@@ -153,7 +138,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class Relationship {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  _Relationship: ").Append(_Relationship).Append("\n");
@@ -201,11 +185,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
@@ -246,9 +225,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();

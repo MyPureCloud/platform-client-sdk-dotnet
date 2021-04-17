@@ -9,7 +9,7 @@ title: SurveyQuestionScore
 |------------ | ------------- | ------------- | -------------|
 | **QuestionId** | **string** |  | [optional] |
 | **AnswerId** | **string** |  | [optional] |
-| **Score** | **int?** |  | [optional] |
+| **Score** | **int?** | Unweighted score of the question | [optional] |
 | **MarkedNA** | **bool?** |  | [optional] |
 | **NpsScore** | **int?** |  | [optional] |
 | **NpsTextAnswer** | **string** |  | [optional] |

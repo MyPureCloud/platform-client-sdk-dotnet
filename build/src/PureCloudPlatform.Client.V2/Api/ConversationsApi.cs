@@ -1136,7 +1136,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get media
         /// </summary>
         /// <remarks>
-        /// 
+        /// See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -1149,7 +1149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get media
         /// </summary>
         /// <remarks>
-        /// 
+        /// See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -3062,7 +3062,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create media
         /// </summary>
         /// <remarks>
-        /// 
+        /// See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -3074,7 +3074,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create media
         /// </summary>
         /// <remarks>
-        /// 
+        /// See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -4488,7 +4488,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get media
         /// </summary>
         /// <remarks>
-        /// 
+        /// See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -4501,7 +4501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get media
         /// </summary>
         /// <remarks>
-        /// 
+        /// See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -6414,7 +6414,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create media
         /// </summary>
         /// <remarks>
-        /// 
+        /// See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -6426,7 +6426,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create media
         /// </summary>
         /// <remarks>
-        /// 
+        /// See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -16321,7 +16321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get media 
+        /// Get media See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -16335,7 +16335,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get media 
+        /// Get media See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -16428,7 +16428,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get media 
+        /// Get media See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -16443,7 +16443,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get media 
+        /// Get media See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -32853,7 +32853,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Create media 
+        /// Create media See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -32866,7 +32866,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create media 
+        /// Create media See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -32954,7 +32954,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Create media 
+        /// Create media See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -32968,7 +32968,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create media 
+        /// Create media See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>

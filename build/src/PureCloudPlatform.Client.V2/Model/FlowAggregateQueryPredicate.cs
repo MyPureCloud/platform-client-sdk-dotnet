@@ -127,10 +127,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Assignerid,
             
             /// <summary>
-            /// Enum Bullseyering for "bullseyeRing"
+            /// Enum Authenticated for "authenticated"
             /// </summary>
-            [EnumMember(Value = "bullseyeRing")]
-            Bullseyering,
+            [EnumMember(Value = "authenticated")]
+            Authenticated,
             
             /// <summary>
             /// Enum Conversationid for "conversationId"
@@ -221,6 +221,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "externalOrganizationId")]
             Externalorganizationid,
+            
+            /// <summary>
+            /// Enum Externaltag for "externalTag"
+            /// </summary>
+            [EnumMember(Value = "externalTag")]
+            Externaltag,
             
             /// <summary>
             /// Enum Firstqueue for "firstQueue"
@@ -427,6 +433,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Queueid,
             
             /// <summary>
+            /// Enum Recognitionfailurereason for "recognitionFailureReason"
+            /// </summary>
+            [EnumMember(Value = "recognitionFailureReason")]
+            Recognitionfailurereason,
+            
+            /// <summary>
             /// Enum Remote for "remote"
             /// </summary>
             [EnumMember(Value = "remote")]
@@ -475,10 +487,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Routingpriority,
             
             /// <summary>
-            /// Enum Routingrule for "routingRule"
+            /// Enum Routingring for "routingRing"
             /// </summary>
-            [EnumMember(Value = "routingRule")]
-            Routingrule,
+            [EnumMember(Value = "routingRing")]
+            Routingring,
             
             /// <summary>
             /// Enum Scoredagentid for "scoredAgentId"

@@ -56,10 +56,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="QuestionId">QuestionId.</param>
         /// <param name="AnswerId">AnswerId.</param>
-        /// <param name="Score">Score.</param>
+        /// <param name="Score">Unweighted score of the question.</param>
         /// <param name="MarkedNA">MarkedNA.</param>
-        /// <param name="FailedKillQuestion">FailedKillQuestion.</param>
-        /// <param name="Comments">Comments.</param>
+        /// <param name="FailedKillQuestion">Applicable only on fatal questions. Indicates that the answer selected was not the highest score available for the question.</param>
+        /// <param name="Comments">Comments from the evaluator specific to this question.</param>
         public EvaluationQuestionScore(string QuestionId = null, string AnswerId = null, int? Score = null, bool? MarkedNA = null, bool? FailedKillQuestion = null, string Comments = null)
         {
             this.QuestionId = QuestionId;
@@ -90,8 +90,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Score
+        /// Unweighted score of the question
         /// </summary>
+        /// <value>Unweighted score of the question</value>
         [DataMember(Name="score", EmitDefaultValue=false)]
         public int? Score { get; set; }
         
@@ -106,16 +107,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets FailedKillQuestion
+        /// Applicable only on fatal questions. Indicates that the answer selected was not the highest score available for the question
         /// </summary>
+        /// <value>Applicable only on fatal questions. Indicates that the answer selected was not the highest score available for the question</value>
         [DataMember(Name="failedKillQuestion", EmitDefaultValue=false)]
         public bool? FailedKillQuestion { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Comments
+        /// Comments from the evaluator specific to this question
         /// </summary>
+        /// <value>Comments from the evaluator specific to this question</value>
         [DataMember(Name="comments", EmitDefaultValue=false)]
         public string Comments { get; set; }
         

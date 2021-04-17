@@ -69,6 +69,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Contentmanagement,
             
             /// <summary>
+            /// Enum Integrations for "Integrations"
+            /// </summary>
+            [EnumMember(Value = "Integrations")]
+            Integrations,
+            
+            /// <summary>
             /// Enum Peoplepermissions for "PeoplePermissions"
             /// </summary>
             [EnumMember(Value = "PeoplePermissions")]
@@ -857,7 +863,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Sentimentfeedback for "SentimentFeedback"
             /// </summary>
             [EnumMember(Value = "SentimentFeedback")]
-            Sentimentfeedback
+            Sentimentfeedback,
+            
+            /// <summary>
+            /// Enum Integration for "Integration"
+            /// </summary>
+            [EnumMember(Value = "Integration")]
+            Integration
         }
         
         

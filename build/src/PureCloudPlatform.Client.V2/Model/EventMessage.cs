@@ -251,6 +251,12 @@ namespace PureCloudPlatform.Client.V2.Model
             InactiveEdgesTurnedCampaignOff,
             
             /// <summary>
+            /// Enum InvalidAgent for "INVALID_AGENT"
+            /// </summary>
+            [EnumMember(Value = "INVALID_AGENT")]
+            InvalidAgent,
+            
+            /// <summary>
             /// Enum InvalidPhoneNumber for "INVALID_PHONE_NUMBER"
             /// </summary>
             [EnumMember(Value = "INVALID_PHONE_NUMBER")]
