@@ -12,6 +12,7 @@ title: ConversationEventTopicConversation
 | **Participants** | [**List&lt;ConversationEventTopicParticipant&gt;**](ConversationEventTopicParticipant.html) |  | [optional] |
 | **RecordingState** | **string** |  | [optional] |
 | **Address** | **string** |  | [optional] |
+| **ExternalTag** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

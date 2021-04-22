@@ -59,6 +59,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The skill evaluation method to use when routing conversations.
         /// </summary>
@@ -92,6 +95,8 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ALL")]
             All
         }
+        
+        
         
         
         
@@ -327,11 +332,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The number of users in the queue.
+        /// The total number of members (joined or unjoined) in the queue.
         /// </summary>
-        /// <value>The number of users in the queue.</value>
+        /// <value>The total number of members (joined or unjoined) in the queue.</value>
         [DataMember(Name="memberCount", EmitDefaultValue=false)]
         public int? MemberCount { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The number of joined members in the queue.
+        /// </summary>
+        /// <value>The number of joined members in the queue.</value>
+        [DataMember(Name="joinedMemberCount", EmitDefaultValue=false)]
+        public int? JoinedMemberCount { get; private set; }
         
         
         
@@ -497,6 +511,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
+            sb.Append("  JoinedMemberCount: ").Append(JoinedMemberCount).Append("\n");
             sb.Append("  MediaSettings: ").Append(MediaSettings).Append("\n");
             sb.Append("  RoutingRules: ").Append(RoutingRules).Append("\n");
             sb.Append("  Bullseye: ").Append(Bullseye).Append("\n");
@@ -594,6 +609,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MemberCount == other.MemberCount ||
                     this.MemberCount != null &&
                     this.MemberCount.Equals(other.MemberCount)
+                ) &&
+                (
+                    this.JoinedMemberCount == other.JoinedMemberCount ||
+                    this.JoinedMemberCount != null &&
+                    this.JoinedMemberCount.Equals(other.JoinedMemberCount)
                 ) &&
                 (
                     this.MediaSettings == other.MediaSettings ||
@@ -720,6 +740,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MemberCount != null)
                     hash = hash * 59 + this.MemberCount.GetHashCode();
+                
+                if (this.JoinedMemberCount != null)
+                    hash = hash * 59 + this.JoinedMemberCount.GetHashCode();
                 
                 if (this.MediaSettings != null)
                     hash = hash * 59 + this.MediaSettings.GetHashCode();

@@ -45,6 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationEventTopicConversation" /> class.
@@ -54,13 +59,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Participants">Participants.</param>
         /// <param name="RecordingState">RecordingState.</param>
         /// <param name="Address">Address.</param>
-        public QueueConversationEventTopicConversation(string Id = null, int? MaxParticipants = null, List<QueueConversationEventTopicParticipant> Participants = null, string RecordingState = null, string Address = null)
+        /// <param name="ExternalTag">ExternalTag.</param>
+        public QueueConversationEventTopicConversation(string Id = null, int? MaxParticipants = null, List<QueueConversationEventTopicParticipant> Participants = null, string RecordingState = null, string Address = null, string ExternalTag = null)
         {
             this.Id = Id;
             this.MaxParticipants = MaxParticipants;
             this.Participants = Participants;
             this.RecordingState = RecordingState;
             this.Address = Address;
+            this.ExternalTag = ExternalTag;
             
         }
         
@@ -105,6 +112,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Address { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets ExternalTag
+        /// </summary>
+        [DataMember(Name="externalTag", EmitDefaultValue=false)]
+        public string ExternalTag { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -119,6 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
+            sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -179,6 +195,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Address == other.Address ||
                     this.Address != null &&
                     this.Address.Equals(other.Address)
+                ) &&
+                (
+                    this.ExternalTag == other.ExternalTag ||
+                    this.ExternalTag != null &&
+                    this.ExternalTag.Equals(other.ExternalTag)
                 );
         }
 
@@ -208,6 +229,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
+                
+                if (this.ExternalTag != null)
+                    hash = hash * 59 + this.ExternalTag.GetHashCode();
                 
                 return hash;
             }

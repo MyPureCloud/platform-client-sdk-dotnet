@@ -12,6 +12,7 @@ title: QueueConversationEventTopicConversation
 | **Participants** | [**List&lt;QueueConversationEventTopicParticipant&gt;**](QueueConversationEventTopicParticipant.html) |  | [optional] |
 | **RecordingState** | **string** |  | [optional] |
 | **Address** | **string** |  | [optional] |
+| **ExternalTag** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

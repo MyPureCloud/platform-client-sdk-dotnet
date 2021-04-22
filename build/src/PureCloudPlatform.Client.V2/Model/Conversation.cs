@@ -44,6 +44,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording.
         /// </summary>
@@ -189,6 +192,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording.
         /// </summary>
@@ -221,6 +226,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Conversation" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
+        /// <param name="ExternalTag">The external tag associated with the conversation..</param>
         /// <param name="StartTime">The time when the conversation started. This will be the time when the first participant joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="EndTime">The time when the conversation ended. This will be the time when the last participant left the conversation, or null when the conversation is still active. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Address">The address of the conversation as seen from an external participant. For phone calls this will be the DNIS for inbound calls and the ANI for outbound calls. For other media types this will be the address of the destination participant for inbound and the address of the initiating participant for outbound..</param>
@@ -230,9 +236,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecordingState">On update, &#39;paused&#39; initiates a secure pause, &#39;active&#39; resumes any paused recordings; otherwise indicates state of conversation recording..</param>
         /// <param name="State">The conversation&#39;s state.</param>
         /// <param name="Divisions">Identifiers of divisions associated with this conversation.</param>
-        public Conversation(string Name = null, DateTime? StartTime = null, DateTime? EndTime = null, string Address = null, List<Participant> Participants = null, List<string> ConversationIds = null, int? MaxParticipants = null, RecordingStateEnum? RecordingState = null, StateEnum? State = null, List<ConversationDivisionMembership> Divisions = null)
+        public Conversation(string Name = null, string ExternalTag = null, DateTime? StartTime = null, DateTime? EndTime = null, string Address = null, List<Participant> Participants = null, List<string> ConversationIds = null, int? MaxParticipants = null, RecordingStateEnum? RecordingState = null, StateEnum? State = null, List<ConversationDivisionMembership> Divisions = null)
         {
             this.Name = Name;
+            this.ExternalTag = ExternalTag;
             this.StartTime = StartTime;
             this.EndTime = EndTime;
             this.Address = Address;
@@ -261,6 +268,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The external tag associated with the conversation.
+        /// </summary>
+        /// <value>The external tag associated with the conversation.</value>
+        [DataMember(Name="externalTag", EmitDefaultValue=false)]
+        public string ExternalTag { get; set; }
         
         
         
@@ -350,6 +366,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
@@ -405,6 +422,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.ExternalTag == other.ExternalTag ||
+                    this.ExternalTag != null &&
+                    this.ExternalTag.Equals(other.ExternalTag)
                 ) &&
                 (
                     this.StartTime == other.StartTime ||
@@ -475,6 +497,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.ExternalTag != null)
+                    hash = hash * 59 + this.ExternalTag.GetHashCode();
                 
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();

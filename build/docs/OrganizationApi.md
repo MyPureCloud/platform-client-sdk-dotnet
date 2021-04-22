@@ -10,6 +10,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFieldconfig**](OrganizationApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
 | [**GetOrganizationsEmbeddedintegration**](OrganizationApi.html#getorganizationsembeddedintegration) | **GET** /api/v2/organizations/embeddedintegration | Get the list of domains that will be allowed to embed PureCloud applications |
 | [**GetOrganizationsIpaddressauthentication**](OrganizationApi.html#getorganizationsipaddressauthentication) | **GET** /api/v2/organizations/ipaddressauthentication | Get organization IP address whitelist settings |
+| [**GetOrganizationsLimitsChangerequest**](OrganizationApi.html#getorganizationslimitschangerequest) | **GET** /api/v2/organizations/limits/changerequests/{requestId} | Get a limit change request |
+| [**GetOrganizationsLimitsChangerequests**](OrganizationApi.html#getorganizationslimitschangerequests) | **GET** /api/v2/organizations/limits/changerequests | Get the available limit change requests |
+| [**GetOrganizationsLimitsDocs**](OrganizationApi.html#getorganizationslimitsdocs) | **GET** /api/v2/organizations/limits/docs | Get a link to the limit documentation |
+| [**GetOrganizationsLimitsNamespace**](OrganizationApi.html#getorganizationslimitsnamespace) | **GET** /api/v2/organizations/limits/namespaces/{namespaceName} | Get the effective limits in a namespace for an organization |
+| [**GetOrganizationsLimitsNamespaces**](OrganizationApi.html#getorganizationslimitsnamespaces) | **GET** /api/v2/organizations/limits/namespaces | Get the available limit namespaces |
 | [**GetOrganizationsMe**](OrganizationApi.html#getorganizationsme) | **GET** /api/v2/organizations/me | Get organization. |
 | [**GetOrganizationsWhitelist**](OrganizationApi.html#getorganizationswhitelist) | **GET** /api/v2/organizations/whitelist | Use PUT /api/v2/organizations/embeddedintegration instead |
 | [**PatchOrganizationsFeature**](OrganizationApi.html#patchorganizationsfeature) | **PATCH** /api/v2/organizations/features/{featureName} | Update organization |
@@ -201,6 +206,335 @@ This endpoint does require any parameters.
 ### Return type
 
 [**IpAddressAuthentication**](IpAddressAuthentication.html)
+
+<a name="getorganizationslimitschangerequest"></a>
+
+## [**LimitChangeRequestDetails**](LimitChangeRequestDetails.html) GetOrganizationsLimitsChangerequest (string requestId)
+
+
+
+Get a limit change request
+
+
+
+Requires ANY permissions: 
+
+* limits:organization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrganizationsLimitsChangerequestExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationApi();
+            var requestId = requestId_example;  // string | Unique id for the limit change request
+
+            try
+            { 
+                // Get a limit change request
+                LimitChangeRequestDetails result = apiInstance.GetOrganizationsLimitsChangerequest(requestId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationApi.GetOrganizationsLimitsChangerequest: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **requestId** | **string**| Unique id for the limit change request |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LimitChangeRequestDetails**](LimitChangeRequestDetails.html)
+
+<a name="getorganizationslimitschangerequests"></a>
+
+## [**LimitChangeRequestsEntityListing**](LimitChangeRequestsEntityListing.html) GetOrganizationsLimitsChangerequests (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null)
+
+
+
+Get the available limit change requests
+
+Timestamp interval defaults to the last 365 days if both query parameters are omitted. If only one parameter is omitted, the interval will default to a 180 day range in the specified direction.
+
+Requires ANY permissions: 
+
+* limits:organization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrganizationsLimitsChangerequestsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationApi();
+            var after = 789;  // long? | Timestamp indicating the date to begin after when searching for requests. (optional) 
+            var before = 789;  // long? | Timestamp indicating the date to end before when searching for requests. (optional) 
+            var status = status_example;  // string | Status of the request to be filtered by (optional) 
+            var pageSize = 56;  // int? | Page Size (optional)  (default to 25)
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
+
+            try
+            { 
+                // Get the available limit change requests
+                LimitChangeRequestsEntityListing result = apiInstance.GetOrganizationsLimitsChangerequests(after, before, status, pageSize, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationApi.GetOrganizationsLimitsChangerequests: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **after** | **long?**| Timestamp indicating the date to begin after when searching for requests. | [optional]  |
+| **before** | **long?**| Timestamp indicating the date to end before when searching for requests. | [optional]  |
+| **status** | **string**| Status of the request to be filtered by | [optional] <br />**Values**: Open, Approved, ImplementingChange, ChangeImplemented, Rejected, Rollback, ImplementingRollback, RollbackImplemented |
+| **pageSize** | **int?**| Page Size | [optional] [default to 25] |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: statusHistory |
+{: class="table table-striped"}
+
+### Return type
+
+[**LimitChangeRequestsEntityListing**](LimitChangeRequestsEntityListing.html)
+
+<a name="getorganizationslimitsdocs"></a>
+
+## [**UrlResponse**](UrlResponse.html) GetOrganizationsLimitsDocs ()
+
+
+
+Get a link to the limit documentation
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrganizationsLimitsDocsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationApi();
+
+            try
+            { 
+                // Get a link to the limit documentation
+                UrlResponse result = apiInstance.GetOrganizationsLimitsDocs();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationApi.GetOrganizationsLimitsDocs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**UrlResponse**](UrlResponse.html)
+
+<a name="getorganizationslimitsnamespace"></a>
+
+## [**LimitsEntityListing**](LimitsEntityListing.html) GetOrganizationsLimitsNamespace (string namespaceName)
+
+
+
+Get the effective limits in a namespace for an organization
+
+
+
+Requires ANY permissions: 
+
+* limits:organization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrganizationsLimitsNamespaceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationApi();
+            var namespaceName = namespaceName_example;  // string | The namespace to fetch limits for
+
+            try
+            { 
+                // Get the effective limits in a namespace for an organization
+                LimitsEntityListing result = apiInstance.GetOrganizationsLimitsNamespace(namespaceName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationApi.GetOrganizationsLimitsNamespace: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **namespaceName** | **string**| The namespace to fetch limits for |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LimitsEntityListing**](LimitsEntityListing.html)
+
+<a name="getorganizationslimitsnamespaces"></a>
+
+## [**LimitsEntityListing**](LimitsEntityListing.html) GetOrganizationsLimitsNamespaces (int? pageSize = null, int? pageNumber = null)
+
+
+
+Get the available limit namespaces
+
+
+
+Requires ANY permissions: 
+
+* limits:organization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrganizationsLimitsNamespacesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 100)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // Get the available limit namespaces
+                LimitsEntityListing result = apiInstance.GetOrganizationsLimitsNamespaces(pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationApi.GetOrganizationsLimitsNamespaces: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 100] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**LimitsEntityListing**](LimitsEntityListing.html)
 
 <a name="getorganizationsme"></a>
 

@@ -69,16 +69,46 @@ namespace PureCloudPlatform.Client.V2.Model
             Contentmanagement,
             
             /// <summary>
+            /// Enum Groups for "Groups"
+            /// </summary>
+            [EnumMember(Value = "Groups")]
+            Groups,
+            
+            /// <summary>
             /// Enum Integrations for "Integrations"
             /// </summary>
             [EnumMember(Value = "Integrations")]
             Integrations,
             
             /// <summary>
+            /// Enum Languageunderstanding for "LanguageUnderstanding"
+            /// </summary>
+            [EnumMember(Value = "LanguageUnderstanding")]
+            Languageunderstanding,
+            
+            /// <summary>
+            /// Enum Limits for "Limits"
+            /// </summary>
+            [EnumMember(Value = "Limits")]
+            Limits,
+            
+            /// <summary>
+            /// Enum Outbound for "Outbound"
+            /// </summary>
+            [EnumMember(Value = "Outbound")]
+            Outbound,
+            
+            /// <summary>
             /// Enum Peoplepermissions for "PeoplePermissions"
             /// </summary>
             [EnumMember(Value = "PeoplePermissions")]
             Peoplepermissions,
+            
+            /// <summary>
+            /// Enum Predictiveengagement for "PredictiveEngagement"
+            /// </summary>
+            [EnumMember(Value = "PredictiveEngagement")]
+            Predictiveengagement,
             
             /// <summary>
             /// Enum Presence for "Presence"
@@ -93,58 +123,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Quality,
             
             /// <summary>
-            /// Enum Languageunderstanding for "LanguageUnderstanding"
-            /// </summary>
-            [EnumMember(Value = "LanguageUnderstanding")]
-            Languageunderstanding,
-            
-            /// <summary>
-            /// Enum Topicsdefinitions for "TopicsDefinitions"
-            /// </summary>
-            [EnumMember(Value = "TopicsDefinitions")]
-            Topicsdefinitions,
-            
-            /// <summary>
-            /// Enum Predictiveengagement for "PredictiveEngagement"
-            /// </summary>
-            [EnumMember(Value = "PredictiveEngagement")]
-            Predictiveengagement,
-            
-            /// <summary>
-            /// Enum Workforcemanagement for "WorkforceManagement"
-            /// </summary>
-            [EnumMember(Value = "WorkforceManagement")]
-            Workforcemanagement,
-            
-            /// <summary>
-            /// Enum Triggers for "Triggers"
-            /// </summary>
-            [EnumMember(Value = "Triggers")]
-            Triggers,
-            
-            /// <summary>
             /// Enum Responsemanagement for "ResponseManagement"
             /// </summary>
             [EnumMember(Value = "ResponseManagement")]
             Responsemanagement,
             
             /// <summary>
-            /// Enum Groups for "Groups"
+            /// Enum Routing for "Routing"
             /// </summary>
-            [EnumMember(Value = "Groups")]
-            Groups,
-            
-            /// <summary>
-            /// Enum Telephony for "Telephony"
-            /// </summary>
-            [EnumMember(Value = "Telephony")]
-            Telephony,
-            
-            /// <summary>
-            /// Enum Outbound for "Outbound"
-            /// </summary>
-            [EnumMember(Value = "Outbound")]
-            Outbound,
+            [EnumMember(Value = "Routing")]
+            Routing,
             
             /// <summary>
             /// Enum Speechandtextanalytics for "SpeechAndTextAnalytics"
@@ -153,10 +141,28 @@ namespace PureCloudPlatform.Client.V2.Model
             Speechandtextanalytics,
             
             /// <summary>
-            /// Enum Routing for "Routing"
+            /// Enum Telephony for "Telephony"
             /// </summary>
-            [EnumMember(Value = "Routing")]
-            Routing
+            [EnumMember(Value = "Telephony")]
+            Telephony,
+            
+            /// <summary>
+            /// Enum Topicsdefinitions for "TopicsDefinitions"
+            /// </summary>
+            [EnumMember(Value = "TopicsDefinitions")]
+            Topicsdefinitions,
+            
+            /// <summary>
+            /// Enum Triggers for "Triggers"
+            /// </summary>
+            [EnumMember(Value = "Triggers")]
+            Triggers,
+            
+            /// <summary>
+            /// Enum Workforcemanagement for "WorkforceManagement"
+            /// </summary>
+            [EnumMember(Value = "WorkforceManagement")]
+            Workforcemanagement
         }
         
         
@@ -397,7 +403,55 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Recycle for "Recycle"
             /// </summary>
             [EnumMember(Value = "Recycle")]
-            Recycle
+            Recycle,
+            
+            /// <summary>
+            /// Enum Open for "Open"
+            /// </summary>
+            [EnumMember(Value = "Open")]
+            Open,
+            
+            /// <summary>
+            /// Enum Approved for "Approved"
+            /// </summary>
+            [EnumMember(Value = "Approved")]
+            Approved,
+            
+            /// <summary>
+            /// Enum Rejected for "Rejected"
+            /// </summary>
+            [EnumMember(Value = "Rejected")]
+            Rejected,
+            
+            /// <summary>
+            /// Enum Rollback for "Rollback"
+            /// </summary>
+            [EnumMember(Value = "Rollback")]
+            Rollback,
+            
+            /// <summary>
+            /// Enum Implementingchange for "ImplementingChange"
+            /// </summary>
+            [EnumMember(Value = "ImplementingChange")]
+            Implementingchange,
+            
+            /// <summary>
+            /// Enum Changeimplemented for "ChangeImplemented"
+            /// </summary>
+            [EnumMember(Value = "ChangeImplemented")]
+            Changeimplemented,
+            
+            /// <summary>
+            /// Enum Implementingrollback for "ImplementingRollback"
+            /// </summary>
+            [EnumMember(Value = "ImplementingRollback")]
+            Implementingrollback,
+            
+            /// <summary>
+            /// Enum Rollbackimplemented for "RollbackImplemented"
+            /// </summary>
+            [EnumMember(Value = "RollbackImplemented")]
+            Rollbackimplemented
         }
         
         
@@ -422,76 +476,16 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Document for "Document"
-            /// </summary>
-            [EnumMember(Value = "Document")]
-            Document,
-            
-            /// <summary>
-            /// Enum Queue for "Queue"
-            /// </summary>
-            [EnumMember(Value = "Queue")]
-            Queue,
-            
-            /// <summary>
-            /// Enum Recording for "Recording"
-            /// </summary>
-            [EnumMember(Value = "Recording")]
-            Recording,
-            
-            /// <summary>
-            /// Enum Role for "Role"
-            /// </summary>
-            [EnumMember(Value = "Role")]
-            Role,
-            
-            /// <summary>
-            /// Enum Voicemailpolicy for "VoicemailPolicy"
-            /// </summary>
-            [EnumMember(Value = "VoicemailPolicy")]
-            Voicemailpolicy,
-            
-            /// <summary>
-            /// Enum Voicemailuserpolicy for "VoicemailUserPolicy"
-            /// </summary>
-            [EnumMember(Value = "VoicemailUserPolicy")]
-            Voicemailuserpolicy,
-            
-            /// <summary>
-            /// Enum Userpresence for "UserPresence"
-            /// </summary>
-            [EnumMember(Value = "UserPresence")]
-            Userpresence,
-            
-            /// <summary>
-            /// Enum Wrapupcode for "WrapupCode"
-            /// </summary>
-            [EnumMember(Value = "WrapupCode")]
-            Wrapupcode,
-            
-            /// <summary>
-            /// Enum Maxorgroutingutilizationcapacity for "MaxOrgRoutingUtilizationCapacity"
-            /// </summary>
-            [EnumMember(Value = "MaxOrgRoutingUtilizationCapacity")]
-            Maxorgroutingutilizationcapacity,
-            
-            /// <summary>
             /// Enum Accesstoken for "AccessToken"
             /// </summary>
             [EnumMember(Value = "AccessToken")]
             Accesstoken,
             
             /// <summary>
-            /// Enum Oauthclient for "OAuthClient"
+            /// Enum Attemptlimits for "AttemptLimits"
             /// </summary>
-            [EnumMember(Value = "OAuthClient")]
-            Oauthclient,
-            
-            /// <summary>
-            /// Enum Oauthclientauthorization for "OAuthClientAuthorization"
-            /// </summary>
-            [EnumMember(Value = "OAuthClientAuthorization")]
-            Oauthclientauthorization,
+            [EnumMember(Value = "AttemptLimits")]
+            Attemptlimits,
             
             /// <summary>
             /// Enum Authorganization for "AuthOrganization"
@@ -506,250 +500,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Authuser,
             
             /// <summary>
-            /// Enum Organizationauthorizationtrust for "OrganizationAuthorizationTrust"
-            /// </summary>
-            [EnumMember(Value = "OrganizationAuthorizationTrust")]
-            Organizationauthorizationtrust,
-            
-            /// <summary>
-            /// Enum Organizationauthorizationusertrust for "OrganizationAuthorizationUserTrust"
-            /// </summary>
-            [EnumMember(Value = "OrganizationAuthorizationUserTrust")]
-            Organizationauthorizationusertrust,
-            
-            /// <summary>
             /// Enum Bulkactions for "BulkActions"
             /// </summary>
             [EnumMember(Value = "BulkActions")]
             Bulkactions,
             
             /// <summary>
-            /// Enum Feedback for "Feedback"
-            /// </summary>
-            [EnumMember(Value = "Feedback")]
-            Feedback,
-            
-            /// <summary>
-            /// Enum Topic for "Topic"
-            /// </summary>
-            [EnumMember(Value = "Topic")]
-            Topic,
-            
-            /// <summary>
-            /// Enum Program for "Program"
-            /// </summary>
-            [EnumMember(Value = "Program")]
-            Program,
-            
-            /// <summary>
-            /// Enum Segment for "Segment"
-            /// </summary>
-            [EnumMember(Value = "Segment")]
-            Segment,
-            
-            /// <summary>
-            /// Enum Outcome for "Outcome"
-            /// </summary>
-            [EnumMember(Value = "Outcome")]
-            Outcome,
-            
-            /// <summary>
-            /// Enum Sessiontype for "SessionType"
-            /// </summary>
-            [EnumMember(Value = "SessionType")]
-            Sessiontype,
-            
-            /// <summary>
-            /// Enum Eventtype for "EventType"
-            /// </summary>
-            [EnumMember(Value = "EventType")]
-            Eventtype,
-            
-            /// <summary>
-            /// Enum Clickstreamsettings for "ClickstreamSettings"
-            /// </summary>
-            [EnumMember(Value = "ClickstreamSettings")]
-            Clickstreamsettings,
-            
-            /// <summary>
-            /// Enum Schedule for "Schedule"
-            /// </summary>
-            [EnumMember(Value = "Schedule")]
-            Schedule,
-            
-            /// <summary>
-            /// Enum Schedulegroup for "ScheduleGroup"
-            /// </summary>
-            [EnumMember(Value = "ScheduleGroup")]
-            Schedulegroup,
-            
-            /// <summary>
-            /// Enum Emergencygroup for "EmergencyGroup"
-            /// </summary>
-            [EnumMember(Value = "EmergencyGroup")]
-            Emergencygroup,
-            
-            /// <summary>
-            /// Enum Ivr for "IVR"
-            /// </summary>
-            [EnumMember(Value = "IVR")]
-            Ivr,
-            
-            /// <summary>
-            /// Enum Trigger for "Trigger"
-            /// </summary>
-            [EnumMember(Value = "Trigger")]
-            Trigger,
-            
-            /// <summary>
-            /// Enum Response for "Response"
-            /// </summary>
-            [EnumMember(Value = "Response")]
-            Response,
-            
-            /// <summary>
-            /// Enum Dependencytrackingbuild for "DependencyTrackingBuild"
-            /// </summary>
-            [EnumMember(Value = "DependencyTrackingBuild")]
-            Dependencytrackingbuild,
-            
-            /// <summary>
-            /// Enum Flow for "Flow"
-            /// </summary>
-            [EnumMember(Value = "Flow")]
-            Flow,
-            
-            /// <summary>
-            /// Enum Prompt for "Prompt"
-            /// </summary>
-            [EnumMember(Value = "Prompt")]
-            Prompt,
-            
-            /// <summary>
-            /// Enum Promptresource for "PromptResource"
-            /// </summary>
-            [EnumMember(Value = "PromptResource")]
-            Promptresource,
-            
-            /// <summary>
-            /// Enum Flowoutcome for "FlowOutcome"
-            /// </summary>
-            [EnumMember(Value = "FlowOutcome")]
-            Flowoutcome,
-            
-            /// <summary>
-            /// Enum Flowmilestone for "FlowMilestone"
-            /// </summary>
-            [EnumMember(Value = "FlowMilestone")]
-            Flowmilestone,
-            
-            /// <summary>
-            /// Enum Team for "Team"
-            /// </summary>
-            [EnumMember(Value = "Team")]
-            Team,
-            
-            /// <summary>
-            /// Enum Edge for "Edge"
-            /// </summary>
-            [EnumMember(Value = "Edge")]
-            Edge,
-            
-            /// <summary>
-            /// Enum Edgegroup for "EdgeGroup"
-            /// </summary>
-            [EnumMember(Value = "EdgeGroup")]
-            Edgegroup,
-            
-            /// <summary>
-            /// Enum Trunk for "Trunk"
-            /// </summary>
-            [EnumMember(Value = "Trunk")]
-            Trunk,
-            
-            /// <summary>
-            /// Enum Trunkbase for "TrunkBase"
-            /// </summary>
-            [EnumMember(Value = "TrunkBase")]
-            Trunkbase,
-            
-            /// <summary>
-            /// Enum Did for "DID"
-            /// </summary>
-            [EnumMember(Value = "DID")]
-            Did,
-            
-            /// <summary>
-            /// Enum Didpool for "DIDPool"
-            /// </summary>
-            [EnumMember(Value = "DIDPool")]
-            Didpool,
-            
-            /// <summary>
-            /// Enum Extension for "Extension"
-            /// </summary>
-            [EnumMember(Value = "Extension")]
-            Extension,
-            
-            /// <summary>
-            /// Enum Extensionpool for "ExtensionPool"
-            /// </summary>
-            [EnumMember(Value = "ExtensionPool")]
-            Extensionpool,
-            
-            /// <summary>
-            /// Enum Phone for "Phone"
-            /// </summary>
-            [EnumMember(Value = "Phone")]
-            Phone,
-            
-            /// <summary>
-            /// Enum Phonebase for "PhoneBase"
-            /// </summary>
-            [EnumMember(Value = "PhoneBase")]
-            Phonebase,
-            
-            /// <summary>
-            /// Enum Line for "Line"
-            /// </summary>
-            [EnumMember(Value = "Line")]
-            Line,
-            
-            /// <summary>
-            /// Enum Linebase for "LineBase"
-            /// </summary>
-            [EnumMember(Value = "LineBase")]
-            Linebase,
-            
-            /// <summary>
-            /// Enum Outboundroute for "OutboundRoute"
-            /// </summary>
-            [EnumMember(Value = "OutboundRoute")]
-            Outboundroute,
-            
-            /// <summary>
-            /// Enum Numberplan for "NumberPlan"
-            /// </summary>
-            [EnumMember(Value = "NumberPlan")]
-            Numberplan,
-            
-            /// <summary>
-            /// Enum Site for "Site"
-            /// </summary>
-            [EnumMember(Value = "Site")]
-            Site,
-            
-            /// <summary>
-            /// Enum Attemptlimits for "AttemptLimits"
-            /// </summary>
-            [EnumMember(Value = "AttemptLimits")]
-            Attemptlimits,
-            
-            /// <summary>
             /// Enum Callabletimeset for "CallableTimeSet"
             /// </summary>
             [EnumMember(Value = "CallableTimeSet")]
             Callabletimeset,
+            
+            /// <summary>
+            /// Enum Callanalysisresponseset for "CallAnalysisResponseSet"
+            /// </summary>
+            [EnumMember(Value = "CallAnalysisResponseSet")]
+            Callanalysisresponseset,
             
             /// <summary>
             /// Enum Campaign for "Campaign"
@@ -764,10 +530,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Campaignrule,
             
             /// <summary>
-            /// Enum Sequence for "Sequence"
+            /// Enum Campaignschedule for "CampaignSchedule"
             /// </summary>
-            [EnumMember(Value = "Sequence")]
-            Sequence,
+            [EnumMember(Value = "CampaignSchedule")]
+            Campaignschedule,
+            
+            /// <summary>
+            /// Enum Changerequest for "ChangeRequest"
+            /// </summary>
+            [EnumMember(Value = "ChangeRequest")]
+            Changerequest,
+            
+            /// <summary>
+            /// Enum Clickstreamsettings for "ClickstreamSettings"
+            /// </summary>
+            [EnumMember(Value = "ClickstreamSettings")]
+            Clickstreamsettings,
             
             /// <summary>
             /// Enum Contactlist for "ContactList"
@@ -782,46 +560,124 @@ namespace PureCloudPlatform.Client.V2.Model
             Contactlistfilter,
             
             /// <summary>
+            /// Enum Dependencytrackingbuild for "DependencyTrackingBuild"
+            /// </summary>
+            [EnumMember(Value = "DependencyTrackingBuild")]
+            Dependencytrackingbuild,
+            
+            /// <summary>
+            /// Enum Did for "DID"
+            /// </summary>
+            [EnumMember(Value = "DID")]
+            Did,
+            
+            /// <summary>
+            /// Enum Didpool for "DIDPool"
+            /// </summary>
+            [EnumMember(Value = "DIDPool")]
+            Didpool,
+            
+            /// <summary>
             /// Enum Dnclist for "DNCList"
             /// </summary>
             [EnumMember(Value = "DNCList")]
             Dnclist,
             
             /// <summary>
-            /// Enum Callanalysisresponseset for "CallAnalysisResponseSet"
+            /// Enum Document for "Document"
             /// </summary>
-            [EnumMember(Value = "CallAnalysisResponseSet")]
-            Callanalysisresponseset,
+            [EnumMember(Value = "Document")]
+            Document,
             
             /// <summary>
-            /// Enum Ruleset for "RuleSet"
+            /// Enum Edge for "Edge"
             /// </summary>
-            [EnumMember(Value = "RuleSet")]
-            Ruleset,
+            [EnumMember(Value = "Edge")]
+            Edge,
             
             /// <summary>
-            /// Enum Campaignschedule for "CampaignSchedule"
+            /// Enum Edgegroup for "EdgeGroup"
             /// </summary>
-            [EnumMember(Value = "CampaignSchedule")]
-            Campaignschedule,
+            [EnumMember(Value = "EdgeGroup")]
+            Edgegroup,
             
             /// <summary>
-            /// Enum Sequenceschedule for "SequenceSchedule"
+            /// Enum Emergencygroup for "EmergencyGroup"
             /// </summary>
-            [EnumMember(Value = "SequenceSchedule")]
-            Sequenceschedule,
+            [EnumMember(Value = "EmergencyGroup")]
+            Emergencygroup,
             
             /// <summary>
-            /// Enum Organizationsettings for "OrganizationSettings"
+            /// Enum Eventtype for "EventType"
             /// </summary>
-            [EnumMember(Value = "OrganizationSettings")]
-            Organizationsettings,
+            [EnumMember(Value = "EventType")]
+            Eventtype,
             
             /// <summary>
-            /// Enum Wrapupcodemapping for "WrapUpCodeMapping"
+            /// Enum Extension for "Extension"
             /// </summary>
-            [EnumMember(Value = "WrapUpCodeMapping")]
-            Wrapupcodemapping,
+            [EnumMember(Value = "Extension")]
+            Extension,
+            
+            /// <summary>
+            /// Enum Extensionpool for "ExtensionPool"
+            /// </summary>
+            [EnumMember(Value = "ExtensionPool")]
+            Extensionpool,
+            
+            /// <summary>
+            /// Enum Feedback for "Feedback"
+            /// </summary>
+            [EnumMember(Value = "Feedback")]
+            Feedback,
+            
+            /// <summary>
+            /// Enum Flow for "Flow"
+            /// </summary>
+            [EnumMember(Value = "Flow")]
+            Flow,
+            
+            /// <summary>
+            /// Enum Flowmilestone for "FlowMilestone"
+            /// </summary>
+            [EnumMember(Value = "FlowMilestone")]
+            Flowmilestone,
+            
+            /// <summary>
+            /// Enum Flowoutcome for "FlowOutcome"
+            /// </summary>
+            [EnumMember(Value = "FlowOutcome")]
+            Flowoutcome,
+            
+            /// <summary>
+            /// Enum Integration for "Integration"
+            /// </summary>
+            [EnumMember(Value = "Integration")]
+            Integration,
+            
+            /// <summary>
+            /// Enum Ivr for "IVR"
+            /// </summary>
+            [EnumMember(Value = "IVR")]
+            Ivr,
+            
+            /// <summary>
+            /// Enum Line for "Line"
+            /// </summary>
+            [EnumMember(Value = "Line")]
+            Line,
+            
+            /// <summary>
+            /// Enum Linebase for "LineBase"
+            /// </summary>
+            [EnumMember(Value = "LineBase")]
+            Linebase,
+            
+            /// <summary>
+            /// Enum Maxorgroutingutilizationcapacity for "MaxOrgRoutingUtilizationCapacity"
+            /// </summary>
+            [EnumMember(Value = "MaxOrgRoutingUtilizationCapacity")]
+            Maxorgroutingutilizationcapacity,
             
             /// <summary>
             /// Enum Messagingcampaign for "MessagingCampaign"
@@ -830,22 +686,64 @@ namespace PureCloudPlatform.Client.V2.Model
             Messagingcampaign,
             
             /// <summary>
-            /// Enum Transcriptionsettings for "TranscriptionSettings"
+            /// Enum Numberplan for "NumberPlan"
             /// </summary>
-            [EnumMember(Value = "TranscriptionSettings")]
-            Transcriptionsettings,
+            [EnumMember(Value = "NumberPlan")]
+            Numberplan,
             
             /// <summary>
-            /// Enum Routingtranscriptionsettings for "RoutingTranscriptionSettings"
+            /// Enum Oauthclient for "OAuthClient"
             /// </summary>
-            [EnumMember(Value = "RoutingTranscriptionSettings")]
-            Routingtranscriptionsettings,
+            [EnumMember(Value = "OAuthClient")]
+            Oauthclient,
             
             /// <summary>
-            /// Enum Speechtextanalyticssettings for "SpeechTextAnalyticsSettings"
+            /// Enum Oauthclientauthorization for "OAuthClientAuthorization"
             /// </summary>
-            [EnumMember(Value = "SpeechTextAnalyticsSettings")]
-            Speechtextanalyticssettings,
+            [EnumMember(Value = "OAuthClientAuthorization")]
+            Oauthclientauthorization,
+            
+            /// <summary>
+            /// Enum Organizationauthorizationtrust for "OrganizationAuthorizationTrust"
+            /// </summary>
+            [EnumMember(Value = "OrganizationAuthorizationTrust")]
+            Organizationauthorizationtrust,
+            
+            /// <summary>
+            /// Enum Organizationauthorizationusertrust for "OrganizationAuthorizationUserTrust"
+            /// </summary>
+            [EnumMember(Value = "OrganizationAuthorizationUserTrust")]
+            Organizationauthorizationusertrust,
+            
+            /// <summary>
+            /// Enum Organizationsettings for "OrganizationSettings"
+            /// </summary>
+            [EnumMember(Value = "OrganizationSettings")]
+            Organizationsettings,
+            
+            /// <summary>
+            /// Enum Outboundroute for "OutboundRoute"
+            /// </summary>
+            [EnumMember(Value = "OutboundRoute")]
+            Outboundroute,
+            
+            /// <summary>
+            /// Enum Outcome for "Outcome"
+            /// </summary>
+            [EnumMember(Value = "Outcome")]
+            Outcome,
+            
+            /// <summary>
+            /// Enum Phone for "Phone"
+            /// </summary>
+            [EnumMember(Value = "Phone")]
+            Phone,
+            
+            /// <summary>
+            /// Enum Phonebase for "PhoneBase"
+            /// </summary>
+            [EnumMember(Value = "PhoneBase")]
+            Phonebase,
             
             /// <summary>
             /// Enum Predictor for "Predictor"
@@ -854,10 +752,76 @@ namespace PureCloudPlatform.Client.V2.Model
             Predictor,
             
             /// <summary>
-            /// Enum Workplan for "WorkPlan"
+            /// Enum Program for "Program"
             /// </summary>
-            [EnumMember(Value = "WorkPlan")]
-            Workplan,
+            [EnumMember(Value = "Program")]
+            Program,
+            
+            /// <summary>
+            /// Enum Prompt for "Prompt"
+            /// </summary>
+            [EnumMember(Value = "Prompt")]
+            Prompt,
+            
+            /// <summary>
+            /// Enum Promptresource for "PromptResource"
+            /// </summary>
+            [EnumMember(Value = "PromptResource")]
+            Promptresource,
+            
+            /// <summary>
+            /// Enum Queue for "Queue"
+            /// </summary>
+            [EnumMember(Value = "Queue")]
+            Queue,
+            
+            /// <summary>
+            /// Enum Recording for "Recording"
+            /// </summary>
+            [EnumMember(Value = "Recording")]
+            Recording,
+            
+            /// <summary>
+            /// Enum Response for "Response"
+            /// </summary>
+            [EnumMember(Value = "Response")]
+            Response,
+            
+            /// <summary>
+            /// Enum Role for "Role"
+            /// </summary>
+            [EnumMember(Value = "Role")]
+            Role,
+            
+            /// <summary>
+            /// Enum Routingtranscriptionsettings for "RoutingTranscriptionSettings"
+            /// </summary>
+            [EnumMember(Value = "RoutingTranscriptionSettings")]
+            Routingtranscriptionsettings,
+            
+            /// <summary>
+            /// Enum Ruleset for "RuleSet"
+            /// </summary>
+            [EnumMember(Value = "RuleSet")]
+            Ruleset,
+            
+            /// <summary>
+            /// Enum Schedule for "Schedule"
+            /// </summary>
+            [EnumMember(Value = "Schedule")]
+            Schedule,
+            
+            /// <summary>
+            /// Enum Schedulegroup for "ScheduleGroup"
+            /// </summary>
+            [EnumMember(Value = "ScheduleGroup")]
+            Schedulegroup,
+            
+            /// <summary>
+            /// Enum Segment for "Segment"
+            /// </summary>
+            [EnumMember(Value = "Segment")]
+            Segment,
             
             /// <summary>
             /// Enum Sentimentfeedback for "SentimentFeedback"
@@ -866,10 +830,106 @@ namespace PureCloudPlatform.Client.V2.Model
             Sentimentfeedback,
             
             /// <summary>
-            /// Enum Integration for "Integration"
+            /// Enum Sequence for "Sequence"
             /// </summary>
-            [EnumMember(Value = "Integration")]
-            Integration
+            [EnumMember(Value = "Sequence")]
+            Sequence,
+            
+            /// <summary>
+            /// Enum Sequenceschedule for "SequenceSchedule"
+            /// </summary>
+            [EnumMember(Value = "SequenceSchedule")]
+            Sequenceschedule,
+            
+            /// <summary>
+            /// Enum Sessiontype for "SessionType"
+            /// </summary>
+            [EnumMember(Value = "SessionType")]
+            Sessiontype,
+            
+            /// <summary>
+            /// Enum Site for "Site"
+            /// </summary>
+            [EnumMember(Value = "Site")]
+            Site,
+            
+            /// <summary>
+            /// Enum Speechtextanalyticssettings for "SpeechTextAnalyticsSettings"
+            /// </summary>
+            [EnumMember(Value = "SpeechTextAnalyticsSettings")]
+            Speechtextanalyticssettings,
+            
+            /// <summary>
+            /// Enum Team for "Team"
+            /// </summary>
+            [EnumMember(Value = "Team")]
+            Team,
+            
+            /// <summary>
+            /// Enum Topic for "Topic"
+            /// </summary>
+            [EnumMember(Value = "Topic")]
+            Topic,
+            
+            /// <summary>
+            /// Enum Transcriptionsettings for "TranscriptionSettings"
+            /// </summary>
+            [EnumMember(Value = "TranscriptionSettings")]
+            Transcriptionsettings,
+            
+            /// <summary>
+            /// Enum Trigger for "Trigger"
+            /// </summary>
+            [EnumMember(Value = "Trigger")]
+            Trigger,
+            
+            /// <summary>
+            /// Enum Trunk for "Trunk"
+            /// </summary>
+            [EnumMember(Value = "Trunk")]
+            Trunk,
+            
+            /// <summary>
+            /// Enum Trunkbase for "TrunkBase"
+            /// </summary>
+            [EnumMember(Value = "TrunkBase")]
+            Trunkbase,
+            
+            /// <summary>
+            /// Enum Userpresence for "UserPresence"
+            /// </summary>
+            [EnumMember(Value = "UserPresence")]
+            Userpresence,
+            
+            /// <summary>
+            /// Enum Voicemailpolicy for "VoicemailPolicy"
+            /// </summary>
+            [EnumMember(Value = "VoicemailPolicy")]
+            Voicemailpolicy,
+            
+            /// <summary>
+            /// Enum Voicemailuserpolicy for "VoicemailUserPolicy"
+            /// </summary>
+            [EnumMember(Value = "VoicemailUserPolicy")]
+            Voicemailuserpolicy,
+            
+            /// <summary>
+            /// Enum Workplan for "WorkPlan"
+            /// </summary>
+            [EnumMember(Value = "WorkPlan")]
+            Workplan,
+            
+            /// <summary>
+            /// Enum Wrapupcode for "WrapupCode"
+            /// </summary>
+            [EnumMember(Value = "WrapupCode")]
+            Wrapupcode,
+            
+            /// <summary>
+            /// Enum Wrapupcodemapping for "WrapUpCodeMapping"
+            /// </summary>
+            [EnumMember(Value = "WrapUpCodeMapping")]
+            Wrapupcodemapping
         }
         
         

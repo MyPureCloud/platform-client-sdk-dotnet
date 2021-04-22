@@ -440,7 +440,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum AgentScheduleMeView for "AGENT_SCHEDULE_ME_VIEW"
             /// </summary>
             [EnumMember(Value = "AGENT_SCHEDULE_ME_VIEW")]
-            AgentScheduleMeView
+            AgentScheduleMeView,
+            
+            /// <summary>
+            /// Enum BotPerformanceSummaryView for "BOT_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "BOT_PERFORMANCE_SUMMARY_VIEW")]
+            BotPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum BotPerformanceDetailView for "BOT_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "BOT_PERFORMANCE_DETAIL_VIEW")]
+            BotPerformanceDetailView
         }
         
         

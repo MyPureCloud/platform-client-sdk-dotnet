@@ -25,16 +25,31 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="NluInfo" /> class.
         /// </summary>
+        /// <param name="Domain">Domain.</param>
         /// <param name="Intents">Intents.</param>
-        public NluInfo(List<Intent> Intents = null)
+        public NluInfo(AddressableEntityRef Domain = null, List<Intent> Intents = null)
         {
+            this.Domain = Domain;
             this.Intents = Intents;
             
         }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Domain
+        /// </summary>
+        [DataMember(Name="domain", EmitDefaultValue=false)]
+        public AddressableEntityRef Domain { get; set; }
         
         
         
@@ -54,6 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class NluInfo {\n");
             
+            sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  Intents: ").Append(Intents).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -92,6 +108,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Domain == other.Domain ||
+                    this.Domain != null &&
+                    this.Domain.Equals(other.Domain)
+                ) &&
+                (
                     this.Intents == other.Intents ||
                     this.Intents != null &&
                     this.Intents.SequenceEqual(other.Intents)
@@ -109,6 +130,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.Domain != null)
+                    hash = hash * 59 + this.Domain.GetHashCode();
                 
                 if (this.Intents != null)
                     hash = hash * 59 + this.Intents.GetHashCode();

@@ -55,6 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationBasic" /> class.
@@ -66,13 +71,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ConversationBasic" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
+        /// <param name="ExternalTag">The external tag associated with the conversation..</param>
         /// <param name="StartTime">The time when the conversation started. This will be the time when the first participant joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="EndTime">The time when the conversation ended. This will be the time when the last participant left the conversation, or null when the conversation is still active. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Divisions">Identifiers of divisions associated with this conversation.</param>
         /// <param name="Participants">Participants.</param>
-        public ConversationBasic(string Name = null, DateTime? StartTime = null, DateTime? EndTime = null, List<ConversationDivisionMembership> Divisions = null, List<ParticipantBasic> Participants = null)
+        public ConversationBasic(string Name = null, string ExternalTag = null, DateTime? StartTime = null, DateTime? EndTime = null, List<ConversationDivisionMembership> Divisions = null, List<ParticipantBasic> Participants = null)
         {
             this.Name = Name;
+            this.ExternalTag = ExternalTag;
             this.StartTime = StartTime;
             this.EndTime = EndTime;
             this.Divisions = Divisions;
@@ -96,6 +103,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The external tag associated with the conversation.
+        /// </summary>
+        /// <value>The external tag associated with the conversation.</value>
+        [DataMember(Name="externalTag", EmitDefaultValue=false)]
+        public string ExternalTag { get; set; }
         
         
         
@@ -153,6 +169,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
             sb.Append("  Divisions: ").Append(Divisions).Append("\n");
@@ -205,6 +222,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.ExternalTag == other.ExternalTag ||
+                    this.ExternalTag != null &&
+                    this.ExternalTag.Equals(other.ExternalTag)
+                ) &&
+                (
                     this.StartTime == other.StartTime ||
                     this.StartTime != null &&
                     this.StartTime.Equals(other.StartTime)
@@ -248,6 +270,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.ExternalTag != null)
+                    hash = hash * 59 + this.ExternalTag.GetHashCode();
                 
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();

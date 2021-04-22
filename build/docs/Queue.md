@@ -15,7 +15,8 @@ title: Queue
 | **DateModified** | **DateTime?** | The date of the last modification to the queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ModifiedBy** | **string** | The ID of the user that last modified the queue. | [optional] |
 | **CreatedBy** | **string** | The ID of the user that created the queue. | [optional] |
-| **MemberCount** | **int?** | The number of users in the queue. | [optional] |
+| **MemberCount** | **int?** | The total number of members (joined or unjoined) in the queue. | [optional] |
+| **JoinedMemberCount** | **int?** | The number of joined members in the queue. | [optional] |
 | **MediaSettings** | [**Dictionary&lt;string, MediaSetting&gt;**](MediaSetting.html) | The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM | [optional] |
 | **RoutingRules** | [**List&lt;RoutingRule&gt;**](RoutingRule.html) | The routing rules for the queue, used for routing to known or preferred agents. | [optional] |
 | **Bullseye** | [**Bullseye**](Bullseye.html) | The bulls-eye settings for the queue. | [optional] |

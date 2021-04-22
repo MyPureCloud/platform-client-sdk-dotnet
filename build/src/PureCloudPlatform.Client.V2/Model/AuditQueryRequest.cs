@@ -57,16 +57,46 @@ namespace PureCloudPlatform.Client.V2.Model
             Contentmanagement,
             
             /// <summary>
+            /// Enum Groups for "Groups"
+            /// </summary>
+            [EnumMember(Value = "Groups")]
+            Groups,
+            
+            /// <summary>
             /// Enum Integrations for "Integrations"
             /// </summary>
             [EnumMember(Value = "Integrations")]
             Integrations,
             
             /// <summary>
+            /// Enum Languageunderstanding for "LanguageUnderstanding"
+            /// </summary>
+            [EnumMember(Value = "LanguageUnderstanding")]
+            Languageunderstanding,
+            
+            /// <summary>
+            /// Enum Limits for "Limits"
+            /// </summary>
+            [EnumMember(Value = "Limits")]
+            Limits,
+            
+            /// <summary>
+            /// Enum Outbound for "Outbound"
+            /// </summary>
+            [EnumMember(Value = "Outbound")]
+            Outbound,
+            
+            /// <summary>
             /// Enum Peoplepermissions for "PeoplePermissions"
             /// </summary>
             [EnumMember(Value = "PeoplePermissions")]
             Peoplepermissions,
+            
+            /// <summary>
+            /// Enum Predictiveengagement for "PredictiveEngagement"
+            /// </summary>
+            [EnumMember(Value = "PredictiveEngagement")]
+            Predictiveengagement,
             
             /// <summary>
             /// Enum Presence for "Presence"
@@ -81,58 +111,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Quality,
             
             /// <summary>
-            /// Enum Languageunderstanding for "LanguageUnderstanding"
-            /// </summary>
-            [EnumMember(Value = "LanguageUnderstanding")]
-            Languageunderstanding,
-            
-            /// <summary>
-            /// Enum Topicsdefinitions for "TopicsDefinitions"
-            /// </summary>
-            [EnumMember(Value = "TopicsDefinitions")]
-            Topicsdefinitions,
-            
-            /// <summary>
-            /// Enum Predictiveengagement for "PredictiveEngagement"
-            /// </summary>
-            [EnumMember(Value = "PredictiveEngagement")]
-            Predictiveengagement,
-            
-            /// <summary>
-            /// Enum Workforcemanagement for "WorkforceManagement"
-            /// </summary>
-            [EnumMember(Value = "WorkforceManagement")]
-            Workforcemanagement,
-            
-            /// <summary>
-            /// Enum Triggers for "Triggers"
-            /// </summary>
-            [EnumMember(Value = "Triggers")]
-            Triggers,
-            
-            /// <summary>
             /// Enum Responsemanagement for "ResponseManagement"
             /// </summary>
             [EnumMember(Value = "ResponseManagement")]
             Responsemanagement,
             
             /// <summary>
-            /// Enum Groups for "Groups"
+            /// Enum Routing for "Routing"
             /// </summary>
-            [EnumMember(Value = "Groups")]
-            Groups,
-            
-            /// <summary>
-            /// Enum Telephony for "Telephony"
-            /// </summary>
-            [EnumMember(Value = "Telephony")]
-            Telephony,
-            
-            /// <summary>
-            /// Enum Outbound for "Outbound"
-            /// </summary>
-            [EnumMember(Value = "Outbound")]
-            Outbound,
+            [EnumMember(Value = "Routing")]
+            Routing,
             
             /// <summary>
             /// Enum Speechandtextanalytics for "SpeechAndTextAnalytics"
@@ -141,10 +129,28 @@ namespace PureCloudPlatform.Client.V2.Model
             Speechandtextanalytics,
             
             /// <summary>
-            /// Enum Routing for "Routing"
+            /// Enum Telephony for "Telephony"
             /// </summary>
-            [EnumMember(Value = "Routing")]
-            Routing
+            [EnumMember(Value = "Telephony")]
+            Telephony,
+            
+            /// <summary>
+            /// Enum Topicsdefinitions for "TopicsDefinitions"
+            /// </summary>
+            [EnumMember(Value = "TopicsDefinitions")]
+            Topicsdefinitions,
+            
+            /// <summary>
+            /// Enum Triggers for "Triggers"
+            /// </summary>
+            [EnumMember(Value = "Triggers")]
+            Triggers,
+            
+            /// <summary>
+            /// Enum Workforcemanagement for "WorkforceManagement"
+            /// </summary>
+            [EnumMember(Value = "WorkforceManagement")]
+            Workforcemanagement
         }
         
         

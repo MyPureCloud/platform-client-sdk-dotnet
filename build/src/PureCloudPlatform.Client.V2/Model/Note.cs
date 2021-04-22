@@ -26,6 +26,33 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// This is only need to be set when using Bulk API. Using any other value than contact or organization will result in null being used.
+        /// </summary>
+        /// <value>This is only need to be set when using Bulk API. Using any other value than contact or organization will result in null being used.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum EntityTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Contact for "contact"
+            /// </summary>
+            [EnumMember(Value = "contact")]
+            Contact,
+            
+            /// <summary>
+            /// Enum Organization for "organization"
+            /// </summary>
+            [EnumMember(Value = "organization")]
+            Organization
+        }
         
         
         
@@ -46,6 +73,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// This is only need to be set when using Bulk API. Using any other value than contact or organization will result in null being used.
+        /// </summary>
+        /// <value>This is only need to be set when using Bulk API. Using any other value than contact or organization will result in null being used.</value>
+        [DataMember(Name="entityType", EmitDefaultValue=false)]
+        public EntityTypeEnum? EntityType { get; set; }
         
         
         
@@ -70,15 +110,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Note" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        /// <param name="EntityId">The id of the contact or organization to which this note refers. This only needs to be set for input when using the Bulk APIs..</param>
+        /// <param name="EntityType">This is only need to be set when using Bulk API. Using any other value than contact or organization will result in null being used..</param>
         /// <param name="NoteText">NoteText.</param>
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="CreatedBy">The author of this note (required).</param>
+        /// <param name="CreatedBy">When creating or updating a note, only User.id is required. User object is fully populated when expanding a note. (required).</param>
         /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
-        public Note(string Name = null, string NoteText = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, User CreatedBy = null, List<ExternalDataSource> ExternalDataSources = null)
+        public Note(string EntityId = null, EntityTypeEnum? EntityType = null, string NoteText = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, User CreatedBy = null, List<ExternalDataSource> ExternalDataSources = null)
         {
-            this.Name = Name;
+            this.EntityId = EntityId;
+            this.EntityType = EntityType;
             this.NoteText = NoteText;
             this.ModifyDate = ModifyDate;
             this.CreateDate = CreateDate;
@@ -99,10 +141,13 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The id of the contact or organization to which this note refers. This only needs to be set for input when using the Bulk APIs.
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        /// <value>The id of the contact or organization to which this note refers. This only needs to be set for input when using the Bulk APIs.</value>
+        [DataMember(Name="entityId", EmitDefaultValue=false)]
+        public string EntityId { get; set; }
+        
+        
         
         
         
@@ -133,9 +178,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The author of this note
+        /// When creating or updating a note, only User.id is required. User object is fully populated when expanding a note.
         /// </summary>
-        /// <value>The author of this note</value>
+        /// <value>When creating or updating a note, only User.id is required. User object is fully populated when expanding a note.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public User CreatedBy { get; set; }
         
@@ -168,7 +213,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class Note {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  EntityId: ").Append(EntityId).Append("\n");
+            sb.Append("  EntityType: ").Append(EntityType).Append("\n");
             sb.Append("  NoteText: ").Append(NoteText).Append("\n");
             sb.Append("  ModifyDate: ").Append(ModifyDate).Append("\n");
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
@@ -217,9 +263,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.EntityId == other.EntityId ||
+                    this.EntityId != null &&
+                    this.EntityId.Equals(other.EntityId)
+                ) &&
+                (
+                    this.EntityType == other.EntityType ||
+                    this.EntityType != null &&
+                    this.EntityType.Equals(other.EntityType)
                 ) &&
                 (
                     this.NoteText == other.NoteText ||
@@ -268,8 +319,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                if (this.EntityId != null)
+                    hash = hash * 59 + this.EntityId.GetHashCode();
+                
+                if (this.EntityType != null)
+                    hash = hash * 59 + this.EntityType.GetHashCode();
                 
                 if (this.NoteText != null)
                     hash = hash * 59 + this.NoteText.GetHashCode();

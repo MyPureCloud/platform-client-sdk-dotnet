@@ -79,6 +79,124 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<IpAddressAuthentication> GetOrganizationsIpaddressauthenticationWithHttpInfo ();
         
         /// <summary>
+        /// Get a limit change request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestId">Unique id for the limit change request</param>
+        /// <returns>LimitChangeRequestDetails</returns>
+        LimitChangeRequestDetails GetOrganizationsLimitsChangerequest (string requestId);
+
+        /// <summary>
+        /// Get a limit change request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestId">Unique id for the limit change request</param>
+        /// <returns>ApiResponse of LimitChangeRequestDetails</returns>
+        ApiResponse<LimitChangeRequestDetails> GetOrganizationsLimitsChangerequestWithHttpInfo (string requestId);
+        
+        /// <summary>
+        /// Get the available limit change requests
+        /// </summary>
+        /// <remarks>
+        /// Timestamp interval defaults to the last 365 days if both query parameters are omitted. If only one parameter is omitted, the interval will default to a 180 day range in the specified direction.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">Timestamp indicating the date to begin after when searching for requests. (optional)</param>
+        /// <param name="before">Timestamp indicating the date to end before when searching for requests. (optional)</param>
+        /// <param name="status">Status of the request to be filtered by (optional)</param>
+        /// <param name="pageSize">Page Size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>LimitChangeRequestsEntityListing</returns>
+        LimitChangeRequestsEntityListing GetOrganizationsLimitsChangerequests (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null);
+
+        /// <summary>
+        /// Get the available limit change requests
+        /// </summary>
+        /// <remarks>
+        /// Timestamp interval defaults to the last 365 days if both query parameters are omitted. If only one parameter is omitted, the interval will default to a 180 day range in the specified direction.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">Timestamp indicating the date to begin after when searching for requests. (optional)</param>
+        /// <param name="before">Timestamp indicating the date to end before when searching for requests. (optional)</param>
+        /// <param name="status">Status of the request to be filtered by (optional)</param>
+        /// <param name="pageSize">Page Size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>ApiResponse of LimitChangeRequestsEntityListing</returns>
+        ApiResponse<LimitChangeRequestsEntityListing> GetOrganizationsLimitsChangerequestsWithHttpInfo (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null);
+        
+        /// <summary>
+        /// Get a link to the limit documentation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>UrlResponse</returns>
+        UrlResponse GetOrganizationsLimitsDocs ();
+
+        /// <summary>
+        /// Get a link to the limit documentation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of UrlResponse</returns>
+        ApiResponse<UrlResponse> GetOrganizationsLimitsDocsWithHttpInfo ();
+        
+        /// <summary>
+        /// Get the effective limits in a namespace for an organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to fetch limits for</param>
+        /// <returns>LimitsEntityListing</returns>
+        LimitsEntityListing GetOrganizationsLimitsNamespace (string namespaceName);
+
+        /// <summary>
+        /// Get the effective limits in a namespace for an organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to fetch limits for</param>
+        /// <returns>ApiResponse of LimitsEntityListing</returns>
+        ApiResponse<LimitsEntityListing> GetOrganizationsLimitsNamespaceWithHttpInfo (string namespaceName);
+        
+        /// <summary>
+        /// Get the available limit namespaces
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 100)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>LimitsEntityListing</returns>
+        LimitsEntityListing GetOrganizationsLimitsNamespaces (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get the available limit namespaces
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 100)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of LimitsEntityListing</returns>
+        ApiResponse<LimitsEntityListing> GetOrganizationsLimitsNamespacesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        
+        /// <summary>
         /// Get organization.
         /// </summary>
         /// <remarks>
@@ -295,6 +413,124 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (IpAddressAuthentication)</returns>
         System.Threading.Tasks.Task<ApiResponse<IpAddressAuthentication>> GetOrganizationsIpaddressauthenticationAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// Get a limit change request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestId">Unique id for the limit change request</param>
+        /// <returns>Task of LimitChangeRequestDetails</returns>
+        System.Threading.Tasks.Task<LimitChangeRequestDetails> GetOrganizationsLimitsChangerequestAsync (string requestId);
+
+        /// <summary>
+        /// Get a limit change request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestId">Unique id for the limit change request</param>
+        /// <returns>Task of ApiResponse (LimitChangeRequestDetails)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LimitChangeRequestDetails>> GetOrganizationsLimitsChangerequestAsyncWithHttpInfo (string requestId);
+        
+        /// <summary>
+        /// Get the available limit change requests
+        /// </summary>
+        /// <remarks>
+        /// Timestamp interval defaults to the last 365 days if both query parameters are omitted. If only one parameter is omitted, the interval will default to a 180 day range in the specified direction.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">Timestamp indicating the date to begin after when searching for requests. (optional)</param>
+        /// <param name="before">Timestamp indicating the date to end before when searching for requests. (optional)</param>
+        /// <param name="status">Status of the request to be filtered by (optional)</param>
+        /// <param name="pageSize">Page Size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>Task of LimitChangeRequestsEntityListing</returns>
+        System.Threading.Tasks.Task<LimitChangeRequestsEntityListing> GetOrganizationsLimitsChangerequestsAsync (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null);
+
+        /// <summary>
+        /// Get the available limit change requests
+        /// </summary>
+        /// <remarks>
+        /// Timestamp interval defaults to the last 365 days if both query parameters are omitted. If only one parameter is omitted, the interval will default to a 180 day range in the specified direction.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">Timestamp indicating the date to begin after when searching for requests. (optional)</param>
+        /// <param name="before">Timestamp indicating the date to end before when searching for requests. (optional)</param>
+        /// <param name="status">Status of the request to be filtered by (optional)</param>
+        /// <param name="pageSize">Page Size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>Task of ApiResponse (LimitChangeRequestsEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LimitChangeRequestsEntityListing>> GetOrganizationsLimitsChangerequestsAsyncWithHttpInfo (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null);
+        
+        /// <summary>
+        /// Get a link to the limit documentation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of UrlResponse</returns>
+        System.Threading.Tasks.Task<UrlResponse> GetOrganizationsLimitsDocsAsync ();
+
+        /// <summary>
+        /// Get a link to the limit documentation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (UrlResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetOrganizationsLimitsDocsAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// Get the effective limits in a namespace for an organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to fetch limits for</param>
+        /// <returns>Task of LimitsEntityListing</returns>
+        System.Threading.Tasks.Task<LimitsEntityListing> GetOrganizationsLimitsNamespaceAsync (string namespaceName);
+
+        /// <summary>
+        /// Get the effective limits in a namespace for an organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to fetch limits for</param>
+        /// <returns>Task of ApiResponse (LimitsEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LimitsEntityListing>> GetOrganizationsLimitsNamespaceAsyncWithHttpInfo (string namespaceName);
+        
+        /// <summary>
+        /// Get the available limit namespaces
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 100)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of LimitsEntityListing</returns>
+        System.Threading.Tasks.Task<LimitsEntityListing> GetOrganizationsLimitsNamespacesAsync (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get the available limit namespaces
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 100)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (LimitsEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LimitsEntityListing>> GetOrganizationsLimitsNamespacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get organization.
@@ -1087,6 +1323,974 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<IpAddressAuthentication>(localVarStatusCode,
                 localVarHeaders,
                 (IpAddressAuthentication) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IpAddressAuthentication)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a limit change request 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestId">Unique id for the limit change request</param>
+        /// <returns>LimitChangeRequestDetails</returns>
+        public LimitChangeRequestDetails GetOrganizationsLimitsChangerequest (string requestId)
+        {
+             ApiResponse<LimitChangeRequestDetails> localVarResponse = GetOrganizationsLimitsChangerequestWithHttpInfo(requestId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a limit change request 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestId">Unique id for the limit change request</param>
+        /// <returns>ApiResponse of LimitChangeRequestDetails</returns>
+        public ApiResponse< LimitChangeRequestDetails > GetOrganizationsLimitsChangerequestWithHttpInfo (string requestId)
+        { 
+            // verify the required parameter 'requestId' is set
+            if (requestId == null)
+                throw new ApiException(400, "Missing required parameter 'requestId' when calling OrganizationApi->GetOrganizationsLimitsChangerequest");
+
+            var localVarPath = "/api/v2/organizations/limits/changerequests/{requestId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (requestId != null) localVarPathParams.Add("requestId", this.Configuration.ApiClient.ParameterToString(requestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsChangerequest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsChangerequest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LimitChangeRequestDetails>(localVarStatusCode,
+                localVarHeaders,
+                (LimitChangeRequestDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitChangeRequestDetails)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a limit change request 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestId">Unique id for the limit change request</param>
+        /// <returns>Task of LimitChangeRequestDetails</returns>
+        public async System.Threading.Tasks.Task<LimitChangeRequestDetails> GetOrganizationsLimitsChangerequestAsync (string requestId)
+        {
+             ApiResponse<LimitChangeRequestDetails> localVarResponse = await GetOrganizationsLimitsChangerequestAsyncWithHttpInfo(requestId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a limit change request 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestId">Unique id for the limit change request</param>
+        /// <returns>Task of ApiResponse (LimitChangeRequestDetails)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LimitChangeRequestDetails>> GetOrganizationsLimitsChangerequestAsyncWithHttpInfo (string requestId)
+        { 
+            // verify the required parameter 'requestId' is set
+            if (requestId == null)
+                throw new ApiException(400, "Missing required parameter 'requestId' when calling OrganizationApi->GetOrganizationsLimitsChangerequest");
+            
+
+            var localVarPath = "/api/v2/organizations/limits/changerequests/{requestId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (requestId != null) localVarPathParams.Add("requestId", this.Configuration.ApiClient.ParameterToString(requestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsChangerequest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsChangerequest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LimitChangeRequestDetails>(localVarStatusCode,
+                localVarHeaders,
+                (LimitChangeRequestDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitChangeRequestDetails)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get the available limit change requests Timestamp interval defaults to the last 365 days if both query parameters are omitted. If only one parameter is omitted, the interval will default to a 180 day range in the specified direction.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">Timestamp indicating the date to begin after when searching for requests. (optional)</param>
+        /// <param name="before">Timestamp indicating the date to end before when searching for requests. (optional)</param>
+        /// <param name="status">Status of the request to be filtered by (optional)</param>
+        /// <param name="pageSize">Page Size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>LimitChangeRequestsEntityListing</returns>
+        public LimitChangeRequestsEntityListing GetOrganizationsLimitsChangerequests (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null)
+        {
+             ApiResponse<LimitChangeRequestsEntityListing> localVarResponse = GetOrganizationsLimitsChangerequestsWithHttpInfo(after, before, status, pageSize, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the available limit change requests Timestamp interval defaults to the last 365 days if both query parameters are omitted. If only one parameter is omitted, the interval will default to a 180 day range in the specified direction.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">Timestamp indicating the date to begin after when searching for requests. (optional)</param>
+        /// <param name="before">Timestamp indicating the date to end before when searching for requests. (optional)</param>
+        /// <param name="status">Status of the request to be filtered by (optional)</param>
+        /// <param name="pageSize">Page Size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>ApiResponse of LimitChangeRequestsEntityListing</returns>
+        public ApiResponse< LimitChangeRequestsEntityListing > GetOrganizationsLimitsChangerequestsWithHttpInfo (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null)
+        { 
+
+            var localVarPath = "/api/v2/organizations/limits/changerequests";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (status != null) localVarQueryParams.Add(new Tuple<string, string>("status", this.Configuration.ApiClient.ParameterToString(status)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsChangerequests: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsChangerequests: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LimitChangeRequestsEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (LimitChangeRequestsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitChangeRequestsEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the available limit change requests Timestamp interval defaults to the last 365 days if both query parameters are omitted. If only one parameter is omitted, the interval will default to a 180 day range in the specified direction.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">Timestamp indicating the date to begin after when searching for requests. (optional)</param>
+        /// <param name="before">Timestamp indicating the date to end before when searching for requests. (optional)</param>
+        /// <param name="status">Status of the request to be filtered by (optional)</param>
+        /// <param name="pageSize">Page Size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>Task of LimitChangeRequestsEntityListing</returns>
+        public async System.Threading.Tasks.Task<LimitChangeRequestsEntityListing> GetOrganizationsLimitsChangerequestsAsync (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null)
+        {
+             ApiResponse<LimitChangeRequestsEntityListing> localVarResponse = await GetOrganizationsLimitsChangerequestsAsyncWithHttpInfo(after, before, status, pageSize, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the available limit change requests Timestamp interval defaults to the last 365 days if both query parameters are omitted. If only one parameter is omitted, the interval will default to a 180 day range in the specified direction.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">Timestamp indicating the date to begin after when searching for requests. (optional)</param>
+        /// <param name="before">Timestamp indicating the date to end before when searching for requests. (optional)</param>
+        /// <param name="status">Status of the request to be filtered by (optional)</param>
+        /// <param name="pageSize">Page Size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>Task of ApiResponse (LimitChangeRequestsEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LimitChangeRequestsEntityListing>> GetOrganizationsLimitsChangerequestsAsyncWithHttpInfo (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null)
+        { 
+
+            var localVarPath = "/api/v2/organizations/limits/changerequests";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (status != null) localVarQueryParams.Add(new Tuple<string, string>("status", this.Configuration.ApiClient.ParameterToString(status)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsChangerequests: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsChangerequests: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LimitChangeRequestsEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (LimitChangeRequestsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitChangeRequestsEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a link to the limit documentation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>UrlResponse</returns>
+        public UrlResponse GetOrganizationsLimitsDocs ()
+        {
+             ApiResponse<UrlResponse> localVarResponse = GetOrganizationsLimitsDocsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a link to the limit documentation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of UrlResponse</returns>
+        public ApiResponse< UrlResponse > GetOrganizationsLimitsDocsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/organizations/limits/docs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsDocs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsDocs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UrlResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UrlResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a link to the limit documentation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of UrlResponse</returns>
+        public async System.Threading.Tasks.Task<UrlResponse> GetOrganizationsLimitsDocsAsync ()
+        {
+             ApiResponse<UrlResponse> localVarResponse = await GetOrganizationsLimitsDocsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a link to the limit documentation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (UrlResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetOrganizationsLimitsDocsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/organizations/limits/docs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsDocs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsDocs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UrlResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UrlResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get the effective limits in a namespace for an organization 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to fetch limits for</param>
+        /// <returns>LimitsEntityListing</returns>
+        public LimitsEntityListing GetOrganizationsLimitsNamespace (string namespaceName)
+        {
+             ApiResponse<LimitsEntityListing> localVarResponse = GetOrganizationsLimitsNamespaceWithHttpInfo(namespaceName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the effective limits in a namespace for an organization 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to fetch limits for</param>
+        /// <returns>ApiResponse of LimitsEntityListing</returns>
+        public ApiResponse< LimitsEntityListing > GetOrganizationsLimitsNamespaceWithHttpInfo (string namespaceName)
+        { 
+            // verify the required parameter 'namespaceName' is set
+            if (namespaceName == null)
+                throw new ApiException(400, "Missing required parameter 'namespaceName' when calling OrganizationApi->GetOrganizationsLimitsNamespace");
+
+            var localVarPath = "/api/v2/organizations/limits/namespaces/{namespaceName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (namespaceName != null) localVarPathParams.Add("namespaceName", this.Configuration.ApiClient.ParameterToString(namespaceName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespace: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespace: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LimitsEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (LimitsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitsEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the effective limits in a namespace for an organization 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to fetch limits for</param>
+        /// <returns>Task of LimitsEntityListing</returns>
+        public async System.Threading.Tasks.Task<LimitsEntityListing> GetOrganizationsLimitsNamespaceAsync (string namespaceName)
+        {
+             ApiResponse<LimitsEntityListing> localVarResponse = await GetOrganizationsLimitsNamespaceAsyncWithHttpInfo(namespaceName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the effective limits in a namespace for an organization 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to fetch limits for</param>
+        /// <returns>Task of ApiResponse (LimitsEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LimitsEntityListing>> GetOrganizationsLimitsNamespaceAsyncWithHttpInfo (string namespaceName)
+        { 
+            // verify the required parameter 'namespaceName' is set
+            if (namespaceName == null)
+                throw new ApiException(400, "Missing required parameter 'namespaceName' when calling OrganizationApi->GetOrganizationsLimitsNamespace");
+            
+
+            var localVarPath = "/api/v2/organizations/limits/namespaces/{namespaceName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (namespaceName != null) localVarPathParams.Add("namespaceName", this.Configuration.ApiClient.ParameterToString(namespaceName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespace: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespace: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LimitsEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (LimitsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitsEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get the available limit namespaces 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 100)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>LimitsEntityListing</returns>
+        public LimitsEntityListing GetOrganizationsLimitsNamespaces (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<LimitsEntityListing> localVarResponse = GetOrganizationsLimitsNamespacesWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the available limit namespaces 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 100)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of LimitsEntityListing</returns>
+        public ApiResponse< LimitsEntityListing > GetOrganizationsLimitsNamespacesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        { 
+
+            var localVarPath = "/api/v2/organizations/limits/namespaces";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespaces: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespaces: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LimitsEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (LimitsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitsEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the available limit namespaces 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 100)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of LimitsEntityListing</returns>
+        public async System.Threading.Tasks.Task<LimitsEntityListing> GetOrganizationsLimitsNamespacesAsync (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<LimitsEntityListing> localVarResponse = await GetOrganizationsLimitsNamespacesAsyncWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the available limit namespaces 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 100)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (LimitsEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LimitsEntityListing>> GetOrganizationsLimitsNamespacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        { 
+
+            var localVarPath = "/api/v2/organizations/limits/namespaces";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespaces: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespaces: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LimitsEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (LimitsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitsEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

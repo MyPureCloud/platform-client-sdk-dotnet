@@ -86,6 +86,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets ContactMethod
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ContactMethodEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Email for "EMAIL"
+            /// </summary>
+            [EnumMember(Value = "EMAIL")]
+            Email,
+            
+            /// <summary>
+            /// Enum Phone for "PHONE"
+            /// </summary>
+            [EnumMember(Value = "PHONE")]
+            Phone
+        }
+        
+        
+        
+        
         
         
         
@@ -121,6 +151,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets ContactMethod
+        /// </summary>
+        [DataMember(Name="contactMethod", EmitDefaultValue=false)]
+        public ContactMethodEnum? ContactMethod { get; set; }
+        
+        
+        
         
         
         
@@ -139,9 +177,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LoginId">LoginId.</param>
         /// <param name="DncCodes">DncCodes.</param>
         /// <param name="LicenseId">LicenseId.</param>
+        /// <param name="ContactMethod">ContactMethod.</param>
         /// <param name="Division">Division.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerDnclistConfigChangeDncList(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DialerDnclistConfigChangeImportStatus ImportStatus = null, int? Size = null, DncSourceTypeEnum? DncSourceType = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null, DialerDnclistConfigChangeUriReference Division = null, Object AdditionalProperties = null)
+        public DialerDnclistConfigChangeDncList(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DialerDnclistConfigChangeImportStatus ImportStatus = null, int? Size = null, DncSourceTypeEnum? DncSourceType = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null, ContactMethodEnum? ContactMethod = null, DialerDnclistConfigChangeUriReference Division = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -154,6 +193,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LoginId = LoginId;
             this.DncCodes = DncCodes;
             this.LicenseId = LicenseId;
+            this.ContactMethod = ContactMethod;
             this.Division = Division;
             this.AdditionalProperties = AdditionalProperties;
             
@@ -243,6 +283,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets Division
         /// </summary>
@@ -278,6 +320,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LoginId: ").Append(LoginId).Append("\n");
             sb.Append("  DncCodes: ").Append(DncCodes).Append("\n");
             sb.Append("  LicenseId: ").Append(LicenseId).Append("\n");
+            sb.Append("  ContactMethod: ").Append(ContactMethod).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
@@ -372,6 +415,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LicenseId.Equals(other.LicenseId)
                 ) &&
                 (
+                    this.ContactMethod == other.ContactMethod ||
+                    this.ContactMethod != null &&
+                    this.ContactMethod.Equals(other.ContactMethod)
+                ) &&
+                (
                     this.Division == other.Division ||
                     this.Division != null &&
                     this.Division.Equals(other.Division)
@@ -427,6 +475,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.LicenseId != null)
                     hash = hash * 59 + this.LicenseId.GetHashCode();
+                
+                if (this.ContactMethod != null)
+                    hash = hash * 59 + this.ContactMethod.GetHashCode();
                 
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
