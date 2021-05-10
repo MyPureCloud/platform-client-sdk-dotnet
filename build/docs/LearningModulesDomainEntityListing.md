@@ -1,21 +1,21 @@
 ---
-title: KeywordSetEntityListing
+title: LearningModulesDomainEntityListing
 ---
-## ININ.PureCloudApi.Model.KeywordSetEntityListing
+## ININ.PureCloudApi.Model.LearningModulesDomainEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;KeywordSet&gt;**](KeywordSet.html) |  | [optional] |
+| **Entities** | [**List&lt;LearningModule&gt;**](LearningModule.html) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **LastUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-| **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 

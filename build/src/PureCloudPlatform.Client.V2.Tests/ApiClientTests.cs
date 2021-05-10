@@ -56,7 +56,8 @@ public class ApiClientTests
         var retryConfig = new ApiClient.RetryConfiguration
         {
             MaxRetryTimeSec = 6,
-            RetryAfterDefaultMs = 100
+            RetryAfterDefaultMs = 100,
+            RetryMax = 50
         };
 
         var mockRestClient = new Mock<IRestClient>();
@@ -81,7 +82,8 @@ public class ApiClientTests
         var retryConfig = new ApiClient.RetryConfiguration
         {
             MaxRetryTimeSec = 0,
-            RetryAfterDefaultMs = 100
+            RetryAfterDefaultMs = 100,
+            RetryMax = 50
         };
 
         var mockRestClient = new Mock<IRestClient>();
@@ -107,7 +109,8 @@ public class ApiClientTests
         {
             MaxRetryTimeSec = 13,
             RetryAfterDefaultMs = 2000,
-            BackOffIntervalMs = 11000
+            BackOffIntervalMs = 11000,
+            RetryMax = 50
         };
 
         var mockRestClient = new Mock<IRestClient>();
@@ -134,7 +137,8 @@ public class ApiClientTests
         {
             MaxRetryTimeSec = 40,
             RetryAfterDefaultMs = 200,
-            BackOffIntervalMs = 3000
+            BackOffIntervalMs = 3000,
+            RetryMax = 50
         };
 
         var mockRestClient = new Mock<IRestClient>();
@@ -160,7 +164,8 @@ public class ApiClientTests
         var retryConfig = new ApiClient.RetryConfiguration
         {
             MaxRetryTimeSec = 2,
-            RetryAfterDefaultMs = 1000
+            RetryAfterDefaultMs = 1000,
+            RetryMax = 50
         };
 
         var mockRestClient = new Mock<IRestClient>();
@@ -185,7 +190,8 @@ public class ApiClientTests
     {
         var retryConfig = new ApiClient.RetryConfiguration
         {
-            MaxRetryTimeSec = 0
+            MaxRetryTimeSec = 0,
+            RetryMax = 50
         };
 
         var mockRestClient = new Mock<IRestClient>();
@@ -210,7 +216,8 @@ public class ApiClientTests
     {
         var retryConfig = new ApiClient.RetryConfiguration
         {
-            MaxRetryTimeSec = 5
+            MaxRetryTimeSec = 5,
+            RetryMax = 50
         };
 
         var mockRestClient = new Mock<IRestClient>();
@@ -234,7 +241,8 @@ public class ApiClientTests
     {
         var retryConfig = new ApiClient.RetryConfiguration
         {
-            MaxRetryTimeSec = 0
+            MaxRetryTimeSec = 0,
+            RetryMax = 50
         };
 
         var mockRestClient = new Mock<IRestClient>();
@@ -260,7 +268,8 @@ public class ApiClientTests
         {
             MaxRetryTimeSec = 13,
             RetryAfterDefaultMs = 2000,
-            BackOffIntervalMs = 11000
+            BackOffIntervalMs = 11000,
+            RetryMax = 50
         };
 
         var mockRestClient = new Mock<IRestClient>();
@@ -287,7 +296,8 @@ public class ApiClientTests
         {
             MaxRetryTimeSec = 40,
             RetryAfterDefaultMs = 200,
-            BackOffIntervalMs = 3000
+            BackOffIntervalMs = 3000,
+            RetryMax = 50
         };
 
         var mockRestClient = new Mock<IRestClient>();
@@ -313,7 +323,8 @@ public class ApiClientTests
         var retryConfig = new ApiClient.RetryConfiguration
         {
             MaxRetryTimeSec = 2,
-            RetryAfterDefaultMs = 1000
+            RetryAfterDefaultMs = 1000,
+            RetryMax = 50
         };
 
         var mockRestClient = new Mock<IRestClient>();
@@ -338,7 +349,8 @@ public class ApiClientTests
     {
         var retryConfig = new ApiClient.RetryConfiguration
         {
-            MaxRetryTimeSec = 0
+            MaxRetryTimeSec = 0,
+            RetryMax = 50
         };
 
         var mockRestClient = new Mock<IRestClient>();

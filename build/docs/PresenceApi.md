@@ -14,6 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserPresence**](PresenceApi.html#getuserpresence) | **GET** /api/v2/users/{userId}/presences/{sourceId} | Get a user&#39;s Presence |
 | [**GetUserPresencesMicrosoftteams**](PresenceApi.html#getuserpresencesmicrosoftteams) | **GET** /api/v2/users/{userId}/presences/microsoftteams | Get a user&#39;s Microsoft Teams presence. |
 | [**GetUserPresencesPurecloud**](PresenceApi.html#getuserpresencespurecloud) | **GET** /api/v2/users/{userId}/presences/purecloud | Get a user&#39;s Genesys Cloud presence. |
+| [**GetUserPresencesZoomphone**](PresenceApi.html#getuserpresenceszoomphone) | **GET** /api/v2/users/{userId}/presences/zoomphone | Get a user&#39;s Zoom Phone presence. |
 | [**PatchUserPresence**](PresenceApi.html#patchuserpresence) | **PATCH** /api/v2/users/{userId}/presences/{sourceId} | Patch a user&#39;s Presence |
 | [**PatchUserPresencesPurecloud**](PresenceApi.html#patchuserpresencespurecloud) | **PATCH** /api/v2/users/{userId}/presences/purecloud | Patch a Genesys Cloud user&#39;s presence |
 | [**PostPresencedefinitions**](PresenceApi.html#postpresencedefinitions) | **POST** /api/v2/presencedefinitions | Create a Presence Definition |
@@ -475,6 +476,72 @@ namespace Example
 ### Return type
 
 [**UserPresence**](UserPresence.html)
+
+<a name="getuserpresenceszoomphone"></a>
+
+## [**PresenceExpand**](PresenceExpand.html) GetUserPresencesZoomphone (string userId)
+
+
+
+Get a user's Zoom Phone presence.
+
+Gets the presence for a Zoom user.  This will return the Zoom Phone presence mapped to Genesys Cloud presence with additional activity details in the message field. This presence source is read-only.
+
+Requires ANY permissions: 
+
+* integration:zoomPhone:view
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUserPresencesZoomphoneExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PresenceApi();
+            var userId = userId_example;  // string | user Id
+
+            try
+            { 
+                // Get a user's Zoom Phone presence.
+                PresenceExpand result = apiInstance.GetUserPresencesZoomphone(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.GetUserPresencesZoomphone: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| user Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PresenceExpand**](PresenceExpand.html)
 
 <a name="patchuserpresence"></a>
 

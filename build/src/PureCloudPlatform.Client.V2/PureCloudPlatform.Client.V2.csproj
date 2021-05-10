@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E17108FF-BEA7-447B-BE66-9D9E7E6DD1A2}</ProjectGuid>
+    <ProjectGuid>{7C77552E-EB9F-4500-9476-BDC9713AD602}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PureCloud Platform Client SDK</RootNamespace>
@@ -58,6 +58,7 @@
         <HintPath Condition="Exists('..\..\packages')">..\..\packages\WebSocketSharp.1.0.3-rc11\lib\websocket-sharp.dll</HintPath>
       <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\WebSocketSharp.1.0.3-rc11\lib\websocket-sharp.dll</HintPath>
     </Reference>
+    <Reference Include="ini-parser" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="**\*.cs"/>

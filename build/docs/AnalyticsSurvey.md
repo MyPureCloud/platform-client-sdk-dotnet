@@ -17,7 +17,7 @@ title: AnalyticsSurvey
 | **SurveyPromoterScore** | **int?** | Score of the survey used with NPS | [optional] |
 | **SurveyStatus** | **string** | The status of the survey | [optional] |
 | **UserId** | **string** | ID of the agent the survey was performed against | [optional] |
-| **OSurveyTotalScore** | **long?** |  | [optional] |
+| **GetoSurveyTotalScore** | **long?** | Total score of the survey | [optional] |
 {: class="table table-striped"}
 
 

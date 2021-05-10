@@ -189,6 +189,24 @@ namespace PureCloudPlatform.Client.V2.Model
             Obotslot,
             
             /// <summary>
+            /// Enum Tbotdisconnect for "tBotDisconnect"
+            /// </summary>
+            [EnumMember(Value = "tBotDisconnect")]
+            Tbotdisconnect,
+            
+            /// <summary>
+            /// Enum Tbotexit for "tBotExit"
+            /// </summary>
+            [EnumMember(Value = "tBotExit")]
+            Tbotexit,
+            
+            /// <summary>
+            /// Enum Tbotrecognitionfailure for "tBotRecognitionFailure"
+            /// </summary>
+            [EnumMember(Value = "tBotRecognitionFailure")]
+            Tbotrecognitionfailure,
+            
+            /// <summary>
             /// Enum Tbotsession for "tBotSession"
             /// </summary>
             [EnumMember(Value = "tBotSession")]

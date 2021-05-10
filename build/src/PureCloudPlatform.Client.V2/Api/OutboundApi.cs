@@ -585,6 +585,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Campaign> GetOutboundCampaignWithHttpInfo (string campaignId);
         
         /// <summary>
+        /// Get a preview of how agents will be mapped to this campaign&#39;s contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>AgentOwnedMappingPreviewListing</returns>
+        AgentOwnedMappingPreviewListing GetOutboundCampaignAgentownedmappingpreviewResults (string campaignId);
+
+        /// <summary>
+        /// Get a preview of how agents will be mapped to this campaign&#39;s contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of AgentOwnedMappingPreviewListing</returns>
+        ApiResponse<AgentOwnedMappingPreviewListing> GetOutboundCampaignAgentownedmappingpreviewResultsWithHttpInfo (string campaignId);
+        
+        /// <summary>
         /// Get campaign diagnostics
         /// </summary>
         /// <remarks>
@@ -1907,6 +1929,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ResponseSet</param>
         /// <returns>ApiResponse of ResponseSet</returns>
         ApiResponse<ResponseSet> PostOutboundCallanalysisresponsesetsWithHttpInfo (ResponseSet body);
+        
+        /// <summary>
+        /// Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Empty</returns>
+        Empty PostOutboundCampaignAgentownedmappingpreview (string campaignId);
+
+        /// <summary>
+        /// Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of Empty</returns>
+        ApiResponse<Empty> PostOutboundCampaignAgentownedmappingpreviewWithHttpInfo (string campaignId);
         
         /// <summary>
         /// Schedule a Callback for a Dialer Campaign (Deprecated)
@@ -3299,6 +3343,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Campaign>> GetOutboundCampaignAsyncWithHttpInfo (string campaignId);
         
         /// <summary>
+        /// Get a preview of how agents will be mapped to this campaign&#39;s contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of AgentOwnedMappingPreviewListing</returns>
+        System.Threading.Tasks.Task<AgentOwnedMappingPreviewListing> GetOutboundCampaignAgentownedmappingpreviewResultsAsync (string campaignId);
+
+        /// <summary>
+        /// Get a preview of how agents will be mapped to this campaign&#39;s contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (AgentOwnedMappingPreviewListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AgentOwnedMappingPreviewListing>> GetOutboundCampaignAgentownedmappingpreviewResultsAsyncWithHttpInfo (string campaignId);
+        
+        /// <summary>
         /// Get campaign diagnostics
         /// </summary>
         /// <remarks>
@@ -4621,6 +4687,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ResponseSet</param>
         /// <returns>Task of ApiResponse (ResponseSet)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PostOutboundCallanalysisresponsesetsAsyncWithHttpInfo (ResponseSet body);
+        
+        /// <summary>
+        /// Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of Empty</returns>
+        System.Threading.Tasks.Task<Empty> PostOutboundCampaignAgentownedmappingpreviewAsync (string campaignId);
+
+        /// <summary>
+        /// Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Empty>> PostOutboundCampaignAgentownedmappingpreviewAsyncWithHttpInfo (string campaignId);
         
         /// <summary>
         /// Schedule a Callback for a Dialer Campaign (Deprecated)
@@ -10241,6 +10329,199 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Campaign>(localVarStatusCode,
                 localVarHeaders,
                 (Campaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Campaign)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a preview of how agents will be mapped to this campaign&#39;s contact list. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>AgentOwnedMappingPreviewListing</returns>
+        public AgentOwnedMappingPreviewListing GetOutboundCampaignAgentownedmappingpreviewResults (string campaignId)
+        {
+             ApiResponse<AgentOwnedMappingPreviewListing> localVarResponse = GetOutboundCampaignAgentownedmappingpreviewResultsWithHttpInfo(campaignId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a preview of how agents will be mapped to this campaign&#39;s contact list. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of AgentOwnedMappingPreviewListing</returns>
+        public ApiResponse< AgentOwnedMappingPreviewListing > GetOutboundCampaignAgentownedmappingpreviewResultsWithHttpInfo (string campaignId)
+        { 
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignAgentownedmappingpreviewResults");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (campaignId != null) localVarPathParams.Add("campaignId", this.Configuration.ApiClient.ParameterToString(campaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignAgentownedmappingpreviewResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignAgentownedmappingpreviewResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentOwnedMappingPreviewListing>(localVarStatusCode,
+                localVarHeaders,
+                (AgentOwnedMappingPreviewListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentOwnedMappingPreviewListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a preview of how agents will be mapped to this campaign&#39;s contact list. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of AgentOwnedMappingPreviewListing</returns>
+        public async System.Threading.Tasks.Task<AgentOwnedMappingPreviewListing> GetOutboundCampaignAgentownedmappingpreviewResultsAsync (string campaignId)
+        {
+             ApiResponse<AgentOwnedMappingPreviewListing> localVarResponse = await GetOutboundCampaignAgentownedmappingpreviewResultsAsyncWithHttpInfo(campaignId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a preview of how agents will be mapped to this campaign&#39;s contact list. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (AgentOwnedMappingPreviewListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AgentOwnedMappingPreviewListing>> GetOutboundCampaignAgentownedmappingpreviewResultsAsyncWithHttpInfo (string campaignId)
+        { 
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignAgentownedmappingpreviewResults");
+            
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (campaignId != null) localVarPathParams.Add("campaignId", this.Configuration.ApiClient.ParameterToString(campaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignAgentownedmappingpreviewResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignAgentownedmappingpreviewResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentOwnedMappingPreviewListing>(localVarStatusCode,
+                localVarHeaders,
+                (AgentOwnedMappingPreviewListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentOwnedMappingPreviewListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -20348,6 +20629,199 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ResponseSet>(localVarStatusCode,
                 localVarHeaders,
                 (ResponseSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSet)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Empty</returns>
+        public Empty PostOutboundCampaignAgentownedmappingpreview (string campaignId)
+        {
+             ApiResponse<Empty> localVarResponse = PostOutboundCampaignAgentownedmappingpreviewWithHttpInfo(campaignId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of Empty</returns>
+        public ApiResponse< Empty > PostOutboundCampaignAgentownedmappingpreviewWithHttpInfo (string campaignId)
+        { 
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PostOutboundCampaignAgentownedmappingpreview");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (campaignId != null) localVarPathParams.Add("campaignId", this.Configuration.ApiClient.ParameterToString(campaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundCampaignAgentownedmappingpreview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundCampaignAgentownedmappingpreview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Empty>(localVarStatusCode,
+                localVarHeaders,
+                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of Empty</returns>
+        public async System.Threading.Tasks.Task<Empty> PostOutboundCampaignAgentownedmappingpreviewAsync (string campaignId)
+        {
+             ApiResponse<Empty> localVarResponse = await PostOutboundCampaignAgentownedmappingpreviewAsyncWithHttpInfo(campaignId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Empty>> PostOutboundCampaignAgentownedmappingpreviewAsyncWithHttpInfo (string campaignId)
+        { 
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PostOutboundCampaignAgentownedmappingpreview");
+            
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (campaignId != null) localVarPathParams.Add("campaignId", this.Configuration.ApiClient.ParameterToString(campaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundCampaignAgentownedmappingpreview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundCampaignAgentownedmappingpreview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Empty>(localVarStatusCode,
+                localVarHeaders,
+                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

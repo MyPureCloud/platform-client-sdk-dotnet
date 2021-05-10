@@ -480,6 +480,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Workplan,
             
             /// <summary>
+            /// Enum Workspace for "Workspace"
+            /// </summary>
+            [EnumMember(Value = "Workspace")]
+            Workspace,
+            
+            /// <summary>
             /// Enum Wrapupcode for "WrapupCode"
             /// </summary>
             [EnumMember(Value = "WrapupCode")]
@@ -528,6 +534,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Update")]
             Update,
+            
+            /// <summary>
+            /// Enum Move for "Move"
+            /// </summary>
+            [EnumMember(Value = "Move")]
+            Move,
             
             /// <summary>
             /// Enum Delete for "Delete"

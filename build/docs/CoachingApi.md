@@ -25,6 +25,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostCoachingAppointmentConversations**](CoachingApi.html#postcoachingappointmentconversations) | **POST** /api/v2/coaching/appointments/{appointmentId}/conversations | Add a conversation to an appointment |
 | [**PostCoachingAppointments**](CoachingApi.html#postcoachingappointments) | **POST** /api/v2/coaching/appointments | Create a new appointment |
 | [**PostCoachingAppointmentsAggregatesQuery**](CoachingApi.html#postcoachingappointmentsaggregatesquery) | **POST** /api/v2/coaching/appointments/aggregates/query | Retrieve aggregated appointment data |
+| [**PostCoachingScheduleslotsQuery**](CoachingApi.html#postcoachingscheduleslotsquery) | **POST** /api/v2/coaching/scheduleslots/query | Get list of possible slots where a coaching appointment can be scheduled. |
 {: class="table table-striped"}
 
 <a name="deletecoachingappointment"></a>
@@ -1264,4 +1265,69 @@ namespace Example
 ### Return type
 
 [**CoachingAppointmentAggregateResponse**](CoachingAppointmentAggregateResponse.html)
+
+<a name="postcoachingscheduleslotsquery"></a>
+
+## [**CoachingSlotsResponse**](CoachingSlotsResponse.html) PostCoachingScheduleslotsQuery (CoachingSlotsRequest body)
+
+
+
+Get list of possible slots where a coaching appointment can be scheduled.
+
+
+
+Requires ANY permissions: 
+
+* coaching:scheduleSlot:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostCoachingScheduleslotsQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CoachingApi();
+            var body = new CoachingSlotsRequest(); // CoachingSlotsRequest | The slot search request
+
+            try
+            { 
+                // Get list of possible slots where a coaching appointment can be scheduled.
+                CoachingSlotsResponse result = apiInstance.PostCoachingScheduleslotsQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CoachingApi.PostCoachingScheduleslotsQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CoachingSlotsRequest**](CoachingSlotsRequest.html)| The slot search request |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CoachingSlotsResponse**](CoachingSlotsResponse.html)
 

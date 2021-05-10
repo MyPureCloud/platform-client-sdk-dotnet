@@ -35,6 +35,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="IntentDefinition" /> class.
@@ -46,12 +51,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="IntentDefinition" /> class.
         /// </summary>
         /// <param name="Name">The name of the intent. (required).</param>
-        /// <param name="EntityTypeBindings">The bindings for the named entity types used in this intent. (required).</param>
+        /// <param name="EntityTypeBindings">The bindings for the named entity types used in this intent.This field is mutually exclusive with entityNameReferences and entities.</param>
+        /// <param name="EntityNameReferences">The references for the named entity used in this intent.This field is mutually exclusive with entityTypeBindings.</param>
         /// <param name="Utterances">The utterances that act as training phrases for the intent. (required).</param>
-        public IntentDefinition(string Name = null, List<NamedEntityTypeBinding> EntityTypeBindings = null, List<NluUtterance> Utterances = null)
+        public IntentDefinition(string Name = null, List<NamedEntityTypeBinding> EntityTypeBindings = null, List<string> EntityNameReferences = null, List<NluUtterance> Utterances = null)
         {
             this.Name = Name;
             this.EntityTypeBindings = EntityTypeBindings;
+            this.EntityNameReferences = EntityNameReferences;
             this.Utterances = Utterances;
             
         }
@@ -68,11 +75,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The bindings for the named entity types used in this intent.
+        /// The bindings for the named entity types used in this intent.This field is mutually exclusive with entityNameReferences and entities
         /// </summary>
-        /// <value>The bindings for the named entity types used in this intent.</value>
+        /// <value>The bindings for the named entity types used in this intent.This field is mutually exclusive with entityNameReferences and entities</value>
         [DataMember(Name="entityTypeBindings", EmitDefaultValue=false)]
         public List<NamedEntityTypeBinding> EntityTypeBindings { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The references for the named entity used in this intent.This field is mutually exclusive with entityTypeBindings
+        /// </summary>
+        /// <value>The references for the named entity used in this intent.This field is mutually exclusive with entityTypeBindings</value>
+        [DataMember(Name="entityNameReferences", EmitDefaultValue=false)]
+        public List<string> EntityNameReferences { get; set; }
         
         
         
@@ -95,6 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  EntityTypeBindings: ").Append(EntityTypeBindings).Append("\n");
+            sb.Append("  EntityNameReferences: ").Append(EntityNameReferences).Append("\n");
             sb.Append("  Utterances: ").Append(Utterances).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -143,6 +160,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EntityTypeBindings.SequenceEqual(other.EntityTypeBindings)
                 ) &&
                 (
+                    this.EntityNameReferences == other.EntityNameReferences ||
+                    this.EntityNameReferences != null &&
+                    this.EntityNameReferences.SequenceEqual(other.EntityNameReferences)
+                ) &&
+                (
                     this.Utterances == other.Utterances ||
                     this.Utterances != null &&
                     this.Utterances.SequenceEqual(other.Utterances)
@@ -166,6 +188,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.EntityTypeBindings != null)
                     hash = hash * 59 + this.EntityTypeBindings.GetHashCode();
+                
+                if (this.EntityNameReferences != null)
+                    hash = hash * 59 + this.EntityNameReferences.GetHashCode();
                 
                 if (this.Utterances != null)
                     hash = hash * 59 + this.Utterances.GetHashCode();

@@ -185,6 +185,12 @@ namespace PureCloudPlatform.Client.V2.Model
             ContactColumnLengthLimitExceeded,
             
             /// <summary>
+            /// Enum ContactIdLengthLimitExceeded for "CONTACT_ID_LENGTH_LIMIT_EXCEEDED"
+            /// </summary>
+            [EnumMember(Value = "CONTACT_ID_LENGTH_LIMIT_EXCEEDED")]
+            ContactIdLengthLimitExceeded,
+            
+            /// <summary>
             /// Enum ContactDatumLengthLimitExceeded for "CONTACT_DATUM_LENGTH_LIMIT_EXCEEDED"
             /// </summary>
             [EnumMember(Value = "CONTACT_DATUM_LENGTH_LIMIT_EXCEEDED")]

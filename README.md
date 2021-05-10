@@ -76,7 +76,7 @@ var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4
 Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
 ```
 
-By default the SDK will transparently request a new access token using the refresh token when the access token expires. If you wish to implement the refresh logic set _ShouldRefreshAccessToken_ to false and store the refresh token from the auth response:
+By default, the SDK will transparently request a new access token using the refresh token when the access token expires. If you wish to implement the refresh logic set _ShouldRefreshAccessToken_ to false and store the refresh token from the auth response:
 
 ```{"language":"csharp"}
 var refreshToken = accessTokenInfo.RefreshToken;
@@ -89,7 +89,7 @@ You can use the _ExpiresIn_ value to determine how long the token will live and 
 var tokenTimeToLive = authTokenInfo.ExpiresIn;
 ```
 
-When the access token expires refresh it using the _PostToken_ method using the same clientId and clientSecret as used to request it.
+When the access token expires, refresh it using the _PostToken_ method using the same clientId and clientSecret as used to request it.
 
 ```{"language":"csharp"}
 var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
@@ -160,13 +160,14 @@ Configuration.Default.ApiClient.setBasePath(region);
 #### Setting the max retry time
 
 By default, the .NET SDK does not automatically retry any failed requests.
-To enable automatic retries, provide a RetryConfiguration object with the maximum number of seconds to retry requests when building the ApiClient instance.
+To enable automatic retries, provide a RetryConfiguration object with the maximum number of seconds to retry requests and the max number of retries when building the ApiClient instance.
 
 Building a `RetryConfiguration` instance:
 ```{"language":"csharp"}
 var retryConfig = new ApiClient.RetryConfiguration
 {
-  MaxRetryTimeSec = 10
+  MaxRetryTimeSec = 10,
+  RetryMax = 5;
 };
 ```
 
@@ -174,9 +175,95 @@ Setting `RetryConfiguration` instance to `ApiClient`:
 ```{"language":"csharp"}
 Configuration.Default.ApiClient.RetryConfig = retryConfig;
 ```
-Set the `MaxRetryTimeSec` to the number of seconds to process retries before returning an error.
-When the retry time is a a positive integer, the SDK will follow the recommended backoff logic using the provided configuration.
+Set the `MaxRetryTimeSec` to the number of seconds to process retries before returning an error.  
+Set the `RetryMax` to the retries to attempt before returning an error.  
+When the retry time is a positive integer, the SDK will follow the recommended backoff logic using the provided configuration.
 The best practices are documented in the [Rate Limiting](https://developer.mypurecloud.com/api/rest/rate_limits.html) Developer Center article.
+
+#### SDK Logging
+
+Logging of API requests and responses can be controlled by several parameters on the `Configuration`'s `Logger` instance.
+
+`LogLevel` values:
+1. LogLevel.LTrace (HTTP Method, URL, Request Body, HTTP Status Code, Request Headers, Response Headers)
+2. LogLevel.LDebug (HTTP Method, URL, Request Body, HTTP Status Code, Request Headers)
+3. LogLevel.LError (HTTP Method, URL, Request Body, Response Body, HTTP Status Code, Request Headers, Response Headers)
+4. LogLevel.LNone - default
+
+`LogFormat` values:
+1. JSON
+2. Text - default
+
+By default, the request and response bodies are not logged because these can contain PII. Be mindful of this data if choosing to log it.  
+To log to a file, provide a `LogFilePath` value. SDK users are responsible for the rotation of the log file.
+
+Example logging configuration:
+```{"language":"csharp"}
+Configuration.Default.Logger.Level = LogLevel.LTrace;
+Configuration.Default.Logger.Format = LogFormat.JSON;
+Configuration.Default.Logger.LogRequestBody = true;
+Configuration.Default.Logger.LogResponseBody = true;
+Configuration.Default.Logger.LogToConsole = true;
+Configuration.Default.Logger.LogFilePath = "/var/log/dotnetsdk.log";
+```
+
+#### Configuration file
+
+Several configuration parameters can be applied using a configuration file. There are two sources for this file:
+
+1. The SDK will look for `%HOMEDRIVE%%HOMEPATH%\.genesysclouddotnet\config` on Windows, or `$HOME/.genesysclouddotnet/config` on Unix.
+2. Provide a valid file path to `Configuration.Default.ConfigFilePath`
+
+The SDK will take an event-driven approach to monitor for config file changes and will apply changes in near real-time. To disable this behavior, set `Configuration.Default.AutoReloadConfig` to false.  
+INI and JSON formats are supported. See below for examples of configuration values in both formats:
+
+INI:
+```{"language":"ini"}
+[logging]
+log_level = trace
+log_format = text
+log_to_console = false
+log_file_path = /var/log/dotnetsdk.log
+log_response_body = false
+log_request_body = false
+[retry]
+retry_wait_min = 3
+retry_wait_max = 10
+retry_max = 5
+[reauthentication]
+refresh_access_token = true
+refresh_token_wait_max = 10
+[general]
+live_reload_config = true
+host = https://api.mypurecloud.com
+```
+
+JSON:
+```{"language":"json"}
+{
+    "logging": {
+        "log_level": "trace",
+        "log_format": "text",
+        "log_to_console": false,
+        "log_file_path": "/var/log/dotnetsdk.log",
+        "log_response_body": false,
+        "log_request_body": false
+    },
+    "retry": {
+        "retry_wait_min": 3,
+        "retry_wait_max": 10,
+        "retry_max": 5
+    },
+    "reauthentication": {
+        "refresh_access_token": true,
+        "refresh_token_wait_max": 10
+    },
+    "general": {
+        "live_reload_config": true,
+        "host": "https://api.mypurecloud.com"
+    }
+}
+```
 
 #### Invoking the API
 
@@ -300,7 +387,7 @@ _Note that the deserializer does not use this mapping; it uses the type provided
 
 ### REST Requests
 
-The SDK library uses [RestSharp](http://restsharp.org/) to make the REST reqests. The majority of this work is done in [ApiClient.cs](https://github.com/MyPureCloud/platform-client-sdk-dotnet/blob/master/build/src/PureCloudPlatform.Client.V2/Client/ApiClient.cs)
+The SDK library uses [RestSharp](http://restsharp.org/) to make the REST requests. The majority of this work is done in [ApiClient.cs](https://github.com/MyPureCloud/platform-client-sdk-dotnet/blob/master/build/src/PureCloudPlatform.Client.V2/Client/ApiClient.cs)
 
 ### Building from Source
 

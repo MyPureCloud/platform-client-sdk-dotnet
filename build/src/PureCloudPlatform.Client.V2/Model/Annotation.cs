@@ -80,62 +80,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Annotation" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected Annotation() { }
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Annotation" /> class.
@@ -150,17 +94,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecordingDurationMs">Duration of annotation (milliseconds), adjusted for any recording cuts..</param>
         /// <param name="User">User that created this annotation (if any)..</param>
         /// <param name="Description">Text of annotation..</param>
-        /// <param name="KeywordName">The word or phrase which is being looked for with speech recognition..</param>
-        /// <param name="Confidence">Actual confidence that this is an accurate match..</param>
-        /// <param name="KeywordSetId">A unique identifier for the keyword set to which this spotted keyword belongs..</param>
-        /// <param name="KeywordSetName">The keyword set to which this spotted keyword belongs..</param>
-        /// <param name="Utterance">The phonetic spellings for the phrase and alternate spellings..</param>
-        /// <param name="TimeBegin">Beginning time offset of the keyword spot match..</param>
-        /// <param name="TimeEnd">Ending time offset of the keyword spot match..</param>
-        /// <param name="KeywordConfidenceThreshold">Configured sensitivity threshold that can be increased to lower false positives or decreased to reduce false negatives..</param>
-        /// <param name="AgentScoreModifier">A modifier to the evaluation score when the phrase is spotted in the agent channel. (required).</param>
-        /// <param name="CustomerScoreModifier">A modifier to the evaluation score when the phrase is spotted in the customer channel. (required).</param>
-        public Annotation(string Name = null, string Type = null, long? Location = null, long? DurationMs = null, long? AbsoluteLocation = null, long? AbsoluteDurationMs = null, long? RecordingLocation = null, long? RecordingDurationMs = null, User User = null, string Description = null, string KeywordName = null, float? Confidence = null, string KeywordSetId = null, string KeywordSetName = null, string Utterance = null, string TimeBegin = null, string TimeEnd = null, string KeywordConfidenceThreshold = null, string AgentScoreModifier = null, string CustomerScoreModifier = null)
+        public Annotation(string Name = null, string Type = null, long? Location = null, long? DurationMs = null, long? AbsoluteLocation = null, long? AbsoluteDurationMs = null, long? RecordingLocation = null, long? RecordingDurationMs = null, User User = null, string Description = null)
         {
             this.Name = Name;
             this.Type = Type;
@@ -172,16 +106,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RecordingDurationMs = RecordingDurationMs;
             this.User = User;
             this.Description = Description;
-            this.KeywordName = KeywordName;
-            this.Confidence = Confidence;
-            this.KeywordSetId = KeywordSetId;
-            this.KeywordSetName = KeywordSetName;
-            this.Utterance = Utterance;
-            this.TimeBegin = TimeBegin;
-            this.TimeEnd = TimeEnd;
-            this.KeywordConfidenceThreshold = KeywordConfidenceThreshold;
-            this.AgentScoreModifier = AgentScoreModifier;
-            this.CustomerScoreModifier = CustomerScoreModifier;
             
         }
         
@@ -285,96 +209,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The word or phrase which is being looked for with speech recognition.
-        /// </summary>
-        /// <value>The word or phrase which is being looked for with speech recognition.</value>
-        [DataMember(Name="keywordName", EmitDefaultValue=false)]
-        public string KeywordName { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Actual confidence that this is an accurate match.
-        /// </summary>
-        /// <value>Actual confidence that this is an accurate match.</value>
-        [DataMember(Name="confidence", EmitDefaultValue=false)]
-        public float? Confidence { get; set; }
-        
-        
-        
-        /// <summary>
-        /// A unique identifier for the keyword set to which this spotted keyword belongs.
-        /// </summary>
-        /// <value>A unique identifier for the keyword set to which this spotted keyword belongs.</value>
-        [DataMember(Name="keywordSetId", EmitDefaultValue=false)]
-        public string KeywordSetId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The keyword set to which this spotted keyword belongs.
-        /// </summary>
-        /// <value>The keyword set to which this spotted keyword belongs.</value>
-        [DataMember(Name="keywordSetName", EmitDefaultValue=false)]
-        public string KeywordSetName { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The phonetic spellings for the phrase and alternate spellings.
-        /// </summary>
-        /// <value>The phonetic spellings for the phrase and alternate spellings.</value>
-        [DataMember(Name="utterance", EmitDefaultValue=false)]
-        public string Utterance { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Beginning time offset of the keyword spot match.
-        /// </summary>
-        /// <value>Beginning time offset of the keyword spot match.</value>
-        [DataMember(Name="timeBegin", EmitDefaultValue=false)]
-        public string TimeBegin { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Ending time offset of the keyword spot match.
-        /// </summary>
-        /// <value>Ending time offset of the keyword spot match.</value>
-        [DataMember(Name="timeEnd", EmitDefaultValue=false)]
-        public string TimeEnd { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Configured sensitivity threshold that can be increased to lower false positives or decreased to reduce false negatives.
-        /// </summary>
-        /// <value>Configured sensitivity threshold that can be increased to lower false positives or decreased to reduce false negatives.</value>
-        [DataMember(Name="keywordConfidenceThreshold", EmitDefaultValue=false)]
-        public string KeywordConfidenceThreshold { get; set; }
-        
-        
-        
-        /// <summary>
-        /// A modifier to the evaluation score when the phrase is spotted in the agent channel.
-        /// </summary>
-        /// <value>A modifier to the evaluation score when the phrase is spotted in the agent channel.</value>
-        [DataMember(Name="agentScoreModifier", EmitDefaultValue=false)]
-        public string AgentScoreModifier { get; set; }
-        
-        
-        
-        /// <summary>
-        /// A modifier to the evaluation score when the phrase is spotted in the customer channel.
-        /// </summary>
-        /// <value>A modifier to the evaluation score when the phrase is spotted in the customer channel.</value>
-        [DataMember(Name="customerScoreModifier", EmitDefaultValue=false)]
-        public string CustomerScoreModifier { get; set; }
-        
-        
-        
-        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -402,16 +236,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RecordingDurationMs: ").Append(RecordingDurationMs).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  KeywordName: ").Append(KeywordName).Append("\n");
-            sb.Append("  Confidence: ").Append(Confidence).Append("\n");
-            sb.Append("  KeywordSetId: ").Append(KeywordSetId).Append("\n");
-            sb.Append("  KeywordSetName: ").Append(KeywordSetName).Append("\n");
-            sb.Append("  Utterance: ").Append(Utterance).Append("\n");
-            sb.Append("  TimeBegin: ").Append(TimeBegin).Append("\n");
-            sb.Append("  TimeEnd: ").Append(TimeEnd).Append("\n");
-            sb.Append("  KeywordConfidenceThreshold: ").Append(KeywordConfidenceThreshold).Append("\n");
-            sb.Append("  AgentScoreModifier: ").Append(AgentScoreModifier).Append("\n");
-            sb.Append("  CustomerScoreModifier: ").Append(CustomerScoreModifier).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -505,56 +329,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description.Equals(other.Description)
                 ) &&
                 (
-                    this.KeywordName == other.KeywordName ||
-                    this.KeywordName != null &&
-                    this.KeywordName.Equals(other.KeywordName)
-                ) &&
-                (
-                    this.Confidence == other.Confidence ||
-                    this.Confidence != null &&
-                    this.Confidence.Equals(other.Confidence)
-                ) &&
-                (
-                    this.KeywordSetId == other.KeywordSetId ||
-                    this.KeywordSetId != null &&
-                    this.KeywordSetId.Equals(other.KeywordSetId)
-                ) &&
-                (
-                    this.KeywordSetName == other.KeywordSetName ||
-                    this.KeywordSetName != null &&
-                    this.KeywordSetName.Equals(other.KeywordSetName)
-                ) &&
-                (
-                    this.Utterance == other.Utterance ||
-                    this.Utterance != null &&
-                    this.Utterance.Equals(other.Utterance)
-                ) &&
-                (
-                    this.TimeBegin == other.TimeBegin ||
-                    this.TimeBegin != null &&
-                    this.TimeBegin.Equals(other.TimeBegin)
-                ) &&
-                (
-                    this.TimeEnd == other.TimeEnd ||
-                    this.TimeEnd != null &&
-                    this.TimeEnd.Equals(other.TimeEnd)
-                ) &&
-                (
-                    this.KeywordConfidenceThreshold == other.KeywordConfidenceThreshold ||
-                    this.KeywordConfidenceThreshold != null &&
-                    this.KeywordConfidenceThreshold.Equals(other.KeywordConfidenceThreshold)
-                ) &&
-                (
-                    this.AgentScoreModifier == other.AgentScoreModifier ||
-                    this.AgentScoreModifier != null &&
-                    this.AgentScoreModifier.Equals(other.AgentScoreModifier)
-                ) &&
-                (
-                    this.CustomerScoreModifier == other.CustomerScoreModifier ||
-                    this.CustomerScoreModifier != null &&
-                    this.CustomerScoreModifier.Equals(other.CustomerScoreModifier)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -605,36 +379,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
-                if (this.KeywordName != null)
-                    hash = hash * 59 + this.KeywordName.GetHashCode();
-                
-                if (this.Confidence != null)
-                    hash = hash * 59 + this.Confidence.GetHashCode();
-                
-                if (this.KeywordSetId != null)
-                    hash = hash * 59 + this.KeywordSetId.GetHashCode();
-                
-                if (this.KeywordSetName != null)
-                    hash = hash * 59 + this.KeywordSetName.GetHashCode();
-                
-                if (this.Utterance != null)
-                    hash = hash * 59 + this.Utterance.GetHashCode();
-                
-                if (this.TimeBegin != null)
-                    hash = hash * 59 + this.TimeBegin.GetHashCode();
-                
-                if (this.TimeEnd != null)
-                    hash = hash * 59 + this.TimeEnd.GetHashCode();
-                
-                if (this.KeywordConfidenceThreshold != null)
-                    hash = hash * 59 + this.KeywordConfidenceThreshold.GetHashCode();
-                
-                if (this.AgentScoreModifier != null)
-                    hash = hash * 59 + this.AgentScoreModifier.GetHashCode();
-                
-                if (this.CustomerScoreModifier != null)
-                    hash = hash * 59 + this.CustomerScoreModifier.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

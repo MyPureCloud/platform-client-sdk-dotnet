@@ -7,7 +7,11 @@ title: EntityListing
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | **List&lt;Object&gt;** |  | [optional] |
+| **Entities** | [**List&lt;DataTableImportJob&gt;**](DataTableImportJob.html) |  | [optional] |
+| **PageSize** | **int?** |  | [optional] |
+| **PageNumber** | **int?** |  | [optional] |
+| **Total** | **long?** |  | [optional] |
+| **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 
 

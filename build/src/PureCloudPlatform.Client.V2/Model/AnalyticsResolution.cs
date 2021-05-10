@@ -47,13 +47,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EventTime">Specifies when an event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="QueueId">The ID of the last queue on which the conversation was handled..</param>
         /// <param name="UserId">The ID of the last user who handled the conversation..</param>
-        /// <param name="NNextContactAvoided">NNextContactAvoided.</param>
-        public AnalyticsResolution(DateTime? EventTime = null, string QueueId = null, string UserId = null, long? NNextContactAvoided = null)
+        /// <param name="GetnNextContactAvoided">The number of interactions for which next contact was avoided..</param>
+        public AnalyticsResolution(DateTime? EventTime = null, string QueueId = null, string UserId = null, long? GetnNextContactAvoided = null)
         {
             this.EventTime = EventTime;
             this.QueueId = QueueId;
             this.UserId = UserId;
-            this.NNextContactAvoided = NNextContactAvoided;
+            this.GetnNextContactAvoided = GetnNextContactAvoided;
             
         }
         
@@ -87,10 +87,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets NNextContactAvoided
+        /// The number of interactions for which next contact was avoided.
         /// </summary>
-        [DataMember(Name="nNextContactAvoided", EmitDefaultValue=false)]
-        public long? NNextContactAvoided { get; set; }
+        /// <value>The number of interactions for which next contact was avoided.</value>
+        [DataMember(Name="getnNextContactAvoided", EmitDefaultValue=false)]
+        public long? GetnNextContactAvoided { get; set; }
         
         
         /// <summary>
@@ -105,7 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EventTime: ").Append(EventTime).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
-            sb.Append("  NNextContactAvoided: ").Append(NNextContactAvoided).Append("\n");
+            sb.Append("  GetnNextContactAvoided: ").Append(GetnNextContactAvoided).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -158,9 +159,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UserId.Equals(other.UserId)
                 ) &&
                 (
-                    this.NNextContactAvoided == other.NNextContactAvoided ||
-                    this.NNextContactAvoided != null &&
-                    this.NNextContactAvoided.Equals(other.NNextContactAvoided)
+                    this.GetnNextContactAvoided == other.GetnNextContactAvoided ||
+                    this.GetnNextContactAvoided != null &&
+                    this.GetnNextContactAvoided.Equals(other.GetnNextContactAvoided)
                 );
         }
 
@@ -185,8 +186,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
                 
-                if (this.NNextContactAvoided != null)
-                    hash = hash * 59 + this.NNextContactAvoided.GetHashCode();
+                if (this.GetnNextContactAvoided != null)
+                    hash = hash * 59 + this.GetnNextContactAvoided.GetHashCode();
                 
                 return hash;
             }

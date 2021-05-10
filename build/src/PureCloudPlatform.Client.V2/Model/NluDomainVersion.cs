@@ -167,6 +167,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The training status of the NLU domain version.
         /// </summary>
@@ -190,6 +193,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDomainVersion" /> class.
@@ -205,13 +210,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Language">The language that the NLU domain version supports. (required).</param>
         /// <param name="Intents">The intents defined for this NLU domain version..</param>
         /// <param name="EntityTypes">The entity types defined for this NLU domain version..</param>
-        public NluDomainVersion(NluDomain Domain = null, string Description = null, string Language = null, List<IntentDefinition> Intents = null, List<NamedEntityTypeDefinition> EntityTypes = null)
+        /// <param name="Entities">The entities defined for this NLU domain version.This field is mutually exclusive with entityTypeBindings.</param>
+        public NluDomainVersion(NluDomain Domain = null, string Description = null, string Language = null, List<IntentDefinition> Intents = null, List<NamedEntityTypeDefinition> EntityTypes = null, List<NamedEntityDefinition> Entities = null)
         {
             this.Domain = Domain;
             this.Description = Description;
             this.Language = Language;
             this.Intents = Intents;
             this.EntityTypes = EntityTypes;
+            this.Entities = Entities;
             
         }
         
@@ -321,6 +328,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The entities defined for this NLU domain version.This field is mutually exclusive with entityTypeBindings
+        /// </summary>
+        /// <value>The entities defined for this NLU domain version.This field is mutually exclusive with entityTypeBindings</value>
+        [DataMember(Name="entities", EmitDefaultValue=false)]
+        public List<NamedEntityDefinition> Entities { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -350,6 +366,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EvaluationStatus: ").Append(EvaluationStatus).Append("\n");
             sb.Append("  Intents: ").Append(Intents).Append("\n");
             sb.Append("  EntityTypes: ").Append(EntityTypes).Append("\n");
+            sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -453,6 +470,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EntityTypes.SequenceEqual(other.EntityTypes)
                 ) &&
                 (
+                    this.Entities == other.Entities ||
+                    this.Entities != null &&
+                    this.Entities.SequenceEqual(other.Entities)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -509,6 +531,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.EntityTypes != null)
                     hash = hash * 59 + this.EntityTypes.GetHashCode();
+                
+                if (this.Entities != null)
+                    hash = hash * 59 + this.Entities.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

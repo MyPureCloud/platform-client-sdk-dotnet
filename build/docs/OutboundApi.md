@@ -31,6 +31,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundCallanalysisresponseset**](OutboundApi.html#getoutboundcallanalysisresponseset) | **GET** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Get a dialer call analysis response set. |
 | [**GetOutboundCallanalysisresponsesets**](OutboundApi.html#getoutboundcallanalysisresponsesets) | **GET** /api/v2/outbound/callanalysisresponsesets | Query a list of dialer call analysis response sets. |
 | [**GetOutboundCampaign**](OutboundApi.html#getoutboundcampaign) | **GET** /api/v2/outbound/campaigns/{campaignId} | Get dialer campaign. |
+| [**GetOutboundCampaignAgentownedmappingpreviewResults**](OutboundApi.html#getoutboundcampaignagentownedmappingpreviewresults) | **GET** /api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview/results | Get a preview of how agents will be mapped to this campaign&#39;s contact list. |
 | [**GetOutboundCampaignDiagnostics**](OutboundApi.html#getoutboundcampaigndiagnostics) | **GET** /api/v2/outbound/campaigns/{campaignId}/diagnostics | Get campaign diagnostics |
 | [**GetOutboundCampaignInteractions**](OutboundApi.html#getoutboundcampaigninteractions) | **GET** /api/v2/outbound/campaigns/{campaignId}/interactions | Get dialer campaign interactions. |
 | [**GetOutboundCampaignProgress**](OutboundApi.html#getoutboundcampaignprogress) | **GET** /api/v2/outbound/campaigns/{campaignId}/progress | Get campaign progress |
@@ -80,6 +81,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundAudits**](OutboundApi.html#postoutboundaudits) | **POST** /api/v2/outbound/audits | Retrieves audits for dialer. |
 | [**PostOutboundCallabletimesets**](OutboundApi.html#postoutboundcallabletimesets) | **POST** /api/v2/outbound/callabletimesets | Create callable time set |
 | [**PostOutboundCallanalysisresponsesets**](OutboundApi.html#postoutboundcallanalysisresponsesets) | **POST** /api/v2/outbound/callanalysisresponsesets | Create a dialer call analysis response set. |
+| [**PostOutboundCampaignAgentownedmappingpreview**](OutboundApi.html#postoutboundcampaignagentownedmappingpreview) | **POST** /api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview | Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list. |
 | [**PostOutboundCampaignCallbackSchedule**](OutboundApi.html#postoutboundcampaigncallbackschedule) | **POST** /api/v2/outbound/campaigns/{campaignId}/callback/schedule | Schedule a Callback for a Dialer Campaign (Deprecated) |
 | [**PostOutboundCampaignrules**](OutboundApi.html#postoutboundcampaignrules) | **POST** /api/v2/outbound/campaignrules | Create Campaign Rule |
 | [**PostOutboundCampaigns**](OutboundApi.html#postoutboundcampaigns) | **POST** /api/v2/outbound/campaigns | Create a campaign. |
@@ -1701,6 +1703,73 @@ namespace Example
 ### Return type
 
 [**Campaign**](Campaign.html)
+
+<a name="getoutboundcampaignagentownedmappingpreviewresults"></a>
+
+## [**AgentOwnedMappingPreviewListing**](AgentOwnedMappingPreviewListing.html) GetOutboundCampaignAgentownedmappingpreviewResults (string campaignId)
+
+
+
+Get a preview of how agents will be mapped to this campaign's contact list.
+
+
+
+Requires ALL permissions: 
+
+* outbound:campaign:view
+* outbound:contact:view
+* routing:queue:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundCampaignAgentownedmappingpreviewResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var campaignId = campaignId_example;  // string | Campaign ID
+
+            try
+            { 
+                // Get a preview of how agents will be mapped to this campaign's contact list.
+                AgentOwnedMappingPreviewListing result = apiInstance.GetOutboundCampaignAgentownedmappingpreviewResults(campaignId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundCampaignAgentownedmappingpreviewResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignId** | **string**| Campaign ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AgentOwnedMappingPreviewListing**](AgentOwnedMappingPreviewListing.html)
 
 <a name="getoutboundcampaigndiagnostics"></a>
 
@@ -5123,6 +5192,73 @@ namespace Example
 ### Return type
 
 [**ResponseSet**](ResponseSet.html)
+
+<a name="postoutboundcampaignagentownedmappingpreview"></a>
+
+## [**Empty**](Empty.html) PostOutboundCampaignAgentownedmappingpreview (string campaignId)
+
+
+
+Initiate request for a preview of how agents will be mapped to this campaign's contact list.
+
+
+
+Requires ALL permissions: 
+
+* outbound:campaign:view
+* outbound:contact:view
+* directory:user:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundCampaignAgentownedmappingpreviewExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var campaignId = campaignId_example;  // string | Campaign ID
+
+            try
+            { 
+                // Initiate request for a preview of how agents will be mapped to this campaign's contact list.
+                Empty result = apiInstance.PostOutboundCampaignAgentownedmappingpreview(campaignId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundCampaignAgentownedmappingpreview: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignId** | **string**| Campaign ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Empty**](Empty.html)
 
 <a name="postoutboundcampaigncallbackschedule"></a>
 

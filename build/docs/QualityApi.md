@@ -12,8 +12,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteQualityForm**](QualityApi.html#deletequalityform) | **DELETE** /api/v2/quality/forms/{formId} | Delete an evaluation form. |
 | [**DeleteQualityFormsEvaluation**](QualityApi.html#deletequalityformsevaluation) | **DELETE** /api/v2/quality/forms/evaluations/{formId} | Delete an evaluation form. |
 | [**DeleteQualityFormsSurvey**](QualityApi.html#deletequalityformssurvey) | **DELETE** /api/v2/quality/forms/surveys/{formId} | Delete a survey form. |
-| [**DeleteQualityKeywordset**](QualityApi.html#deletequalitykeywordset) | **DELETE** /api/v2/quality/keywordsets/{keywordSetId} | Delete a keywordSet by id. |
-| [**DeleteQualityKeywordsets**](QualityApi.html#deletequalitykeywordsets) | **DELETE** /api/v2/quality/keywordsets | Delete keyword sets |
 | [**GetQualityAgentsActivity**](QualityApi.html#getqualityagentsactivity) | **GET** /api/v2/quality/agents/activity | Gets a list of Agent Activities |
 | [**GetQualityCalibration**](QualityApi.html#getqualitycalibration) | **GET** /api/v2/quality/calibrations/{calibrationId} | Get a calibration by id.  Requires either calibrator id or conversation id |
 | [**GetQualityCalibrations**](QualityApi.html#getqualitycalibrations) | **GET** /api/v2/quality/calibrations | Get the list of calibrations |
@@ -33,8 +31,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetQualityFormsSurveys**](QualityApi.html#getqualityformssurveys) | **GET** /api/v2/quality/forms/surveys | Get the list of survey forms |
 | [**GetQualityFormsSurveysBulk**](QualityApi.html#getqualityformssurveysbulk) | **GET** /api/v2/quality/forms/surveys/bulk | Retrieve a list of survey forms by their ids |
 | [**GetQualityFormsSurveysBulkContexts**](QualityApi.html#getqualityformssurveysbulkcontexts) | **GET** /api/v2/quality/forms/surveys/bulk/contexts | Retrieve a list of the latest form versions by context ids |
-| [**GetQualityKeywordset**](QualityApi.html#getqualitykeywordset) | **GET** /api/v2/quality/keywordsets/{keywordSetId} | Get a keywordSet by id. |
-| [**GetQualityKeywordsets**](QualityApi.html#getqualitykeywordsets) | **GET** /api/v2/quality/keywordsets | Get the list of keyword sets |
 | [**GetQualityPublishedform**](QualityApi.html#getqualitypublishedform) | **GET** /api/v2/quality/publishedforms/{formId} | Get the published evaluation forms. |
 | [**GetQualityPublishedforms**](QualityApi.html#getqualitypublishedforms) | **GET** /api/v2/quality/publishedforms | Get the published evaluation forms. |
 | [**GetQualityPublishedformsEvaluation**](QualityApi.html#getqualitypublishedformsevaluation) | **GET** /api/v2/quality/publishedforms/evaluations/{formId} | Get the most recent published version of an evaluation form. |
@@ -52,18 +48,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostQualityForms**](QualityApi.html#postqualityforms) | **POST** /api/v2/quality/forms | Create an evaluation form. |
 | [**PostQualityFormsEvaluations**](QualityApi.html#postqualityformsevaluations) | **POST** /api/v2/quality/forms/evaluations | Create an evaluation form. |
 | [**PostQualityFormsSurveys**](QualityApi.html#postqualityformssurveys) | **POST** /api/v2/quality/forms/surveys | Create a survey form. |
-| [**PostQualityKeywordsets**](QualityApi.html#postqualitykeywordsets) | **POST** /api/v2/quality/keywordsets | Create a Keyword Set |
 | [**PostQualityPublishedforms**](QualityApi.html#postqualitypublishedforms) | **POST** /api/v2/quality/publishedforms | Publish an evaluation form. |
 | [**PostQualityPublishedformsEvaluations**](QualityApi.html#postqualitypublishedformsevaluations) | **POST** /api/v2/quality/publishedforms/evaluations | Publish an evaluation form. |
 | [**PostQualityPublishedformsSurveys**](QualityApi.html#postqualitypublishedformssurveys) | **POST** /api/v2/quality/publishedforms/surveys | Publish a survey form. |
-| [**PostQualitySpotability**](QualityApi.html#postqualityspotability) | **POST** /api/v2/quality/spotability | Retrieve the spotability statistic |
 | [**PostQualitySurveysScoring**](QualityApi.html#postqualitysurveysscoring) | **POST** /api/v2/quality/surveys/scoring | Score survey |
 | [**PutQualityCalibration**](QualityApi.html#putqualitycalibration) | **PUT** /api/v2/quality/calibrations/{calibrationId} | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
 | [**PutQualityConversationEvaluation**](QualityApi.html#putqualityconversationevaluation) | **PUT** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Update an evaluation |
 | [**PutQualityForm**](QualityApi.html#putqualityform) | **PUT** /api/v2/quality/forms/{formId} | Update an evaluation form. |
 | [**PutQualityFormsEvaluation**](QualityApi.html#putqualityformsevaluation) | **PUT** /api/v2/quality/forms/evaluations/{formId} | Update an evaluation form. |
 | [**PutQualityFormsSurvey**](QualityApi.html#putqualityformssurvey) | **PUT** /api/v2/quality/forms/surveys/{formId} | Update a survey form. |
-| [**PutQualityKeywordset**](QualityApi.html#putqualitykeywordset) | **PUT** /api/v2/quality/keywordsets/{keywordSetId} | Update a keywordSet to the specified keywordSet via PUT. |
 | [**PutQualitySurveysScorable**](QualityApi.html#putqualitysurveysscorable) | **PUT** /api/v2/quality/surveys/scorable | Update a survey as an end-customer, for the purposes of scoring it. |
 {: class="table table-striped"}
 
@@ -389,134 +382,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="deletequalitykeywordset"></a>
-
-## void DeleteQualityKeywordset (string keywordSetId)
-
-
-
-Delete a keywordSet by id.
-
-
-
-Requires ANY permissions: 
-
-* quality:keywordset:delete
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class DeleteQualityKeywordsetExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new QualityApi();
-            var keywordSetId = keywordSetId_example;  // string | KeywordSet ID
-
-            try
-            { 
-                // Delete a keywordSet by id.
-                apiInstance.DeleteQualityKeywordset(keywordSetId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling QualityApi.DeleteQualityKeywordset: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **keywordSetId** | **string**| KeywordSet ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="deletequalitykeywordsets"></a>
-
-## void DeleteQualityKeywordsets (string ids)
-
-
-
-Delete keyword sets
-
-Bulk delete of keyword sets; this will only delete the keyword sets that match the ids specified in the query param.
-
-Requires ANY permissions: 
-
-* quality:keywordset:delete
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class DeleteQualityKeywordsetsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new QualityApi();
-            var ids = ids_example;  // string | A comma-delimited list of valid KeywordSet ids
-
-            try
-            { 
-                // Delete keyword sets
-                apiInstance.DeleteQualityKeywordsets(ids);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling QualityApi.DeleteQualityKeywordsets: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **ids** | **string**| A comma-delimited list of valid KeywordSet ids |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1939,154 +1804,6 @@ namespace Example
 
 [**SurveyFormEntityListing**](SurveyFormEntityListing.html)
 
-<a name="getqualitykeywordset"></a>
-
-## [**KeywordSet**](KeywordSet.html) GetQualityKeywordset (string keywordSetId)
-
-
-
-Get a keywordSet by id.
-
-
-
-Requires ANY permissions: 
-
-* quality:keywordset:view
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetQualityKeywordsetExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new QualityApi();
-            var keywordSetId = keywordSetId_example;  // string | KeywordSet ID
-
-            try
-            { 
-                // Get a keywordSet by id.
-                KeywordSet result = apiInstance.GetQualityKeywordset(keywordSetId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling QualityApi.GetQualityKeywordset: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **keywordSetId** | **string**| KeywordSet ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**KeywordSet**](KeywordSet.html)
-
-<a name="getqualitykeywordsets"></a>
-
-## [**KeywordSetEntityListing**](KeywordSetEntityListing.html) GetQualityKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null)
-
-
-
-Get the list of keyword sets
-
-
-
-Requires ANY permissions: 
-
-* quality:keywordset:view
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetQualityKeywordsetsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new QualityApi();
-            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            var nextPage = nextPage_example;  // string | next page token (optional) 
-            var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            var name = name_example;  // string | the keyword set name - used for filtering results in searches. (optional) 
-            var queueId = queueId_example;  // string | the queue id - used for filtering results in searches. (optional) 
-            var agentId = agentId_example;  // string | the agent id - used for filtering results in searches. (optional) 
-            var _operator = _operator_example;  // string | If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional) 
-
-            try
-            { 
-                // Get the list of keyword sets
-                KeywordSetEntityListing result = apiInstance.GetQualityKeywordsets(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, queueId, agentId, _operator);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling QualityApi.GetQualityKeywordsets: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
-| **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
-| **nextPage** | **string**| next page token | [optional]  |
-| **previousPage** | **string**| Previous page token | [optional]  |
-| **name** | **string**| the keyword set name - used for filtering results in searches. | [optional]  |
-| **queueId** | **string**| the queue id - used for filtering results in searches. | [optional]  |
-| **agentId** | **string**| the agent id - used for filtering results in searches. | [optional]  |
-| **_operator** | **string**| If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. | [optional] <br />**Values**: AND, OR |
-{: class="table table-striped"}
-
-### Return type
-
-[**KeywordSetEntityListing**](KeywordSetEntityListing.html)
-
 <a name="getqualitypublishedform"></a>
 
 ## [**EvaluationForm**](EvaluationForm.html) GetQualityPublishedform (string formId)
@@ -3210,73 +2927,6 @@ namespace Example
 
 [**SurveyForm**](SurveyForm.html)
 
-<a name="postqualitykeywordsets"></a>
-
-## [**KeywordSet**](KeywordSet.html) PostQualityKeywordsets (KeywordSet body, string expand = null)
-
-
-
-Create a Keyword Set
-
-
-
-Requires ANY permissions: 
-
-* quality:keywordset:add
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostQualityKeywordsetsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new QualityApi();
-            var body = new KeywordSet(); // KeywordSet | keywordSet
-            var expand = expand_example;  // string | queueId (optional) 
-
-            try
-            { 
-                // Create a Keyword Set
-                KeywordSet result = apiInstance.PostQualityKeywordsets(body, expand);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling QualityApi.PostQualityKeywordsets: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**KeywordSet**](KeywordSet.html)| keywordSet |  |
-| **expand** | **string**| queueId | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**KeywordSet**](KeywordSet.html)
-
 <a name="postqualitypublishedforms"></a>
 
 ## [**EvaluationForm**](EvaluationForm.html) PostQualityPublishedforms (PublishForm body)
@@ -3471,70 +3121,6 @@ namespace Example
 ### Return type
 
 [**SurveyForm**](SurveyForm.html)
-
-<a name="postqualityspotability"></a>
-
-## [**KeywordSet**](KeywordSet.html) PostQualitySpotability (KeywordSet body = null)
-
-
-
-Retrieve the spotability statistic
-
-
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostQualitySpotabilityExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new QualityApi();
-            var body = new KeywordSet(); // KeywordSet | Keyword Set (optional) 
-
-            try
-            { 
-                // Retrieve the spotability statistic
-                KeywordSet result = apiInstance.PostQualitySpotability(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling QualityApi.PostQualitySpotability: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**KeywordSet**](KeywordSet.html)| Keyword Set | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**KeywordSet**](KeywordSet.html)
 
 <a name="postqualitysurveysscoring"></a>
 
@@ -3940,73 +3526,6 @@ namespace Example
 ### Return type
 
 [**SurveyForm**](SurveyForm.html)
-
-<a name="putqualitykeywordset"></a>
-
-## [**KeywordSet**](KeywordSet.html) PutQualityKeywordset (string keywordSetId, KeywordSet body)
-
-
-
-Update a keywordSet to the specified keywordSet via PUT.
-
-
-
-Requires ANY permissions: 
-
-* quality:keywordset:edit
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PutQualityKeywordsetExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new QualityApi();
-            var keywordSetId = keywordSetId_example;  // string | KeywordSet ID
-            var body = new KeywordSet(); // KeywordSet | keywordSet
-
-            try
-            { 
-                // Update a keywordSet to the specified keywordSet via PUT.
-                KeywordSet result = apiInstance.PutQualityKeywordset(keywordSetId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling QualityApi.PutQualityKeywordset: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **keywordSetId** | **string**| KeywordSet ID |  |
-| **body** | [**KeywordSet**](KeywordSet.html)| keywordSet |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**KeywordSet**](KeywordSet.html)
 
 <a name="putqualitysurveysscorable"></a>
 

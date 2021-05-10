@@ -89,8 +89,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SurveyPromoterScore">Score of the survey used with NPS.</param>
         /// <param name="SurveyStatus">The status of the survey.</param>
         /// <param name="UserId">ID of the agent the survey was performed against.</param>
-        /// <param name="OSurveyTotalScore">OSurveyTotalScore.</param>
-        public AnalyticsSurvey(DateTime? EventTime = null, string QueueId = null, DateTime? SurveyCompletedDate = null, string SurveyFormContextId = null, string SurveyFormId = null, string SurveyFormName = null, string SurveyId = null, int? SurveyPromoterScore = null, string SurveyStatus = null, string UserId = null, long? OSurveyTotalScore = null)
+        /// <param name="GetoSurveyTotalScore">Total score of the survey.</param>
+        public AnalyticsSurvey(DateTime? EventTime = null, string QueueId = null, DateTime? SurveyCompletedDate = null, string SurveyFormContextId = null, string SurveyFormId = null, string SurveyFormName = null, string SurveyId = null, int? SurveyPromoterScore = null, string SurveyStatus = null, string UserId = null, long? GetoSurveyTotalScore = null)
         {
             this.EventTime = EventTime;
             this.QueueId = QueueId;
@@ -102,7 +102,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SurveyPromoterScore = SurveyPromoterScore;
             this.SurveyStatus = SurveyStatus;
             this.UserId = UserId;
-            this.OSurveyTotalScore = OSurveyTotalScore;
+            this.GetoSurveyTotalScore = GetoSurveyTotalScore;
             
         }
         
@@ -199,10 +199,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets OSurveyTotalScore
+        /// Total score of the survey
         /// </summary>
-        [DataMember(Name="oSurveyTotalScore", EmitDefaultValue=false)]
-        public long? OSurveyTotalScore { get; set; }
+        /// <value>Total score of the survey</value>
+        [DataMember(Name="getoSurveyTotalScore", EmitDefaultValue=false)]
+        public long? GetoSurveyTotalScore { get; set; }
         
         
         /// <summary>
@@ -224,7 +225,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SurveyPromoterScore: ").Append(SurveyPromoterScore).Append("\n");
             sb.Append("  SurveyStatus: ").Append(SurveyStatus).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
-            sb.Append("  OSurveyTotalScore: ").Append(OSurveyTotalScore).Append("\n");
+            sb.Append("  GetoSurveyTotalScore: ").Append(GetoSurveyTotalScore).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -312,9 +313,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UserId.Equals(other.UserId)
                 ) &&
                 (
-                    this.OSurveyTotalScore == other.OSurveyTotalScore ||
-                    this.OSurveyTotalScore != null &&
-                    this.OSurveyTotalScore.Equals(other.OSurveyTotalScore)
+                    this.GetoSurveyTotalScore == other.GetoSurveyTotalScore ||
+                    this.GetoSurveyTotalScore != null &&
+                    this.GetoSurveyTotalScore.Equals(other.GetoSurveyTotalScore)
                 );
         }
 
@@ -360,8 +361,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
                 
-                if (this.OSurveyTotalScore != null)
-                    hash = hash * 59 + this.OSurveyTotalScore.GetHashCode();
+                if (this.GetoSurveyTotalScore != null)
+                    hash = hash * 59 + this.GetoSurveyTotalScore.GetHashCode();
                 
                 return hash;
             }

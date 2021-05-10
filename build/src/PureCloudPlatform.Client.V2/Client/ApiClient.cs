@@ -220,16 +220,20 @@ namespace PureCloudPlatform.Client.V2.Client
             RestClient.UserAgent = Configuration.UserAgent;
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "120.0.0");
+            request.AddHeader("purecloud-sdk", "121.0.0");
 
             Retry retry = new Retry(this.RetryConfig);
             IRestResponse response;
+            var fullUrl = RestClient.BuildUri(request);
+            string url = fullUrl == null ? path : fullUrl.ToString();
             do
             {
             
                 response = RestClient.Execute(request);
             
             
+                Configuration.Logger.Debug(method.ToString(), url, postBody, (int)response.StatusCode, headerParams);
+                Configuration.Logger.Trace(method.ToString(), url, postBody, (int)response.StatusCode, headerParams, response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()));
             }while(retry.ShouldRetry(response));
 
             if (UsingCodeAuth && Configuration.ShouldRefreshAccessToken)
@@ -242,6 +246,9 @@ namespace PureCloudPlatform.Client.V2.Client
                     return CallApi(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams, contentType);
                 }
             }
+
+            if ((int)response.StatusCode < 200 || (int)response.StatusCode >= 300)
+                Configuration.Logger.Error(method.ToString(), url, postBody, response.Content, (int)response.StatusCode, headerParams, response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()));
 
             return (Object) response;
         }
@@ -576,133 +583,153 @@ namespace PureCloudPlatform.Client.V2.Client
         }
         
 
-    public class RetryConfiguration
-    {
-        private long backoffIntervalMs = 300000L;
-        private long retryAfterDefaultMs = 3000L;
-        private int maxRetryTimeSec = 0;
-
-        public long BackOffIntervalMs
+        public class RetryConfiguration
         {
-            get
-            {
-                return backoffIntervalMs;
-            }
+            private long backoffIntervalMs = 300000L;
+            private long retryAfterDefaultMs = 3000L;
+            private int maxRetryTimeSec = 0;
+            private int retryMax = 5;
 
-            set
+            public long BackOffIntervalMs
             {
-                if (value < 0)
+                get
                 {
-                    throw new ArgumentException("BackOffIntervalMs should be a positive integer");
-                }
-                this.backoffIntervalMs = value;
-            }
-        }
-
-        public long RetryAfterDefaultMs
-        {
-            get
-            {
-                return retryAfterDefaultMs;
-            }
-            set
-            {
-                if (value < 0)
-                {
-                    throw new ArgumentException("RetryAfterDefaultMs should be a positive integer");
-                }
-                this.retryAfterDefaultMs = value;
-            }
-        }
-
-        public int MaxRetryTimeSec
-        {
-            get
-            {
-                return maxRetryTimeSec;
-            }
-            set
-            {
-                if (value < 0)
-                {
-                    throw new ArgumentException("MaxRetryTimeSec should be a positive integer");
-                }
-                this.maxRetryTimeSec = value;
-            }
-        }
-    }
-
-    private class Retry
-    {
-        private long backoffIntervalMs;
-        private long retryAfterDefaultMs;
-        private int maxRetryTimeSec;
-        private int maxRetriesBeforeBackoff = 5;
-        private int retryCountBeforeBackOff = 0;
-        private long retryAfterMs;
-        private Stopwatch stopwatch;
-
-        private readonly List<int> statusCodes = new List<int>() { 429, 502, 503, 504 };
-
-        public Retry(RetryConfiguration retryConfiguration)
-        {
-            this.backoffIntervalMs = retryConfiguration.BackOffIntervalMs;
-            this.retryAfterDefaultMs = retryConfiguration.RetryAfterDefaultMs;
-            this.maxRetryTimeSec = retryConfiguration.MaxRetryTimeSec;
-            stopwatch = Stopwatch.StartNew();
-        }
-
-        /// <summary>
-        /// Check if retryable
-        /// </summary>
-        /// <param name="response">IRestResponse</param>
-        /// <returns>bool</returns>
-        public bool ShouldRetry(IRestResponse response)
-        {
-            if (stopwatch.ElapsedMilliseconds < maxRetryTimeSec * 1000L && statusCodes.Contains((int)response.StatusCode))
-            {
-                var retryAfterHeader = response.Headers.FirstOrDefault(y => y.Name.Equals("Retry-After"));
-
-                if (retryAfterHeader != null && Int32.TryParse(retryAfterHeader.Value.ToString(), out int retryAfterSec))
-                {
-                    retryAfterMs =  retryAfterSec * 1000;
-                }
-                else
-                {
-                    retryAfterMs = retryAfterDefaultMs;
-                }
-                //If status code is 429 then wait until retry-after time and retry. OR If status code is retryable then for the first 5 times: wait until retry-after time and retry.
-                if ((int)response.StatusCode == 429 || retryCountBeforeBackOff++ < maxRetriesBeforeBackoff)
-                {
-                    return waitBeforeRetry(retryAfterMs);
+                    return backoffIntervalMs;
                 }
 
-                //If status code is 50x then wait for every 3 Sec and retry until 5 minutes then after wait for every 9 Sec and retry until next 5 minutes afterwards wait for every 27 Sec and retry.
-                return waitBeforeRetry(getWaitTimeExp(Math.Min(3, Math.Floor(stopwatch.ElapsedMilliseconds / backoffIntervalMs * 1.0) + 1)));
-
+                set
+                {
+                    if (value < 0)
+                    {
+                        throw new ArgumentException("BackOffIntervalMs should be a positive integer");
+                    }
+                    this.backoffIntervalMs = value;
+                }
             }
-            stopwatch.Stop();
-            return false;
-        }
 
-        private bool waitBeforeRetry(long retryAfterMs)
-        {
-            try
+            public long RetryAfterDefaultMs
             {
-                Thread.Sleep((int) retryAfterMs);
+                get
+                {
+                    return retryAfterDefaultMs;
+                }
+                set
+                {
+                    if (value < 0)
+                    {
+                        throw new ArgumentException("RetryAfterDefaultMs should be a positive integer");
+                    }
+                    this.retryAfterDefaultMs = value;
+                }
             }
-            catch (ThreadInterruptedException)
+
+            public int MaxRetryTimeSec
             {
-                Thread.CurrentThread.Interrupt();
+                get
+                {
+                    return maxRetryTimeSec;
+                }
+                set
+                {
+                    if (value < 0)
+                    {
+                        throw new ArgumentException("MaxRetryTimeSec should be a positive integer");
+                    }
+                    this.maxRetryTimeSec = value;
+                }
             }
-            return true;
+
+            public int RetryMax
+            {
+                get
+                {
+                    return retryMax;
+                }
+                set
+                {
+                    if (value < 0)
+                    {
+                        throw new ArgumentException("RetryMax should be a positive integer");
+                    }
+                    this.retryMax = value;
+                }
+            }
         }
 
-        private long getWaitTimeExp(double bucketCount)
+        private class Retry
         {
-            return (long)Math.Pow(3, bucketCount) * 1000L;
-        }
-    }
+            private long backoffIntervalMs;
+            private long retryAfterDefaultMs;
+            private int maxRetryTimeSec;
+            private int maxRetriesBeforeBackoff = 5;
+            private int retryCountBeforeBackOff = 0;
+            private int retryMax = 5;
+            private int retryCount;
+            private long retryAfterMs;
+            private Stopwatch stopwatch;
 
+            private readonly List<int> statusCodes = new List<int>() { 429, 502, 503, 504 };
+
+            public Retry(RetryConfiguration retryConfiguration)
+            {
+                this.backoffIntervalMs = retryConfiguration.BackOffIntervalMs;
+                this.retryAfterDefaultMs = retryConfiguration.RetryAfterDefaultMs;
+                this.maxRetryTimeSec = retryConfiguration.MaxRetryTimeSec;
+                this.retryMax = retryConfiguration.RetryMax;
+                stopwatch = Stopwatch.StartNew();
+            }
+
+            /// <summary>
+            /// Check if retryable
+            /// </summary>
+            /// <param name="response">IRestResponse</param>
+            /// <returns>bool</returns>
+            public bool ShouldRetry(IRestResponse response)
+            {
+                if (stopwatch.ElapsedMilliseconds < maxRetryTimeSec * 1000L && statusCodes.Contains((int)response.StatusCode) && retryCount <= retryMax)
+                {
+                    var retryAfterHeader = response.Headers.FirstOrDefault(y => y.Name.Equals("Retry-After"));
+
+                    if (retryAfterHeader != null && Int32.TryParse(retryAfterHeader.Value.ToString(), out int retryAfterSec))
+                    {
+                        retryAfterMs =  retryAfterSec * 1000;
+                    }
+                    else
+                    {
+                        retryAfterMs = retryAfterDefaultMs;
+                    }
+                    //If status code is 429 then wait until retry-after time and retry. OR If status code is retryable then for the first 5 times: wait until retry-after time and retry.
+                    if ((int)response.StatusCode == 429 || retryCountBeforeBackOff++ < maxRetriesBeforeBackoff)
+                    {
+                        retryCount++;
+                        return waitBeforeRetry(retryAfterMs);
+                    }
+
+                    //If status code is 50x then wait for every 3 Sec and retry until 5 minutes then after wait for every 9 Sec and retry until next 5 minutes afterwards wait for every 27 Sec and retry.
+                    retryCount++;
+                    return waitBeforeRetry(getWaitTimeExp(Math.Min(3, Math.Floor(stopwatch.ElapsedMilliseconds / backoffIntervalMs * 1.0) + 1)));
+                }
+                stopwatch.Stop();
+                return false;
+            }
+
+            private bool waitBeforeRetry(long retryAfterMs)
+            {
+                try
+                {
+                    Thread.Sleep((int) retryAfterMs);
+                }
+                catch (ThreadInterruptedException)
+                {
+                    Thread.CurrentThread.Interrupt();
+                }
+                return true;
+            }
+
+            private long getWaitTimeExp(double bucketCount)
+            {
+                return (long)Math.Pow(3, bucketCount) * 1000L;
+            }
+        }
     }
 }
