@@ -40,6 +40,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustCreate" /> class.
@@ -54,12 +59,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Enabled">If disabled no trustee user will have access, even if they were previously added. (required).</param>
         /// <param name="Users">The list of users and their roles to which access will be granted. The users are from the trustee and the roles are from the trustor. If no users are specified, at least one group is required..</param>
         /// <param name="Groups">The list of groups and their roles to which access will be granted. The groups are from the trustee and the roles are from the trustor. If no groups are specified, at least one user is required..</param>
-        public TrustCreate(string PairingId = null, bool? Enabled = null, List<TrustMemberCreate> Users = null, List<TrustMemberCreate> Groups = null)
+        /// <param name="DateExpired">The expiration date of the trust. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        public TrustCreate(string PairingId = null, bool? Enabled = null, List<TrustMemberCreate> Users = null, List<TrustMemberCreate> Groups = null, DateTime? DateExpired = null)
         {
             this.PairingId = PairingId;
             this.Enabled = Enabled;
             this.Users = Users;
             this.Groups = Groups;
+            this.DateExpired = DateExpired;
             
         }
         
@@ -100,6 +107,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<TrustMemberCreate> Groups { get; set; }
         
         
+        
+        /// <summary>
+        /// The expiration date of the trust. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The expiration date of the trust. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateExpired", EmitDefaultValue=false)]
+        public DateTime? DateExpired { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,6 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  Users: ").Append(Users).Append("\n");
             sb.Append("  Groups: ").Append(Groups).Append("\n");
+            sb.Append("  DateExpired: ").Append(DateExpired).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -168,6 +185,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Groups == other.Groups ||
                     this.Groups != null &&
                     this.Groups.SequenceEqual(other.Groups)
+                ) &&
+                (
+                    this.DateExpired == other.DateExpired ||
+                    this.DateExpired != null &&
+                    this.DateExpired.Equals(other.DateExpired)
                 );
         }
 
@@ -194,6 +216,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Groups != null)
                     hash = hash * 59 + this.Groups.GetHashCode();
+                
+                if (this.DateExpired != null)
+                    hash = hash * 59 + this.DateExpired.GetHashCode();
                 
                 return hash;
             }

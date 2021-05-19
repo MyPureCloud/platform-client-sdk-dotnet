@@ -48,7 +48,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Faq for "Faq"
             /// </summary>
             [EnumMember(Value = "Faq")]
-            Faq
+            Faq,
+            
+            /// <summary>
+            /// Enum Article for "Article"
+            /// </summary>
+            [EnumMember(Value = "Article")]
+            Article
         }
         
         

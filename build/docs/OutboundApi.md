@@ -3631,7 +3631,7 @@ namespace Example
 
 <a name="getoutbounddnclistsdivisionviews"></a>
 
-## [**DncListDivisionViewListing**](DncListDivisionViewListing.html) GetOutboundDnclistsDivisionviews (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
+## [**DncListDivisionViewListing**](DncListDivisionViewListing.html) GetOutboundDnclistsDivisionviews (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string dncSourceType = null, List<string> id = null, string sortBy = null, string sortOrder = null)
 
 
 
@@ -3671,6 +3671,7 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
+            var dncSourceType = dncSourceType_example;  // string | DncSourceType (optional) 
             var id = new List<string>(); // List<string> | id (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional) 
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
@@ -3678,7 +3679,7 @@ namespace Example
             try
             { 
                 // Query a list of simplified dnc list objects.
-                DncListDivisionViewListing result = apiInstance.GetOutboundDnclistsDivisionviews(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, id, sortBy, sortOrder);
+                DncListDivisionViewListing result = apiInstance.GetOutboundDnclistsDivisionviews(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, dncSourceType, id, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3701,6 +3702,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
+| **dncSourceType** | **string**| DncSourceType | [optional] <br />**Values**: rds, dnc.com, gryphon |
 | **id** | [**List<string>**](string.html)| id | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
@@ -4056,7 +4058,7 @@ namespace Example
 | **name** | **string**| Name | [optional]  |
 | **contactListId** | **string**| Contact List ID | [optional]  |
 | **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
-| **type** | **string**| Campaign Type | [optional] <br />**Values**: SMS |
+| **type** | **string**| Campaign Type | [optional] <br />**Values**: EMAIL, SMS |
 | **senderSmsPhoneNumber** | **string**| Sender SMS Phone Number | [optional]  |
 | **id** | [**List<string>**](string.html)| A list of messaging campaign ids to bulk fetch | [optional]  |
 {: class="table table-striped"}

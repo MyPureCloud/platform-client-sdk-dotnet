@@ -55,6 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Trustee" /> class.
@@ -67,12 +72,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Enabled">If disabled no trustee user will have access, even if they were previously added. (required).</param>
         /// <param name="UsesDefaultRole">Denotes if trustee uses admin role by default..</param>
+        /// <param name="DateExpired">The expiration date of the trust. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreatedBy">User that created trust..</param>
         /// <param name="Organization">Organization associated with this trust..</param>
-        public Trustee(bool? Enabled = null, bool? UsesDefaultRole = null, OrgUser CreatedBy = null, Organization Organization = null)
+        public Trustee(bool? Enabled = null, bool? UsesDefaultRole = null, DateTime? DateExpired = null, OrgUser CreatedBy = null, Organization Organization = null)
         {
             this.Enabled = Enabled;
             this.UsesDefaultRole = UsesDefaultRole;
+            this.DateExpired = DateExpired;
             this.CreatedBy = CreatedBy;
             this.Organization = Organization;
             
@@ -117,6 +124,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The expiration date of the trust. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The expiration date of the trust. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateExpired", EmitDefaultValue=false)]
+        public DateTime? DateExpired { get; set; }
+        
+        
+        
+        /// <summary>
         /// User that created trust.
         /// </summary>
         /// <value>User that created trust.</value>
@@ -155,6 +171,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  UsesDefaultRole: ").Append(UsesDefaultRole).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  DateExpired: ").Append(DateExpired).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  Organization: ").Append(Organization).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -215,6 +232,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
+                    this.DateExpired == other.DateExpired ||
+                    this.DateExpired != null &&
+                    this.DateExpired.Equals(other.DateExpired)
+                ) &&
+                (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
@@ -254,6 +276,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
+                if (this.DateExpired != null)
+                    hash = hash * 59 + this.DateExpired.GetHashCode();
                 
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();

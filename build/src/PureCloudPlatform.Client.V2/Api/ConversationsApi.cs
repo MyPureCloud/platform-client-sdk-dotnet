@@ -1535,6 +1535,26 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<MessagingStickerEntityListing> GetConversationsMessagingStickerWithHttpInfo (string messengerType, int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
+        /// Get conversation threading window timeline for each messaging type
+        /// </summary>
+        /// <remarks>
+        /// Conversation messaging threading timeline is a setting defined for each messenger type in your organization. This setting will dictate whether a new message is added to the most recent existing conversation, or creates a new Conversation. If the existing Conversation is still in a connected state the threading timeline setting will never play a role. After the conversation is disconnected, if an inbound message is received or an outbound message is sent after the setting for threading timeline expires, a new conversation is created.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ConversationThreadingWindow</returns>
+        ConversationThreadingWindow GetConversationsMessagingThreadingtimeline ();
+
+        /// <summary>
+        /// Get conversation threading window timeline for each messaging type
+        /// </summary>
+        /// <remarks>
+        /// Conversation messaging threading timeline is a setting defined for each messenger type in your organization. This setting will dictate whether a new message is added to the most recent existing conversation, or creates a new Conversation. If the existing Conversation is still in a connected state the threading timeline setting will never play a role. After the conversation is disconnected, if an inbound message is received or an outbound message is sent after the setting for threading timeline expires, a new conversation is created.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ConversationThreadingWindow</returns>
+        ApiResponse<ConversationThreadingWindow> GetConversationsMessagingThreadingtimelineWithHttpInfo ();
+        
+        /// <summary>
         /// Update a participant.
         /// </summary>
         /// <remarks>
@@ -3364,6 +3384,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of LineIntegration</returns>
         ApiResponse<LineIntegration> PutConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo (string integrationId, LineIntegrationRequest body);
         
+        /// <summary>
+        /// Update conversation threading window timeline for each messaging type
+        /// </summary>
+        /// <remarks>
+        /// PUT Conversation messaging threading timeline is intended to set the conversation threading settings for ALL messengerTypes. If you omit a messengerType in the request body then the setting for that messengerType will use the platform default value. The PUT replaces the existing setting(s) that were previously set for each messengerType.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ConversationThreadingWindowRequest</param>
+        /// <returns>ConversationThreadingWindow</returns>
+        ConversationThreadingWindow PutConversationsMessagingThreadingtimeline (ConversationThreadingWindow body);
+
+        /// <summary>
+        /// Update conversation threading window timeline for each messaging type
+        /// </summary>
+        /// <remarks>
+        /// PUT Conversation messaging threading timeline is intended to set the conversation threading settings for ALL messengerTypes. If you omit a messengerType in the request body then the setting for that messengerType will use the platform default value. The PUT replaces the existing setting(s) that were previously set for each messengerType.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ConversationThreadingWindowRequest</param>
+        /// <returns>ApiResponse of ConversationThreadingWindow</returns>
+        ApiResponse<ConversationThreadingWindow> PutConversationsMessagingThreadingtimelineWithHttpInfo (ConversationThreadingWindow body);
+        
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
@@ -4885,6 +4927,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (MessagingStickerEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<MessagingStickerEntityListing>> GetConversationsMessagingStickerAsyncWithHttpInfo (string messengerType, int? pageSize = null, int? pageNumber = null);
+        
+        /// <summary>
+        /// Get conversation threading window timeline for each messaging type
+        /// </summary>
+        /// <remarks>
+        /// Conversation messaging threading timeline is a setting defined for each messenger type in your organization. This setting will dictate whether a new message is added to the most recent existing conversation, or creates a new Conversation. If the existing Conversation is still in a connected state the threading timeline setting will never play a role. After the conversation is disconnected, if an inbound message is received or an outbound message is sent after the setting for threading timeline expires, a new conversation is created.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ConversationThreadingWindow</returns>
+        System.Threading.Tasks.Task<ConversationThreadingWindow> GetConversationsMessagingThreadingtimelineAsync ();
+
+        /// <summary>
+        /// Get conversation threading window timeline for each messaging type
+        /// </summary>
+        /// <remarks>
+        /// Conversation messaging threading timeline is a setting defined for each messenger type in your organization. This setting will dictate whether a new message is added to the most recent existing conversation, or creates a new Conversation. If the existing Conversation is still in a connected state the threading timeline setting will never play a role. After the conversation is disconnected, if an inbound message is received or an outbound message is sent after the setting for threading timeline expires, a new conversation is created.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ConversationThreadingWindow)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConversationThreadingWindow>> GetConversationsMessagingThreadingtimelineAsyncWithHttpInfo ();
         
         /// <summary>
         /// Update a participant.
@@ -6715,6 +6777,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>Task of ApiResponse (LineIntegration)</returns>
         System.Threading.Tasks.Task<ApiResponse<LineIntegration>> PutConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo (string integrationId, LineIntegrationRequest body);
+        
+        /// <summary>
+        /// Update conversation threading window timeline for each messaging type
+        /// </summary>
+        /// <remarks>
+        /// PUT Conversation messaging threading timeline is intended to set the conversation threading settings for ALL messengerTypes. If you omit a messengerType in the request body then the setting for that messengerType will use the platform default value. The PUT replaces the existing setting(s) that were previously set for each messengerType.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ConversationThreadingWindowRequest</param>
+        /// <returns>Task of ConversationThreadingWindow</returns>
+        System.Threading.Tasks.Task<ConversationThreadingWindow> PutConversationsMessagingThreadingtimelineAsync (ConversationThreadingWindow body);
+
+        /// <summary>
+        /// Update conversation threading window timeline for each messaging type
+        /// </summary>
+        /// <remarks>
+        /// PUT Conversation messaging threading timeline is intended to set the conversation threading settings for ALL messengerTypes. If you omit a messengerType in the request body then the setting for that messengerType will use the platform default value. The PUT replaces the existing setting(s) that were previously set for each messengerType.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ConversationThreadingWindowRequest</param>
+        /// <returns>Task of ApiResponse (ConversationThreadingWindow)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConversationThreadingWindow>> PutConversationsMessagingThreadingtimelineAsyncWithHttpInfo (ConversationThreadingWindow body);
         
         #endregion Asynchronous Operations
         
@@ -19538,6 +19622,186 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<MessagingStickerEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (MessagingStickerEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessagingStickerEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get conversation threading window timeline for each messaging type Conversation messaging threading timeline is a setting defined for each messenger type in your organization. This setting will dictate whether a new message is added to the most recent existing conversation, or creates a new Conversation. If the existing Conversation is still in a connected state the threading timeline setting will never play a role. After the conversation is disconnected, if an inbound message is received or an outbound message is sent after the setting for threading timeline expires, a new conversation is created.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ConversationThreadingWindow</returns>
+        public ConversationThreadingWindow GetConversationsMessagingThreadingtimeline ()
+        {
+             ApiResponse<ConversationThreadingWindow> localVarResponse = GetConversationsMessagingThreadingtimelineWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get conversation threading window timeline for each messaging type Conversation messaging threading timeline is a setting defined for each messenger type in your organization. This setting will dictate whether a new message is added to the most recent existing conversation, or creates a new Conversation. If the existing Conversation is still in a connected state the threading timeline setting will never play a role. After the conversation is disconnected, if an inbound message is received or an outbound message is sent after the setting for threading timeline expires, a new conversation is created.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ConversationThreadingWindow</returns>
+        public ApiResponse< ConversationThreadingWindow > GetConversationsMessagingThreadingtimelineWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/conversations/messaging/threadingtimeline";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingThreadingtimeline: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingThreadingtimeline: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationThreadingWindow>(localVarStatusCode,
+                localVarHeaders,
+                (ConversationThreadingWindow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationThreadingWindow)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get conversation threading window timeline for each messaging type Conversation messaging threading timeline is a setting defined for each messenger type in your organization. This setting will dictate whether a new message is added to the most recent existing conversation, or creates a new Conversation. If the existing Conversation is still in a connected state the threading timeline setting will never play a role. After the conversation is disconnected, if an inbound message is received or an outbound message is sent after the setting for threading timeline expires, a new conversation is created.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ConversationThreadingWindow</returns>
+        public async System.Threading.Tasks.Task<ConversationThreadingWindow> GetConversationsMessagingThreadingtimelineAsync ()
+        {
+             ApiResponse<ConversationThreadingWindow> localVarResponse = await GetConversationsMessagingThreadingtimelineAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get conversation threading window timeline for each messaging type Conversation messaging threading timeline is a setting defined for each messenger type in your organization. This setting will dictate whether a new message is added to the most recent existing conversation, or creates a new Conversation. If the existing Conversation is still in a connected state the threading timeline setting will never play a role. After the conversation is disconnected, if an inbound message is received or an outbound message is sent after the setting for threading timeline expires, a new conversation is created.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ConversationThreadingWindow)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationThreadingWindow>> GetConversationsMessagingThreadingtimelineAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/conversations/messaging/threadingtimeline";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingThreadingtimeline: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingThreadingtimeline: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationThreadingWindow>(localVarStatusCode,
+                localVarHeaders,
+                (ConversationThreadingWindow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationThreadingWindow)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -35562,6 +35826,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<LineIntegration>(localVarStatusCode,
                 localVarHeaders,
                 (LineIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LineIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update conversation threading window timeline for each messaging type PUT Conversation messaging threading timeline is intended to set the conversation threading settings for ALL messengerTypes. If you omit a messengerType in the request body then the setting for that messengerType will use the platform default value. The PUT replaces the existing setting(s) that were previously set for each messengerType.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ConversationThreadingWindowRequest</param>
+        /// <returns>ConversationThreadingWindow</returns>
+        public ConversationThreadingWindow PutConversationsMessagingThreadingtimeline (ConversationThreadingWindow body)
+        {
+             ApiResponse<ConversationThreadingWindow> localVarResponse = PutConversationsMessagingThreadingtimelineWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update conversation threading window timeline for each messaging type PUT Conversation messaging threading timeline is intended to set the conversation threading settings for ALL messengerTypes. If you omit a messengerType in the request body then the setting for that messengerType will use the platform default value. The PUT replaces the existing setting(s) that were previously set for each messengerType.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ConversationThreadingWindowRequest</param>
+        /// <returns>ApiResponse of ConversationThreadingWindow</returns>
+        public ApiResponse< ConversationThreadingWindow > PutConversationsMessagingThreadingtimelineWithHttpInfo (ConversationThreadingWindow body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingThreadingtimeline");
+
+            var localVarPath = "/api/v2/conversations/messaging/threadingtimeline";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingThreadingtimeline: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingThreadingtimeline: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationThreadingWindow>(localVarStatusCode,
+                localVarHeaders,
+                (ConversationThreadingWindow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationThreadingWindow)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update conversation threading window timeline for each messaging type PUT Conversation messaging threading timeline is intended to set the conversation threading settings for ALL messengerTypes. If you omit a messengerType in the request body then the setting for that messengerType will use the platform default value. The PUT replaces the existing setting(s) that were previously set for each messengerType.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ConversationThreadingWindowRequest</param>
+        /// <returns>Task of ConversationThreadingWindow</returns>
+        public async System.Threading.Tasks.Task<ConversationThreadingWindow> PutConversationsMessagingThreadingtimelineAsync (ConversationThreadingWindow body)
+        {
+             ApiResponse<ConversationThreadingWindow> localVarResponse = await PutConversationsMessagingThreadingtimelineAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update conversation threading window timeline for each messaging type PUT Conversation messaging threading timeline is intended to set the conversation threading settings for ALL messengerTypes. If you omit a messengerType in the request body then the setting for that messengerType will use the platform default value. The PUT replaces the existing setting(s) that were previously set for each messengerType.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ConversationThreadingWindowRequest</param>
+        /// <returns>Task of ApiResponse (ConversationThreadingWindow)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationThreadingWindow>> PutConversationsMessagingThreadingtimelineAsyncWithHttpInfo (ConversationThreadingWindow body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingThreadingtimeline");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/threadingtimeline";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingThreadingtimeline: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingThreadingtimeline: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationThreadingWindow>(localVarStatusCode,
+                localVarHeaders,
+                (ConversationThreadingWindow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationThreadingWindow)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -39,8 +39,17 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Faq for "Faq"
             /// </summary>
             [EnumMember(Value = "Faq")]
-            Faq
+            Faq,
+            
+            /// <summary>
+            /// Enum Article for "Article"
+            /// </summary>
+            [EnumMember(Value = "Article")]
+            Article
         }
+        
+        
+        
         
         
         
@@ -74,6 +83,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeDocumentBulkRequest" /> class.
@@ -88,13 +99,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalUrl">External Url to the document.</param>
         /// <param name="Faq">Faq document details.</param>
         /// <param name="Categories">Document categories.</param>
+        /// <param name="Article">Article details.</param>
         /// <param name="Id">Identifier of document for update. Omit for create new Document..</param>
-        public KnowledgeDocumentBulkRequest(TypeEnum? Type = null, string ExternalUrl = null, DocumentFaq Faq = null, List<DocumentCategoryInput> Categories = null, string Id = null)
+        public KnowledgeDocumentBulkRequest(TypeEnum? Type = null, string ExternalUrl = null, DocumentFaq Faq = null, List<DocumentCategoryInput> Categories = null, DocumentArticle Article = null, string Id = null)
         {
             this.Type = Type;
             this.ExternalUrl = ExternalUrl;
             this.Faq = Faq;
             this.Categories = Categories;
+            this.Article = Article;
             this.Id = Id;
             
         }
@@ -131,6 +144,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Article details
+        /// </summary>
+        /// <value>Article details</value>
+        [DataMember(Name="article", EmitDefaultValue=false)]
+        public DocumentArticle Article { get; set; }
+        
+        
+        
+        /// <summary>
         /// Identifier of document for update. Omit for create new Document.
         /// </summary>
         /// <value>Identifier of document for update. Omit for create new Document.</value>
@@ -151,6 +173,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalUrl: ").Append(ExternalUrl).Append("\n");
             sb.Append("  Faq: ").Append(Faq).Append("\n");
             sb.Append("  Categories: ").Append(Categories).Append("\n");
+            sb.Append("  Article: ").Append(Article).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -209,6 +232,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Categories.SequenceEqual(other.Categories)
                 ) &&
                 (
+                    this.Article == other.Article ||
+                    this.Article != null &&
+                    this.Article.Equals(other.Article)
+                ) &&
+                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
@@ -238,6 +266,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Categories != null)
                     hash = hash * 59 + this.Categories.GetHashCode();
+                
+                if (this.Article != null)
+                    hash = hash * 59 + this.Article.GetHashCode();
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();

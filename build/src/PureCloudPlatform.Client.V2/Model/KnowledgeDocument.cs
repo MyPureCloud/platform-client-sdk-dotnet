@@ -76,8 +76,17 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Faq for "Faq"
             /// </summary>
             [EnumMember(Value = "Faq")]
-            Faq
+            Faq,
+            
+            /// <summary>
+            /// Enum Article for "Article"
+            /// </summary>
+            [EnumMember(Value = "Article")]
+            Article
         }
+        
+        
+        
         
         
         
@@ -139,6 +148,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeDocument" /> class.
@@ -156,7 +167,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Categories">Document categories.</param>
         /// <param name="KnowledgeBase">Knowledge base which document does belong to.</param>
         /// <param name="ExternalUrl">External URL to the document.</param>
-        public KnowledgeDocument(string Name = null, LanguageCodeEnum? LanguageCode = null, TypeEnum? Type = null, DocumentFaq Faq = null, List<KnowledgeCategory> Categories = null, KnowledgeBase KnowledgeBase = null, string ExternalUrl = null)
+        /// <param name="Article">Article.</param>
+        public KnowledgeDocument(string Name = null, LanguageCodeEnum? LanguageCode = null, TypeEnum? Type = null, DocumentFaq Faq = null, List<KnowledgeCategory> Categories = null, KnowledgeBase KnowledgeBase = null, string ExternalUrl = null, DocumentArticle Article = null)
         {
             this.Name = Name;
             this.LanguageCode = LanguageCode;
@@ -165,6 +177,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Categories = Categories;
             this.KnowledgeBase = KnowledgeBase;
             this.ExternalUrl = ExternalUrl;
+            this.Article = Article;
             
         }
         
@@ -246,6 +259,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Article
+        /// </summary>
+        /// <value>Article</value>
+        [DataMember(Name="article", EmitDefaultValue=false)]
+        public DocumentArticle Article { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -272,6 +294,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Categories: ").Append(Categories).Append("\n");
             sb.Append("  KnowledgeBase: ").Append(KnowledgeBase).Append("\n");
             sb.Append("  ExternalUrl: ").Append(ExternalUrl).Append("\n");
+            sb.Append("  Article: ").Append(Article).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -360,6 +383,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalUrl.Equals(other.ExternalUrl)
                 ) &&
                 (
+                    this.Article == other.Article ||
+                    this.Article != null &&
+                    this.Article.Equals(other.Article)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -407,6 +435,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ExternalUrl != null)
                     hash = hash * 59 + this.ExternalUrl.GetHashCode();
+                
+                if (this.Article != null)
+                    hash = hash * 59 + this.Article.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

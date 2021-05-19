@@ -82,12 +82,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Core language for knowledge base in which initial content must be created first
         /// </summary>
         /// <value>Core language for knowledge base in which initial content must be created first</value>
         [DataMember(Name="coreLanguage", EmitDefaultValue=false)]
         public CoreLanguageEnum? CoreLanguage { get; set; }
+        
+        
         
         
         
@@ -170,9 +175,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The count representing the number of documents of type FAQ per KnowledgeBase
+        /// The count representing the number of documents of type FAQ in the KnowledgeBase
         /// </summary>
-        /// <value>The count representing the number of documents of type FAQ per KnowledgeBase</value>
+        /// <value>The count representing the number of documents of type FAQ in the KnowledgeBase</value>
         [DataMember(Name="faqCount", EmitDefaultValue=false)]
         public int? FaqCount { get; private set; }
         
@@ -184,6 +189,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The date representing when the last document is modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateDocumentLastModified", EmitDefaultValue=false)]
         public DateTime? DateDocumentLastModified { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The count representing the number of documents of type Article in the KnowledgeBase
+        /// </summary>
+        /// <value>The count representing the number of documents of type Article in the KnowledgeBase</value>
+        [DataMember(Name="articleCount", EmitDefaultValue=false)]
+        public int? ArticleCount { get; private set; }
         
         
         
@@ -212,6 +226,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  FaqCount: ").Append(FaqCount).Append("\n");
             sb.Append("  DateDocumentLastModified: ").Append(DateDocumentLastModified).Append("\n");
+            sb.Append("  ArticleCount: ").Append(ArticleCount).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -290,6 +305,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateDocumentLastModified.Equals(other.DateDocumentLastModified)
                 ) &&
                 (
+                    this.ArticleCount == other.ArticleCount ||
+                    this.ArticleCount != null &&
+                    this.ArticleCount.Equals(other.ArticleCount)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -331,6 +351,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DateDocumentLastModified != null)
                     hash = hash * 59 + this.DateDocumentLastModified.GetHashCode();
+                
+                if (this.ArticleCount != null)
+                    hash = hash * 59 + this.ArticleCount.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -18,6 +18,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetLearningModules**](LearningApi.html#getlearningmodules) | **GET** /api/v2/learning/modules | Get all learning modules of an organization |
 | [**PatchLearningAssignment**](LearningApi.html#patchlearningassignment) | **PATCH** /api/v2/learning/assignments/{assignmentId} | Update Learning Assignment |
 | [**PostLearningAssignments**](LearningApi.html#postlearningassignments) | **POST** /api/v2/learning/assignments | Create Learning Assignment |
+| [**PostLearningAssignmentsAggregatesQuery**](LearningApi.html#postlearningassignmentsaggregatesquery) | **POST** /api/v2/learning/assignments/aggregates/query | Retrieve aggregated assignment data |
 | [**PostLearningAssignmentsBulkadd**](LearningApi.html#postlearningassignmentsbulkadd) | **POST** /api/v2/learning/assignments/bulkadd | Add multiple learning assignments |
 | [**PostLearningAssignmentsBulkremove**](LearningApi.html#postlearningassignmentsbulkremove) | **POST** /api/v2/learning/assignments/bulkremove | Remove multiple Learning Assignments |
 | [**PostLearningModulePublish**](LearningApi.html#postlearningmodulepublish) | **POST** /api/v2/learning/modules/{moduleId}/publish | Publish a Learning module |
@@ -803,6 +804,71 @@ namespace Example
 ### Return type
 
 [**LearningAssignment**](LearningAssignment.html)
+
+<a name="postlearningassignmentsaggregatesquery"></a>
+
+## [**LearningAssignmentAggregateResponse**](LearningAssignmentAggregateResponse.html) PostLearningAssignmentsAggregatesQuery (LearningAssignmentAggregateParam body)
+
+
+
+Retrieve aggregated assignment data
+
+
+
+Requires ANY permissions: 
+
+* learning:assignment:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLearningAssignmentsAggregatesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LearningApi();
+            var body = new LearningAssignmentAggregateParam(); // LearningAssignmentAggregateParam | Aggregate Request
+
+            try
+            { 
+                // Retrieve aggregated assignment data
+                LearningAssignmentAggregateResponse result = apiInstance.PostLearningAssignmentsAggregatesQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LearningApi.PostLearningAssignmentsAggregatesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**LearningAssignmentAggregateParam**](LearningAssignmentAggregateParam.html)| Aggregate Request |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LearningAssignmentAggregateResponse**](LearningAssignmentAggregateResponse.html)
 
 <a name="postlearningassignmentsbulkadd"></a>
 

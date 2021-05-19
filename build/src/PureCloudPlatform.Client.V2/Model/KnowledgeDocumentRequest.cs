@@ -39,8 +39,17 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Faq for "Faq"
             /// </summary>
             [EnumMember(Value = "Faq")]
-            Faq
+            Faq,
+            
+            /// <summary>
+            /// Enum Article for "Article"
+            /// </summary>
+            [EnumMember(Value = "Article")]
+            Article
         }
+        
+        
+        
         
         
         
@@ -69,6 +78,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeDocumentRequest" /> class.
@@ -83,12 +94,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalUrl">External Url to the document.</param>
         /// <param name="Faq">Faq document details.</param>
         /// <param name="Categories">Document categories.</param>
-        public KnowledgeDocumentRequest(TypeEnum? Type = null, string ExternalUrl = null, DocumentFaq Faq = null, List<DocumentCategoryInput> Categories = null)
+        /// <param name="Article">Article details.</param>
+        public KnowledgeDocumentRequest(TypeEnum? Type = null, string ExternalUrl = null, DocumentFaq Faq = null, List<DocumentCategoryInput> Categories = null, DocumentArticle Article = null)
         {
             this.Type = Type;
             this.ExternalUrl = ExternalUrl;
             this.Faq = Faq;
             this.Categories = Categories;
+            this.Article = Article;
             
         }
         
@@ -122,6 +135,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<DocumentCategoryInput> Categories { get; set; }
         
         
+        
+        /// <summary>
+        /// Article details
+        /// </summary>
+        /// <value>Article details</value>
+        [DataMember(Name="article", EmitDefaultValue=false)]
+        public DocumentArticle Article { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -135,6 +157,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalUrl: ").Append(ExternalUrl).Append("\n");
             sb.Append("  Faq: ").Append(Faq).Append("\n");
             sb.Append("  Categories: ").Append(Categories).Append("\n");
+            sb.Append("  Article: ").Append(Article).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -190,6 +213,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Categories == other.Categories ||
                     this.Categories != null &&
                     this.Categories.SequenceEqual(other.Categories)
+                ) &&
+                (
+                    this.Article == other.Article ||
+                    this.Article != null &&
+                    this.Article.Equals(other.Article)
                 );
         }
 
@@ -216,6 +244,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Categories != null)
                     hash = hash * 59 + this.Categories.GetHashCode();
+                
+                if (this.Article != null)
+                    hash = hash * 59 + this.Article.GetHashCode();
                 
                 return hash;
             }

@@ -8,6 +8,7 @@ title: NluInfo
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Domain** | [**AddressableEntityRef**](AddressableEntityRef.html) |  | [optional] |
+| **Version** | [**AddressableEntityRef**](AddressableEntityRef.html) |  | [optional] |
 | **Intents** | [**List&lt;Intent&gt;**](Intent.html) |  | [optional] |
 {: class="table table-striped"}
 

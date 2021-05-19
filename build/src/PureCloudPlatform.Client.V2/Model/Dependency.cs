@@ -212,6 +212,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Ivrconfiguration,
             
             /// <summary>
+            /// Enum Knowledgebase for "KNOWLEDGEBASE"
+            /// </summary>
+            [EnumMember(Value = "KNOWLEDGEBASE")]
+            Knowledgebase,
+            
+            /// <summary>
             /// Enum Language for "LANGUAGE"
             /// </summary>
             [EnumMember(Value = "LANGUAGE")]
@@ -341,7 +347,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Workflow for "WORKFLOW"
             /// </summary>
             [EnumMember(Value = "WORKFLOW")]
-            Workflow
+            Workflow,
+            
+            /// <summary>
+            /// Enum Workitemflow for "WORKITEMFLOW"
+            /// </summary>
+            [EnumMember(Value = "WORKITEMFLOW")]
+            Workitemflow
         }
         
         

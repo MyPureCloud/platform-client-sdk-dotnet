@@ -76,12 +76,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Media type of action.
         /// </summary>
         /// <value>Media type of action.</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
+        
+        
         
         
         
@@ -101,11 +106,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaType">Media type of action. (required).</param>
         /// <param name="ActionTemplate">Action template associated with the action map..</param>
         /// <param name="ArchitectFlowFields">Architect Flow Id and input contract..</param>
-        public PatchAction(MediaTypeEnum? MediaType = null, ActionMapActionTemplate ActionTemplate = null, ArchitectFlowFields ArchitectFlowFields = null)
+        /// <param name="WebMessagingOfferFields">Admin-configurable fields of a web messaging offer action..</param>
+        public PatchAction(MediaTypeEnum? MediaType = null, ActionMapActionTemplate ActionTemplate = null, ArchitectFlowFields ArchitectFlowFields = null, WebMessagingOfferFields WebMessagingOfferFields = null)
         {
             this.MediaType = MediaType;
             this.ActionTemplate = ActionTemplate;
             this.ArchitectFlowFields = ArchitectFlowFields;
+            this.WebMessagingOfferFields = WebMessagingOfferFields;
             
         }
         
@@ -130,6 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ArchitectFlowFields ArchitectFlowFields { get; set; }
         
         
+        
+        /// <summary>
+        /// Admin-configurable fields of a web messaging offer action.
+        /// </summary>
+        /// <value>Admin-configurable fields of a web messaging offer action.</value>
+        [DataMember(Name="webMessagingOfferFields", EmitDefaultValue=false)]
+        public WebMessagingOfferFields WebMessagingOfferFields { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -142,6 +158,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  ActionTemplate: ").Append(ActionTemplate).Append("\n");
             sb.Append("  ArchitectFlowFields: ").Append(ArchitectFlowFields).Append("\n");
+            sb.Append("  WebMessagingOfferFields: ").Append(WebMessagingOfferFields).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -192,6 +209,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ArchitectFlowFields == other.ArchitectFlowFields ||
                     this.ArchitectFlowFields != null &&
                     this.ArchitectFlowFields.Equals(other.ArchitectFlowFields)
+                ) &&
+                (
+                    this.WebMessagingOfferFields == other.WebMessagingOfferFields ||
+                    this.WebMessagingOfferFields != null &&
+                    this.WebMessagingOfferFields.Equals(other.WebMessagingOfferFields)
                 );
         }
 
@@ -215,6 +237,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ArchitectFlowFields != null)
                     hash = hash * 59 + this.ArchitectFlowFields.GetHashCode();
+                
+                if (this.WebMessagingOfferFields != null)
+                    hash = hash * 59 + this.WebMessagingOfferFields.GetHashCode();
                 
                 return hash;
             }

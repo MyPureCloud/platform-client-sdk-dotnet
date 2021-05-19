@@ -452,7 +452,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum BotPerformanceDetailView for "BOT_PERFORMANCE_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "BOT_PERFORMANCE_DETAIL_VIEW")]
-            BotPerformanceDetailView
+            BotPerformanceDetailView,
+            
+            /// <summary>
+            /// Enum TopicTrendSummaryView for "TOPIC_TREND_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "TOPIC_TREND_SUMMARY_VIEW")]
+            TopicTrendSummaryView,
+            
+            /// <summary>
+            /// Enum TopicTrendDetailView for "TOPIC_TREND_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "TOPIC_TREND_DETAIL_VIEW")]
+            TopicTrendDetailView
         }
         
         

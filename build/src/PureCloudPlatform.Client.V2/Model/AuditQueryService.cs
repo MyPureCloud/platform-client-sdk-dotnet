@@ -36,6 +36,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Analyticsreporting for "AnalyticsReporting"
+            /// </summary>
+            [EnumMember(Value = "AnalyticsReporting")]
+            Analyticsreporting,
+            
+            /// <summary>
             /// Enum Architect for "Architect"
             /// </summary>
             [EnumMember(Value = "Architect")]
@@ -88,6 +94,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "PeoplePermissions")]
             Peoplepermissions,
+            
+            /// <summary>
+            /// Enum Performance for "Performance"
+            /// </summary>
+            [EnumMember(Value = "Performance")]
+            Performance,
             
             /// <summary>
             /// Enum Predictiveengagement for "PredictiveEngagement"

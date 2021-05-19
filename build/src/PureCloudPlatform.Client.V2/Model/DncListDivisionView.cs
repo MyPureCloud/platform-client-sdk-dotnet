@@ -103,9 +103,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The number of contacts in the ContactList.
+        /// The number of contacts in the DncList.
         /// </summary>
-        /// <value>The number of contacts in the ContactList.</value>
+        /// <value>The number of contacts in the DncList.</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
         public long? Size { get; private set; }
         

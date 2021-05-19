@@ -11,6 +11,7 @@ title: KnowledgeDocumentBulkRequest
 | **ExternalUrl** | **string** | External Url to the document | [optional] |
 | **Faq** | [**DocumentFaq**](DocumentFaq.html) | Faq document details | [optional] |
 | **Categories** | [**List&lt;DocumentCategoryInput&gt;**](DocumentCategoryInput.html) | Document categories | [optional] |
+| **Article** | [**DocumentArticle**](DocumentArticle.html) | Article details | [optional] |
 | **Id** | **string** | Identifier of document for update. Omit for create new Document. | [optional] |
 {: class="table table-striped"}
 

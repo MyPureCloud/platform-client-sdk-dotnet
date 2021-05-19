@@ -442,7 +442,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum ScheduledExportsView for "SCHEDULED_EXPORTS_VIEW"
             /// </summary>
             [EnumMember(Value = "SCHEDULED_EXPORTS_VIEW")]
-            ScheduledExportsView
+            ScheduledExportsView,
+            
+            /// <summary>
+            /// Enum TopicTrendSummaryView for "TOPIC_TREND_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "TOPIC_TREND_SUMMARY_VIEW")]
+            TopicTrendSummaryView,
+            
+            /// <summary>
+            /// Enum TopicTrendDetailView for "TOPIC_TREND_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "TOPIC_TREND_DETAIL_VIEW")]
+            TopicTrendDetailView
         }
         
         

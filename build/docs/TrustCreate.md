@@ -11,6 +11,7 @@ title: TrustCreate
 | **Enabled** | **bool?** | If disabled no trustee user will have access, even if they were previously added. | |
 | **Users** | [**List&lt;TrustMemberCreate&gt;**](TrustMemberCreate.html) | The list of users and their roles to which access will be granted. The users are from the trustee and the roles are from the trustor. If no users are specified, at least one group is required. | [optional] |
 | **Groups** | [**List&lt;TrustMemberCreate&gt;**](TrustMemberCreate.html) | The list of groups and their roles to which access will be granted. The groups are from the trustee and the roles are from the trustor. If no groups are specified, at least one user is required. | [optional] |
+| **DateExpired** | **DateTime?** | The expiration date of the trust. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 {: class="table table-striped"}
 
 

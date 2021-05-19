@@ -51,6 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Analyticsreporting for "AnalyticsReporting"
+            /// </summary>
+            [EnumMember(Value = "AnalyticsReporting")]
+            Analyticsreporting,
+            
+            /// <summary>
             /// Enum Architect for "Architect"
             /// </summary>
             [EnumMember(Value = "Architect")]
@@ -103,6 +109,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "PeoplePermissions")]
             Peoplepermissions,
+            
+            /// <summary>
+            /// Enum Performance for "Performance"
+            /// </summary>
+            [EnumMember(Value = "Performance")]
+            Performance,
             
             /// <summary>
             /// Enum Predictiveengagement for "PredictiveEngagement"
@@ -566,6 +578,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Contactlistfilter,
             
             /// <summary>
+            /// Enum Dashboardsettings for "DashboardSettings"
+            /// </summary>
+            [EnumMember(Value = "DashboardSettings")]
+            Dashboardsettings,
+            
+            /// <summary>
             /// Enum Dependencytrackingbuild for "DependencyTrackingBuild"
             /// </summary>
             [EnumMember(Value = "DependencyTrackingBuild")]
@@ -620,6 +638,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Eventtype,
             
             /// <summary>
+            /// Enum Exports for "Exports"
+            /// </summary>
+            [EnumMember(Value = "Exports")]
+            Exports,
+            
+            /// <summary>
             /// Enum Extension for "Extension"
             /// </summary>
             [EnumMember(Value = "Extension")]
@@ -630,6 +654,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ExtensionPool")]
             Extensionpool,
+            
+            /// <summary>
+            /// Enum Externalmetricdefinition for "ExternalMetricDefinition"
+            /// </summary>
+            [EnumMember(Value = "ExternalMetricDefinition")]
+            Externalmetricdefinition,
             
             /// <summary>
             /// Enum Feedback for "Feedback"
@@ -654,6 +684,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "FlowOutcome")]
             Flowoutcome,
+            
+            /// <summary>
+            /// Enum Forecast for "Forecast"
+            /// </summary>
+            [EnumMember(Value = "Forecast")]
+            Forecast,
+            
+            /// <summary>
+            /// Enum Insightsettings for "InsightSettings"
+            /// </summary>
+            [EnumMember(Value = "InsightSettings")]
+            Insightsettings,
             
             /// <summary>
             /// Enum Integration for "Integration"
@@ -816,6 +858,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Schedule")]
             Schedule,
+            
+            /// <summary>
+            /// Enum Scheduledexports for "ScheduledExports"
+            /// </summary>
+            [EnumMember(Value = "ScheduledExports")]
+            Scheduledexports,
             
             /// <summary>
             /// Enum Schedulegroup for "ScheduleGroup"

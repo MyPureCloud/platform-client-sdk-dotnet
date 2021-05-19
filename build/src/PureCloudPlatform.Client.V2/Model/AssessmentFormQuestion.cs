@@ -124,9 +124,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AssessmentFormQuestion" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected AssessmentFormQuestion() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AssessmentFormQuestion" /> class.
+        /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="Type">Type.</param>
-        /// <param name="Text">Text.</param>
+        /// <param name="Text">The question text (required).</param>
         /// <param name="HelpText">HelpText.</param>
         /// <param name="NaEnabled">NaEnabled.</param>
         /// <param name="CommentsRequired">CommentsRequired.</param>
@@ -164,8 +170,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Text
+        /// The question text
         /// </summary>
+        /// <value>The question text</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
         

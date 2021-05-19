@@ -422,8 +422,9 @@ Search users using the q64 value returned from a previous search
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* directory:user:divisionview
 
 ### Example
 ```{"language":"csharp"}
@@ -1130,8 +1131,9 @@ Search users
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* directory:user:divisionview
 
 ### Example
 ```{"language":"csharp"}

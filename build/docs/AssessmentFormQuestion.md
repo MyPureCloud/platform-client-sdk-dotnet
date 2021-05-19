@@ -9,7 +9,7 @@ title: AssessmentFormQuestion
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
-| **Text** | **string** |  | [optional] |
+| **Text** | **string** | The question text | |
 | **HelpText** | **string** |  | [optional] |
 | **NaEnabled** | **bool?** |  | [optional] |
 | **CommentsRequired** | **bool?** |  | [optional] |

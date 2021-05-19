@@ -79,15 +79,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AssessmentFormQuestionGroup" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected AssessmentFormQuestionGroup() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AssessmentFormQuestionGroup" /> class.
+        /// </summary>
         /// <param name="Id">The ID of the question group,.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Type">Type.</param>
+        /// <param name="Name">The question group name (required).</param>
+        /// <param name="Type">The question group type (required).</param>
         /// <param name="DefaultAnswersToHighest">DefaultAnswersToHighest.</param>
         /// <param name="DefaultAnswersToNA">DefaultAnswersToNA.</param>
         /// <param name="NaEnabled">NaEnabled.</param>
         /// <param name="Weight">Weight.</param>
         /// <param name="ManualWeight">ManualWeight.</param>
-        /// <param name="Questions">Questions.</param>
+        /// <param name="Questions">The list of questions for this question group (required).</param>
         /// <param name="VisibilityCondition">VisibilityCondition.</param>
         public AssessmentFormQuestionGroup(string Id = null, string Name = null, string Type = null, bool? DefaultAnswersToHighest = null, bool? DefaultAnswersToNA = null, bool? NaEnabled = null, float? Weight = null, bool? ManualWeight = null, List<AssessmentFormQuestion> Questions = null, VisibilityCondition VisibilityCondition = null)
         {
@@ -116,16 +122,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The question group name
         /// </summary>
+        /// <value>The question group name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Type
+        /// The question group type
         /// </summary>
+        /// <value>The question group type</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
         
@@ -172,8 +180,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Questions
+        /// The list of questions for this question group
         /// </summary>
+        /// <value>The list of questions for this question group</value>
         [DataMember(Name="questions", EmitDefaultValue=false)]
         public List<AssessmentFormQuestion> Questions { get; set; }
         

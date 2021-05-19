@@ -30,7 +30,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserAdjacents**](UsersApi.html#getuseradjacents) | **GET** /api/v2/users/{userId}/adjacents | Get adjacents |
 | [**GetUserCallforwarding**](UsersApi.html#getusercallforwarding) | **GET** /api/v2/users/{userId}/callforwarding | Get a user&#39;s CallForwarding |
 | [**GetUserDirectreports**](UsersApi.html#getuserdirectreports) | **GET** /api/v2/users/{userId}/directreports | Get direct reports |
-| [**GetUserFavorites**](UsersApi.html#getuserfavorites) | **GET** /api/v2/users/{userId}/favorites | Get favorites |
+| [**GetUserFavorites**](UsersApi.html#getuserfavorites) | **GET** /api/v2/users/{userId}/favorites | Deprecated; will be revived with new contract |
 | [**GetUserGeolocation**](UsersApi.html#getusergeolocation) | **GET** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
 | [**GetUserOutofoffice**](UsersApi.html#getuseroutofoffice) | **GET** /api/v2/users/{userId}/outofoffice | Get a OutOfOffice |
 | [**GetUserProfile**](UsersApi.html#getuserprofile) | **GET** /api/v2/users/{userId}/profile | Get user profile |
@@ -1606,9 +1606,9 @@ namespace Example
 
 ## [**UserEntityListing**](UserEntityListing.html) GetUserFavorites (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-
-Get favorites
+Deprecated; will be revived with new contract
 
 
 
@@ -1645,7 +1645,7 @@ namespace Example
 
             try
             { 
-                // Get favorites
+                // Deprecated; will be revived with new contract
                 UserEntityListing result = apiInstance.GetUserFavorites(userId, pageSize, pageNumber, sortOrder, expand);
                 Debug.WriteLine(result);
             }
@@ -2870,8 +2870,9 @@ Search users using the q64 value returned from a previous search
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* directory:user:divisionview
 
 ### Example
 ```{"language":"csharp"}
@@ -4545,8 +4546,9 @@ Search users
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* directory:user:divisionview
 
 ### Example
 ```{"language":"csharp"}

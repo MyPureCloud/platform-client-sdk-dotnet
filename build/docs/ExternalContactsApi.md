@@ -42,10 +42,18 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostExternalcontactsBulkContactsAdd**](ExternalContactsApi.html#postexternalcontactsbulkcontactsadd) | **POST** /api/v2/externalcontacts/bulk/contacts/add | Bulk add contacts |
 | [**PostExternalcontactsBulkContactsRemove**](ExternalContactsApi.html#postexternalcontactsbulkcontactsremove) | **POST** /api/v2/externalcontacts/bulk/contacts/remove | Bulk remove contacts |
 | [**PostExternalcontactsBulkContactsUpdate**](ExternalContactsApi.html#postexternalcontactsbulkcontactsupdate) | **POST** /api/v2/externalcontacts/bulk/contacts/update | Bulk update contacts |
+| [**PostExternalcontactsBulkNotes**](ExternalContactsApi.html#postexternalcontactsbulknotes) | **POST** /api/v2/externalcontacts/bulk/notes | Bulk fetch notes |
+| [**PostExternalcontactsBulkNotesAdd**](ExternalContactsApi.html#postexternalcontactsbulknotesadd) | **POST** /api/v2/externalcontacts/bulk/notes/add | Bulk add notes |
+| [**PostExternalcontactsBulkNotesRemove**](ExternalContactsApi.html#postexternalcontactsbulknotesremove) | **POST** /api/v2/externalcontacts/bulk/notes/remove | Bulk remove notes |
+| [**PostExternalcontactsBulkNotesUpdate**](ExternalContactsApi.html#postexternalcontactsbulknotesupdate) | **POST** /api/v2/externalcontacts/bulk/notes/update | Bulk update notes |
 | [**PostExternalcontactsBulkOrganizations**](ExternalContactsApi.html#postexternalcontactsbulkorganizations) | **POST** /api/v2/externalcontacts/bulk/organizations | Bulk fetch organizations |
 | [**PostExternalcontactsBulkOrganizationsAdd**](ExternalContactsApi.html#postexternalcontactsbulkorganizationsadd) | **POST** /api/v2/externalcontacts/bulk/organizations/add | Bulk add organizations |
 | [**PostExternalcontactsBulkOrganizationsRemove**](ExternalContactsApi.html#postexternalcontactsbulkorganizationsremove) | **POST** /api/v2/externalcontacts/bulk/organizations/remove | Bulk remove organizations |
 | [**PostExternalcontactsBulkOrganizationsUpdate**](ExternalContactsApi.html#postexternalcontactsbulkorganizationsupdate) | **POST** /api/v2/externalcontacts/bulk/organizations/update | Bulk update organizations |
+| [**PostExternalcontactsBulkRelationships**](ExternalContactsApi.html#postexternalcontactsbulkrelationships) | **POST** /api/v2/externalcontacts/bulk/relationships | Bulk fetch relationships |
+| [**PostExternalcontactsBulkRelationshipsAdd**](ExternalContactsApi.html#postexternalcontactsbulkrelationshipsadd) | **POST** /api/v2/externalcontacts/bulk/relationships/add | Bulk add relationships |
+| [**PostExternalcontactsBulkRelationshipsRemove**](ExternalContactsApi.html#postexternalcontactsbulkrelationshipsremove) | **POST** /api/v2/externalcontacts/bulk/relationships/remove | Bulk remove relationships |
+| [**PostExternalcontactsBulkRelationshipsUpdate**](ExternalContactsApi.html#postexternalcontactsbulkrelationshipsupdate) | **POST** /api/v2/externalcontacts/bulk/relationships/update | Bulk update relationships |
 | [**PostExternalcontactsContactNotes**](ExternalContactsApi.html#postexternalcontactscontactnotes) | **POST** /api/v2/externalcontacts/contacts/{contactId}/notes | Create a note for an external contact |
 | [**PostExternalcontactsContacts**](ExternalContactsApi.html#postexternalcontactscontacts) | **POST** /api/v2/externalcontacts/contacts | Create an external contact |
 | [**PostExternalcontactsContactsSchemas**](ExternalContactsApi.html#postexternalcontactscontactsschemas) | **POST** /api/v2/externalcontacts/contacts/schemas | Create a schema |
@@ -2420,6 +2428,270 @@ namespace Example
 
 [**BulkContactsResponse**](BulkContactsResponse.html)
 
+<a name="postexternalcontactsbulknotes"></a>
+
+## [**BulkFetchNotesResponse**](BulkFetchNotesResponse.html) PostExternalcontactsBulkNotes (BulkIdsRequest body)
+
+
+
+Bulk fetch notes
+
+
+
+Requires ALL permissions: 
+
+* externalContacts:contact:view
+* externalContacts:externalOrganization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsBulkNotesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new BulkIdsRequest(); // BulkIdsRequest | Note ids
+
+            try
+            { 
+                // Bulk fetch notes
+                BulkFetchNotesResponse result = apiInstance.PostExternalcontactsBulkNotes(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsBulkNotes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkIdsRequest**](BulkIdsRequest.html)| Note ids |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkFetchNotesResponse**](BulkFetchNotesResponse.html)
+
+<a name="postexternalcontactsbulknotesadd"></a>
+
+## [**BulkNotesResponse**](BulkNotesResponse.html) PostExternalcontactsBulkNotesAdd (BulkNotesRequest body)
+
+
+
+Bulk add notes
+
+
+
+Requires ALL permissions: 
+
+* externalContacts:contact:add
+* externalContacts:externalOrganization:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsBulkNotesAddExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new BulkNotesRequest(); // BulkNotesRequest | Notes
+
+            try
+            { 
+                // Bulk add notes
+                BulkNotesResponse result = apiInstance.PostExternalcontactsBulkNotesAdd(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsBulkNotesAdd: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkNotesRequest**](BulkNotesRequest.html)| Notes |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkNotesResponse**](BulkNotesResponse.html)
+
+<a name="postexternalcontactsbulknotesremove"></a>
+
+## [**BulkDeleteResponse**](BulkDeleteResponse.html) PostExternalcontactsBulkNotesRemove (BulkIdsRequest body)
+
+
+
+Bulk remove notes
+
+
+
+Requires ALL permissions: 
+
+* externalContacts:contact:delete
+* externalContacts:externalOrganization:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsBulkNotesRemoveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new BulkIdsRequest(); // BulkIdsRequest | Note ids
+
+            try
+            { 
+                // Bulk remove notes
+                BulkDeleteResponse result = apiInstance.PostExternalcontactsBulkNotesRemove(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsBulkNotesRemove: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkIdsRequest**](BulkIdsRequest.html)| Note ids |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkDeleteResponse**](BulkDeleteResponse.html)
+
+<a name="postexternalcontactsbulknotesupdate"></a>
+
+## [**BulkNotesResponse**](BulkNotesResponse.html) PostExternalcontactsBulkNotesUpdate (BulkNotesRequest body)
+
+
+
+Bulk update notes
+
+
+
+Requires ALL permissions: 
+
+* externalContacts:contact:edit
+* externalContacts:externalOrganization:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsBulkNotesUpdateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new BulkNotesRequest(); // BulkNotesRequest | Notes
+
+            try
+            { 
+                // Bulk update notes
+                BulkNotesResponse result = apiInstance.PostExternalcontactsBulkNotesUpdate(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsBulkNotesUpdate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkNotesRequest**](BulkNotesRequest.html)| Notes |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkNotesResponse**](BulkNotesResponse.html)
+
 <a name="postexternalcontactsbulkorganizations"></a>
 
 ## [**BulkFetchOrganizationsResponse**](BulkFetchOrganizationsResponse.html) PostExternalcontactsBulkOrganizations (BulkIdsRequest body)
@@ -2679,6 +2951,270 @@ namespace Example
 ### Return type
 
 [**BulkOrganizationsResponse**](BulkOrganizationsResponse.html)
+
+<a name="postexternalcontactsbulkrelationships"></a>
+
+## [**BulkFetchRelationshipsResponse**](BulkFetchRelationshipsResponse.html) PostExternalcontactsBulkRelationships (BulkIdsRequest body)
+
+
+
+Bulk fetch relationships
+
+
+
+Requires ALL permissions: 
+
+* externalContacts:contact:view
+* externalContacts:externalOrganization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsBulkRelationshipsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new BulkIdsRequest(); // BulkIdsRequest | Relationships ids
+
+            try
+            { 
+                // Bulk fetch relationships
+                BulkFetchRelationshipsResponse result = apiInstance.PostExternalcontactsBulkRelationships(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsBulkRelationships: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkIdsRequest**](BulkIdsRequest.html)| Relationships ids |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkFetchRelationshipsResponse**](BulkFetchRelationshipsResponse.html)
+
+<a name="postexternalcontactsbulkrelationshipsadd"></a>
+
+## [**BulkRelationshipsResponse**](BulkRelationshipsResponse.html) PostExternalcontactsBulkRelationshipsAdd (BulkRelationshipsRequest body)
+
+
+
+Bulk add relationships
+
+
+
+Requires ALL permissions: 
+
+* externalContacts:contact:add
+* externalContacts:externalOrganization:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsBulkRelationshipsAddExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new BulkRelationshipsRequest(); // BulkRelationshipsRequest | Relationships
+
+            try
+            { 
+                // Bulk add relationships
+                BulkRelationshipsResponse result = apiInstance.PostExternalcontactsBulkRelationshipsAdd(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsBulkRelationshipsAdd: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkRelationshipsRequest**](BulkRelationshipsRequest.html)| Relationships |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkRelationshipsResponse**](BulkRelationshipsResponse.html)
+
+<a name="postexternalcontactsbulkrelationshipsremove"></a>
+
+## [**BulkDeleteResponse**](BulkDeleteResponse.html) PostExternalcontactsBulkRelationshipsRemove (BulkIdsRequest body)
+
+
+
+Bulk remove relationships
+
+
+
+Requires ALL permissions: 
+
+* externalContacts:contact:delete
+* externalContacts:externalOrganization:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsBulkRelationshipsRemoveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new BulkIdsRequest(); // BulkIdsRequest | Relationships ids
+
+            try
+            { 
+                // Bulk remove relationships
+                BulkDeleteResponse result = apiInstance.PostExternalcontactsBulkRelationshipsRemove(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsBulkRelationshipsRemove: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkIdsRequest**](BulkIdsRequest.html)| Relationships ids |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkDeleteResponse**](BulkDeleteResponse.html)
+
+<a name="postexternalcontactsbulkrelationshipsupdate"></a>
+
+## [**BulkRelationshipsResponse**](BulkRelationshipsResponse.html) PostExternalcontactsBulkRelationshipsUpdate (BulkRelationshipsRequest body)
+
+
+
+Bulk update relationships
+
+
+
+Requires ALL permissions: 
+
+* externalContacts:contact:edit
+* externalContacts:externalOrganization:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsBulkRelationshipsUpdateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new BulkRelationshipsRequest(); // BulkRelationshipsRequest | Relationships
+
+            try
+            { 
+                // Bulk update relationships
+                BulkRelationshipsResponse result = apiInstance.PostExternalcontactsBulkRelationshipsUpdate(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsBulkRelationshipsUpdate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkRelationshipsRequest**](BulkRelationshipsRequest.html)| Relationships |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkRelationshipsResponse**](BulkRelationshipsResponse.html)
 
 <a name="postexternalcontactscontactnotes"></a>
 

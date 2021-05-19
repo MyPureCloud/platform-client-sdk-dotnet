@@ -30,15 +30,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="NluInfo" /> class.
         /// </summary>
         /// <param name="Domain">Domain.</param>
+        /// <param name="Version">Version.</param>
         /// <param name="Intents">Intents.</param>
-        public NluInfo(AddressableEntityRef Domain = null, List<Intent> Intents = null)
+        public NluInfo(AddressableEntityRef Domain = null, AddressableEntityRef Version = null, List<Intent> Intents = null)
         {
             this.Domain = Domain;
+            this.Version = Version;
             this.Intents = Intents;
             
         }
@@ -50,6 +57,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public AddressableEntityRef Domain { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Version
+        /// </summary>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public AddressableEntityRef Version { get; set; }
         
         
         
@@ -70,6 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class NluInfo {\n");
             
             sb.Append("  Domain: ").Append(Domain).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Intents: ").Append(Intents).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -113,6 +129,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Domain.Equals(other.Domain)
                 ) &&
                 (
+                    this.Version == other.Version ||
+                    this.Version != null &&
+                    this.Version.Equals(other.Version)
+                ) &&
+                (
                     this.Intents == other.Intents ||
                     this.Intents != null &&
                     this.Intents.SequenceEqual(other.Intents)
@@ -133,6 +154,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
+                
+                if (this.Version != null)
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.Intents != null)
                     hash = hash * 59 + this.Intents.GetHashCode();

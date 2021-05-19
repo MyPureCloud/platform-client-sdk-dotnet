@@ -3529,7 +3529,7 @@ namespace Example
 
 <a name="putqualitysurveysscorable"></a>
 
-## [**ScorableSurvey**](ScorableSurvey.html) PutQualitySurveysScorable (ScorableSurvey body, string customerSurveyUrl = null)
+## [**ScorableSurvey**](ScorableSurvey.html) PutQualitySurveysScorable (ScorableSurvey body, string customerSurveyUrl)
 
 
 
@@ -3557,7 +3557,7 @@ namespace Example
 
             var apiInstance = new QualityApi();
             var body = new ScorableSurvey(); // ScorableSurvey | survey
-            var customerSurveyUrl = customerSurveyUrl_example;  // string | customerSurveyUrl (optional) 
+            var customerSurveyUrl = customerSurveyUrl_example;  // string | customerSurveyUrl
 
             try
             { 
@@ -3580,7 +3580,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ScorableSurvey**](ScorableSurvey.html)| survey |  |
-| **customerSurveyUrl** | **string**| customerSurveyUrl | [optional]  |
+| **customerSurveyUrl** | **string**| customerSurveyUrl |  |
 {: class="table table-striped"}
 
 ### Return type

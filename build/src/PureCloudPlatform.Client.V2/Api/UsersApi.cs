@@ -565,7 +565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<User>> GetUserDirectreportsWithHttpInfo (string userId, List<string> expand = null);
         
         /// <summary>
-        /// Get favorites
+        /// Deprecated; will be revived with new contract
         /// </summary>
         /// <remarks>
         /// 
@@ -580,7 +580,7 @@ namespace PureCloudPlatform.Client.V2.Api
         UserEntityListing GetUserFavorites (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
-        /// Get favorites
+        /// Deprecated; will be revived with new contract
         /// </summary>
         /// <remarks>
         /// 
@@ -2475,7 +2475,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<User>>> GetUserDirectreportsAsyncWithHttpInfo (string userId, List<string> expand = null);
         
         /// <summary>
-        /// Get favorites
+        /// Deprecated; will be revived with new contract
         /// </summary>
         /// <remarks>
         /// 
@@ -2490,7 +2490,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UserEntityListing> GetUserFavoritesAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
-        /// Get favorites
+        /// Deprecated; will be revived with new contract
         /// </summary>
         /// <remarks>
         /// 
@@ -8490,7 +8490,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get favorites 
+        /// Deprecated; will be revived with new contract 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -8506,7 +8506,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get favorites 
+        /// Deprecated; will be revived with new contract 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -8597,7 +8597,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get favorites 
+        /// Deprecated; will be revived with new contract 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -8614,7 +8614,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get favorites 
+        /// Deprecated; will be revived with new contract 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>

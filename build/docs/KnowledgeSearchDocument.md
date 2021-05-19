@@ -17,6 +17,7 @@ title: KnowledgeSearchDocument
 | **Categories** | [**List&lt;KnowledgeCategory&gt;**](KnowledgeCategory.html) | Document categories | [optional] |
 | **KnowledgeBase** | [**KnowledgeBase**](KnowledgeBase.html) | Knowledge base which document does belong to | [optional] |
 | **ExternalUrl** | **string** | External URL to the document | [optional] |
+| **Article** | [**DocumentArticle**](DocumentArticle.html) | Article | [optional] |
 | **Confidence** | **double?** | The confidence associated with a document with respect to a search query | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

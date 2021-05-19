@@ -9,7 +9,7 @@ title: DataTable
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
+| **Division** | [**WritableDivision**](WritableDivision.html) | The division to which this entity belongs. | [optional] |
 | **Description** | **string** | The description from the JSON schema (equates to the Description field on the JSON schema.) | [optional] |
 | **Schema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) | the schema as stored in the system. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

@@ -58,7 +58,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Description">The description from the JSON schema (equates to the Description field on the JSON schema.).</param>
         /// <param name="Schema">the schema as stored in the system..</param>
-        public DataTable(string Name = null, Division Division = null, string Description = null, JsonSchemaDocument Schema = null)
+        public DataTable(string Name = null, WritableDivision Division = null, string Description = null, JsonSchemaDocument Schema = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -91,7 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public Division Division { get; set; }
+        public WritableDivision Division { get; set; }
         
         
         
