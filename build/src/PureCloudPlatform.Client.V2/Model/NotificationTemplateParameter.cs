@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Parameters for placeholders in template
+    /// Template parameters for placeholders in template.
     /// </summary>
     [DataContract]
     public partial class NotificationTemplateParameter :  IEquatable<NotificationTemplateParameter>
@@ -40,8 +40,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificationTemplateParameter" /> class.
         /// </summary>
-        /// <param name="Name">Parameter name.</param>
-        /// <param name="Text">Parameter text value (required).</param>
+        /// <param name="Name">Parameter name..</param>
+        /// <param name="Text">Parameter text value. (required).</param>
         public NotificationTemplateParameter(string Name = null, string Text = null)
         {
             this.Name = Name;
@@ -52,18 +52,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Parameter name
+        /// Parameter name.
         /// </summary>
-        /// <value>Parameter name</value>
+        /// <value>Parameter name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
         
         
         /// <summary>
-        /// Parameter text value
+        /// Parameter text value.
         /// </summary>
-        /// <value>Parameter text value</value>
+        /// <value>Parameter text value.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
         

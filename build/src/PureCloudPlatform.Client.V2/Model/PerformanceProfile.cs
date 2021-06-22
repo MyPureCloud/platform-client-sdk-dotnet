@@ -45,6 +45,31 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="PerformanceProfile" /> class.
@@ -56,13 +81,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="PerformanceProfile" /> class.
         /// </summary>
         /// <param name="Name">A name for this performance profile (required).</param>
+        /// <param name="Division">The division for this performance profile associate to.</param>
         /// <param name="Description">A description about this performance profile (required).</param>
         /// <param name="MetricOrders">Order of the associated metrics. The list should contain valid ids for metrics (required).</param>
-        public PerformanceProfile(string Name = null, string Description = null, List<string> MetricOrders = null)
+        /// <param name="ReportingIntervals">The reporting interval periods for this performance profile.</param>
+        /// <param name="Active">The flag for active profiles.</param>
+        /// <param name="MaxLeaderboardRankSize">The maximum rank size for the leaderboard. This counts the number of ranks can be retrieved in a leaderboard queries.</param>
+        public PerformanceProfile(string Name = null, Division Division = null, string Description = null, List<string> MetricOrders = null, List<ReportingInterval> ReportingIntervals = null, bool? Active = null, int? MaxLeaderboardRankSize = null)
         {
             this.Name = Name;
+            this.Division = Division;
             this.Description = Description;
             this.MetricOrders = MetricOrders;
+            this.ReportingIntervals = ReportingIntervals;
+            this.Active = Active;
+            this.MaxLeaderboardRankSize = MaxLeaderboardRankSize;
             
         }
         
@@ -87,6 +120,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The division for this performance profile associate to
+        /// </summary>
+        /// <value>The division for this performance profile associate to</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public Division Division { get; set; }
+        
+        
+        
+        /// <summary>
         /// A description about this performance profile
         /// </summary>
         /// <value>A description about this performance profile</value>
@@ -101,6 +143,42 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Order of the associated metrics. The list should contain valid ids for metrics</value>
         [DataMember(Name="metricOrders", EmitDefaultValue=false)]
         public List<string> MetricOrders { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Creation date for this performance profile. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Creation date for this performance profile. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The reporting interval periods for this performance profile
+        /// </summary>
+        /// <value>The reporting interval periods for this performance profile</value>
+        [DataMember(Name="reportingIntervals", EmitDefaultValue=false)]
+        public List<ReportingInterval> ReportingIntervals { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The flag for active profiles
+        /// </summary>
+        /// <value>The flag for active profiles</value>
+        [DataMember(Name="active", EmitDefaultValue=false)]
+        public bool? Active { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The maximum rank size for the leaderboard. This counts the number of ranks can be retrieved in a leaderboard queries
+        /// </summary>
+        /// <value>The maximum rank size for the leaderboard. This counts the number of ranks can be retrieved in a leaderboard queries</value>
+        [DataMember(Name="maxLeaderboardRankSize", EmitDefaultValue=false)]
+        public int? MaxLeaderboardRankSize { get; set; }
         
         
         
@@ -123,8 +201,13 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  MetricOrders: ").Append(MetricOrders).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  ReportingIntervals: ").Append(ReportingIntervals).Append("\n");
+            sb.Append("  Active: ").Append(Active).Append("\n");
+            sb.Append("  MaxLeaderboardRankSize: ").Append(MaxLeaderboardRankSize).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -173,6 +256,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
@@ -181,6 +269,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MetricOrders == other.MetricOrders ||
                     this.MetricOrders != null &&
                     this.MetricOrders.SequenceEqual(other.MetricOrders)
+                ) &&
+                (
+                    this.DateCreated == other.DateCreated ||
+                    this.DateCreated != null &&
+                    this.DateCreated.Equals(other.DateCreated)
+                ) &&
+                (
+                    this.ReportingIntervals == other.ReportingIntervals ||
+                    this.ReportingIntervals != null &&
+                    this.ReportingIntervals.SequenceEqual(other.ReportingIntervals)
+                ) &&
+                (
+                    this.Active == other.Active ||
+                    this.Active != null &&
+                    this.Active.Equals(other.Active)
+                ) &&
+                (
+                    this.MaxLeaderboardRankSize == other.MaxLeaderboardRankSize ||
+                    this.MaxLeaderboardRankSize != null &&
+                    this.MaxLeaderboardRankSize.Equals(other.MaxLeaderboardRankSize)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -207,11 +315,26 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
+                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.MetricOrders != null)
                     hash = hash * 59 + this.MetricOrders.GetHashCode();
+                
+                if (this.DateCreated != null)
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
+                
+                if (this.ReportingIntervals != null)
+                    hash = hash * 59 + this.ReportingIntervals.GetHashCode();
+                
+                if (this.Active != null)
+                    hash = hash * 59 + this.Active.GetHashCode();
+                
+                if (this.MaxLeaderboardRankSize != null)
+                    hash = hash * 59 + this.MaxLeaderboardRankSize.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

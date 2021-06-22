@@ -111,6 +111,8 @@ title: ViewFilter
 | **DevelopmentName** | **string** | Filter for development name | [optional] |
 | **TopicIds** | **List&lt;string&gt;** | Represents the topics detected in the transcript | [optional] |
 | **ExternalTags** | **List&lt;string&gt;** | The list of external Tags used to filter conversation data | [optional] |
+| **IsNotResponding** | **bool?** | Indicates filtering for not responding users | [optional] |
+| **IsAuthenticated** | **bool?** | Indicates filtering for the authenticated chat | [optional] |
 {: class="table table-striped"}
 
 

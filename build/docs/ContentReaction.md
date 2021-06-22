@@ -7,8 +7,8 @@ title: ContentReaction
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ReactionType** | **string** | Type of reaction | [optional] |
-| **Count** | **int?** | Number of users that reacted this way to this public message | [optional] |
+| **ReactionType** | **string** | Type of reaction. | [optional] |
+| **Count** | **int?** | Number of users that reacted this way to the message. | [optional] |
 {: class="table table-striped"}
 
 

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// List content object
+    /// List content object.
     /// </summary>
     [DataContract]
     public partial class ContentList :  IEquatable<ContentList>
@@ -24,9 +24,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The type of list this instance represents
+        /// The type of list this instance represents.
         /// </summary>
-        /// <value>The type of list this instance represents</value>
+        /// <value>The type of list this instance represents.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ListTypeEnum
         {
@@ -73,9 +73,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The type of list this instance represents
+        /// The type of list this instance represents.
         /// </summary>
-        /// <value>The type of list this instance represents</value>
+        /// <value>The type of list this instance represents.</value>
         [DataMember(Name="listType", EmitDefaultValue=false)]
         public ListTypeEnum? ListType { get; set; }
         
@@ -94,13 +94,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentList" /> class.
         /// </summary>
-        /// <param name="Id">An ID assigned to this rich message content. Each instance inside the content array has a unique ID..</param>
-        /// <param name="ListType">The type of list this instance represents.</param>
-        /// <param name="Title">Text to show in the title row.</param>
-        /// <param name="Description">Text to show in the description row. This is immediately below the title.</param>
-        /// <param name="SubmitLabel">Label for Submit button.</param>
-        /// <param name="Actions">User actions available on the content. All actions are optional and all actions are executed simultaneously..</param>
-        /// <param name="Components">An array of component objects.</param>
+        /// <param name="Id">A unique ID assigned to this rich message content..</param>
+        /// <param name="ListType">The type of list this instance represents..</param>
+        /// <param name="Title">Text to show in the title..</param>
+        /// <param name="Description">Text to show in the description..</param>
+        /// <param name="SubmitLabel">Label for Submit button..</param>
+        /// <param name="Actions">The list actions..</param>
+        /// <param name="Components">An array of component objects..</param>
         public ContentList(string Id = null, ListTypeEnum? ListType = null, string Title = null, string Description = null, string SubmitLabel = null, ContentActions Actions = null, List<ListItemComponent> Components = null)
         {
             this.Id = Id;
@@ -116,9 +116,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// An ID assigned to this rich message content. Each instance inside the content array has a unique ID.
+        /// A unique ID assigned to this rich message content.
         /// </summary>
-        /// <value>An ID assigned to this rich message content. Each instance inside the content array has a unique ID.</value>
+        /// <value>A unique ID assigned to this rich message content.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
@@ -127,45 +127,45 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Text to show in the title row
+        /// Text to show in the title.
         /// </summary>
-        /// <value>Text to show in the title row</value>
+        /// <value>Text to show in the title.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
         
         
         
         /// <summary>
-        /// Text to show in the description row. This is immediately below the title
+        /// Text to show in the description.
         /// </summary>
-        /// <value>Text to show in the description row. This is immediately below the title</value>
+        /// <value>Text to show in the description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
         
         
         
         /// <summary>
-        /// Label for Submit button
+        /// Label for Submit button.
         /// </summary>
-        /// <value>Label for Submit button</value>
+        /// <value>Label for Submit button.</value>
         [DataMember(Name="submitLabel", EmitDefaultValue=false)]
         public string SubmitLabel { get; set; }
         
         
         
         /// <summary>
-        /// User actions available on the content. All actions are optional and all actions are executed simultaneously.
+        /// The list actions.
         /// </summary>
-        /// <value>User actions available on the content. All actions are optional and all actions are executed simultaneously.</value>
+        /// <value>The list actions.</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public ContentActions Actions { get; set; }
         
         
         
         /// <summary>
-        /// An array of component objects
+        /// An array of component objects.
         /// </summary>
-        /// <value>An array of component objects</value>
+        /// <value>An array of component objects.</value>
         [DataMember(Name="components", EmitDefaultValue=false)]
         public List<ListItemComponent> Components { get; set; }
         

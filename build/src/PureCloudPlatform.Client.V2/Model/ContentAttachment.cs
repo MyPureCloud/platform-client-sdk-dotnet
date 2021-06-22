@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Attachment object
+    /// Attachment object.
     /// </summary>
     [DataContract]
     public partial class ContentAttachment :  IEquatable<ContentAttachment>
@@ -24,9 +24,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The type of media this instance represents
+        /// The type of attachment this instance represents.
         /// </summary>
-        /// <value>The type of media this instance represents</value>
+        /// <value>The type of attachment this instance represents.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum MediaTypeEnum
         {
@@ -85,9 +85,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The type of media this instance represents
+        /// The type of attachment this instance represents.
         /// </summary>
-        /// <value>The type of media this instance represents</value>
+        /// <value>The type of attachment this instance represents.</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
         
@@ -112,13 +112,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentAttachment" /> class.
         /// </summary>
-        /// <param name="Id">Vendor specific ID for media. For example, a LINE sticker ID.</param>
-        /// <param name="MediaType">The type of media this instance represents (required).</param>
-        /// <param name="Url">Content element url.</param>
-        /// <param name="Mime">Content mime type from https://www.iana.org/assignments/media-types/media-types.xhtml.</param>
-        /// <param name="Text">Text message associated with media element: e.g. caption in case of image..</param>
-        /// <param name="Sha256">Secure hash of the media content.</param>
-        /// <param name="Filename">Suggested file name for media file.</param>
+        /// <param name="Id">Provider specific ID for attachment. For example, a LINE sticker ID..</param>
+        /// <param name="MediaType">The type of attachment this instance represents. (required).</param>
+        /// <param name="Url">URL of the attachment..</param>
+        /// <param name="Mime">Attachment mime type (https://www.iana.org/assignments/media-types/media-types.xhtml)..</param>
+        /// <param name="Text">Text associated with attachment such as an image caption..</param>
+        /// <param name="Sha256">Secure hash of the attachment content..</param>
+        /// <param name="Filename">Suggested file name for attachment..</param>
         public ContentAttachment(string Id = null, MediaTypeEnum? MediaType = null, string Url = null, string Mime = null, string Text = null, string Sha256 = null, string Filename = null)
         {
             this.Id = Id;
@@ -134,9 +134,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Vendor specific ID for media. For example, a LINE sticker ID
+        /// Provider specific ID for attachment. For example, a LINE sticker ID.
         /// </summary>
-        /// <value>Vendor specific ID for media. For example, a LINE sticker ID</value>
+        /// <value>Provider specific ID for attachment. For example, a LINE sticker ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
@@ -145,45 +145,45 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Content element url
+        /// URL of the attachment.
         /// </summary>
-        /// <value>Content element url</value>
+        /// <value>URL of the attachment.</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
         
         
         
         /// <summary>
-        /// Content mime type from https://www.iana.org/assignments/media-types/media-types.xhtml
+        /// Attachment mime type (https://www.iana.org/assignments/media-types/media-types.xhtml).
         /// </summary>
-        /// <value>Content mime type from https://www.iana.org/assignments/media-types/media-types.xhtml</value>
+        /// <value>Attachment mime type (https://www.iana.org/assignments/media-types/media-types.xhtml).</value>
         [DataMember(Name="mime", EmitDefaultValue=false)]
         public string Mime { get; set; }
         
         
         
         /// <summary>
-        /// Text message associated with media element: e.g. caption in case of image.
+        /// Text associated with attachment such as an image caption.
         /// </summary>
-        /// <value>Text message associated with media element: e.g. caption in case of image.</value>
+        /// <value>Text associated with attachment such as an image caption.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
         
         
         
         /// <summary>
-        /// Secure hash of the media content
+        /// Secure hash of the attachment content.
         /// </summary>
-        /// <value>Secure hash of the media content</value>
+        /// <value>Secure hash of the attachment content.</value>
         [DataMember(Name="sha256", EmitDefaultValue=false)]
         public string Sha256 { get; set; }
         
         
         
         /// <summary>
-        /// Suggested file name for media file
+        /// Suggested file name for attachment.
         /// </summary>
-        /// <value>Suggested file name for media file</value>
+        /// <value>Suggested file name for attachment.</value>
         [DataMember(Name="filename", EmitDefaultValue=false)]
         public string Filename { get; set; }
         

@@ -42,7 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Domain">Domain.</param>
         /// <param name="Version">Version.</param>
         /// <param name="Intents">Intents.</param>
-        public NluInfo(AddressableEntityRef Domain = null, AddressableEntityRef Version = null, List<Intent> Intents = null)
+        public NluInfo(AddressableEntityRef Domain = null, NluDomainVersion Version = null, List<Intent> Intents = null)
         {
             this.Domain = Domain;
             this.Version = Version;
@@ -64,7 +64,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public AddressableEntityRef Version { get; set; }
+        public NluDomainVersion Version { get; set; }
         
         
         

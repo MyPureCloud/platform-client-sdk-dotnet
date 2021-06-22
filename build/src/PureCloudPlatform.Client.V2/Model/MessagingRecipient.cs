@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// This is used to identify who the message is sent to, as well as who it was sent from. This information is channel specific - depends on capabilities to describe party by the platform
+    /// Information about the recipient the message is sent to or received from.
     /// </summary>
     [DataContract]
     public partial class MessagingRecipient :  IEquatable<MessagingRecipient>
@@ -27,9 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The recipient identifier type. This is used to indicate the format used by the recipient identifier.
+        /// The recipient ID type. This is used to indicate the format used for the ID.
         /// </summary>
-        /// <value>The recipient identifier type. This is used to indicate the format used by the recipient identifier.</value>
+        /// <value>The recipient ID type. This is used to indicate the format used for the ID.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum IdTypeEnum
         {
@@ -81,9 +81,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The recipient identifier type. This is used to indicate the format used by the recipient identifier.
+        /// The recipient ID type. This is used to indicate the format used for the ID.
         /// </summary>
-        /// <value>The recipient identifier type. This is used to indicate the format used by the recipient identifier.</value>
+        /// <value>The recipient ID type. This is used to indicate the format used for the ID.</value>
         [DataMember(Name="idType", EmitDefaultValue=false)]
         public IdTypeEnum? IdType { get; set; }
         
@@ -106,8 +106,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessagingRecipient" /> class.
         /// </summary>
-        /// <param name="Id">The recipient identifier specific for particular channel/integration. This is required when sending a message. (required).</param>
-        /// <param name="IdType">The recipient identifier type. This is used to indicate the format used by the recipient identifier..</param>
+        /// <param name="Id">The recipient ID specific to the provider. (required).</param>
+        /// <param name="IdType">The recipient ID type. This is used to indicate the format used for the ID..</param>
         public MessagingRecipient(string Id = null, IdTypeEnum? IdType = null)
         {
             this.Id = Id;
@@ -118,18 +118,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Nickname/user name
+        /// Nickname or display name of the recipient.
         /// </summary>
-        /// <value>Nickname/user name</value>
+        /// <value>Nickname or display name of the recipient.</value>
         [DataMember(Name="nickname", EmitDefaultValue=false)]
         public string Nickname { get; private set; }
         
         
         
         /// <summary>
-        /// The recipient identifier specific for particular channel/integration. This is required when sending a message.
+        /// The recipient ID specific to the provider.
         /// </summary>
-        /// <value>The recipient identifier specific for particular channel/integration. This is required when sending a message.</value>
+        /// <value>The recipient ID specific to the provider.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
@@ -138,36 +138,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Path or URI to an image file containing an avatar
+        /// URL of an image that represents the recipient.
         /// </summary>
-        /// <value>Path or URI to an image file containing an avatar</value>
+        /// <value>URL of an image that represents the recipient.</value>
         [DataMember(Name="image", EmitDefaultValue=false)]
         public string Image { get; private set; }
         
         
         
         /// <summary>
-        /// Sender&#39;s first name
+        /// First name of the recipient.
         /// </summary>
-        /// <value>Sender&#39;s first name</value>
+        /// <value>First name of the recipient.</value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; private set; }
         
         
         
         /// <summary>
-        /// Sender&#39;s last name
+        /// Last name of the recipient.
         /// </summary>
-        /// <value>Sender&#39;s last name</value>
+        /// <value>Last name of the recipient.</value>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; private set; }
         
         
         
         /// <summary>
-        /// Sender&#39;s email address
+        /// E-mail address of the recipient.
         /// </summary>
-        /// <value>Sender&#39;s email address</value>
+        /// <value>E-mail address of the recipient.</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; private set; }
         

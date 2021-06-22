@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// User reaction to public message
+    /// User reaction to public message.
     /// </summary>
     [DataContract]
     public partial class ContentReaction :  IEquatable<ContentReaction>
@@ -21,9 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Type of reaction
+        /// Type of reaction.
         /// </summary>
-        /// <value>Type of reaction</value>
+        /// <value>Type of reaction.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ReactionTypeEnum
         {
@@ -34,12 +34,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "OUTDATED_SDK_VERSION")]
             OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum None for "None"
-            /// </summary>
-            [EnumMember(Value = "None")]
-            None,
             
             /// <summary>
             /// Enum Like for "Like"
@@ -104,9 +98,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Type of reaction
+        /// Type of reaction.
         /// </summary>
-        /// <value>Type of reaction</value>
+        /// <value>Type of reaction.</value>
         [DataMember(Name="reactionType", EmitDefaultValue=false)]
         public ReactionTypeEnum? ReactionType { get; set; }
         
@@ -117,8 +111,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentReaction" /> class.
         /// </summary>
-        /// <param name="ReactionType">Type of reaction.</param>
-        /// <param name="Count">Number of users that reacted this way to this public message.</param>
+        /// <param name="ReactionType">Type of reaction..</param>
+        /// <param name="Count">Number of users that reacted this way to the message..</param>
         public ContentReaction(ReactionTypeEnum? ReactionType = null, int? Count = null)
         {
             this.ReactionType = ReactionType;
@@ -131,9 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Number of users that reacted this way to this public message
+        /// Number of users that reacted this way to the message.
         /// </summary>
-        /// <value>Number of users that reacted this way to this public message</value>
+        /// <value>Number of users that reacted this way to the message.</value>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
         

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Template footer object
+    /// Template footer object.
     /// </summary>
     [DataContract]
     public partial class NotificationTemplateFooter :  IEquatable<NotificationTemplateFooter>
@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificationTemplateFooter" /> class.
         /// </summary>
-        /// <param name="Text">Footer text. For WhatsApp, ignored.</param>
+        /// <param name="Text">Footer text. For WhatsApp, ignored..</param>
         public NotificationTemplateFooter(string Text = null)
         {
             this.Text = Text;
@@ -39,9 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Footer text. For WhatsApp, ignored
+        /// Footer text. For WhatsApp, ignored.
         /// </summary>
-        /// <value>Footer text. For WhatsApp, ignored</value>
+        /// <value>Footer text. For WhatsApp, ignored.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
         

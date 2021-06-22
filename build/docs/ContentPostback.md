@@ -7,9 +7,9 @@ title: ContentPostback
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** | An ID assigned to the postback reply. Each object inside the content array has a unique ID. | [optional] |
-| **Text** | **string** | The text inside the button clicked (in the structured message template) | [optional] |
-| **Payload** | **string** | Content of the textback payload after clicking a quick reply | |
+| **Id** | **string** | An ID assigned to the button response. | [optional] |
+| **Text** | **string** | The response text from the button click. | [optional] |
+| **Payload** | **string** | The response payload associated with the clicked button. | |
 {: class="table table-striped"}
 
 

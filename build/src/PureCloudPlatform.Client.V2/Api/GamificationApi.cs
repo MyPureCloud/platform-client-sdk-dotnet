@@ -17,7 +17,7 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Leaderboard of the requesting user&#39;s division
+        /// Leaderboard of the requesting user&#39;s division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Leaderboard GetGamificationLeaderboard (String startWorkday, String endWorkday, string metricId = null);
 
         /// <summary>
-        /// Leaderboard of the requesting user&#39;s division
+        /// Leaderboard of the requesting user&#39;s division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -43,7 +43,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Leaderboard> GetGamificationLeaderboardWithHttpInfo (String startWorkday, String endWorkday, string metricId = null);
         
         /// <summary>
-        /// Leaderboard by division
+        /// Leaderboard by filter type
         /// </summary>
         /// <remarks>
         /// 
@@ -58,7 +58,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Leaderboard GetGamificationLeaderboardAll (string filterType, string filterId, String startWorkday, String endWorkday, string metricId = null);
 
         /// <summary>
-        /// Leaderboard by division
+        /// Leaderboard by filter type
         /// </summary>
         /// <remarks>
         /// 
@@ -124,8 +124,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
+        /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Metric</returns>
-        Metric GetGamificationMetric (string metricId);
+        Metric GetGamificationMetric (string metricId, string performanceProfileId = null);
 
         /// <summary>
         /// Gamified metric by id
@@ -135,8 +136,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
+        /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>ApiResponse of Metric</returns>
-        ApiResponse<Metric> GetGamificationMetricWithHttpInfo (string metricId);
+        ApiResponse<Metric> GetGamificationMetricWithHttpInfo (string metricId, string performanceProfileId = null);
         
         /// <summary>
         /// Metric definition by id
@@ -251,7 +253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workday">Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkdayMetricListing</returns>
         WorkdayMetricListing GetGamificationScorecards (String workday, List<string> expand = null);
@@ -263,7 +265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workday">Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkdayMetricListing</returns>
         ApiResponse<WorkdayMetricListing> GetGamificationScorecardsWithHttpInfo (String workday, List<string> expand = null);
@@ -275,8 +277,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>AttendanceStatusListing</returns>
         AttendanceStatusListing GetGamificationScorecardsAttendance (String startWorkday, String endWorkday);
 
@@ -287,8 +289,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AttendanceStatusListing</returns>
         ApiResponse<AttendanceStatusListing> GetGamificationScorecardsAttendanceWithHttpInfo (String startWorkday, String endWorkday);
         
@@ -319,7 +321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>AllTimePoints</returns>
         AllTimePoints GetGamificationScorecardsPointsAlltime (String endWorkday);
 
@@ -330,7 +332,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AllTimePoints</returns>
         ApiResponse<AllTimePoints> GetGamificationScorecardsPointsAlltimeWithHttpInfo (String endWorkday);
         
@@ -363,8 +365,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>WorkdayPointsTrend</returns>
         WorkdayPointsTrend GetGamificationScorecardsPointsTrends (String startWorkday, String endWorkday, string dayOfWeek = null);
@@ -376,8 +378,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>ApiResponse of WorkdayPointsTrend</returns>
         ApiResponse<WorkdayPointsTrend> GetGamificationScorecardsPointsTrendsWithHttpInfo (String startWorkday, String endWorkday, string dayOfWeek = null);
@@ -390,7 +392,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="workday">Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkdayMetricListing</returns>
         WorkdayMetricListing GetGamificationScorecardsUser (string userId, String workday, List<string> expand = null);
@@ -403,7 +405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="workday">Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkdayMetricListing</returns>
         ApiResponse<WorkdayMetricListing> GetGamificationScorecardsUserWithHttpInfo (string userId, String workday, List<string> expand = null);
@@ -416,8 +418,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>AttendanceStatusListing</returns>
         AttendanceStatusListing GetGamificationScorecardsUserAttendance (string userId, String startWorkday, String endWorkday);
 
@@ -429,8 +431,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AttendanceStatusListing</returns>
         ApiResponse<AttendanceStatusListing> GetGamificationScorecardsUserAttendanceWithHttpInfo (string userId, String startWorkday, String endWorkday);
         
@@ -464,7 +466,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>AllTimePoints</returns>
         AllTimePoints GetGamificationScorecardsUserPointsAlltime (string userId, String endWorkday);
 
@@ -476,7 +478,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AllTimePoints</returns>
         ApiResponse<AllTimePoints> GetGamificationScorecardsUserPointsAlltimeWithHttpInfo (string userId, String endWorkday);
         
@@ -488,8 +490,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>WorkdayPointsTrend</returns>
         WorkdayPointsTrend GetGamificationScorecardsUserPointsTrends (string userId, String startWorkday, String endWorkday, string dayOfWeek = null);
@@ -502,8 +504,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>ApiResponse of WorkdayPointsTrend</returns>
         ApiResponse<WorkdayPointsTrend> GetGamificationScorecardsUserPointsTrendsWithHttpInfo (string userId, String startWorkday, String endWorkday, string dayOfWeek = null);
@@ -516,8 +518,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>WorkdayValuesTrend</returns>
         WorkdayValuesTrend GetGamificationScorecardsUserValuesTrends (string userId, String startWorkday, String endWorkday, string timeZone = null);
@@ -530,8 +532,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>ApiResponse of WorkdayValuesTrend</returns>
         ApiResponse<WorkdayValuesTrend> GetGamificationScorecardsUserValuesTrendsWithHttpInfo (string userId, String startWorkday, String endWorkday, string timeZone = null);
@@ -599,8 +601,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type.</param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>WorkdayValuesTrend</returns>
         WorkdayValuesTrend GetGamificationScorecardsUsersValuesTrends (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null);
@@ -614,8 +616,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type.</param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>ApiResponse of WorkdayValuesTrend</returns>
         ApiResponse<WorkdayValuesTrend> GetGamificationScorecardsUsersValuesTrendsWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null);
@@ -651,8 +653,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="filterType">Filter type for the query request. If not set, then the request is for the requesting user. (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>WorkdayValuesTrend</returns>
@@ -665,8 +667,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="filterType">Filter type for the query request. If not set, then the request is for the requesting user. (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>ApiResponse of WorkdayValuesTrend</returns>
@@ -765,8 +767,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
         /// <param name="body">Metric</param>
+        /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Metric</returns>
-        Metric PutGamificationMetric (string metricId, Metric body);
+        Metric PutGamificationMetric (string metricId, Metric body, string performanceProfileId = null);
 
         /// <summary>
         /// Updates a metric
@@ -777,8 +780,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
         /// <param name="body">Metric</param>
+        /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>ApiResponse of Metric</returns>
-        ApiResponse<Metric> PutGamificationMetricWithHttpInfo (string metricId, Metric body);
+        ApiResponse<Metric> PutGamificationMetricWithHttpInfo (string metricId, Metric body, string performanceProfileId = null);
         
         /// <summary>
         /// Updates a performance profile
@@ -831,7 +835,7 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Leaderboard of the requesting user&#39;s division
+        /// Leaderboard of the requesting user&#39;s division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -844,7 +848,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Leaderboard> GetGamificationLeaderboardAsync (String startWorkday, String endWorkday, string metricId = null);
 
         /// <summary>
-        /// Leaderboard of the requesting user&#39;s division
+        /// Leaderboard of the requesting user&#39;s division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -857,7 +861,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Leaderboard>> GetGamificationLeaderboardAsyncWithHttpInfo (String startWorkday, String endWorkday, string metricId = null);
         
         /// <summary>
-        /// Leaderboard by division
+        /// Leaderboard by filter type
         /// </summary>
         /// <remarks>
         /// 
@@ -872,7 +876,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Leaderboard> GetGamificationLeaderboardAllAsync (string filterType, string filterId, String startWorkday, String endWorkday, string metricId = null);
 
         /// <summary>
-        /// Leaderboard by division
+        /// Leaderboard by filter type
         /// </summary>
         /// <remarks>
         /// 
@@ -938,8 +942,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
+        /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Task of Metric</returns>
-        System.Threading.Tasks.Task<Metric> GetGamificationMetricAsync (string metricId);
+        System.Threading.Tasks.Task<Metric> GetGamificationMetricAsync (string metricId, string performanceProfileId = null);
 
         /// <summary>
         /// Gamified metric by id
@@ -949,8 +954,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
+        /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Metric>> GetGamificationMetricAsyncWithHttpInfo (string metricId);
+        System.Threading.Tasks.Task<ApiResponse<Metric>> GetGamificationMetricAsyncWithHttpInfo (string metricId, string performanceProfileId = null);
         
         /// <summary>
         /// Metric definition by id
@@ -1065,7 +1071,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workday">Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkdayMetricListing</returns>
         System.Threading.Tasks.Task<WorkdayMetricListing> GetGamificationScorecardsAsync (String workday, List<string> expand = null);
@@ -1077,7 +1083,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workday">Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayMetricListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkdayMetricListing>> GetGamificationScorecardsAsyncWithHttpInfo (String workday, List<string> expand = null);
@@ -1089,8 +1095,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of AttendanceStatusListing</returns>
         System.Threading.Tasks.Task<AttendanceStatusListing> GetGamificationScorecardsAttendanceAsync (String startWorkday, String endWorkday);
 
@@ -1101,8 +1107,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AttendanceStatusListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<AttendanceStatusListing>> GetGamificationScorecardsAttendanceAsyncWithHttpInfo (String startWorkday, String endWorkday);
         
@@ -1133,7 +1139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of AllTimePoints</returns>
         System.Threading.Tasks.Task<AllTimePoints> GetGamificationScorecardsPointsAlltimeAsync (String endWorkday);
 
@@ -1144,7 +1150,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AllTimePoints)</returns>
         System.Threading.Tasks.Task<ApiResponse<AllTimePoints>> GetGamificationScorecardsPointsAlltimeAsyncWithHttpInfo (String endWorkday);
         
@@ -1177,8 +1183,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of WorkdayPointsTrend</returns>
         System.Threading.Tasks.Task<WorkdayPointsTrend> GetGamificationScorecardsPointsTrendsAsync (String startWorkday, String endWorkday, string dayOfWeek = null);
@@ -1190,8 +1196,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayPointsTrend)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkdayPointsTrend>> GetGamificationScorecardsPointsTrendsAsyncWithHttpInfo (String startWorkday, String endWorkday, string dayOfWeek = null);
@@ -1204,7 +1210,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="workday">Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkdayMetricListing</returns>
         System.Threading.Tasks.Task<WorkdayMetricListing> GetGamificationScorecardsUserAsync (string userId, String workday, List<string> expand = null);
@@ -1217,7 +1223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="workday">Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayMetricListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkdayMetricListing>> GetGamificationScorecardsUserAsyncWithHttpInfo (string userId, String workday, List<string> expand = null);
@@ -1230,8 +1236,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of AttendanceStatusListing</returns>
         System.Threading.Tasks.Task<AttendanceStatusListing> GetGamificationScorecardsUserAttendanceAsync (string userId, String startWorkday, String endWorkday);
 
@@ -1243,8 +1249,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AttendanceStatusListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<AttendanceStatusListing>> GetGamificationScorecardsUserAttendanceAsyncWithHttpInfo (string userId, String startWorkday, String endWorkday);
         
@@ -1278,7 +1284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of AllTimePoints</returns>
         System.Threading.Tasks.Task<AllTimePoints> GetGamificationScorecardsUserPointsAlltimeAsync (string userId, String endWorkday);
 
@@ -1290,7 +1296,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AllTimePoints)</returns>
         System.Threading.Tasks.Task<ApiResponse<AllTimePoints>> GetGamificationScorecardsUserPointsAlltimeAsyncWithHttpInfo (string userId, String endWorkday);
         
@@ -1302,8 +1308,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of WorkdayPointsTrend</returns>
         System.Threading.Tasks.Task<WorkdayPointsTrend> GetGamificationScorecardsUserPointsTrendsAsync (string userId, String startWorkday, String endWorkday, string dayOfWeek = null);
@@ -1316,8 +1322,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayPointsTrend)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkdayPointsTrend>> GetGamificationScorecardsUserPointsTrendsAsyncWithHttpInfo (string userId, String startWorkday, String endWorkday, string dayOfWeek = null);
@@ -1330,8 +1336,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>Task of WorkdayValuesTrend</returns>
         System.Threading.Tasks.Task<WorkdayValuesTrend> GetGamificationScorecardsUserValuesTrendsAsync (string userId, String startWorkday, String endWorkday, string timeZone = null);
@@ -1344,8 +1350,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>Task of ApiResponse (WorkdayValuesTrend)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkdayValuesTrend>> GetGamificationScorecardsUserValuesTrendsAsyncWithHttpInfo (string userId, String startWorkday, String endWorkday, string timeZone = null);
@@ -1413,8 +1419,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type.</param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>Task of WorkdayValuesTrend</returns>
         System.Threading.Tasks.Task<WorkdayValuesTrend> GetGamificationScorecardsUsersValuesTrendsAsync (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null);
@@ -1428,8 +1434,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type.</param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>Task of ApiResponse (WorkdayValuesTrend)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkdayValuesTrend>> GetGamificationScorecardsUsersValuesTrendsAsyncWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null);
@@ -1465,8 +1471,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="filterType">Filter type for the query request. If not set, then the request is for the requesting user. (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>Task of WorkdayValuesTrend</returns>
@@ -1479,8 +1485,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="filterType">Filter type for the query request. If not set, then the request is for the requesting user. (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>Task of ApiResponse (WorkdayValuesTrend)</returns>
@@ -1579,8 +1585,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
         /// <param name="body">Metric</param>
+        /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Task of Metric</returns>
-        System.Threading.Tasks.Task<Metric> PutGamificationMetricAsync (string metricId, Metric body);
+        System.Threading.Tasks.Task<Metric> PutGamificationMetricAsync (string metricId, Metric body, string performanceProfileId = null);
 
         /// <summary>
         /// Updates a metric
@@ -1591,8 +1598,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
         /// <param name="body">Metric</param>
+        /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Metric>> PutGamificationMetricAsyncWithHttpInfo (string metricId, Metric body);
+        System.Threading.Tasks.Task<ApiResponse<Metric>> PutGamificationMetricAsyncWithHttpInfo (string metricId, Metric body, string performanceProfileId = null);
         
         /// <summary>
         /// Updates a performance profile
@@ -1733,7 +1741,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Leaderboard of the requesting user&#39;s division 
+        /// Leaderboard of the requesting user&#39;s division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startWorkday">Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
@@ -1747,7 +1755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Leaderboard of the requesting user&#39;s division 
+        /// Leaderboard of the requesting user&#39;s division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startWorkday">Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
@@ -1837,7 +1845,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Leaderboard of the requesting user&#39;s division 
+        /// Leaderboard of the requesting user&#39;s division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startWorkday">Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
@@ -1852,7 +1860,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Leaderboard of the requesting user&#39;s division 
+        /// Leaderboard of the requesting user&#39;s division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startWorkday">Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
@@ -1945,7 +1953,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Leaderboard by division 
+        /// Leaderboard by filter type 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
@@ -1961,7 +1969,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Leaderboard by division 
+        /// Leaderboard by filter type 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
@@ -2061,7 +2069,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Leaderboard by division 
+        /// Leaderboard by filter type 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
@@ -2078,7 +2086,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Leaderboard by division 
+        /// Leaderboard by filter type 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
@@ -2573,10 +2581,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
+        /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Metric</returns>
-        public Metric GetGamificationMetric (string metricId)
+        public Metric GetGamificationMetric (string metricId, string performanceProfileId = null)
         {
-             ApiResponse<Metric> localVarResponse = GetGamificationMetricWithHttpInfo(metricId);
+             ApiResponse<Metric> localVarResponse = GetGamificationMetricWithHttpInfo(metricId, performanceProfileId);
              return localVarResponse.Data;
         }
 
@@ -2585,8 +2594,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
+        /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>ApiResponse of Metric</returns>
-        public ApiResponse< Metric > GetGamificationMetricWithHttpInfo (string metricId)
+        public ApiResponse< Metric > GetGamificationMetricWithHttpInfo (string metricId, string performanceProfileId = null)
         { 
             // verify the required parameter 'metricId' is set
             if (metricId == null)
@@ -2626,6 +2636,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
 
             // Query params
+            if (performanceProfileId != null) localVarQueryParams.Add(new Tuple<string, string>("performance profile id", this.Configuration.ApiClient.ParameterToString(performanceProfileId)));
 
             // Header params
 
@@ -2668,10 +2679,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
+        /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Task of Metric</returns>
-        public async System.Threading.Tasks.Task<Metric> GetGamificationMetricAsync (string metricId)
+        public async System.Threading.Tasks.Task<Metric> GetGamificationMetricAsync (string metricId, string performanceProfileId = null)
         {
-             ApiResponse<Metric> localVarResponse = await GetGamificationMetricAsyncWithHttpInfo(metricId);
+             ApiResponse<Metric> localVarResponse = await GetGamificationMetricAsyncWithHttpInfo(metricId, performanceProfileId);
              return localVarResponse.Data;
 
         }
@@ -2681,8 +2693,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
+        /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Metric>> GetGamificationMetricAsyncWithHttpInfo (string metricId)
+        public async System.Threading.Tasks.Task<ApiResponse<Metric>> GetGamificationMetricAsyncWithHttpInfo (string metricId, string performanceProfileId = null)
         { 
             // verify the required parameter 'metricId' is set
             if (metricId == null)
@@ -2723,6 +2736,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
 
             // Query params
+            if (performanceProfileId != null) localVarQueryParams.Add(new Tuple<string, string>("performance profile id", this.Configuration.ApiClient.ParameterToString(performanceProfileId)));
 
             // Header params
 
@@ -3697,7 +3711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Workday performance metrics of the requesting user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workday">Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkdayMetricListing</returns>
         public WorkdayMetricListing GetGamificationScorecards (String workday, List<string> expand = null)
@@ -3710,7 +3724,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Workday performance metrics of the requesting user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workday">Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkdayMetricListing</returns>
         public ApiResponse< WorkdayMetricListing > GetGamificationScorecardsWithHttpInfo (String workday, List<string> expand = null)
@@ -3795,7 +3809,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Workday performance metrics of the requesting user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workday">Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkdayMetricListing</returns>
         public async System.Threading.Tasks.Task<WorkdayMetricListing> GetGamificationScorecardsAsync (String workday, List<string> expand = null)
@@ -3809,7 +3823,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Workday performance metrics of the requesting user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workday">Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayMetricListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WorkdayMetricListing>> GetGamificationScorecardsAsyncWithHttpInfo (String workday, List<string> expand = null)
@@ -3896,8 +3910,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Attendance status metrics of the requesting user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>AttendanceStatusListing</returns>
         public AttendanceStatusListing GetGamificationScorecardsAttendance (String startWorkday, String endWorkday)
         {
@@ -3909,8 +3923,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Attendance status metrics of the requesting user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AttendanceStatusListing</returns>
         public ApiResponse< AttendanceStatusListing > GetGamificationScorecardsAttendanceWithHttpInfo (String startWorkday, String endWorkday)
         { 
@@ -3997,8 +4011,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Attendance status metrics of the requesting user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of AttendanceStatusListing</returns>
         public async System.Threading.Tasks.Task<AttendanceStatusListing> GetGamificationScorecardsAttendanceAsync (String startWorkday, String endWorkday)
         {
@@ -4011,8 +4025,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Attendance status metrics of the requesting user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AttendanceStatusListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AttendanceStatusListing>> GetGamificationScorecardsAttendanceAsyncWithHttpInfo (String startWorkday, String endWorkday)
         { 
@@ -4282,7 +4296,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// All-time points of the requesting user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>AllTimePoints</returns>
         public AllTimePoints GetGamificationScorecardsPointsAlltime (String endWorkday)
         {
@@ -4294,7 +4308,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// All-time points of the requesting user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AllTimePoints</returns>
         public ApiResponse< AllTimePoints > GetGamificationScorecardsPointsAlltimeWithHttpInfo (String endWorkday)
         { 
@@ -4377,7 +4391,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// All-time points of the requesting user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of AllTimePoints</returns>
         public async System.Threading.Tasks.Task<AllTimePoints> GetGamificationScorecardsPointsAlltimeAsync (String endWorkday)
         {
@@ -4390,7 +4404,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// All-time points of the requesting user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AllTimePoints)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AllTimePoints>> GetGamificationScorecardsPointsAlltimeAsyncWithHttpInfo (String endWorkday)
         { 
@@ -4668,8 +4682,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Points trends of the requesting user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>WorkdayPointsTrend</returns>
         public WorkdayPointsTrend GetGamificationScorecardsPointsTrends (String startWorkday, String endWorkday, string dayOfWeek = null)
@@ -4682,8 +4696,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Points trends of the requesting user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>ApiResponse of WorkdayPointsTrend</returns>
         public ApiResponse< WorkdayPointsTrend > GetGamificationScorecardsPointsTrendsWithHttpInfo (String startWorkday, String endWorkday, string dayOfWeek = null)
@@ -4772,8 +4786,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Points trends of the requesting user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of WorkdayPointsTrend</returns>
         public async System.Threading.Tasks.Task<WorkdayPointsTrend> GetGamificationScorecardsPointsTrendsAsync (String startWorkday, String endWorkday, string dayOfWeek = null)
@@ -4787,8 +4801,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Points trends of the requesting user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayPointsTrend)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WorkdayPointsTrend>> GetGamificationScorecardsPointsTrendsAsyncWithHttpInfo (String startWorkday, String endWorkday, string dayOfWeek = null)
@@ -4881,7 +4895,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="workday">Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkdayMetricListing</returns>
         public WorkdayMetricListing GetGamificationScorecardsUser (string userId, String workday, List<string> expand = null)
@@ -4895,7 +4909,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="workday">Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkdayMetricListing</returns>
         public ApiResponse< WorkdayMetricListing > GetGamificationScorecardsUserWithHttpInfo (string userId, String workday, List<string> expand = null)
@@ -4985,7 +4999,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="workday">Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkdayMetricListing</returns>
         public async System.Threading.Tasks.Task<WorkdayMetricListing> GetGamificationScorecardsUserAsync (string userId, String workday, List<string> expand = null)
@@ -5000,7 +5014,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="workday">Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayMetricListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WorkdayMetricListing>> GetGamificationScorecardsUserAsyncWithHttpInfo (string userId, String workday, List<string> expand = null)
@@ -5093,8 +5107,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>AttendanceStatusListing</returns>
         public AttendanceStatusListing GetGamificationScorecardsUserAttendance (string userId, String startWorkday, String endWorkday)
         {
@@ -5107,8 +5121,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AttendanceStatusListing</returns>
         public ApiResponse< AttendanceStatusListing > GetGamificationScorecardsUserAttendanceWithHttpInfo (string userId, String startWorkday, String endWorkday)
         { 
@@ -5200,8 +5214,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of AttendanceStatusListing</returns>
         public async System.Threading.Tasks.Task<AttendanceStatusListing> GetGamificationScorecardsUserAttendanceAsync (string userId, String startWorkday, String endWorkday)
         {
@@ -5215,8 +5229,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AttendanceStatusListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AttendanceStatusListing>> GetGamificationScorecardsUserAttendanceAsyncWithHttpInfo (string userId, String startWorkday, String endWorkday)
         { 
@@ -5505,7 +5519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>AllTimePoints</returns>
         public AllTimePoints GetGamificationScorecardsUserPointsAlltime (string userId, String endWorkday)
         {
@@ -5518,7 +5532,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AllTimePoints</returns>
         public ApiResponse< AllTimePoints > GetGamificationScorecardsUserPointsAlltimeWithHttpInfo (string userId, String endWorkday)
         { 
@@ -5606,7 +5620,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of AllTimePoints</returns>
         public async System.Threading.Tasks.Task<AllTimePoints> GetGamificationScorecardsUserPointsAlltimeAsync (string userId, String endWorkday)
         {
@@ -5620,7 +5634,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AllTimePoints)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AllTimePoints>> GetGamificationScorecardsUserPointsAlltimeAsyncWithHttpInfo (string userId, String endWorkday)
         { 
@@ -5711,8 +5725,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>WorkdayPointsTrend</returns>
         public WorkdayPointsTrend GetGamificationScorecardsUserPointsTrends (string userId, String startWorkday, String endWorkday, string dayOfWeek = null)
@@ -5726,8 +5740,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>ApiResponse of WorkdayPointsTrend</returns>
         public ApiResponse< WorkdayPointsTrend > GetGamificationScorecardsUserPointsTrendsWithHttpInfo (string userId, String startWorkday, String endWorkday, string dayOfWeek = null)
@@ -5821,8 +5835,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of WorkdayPointsTrend</returns>
         public async System.Threading.Tasks.Task<WorkdayPointsTrend> GetGamificationScorecardsUserPointsTrendsAsync (string userId, String startWorkday, String endWorkday, string dayOfWeek = null)
@@ -5837,8 +5851,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayPointsTrend)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WorkdayPointsTrend>> GetGamificationScorecardsUserPointsTrendsAsyncWithHttpInfo (string userId, String startWorkday, String endWorkday, string dayOfWeek = null)
@@ -5936,8 +5950,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>WorkdayValuesTrend</returns>
         public WorkdayValuesTrend GetGamificationScorecardsUserValuesTrends (string userId, String startWorkday, String endWorkday, string timeZone = null)
@@ -5951,8 +5965,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>ApiResponse of WorkdayValuesTrend</returns>
         public ApiResponse< WorkdayValuesTrend > GetGamificationScorecardsUserValuesTrendsWithHttpInfo (string userId, String startWorkday, String endWorkday, string timeZone = null)
@@ -6046,8 +6060,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>Task of WorkdayValuesTrend</returns>
         public async System.Threading.Tasks.Task<WorkdayValuesTrend> GetGamificationScorecardsUserValuesTrendsAsync (string userId, String startWorkday, String endWorkday, string timeZone = null)
@@ -6062,8 +6076,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>Task of ApiResponse (WorkdayValuesTrend)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WorkdayValuesTrend>> GetGamificationScorecardsUserValuesTrendsAsyncWithHttpInfo (string userId, String startWorkday, String endWorkday, string timeZone = null)
@@ -6606,8 +6620,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type.</param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>WorkdayValuesTrend</returns>
         public WorkdayValuesTrend GetGamificationScorecardsUsersValuesTrends (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null)
@@ -6622,8 +6636,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type.</param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>ApiResponse of WorkdayValuesTrend</returns>
         public ApiResponse< WorkdayValuesTrend > GetGamificationScorecardsUsersValuesTrendsWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null)
@@ -6722,8 +6736,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type.</param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>Task of WorkdayValuesTrend</returns>
         public async System.Threading.Tasks.Task<WorkdayValuesTrend> GetGamificationScorecardsUsersValuesTrendsAsync (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null)
@@ -6739,8 +6753,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type.</param>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>Task of ApiResponse (WorkdayValuesTrend)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WorkdayValuesTrend>> GetGamificationScorecardsUsersValuesTrendsAsyncWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null)
@@ -7041,8 +7055,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Values trends of the requesting user or group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="filterType">Filter type for the query request. If not set, then the request is for the requesting user. (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>WorkdayValuesTrend</returns>
@@ -7056,8 +7070,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Values trends of the requesting user or group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="filterType">Filter type for the query request. If not set, then the request is for the requesting user. (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>ApiResponse of WorkdayValuesTrend</returns>
@@ -7148,8 +7162,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Values trends of the requesting user or group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="filterType">Filter type for the query request. If not set, then the request is for the requesting user. (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>Task of WorkdayValuesTrend</returns>
@@ -7164,8 +7178,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Values trends of the requesting user or group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startWorkday">Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="endWorkday">End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="filterType">Filter type for the query request. If not set, then the request is for the requesting user. (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
         /// <returns>Task of ApiResponse (WorkdayValuesTrend)</returns>
@@ -8015,10 +8029,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
         /// <param name="body">Metric</param>
+        /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Metric</returns>
-        public Metric PutGamificationMetric (string metricId, Metric body)
+        public Metric PutGamificationMetric (string metricId, Metric body, string performanceProfileId = null)
         {
-             ApiResponse<Metric> localVarResponse = PutGamificationMetricWithHttpInfo(metricId, body);
+             ApiResponse<Metric> localVarResponse = PutGamificationMetricWithHttpInfo(metricId, body, performanceProfileId);
              return localVarResponse.Data;
         }
 
@@ -8028,8 +8043,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
         /// <param name="body">Metric</param>
+        /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>ApiResponse of Metric</returns>
-        public ApiResponse< Metric > PutGamificationMetricWithHttpInfo (string metricId, Metric body)
+        public ApiResponse< Metric > PutGamificationMetricWithHttpInfo (string metricId, Metric body, string performanceProfileId = null)
         { 
             // verify the required parameter 'metricId' is set
             if (metricId == null)
@@ -8072,6 +8088,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
 
             // Query params
+            if (performanceProfileId != null) localVarQueryParams.Add(new Tuple<string, string>("performance profile id", this.Configuration.ApiClient.ParameterToString(performanceProfileId)));
 
             // Header params
 
@@ -8120,10 +8137,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
         /// <param name="body">Metric</param>
+        /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Task of Metric</returns>
-        public async System.Threading.Tasks.Task<Metric> PutGamificationMetricAsync (string metricId, Metric body)
+        public async System.Threading.Tasks.Task<Metric> PutGamificationMetricAsync (string metricId, Metric body, string performanceProfileId = null)
         {
-             ApiResponse<Metric> localVarResponse = await PutGamificationMetricAsyncWithHttpInfo(metricId, body);
+             ApiResponse<Metric> localVarResponse = await PutGamificationMetricAsyncWithHttpInfo(metricId, body, performanceProfileId);
              return localVarResponse.Data;
 
         }
@@ -8134,8 +8152,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
         /// <param name="body">Metric</param>
+        /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Metric>> PutGamificationMetricAsyncWithHttpInfo (string metricId, Metric body)
+        public async System.Threading.Tasks.Task<ApiResponse<Metric>> PutGamificationMetricAsyncWithHttpInfo (string metricId, Metric body, string performanceProfileId = null)
         { 
             // verify the required parameter 'metricId' is set
             if (metricId == null)
@@ -8180,6 +8199,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
 
             // Query params
+            if (performanceProfileId != null) localVarQueryParams.Add(new Tuple<string, string>("performance profile id", this.Configuration.ApiClient.ParameterToString(performanceProfileId)));
 
             // Header params
 

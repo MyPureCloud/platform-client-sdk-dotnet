@@ -49,11 +49,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentActions" /> class.
         /// </summary>
-        /// <param name="Url">A URL for a web page to redirect the user to.</param>
-        /// <param name="UrlTarget">The target window or tab within the URL&#39;s web page. If empty will open a blank page or tab..</param>
-        /// <param name="Textback">Text to be sent back in reply when a list item is selected.</param>
-        /// <param name="CommandName">Execute an organization&#39;s specific command.</param>
-        /// <param name="Context">Additional context for the command.</param>
+        /// <param name="Url">A URL of a web page to direct the user to..</param>
+        /// <param name="UrlTarget">The target window in which to open the URL. If empty will open a blank page or tab..</param>
+        /// <param name="Textback">Text to be sent back in reply when the item is selected..</param>
+        /// <param name="CommandName">Execute an organization&#39;s specific command..</param>
+        /// <param name="Context">Additional context for the command..</param>
         public ContentActions(string Url = null, string UrlTarget = null, string Textback = null, string CommandName = null, Dictionary<string, Object> Context = null)
         {
             this.Url = Url;
@@ -67,45 +67,45 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// A URL for a web page to redirect the user to
+        /// A URL of a web page to direct the user to.
         /// </summary>
-        /// <value>A URL for a web page to redirect the user to</value>
+        /// <value>A URL of a web page to direct the user to.</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
         
         
         
         /// <summary>
-        /// The target window or tab within the URL&#39;s web page. If empty will open a blank page or tab.
+        /// The target window in which to open the URL. If empty will open a blank page or tab.
         /// </summary>
-        /// <value>The target window or tab within the URL&#39;s web page. If empty will open a blank page or tab.</value>
+        /// <value>The target window in which to open the URL. If empty will open a blank page or tab.</value>
         [DataMember(Name="urlTarget", EmitDefaultValue=false)]
         public string UrlTarget { get; set; }
         
         
         
         /// <summary>
-        /// Text to be sent back in reply when a list item is selected
+        /// Text to be sent back in reply when the item is selected.
         /// </summary>
-        /// <value>Text to be sent back in reply when a list item is selected</value>
+        /// <value>Text to be sent back in reply when the item is selected.</value>
         [DataMember(Name="textback", EmitDefaultValue=false)]
         public string Textback { get; set; }
         
         
         
         /// <summary>
-        /// Execute an organization&#39;s specific command
+        /// Execute an organization&#39;s specific command.
         /// </summary>
-        /// <value>Execute an organization&#39;s specific command</value>
+        /// <value>Execute an organization&#39;s specific command.</value>
         [DataMember(Name="commandName", EmitDefaultValue=false)]
         public string CommandName { get; set; }
         
         
         
         /// <summary>
-        /// Additional context for the command
+        /// Additional context for the command.
         /// </summary>
-        /// <value>Additional context for the command</value>
+        /// <value>Additional context for the command.</value>
         [DataMember(Name="context", EmitDefaultValue=false)]
         public Dictionary<string, Object> Context { get; set; }
         

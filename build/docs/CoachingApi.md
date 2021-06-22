@@ -583,7 +583,7 @@ namespace Example
 | **interval** | **string**| Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **statuses** | [**List<string>**](string.html)| Appointment Statuses to filter by | [optional] <br />**Values**: Scheduled, InProgress, Completed |
+| **statuses** | [**List<string>**](string.html)| Appointment Statuses to filter by | [optional] <br />**Values**: Scheduled, InProgress, Completed, InvalidSchedule |
 | **facilitatorIds** | [**List<string>**](string.html)| The facilitator IDs for which to retrieve appointments | [optional]  |
 | **sortOrder** | **string**| Sort (by due date) either Asc or Desc | [optional] <br />**Values**: Desc, Asc |
 | **relationships** | [**List<string>**](string.html)| Relationships to filter by | [optional] <br />**Values**: Creator, Facilitator, Attendee |

@@ -45,6 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Leaderboard" /> class.
@@ -52,11 +57,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Division">The targeted division for this leaderboard.</param>
         /// <param name="Metric">The metric id if the leaderboard is about a specific metric.</param>
         /// <param name="Leaders">The list of leaders generated..</param>
-        public Leaderboard(Division Division = null, Metric Metric = null, List<LeaderboardItem> Leaders = null)
+        /// <param name="UserRank">The requesting user&#39;s rank.</param>
+        public Leaderboard(Division Division = null, Metric Metric = null, List<LeaderboardItem> Leaders = null, LeaderboardItem UserRank = null)
         {
             this.Division = Division;
             this.Metric = Metric;
             this.Leaders = Leaders;
+            this.UserRank = UserRank;
             
         }
         
@@ -106,6 +113,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<LeaderboardItem> Leaders { get; set; }
         
         
+        
+        /// <summary>
+        /// The requesting user&#39;s rank
+        /// </summary>
+        /// <value>The requesting user&#39;s rank</value>
+        [DataMember(Name="userRank", EmitDefaultValue=false)]
+        public LeaderboardItem UserRank { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -120,6 +136,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateStartWorkday: ").Append(DateStartWorkday).Append("\n");
             sb.Append("  DateEndWorkday: ").Append(DateEndWorkday).Append("\n");
             sb.Append("  Leaders: ").Append(Leaders).Append("\n");
+            sb.Append("  UserRank: ").Append(UserRank).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -180,6 +197,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Leaders == other.Leaders ||
                     this.Leaders != null &&
                     this.Leaders.SequenceEqual(other.Leaders)
+                ) &&
+                (
+                    this.UserRank == other.UserRank ||
+                    this.UserRank != null &&
+                    this.UserRank.Equals(other.UserRank)
                 );
         }
 
@@ -209,6 +231,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Leaders != null)
                     hash = hash * 59 + this.Leaders.GetHashCode();
+                
+                if (this.UserRank != null)
+                    hash = hash * 59 + this.UserRank.GetHashCode();
                 
                 return hash;
             }

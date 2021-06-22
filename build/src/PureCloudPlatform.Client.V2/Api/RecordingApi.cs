@@ -770,7 +770,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>CrossPlatformPolicy</returns>
-        CrossPlatformPolicy PatchRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicy body);
+        CrossPlatformPolicy PatchRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicyUpdate body);
 
         /// <summary>
         /// Patch a media retention policy
@@ -782,7 +782,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of CrossPlatformPolicy</returns>
-        ApiResponse<CrossPlatformPolicy> PatchRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId, CrossPlatformPolicy body);
+        ApiResponse<CrossPlatformPolicy> PatchRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId, CrossPlatformPolicyUpdate body);
         
         /// <summary>
         /// Patch a media retention policy
@@ -794,7 +794,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
-        Policy PatchRecordingMediaretentionpolicy (string policyId, Policy body);
+        Policy PatchRecordingMediaretentionpolicy (string policyId, PolicyUpdate body);
 
         /// <summary>
         /// Patch a media retention policy
@@ -806,7 +806,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
-        ApiResponse<Policy> PatchRecordingMediaretentionpolicyWithHttpInfo (string policyId, Policy body);
+        ApiResponse<Policy> PatchRecordingMediaretentionpolicyWithHttpInfo (string policyId, PolicyUpdate body);
         
         /// <summary>
         /// Update a screen recording session
@@ -2076,7 +2076,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of CrossPlatformPolicy</returns>
-        System.Threading.Tasks.Task<CrossPlatformPolicy> PatchRecordingCrossplatformMediaretentionpolicyAsync (string policyId, CrossPlatformPolicy body);
+        System.Threading.Tasks.Task<CrossPlatformPolicy> PatchRecordingCrossplatformMediaretentionpolicyAsync (string policyId, CrossPlatformPolicyUpdate body);
 
         /// <summary>
         /// Patch a media retention policy
@@ -2088,7 +2088,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (CrossPlatformPolicy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> PatchRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId, CrossPlatformPolicy body);
+        System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> PatchRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId, CrossPlatformPolicyUpdate body);
         
         /// <summary>
         /// Patch a media retention policy
@@ -2100,7 +2100,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        System.Threading.Tasks.Task<Policy> PatchRecordingMediaretentionpolicyAsync (string policyId, Policy body);
+        System.Threading.Tasks.Task<Policy> PatchRecordingMediaretentionpolicyAsync (string policyId, PolicyUpdate body);
 
         /// <summary>
         /// Patch a media retention policy
@@ -2112,7 +2112,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Policy>> PatchRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId, Policy body);
+        System.Threading.Tasks.Task<ApiResponse<Policy>> PatchRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId, PolicyUpdate body);
         
         /// <summary>
         /// Update a screen recording session
@@ -8612,7 +8612,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>CrossPlatformPolicy</returns>
-        public CrossPlatformPolicy PatchRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicy body)
+        public CrossPlatformPolicy PatchRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicyUpdate body)
         {
              ApiResponse<CrossPlatformPolicy> localVarResponse = PatchRecordingCrossplatformMediaretentionpolicyWithHttpInfo(policyId, body);
              return localVarResponse.Data;
@@ -8625,7 +8625,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of CrossPlatformPolicy</returns>
-        public ApiResponse< CrossPlatformPolicy > PatchRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId, CrossPlatformPolicy body)
+        public ApiResponse< CrossPlatformPolicy > PatchRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId, CrossPlatformPolicyUpdate body)
         { 
             // verify the required parameter 'policyId' is set
             if (policyId == null)
@@ -8717,7 +8717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of CrossPlatformPolicy</returns>
-        public async System.Threading.Tasks.Task<CrossPlatformPolicy> PatchRecordingCrossplatformMediaretentionpolicyAsync (string policyId, CrossPlatformPolicy body)
+        public async System.Threading.Tasks.Task<CrossPlatformPolicy> PatchRecordingCrossplatformMediaretentionpolicyAsync (string policyId, CrossPlatformPolicyUpdate body)
         {
              ApiResponse<CrossPlatformPolicy> localVarResponse = await PatchRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo(policyId, body);
              return localVarResponse.Data;
@@ -8731,7 +8731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (CrossPlatformPolicy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> PatchRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId, CrossPlatformPolicy body)
+        public async System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> PatchRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId, CrossPlatformPolicyUpdate body)
         { 
             // verify the required parameter 'policyId' is set
             if (policyId == null)
@@ -8826,7 +8826,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
-        public Policy PatchRecordingMediaretentionpolicy (string policyId, Policy body)
+        public Policy PatchRecordingMediaretentionpolicy (string policyId, PolicyUpdate body)
         {
              ApiResponse<Policy> localVarResponse = PatchRecordingMediaretentionpolicyWithHttpInfo(policyId, body);
              return localVarResponse.Data;
@@ -8839,7 +8839,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
-        public ApiResponse< Policy > PatchRecordingMediaretentionpolicyWithHttpInfo (string policyId, Policy body)
+        public ApiResponse< Policy > PatchRecordingMediaretentionpolicyWithHttpInfo (string policyId, PolicyUpdate body)
         { 
             // verify the required parameter 'policyId' is set
             if (policyId == null)
@@ -8931,7 +8931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        public async System.Threading.Tasks.Task<Policy> PatchRecordingMediaretentionpolicyAsync (string policyId, Policy body)
+        public async System.Threading.Tasks.Task<Policy> PatchRecordingMediaretentionpolicyAsync (string policyId, PolicyUpdate body)
         {
              ApiResponse<Policy> localVarResponse = await PatchRecordingMediaretentionpolicyAsyncWithHttpInfo(policyId, body);
              return localVarResponse.Data;
@@ -8945,7 +8945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PatchRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId, Policy body)
+        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PatchRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId, PolicyUpdate body)
         { 
             // verify the required parameter 'policyId' is set
             if (policyId == null)

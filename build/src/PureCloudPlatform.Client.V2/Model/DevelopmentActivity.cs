@@ -72,6 +72,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Assessedcontent,
             
             /// <summary>
+            /// Enum Assessment for "Assessment"
+            /// </summary>
+            [EnumMember(Value = "Assessment")]
+            Assessment,
+            
+            /// <summary>
             /// Enum Questionnaire for "Questionnaire"
             /// </summary>
             [EnumMember(Value = "Questionnaire")]

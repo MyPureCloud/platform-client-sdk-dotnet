@@ -119,6 +119,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Outsideshift,
             
             /// <summary>
+            /// Enum Removedfromwaitlist for "RemovedFromWaitlist"
+            /// </summary>
+            [EnumMember(Value = "RemovedFromWaitlist")]
+            Removedfromwaitlist,
+            
+            /// <summary>
             /// Enum Waitlisted for "Waitlisted"
             /// </summary>
             [EnumMember(Value = "Waitlisted")]

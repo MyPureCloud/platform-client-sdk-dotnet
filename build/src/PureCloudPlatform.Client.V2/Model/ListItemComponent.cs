@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// An entry in List template
+    /// An entry in a List template.
     /// </summary>
     [DataContract]
     public partial class ListItemComponent :  IEquatable<ListItemComponent>
@@ -27,9 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The type of component to render
+        /// The type of list item to render.
         /// </summary>
-        /// <value>The type of component to render</value>
+        /// <value>The type of list item to render.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -75,9 +75,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The type of component to render
+        /// The type of list item to render.
         /// </summary>
-        /// <value>The type of component to render</value>
+        /// <value>The type of list item to render.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         
@@ -94,13 +94,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ListItemComponent" /> class.
         /// </summary>
-        /// <param name="Id">An ID assigned to this component.</param>
-        /// <param name="Rmid">An ID of the rich message instance.</param>
-        /// <param name="Type">The type of component to render.</param>
-        /// <param name="Image">Path or URI to an image file.</param>
-        /// <param name="Title">The main headline of the list item.</param>
-        /// <param name="Description">Text to show in the description row.</param>
-        /// <param name="Actions">User actions available on the content. All actions are optional and all actions are executed simultaneously..</param>
+        /// <param name="Id">An ID assigned to this list item..</param>
+        /// <param name="Rmid">An ID of the rich message instance..</param>
+        /// <param name="Type">The type of list item to render..</param>
+        /// <param name="Image">URL of an image..</param>
+        /// <param name="Title">The main headline of the list item..</param>
+        /// <param name="Description">Text to show in the list item description..</param>
+        /// <param name="Actions">The list item actions..</param>
         public ListItemComponent(string Id = null, string Rmid = null, TypeEnum? Type = null, string Image = null, string Title = null, string Description = null, ContentActions Actions = null)
         {
             this.Id = Id;
@@ -116,18 +116,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// An ID assigned to this component
+        /// An ID assigned to this list item.
         /// </summary>
-        /// <value>An ID assigned to this component</value>
+        /// <value>An ID assigned to this list item.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// An ID of the rich message instance
+        /// An ID of the rich message instance.
         /// </summary>
-        /// <value>An ID of the rich message instance</value>
+        /// <value>An ID of the rich message instance.</value>
         [DataMember(Name="rmid", EmitDefaultValue=false)]
         public string Rmid { get; set; }
         
@@ -136,36 +136,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Path or URI to an image file
+        /// URL of an image.
         /// </summary>
-        /// <value>Path or URI to an image file</value>
+        /// <value>URL of an image.</value>
         [DataMember(Name="image", EmitDefaultValue=false)]
         public string Image { get; set; }
         
         
         
         /// <summary>
-        /// The main headline of the list item
+        /// The main headline of the list item.
         /// </summary>
-        /// <value>The main headline of the list item</value>
+        /// <value>The main headline of the list item.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
         
         
         
         /// <summary>
-        /// Text to show in the description row
+        /// Text to show in the list item description.
         /// </summary>
-        /// <value>Text to show in the description row</value>
+        /// <value>Text to show in the list item description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
         
         
         
         /// <summary>
-        /// User actions available on the content. All actions are optional and all actions are executed simultaneously.
+        /// The list item actions.
         /// </summary>
-        /// <value>User actions available on the content. All actions are optional and all actions are executed simultaneously.</value>
+        /// <value>The list item actions.</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public ContentActions Actions { get; set; }
         

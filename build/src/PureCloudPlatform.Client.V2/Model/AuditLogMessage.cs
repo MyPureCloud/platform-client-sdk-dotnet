@@ -63,6 +63,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Architect,
             
             /// <summary>
+            /// Enum Coaching for "Coaching"
+            /// </summary>
+            [EnumMember(Value = "Coaching")]
+            Coaching,
+            
+            /// <summary>
             /// Enum Contactcenter for "ContactCenter"
             /// </summary>
             [EnumMember(Value = "ContactCenter")]
@@ -73,6 +79,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ContentManagement")]
             Contentmanagement,
+            
+            /// <summary>
+            /// Enum Datatables for "Datatables"
+            /// </summary>
+            [EnumMember(Value = "Datatables")]
+            Datatables,
+            
+            /// <summary>
+            /// Enum Gamification for "Gamification"
+            /// </summary>
+            [EnumMember(Value = "Gamification")]
+            Gamification,
             
             /// <summary>
             /// Enum Groups for "Groups"
@@ -171,10 +189,28 @@ namespace PureCloudPlatform.Client.V2.Model
             Triggers,
             
             /// <summary>
+            /// Enum Webdeployments for "WebDeployments"
+            /// </summary>
+            [EnumMember(Value = "WebDeployments")]
+            Webdeployments,
+            
+            /// <summary>
+            /// Enum Webhooks for "Webhooks"
+            /// </summary>
+            [EnumMember(Value = "Webhooks")]
+            Webhooks,
+            
+            /// <summary>
             /// Enum Workforcemanagement for "WorkforceManagement"
             /// </summary>
             [EnumMember(Value = "WorkforceManagement")]
-            Workforcemanagement
+            Workforcemanagement,
+            
+            /// <summary>
+            /// Enum Messaging for "Messaging"
+            /// </summary>
+            [EnumMember(Value = "Messaging")]
+            Messaging
         }
         
         
@@ -274,6 +310,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Read,
             
             /// <summary>
+            /// Enum Readall for "ReadAll"
+            /// </summary>
+            [EnumMember(Value = "ReadAll")]
+            Readall,
+            
+            /// <summary>
+            /// Enum Execute for "Execute"
+            /// </summary>
+            [EnumMember(Value = "Execute")]
+            Execute,
+            
+            /// <summary>
             /// Enum Applyprotection for "ApplyProtection"
             /// </summary>
             [EnumMember(Value = "ApplyProtection")]
@@ -292,16 +340,28 @@ namespace PureCloudPlatform.Client.V2.Model
             Updateretention,
             
             /// <summary>
-            /// Enum Readall for "ReadAll"
+            /// Enum Abandon for "Abandon"
             /// </summary>
-            [EnumMember(Value = "ReadAll")]
-            Readall,
+            [EnumMember(Value = "Abandon")]
+            Abandon,
             
             /// <summary>
-            /// Enum Execute for "Execute"
+            /// Enum Archive for "Archive"
             /// </summary>
-            [EnumMember(Value = "Execute")]
-            Execute,
+            [EnumMember(Value = "Archive")]
+            Archive,
+            
+            /// <summary>
+            /// Enum Restorerequest for "RestoreRequest"
+            /// </summary>
+            [EnumMember(Value = "RestoreRequest")]
+            Restorerequest,
+            
+            /// <summary>
+            /// Enum Restorecomplete for "RestoreComplete"
+            /// </summary>
+            [EnumMember(Value = "RestoreComplete")]
+            Restorecomplete,
             
             /// <summary>
             /// Enum Publish for "Publish"
@@ -469,7 +529,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Rollbackimplemented for "RollbackImplemented"
             /// </summary>
             [EnumMember(Value = "RollbackImplemented")]
-            Rollbackimplemented
+            Rollbackimplemented,
+            
+            /// <summary>
+            /// Enum Write for "Write"
+            /// </summary>
+            [EnumMember(Value = "Write")]
+            Write,
+            
+            /// <summary>
+            /// Enum Purge for "Purge"
+            /// </summary>
+            [EnumMember(Value = "Purge")]
+            Purge,
+            
+            /// <summary>
+            /// Enum Processed for "Processed"
+            /// </summary>
+            [EnumMember(Value = "Processed")]
+            Processed
         }
         
         
@@ -500,6 +578,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Accesstoken,
             
             /// <summary>
+            /// Enum Annotation for "Annotation"
+            /// </summary>
+            [EnumMember(Value = "Annotation")]
+            Annotation,
+            
+            /// <summary>
+            /// Enum Appointment for "Appointment"
+            /// </summary>
+            [EnumMember(Value = "Appointment")]
+            Appointment,
+            
+            /// <summary>
             /// Enum Attemptlimits for "AttemptLimits"
             /// </summary>
             [EnumMember(Value = "AttemptLimits")]
@@ -518,10 +608,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Authuser,
             
             /// <summary>
+            /// Enum Bulk for "Bulk"
+            /// </summary>
+            [EnumMember(Value = "Bulk")]
+            Bulk,
+            
+            /// <summary>
             /// Enum Bulkactions for "BulkActions"
             /// </summary>
             [EnumMember(Value = "BulkActions")]
             Bulkactions,
+            
+            /// <summary>
+            /// Enum Calibration for "Calibration"
+            /// </summary>
+            [EnumMember(Value = "Calibration")]
+            Calibration,
             
             /// <summary>
             /// Enum Callabletimeset for "CallableTimeSet"
@@ -566,6 +668,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Clickstreamsettings,
             
             /// <summary>
+            /// Enum Configuration for "Configuration"
+            /// </summary>
+            [EnumMember(Value = "Configuration")]
+            Configuration,
+            
+            /// <summary>
+            /// Enum Configurationversion for "ConfigurationVersion"
+            /// </summary>
+            [EnumMember(Value = "ConfigurationVersion")]
+            Configurationversion,
+            
+            /// <summary>
             /// Enum Contactlist for "ContactList"
             /// </summary>
             [EnumMember(Value = "ContactList")]
@@ -576,6 +690,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ContactListFilter")]
             Contactlistfilter,
+            
+            /// <summary>
+            /// Enum Deployment for "Deployment"
+            /// </summary>
+            [EnumMember(Value = "Deployment")]
+            Deployment,
             
             /// <summary>
             /// Enum Dashboardsettings for "DashboardSettings"
@@ -632,6 +752,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Emergencygroup,
             
             /// <summary>
+            /// Enum Evaluation for "Evaluation"
+            /// </summary>
+            [EnumMember(Value = "Evaluation")]
+            Evaluation,
+            
+            /// <summary>
+            /// Enum Evaluationform for "EvaluationForm"
+            /// </summary>
+            [EnumMember(Value = "EvaluationForm")]
+            Evaluationform,
+            
+            /// <summary>
             /// Enum Eventtype for "EventType"
             /// </summary>
             [EnumMember(Value = "EventType")]
@@ -654,6 +786,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ExtensionPool")]
             Extensionpool,
+            
+            /// <summary>
+            /// Enum Externalmetricdata for "ExternalMetricData"
+            /// </summary>
+            [EnumMember(Value = "ExternalMetricData")]
+            Externalmetricdata,
             
             /// <summary>
             /// Enum Externalmetricdefinition for "ExternalMetricDefinition"
@@ -690,6 +828,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Forecast")]
             Forecast,
+            
+            /// <summary>
+            /// Enum Historicaldata for "HistoricalData"
+            /// </summary>
+            [EnumMember(Value = "HistoricalData")]
+            Historicaldata,
             
             /// <summary>
             /// Enum Insightsettings for "InsightSettings"
@@ -734,6 +878,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Messagingcampaign,
             
             /// <summary>
+            /// Enum Metric for "Metric"
+            /// </summary>
+            [EnumMember(Value = "Metric")]
+            Metric,
+            
+            /// <summary>
             /// Enum Numberplan for "NumberPlan"
             /// </summary>
             [EnumMember(Value = "NumberPlan")]
@@ -770,6 +920,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Organizationsettings,
             
             /// <summary>
+            /// Enum Orphanedrecording for "OrphanedRecording"
+            /// </summary>
+            [EnumMember(Value = "OrphanedRecording")]
+            Orphanedrecording,
+            
+            /// <summary>
             /// Enum Outboundroute for "OutboundRoute"
             /// </summary>
             [EnumMember(Value = "OutboundRoute")]
@@ -792,6 +948,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "PhoneBase")]
             Phonebase,
+            
+            /// <summary>
+            /// Enum Policy for "Policy"
+            /// </summary>
+            [EnumMember(Value = "Policy")]
+            Policy,
             
             /// <summary>
             /// Enum Predictor for "Predictor"
@@ -830,6 +992,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Recording,
             
             /// <summary>
+            /// Enum Recordingannotation for "RecordingAnnotation"
+            /// </summary>
+            [EnumMember(Value = "RecordingAnnotation")]
+            Recordingannotation,
+            
+            /// <summary>
+            /// Enum Recordingsettings for "RecordingSettings"
+            /// </summary>
+            [EnumMember(Value = "RecordingSettings")]
+            Recordingsettings,
+            
+            /// <summary>
             /// Enum Response for "Response"
             /// </summary>
             [EnumMember(Value = "Response")]
@@ -840,6 +1014,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Role")]
             Role,
+            
+            /// <summary>
+            /// Enum Row for "Row"
+            /// </summary>
+            [EnumMember(Value = "Row")]
+            Row,
             
             /// <summary>
             /// Enum Routingtranscriptionsettings for "RoutingTranscriptionSettings"
@@ -870,6 +1050,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ScheduleGroup")]
             Schedulegroup,
+            
+            /// <summary>
+            /// Enum Schema for "Schema"
+            /// </summary>
+            [EnumMember(Value = "Schema")]
+            Schema,
+            
+            /// <summary>
+            /// Enum Screenrecording for "ScreenRecording"
+            /// </summary>
+            [EnumMember(Value = "ScreenRecording")]
+            Screenrecording,
             
             /// <summary>
             /// Enum Segment for "Segment"
@@ -912,6 +1104,24 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "SpeechTextAnalyticsSettings")]
             Speechtextanalyticssettings,
+            
+            /// <summary>
+            /// Enum Status for "Status"
+            /// </summary>
+            [EnumMember(Value = "Status")]
+            Status,
+            
+            /// <summary>
+            /// Enum Survey for "Survey"
+            /// </summary>
+            [EnumMember(Value = "Survey")]
+            Survey,
+            
+            /// <summary>
+            /// Enum Surveyform for "SurveyForm"
+            /// </summary>
+            [EnumMember(Value = "SurveyForm")]
+            Surveyform,
             
             /// <summary>
             /// Enum Team for "Team"
@@ -968,6 +1178,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Voicemailuserpolicy,
             
             /// <summary>
+            /// Enum Webhook for "Webhook"
+            /// </summary>
+            [EnumMember(Value = "Webhook")]
+            Webhook,
+            
+            /// <summary>
             /// Enum Workplan for "WorkPlan"
             /// </summary>
             [EnumMember(Value = "WorkPlan")]
@@ -989,7 +1205,43 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Wrapupcodemapping for "WrapUpCodeMapping"
             /// </summary>
             [EnumMember(Value = "WrapUpCodeMapping")]
-            Wrapupcodemapping
+            Wrapupcodemapping,
+            
+            /// <summary>
+            /// Enum Conversationphonenumber for "ConversationPhoneNumber"
+            /// </summary>
+            [EnumMember(Value = "ConversationPhoneNumber")]
+            Conversationphonenumber,
+            
+            /// <summary>
+            /// Enum Conversationrecipient for "ConversationRecipient"
+            /// </summary>
+            [EnumMember(Value = "ConversationRecipient")]
+            Conversationrecipient,
+            
+            /// <summary>
+            /// Enum Conversationaccount for "ConversationAccount"
+            /// </summary>
+            [EnumMember(Value = "ConversationAccount")]
+            Conversationaccount,
+            
+            /// <summary>
+            /// Enum Conversationdefaultsupportedcontent for "ConversationDefaultSupportedContent"
+            /// </summary>
+            [EnumMember(Value = "ConversationDefaultSupportedContent")]
+            Conversationdefaultsupportedcontent,
+            
+            /// <summary>
+            /// Enum Conversationthreadingwindow for "ConversationThreadingWindow"
+            /// </summary>
+            [EnumMember(Value = "ConversationThreadingWindow")]
+            Conversationthreadingwindow,
+            
+            /// <summary>
+            /// Enum Supportedcontent for "SupportedContent"
+            /// </summary>
+            [EnumMember(Value = "SupportedContent")]
+            Supportedcontent
         }
         
         

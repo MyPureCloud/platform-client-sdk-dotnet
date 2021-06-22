@@ -30,7 +30,8 @@ title: Site
 | **Managed** | **bool?** |  | [optional] |
 | **NtpSettings** | [**NTPSettings**](NTPSettings.html) | Network Time Protocol settings for the site | [optional] |
 | **MediaModel** | **string** | Media model for the site | [optional] |
-| **CoreSite** | **bool?** | The core site | [optional] |
+| **CoreSite** | **bool?** | Is this site a core site | [optional] |
+| **SiteConnections** | [**List&lt;SiteConnection&gt;**](SiteConnection.html) | The site connections | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

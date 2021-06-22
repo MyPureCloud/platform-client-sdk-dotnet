@@ -135,11 +135,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
+        
+        
         
         
         
@@ -189,7 +194,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Rescore">Rescore.</param>
         /// <param name="ConversationDate">ConversationDate.</param>
         /// <param name="MediaType">MediaType.</param>
-        public EvaluationQualityV2TopicEvaluationV2(string Id = null, string ConversationId = null, EvaluationQualityV2TopicUser Agent = null, EvaluationQualityV2TopicUser Evaluator = null, DateTime? EventTime = null, string EvaluationFormId = null, string FormName = null, EvaluationQualityV2TopicEvaluationScoringSet ScoringSet = null, string ContextId = null, StatusEnum? Status = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, string EventType = null, string ResourceId = null, string ResourceType = null, List<string> DivisionIds = null, bool? Rescore = null, DateTime? ConversationDate = null, List<string> MediaType = null)
+        /// <param name="Calibration">Calibration.</param>
+        public EvaluationQualityV2TopicEvaluationV2(string Id = null, string ConversationId = null, EvaluationQualityV2TopicUser Agent = null, EvaluationQualityV2TopicUser Evaluator = null, DateTime? EventTime = null, string EvaluationFormId = null, string FormName = null, EvaluationQualityV2TopicEvaluationScoringSet ScoringSet = null, string ContextId = null, StatusEnum? Status = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, string EventType = null, string ResourceId = null, string ResourceType = null, List<string> DivisionIds = null, bool? Rescore = null, DateTime? ConversationDate = null, List<string> MediaType = null, EvaluationQualityV2TopicCalibration Calibration = null)
         {
             this.Id = Id;
             this.ConversationId = ConversationId;
@@ -212,6 +218,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Rescore = Rescore;
             this.ConversationDate = ConversationDate;
             this.MediaType = MediaType;
+            this.Calibration = Calibration;
             
         }
         
@@ -378,6 +385,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> MediaType { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets Calibration
+        /// </summary>
+        [DataMember(Name="calibration", EmitDefaultValue=false)]
+        public EvaluationQualityV2TopicCalibration Calibration { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -408,6 +423,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Rescore: ").Append(Rescore).Append("\n");
             sb.Append("  ConversationDate: ").Append(ConversationDate).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            sb.Append("  Calibration: ").Append(Calibration).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -548,6 +564,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaType == other.MediaType ||
                     this.MediaType != null &&
                     this.MediaType.SequenceEqual(other.MediaType)
+                ) &&
+                (
+                    this.Calibration == other.Calibration ||
+                    this.Calibration != null &&
+                    this.Calibration.Equals(other.Calibration)
                 );
         }
 
@@ -625,6 +646,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
+                
+                if (this.Calibration != null)
+                    hash = hash * 59 + this.Calibration.GetHashCode();
                 
                 return hash;
             }

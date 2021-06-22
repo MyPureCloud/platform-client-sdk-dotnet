@@ -23,8 +23,9 @@ Search using the q64 value returned from a previous search.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* directory:user:divisionview
 
 ### Example
 ```{"language":"csharp"}
@@ -91,8 +92,9 @@ Suggest resources using the q64 value returned from a previous suggest query.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* directory:user:divisionview
 
 ### Example
 ```{"language":"csharp"}
@@ -159,8 +161,9 @@ Search resources.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* directory:user:divisionview
 
 ### Example
 ```{"language":"csharp"}
@@ -225,8 +228,9 @@ Suggest resources.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* directory:user:divisionview
 
 ### Example
 ```{"language":"csharp"}

@@ -48,6 +48,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Architect,
             
             /// <summary>
+            /// Enum Coaching for "Coaching"
+            /// </summary>
+            [EnumMember(Value = "Coaching")]
+            Coaching,
+            
+            /// <summary>
             /// Enum Contactcenter for "ContactCenter"
             /// </summary>
             [EnumMember(Value = "ContactCenter")]
@@ -58,6 +64,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ContentManagement")]
             Contentmanagement,
+            
+            /// <summary>
+            /// Enum Datatables for "Datatables"
+            /// </summary>
+            [EnumMember(Value = "Datatables")]
+            Datatables,
+            
+            /// <summary>
+            /// Enum Gamification for "Gamification"
+            /// </summary>
+            [EnumMember(Value = "Gamification")]
+            Gamification,
             
             /// <summary>
             /// Enum Groups for "Groups"
@@ -156,10 +174,28 @@ namespace PureCloudPlatform.Client.V2.Model
             Triggers,
             
             /// <summary>
+            /// Enum Webdeployments for "WebDeployments"
+            /// </summary>
+            [EnumMember(Value = "WebDeployments")]
+            Webdeployments,
+            
+            /// <summary>
+            /// Enum Webhooks for "Webhooks"
+            /// </summary>
+            [EnumMember(Value = "Webhooks")]
+            Webhooks,
+            
+            /// <summary>
             /// Enum Workforcemanagement for "WorkforceManagement"
             /// </summary>
             [EnumMember(Value = "WorkforceManagement")]
-            Workforcemanagement
+            Workforcemanagement,
+            
+            /// <summary>
+            /// Enum Messaging for "Messaging"
+            /// </summary>
+            [EnumMember(Value = "Messaging")]
+            Messaging
         }
         
         

@@ -2042,7 +2042,7 @@ namespace Example
 
 <a name="patchrecordingcrossplatformmediaretentionpolicy"></a>
 
-## [**CrossPlatformPolicy**](CrossPlatformPolicy.html) PatchRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicy body)
+## [**CrossPlatformPolicy**](CrossPlatformPolicy.html) PatchRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicyUpdate body)
 
 
 
@@ -2077,7 +2077,7 @@ namespace Example
 
             var apiInstance = new RecordingApi();
             var policyId = policyId_example;  // string | Policy ID
-            var body = new CrossPlatformPolicy(); // CrossPlatformPolicy | Policy
+            var body = new CrossPlatformPolicyUpdate(); // CrossPlatformPolicyUpdate | Policy
 
             try
             { 
@@ -2100,7 +2100,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
-| **body** | [**CrossPlatformPolicy**](CrossPlatformPolicy.html)| Policy |  |
+| **body** | [**CrossPlatformPolicyUpdate**](CrossPlatformPolicyUpdate.html)| Policy |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2109,7 +2109,7 @@ namespace Example
 
 <a name="patchrecordingmediaretentionpolicy"></a>
 
-## [**Policy**](Policy.html) PatchRecordingMediaretentionpolicy (string policyId, Policy body)
+## [**Policy**](Policy.html) PatchRecordingMediaretentionpolicy (string policyId, PolicyUpdate body)
 
 
 
@@ -2144,7 +2144,7 @@ namespace Example
 
             var apiInstance = new RecordingApi();
             var policyId = policyId_example;  // string | Policy ID
-            var body = new Policy(); // Policy | Policy
+            var body = new PolicyUpdate(); // PolicyUpdate | Policy
 
             try
             { 
@@ -2167,7 +2167,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
-| **body** | [**Policy**](Policy.html)| Policy |  |
+| **body** | [**PolicyUpdate**](PolicyUpdate.html)| Policy |  |
 {: class="table table-striped"}
 
 ### Return type

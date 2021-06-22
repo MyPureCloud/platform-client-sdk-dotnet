@@ -97,18 +97,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Equalcondition,
             
             /// <summary>
-            /// Enum Greaterthancondition for "greaterThanCondition"
-            /// </summary>
-            [EnumMember(Value = "greaterThanCondition")]
-            Greaterthancondition,
-            
-            /// <summary>
-            /// Enum Greaterthanorequalcondition for "greaterThanOrEqualCondition"
-            /// </summary>
-            [EnumMember(Value = "greaterThanOrEqualCondition")]
-            Greaterthanorequalcondition,
-            
-            /// <summary>
             /// Enum Journeyactionid for "journeyActionId"
             /// </summary>
             [EnumMember(Value = "journeyActionId")]
@@ -149,6 +137,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "journeyBlockingActionMapId")]
             Journeyblockingactionmapid,
+            
+            /// <summary>
+            /// Enum Journeyblockingemergencyschedulegroupid for "journeyBlockingEmergencyScheduleGroupId"
+            /// </summary>
+            [EnumMember(Value = "journeyBlockingEmergencyScheduleGroupId")]
+            Journeyblockingemergencyschedulegroupid,
             
             /// <summary>
             /// Enum Journeyblockingreason for "journeyBlockingReason"
@@ -221,18 +215,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "journeySessionType")]
             Journeysessiontype,
-            
-            /// <summary>
-            /// Enum Lessthancondition for "lessThanCondition"
-            /// </summary>
-            [EnumMember(Value = "lessThanCondition")]
-            Lessthancondition,
-            
-            /// <summary>
-            /// Enum Lessthanorequalcondition for "lessThanOrEqualCondition"
-            /// </summary>
-            [EnumMember(Value = "lessThanOrEqualCondition")]
-            Lessthanorequalcondition,
             
             /// <summary>
             /// Enum Notcontainsallcondition for "notContainsAllCondition"

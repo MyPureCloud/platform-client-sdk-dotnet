@@ -907,8 +907,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ScheduleGroupEntityListing</returns>
-        ScheduleGroupEntityListing GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null);
+        ScheduleGroupEntityListing GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get a list of schedule groups.
@@ -923,8 +924,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ApiResponse of ScheduleGroupEntityListing</returns>
-        ApiResponse<ScheduleGroupEntityListing> GetArchitectSchedulegroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null);
+        ApiResponse<ScheduleGroupEntityListing> GetArchitectSchedulegroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null);
         
         /// <summary>
         /// Get a list of schedules.
@@ -938,8 +940,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ScheduleEntityListing</returns>
-        ScheduleEntityListing GetArchitectSchedules (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
+        ScheduleEntityListing GetArchitectSchedules (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get a list of schedules.
@@ -953,8 +956,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ApiResponse of ScheduleEntityListing</returns>
-        ApiResponse<ScheduleEntityListing> GetArchitectSchedulesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
+        ApiResponse<ScheduleEntityListing> GetArchitectSchedulesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null);
         
         /// <summary>
         /// Get a system prompt
@@ -1981,6 +1985,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SystemPromptAsset> PostArchitectSystempromptResourcesWithHttpInfo (string promptId, SystemPromptAsset body);
         
         /// <summary>
+        /// Generate flow history
+        /// </summary>
+        /// <remarks>
+        /// Asynchronous.  Notification topic: v2.flows.{flowId}
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID</param>
+        /// <returns>Operation</returns>
+        Operation PostFlowHistory (string flowId);
+
+        /// <summary>
+        /// Generate flow history
+        /// </summary>
+        /// <remarks>
+        /// Asynchronous.  Notification topic: v2.flows.{flowId}
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID</param>
+        /// <returns>ApiResponse of Operation</returns>
+        ApiResponse<Operation> PostFlowHistoryWithHttpInfo (string flowId);
+        
+        /// <summary>
         /// Create flow version
         /// </summary>
         /// <remarks>
@@ -2012,8 +2038,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
+        /// <param name="language">Language (optional)</param>
         /// <returns>Flow</returns>
-        Flow PostFlows (Flow body);
+        Flow PostFlows (Flow body, string language = null);
 
         /// <summary>
         /// Create flow
@@ -2023,8 +2050,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
+        /// <param name="language">Language (optional)</param>
         /// <returns>ApiResponse of Flow</returns>
-        ApiResponse<Flow> PostFlowsWithHttpInfo (Flow body);
+        ApiResponse<Flow> PostFlowsWithHttpInfo (Flow body, string language = null);
         
         /// <summary>
         /// Check-in flow
@@ -3509,8 +3537,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ScheduleGroupEntityListing</returns>
-        System.Threading.Tasks.Task<ScheduleGroupEntityListing> GetArchitectSchedulegroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null);
+        System.Threading.Tasks.Task<ScheduleGroupEntityListing> GetArchitectSchedulegroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get a list of schedule groups.
@@ -3525,8 +3554,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ApiResponse (ScheduleGroupEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScheduleGroupEntityListing>> GetArchitectSchedulegroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null);
+        System.Threading.Tasks.Task<ApiResponse<ScheduleGroupEntityListing>> GetArchitectSchedulegroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null);
         
         /// <summary>
         /// Get a list of schedules.
@@ -3540,8 +3570,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ScheduleEntityListing</returns>
-        System.Threading.Tasks.Task<ScheduleEntityListing> GetArchitectSchedulesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
+        System.Threading.Tasks.Task<ScheduleEntityListing> GetArchitectSchedulesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get a list of schedules.
@@ -3555,8 +3586,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ApiResponse (ScheduleEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScheduleEntityListing>> GetArchitectSchedulesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<ScheduleEntityListing>> GetArchitectSchedulesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null);
         
         /// <summary>
         /// Get a system prompt
@@ -4583,6 +4615,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PostArchitectSystempromptResourcesAsyncWithHttpInfo (string promptId, SystemPromptAsset body);
         
         /// <summary>
+        /// Generate flow history
+        /// </summary>
+        /// <remarks>
+        /// Asynchronous.  Notification topic: v2.flows.{flowId}
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID</param>
+        /// <returns>Task of Operation</returns>
+        System.Threading.Tasks.Task<Operation> PostFlowHistoryAsync (string flowId);
+
+        /// <summary>
+        /// Generate flow history
+        /// </summary>
+        /// <remarks>
+        /// Asynchronous.  Notification topic: v2.flows.{flowId}
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID</param>
+        /// <returns>Task of ApiResponse (Operation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Operation>> PostFlowHistoryAsyncWithHttpInfo (string flowId);
+        
+        /// <summary>
         /// Create flow version
         /// </summary>
         /// <remarks>
@@ -4614,8 +4668,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
+        /// <param name="language">Language (optional)</param>
         /// <returns>Task of Flow</returns>
-        System.Threading.Tasks.Task<Flow> PostFlowsAsync (Flow body);
+        System.Threading.Tasks.Task<Flow> PostFlowsAsync (Flow body, string language = null);
 
         /// <summary>
         /// Create flow
@@ -4625,8 +4680,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
+        /// <param name="language">Language (optional)</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsAsyncWithHttpInfo (Flow body);
+        System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsAsyncWithHttpInfo (Flow body, string language = null);
         
         /// <summary>
         /// Check-in flow
@@ -12262,10 +12318,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ScheduleGroupEntityListing</returns>
-        public ScheduleGroupEntityListing GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null)
+        public ScheduleGroupEntityListing GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null)
         {
-             ApiResponse<ScheduleGroupEntityListing> localVarResponse = GetArchitectSchedulegroupsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, scheduleIds);
+             ApiResponse<ScheduleGroupEntityListing> localVarResponse = GetArchitectSchedulegroupsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, scheduleIds, divisionId);
              return localVarResponse.Data;
         }
 
@@ -12279,8 +12336,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ApiResponse of ScheduleGroupEntityListing</returns>
-        public ApiResponse< ScheduleGroupEntityListing > GetArchitectSchedulegroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null)
+        public ApiResponse< ScheduleGroupEntityListing > GetArchitectSchedulegroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null)
         { 
 
             var localVarPath = "/api/v2/architect/schedulegroups";
@@ -12322,6 +12380,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (scheduleIds != null) localVarQueryParams.Add(new Tuple<string, string>("scheduleIds", this.Configuration.ApiClient.ParameterToString(scheduleIds)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -12369,10 +12428,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ScheduleGroupEntityListing</returns>
-        public async System.Threading.Tasks.Task<ScheduleGroupEntityListing> GetArchitectSchedulegroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null)
+        public async System.Threading.Tasks.Task<ScheduleGroupEntityListing> GetArchitectSchedulegroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null)
         {
-             ApiResponse<ScheduleGroupEntityListing> localVarResponse = await GetArchitectSchedulegroupsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, scheduleIds);
+             ApiResponse<ScheduleGroupEntityListing> localVarResponse = await GetArchitectSchedulegroupsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, scheduleIds, divisionId);
              return localVarResponse.Data;
 
         }
@@ -12387,8 +12447,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ApiResponse (ScheduleGroupEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroupEntityListing>> GetArchitectSchedulegroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroupEntityListing>> GetArchitectSchedulegroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null)
         { 
 
             var localVarPath = "/api/v2/architect/schedulegroups";
@@ -12430,6 +12491,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (scheduleIds != null) localVarQueryParams.Add(new Tuple<string, string>("scheduleIds", this.Configuration.ApiClient.ParameterToString(scheduleIds)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -12477,10 +12539,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ScheduleEntityListing</returns>
-        public ScheduleEntityListing GetArchitectSchedules (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
+        public ScheduleEntityListing GetArchitectSchedules (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null)
         {
-             ApiResponse<ScheduleEntityListing> localVarResponse = GetArchitectSchedulesWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name);
+             ApiResponse<ScheduleEntityListing> localVarResponse = GetArchitectSchedulesWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, divisionId);
              return localVarResponse.Data;
         }
 
@@ -12493,8 +12556,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ApiResponse of ScheduleEntityListing</returns>
-        public ApiResponse< ScheduleEntityListing > GetArchitectSchedulesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
+        public ApiResponse< ScheduleEntityListing > GetArchitectSchedulesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null)
         { 
 
             var localVarPath = "/api/v2/architect/schedules";
@@ -12535,6 +12599,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -12581,10 +12646,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ScheduleEntityListing</returns>
-        public async System.Threading.Tasks.Task<ScheduleEntityListing> GetArchitectSchedulesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
+        public async System.Threading.Tasks.Task<ScheduleEntityListing> GetArchitectSchedulesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null)
         {
-             ApiResponse<ScheduleEntityListing> localVarResponse = await GetArchitectSchedulesAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name);
+             ApiResponse<ScheduleEntityListing> localVarResponse = await GetArchitectSchedulesAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, divisionId);
              return localVarResponse.Data;
 
         }
@@ -12598,8 +12664,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ApiResponse (ScheduleEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScheduleEntityListing>> GetArchitectSchedulesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ScheduleEntityListing>> GetArchitectSchedulesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null)
         { 
 
             var localVarPath = "/api/v2/architect/schedules";
@@ -12640,6 +12707,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -20511,6 +20579,199 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Generate flow history Asynchronous.  Notification topic: v2.flows.{flowId}
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID</param>
+        /// <returns>Operation</returns>
+        public Operation PostFlowHistory (string flowId)
+        {
+             ApiResponse<Operation> localVarResponse = PostFlowHistoryWithHttpInfo(flowId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Generate flow history Asynchronous.  Notification topic: v2.flows.{flowId}
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID</param>
+        /// <returns>ApiResponse of Operation</returns>
+        public ApiResponse< Operation > PostFlowHistoryWithHttpInfo (string flowId)
+        { 
+            // verify the required parameter 'flowId' is set
+            if (flowId == null)
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PostFlowHistory");
+
+            var localVarPath = "/api/v2/flows/{flowId}/history";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowHistory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowHistory: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Operation>(localVarStatusCode,
+                localVarHeaders,
+                (Operation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Generate flow history Asynchronous.  Notification topic: v2.flows.{flowId}
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID</param>
+        /// <returns>Task of Operation</returns>
+        public async System.Threading.Tasks.Task<Operation> PostFlowHistoryAsync (string flowId)
+        {
+             ApiResponse<Operation> localVarResponse = await PostFlowHistoryAsyncWithHttpInfo(flowId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Generate flow history Asynchronous.  Notification topic: v2.flows.{flowId}
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID</param>
+        /// <returns>Task of ApiResponse (Operation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Operation>> PostFlowHistoryAsyncWithHttpInfo (string flowId)
+        { 
+            // verify the required parameter 'flowId' is set
+            if (flowId == null)
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PostFlowHistory");
+            
+
+            var localVarPath = "/api/v2/flows/{flowId}/history";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowHistory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowHistory: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Operation>(localVarStatusCode,
+                localVarHeaders,
+                (Operation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Create flow version 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -20729,10 +20990,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
+        /// <param name="language">Language (optional)</param>
         /// <returns>Flow</returns>
-        public Flow PostFlows (Flow body)
+        public Flow PostFlows (Flow body, string language = null)
         {
-             ApiResponse<Flow> localVarResponse = PostFlowsWithHttpInfo(body);
+             ApiResponse<Flow> localVarResponse = PostFlowsWithHttpInfo(body, language);
              return localVarResponse.Data;
         }
 
@@ -20741,8 +21003,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
+        /// <param name="language">Language (optional)</param>
         /// <returns>ApiResponse of Flow</returns>
-        public ApiResponse< Flow > PostFlowsWithHttpInfo (Flow body)
+        public ApiResponse< Flow > PostFlowsWithHttpInfo (Flow body, string language = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -20781,6 +21044,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
 
             // Header params
 
@@ -20828,10 +21092,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
+        /// <param name="language">Language (optional)</param>
         /// <returns>Task of Flow</returns>
-        public async System.Threading.Tasks.Task<Flow> PostFlowsAsync (Flow body)
+        public async System.Threading.Tasks.Task<Flow> PostFlowsAsync (Flow body, string language = null)
         {
-             ApiResponse<Flow> localVarResponse = await PostFlowsAsyncWithHttpInfo(body);
+             ApiResponse<Flow> localVarResponse = await PostFlowsAsyncWithHttpInfo(body, language);
              return localVarResponse.Data;
 
         }
@@ -20841,8 +21106,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
+        /// <param name="language">Language (optional)</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsAsyncWithHttpInfo (Flow body)
+        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsAsyncWithHttpInfo (Flow body, string language = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -20882,6 +21148,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
 
             // Header params
 

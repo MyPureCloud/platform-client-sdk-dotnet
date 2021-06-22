@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Message content element
+    /// Message content element.
     /// </summary>
     [DataContract]
     public partial class MessageContent :  IEquatable<MessageContent>
@@ -54,12 +54,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Quickreply,
             
             /// <summary>
-            /// Enum Buttonresponse for "ButtonResponse"
-            /// </summary>
-            [EnumMember(Value = "ButtonResponse")]
-            Buttonresponse,
-            
-            /// <summary>
             /// Enum Notification for "Notification"
             /// </summary>
             [EnumMember(Value = "Notification")]
@@ -93,7 +87,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Mention for "Mention"
             /// </summary>
             [EnumMember(Value = "Mention")]
-            Mention
+            Mention,
+            
+            /// <summary>
+            /// Enum Buttonresponse for "ButtonResponse"
+            /// </summary>
+            [EnumMember(Value = "ButtonResponse")]
+            Buttonresponse
         }
         
         
@@ -169,16 +169,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="MessageContent" /> class.
         /// </summary>
         /// <param name="ContentType">Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. (required).</param>
-        /// <param name="Location">Location object.</param>
-        /// <param name="Attachment">Attachment object.</param>
-        /// <param name="QuickReply">Quick reply object.</param>
-        /// <param name="ButtonResponse">Button response object.</param>
-        /// <param name="Generic">Generic content object.</param>
-        /// <param name="List">List content object.</param>
-        /// <param name="Template">Template notification object.</param>
-        /// <param name="Reactions">A list of reactions.</param>
-        /// <param name="Mention">This is used to identify who the message is sent to, as well as who it was sent from. This information is channel specific - depends on capabilities to describe party by the platform.</param>
-        /// <param name="Postback">The postback object result of a user clicking in a button.</param>
+        /// <param name="Location">Location content..</param>
+        /// <param name="Attachment">Attachment content..</param>
+        /// <param name="QuickReply">Quick reply content..</param>
+        /// <param name="ButtonResponse">Button response content..</param>
+        /// <param name="Generic">Generic content..</param>
+        /// <param name="List">List content..</param>
+        /// <param name="Template">Template notification content..</param>
+        /// <param name="Reactions">A set of reactions to a message..</param>
+        /// <param name="Mention">Mention content..</param>
+        /// <param name="Postback">Structured message postback (Deprecated)..</param>
         public MessageContent(ContentTypeEnum? ContentType = null, ContentLocation Location = null, ContentAttachment Attachment = null, ContentQuickReply QuickReply = null, ContentButtonResponse ButtonResponse = null, ContentGeneric Generic = null, ContentList List = null, ContentNotificationTemplate Template = null, List<ContentReaction> Reactions = null, MessagingRecipient Mention = null, ContentPostback Postback = null)
         {
             this.ContentType = ContentType;
@@ -200,90 +200,90 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Location object
+        /// Location content.
         /// </summary>
-        /// <value>Location object</value>
+        /// <value>Location content.</value>
         [DataMember(Name="location", EmitDefaultValue=false)]
         public ContentLocation Location { get; set; }
         
         
         
         /// <summary>
-        /// Attachment object
+        /// Attachment content.
         /// </summary>
-        /// <value>Attachment object</value>
+        /// <value>Attachment content.</value>
         [DataMember(Name="attachment", EmitDefaultValue=false)]
         public ContentAttachment Attachment { get; set; }
         
         
         
         /// <summary>
-        /// Quick reply object
+        /// Quick reply content.
         /// </summary>
-        /// <value>Quick reply object</value>
+        /// <value>Quick reply content.</value>
         [DataMember(Name="quickReply", EmitDefaultValue=false)]
         public ContentQuickReply QuickReply { get; set; }
         
         
         
         /// <summary>
-        /// Button response object
+        /// Button response content.
         /// </summary>
-        /// <value>Button response object</value>
+        /// <value>Button response content.</value>
         [DataMember(Name="buttonResponse", EmitDefaultValue=false)]
         public ContentButtonResponse ButtonResponse { get; set; }
         
         
         
         /// <summary>
-        /// Generic content object
+        /// Generic content.
         /// </summary>
-        /// <value>Generic content object</value>
+        /// <value>Generic content.</value>
         [DataMember(Name="generic", EmitDefaultValue=false)]
         public ContentGeneric Generic { get; set; }
         
         
         
         /// <summary>
-        /// List content object
+        /// List content.
         /// </summary>
-        /// <value>List content object</value>
+        /// <value>List content.</value>
         [DataMember(Name="list", EmitDefaultValue=false)]
         public ContentList List { get; set; }
         
         
         
         /// <summary>
-        /// Template notification object
+        /// Template notification content.
         /// </summary>
-        /// <value>Template notification object</value>
+        /// <value>Template notification content.</value>
         [DataMember(Name="template", EmitDefaultValue=false)]
         public ContentNotificationTemplate Template { get; set; }
         
         
         
         /// <summary>
-        /// A list of reactions
+        /// A set of reactions to a message.
         /// </summary>
-        /// <value>A list of reactions</value>
+        /// <value>A set of reactions to a message.</value>
         [DataMember(Name="reactions", EmitDefaultValue=false)]
         public List<ContentReaction> Reactions { get; set; }
         
         
         
         /// <summary>
-        /// This is used to identify who the message is sent to, as well as who it was sent from. This information is channel specific - depends on capabilities to describe party by the platform
+        /// Mention content.
         /// </summary>
-        /// <value>This is used to identify who the message is sent to, as well as who it was sent from. This information is channel specific - depends on capabilities to describe party by the platform</value>
+        /// <value>Mention content.</value>
         [DataMember(Name="mention", EmitDefaultValue=false)]
         public MessagingRecipient Mention { get; set; }
         
         
         
         /// <summary>
-        /// The postback object result of a user clicking in a button
+        /// Structured message postback (Deprecated).
         /// </summary>
-        /// <value>The postback object result of a user clicking in a button</value>
+        /// <value>Structured message postback (Deprecated).</value>
         [DataMember(Name="postback", EmitDefaultValue=false)]
         public ContentPostback Postback { get; set; }
         

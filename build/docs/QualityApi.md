@@ -18,6 +18,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetQualityConversationAudits**](QualityApi.html#getqualityconversationaudits) | **GET** /api/v2/quality/conversations/{conversationId}/audits | Get audits for conversation or recording |
 | [**GetQualityConversationEvaluation**](QualityApi.html#getqualityconversationevaluation) | **GET** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Get an evaluation |
 | [**GetQualityConversationSurveys**](QualityApi.html#getqualityconversationsurveys) | **GET** /api/v2/quality/conversations/{conversationId}/surveys | Get the surveys for a conversation |
+| [**GetQualityConversationsAuditsQueryTransactionId**](QualityApi.html#getqualityconversationsauditsquerytransactionid) | **GET** /api/v2/quality/conversations/audits/query/{transactionId} | Get status of audit query execution |
+| [**GetQualityConversationsAuditsQueryTransactionIdResults**](QualityApi.html#getqualityconversationsauditsquerytransactionidresults) | **GET** /api/v2/quality/conversations/audits/query/{transactionId}/results | Get results of audit query |
 | [**GetQualityEvaluationsQuery**](QualityApi.html#getqualityevaluationsquery) | **GET** /api/v2/quality/evaluations/query | Queries Evaluations and returns a paged list |
 | [**GetQualityEvaluatorsActivity**](QualityApi.html#getqualityevaluatorsactivity) | **GET** /api/v2/quality/evaluators/activity | Get an evaluator activity |
 | [**GetQualityForm**](QualityApi.html#getqualityform) | **GET** /api/v2/quality/forms/{formId} | Get an evaluation form |
@@ -44,6 +46,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsSurveysAggregatesQuery**](QualityApi.html#postanalyticssurveysaggregatesquery) | **POST** /api/v2/analytics/surveys/aggregates/query | Query for survey aggregates |
 | [**PostQualityCalibrations**](QualityApi.html#postqualitycalibrations) | **POST** /api/v2/quality/calibrations | Create a calibration |
 | [**PostQualityConversationEvaluations**](QualityApi.html#postqualityconversationevaluations) | **POST** /api/v2/quality/conversations/{conversationId}/evaluations | Create an evaluation |
+| [**PostQualityConversationsAuditsQuery**](QualityApi.html#postqualityconversationsauditsquery) | **POST** /api/v2/quality/conversations/audits/query | Create audit query execution |
 | [**PostQualityEvaluationsScoring**](QualityApi.html#postqualityevaluationsscoring) | **POST** /api/v2/quality/evaluations/scoring | Score evaluation |
 | [**PostQualityForms**](QualityApi.html#postqualityforms) | **POST** /api/v2/quality/forms | Create an evaluation form. |
 | [**PostQualityFormsEvaluations**](QualityApi.html#postqualityformsevaluations) | **POST** /api/v2/quality/forms/evaluations | Create an evaluation form. |
@@ -631,11 +634,11 @@ namespace Example
 
 ## [**QualityAuditPage**](QualityAuditPage.html) GetQualityConversationAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get audits for conversation or recording
 
-Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.
+Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.This endpoint is deprecated. Use following async endpoints, To query for audits POST /api/v2/quality/conversations/audits/queryTo get status of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}To get results of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}/results
 
 Requires ANY permissions: 
 
@@ -846,6 +849,142 @@ namespace Example
 ### Return type
 
 [**List<Survey>**](Survey.html)
+
+<a name="getqualityconversationsauditsquerytransactionid"></a>
+
+## [**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse.html) GetQualityConversationsAuditsQueryTransactionId (string transactionId)
+
+
+
+Get status of audit query execution
+
+
+
+Requires ALL permissions: 
+
+* audits:interactionDetails:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityConversationsAuditsQueryTransactionIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new QualityApi();
+            var transactionId = transactionId_example;  // string | Transaction ID
+
+            try
+            { 
+                // Get status of audit query execution
+                QualityAuditQueryExecutionStatusResponse result = apiInstance.GetQualityConversationsAuditsQueryTransactionId(transactionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityConversationsAuditsQueryTransactionId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **transactionId** | **string**| Transaction ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse.html)
+
+<a name="getqualityconversationsauditsquerytransactionidresults"></a>
+
+## [**QualityAuditQueryExecutionResultsResponse**](QualityAuditQueryExecutionResultsResponse.html) GetQualityConversationsAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
+
+
+
+Get results of audit query
+
+
+
+Requires ALL permissions: 
+
+* audits:interactionDetails:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityConversationsAuditsQueryTransactionIdResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new QualityApi();
+            var transactionId = transactionId_example;  // string | Transaction ID
+            var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page) (optional) 
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            { 
+                // Get results of audit query
+                QualityAuditQueryExecutionResultsResponse result = apiInstance.GetQualityConversationsAuditsQueryTransactionIdResults(transactionId, cursor, pageSize, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityConversationsAuditsQueryTransactionIdResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **transactionId** | **string**| Transaction ID |  |
+| **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: user |
+{: class="table table-striped"}
+
+### Return type
+
+[**QualityAuditQueryExecutionResultsResponse**](QualityAuditQueryExecutionResultsResponse.html)
 
 <a name="getqualityevaluationsquery"></a>
 
@@ -2667,6 +2806,71 @@ namespace Example
 ### Return type
 
 [**Evaluation**](Evaluation.html)
+
+<a name="postqualityconversationsauditsquery"></a>
+
+## [**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse.html) PostQualityConversationsAuditsQuery (QMAuditQueryRequest body)
+
+
+
+Create audit query execution
+
+
+
+Requires ALL permissions: 
+
+* audits:interactionDetails:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostQualityConversationsAuditsQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new QualityApi();
+            var body = new QMAuditQueryRequest(); // QMAuditQueryRequest | query
+
+            try
+            { 
+                // Create audit query execution
+                QualityAuditQueryExecutionStatusResponse result = apiInstance.PostQualityConversationsAuditsQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.PostQualityConversationsAuditsQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**QMAuditQueryRequest**](QMAuditQueryRequest.html)| query |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse.html)
 
 <a name="postqualityevaluationsscoring"></a>
 

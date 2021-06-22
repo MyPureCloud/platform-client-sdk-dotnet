@@ -7,11 +7,11 @@ title: ContentLocation
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Url** | **string** | Location map url | [optional] |
-| **Address** | **string** | Location postal address | [optional] |
-| **Text** | **string** | Location name | [optional] |
-| **Latitude** | **double?** | Latitude of the location | [optional] |
-| **Longitude** | **double?** | Longitude of the location | [optional] |
+| **Url** | **string** | URL of the Location. | [optional] |
+| **Address** | **string** | Location postal address. | [optional] |
+| **Text** | **string** | Location name. | [optional] |
+| **Latitude** | **double?** | Latitude of the location. | [optional] |
+| **Longitude** | **double?** | Longitude of the location. | [optional] |
 {: class="table table-striped"}
 
 

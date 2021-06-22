@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Structured template button object
+    /// Structured template button object.
     /// </summary>
     [DataContract]
     public partial class ButtonComponent :  IEquatable<ButtonComponent>
@@ -44,10 +44,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ButtonComponent" /> class.
         /// </summary>
-        /// <param name="Id">An ID assigned to this component.</param>
-        /// <param name="Text">Deprecated - Use title instead.</param>
-        /// <param name="Title">Text to show inside the button.</param>
-        /// <param name="Actions">User actions available on the content. All actions are optional and all actions are executed simultaneously..</param>
+        /// <param name="Id">The ID of this component..</param>
+        /// <param name="Text">Deprecated - Use title instead..</param>
+        /// <param name="Title">Text to show inside the button..</param>
+        /// <param name="Actions">The button actions..</param>
         public ButtonComponent(string Id = null, string Text = null, string Title = null, ContentActions Actions = null)
         {
             this.Id = Id;
@@ -60,36 +60,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// An ID assigned to this component
+        /// The ID of this component.
         /// </summary>
-        /// <value>An ID assigned to this component</value>
+        /// <value>The ID of this component.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Deprecated - Use title instead
+        /// Deprecated - Use title instead.
         /// </summary>
-        /// <value>Deprecated - Use title instead</value>
+        /// <value>Deprecated - Use title instead.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
         
         
         
         /// <summary>
-        /// Text to show inside the button
+        /// Text to show inside the button.
         /// </summary>
-        /// <value>Text to show inside the button</value>
+        /// <value>Text to show inside the button.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
         
         
         
         /// <summary>
-        /// User actions available on the content. All actions are optional and all actions are executed simultaneously.
+        /// The button actions.
         /// </summary>
-        /// <value>User actions available on the content. All actions are optional and all actions are executed simultaneously.</value>
+        /// <value>The button actions.</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public ContentActions Actions { get; set; }
         

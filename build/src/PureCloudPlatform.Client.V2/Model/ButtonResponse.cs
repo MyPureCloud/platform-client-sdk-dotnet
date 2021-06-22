@@ -20,9 +20,6 @@ namespace PureCloudPlatform.Client.V2.Model
     {
         
         
-        
-        
-        
         /// <summary>
         /// Button response type that captures Button and QuickReply type responses
         /// </summary>
@@ -61,8 +58,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
         /// <summary>
         /// Button response type that captures Button and QuickReply type responses
         /// </summary>
@@ -79,27 +74,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ButtonResponse" /> class.
         /// </summary>
-        /// <param name="Id">An ID assigned to the button response..</param>
         /// <param name="Type">Button response type that captures Button and QuickReply type responses.</param>
         /// <param name="Text">Text to show inside the Button reply. This is also used as the response text after clicking on the Button..</param>
         /// <param name="Payload">Content of the textback payload after clicking a button.</param>
-        public ButtonResponse(string Id = null, TypeEnum? Type = null, string Text = null, string Payload = null)
+        public ButtonResponse(TypeEnum? Type = null, string Text = null, string Payload = null)
         {
-            this.Id = Id;
             this.Type = Type;
             this.Text = Text;
             this.Payload = Payload;
             
         }
-        
-        
-        
-        /// <summary>
-        /// An ID assigned to the button response.
-        /// </summary>
-        /// <value>An ID assigned to the button response.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
         
         
         
@@ -131,7 +115,6 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ButtonResponse {\n");
             
-            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Payload: ").Append(Payload).Append("\n");
@@ -172,11 +155,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
@@ -204,9 +182,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();

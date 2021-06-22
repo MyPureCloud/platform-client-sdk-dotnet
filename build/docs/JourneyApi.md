@@ -358,7 +358,7 @@ namespace Example
 
 <a name="getjourneyactionmaps"></a>
 
-## [**ActionMapListing**](ActionMapListing.html) GetJourneyActionmaps (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null)
+## [**ActionMapListing**](ActionMapListing.html) GetJourneyActionmaps (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null)
 
 
 
@@ -397,12 +397,14 @@ namespace Example
             var sortBy = sortBy_example;  // string | Field(s) to sort by. Prefix with '-' for descending (e.g. sortBy=displayName,-createdDate). (optional) 
             var filterField = filterField_example;  // string | Field to filter by (e.g. filterField=weight or filterField=action.actionTemplate.id). Requires 'filterField' to also be set. (optional) 
             var filterValue = filterValue_example;  // string | Value to filter by. Requires 'filterValue' to also be set. (optional) 
-            var actionMapIds = new List<string>(); // List<string> | IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering or sorting. A maximum of 100 action maps are allowed per request. (optional) 
+            var actionMapIds = new List<string>(); // List<string> | IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. (optional) 
+            var queryFields = new List<string>(); // List<string> | Action Map field(s) to query on. Requires 'queryValue' to also be set. (optional) 
+            var queryValue = queryValue_example;  // string | Value to query on. Requires 'queryFields' to also be set. (optional) 
 
             try
             { 
                 // Retrieve all action maps.
-                ActionMapListing result = apiInstance.GetJourneyActionmaps(pageNumber, pageSize, sortBy, filterField, filterValue, actionMapIds);
+                ActionMapListing result = apiInstance.GetJourneyActionmaps(pageNumber, pageSize, sortBy, filterField, filterValue, actionMapIds, queryFields, queryValue);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -424,7 +426,9 @@ namespace Example
 | **sortBy** | **string**| Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). | [optional]  |
 | **filterField** | **string**| Field to filter by (e.g. filterField=weight or filterField=action.actionTemplate.id). Requires &#39;filterField&#39; to also be set. | [optional]  |
 | **filterValue** | **string**| Value to filter by. Requires &#39;filterValue&#39; to also be set. | [optional]  |
-| **actionMapIds** | [**List<string>**](string.html)| IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering or sorting. A maximum of 100 action maps are allowed per request. | [optional]  |
+| **actionMapIds** | [**List<string>**](string.html)| IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. | [optional]  |
+| **queryFields** | [**List<string>**](string.html)| Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional]  |
+| **queryValue** | **string**| Value to query on. Requires &#39;queryFields&#39; to also be set. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -630,7 +634,7 @@ namespace Example
 
 <a name="getjourneyactiontemplates"></a>
 
-## [**ActionTemplateListing**](ActionTemplateListing.html) GetJourneyActiontemplates (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null)
+## [**ActionTemplateListing**](ActionTemplateListing.html) GetJourneyActiontemplates (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null)
 
 
 
@@ -668,12 +672,14 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var sortBy = sortBy_example;  // string | Field(s) to sort by. Prefix with '-' for descending (e.g. sortBy=name,-createdDate). (optional) 
             var mediaType = mediaType_example;  // string | Media type (optional) 
-            var state = state_example;  // string | Action template state (optional) 
+            var state = state_example;  // string | Action template state. (optional) 
+            var queryFields = new List<string>(); // List<string> | ActionTemplate field(s) to query on. Requires 'queryValue' to also be set. (optional) 
+            var queryValue = queryValue_example;  // string | Value to query on. Requires 'queryFields' to also be set. (optional) 
 
             try
             { 
                 // Retrieve all action templates.
-                ActionTemplateListing result = apiInstance.GetJourneyActiontemplates(pageNumber, pageSize, sortBy, mediaType, state);
+                ActionTemplateListing result = apiInstance.GetJourneyActiontemplates(pageNumber, pageSize, sortBy, mediaType, state, queryFields, queryValue);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -694,7 +700,9 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy=name,-createdDate). | [optional]  |
 | **mediaType** | **string**| Media type | [optional] <br />**Values**: webchat, webMessagingOffer, contentOffer, integrationAction, architectFlow |
-| **state** | **string**| Action template state | [optional] <br />**Values**: Active, Inactive, Deleted |
+| **state** | **string**| Action template state. | [optional] <br />**Values**: Active, Inactive, Deleted |
+| **queryFields** | [**List<string>**](string.html)| ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional]  |
+| **queryValue** | **string**| Value to query on. Requires &#39;queryFields&#39; to also be set. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -768,7 +776,7 @@ namespace Example
 
 <a name="getjourneyoutcomes"></a>
 
-## [**OutcomeListing**](OutcomeListing.html) GetJourneyOutcomes (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null)
+## [**OutcomeListing**](OutcomeListing.html) GetJourneyOutcomes (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null)
 
 
 
@@ -805,12 +813,14 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var sortBy = sortBy_example;  // string | Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with '-' for descending (e.g. sortBy=displayName,-createdDate). (optional) 
-            var outcomeIds = new List<string>(); // List<string> | IDs of outcomes to return. Use of this parameter is not compatible with pagination or sorting. A maximum of 20 outcomes are allowed per request. (optional) 
+            var outcomeIds = new List<string>(); // List<string> | IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. (optional) 
+            var queryFields = new List<string>(); // List<string> | Outcome field(s) to query on. Requires 'queryValue' to also be set. (optional) 
+            var queryValue = queryValue_example;  // string | Value to query on. Requires 'queryFields' to also be set. (optional) 
 
             try
             { 
                 // Retrieve all outcomes.
-                OutcomeListing result = apiInstance.GetJourneyOutcomes(pageNumber, pageSize, sortBy, outcomeIds);
+                OutcomeListing result = apiInstance.GetJourneyOutcomes(pageNumber, pageSize, sortBy, outcomeIds, queryFields, queryValue);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -830,7 +840,9 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). | [optional]  |
-| **outcomeIds** | [**List<string>**](string.html)| IDs of outcomes to return. Use of this parameter is not compatible with pagination or sorting. A maximum of 20 outcomes are allowed per request. | [optional]  |
+| **outcomeIds** | [**List<string>**](string.html)| IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. | [optional]  |
+| **queryFields** | [**List<string>**](string.html)| Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional]  |
+| **queryValue** | **string**| Value to query on. Requires &#39;queryFields&#39; to also be set. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -904,7 +916,7 @@ namespace Example
 
 <a name="getjourneysegments"></a>
 
-## [**SegmentListing**](SegmentListing.html) GetJourneySegments (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null)
+## [**SegmentListing**](SegmentListing.html) GetJourneySegments (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null)
 
 
 
@@ -942,12 +954,14 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var isActive = true;  // bool? | Determines whether or not to show only active segments. (optional) 
-            var segmentIds = new List<string>(); // List<string> | IDs of segments to return. Use of this parameter is not compatible with pagination or sorting. A maximum of 100 segments are allowed per request. (optional) 
+            var segmentIds = new List<string>(); // List<string> | IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional) 
+            var queryFields = new List<string>(); // List<string> | Segment field(s) to query on. Requires 'queryValue' to also be set. (optional) 
+            var queryValue = queryValue_example;  // string | Value to query on. Requires 'queryFields' to also be set. (optional) 
 
             try
             { 
                 // Retrieve all segments.
-                SegmentListing result = apiInstance.GetJourneySegments(sortBy, pageSize, pageNumber, isActive, segmentIds);
+                SegmentListing result = apiInstance.GetJourneySegments(sortBy, pageSize, pageNumber, isActive, segmentIds, queryFields, queryValue);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -968,7 +982,9 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **isActive** | **bool?**| Determines whether or not to show only active segments. | [optional]  |
-| **segmentIds** | [**List<string>**](string.html)| IDs of segments to return. Use of this parameter is not compatible with pagination or sorting. A maximum of 100 segments are allowed per request. | [optional]  |
+| **segmentIds** | [**List<string>**](string.html)| IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. | [optional]  |
+| **queryFields** | [**List<string>**](string.html)| Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional]  |
+| **queryValue** | **string**| Value to query on. Requires &#39;queryFields&#39; to also be set. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

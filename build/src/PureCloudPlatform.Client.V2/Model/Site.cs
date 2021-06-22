@@ -174,6 +174,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Indicates if the resource is active, inactive, or deleted.
         /// </summary>
@@ -221,6 +224,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Site" /> class.
@@ -252,7 +257,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Managed">Managed.</param>
         /// <param name="NtpSettings">Network Time Protocol settings for the site.</param>
         /// <param name="MediaModel">Media model for the site.</param>
-        public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<DomainEntityRef> PrimarySites = null, List<DomainEntityRef> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<Contact> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, bool? MediaRegionsUseLatencyBased = null, LocationDefinition Location = null, bool? Managed = null, NTPSettings NtpSettings = null, MediaModelEnum? MediaModel = null)
+        /// <param name="CoreSite">Is this site a core site.</param>
+        /// <param name="SiteConnections">The site connections.</param>
+        public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<DomainEntityRef> PrimarySites = null, List<DomainEntityRef> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<Contact> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, bool? MediaRegionsUseLatencyBased = null, LocationDefinition Location = null, bool? Managed = null, NTPSettings NtpSettings = null, MediaModelEnum? MediaModel = null, bool? CoreSite = null, List<SiteConnection> SiteConnections = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -275,6 +282,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Managed = Managed;
             this.NtpSettings = NtpSettings;
             this.MediaModel = MediaModel;
+            this.CoreSite = CoreSite;
+            this.SiteConnections = SiteConnections;
             
         }
         
@@ -466,11 +475,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The core site
+        /// Is this site a core site
         /// </summary>
-        /// <value>The core site</value>
+        /// <value>Is this site a core site</value>
         [DataMember(Name="coreSite", EmitDefaultValue=false)]
-        public bool? CoreSite { get; private set; }
+        public bool? CoreSite { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The site connections
+        /// </summary>
+        /// <value>The site connections</value>
+        [DataMember(Name="siteConnections", EmitDefaultValue=false)]
+        public List<SiteConnection> SiteConnections { get; set; }
         
         
         
@@ -515,6 +533,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  NtpSettings: ").Append(NtpSettings).Append("\n");
             sb.Append("  MediaModel: ").Append(MediaModel).Append("\n");
             sb.Append("  CoreSite: ").Append(CoreSite).Append("\n");
+            sb.Append("  SiteConnections: ").Append(SiteConnections).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -673,6 +692,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CoreSite.Equals(other.CoreSite)
                 ) &&
                 (
+                    this.SiteConnections == other.SiteConnections ||
+                    this.SiteConnections != null &&
+                    this.SiteConnections.SequenceEqual(other.SiteConnections)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -762,6 +786,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CoreSite != null)
                     hash = hash * 59 + this.CoreSite.GetHashCode();
+                
+                if (this.SiteConnections != null)
+                    hash = hash * 59 + this.SiteConnections.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

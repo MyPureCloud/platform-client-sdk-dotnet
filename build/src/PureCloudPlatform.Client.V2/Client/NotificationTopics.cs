@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.businessunits.{id}.workforcemanagement.intraday", typeof(WfmBuIntradayDataUpdateTopicBuIntradayNotification)},
               {"v2.contentmanagement.documents.{id}", typeof(ContentManagementSingleDocumentTopicDocumentDataV2)},
               {"v2.contentmanagement.workspaces.{id}.documents", typeof(ContentManagementWorkspaceDocumentsTopicDocumentDataV2)},
-              {"v2.conversations.{id}.transcriptions", typeof(TranscriptionsTopicTranscriptionMessage)},
+              {"v2.conversations.{id}.transcription", typeof(TranscriptionTopicTranscriptionMessage)},
               {"v2.flows.outcomes.{id}", typeof(ArchitectFlowOutcomeNotificationFlowOutcomeNotification)},
               {"v2.flows.{id}", typeof(ArchitectFlowNotificationFlowNotification)},
               {"v2.groups.{id}.greetings", typeof(GroupGreetingEventGreeting)},

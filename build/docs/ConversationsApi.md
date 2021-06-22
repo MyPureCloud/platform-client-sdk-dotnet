@@ -14,6 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteConversationsEmailMessagesDraftAttachment**](ConversationsApi.html#deleteconversationsemailmessagesdraftattachment) | **DELETE** /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/{attachmentId} | Delete attachment from draft |
 | [**DeleteConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationsfacebookintegrationid) | **DELETE** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Delete a Facebook messaging integration |
 | [**DeleteConversationsMessagingIntegrationsLineIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationslineintegrationid) | **DELETE** /api/v2/conversations/messaging/integrations/line/{integrationId} | Delete a LINE messenger integration |
+| [**DeleteConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationsopenintegrationid) | **DELETE** /api/v2/conversations/messaging/integrations/open/{integrationId} | Delete an Open messaging integration |
 | [**DeleteConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationstwitterintegrationid) | **DELETE** /api/v2/conversations/messaging/integrations/twitter/{integrationId} | Delete a Twitter messaging integration |
 | [**DeleteConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationswhatsappintegrationid) | **DELETE** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Delete a WhatsApp messaging integration |
 | [**GetAnalyticsConversationDetails**](ConversationsApi.html#getanalyticsconversationdetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
@@ -66,6 +67,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationsfacebookintegrationid) | **GET** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Get a Facebook messaging integration |
 | [**GetConversationsMessagingIntegrationsLine**](ConversationsApi.html#getconversationsmessagingintegrationsline) | **GET** /api/v2/conversations/messaging/integrations/line | Get a list of LINE messenger Integrations |
 | [**GetConversationsMessagingIntegrationsLineIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationslineintegrationid) | **GET** /api/v2/conversations/messaging/integrations/line/{integrationId} | Get a LINE messenger integration |
+| [**GetConversationsMessagingIntegrationsOpen**](ConversationsApi.html#getconversationsmessagingintegrationsopen) | **GET** /api/v2/conversations/messaging/integrations/open | Get a list of Open messaging integrations |
+| [**GetConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationsopenintegrationid) | **GET** /api/v2/conversations/messaging/integrations/open/{integrationId} | Get an Open messaging integration |
 | [**GetConversationsMessagingIntegrationsTwitter**](ConversationsApi.html#getconversationsmessagingintegrationstwitter) | **GET** /api/v2/conversations/messaging/integrations/twitter | Get a list of Twitter Integrations |
 | [**GetConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationstwitterintegrationid) | **GET** /api/v2/conversations/messaging/integrations/twitter/{integrationId} | Get a Twitter messaging integration |
 | [**GetConversationsMessagingIntegrationsWhatsapp**](ConversationsApi.html#getconversationsmessagingintegrationswhatsapp) | **GET** /api/v2/conversations/messaging/integrations/whatsapp | Get a list of WhatsApp Integrations |
@@ -100,6 +103,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationsMessageParticipantAttributes**](ConversationsApi.html#patchconversationsmessageparticipantattributes) | **PATCH** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationsMessageParticipantCommunication**](ConversationsApi.html#patchconversationsmessageparticipantcommunication) | **PATCH** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
 | [**PatchConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationsfacebookintegrationid) | **PATCH** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Update Facebook messaging integration |
+| [**PatchConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationsopenintegrationid) | **PATCH** /api/v2/conversations/messaging/integrations/open/{integrationId} | Update an Open messaging integration |
 | [**PatchConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationstwitterintegrationid) | **PATCH** /api/v2/conversations/messaging/integrations/twitter/{integrationId} | Update Twitter messaging integration |
 | [**PatchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationswhatsappintegrationid) | **PATCH** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Update or activate a WhatsApp messaging integration. |
 | [**PostAnalyticsConversationDetailsProperties**](ConversationsApi.html#postanalyticsconversationdetailsproperties) | **POST** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
@@ -138,8 +142,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsMessageParticipantReplace**](ConversationsApi.html#postconversationsmessageparticipantreplace) | **POST** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsMessages**](ConversationsApi.html#postconversationsmessages) | **POST** /api/v2/conversations/messages | Create an outbound messaging conversation. |
 | [**PostConversationsMessagesAgentless**](ConversationsApi.html#postconversationsmessagesagentless) | **POST** /api/v2/conversations/messages/agentless | Send an agentless outbound message |
+| [**PostConversationsMessagesInboundOpen**](ConversationsApi.html#postconversationsmessagesinboundopen) | **POST** /api/v2/conversations/messages/inbound/open | Send an inbound Open Message |
 | [**PostConversationsMessagingIntegrationsFacebook**](ConversationsApi.html#postconversationsmessagingintegrationsfacebook) | **POST** /api/v2/conversations/messaging/integrations/facebook | Create a Facebook Integration |
 | [**PostConversationsMessagingIntegrationsLine**](ConversationsApi.html#postconversationsmessagingintegrationsline) | **POST** /api/v2/conversations/messaging/integrations/line | Create a LINE messenger Integration |
+| [**PostConversationsMessagingIntegrationsOpen**](ConversationsApi.html#postconversationsmessagingintegrationsopen) | **POST** /api/v2/conversations/messaging/integrations/open | Create an Open messaging integration |
 | [**PostConversationsMessagingIntegrationsTwitter**](ConversationsApi.html#postconversationsmessagingintegrationstwitter) | **POST** /api/v2/conversations/messaging/integrations/twitter | Create a Twitter Integration |
 | [**PostConversationsMessagingIntegrationsWhatsapp**](ConversationsApi.html#postconversationsmessagingintegrationswhatsapp) | **POST** /api/v2/conversations/messaging/integrations/whatsapp | Create a WhatsApp Integration |
 | [**PutConversationParticipantFlaggedreason**](ConversationsApi.html#putconversationparticipantflaggedreason) | **PUT** /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason | Set flagged reason on conversation participant to indicate bad conversation quality. |
@@ -585,6 +591,70 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling ConversationsApi.DeleteConversationsMessagingIntegrationsLineIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteconversationsmessagingintegrationsopenintegrationid"></a>
+
+## void DeleteConversationsMessagingIntegrationsOpenIntegrationId (string integrationId)
+
+
+
+Delete an Open messaging integration
+
+See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+
+Requires ALL permissions: 
+
+* messaging:integration:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteConversationsMessagingIntegrationsOpenIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+
+            try
+            { 
+                // Delete an Open messaging integration
+                apiInstance.DeleteConversationsMessagingIntegrationsOpenIntegrationId(integrationId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.DeleteConversationsMessagingIntegrationsOpenIntegrationId: " + e.Message );
             }
         }
     }
@@ -3276,6 +3346,7 @@ See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-up
 Requires ANY permissions: 
 
 * conversation:message:view
+* conversation:webmessaging:view
 
 ### Example
 ```{"language":"csharp"}
@@ -3345,6 +3416,7 @@ Get message
 Requires ANY permissions: 
 
 * conversation:message:view
+* conversation:webmessaging:view
 
 ### Example
 ```{"language":"csharp"}
@@ -3998,6 +4070,144 @@ namespace Example
 ### Return type
 
 [**LineIntegration**](LineIntegration.html)
+
+<a name="getconversationsmessagingintegrationsopen"></a>
+
+## [**OpenIntegrationEntityListing**](OpenIntegrationEntityListing.html) GetConversationsMessagingIntegrationsOpen (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
+
+
+
+Get a list of Open messaging integrations
+
+See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationsOpenExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
+            var supportedContentId = supportedContentId_example;  // string | Filter integrations returned based on the supported content ID (optional) 
+
+            try
+            { 
+                // Get a list of Open messaging integrations
+                OpenIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsOpen(pageSize, pageNumber, expand, supportedContentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrationsOpen: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
+| **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OpenIntegrationEntityListing**](OpenIntegrationEntityListing.html)
+
+<a name="getconversationsmessagingintegrationsopenintegrationid"></a>
+
+## [**OpenIntegration**](OpenIntegration.html) GetConversationsMessagingIntegrationsOpenIntegrationId (string integrationId, string expand = null)
+
+
+
+Get an Open messaging integration
+
+See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationsOpenIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
+
+            try
+            { 
+                // Get an Open messaging integration
+                OpenIntegration result = apiInstance.GetConversationsMessagingIntegrationsOpenIntegrationId(integrationId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrationsOpenIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
+{: class="table table-striped"}
+
+### Return type
+
+[**OpenIntegration**](OpenIntegration.html)
 
 <a name="getconversationsmessagingintegrationstwitter"></a>
 
@@ -6299,6 +6509,73 @@ namespace Example
 
 [**FacebookIntegration**](FacebookIntegration.html)
 
+<a name="patchconversationsmessagingintegrationsopenintegrationid"></a>
+
+## [**OpenIntegration**](OpenIntegration.html) PatchConversationsMessagingIntegrationsOpenIntegrationId (string integrationId, OpenIntegrationUpdateRequest body)
+
+
+
+Update an Open messaging integration
+
+See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+
+Requires ALL permissions: 
+
+* messaging:integration:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationsMessagingIntegrationsOpenIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+            var body = new OpenIntegrationUpdateRequest(); // OpenIntegrationUpdateRequest | OpenIntegrationUpdateRequest
+
+            try
+            { 
+                // Update an Open messaging integration
+                OpenIntegration result = apiInstance.PatchConversationsMessagingIntegrationsOpenIntegrationId(integrationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationsMessagingIntegrationsOpenIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+| **body** | [**OpenIntegrationUpdateRequest**](OpenIntegrationUpdateRequest.html)| OpenIntegrationUpdateRequest |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OpenIntegration**](OpenIntegration.html)
+
 <a name="patchconversationsmessagingintegrationstwitterintegrationid"></a>
 
 ## [**TwitterIntegration**](TwitterIntegration.html) PatchConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId, TwitterIntegrationRequest body)
@@ -8439,9 +8716,10 @@ Send message
 
 Send message on existing conversation/communication. Only one message body field can be accepted, per request. Example: 1 textBody, 1 mediaId, 1 stickerId, or 1 messageTemplate.
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * conversation:message:create
+* conversation:webmessaging:create
 
 ### Example
 ```{"language":"csharp"}
@@ -8508,9 +8786,10 @@ Create media
 
 See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * conversation:message:create
+* conversation:webmessaging:create
 
 ### Example
 ```{"language":"csharp"}
@@ -8578,6 +8857,7 @@ The path parameter [conversationId] should contain the conversationId of the con
 Requires ANY permissions: 
 
 * conversation:message:view
+* conversation:webmessaging:view
 
 ### Example
 ```{"language":"csharp"}
@@ -8829,6 +9109,71 @@ namespace Example
 
 [**SendAgentlessOutboundMessageResponse**](SendAgentlessOutboundMessageResponse.html)
 
+<a name="postconversationsmessagesinboundopen"></a>
+
+## [**OpenNormalizedMessage**](OpenNormalizedMessage.html) PostConversationsMessagesInboundOpen (OpenNormalizedMessage body)
+
+
+
+Send an inbound Open Message
+
+Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+
+Requires ALL permissions: 
+
+* conversation:message:receive
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessagesInboundOpenExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var body = new OpenNormalizedMessage(); // OpenNormalizedMessage | NormalizedMessage
+
+            try
+            { 
+                // Send an inbound Open Message
+                OpenNormalizedMessage result = apiInstance.PostConversationsMessagesInboundOpen(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessagesInboundOpen: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**OpenNormalizedMessage**](OpenNormalizedMessage.html)| NormalizedMessage |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OpenNormalizedMessage**](OpenNormalizedMessage.html)
+
 <a name="postconversationsmessagingintegrationsfacebook"></a>
 
 ## [**FacebookIntegration**](FacebookIntegration.html) PostConversationsMessagingIntegrationsFacebook (FacebookIntegrationRequest body)
@@ -8958,6 +9303,71 @@ namespace Example
 ### Return type
 
 [**LineIntegration**](LineIntegration.html)
+
+<a name="postconversationsmessagingintegrationsopen"></a>
+
+## [**OpenIntegration**](OpenIntegration.html) PostConversationsMessagingIntegrationsOpen (OpenIntegrationRequest body)
+
+
+
+Create an Open messaging integration
+
+See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+
+Requires ALL permissions: 
+
+* messaging:integration:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessagingIntegrationsOpenExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var body = new OpenIntegrationRequest(); // OpenIntegrationRequest | OpenIntegrationRequest
+
+            try
+            { 
+                // Create an Open messaging integration
+                OpenIntegration result = apiInstance.PostConversationsMessagingIntegrationsOpen(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessagingIntegrationsOpen: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**OpenIntegrationRequest**](OpenIntegrationRequest.html)| OpenIntegrationRequest |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OpenIntegration**](OpenIntegration.html)
 
 <a name="postconversationsmessagingintegrationstwitter"></a>
 

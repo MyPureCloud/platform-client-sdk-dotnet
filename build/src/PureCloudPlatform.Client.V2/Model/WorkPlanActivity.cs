@@ -95,6 +95,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkPlanActivity" /> class.
@@ -114,7 +119,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MinimumLengthFromShiftEndMinutes">The minimum duration between shift item (e.g., break or meal) end and shift end in minutes.</param>
         /// <param name="Id">ID of the activity. This is required only for the case of updating an existing activity.</param>
         /// <param name="Delete">If marked true for updating an existing activity, the activity will be permanently deleted.</param>
-        public WorkPlanActivity(string ActivityCodeId = null, string Description = null, int? LengthMinutes = null, bool? StartTimeIsRelativeToShiftStart = null, bool? FlexibleStartTime = null, int? EarliestStartTimeMinutes = null, int? LatestStartTimeMinutes = null, int? ExactStartTimeMinutes = null, int? StartTimeIncrementMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsContiguousWorkTime = null, int? MinimumLengthFromShiftStartMinutes = null, int? MinimumLengthFromShiftEndMinutes = null, string Id = null, bool? Delete = null)
+        /// <param name="ValidationId">ID of the activity in the context of work plan validation.</param>
+        public WorkPlanActivity(string ActivityCodeId = null, string Description = null, int? LengthMinutes = null, bool? StartTimeIsRelativeToShiftStart = null, bool? FlexibleStartTime = null, int? EarliestStartTimeMinutes = null, int? LatestStartTimeMinutes = null, int? ExactStartTimeMinutes = null, int? StartTimeIncrementMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsContiguousWorkTime = null, int? MinimumLengthFromShiftStartMinutes = null, int? MinimumLengthFromShiftEndMinutes = null, string Id = null, bool? Delete = null, string ValidationId = null)
         {
             this.ActivityCodeId = ActivityCodeId;
             this.Description = Description;
@@ -131,6 +137,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MinimumLengthFromShiftEndMinutes = MinimumLengthFromShiftEndMinutes;
             this.Id = Id;
             this.Delete = Delete;
+            this.ValidationId = ValidationId;
             
         }
         
@@ -270,6 +277,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Delete { get; set; }
         
         
+        
+        /// <summary>
+        /// ID of the activity in the context of work plan validation
+        /// </summary>
+        /// <value>ID of the activity in the context of work plan validation</value>
+        [DataMember(Name="validationId", EmitDefaultValue=false)]
+        public string ValidationId { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -294,6 +310,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MinimumLengthFromShiftEndMinutes: ").Append(MinimumLengthFromShiftEndMinutes).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Delete: ").Append(Delete).Append("\n");
+            sb.Append("  ValidationId: ").Append(ValidationId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -404,6 +421,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Delete == other.Delete ||
                     this.Delete != null &&
                     this.Delete.Equals(other.Delete)
+                ) &&
+                (
+                    this.ValidationId == other.ValidationId ||
+                    this.ValidationId != null &&
+                    this.ValidationId.Equals(other.ValidationId)
                 );
         }
 
@@ -463,6 +485,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Delete != null)
                     hash = hash * 59 + this.Delete.GetHashCode();
+                
+                if (this.ValidationId != null)
+                    hash = hash * 59 + this.ValidationId.GetHashCode();
                 
                 return hash;
             }

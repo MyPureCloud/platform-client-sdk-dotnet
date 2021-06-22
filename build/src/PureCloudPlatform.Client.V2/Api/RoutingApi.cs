@@ -17,6 +17,28 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
         
         /// <summary>
+        /// Delete single benefit assessment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assessmentId">Benefit Assessment ID</param>
+        /// <returns></returns>
+        void DeleteRoutingAssessment (string assessmentId);
+
+        /// <summary>
+        /// Delete single benefit assessment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assessmentId">Benefit Assessment ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteRoutingAssessmentWithHttpInfo (string assessmentId);
+        
+        /// <summary>
         /// Delete a domain
         /// </summary>
         /// <remarks>
@@ -61,6 +83,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="routeId">route ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteRoutingEmailDomainRouteWithHttpInfo (string domainName, string routeId);
+        
+        /// <summary>
+        /// Delete single predictor.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns></returns>
+        void DeleteRoutingPredictor (string predictorId);
+
+        /// <summary>
+        /// Delete single predictor.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteRoutingPredictorWithHttpInfo (string predictorId);
         
         /// <summary>
         /// Delete a queue
@@ -357,6 +401,102 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteUserRoutingskillWithHttpInfo (string userId, string skillId);
         
         /// <summary>
+        /// Retrieve a single benefit assessment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assessmentId">Benefit Assessment ID</param>
+        /// <returns>BenefitAssessment</returns>
+        BenefitAssessment GetRoutingAssessment (string assessmentId);
+
+        /// <summary>
+        /// Retrieve a single benefit assessment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assessmentId">Benefit Assessment ID</param>
+        /// <returns>ApiResponse of BenefitAssessment</returns>
+        ApiResponse<BenefitAssessment> GetRoutingAssessmentWithHttpInfo (string assessmentId);
+        
+        /// <summary>
+        /// Retrieve all benefit assessments.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
+        /// <returns>AssessmentListing</returns>
+        AssessmentListing GetRoutingAssessments (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
+
+        /// <summary>
+        /// Retrieve all benefit assessments.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
+        /// <returns>ApiResponse of AssessmentListing</returns>
+        ApiResponse<AssessmentListing> GetRoutingAssessmentsWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
+        
+        /// <summary>
+        /// Retrieve a single benefit assessments job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Benefit Assessment Job ID</param>
+        /// <returns>BenefitAssessmentJob</returns>
+        BenefitAssessmentJob GetRoutingAssessmentsJob (string jobId);
+
+        /// <summary>
+        /// Retrieve a single benefit assessments job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Benefit Assessment Job ID</param>
+        /// <returns>ApiResponse of BenefitAssessmentJob</returns>
+        ApiResponse<BenefitAssessmentJob> GetRoutingAssessmentsJobWithHttpInfo (string jobId);
+        
+        /// <summary>
+        /// Retrieve all benefit assessment jobs.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID(s) to filter assessment jobs by. (optional)</param>
+        /// <returns>AssessmentJobListing</returns>
+        AssessmentJobListing GetRoutingAssessmentsJobs (List<string> divisionId = null);
+
+        /// <summary>
+        /// Retrieve all benefit assessment jobs.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID(s) to filter assessment jobs by. (optional)</param>
+        /// <returns>ApiResponse of AssessmentJobListing</returns>
+        ApiResponse<AssessmentJobListing> GetRoutingAssessmentsJobsWithHttpInfo (List<string> divisionId = null);
+        
+        /// <summary>
         /// Get domain
         /// </summary>
         /// <remarks>
@@ -549,6 +689,78 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<RecipientListing> GetRoutingMessageRecipientsWithHttpInfo (string messengerType = null, int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
+        /// Retrieve a single predictor.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>Predictor</returns>
+        Predictor GetRoutingPredictor (string predictorId);
+
+        /// <summary>
+        /// Retrieve a single predictor.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>ApiResponse of Predictor</returns>
+        ApiResponse<Predictor> GetRoutingPredictorWithHttpInfo (string predictorId);
+        
+        /// <summary>
+        /// Retrieve all predictors.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
+        /// <returns>PredictorListing</returns>
+        PredictorListing GetRoutingPredictors (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
+
+        /// <summary>
+        /// Retrieve all predictors.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
+        /// <returns>ApiResponse of PredictorListing</returns>
+        ApiResponse<PredictorListing> GetRoutingPredictorsWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
+        
+        /// <summary>
+        /// Get a list of Key Performance Indicators available for the predictors.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;KeyPerformanceIndicator&gt;</returns>
+        List<KeyPerformanceIndicator> GetRoutingPredictorsKeyperformanceindicators ();
+
+        /// <summary>
+        /// Get a list of Key Performance Indicators available for the predictors.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;KeyPerformanceIndicator&gt;</returns>
+        ApiResponse<List<KeyPerformanceIndicator>> GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo ();
+        
+        /// <summary>
         /// Get details about this queue.
         /// </summary>
         /// <remarks>
@@ -569,6 +781,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <returns>ApiResponse of Queue</returns>
         ApiResponse<Queue> GetRoutingQueueWithHttpInfo (string queueId);
+        
+        /// <summary>
+        /// Get a Comparison Period.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue id</param>
+        /// <param name="comparisonPeriodId">ComparisonPeriod id</param>
+        /// <returns>ComparisonPeriod</returns>
+        ComparisonPeriod GetRoutingQueueComparisonperiod (string queueId, string comparisonPeriodId);
+
+        /// <summary>
+        /// Get a Comparison Period.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue id</param>
+        /// <param name="comparisonPeriodId">ComparisonPeriod id</param>
+        /// <returns>ApiResponse of ComparisonPeriod</returns>
+        ApiResponse<ComparisonPeriod> GetRoutingQueueComparisonperiodWithHttpInfo (string queueId, string comparisonPeriodId);
+        
+        /// <summary>
+        /// Get list of comparison periods
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue id</param>
+        /// <returns>ComparisonPeriodListing</returns>
+        ComparisonPeriodListing GetRoutingQueueComparisonperiods (string queueId);
+
+        /// <summary>
+        /// Get list of comparison periods
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue id</param>
+        /// <returns>ApiResponse of ComparisonPeriodListing</returns>
+        ApiResponse<ComparisonPeriodListing> GetRoutingQueueComparisonperiodsWithHttpInfo (string queueId);
         
         /// <summary>
         /// Get Estimated Wait Time
@@ -1351,6 +1609,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<InboundDomain> PatchRoutingEmailDomainValidateWithHttpInfo (string domainId, InboundDomainPatchRequest body);
         
         /// <summary>
+        /// Update single predictor.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Predictor</returns>
+        Predictor PatchRoutingPredictor (string predictorId, PatchPredictorRequest body = null);
+
+        /// <summary>
+        /// Update single predictor.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Predictor</returns>
+        ApiResponse<Predictor> PatchRoutingPredictorWithHttpInfo (string predictorId, PatchPredictorRequest body = null);
+        
+        /// <summary>
         /// Update the ring number OR joined status for a queue member.
         /// </summary>
         /// <remarks>
@@ -1621,6 +1903,50 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<QueueObservationQueryResponse> PostAnalyticsQueuesObservationsQueryWithHttpInfo (QueueObservationQuery body);
         
         /// <summary>
+        /// Create a benefit assessment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>BenefitAssessment</returns>
+        BenefitAssessment PostRoutingAssessments (CreateBenefitAssessmentRequest body = null);
+
+        /// <summary>
+        /// Create a benefit assessment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of BenefitAssessment</returns>
+        ApiResponse<BenefitAssessment> PostRoutingAssessmentsWithHttpInfo (CreateBenefitAssessmentRequest body = null);
+        
+        /// <summary>
+        /// Create a benefit assessment job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>BenefitAssessmentJob</returns>
+        BenefitAssessmentJob PostRoutingAssessmentsJobs (CreateBenefitAssessmentJobRequest body = null);
+
+        /// <summary>
+        /// Create a benefit assessment job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of BenefitAssessmentJob</returns>
+        ApiResponse<BenefitAssessmentJob> PostRoutingAssessmentsJobsWithHttpInfo (CreateBenefitAssessmentJobRequest body = null);
+        
+        /// <summary>
         /// Create a route
         /// </summary>
         /// <remarks>
@@ -1711,6 +2037,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of Language</returns>
         ApiResponse<Language> PostRoutingLanguagesWithHttpInfo (Language body);
+        
+        /// <summary>
+        /// Create a predictor.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Predictor</returns>
+        Predictor PostRoutingPredictors (CreatePredictorRequest body = null);
+
+        /// <summary>
+        /// Create a predictor.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Predictor</returns>
+        ApiResponse<Predictor> PostRoutingPredictorsWithHttpInfo (CreatePredictorRequest body = null);
         
         /// <summary>
         /// Bulk add or delete up to 100 queue members
@@ -2213,6 +2561,28 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Asynchronous Operations
         
         /// <summary>
+        /// Delete single benefit assessment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assessmentId">Benefit Assessment ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteRoutingAssessmentAsync (string assessmentId);
+
+        /// <summary>
+        /// Delete single benefit assessment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assessmentId">Benefit Assessment ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingAssessmentAsyncWithHttpInfo (string assessmentId);
+        
+        /// <summary>
         /// Delete a domain
         /// </summary>
         /// <remarks>
@@ -2257,6 +2627,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="routeId">route ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingEmailDomainRouteAsyncWithHttpInfo (string domainName, string routeId);
+        
+        /// <summary>
+        /// Delete single predictor.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteRoutingPredictorAsync (string predictorId);
+
+        /// <summary>
+        /// Delete single predictor.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingPredictorAsyncWithHttpInfo (string predictorId);
         
         /// <summary>
         /// Delete a queue
@@ -2553,6 +2945,102 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRoutingskillAsyncWithHttpInfo (string userId, string skillId);
         
         /// <summary>
+        /// Retrieve a single benefit assessment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assessmentId">Benefit Assessment ID</param>
+        /// <returns>Task of BenefitAssessment</returns>
+        System.Threading.Tasks.Task<BenefitAssessment> GetRoutingAssessmentAsync (string assessmentId);
+
+        /// <summary>
+        /// Retrieve a single benefit assessment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assessmentId">Benefit Assessment ID</param>
+        /// <returns>Task of ApiResponse (BenefitAssessment)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BenefitAssessment>> GetRoutingAssessmentAsyncWithHttpInfo (string assessmentId);
+        
+        /// <summary>
+        /// Retrieve all benefit assessments.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
+        /// <returns>Task of AssessmentListing</returns>
+        System.Threading.Tasks.Task<AssessmentListing> GetRoutingAssessmentsAsync (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
+
+        /// <summary>
+        /// Retrieve all benefit assessments.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
+        /// <returns>Task of ApiResponse (AssessmentListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AssessmentListing>> GetRoutingAssessmentsAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
+        
+        /// <summary>
+        /// Retrieve a single benefit assessments job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Benefit Assessment Job ID</param>
+        /// <returns>Task of BenefitAssessmentJob</returns>
+        System.Threading.Tasks.Task<BenefitAssessmentJob> GetRoutingAssessmentsJobAsync (string jobId);
+
+        /// <summary>
+        /// Retrieve a single benefit assessments job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Benefit Assessment Job ID</param>
+        /// <returns>Task of ApiResponse (BenefitAssessmentJob)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BenefitAssessmentJob>> GetRoutingAssessmentsJobAsyncWithHttpInfo (string jobId);
+        
+        /// <summary>
+        /// Retrieve all benefit assessment jobs.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID(s) to filter assessment jobs by. (optional)</param>
+        /// <returns>Task of AssessmentJobListing</returns>
+        System.Threading.Tasks.Task<AssessmentJobListing> GetRoutingAssessmentsJobsAsync (List<string> divisionId = null);
+
+        /// <summary>
+        /// Retrieve all benefit assessment jobs.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID(s) to filter assessment jobs by. (optional)</param>
+        /// <returns>Task of ApiResponse (AssessmentJobListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AssessmentJobListing>> GetRoutingAssessmentsJobsAsyncWithHttpInfo (List<string> divisionId = null);
+        
+        /// <summary>
         /// Get domain
         /// </summary>
         /// <remarks>
@@ -2745,6 +3233,78 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<RecipientListing>> GetRoutingMessageRecipientsAsyncWithHttpInfo (string messengerType = null, int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
+        /// Retrieve a single predictor.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>Task of Predictor</returns>
+        System.Threading.Tasks.Task<Predictor> GetRoutingPredictorAsync (string predictorId);
+
+        /// <summary>
+        /// Retrieve a single predictor.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>Task of ApiResponse (Predictor)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Predictor>> GetRoutingPredictorAsyncWithHttpInfo (string predictorId);
+        
+        /// <summary>
+        /// Retrieve all predictors.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
+        /// <returns>Task of PredictorListing</returns>
+        System.Threading.Tasks.Task<PredictorListing> GetRoutingPredictorsAsync (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
+
+        /// <summary>
+        /// Retrieve all predictors.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
+        /// <returns>Task of ApiResponse (PredictorListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PredictorListing>> GetRoutingPredictorsAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
+        
+        /// <summary>
+        /// Get a list of Key Performance Indicators available for the predictors.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;KeyPerformanceIndicator&gt;</returns>
+        System.Threading.Tasks.Task<List<KeyPerformanceIndicator>> GetRoutingPredictorsKeyperformanceindicatorsAsync ();
+
+        /// <summary>
+        /// Get a list of Key Performance Indicators available for the predictors.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;KeyPerformanceIndicator&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<KeyPerformanceIndicator>>> GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo ();
+        
+        /// <summary>
         /// Get details about this queue.
         /// </summary>
         /// <remarks>
@@ -2765,6 +3325,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
         System.Threading.Tasks.Task<ApiResponse<Queue>> GetRoutingQueueAsyncWithHttpInfo (string queueId);
+        
+        /// <summary>
+        /// Get a Comparison Period.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue id</param>
+        /// <param name="comparisonPeriodId">ComparisonPeriod id</param>
+        /// <returns>Task of ComparisonPeriod</returns>
+        System.Threading.Tasks.Task<ComparisonPeriod> GetRoutingQueueComparisonperiodAsync (string queueId, string comparisonPeriodId);
+
+        /// <summary>
+        /// Get a Comparison Period.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue id</param>
+        /// <param name="comparisonPeriodId">ComparisonPeriod id</param>
+        /// <returns>Task of ApiResponse (ComparisonPeriod)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ComparisonPeriod>> GetRoutingQueueComparisonperiodAsyncWithHttpInfo (string queueId, string comparisonPeriodId);
+        
+        /// <summary>
+        /// Get list of comparison periods
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue id</param>
+        /// <returns>Task of ComparisonPeriodListing</returns>
+        System.Threading.Tasks.Task<ComparisonPeriodListing> GetRoutingQueueComparisonperiodsAsync (string queueId);
+
+        /// <summary>
+        /// Get list of comparison periods
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue id</param>
+        /// <returns>Task of ApiResponse (ComparisonPeriodListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ComparisonPeriodListing>> GetRoutingQueueComparisonperiodsAsyncWithHttpInfo (string queueId);
         
         /// <summary>
         /// Get Estimated Wait Time
@@ -3547,6 +4153,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<InboundDomain>> PatchRoutingEmailDomainValidateAsyncWithHttpInfo (string domainId, InboundDomainPatchRequest body);
         
         /// <summary>
+        /// Update single predictor.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of Predictor</returns>
+        System.Threading.Tasks.Task<Predictor> PatchRoutingPredictorAsync (string predictorId, PatchPredictorRequest body = null);
+
+        /// <summary>
+        /// Update single predictor.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (Predictor)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Predictor>> PatchRoutingPredictorAsyncWithHttpInfo (string predictorId, PatchPredictorRequest body = null);
+        
+        /// <summary>
         /// Update the ring number OR joined status for a queue member.
         /// </summary>
         /// <remarks>
@@ -3817,6 +4447,50 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<QueueObservationQueryResponse>> PostAnalyticsQueuesObservationsQueryAsyncWithHttpInfo (QueueObservationQuery body);
         
         /// <summary>
+        /// Create a benefit assessment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of BenefitAssessment</returns>
+        System.Threading.Tasks.Task<BenefitAssessment> PostRoutingAssessmentsAsync (CreateBenefitAssessmentRequest body = null);
+
+        /// <summary>
+        /// Create a benefit assessment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (BenefitAssessment)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BenefitAssessment>> PostRoutingAssessmentsAsyncWithHttpInfo (CreateBenefitAssessmentRequest body = null);
+        
+        /// <summary>
+        /// Create a benefit assessment job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of BenefitAssessmentJob</returns>
+        System.Threading.Tasks.Task<BenefitAssessmentJob> PostRoutingAssessmentsJobsAsync (CreateBenefitAssessmentJobRequest body = null);
+
+        /// <summary>
+        /// Create a benefit assessment job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (BenefitAssessmentJob)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BenefitAssessmentJob>> PostRoutingAssessmentsJobsAsyncWithHttpInfo (CreateBenefitAssessmentJobRequest body = null);
+        
+        /// <summary>
         /// Create a route
         /// </summary>
         /// <remarks>
@@ -3907,6 +4581,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (Language)</returns>
         System.Threading.Tasks.Task<ApiResponse<Language>> PostRoutingLanguagesAsyncWithHttpInfo (Language body);
+        
+        /// <summary>
+        /// Create a predictor.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of Predictor</returns>
+        System.Threading.Tasks.Task<Predictor> PostRoutingPredictorsAsync (CreatePredictorRequest body = null);
+
+        /// <summary>
+        /// Create a predictor.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (Predictor)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Predictor>> PostRoutingPredictorsAsyncWithHttpInfo (CreatePredictorRequest body = null);
         
         /// <summary>
         /// Bulk add or delete up to 100 queue members
@@ -4497,6 +5193,197 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
+        /// Delete single benefit assessment. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assessmentId">Benefit Assessment ID</param>
+        /// <returns></returns>
+        public void DeleteRoutingAssessment (string assessmentId)
+        {
+             DeleteRoutingAssessmentWithHttpInfo(assessmentId);
+        }
+
+        /// <summary>
+        /// Delete single benefit assessment. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assessmentId">Benefit Assessment ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteRoutingAssessmentWithHttpInfo (string assessmentId)
+        { 
+            // verify the required parameter 'assessmentId' is set
+            if (assessmentId == null)
+                throw new ApiException(400, "Missing required parameter 'assessmentId' when calling RoutingApi->DeleteRoutingAssessment");
+
+            var localVarPath = "/api/v2/routing/assessments/{assessmentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (assessmentId != null) localVarPathParams.Add("assessmentId", this.Configuration.ApiClient.ParameterToString(assessmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingAssessment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingAssessment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete single benefit assessment. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assessmentId">Benefit Assessment ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteRoutingAssessmentAsync (string assessmentId)
+        {
+             await DeleteRoutingAssessmentAsyncWithHttpInfo(assessmentId);
+
+        }
+
+        /// <summary>
+        /// Delete single benefit assessment. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assessmentId">Benefit Assessment ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingAssessmentAsyncWithHttpInfo (string assessmentId)
+        { 
+            // verify the required parameter 'assessmentId' is set
+            if (assessmentId == null)
+                throw new ApiException(400, "Missing required parameter 'assessmentId' when calling RoutingApi->DeleteRoutingAssessment");
+            
+
+            var localVarPath = "/api/v2/routing/assessments/{assessmentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (assessmentId != null) localVarPathParams.Add("assessmentId", this.Configuration.ApiClient.ParameterToString(assessmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingAssessment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingAssessment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Delete a domain 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4881,6 +5768,197 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingEmailDomainRoute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingEmailDomainRoute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete single predictor. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns></returns>
+        public void DeleteRoutingPredictor (string predictorId)
+        {
+             DeleteRoutingPredictorWithHttpInfo(predictorId);
+        }
+
+        /// <summary>
+        /// Delete single predictor. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteRoutingPredictorWithHttpInfo (string predictorId)
+        { 
+            // verify the required parameter 'predictorId' is set
+            if (predictorId == null)
+                throw new ApiException(400, "Missing required parameter 'predictorId' when calling RoutingApi->DeleteRoutingPredictor");
+
+            var localVarPath = "/api/v2/routing/predictors/{predictorId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (predictorId != null) localVarPathParams.Add("predictorId", this.Configuration.ApiClient.ParameterToString(predictorId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingPredictor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingPredictor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete single predictor. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteRoutingPredictorAsync (string predictorId)
+        {
+             await DeleteRoutingPredictorAsyncWithHttpInfo(predictorId);
+
+        }
+
+        /// <summary>
+        /// Delete single predictor. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingPredictorAsyncWithHttpInfo (string predictorId)
+        { 
+            // verify the required parameter 'predictorId' is set
+            if (predictorId == null)
+                throw new ApiException(400, "Missing required parameter 'predictorId' when calling RoutingApi->DeleteRoutingPredictor");
+            
+
+            var localVarPath = "/api/v2/routing/predictors/{predictorId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (predictorId != null) localVarPathParams.Add("predictorId", this.Configuration.ApiClient.ParameterToString(predictorId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingPredictor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingPredictor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -7420,6 +8498,788 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Retrieve a single benefit assessment. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assessmentId">Benefit Assessment ID</param>
+        /// <returns>BenefitAssessment</returns>
+        public BenefitAssessment GetRoutingAssessment (string assessmentId)
+        {
+             ApiResponse<BenefitAssessment> localVarResponse = GetRoutingAssessmentWithHttpInfo(assessmentId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve a single benefit assessment. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assessmentId">Benefit Assessment ID</param>
+        /// <returns>ApiResponse of BenefitAssessment</returns>
+        public ApiResponse< BenefitAssessment > GetRoutingAssessmentWithHttpInfo (string assessmentId)
+        { 
+            // verify the required parameter 'assessmentId' is set
+            if (assessmentId == null)
+                throw new ApiException(400, "Missing required parameter 'assessmentId' when calling RoutingApi->GetRoutingAssessment");
+
+            var localVarPath = "/api/v2/routing/assessments/{assessmentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (assessmentId != null) localVarPathParams.Add("assessmentId", this.Configuration.ApiClient.ParameterToString(assessmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingAssessment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingAssessment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BenefitAssessment>(localVarStatusCode,
+                localVarHeaders,
+                (BenefitAssessment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BenefitAssessment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieve a single benefit assessment. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assessmentId">Benefit Assessment ID</param>
+        /// <returns>Task of BenefitAssessment</returns>
+        public async System.Threading.Tasks.Task<BenefitAssessment> GetRoutingAssessmentAsync (string assessmentId)
+        {
+             ApiResponse<BenefitAssessment> localVarResponse = await GetRoutingAssessmentAsyncWithHttpInfo(assessmentId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve a single benefit assessment. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assessmentId">Benefit Assessment ID</param>
+        /// <returns>Task of ApiResponse (BenefitAssessment)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BenefitAssessment>> GetRoutingAssessmentAsyncWithHttpInfo (string assessmentId)
+        { 
+            // verify the required parameter 'assessmentId' is set
+            if (assessmentId == null)
+                throw new ApiException(400, "Missing required parameter 'assessmentId' when calling RoutingApi->GetRoutingAssessment");
+            
+
+            var localVarPath = "/api/v2/routing/assessments/{assessmentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (assessmentId != null) localVarPathParams.Add("assessmentId", this.Configuration.ApiClient.ParameterToString(assessmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingAssessment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingAssessment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BenefitAssessment>(localVarStatusCode,
+                localVarHeaders,
+                (BenefitAssessment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BenefitAssessment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Retrieve all benefit assessments. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
+        /// <returns>AssessmentListing</returns>
+        public AssessmentListing GetRoutingAssessments (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
+        {
+             ApiResponse<AssessmentListing> localVarResponse = GetRoutingAssessmentsWithHttpInfo(before, after, limit, pageSize, queueId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve all benefit assessments. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
+        /// <returns>ApiResponse of AssessmentListing</returns>
+        public ApiResponse< AssessmentListing > GetRoutingAssessmentsWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/assessments";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (queueId != null) queueId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("queueId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingAssessments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingAssessments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AssessmentListing>(localVarStatusCode,
+                localVarHeaders,
+                (AssessmentListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssessmentListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieve all benefit assessments. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
+        /// <returns>Task of AssessmentListing</returns>
+        public async System.Threading.Tasks.Task<AssessmentListing> GetRoutingAssessmentsAsync (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
+        {
+             ApiResponse<AssessmentListing> localVarResponse = await GetRoutingAssessmentsAsyncWithHttpInfo(before, after, limit, pageSize, queueId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve all benefit assessments. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
+        /// <returns>Task of ApiResponse (AssessmentListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AssessmentListing>> GetRoutingAssessmentsAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/assessments";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (queueId != null) queueId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("queueId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingAssessments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingAssessments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AssessmentListing>(localVarStatusCode,
+                localVarHeaders,
+                (AssessmentListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssessmentListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Retrieve a single benefit assessments job. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Benefit Assessment Job ID</param>
+        /// <returns>BenefitAssessmentJob</returns>
+        public BenefitAssessmentJob GetRoutingAssessmentsJob (string jobId)
+        {
+             ApiResponse<BenefitAssessmentJob> localVarResponse = GetRoutingAssessmentsJobWithHttpInfo(jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve a single benefit assessments job. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Benefit Assessment Job ID</param>
+        /// <returns>ApiResponse of BenefitAssessmentJob</returns>
+        public ApiResponse< BenefitAssessmentJob > GetRoutingAssessmentsJobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling RoutingApi->GetRoutingAssessmentsJob");
+
+            var localVarPath = "/api/v2/routing/assessments/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingAssessmentsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingAssessmentsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BenefitAssessmentJob>(localVarStatusCode,
+                localVarHeaders,
+                (BenefitAssessmentJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BenefitAssessmentJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieve a single benefit assessments job. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Benefit Assessment Job ID</param>
+        /// <returns>Task of BenefitAssessmentJob</returns>
+        public async System.Threading.Tasks.Task<BenefitAssessmentJob> GetRoutingAssessmentsJobAsync (string jobId)
+        {
+             ApiResponse<BenefitAssessmentJob> localVarResponse = await GetRoutingAssessmentsJobAsyncWithHttpInfo(jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve a single benefit assessments job. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Benefit Assessment Job ID</param>
+        /// <returns>Task of ApiResponse (BenefitAssessmentJob)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BenefitAssessmentJob>> GetRoutingAssessmentsJobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling RoutingApi->GetRoutingAssessmentsJob");
+            
+
+            var localVarPath = "/api/v2/routing/assessments/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingAssessmentsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingAssessmentsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BenefitAssessmentJob>(localVarStatusCode,
+                localVarHeaders,
+                (BenefitAssessmentJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BenefitAssessmentJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Retrieve all benefit assessment jobs. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID(s) to filter assessment jobs by. (optional)</param>
+        /// <returns>AssessmentJobListing</returns>
+        public AssessmentJobListing GetRoutingAssessmentsJobs (List<string> divisionId = null)
+        {
+             ApiResponse<AssessmentJobListing> localVarResponse = GetRoutingAssessmentsJobsWithHttpInfo(divisionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve all benefit assessment jobs. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID(s) to filter assessment jobs by. (optional)</param>
+        /// <returns>ApiResponse of AssessmentJobListing</returns>
+        public ApiResponse< AssessmentJobListing > GetRoutingAssessmentsJobsWithHttpInfo (List<string> divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/assessments/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingAssessmentsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingAssessmentsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AssessmentJobListing>(localVarStatusCode,
+                localVarHeaders,
+                (AssessmentJobListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssessmentJobListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieve all benefit assessment jobs. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID(s) to filter assessment jobs by. (optional)</param>
+        /// <returns>Task of AssessmentJobListing</returns>
+        public async System.Threading.Tasks.Task<AssessmentJobListing> GetRoutingAssessmentsJobsAsync (List<string> divisionId = null)
+        {
+             ApiResponse<AssessmentJobListing> localVarResponse = await GetRoutingAssessmentsJobsAsyncWithHttpInfo(divisionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve all benefit assessment jobs. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID(s) to filter assessment jobs by. (optional)</param>
+        /// <returns>Task of ApiResponse (AssessmentJobListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AssessmentJobListing>> GetRoutingAssessmentsJobsAsyncWithHttpInfo (List<string> divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/assessments/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingAssessmentsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingAssessmentsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AssessmentJobListing>(localVarStatusCode,
+                localVarHeaders,
+                (AssessmentJobListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssessmentJobListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get domain 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8991,6 +10851,589 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Retrieve a single predictor. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>Predictor</returns>
+        public Predictor GetRoutingPredictor (string predictorId)
+        {
+             ApiResponse<Predictor> localVarResponse = GetRoutingPredictorWithHttpInfo(predictorId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve a single predictor. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>ApiResponse of Predictor</returns>
+        public ApiResponse< Predictor > GetRoutingPredictorWithHttpInfo (string predictorId)
+        { 
+            // verify the required parameter 'predictorId' is set
+            if (predictorId == null)
+                throw new ApiException(400, "Missing required parameter 'predictorId' when calling RoutingApi->GetRoutingPredictor");
+
+            var localVarPath = "/api/v2/routing/predictors/{predictorId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (predictorId != null) localVarPathParams.Add("predictorId", this.Configuration.ApiClient.ParameterToString(predictorId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Predictor>(localVarStatusCode,
+                localVarHeaders,
+                (Predictor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Predictor)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieve a single predictor. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>Task of Predictor</returns>
+        public async System.Threading.Tasks.Task<Predictor> GetRoutingPredictorAsync (string predictorId)
+        {
+             ApiResponse<Predictor> localVarResponse = await GetRoutingPredictorAsyncWithHttpInfo(predictorId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve a single predictor. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>Task of ApiResponse (Predictor)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Predictor>> GetRoutingPredictorAsyncWithHttpInfo (string predictorId)
+        { 
+            // verify the required parameter 'predictorId' is set
+            if (predictorId == null)
+                throw new ApiException(400, "Missing required parameter 'predictorId' when calling RoutingApi->GetRoutingPredictor");
+            
+
+            var localVarPath = "/api/v2/routing/predictors/{predictorId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (predictorId != null) localVarPathParams.Add("predictorId", this.Configuration.ApiClient.ParameterToString(predictorId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Predictor>(localVarStatusCode,
+                localVarHeaders,
+                (Predictor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Predictor)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Retrieve all predictors. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
+        /// <returns>PredictorListing</returns>
+        public PredictorListing GetRoutingPredictors (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
+        {
+             ApiResponse<PredictorListing> localVarResponse = GetRoutingPredictorsWithHttpInfo(before, after, limit, pageSize, queueId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve all predictors. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
+        /// <returns>ApiResponse of PredictorListing</returns>
+        public ApiResponse< PredictorListing > GetRoutingPredictorsWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/predictors";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (queueId != null) queueId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("queueId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictors: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictors: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PredictorListing>(localVarStatusCode,
+                localVarHeaders,
+                (PredictorListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PredictorListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieve all predictors. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
+        /// <returns>Task of PredictorListing</returns>
+        public async System.Threading.Tasks.Task<PredictorListing> GetRoutingPredictorsAsync (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
+        {
+             ApiResponse<PredictorListing> localVarResponse = await GetRoutingPredictorsAsyncWithHttpInfo(before, after, limit, pageSize, queueId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve all predictors. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
+        /// <returns>Task of ApiResponse (PredictorListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PredictorListing>> GetRoutingPredictorsAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/predictors";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (queueId != null) queueId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("queueId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictors: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictors: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PredictorListing>(localVarStatusCode,
+                localVarHeaders,
+                (PredictorListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PredictorListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a list of Key Performance Indicators available for the predictors. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;KeyPerformanceIndicator&gt;</returns>
+        public List<KeyPerformanceIndicator> GetRoutingPredictorsKeyperformanceindicators ()
+        {
+             ApiResponse<List<KeyPerformanceIndicator>> localVarResponse = GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of Key Performance Indicators available for the predictors. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;KeyPerformanceIndicator&gt;</returns>
+        public ApiResponse< List<KeyPerformanceIndicator> > GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/routing/predictors/keyperformanceindicators";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorsKeyperformanceindicators: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorsKeyperformanceindicators: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<KeyPerformanceIndicator>>(localVarStatusCode,
+                localVarHeaders,
+                (List<KeyPerformanceIndicator>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<KeyPerformanceIndicator>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a list of Key Performance Indicators available for the predictors. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;KeyPerformanceIndicator&gt;</returns>
+        public async System.Threading.Tasks.Task<List<KeyPerformanceIndicator>> GetRoutingPredictorsKeyperformanceindicatorsAsync ()
+        {
+             ApiResponse<List<KeyPerformanceIndicator>> localVarResponse = await GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of Key Performance Indicators available for the predictors. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;KeyPerformanceIndicator&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<KeyPerformanceIndicator>>> GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/routing/predictors/keyperformanceindicators";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorsKeyperformanceindicators: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorsKeyperformanceindicators: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<KeyPerformanceIndicator>>(localVarStatusCode,
+                localVarHeaders,
+                (List<KeyPerformanceIndicator>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<KeyPerformanceIndicator>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get details about this queue. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9177,6 +11620,405 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Queue>(localVarStatusCode,
                 localVarHeaders,
                 (Queue) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Queue)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a Comparison Period. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue id</param>
+        /// <param name="comparisonPeriodId">ComparisonPeriod id</param>
+        /// <returns>ComparisonPeriod</returns>
+        public ComparisonPeriod GetRoutingQueueComparisonperiod (string queueId, string comparisonPeriodId)
+        {
+             ApiResponse<ComparisonPeriod> localVarResponse = GetRoutingQueueComparisonperiodWithHttpInfo(queueId, comparisonPeriodId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a Comparison Period. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue id</param>
+        /// <param name="comparisonPeriodId">ComparisonPeriod id</param>
+        /// <returns>ApiResponse of ComparisonPeriod</returns>
+        public ApiResponse< ComparisonPeriod > GetRoutingQueueComparisonperiodWithHttpInfo (string queueId, string comparisonPeriodId)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetRoutingQueueComparisonperiod");
+            // verify the required parameter 'comparisonPeriodId' is set
+            if (comparisonPeriodId == null)
+                throw new ApiException(400, "Missing required parameter 'comparisonPeriodId' when calling RoutingApi->GetRoutingQueueComparisonperiod");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/comparisonperiods/{comparisonPeriodId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+            if (comparisonPeriodId != null) localVarPathParams.Add("comparisonPeriodId", this.Configuration.ApiClient.ParameterToString(comparisonPeriodId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueueComparisonperiod: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueueComparisonperiod: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ComparisonPeriod>(localVarStatusCode,
+                localVarHeaders,
+                (ComparisonPeriod) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ComparisonPeriod)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a Comparison Period. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue id</param>
+        /// <param name="comparisonPeriodId">ComparisonPeriod id</param>
+        /// <returns>Task of ComparisonPeriod</returns>
+        public async System.Threading.Tasks.Task<ComparisonPeriod> GetRoutingQueueComparisonperiodAsync (string queueId, string comparisonPeriodId)
+        {
+             ApiResponse<ComparisonPeriod> localVarResponse = await GetRoutingQueueComparisonperiodAsyncWithHttpInfo(queueId, comparisonPeriodId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a Comparison Period. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue id</param>
+        /// <param name="comparisonPeriodId">ComparisonPeriod id</param>
+        /// <returns>Task of ApiResponse (ComparisonPeriod)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ComparisonPeriod>> GetRoutingQueueComparisonperiodAsyncWithHttpInfo (string queueId, string comparisonPeriodId)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetRoutingQueueComparisonperiod");
+            
+            // verify the required parameter 'comparisonPeriodId' is set
+            if (comparisonPeriodId == null)
+                throw new ApiException(400, "Missing required parameter 'comparisonPeriodId' when calling RoutingApi->GetRoutingQueueComparisonperiod");
+            
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/comparisonperiods/{comparisonPeriodId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+            if (comparisonPeriodId != null) localVarPathParams.Add("comparisonPeriodId", this.Configuration.ApiClient.ParameterToString(comparisonPeriodId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueueComparisonperiod: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueueComparisonperiod: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ComparisonPeriod>(localVarStatusCode,
+                localVarHeaders,
+                (ComparisonPeriod) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ComparisonPeriod)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get list of comparison periods 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue id</param>
+        /// <returns>ComparisonPeriodListing</returns>
+        public ComparisonPeriodListing GetRoutingQueueComparisonperiods (string queueId)
+        {
+             ApiResponse<ComparisonPeriodListing> localVarResponse = GetRoutingQueueComparisonperiodsWithHttpInfo(queueId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get list of comparison periods 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue id</param>
+        /// <returns>ApiResponse of ComparisonPeriodListing</returns>
+        public ApiResponse< ComparisonPeriodListing > GetRoutingQueueComparisonperiodsWithHttpInfo (string queueId)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetRoutingQueueComparisonperiods");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/comparisonperiods";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueueComparisonperiods: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueueComparisonperiods: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ComparisonPeriodListing>(localVarStatusCode,
+                localVarHeaders,
+                (ComparisonPeriodListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ComparisonPeriodListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get list of comparison periods 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue id</param>
+        /// <returns>Task of ComparisonPeriodListing</returns>
+        public async System.Threading.Tasks.Task<ComparisonPeriodListing> GetRoutingQueueComparisonperiodsAsync (string queueId)
+        {
+             ApiResponse<ComparisonPeriodListing> localVarResponse = await GetRoutingQueueComparisonperiodsAsyncWithHttpInfo(queueId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get list of comparison periods 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue id</param>
+        /// <returns>Task of ApiResponse (ComparisonPeriodListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ComparisonPeriodListing>> GetRoutingQueueComparisonperiodsAsyncWithHttpInfo (string queueId)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetRoutingQueueComparisonperiods");
+            
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/comparisonperiods";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueueComparisonperiods: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueueComparisonperiods: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ComparisonPeriodListing>(localVarStatusCode,
+                localVarHeaders,
+                (ComparisonPeriodListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ComparisonPeriodListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15182,6 +18024,213 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Update single predictor. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Predictor</returns>
+        public Predictor PatchRoutingPredictor (string predictorId, PatchPredictorRequest body = null)
+        {
+             ApiResponse<Predictor> localVarResponse = PatchRoutingPredictorWithHttpInfo(predictorId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update single predictor. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Predictor</returns>
+        public ApiResponse< Predictor > PatchRoutingPredictorWithHttpInfo (string predictorId, PatchPredictorRequest body = null)
+        { 
+            // verify the required parameter 'predictorId' is set
+            if (predictorId == null)
+                throw new ApiException(400, "Missing required parameter 'predictorId' when calling RoutingApi->PatchRoutingPredictor");
+
+            var localVarPath = "/api/v2/routing/predictors/{predictorId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (predictorId != null) localVarPathParams.Add("predictorId", this.Configuration.ApiClient.ParameterToString(predictorId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingPredictor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingPredictor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Predictor>(localVarStatusCode,
+                localVarHeaders,
+                (Predictor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Predictor)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update single predictor. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of Predictor</returns>
+        public async System.Threading.Tasks.Task<Predictor> PatchRoutingPredictorAsync (string predictorId, PatchPredictorRequest body = null)
+        {
+             ApiResponse<Predictor> localVarResponse = await PatchRoutingPredictorAsyncWithHttpInfo(predictorId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update single predictor. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (Predictor)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Predictor>> PatchRoutingPredictorAsyncWithHttpInfo (string predictorId, PatchPredictorRequest body = null)
+        { 
+            // verify the required parameter 'predictorId' is set
+            if (predictorId == null)
+                throw new ApiException(400, "Missing required parameter 'predictorId' when calling RoutingApi->PatchRoutingPredictor");
+            
+
+            var localVarPath = "/api/v2/routing/predictors/{predictorId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (predictorId != null) localVarPathParams.Add("predictorId", this.Configuration.ApiClient.ParameterToString(predictorId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingPredictor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingPredictor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Predictor>(localVarStatusCode,
+                localVarHeaders,
+                (Predictor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Predictor)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Update the ring number OR joined status for a queue member. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -17562,6 +20611,394 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Create a benefit assessment. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>BenefitAssessment</returns>
+        public BenefitAssessment PostRoutingAssessments (CreateBenefitAssessmentRequest body = null)
+        {
+             ApiResponse<BenefitAssessment> localVarResponse = PostRoutingAssessmentsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a benefit assessment. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of BenefitAssessment</returns>
+        public ApiResponse< BenefitAssessment > PostRoutingAssessmentsWithHttpInfo (CreateBenefitAssessmentRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/assessments";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingAssessments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingAssessments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BenefitAssessment>(localVarStatusCode,
+                localVarHeaders,
+                (BenefitAssessment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BenefitAssessment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Create a benefit assessment. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of BenefitAssessment</returns>
+        public async System.Threading.Tasks.Task<BenefitAssessment> PostRoutingAssessmentsAsync (CreateBenefitAssessmentRequest body = null)
+        {
+             ApiResponse<BenefitAssessment> localVarResponse = await PostRoutingAssessmentsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a benefit assessment. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (BenefitAssessment)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BenefitAssessment>> PostRoutingAssessmentsAsyncWithHttpInfo (CreateBenefitAssessmentRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/assessments";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingAssessments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingAssessments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BenefitAssessment>(localVarStatusCode,
+                localVarHeaders,
+                (BenefitAssessment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BenefitAssessment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Create a benefit assessment job. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>BenefitAssessmentJob</returns>
+        public BenefitAssessmentJob PostRoutingAssessmentsJobs (CreateBenefitAssessmentJobRequest body = null)
+        {
+             ApiResponse<BenefitAssessmentJob> localVarResponse = PostRoutingAssessmentsJobsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a benefit assessment job. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of BenefitAssessmentJob</returns>
+        public ApiResponse< BenefitAssessmentJob > PostRoutingAssessmentsJobsWithHttpInfo (CreateBenefitAssessmentJobRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/assessments/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingAssessmentsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingAssessmentsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BenefitAssessmentJob>(localVarStatusCode,
+                localVarHeaders,
+                (BenefitAssessmentJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BenefitAssessmentJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Create a benefit assessment job. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of BenefitAssessmentJob</returns>
+        public async System.Threading.Tasks.Task<BenefitAssessmentJob> PostRoutingAssessmentsJobsAsync (CreateBenefitAssessmentJobRequest body = null)
+        {
+             ApiResponse<BenefitAssessmentJob> localVarResponse = await PostRoutingAssessmentsJobsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a benefit assessment job. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (BenefitAssessmentJob)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BenefitAssessmentJob>> PostRoutingAssessmentsJobsAsyncWithHttpInfo (CreateBenefitAssessmentJobRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/assessments/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingAssessmentsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingAssessmentsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BenefitAssessmentJob>(localVarStatusCode,
+                localVarHeaders,
+                (BenefitAssessmentJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BenefitAssessmentJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Create a route 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -18378,6 +21815,200 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Language>(localVarStatusCode,
                 localVarHeaders,
                 (Language) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Language)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Create a predictor. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Predictor</returns>
+        public Predictor PostRoutingPredictors (CreatePredictorRequest body = null)
+        {
+             ApiResponse<Predictor> localVarResponse = PostRoutingPredictorsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a predictor. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Predictor</returns>
+        public ApiResponse< Predictor > PostRoutingPredictorsWithHttpInfo (CreatePredictorRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/predictors";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingPredictors: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingPredictors: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Predictor>(localVarStatusCode,
+                localVarHeaders,
+                (Predictor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Predictor)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Create a predictor. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of Predictor</returns>
+        public async System.Threading.Tasks.Task<Predictor> PostRoutingPredictorsAsync (CreatePredictorRequest body = null)
+        {
+             ApiResponse<Predictor> localVarResponse = await PostRoutingPredictorsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a predictor. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (Predictor)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Predictor>> PostRoutingPredictorsAsyncWithHttpInfo (CreatePredictorRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/predictors";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingPredictors: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingPredictors: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Predictor>(localVarStatusCode,
+                localVarHeaders,
+                (Predictor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Predictor)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

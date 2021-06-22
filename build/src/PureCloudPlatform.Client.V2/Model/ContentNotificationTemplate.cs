@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Template notification object
+    /// Template notification object.
     /// </summary>
     [DataContract]
     public partial class ContentNotificationTemplate :  IEquatable<ContentNotificationTemplate>
@@ -55,11 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentNotificationTemplate" /> class.
         /// </summary>
-        /// <param name="Id">The messaging channel template id. For WhatsApp, &#39;namespace@name&#39;.</param>
-        /// <param name="Language">Template language.</param>
-        /// <param name="Header">Template header object.</param>
-        /// <param name="Body">Template body object (required).</param>
-        /// <param name="Footer">Template footer object.</param>
+        /// <param name="Id">The messaging provider template ID. For WhatsApp, &#39;namespace@name&#39;..</param>
+        /// <param name="Language">Template language..</param>
+        /// <param name="Header">The template header..</param>
+        /// <param name="Body">The template body. (required).</param>
+        /// <param name="Footer">The template footer..</param>
         public ContentNotificationTemplate(string Id = null, string Language = null, NotificationTemplateHeader Header = null, NotificationTemplateBody Body = null, NotificationTemplateFooter Footer = null)
         {
             this.Id = Id;
@@ -73,45 +73,45 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The messaging channel template id. For WhatsApp, &#39;namespace@name&#39;
+        /// The messaging provider template ID. For WhatsApp, &#39;namespace@name&#39;.
         /// </summary>
-        /// <value>The messaging channel template id. For WhatsApp, &#39;namespace@name&#39;</value>
+        /// <value>The messaging provider template ID. For WhatsApp, &#39;namespace@name&#39;.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Template language
+        /// Template language.
         /// </summary>
-        /// <value>Template language</value>
+        /// <value>Template language.</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
         
         
         
         /// <summary>
-        /// Template header object
+        /// The template header.
         /// </summary>
-        /// <value>Template header object</value>
+        /// <value>The template header.</value>
         [DataMember(Name="header", EmitDefaultValue=false)]
         public NotificationTemplateHeader Header { get; set; }
         
         
         
         /// <summary>
-        /// Template body object
+        /// The template body.
         /// </summary>
-        /// <value>Template body object</value>
+        /// <value>The template body.</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
         public NotificationTemplateBody Body { get; set; }
         
         
         
         /// <summary>
-        /// Template footer object
+        /// The template footer.
         /// </summary>
-        /// <value>Template footer object</value>
+        /// <value>The template footer.</value>
         [DataMember(Name="footer", EmitDefaultValue=false)]
         public NotificationTemplateFooter Footer { get; set; }
         

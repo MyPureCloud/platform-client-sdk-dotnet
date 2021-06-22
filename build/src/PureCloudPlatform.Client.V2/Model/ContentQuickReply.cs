@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Quick reply object
+    /// Quick reply object.
     /// </summary>
     [DataContract]
     public partial class ContentQuickReply :  IEquatable<ContentQuickReply>
@@ -33,9 +33,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \"Message\" which sends a message using the quick reply text.
+        /// Specifies the type of action that is triggered upon clicking the quick reply.
         /// </summary>
-        /// <value>Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \"Message\" which sends a message using the quick reply text.</value>
+        /// <value>Specifies the type of action that is triggered upon clicking the quick reply.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ActionEnum
         {
@@ -67,9 +67,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \"Message\" which sends a message using the quick reply text.
+        /// Specifies the type of action that is triggered upon clicking the quick reply.
         /// </summary>
-        /// <value>Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \"Message\" which sends a message using the quick reply text.</value>
+        /// <value>Specifies the type of action that is triggered upon clicking the quick reply.</value>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
         
@@ -84,11 +84,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentQuickReply" /> class.
         /// </summary>
-        /// <param name="Id">An ID assigned to the quick reply. Each object inside the content array has a unique ID..</param>
+        /// <param name="Id">A unique ID assigned to the quick reply (Deprecated)..</param>
         /// <param name="Text">Text to show inside the quick reply. This is also used as the response text after clicking on the quick reply. (required).</param>
-        /// <param name="Payload">Content of the textback payload after clicking a quick reply.</param>
-        /// <param name="Image">Path or URI to an image file associated with quick reply.</param>
-        /// <param name="Action">Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \&quot;Message\&quot; which sends a message using the quick reply text..</param>
+        /// <param name="Payload">Content of the payload included in the quick reply response. Could be an ID identifying the quick reply response..</param>
+        /// <param name="Image">URL of an image associated with the quick reply..</param>
+        /// <param name="Action">Specifies the type of action that is triggered upon clicking the quick reply..</param>
         public ContentQuickReply(string Id = null, string Text = null, string Payload = null, string Image = null, ActionEnum? Action = null)
         {
             this.Id = Id;
@@ -102,9 +102,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// An ID assigned to the quick reply. Each object inside the content array has a unique ID.
+        /// A unique ID assigned to the quick reply (Deprecated).
         /// </summary>
-        /// <value>An ID assigned to the quick reply. Each object inside the content array has a unique ID.</value>
+        /// <value>A unique ID assigned to the quick reply (Deprecated).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
@@ -120,18 +120,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Content of the textback payload after clicking a quick reply
+        /// Content of the payload included in the quick reply response. Could be an ID identifying the quick reply response.
         /// </summary>
-        /// <value>Content of the textback payload after clicking a quick reply</value>
+        /// <value>Content of the payload included in the quick reply response. Could be an ID identifying the quick reply response.</value>
         [DataMember(Name="payload", EmitDefaultValue=false)]
         public string Payload { get; set; }
         
         
         
         /// <summary>
-        /// Path or URI to an image file associated with quick reply
+        /// URL of an image associated with the quick reply.
         /// </summary>
-        /// <value>Path or URI to an image file associated with quick reply</value>
+        /// <value>URL of an image associated with the quick reply.</value>
         [DataMember(Name="image", EmitDefaultValue=false)]
         public string Image { get; set; }
         

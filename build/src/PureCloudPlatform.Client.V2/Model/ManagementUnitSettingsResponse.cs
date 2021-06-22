@@ -63,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Adherence">Adherence settings for this management unit.</param>
         /// <param name="ShortTermForecasting">Short term forecasting settings for this management unit.</param>
         /// <param name="TimeOff">Time off request settings for this management unit.</param>
-        /// <param name="Scheduling">Scheduling settings for this management unit.</param>
+        /// <param name="Scheduling">Scheduling settings for this management unit. These settings are only available if you have the permission wfm:managementUnit:view.</param>
         /// <param name="ShiftTrading">Shift trade settings for this management unit.</param>
         /// <param name="Metadata">Version info metadata for the associated management unit (required).</param>
         public ManagementUnitSettingsResponse(AdherenceSettings Adherence = null, ShortTermForecastingSettings ShortTermForecasting = null, TimeOffRequestSettings TimeOff = null, SchedulingSettingsResponse Scheduling = null, ShiftTradeSettings ShiftTrading = null, WfmVersionedEntityMetadata Metadata = null)
@@ -107,9 +107,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Scheduling settings for this management unit
+        /// Scheduling settings for this management unit. These settings are only available if you have the permission wfm:managementUnit:view
         /// </summary>
-        /// <value>Scheduling settings for this management unit</value>
+        /// <value>Scheduling settings for this management unit. These settings are only available if you have the permission wfm:managementUnit:view</value>
         [DataMember(Name="scheduling", EmitDefaultValue=false)]
         public SchedulingSettingsResponse Scheduling { get; set; }
         

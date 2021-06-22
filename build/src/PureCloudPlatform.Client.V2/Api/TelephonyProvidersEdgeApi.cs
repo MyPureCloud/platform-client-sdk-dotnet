@@ -1337,8 +1337,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>LineBaseEntityListing</returns>
-        LineBaseEntityListing GetTelephonyProvidersEdgesLinebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        LineBaseEntityListing GetTelephonyProvidersEdgesLinebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
         /// Get a listing of line base settings objects
@@ -1351,8 +1352,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>ApiResponse of LineBaseEntityListing</returns>
-        ApiResponse<LineBaseEntityListing> GetTelephonyProvidersEdgesLinebasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<LineBaseEntityListing> GetTelephonyProvidersEdgesLinebasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null);
         
         /// <summary>
         /// Get a list of Lines
@@ -4501,8 +4503,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of LineBaseEntityListing</returns>
-        System.Threading.Tasks.Task<LineBaseEntityListing> GetTelephonyProvidersEdgesLinebasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<LineBaseEntityListing> GetTelephonyProvidersEdgesLinebasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
         /// Get a listing of line base settings objects
@@ -4515,8 +4518,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (LineBaseEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LineBaseEntityListing>> GetTelephonyProvidersEdgesLinebasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<LineBaseEntityListing>> GetTelephonyProvidersEdgesLinebasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null);
         
         /// <summary>
         /// Get a list of Lines
@@ -17230,10 +17234,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>LineBaseEntityListing</returns>
-        public LineBaseEntityListing GetTelephonyProvidersEdgesLinebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public LineBaseEntityListing GetTelephonyProvidersEdgesLinebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
         {
-             ApiResponse<LineBaseEntityListing> localVarResponse = GetTelephonyProvidersEdgesLinebasesettingsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<LineBaseEntityListing> localVarResponse = GetTelephonyProvidersEdgesLinebasesettingsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, expand);
              return localVarResponse.Data;
         }
 
@@ -17245,8 +17250,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>ApiResponse of LineBaseEntityListing</returns>
-        public ApiResponse< LineBaseEntityListing > GetTelephonyProvidersEdgesLinebasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< LineBaseEntityListing > GetTelephonyProvidersEdgesLinebasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/telephony/providers/edges/linebasesettings";
@@ -17286,6 +17292,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -17331,10 +17338,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of LineBaseEntityListing</returns>
-        public async System.Threading.Tasks.Task<LineBaseEntityListing> GetTelephonyProvidersEdgesLinebasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<LineBaseEntityListing> GetTelephonyProvidersEdgesLinebasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
         {
-             ApiResponse<LineBaseEntityListing> localVarResponse = await GetTelephonyProvidersEdgesLinebasesettingsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<LineBaseEntityListing> localVarResponse = await GetTelephonyProvidersEdgesLinebasesettingsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, expand);
              return localVarResponse.Data;
 
         }
@@ -17347,8 +17355,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (LineBaseEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LineBaseEntityListing>> GetTelephonyProvidersEdgesLinebasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LineBaseEntityListing>> GetTelephonyProvidersEdgesLinebasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/telephony/providers/edges/linebasesettings";
@@ -17388,6 +17397,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

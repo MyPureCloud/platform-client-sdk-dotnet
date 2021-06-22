@@ -206,6 +206,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Inqueuecallflow,
             
             /// <summary>
+            /// Enum Inqueueemailflow for "INQUEUEEMAILFLOW"
+            /// </summary>
+            [EnumMember(Value = "INQUEUEEMAILFLOW")]
+            Inqueueemailflow,
+            
+            /// <summary>
+            /// Enum Inqueueshortmessageflow for "INQUEUESHORTMESSAGEFLOW"
+            /// </summary>
+            [EnumMember(Value = "INQUEUESHORTMESSAGEFLOW")]
+            Inqueueshortmessageflow,
+            
+            /// <summary>
             /// Enum Ivrconfiguration for "IVRCONFIGURATION"
             /// </summary>
             [EnumMember(Value = "IVRCONFIGURATION")]

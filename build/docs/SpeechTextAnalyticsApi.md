@@ -13,8 +13,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSpeechandtextanalyticsConversationCommunicationTranscripturl**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsconversationcommunicationtranscripturl) | **GET** /api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturl | Get the pre-signed S3 URL for the transcript of a specific communication of a conversation |
 | [**GetSpeechandtextanalyticsDialects**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsdialects) | **GET** /api/v2/speechandtextanalytics/dialects | Get list of supported Speech &amp; Text Analytics dialects |
 | [**GetSpeechandtextanalyticsProgram**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprogram) | **GET** /api/v2/speechandtextanalytics/programs/{programId} | Get a Speech &amp; Text Analytics program by id |
+| [**GetSpeechandtextanalyticsProgramMappings**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprogrammappings) | **GET** /api/v2/speechandtextanalytics/programs/{programId}/mappings | Get Speech &amp; Text Analytics program mappings to queues and flows by id |
 | [**GetSpeechandtextanalyticsPrograms**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprograms) | **GET** /api/v2/speechandtextanalytics/programs | Get the list of Speech &amp; Text Analytics programs |
 | [**GetSpeechandtextanalyticsProgramsGeneralJob**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprogramsgeneraljob) | **GET** /api/v2/speechandtextanalytics/programs/general/jobs/{jobId} | Get a Speech &amp; Text Analytics general program job by id |
+| [**GetSpeechandtextanalyticsProgramsMappings**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprogramsmappings) | **GET** /api/v2/speechandtextanalytics/programs/mappings | Get the list of Speech &amp; Text Analytics programs mappings to queues and flows |
 | [**GetSpeechandtextanalyticsProgramsPublishjob**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprogramspublishjob) | **GET** /api/v2/speechandtextanalytics/programs/publishjobs/{jobId} | Get a Speech &amp; Text Analytics publish programs job by id |
 | [**GetSpeechandtextanalyticsProgramsUnpublished**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprogramsunpublished) | **GET** /api/v2/speechandtextanalytics/programs/unpublished | Get the list of Speech &amp; Text Analytics unpublished programs |
 | [**GetSpeechandtextanalyticsSettings**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticssettings) | **GET** /api/v2/speechandtextanalytics/settings | Get Speech And Text Analytics Settings |
@@ -30,6 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostSpeechandtextanalyticsTopicsPublishjobs**](SpeechTextAnalyticsApi.html#postspeechandtextanalyticstopicspublishjobs) | **POST** /api/v2/speechandtextanalytics/topics/publishjobs | Create new Speech &amp; Text Analytics publish topics job |
 | [**PostSpeechandtextanalyticsTranscriptsSearch**](SpeechTextAnalyticsApi.html#postspeechandtextanalyticstranscriptssearch) | **POST** /api/v2/speechandtextanalytics/transcripts/search | Search resources. |
 | [**PutSpeechandtextanalyticsProgram**](SpeechTextAnalyticsApi.html#putspeechandtextanalyticsprogram) | **PUT** /api/v2/speechandtextanalytics/programs/{programId} | Update existing Speech &amp; Text Analytics program |
+| [**PutSpeechandtextanalyticsProgramMappings**](SpeechTextAnalyticsApi.html#putspeechandtextanalyticsprogrammappings) | **PUT** /api/v2/speechandtextanalytics/programs/{programId}/mappings | Set Speech &amp; Text Analytics program mappings to queues and flows |
 | [**PutSpeechandtextanalyticsSettings**](SpeechTextAnalyticsApi.html#putspeechandtextanalyticssettings) | **PUT** /api/v2/speechandtextanalytics/settings | Update Speech And Text Analytics Settings |
 | [**PutSpeechandtextanalyticsTopic**](SpeechTextAnalyticsApi.html#putspeechandtextanalyticstopic) | **PUT** /api/v2/speechandtextanalytics/topics/{topicId} | Update existing Speech &amp; Text Analytics topic |
 {: class="table table-striped"}
@@ -420,6 +423,71 @@ namespace Example
 
 [**Program**](Program.html)
 
+<a name="getspeechandtextanalyticsprogrammappings"></a>
+
+## [**ProgramMappings**](ProgramMappings.html) GetSpeechandtextanalyticsProgramMappings (string programId)
+
+
+
+Get Speech & Text Analytics program mappings to queues and flows by id
+
+
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsProgramMappingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var programId = programId_example;  // string | The id of the program
+
+            try
+            { 
+                // Get Speech & Text Analytics program mappings to queues and flows by id
+                ProgramMappings result = apiInstance.GetSpeechandtextanalyticsProgramMappings(programId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsProgramMappings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **programId** | **string**| The id of the program |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ProgramMappings**](ProgramMappings.html)
+
 <a name="getspeechandtextanalyticsprograms"></a>
 
 ## [**ProgramsEntityListing**](ProgramsEntityListing.html) GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null)
@@ -554,6 +622,73 @@ namespace Example
 ### Return type
 
 [**GeneralProgramJob**](GeneralProgramJob.html)
+
+<a name="getspeechandtextanalyticsprogramsmappings"></a>
+
+## [**ProgramsMappingsEntityListing**](ProgramsMappingsEntityListing.html) GetSpeechandtextanalyticsProgramsMappings (string nextPage = null, int? pageSize = null)
+
+
+
+Get the list of Speech & Text Analytics programs mappings to queues and flows
+
+
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsProgramsMappingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var nextPage = nextPage_example;  // string | The key for listing the next page (optional) 
+            var pageSize = 56;  // int? | The page size for the listing (optional)  (default to 20)
+
+            try
+            { 
+                // Get the list of Speech & Text Analytics programs mappings to queues and flows
+                ProgramsMappingsEntityListing result = apiInstance.GetSpeechandtextanalyticsProgramsMappings(nextPage, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsProgramsMappings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **nextPage** | **string**| The key for listing the next page | [optional]  |
+| **pageSize** | **int?**| The page size for the listing | [optional] [default to 20] |
+{: class="table table-striped"}
+
+### Return type
+
+[**ProgramsMappingsEntityListing**](ProgramsMappingsEntityListing.html)
 
 <a name="getspeechandtextanalyticsprogramspublishjob"></a>
 
@@ -937,7 +1072,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **dialect** | **string**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional] <br />**Values**: en-US, es-US |
+| **dialect** | **string**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional] <br />**Values**: en-US, es-US, en-AU, en-GB, en-ZA, es-ES, en-IN |
 {: class="table table-striped"}
 
 ### Return type
@@ -1534,6 +1669,73 @@ namespace Example
 ### Return type
 
 [**Program**](Program.html)
+
+<a name="putspeechandtextanalyticsprogrammappings"></a>
+
+## [**ProgramMappings**](ProgramMappings.html) PutSpeechandtextanalyticsProgramMappings (string programId, ProgramMappingsRequest body)
+
+
+
+Set Speech & Text Analytics program mappings to queues and flows
+
+
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutSpeechandtextanalyticsProgramMappingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var programId = programId_example;  // string | The id of the program
+            var body = new ProgramMappingsRequest(); // ProgramMappingsRequest | The program to set mappings for
+
+            try
+            { 
+                // Set Speech & Text Analytics program mappings to queues and flows
+                ProgramMappings result = apiInstance.PutSpeechandtextanalyticsProgramMappings(programId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.PutSpeechandtextanalyticsProgramMappings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **programId** | **string**| The id of the program |  |
+| **body** | [**ProgramMappingsRequest**](ProgramMappingsRequest.html)| The program to set mappings for |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ProgramMappings**](ProgramMappings.html)
 
 <a name="putspeechandtextanalyticssettings"></a>
 

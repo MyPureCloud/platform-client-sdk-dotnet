@@ -205,6 +205,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Dynamicharmonicregression,
             
             /// <summary>
+            /// Enum Theta for "Theta"
+            /// </summary>
+            [EnumMember(Value = "Theta")]
+            Theta,
+            
+            /// <summary>
             /// Enum Other for "Other"
             /// </summary>
             [EnumMember(Value = "Other")]

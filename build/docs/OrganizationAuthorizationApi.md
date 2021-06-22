@@ -1374,7 +1374,7 @@ namespace Example
 
 <a name="putorgauthorizationtrustee"></a>
 
-## [**Trustee**](Trustee.html) PutOrgauthorizationTrustee (string trusteeOrgId, Trustee body)
+## [**Trustee**](Trustee.html) PutOrgauthorizationTrustee (string trusteeOrgId, TrustUpdate body)
 
 
 
@@ -1409,7 +1409,7 @@ namespace Example
 
             var apiInstance = new OrganizationAuthorizationApi();
             var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
-            var body = new Trustee(); // Trustee | Client
+            var body = new TrustUpdate(); // TrustUpdate | Client
 
             try
             { 
@@ -1432,7 +1432,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **trusteeOrgId** | **string**| Trustee Organization Id |  |
-| **body** | [**Trustee**](Trustee.html)| Client |  |
+| **body** | [**TrustUpdate**](TrustUpdate.html)| Client |  |
 {: class="table table-striped"}
 
 ### Return type

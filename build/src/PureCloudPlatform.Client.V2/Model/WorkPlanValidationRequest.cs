@@ -95,6 +95,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// This constraint ensures that an agent starts each workday within a user-defined time threshold
         /// </summary>
@@ -122,6 +125,8 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ShiftStartAndPaidDuration")]
             Shiftstartandpaidduration
         }
+        
+        
         
         
         
@@ -295,6 +300,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Whether the work plan is enabled for scheduling</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Whether the work plan is valid or not
+        /// </summary>
+        /// <value>Whether the work plan is valid or not</value>
+        [DataMember(Name="valid", EmitDefaultValue=false)]
+        public bool? Valid { get; private set; }
         
         
         
@@ -545,6 +559,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  Valid: ").Append(Valid).Append("\n");
             sb.Append("  ConstrainWeeklyPaidTime: ").Append(ConstrainWeeklyPaidTime).Append("\n");
             sb.Append("  FlexibleWeeklyPaidTime: ").Append(FlexibleWeeklyPaidTime).Append("\n");
             sb.Append("  WeeklyExactPaidMinutes: ").Append(WeeklyExactPaidMinutes).Append("\n");
@@ -622,6 +637,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
+                ) &&
+                (
+                    this.Valid == other.Valid ||
+                    this.Valid != null &&
+                    this.Valid.Equals(other.Valid)
                 ) &&
                 (
                     this.ConstrainWeeklyPaidTime == other.ConstrainWeeklyPaidTime ||
@@ -780,6 +800,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+                
+                if (this.Valid != null)
+                    hash = hash * 59 + this.Valid.GetHashCode();
                 
                 if (this.ConstrainWeeklyPaidTime != null)
                     hash = hash * 59 + this.ConstrainWeeklyPaidTime.GetHashCode();

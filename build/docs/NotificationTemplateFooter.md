@@ -7,7 +7,7 @@ title: NotificationTemplateFooter
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Text** | **string** | Footer text. For WhatsApp, ignored | [optional] |
+| **Text** | **string** | Footer text. For WhatsApp, ignored. | [optional] |
 {: class="table table-striped"}
 
 

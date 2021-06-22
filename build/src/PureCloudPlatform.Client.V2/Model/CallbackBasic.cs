@@ -306,6 +306,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -376,6 +382,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CallbackBasic" /> class.
@@ -405,7 +415,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
         /// <param name="AfterCallWork">After-call work for the communication..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
-        public CallbackBasic(StateEnum? State = null, string Id = null, List<Segment> Segments = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DialerPreview DialerPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, string Provider = null, string PeerId = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null)
+        /// <param name="CallerId">The phone number displayed to recipients of the phone call. The value should conform to the E164 format..</param>
+        /// <param name="CallerIdName">The name displayed to recipients of the phone call..</param>
+        public CallbackBasic(StateEnum? State = null, string Id = null, List<Segment> Segments = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DialerPreview DialerPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, string Provider = null, string PeerId = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string CallerId = null, string CallerIdName = null)
         {
             this.State = State;
             this.Id = Id;
@@ -432,6 +444,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Wrapup = Wrapup;
             this.AfterCallWork = AfterCallWork;
             this.AfterCallWorkRequired = AfterCallWorkRequired;
+            this.CallerId = CallerId;
+            this.CallerIdName = CallerIdName;
             
         }
         
@@ -640,6 +654,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? AfterCallWorkRequired { get; set; }
         
         
+        
+        /// <summary>
+        /// The phone number displayed to recipients of the phone call. The value should conform to the E164 format.
+        /// </summary>
+        /// <value>The phone number displayed to recipients of the phone call. The value should conform to the E164 format.</value>
+        [DataMember(Name="callerId", EmitDefaultValue=false)]
+        public string CallerId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The name displayed to recipients of the phone call.
+        /// </summary>
+        /// <value>The name displayed to recipients of the phone call.</value>
+        [DataMember(Name="callerIdName", EmitDefaultValue=false)]
+        public string CallerIdName { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -674,6 +706,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
+            sb.Append("  CallerId: ").Append(CallerId).Append("\n");
+            sb.Append("  CallerIdName: ").Append(CallerIdName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -834,6 +868,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AfterCallWorkRequired == other.AfterCallWorkRequired ||
                     this.AfterCallWorkRequired != null &&
                     this.AfterCallWorkRequired.Equals(other.AfterCallWorkRequired)
+                ) &&
+                (
+                    this.CallerId == other.CallerId ||
+                    this.CallerId != null &&
+                    this.CallerId.Equals(other.CallerId)
+                ) &&
+                (
+                    this.CallerIdName == other.CallerIdName ||
+                    this.CallerIdName != null &&
+                    this.CallerIdName.Equals(other.CallerIdName)
                 );
         }
 
@@ -923,6 +967,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AfterCallWorkRequired != null)
                     hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();
+                
+                if (this.CallerId != null)
+                    hash = hash * 59 + this.CallerId.GetHashCode();
+                
+                if (this.CallerIdName != null)
+                    hash = hash * 59 + this.CallerIdName.GetHashCode();
                 
                 return hash;
             }

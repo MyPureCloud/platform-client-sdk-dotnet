@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Generic content object
+    /// Generic content object.
     /// </summary>
     [DataContract]
     public partial class ContentGeneric :  IEquatable<ContentGeneric>
@@ -59,13 +59,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentGeneric" /> class.
         /// </summary>
-        /// <param name="Id">An ID assigned to this rich message content. Each instance inside the content array has a unique ID..</param>
-        /// <param name="Title">Text to show in the title row.</param>
-        /// <param name="Description">Text to show in the description row. This is immediately below the title.</param>
-        /// <param name="Image">Path or URI to an image file.</param>
-        /// <param name="Video">Path or URI to a video file.</param>
-        /// <param name="Actions">User actions available on the content. All actions are optional and all actions are executed simultaneously..</param>
-        /// <param name="Components">An array of component objects.</param>
+        /// <param name="Id">A unique ID assigned to this rich message content..</param>
+        /// <param name="Title">Text to show in the title..</param>
+        /// <param name="Description">Text to show in the description..</param>
+        /// <param name="Image">URL of an image..</param>
+        /// <param name="Video">URL of a video..</param>
+        /// <param name="Actions">Actions to be taken..</param>
+        /// <param name="Components">An array of component objects..</param>
         public ContentGeneric(string Id = null, string Title = null, string Description = null, string Image = null, string Video = null, ContentActions Actions = null, List<ButtonComponent> Components = null)
         {
             this.Id = Id;
@@ -81,63 +81,63 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// An ID assigned to this rich message content. Each instance inside the content array has a unique ID.
+        /// A unique ID assigned to this rich message content.
         /// </summary>
-        /// <value>An ID assigned to this rich message content. Each instance inside the content array has a unique ID.</value>
+        /// <value>A unique ID assigned to this rich message content.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Text to show in the title row
+        /// Text to show in the title.
         /// </summary>
-        /// <value>Text to show in the title row</value>
+        /// <value>Text to show in the title.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
         
         
         
         /// <summary>
-        /// Text to show in the description row. This is immediately below the title
+        /// Text to show in the description.
         /// </summary>
-        /// <value>Text to show in the description row. This is immediately below the title</value>
+        /// <value>Text to show in the description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
         
         
         
         /// <summary>
-        /// Path or URI to an image file
+        /// URL of an image.
         /// </summary>
-        /// <value>Path or URI to an image file</value>
+        /// <value>URL of an image.</value>
         [DataMember(Name="image", EmitDefaultValue=false)]
         public string Image { get; set; }
         
         
         
         /// <summary>
-        /// Path or URI to a video file
+        /// URL of a video.
         /// </summary>
-        /// <value>Path or URI to a video file</value>
+        /// <value>URL of a video.</value>
         [DataMember(Name="video", EmitDefaultValue=false)]
         public string Video { get; set; }
         
         
         
         /// <summary>
-        /// User actions available on the content. All actions are optional and all actions are executed simultaneously.
+        /// Actions to be taken.
         /// </summary>
-        /// <value>User actions available on the content. All actions are optional and all actions are executed simultaneously.</value>
+        /// <value>Actions to be taken.</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public ContentActions Actions { get; set; }
         
         
         
         /// <summary>
-        /// An array of component objects
+        /// An array of component objects.
         /// </summary>
-        /// <value>An array of component objects</value>
+        /// <value>An array of component objects.</value>
         [DataMember(Name="components", EmitDefaultValue=false)]
         public List<ButtonComponent> Components { get; set; }
         

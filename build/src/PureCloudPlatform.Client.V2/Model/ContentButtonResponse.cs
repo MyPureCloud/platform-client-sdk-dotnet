@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Button response object
+    /// Button response object representing the click of a structured message button, such as a quick reply.
     /// </summary>
     [DataContract]
     public partial class ContentButtonResponse :  IEquatable<ContentButtonResponse>
@@ -24,9 +24,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Button response type that captures Button and QuickReply type responses
+        /// Describes the button that resulted in the Button Response.
         /// </summary>
-        /// <value>Button response type that captures Button and QuickReply type responses</value>
+        /// <value>Describes the button that resulted in the Button Response.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -64,9 +64,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Button response type that captures Button and QuickReply type responses
+        /// Describes the button that resulted in the Button Response.
         /// </summary>
-        /// <value>Button response type that captures Button and QuickReply type responses</value>
+        /// <value>Describes the button that resulted in the Button Response.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         
@@ -85,10 +85,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentButtonResponse" /> class.
         /// </summary>
-        /// <param name="Id">An ID assigned to the button response. Each object inside the content array has a unique ID..</param>
-        /// <param name="Type">Button response type that captures Button and QuickReply type responses.</param>
-        /// <param name="Text">Text to show inside the Button reply. This is also used as the response text after clicking on the Button. (required).</param>
-        /// <param name="Payload">Content of the textback payload after clicking a button.</param>
+        /// <param name="Id">An ID assigned to the button response (Deprecated)..</param>
+        /// <param name="Type">Describes the button that resulted in the Button Response..</param>
+        /// <param name="Text">The response text from the button click. (required).</param>
+        /// <param name="Payload">The response payload associated with the clicked button..</param>
         public ContentButtonResponse(string Id = null, TypeEnum? Type = null, string Text = null, string Payload = null)
         {
             this.Id = Id;
@@ -101,9 +101,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// An ID assigned to the button response. Each object inside the content array has a unique ID.
+        /// An ID assigned to the button response (Deprecated).
         /// </summary>
-        /// <value>An ID assigned to the button response. Each object inside the content array has a unique ID.</value>
+        /// <value>An ID assigned to the button response (Deprecated).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
@@ -112,18 +112,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Text to show inside the Button reply. This is also used as the response text after clicking on the Button.
+        /// The response text from the button click.
         /// </summary>
-        /// <value>Text to show inside the Button reply. This is also used as the response text after clicking on the Button.</value>
+        /// <value>The response text from the button click.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
         
         
         
         /// <summary>
-        /// Content of the textback payload after clicking a button
+        /// The response payload associated with the clicked button.
         /// </summary>
-        /// <value>Content of the textback payload after clicking a button</value>
+        /// <value>The response payload associated with the clicked button.</value>
         [DataMember(Name="payload", EmitDefaultValue=false)]
         public string Payload { get; set; }
         

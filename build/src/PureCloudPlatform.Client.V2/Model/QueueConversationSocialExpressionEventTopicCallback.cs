@@ -306,6 +306,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -331,6 +337,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
+        
+        
         
         
         
@@ -398,8 +408,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Wrapup">Wrapup.</param>
         /// <param name="AfterCallWork">AfterCallWork.</param>
         /// <param name="AfterCallWorkRequired">AfterCallWorkRequired.</param>
+        /// <param name="CallerId">CallerId.</param>
+        /// <param name="CallerIdName">CallerIdName.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationSocialExpressionEventTopicCallback(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, QueueConversationSocialExpressionEventTopicDialerPreview DialerPreview = null, QueueConversationSocialExpressionEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, Object AdditionalProperties = null)
+        public QueueConversationSocialExpressionEventTopicCallback(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, QueueConversationSocialExpressionEventTopicDialerPreview DialerPreview = null, QueueConversationSocialExpressionEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string CallerId = null, string CallerIdName = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Id = Id;
@@ -424,6 +436,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Wrapup = Wrapup;
             this.AfterCallWork = AfterCallWork;
             this.AfterCallWorkRequired = AfterCallWorkRequired;
+            this.CallerId = CallerId;
+            this.CallerIdName = CallerIdName;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -597,6 +611,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets CallerId
+        /// </summary>
+        [DataMember(Name="callerId", EmitDefaultValue=false)]
+        public string CallerId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets CallerIdName
+        /// </summary>
+        [DataMember(Name="callerIdName", EmitDefaultValue=false)]
+        public string CallerIdName { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -635,6 +665,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
+            sb.Append("  CallerId: ").Append(CallerId).Append("\n");
+            sb.Append("  CallerIdName: ").Append(CallerIdName).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -788,6 +820,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AfterCallWorkRequired.Equals(other.AfterCallWorkRequired)
                 ) &&
                 (
+                    this.CallerId == other.CallerId ||
+                    this.CallerId != null &&
+                    this.CallerId.Equals(other.CallerId)
+                ) &&
+                (
+                    this.CallerIdName == other.CallerIdName ||
+                    this.CallerIdName != null &&
+                    this.CallerIdName.Equals(other.CallerIdName)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -874,6 +916,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AfterCallWorkRequired != null)
                     hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();
+                
+                if (this.CallerId != null)
+                    hash = hash * 59 + this.CallerId.GetHashCode();
+                
+                if (this.CallerIdName != null)
+                    hash = hash * 59 + this.CallerIdName.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

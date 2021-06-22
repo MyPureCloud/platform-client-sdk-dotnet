@@ -7,14 +7,14 @@ title: JsonNode
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **NodeType** | **string** |  | [optional] |
 | **_Float** | **bool?** |  | [optional] |
+| **NodeType** | **string** |  | [optional] |
 | **Number** | **bool?** |  | [optional] |
-| **Boolean** | **bool?** |  | [optional] |
-| **_Object** | **bool?** |  | [optional] |
 | **ValueNode** | **bool?** |  | [optional] |
-| **ContainerNode** | **bool?** |  | [optional] |
 | **FloatingPointNumber** | **bool?** |  | [optional] |
+| **ContainerNode** | **bool?** |  | [optional] |
+| **MissingNode** | **bool?** |  | [optional] |
+| **_Object** | **bool?** |  | [optional] |
 | **Pojo** | **bool?** |  | [optional] |
 | **IntegralNumber** | **bool?** |  | [optional] |
 | **_Short** | **bool?** |  | [optional] |
@@ -24,8 +24,8 @@ title: JsonNode
 | **BigDecimal** | **bool?** |  | [optional] |
 | **BigInteger** | **bool?** |  | [optional] |
 | **Textual** | **bool?** |  | [optional] |
+| **Boolean** | **bool?** |  | [optional] |
 | **Binary** | **bool?** |  | [optional] |
-| **MissingNode** | **bool?** |  | [optional] |
 | **Array** | **bool?** |  | [optional] |
 | **_Null** | **bool?** |  | [optional] |
 {: class="table table-striped"}

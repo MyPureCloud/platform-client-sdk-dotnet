@@ -130,6 +130,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkPlanShift" /> class.
@@ -162,7 +167,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Activities">Activities configured for this shift.</param>
         /// <param name="Id">ID of the shift. This is required only for the case of updating an existing shift.</param>
         /// <param name="Delete">If marked true for updating an existing shift, the shift will be permanently deleted.</param>
-        public WorkPlanShift(string Name = null, SetWrapperDayOfWeek Days = null, bool? FlexibleStartTime = null, int? ExactStartTimeMinutesFromMidnight = null, int? EarliestStartTimeMinutesFromMidnight = null, int? LatestStartTimeMinutesFromMidnight = null, bool? ConstrainStopTime = null, bool? ConstrainLatestStopTime = null, int? LatestStopTimeMinutesFromMidnight = null, bool? ConstrainEarliestStopTime = null, int? EarliestStopTimeMinutesFromMidnight = null, int? StartIncrementMinutes = null, bool? FlexiblePaidTime = null, int? ExactPaidTimeMinutes = null, int? MinimumPaidTimeMinutes = null, int? MaximumPaidTimeMinutes = null, bool? ConstrainContiguousWorkTime = null, int? MinimumContiguousWorkTimeMinutes = null, int? MaximumContiguousWorkTimeMinutes = null, List<WorkPlanActivity> Activities = null, string Id = null, bool? Delete = null)
+        /// <param name="ValidationId">ID of shift in the context of work plan validation.</param>
+        public WorkPlanShift(string Name = null, SetWrapperDayOfWeek Days = null, bool? FlexibleStartTime = null, int? ExactStartTimeMinutesFromMidnight = null, int? EarliestStartTimeMinutesFromMidnight = null, int? LatestStartTimeMinutesFromMidnight = null, bool? ConstrainStopTime = null, bool? ConstrainLatestStopTime = null, int? LatestStopTimeMinutesFromMidnight = null, bool? ConstrainEarliestStopTime = null, int? EarliestStopTimeMinutesFromMidnight = null, int? StartIncrementMinutes = null, bool? FlexiblePaidTime = null, int? ExactPaidTimeMinutes = null, int? MinimumPaidTimeMinutes = null, int? MaximumPaidTimeMinutes = null, bool? ConstrainContiguousWorkTime = null, int? MinimumContiguousWorkTimeMinutes = null, int? MaximumContiguousWorkTimeMinutes = null, List<WorkPlanActivity> Activities = null, string Id = null, bool? Delete = null, string ValidationId = null)
         {
             this.Name = Name;
             this.Days = Days;
@@ -186,6 +192,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Activities = Activities;
             this.Id = Id;
             this.Delete = Delete;
+            this.ValidationId = ValidationId;
             
         }
         
@@ -388,6 +395,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Delete { get; set; }
         
         
+        
+        /// <summary>
+        /// ID of shift in the context of work plan validation
+        /// </summary>
+        /// <value>ID of shift in the context of work plan validation</value>
+        [DataMember(Name="validationId", EmitDefaultValue=false)]
+        public string ValidationId { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -419,6 +435,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Activities: ").Append(Activities).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Delete: ").Append(Delete).Append("\n");
+            sb.Append("  ValidationId: ").Append(ValidationId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -564,6 +581,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Delete == other.Delete ||
                     this.Delete != null &&
                     this.Delete.Equals(other.Delete)
+                ) &&
+                (
+                    this.ValidationId == other.ValidationId ||
+                    this.ValidationId != null &&
+                    this.ValidationId.Equals(other.ValidationId)
                 );
         }
 
@@ -644,6 +666,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Delete != null)
                     hash = hash * 59 + this.Delete.GetHashCode();
+                
+                if (this.ValidationId != null)
+                    hash = hash * 59 + this.ValidationId.GetHashCode();
                 
                 return hash;
             }

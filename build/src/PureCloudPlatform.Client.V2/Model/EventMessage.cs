@@ -305,6 +305,24 @@ namespace PureCloudPlatform.Client.V2.Model
             ImportInvalidData,
             
             /// <summary>
+            /// Enum ImportInvalidEmailAddresses for "IMPORT_INVALID_EMAIL_ADDRESSES"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_INVALID_EMAIL_ADDRESSES")]
+            ImportInvalidEmailAddresses,
+            
+            /// <summary>
+            /// Enum ImportInvalidExpirationDate for "IMPORT_INVALID_EXPIRATION_DATE"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_INVALID_EXPIRATION_DATE")]
+            ImportInvalidExpirationDate,
+            
+            /// <summary>
+            /// Enum ImportExpirationDateExceedsMaxDays for "IMPORT_EXPIRATION_DATE_EXCEEDS_MAX_DAYS"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_EXPIRATION_DATE_EXCEEDS_MAX_DAYS")]
+            ImportExpirationDateExceedsMaxDays,
+            
+            /// <summary>
             /// Enum ImportColumnExceedsLengthLimit for "IMPORT_COLUMN_EXCEEDS_LENGTH_LIMIT"
             /// </summary>
             [EnumMember(Value = "IMPORT_COLUMN_EXCEEDS_LENGTH_LIMIT")]

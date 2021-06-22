@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Template header object
+    /// Template header object.
     /// </summary>
     [DataContract]
     public partial class NotificationTemplateHeader :  IEquatable<NotificationTemplateHeader>
@@ -21,9 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Template header type
+        /// Template header type.
         /// </summary>
-        /// <value>Template header type</value>
+        /// <value>Template header type.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -62,9 +62,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Template header type
+        /// Template header type.
         /// </summary>
-        /// <value>Template header type</value>
+        /// <value>Template header type.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         
@@ -85,10 +85,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificationTemplateHeader" /> class.
         /// </summary>
-        /// <param name="Type">Template header type (required).</param>
-        /// <param name="Text">Header text. For WhatsApp, ignored.</param>
-        /// <param name="Media">Attachment object.</param>
-        /// <param name="Parameters">Template parameters for placeholders in template.</param>
+        /// <param name="Type">Template header type. (required).</param>
+        /// <param name="Text">Header text. For WhatsApp, ignored..</param>
+        /// <param name="Media">Media template header image..</param>
+        /// <param name="Parameters">Template parameters for placeholders in template..</param>
         public NotificationTemplateHeader(TypeEnum? Type = null, string Text = null, ContentAttachment Media = null, List<NotificationTemplateParameter> Parameters = null)
         {
             this.Type = Type;
@@ -103,27 +103,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Header text. For WhatsApp, ignored
+        /// Header text. For WhatsApp, ignored.
         /// </summary>
-        /// <value>Header text. For WhatsApp, ignored</value>
+        /// <value>Header text. For WhatsApp, ignored.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
         
         
         
         /// <summary>
-        /// Attachment object
+        /// Media template header image.
         /// </summary>
-        /// <value>Attachment object</value>
+        /// <value>Media template header image.</value>
         [DataMember(Name="media", EmitDefaultValue=false)]
         public ContentAttachment Media { get; set; }
         
         
         
         /// <summary>
-        /// Template parameters for placeholders in template
+        /// Template parameters for placeholders in template.
         /// </summary>
-        /// <value>Template parameters for placeholders in template</value>
+        /// <value>Template parameters for placeholders in template.</value>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public List<NotificationTemplateParameter> Parameters { get; set; }
         

@@ -2635,7 +2635,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: Asc, Desc |
-| **types** | [**List<string>**](string.html)| Specifies the activity types. | [optional] <br />**Values**: Informational, Coaching, AssessedContent, Questionnaire |
+| **types** | [**List<string>**](string.html)| Specifies the activity types. | [optional] <br />**Values**: Informational, Coaching, AssessedContent, Questionnaire, Assessment |
 | **statuses** | [**List<string>**](string.html)| Specifies the activity statuses to filter by | [optional] <br />**Values**: Planned, InProgress, Completed, InvalidSchedule |
 | **relationship** | [**List<string>**](string.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional] <br />**Values**: Creator, Facilitator, Attendee |
 {: class="table table-striped"}
@@ -2717,7 +2717,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: Asc, Desc |
-| **types** | [**List<string>**](string.html)| Specifies the activity types. | [optional] <br />**Values**: Informational, Coaching, AssessedContent, Questionnaire |
+| **types** | [**List<string>**](string.html)| Specifies the activity types. | [optional] <br />**Values**: Informational, Coaching, AssessedContent, Questionnaire, Assessment |
 | **statuses** | [**List<string>**](string.html)| Specifies the activity statuses to filter by | [optional] <br />**Values**: Planned, InProgress, Completed, InvalidSchedule |
 | **relationship** | [**List<string>**](string.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional] <br />**Values**: Creator, Facilitator, Attendee |
 {: class="table table-striped"}
@@ -2787,7 +2787,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **activityId** | **string**| Specifies the activity ID, maps to either assignment or appointment ID |  |
-| **type** | **string**| Specifies the activity type. | <br />**Values**: Informational, Coaching, AssessedContent, Questionnaire |
+| **type** | **string**| Specifies the activity type. | <br />**Values**: Informational, Coaching, AssessedContent, Assessment, Questionnaire |
 {: class="table table-striped"}
 
 ### Return type

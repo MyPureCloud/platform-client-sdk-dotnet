@@ -7,8 +7,8 @@ title: NotificationTemplateParameter
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Name** | **string** | Parameter name | [optional] |
-| **Text** | **string** | Parameter text value | |
+| **Name** | **string** | Parameter name. | [optional] |
+| **Text** | **string** | Parameter text value. | |
 {: class="table table-striped"}
 
 

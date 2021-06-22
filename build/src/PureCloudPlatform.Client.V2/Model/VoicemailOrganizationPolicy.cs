@@ -55,6 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailOrganizationPolicy" /> class.
@@ -64,13 +69,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="VoicemailExtension">The extension for voicemail retrieval.  The default value is *86..</param>
         /// <param name="PinRequired">If this is true, a PIN is required when accessing a user&#39;s voicemail from a phone..</param>
         /// <param name="SendEmailNotifications">Whether email notifications are sent for new voicemails in the organization. If false, new voicemail email notifications are not be sent for the organization overriding any user or group setting..</param>
-        public VoicemailOrganizationPolicy(int? AlertTimeoutSeconds = null, PINConfiguration PinConfiguration = null, string VoicemailExtension = null, bool? PinRequired = null, bool? SendEmailNotifications = null)
+        /// <param name="DisableEmailPii">Removes any PII from emails. This overrides any analogous group configuration value. This is always true if HIPAA is enabled or unknown for an organization..</param>
+        public VoicemailOrganizationPolicy(int? AlertTimeoutSeconds = null, PINConfiguration PinConfiguration = null, string VoicemailExtension = null, bool? PinRequired = null, bool? SendEmailNotifications = null, bool? DisableEmailPii = null)
         {
             this.AlertTimeoutSeconds = AlertTimeoutSeconds;
             this.PinConfiguration = PinConfiguration;
             this.VoicemailExtension = VoicemailExtension;
             this.PinRequired = PinRequired;
             this.SendEmailNotifications = SendEmailNotifications;
+            this.DisableEmailPii = DisableEmailPii;
             
         }
         
@@ -131,6 +138,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Removes any PII from emails. This overrides any analogous group configuration value. This is always true if HIPAA is enabled or unknown for an organization.
+        /// </summary>
+        /// <value>Removes any PII from emails. This overrides any analogous group configuration value. This is always true if HIPAA is enabled or unknown for an organization.</value>
+        [DataMember(Name="disableEmailPii", EmitDefaultValue=false)]
+        public bool? DisableEmailPii { get; set; }
+        
+        
+        
+        /// <summary>
         /// The date the policy was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the policy was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -153,6 +169,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  VoicemailExtension: ").Append(VoicemailExtension).Append("\n");
             sb.Append("  PinRequired: ").Append(PinRequired).Append("\n");
             sb.Append("  SendEmailNotifications: ").Append(SendEmailNotifications).Append("\n");
+            sb.Append("  DisableEmailPii: ").Append(DisableEmailPii).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -221,6 +238,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SendEmailNotifications.Equals(other.SendEmailNotifications)
                 ) &&
                 (
+                    this.DisableEmailPii == other.DisableEmailPii ||
+                    this.DisableEmailPii != null &&
+                    this.DisableEmailPii.Equals(other.DisableEmailPii)
+                ) &&
+                (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
@@ -256,6 +278,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SendEmailNotifications != null)
                     hash = hash * 59 + this.SendEmailNotifications.GetHashCode();
+                
+                if (this.DisableEmailPii != null)
+                    hash = hash * 59 + this.DisableEmailPii.GetHashCode();
                 
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();

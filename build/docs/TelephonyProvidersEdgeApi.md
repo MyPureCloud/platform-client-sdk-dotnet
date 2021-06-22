@@ -3740,7 +3740,7 @@ namespace Example
 
 <a name="gettelephonyprovidersedgeslinebasesettings"></a>
 
-## [**LineBaseEntityListing**](LineBaseEntityListing.html) GetTelephonyProvidersEdgesLinebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+## [**LineBaseEntityListing**](LineBaseEntityListing.html) GetTelephonyProvidersEdgesLinebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
 
 
 
@@ -3778,11 +3778,12 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to name)
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            var expand = new List<string>(); // List<string> | Fields to expand in the response, comma-separated (optional) 
 
             try
             { 
                 // Get a listing of line base settings objects
-                LineBaseEntityListing result = apiInstance.GetTelephonyProvidersEdgesLinebasesettings(pageNumber, pageSize, sortBy, sortOrder);
+                LineBaseEntityListing result = apiInstance.GetTelephonyProvidersEdgesLinebasesettings(pageNumber, pageSize, sortBy, sortOrder, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3803,6 +3804,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Value by which to sort | [optional] [default to name] |
 | **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+| **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional] <br />**Values**: properties |
 {: class="table table-striped"}
 
 ### Return type

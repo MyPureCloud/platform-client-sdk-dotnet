@@ -10,6 +10,7 @@ title: WorkPlanValidationRequest
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Enabled** | **bool?** | Whether the work plan is enabled for scheduling | [optional] |
+| **Valid** | **bool?** | Whether the work plan is valid or not | [optional] |
 | **ConstrainWeeklyPaidTime** | **bool?** | Whether the weekly paid time constraint is enabled for this work plan | [optional] |
 | **FlexibleWeeklyPaidTime** | **bool?** | Whether the weekly paid time constraint is flexible for this work plan | [optional] |
 | **WeeklyExactPaidMinutes** | **int?** | Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == false | [optional] |

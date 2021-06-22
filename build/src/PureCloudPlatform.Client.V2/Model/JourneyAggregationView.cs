@@ -42,6 +42,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Ndistinctjourneyactions,
             
             /// <summary>
+            /// Enum Ndistinctjourneysessions for "nDistinctJourneySessions"
+            /// </summary>
+            [EnumMember(Value = "nDistinctJourneySessions")]
+            Ndistinctjourneysessions,
+            
+            /// <summary>
             /// Enum Njourneyactionsblocked for "nJourneyActionsBlocked"
             /// </summary>
             [EnumMember(Value = "nJourneyActionsBlocked")]

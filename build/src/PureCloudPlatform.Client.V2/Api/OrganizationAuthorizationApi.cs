@@ -508,7 +508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Client</param>
         /// <returns>Trustee</returns>
-        Trustee PutOrgauthorizationTrustee (string trusteeOrgId, Trustee body);
+        Trustee PutOrgauthorizationTrustee (string trusteeOrgId, TrustUpdate body);
 
         /// <summary>
         /// Update Org Trust
@@ -520,7 +520,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of Trustee</returns>
-        ApiResponse<Trustee> PutOrgauthorizationTrusteeWithHttpInfo (string trusteeOrgId, Trustee body);
+        ApiResponse<Trustee> PutOrgauthorizationTrusteeWithHttpInfo (string trusteeOrgId, TrustUpdate body);
         
         /// <summary>
         /// Update Trustee User Roles
@@ -1094,7 +1094,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Client</param>
         /// <returns>Task of Trustee</returns>
-        System.Threading.Tasks.Task<Trustee> PutOrgauthorizationTrusteeAsync (string trusteeOrgId, Trustee body);
+        System.Threading.Tasks.Task<Trustee> PutOrgauthorizationTrusteeAsync (string trusteeOrgId, TrustUpdate body);
 
         /// <summary>
         /// Update Org Trust
@@ -1106,7 +1106,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (Trustee)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Trustee>> PutOrgauthorizationTrusteeAsyncWithHttpInfo (string trusteeOrgId, Trustee body);
+        System.Threading.Tasks.Task<ApiResponse<Trustee>> PutOrgauthorizationTrusteeAsyncWithHttpInfo (string trusteeOrgId, TrustUpdate body);
         
         /// <summary>
         /// Update Trustee User Roles
@@ -5334,7 +5334,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Client</param>
         /// <returns>Trustee</returns>
-        public Trustee PutOrgauthorizationTrustee (string trusteeOrgId, Trustee body)
+        public Trustee PutOrgauthorizationTrustee (string trusteeOrgId, TrustUpdate body)
         {
              ApiResponse<Trustee> localVarResponse = PutOrgauthorizationTrusteeWithHttpInfo(trusteeOrgId, body);
              return localVarResponse.Data;
@@ -5347,7 +5347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of Trustee</returns>
-        public ApiResponse< Trustee > PutOrgauthorizationTrusteeWithHttpInfo (string trusteeOrgId, Trustee body)
+        public ApiResponse< Trustee > PutOrgauthorizationTrusteeWithHttpInfo (string trusteeOrgId, TrustUpdate body)
         { 
             // verify the required parameter 'trusteeOrgId' is set
             if (trusteeOrgId == null)
@@ -5439,7 +5439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Client</param>
         /// <returns>Task of Trustee</returns>
-        public async System.Threading.Tasks.Task<Trustee> PutOrgauthorizationTrusteeAsync (string trusteeOrgId, Trustee body)
+        public async System.Threading.Tasks.Task<Trustee> PutOrgauthorizationTrusteeAsync (string trusteeOrgId, TrustUpdate body)
         {
              ApiResponse<Trustee> localVarResponse = await PutOrgauthorizationTrusteeAsyncWithHttpInfo(trusteeOrgId, body);
              return localVarResponse.Data;
@@ -5453,7 +5453,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (Trustee)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Trustee>> PutOrgauthorizationTrusteeAsyncWithHttpInfo (string trusteeOrgId, Trustee body)
+        public async System.Threading.Tasks.Task<ApiResponse<Trustee>> PutOrgauthorizationTrusteeAsyncWithHttpInfo (string trusteeOrgId, TrustUpdate body)
         { 
             // verify the required parameter 'trusteeOrgId' is set
             if (trusteeOrgId == null)

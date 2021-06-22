@@ -32,6 +32,8 @@ title: CallbackBasic
 | **Wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
 | **AfterCallWork** | [**AfterCallWork**](AfterCallWork.html) | After-call work for the communication. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
+| **CallerId** | **string** | The phone number displayed to recipients of the phone call. The value should conform to the E164 format. | [optional] |
+| **CallerIdName** | **string** | The name displayed to recipients of the phone call. | [optional] |
 {: class="table table-striped"}
 
 

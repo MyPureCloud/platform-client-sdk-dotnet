@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Location object
+    /// Location object.
     /// </summary>
     [DataContract]
     public partial class ContentLocation :  IEquatable<ContentLocation>
@@ -49,11 +49,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentLocation" /> class.
         /// </summary>
-        /// <param name="Url">Location map url.</param>
-        /// <param name="Address">Location postal address.</param>
-        /// <param name="Text">Location name.</param>
-        /// <param name="Latitude">Latitude of the location.</param>
-        /// <param name="Longitude">Longitude of the location.</param>
+        /// <param name="Url">URL of the Location..</param>
+        /// <param name="Address">Location postal address..</param>
+        /// <param name="Text">Location name..</param>
+        /// <param name="Latitude">Latitude of the location..</param>
+        /// <param name="Longitude">Longitude of the location..</param>
         public ContentLocation(string Url = null, string Address = null, string Text = null, double? Latitude = null, double? Longitude = null)
         {
             this.Url = Url;
@@ -67,45 +67,45 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Location map url
+        /// URL of the Location.
         /// </summary>
-        /// <value>Location map url</value>
+        /// <value>URL of the Location.</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
         
         
         
         /// <summary>
-        /// Location postal address
+        /// Location postal address.
         /// </summary>
-        /// <value>Location postal address</value>
+        /// <value>Location postal address.</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
         
         
         
         /// <summary>
-        /// Location name
+        /// Location name.
         /// </summary>
-        /// <value>Location name</value>
+        /// <value>Location name.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
         
         
         
         /// <summary>
-        /// Latitude of the location
+        /// Latitude of the location.
         /// </summary>
-        /// <value>Latitude of the location</value>
+        /// <value>Latitude of the location.</value>
         [DataMember(Name="latitude", EmitDefaultValue=false)]
         public double? Latitude { get; set; }
         
         
         
         /// <summary>
-        /// Longitude of the location
+        /// Longitude of the location.
         /// </summary>
-        /// <value>Longitude of the location</value>
+        /// <value>Longitude of the location.</value>
         [DataMember(Name="longitude", EmitDefaultValue=false)]
         public double? Longitude { get; set; }
         

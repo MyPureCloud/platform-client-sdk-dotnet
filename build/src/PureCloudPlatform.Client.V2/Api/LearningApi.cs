@@ -376,8 +376,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The IDs of the learning assignments to be removed (optional)</param>
-        /// <returns></returns>
-        void PostLearningAssignmentsBulkremove (List<string> body = null);
+        /// <returns>LearningAssignmentBulkRemoveResponse</returns>
+        LearningAssignmentBulkRemoveResponse PostLearningAssignmentsBulkremove (List<string> body = null);
 
         /// <summary>
         /// Remove multiple Learning Assignments
@@ -387,8 +387,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The IDs of the learning assignments to be removed (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostLearningAssignmentsBulkremoveWithHttpInfo (List<string> body = null);
+        /// <returns>ApiResponse of LearningAssignmentBulkRemoveResponse</returns>
+        ApiResponse<LearningAssignmentBulkRemoveResponse> PostLearningAssignmentsBulkremoveWithHttpInfo (List<string> body = null);
         
         /// <summary>
         /// Publish a Learning module
@@ -872,8 +872,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The IDs of the learning assignments to be removed (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostLearningAssignmentsBulkremoveAsync (List<string> body = null);
+        /// <returns>Task of LearningAssignmentBulkRemoveResponse</returns>
+        System.Threading.Tasks.Task<LearningAssignmentBulkRemoveResponse> PostLearningAssignmentsBulkremoveAsync (List<string> body = null);
 
         /// <summary>
         /// Remove multiple Learning Assignments
@@ -883,8 +883,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The IDs of the learning assignments to be removed (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostLearningAssignmentsBulkremoveAsyncWithHttpInfo (List<string> body = null);
+        /// <returns>Task of ApiResponse (LearningAssignmentBulkRemoveResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LearningAssignmentBulkRemoveResponse>> PostLearningAssignmentsBulkremoveAsyncWithHttpInfo (List<string> body = null);
         
         /// <summary>
         /// Publish a Learning module
@@ -3808,10 +3808,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The IDs of the learning assignments to be removed (optional)</param>
-        /// <returns></returns>
-        public void PostLearningAssignmentsBulkremove (List<string> body = null)
+        /// <returns>LearningAssignmentBulkRemoveResponse</returns>
+        public LearningAssignmentBulkRemoveResponse PostLearningAssignmentsBulkremove (List<string> body = null)
         {
-             PostLearningAssignmentsBulkremoveWithHttpInfo(body);
+             ApiResponse<LearningAssignmentBulkRemoveResponse> localVarResponse = PostLearningAssignmentsBulkremoveWithHttpInfo(body);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -3819,8 +3820,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The IDs of the learning assignments to be removed (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostLearningAssignmentsBulkremoveWithHttpInfo (List<string> body = null)
+        /// <returns>ApiResponse of LearningAssignmentBulkRemoveResponse</returns>
+        public ApiResponse< LearningAssignmentBulkRemoveResponse > PostLearningAssignmentsBulkremoveWithHttpInfo (List<string> body = null)
         { 
 
             var localVarPath = "/api/v2/learning/assignments/bulkremove";
@@ -3890,9 +3891,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostLearningAssignmentsBulkremove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<LearningAssignmentBulkRemoveResponse>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (LearningAssignmentBulkRemoveResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningAssignmentBulkRemoveResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -3903,10 +3904,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The IDs of the learning assignments to be removed (optional)</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostLearningAssignmentsBulkremoveAsync (List<string> body = null)
+        /// <returns>Task of LearningAssignmentBulkRemoveResponse</returns>
+        public async System.Threading.Tasks.Task<LearningAssignmentBulkRemoveResponse> PostLearningAssignmentsBulkremoveAsync (List<string> body = null)
         {
-             await PostLearningAssignmentsBulkremoveAsyncWithHttpInfo(body);
+             ApiResponse<LearningAssignmentBulkRemoveResponse> localVarResponse = await PostLearningAssignmentsBulkremoveAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
 
         }
 
@@ -3915,8 +3917,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The IDs of the learning assignments to be removed (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostLearningAssignmentsBulkremoveAsyncWithHttpInfo (List<string> body = null)
+        /// <returns>Task of ApiResponse (LearningAssignmentBulkRemoveResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentBulkRemoveResponse>> PostLearningAssignmentsBulkremoveAsyncWithHttpInfo (List<string> body = null)
         { 
 
             var localVarPath = "/api/v2/learning/assignments/bulkremove";
@@ -3986,9 +3988,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostLearningAssignmentsBulkremove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<LearningAssignmentBulkRemoveResponse>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (LearningAssignmentBulkRemoveResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningAssignmentBulkRemoveResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

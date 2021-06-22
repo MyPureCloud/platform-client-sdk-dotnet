@@ -65,6 +65,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCallbackOnConversationCommand" /> class.
@@ -84,7 +94,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CountryCode">The country code to be associated with the callback numbers..</param>
         /// <param name="ValidateCallbackNumbers">Whether or not to validate the callback numbers for phone number format..</param>
         /// <param name="Data">A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }.</param>
-        public CreateCallbackOnConversationCommand(string ScriptId = null, string QueueId = null, RoutingData RoutingData = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, bool? ValidateCallbackNumbers = null, Dictionary<string, string> Data = null)
+        /// <param name="CallerId">The phone number displayed to recipients when a phone call is placed as part of the callback. Must conform to the E.164 format. May be overridden by other settings in the system such as external trunk settings. Telco support for \&quot;callerId\&quot; varies..</param>
+        /// <param name="CallerIdName">The name displayed to recipients when a phone call is placed as part of the callback. May be overridden by other settings in the system such as external trunk settings. Telco support for \&quot;callerIdName\&quot; varies..</param>
+        public CreateCallbackOnConversationCommand(string ScriptId = null, string QueueId = null, RoutingData RoutingData = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, bool? ValidateCallbackNumbers = null, Dictionary<string, string> Data = null, string CallerId = null, string CallerIdName = null)
         {
             this.ScriptId = ScriptId;
             this.QueueId = QueueId;
@@ -95,6 +107,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CountryCode = CountryCode;
             this.ValidateCallbackNumbers = ValidateCallbackNumbers;
             this.Data = Data;
+            this.CallerId = CallerId;
+            this.CallerIdName = CallerIdName;
             
         }
         
@@ -180,6 +194,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public Dictionary<string, string> Data { get; set; }
         
         
+        
+        /// <summary>
+        /// The phone number displayed to recipients when a phone call is placed as part of the callback. Must conform to the E.164 format. May be overridden by other settings in the system such as external trunk settings. Telco support for \&quot;callerId\&quot; varies.
+        /// </summary>
+        /// <value>The phone number displayed to recipients when a phone call is placed as part of the callback. Must conform to the E.164 format. May be overridden by other settings in the system such as external trunk settings. Telco support for \&quot;callerId\&quot; varies.</value>
+        [DataMember(Name="callerId", EmitDefaultValue=false)]
+        public string CallerId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The name displayed to recipients when a phone call is placed as part of the callback. May be overridden by other settings in the system such as external trunk settings. Telco support for \&quot;callerIdName\&quot; varies.
+        /// </summary>
+        /// <value>The name displayed to recipients when a phone call is placed as part of the callback. May be overridden by other settings in the system such as external trunk settings. Telco support for \&quot;callerIdName\&quot; varies.</value>
+        [DataMember(Name="callerIdName", EmitDefaultValue=false)]
+        public string CallerIdName { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -198,6 +230,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
             sb.Append("  ValidateCallbackNumbers: ").Append(ValidateCallbackNumbers).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
+            sb.Append("  CallerId: ").Append(CallerId).Append("\n");
+            sb.Append("  CallerIdName: ").Append(CallerIdName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -278,6 +312,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Data == other.Data ||
                     this.Data != null &&
                     this.Data.SequenceEqual(other.Data)
+                ) &&
+                (
+                    this.CallerId == other.CallerId ||
+                    this.CallerId != null &&
+                    this.CallerId.Equals(other.CallerId)
+                ) &&
+                (
+                    this.CallerIdName == other.CallerIdName ||
+                    this.CallerIdName != null &&
+                    this.CallerIdName.Equals(other.CallerIdName)
                 );
         }
 
@@ -319,6 +363,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Data != null)
                     hash = hash * 59 + this.Data.GetHashCode();
+                
+                if (this.CallerId != null)
+                    hash = hash * 59 + this.CallerId.GetHashCode();
+                
+                if (this.CallerIdName != null)
+                    hash = hash * 59 + this.CallerIdName.GetHashCode();
                 
                 return hash;
             }

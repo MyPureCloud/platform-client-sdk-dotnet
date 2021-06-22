@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// The postback object result of a user clicking in a button
+    /// Postback response object representing the click of a rich media button (Deprecated).
     /// </summary>
     [DataContract]
     public partial class ContentPostback :  IEquatable<ContentPostback>
@@ -45,9 +45,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentPostback" /> class.
         /// </summary>
-        /// <param name="Id">An ID assigned to the postback reply. Each object inside the content array has a unique ID..</param>
-        /// <param name="Text">The text inside the button clicked (in the structured message template).</param>
-        /// <param name="Payload">Content of the textback payload after clicking a quick reply (required).</param>
+        /// <param name="Id">An ID assigned to the button response..</param>
+        /// <param name="Text">The response text from the button click..</param>
+        /// <param name="Payload">The response payload associated with the clicked button. (required).</param>
         public ContentPostback(string Id = null, string Text = null, string Payload = null)
         {
             this.Id = Id;
@@ -59,27 +59,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// An ID assigned to the postback reply. Each object inside the content array has a unique ID.
+        /// An ID assigned to the button response.
         /// </summary>
-        /// <value>An ID assigned to the postback reply. Each object inside the content array has a unique ID.</value>
+        /// <value>An ID assigned to the button response.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// The text inside the button clicked (in the structured message template)
+        /// The response text from the button click.
         /// </summary>
-        /// <value>The text inside the button clicked (in the structured message template)</value>
+        /// <value>The response text from the button click.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
         
         
         
         /// <summary>
-        /// Content of the textback payload after clicking a quick reply
+        /// The response payload associated with the clicked button.
         /// </summary>
-        /// <value>Content of the textback payload after clicking a quick reply</value>
+        /// <value>The response payload associated with the clicked button.</value>
         [DataMember(Name="payload", EmitDefaultValue=false)]
         public string Payload { get; set; }
         

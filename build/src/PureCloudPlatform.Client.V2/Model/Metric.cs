@@ -61,8 +61,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Metric" /> class.
         /// </summary>
         /// <param name="Name">The name of this metric (required).</param>
-        /// <param name="MetricDefinitionId">The id of associated metric definition (required).</param>
-        /// <param name="Objective">Associated objective for this metric (required).</param>
+        /// <param name="MetricDefinitionId">The id of associated metric definition.</param>
+        /// <param name="Objective">Associated objective for this metric.</param>
         /// <param name="PerformanceProfileId">Performance profile id of this metric (required).</param>
         public Metric(string Name = null, string MetricDefinitionId = null, Objective Objective = null, string PerformanceProfileId = null)
         {

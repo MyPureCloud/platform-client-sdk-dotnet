@@ -246,7 +246,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get audits for conversation or recording
         /// </summary>
         /// <remarks>
-        /// Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.
+        /// Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.This endpoint is deprecated. Use following async endpoints, To query for audits POST /api/v2/quality/conversations/audits/queryTo get status of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}To get results of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}/results
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -265,7 +265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get audits for conversation or recording
         /// </summary>
         /// <remarks>
-        /// Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.
+        /// Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.This endpoint is deprecated. Use following async endpoints, To query for audits POST /api/v2/quality/conversations/audits/queryTo get status of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}To get results of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}/results
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -327,6 +327,56 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <returns>ApiResponse of List&lt;Survey&gt;</returns>
         ApiResponse<List<Survey>> GetQualityConversationSurveysWithHttpInfo (string conversationId);
+        
+        /// <summary>
+        /// Get status of audit query execution
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionId">Transaction ID</param>
+        /// <returns>QualityAuditQueryExecutionStatusResponse</returns>
+        QualityAuditQueryExecutionStatusResponse GetQualityConversationsAuditsQueryTransactionId (string transactionId);
+
+        /// <summary>
+        /// Get status of audit query execution
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionId">Transaction ID</param>
+        /// <returns>ApiResponse of QualityAuditQueryExecutionStatusResponse</returns>
+        ApiResponse<QualityAuditQueryExecutionStatusResponse> GetQualityConversationsAuditsQueryTransactionIdWithHttpInfo (string transactionId);
+        
+        /// <summary>
+        /// Get results of audit query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionId">Transaction ID</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>QualityAuditQueryExecutionResultsResponse</returns>
+        QualityAuditQueryExecutionResultsResponse GetQualityConversationsAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
+
+        /// <summary>
+        /// Get results of audit query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionId">Transaction ID</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>ApiResponse of QualityAuditQueryExecutionResultsResponse</returns>
+        ApiResponse<QualityAuditQueryExecutionResultsResponse> GetQualityConversationsAuditsQueryTransactionIdResultsWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
         
         /// <summary>
         /// Queries Evaluations and returns a paged list
@@ -1039,6 +1089,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Evaluation> PostQualityConversationEvaluationsWithHttpInfo (string conversationId, Evaluation body, string expand = null);
         
         /// <summary>
+        /// Create audit query execution
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>QualityAuditQueryExecutionStatusResponse</returns>
+        QualityAuditQueryExecutionStatusResponse PostQualityConversationsAuditsQuery (QMAuditQueryRequest body);
+
+        /// <summary>
+        /// Create audit query execution
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of QualityAuditQueryExecutionStatusResponse</returns>
+        ApiResponse<QualityAuditQueryExecutionStatusResponse> PostQualityConversationsAuditsQueryWithHttpInfo (QMAuditQueryRequest body);
+        
+        /// <summary>
         /// Score evaluation
         /// </summary>
         /// <remarks>
@@ -1596,7 +1668,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get audits for conversation or recording
         /// </summary>
         /// <remarks>
-        /// Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.
+        /// Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.This endpoint is deprecated. Use following async endpoints, To query for audits POST /api/v2/quality/conversations/audits/queryTo get status of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}To get results of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}/results
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -1615,7 +1687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get audits for conversation or recording
         /// </summary>
         /// <remarks>
-        /// Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.
+        /// Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.This endpoint is deprecated. Use following async endpoints, To query for audits POST /api/v2/quality/conversations/audits/queryTo get status of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}To get results of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}/results
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -1677,6 +1749,56 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <returns>Task of ApiResponse (List&lt;Survey&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Survey>>> GetQualityConversationSurveysAsyncWithHttpInfo (string conversationId);
+        
+        /// <summary>
+        /// Get status of audit query execution
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionId">Transaction ID</param>
+        /// <returns>Task of QualityAuditQueryExecutionStatusResponse</returns>
+        System.Threading.Tasks.Task<QualityAuditQueryExecutionStatusResponse> GetQualityConversationsAuditsQueryTransactionIdAsync (string transactionId);
+
+        /// <summary>
+        /// Get status of audit query execution
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionId">Transaction ID</param>
+        /// <returns>Task of ApiResponse (QualityAuditQueryExecutionStatusResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QualityAuditQueryExecutionStatusResponse>> GetQualityConversationsAuditsQueryTransactionIdAsyncWithHttpInfo (string transactionId);
+        
+        /// <summary>
+        /// Get results of audit query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionId">Transaction ID</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>Task of QualityAuditQueryExecutionResultsResponse</returns>
+        System.Threading.Tasks.Task<QualityAuditQueryExecutionResultsResponse> GetQualityConversationsAuditsQueryTransactionIdResultsAsync (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
+
+        /// <summary>
+        /// Get results of audit query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionId">Transaction ID</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ApiResponse (QualityAuditQueryExecutionResultsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QualityAuditQueryExecutionResultsResponse>> GetQualityConversationsAuditsQueryTransactionIdResultsAsyncWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
         
         /// <summary>
         /// Queries Evaluations and returns a paged list
@@ -2387,6 +2509,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostQualityConversationEvaluationsAsyncWithHttpInfo (string conversationId, Evaluation body, string expand = null);
+        
+        /// <summary>
+        /// Create audit query execution
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of QualityAuditQueryExecutionStatusResponse</returns>
+        System.Threading.Tasks.Task<QualityAuditQueryExecutionStatusResponse> PostQualityConversationsAuditsQueryAsync (QMAuditQueryRequest body);
+
+        /// <summary>
+        /// Create audit query execution
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (QualityAuditQueryExecutionStatusResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QualityAuditQueryExecutionStatusResponse>> PostQualityConversationsAuditsQueryAsyncWithHttpInfo (QMAuditQueryRequest body);
         
         /// <summary>
         /// Score evaluation
@@ -4500,7 +4644,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get audits for conversation or recording Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.
+        /// Get audits for conversation or recording Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.This endpoint is deprecated. Use following async endpoints, To query for audits POST /api/v2/quality/conversations/audits/queryTo get status of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}To get results of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}/results
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -4520,7 +4664,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get audits for conversation or recording Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.
+        /// Get audits for conversation or recording Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.This endpoint is deprecated. Use following async endpoints, To query for audits POST /api/v2/quality/conversations/audits/queryTo get status of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}To get results of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}/results
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -4619,7 +4763,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get audits for conversation or recording Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.
+        /// Get audits for conversation or recording Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.This endpoint is deprecated. Use following async endpoints, To query for audits POST /api/v2/quality/conversations/audits/queryTo get status of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}To get results of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}/results
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -4640,7 +4784,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get audits for conversation or recording Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.
+        /// Get audits for conversation or recording Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.This endpoint is deprecated. Use following async endpoints, To query for audits POST /api/v2/quality/conversations/audits/queryTo get status of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}To get results of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}/results
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -5139,6 +5283,410 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<List<Survey>>(localVarStatusCode,
                 localVarHeaders,
                 (List<Survey>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Survey>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get status of audit query execution 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionId">Transaction ID</param>
+        /// <returns>QualityAuditQueryExecutionStatusResponse</returns>
+        public QualityAuditQueryExecutionStatusResponse GetQualityConversationsAuditsQueryTransactionId (string transactionId)
+        {
+             ApiResponse<QualityAuditQueryExecutionStatusResponse> localVarResponse = GetQualityConversationsAuditsQueryTransactionIdWithHttpInfo(transactionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get status of audit query execution 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionId">Transaction ID</param>
+        /// <returns>ApiResponse of QualityAuditQueryExecutionStatusResponse</returns>
+        public ApiResponse< QualityAuditQueryExecutionStatusResponse > GetQualityConversationsAuditsQueryTransactionIdWithHttpInfo (string transactionId)
+        { 
+            // verify the required parameter 'transactionId' is set
+            if (transactionId == null)
+                throw new ApiException(400, "Missing required parameter 'transactionId' when calling QualityApi->GetQualityConversationsAuditsQueryTransactionId");
+
+            var localVarPath = "/api/v2/quality/conversations/audits/query/{transactionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (transactionId != null) localVarPathParams.Add("transactionId", this.Configuration.ApiClient.ParameterToString(transactionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityConversationsAuditsQueryTransactionId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityConversationsAuditsQueryTransactionId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QualityAuditQueryExecutionStatusResponse>(localVarStatusCode,
+                localVarHeaders,
+                (QualityAuditQueryExecutionStatusResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualityAuditQueryExecutionStatusResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get status of audit query execution 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionId">Transaction ID</param>
+        /// <returns>Task of QualityAuditQueryExecutionStatusResponse</returns>
+        public async System.Threading.Tasks.Task<QualityAuditQueryExecutionStatusResponse> GetQualityConversationsAuditsQueryTransactionIdAsync (string transactionId)
+        {
+             ApiResponse<QualityAuditQueryExecutionStatusResponse> localVarResponse = await GetQualityConversationsAuditsQueryTransactionIdAsyncWithHttpInfo(transactionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get status of audit query execution 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionId">Transaction ID</param>
+        /// <returns>Task of ApiResponse (QualityAuditQueryExecutionStatusResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QualityAuditQueryExecutionStatusResponse>> GetQualityConversationsAuditsQueryTransactionIdAsyncWithHttpInfo (string transactionId)
+        { 
+            // verify the required parameter 'transactionId' is set
+            if (transactionId == null)
+                throw new ApiException(400, "Missing required parameter 'transactionId' when calling QualityApi->GetQualityConversationsAuditsQueryTransactionId");
+            
+
+            var localVarPath = "/api/v2/quality/conversations/audits/query/{transactionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (transactionId != null) localVarPathParams.Add("transactionId", this.Configuration.ApiClient.ParameterToString(transactionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityConversationsAuditsQueryTransactionId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityConversationsAuditsQueryTransactionId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QualityAuditQueryExecutionStatusResponse>(localVarStatusCode,
+                localVarHeaders,
+                (QualityAuditQueryExecutionStatusResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualityAuditQueryExecutionStatusResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get results of audit query 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionId">Transaction ID</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>QualityAuditQueryExecutionResultsResponse</returns>
+        public QualityAuditQueryExecutionResultsResponse GetQualityConversationsAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
+        {
+             ApiResponse<QualityAuditQueryExecutionResultsResponse> localVarResponse = GetQualityConversationsAuditsQueryTransactionIdResultsWithHttpInfo(transactionId, cursor, pageSize, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get results of audit query 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionId">Transaction ID</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>ApiResponse of QualityAuditQueryExecutionResultsResponse</returns>
+        public ApiResponse< QualityAuditQueryExecutionResultsResponse > GetQualityConversationsAuditsQueryTransactionIdResultsWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
+        { 
+            // verify the required parameter 'transactionId' is set
+            if (transactionId == null)
+                throw new ApiException(400, "Missing required parameter 'transactionId' when calling QualityApi->GetQualityConversationsAuditsQueryTransactionIdResults");
+
+            var localVarPath = "/api/v2/quality/conversations/audits/query/{transactionId}/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (transactionId != null) localVarPathParams.Add("transactionId", this.Configuration.ApiClient.ParameterToString(transactionId));
+
+            // Query params
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityConversationsAuditsQueryTransactionIdResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityConversationsAuditsQueryTransactionIdResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QualityAuditQueryExecutionResultsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (QualityAuditQueryExecutionResultsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualityAuditQueryExecutionResultsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get results of audit query 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionId">Transaction ID</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>Task of QualityAuditQueryExecutionResultsResponse</returns>
+        public async System.Threading.Tasks.Task<QualityAuditQueryExecutionResultsResponse> GetQualityConversationsAuditsQueryTransactionIdResultsAsync (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
+        {
+             ApiResponse<QualityAuditQueryExecutionResultsResponse> localVarResponse = await GetQualityConversationsAuditsQueryTransactionIdResultsAsyncWithHttpInfo(transactionId, cursor, pageSize, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get results of audit query 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionId">Transaction ID</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ApiResponse (QualityAuditQueryExecutionResultsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QualityAuditQueryExecutionResultsResponse>> GetQualityConversationsAuditsQueryTransactionIdResultsAsyncWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
+        { 
+            // verify the required parameter 'transactionId' is set
+            if (transactionId == null)
+                throw new ApiException(400, "Missing required parameter 'transactionId' when calling QualityApi->GetQualityConversationsAuditsQueryTransactionIdResults");
+            
+
+            var localVarPath = "/api/v2/quality/conversations/audits/query/{transactionId}/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (transactionId != null) localVarPathParams.Add("transactionId", this.Configuration.ApiClient.ParameterToString(transactionId));
+
+            // Query params
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityConversationsAuditsQueryTransactionIdResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityConversationsAuditsQueryTransactionIdResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QualityAuditQueryExecutionResultsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (QualityAuditQueryExecutionResultsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualityAuditQueryExecutionResultsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -10557,6 +11105,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Evaluation>(localVarStatusCode,
                 localVarHeaders,
                 (Evaluation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Evaluation)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Create audit query execution 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>QualityAuditQueryExecutionStatusResponse</returns>
+        public QualityAuditQueryExecutionStatusResponse PostQualityConversationsAuditsQuery (QMAuditQueryRequest body)
+        {
+             ApiResponse<QualityAuditQueryExecutionStatusResponse> localVarResponse = PostQualityConversationsAuditsQueryWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create audit query execution 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of QualityAuditQueryExecutionStatusResponse</returns>
+        public ApiResponse< QualityAuditQueryExecutionStatusResponse > PostQualityConversationsAuditsQueryWithHttpInfo (QMAuditQueryRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityConversationsAuditsQuery");
+
+            var localVarPath = "/api/v2/quality/conversations/audits/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualityConversationsAuditsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualityConversationsAuditsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QualityAuditQueryExecutionStatusResponse>(localVarStatusCode,
+                localVarHeaders,
+                (QualityAuditQueryExecutionStatusResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualityAuditQueryExecutionStatusResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Create audit query execution 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of QualityAuditQueryExecutionStatusResponse</returns>
+        public async System.Threading.Tasks.Task<QualityAuditQueryExecutionStatusResponse> PostQualityConversationsAuditsQueryAsync (QMAuditQueryRequest body)
+        {
+             ApiResponse<QualityAuditQueryExecutionStatusResponse> localVarResponse = await PostQualityConversationsAuditsQueryAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create audit query execution 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (QualityAuditQueryExecutionStatusResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QualityAuditQueryExecutionStatusResponse>> PostQualityConversationsAuditsQueryAsyncWithHttpInfo (QMAuditQueryRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityConversationsAuditsQuery");
+            
+
+            var localVarPath = "/api/v2/quality/conversations/audits/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualityConversationsAuditsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualityConversationsAuditsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QualityAuditQueryExecutionStatusResponse>(localVarStatusCode,
+                localVarHeaders,
+                (QualityAuditQueryExecutionStatusResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualityAuditQueryExecutionStatusResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

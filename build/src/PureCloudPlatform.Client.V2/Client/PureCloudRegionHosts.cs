@@ -28,7 +28,11 @@ namespace PureCloudPlatform.Client.V2.Client
         [Description("https://api.apne2.pure.cloud")]
         ap_northeast_2,
         [Description("https://api.euw2.pure.cloud")]
-        eu_west_2
+        eu_west_2,
+        [Description("https://api.aps1.pure.cloud")]
+        ap_south_1,
+        [Description("https://api.use2.us-gov-pure.cloud")]
+        us_east_2
 
     }
 

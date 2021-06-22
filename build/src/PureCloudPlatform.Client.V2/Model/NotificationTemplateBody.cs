@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Template body object
+    /// Template body object.
     /// </summary>
     [DataContract]
     public partial class NotificationTemplateBody :  IEquatable<NotificationTemplateBody>
@@ -40,8 +40,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificationTemplateBody" /> class.
         /// </summary>
-        /// <param name="Text">Body text. For WhatsApp, ignored.</param>
-        /// <param name="Parameters">Template parameters for placeholders in template (required).</param>
+        /// <param name="Text">Body text. For WhatsApp, ignored..</param>
+        /// <param name="Parameters">Template parameters for placeholders in template. (required).</param>
         public NotificationTemplateBody(string Text = null, List<NotificationTemplateParameter> Parameters = null)
         {
             this.Text = Text;
@@ -52,18 +52,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Body text. For WhatsApp, ignored
+        /// Body text. For WhatsApp, ignored.
         /// </summary>
-        /// <value>Body text. For WhatsApp, ignored</value>
+        /// <value>Body text. For WhatsApp, ignored.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
         
         
         
         /// <summary>
-        /// Template parameters for placeholders in template
+        /// Template parameters for placeholders in template.
         /// </summary>
-        /// <value>Template parameters for placeholders in template</value>
+        /// <value>Template parameters for placeholders in template.</value>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public List<NotificationTemplateParameter> Parameters { get; set; }
         

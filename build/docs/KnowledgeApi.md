@@ -742,7 +742,7 @@ namespace Example
 
 <a name="getknowledgeknowledgebases"></a>
 
-## [**KnowledgeBaseListing**](KnowledgeBaseListing.html) GetKnowledgeKnowledgebases (string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
+## [**KnowledgeBaseListing**](KnowledgeBaseListing.html) GetKnowledgeKnowledgebases (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null)
 
 
 
@@ -781,11 +781,12 @@ namespace Example
             var limit = limit_example;  // string | Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var name = name_example;  // string | Name of the KnowledgeBase to filter. (optional) 
+            var coreLanguage = coreLanguage_example;  // string | To filter knowledgebases by corelanguage. (optional) 
 
             try
             { 
                 // Get knowledge bases
-                KnowledgeBaseListing result = apiInstance.GetKnowledgeKnowledgebases(before, after, limit, pageSize, name);
+                KnowledgeBaseListing result = apiInstance.GetKnowledgeKnowledgebases(before, after, limit, pageSize, name, coreLanguage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -807,6 +808,7 @@ namespace Example
 | **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **name** | **string**| Name of the KnowledgeBase to filter. | [optional]  |
+| **coreLanguage** | **string**| To filter knowledgebases by corelanguage. | [optional] <br />**Values**: en-US, de-DE |
 {: class="table table-striped"}
 
 ### Return type

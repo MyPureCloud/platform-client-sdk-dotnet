@@ -87,24 +87,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="User">User.</param>
         /// <param name="JobId">JobId.</param>
-        /// <param name="Level">Level.</param>
-        /// <param name="Entity">Entity.</param>
-        /// <param name="Timestamp">Timestamp.</param>
         /// <param name="Action">Action.</param>
-        /// <param name="Status">Status.</param>
+        /// <param name="Entity">Entity.</param>
+        /// <param name="Level">Level.</param>
+        /// <param name="Timestamp">Timestamp.</param>
         /// <param name="Changes">Changes.</param>
+        /// <param name="Status">Status.</param>
         /// <param name="EntityType">EntityType.</param>
-        public QualityAudit(string Name = null, User User = null, string JobId = null, string Level = null, AuditEntity Entity = null, string Timestamp = null, string Action = null, string Status = null, List<Change> Changes = null, string EntityType = null)
+        public QualityAudit(string Name = null, User User = null, string JobId = null, string Action = null, AuditEntity Entity = null, string Level = null, string Timestamp = null, List<Change> Changes = null, string Status = null, string EntityType = null)
         {
             this.Name = Name;
             this.User = User;
             this.JobId = JobId;
-            this.Level = Level;
-            this.Entity = Entity;
-            this.Timestamp = Timestamp;
             this.Action = Action;
-            this.Status = Status;
+            this.Entity = Entity;
+            this.Level = Level;
+            this.Timestamp = Timestamp;
             this.Changes = Changes;
+            this.Status = Status;
             this.EntityType = EntityType;
             
         }
@@ -145,10 +145,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Level
+        /// Gets or Sets Action
         /// </summary>
-        [DataMember(Name="level", EmitDefaultValue=false)]
-        public string Level { get; set; }
+        [DataMember(Name="action", EmitDefaultValue=false)]
+        public string Action { get; set; }
         
         
         
@@ -161,6 +161,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets Level
+        /// </summary>
+        [DataMember(Name="level", EmitDefaultValue=false)]
+        public string Level { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Timestamp
         /// </summary>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
@@ -169,10 +177,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Action
+        /// Gets or Sets Changes
         /// </summary>
-        [DataMember(Name="action", EmitDefaultValue=false)]
-        public string Action { get; set; }
+        [DataMember(Name="changes", EmitDefaultValue=false)]
+        public List<Change> Changes { get; set; }
         
         
         
@@ -181,14 +189,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Changes
-        /// </summary>
-        [DataMember(Name="changes", EmitDefaultValue=false)]
-        public List<Change> Changes { get; set; }
         
         
         
@@ -221,12 +221,12 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  JobId: ").Append(JobId).Append("\n");
-            sb.Append("  Level: ").Append(Level).Append("\n");
-            sb.Append("  Entity: ").Append(Entity).Append("\n");
-            sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  Entity: ").Append(Entity).Append("\n");
+            sb.Append("  Level: ").Append(Level).Append("\n");
+            sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  Changes: ").Append(Changes).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -286,9 +286,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.JobId.Equals(other.JobId)
                 ) &&
                 (
-                    this.Level == other.Level ||
-                    this.Level != null &&
-                    this.Level.Equals(other.Level)
+                    this.Action == other.Action ||
+                    this.Action != null &&
+                    this.Action.Equals(other.Action)
                 ) &&
                 (
                     this.Entity == other.Entity ||
@@ -296,24 +296,24 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Entity.Equals(other.Entity)
                 ) &&
                 (
+                    this.Level == other.Level ||
+                    this.Level != null &&
+                    this.Level.Equals(other.Level)
+                ) &&
+                (
                     this.Timestamp == other.Timestamp ||
                     this.Timestamp != null &&
                     this.Timestamp.Equals(other.Timestamp)
                 ) &&
                 (
-                    this.Action == other.Action ||
-                    this.Action != null &&
-                    this.Action.Equals(other.Action)
+                    this.Changes == other.Changes ||
+                    this.Changes != null &&
+                    this.Changes.SequenceEqual(other.Changes)
                 ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) &&
-                (
-                    this.Changes == other.Changes ||
-                    this.Changes != null &&
-                    this.Changes.SequenceEqual(other.Changes)
                 ) &&
                 (
                     this.EntityType == other.EntityType ||
@@ -351,23 +351,23 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.JobId != null)
                     hash = hash * 59 + this.JobId.GetHashCode();
                 
-                if (this.Level != null)
-                    hash = hash * 59 + this.Level.GetHashCode();
+                if (this.Action != null)
+                    hash = hash * 59 + this.Action.GetHashCode();
                 
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
                 
+                if (this.Level != null)
+                    hash = hash * 59 + this.Level.GetHashCode();
+                
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
                 
-                if (this.Action != null)
-                    hash = hash * 59 + this.Action.GetHashCode();
+                if (this.Changes != null)
+                    hash = hash * 59 + this.Changes.GetHashCode();
                 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
-                if (this.Changes != null)
-                    hash = hash * 59 + this.Changes.GetHashCode();
                 
                 if (this.EntityType != null)
                     hash = hash * 59 + this.EntityType.GetHashCode();

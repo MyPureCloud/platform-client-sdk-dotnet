@@ -181,6 +181,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo (string integrationId);
         
         /// <summary>
+        /// Delete an Open messaging integration
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns></returns>
+        void DeleteConversationsMessagingIntegrationsOpenIntegrationId (string integrationId);
+
+        /// <summary>
+        /// Delete an Open messaging integration
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteConversationsMessagingIntegrationsOpenIntegrationIdWithHttpInfo (string integrationId);
+        
+        /// <summary>
         /// Delete a Twitter messaging integration
         /// </summary>
         /// <remarks>
@@ -1405,6 +1427,58 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<LineIntegration> GetConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo (string integrationId, string expand = null);
         
         /// <summary>
+        /// Get a list of Open messaging integrations
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <returns>OpenIntegrationEntityListing</returns>
+        OpenIntegrationEntityListing GetConversationsMessagingIntegrationsOpen (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
+
+        /// <summary>
+        /// Get a list of Open messaging integrations
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <returns>ApiResponse of OpenIntegrationEntityListing</returns>
+        ApiResponse<OpenIntegrationEntityListing> GetConversationsMessagingIntegrationsOpenWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
+        
+        /// <summary>
+        /// Get an Open messaging integration
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>OpenIntegration</returns>
+        OpenIntegration GetConversationsMessagingIntegrationsOpenIntegrationId (string integrationId, string expand = null);
+
+        /// <summary>
+        /// Get an Open messaging integration
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>ApiResponse of OpenIntegration</returns>
+        ApiResponse<OpenIntegration> GetConversationsMessagingIntegrationsOpenIntegrationIdWithHttpInfo (string integrationId, string expand = null);
+        
+        /// <summary>
         /// Get a list of Twitter Integrations
         /// </summary>
         /// <remarks>
@@ -2279,6 +2353,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">FacebookIntegrationUpdateRequest</param>
         /// <returns>ApiResponse of FacebookIntegration</returns>
         ApiResponse<FacebookIntegration> PatchConversationsMessagingIntegrationsFacebookIntegrationIdWithHttpInfo (string integrationId, FacebookIntegrationUpdateRequest body);
+        
+        /// <summary>
+        /// Update an Open messaging integration
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">OpenIntegrationUpdateRequest</param>
+        /// <returns>OpenIntegration</returns>
+        OpenIntegration PatchConversationsMessagingIntegrationsOpenIntegrationId (string integrationId, OpenIntegrationUpdateRequest body);
+
+        /// <summary>
+        /// Update an Open messaging integration
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">OpenIntegrationUpdateRequest</param>
+        /// <returns>ApiResponse of OpenIntegration</returns>
+        ApiResponse<OpenIntegration> PatchConversationsMessagingIntegrationsOpenIntegrationIdWithHttpInfo (string integrationId, OpenIntegrationUpdateRequest body);
         
         /// <summary>
         /// Update Twitter messaging integration
@@ -3197,6 +3295,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SendAgentlessOutboundMessageResponse> PostConversationsMessagesAgentlessWithHttpInfo (SendAgentlessOutboundMessageRequest body);
         
         /// <summary>
+        /// Send an inbound Open Message
+        /// </summary>
+        /// <remarks>
+        /// Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">NormalizedMessage</param>
+        /// <returns>OpenNormalizedMessage</returns>
+        OpenNormalizedMessage PostConversationsMessagesInboundOpen (OpenNormalizedMessage body);
+
+        /// <summary>
+        /// Send an inbound Open Message
+        /// </summary>
+        /// <remarks>
+        /// Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">NormalizedMessage</param>
+        /// <returns>ApiResponse of OpenNormalizedMessage</returns>
+        ApiResponse<OpenNormalizedMessage> PostConversationsMessagesInboundOpenWithHttpInfo (OpenNormalizedMessage body);
+        
+        /// <summary>
         /// Create a Facebook Integration
         /// </summary>
         /// <remarks>
@@ -3239,6 +3359,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>ApiResponse of LineIntegration</returns>
         ApiResponse<LineIntegration> PostConversationsMessagingIntegrationsLineWithHttpInfo (LineIntegrationRequest body);
+        
+        /// <summary>
+        /// Create an Open messaging integration
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">OpenIntegrationRequest</param>
+        /// <returns>OpenIntegration</returns>
+        OpenIntegration PostConversationsMessagingIntegrationsOpen (OpenIntegrationRequest body);
+
+        /// <summary>
+        /// Create an Open messaging integration
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">OpenIntegrationRequest</param>
+        /// <returns>ApiResponse of OpenIntegration</returns>
+        ApiResponse<OpenIntegration> PostConversationsMessagingIntegrationsOpenWithHttpInfo (OpenIntegrationRequest body);
         
         /// <summary>
         /// Create a Twitter Integration
@@ -3573,6 +3715,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">Integration ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo (string integrationId);
+        
+        /// <summary>
+        /// Delete an Open messaging integration
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteConversationsMessagingIntegrationsOpenIntegrationIdAsync (string integrationId);
+
+        /// <summary>
+        /// Delete an Open messaging integration
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsMessagingIntegrationsOpenIntegrationIdAsyncWithHttpInfo (string integrationId);
         
         /// <summary>
         /// Delete a Twitter messaging integration
@@ -4799,6 +4963,58 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<LineIntegration>> GetConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null);
         
         /// <summary>
+        /// Get a list of Open messaging integrations
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <returns>Task of OpenIntegrationEntityListing</returns>
+        System.Threading.Tasks.Task<OpenIntegrationEntityListing> GetConversationsMessagingIntegrationsOpenAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
+
+        /// <summary>
+        /// Get a list of Open messaging integrations
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <returns>Task of ApiResponse (OpenIntegrationEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OpenIntegrationEntityListing>> GetConversationsMessagingIntegrationsOpenAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null);
+        
+        /// <summary>
+        /// Get an Open messaging integration
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>Task of OpenIntegration</returns>
+        System.Threading.Tasks.Task<OpenIntegration> GetConversationsMessagingIntegrationsOpenIntegrationIdAsync (string integrationId, string expand = null);
+
+        /// <summary>
+        /// Get an Open messaging integration
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>Task of ApiResponse (OpenIntegration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OpenIntegration>> GetConversationsMessagingIntegrationsOpenIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null);
+        
+        /// <summary>
         /// Get a list of Twitter Integrations
         /// </summary>
         /// <remarks>
@@ -5673,6 +5889,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">FacebookIntegrationUpdateRequest</param>
         /// <returns>Task of ApiResponse (FacebookIntegration)</returns>
         System.Threading.Tasks.Task<ApiResponse<FacebookIntegration>> PatchConversationsMessagingIntegrationsFacebookIntegrationIdAsyncWithHttpInfo (string integrationId, FacebookIntegrationUpdateRequest body);
+        
+        /// <summary>
+        /// Update an Open messaging integration
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">OpenIntegrationUpdateRequest</param>
+        /// <returns>Task of OpenIntegration</returns>
+        System.Threading.Tasks.Task<OpenIntegration> PatchConversationsMessagingIntegrationsOpenIntegrationIdAsync (string integrationId, OpenIntegrationUpdateRequest body);
+
+        /// <summary>
+        /// Update an Open messaging integration
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">OpenIntegrationUpdateRequest</param>
+        /// <returns>Task of ApiResponse (OpenIntegration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OpenIntegration>> PatchConversationsMessagingIntegrationsOpenIntegrationIdAsyncWithHttpInfo (string integrationId, OpenIntegrationUpdateRequest body);
         
         /// <summary>
         /// Update Twitter messaging integration
@@ -6591,6 +6831,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SendAgentlessOutboundMessageResponse>> PostConversationsMessagesAgentlessAsyncWithHttpInfo (SendAgentlessOutboundMessageRequest body);
         
         /// <summary>
+        /// Send an inbound Open Message
+        /// </summary>
+        /// <remarks>
+        /// Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">NormalizedMessage</param>
+        /// <returns>Task of OpenNormalizedMessage</returns>
+        System.Threading.Tasks.Task<OpenNormalizedMessage> PostConversationsMessagesInboundOpenAsync (OpenNormalizedMessage body);
+
+        /// <summary>
+        /// Send an inbound Open Message
+        /// </summary>
+        /// <remarks>
+        /// Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">NormalizedMessage</param>
+        /// <returns>Task of ApiResponse (OpenNormalizedMessage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OpenNormalizedMessage>> PostConversationsMessagesInboundOpenAsyncWithHttpInfo (OpenNormalizedMessage body);
+        
+        /// <summary>
         /// Create a Facebook Integration
         /// </summary>
         /// <remarks>
@@ -6633,6 +6895,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>Task of ApiResponse (LineIntegration)</returns>
         System.Threading.Tasks.Task<ApiResponse<LineIntegration>> PostConversationsMessagingIntegrationsLineAsyncWithHttpInfo (LineIntegrationRequest body);
+        
+        /// <summary>
+        /// Create an Open messaging integration
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">OpenIntegrationRequest</param>
+        /// <returns>Task of OpenIntegration</returns>
+        System.Threading.Tasks.Task<OpenIntegration> PostConversationsMessagingIntegrationsOpenAsync (OpenIntegrationRequest body);
+
+        /// <summary>
+        /// Create an Open messaging integration
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">OpenIntegrationRequest</param>
+        /// <returns>Task of ApiResponse (OpenIntegration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OpenIntegration>> PostConversationsMessagingIntegrationsOpenAsyncWithHttpInfo (OpenIntegrationRequest body);
         
         /// <summary>
         /// Create a Twitter Integration
@@ -8284,6 +8568,197 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsLineIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsLineIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete an Open messaging integration See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns></returns>
+        public void DeleteConversationsMessagingIntegrationsOpenIntegrationId (string integrationId)
+        {
+             DeleteConversationsMessagingIntegrationsOpenIntegrationIdWithHttpInfo(integrationId);
+        }
+
+        /// <summary>
+        /// Delete an Open messaging integration See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteConversationsMessagingIntegrationsOpenIntegrationIdWithHttpInfo (string integrationId)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsOpenIntegrationId");
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/open/{integrationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete an Open messaging integration See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteConversationsMessagingIntegrationsOpenIntegrationIdAsync (string integrationId)
+        {
+             await DeleteConversationsMessagingIntegrationsOpenIntegrationIdAsyncWithHttpInfo(integrationId);
+
+        }
+
+        /// <summary>
+        /// Delete an Open messaging integration See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsMessagingIntegrationsOpenIntegrationIdAsyncWithHttpInfo (string integrationId)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsOpenIntegrationId");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/open/{integrationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -18618,6 +19093,409 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get a list of Open messaging integrations See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <returns>OpenIntegrationEntityListing</returns>
+        public OpenIntegrationEntityListing GetConversationsMessagingIntegrationsOpen (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
+        {
+             ApiResponse<OpenIntegrationEntityListing> localVarResponse = GetConversationsMessagingIntegrationsOpenWithHttpInfo(pageSize, pageNumber, expand, supportedContentId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of Open messaging integrations See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <returns>ApiResponse of OpenIntegrationEntityListing</returns>
+        public ApiResponse< OpenIntegrationEntityListing > GetConversationsMessagingIntegrationsOpenWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
+        { 
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/open";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (supportedContentId != null) localVarQueryParams.Add(new Tuple<string, string>("supportedContent.id", this.Configuration.ApiClient.ParameterToString(supportedContentId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsOpen: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsOpen: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OpenIntegrationEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (OpenIntegrationEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpenIntegrationEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a list of Open messaging integrations See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <returns>Task of OpenIntegrationEntityListing</returns>
+        public async System.Threading.Tasks.Task<OpenIntegrationEntityListing> GetConversationsMessagingIntegrationsOpenAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
+        {
+             ApiResponse<OpenIntegrationEntityListing> localVarResponse = await GetConversationsMessagingIntegrationsOpenAsyncWithHttpInfo(pageSize, pageNumber, expand, supportedContentId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of Open messaging integrations See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <returns>Task of ApiResponse (OpenIntegrationEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OpenIntegrationEntityListing>> GetConversationsMessagingIntegrationsOpenAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
+        { 
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/open";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (supportedContentId != null) localVarQueryParams.Add(new Tuple<string, string>("supportedContent.id", this.Configuration.ApiClient.ParameterToString(supportedContentId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsOpen: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsOpen: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OpenIntegrationEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (OpenIntegrationEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpenIntegrationEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get an Open messaging integration See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>OpenIntegration</returns>
+        public OpenIntegration GetConversationsMessagingIntegrationsOpenIntegrationId (string integrationId, string expand = null)
+        {
+             ApiResponse<OpenIntegration> localVarResponse = GetConversationsMessagingIntegrationsOpenIntegrationIdWithHttpInfo(integrationId, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an Open messaging integration See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>ApiResponse of OpenIntegration</returns>
+        public ApiResponse< OpenIntegration > GetConversationsMessagingIntegrationsOpenIntegrationIdWithHttpInfo (string integrationId, string expand = null)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationsOpenIntegrationId");
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/open/{integrationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OpenIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (OpenIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpenIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get an Open messaging integration See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>Task of OpenIntegration</returns>
+        public async System.Threading.Tasks.Task<OpenIntegration> GetConversationsMessagingIntegrationsOpenIntegrationIdAsync (string integrationId, string expand = null)
+        {
+             ApiResponse<OpenIntegration> localVarResponse = await GetConversationsMessagingIntegrationsOpenIntegrationIdAsyncWithHttpInfo(integrationId, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an Open messaging integration See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>Task of ApiResponse (OpenIntegration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OpenIntegration>> GetConversationsMessagingIntegrationsOpenIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationsOpenIntegrationId");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/open/{integrationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OpenIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (OpenIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpenIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get a list of Twitter Integrations 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -26089,6 +26967,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<FacebookIntegration>(localVarStatusCode,
                 localVarHeaders,
                 (FacebookIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FacebookIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update an Open messaging integration See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">OpenIntegrationUpdateRequest</param>
+        /// <returns>OpenIntegration</returns>
+        public OpenIntegration PatchConversationsMessagingIntegrationsOpenIntegrationId (string integrationId, OpenIntegrationUpdateRequest body)
+        {
+             ApiResponse<OpenIntegration> localVarResponse = PatchConversationsMessagingIntegrationsOpenIntegrationIdWithHttpInfo(integrationId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update an Open messaging integration See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">OpenIntegrationUpdateRequest</param>
+        /// <returns>ApiResponse of OpenIntegration</returns>
+        public ApiResponse< OpenIntegration > PatchConversationsMessagingIntegrationsOpenIntegrationIdWithHttpInfo (string integrationId, OpenIntegrationUpdateRequest body)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->PatchConversationsMessagingIntegrationsOpenIntegrationId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsOpenIntegrationId");
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/open/{integrationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OpenIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (OpenIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpenIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update an Open messaging integration See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">OpenIntegrationUpdateRequest</param>
+        /// <returns>Task of OpenIntegration</returns>
+        public async System.Threading.Tasks.Task<OpenIntegration> PatchConversationsMessagingIntegrationsOpenIntegrationIdAsync (string integrationId, OpenIntegrationUpdateRequest body)
+        {
+             ApiResponse<OpenIntegration> localVarResponse = await PatchConversationsMessagingIntegrationsOpenIntegrationIdAsyncWithHttpInfo(integrationId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update an Open messaging integration See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">OpenIntegrationUpdateRequest</param>
+        /// <returns>Task of ApiResponse (OpenIntegration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OpenIntegration>> PatchConversationsMessagingIntegrationsOpenIntegrationIdAsyncWithHttpInfo (string integrationId, OpenIntegrationUpdateRequest body)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->PatchConversationsMessagingIntegrationsOpenIntegrationId");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsOpenIntegrationId");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/open/{integrationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OpenIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (OpenIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpenIntegration)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -34157,6 +35249,207 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Send an inbound Open Message Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">NormalizedMessage</param>
+        /// <returns>OpenNormalizedMessage</returns>
+        public OpenNormalizedMessage PostConversationsMessagesInboundOpen (OpenNormalizedMessage body)
+        {
+             ApiResponse<OpenNormalizedMessage> localVarResponse = PostConversationsMessagesInboundOpenWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Send an inbound Open Message Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">NormalizedMessage</param>
+        /// <returns>ApiResponse of OpenNormalizedMessage</returns>
+        public ApiResponse< OpenNormalizedMessage > PostConversationsMessagesInboundOpenWithHttpInfo (OpenNormalizedMessage body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagesInboundOpen");
+
+            var localVarPath = "/api/v2/conversations/messages/inbound/open";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagesInboundOpen: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagesInboundOpen: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OpenNormalizedMessage>(localVarStatusCode,
+                localVarHeaders,
+                (OpenNormalizedMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpenNormalizedMessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Send an inbound Open Message Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">NormalizedMessage</param>
+        /// <returns>Task of OpenNormalizedMessage</returns>
+        public async System.Threading.Tasks.Task<OpenNormalizedMessage> PostConversationsMessagesInboundOpenAsync (OpenNormalizedMessage body)
+        {
+             ApiResponse<OpenNormalizedMessage> localVarResponse = await PostConversationsMessagesInboundOpenAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Send an inbound Open Message Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">NormalizedMessage</param>
+        /// <returns>Task of ApiResponse (OpenNormalizedMessage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OpenNormalizedMessage>> PostConversationsMessagesInboundOpenAsyncWithHttpInfo (OpenNormalizedMessage body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagesInboundOpen");
+            
+
+            var localVarPath = "/api/v2/conversations/messages/inbound/open";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagesInboundOpen: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagesInboundOpen: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OpenNormalizedMessage>(localVarStatusCode,
+                localVarHeaders,
+                (OpenNormalizedMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpenNormalizedMessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Create a Facebook Integration 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -34552,6 +35845,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<LineIntegration>(localVarStatusCode,
                 localVarHeaders,
                 (LineIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LineIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Create an Open messaging integration See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">OpenIntegrationRequest</param>
+        /// <returns>OpenIntegration</returns>
+        public OpenIntegration PostConversationsMessagingIntegrationsOpen (OpenIntegrationRequest body)
+        {
+             ApiResponse<OpenIntegration> localVarResponse = PostConversationsMessagingIntegrationsOpenWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create an Open messaging integration See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">OpenIntegrationRequest</param>
+        /// <returns>ApiResponse of OpenIntegration</returns>
+        public ApiResponse< OpenIntegration > PostConversationsMessagingIntegrationsOpenWithHttpInfo (OpenIntegrationRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsOpen");
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/open";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsOpen: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsOpen: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OpenIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (OpenIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpenIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Create an Open messaging integration See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">OpenIntegrationRequest</param>
+        /// <returns>Task of OpenIntegration</returns>
+        public async System.Threading.Tasks.Task<OpenIntegration> PostConversationsMessagingIntegrationsOpenAsync (OpenIntegrationRequest body)
+        {
+             ApiResponse<OpenIntegration> localVarResponse = await PostConversationsMessagingIntegrationsOpenAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create an Open messaging integration See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">OpenIntegrationRequest</param>
+        /// <returns>Task of ApiResponse (OpenIntegration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OpenIntegration>> PostConversationsMessagingIntegrationsOpenAsyncWithHttpInfo (OpenIntegrationRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsOpen");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/open";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsOpen: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsOpen: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OpenIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (OpenIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpenIntegration)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -29,9 +29,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \"Message\" which sends a message using the quick reply text.
         /// </summary>
@@ -67,8 +64,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
         /// <summary>
         /// Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \"Message\" which sends a message using the quick reply text.
         /// </summary>
@@ -83,15 +78,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QuickReply" /> class.
         /// </summary>
-        /// <param name="Id">An ID assigned to the quick reply..</param>
         /// <param name="Text">Text to show inside the quick reply. This is also used as the response text after clicking on the quick reply..</param>
         /// <param name="Payload">Content of the textback payload after clicking a quick reply.</param>
         /// <param name="Url">The location of the image file associated with quick reply.</param>
         /// <param name="Action">Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \&quot;Message\&quot; which sends a message using the quick reply text..</param>
         /// <param name="IsSelected">Indicates if the quick reply option is selected by end customer.</param>
-        public QuickReply(string Id = null, string Text = null, string Payload = null, string Url = null, ActionEnum? Action = null, bool? IsSelected = null)
+        public QuickReply(string Text = null, string Payload = null, string Url = null, ActionEnum? Action = null, bool? IsSelected = null)
         {
-            this.Id = Id;
             this.Text = Text;
             this.Payload = Payload;
             this.Url = Url;
@@ -99,15 +92,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.IsSelected = IsSelected;
             
         }
-        
-        
-        
-        /// <summary>
-        /// An ID assigned to the quick reply.
-        /// </summary>
-        /// <value>An ID assigned to the quick reply.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
         
         
         
@@ -157,7 +141,6 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class QuickReply {\n");
             
-            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Payload: ").Append(Payload).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
@@ -200,11 +183,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
                     this.Text == other.Text ||
                     this.Text != null &&
                     this.Text.Equals(other.Text)
@@ -242,9 +220,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();

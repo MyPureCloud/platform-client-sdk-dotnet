@@ -50,6 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Team" /> class.
@@ -61,10 +66,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Team" /> class.
         /// </summary>
         /// <param name="Name">The team name (required).</param>
+        /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Description">Team information..</param>
-        public Team(string Name = null, string Description = null)
+        public Team(string Name = null, Division Division = null, string Description = null)
         {
             this.Name = Name;
+            this.Division = Division;
             this.Description = Description;
             
         }
@@ -86,6 +93,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The team name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The division to which this entity belongs.
+        /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public Division Division { get; set; }
         
         
         
@@ -135,6 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
@@ -186,6 +203,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
@@ -224,6 +246,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();

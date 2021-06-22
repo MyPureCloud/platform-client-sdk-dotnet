@@ -7,8 +7,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteRoutingAssessment**](RoutingApi.html#deleteroutingassessment) | **DELETE** /api/v2/routing/assessments/{assessmentId} | Delete single benefit assessment. |
 | [**DeleteRoutingEmailDomain**](RoutingApi.html#deleteroutingemaildomain) | **DELETE** /api/v2/routing/email/domains/{domainId} | Delete a domain |
 | [**DeleteRoutingEmailDomainRoute**](RoutingApi.html#deleteroutingemaildomainroute) | **DELETE** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Delete a route |
+| [**DeleteRoutingPredictor**](RoutingApi.html#deleteroutingpredictor) | **DELETE** /api/v2/routing/predictors/{predictorId} | Delete single predictor. |
 | [**DeleteRoutingQueue**](RoutingApi.html#deleteroutingqueue) | **DELETE** /api/v2/routing/queues/{queueId} | Delete a queue |
 | [**DeleteRoutingQueueMember**](RoutingApi.html#deleteroutingqueuemember) | **DELETE** /api/v2/routing/queues/{queueId}/members/{memberId} | Delete a queue member. |
 | [**DeleteRoutingQueueUser**](RoutingApi.html#deleteroutingqueueuser) | **DELETE** /api/v2/routing/queues/{queueId}/users/{memberId} | DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member. |
@@ -22,6 +24,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteRoutingWrapupcode**](RoutingApi.html#deleteroutingwrapupcode) | **DELETE** /api/v2/routing/wrapupcodes/{codeId} | Delete wrap-up code |
 | [**DeleteUserRoutinglanguage**](RoutingApi.html#deleteuserroutinglanguage) | **DELETE** /api/v2/users/{userId}/routinglanguages/{languageId} | Remove routing language from user |
 | [**DeleteUserRoutingskill**](RoutingApi.html#deleteuserroutingskill) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
+| [**GetRoutingAssessment**](RoutingApi.html#getroutingassessment) | **GET** /api/v2/routing/assessments/{assessmentId} | Retrieve a single benefit assessment. |
+| [**GetRoutingAssessments**](RoutingApi.html#getroutingassessments) | **GET** /api/v2/routing/assessments | Retrieve all benefit assessments. |
+| [**GetRoutingAssessmentsJob**](RoutingApi.html#getroutingassessmentsjob) | **GET** /api/v2/routing/assessments/jobs/{jobId} | Retrieve a single benefit assessments job. |
+| [**GetRoutingAssessmentsJobs**](RoutingApi.html#getroutingassessmentsjobs) | **GET** /api/v2/routing/assessments/jobs | Retrieve all benefit assessment jobs. |
 | [**GetRoutingEmailDomain**](RoutingApi.html#getroutingemaildomain) | **GET** /api/v2/routing/email/domains/{domainId} | Get domain |
 | [**GetRoutingEmailDomainRoute**](RoutingApi.html#getroutingemaildomainroute) | **GET** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Get a route |
 | [**GetRoutingEmailDomainRoutes**](RoutingApi.html#getroutingemaildomainroutes) | **GET** /api/v2/routing/email/domains/{domainName}/routes | Get routes |
@@ -30,7 +36,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingLanguages**](RoutingApi.html#getroutinglanguages) | **GET** /api/v2/routing/languages | Get the list of supported languages. |
 | [**GetRoutingMessageRecipient**](RoutingApi.html#getroutingmessagerecipient) | **GET** /api/v2/routing/message/recipients/{recipientId} | Get a recipient |
 | [**GetRoutingMessageRecipients**](RoutingApi.html#getroutingmessagerecipients) | **GET** /api/v2/routing/message/recipients | Get recipients |
+| [**GetRoutingPredictor**](RoutingApi.html#getroutingpredictor) | **GET** /api/v2/routing/predictors/{predictorId} | Retrieve a single predictor. |
+| [**GetRoutingPredictors**](RoutingApi.html#getroutingpredictors) | **GET** /api/v2/routing/predictors | Retrieve all predictors. |
+| [**GetRoutingPredictorsKeyperformanceindicators**](RoutingApi.html#getroutingpredictorskeyperformanceindicators) | **GET** /api/v2/routing/predictors/keyperformanceindicators | Get a list of Key Performance Indicators available for the predictors. |
 | [**GetRoutingQueue**](RoutingApi.html#getroutingqueue) | **GET** /api/v2/routing/queues/{queueId} | Get details about this queue. |
+| [**GetRoutingQueueComparisonperiod**](RoutingApi.html#getroutingqueuecomparisonperiod) | **GET** /api/v2/routing/queues/{queueId}/comparisonperiods/{comparisonPeriodId} | Get a Comparison Period. |
+| [**GetRoutingQueueComparisonperiods**](RoutingApi.html#getroutingqueuecomparisonperiods) | **GET** /api/v2/routing/queues/{queueId}/comparisonperiods | Get list of comparison periods |
 | [**GetRoutingQueueEstimatedwaittime**](RoutingApi.html#getroutingqueueestimatedwaittime) | **GET** /api/v2/routing/queues/{queueId}/estimatedwaittime | Get Estimated Wait Time |
 | [**GetRoutingQueueMediatypeEstimatedwaittime**](RoutingApi.html#getroutingqueuemediatypeestimatedwaittime) | **GET** /api/v2/routing/queues/{queueId}/mediatypes/{mediaType}/estimatedwaittime | Get Estimated Wait Time |
 | [**GetRoutingQueueMembers**](RoutingApi.html#getroutingqueuemembers) | **GET** /api/v2/routing/queues/{queueId}/members | Get the members of this queue. |
@@ -60,6 +71,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchRoutingConversation**](RoutingApi.html#patchroutingconversation) | **PATCH** /api/v2/routing/conversations/{conversationId} | Update attributes of an in-queue conversation |
 | [**PatchRoutingEmailDomain**](RoutingApi.html#patchroutingemaildomain) | **PATCH** /api/v2/routing/email/domains/{domainId} | Update domain settings |
 | [**PatchRoutingEmailDomainValidate**](RoutingApi.html#patchroutingemaildomainvalidate) | **PATCH** /api/v2/routing/email/domains/{domainId}/validate | Validate domain settings |
+| [**PatchRoutingPredictor**](RoutingApi.html#patchroutingpredictor) | **PATCH** /api/v2/routing/predictors/{predictorId} | Update single predictor. |
 | [**PatchRoutingQueueMember**](RoutingApi.html#patchroutingqueuemember) | **PATCH** /api/v2/routing/queues/{queueId}/members/{memberId} | Update the ring number OR joined status for a queue member. |
 | [**PatchRoutingQueueMembers**](RoutingApi.html#patchroutingqueuemembers) | **PATCH** /api/v2/routing/queues/{queueId}/members | Join or unjoin a set of users for a queue |
 | [**PatchRoutingQueueUser**](RoutingApi.html#patchroutingqueueuser) | **PATCH** /api/v2/routing/queues/{queueId}/users/{memberId} | DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue. |
@@ -71,10 +83,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchUserRoutinglanguagesBulk**](RoutingApi.html#patchuserroutinglanguagesbulk) | **PATCH** /api/v2/users/{userId}/routinglanguages/bulk | Add bulk routing language to user. Max limit 50 languages |
 | [**PatchUserRoutingskillsBulk**](RoutingApi.html#patchuserroutingskillsbulk) | **PATCH** /api/v2/users/{userId}/routingskills/bulk | Bulk add routing skills to user |
 | [**PostAnalyticsQueuesObservationsQuery**](RoutingApi.html#postanalyticsqueuesobservationsquery) | **POST** /api/v2/analytics/queues/observations/query | Query for queue observations |
+| [**PostRoutingAssessments**](RoutingApi.html#postroutingassessments) | **POST** /api/v2/routing/assessments | Create a benefit assessment. |
+| [**PostRoutingAssessmentsJobs**](RoutingApi.html#postroutingassessmentsjobs) | **POST** /api/v2/routing/assessments/jobs | Create a benefit assessment job. |
 | [**PostRoutingEmailDomainRoutes**](RoutingApi.html#postroutingemaildomainroutes) | **POST** /api/v2/routing/email/domains/{domainName}/routes | Create a route |
 | [**PostRoutingEmailDomainTestconnection**](RoutingApi.html#postroutingemaildomaintestconnection) | **POST** /api/v2/routing/email/domains/{domainId}/testconnection | Tests the custom SMTP server integration connection set on this domain |
 | [**PostRoutingEmailDomains**](RoutingApi.html#postroutingemaildomains) | **POST** /api/v2/routing/email/domains | Create a domain |
 | [**PostRoutingLanguages**](RoutingApi.html#postroutinglanguages) | **POST** /api/v2/routing/languages | Create Language |
+| [**PostRoutingPredictors**](RoutingApi.html#postroutingpredictors) | **POST** /api/v2/routing/predictors | Create a predictor. |
 | [**PostRoutingQueueMembers**](RoutingApi.html#postroutingqueuemembers) | **POST** /api/v2/routing/queues/{queueId}/members | Bulk add or delete up to 100 queue members |
 | [**PostRoutingQueueUsers**](RoutingApi.html#postroutingqueueusers) | **POST** /api/v2/routing/queues/{queueId}/users | DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members. |
 | [**PostRoutingQueueWrapupcodes**](RoutingApi.html#postroutingqueuewrapupcodes) | **POST** /api/v2/routing/queues/{queueId}/wrapupcodes | Add up to 100 wrap-up codes to a queue |
@@ -97,6 +112,70 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutUserRoutingskill**](RoutingApi.html#putuserroutingskill) | **PUT** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
 | [**PutUserRoutingskillsBulk**](RoutingApi.html#putuserroutingskillsbulk) | **PUT** /api/v2/users/{userId}/routingskills/bulk | Replace all routing skills assigned to a user |
 {: class="table table-striped"}
+
+<a name="deleteroutingassessment"></a>
+
+## void DeleteRoutingAssessment (string assessmentId)
+
+
+
+Delete single benefit assessment.
+
+
+
+Requires ANY permissions: 
+
+* routing:assessment:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteRoutingAssessmentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var assessmentId = assessmentId_example;  // string | Benefit Assessment ID
+
+            try
+            { 
+                // Delete single benefit assessment.
+                apiInstance.DeleteRoutingAssessment(assessmentId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.DeleteRoutingAssessment: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **assessmentId** | **string**| Benefit Assessment ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="deleteroutingemaildomain"></a>
 
@@ -222,6 +301,71 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainName** | **string**| email domain |  |
 | **routeId** | **string**| route ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteroutingpredictor"></a>
+
+## void DeleteRoutingPredictor (string predictorId)
+
+
+
+Delete single predictor.
+
+
+
+Requires ALL permissions: 
+
+* routing:predictor:delete
+* routing:queue:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteRoutingPredictorExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var predictorId = predictorId_example;  // string | Predictor ID
+
+            try
+            { 
+                // Delete single predictor.
+                apiInstance.DeleteRoutingPredictor(predictorId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.DeleteRoutingPredictor: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **predictorId** | **string**| Predictor ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1065,6 +1209,275 @@ namespace Example
 
 void (empty response body)
 
+<a name="getroutingassessment"></a>
+
+## [**BenefitAssessment**](BenefitAssessment.html) GetRoutingAssessment (string assessmentId)
+
+
+
+Retrieve a single benefit assessment.
+
+
+
+Requires ANY permissions: 
+
+* routing:assessment:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingAssessmentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var assessmentId = assessmentId_example;  // string | Benefit Assessment ID
+
+            try
+            { 
+                // Retrieve a single benefit assessment.
+                BenefitAssessment result = apiInstance.GetRoutingAssessment(assessmentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingAssessment: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **assessmentId** | **string**| Benefit Assessment ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BenefitAssessment**](BenefitAssessment.html)
+
+<a name="getroutingassessments"></a>
+
+## [**AssessmentListing**](AssessmentListing.html) GetRoutingAssessments (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
+
+
+
+Retrieve all benefit assessments.
+
+
+
+Requires ANY permissions: 
+
+* routing:queue:view
+* routing:assessment:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingAssessmentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var limit = limit_example;  // string | Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var queueId = new List<string>(); // List<string> | Queue ID(s) to filter assessments by. (optional) 
+
+            try
+            { 
+                // Retrieve all benefit assessments.
+                AssessmentListing result = apiInstance.GetRoutingAssessments(before, after, limit, pageSize, queueId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingAssessments: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **queueId** | [**List<string>**](string.html)| Queue ID(s) to filter assessments by. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AssessmentListing**](AssessmentListing.html)
+
+<a name="getroutingassessmentsjob"></a>
+
+## [**BenefitAssessmentJob**](BenefitAssessmentJob.html) GetRoutingAssessmentsJob (string jobId)
+
+
+
+Retrieve a single benefit assessments job.
+
+
+
+Requires ANY permissions: 
+
+* routing:assessment:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingAssessmentsJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var jobId = jobId_example;  // string | Benefit Assessment Job ID
+
+            try
+            { 
+                // Retrieve a single benefit assessments job.
+                BenefitAssessmentJob result = apiInstance.GetRoutingAssessmentsJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingAssessmentsJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| Benefit Assessment Job ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BenefitAssessmentJob**](BenefitAssessmentJob.html)
+
+<a name="getroutingassessmentsjobs"></a>
+
+## [**AssessmentJobListing**](AssessmentJobListing.html) GetRoutingAssessmentsJobs (List<string> divisionId = null)
+
+
+
+Retrieve all benefit assessment jobs.
+
+
+
+Requires ANY permissions: 
+
+* routing:queue:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingAssessmentsJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var divisionId = new List<string>(); // List<string> | Division ID(s) to filter assessment jobs by. (optional) 
+
+            try
+            { 
+                // Retrieve all benefit assessment jobs.
+                AssessmentJobListing result = apiInstance.GetRoutingAssessmentsJobs(divisionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingAssessmentsJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **divisionId** | [**List<string>**](string.html)| Division ID(s) to filter assessment jobs by. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AssessmentJobListing**](AssessmentJobListing.html)
+
 <a name="getroutingemaildomain"></a>
 
 ## [**InboundDomain**](InboundDomain.html) GetRoutingEmailDomain (string domainId)
@@ -1594,6 +2007,205 @@ namespace Example
 
 [**RecipientListing**](RecipientListing.html)
 
+<a name="getroutingpredictor"></a>
+
+## [**Predictor**](Predictor.html) GetRoutingPredictor (string predictorId)
+
+
+
+Retrieve a single predictor.
+
+
+
+Requires ANY permissions: 
+
+* routing:predictor:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingPredictorExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var predictorId = predictorId_example;  // string | Predictor ID
+
+            try
+            { 
+                // Retrieve a single predictor.
+                Predictor result = apiInstance.GetRoutingPredictor(predictorId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingPredictor: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **predictorId** | **string**| Predictor ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Predictor**](Predictor.html)
+
+<a name="getroutingpredictors"></a>
+
+## [**PredictorListing**](PredictorListing.html) GetRoutingPredictors (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
+
+
+
+Retrieve all predictors.
+
+
+
+Requires ANY permissions: 
+
+* routing:predictor:view
+* routing:queue:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingPredictorsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var limit = limit_example;  // string | Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var queueId = new List<string>(); // List<string> | Comma-separated list of queue Ids to filter by. (optional) 
+
+            try
+            { 
+                // Retrieve all predictors.
+                PredictorListing result = apiInstance.GetRoutingPredictors(before, after, limit, pageSize, queueId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingPredictors: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **queueId** | [**List<string>**](string.html)| Comma-separated list of queue Ids to filter by. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PredictorListing**](PredictorListing.html)
+
+<a name="getroutingpredictorskeyperformanceindicators"></a>
+
+## [**List&lt;KeyPerformanceIndicator&gt;**](KeyPerformanceIndicator.html) GetRoutingPredictorsKeyperformanceindicators ()
+
+
+
+Get a list of Key Performance Indicators available for the predictors.
+
+
+
+Requires ANY permissions: 
+
+* routing:keyPerformanceIndicator:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingPredictorsKeyperformanceindicatorsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+
+            try
+            { 
+                // Get a list of Key Performance Indicators available for the predictors.
+                List&lt;KeyPerformanceIndicator&gt; result = apiInstance.GetRoutingPredictorsKeyperformanceindicators();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingPredictorsKeyperformanceindicators: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**List<KeyPerformanceIndicator>**](KeyPerformanceIndicator.html)
+
 <a name="getroutingqueue"></a>
 
 ## [**Queue**](Queue.html) GetRoutingQueue (string queueId)
@@ -1658,6 +2270,140 @@ namespace Example
 ### Return type
 
 [**Queue**](Queue.html)
+
+<a name="getroutingqueuecomparisonperiod"></a>
+
+## [**ComparisonPeriod**](ComparisonPeriod.html) GetRoutingQueueComparisonperiod (string queueId, string comparisonPeriodId)
+
+
+
+Get a Comparison Period.
+
+
+
+Requires ALL permissions: 
+
+* routing:comparisonPeriod:view
+* routing:queue:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingQueueComparisonperiodExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue id
+            var comparisonPeriodId = comparisonPeriodId_example;  // string | ComparisonPeriod id
+
+            try
+            { 
+                // Get a Comparison Period.
+                ComparisonPeriod result = apiInstance.GetRoutingQueueComparisonperiod(queueId, comparisonPeriodId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingQueueComparisonperiod: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue id |  |
+| **comparisonPeriodId** | **string**| ComparisonPeriod id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ComparisonPeriod**](ComparisonPeriod.html)
+
+<a name="getroutingqueuecomparisonperiods"></a>
+
+## [**ComparisonPeriodListing**](ComparisonPeriodListing.html) GetRoutingQueueComparisonperiods (string queueId)
+
+
+
+Get list of comparison periods
+
+
+
+Requires ALL permissions: 
+
+* routing:comparisonPeriod:view
+* routing:queue:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingQueueComparisonperiodsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue id
+
+            try
+            { 
+                // Get list of comparison periods
+                ComparisonPeriodListing result = apiInstance.GetRoutingQueueComparisonperiods(queueId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingQueueComparisonperiods: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ComparisonPeriodListing**](ComparisonPeriodListing.html)
 
 <a name="getroutingqueueestimatedwaittime"></a>
 
@@ -3673,6 +4419,74 @@ namespace Example
 
 [**InboundDomain**](InboundDomain.html)
 
+<a name="patchroutingpredictor"></a>
+
+## [**Predictor**](Predictor.html) PatchRoutingPredictor (string predictorId, PatchPredictorRequest body = null)
+
+
+
+Update single predictor.
+
+
+
+Requires ALL permissions: 
+
+* routing:predictor:edit
+* routing:queue:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchRoutingPredictorExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var predictorId = predictorId_example;  // string | Predictor ID
+            var body = new PatchPredictorRequest(); // PatchPredictorRequest |  (optional) 
+
+            try
+            { 
+                // Update single predictor.
+                Predictor result = apiInstance.PatchRoutingPredictor(predictorId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PatchRoutingPredictor: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **predictorId** | **string**| Predictor ID |  |
+| **body** | [**PatchPredictorRequest**](PatchPredictorRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Predictor**](Predictor.html)
+
 <a name="patchroutingqueuemember"></a>
 
 ## void PatchRoutingQueueMember (string queueId, string memberId, QueueMember body)
@@ -4421,6 +5235,137 @@ namespace Example
 
 [**QueueObservationQueryResponse**](QueueObservationQueryResponse.html)
 
+<a name="postroutingassessments"></a>
+
+## [**BenefitAssessment**](BenefitAssessment.html) PostRoutingAssessments (CreateBenefitAssessmentRequest body = null)
+
+
+
+Create a benefit assessment.
+
+
+
+Requires ALL permissions: 
+
+* routing:assessment:add
+* routing:queue:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRoutingAssessmentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var body = new CreateBenefitAssessmentRequest(); // CreateBenefitAssessmentRequest |  (optional) 
+
+            try
+            { 
+                // Create a benefit assessment.
+                BenefitAssessment result = apiInstance.PostRoutingAssessments(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostRoutingAssessments: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CreateBenefitAssessmentRequest**](CreateBenefitAssessmentRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BenefitAssessment**](BenefitAssessment.html)
+
+<a name="postroutingassessmentsjobs"></a>
+
+## [**BenefitAssessmentJob**](BenefitAssessmentJob.html) PostRoutingAssessmentsJobs (CreateBenefitAssessmentJobRequest body = null)
+
+
+
+Create a benefit assessment job.
+
+
+
+Requires ANY permissions: 
+
+* routing:assessment:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRoutingAssessmentsJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var body = new CreateBenefitAssessmentJobRequest(); // CreateBenefitAssessmentJobRequest |  (optional) 
+
+            try
+            { 
+                // Create a benefit assessment job.
+                BenefitAssessmentJob result = apiInstance.PostRoutingAssessmentsJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostRoutingAssessmentsJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CreateBenefitAssessmentJobRequest**](CreateBenefitAssessmentJobRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BenefitAssessmentJob**](BenefitAssessmentJob.html)
+
 <a name="postroutingemaildomainroutes"></a>
 
 ## [**InboundRoute**](InboundRoute.html) PostRoutingEmailDomainRoutes (string domainName, InboundRoute body)
@@ -4684,6 +5629,72 @@ namespace Example
 ### Return type
 
 [**Language**](Language.html)
+
+<a name="postroutingpredictors"></a>
+
+## [**Predictor**](Predictor.html) PostRoutingPredictors (CreatePredictorRequest body = null)
+
+
+
+Create a predictor.
+
+
+
+Requires ALL permissions: 
+
+* routing:predictor:add
+* routing:queue:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRoutingPredictorsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var body = new CreatePredictorRequest(); // CreatePredictorRequest |  (optional) 
+
+            try
+            { 
+                // Create a predictor.
+                Predictor result = apiInstance.PostRoutingPredictors(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostRoutingPredictors: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CreatePredictorRequest**](CreatePredictorRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Predictor**](Predictor.html)
 
 <a name="postroutingqueuemembers"></a>
 

@@ -7,7 +7,6 @@ title: QuickReply
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** | An ID assigned to the quick reply. | [optional] |
 | **Text** | **string** | Text to show inside the quick reply. This is also used as the response text after clicking on the quick reply. | [optional] |
 | **Payload** | **string** | Content of the textback payload after clicking a quick reply | [optional] |
 | **Url** | **string** | The location of the image file associated with quick reply | [optional] |
