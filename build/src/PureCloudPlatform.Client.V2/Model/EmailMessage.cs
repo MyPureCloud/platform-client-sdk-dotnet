@@ -85,6 +85,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailMessage" /> class.
@@ -100,19 +105,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Cc">The recipients that were copied on the email message..</param>
         /// <param name="Bcc">The recipients that were blind copied on the email message..</param>
         /// <param name="From">The sender of the email message. (required).</param>
+        /// <param name="ReplyTo">The receiver of the reply email message..</param>
         /// <param name="Subject">The subject of the email message..</param>
         /// <param name="Attachments">The attachments of the email message..</param>
         /// <param name="TextBody">The text body of the email message. (required).</param>
         /// <param name="HtmlBody">The html body of the email message..</param>
         /// <param name="Time">The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="HistoryIncluded">Indicates whether the history of previous emails of the conversation is included within the email bodies of this message..</param>
-        public EmailMessage(string Name = null, List<EmailAddress> To = null, List<EmailAddress> Cc = null, List<EmailAddress> Bcc = null, EmailAddress From = null, string Subject = null, List<Attachment> Attachments = null, string TextBody = null, string HtmlBody = null, DateTime? Time = null, bool? HistoryIncluded = null)
+        public EmailMessage(string Name = null, List<EmailAddress> To = null, List<EmailAddress> Cc = null, List<EmailAddress> Bcc = null, EmailAddress From = null, EmailAddress ReplyTo = null, string Subject = null, List<Attachment> Attachments = null, string TextBody = null, string HtmlBody = null, DateTime? Time = null, bool? HistoryIncluded = null)
         {
             this.Name = Name;
             this.To = To;
             this.Cc = Cc;
             this.Bcc = Bcc;
             this.From = From;
+            this.ReplyTo = ReplyTo;
             this.Subject = Subject;
             this.Attachments = Attachments;
             this.TextBody = TextBody;
@@ -174,6 +181,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The sender of the email message.</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public EmailAddress From { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The receiver of the reply email message.
+        /// </summary>
+        /// <value>The receiver of the reply email message.</value>
+        [DataMember(Name="replyTo", EmitDefaultValue=false)]
+        public EmailAddress ReplyTo { get; set; }
         
         
         
@@ -254,6 +270,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Cc: ").Append(Cc).Append("\n");
             sb.Append("  Bcc: ").Append(Bcc).Append("\n");
             sb.Append("  From: ").Append(From).Append("\n");
+            sb.Append("  ReplyTo: ").Append(ReplyTo).Append("\n");
             sb.Append("  Subject: ").Append(Subject).Append("\n");
             sb.Append("  Attachments: ").Append(Attachments).Append("\n");
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
@@ -328,6 +345,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.From.Equals(other.From)
                 ) &&
                 (
+                    this.ReplyTo == other.ReplyTo ||
+                    this.ReplyTo != null &&
+                    this.ReplyTo.Equals(other.ReplyTo)
+                ) &&
+                (
                     this.Subject == other.Subject ||
                     this.Subject != null &&
                     this.Subject.Equals(other.Subject)
@@ -393,6 +415,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.From != null)
                     hash = hash * 59 + this.From.GetHashCode();
+                
+                if (this.ReplyTo != null)
+                    hash = hash * 59 + this.ReplyTo.GetHashCode();
                 
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();

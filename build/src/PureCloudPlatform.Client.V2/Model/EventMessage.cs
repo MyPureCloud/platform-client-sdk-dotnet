@@ -311,6 +311,12 @@ namespace PureCloudPlatform.Client.V2.Model
             ImportInvalidEmailAddresses,
             
             /// <summary>
+            /// Enum ImportInvalidPhoneNumbers for "IMPORT_INVALID_PHONE_NUMBERS"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_INVALID_PHONE_NUMBERS")]
+            ImportInvalidPhoneNumbers,
+            
+            /// <summary>
             /// Enum ImportInvalidExpirationDate for "IMPORT_INVALID_EXPIRATION_DATE"
             /// </summary>
             [EnumMember(Value = "IMPORT_INVALID_EXPIRATION_DATE")]

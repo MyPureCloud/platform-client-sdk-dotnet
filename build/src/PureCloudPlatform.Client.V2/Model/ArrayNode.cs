@@ -208,8 +208,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="_Float">_Float.</param>
         /// <param name="Number">Number.</param>
         /// <param name="ValueNode">ValueNode.</param>
-        /// <param name="FloatingPointNumber">FloatingPointNumber.</param>
         /// <param name="ContainerNode">ContainerNode.</param>
+        /// <param name="FloatingPointNumber">FloatingPointNumber.</param>
         /// <param name="MissingNode">MissingNode.</param>
         /// <param name="_Object">_Object.</param>
         /// <param name="Pojo">Pojo.</param>
@@ -225,14 +225,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Binary">Binary.</param>
         /// <param name="Array">Array.</param>
         /// <param name="_Null">_Null.</param>
-        public ArrayNode(NodeTypeEnum? NodeType = null, bool? _Float = null, bool? Number = null, bool? ValueNode = null, bool? FloatingPointNumber = null, bool? ContainerNode = null, bool? MissingNode = null, bool? _Object = null, bool? Pojo = null, bool? IntegralNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Boolean = null, bool? Binary = null, bool? Array = null, bool? _Null = null)
+        public ArrayNode(NodeTypeEnum? NodeType = null, bool? _Float = null, bool? Number = null, bool? ValueNode = null, bool? ContainerNode = null, bool? FloatingPointNumber = null, bool? MissingNode = null, bool? _Object = null, bool? Pojo = null, bool? IntegralNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Boolean = null, bool? Binary = null, bool? Array = null, bool? _Null = null)
         {
             this.NodeType = NodeType;
             this._Float = _Float;
             this.Number = Number;
             this.ValueNode = ValueNode;
-            this.FloatingPointNumber = FloatingPointNumber;
             this.ContainerNode = ContainerNode;
+            this.FloatingPointNumber = FloatingPointNumber;
             this.MissingNode = MissingNode;
             this._Object = _Object;
             this.Pojo = Pojo;
@@ -280,18 +280,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets FloatingPointNumber
-        /// </summary>
-        [DataMember(Name="floatingPointNumber", EmitDefaultValue=false)]
-        public bool? FloatingPointNumber { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets ContainerNode
         /// </summary>
         [DataMember(Name="containerNode", EmitDefaultValue=false)]
         public bool? ContainerNode { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets FloatingPointNumber
+        /// </summary>
+        [DataMember(Name="floatingPointNumber", EmitDefaultValue=false)]
+        public bool? FloatingPointNumber { get; set; }
         
         
         
@@ -427,8 +427,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  _Float: ").Append(_Float).Append("\n");
             sb.Append("  Number: ").Append(Number).Append("\n");
             sb.Append("  ValueNode: ").Append(ValueNode).Append("\n");
-            sb.Append("  FloatingPointNumber: ").Append(FloatingPointNumber).Append("\n");
             sb.Append("  ContainerNode: ").Append(ContainerNode).Append("\n");
+            sb.Append("  FloatingPointNumber: ").Append(FloatingPointNumber).Append("\n");
             sb.Append("  MissingNode: ").Append(MissingNode).Append("\n");
             sb.Append("  _Object: ").Append(_Object).Append("\n");
             sb.Append("  Pojo: ").Append(Pojo).Append("\n");
@@ -501,14 +501,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ValueNode.Equals(other.ValueNode)
                 ) &&
                 (
-                    this.FloatingPointNumber == other.FloatingPointNumber ||
-                    this.FloatingPointNumber != null &&
-                    this.FloatingPointNumber.Equals(other.FloatingPointNumber)
-                ) &&
-                (
                     this.ContainerNode == other.ContainerNode ||
                     this.ContainerNode != null &&
                     this.ContainerNode.Equals(other.ContainerNode)
+                ) &&
+                (
+                    this.FloatingPointNumber == other.FloatingPointNumber ||
+                    this.FloatingPointNumber != null &&
+                    this.FloatingPointNumber.Equals(other.FloatingPointNumber)
                 ) &&
                 (
                     this.MissingNode == other.MissingNode ||
@@ -611,11 +611,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.ValueNode != null)
                     hash = hash * 59 + this.ValueNode.GetHashCode();
                 
-                if (this.FloatingPointNumber != null)
-                    hash = hash * 59 + this.FloatingPointNumber.GetHashCode();
-                
                 if (this.ContainerNode != null)
                     hash = hash * 59 + this.ContainerNode.GetHashCode();
+                
+                if (this.FloatingPointNumber != null)
+                    hash = hash * 59 + this.FloatingPointNumber.GetHashCode();
                 
                 if (this.MissingNode != null)
                     hash = hash * 59 + this.MissingNode.GetHashCode();

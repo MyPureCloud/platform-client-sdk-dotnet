@@ -220,6 +220,37 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The forecasting type in this forecast result
+        /// </summary>
+        /// <value>The forecasting type in this forecast result</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ForecastTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Longterm for "LongTerm"
+            /// </summary>
+            [EnumMember(Value = "LongTerm")]
+            Longterm,
+            
+            /// <summary>
+            /// Enum Shortterm for "ShortTerm"
+            /// </summary>
+            [EnumMember(Value = "ShortTerm")]
+            Shortterm
+        }
+        
+        
+        
+        
         
         /// <summary>
         /// The metric this result applies to
@@ -238,18 +269,31 @@ namespace PureCloudPlatform.Client.V2.Model
         public ForecastingMethodEnum? ForecastingMethod { get; set; }
         
         
+        
+        /// <summary>
+        /// The forecasting type in this forecast result
+        /// </summary>
+        /// <value>The forecasting type in this forecast result</value>
+        [DataMember(Name="forecastType", EmitDefaultValue=false)]
+        public ForecastTypeEnum? ForecastType { get; set; }
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="BuForecastTimeSeriesResult" /> class.
         /// </summary>
         /// <param name="Metric">The metric this result applies to.</param>
         /// <param name="ForecastingMethod">The forecasting method that was used for this metric.</param>
-        public BuForecastTimeSeriesResult(MetricEnum? Metric = null, ForecastingMethodEnum? ForecastingMethod = null)
+        /// <param name="ForecastType">The forecasting type in this forecast result.</param>
+        public BuForecastTimeSeriesResult(MetricEnum? Metric = null, ForecastingMethodEnum? ForecastingMethod = null, ForecastTypeEnum? ForecastType = null)
         {
             this.Metric = Metric;
             this.ForecastingMethod = ForecastingMethod;
+            this.ForecastType = ForecastType;
             
         }
+        
+        
         
         
         
@@ -267,6 +311,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  ForecastingMethod: ").Append(ForecastingMethod).Append("\n");
+            sb.Append("  ForecastType: ").Append(ForecastType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -312,6 +357,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ForecastingMethod == other.ForecastingMethod ||
                     this.ForecastingMethod != null &&
                     this.ForecastingMethod.Equals(other.ForecastingMethod)
+                ) &&
+                (
+                    this.ForecastType == other.ForecastType ||
+                    this.ForecastType != null &&
+                    this.ForecastType.Equals(other.ForecastType)
                 );
         }
 
@@ -332,6 +382,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ForecastingMethod != null)
                     hash = hash * 59 + this.ForecastingMethod.GetHashCode();
+                
+                if (this.ForecastType != null)
+                    hash = hash * 59 + this.ForecastType.GetHashCode();
                 
                 return hash;
             }

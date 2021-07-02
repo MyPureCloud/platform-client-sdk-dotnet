@@ -88,7 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">An ID assigned to the button response (Deprecated)..</param>
         /// <param name="Type">Describes the button that resulted in the Button Response..</param>
         /// <param name="Text">The response text from the button click. (required).</param>
-        /// <param name="Payload">The response payload associated with the clicked button..</param>
+        /// <param name="Payload">The response payload associated with the clicked button. (required).</param>
         public ContentButtonResponse(string Id = null, TypeEnum? Type = null, string Text = null, string Payload = null)
         {
             this.Id = Id;

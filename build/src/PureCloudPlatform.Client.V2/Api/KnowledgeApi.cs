@@ -307,10 +307,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
-        /// <param name="coreLanguage">To filter knowledgebases by corelanguage. (optional)</param>
+        /// <param name="name">Filter by Name. (optional)</param>
+        /// <param name="coreLanguage">Filter by core language. (optional)</param>
+        /// <param name="published">Filter by published status. (optional)</param>
         /// <returns>KnowledgeBaseListing</returns>
-        KnowledgeBaseListing GetKnowledgeKnowledgebases (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null);
+        KnowledgeBaseListing GetKnowledgeKnowledgebases (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null);
 
         /// <summary>
         /// Get knowledge bases
@@ -323,10 +324,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
-        /// <param name="coreLanguage">To filter knowledgebases by corelanguage. (optional)</param>
+        /// <param name="name">Filter by Name. (optional)</param>
+        /// <param name="coreLanguage">Filter by core language. (optional)</param>
+        /// <param name="published">Filter by published status. (optional)</param>
         /// <returns>ApiResponse of KnowledgeBaseListing</returns>
-        ApiResponse<KnowledgeBaseListing> GetKnowledgeKnowledgebasesWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null);
+        ApiResponse<KnowledgeBaseListing> GetKnowledgeKnowledgebasesWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null);
         
         /// <summary>
         /// Update knowledge base
@@ -877,10 +879,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
-        /// <param name="coreLanguage">To filter knowledgebases by corelanguage. (optional)</param>
+        /// <param name="name">Filter by Name. (optional)</param>
+        /// <param name="coreLanguage">Filter by core language. (optional)</param>
+        /// <param name="published">Filter by published status. (optional)</param>
         /// <returns>Task of KnowledgeBaseListing</returns>
-        System.Threading.Tasks.Task<KnowledgeBaseListing> GetKnowledgeKnowledgebasesAsync (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null);
+        System.Threading.Tasks.Task<KnowledgeBaseListing> GetKnowledgeKnowledgebasesAsync (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null);
 
         /// <summary>
         /// Get knowledge bases
@@ -893,10 +896,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
-        /// <param name="coreLanguage">To filter knowledgebases by corelanguage. (optional)</param>
+        /// <param name="name">Filter by Name. (optional)</param>
+        /// <param name="coreLanguage">Filter by core language. (optional)</param>
+        /// <param name="published">Filter by published status. (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeBaseListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<KnowledgeBaseListing>> GetKnowledgeKnowledgebasesAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null);
+        System.Threading.Tasks.Task<ApiResponse<KnowledgeBaseListing>> GetKnowledgeKnowledgebasesAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null);
         
         /// <summary>
         /// Update knowledge base
@@ -3453,12 +3457,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
-        /// <param name="coreLanguage">To filter knowledgebases by corelanguage. (optional)</param>
+        /// <param name="name">Filter by Name. (optional)</param>
+        /// <param name="coreLanguage">Filter by core language. (optional)</param>
+        /// <param name="published">Filter by published status. (optional)</param>
         /// <returns>KnowledgeBaseListing</returns>
-        public KnowledgeBaseListing GetKnowledgeKnowledgebases (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null)
+        public KnowledgeBaseListing GetKnowledgeKnowledgebases (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null)
         {
-             ApiResponse<KnowledgeBaseListing> localVarResponse = GetKnowledgeKnowledgebasesWithHttpInfo(before, after, limit, pageSize, name, coreLanguage);
+             ApiResponse<KnowledgeBaseListing> localVarResponse = GetKnowledgeKnowledgebasesWithHttpInfo(before, after, limit, pageSize, name, coreLanguage, published);
              return localVarResponse.Data;
         }
 
@@ -3470,10 +3475,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
-        /// <param name="coreLanguage">To filter knowledgebases by corelanguage. (optional)</param>
+        /// <param name="name">Filter by Name. (optional)</param>
+        /// <param name="coreLanguage">Filter by core language. (optional)</param>
+        /// <param name="published">Filter by published status. (optional)</param>
         /// <returns>ApiResponse of KnowledgeBaseListing</returns>
-        public ApiResponse< KnowledgeBaseListing > GetKnowledgeKnowledgebasesWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null)
+        public ApiResponse< KnowledgeBaseListing > GetKnowledgeKnowledgebasesWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null)
         { 
 
             var localVarPath = "/api/v2/knowledge/knowledgebases";
@@ -3515,6 +3521,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (coreLanguage != null) localVarQueryParams.Add(new Tuple<string, string>("coreLanguage", this.Configuration.ApiClient.ParameterToString(coreLanguage)));
+            if (published != null) localVarQueryParams.Add(new Tuple<string, string>("published", this.Configuration.ApiClient.ParameterToString(published)));
 
             // Header params
 
@@ -3560,12 +3567,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
-        /// <param name="coreLanguage">To filter knowledgebases by corelanguage. (optional)</param>
+        /// <param name="name">Filter by Name. (optional)</param>
+        /// <param name="coreLanguage">Filter by core language. (optional)</param>
+        /// <param name="published">Filter by published status. (optional)</param>
         /// <returns>Task of KnowledgeBaseListing</returns>
-        public async System.Threading.Tasks.Task<KnowledgeBaseListing> GetKnowledgeKnowledgebasesAsync (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null)
+        public async System.Threading.Tasks.Task<KnowledgeBaseListing> GetKnowledgeKnowledgebasesAsync (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null)
         {
-             ApiResponse<KnowledgeBaseListing> localVarResponse = await GetKnowledgeKnowledgebasesAsyncWithHttpInfo(before, after, limit, pageSize, name, coreLanguage);
+             ApiResponse<KnowledgeBaseListing> localVarResponse = await GetKnowledgeKnowledgebasesAsyncWithHttpInfo(before, after, limit, pageSize, name, coreLanguage, published);
              return localVarResponse.Data;
 
         }
@@ -3578,10 +3586,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="name">Name of the KnowledgeBase to filter. (optional)</param>
-        /// <param name="coreLanguage">To filter knowledgebases by corelanguage. (optional)</param>
+        /// <param name="name">Filter by Name. (optional)</param>
+        /// <param name="coreLanguage">Filter by core language. (optional)</param>
+        /// <param name="published">Filter by published status. (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeBaseListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeBaseListing>> GetKnowledgeKnowledgebasesAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeBaseListing>> GetKnowledgeKnowledgebasesAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null)
         { 
 
             var localVarPath = "/api/v2/knowledge/knowledgebases";
@@ -3623,6 +3632,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (coreLanguage != null) localVarQueryParams.Add(new Tuple<string, string>("coreLanguage", this.Configuration.ApiClient.ParameterToString(coreLanguage)));
+            if (published != null) localVarQueryParams.Add(new Tuple<string, string>("published", this.Configuration.ApiClient.ParameterToString(published)));
 
             // Header params
 

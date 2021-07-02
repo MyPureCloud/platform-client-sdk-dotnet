@@ -9,6 +9,7 @@ title: GenerateBuForecastRequest
 |------------ | ------------- | ------------- | -------------|
 | **Description** | **string** | The description for the forecast | |
 | **WeekCount** | **int?** | The number of weeks this forecast covers | [optional] |
+| **CanUseForScheduling** | **bool?** | Whether this forecast can be used for scheduling | [optional] |
 {: class="table table-striped"}
 
 

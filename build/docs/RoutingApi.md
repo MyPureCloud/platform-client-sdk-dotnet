@@ -71,6 +71,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchRoutingConversation**](RoutingApi.html#patchroutingconversation) | **PATCH** /api/v2/routing/conversations/{conversationId} | Update attributes of an in-queue conversation |
 | [**PatchRoutingEmailDomain**](RoutingApi.html#patchroutingemaildomain) | **PATCH** /api/v2/routing/email/domains/{domainId} | Update domain settings |
 | [**PatchRoutingEmailDomainValidate**](RoutingApi.html#patchroutingemaildomainvalidate) | **PATCH** /api/v2/routing/email/domains/{domainId}/validate | Validate domain settings |
+| [**PatchRoutingEmailOutboundDomain**](RoutingApi.html#patchroutingemailoutbounddomain) | **PATCH** /api/v2/routing/email/outbound/domains/{domainId} | Request an update of the emails from /replyTo of an outbound domain |
 | [**PatchRoutingPredictor**](RoutingApi.html#patchroutingpredictor) | **PATCH** /api/v2/routing/predictors/{predictorId} | Update single predictor. |
 | [**PatchRoutingQueueMember**](RoutingApi.html#patchroutingqueuemember) | **PATCH** /api/v2/routing/queues/{queueId}/members/{memberId} | Update the ring number OR joined status for a queue member. |
 | [**PatchRoutingQueueMembers**](RoutingApi.html#patchroutingqueuemembers) | **PATCH** /api/v2/routing/queues/{queueId}/members | Join or unjoin a set of users for a queue |
@@ -4418,6 +4419,73 @@ namespace Example
 ### Return type
 
 [**InboundDomain**](InboundDomain.html)
+
+<a name="patchroutingemailoutbounddomain"></a>
+
+## [**OutboundDomain**](OutboundDomain.html) PatchRoutingEmailOutboundDomain (string domainId, OutboundDomain body)
+
+
+
+Request an update of the emails from /replyTo of an outbound domain
+
+
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchRoutingEmailOutboundDomainExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var domainId = domainId_example;  // string | domain ID
+            var body = new OutboundDomain(); // OutboundDomain | domain with emails that need update set
+
+            try
+            { 
+                // Request an update of the emails from /replyTo of an outbound domain
+                OutboundDomain result = apiInstance.PatchRoutingEmailOutboundDomain(domainId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PatchRoutingEmailOutboundDomain: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainId** | **string**| domain ID |  |
+| **body** | [**OutboundDomain**](OutboundDomain.html)| domain with emails that need update set |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OutboundDomain**](OutboundDomain.html)
 
 <a name="patchroutingpredictor"></a>
 

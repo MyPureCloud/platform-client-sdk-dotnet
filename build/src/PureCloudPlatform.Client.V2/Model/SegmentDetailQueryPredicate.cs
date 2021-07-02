@@ -91,6 +91,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Agentassistantid,
             
             /// <summary>
+            /// Enum Agentowned for "agentOwned"
+            /// </summary>
+            [EnumMember(Value = "agentOwned")]
+            Agentowned,
+            
+            /// <summary>
             /// Enum Ani for "ani"
             /// </summary>
             [EnumMember(Value = "ani")]

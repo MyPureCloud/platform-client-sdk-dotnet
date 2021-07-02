@@ -114,10 +114,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Peoplepermissions,
             
             /// <summary>
-            /// Enum Performance for "Performance"
+            /// Enum Employeeperformance for "EmployeePerformance"
             /// </summary>
-            [EnumMember(Value = "Performance")]
-            Performance,
+            [EnumMember(Value = "EmployeePerformance")]
+            Employeeperformance,
             
             /// <summary>
             /// Enum Predictiveengagement for "PredictiveEngagement"
@@ -195,7 +195,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Messaging for "Messaging"
             /// </summary>
             [EnumMember(Value = "Messaging")]
-            Messaging
+            Messaging,
+            
+            /// <summary>
+            /// Enum Supportability for "Supportability"
+            /// </summary>
+            [EnumMember(Value = "Supportability")]
+            Supportability
         }
         
         

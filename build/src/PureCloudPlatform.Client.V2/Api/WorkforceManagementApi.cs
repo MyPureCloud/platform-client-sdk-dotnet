@@ -851,6 +851,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<BuForecastGenerationResult> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
         
         /// <summary>
+        /// Get the result of a long term forecast calculation
+        /// </summary>
+        /// <remarks>
+        /// Includes modifications unless you pass the doNotApplyModifications query parameter
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <returns>LongTermForecastResultResponse</returns>
+        LongTermForecastResultResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata (string businessUnitId, String weekDateId, string forecastId, bool? forceDownloadService = null);
+
+        /// <summary>
+        /// Get the result of a long term forecast calculation
+        /// </summary>
+        /// <remarks>
+        /// Includes modifications unless you pass the doNotApplyModifications query parameter
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <returns>ApiResponse of LongTermForecastResultResponse</returns>
+        ApiResponse<LongTermForecastResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, bool? forceDownloadService = null);
+        
+        /// <summary>
         /// Gets the forecast planning group snapshot
         /// </summary>
         /// <remarks>
@@ -3593,6 +3621,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse (BuForecastGenerationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuForecastGenerationResult>> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
+        
+        /// <summary>
+        /// Get the result of a long term forecast calculation
+        /// </summary>
+        /// <remarks>
+        /// Includes modifications unless you pass the doNotApplyModifications query parameter
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <returns>Task of LongTermForecastResultResponse</returns>
+        System.Threading.Tasks.Task<LongTermForecastResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataAsync (string businessUnitId, String weekDateId, string forecastId, bool? forceDownloadService = null);
+
+        /// <summary>
+        /// Get the result of a long term forecast calculation
+        /// </summary>
+        /// <remarks>
+        /// Includes modifications unless you pass the doNotApplyModifications query parameter
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <returns>Task of ApiResponse (LongTermForecastResultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LongTermForecastResultResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, bool? forceDownloadService = null);
         
         /// <summary>
         /// Gets the forecast planning group snapshot
@@ -12619,6 +12675,231 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<BuForecastGenerationResult>(localVarStatusCode,
                 localVarHeaders,
                 (BuForecastGenerationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuForecastGenerationResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get the result of a long term forecast calculation Includes modifications unless you pass the doNotApplyModifications query parameter
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <returns>LongTermForecastResultResponse</returns>
+        public LongTermForecastResultResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata (string businessUnitId, String weekDateId, string forecastId, bool? forceDownloadService = null)
+        {
+             ApiResponse<LongTermForecastResultResponse> localVarResponse = GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataWithHttpInfo(businessUnitId, weekDateId, forecastId, forceDownloadService);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the result of a long term forecast calculation Includes modifications unless you pass the doNotApplyModifications query parameter
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <returns>ApiResponse of LongTermForecastResultResponse</returns>
+        public ApiResponse< LongTermForecastResultResponse > GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, bool? forceDownloadService = null)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata");
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata");
+            // verify the required parameter 'forecastId' is set
+            if (forecastId == null)
+                throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/longtermforecastdata";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+            if (forecastId != null) localVarPathParams.Add("forecastId", this.Configuration.ApiClient.ParameterToString(forecastId));
+
+            // Query params
+            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LongTermForecastResultResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LongTermForecastResultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LongTermForecastResultResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the result of a long term forecast calculation Includes modifications unless you pass the doNotApplyModifications query parameter
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <returns>Task of LongTermForecastResultResponse</returns>
+        public async System.Threading.Tasks.Task<LongTermForecastResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataAsync (string businessUnitId, String weekDateId, string forecastId, bool? forceDownloadService = null)
+        {
+             ApiResponse<LongTermForecastResultResponse> localVarResponse = await GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataAsyncWithHttpInfo(businessUnitId, weekDateId, forecastId, forceDownloadService);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the result of a long term forecast calculation Includes modifications unless you pass the doNotApplyModifications query parameter
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <returns>Task of ApiResponse (LongTermForecastResultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LongTermForecastResultResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, bool? forceDownloadService = null)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata");
+            
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata");
+            
+            // verify the required parameter 'forecastId' is set
+            if (forecastId == null)
+                throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/longtermforecastdata";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+            if (forecastId != null) localVarPathParams.Add("forecastId", this.Configuration.ApiClient.ParameterToString(forecastId));
+
+            // Query params
+            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LongTermForecastResultResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LongTermForecastResultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LongTermForecastResultResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

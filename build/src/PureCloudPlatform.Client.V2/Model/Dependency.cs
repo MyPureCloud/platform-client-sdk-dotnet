@@ -134,6 +134,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Dialogflowagent,
             
             /// <summary>
+            /// Enum Dialogflowcxagent for "DIALOGFLOWCXAGENT"
+            /// </summary>
+            [EnumMember(Value = "DIALOGFLOWCXAGENT")]
+            Dialogflowcxagent,
+            
+            /// <summary>
             /// Enum Emailroute for "EMAILROUTE"
             /// </summary>
             [EnumMember(Value = "EMAILROUTE")]
@@ -264,6 +270,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "NLUDOMAIN")]
             Nludomain,
+            
+            /// <summary>
+            /// Enum Nuancemixbot for "NUANCEMIXBOT"
+            /// </summary>
+            [EnumMember(Value = "NUANCEMIXBOT")]
+            Nuancemixbot,
+            
+            /// <summary>
+            /// Enum Nuancemixintegration for "NUANCEMIXINTEGRATION"
+            /// </summary>
+            [EnumMember(Value = "NUANCEMIXINTEGRATION")]
+            Nuancemixintegration,
             
             /// <summary>
             /// Enum Outboundcallflow for "OUTBOUNDCALLFLOW"

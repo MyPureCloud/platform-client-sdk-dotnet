@@ -93,6 +93,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgesTrunks**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgestrunks) | **GET** /api/v2/telephony/providers/edges/trunks | Get the list of available trunks. |
 | [**GetTelephonyProvidersEdgesTrunksMetrics**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgestrunksmetrics) | **GET** /api/v2/telephony/providers/edges/trunks/metrics | Get the metrics for a list of trunks. |
 | [**GetTelephonyProvidersEdgesTrunkswithrecording**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgestrunkswithrecording) | **GET** /api/v2/telephony/providers/edges/trunkswithrecording | Get Counts of trunks that have recording disabled or enabled |
+| [**PatchTelephonyProvidersEdgesAutoscalinggroupCapacity**](TelephonyProvidersEdgeApi.html#patchtelephonyprovidersedgesautoscalinggroupcapacity) | **PATCH** /api/v2/telephony/providers/edges/autoscalinggroups/{asgId}/capacity | Scales the ASG to match the desired capacity |
 | [**PostTelephonyProvidersEdgeDiagnosticNslookup**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgediagnosticnslookup) | **POST** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup | Nslookup request command to collect networking-related information from an Edge for a target IP or host. |
 | [**PostTelephonyProvidersEdgeDiagnosticPing**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgediagnosticping) | **POST** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping | Ping Request command to collect networking-related information from an Edge for a target IP or host. |
 | [**PostTelephonyProvidersEdgeDiagnosticRoute**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgediagnosticroute) | **POST** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/route | Route request command to collect networking-related information from an Edge for a target IP or host. |
@@ -5953,6 +5954,74 @@ namespace Example
 ### Return type
 
 [**TrunkRecordingEnabledCount**](TrunkRecordingEnabledCount.html)
+
+<a name="patchtelephonyprovidersedgesautoscalinggroupcapacity"></a>
+
+## [**ScaleASGResponse**](ScaleASGResponse.html) PatchTelephonyProvidersEdgesAutoscalinggroupCapacity (string asgId, AsgScaleRequest body)
+
+
+
+Scales the ASG to match the desired capacity
+
+
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+* internal:edge:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchTelephonyProvidersEdgesAutoscalinggroupCapacityExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var asgId = asgId_example;  // string | Id of the asg that is to be scaled
+            var body = new AsgScaleRequest(); // AsgScaleRequest | AsgScaleRequest
+
+            try
+            { 
+                // Scales the ASG to match the desired capacity
+                ScaleASGResponse result = apiInstance.PatchTelephonyProvidersEdgesAutoscalinggroupCapacity(asgId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PatchTelephonyProvidersEdgesAutoscalinggroupCapacity: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **asgId** | **string**| Id of the asg that is to be scaled |  |
+| **body** | [**AsgScaleRequest**](AsgScaleRequest.html)| AsgScaleRequest |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScaleASGResponse**](ScaleASGResponse.html)
 
 <a name="posttelephonyprovidersedgediagnosticnslookup"></a>
 

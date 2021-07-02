@@ -30,6 +30,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationThreadingWindow" /> class.
@@ -66,6 +71,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ConversationThreadingWindowSetting> Settings { get; set; }
         
         
+        
+        /// <summary>
+        /// The default conversation threading window timeout (Minutes)
+        /// </summary>
+        /// <value>The default conversation threading window timeout (Minutes)</value>
+        [DataMember(Name="defaultTimeoutMinutes", EmitDefaultValue=false)]
+        public long? DefaultTimeoutMinutes { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -77,6 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Settings: ").Append(Settings).Append("\n");
+            sb.Append("  DefaultTimeoutMinutes: ").Append(DefaultTimeoutMinutes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -122,6 +137,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Settings == other.Settings ||
                     this.Settings != null &&
                     this.Settings.SequenceEqual(other.Settings)
+                ) &&
+                (
+                    this.DefaultTimeoutMinutes == other.DefaultTimeoutMinutes ||
+                    this.DefaultTimeoutMinutes != null &&
+                    this.DefaultTimeoutMinutes.Equals(other.DefaultTimeoutMinutes)
                 );
         }
 
@@ -142,6 +162,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Settings != null)
                     hash = hash * 59 + this.Settings.GetHashCode();
+                
+                if (this.DefaultTimeoutMinutes != null)
+                    hash = hash * 59 + this.DefaultTimeoutMinutes.GetHashCode();
                 
                 return hash;
             }

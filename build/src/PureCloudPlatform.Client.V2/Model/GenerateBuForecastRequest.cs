@@ -30,6 +30,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="GenerateBuForecastRequest" /> class.
@@ -42,10 +47,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Description">The description for the forecast (required).</param>
         /// <param name="WeekCount">The number of weeks this forecast covers.</param>
-        public GenerateBuForecastRequest(string Description = null, int? WeekCount = null)
+        /// <param name="CanUseForScheduling">Whether this forecast can be used for scheduling.</param>
+        public GenerateBuForecastRequest(string Description = null, int? WeekCount = null, bool? CanUseForScheduling = null)
         {
             this.Description = Description;
             this.WeekCount = WeekCount;
+            this.CanUseForScheduling = CanUseForScheduling;
             
         }
         
@@ -68,6 +75,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? WeekCount { get; set; }
         
         
+        
+        /// <summary>
+        /// Whether this forecast can be used for scheduling
+        /// </summary>
+        /// <value>Whether this forecast can be used for scheduling</value>
+        [DataMember(Name="canUseForScheduling", EmitDefaultValue=false)]
+        public bool? CanUseForScheduling { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -79,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  WeekCount: ").Append(WeekCount).Append("\n");
+            sb.Append("  CanUseForScheduling: ").Append(CanUseForScheduling).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,6 +141,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WeekCount == other.WeekCount ||
                     this.WeekCount != null &&
                     this.WeekCount.Equals(other.WeekCount)
+                ) &&
+                (
+                    this.CanUseForScheduling == other.CanUseForScheduling ||
+                    this.CanUseForScheduling != null &&
+                    this.CanUseForScheduling.Equals(other.CanUseForScheduling)
                 );
         }
 
@@ -144,6 +166,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.WeekCount != null)
                     hash = hash * 59 + this.WeekCount.GetHashCode();
+                
+                if (this.CanUseForScheduling != null)
+                    hash = hash * 59 + this.CanUseForScheduling.GetHashCode();
                 
                 return hash;
             }

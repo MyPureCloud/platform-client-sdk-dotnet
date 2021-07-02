@@ -68,6 +68,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The direction of the communication
         /// </summary>
@@ -336,6 +339,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Complete routing method
         /// </summary>
@@ -387,7 +393,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Standard")]
             Standard
         }
-        
         
         
         
@@ -544,14 +549,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Complete routing method
         /// </summary>
         /// <value>Complete routing method</value>
         [DataMember(Name="usedRouting", EmitDefaultValue=false)]
         public UsedRoutingEnum? UsedRouting { get; set; }
-        
-        
         
         
         
@@ -580,6 +585,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AddressTo">The address receiving an action.</param>
         /// <param name="AgentAssistantId">Unique identifier of the active virtual agent assistant.</param>
         /// <param name="AgentBullseyeRing">Bullseye ring of the targeted agent.</param>
+        /// <param name="AgentOwned">Flag indicating an agent-owned callback.</param>
         /// <param name="Ani">Automatic Number Identification (caller&#39;s number).</param>
         /// <param name="AssignerId">ID of the user that manually assigned a conversation.</param>
         /// <param name="Authenticated">Flag that indicates that the identity of the customer has been asserted as verified by the provider..</param>
@@ -629,6 +635,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SessionId">The unique identifier of this session.</param>
         /// <param name="SharingScreen">Flag determining if screenShare is started or not (true/false).</param>
         /// <param name="SkipEnabled">(Dialer) Whether the agent can skip the dialer contact.</param>
+        /// <param name="TimeoutSeconds">The number of seconds before PureCloud begins the call for a call back (0 disables automatic calling).</param>
         /// <param name="UsedRouting">Complete routing method.</param>
         /// <param name="VideoAddressSelf">Direct Video address.</param>
         /// <param name="VideoRoomId">A unique identifier for a PureCloud video room.</param>
@@ -637,8 +644,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Flow">IVR flow execution associated with this session.</param>
         /// <param name="Metrics">List of metrics for this session.</param>
         /// <param name="Segments">List of segments for this session.</param>
-        /// <param name="TimeoutSeconds">The number of seconds before PureCloud begins the call for a call back (0 disables automatic calling).</param>
-        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, string CobrowseRole = null, string CobrowseRoomId = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, bool? SkipEnabled = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null, int? TimeoutSeconds = null)
+        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, string CobrowseRole = null, string CobrowseRoomId = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null)
         {
             this.ActiveSkillIds = ActiveSkillIds;
             this.AcwSkipped = AcwSkipped;
@@ -648,6 +654,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AddressTo = AddressTo;
             this.AgentAssistantId = AgentAssistantId;
             this.AgentBullseyeRing = AgentBullseyeRing;
+            this.AgentOwned = AgentOwned;
             this.Ani = Ani;
             this.AssignerId = AssignerId;
             this.Authenticated = Authenticated;
@@ -697,6 +704,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SessionId = SessionId;
             this.SharingScreen = SharingScreen;
             this.SkipEnabled = SkipEnabled;
+            this.TimeoutSeconds = TimeoutSeconds;
             this.UsedRouting = UsedRouting;
             this.VideoAddressSelf = VideoAddressSelf;
             this.VideoRoomId = VideoRoomId;
@@ -705,7 +713,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Flow = Flow;
             this.Metrics = Metrics;
             this.Segments = Segments;
-            this.TimeoutSeconds = TimeoutSeconds;
             
         }
         
@@ -780,6 +787,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Bullseye ring of the targeted agent</value>
         [DataMember(Name="agentBullseyeRing", EmitDefaultValue=false)]
         public int? AgentBullseyeRing { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Flag indicating an agent-owned callback
+        /// </summary>
+        /// <value>Flag indicating an agent-owned callback</value>
+        [DataMember(Name="agentOwned", EmitDefaultValue=false)]
+        public bool? AgentOwned { get; set; }
         
         
         
@@ -1210,6 +1226,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The number of seconds before PureCloud begins the call for a call back (0 disables automatic calling)
+        /// </summary>
+        /// <value>The number of seconds before PureCloud begins the call for a call back (0 disables automatic calling)</value>
+        [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
+        public int? TimeoutSeconds { get; set; }
+        
+        
+        
         
         
         /// <summary>
@@ -1274,15 +1299,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<AnalyticsConversationSegment> Segments { get; set; }
         
         
-        
-        /// <summary>
-        /// The number of seconds before PureCloud begins the call for a call back (0 disables automatic calling)
-        /// </summary>
-        /// <value>The number of seconds before PureCloud begins the call for a call back (0 disables automatic calling)</value>
-        [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
-        public int? TimeoutSeconds { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1300,6 +1316,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AddressTo: ").Append(AddressTo).Append("\n");
             sb.Append("  AgentAssistantId: ").Append(AgentAssistantId).Append("\n");
             sb.Append("  AgentBullseyeRing: ").Append(AgentBullseyeRing).Append("\n");
+            sb.Append("  AgentOwned: ").Append(AgentOwned).Append("\n");
             sb.Append("  Ani: ").Append(Ani).Append("\n");
             sb.Append("  AssignerId: ").Append(AssignerId).Append("\n");
             sb.Append("  Authenticated: ").Append(Authenticated).Append("\n");
@@ -1349,6 +1366,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
             sb.Append("  SharingScreen: ").Append(SharingScreen).Append("\n");
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
+            sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
             sb.Append("  UsedRouting: ").Append(UsedRouting).Append("\n");
             sb.Append("  VideoAddressSelf: ").Append(VideoAddressSelf).Append("\n");
             sb.Append("  VideoRoomId: ").Append(VideoRoomId).Append("\n");
@@ -1357,7 +1375,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Flow: ").Append(Flow).Append("\n");
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
             sb.Append("  Segments: ").Append(Segments).Append("\n");
-            sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1433,6 +1450,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentBullseyeRing == other.AgentBullseyeRing ||
                     this.AgentBullseyeRing != null &&
                     this.AgentBullseyeRing.Equals(other.AgentBullseyeRing)
+                ) &&
+                (
+                    this.AgentOwned == other.AgentOwned ||
+                    this.AgentOwned != null &&
+                    this.AgentOwned.Equals(other.AgentOwned)
                 ) &&
                 (
                     this.Ani == other.Ani ||
@@ -1680,6 +1702,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SkipEnabled.Equals(other.SkipEnabled)
                 ) &&
                 (
+                    this.TimeoutSeconds == other.TimeoutSeconds ||
+                    this.TimeoutSeconds != null &&
+                    this.TimeoutSeconds.Equals(other.TimeoutSeconds)
+                ) &&
+                (
                     this.UsedRouting == other.UsedRouting ||
                     this.UsedRouting != null &&
                     this.UsedRouting.Equals(other.UsedRouting)
@@ -1718,11 +1745,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Segments == other.Segments ||
                     this.Segments != null &&
                     this.Segments.SequenceEqual(other.Segments)
-                ) &&
-                (
-                    this.TimeoutSeconds == other.TimeoutSeconds ||
-                    this.TimeoutSeconds != null &&
-                    this.TimeoutSeconds.Equals(other.TimeoutSeconds)
                 );
         }
 
@@ -1761,6 +1783,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AgentBullseyeRing != null)
                     hash = hash * 59 + this.AgentBullseyeRing.GetHashCode();
+                
+                if (this.AgentOwned != null)
+                    hash = hash * 59 + this.AgentOwned.GetHashCode();
                 
                 if (this.Ani != null)
                     hash = hash * 59 + this.Ani.GetHashCode();
@@ -1909,6 +1934,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SkipEnabled != null)
                     hash = hash * 59 + this.SkipEnabled.GetHashCode();
                 
+                if (this.TimeoutSeconds != null)
+                    hash = hash * 59 + this.TimeoutSeconds.GetHashCode();
+                
                 if (this.UsedRouting != null)
                     hash = hash * 59 + this.UsedRouting.GetHashCode();
                 
@@ -1932,9 +1960,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Segments != null)
                     hash = hash * 59 + this.Segments.GetHashCode();
-                
-                if (this.TimeoutSeconds != null)
-                    hash = hash * 59 + this.TimeoutSeconds.GetHashCode();
                 
                 return hash;
             }

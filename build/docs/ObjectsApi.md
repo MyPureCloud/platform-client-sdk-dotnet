@@ -13,6 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAuthorizationDivisionsHome**](ObjectsApi.html#getauthorizationdivisionshome) | **GET** /api/v2/authorization/divisions/home | Retrieve the home division for the organization. |
 | [**GetAuthorizationDivisionsLimit**](ObjectsApi.html#getauthorizationdivisionslimit) | **GET** /api/v2/authorization/divisions/limit | Returns the maximum allowed number of divisions. |
 | [**PostAuthorizationDivisionObject**](ObjectsApi.html#postauthorizationdivisionobject) | **POST** /api/v2/authorization/divisions/{divisionId}/objects/{objectType} | Assign a list of objects to a division |
+| [**PostAuthorizationDivisionRestore**](ObjectsApi.html#postauthorizationdivisionrestore) | **POST** /api/v2/authorization/divisions/{divisionId}/restore | Recreate a previously deleted division. |
 | [**PostAuthorizationDivisions**](ObjectsApi.html#postauthorizationdivisions) | **POST** /api/v2/authorization/divisions | Create a division. |
 | [**PutAuthorizationDivision**](ObjectsApi.html#putauthorizationdivision) | **PUT** /api/v2/authorization/divisions/{divisionId} | Update a division. |
 {: class="table table-striped"}
@@ -413,6 +414,73 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="postauthorizationdivisionrestore"></a>
+
+## [**AuthzDivision**](AuthzDivision.html) PostAuthorizationDivisionRestore (string divisionId, AuthzDivision body)
+
+
+
+Recreate a previously deleted division.
+
+
+
+Requires ANY permissions: 
+
+* authorization:division:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAuthorizationDivisionRestoreExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ObjectsApi();
+            var divisionId = divisionId_example;  // string | Division ID
+            var body = new AuthzDivision(); // AuthzDivision | Recreated division data
+
+            try
+            { 
+                // Recreate a previously deleted division.
+                AuthzDivision result = apiInstance.PostAuthorizationDivisionRestore(divisionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ObjectsApi.PostAuthorizationDivisionRestore: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **divisionId** | **string**| Division ID |  |
+| **body** | [**AuthzDivision**](AuthzDivision.html)| Recreated division data |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AuthzDivision**](AuthzDivision.html)
 
 <a name="postauthorizationdivisions"></a>
 

@@ -103,6 +103,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Agentbullseyering,
             
             /// <summary>
+            /// Enum Agentowned for "agentOwned"
+            /// </summary>
+            [EnumMember(Value = "agentOwned")]
+            Agentowned,
+            
+            /// <summary>
             /// Enum Agentrank for "agentRank"
             /// </summary>
             [EnumMember(Value = "agentRank")]

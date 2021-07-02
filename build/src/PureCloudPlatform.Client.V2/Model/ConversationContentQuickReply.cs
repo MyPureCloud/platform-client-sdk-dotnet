@@ -80,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ConversationContentQuickReply" /> class.
         /// </summary>
         /// <param name="Text">Text to show inside the quick reply. This is also used as the response text after clicking on the quick reply. (required).</param>
-        /// <param name="Payload">Content of the payload included in the quick reply response. Could be an ID identifying the quick reply response..</param>
+        /// <param name="Payload">Content of the payload included in the quick reply response. Could be an ID identifying the quick reply response. (required).</param>
         /// <param name="Image">URL of an image associated with the quick reply..</param>
         /// <param name="Action">Specifies the type of action that is triggered upon clicking the quick reply..</param>
         public ConversationContentQuickReply(string Text = null, string Payload = null, string Image = null, ActionEnum? Action = null)

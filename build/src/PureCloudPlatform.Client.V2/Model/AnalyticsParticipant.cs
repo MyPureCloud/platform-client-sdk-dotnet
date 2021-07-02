@@ -91,6 +91,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Api,
             
             /// <summary>
+            /// Enum Botflow for "botflow"
+            /// </summary>
+            [EnumMember(Value = "botflow")]
+            Botflow,
+            
+            /// <summary>
             /// Enum Campaign for "campaign"
             /// </summary>
             [EnumMember(Value = "campaign")]

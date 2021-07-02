@@ -1609,6 +1609,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<InboundDomain> PatchRoutingEmailDomainValidateWithHttpInfo (string domainId, InboundDomainPatchRequest body);
         
         /// <summary>
+        /// Request an update of the emails from /replyTo of an outbound domain
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">domain with emails that need update set</param>
+        /// <returns>OutboundDomain</returns>
+        OutboundDomain PatchRoutingEmailOutboundDomain (string domainId, OutboundDomain body);
+
+        /// <summary>
+        /// Request an update of the emails from /replyTo of an outbound domain
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">domain with emails that need update set</param>
+        /// <returns>ApiResponse of OutboundDomain</returns>
+        ApiResponse<OutboundDomain> PatchRoutingEmailOutboundDomainWithHttpInfo (string domainId, OutboundDomain body);
+        
+        /// <summary>
         /// Update single predictor.
         /// </summary>
         /// <remarks>
@@ -4151,6 +4175,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain settings</param>
         /// <returns>Task of ApiResponse (InboundDomain)</returns>
         System.Threading.Tasks.Task<ApiResponse<InboundDomain>> PatchRoutingEmailDomainValidateAsyncWithHttpInfo (string domainId, InboundDomainPatchRequest body);
+        
+        /// <summary>
+        /// Request an update of the emails from /replyTo of an outbound domain
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">domain with emails that need update set</param>
+        /// <returns>Task of OutboundDomain</returns>
+        System.Threading.Tasks.Task<OutboundDomain> PatchRoutingEmailOutboundDomainAsync (string domainId, OutboundDomain body);
+
+        /// <summary>
+        /// Request an update of the emails from /replyTo of an outbound domain
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">domain with emails that need update set</param>
+        /// <returns>Task of ApiResponse (OutboundDomain)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OutboundDomain>> PatchRoutingEmailOutboundDomainAsyncWithHttpInfo (string domainId, OutboundDomain body);
         
         /// <summary>
         /// Update single predictor.
@@ -18017,6 +18065,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<InboundDomain>(localVarStatusCode,
                 localVarHeaders,
                 (InboundDomain) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InboundDomain)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Request an update of the emails from /replyTo of an outbound domain 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">domain with emails that need update set</param>
+        /// <returns>OutboundDomain</returns>
+        public OutboundDomain PatchRoutingEmailOutboundDomain (string domainId, OutboundDomain body)
+        {
+             ApiResponse<OutboundDomain> localVarResponse = PatchRoutingEmailOutboundDomainWithHttpInfo(domainId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Request an update of the emails from /replyTo of an outbound domain 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">domain with emails that need update set</param>
+        /// <returns>ApiResponse of OutboundDomain</returns>
+        public ApiResponse< OutboundDomain > PatchRoutingEmailOutboundDomainWithHttpInfo (string domainId, OutboundDomain body)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->PatchRoutingEmailOutboundDomain");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchRoutingEmailOutboundDomain");
+
+            var localVarPath = "/api/v2/routing/email/outbound/domains/{domainId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingEmailOutboundDomain: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingEmailOutboundDomain: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OutboundDomain>(localVarStatusCode,
+                localVarHeaders,
+                (OutboundDomain) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundDomain)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Request an update of the emails from /replyTo of an outbound domain 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">domain with emails that need update set</param>
+        /// <returns>Task of OutboundDomain</returns>
+        public async System.Threading.Tasks.Task<OutboundDomain> PatchRoutingEmailOutboundDomainAsync (string domainId, OutboundDomain body)
+        {
+             ApiResponse<OutboundDomain> localVarResponse = await PatchRoutingEmailOutboundDomainAsyncWithHttpInfo(domainId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Request an update of the emails from /replyTo of an outbound domain 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">domain with emails that need update set</param>
+        /// <returns>Task of ApiResponse (OutboundDomain)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundDomain>> PatchRoutingEmailOutboundDomainAsyncWithHttpInfo (string domainId, OutboundDomain body)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->PatchRoutingEmailOutboundDomain");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchRoutingEmailOutboundDomain");
+            
+
+            var localVarPath = "/api/v2/routing/email/outbound/domains/{domainId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingEmailOutboundDomain: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingEmailOutboundDomain: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OutboundDomain>(localVarStatusCode,
+                localVarHeaders,
+                (OutboundDomain) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundDomain)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

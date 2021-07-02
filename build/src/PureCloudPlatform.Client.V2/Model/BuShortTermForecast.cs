@@ -112,12 +112,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The method by which this forecast was created
         /// </summary>
         /// <value>The method by which this forecast was created</value>
         [DataMember(Name="creationMethod", EmitDefaultValue=false)]
         public CreationMethodEnum? CreationMethod { get; set; }
+        
+        
         
         
         
@@ -151,6 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreationMethod">The method by which this forecast was created.</param>
         /// <param name="Description">The description of this forecast.</param>
         /// <param name="Metadata">Metadata for this forecast.</param>
+        /// <param name="CanUseForScheduling">Whether this forecast can be used for scheduling.</param>
         /// <param name="ReferenceStartDate">The reference start date for interval-based data for this forecast. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="SourceDays">The source day pointers for this forecast.</param>
         /// <param name="Modifications">Any manual modifications applied to this forecast.</param>
@@ -158,13 +164,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeZone">The time zone for this forecast.</param>
         /// <param name="PlanningGroupsVersion">The version of the planning groups that was used for this forecast.</param>
         /// <param name="PlanningGroups">A snapshot of the planning groups used for this forecast as of the version number indicated.</param>
-        public BuShortTermForecast(String WeekDate = null, int? WeekCount = null, CreationMethodEnum? CreationMethod = null, string Description = null, WfmVersionedEntityMetadata Metadata = null, DateTime? ReferenceStartDate = null, List<ForecastSourceDayPointer> SourceDays = null, List<BuForecastModification> Modifications = null, BuForecastGenerationResult GenerationResults = null, string TimeZone = null, int? PlanningGroupsVersion = null, ForecastPlanningGroupsResponse PlanningGroups = null)
+        public BuShortTermForecast(String WeekDate = null, int? WeekCount = null, CreationMethodEnum? CreationMethod = null, string Description = null, WfmVersionedEntityMetadata Metadata = null, bool? CanUseForScheduling = null, DateTime? ReferenceStartDate = null, List<ForecastSourceDayPointer> SourceDays = null, List<BuForecastModification> Modifications = null, BuForecastGenerationResult GenerationResults = null, string TimeZone = null, int? PlanningGroupsVersion = null, ForecastPlanningGroupsResponse PlanningGroups = null)
         {
             this.WeekDate = WeekDate;
             this.WeekCount = WeekCount;
             this.CreationMethod = CreationMethod;
             this.Description = Description;
             this.Metadata = Metadata;
+            this.CanUseForScheduling = CanUseForScheduling;
             this.ReferenceStartDate = ReferenceStartDate;
             this.SourceDays = SourceDays;
             this.Modifications = Modifications;
@@ -230,6 +237,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Metadata for this forecast</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Whether this forecast can be used for scheduling
+        /// </summary>
+        /// <value>Whether this forecast can be used for scheduling</value>
+        [DataMember(Name="canUseForScheduling", EmitDefaultValue=false)]
+        public bool? CanUseForScheduling { get; set; }
         
         
         
@@ -320,6 +336,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Legacy: ").Append(Legacy).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  CanUseForScheduling: ").Append(CanUseForScheduling).Append("\n");
             sb.Append("  ReferenceStartDate: ").Append(ReferenceStartDate).Append("\n");
             sb.Append("  SourceDays: ").Append(SourceDays).Append("\n");
             sb.Append("  Modifications: ").Append(Modifications).Append("\n");
@@ -400,6 +417,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Metadata.Equals(other.Metadata)
                 ) &&
                 (
+                    this.CanUseForScheduling == other.CanUseForScheduling ||
+                    this.CanUseForScheduling != null &&
+                    this.CanUseForScheduling.Equals(other.CanUseForScheduling)
+                ) &&
+                (
                     this.ReferenceStartDate == other.ReferenceStartDate ||
                     this.ReferenceStartDate != null &&
                     this.ReferenceStartDate.Equals(other.ReferenceStartDate)
@@ -473,6 +495,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
+                
+                if (this.CanUseForScheduling != null)
+                    hash = hash * 59 + this.CanUseForScheduling.GetHashCode();
                 
                 if (this.ReferenceStartDate != null)
                     hash = hash * 59 + this.ReferenceStartDate.GetHashCode();

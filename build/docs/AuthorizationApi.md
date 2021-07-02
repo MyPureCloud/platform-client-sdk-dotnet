@@ -31,6 +31,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserRoles**](AuthorizationApi.html#getuserroles) | **GET** /api/v2/users/{userId}/roles | Returns a listing of roles and permissions for a user. |
 | [**PatchAuthorizationRole**](AuthorizationApi.html#patchauthorizationrole) | **PATCH** /api/v2/authorization/roles/{roleId} | Patch Organization Role for needsUpdate Field |
 | [**PostAuthorizationDivisionObject**](AuthorizationApi.html#postauthorizationdivisionobject) | **POST** /api/v2/authorization/divisions/{divisionId}/objects/{objectType} | Assign a list of objects to a division |
+| [**PostAuthorizationDivisionRestore**](AuthorizationApi.html#postauthorizationdivisionrestore) | **POST** /api/v2/authorization/divisions/{divisionId}/restore | Recreate a previously deleted division. |
 | [**PostAuthorizationDivisions**](AuthorizationApi.html#postauthorizationdivisions) | **POST** /api/v2/authorization/divisions | Create a division. |
 | [**PostAuthorizationRole**](AuthorizationApi.html#postauthorizationrole) | **POST** /api/v2/authorization/roles/{roleId} | Bulk-grant subjects and divisions with an organization role. |
 | [**PostAuthorizationRoleComparedefaultRightRoleId**](AuthorizationApi.html#postauthorizationrolecomparedefaultrightroleid) | **POST** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an unsaved org role to default role comparison |
@@ -1663,6 +1664,73 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="postauthorizationdivisionrestore"></a>
+
+## [**AuthzDivision**](AuthzDivision.html) PostAuthorizationDivisionRestore (string divisionId, AuthzDivision body)
+
+
+
+Recreate a previously deleted division.
+
+
+
+Requires ANY permissions: 
+
+* authorization:division:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAuthorizationDivisionRestoreExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+            var divisionId = divisionId_example;  // string | Division ID
+            var body = new AuthzDivision(); // AuthzDivision | Recreated division data
+
+            try
+            { 
+                // Recreate a previously deleted division.
+                AuthzDivision result = apiInstance.PostAuthorizationDivisionRestore(divisionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.PostAuthorizationDivisionRestore: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **divisionId** | **string**| Division ID |  |
+| **body** | [**AuthzDivision**](AuthzDivision.html)| Recreated division data |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AuthzDivision**](AuthzDivision.html)
 
 <a name="postauthorizationdivisions"></a>
 

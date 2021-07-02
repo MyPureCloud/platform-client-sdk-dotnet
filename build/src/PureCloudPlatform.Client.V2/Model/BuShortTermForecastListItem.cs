@@ -91,12 +91,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The method by which this forecast was created
         /// </summary>
         /// <value>The method by which this forecast was created</value>
         [DataMember(Name="creationMethod", EmitDefaultValue=false)]
         public CreationMethodEnum? CreationMethod { get; set; }
+        
+        
         
         
         
@@ -116,13 +121,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreationMethod">The method by which this forecast was created.</param>
         /// <param name="Description">The description of this forecast.</param>
         /// <param name="Metadata">Metadata for this forecast.</param>
-        public BuShortTermForecastListItem(String WeekDate = null, int? WeekCount = null, CreationMethodEnum? CreationMethod = null, string Description = null, WfmVersionedEntityMetadata Metadata = null)
+        /// <param name="CanUseForScheduling">Whether this forecast can be used for scheduling.</param>
+        public BuShortTermForecastListItem(String WeekDate = null, int? WeekCount = null, CreationMethodEnum? CreationMethod = null, string Description = null, WfmVersionedEntityMetadata Metadata = null, bool? CanUseForScheduling = null)
         {
             this.WeekDate = WeekDate;
             this.WeekCount = WeekCount;
             this.CreationMethod = CreationMethod;
             this.Description = Description;
             this.Metadata = Metadata;
+            this.CanUseForScheduling = CanUseForScheduling;
             
         }
         
@@ -185,6 +192,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Whether this forecast can be used for scheduling
+        /// </summary>
+        /// <value>Whether this forecast can be used for scheduling</value>
+        [DataMember(Name="canUseForScheduling", EmitDefaultValue=false)]
+        public bool? CanUseForScheduling { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -208,6 +224,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Legacy: ").Append(Legacy).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  CanUseForScheduling: ").Append(CanUseForScheduling).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -281,6 +298,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Metadata.Equals(other.Metadata)
                 ) &&
                 (
+                    this.CanUseForScheduling == other.CanUseForScheduling ||
+                    this.CanUseForScheduling != null &&
+                    this.CanUseForScheduling.Equals(other.CanUseForScheduling)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -319,6 +341,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
+                
+                if (this.CanUseForScheduling != null)
+                    hash = hash * 59 + this.CanUseForScheduling.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

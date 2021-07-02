@@ -13,6 +13,7 @@ title: Contact
 | **Type** | **string** |  | [optional] |
 | **Extension** | **string** | Use internal extension instead of address. Mutually exclusive with the address field. | [optional] |
 | **CountryCode** | **string** |  | [optional] |
+| **Integration** | **string** | Integration tag value if this number is associated with an external integration. | [optional] |
 {: class="table table-striped"}
 
 

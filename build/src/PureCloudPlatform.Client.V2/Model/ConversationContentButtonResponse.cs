@@ -82,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Type">Describes the button that resulted in the Button Response..</param>
         /// <param name="Text">The response text from the button click. (required).</param>
-        /// <param name="Payload">The response payload associated with the clicked button..</param>
+        /// <param name="Payload">The response payload associated with the clicked button. (required).</param>
         public ConversationContentButtonResponse(TypeEnum? Type = null, string Text = null, string Payload = null)
         {
             this.Type = Type;

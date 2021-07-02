@@ -865,7 +865,7 @@ List voicemail messages
 
 Requires ANY permissions: 
 
-* voicemail:acdVoicemail:view
+* voicemail:acdvoicemail:view
 
 ### Example
 ```{"language":"csharp"}

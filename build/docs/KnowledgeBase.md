@@ -16,6 +16,7 @@ title: KnowledgeBase
 | **FaqCount** | **int?** | The count representing the number of documents of type FAQ in the KnowledgeBase | [optional] |
 | **DateDocumentLastModified** | **DateTime?** | The date representing when the last document is modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ArticleCount** | **int?** | The count representing the number of documents of type Article in the KnowledgeBase | [optional] |
+| **Published** | **bool?** | Flag that indicates the knowledge base is published | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -85,12 +85,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Core language for knowledge base in which initial content must be created first
         /// </summary>
         /// <value>Core language for knowledge base in which initial content must be created first</value>
         [DataMember(Name="coreLanguage", EmitDefaultValue=false)]
         public CoreLanguageEnum? CoreLanguage { get; set; }
+        
+        
         
         
         
@@ -202,6 +207,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Flag that indicates the knowledge base is published
+        /// </summary>
+        /// <value>Flag that indicates the knowledge base is published</value>
+        [DataMember(Name="published", EmitDefaultValue=false)]
+        public bool? Published { get; private set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -227,6 +241,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FaqCount: ").Append(FaqCount).Append("\n");
             sb.Append("  DateDocumentLastModified: ").Append(DateDocumentLastModified).Append("\n");
             sb.Append("  ArticleCount: ").Append(ArticleCount).Append("\n");
+            sb.Append("  Published: ").Append(Published).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -310,6 +325,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ArticleCount.Equals(other.ArticleCount)
                 ) &&
                 (
+                    this.Published == other.Published ||
+                    this.Published != null &&
+                    this.Published.Equals(other.Published)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -354,6 +374,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ArticleCount != null)
                     hash = hash * 59 + this.ArticleCount.GetHashCode();
+                
+                if (this.Published != null)
+                    hash = hash * 59 + this.Published.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

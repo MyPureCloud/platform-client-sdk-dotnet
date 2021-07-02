@@ -11,8 +11,8 @@ title: ArrayNode
 | **_Float** | **bool?** |  | [optional] |
 | **Number** | **bool?** |  | [optional] |
 | **ValueNode** | **bool?** |  | [optional] |
-| **FloatingPointNumber** | **bool?** |  | [optional] |
 | **ContainerNode** | **bool?** |  | [optional] |
+| **FloatingPointNumber** | **bool?** |  | [optional] |
 | **MissingNode** | **bool?** |  | [optional] |
 | **_Object** | **bool?** |  | [optional] |
 | **Pojo** | **bool?** |  | [optional] |

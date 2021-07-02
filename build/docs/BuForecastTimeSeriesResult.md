@@ -9,6 +9,7 @@ title: BuForecastTimeSeriesResult
 |------------ | ------------- | ------------- | -------------|
 | **Metric** | **string** | The metric this result applies to | [optional] |
 | **ForecastingMethod** | **string** | The forecasting method that was used for this metric | [optional] |
+| **ForecastType** | **string** | The forecasting type in this forecast result | [optional] |
 {: class="table table-striped"}
 
 

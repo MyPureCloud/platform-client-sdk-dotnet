@@ -537,7 +537,7 @@ namespace Example
 
             var apiInstance = new JourneyApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
 
             try
             { 
@@ -560,7 +560,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 {: class="table table-striped"}
 
 ### Return type

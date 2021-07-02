@@ -139,6 +139,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
@@ -158,6 +161,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Contact" /> class.
@@ -167,13 +172,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Type.</param>
         /// <param name="Extension">Use internal extension instead of address. Mutually exclusive with the address field..</param>
         /// <param name="CountryCode">CountryCode.</param>
-        public Contact(string Address = null, MediaTypeEnum? MediaType = null, TypeEnum? Type = null, string Extension = null, string CountryCode = null)
+        /// <param name="Integration">Integration tag value if this number is associated with an external integration..</param>
+        public Contact(string Address = null, MediaTypeEnum? MediaType = null, TypeEnum? Type = null, string Extension = null, string CountryCode = null, string Integration = null)
         {
             this.Address = Address;
             this.MediaType = MediaType;
             this.Type = Type;
             this.Extension = Extension;
             this.CountryCode = CountryCode;
+            this.Integration = Integration;
             
         }
         
@@ -217,6 +224,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string CountryCode { get; set; }
         
         
+        
+        /// <summary>
+        /// Integration tag value if this number is associated with an external integration.
+        /// </summary>
+        /// <value>Integration tag value if this number is associated with an external integration.</value>
+        [DataMember(Name="integration", EmitDefaultValue=false)]
+        public string Integration { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -232,6 +248,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Extension: ").Append(Extension).Append("\n");
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
+            sb.Append("  Integration: ").Append(Integration).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -297,6 +314,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CountryCode == other.CountryCode ||
                     this.CountryCode != null &&
                     this.CountryCode.Equals(other.CountryCode)
+                ) &&
+                (
+                    this.Integration == other.Integration ||
+                    this.Integration != null &&
+                    this.Integration.Equals(other.Integration)
                 );
         }
 
@@ -329,6 +351,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
+                
+                if (this.Integration != null)
+                    hash = hash * 59 + this.Integration.GetHashCode();
                 
                 return hash;
             }

@@ -169,6 +169,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> PostAuthorizationDivisionObjectWithHttpInfo (string divisionId, string objectType, List<string> body);
         
         /// <summary>
+        /// Recreate a previously deleted division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="body">Recreated division data</param>
+        /// <returns>AuthzDivision</returns>
+        AuthzDivision PostAuthorizationDivisionRestore (string divisionId, AuthzDivision body);
+
+        /// <summary>
+        /// Recreate a previously deleted division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="body">Recreated division data</param>
+        /// <returns>ApiResponse of AuthzDivision</returns>
+        ApiResponse<AuthzDivision> PostAuthorizationDivisionRestoreWithHttpInfo (string divisionId, AuthzDivision body);
+        
+        /// <summary>
         /// Create a division.
         /// </summary>
         /// <remarks>
@@ -369,6 +393,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Object Id List</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationDivisionObjectAsyncWithHttpInfo (string divisionId, string objectType, List<string> body);
+        
+        /// <summary>
+        /// Recreate a previously deleted division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="body">Recreated division data</param>
+        /// <returns>Task of AuthzDivision</returns>
+        System.Threading.Tasks.Task<AuthzDivision> PostAuthorizationDivisionRestoreAsync (string divisionId, AuthzDivision body);
+
+        /// <summary>
+        /// Recreate a previously deleted division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="body">Recreated division data</param>
+        /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PostAuthorizationDivisionRestoreAsyncWithHttpInfo (string divisionId, AuthzDivision body);
         
         /// <summary>
         /// Create a division.
@@ -1717,6 +1765,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Recreate a previously deleted division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="body">Recreated division data</param>
+        /// <returns>AuthzDivision</returns>
+        public AuthzDivision PostAuthorizationDivisionRestore (string divisionId, AuthzDivision body)
+        {
+             ApiResponse<AuthzDivision> localVarResponse = PostAuthorizationDivisionRestoreWithHttpInfo(divisionId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Recreate a previously deleted division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="body">Recreated division data</param>
+        /// <returns>ApiResponse of AuthzDivision</returns>
+        public ApiResponse< AuthzDivision > PostAuthorizationDivisionRestoreWithHttpInfo (string divisionId, AuthzDivision body)
+        { 
+            // verify the required parameter 'divisionId' is set
+            if (divisionId == null)
+                throw new ApiException(400, "Missing required parameter 'divisionId' when calling ObjectsApi->PostAuthorizationDivisionRestore");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ObjectsApi->PostAuthorizationDivisionRestore");
+
+            var localVarPath = "/api/v2/authorization/divisions/{divisionId}/restore";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (divisionId != null) localVarPathParams.Add("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationDivisionRestore: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationDivisionRestore: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzDivision>(localVarStatusCode,
+                localVarHeaders,
+                (AuthzDivision) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzDivision)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Recreate a previously deleted division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="body">Recreated division data</param>
+        /// <returns>Task of AuthzDivision</returns>
+        public async System.Threading.Tasks.Task<AuthzDivision> PostAuthorizationDivisionRestoreAsync (string divisionId, AuthzDivision body)
+        {
+             ApiResponse<AuthzDivision> localVarResponse = await PostAuthorizationDivisionRestoreAsyncWithHttpInfo(divisionId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Recreate a previously deleted division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="body">Recreated division data</param>
+        /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PostAuthorizationDivisionRestoreAsyncWithHttpInfo (string divisionId, AuthzDivision body)
+        { 
+            // verify the required parameter 'divisionId' is set
+            if (divisionId == null)
+                throw new ApiException(400, "Missing required parameter 'divisionId' when calling ObjectsApi->PostAuthorizationDivisionRestore");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ObjectsApi->PostAuthorizationDivisionRestore");
+            
+
+            var localVarPath = "/api/v2/authorization/divisions/{divisionId}/restore";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (divisionId != null) localVarPathParams.Add("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationDivisionRestore: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationDivisionRestore: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzDivision>(localVarStatusCode,
+                localVarHeaders,
+                (AuthzDivision) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzDivision)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
