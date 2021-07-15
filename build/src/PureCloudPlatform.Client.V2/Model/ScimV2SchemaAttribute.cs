@@ -39,45 +39,45 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum String for "STRING"
+            /// Enum String for "string"
             /// </summary>
-            [EnumMember(Value = "STRING")]
+            [EnumMember(Value = "string")]
             String,
             
             /// <summary>
-            /// Enum Boolean for "BOOLEAN"
+            /// Enum Boolean for "boolean"
             /// </summary>
-            [EnumMember(Value = "BOOLEAN")]
+            [EnumMember(Value = "boolean")]
             Boolean,
             
             /// <summary>
-            /// Enum Decimal for "DECIMAL"
+            /// Enum Decimal for "decimal"
             /// </summary>
-            [EnumMember(Value = "DECIMAL")]
+            [EnumMember(Value = "decimal")]
             Decimal,
             
             /// <summary>
-            /// Enum Integer for "INTEGER"
+            /// Enum Integer for "integer"
             /// </summary>
-            [EnumMember(Value = "INTEGER")]
+            [EnumMember(Value = "integer")]
             Integer,
             
             /// <summary>
-            /// Enum DateTime for "DATE_TIME"
+            /// Enum Datetime for "dateTime"
             /// </summary>
-            [EnumMember(Value = "DATE_TIME")]
-            DateTime,
+            [EnumMember(Value = "dateTime")]
+            Datetime,
             
             /// <summary>
-            /// Enum Reference for "REFERENCE"
+            /// Enum Reference for "reference"
             /// </summary>
-            [EnumMember(Value = "REFERENCE")]
+            [EnumMember(Value = "reference")]
             Reference,
             
             /// <summary>
-            /// Enum Complex for "COMPLEX"
+            /// Enum Complex for "complex"
             /// </summary>
-            [EnumMember(Value = "COMPLEX")]
+            [EnumMember(Value = "complex")]
             Complex
         }
         
@@ -161,27 +161,27 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Always for "ALWAYS"
+            /// Enum Always for "always"
             /// </summary>
-            [EnumMember(Value = "ALWAYS")]
+            [EnumMember(Value = "always")]
             Always,
             
             /// <summary>
-            /// Enum Never for "NEVER"
+            /// Enum Never for "never"
             /// </summary>
-            [EnumMember(Value = "NEVER")]
+            [EnumMember(Value = "never")]
             Never,
             
             /// <summary>
-            /// Enum Default for "DEFAULT"
+            /// Enum Default for "default"
             /// </summary>
-            [EnumMember(Value = "DEFAULT")]
+            [EnumMember(Value = "default")]
             Default,
             
             /// <summary>
-            /// Enum Request for "REQUEST"
+            /// Enum Request for "request"
             /// </summary>
-            [EnumMember(Value = "REQUEST")]
+            [EnumMember(Value = "request")]
             Request
         }
         
@@ -204,21 +204,21 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum None for "NONE"
+            /// Enum None for "none"
             /// </summary>
-            [EnumMember(Value = "NONE")]
+            [EnumMember(Value = "none")]
             None,
             
             /// <summary>
-            /// Enum Server for "SERVER"
+            /// Enum Server for "server"
             /// </summary>
-            [EnumMember(Value = "SERVER")]
+            [EnumMember(Value = "server")]
             Server,
             
             /// <summary>
-            /// Enum Global for "GLOBAL"
+            /// Enum Global for "global"
             /// </summary>
-            [EnumMember(Value = "GLOBAL")]
+            [EnumMember(Value = "global")]
             Global
         }
         
@@ -242,27 +242,27 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum User for "USER"
+            /// Enum User for "User"
             /// </summary>
-            [EnumMember(Value = "USER")]
+            [EnumMember(Value = "User")]
             User,
             
             /// <summary>
-            /// Enum Group for "GROUP"
+            /// Enum Group for "Group"
             /// </summary>
-            [EnumMember(Value = "GROUP")]
+            [EnumMember(Value = "Group")]
             Group,
             
             /// <summary>
-            /// Enum External for "EXTERNAL"
+            /// Enum External for "external"
             /// </summary>
-            [EnumMember(Value = "EXTERNAL")]
+            [EnumMember(Value = "external")]
             External,
             
             /// <summary>
-            /// Enum Uri for "URI"
+            /// Enum Uri for "uri"
             /// </summary>
-            [EnumMember(Value = "URI")]
+            [EnumMember(Value = "uri")]
             Uri
         }
         

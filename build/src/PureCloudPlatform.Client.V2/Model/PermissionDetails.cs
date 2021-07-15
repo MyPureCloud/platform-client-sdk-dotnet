@@ -57,7 +57,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Requiresanydivisionpermissions for "requiresAnyDivisionPermissions"
             /// </summary>
             [EnumMember(Value = "requiresAnyDivisionPermissions")]
-            Requiresanydivisionpermissions
+            Requiresanydivisionpermissions,
+            
+            /// <summary>
+            /// Enum Requiresuserbeconversationparticipant for "requiresUserBeConversationParticipant"
+            /// </summary>
+            [EnumMember(Value = "requiresUserBeConversationParticipant")]
+            Requiresuserbeconversationparticipant
         }
         
         

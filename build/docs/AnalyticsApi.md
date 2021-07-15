@@ -869,7 +869,7 @@ namespace Example
             try
             { 
                 // Get a list of report formats
-                List&lt;string&gt; result = apiInstance.GetAnalyticsReportingReportformats();
+                List<string> result = apiInstance.GetAnalyticsReportingReportformats();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1256,7 +1256,7 @@ namespace Example
             try
             { 
                 // Get a list of report time periods.
-                List&lt;string&gt; result = apiInstance.GetAnalyticsReportingTimeperiods();
+                List<string> result = apiInstance.GetAnalyticsReportingTimeperiods();
                 Debug.WriteLine(result);
             }
             catch (Exception e)

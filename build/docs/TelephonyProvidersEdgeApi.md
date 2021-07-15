@@ -4058,7 +4058,7 @@ namespace Example
             try
             { 
                 // Get the metrics for a list of edges.
-                List&lt;EdgeMetrics&gt; result = apiInstance.GetTelephonyProvidersEdgesMetrics(edgeIds);
+                List<EdgeMetrics> result = apiInstance.GetTelephonyProvidersEdgesMetrics(edgeIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4960,7 +4960,7 @@ namespace Example
             try
             { 
                 // Get the list of Number Plans for this Site. Only fetches the first 200 records.
-                List&lt;NumberPlan&gt; result = apiInstance.GetTelephonyProvidersEdgesSiteNumberplans(siteId);
+                List<NumberPlan> result = apiInstance.GetTelephonyProvidersEdgesSiteNumberplans(siteId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5026,7 +5026,7 @@ namespace Example
             try
             { 
                 // Get a list of Classifications for this Site
-                List&lt;string&gt; result = apiInstance.GetTelephonyProvidersEdgesSiteNumberplansClassifications(siteId, classification);
+                List<string> result = apiInstance.GetTelephonyProvidersEdgesSiteNumberplansClassifications(siteId, classification);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5865,7 +5865,7 @@ namespace Example
             try
             { 
                 // Get the metrics for a list of trunks.
-                List&lt;TrunkMetrics&gt; result = apiInstance.GetTelephonyProvidersEdgesTrunksMetrics(trunkIds);
+                List<TrunkMetrics> result = apiInstance.GetTelephonyProvidersEdgesTrunksMetrics(trunkIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -8717,7 +8717,7 @@ namespace Example
             try
             { 
                 // Update the list of Number Plans. A user can update maximum 200 number plans at a time.
-                List&lt;NumberPlan&gt; result = apiInstance.PutTelephonyProvidersEdgesSiteNumberplans(siteId, body);
+                List<NumberPlan> result = apiInstance.PutTelephonyProvidersEdgesSiteNumberplans(siteId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)

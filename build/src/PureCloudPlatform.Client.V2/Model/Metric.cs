@@ -50,6 +50,26 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Metric" /> class.
@@ -63,13 +83,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The name of this metric (required).</param>
         /// <param name="MetricDefinitionId">The id of associated metric definition.</param>
         /// <param name="Objective">Associated objective for this metric.</param>
-        /// <param name="PerformanceProfileId">Performance profile id of this metric (required).</param>
-        public Metric(string Name = null, string MetricDefinitionId = null, Objective Objective = null, string PerformanceProfileId = null)
+        /// <param name="PerformanceProfileId">Performance profile id of this metric.</param>
+        /// <param name="LinkedMetric">The linked metric entity reference.</param>
+        /// <param name="SourcePerformanceProfile">The source performance profile when this metric is linked.</param>
+        public Metric(string Name = null, string MetricDefinitionId = null, Objective Objective = null, string PerformanceProfileId = null, AddressableEntityRef LinkedMetric = null, PerformanceProfile SourcePerformanceProfile = null)
         {
             this.Name = Name;
             this.MetricDefinitionId = MetricDefinitionId;
             this.Objective = Objective;
             this.PerformanceProfileId = PerformanceProfileId;
+            this.LinkedMetric = LinkedMetric;
+            this.SourcePerformanceProfile = SourcePerformanceProfile;
             
         }
         
@@ -121,6 +145,42 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The linked metric entity reference
+        /// </summary>
+        /// <value>The linked metric entity reference</value>
+        [DataMember(Name="linkedMetric", EmitDefaultValue=false)]
+        public AddressableEntityRef LinkedMetric { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The created date of this metric. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The created date of this metric. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The unlinked workday for this metric if this metric was ever unlinked. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// </summary>
+        /// <value>The unlinked workday for this metric if this metric was ever unlinked. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        [DataMember(Name="dateUnlinked", EmitDefaultValue=false)]
+        public String DateUnlinked { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The source performance profile when this metric is linked
+        /// </summary>
+        /// <value>The source performance profile when this metric is linked</value>
+        [DataMember(Name="sourcePerformanceProfile", EmitDefaultValue=false)]
+        public PerformanceProfile SourcePerformanceProfile { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -142,6 +202,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MetricDefinitionId: ").Append(MetricDefinitionId).Append("\n");
             sb.Append("  Objective: ").Append(Objective).Append("\n");
             sb.Append("  PerformanceProfileId: ").Append(PerformanceProfileId).Append("\n");
+            sb.Append("  LinkedMetric: ").Append(LinkedMetric).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  DateUnlinked: ").Append(DateUnlinked).Append("\n");
+            sb.Append("  SourcePerformanceProfile: ").Append(SourcePerformanceProfile).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -205,6 +269,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PerformanceProfileId.Equals(other.PerformanceProfileId)
                 ) &&
                 (
+                    this.LinkedMetric == other.LinkedMetric ||
+                    this.LinkedMetric != null &&
+                    this.LinkedMetric.Equals(other.LinkedMetric)
+                ) &&
+                (
+                    this.DateCreated == other.DateCreated ||
+                    this.DateCreated != null &&
+                    this.DateCreated.Equals(other.DateCreated)
+                ) &&
+                (
+                    this.DateUnlinked == other.DateUnlinked ||
+                    this.DateUnlinked != null &&
+                    this.DateUnlinked.Equals(other.DateUnlinked)
+                ) &&
+                (
+                    this.SourcePerformanceProfile == other.SourcePerformanceProfile ||
+                    this.SourcePerformanceProfile != null &&
+                    this.SourcePerformanceProfile.Equals(other.SourcePerformanceProfile)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -237,6 +321,18 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PerformanceProfileId != null)
                     hash = hash * 59 + this.PerformanceProfileId.GetHashCode();
+                
+                if (this.LinkedMetric != null)
+                    hash = hash * 59 + this.LinkedMetric.GetHashCode();
+                
+                if (this.DateCreated != null)
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
+                
+                if (this.DateUnlinked != null)
+                    hash = hash * 59 + this.DateUnlinked.GetHashCode();
+                
+                if (this.SourcePerformanceProfile != null)
+                    hash = hash * 59 + this.SourcePerformanceProfile.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

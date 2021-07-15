@@ -413,7 +413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. (optional)</param>
         /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
         /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>CategoryEntityListing</returns>
@@ -430,7 +430,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. (optional)</param>
         /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
         /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>ApiResponse of CategoryEntityListing</returns>
@@ -475,6 +475,108 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>ApiResponse of ActionEntityListing</returns>
         ApiResponse<ActionEntityListing> GetIntegrationsActionsDraftsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null);
+        
+        /// <summary>
+        /// Get a specific botConnector bot, plus versions, for this integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="botId">The botID for this bot</param>
+        /// <param name="version">Specific Version (optional)</param>
+        /// <returns>BotConnectorBot</returns>
+        BotConnectorBot GetIntegrationsBotconnectorIntegrationIdBot (string integrationId, string botId, string version = null);
+
+        /// <summary>
+        /// Get a specific botConnector bot, plus versions, for this integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="botId">The botID for this bot</param>
+        /// <param name="version">Specific Version (optional)</param>
+        /// <returns>ApiResponse of BotConnectorBot</returns>
+        ApiResponse<BotConnectorBot> GetIntegrationsBotconnectorIntegrationIdBotWithHttpInfo (string integrationId, string botId, string version = null);
+        
+        /// <summary>
+        /// Get a list of bot versions for a bot
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this bot group</param>
+        /// <param name="botId">The botID for this bot</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>BotConnectorBotVersionSummaryEntityListing</returns>
+        BotConnectorBotVersionSummaryEntityListing GetIntegrationsBotconnectorIntegrationIdBotVersions (string integrationId, string botId, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get a list of bot versions for a bot
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this bot group</param>
+        /// <param name="botId">The botID for this bot</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>ApiResponse of BotConnectorBotVersionSummaryEntityListing</returns>
+        ApiResponse<BotConnectorBotVersionSummaryEntityListing> GetIntegrationsBotconnectorIntegrationIdBotVersionsWithHttpInfo (string integrationId, string botId, int? pageNumber = null, int? pageSize = null);
+        
+        /// <summary>
+        /// Get a list of botConnector bots for this integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <returns>BotList</returns>
+        BotList GetIntegrationsBotconnectorIntegrationIdBots (string integrationId);
+
+        /// <summary>
+        /// Get a list of botConnector bots for this integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <returns>ApiResponse of BotList</returns>
+        ApiResponse<BotList> GetIntegrationsBotconnectorIntegrationIdBotsWithHttpInfo (string integrationId);
+        
+        /// <summary>
+        /// Get a summary list of botConnector bots for this integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>BotConnectorBotSummaryEntityListing</returns>
+        BotConnectorBotSummaryEntityListing GetIntegrationsBotconnectorIntegrationIdBotsSummaries (string integrationId, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get a summary list of botConnector bots for this integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>ApiResponse of BotConnectorBotSummaryEntityListing</returns>
+        ApiResponse<BotConnectorBotSummaryEntityListing> GetIntegrationsBotconnectorIntegrationIdBotsSummariesWithHttpInfo (string integrationId, int? pageNumber = null, int? pageSize = null);
         
         /// <summary>
         /// List permitted client app integrations for the logged in user
@@ -1325,6 +1427,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<IntegrationConfiguration> PutIntegrationConfigCurrentWithHttpInfo (string integrationId, IntegrationConfiguration body = null);
         
         /// <summary>
+        /// Set a list of botConnector bots plus versions for this integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="botList"></param>
+        /// <returns></returns>
+        void PutIntegrationsBotconnectorIntegrationIdBots (string integrationId, BotList botList);
+
+        /// <summary>
+        /// Set a list of botConnector bots plus versions for this integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="botList"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PutIntegrationsBotconnectorIntegrationIdBotsWithHttpInfo (string integrationId, BotList botList);
+        
+        /// <summary>
         /// Update a set of credentials
         /// </summary>
         /// <remarks>
@@ -1771,7 +1897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. (optional)</param>
         /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
         /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>Task of CategoryEntityListing</returns>
@@ -1788,7 +1914,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. (optional)</param>
         /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
         /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>Task of ApiResponse (CategoryEntityListing)</returns>
@@ -1833,6 +1959,108 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ActionEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsDraftsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null);
+        
+        /// <summary>
+        /// Get a specific botConnector bot, plus versions, for this integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="botId">The botID for this bot</param>
+        /// <param name="version">Specific Version (optional)</param>
+        /// <returns>Task of BotConnectorBot</returns>
+        System.Threading.Tasks.Task<BotConnectorBot> GetIntegrationsBotconnectorIntegrationIdBotAsync (string integrationId, string botId, string version = null);
+
+        /// <summary>
+        /// Get a specific botConnector bot, plus versions, for this integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="botId">The botID for this bot</param>
+        /// <param name="version">Specific Version (optional)</param>
+        /// <returns>Task of ApiResponse (BotConnectorBot)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BotConnectorBot>> GetIntegrationsBotconnectorIntegrationIdBotAsyncWithHttpInfo (string integrationId, string botId, string version = null);
+        
+        /// <summary>
+        /// Get a list of bot versions for a bot
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this bot group</param>
+        /// <param name="botId">The botID for this bot</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of BotConnectorBotVersionSummaryEntityListing</returns>
+        System.Threading.Tasks.Task<BotConnectorBotVersionSummaryEntityListing> GetIntegrationsBotconnectorIntegrationIdBotVersionsAsync (string integrationId, string botId, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get a list of bot versions for a bot
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this bot group</param>
+        /// <param name="botId">The botID for this bot</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (BotConnectorBotVersionSummaryEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BotConnectorBotVersionSummaryEntityListing>> GetIntegrationsBotconnectorIntegrationIdBotVersionsAsyncWithHttpInfo (string integrationId, string botId, int? pageNumber = null, int? pageSize = null);
+        
+        /// <summary>
+        /// Get a list of botConnector bots for this integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <returns>Task of BotList</returns>
+        System.Threading.Tasks.Task<BotList> GetIntegrationsBotconnectorIntegrationIdBotsAsync (string integrationId);
+
+        /// <summary>
+        /// Get a list of botConnector bots for this integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <returns>Task of ApiResponse (BotList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BotList>> GetIntegrationsBotconnectorIntegrationIdBotsAsyncWithHttpInfo (string integrationId);
+        
+        /// <summary>
+        /// Get a summary list of botConnector bots for this integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of BotConnectorBotSummaryEntityListing</returns>
+        System.Threading.Tasks.Task<BotConnectorBotSummaryEntityListing> GetIntegrationsBotconnectorIntegrationIdBotsSummariesAsync (string integrationId, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get a summary list of botConnector bots for this integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (BotConnectorBotSummaryEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BotConnectorBotSummaryEntityListing>> GetIntegrationsBotconnectorIntegrationIdBotsSummariesAsyncWithHttpInfo (string integrationId, int? pageNumber = null, int? pageSize = null);
         
         /// <summary>
         /// List permitted client app integrations for the logged in user
@@ -2681,6 +2909,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Integration Configuration (optional)</param>
         /// <returns>Task of ApiResponse (IntegrationConfiguration)</returns>
         System.Threading.Tasks.Task<ApiResponse<IntegrationConfiguration>> PutIntegrationConfigCurrentAsyncWithHttpInfo (string integrationId, IntegrationConfiguration body = null);
+        
+        /// <summary>
+        /// Set a list of botConnector bots plus versions for this integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="botList"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PutIntegrationsBotconnectorIntegrationIdBotsAsync (string integrationId, BotList botList);
+
+        /// <summary>
+        /// Set a list of botConnector bots plus versions for this integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="botList"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutIntegrationsBotconnectorIntegrationIdBotsAsyncWithHttpInfo (string integrationId, BotList botList);
         
         /// <summary>
         /// Update a set of credentials
@@ -5899,7 +6151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. (optional)</param>
         /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
         /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>CategoryEntityListing</returns>
@@ -5917,7 +6169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. (optional)</param>
         /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
         /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>ApiResponse of CategoryEntityListing</returns>
@@ -6009,7 +6261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. (optional)</param>
         /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
         /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>Task of CategoryEntityListing</returns>
@@ -6028,7 +6280,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. (optional)</param>
         /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
         /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>Task of ApiResponse (CategoryEntityListing)</returns>
@@ -6347,6 +6599,834 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ActionEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (ActionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActionEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a specific botConnector bot, plus versions, for this integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="botId">The botID for this bot</param>
+        /// <param name="version">Specific Version (optional)</param>
+        /// <returns>BotConnectorBot</returns>
+        public BotConnectorBot GetIntegrationsBotconnectorIntegrationIdBot (string integrationId, string botId, string version = null)
+        {
+             ApiResponse<BotConnectorBot> localVarResponse = GetIntegrationsBotconnectorIntegrationIdBotWithHttpInfo(integrationId, botId, version);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a specific botConnector bot, plus versions, for this integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="botId">The botID for this bot</param>
+        /// <param name="version">Specific Version (optional)</param>
+        /// <returns>ApiResponse of BotConnectorBot</returns>
+        public ApiResponse< BotConnectorBot > GetIntegrationsBotconnectorIntegrationIdBotWithHttpInfo (string integrationId, string botId, string version = null)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBot");
+            // verify the required parameter 'botId' is set
+            if (botId == null)
+                throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBot");
+
+            var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots/{botId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+            if (botId != null) localVarPathParams.Add("botId", this.Configuration.ApiClient.ParameterToString(botId));
+
+            // Query params
+            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", this.Configuration.ApiClient.ParameterToString(version)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsBotconnectorIntegrationIdBot: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsBotconnectorIntegrationIdBot: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BotConnectorBot>(localVarStatusCode,
+                localVarHeaders,
+                (BotConnectorBot) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BotConnectorBot)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a specific botConnector bot, plus versions, for this integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="botId">The botID for this bot</param>
+        /// <param name="version">Specific Version (optional)</param>
+        /// <returns>Task of BotConnectorBot</returns>
+        public async System.Threading.Tasks.Task<BotConnectorBot> GetIntegrationsBotconnectorIntegrationIdBotAsync (string integrationId, string botId, string version = null)
+        {
+             ApiResponse<BotConnectorBot> localVarResponse = await GetIntegrationsBotconnectorIntegrationIdBotAsyncWithHttpInfo(integrationId, botId, version);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a specific botConnector bot, plus versions, for this integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="botId">The botID for this bot</param>
+        /// <param name="version">Specific Version (optional)</param>
+        /// <returns>Task of ApiResponse (BotConnectorBot)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BotConnectorBot>> GetIntegrationsBotconnectorIntegrationIdBotAsyncWithHttpInfo (string integrationId, string botId, string version = null)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBot");
+            
+            // verify the required parameter 'botId' is set
+            if (botId == null)
+                throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBot");
+            
+
+            var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots/{botId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+            if (botId != null) localVarPathParams.Add("botId", this.Configuration.ApiClient.ParameterToString(botId));
+
+            // Query params
+            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", this.Configuration.ApiClient.ParameterToString(version)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsBotconnectorIntegrationIdBot: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsBotconnectorIntegrationIdBot: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BotConnectorBot>(localVarStatusCode,
+                localVarHeaders,
+                (BotConnectorBot) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BotConnectorBot)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a list of bot versions for a bot 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this bot group</param>
+        /// <param name="botId">The botID for this bot</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>BotConnectorBotVersionSummaryEntityListing</returns>
+        public BotConnectorBotVersionSummaryEntityListing GetIntegrationsBotconnectorIntegrationIdBotVersions (string integrationId, string botId, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<BotConnectorBotVersionSummaryEntityListing> localVarResponse = GetIntegrationsBotconnectorIntegrationIdBotVersionsWithHttpInfo(integrationId, botId, pageNumber, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of bot versions for a bot 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this bot group</param>
+        /// <param name="botId">The botID for this bot</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>ApiResponse of BotConnectorBotVersionSummaryEntityListing</returns>
+        public ApiResponse< BotConnectorBotVersionSummaryEntityListing > GetIntegrationsBotconnectorIntegrationIdBotVersionsWithHttpInfo (string integrationId, string botId, int? pageNumber = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBotVersions");
+            // verify the required parameter 'botId' is set
+            if (botId == null)
+                throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBotVersions");
+
+            var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots/{botId}/versions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+            if (botId != null) localVarPathParams.Add("botId", this.Configuration.ApiClient.ParameterToString(botId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsBotconnectorIntegrationIdBotVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsBotconnectorIntegrationIdBotVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BotConnectorBotVersionSummaryEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (BotConnectorBotVersionSummaryEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BotConnectorBotVersionSummaryEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a list of bot versions for a bot 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this bot group</param>
+        /// <param name="botId">The botID for this bot</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of BotConnectorBotVersionSummaryEntityListing</returns>
+        public async System.Threading.Tasks.Task<BotConnectorBotVersionSummaryEntityListing> GetIntegrationsBotconnectorIntegrationIdBotVersionsAsync (string integrationId, string botId, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<BotConnectorBotVersionSummaryEntityListing> localVarResponse = await GetIntegrationsBotconnectorIntegrationIdBotVersionsAsyncWithHttpInfo(integrationId, botId, pageNumber, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of bot versions for a bot 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this bot group</param>
+        /// <param name="botId">The botID for this bot</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (BotConnectorBotVersionSummaryEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BotConnectorBotVersionSummaryEntityListing>> GetIntegrationsBotconnectorIntegrationIdBotVersionsAsyncWithHttpInfo (string integrationId, string botId, int? pageNumber = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBotVersions");
+            
+            // verify the required parameter 'botId' is set
+            if (botId == null)
+                throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBotVersions");
+            
+
+            var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots/{botId}/versions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+            if (botId != null) localVarPathParams.Add("botId", this.Configuration.ApiClient.ParameterToString(botId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsBotconnectorIntegrationIdBotVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsBotconnectorIntegrationIdBotVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BotConnectorBotVersionSummaryEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (BotConnectorBotVersionSummaryEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BotConnectorBotVersionSummaryEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a list of botConnector bots for this integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <returns>BotList</returns>
+        public BotList GetIntegrationsBotconnectorIntegrationIdBots (string integrationId)
+        {
+             ApiResponse<BotList> localVarResponse = GetIntegrationsBotconnectorIntegrationIdBotsWithHttpInfo(integrationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of botConnector bots for this integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <returns>ApiResponse of BotList</returns>
+        public ApiResponse< BotList > GetIntegrationsBotconnectorIntegrationIdBotsWithHttpInfo (string integrationId)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBots");
+
+            var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsBotconnectorIntegrationIdBots: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsBotconnectorIntegrationIdBots: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BotList>(localVarStatusCode,
+                localVarHeaders,
+                (BotList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BotList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a list of botConnector bots for this integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <returns>Task of BotList</returns>
+        public async System.Threading.Tasks.Task<BotList> GetIntegrationsBotconnectorIntegrationIdBotsAsync (string integrationId)
+        {
+             ApiResponse<BotList> localVarResponse = await GetIntegrationsBotconnectorIntegrationIdBotsAsyncWithHttpInfo(integrationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of botConnector bots for this integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <returns>Task of ApiResponse (BotList)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BotList>> GetIntegrationsBotconnectorIntegrationIdBotsAsyncWithHttpInfo (string integrationId)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBots");
+            
+
+            var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsBotconnectorIntegrationIdBots: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsBotconnectorIntegrationIdBots: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BotList>(localVarStatusCode,
+                localVarHeaders,
+                (BotList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BotList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a summary list of botConnector bots for this integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>BotConnectorBotSummaryEntityListing</returns>
+        public BotConnectorBotSummaryEntityListing GetIntegrationsBotconnectorIntegrationIdBotsSummaries (string integrationId, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<BotConnectorBotSummaryEntityListing> localVarResponse = GetIntegrationsBotconnectorIntegrationIdBotsSummariesWithHttpInfo(integrationId, pageNumber, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a summary list of botConnector bots for this integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>ApiResponse of BotConnectorBotSummaryEntityListing</returns>
+        public ApiResponse< BotConnectorBotSummaryEntityListing > GetIntegrationsBotconnectorIntegrationIdBotsSummariesWithHttpInfo (string integrationId, int? pageNumber = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBotsSummaries");
+
+            var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots/summaries";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsBotconnectorIntegrationIdBotsSummaries: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsBotconnectorIntegrationIdBotsSummaries: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BotConnectorBotSummaryEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (BotConnectorBotSummaryEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BotConnectorBotSummaryEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a summary list of botConnector bots for this integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of BotConnectorBotSummaryEntityListing</returns>
+        public async System.Threading.Tasks.Task<BotConnectorBotSummaryEntityListing> GetIntegrationsBotconnectorIntegrationIdBotsSummariesAsync (string integrationId, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<BotConnectorBotSummaryEntityListing> localVarResponse = await GetIntegrationsBotconnectorIntegrationIdBotsSummariesAsyncWithHttpInfo(integrationId, pageNumber, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a summary list of botConnector bots for this integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (BotConnectorBotSummaryEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BotConnectorBotSummaryEntityListing>> GetIntegrationsBotconnectorIntegrationIdBotsSummariesAsyncWithHttpInfo (string integrationId, int? pageNumber = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBotsSummaries");
+            
+
+            var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots/summaries";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsBotconnectorIntegrationIdBotsSummaries: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsBotconnectorIntegrationIdBotsSummaries: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BotConnectorBotSummaryEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (BotConnectorBotSummaryEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BotConnectorBotSummaryEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -13278,6 +14358,218 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<IntegrationConfiguration>(localVarStatusCode,
                 localVarHeaders,
                 (IntegrationConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntegrationConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Set a list of botConnector bots plus versions for this integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="botList"></param>
+        /// <returns></returns>
+        public void PutIntegrationsBotconnectorIntegrationIdBots (string integrationId, BotList botList)
+        {
+             PutIntegrationsBotconnectorIntegrationIdBotsWithHttpInfo(integrationId, botList);
+        }
+
+        /// <summary>
+        /// Set a list of botConnector bots plus versions for this integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="botList"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PutIntegrationsBotconnectorIntegrationIdBotsWithHttpInfo (string integrationId, BotList botList)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->PutIntegrationsBotconnectorIntegrationIdBots");
+            // verify the required parameter 'botList' is set
+            if (botList == null)
+                throw new ApiException(400, "Missing required parameter 'botList' when calling IntegrationsApi->PutIntegrationsBotconnectorIntegrationIdBots");
+
+            var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (botList != null && botList.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(botList); // http body (model) parameter
+            else
+                localVarPostBody = botList; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutIntegrationsBotconnectorIntegrationIdBots: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutIntegrationsBotconnectorIntegrationIdBots: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Set a list of botConnector bots plus versions for this integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="botList"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PutIntegrationsBotconnectorIntegrationIdBotsAsync (string integrationId, BotList botList)
+        {
+             await PutIntegrationsBotconnectorIntegrationIdBotsAsyncWithHttpInfo(integrationId, botList);
+
+        }
+
+        /// <summary>
+        /// Set a list of botConnector bots plus versions for this integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">The integration ID for this group of bots</param>
+        /// <param name="botList"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutIntegrationsBotconnectorIntegrationIdBotsAsyncWithHttpInfo (string integrationId, BotList botList)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->PutIntegrationsBotconnectorIntegrationIdBots");
+            
+            // verify the required parameter 'botList' is set
+            if (botList == null)
+                throw new ApiException(400, "Missing required parameter 'botList' when calling IntegrationsApi->PutIntegrationsBotconnectorIntegrationIdBots");
+            
+
+            var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (botList != null && botList.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(botList); // http body (model) parameter
+            else
+                localVarPostBody = botList; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutIntegrationsBotconnectorIntegrationIdBots: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutIntegrationsBotconnectorIntegrationIdBots: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

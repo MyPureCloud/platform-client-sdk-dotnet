@@ -314,7 +314,7 @@ This endpoint does require any parameters.
 
 <a name="getgamificationmetric"></a>
 
-## [**Metric**](Metric.html) GetGamificationMetric (string metricId, string performanceProfileId = null)
+## [**Metric**](Metric.html) GetGamificationMetric (string metricId, String workday = null, string performanceProfileId = null)
 
 
 
@@ -351,12 +351,13 @@ namespace Example
 
             var apiInstance = new GamificationApi();
             var metricId = metricId_example;  // string | metric Id
+            var workday = 2013-10-20;  // String | The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
             var performanceProfileId = performanceProfileId_example;  // string | The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional) 
 
             try
             { 
                 // Gamified metric by id
-                Metric result = apiInstance.GetGamificationMetric(metricId, performanceProfileId);
+                Metric result = apiInstance.GetGamificationMetric(metricId, workday, performanceProfileId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -374,6 +375,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **metricId** | **string**| metric Id |  |
+| **workday** | **String**| The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 | **performanceProfileId** | **string**| The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. | [optional]  |
 {: class="table table-striped"}
 
@@ -508,7 +510,7 @@ This endpoint does require any parameters.
 
 <a name="getgamificationmetrics"></a>
 
-## [**GetMetricsResponse**](GetMetricsResponse.html) GetGamificationMetrics (string performanceProfileId = null)
+## [**GetMetricsResponse**](GetMetricsResponse.html) GetGamificationMetrics (string performanceProfileId = null, String workday = null)
 
 
 
@@ -545,11 +547,12 @@ namespace Example
 
             var apiInstance = new GamificationApi();
             var performanceProfileId = performanceProfileId_example;  // string | The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional) 
+            var workday = 2013-10-20;  // String | The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
 
             try
             { 
                 // All gamified metrics for a given profile
-                GetMetricsResponse result = apiInstance.GetGamificationMetrics(performanceProfileId);
+                GetMetricsResponse result = apiInstance.GetGamificationMetrics(performanceProfileId, workday);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -567,6 +570,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **performanceProfileId** | **string**| The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. | [optional]  |
+| **workday** | **String**| The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

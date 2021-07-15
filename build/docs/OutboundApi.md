@@ -904,7 +904,8 @@ Delete an Outbound Messaging Campaign
 
 Requires ANY permissions: 
 
-* outbound:campaign:delete
+* outbound:messagingCampaign:delete
+* outbound:emailCampaign:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -3867,6 +3868,7 @@ Get an Outbound Messaging Campaign
 Requires ANY permissions: 
 
 * outbound:messagingCampaign:view
+* outbound:emailCampaign:view
 
 ### Example
 ```{"language":"csharp"}
@@ -3932,6 +3934,7 @@ Get messaging campaign's progress
 Requires ANY permissions: 
 
 * outbound:messagingCampaign:view
+* outbound:emailCampaign:view
 
 ### Example
 ```{"language":"csharp"}
@@ -4454,7 +4457,7 @@ namespace Example
             try
             { 
                 // Query for a list of dialer campaign schedules.
-                List&lt;CampaignSchedule&gt; result = apiInstance.GetOutboundSchedulesCampaigns();
+                List<CampaignSchedule> result = apiInstance.GetOutboundSchedulesCampaigns();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4579,7 +4582,7 @@ namespace Example
             try
             { 
                 // Query for a list of dialer sequence schedules.
-                List&lt;SequenceSchedule&gt; result = apiInstance.GetOutboundSchedulesSequences();
+                List<SequenceSchedule> result = apiInstance.GetOutboundSchedulesSequences();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5499,7 +5502,7 @@ namespace Example
             try
             { 
                 // Get progress for a list of campaigns
-                List&lt;CampaignProgress&gt; result = apiInstance.PostOutboundCampaignsProgress(body);
+                List<CampaignProgress> result = apiInstance.PostOutboundCampaignsProgress(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5632,7 +5635,7 @@ namespace Example
             try
             { 
                 // Add contacts to a contact list.
-                List&lt;DialerContact&gt; result = apiInstance.PostOutboundContactlistContacts(contactListId, body, priority, clearSystemData, doNotQueue);
+                List<DialerContact> result = apiInstance.PostOutboundContactlistContacts(contactListId, body, priority, clearSystemData, doNotQueue);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5702,7 +5705,7 @@ namespace Example
             try
             { 
                 // Get contacts from a contact list.
-                List&lt;DialerContact&gt; result = apiInstance.PostOutboundContactlistContactsBulk(contactListId, body);
+                List<DialerContact> result = apiInstance.PostOutboundContactlistContactsBulk(contactListId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6262,6 +6265,7 @@ Create a Messaging Campaign
 Requires ANY permissions: 
 
 * outbound:messagingCampaign:add
+* outbound:emailCampaign:add
 
 ### Example
 ```{"language":"csharp"}
@@ -6355,7 +6359,7 @@ namespace Example
             try
             { 
                 // Get progress for a list of messaging campaigns
-                List&lt;CampaignProgress&gt; result = apiInstance.PostOutboundMessagingcampaignsProgress(body);
+                List<CampaignProgress> result = apiInstance.PostOutboundMessagingcampaignsProgress(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7195,6 +7199,7 @@ Update an Outbound Messaging Campaign
 Requires ANY permissions: 
 
 * outbound:messagingCampaign:edit
+* outbound:emailCampaign:edit
 
 ### Example
 ```{"language":"csharp"}

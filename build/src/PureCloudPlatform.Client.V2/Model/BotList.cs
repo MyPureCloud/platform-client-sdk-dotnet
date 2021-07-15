@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// EntityListing
+    /// A list of BotConnectorBots
     /// </summary>
     [DataContract]
-    public partial class EntityListing :  IEquatable<EntityListing>
+    public partial class BotList :  IEquatable<BotList>
     {
         
         
@@ -27,22 +27,29 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="EntityListing" /> class.
+        /// Initializes a new instance of the <see cref="BotList" /> class.
         /// </summary>
-        /// <param name="Entities">Entities.</param>
-        public EntityListing(List<Object> Entities = null)
+        [JsonConstructorAttribute]
+        protected BotList() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BotList" /> class.
+        /// </summary>
+        /// <param name="ChatBots">A list of botConnector Bots. Max 50 (required).</param>
+        public BotList(List<BotConnectorBot> ChatBots = null)
         {
-            this.Entities = Entities;
+            this.ChatBots = ChatBots;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Entities
+        /// A list of botConnector Bots. Max 50
         /// </summary>
-        [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<Object> Entities { get; set; }
+        /// <value>A list of botConnector Bots. Max 50</value>
+        [DataMember(Name="chatBots", EmitDefaultValue=false)]
+        public List<BotConnectorBot> ChatBots { get; set; }
         
         
         /// <summary>
@@ -52,9 +59,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EntityListing {\n");
+            sb.Append("class BotList {\n");
             
-            sb.Append("  Entities: ").Append(Entities).Append("\n");
+            sb.Append("  ChatBots: ").Append(ChatBots).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -76,15 +83,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as EntityListing);
+            return this.Equals(obj as BotList);
         }
 
         /// <summary>
-        /// Returns true if EntityListing instances are equal
+        /// Returns true if BotList instances are equal
         /// </summary>
-        /// <param name="other">Instance of EntityListing to be compared</param>
+        /// <param name="other">Instance of BotList to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EntityListing other)
+        public bool Equals(BotList other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -92,9 +99,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Entities == other.Entities ||
-                    this.Entities != null &&
-                    this.Entities.SequenceEqual(other.Entities)
+                    this.ChatBots == other.ChatBots ||
+                    this.ChatBots != null &&
+                    this.ChatBots.SequenceEqual(other.ChatBots)
                 );
         }
 
@@ -110,8 +117,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Entities != null)
-                    hash = hash * 59 + this.Entities.GetHashCode();
+                if (this.ChatBots != null)
+                    hash = hash * 59 + this.ChatBots.GetHashCode();
                 
                 return hash;
             }

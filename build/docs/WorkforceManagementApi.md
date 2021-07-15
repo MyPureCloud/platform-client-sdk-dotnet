@@ -14,6 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunitservicegoaltemplate) | **DELETE** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId} | Delete a service goal template |
 | [**DeleteWorkforcemanagementBusinessunitWeekSchedule**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunitweekschedule) | **DELETE** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId} | Delete a schedule |
 | [**DeleteWorkforcemanagementBusinessunitWeekShorttermforecast**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunitweekshorttermforecast) | **DELETE** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId} | Delete a short term forecast |
+| [**DeleteWorkforcemanagementCalendarUrlIcs**](WorkforceManagementApi.html#deleteworkforcemanagementcalendarurlics) | **DELETE** /api/v2/workforcemanagement/calendar/url/ics | Disable generated calendar link for the current user |
 | [**DeleteWorkforcemanagementManagementunit**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunit) | **DELETE** /api/v2/workforcemanagement/managementunits/{managementUnitId} | Delete management unit |
 | [**DeleteWorkforcemanagementManagementunitWorkplan**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunitworkplan) | **DELETE** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId} | Delete a work plan |
 | [**DeleteWorkforcemanagementManagementunitWorkplanrotation**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunitworkplanrotation) | **DELETE** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId} | Delete a work plan rotation |
@@ -46,6 +47,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementBusinessunitWeekShorttermforecasts**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekshorttermforecasts) | **GET** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts | Get short term forecasts |
 | [**GetWorkforcemanagementBusinessunits**](WorkforceManagementApi.html#getworkforcemanagementbusinessunits) | **GET** /api/v2/workforcemanagement/businessunits | Get business units |
 | [**GetWorkforcemanagementBusinessunitsDivisionviews**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitsdivisionviews) | **GET** /api/v2/workforcemanagement/businessunits/divisionviews | Get business units across divisions |
+| [**GetWorkforcemanagementCalendarDataIcs**](WorkforceManagementApi.html#getworkforcemanagementcalendardataics) | **GET** /api/v2/workforcemanagement/calendar/data/ics | Get ics formatted calendar based on shareable link |
+| [**GetWorkforcemanagementCalendarUrlIcs**](WorkforceManagementApi.html#getworkforcemanagementcalendarurlics) | **GET** /api/v2/workforcemanagement/calendar/url/ics | Get existing calendar link for the current user |
 | [**GetWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementApi.html#getworkforcemanagementhistoricaldatadeletejob) | **GET** /api/v2/workforcemanagement/historicaldata/deletejob | Retrieves delete job status for historical data imports of the organization |
 | [**GetWorkforcemanagementHistoricaldataImportstatus**](WorkforceManagementApi.html#getworkforcemanagementhistoricaldataimportstatus) | **GET** /api/v2/workforcemanagement/historicaldata/importstatus | Retrieves status of the historical data imports of the organization |
 | [**GetWorkforcemanagementManagementunit**](WorkforceManagementApi.html#getworkforcemanagementmanagementunit) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId} | Get management unit |
@@ -98,6 +101,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementBusinessunitWeekShorttermforecastCopy**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekshorttermforecastcopy) | **POST** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/copy | Copy a short term forecast |
 | [**PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekshorttermforecastsgenerate) | **POST** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/generate | Generate a short term forecast |
 | [**PostWorkforcemanagementBusinessunits**](WorkforceManagementApi.html#postworkforcemanagementbusinessunits) | **POST** /api/v2/workforcemanagement/businessunits | Add a new business unit |
+| [**PostWorkforcemanagementCalendarUrlIcs**](WorkforceManagementApi.html#postworkforcemanagementcalendarurlics) | **POST** /api/v2/workforcemanagement/calendar/url/ics | Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned |
 | [**PostWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementApi.html#postworkforcemanagementhistoricaldatadeletejob) | **POST** /api/v2/workforcemanagement/historicaldata/deletejob | Delete the entries of the historical data imports in the organization |
 | [**PostWorkforcemanagementHistoricaldataValidate**](WorkforceManagementApi.html#postworkforcemanagementhistoricaldatavalidate) | **POST** /api/v2/workforcemanagement/historicaldata/validate | Trigger validation process for historical import |
 | [**PostWorkforcemanagementManagementunitAgentschedulesSearch**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitagentschedulessearch) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agentschedules/search | Query published schedules for given given time range for set of users |
@@ -586,6 +590,65 @@ namespace Example
 
 void (empty response body)
 
+<a name="deleteworkforcemanagementcalendarurlics"></a>
+
+## void DeleteWorkforcemanagementCalendarUrlIcs ()
+
+
+
+Disable generated calendar link for the current user
+
+
+
+Requires ALL permissions: 
+
+* wfm:agentSchedule:sync
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteWorkforcemanagementCalendarUrlIcsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+
+            try
+            { 
+                // Disable generated calendar link for the current user
+                apiInstance.DeleteWorkforcemanagementCalendarUrlIcs();
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.DeleteWorkforcemanagementCalendarUrlIcs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="deleteworkforcemanagementmanagementunit"></a>
 
 ## void DeleteWorkforcemanagementManagementunit (string managementUnitId)
@@ -823,7 +886,7 @@ namespace Example
             try
             { 
                 // Get a list of UserScheduleAdherence records for the requested users
-                List&lt;UserScheduleAdherence&gt; result = apiInstance.GetWorkforcemanagementAdherence(userId);
+                List<UserScheduleAdherence> result = apiInstance.GetWorkforcemanagementAdherence(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2941,6 +3004,125 @@ namespace Example
 
 [**BusinessUnitListing**](BusinessUnitListing.html)
 
+<a name="getworkforcemanagementcalendardataics"></a>
+
+## **string** GetWorkforcemanagementCalendarDataIcs (string calendarId)
+
+
+
+Get ics formatted calendar based on shareable link
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementCalendarDataIcsExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new WorkforceManagementApi();
+            var calendarId = calendarId_example;  // string | The id of the ics-formatted calendar
+
+            try
+            { 
+                // Get ics formatted calendar based on shareable link
+                string result = apiInstance.GetWorkforcemanagementCalendarDataIcs(calendarId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementCalendarDataIcs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **calendarId** | **string**| The id of the ics-formatted calendar |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="getworkforcemanagementcalendarurlics"></a>
+
+## [**CalendarUrlResponse**](CalendarUrlResponse.html) GetWorkforcemanagementCalendarUrlIcs ()
+
+
+
+Get existing calendar link for the current user
+
+
+
+Requires ALL permissions: 
+
+* wfm:agentSchedule:sync
+* wfm:agentSchedule:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementCalendarUrlIcsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+
+            try
+            { 
+                // Get existing calendar link for the current user
+                CalendarUrlResponse result = apiInstance.GetWorkforcemanagementCalendarUrlIcs();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementCalendarUrlIcs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**CalendarUrlResponse**](CalendarUrlResponse.html)
+
 <a name="getworkforcemanagementhistoricaldatadeletejob"></a>
 
 ## [**HistoricalImportDeleteJobResponse**](HistoricalImportDeleteJobResponse.html) GetWorkforcemanagementHistoricaldataDeletejob ()
@@ -4055,7 +4237,7 @@ namespace Example
 
 <a name="getworkforcemanagementmanagementunitworkplan"></a>
 
-## [**WorkPlan**](WorkPlan.html) GetWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId)
+## [**WorkPlan**](WorkPlan.html) GetWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, List<string> includeOnly = null)
 
 
 
@@ -4093,11 +4275,12 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var workPlanId = workPlanId_example;  // string | The ID of the work plan to fetch
+            var includeOnly = new List<string>(); // List<string> | limit response to the specified fields (optional) 
 
             try
             { 
                 // Get a work plan
-                WorkPlan result = apiInstance.GetWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId);
+                WorkPlan result = apiInstance.GetWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, includeOnly);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4116,6 +4299,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **workPlanId** | **string**| The ID of the work plan to fetch |  |
+| **includeOnly** | [**List<string>**](string.html)| limit response to the specified fields | [optional] <br />**Values**: agentCount, agents, optionalDays, shifts, shiftStartVariances |
 {: class="table table-striped"}
 
 ### Return type
@@ -6577,6 +6761,72 @@ namespace Example
 ### Return type
 
 [**BusinessUnit**](BusinessUnit.html)
+
+<a name="postworkforcemanagementcalendarurlics"></a>
+
+## [**CalendarUrlResponse**](CalendarUrlResponse.html) PostWorkforcemanagementCalendarUrlIcs (string language = null)
+
+
+
+Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned
+
+
+
+Requires ALL permissions: 
+
+* wfm:agentSchedule:sync
+* wfm:agentSchedule:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementCalendarUrlIcsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var language = en-US;  // string | A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize default activity code names in the ics-formatted calendar (optional)  (default to en-US)
+
+            try
+            { 
+                // Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned
+                CalendarUrlResponse result = apiInstance.PostWorkforcemanagementCalendarUrlIcs(language);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementCalendarUrlIcs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **language** | **string**| A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar | [optional] [default to en-US] |
+{: class="table table-striped"}
+
+### Return type
+
+[**CalendarUrlResponse**](CalendarUrlResponse.html)
 
 <a name="postworkforcemanagementhistoricaldatadeletejob"></a>
 

@@ -49,14 +49,23 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimGroupListResponse" /> class.
         /// </summary>
-        /// <param name="Resources">The list of requested resources. If \&quot;count\&quot; is 0, then the list will be empty..</param>
         /// <param name="Schemas">The list of supported schemas..</param>
-        public ScimGroupListResponse(List<ScimV2Group> Resources = null, List<string> Schemas = null)
+        /// <param name="Resources">The list of requested resources. If \&quot;count\&quot; is 0, then the list will be empty..</param>
+        public ScimGroupListResponse(List<string> Schemas = null, List<ScimV2Group> Resources = null)
         {
-            this.Resources = Resources;
             this.Schemas = Schemas;
+            this.Resources = Resources;
             
         }
+        
+        
+        
+        /// <summary>
+        /// The list of supported schemas.
+        /// </summary>
+        /// <value>The list of supported schemas.</value>
+        [DataMember(Name="schemas", EmitDefaultValue=false)]
+        public List<string> Schemas { get; set; }
         
         
         
@@ -95,15 +104,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ScimV2Group> Resources { get; set; }
         
         
-        
-        /// <summary>
-        /// The list of supported schemas.
-        /// </summary>
-        /// <value>The list of supported schemas.</value>
-        [DataMember(Name="schemas", EmitDefaultValue=false)]
-        public List<string> Schemas { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,11 +113,11 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ScimGroupListResponse {\n");
             
+            sb.Append("  Schemas: ").Append(Schemas).Append("\n");
             sb.Append("  TotalResults: ").Append(TotalResults).Append("\n");
             sb.Append("  StartIndex: ").Append(StartIndex).Append("\n");
             sb.Append("  ItemsPerPage: ").Append(ItemsPerPage).Append("\n");
             sb.Append("  Resources: ").Append(Resources).Append("\n");
-            sb.Append("  Schemas: ").Append(Schemas).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -155,6 +155,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Schemas == other.Schemas ||
+                    this.Schemas != null &&
+                    this.Schemas.SequenceEqual(other.Schemas)
+                ) &&
+                (
                     this.TotalResults == other.TotalResults ||
                     this.TotalResults != null &&
                     this.TotalResults.Equals(other.TotalResults)
@@ -173,11 +178,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Resources == other.Resources ||
                     this.Resources != null &&
                     this.Resources.SequenceEqual(other.Resources)
-                ) &&
-                (
-                    this.Schemas == other.Schemas ||
-                    this.Schemas != null &&
-                    this.Schemas.SequenceEqual(other.Schemas)
                 );
         }
 
@@ -193,6 +193,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.Schemas != null)
+                    hash = hash * 59 + this.Schemas.GetHashCode();
+                
                 if (this.TotalResults != null)
                     hash = hash * 59 + this.TotalResults.GetHashCode();
                 
@@ -204,9 +207,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Resources != null)
                     hash = hash * 59 + this.Resources.GetHashCode();
-                
-                if (this.Schemas != null)
-                    hash = hash * 59 + this.Schemas.GetHashCode();
                 
                 return hash;
             }

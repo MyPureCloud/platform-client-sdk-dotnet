@@ -1434,7 +1434,7 @@ namespace Example
             try
             { 
                 // Get list of wrapup codes for this conversation participant
-                List&lt;WrapupCode&gt; result = apiInstance.GetConversationParticipantWrapupcodes(conversationId, participantId);
+                List<WrapupCode> result = apiInstance.GetConversationParticipantWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1696,7 +1696,7 @@ namespace Example
             try
             { 
                 // Get list of wrapup codes for this conversation participant
-                List&lt;WrapupCode&gt; result = apiInstance.GetConversationsCallParticipantWrapupcodes(conversationId, participantId);
+                List<WrapupCode> result = apiInstance.GetConversationsCallParticipantWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1894,7 +1894,7 @@ namespace Example
             try
             { 
                 // Get list of wrapup codes for this conversation participant
-                List&lt;WrapupCode&gt; result = apiInstance.GetConversationsCallbackParticipantWrapupcodes(conversationId, participantId);
+                List<WrapupCode> result = apiInstance.GetConversationsCallbackParticipantWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2477,7 +2477,7 @@ namespace Example
             try
             { 
                 // Get list of wrapup codes for this conversation participant
-                List&lt;WrapupCode&gt; result = apiInstance.GetConversationsChatParticipantWrapupcodes(conversationId, participantId);
+                List<WrapupCode> result = apiInstance.GetConversationsChatParticipantWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2734,7 +2734,7 @@ namespace Example
             try
             { 
                 // Get list of wrapup codes for this conversation participant
-                List&lt;WrapupCode&gt; result = apiInstance.GetConversationsCobrowsesessionParticipantWrapupcodes(conversationId, participantId);
+                List<WrapupCode> result = apiInstance.GetConversationsCobrowsesessionParticipantWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3185,7 +3185,7 @@ namespace Example
             try
             { 
                 // Get list of wrapup codes for this conversation participant
-                List&lt;WrapupCode&gt; result = apiInstance.GetConversationsEmailParticipantWrapupcodes(conversationId, participantId);
+                List<WrapupCode> result = apiInstance.GetConversationsEmailParticipantWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3580,7 +3580,7 @@ namespace Example
             try
             { 
                 // Get list of wrapup codes for this conversation participant
-                List&lt;WrapupCode&gt; result = apiInstance.GetConversationsMessageParticipantWrapupcodes(conversationId, participantId);
+                List<WrapupCode> result = apiInstance.GetConversationsMessageParticipantWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)

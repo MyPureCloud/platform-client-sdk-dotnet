@@ -74,6 +74,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Contentmanagement,
             
             /// <summary>
+            /// Enum Employeeperformance for "EmployeePerformance"
+            /// </summary>
+            [EnumMember(Value = "EmployeePerformance")]
+            Employeeperformance,
+            
+            /// <summary>
+            /// Enum Gamification for "Gamification"
+            /// </summary>
+            [EnumMember(Value = "Gamification")]
+            Gamification,
+            
+            /// <summary>
             /// Enum Groups for "Groups"
             /// </summary>
             [EnumMember(Value = "Groups")]
@@ -252,6 +264,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Read")]
             Read,
+            
+            /// <summary>
+            /// Enum Write for "Write"
+            /// </summary>
+            [EnumMember(Value = "Write")]
+            Write,
             
             /// <summary>
             /// Enum Applyprotection for "ApplyProtection"
@@ -596,6 +614,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Extensionpool,
             
             /// <summary>
+            /// Enum Externalmetricsdefinition for "ExternalMetricsDefinition"
+            /// </summary>
+            [EnumMember(Value = "ExternalMetricsDefinition")]
+            Externalmetricsdefinition,
+            
+            /// <summary>
+            /// Enum Externalmetricsdata for "ExternalMetricsData"
+            /// </summary>
+            [EnumMember(Value = "ExternalMetricsData")]
+            Externalmetricsdata,
+            
+            /// <summary>
             /// Enum Feedback for "Feedback"
             /// </summary>
             [EnumMember(Value = "Feedback")]
@@ -660,6 +690,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "MessagingCampaign")]
             Messagingcampaign,
+            
+            /// <summary>
+            /// Enum Metric for "Metric"
+            /// </summary>
+            [EnumMember(Value = "Metric")]
+            Metric,
             
             /// <summary>
             /// Enum Numberplan for "NumberPlan"
@@ -828,6 +864,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "SpeechTextAnalyticsSettings")]
             Speechtextanalyticssettings,
+            
+            /// <summary>
+            /// Enum Status for "Status"
+            /// </summary>
+            [EnumMember(Value = "Status")]
+            Status,
             
             /// <summary>
             /// Enum Team for "Team"

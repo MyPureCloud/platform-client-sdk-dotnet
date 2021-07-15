@@ -197,12 +197,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// This constraint ensures that an agent starts each workday within a user-defined time threshold
         /// </summary>
         /// <value>This constraint ensures that an agent starts each workday within a user-defined time threshold</value>
         [DataMember(Name="shiftStartVarianceType", EmitDefaultValue=false)]
         public ShiftStartVarianceTypeEnum? ShiftStartVarianceType { get; set; }
+        
+        
         
         
         
@@ -253,8 +258,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ShiftStartVariances">Variance in minutes among start times of shifts in this work plan.</param>
         /// <param name="Shifts">Shifts in this work plan.</param>
         /// <param name="Agents">Agents in this work plan.</param>
+        /// <param name="AgentCount">Number of agents in this work plan.</param>
         /// <param name="Metadata">Version metadata for this work plan (required).</param>
-        public WorkPlan(string Name = null, bool? Enabled = null, bool? ConstrainWeeklyPaidTime = null, bool? FlexibleWeeklyPaidTime = null, int? WeeklyExactPaidMinutes = null, int? WeeklyMinimumPaidMinutes = null, int? WeeklyMaximumPaidMinutes = null, bool? ConstrainPaidTimeGranularity = null, int? PaidTimeGranularityMinutes = null, bool? ConstrainMinimumTimeBetweenShifts = null, int? MinimumTimeBetweenShiftsMinutes = null, int? MaximumDays = null, int? MinimumConsecutiveNonWorkingMinutesPerWeek = null, bool? ConstrainMaximumConsecutiveWorkingWeekends = null, int? MaximumConsecutiveWorkingWeekends = null, int? MinimumWorkingDaysPerWeek = null, bool? ConstrainMaximumConsecutiveWorkingDays = null, int? MaximumConsecutiveWorkingDays = null, int? MinimumShiftStartDistanceMinutes = null, int? MinimumDaysOffPerPlanningPeriod = null, int? MaximumDaysOffPerPlanningPeriod = null, int? MinimumPaidMinutesPerPlanningPeriod = null, int? MaximumPaidMinutesPerPlanningPeriod = null, SetWrapperDayOfWeek OptionalDays = null, ShiftStartVarianceTypeEnum? ShiftStartVarianceType = null, ListWrapperShiftStartVariance ShiftStartVariances = null, List<WorkPlanShift> Shifts = null, List<DeletableUserReference> Agents = null, WfmVersionedEntityMetadata Metadata = null)
+        public WorkPlan(string Name = null, bool? Enabled = null, bool? ConstrainWeeklyPaidTime = null, bool? FlexibleWeeklyPaidTime = null, int? WeeklyExactPaidMinutes = null, int? WeeklyMinimumPaidMinutes = null, int? WeeklyMaximumPaidMinutes = null, bool? ConstrainPaidTimeGranularity = null, int? PaidTimeGranularityMinutes = null, bool? ConstrainMinimumTimeBetweenShifts = null, int? MinimumTimeBetweenShiftsMinutes = null, int? MaximumDays = null, int? MinimumConsecutiveNonWorkingMinutesPerWeek = null, bool? ConstrainMaximumConsecutiveWorkingWeekends = null, int? MaximumConsecutiveWorkingWeekends = null, int? MinimumWorkingDaysPerWeek = null, bool? ConstrainMaximumConsecutiveWorkingDays = null, int? MaximumConsecutiveWorkingDays = null, int? MinimumShiftStartDistanceMinutes = null, int? MinimumDaysOffPerPlanningPeriod = null, int? MaximumDaysOffPerPlanningPeriod = null, int? MinimumPaidMinutesPerPlanningPeriod = null, int? MaximumPaidMinutesPerPlanningPeriod = null, SetWrapperDayOfWeek OptionalDays = null, ShiftStartVarianceTypeEnum? ShiftStartVarianceType = null, ListWrapperShiftStartVariance ShiftStartVariances = null, List<WorkPlanShift> Shifts = null, List<DeletableUserReference> Agents = null, int? AgentCount = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Name = Name;
             this.Enabled = Enabled;
@@ -284,6 +290,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ShiftStartVariances = ShiftStartVariances;
             this.Shifts = Shifts;
             this.Agents = Agents;
+            this.AgentCount = AgentCount;
             this.Metadata = Metadata;
             
         }
@@ -553,6 +560,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Number of agents in this work plan
+        /// </summary>
+        /// <value>Number of agents in this work plan</value>
+        [DataMember(Name="agentCount", EmitDefaultValue=false)]
+        public int? AgentCount { get; set; }
+        
+        
+        
+        /// <summary>
         /// Version metadata for this work plan
         /// </summary>
         /// <value>Version metadata for this work plan</value>
@@ -608,6 +624,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ShiftStartVariances: ").Append(ShiftStartVariances).Append("\n");
             sb.Append("  Shifts: ").Append(Shifts).Append("\n");
             sb.Append("  Agents: ").Append(Agents).Append("\n");
+            sb.Append("  AgentCount: ").Append(AgentCount).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -797,6 +814,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Agents.SequenceEqual(other.Agents)
                 ) &&
                 (
+                    this.AgentCount == other.AgentCount ||
+                    this.AgentCount != null &&
+                    this.AgentCount.Equals(other.AgentCount)
+                ) &&
+                (
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
@@ -909,6 +931,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Agents != null)
                     hash = hash * 59 + this.Agents.GetHashCode();
+                
+                if (this.AgentCount != null)
+                    hash = hash * 59 + this.AgentCount.GetHashCode();
                 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();

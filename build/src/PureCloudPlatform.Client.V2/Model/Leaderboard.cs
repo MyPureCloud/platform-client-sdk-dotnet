@@ -58,7 +58,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Metric">The metric id if the leaderboard is about a specific metric.</param>
         /// <param name="Leaders">The list of leaders generated..</param>
         /// <param name="UserRank">The requesting user&#39;s rank.</param>
-        public Leaderboard(Division Division = null, Metric Metric = null, List<LeaderboardItem> Leaders = null, LeaderboardItem UserRank = null)
+        public Leaderboard(Division Division = null, AddressableEntityRef Metric = null, List<LeaderboardItem> Leaders = null, LeaderboardItem UserRank = null)
         {
             this.Division = Division;
             this.Metric = Metric;
@@ -83,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The metric id if the leaderboard is about a specific metric</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
-        public Metric Metric { get; set; }
+        public AddressableEntityRef Metric { get; set; }
         
         
         

@@ -431,7 +431,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
         /// <returns>AssessmentListing</returns>
@@ -446,7 +446,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
         /// <returns>ApiResponse of AssessmentListing</returns>
@@ -719,7 +719,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
         /// <returns>PredictorListing</returns>
@@ -734,7 +734,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
         /// <returns>ApiResponse of PredictorListing</returns>
@@ -2999,7 +2999,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
         /// <returns>Task of AssessmentListing</returns>
@@ -3014,7 +3014,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
         /// <returns>Task of ApiResponse (AssessmentListing)</returns>
@@ -3287,7 +3287,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
         /// <returns>Task of PredictorListing</returns>
@@ -3302,7 +3302,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (PredictorListing)</returns>
@@ -8744,7 +8744,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
         /// <returns>AssessmentListing</returns>
@@ -8760,7 +8760,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
         /// <returns>ApiResponse of AssessmentListing</returns>
@@ -8848,7 +8848,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
         /// <returns>Task of AssessmentListing</returns>
@@ -8865,7 +8865,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
         /// <returns>Task of ApiResponse (AssessmentListing)</returns>
@@ -11097,7 +11097,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
         /// <returns>PredictorListing</returns>
@@ -11113,7 +11113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
         /// <returns>ApiResponse of PredictorListing</returns>
@@ -11201,7 +11201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
         /// <returns>Task of PredictorListing</returns>
@@ -11218,7 +11218,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (PredictorListing)</returns>

@@ -707,7 +707,7 @@ namespace Example
             try
             { 
                 // Get annotations for recording
-                List&lt;Annotation&gt; result = apiInstance.GetConversationRecordingAnnotations(conversationId, recordingId);
+                List<Annotation> result = apiInstance.GetConversationRecordingAnnotations(conversationId, recordingId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -772,7 +772,7 @@ namespace Example
             try
             { 
                 // Get recording metadata for a conversation. Does not return playable media.
-                List&lt;RecordingMetadata&gt; result = apiInstance.GetConversationRecordingmetadata(conversationId);
+                List<RecordingMetadata> result = apiInstance.GetConversationRecordingmetadata(conversationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -906,7 +906,7 @@ namespace Example
             try
             { 
                 // Get all of a Conversation's Recordings.
-                List&lt;Recording&gt; result = apiInstance.GetConversationRecordings(conversationId, maxWaitMs, formatId);
+                List<Recording> result = apiInstance.GetConversationRecordings(conversationId, maxWaitMs, formatId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2381,7 +2381,7 @@ namespace Example
 
 Create media retention policy
 
-
+Policy does not work retroactively
 
 Requires ANY permissions: 
 
@@ -2641,7 +2641,7 @@ namespace Example
 
 Create media retention policy
 
-
+Policy does not work retroactively
 
 Requires ANY permissions: 
 
@@ -2798,7 +2798,7 @@ namespace Example
             try
             { 
                 // Get a list of conversations with protected recordings
-                List&lt;AddressableEntityRef&gt; result = apiInstance.PostRecordingsDeletionprotection(body);
+                List<AddressableEntityRef> result = apiInstance.PostRecordingsDeletionprotection(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3165,7 +3165,7 @@ namespace Example
 
 Update a media retention policy
 
-
+Policy does not work retroactively
 
 Requires ANY permissions: 
 
@@ -3368,7 +3368,7 @@ namespace Example
 
 Update a media retention policy
 
-
+Policy does not work retroactively
 
 Requires ANY permissions: 
 

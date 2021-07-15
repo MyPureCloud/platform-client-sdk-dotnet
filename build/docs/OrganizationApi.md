@@ -14,6 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOrganizationsLimitsChangerequests**](OrganizationApi.html#getorganizationslimitschangerequests) | **GET** /api/v2/organizations/limits/changerequests | Get the available limit change requests |
 | [**GetOrganizationsLimitsDocs**](OrganizationApi.html#getorganizationslimitsdocs) | **GET** /api/v2/organizations/limits/docs | Get a link to the limit documentation |
 | [**GetOrganizationsLimitsNamespace**](OrganizationApi.html#getorganizationslimitsnamespace) | **GET** /api/v2/organizations/limits/namespaces/{namespaceName} | Get the effective limits in a namespace for an organization |
+| [**GetOrganizationsLimitsNamespaceDefaults**](OrganizationApi.html#getorganizationslimitsnamespacedefaults) | **GET** /api/v2/organizations/limits/namespaces/{namespaceName}/defaults | Get the default limits in a namespace for an organization |
 | [**GetOrganizationsLimitsNamespaces**](OrganizationApi.html#getorganizationslimitsnamespaces) | **GET** /api/v2/organizations/limits/namespaces | Get the available limit namespaces |
 | [**GetOrganizationsMe**](OrganizationApi.html#getorganizationsme) | **GET** /api/v2/organizations/me | Get organization. |
 | [**GetOrganizationsWhitelist**](OrganizationApi.html#getorganizationswhitelist) | **GET** /api/v2/organizations/whitelist | Use PUT /api/v2/organizations/embeddedintegration instead |
@@ -469,9 +470,73 @@ namespace Example
 
 [**LimitsEntityListing**](LimitsEntityListing.html)
 
+<a name="getorganizationslimitsnamespacedefaults"></a>
+
+## [**LimitsEntityListing**](LimitsEntityListing.html) GetOrganizationsLimitsNamespaceDefaults (string namespaceName)
+
+
+
+Get the default limits in a namespace for an organization
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrganizationsLimitsNamespaceDefaultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationApi();
+            var namespaceName = namespaceName_example;  // string | The namespace to fetch defaults limits for
+
+            try
+            { 
+                // Get the default limits in a namespace for an organization
+                LimitsEntityListing result = apiInstance.GetOrganizationsLimitsNamespaceDefaults(namespaceName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationApi.GetOrganizationsLimitsNamespaceDefaults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **namespaceName** | **string**| The namespace to fetch defaults limits for |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LimitsEntityListing**](LimitsEntityListing.html)
+
 <a name="getorganizationslimitsnamespaces"></a>
 
-## [**LimitsEntityListing**](LimitsEntityListing.html) GetOrganizationsLimitsNamespaces (int? pageSize = null, int? pageNumber = null)
+## [**PagedNamespaceListing**](PagedNamespaceListing.html) GetOrganizationsLimitsNamespaces (int? pageSize = null, int? pageNumber = null)
 
 
 
@@ -511,7 +576,7 @@ namespace Example
             try
             { 
                 // Get the available limit namespaces
-                LimitsEntityListing result = apiInstance.GetOrganizationsLimitsNamespaces(pageSize, pageNumber);
+                PagedNamespaceListing result = apiInstance.GetOrganizationsLimitsNamespaces(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -534,7 +599,7 @@ namespace Example
 
 ### Return type
 
-[**LimitsEntityListing**](LimitsEntityListing.html)
+[**PagedNamespaceListing**](PagedNamespaceListing.html)
 
 <a name="getorganizationsme"></a>
 

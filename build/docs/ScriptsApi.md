@@ -196,7 +196,7 @@ namespace Example
             try
             { 
                 // Get the list of pages
-                List&lt;Page&gt; result = apiInstance.GetScriptPages(scriptId, scriptDataVersion);
+                List<Page> result = apiInstance.GetScriptPages(scriptId, scriptDataVersion);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -557,7 +557,7 @@ namespace Example
             try
             { 
                 // Get the list of published pages
-                List&lt;Page&gt; result = apiInstance.GetScriptsPublishedScriptIdPages(scriptId, scriptDataVersion);
+                List<Page> result = apiInstance.GetScriptsPublishedScriptIdPages(scriptId, scriptDataVersion);
                 Debug.WriteLine(result);
             }
             catch (Exception e)

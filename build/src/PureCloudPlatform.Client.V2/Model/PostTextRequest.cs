@@ -225,12 +225,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// If the channels list contains a 'Messaging' item and the messaging platform is known, include it here to get accurate analytics
         /// </summary>
         /// <value>If the channels list contains a 'Messaging' item and the messaging platform is known, include it here to get accurate analytics</value>
         [DataMember(Name="messagingPlatformType", EmitDefaultValue=false)]
         public MessagingPlatformTypeEnum? MessagingPlatformType { get; set; }
+        
+        
         
         
         
@@ -259,10 +264,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BotChannels">The channels this bot is utilizing.</param>
         /// <param name="BotCorrelationId">Id for tracking the activity - this will be returned in the response.</param>
         /// <param name="MessagingPlatformType">If the channels list contains a &#39;Messaging&#39; item and the messaging platform is known, include it here to get accurate analytics.</param>
-        /// <param name="AmazonLexRequest">AmazonLexRequest.</param>
-        /// <param name="GoogleDialogflow">GoogleDialogflow.</param>
-        /// <param name="GenesysBotConnector">GenesysBotConnector.</param>
-        public PostTextRequest(string BotId = null, string BotAlias = null, string IntegrationId = null, string BotSessionId = null, PostTextMessage PostTextMessage = null, string LanguageCode = null, int? BotSessionTimeoutMinutes = null, List<BotChannelsEnum> BotChannels = null, string BotCorrelationId = null, MessagingPlatformTypeEnum? MessagingPlatformType = null, AmazonLexRequest AmazonLexRequest = null, GoogleDialogflowCustomSettings GoogleDialogflow = null, GenesysBotConnector GenesysBotConnector = null)
+        /// <param name="AmazonLexRequest">Provider specific settings, if any.</param>
+        /// <param name="GoogleDialogflow">Provider specific settings, if any.</param>
+        /// <param name="GenesysBotConnector">Provider specific settings, if any.</param>
+        /// <param name="NuanceMixDlg">Provider specific settings, if any.</param>
+        public PostTextRequest(string BotId = null, string BotAlias = null, string IntegrationId = null, string BotSessionId = null, PostTextMessage PostTextMessage = null, string LanguageCode = null, int? BotSessionTimeoutMinutes = null, List<BotChannelsEnum> BotChannels = null, string BotCorrelationId = null, MessagingPlatformTypeEnum? MessagingPlatformType = null, AmazonLexRequest AmazonLexRequest = null, GoogleDialogflowCustomSettings GoogleDialogflow = null, GenesysBotConnector GenesysBotConnector = null, NuanceMixDlgSettings NuanceMixDlg = null)
         {
             this.BotId = BotId;
             this.BotAlias = BotAlias;
@@ -277,6 +283,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AmazonLexRequest = AmazonLexRequest;
             this.GoogleDialogflow = GoogleDialogflow;
             this.GenesysBotConnector = GenesysBotConnector;
+            this.NuanceMixDlg = NuanceMixDlg;
             
         }
         
@@ -366,26 +373,38 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets AmazonLexRequest
+        /// Provider specific settings, if any
         /// </summary>
+        /// <value>Provider specific settings, if any</value>
         [DataMember(Name="amazonLexRequest", EmitDefaultValue=false)]
         public AmazonLexRequest AmazonLexRequest { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets GoogleDialogflow
+        /// Provider specific settings, if any
         /// </summary>
+        /// <value>Provider specific settings, if any</value>
         [DataMember(Name="googleDialogflow", EmitDefaultValue=false)]
         public GoogleDialogflowCustomSettings GoogleDialogflow { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets GenesysBotConnector
+        /// Provider specific settings, if any
         /// </summary>
+        /// <value>Provider specific settings, if any</value>
         [DataMember(Name="genesysBotConnector", EmitDefaultValue=false)]
         public GenesysBotConnector GenesysBotConnector { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Provider specific settings, if any
+        /// </summary>
+        /// <value>Provider specific settings, if any</value>
+        [DataMember(Name="nuanceMixDlg", EmitDefaultValue=false)]
+        public NuanceMixDlgSettings NuanceMixDlg { get; set; }
         
         
         /// <summary>
@@ -410,6 +429,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AmazonLexRequest: ").Append(AmazonLexRequest).Append("\n");
             sb.Append("  GoogleDialogflow: ").Append(GoogleDialogflow).Append("\n");
             sb.Append("  GenesysBotConnector: ").Append(GenesysBotConnector).Append("\n");
+            sb.Append("  NuanceMixDlg: ").Append(NuanceMixDlg).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -510,6 +530,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.GenesysBotConnector == other.GenesysBotConnector ||
                     this.GenesysBotConnector != null &&
                     this.GenesysBotConnector.Equals(other.GenesysBotConnector)
+                ) &&
+                (
+                    this.NuanceMixDlg == other.NuanceMixDlg ||
+                    this.NuanceMixDlg != null &&
+                    this.NuanceMixDlg.Equals(other.NuanceMixDlg)
                 );
         }
 
@@ -563,6 +588,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.GenesysBotConnector != null)
                     hash = hash * 59 + this.GenesysBotConnector.GetHashCode();
+                
+                if (this.NuanceMixDlg != null)
+                    hash = hash * 59 + this.NuanceMixDlg.GetHashCode();
                 
                 return hash;
             }

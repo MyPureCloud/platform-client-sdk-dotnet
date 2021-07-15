@@ -382,7 +382,7 @@ namespace Example
             try
             { 
                 // Get the builtin translation for a language
-                Dictionary&lt;string, Object&gt; result = apiInstance.GetLanguagesTranslationsBuiltin(language);
+                Dictionary<string, Object> result = apiInstance.GetLanguagesTranslationsBuiltin(language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -446,7 +446,7 @@ namespace Example
             try
             { 
                 // Get effective translation for an organization by language
-                Dictionary&lt;string, Object&gt; result = apiInstance.GetLanguagesTranslationsOrganization(language);
+                Dictionary<string, Object> result = apiInstance.GetLanguagesTranslationsOrganization(language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -510,7 +510,7 @@ namespace Example
             try
             { 
                 // Get effective language translation for a user
-                Dictionary&lt;string, Object&gt; result = apiInstance.GetLanguagesTranslationsUser(userId);
+                Dictionary<string, Object> result = apiInstance.GetLanguagesTranslationsUser(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)

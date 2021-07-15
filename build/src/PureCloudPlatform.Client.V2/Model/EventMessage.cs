@@ -71,6 +71,18 @@ namespace PureCloudPlatform.Client.V2.Model
             CampaignContentTemplateSubstitutionMismatch,
             
             /// <summary>
+            /// Enum CampaignEmailBodyCharacterLimitExceeded for "CAMPAIGN_EMAIL_BODY_CHARACTER_LIMIT_EXCEEDED"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_EMAIL_BODY_CHARACTER_LIMIT_EXCEEDED")]
+            CampaignEmailBodyCharacterLimitExceeded,
+            
+            /// <summary>
+            /// Enum CampaignEmailSubjectCharacterLimitExceeded for "CAMPAIGN_EMAIL_SUBJECT_CHARACTER_LIMIT_EXCEEDED"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_EMAIL_SUBJECT_CHARACTER_LIMIT_EXCEEDED")]
+            CampaignEmailSubjectCharacterLimitExceeded,
+            
+            /// <summary>
             /// Enum CampaignMessageCharacterLimitExceeded for "CAMPAIGN_MESSAGE_CHARACTER_LIMIT_EXCEEDED"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_MESSAGE_CHARACTER_LIMIT_EXCEEDED")]

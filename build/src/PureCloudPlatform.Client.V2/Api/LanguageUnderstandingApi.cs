@@ -87,6 +87,52 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteLanguageunderstandingDomainVersionWithHttpInfo (string domainId, string domainVersionId);
         
         /// <summary>
+        /// Delete a miner.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns></returns>
+        void DeleteLanguageunderstandingMiner (string minerId);
+
+        /// <summary>
+        /// Delete a miner.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteLanguageunderstandingMinerWithHttpInfo (string minerId);
+        
+        /// <summary>
+        /// Delete a draft
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <returns></returns>
+        void DeleteLanguageunderstandingMinerDraft (string minerId, string draftId);
+
+        /// <summary>
+        /// Delete a draft
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteLanguageunderstandingMinerDraftWithHttpInfo (string minerId, string draftId);
+        
+        /// <summary>
         /// Find an NLU Domain.
         /// </summary>
         /// <remarks>
@@ -279,6 +325,144 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<NluDomainListing> GetLanguageunderstandingDomainsWithHttpInfo (int? pageNumber = null, int? pageSize = null);
         
         /// <summary>
+        /// Get information about a miner.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>Miner</returns>
+        Miner GetLanguageunderstandingMiner (string minerId);
+
+        /// <summary>
+        /// Get information about a miner.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>ApiResponse of Miner</returns>
+        ApiResponse<Miner> GetLanguageunderstandingMinerWithHttpInfo (string minerId);
+        
+        /// <summary>
+        /// Get information about a draft.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <returns>Draft</returns>
+        Draft GetLanguageunderstandingMinerDraft (string minerId, string draftId);
+
+        /// <summary>
+        /// Get information about a draft.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <returns>ApiResponse of Draft</returns>
+        ApiResponse<Draft> GetLanguageunderstandingMinerDraftWithHttpInfo (string minerId, string draftId);
+        
+        /// <summary>
+        /// Retrieve the list of drafts created.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>DraftListing</returns>
+        DraftListing GetLanguageunderstandingMinerDrafts (string minerId);
+
+        /// <summary>
+        /// Retrieve the list of drafts created.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>ApiResponse of DraftListing</returns>
+        ApiResponse<DraftListing> GetLanguageunderstandingMinerDraftsWithHttpInfo (string minerId);
+        
+        /// <summary>
+        /// Get information about a mined intent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="intentId">The ID of the intent to be retrieved.</param>
+        /// <param name="expand">Option to fetch utterances (optional)</param>
+        /// <returns>MinerIntent</returns>
+        MinerIntent GetLanguageunderstandingMinerIntent (string minerId, string intentId, string expand = null);
+
+        /// <summary>
+        /// Get information about a mined intent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="intentId">The ID of the intent to be retrieved.</param>
+        /// <param name="expand">Option to fetch utterances (optional)</param>
+        /// <returns>ApiResponse of MinerIntent</returns>
+        ApiResponse<MinerIntent> GetLanguageunderstandingMinerIntentWithHttpInfo (string minerId, string intentId, string expand = null);
+        
+        /// <summary>
+        /// Retrieve a list of mined intents.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="expand">Option to fetch utterances. (optional)</param>
+        /// <returns>MinedIntentsListing</returns>
+        MinedIntentsListing GetLanguageunderstandingMinerIntents (string minerId, string expand = null);
+
+        /// <summary>
+        /// Retrieve a list of mined intents.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="expand">Option to fetch utterances. (optional)</param>
+        /// <returns>ApiResponse of MinedIntentsListing</returns>
+        ApiResponse<MinedIntentsListing> GetLanguageunderstandingMinerIntentsWithHttpInfo (string minerId, string expand = null);
+        
+        /// <summary>
+        /// Retrieve the list of miners created.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>MinerListing</returns>
+        MinerListing GetLanguageunderstandingMiners ();
+
+        /// <summary>
+        /// Retrieve the list of miners created.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of MinerListing</returns>
+        ApiResponse<MinerListing> GetLanguageunderstandingMinersWithHttpInfo ();
+        
+        /// <summary>
         /// Update an NLU Domain.
         /// </summary>
         /// <remarks>
@@ -301,6 +485,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated NLU Domain.</param>
         /// <returns>ApiResponse of NluDomain</returns>
         ApiResponse<NluDomain> PatchLanguageunderstandingDomainWithHttpInfo (string domainId, NluDomain body);
+        
+        /// <summary>
+        /// Save information for the draft
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Draft</returns>
+        Draft PatchLanguageunderstandingMinerDraft (string minerId, string draftId, DraftRequest body = null);
+
+        /// <summary>
+        /// Save information for the draft
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Draft</returns>
+        ApiResponse<Draft> PatchLanguageunderstandingMinerDraftWithHttpInfo (string minerId, string draftId, DraftRequest body = null);
         
         /// <summary>
         /// Create feedback for the NLU Domain Version.
@@ -447,6 +657,76 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<NluDomain> PostLanguageunderstandingDomainsWithHttpInfo (NluDomain body);
         
         /// <summary>
+        /// Create a new draft resource.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="body">Details for creating draft resource</param>
+        /// <returns>Draft</returns>
+        Draft PostLanguageunderstandingMinerDrafts (string minerId, Draft body);
+
+        /// <summary>
+        /// Create a new draft resource.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="body">Details for creating draft resource</param>
+        /// <returns>ApiResponse of Draft</returns>
+        ApiResponse<Draft> PostLanguageunderstandingMinerDraftsWithHttpInfo (string minerId, Draft body);
+        
+        /// <summary>
+        /// Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Miner</returns>
+        Miner PostLanguageunderstandingMinerExecute (string minerId, MinerExecuteRequest body = null);
+
+        /// <summary>
+        /// Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Miner</returns>
+        ApiResponse<Miner> PostLanguageunderstandingMinerExecuteWithHttpInfo (string minerId, MinerExecuteRequest body = null);
+        
+        /// <summary>
+        /// Create a unique miner.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Details for creating a new miner resource.</param>
+        /// <returns>Miner</returns>
+        Miner PostLanguageunderstandingMiners (Miner body);
+
+        /// <summary>
+        /// Create a unique miner.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Details for creating a new miner resource.</param>
+        /// <returns>ApiResponse of Miner</returns>
+        ApiResponse<Miner> PostLanguageunderstandingMinersWithHttpInfo (Miner body);
+        
+        /// <summary>
         /// Update an NLU Domain Version.
         /// </summary>
         /// <remarks>
@@ -545,6 +825,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageunderstandingDomainVersionAsyncWithHttpInfo (string domainId, string domainVersionId);
+        
+        /// <summary>
+        /// Delete a miner.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteLanguageunderstandingMinerAsync (string minerId);
+
+        /// <summary>
+        /// Delete a miner.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageunderstandingMinerAsyncWithHttpInfo (string minerId);
+        
+        /// <summary>
+        /// Delete a draft
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteLanguageunderstandingMinerDraftAsync (string minerId, string draftId);
+
+        /// <summary>
+        /// Delete a draft
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageunderstandingMinerDraftAsyncWithHttpInfo (string minerId, string draftId);
         
         /// <summary>
         /// Find an NLU Domain.
@@ -739,6 +1065,144 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<NluDomainListing>> GetLanguageunderstandingDomainsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
         
         /// <summary>
+        /// Get information about a miner.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>Task of Miner</returns>
+        System.Threading.Tasks.Task<Miner> GetLanguageunderstandingMinerAsync (string minerId);
+
+        /// <summary>
+        /// Get information about a miner.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>Task of ApiResponse (Miner)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Miner>> GetLanguageunderstandingMinerAsyncWithHttpInfo (string minerId);
+        
+        /// <summary>
+        /// Get information about a draft.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <returns>Task of Draft</returns>
+        System.Threading.Tasks.Task<Draft> GetLanguageunderstandingMinerDraftAsync (string minerId, string draftId);
+
+        /// <summary>
+        /// Get information about a draft.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <returns>Task of ApiResponse (Draft)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Draft>> GetLanguageunderstandingMinerDraftAsyncWithHttpInfo (string minerId, string draftId);
+        
+        /// <summary>
+        /// Retrieve the list of drafts created.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>Task of DraftListing</returns>
+        System.Threading.Tasks.Task<DraftListing> GetLanguageunderstandingMinerDraftsAsync (string minerId);
+
+        /// <summary>
+        /// Retrieve the list of drafts created.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>Task of ApiResponse (DraftListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DraftListing>> GetLanguageunderstandingMinerDraftsAsyncWithHttpInfo (string minerId);
+        
+        /// <summary>
+        /// Get information about a mined intent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="intentId">The ID of the intent to be retrieved.</param>
+        /// <param name="expand">Option to fetch utterances (optional)</param>
+        /// <returns>Task of MinerIntent</returns>
+        System.Threading.Tasks.Task<MinerIntent> GetLanguageunderstandingMinerIntentAsync (string minerId, string intentId, string expand = null);
+
+        /// <summary>
+        /// Get information about a mined intent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="intentId">The ID of the intent to be retrieved.</param>
+        /// <param name="expand">Option to fetch utterances (optional)</param>
+        /// <returns>Task of ApiResponse (MinerIntent)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MinerIntent>> GetLanguageunderstandingMinerIntentAsyncWithHttpInfo (string minerId, string intentId, string expand = null);
+        
+        /// <summary>
+        /// Retrieve a list of mined intents.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="expand">Option to fetch utterances. (optional)</param>
+        /// <returns>Task of MinedIntentsListing</returns>
+        System.Threading.Tasks.Task<MinedIntentsListing> GetLanguageunderstandingMinerIntentsAsync (string minerId, string expand = null);
+
+        /// <summary>
+        /// Retrieve a list of mined intents.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="expand">Option to fetch utterances. (optional)</param>
+        /// <returns>Task of ApiResponse (MinedIntentsListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MinedIntentsListing>> GetLanguageunderstandingMinerIntentsAsyncWithHttpInfo (string minerId, string expand = null);
+        
+        /// <summary>
+        /// Retrieve the list of miners created.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of MinerListing</returns>
+        System.Threading.Tasks.Task<MinerListing> GetLanguageunderstandingMinersAsync ();
+
+        /// <summary>
+        /// Retrieve the list of miners created.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (MinerListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MinerListing>> GetLanguageunderstandingMinersAsyncWithHttpInfo ();
+        
+        /// <summary>
         /// Update an NLU Domain.
         /// </summary>
         /// <remarks>
@@ -761,6 +1225,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated NLU Domain.</param>
         /// <returns>Task of ApiResponse (NluDomain)</returns>
         System.Threading.Tasks.Task<ApiResponse<NluDomain>> PatchLanguageunderstandingDomainAsyncWithHttpInfo (string domainId, NluDomain body);
+        
+        /// <summary>
+        /// Save information for the draft
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of Draft</returns>
+        System.Threading.Tasks.Task<Draft> PatchLanguageunderstandingMinerDraftAsync (string minerId, string draftId, DraftRequest body = null);
+
+        /// <summary>
+        /// Save information for the draft
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (Draft)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Draft>> PatchLanguageunderstandingMinerDraftAsyncWithHttpInfo (string minerId, string draftId, DraftRequest body = null);
         
         /// <summary>
         /// Create feedback for the NLU Domain Version.
@@ -905,6 +1395,76 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The NLU Domain to create.</param>
         /// <returns>Task of ApiResponse (NluDomain)</returns>
         System.Threading.Tasks.Task<ApiResponse<NluDomain>> PostLanguageunderstandingDomainsAsyncWithHttpInfo (NluDomain body);
+        
+        /// <summary>
+        /// Create a new draft resource.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="body">Details for creating draft resource</param>
+        /// <returns>Task of Draft</returns>
+        System.Threading.Tasks.Task<Draft> PostLanguageunderstandingMinerDraftsAsync (string minerId, Draft body);
+
+        /// <summary>
+        /// Create a new draft resource.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="body">Details for creating draft resource</param>
+        /// <returns>Task of ApiResponse (Draft)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Draft>> PostLanguageunderstandingMinerDraftsAsyncWithHttpInfo (string minerId, Draft body);
+        
+        /// <summary>
+        /// Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of Miner</returns>
+        System.Threading.Tasks.Task<Miner> PostLanguageunderstandingMinerExecuteAsync (string minerId, MinerExecuteRequest body = null);
+
+        /// <summary>
+        /// Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (Miner)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Miner>> PostLanguageunderstandingMinerExecuteAsyncWithHttpInfo (string minerId, MinerExecuteRequest body = null);
+        
+        /// <summary>
+        /// Create a unique miner.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Details for creating a new miner resource.</param>
+        /// <returns>Task of Miner</returns>
+        System.Threading.Tasks.Task<Miner> PostLanguageunderstandingMinersAsync (Miner body);
+
+        /// <summary>
+        /// Create a unique miner.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Details for creating a new miner resource.</param>
+        /// <returns>Task of ApiResponse (Miner)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Miner>> PostLanguageunderstandingMinersAsyncWithHttpInfo (Miner body);
         
         /// <summary>
         /// Update an NLU Domain Version.
@@ -1613,6 +2173,401 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageunderstandingDomainVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageunderstandingDomainVersion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete a miner. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns></returns>
+        public void DeleteLanguageunderstandingMiner (string minerId)
+        {
+             DeleteLanguageunderstandingMinerWithHttpInfo(minerId);
+        }
+
+        /// <summary>
+        /// Delete a miner. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteLanguageunderstandingMinerWithHttpInfo (string minerId)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingMiner");
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageunderstandingMiner: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageunderstandingMiner: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete a miner. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteLanguageunderstandingMinerAsync (string minerId)
+        {
+             await DeleteLanguageunderstandingMinerAsyncWithHttpInfo(minerId);
+
+        }
+
+        /// <summary>
+        /// Delete a miner. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageunderstandingMinerAsyncWithHttpInfo (string minerId)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingMiner");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageunderstandingMiner: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageunderstandingMiner: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete a draft 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <returns></returns>
+        public void DeleteLanguageunderstandingMinerDraft (string minerId, string draftId)
+        {
+             DeleteLanguageunderstandingMinerDraftWithHttpInfo(minerId, draftId);
+        }
+
+        /// <summary>
+        /// Delete a draft 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteLanguageunderstandingMinerDraftWithHttpInfo (string minerId, string draftId)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingMinerDraft");
+            // verify the required parameter 'draftId' is set
+            if (draftId == null)
+                throw new ApiException(400, "Missing required parameter 'draftId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingMinerDraft");
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+            if (draftId != null) localVarPathParams.Add("draftId", this.Configuration.ApiClient.ParameterToString(draftId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageunderstandingMinerDraft: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageunderstandingMinerDraft: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete a draft 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteLanguageunderstandingMinerDraftAsync (string minerId, string draftId)
+        {
+             await DeleteLanguageunderstandingMinerDraftAsyncWithHttpInfo(minerId, draftId);
+
+        }
+
+        /// <summary>
+        /// Delete a draft 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageunderstandingMinerDraftAsyncWithHttpInfo (string minerId, string draftId)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingMinerDraft");
+            
+            // verify the required parameter 'draftId' is set
+            if (draftId == null)
+                throw new ApiException(400, "Missing required parameter 'draftId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingMinerDraft");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+            if (draftId != null) localVarPathParams.Add("draftId", this.Configuration.ApiClient.ParameterToString(draftId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageunderstandingMinerDraft: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageunderstandingMinerDraft: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -3103,6 +4058,1189 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get information about a miner. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>Miner</returns>
+        public Miner GetLanguageunderstandingMiner (string minerId)
+        {
+             ApiResponse<Miner> localVarResponse = GetLanguageunderstandingMinerWithHttpInfo(minerId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get information about a miner. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>ApiResponse of Miner</returns>
+        public ApiResponse< Miner > GetLanguageunderstandingMinerWithHttpInfo (string minerId)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMiner");
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMiner: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMiner: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Miner>(localVarStatusCode,
+                localVarHeaders,
+                (Miner) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Miner)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get information about a miner. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>Task of Miner</returns>
+        public async System.Threading.Tasks.Task<Miner> GetLanguageunderstandingMinerAsync (string minerId)
+        {
+             ApiResponse<Miner> localVarResponse = await GetLanguageunderstandingMinerAsyncWithHttpInfo(minerId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get information about a miner. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>Task of ApiResponse (Miner)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Miner>> GetLanguageunderstandingMinerAsyncWithHttpInfo (string minerId)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMiner");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMiner: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMiner: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Miner>(localVarStatusCode,
+                localVarHeaders,
+                (Miner) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Miner)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get information about a draft. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <returns>Draft</returns>
+        public Draft GetLanguageunderstandingMinerDraft (string minerId, string draftId)
+        {
+             ApiResponse<Draft> localVarResponse = GetLanguageunderstandingMinerDraftWithHttpInfo(minerId, draftId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get information about a draft. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <returns>ApiResponse of Draft</returns>
+        public ApiResponse< Draft > GetLanguageunderstandingMinerDraftWithHttpInfo (string minerId, string draftId)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerDraft");
+            // verify the required parameter 'draftId' is set
+            if (draftId == null)
+                throw new ApiException(400, "Missing required parameter 'draftId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerDraft");
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+            if (draftId != null) localVarPathParams.Add("draftId", this.Configuration.ApiClient.ParameterToString(draftId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMinerDraft: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMinerDraft: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Draft>(localVarStatusCode,
+                localVarHeaders,
+                (Draft) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Draft)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get information about a draft. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <returns>Task of Draft</returns>
+        public async System.Threading.Tasks.Task<Draft> GetLanguageunderstandingMinerDraftAsync (string minerId, string draftId)
+        {
+             ApiResponse<Draft> localVarResponse = await GetLanguageunderstandingMinerDraftAsyncWithHttpInfo(minerId, draftId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get information about a draft. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <returns>Task of ApiResponse (Draft)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Draft>> GetLanguageunderstandingMinerDraftAsyncWithHttpInfo (string minerId, string draftId)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerDraft");
+            
+            // verify the required parameter 'draftId' is set
+            if (draftId == null)
+                throw new ApiException(400, "Missing required parameter 'draftId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerDraft");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+            if (draftId != null) localVarPathParams.Add("draftId", this.Configuration.ApiClient.ParameterToString(draftId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMinerDraft: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMinerDraft: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Draft>(localVarStatusCode,
+                localVarHeaders,
+                (Draft) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Draft)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Retrieve the list of drafts created. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>DraftListing</returns>
+        public DraftListing GetLanguageunderstandingMinerDrafts (string minerId)
+        {
+             ApiResponse<DraftListing> localVarResponse = GetLanguageunderstandingMinerDraftsWithHttpInfo(minerId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve the list of drafts created. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>ApiResponse of DraftListing</returns>
+        public ApiResponse< DraftListing > GetLanguageunderstandingMinerDraftsWithHttpInfo (string minerId)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerDrafts");
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMinerDrafts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMinerDrafts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DraftListing>(localVarStatusCode,
+                localVarHeaders,
+                (DraftListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DraftListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieve the list of drafts created. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>Task of DraftListing</returns>
+        public async System.Threading.Tasks.Task<DraftListing> GetLanguageunderstandingMinerDraftsAsync (string minerId)
+        {
+             ApiResponse<DraftListing> localVarResponse = await GetLanguageunderstandingMinerDraftsAsyncWithHttpInfo(minerId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve the list of drafts created. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <returns>Task of ApiResponse (DraftListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DraftListing>> GetLanguageunderstandingMinerDraftsAsyncWithHttpInfo (string minerId)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerDrafts");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMinerDrafts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMinerDrafts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DraftListing>(localVarStatusCode,
+                localVarHeaders,
+                (DraftListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DraftListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get information about a mined intent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="intentId">The ID of the intent to be retrieved.</param>
+        /// <param name="expand">Option to fetch utterances (optional)</param>
+        /// <returns>MinerIntent</returns>
+        public MinerIntent GetLanguageunderstandingMinerIntent (string minerId, string intentId, string expand = null)
+        {
+             ApiResponse<MinerIntent> localVarResponse = GetLanguageunderstandingMinerIntentWithHttpInfo(minerId, intentId, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get information about a mined intent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="intentId">The ID of the intent to be retrieved.</param>
+        /// <param name="expand">Option to fetch utterances (optional)</param>
+        /// <returns>ApiResponse of MinerIntent</returns>
+        public ApiResponse< MinerIntent > GetLanguageunderstandingMinerIntentWithHttpInfo (string minerId, string intentId, string expand = null)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerIntent");
+            // verify the required parameter 'intentId' is set
+            if (intentId == null)
+                throw new ApiException(400, "Missing required parameter 'intentId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerIntent");
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/intents/{intentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+            if (intentId != null) localVarPathParams.Add("intentId", this.Configuration.ApiClient.ParameterToString(intentId));
+
+            // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMinerIntent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMinerIntent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MinerIntent>(localVarStatusCode,
+                localVarHeaders,
+                (MinerIntent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MinerIntent)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get information about a mined intent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="intentId">The ID of the intent to be retrieved.</param>
+        /// <param name="expand">Option to fetch utterances (optional)</param>
+        /// <returns>Task of MinerIntent</returns>
+        public async System.Threading.Tasks.Task<MinerIntent> GetLanguageunderstandingMinerIntentAsync (string minerId, string intentId, string expand = null)
+        {
+             ApiResponse<MinerIntent> localVarResponse = await GetLanguageunderstandingMinerIntentAsyncWithHttpInfo(minerId, intentId, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get information about a mined intent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="intentId">The ID of the intent to be retrieved.</param>
+        /// <param name="expand">Option to fetch utterances (optional)</param>
+        /// <returns>Task of ApiResponse (MinerIntent)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MinerIntent>> GetLanguageunderstandingMinerIntentAsyncWithHttpInfo (string minerId, string intentId, string expand = null)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerIntent");
+            
+            // verify the required parameter 'intentId' is set
+            if (intentId == null)
+                throw new ApiException(400, "Missing required parameter 'intentId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerIntent");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/intents/{intentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+            if (intentId != null) localVarPathParams.Add("intentId", this.Configuration.ApiClient.ParameterToString(intentId));
+
+            // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMinerIntent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMinerIntent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MinerIntent>(localVarStatusCode,
+                localVarHeaders,
+                (MinerIntent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MinerIntent)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Retrieve a list of mined intents. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="expand">Option to fetch utterances. (optional)</param>
+        /// <returns>MinedIntentsListing</returns>
+        public MinedIntentsListing GetLanguageunderstandingMinerIntents (string minerId, string expand = null)
+        {
+             ApiResponse<MinedIntentsListing> localVarResponse = GetLanguageunderstandingMinerIntentsWithHttpInfo(minerId, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve a list of mined intents. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="expand">Option to fetch utterances. (optional)</param>
+        /// <returns>ApiResponse of MinedIntentsListing</returns>
+        public ApiResponse< MinedIntentsListing > GetLanguageunderstandingMinerIntentsWithHttpInfo (string minerId, string expand = null)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerIntents");
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/intents";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+
+            // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMinerIntents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMinerIntents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MinedIntentsListing>(localVarStatusCode,
+                localVarHeaders,
+                (MinedIntentsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MinedIntentsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieve a list of mined intents. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="expand">Option to fetch utterances. (optional)</param>
+        /// <returns>Task of MinedIntentsListing</returns>
+        public async System.Threading.Tasks.Task<MinedIntentsListing> GetLanguageunderstandingMinerIntentsAsync (string minerId, string expand = null)
+        {
+             ApiResponse<MinedIntentsListing> localVarResponse = await GetLanguageunderstandingMinerIntentsAsyncWithHttpInfo(minerId, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve a list of mined intents. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="expand">Option to fetch utterances. (optional)</param>
+        /// <returns>Task of ApiResponse (MinedIntentsListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MinedIntentsListing>> GetLanguageunderstandingMinerIntentsAsyncWithHttpInfo (string minerId, string expand = null)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerIntents");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/intents";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+
+            // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMinerIntents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMinerIntents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MinedIntentsListing>(localVarStatusCode,
+                localVarHeaders,
+                (MinedIntentsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MinedIntentsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Retrieve the list of miners created. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>MinerListing</returns>
+        public MinerListing GetLanguageunderstandingMiners ()
+        {
+             ApiResponse<MinerListing> localVarResponse = GetLanguageunderstandingMinersWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve the list of miners created. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of MinerListing</returns>
+        public ApiResponse< MinerListing > GetLanguageunderstandingMinersWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/languageunderstanding/miners";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMiners: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMiners: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MinerListing>(localVarStatusCode,
+                localVarHeaders,
+                (MinerListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MinerListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieve the list of miners created. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of MinerListing</returns>
+        public async System.Threading.Tasks.Task<MinerListing> GetLanguageunderstandingMinersAsync ()
+        {
+             ApiResponse<MinerListing> localVarResponse = await GetLanguageunderstandingMinersAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve the list of miners created. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (MinerListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MinerListing>> GetLanguageunderstandingMinersAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/languageunderstanding/miners";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMiners: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingMiners: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MinerListing>(localVarStatusCode,
+                localVarHeaders,
+                (MinerListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MinerListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Update an NLU Domain. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3310,6 +5448,226 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<NluDomain>(localVarStatusCode,
                 localVarHeaders,
                 (NluDomain) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NluDomain)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Save information for the draft 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Draft</returns>
+        public Draft PatchLanguageunderstandingMinerDraft (string minerId, string draftId, DraftRequest body = null)
+        {
+             ApiResponse<Draft> localVarResponse = PatchLanguageunderstandingMinerDraftWithHttpInfo(minerId, draftId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Save information for the draft 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Draft</returns>
+        public ApiResponse< Draft > PatchLanguageunderstandingMinerDraftWithHttpInfo (string minerId, string draftId, DraftRequest body = null)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->PatchLanguageunderstandingMinerDraft");
+            // verify the required parameter 'draftId' is set
+            if (draftId == null)
+                throw new ApiException(400, "Missing required parameter 'draftId' when calling LanguageUnderstandingApi->PatchLanguageunderstandingMinerDraft");
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+            if (draftId != null) localVarPathParams.Add("draftId", this.Configuration.ApiClient.ParameterToString(draftId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchLanguageunderstandingMinerDraft: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchLanguageunderstandingMinerDraft: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Draft>(localVarStatusCode,
+                localVarHeaders,
+                (Draft) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Draft)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Save information for the draft 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of Draft</returns>
+        public async System.Threading.Tasks.Task<Draft> PatchLanguageunderstandingMinerDraftAsync (string minerId, string draftId, DraftRequest body = null)
+        {
+             ApiResponse<Draft> localVarResponse = await PatchLanguageunderstandingMinerDraftAsyncWithHttpInfo(minerId, draftId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Save information for the draft 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="draftId">Draft ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (Draft)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Draft>> PatchLanguageunderstandingMinerDraftAsyncWithHttpInfo (string minerId, string draftId, DraftRequest body = null)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->PatchLanguageunderstandingMinerDraft");
+            
+            // verify the required parameter 'draftId' is set
+            if (draftId == null)
+                throw new ApiException(400, "Missing required parameter 'draftId' when calling LanguageUnderstandingApi->PatchLanguageunderstandingMinerDraft");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+            if (draftId != null) localVarPathParams.Add("draftId", this.Configuration.ApiClient.ParameterToString(draftId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchLanguageunderstandingMinerDraft: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchLanguageunderstandingMinerDraft: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Draft>(localVarStatusCode,
+                localVarHeaders,
+                (Draft) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Draft)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -4578,6 +6936,628 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<NluDomain>(localVarStatusCode,
                 localVarHeaders,
                 (NluDomain) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NluDomain)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Create a new draft resource. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="body">Details for creating draft resource</param>
+        /// <returns>Draft</returns>
+        public Draft PostLanguageunderstandingMinerDrafts (string minerId, Draft body)
+        {
+             ApiResponse<Draft> localVarResponse = PostLanguageunderstandingMinerDraftsWithHttpInfo(minerId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new draft resource. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="body">Details for creating draft resource</param>
+        /// <returns>ApiResponse of Draft</returns>
+        public ApiResponse< Draft > PostLanguageunderstandingMinerDraftsWithHttpInfo (string minerId, Draft body)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->PostLanguageunderstandingMinerDrafts");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingMinerDrafts");
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingMinerDrafts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingMinerDrafts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Draft>(localVarStatusCode,
+                localVarHeaders,
+                (Draft) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Draft)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Create a new draft resource. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="body">Details for creating draft resource</param>
+        /// <returns>Task of Draft</returns>
+        public async System.Threading.Tasks.Task<Draft> PostLanguageunderstandingMinerDraftsAsync (string minerId, Draft body)
+        {
+             ApiResponse<Draft> localVarResponse = await PostLanguageunderstandingMinerDraftsAsyncWithHttpInfo(minerId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a new draft resource. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="body">Details for creating draft resource</param>
+        /// <returns>Task of ApiResponse (Draft)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Draft>> PostLanguageunderstandingMinerDraftsAsyncWithHttpInfo (string minerId, Draft body)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->PostLanguageunderstandingMinerDrafts");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingMinerDrafts");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingMinerDrafts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingMinerDrafts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Draft>(localVarStatusCode,
+                localVarHeaders,
+                (Draft) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Draft)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Miner</returns>
+        public Miner PostLanguageunderstandingMinerExecute (string minerId, MinerExecuteRequest body = null)
+        {
+             ApiResponse<Miner> localVarResponse = PostLanguageunderstandingMinerExecuteWithHttpInfo(minerId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Miner</returns>
+        public ApiResponse< Miner > PostLanguageunderstandingMinerExecuteWithHttpInfo (string minerId, MinerExecuteRequest body = null)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->PostLanguageunderstandingMinerExecute");
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/execute";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingMinerExecute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingMinerExecute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Miner>(localVarStatusCode,
+                localVarHeaders,
+                (Miner) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Miner)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of Miner</returns>
+        public async System.Threading.Tasks.Task<Miner> PostLanguageunderstandingMinerExecuteAsync (string minerId, MinerExecuteRequest body = null)
+        {
+             ApiResponse<Miner> localVarResponse = await PostLanguageunderstandingMinerExecuteAsyncWithHttpInfo(minerId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="minerId">Miner ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (Miner)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Miner>> PostLanguageunderstandingMinerExecuteAsyncWithHttpInfo (string minerId, MinerExecuteRequest body = null)
+        { 
+            // verify the required parameter 'minerId' is set
+            if (minerId == null)
+                throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->PostLanguageunderstandingMinerExecute");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/execute";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (minerId != null) localVarPathParams.Add("minerId", this.Configuration.ApiClient.ParameterToString(minerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingMinerExecute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingMinerExecute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Miner>(localVarStatusCode,
+                localVarHeaders,
+                (Miner) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Miner)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Create a unique miner. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Details for creating a new miner resource.</param>
+        /// <returns>Miner</returns>
+        public Miner PostLanguageunderstandingMiners (Miner body)
+        {
+             ApiResponse<Miner> localVarResponse = PostLanguageunderstandingMinersWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a unique miner. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Details for creating a new miner resource.</param>
+        /// <returns>ApiResponse of Miner</returns>
+        public ApiResponse< Miner > PostLanguageunderstandingMinersWithHttpInfo (Miner body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingMiners");
+
+            var localVarPath = "/api/v2/languageunderstanding/miners";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingMiners: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingMiners: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Miner>(localVarStatusCode,
+                localVarHeaders,
+                (Miner) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Miner)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Create a unique miner. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Details for creating a new miner resource.</param>
+        /// <returns>Task of Miner</returns>
+        public async System.Threading.Tasks.Task<Miner> PostLanguageunderstandingMinersAsync (Miner body)
+        {
+             ApiResponse<Miner> localVarResponse = await PostLanguageunderstandingMinersAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a unique miner. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Details for creating a new miner resource.</param>
+        /// <returns>Task of ApiResponse (Miner)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Miner>> PostLanguageunderstandingMinersAsyncWithHttpInfo (Miner body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingMiners");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/miners";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingMiners: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingMiners: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Miner>(localVarStatusCode,
+                localVarHeaders,
+                (Miner) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Miner)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

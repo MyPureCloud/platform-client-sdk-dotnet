@@ -261,7 +261,7 @@ namespace Example
             try
             { 
                 // Get the list of SystemPresences
-                List&lt;SystemPresence&gt; result = apiInstance.GetSystempresences();
+                List<SystemPresence> result = apiInstance.GetSystempresences();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -850,7 +850,7 @@ namespace Example
             try
             { 
                 // Update bulk user Presences
-                List&lt;UserPresence&gt; result = apiInstance.PutUsersPresencesBulk(body);
+                List<UserPresence> result = apiInstance.PutUsersPresencesBulk(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)

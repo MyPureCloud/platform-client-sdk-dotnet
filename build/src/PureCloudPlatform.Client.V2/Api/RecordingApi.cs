@@ -884,7 +884,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create media retention policy
         /// </summary>
         /// <remarks>
-        /// 
+        /// Policy does not work retroactively
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
@@ -895,7 +895,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create media retention policy
         /// </summary>
         /// <remarks>
-        /// 
+        /// Policy does not work retroactively
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
@@ -972,7 +972,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create media retention policy
         /// </summary>
         /// <remarks>
-        /// 
+        /// Policy does not work retroactively
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
@@ -983,7 +983,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create media retention policy
         /// </summary>
         /// <remarks>
-        /// 
+        /// Policy does not work retroactively
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
@@ -1158,7 +1158,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a media retention policy
         /// </summary>
         /// <remarks>
-        /// 
+        /// Policy does not work retroactively
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -1170,7 +1170,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a media retention policy
         /// </summary>
         /// <remarks>
-        /// 
+        /// Policy does not work retroactively
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -1230,7 +1230,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a media retention policy
         /// </summary>
         /// <remarks>
-        /// 
+        /// Policy does not work retroactively
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -1242,7 +1242,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a media retention policy
         /// </summary>
         /// <remarks>
-        /// 
+        /// Policy does not work retroactively
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -2190,7 +2190,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create media retention policy
         /// </summary>
         /// <remarks>
-        /// 
+        /// Policy does not work retroactively
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
@@ -2201,7 +2201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create media retention policy
         /// </summary>
         /// <remarks>
-        /// 
+        /// Policy does not work retroactively
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
@@ -2278,7 +2278,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create media retention policy
         /// </summary>
         /// <remarks>
-        /// 
+        /// Policy does not work retroactively
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
@@ -2289,7 +2289,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create media retention policy
         /// </summary>
         /// <remarks>
-        /// 
+        /// Policy does not work retroactively
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
@@ -2464,7 +2464,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a media retention policy
         /// </summary>
         /// <remarks>
-        /// 
+        /// Policy does not work retroactively
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -2476,7 +2476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a media retention policy
         /// </summary>
         /// <remarks>
-        /// 
+        /// Policy does not work retroactively
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -2536,7 +2536,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a media retention policy
         /// </summary>
         /// <remarks>
-        /// 
+        /// Policy does not work retroactively
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -2548,7 +2548,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a media retention policy
         /// </summary>
         /// <remarks>
-        /// 
+        /// Policy does not work retroactively
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -9667,7 +9667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Create media retention policy 
+        /// Create media retention policy Policy does not work retroactively
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
@@ -9679,7 +9679,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create media retention policy 
+        /// Create media retention policy Policy does not work retroactively
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
@@ -9766,7 +9766,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Create media retention policy 
+        /// Create media retention policy Policy does not work retroactively
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
@@ -9779,7 +9779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create media retention policy 
+        /// Create media retention policy Policy does not work retroactively
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
@@ -10471,7 +10471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Create media retention policy 
+        /// Create media retention policy Policy does not work retroactively
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
@@ -10483,7 +10483,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create media retention policy 
+        /// Create media retention policy Policy does not work retroactively
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
@@ -10570,7 +10570,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Create media retention policy 
+        /// Create media retention policy Policy does not work retroactively
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
@@ -10583,7 +10583,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create media retention policy 
+        /// Create media retention policy Policy does not work retroactively
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
@@ -12125,7 +12125,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update a media retention policy 
+        /// Update a media retention policy Policy does not work retroactively
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -12138,7 +12138,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a media retention policy 
+        /// Update a media retention policy Policy does not work retroactively
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -12230,7 +12230,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update a media retention policy 
+        /// Update a media retention policy Policy does not work retroactively
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -12244,7 +12244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a media retention policy 
+        /// Update a media retention policy Policy does not work retroactively
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -12767,7 +12767,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update a media retention policy 
+        /// Update a media retention policy Policy does not work retroactively
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -12780,7 +12780,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a media retention policy 
+        /// Update a media retention policy Policy does not work retroactively
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -12872,7 +12872,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update a media retention policy 
+        /// Update a media retention policy Policy does not work retroactively
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -12886,7 +12886,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a media retention policy 
+        /// Update a media retention policy Policy does not work retroactively
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>

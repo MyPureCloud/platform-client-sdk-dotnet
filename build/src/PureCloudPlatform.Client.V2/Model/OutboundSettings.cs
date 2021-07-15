@@ -100,12 +100,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The denominator to be used in determining the compliance abandon rate
         /// </summary>
         /// <value>The denominator to be used in determining the compliance abandon rate</value>
         [DataMember(Name="complianceAbandonRateDenominator", EmitDefaultValue=false)]
         public ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator { get; set; }
+        
+        
         
         
         
@@ -120,7 +125,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MaxLineUtilization">The maximum percentage of lines that should be used for Outbound, expressed as a decimal in the range [0.0, 1.0].</param>
         /// <param name="AbandonSeconds">The number of seconds used to determine if a call is abandoned.</param>
         /// <param name="ComplianceAbandonRateDenominator">The denominator to be used in determining the compliance abandon rate.</param>
-        public OutboundSettings(string Name = null, int? Version = null, int? MaxCallsPerAgent = null, double? MaxLineUtilization = null, double? AbandonSeconds = null, ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator = null)
+        /// <param name="AutomaticTimeZoneMapping">The settings for automatic time zone mapping. Note that changing these settings will change them for both voice and messaging campaigns..</param>
+        public OutboundSettings(string Name = null, int? Version = null, int? MaxCallsPerAgent = null, double? MaxLineUtilization = null, double? AbandonSeconds = null, ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator = null, AutomaticTimeZoneMappingSettings AutomaticTimeZoneMapping = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -128,6 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MaxLineUtilization = MaxLineUtilization;
             this.AbandonSeconds = AbandonSeconds;
             this.ComplianceAbandonRateDenominator = ComplianceAbandonRateDenominator;
+            this.AutomaticTimeZoneMapping = AutomaticTimeZoneMapping;
             
         }
         
@@ -216,6 +223,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The settings for automatic time zone mapping. Note that changing these settings will change them for both voice and messaging campaigns.
+        /// </summary>
+        /// <value>The settings for automatic time zone mapping. Note that changing these settings will change them for both voice and messaging campaigns.</value>
+        [DataMember(Name="automaticTimeZoneMapping", EmitDefaultValue=false)]
+        public AutomaticTimeZoneMappingSettings AutomaticTimeZoneMapping { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -242,6 +258,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MaxLineUtilization: ").Append(MaxLineUtilization).Append("\n");
             sb.Append("  AbandonSeconds: ").Append(AbandonSeconds).Append("\n");
             sb.Append("  ComplianceAbandonRateDenominator: ").Append(ComplianceAbandonRateDenominator).Append("\n");
+            sb.Append("  AutomaticTimeZoneMapping: ").Append(AutomaticTimeZoneMapping).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -330,6 +347,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ComplianceAbandonRateDenominator.Equals(other.ComplianceAbandonRateDenominator)
                 ) &&
                 (
+                    this.AutomaticTimeZoneMapping == other.AutomaticTimeZoneMapping ||
+                    this.AutomaticTimeZoneMapping != null &&
+                    this.AutomaticTimeZoneMapping.Equals(other.AutomaticTimeZoneMapping)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -377,6 +399,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ComplianceAbandonRateDenominator != null)
                     hash = hash * 59 + this.ComplianceAbandonRateDenominator.GetHashCode();
+                
+                if (this.AutomaticTimeZoneMapping != null)
+                    hash = hash * 59 + this.AutomaticTimeZoneMapping.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

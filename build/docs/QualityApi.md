@@ -826,7 +826,7 @@ namespace Example
             try
             { 
                 // Get the surveys for a conversation
-                List&lt;Survey&gt; result = apiInstance.GetQualityConversationSurveys(conversationId);
+                List<Survey> result = apiInstance.GetQualityConversationSurveys(conversationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)

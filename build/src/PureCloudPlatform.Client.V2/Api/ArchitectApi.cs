@@ -1406,8 +1406,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>EntityListing</returns>
-        EntityListing GetFlowsDatatableImportJobs (string datatableId, int? pageNumber = null, int? pageSize = null);
+        /// <returns>DataTableImportEntityListing</returns>
+        DataTableImportEntityListing GetFlowsDatatableImportJobs (string datatableId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get all recent import jobs
@@ -1419,8 +1419,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>ApiResponse of EntityListing</returns>
-        ApiResponse<EntityListing> GetFlowsDatatableImportJobsWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null);
+        /// <returns>ApiResponse of DataTableImportEntityListing</returns>
+        ApiResponse<DataTableImportEntityListing> GetFlowsDatatableImportJobsWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null);
         
         /// <summary>
         /// Returns a specific row for the datatable
@@ -4036,8 +4036,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>Task of EntityListing</returns>
-        System.Threading.Tasks.Task<EntityListing> GetFlowsDatatableImportJobsAsync (string datatableId, int? pageNumber = null, int? pageSize = null);
+        /// <returns>Task of DataTableImportEntityListing</returns>
+        System.Threading.Tasks.Task<DataTableImportEntityListing> GetFlowsDatatableImportJobsAsync (string datatableId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get all recent import jobs
@@ -4049,8 +4049,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>Task of ApiResponse (EntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntityListing>> GetFlowsDatatableImportJobsAsyncWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null);
+        /// <returns>Task of ApiResponse (DataTableImportEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataTableImportEntityListing>> GetFlowsDatatableImportJobsAsyncWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null);
         
         /// <summary>
         /// Returns a specific row for the datatable
@@ -16001,10 +16001,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>EntityListing</returns>
-        public EntityListing GetFlowsDatatableImportJobs (string datatableId, int? pageNumber = null, int? pageSize = null)
+        /// <returns>DataTableImportEntityListing</returns>
+        public DataTableImportEntityListing GetFlowsDatatableImportJobs (string datatableId, int? pageNumber = null, int? pageSize = null)
         {
-             ApiResponse<EntityListing> localVarResponse = GetFlowsDatatableImportJobsWithHttpInfo(datatableId, pageNumber, pageSize);
+             ApiResponse<DataTableImportEntityListing> localVarResponse = GetFlowsDatatableImportJobsWithHttpInfo(datatableId, pageNumber, pageSize);
              return localVarResponse.Data;
         }
 
@@ -16015,8 +16015,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>ApiResponse of EntityListing</returns>
-        public ApiResponse< EntityListing > GetFlowsDatatableImportJobsWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null)
+        /// <returns>ApiResponse of DataTableImportEntityListing</returns>
+        public ApiResponse< DataTableImportEntityListing > GetFlowsDatatableImportJobsWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null)
         { 
             // verify the required parameter 'datatableId' is set
             if (datatableId == null)
@@ -16087,9 +16087,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableImportJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EntityListing>(localVarStatusCode,
+            return new ApiResponse<DataTableImportEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (EntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EntityListing)),
+                (DataTableImportEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTableImportEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -16102,10 +16102,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>Task of EntityListing</returns>
-        public async System.Threading.Tasks.Task<EntityListing> GetFlowsDatatableImportJobsAsync (string datatableId, int? pageNumber = null, int? pageSize = null)
+        /// <returns>Task of DataTableImportEntityListing</returns>
+        public async System.Threading.Tasks.Task<DataTableImportEntityListing> GetFlowsDatatableImportJobsAsync (string datatableId, int? pageNumber = null, int? pageSize = null)
         {
-             ApiResponse<EntityListing> localVarResponse = await GetFlowsDatatableImportJobsAsyncWithHttpInfo(datatableId, pageNumber, pageSize);
+             ApiResponse<DataTableImportEntityListing> localVarResponse = await GetFlowsDatatableImportJobsAsyncWithHttpInfo(datatableId, pageNumber, pageSize);
              return localVarResponse.Data;
 
         }
@@ -16117,8 +16117,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>Task of ApiResponse (EntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EntityListing>> GetFlowsDatatableImportJobsAsyncWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null)
+        /// <returns>Task of ApiResponse (DataTableImportEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataTableImportEntityListing>> GetFlowsDatatableImportJobsAsyncWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null)
         { 
             // verify the required parameter 'datatableId' is set
             if (datatableId == null)
@@ -16190,9 +16190,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableImportJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EntityListing>(localVarStatusCode,
+            return new ApiResponse<DataTableImportEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (EntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EntityListing)),
+                (DataTableImportEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTableImportEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

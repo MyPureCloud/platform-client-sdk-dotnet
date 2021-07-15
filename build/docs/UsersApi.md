@@ -843,7 +843,7 @@ namespace Example
             try
             { 
                 // Returns which divisions the current user has the given permission in.
-                List&lt;AuthzDivision&gt; result = apiInstance.GetAuthorizationDivisionspermittedMe(permission, name);
+                List<AuthzDivision> result = apiInstance.GetAuthorizationDivisionspermittedMe(permission, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1577,7 +1577,7 @@ namespace Example
             try
             { 
                 // Get direct reports
-                List&lt;User&gt; result = apiInstance.GetUserDirectreports(userId, expand);
+                List<User> result = apiInstance.GetUserDirectreports(userId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1913,7 +1913,7 @@ namespace Example
             try
             { 
                 // List profile skills for a user
-                List&lt;string&gt; result = apiInstance.GetUserProfileskills(userId);
+                List<string> result = apiInstance.GetUserProfileskills(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2386,7 +2386,7 @@ namespace Example
             try
             { 
                 // Get superiors
-                List&lt;User&gt; result = apiInstance.GetUserSuperiors(userId, expand);
+                List<User> result = apiInstance.GetUserSuperiors(userId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4843,7 +4843,7 @@ namespace Example
             try
             { 
                 // Update profile skills for a user
-                List&lt;string&gt; result = apiInstance.PutUserProfileskills(userId, body);
+                List<string> result = apiInstance.PutUserProfileskills(userId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)

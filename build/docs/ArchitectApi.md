@@ -3671,7 +3671,7 @@ namespace Example
 
 <a name="getflowsdatatableimportjobs"></a>
 
-## [**EntityListing**](EntityListing.html) GetFlowsDatatableImportJobs (string datatableId, int? pageNumber = null, int? pageSize = null)
+## [**DataTableImportEntityListing**](DataTableImportEntityListing.html) GetFlowsDatatableImportJobs (string datatableId, int? pageNumber = null, int? pageSize = null)
 
 
 
@@ -3712,7 +3712,7 @@ namespace Example
             try
             { 
                 // Get all recent import jobs
-                EntityListing result = apiInstance.GetFlowsDatatableImportJobs(datatableId, pageNumber, pageSize);
+                DataTableImportEntityListing result = apiInstance.GetFlowsDatatableImportJobs(datatableId, pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3736,7 +3736,7 @@ namespace Example
 
 ### Return type
 
-[**EntityListing**](EntityListing.html)
+[**DataTableImportEntityListing**](DataTableImportEntityListing.html)
 
 <a name="getflowsdatatablerow"></a>
 
@@ -3781,7 +3781,7 @@ namespace Example
             try
             { 
                 // Returns a specific row for the datatable
-                Dictionary&lt;string, Object&gt; result = apiInstance.GetFlowsDatatableRow(datatableId, rowId, showbrief);
+                Dictionary<string, Object> result = apiInstance.GetFlowsDatatableRow(datatableId, rowId, showbrief);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5966,7 +5966,7 @@ namespace Example
             try
             { 
                 // Create a new row entry for the datatable.
-                Dictionary&lt;string, Object&gt; result = apiInstance.PostFlowsDatatableRows(datatableId, dataTableRow);
+                Dictionary<string, Object> result = apiInstance.PostFlowsDatatableRows(datatableId, dataTableRow);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6903,7 +6903,7 @@ namespace Example
             try
             { 
                 // Update a row entry
-                Dictionary&lt;string, Object&gt; result = apiInstance.PutFlowsDatatableRow(datatableId, rowId, body);
+                Dictionary<string, Object> result = apiInstance.PutFlowsDatatableRow(datatableId, rowId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)

@@ -173,6 +173,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<LimitsEntityListing> GetOrganizationsLimitsNamespaceWithHttpInfo (string namespaceName);
         
         /// <summary>
+        /// Get the default limits in a namespace for an organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to fetch defaults limits for</param>
+        /// <returns>LimitsEntityListing</returns>
+        LimitsEntityListing GetOrganizationsLimitsNamespaceDefaults (string namespaceName);
+
+        /// <summary>
+        /// Get the default limits in a namespace for an organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to fetch defaults limits for</param>
+        /// <returns>ApiResponse of LimitsEntityListing</returns>
+        ApiResponse<LimitsEntityListing> GetOrganizationsLimitsNamespaceDefaultsWithHttpInfo (string namespaceName);
+        
+        /// <summary>
         /// Get the available limit namespaces
         /// </summary>
         /// <remarks>
@@ -181,8 +203,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 100)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>LimitsEntityListing</returns>
-        LimitsEntityListing GetOrganizationsLimitsNamespaces (int? pageSize = null, int? pageNumber = null);
+        /// <returns>PagedNamespaceListing</returns>
+        PagedNamespaceListing GetOrganizationsLimitsNamespaces (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get the available limit namespaces
@@ -193,8 +215,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 100)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of LimitsEntityListing</returns>
-        ApiResponse<LimitsEntityListing> GetOrganizationsLimitsNamespacesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        /// <returns>ApiResponse of PagedNamespaceListing</returns>
+        ApiResponse<PagedNamespaceListing> GetOrganizationsLimitsNamespacesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get organization.
@@ -509,6 +531,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<LimitsEntityListing>> GetOrganizationsLimitsNamespaceAsyncWithHttpInfo (string namespaceName);
         
         /// <summary>
+        /// Get the default limits in a namespace for an organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to fetch defaults limits for</param>
+        /// <returns>Task of LimitsEntityListing</returns>
+        System.Threading.Tasks.Task<LimitsEntityListing> GetOrganizationsLimitsNamespaceDefaultsAsync (string namespaceName);
+
+        /// <summary>
+        /// Get the default limits in a namespace for an organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to fetch defaults limits for</param>
+        /// <returns>Task of ApiResponse (LimitsEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LimitsEntityListing>> GetOrganizationsLimitsNamespaceDefaultsAsyncWithHttpInfo (string namespaceName);
+        
+        /// <summary>
         /// Get the available limit namespaces
         /// </summary>
         /// <remarks>
@@ -517,8 +561,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 100)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of LimitsEntityListing</returns>
-        System.Threading.Tasks.Task<LimitsEntityListing> GetOrganizationsLimitsNamespacesAsync (int? pageSize = null, int? pageNumber = null);
+        /// <returns>Task of PagedNamespaceListing</returns>
+        System.Threading.Tasks.Task<PagedNamespaceListing> GetOrganizationsLimitsNamespacesAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get the available limit namespaces
@@ -529,8 +573,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 100)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (LimitsEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LimitsEntityListing>> GetOrganizationsLimitsNamespacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        /// <returns>Task of ApiResponse (PagedNamespaceListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PagedNamespaceListing>> GetOrganizationsLimitsNamespacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get organization.
@@ -2106,15 +2150,208 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get the default limits in a namespace for an organization 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to fetch defaults limits for</param>
+        /// <returns>LimitsEntityListing</returns>
+        public LimitsEntityListing GetOrganizationsLimitsNamespaceDefaults (string namespaceName)
+        {
+             ApiResponse<LimitsEntityListing> localVarResponse = GetOrganizationsLimitsNamespaceDefaultsWithHttpInfo(namespaceName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the default limits in a namespace for an organization 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to fetch defaults limits for</param>
+        /// <returns>ApiResponse of LimitsEntityListing</returns>
+        public ApiResponse< LimitsEntityListing > GetOrganizationsLimitsNamespaceDefaultsWithHttpInfo (string namespaceName)
+        { 
+            // verify the required parameter 'namespaceName' is set
+            if (namespaceName == null)
+                throw new ApiException(400, "Missing required parameter 'namespaceName' when calling OrganizationApi->GetOrganizationsLimitsNamespaceDefaults");
+
+            var localVarPath = "/api/v2/organizations/limits/namespaces/{namespaceName}/defaults";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (namespaceName != null) localVarPathParams.Add("namespaceName", this.Configuration.ApiClient.ParameterToString(namespaceName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespaceDefaults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespaceDefaults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LimitsEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (LimitsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitsEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the default limits in a namespace for an organization 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to fetch defaults limits for</param>
+        /// <returns>Task of LimitsEntityListing</returns>
+        public async System.Threading.Tasks.Task<LimitsEntityListing> GetOrganizationsLimitsNamespaceDefaultsAsync (string namespaceName)
+        {
+             ApiResponse<LimitsEntityListing> localVarResponse = await GetOrganizationsLimitsNamespaceDefaultsAsyncWithHttpInfo(namespaceName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the default limits in a namespace for an organization 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to fetch defaults limits for</param>
+        /// <returns>Task of ApiResponse (LimitsEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LimitsEntityListing>> GetOrganizationsLimitsNamespaceDefaultsAsyncWithHttpInfo (string namespaceName)
+        { 
+            // verify the required parameter 'namespaceName' is set
+            if (namespaceName == null)
+                throw new ApiException(400, "Missing required parameter 'namespaceName' when calling OrganizationApi->GetOrganizationsLimitsNamespaceDefaults");
+            
+
+            var localVarPath = "/api/v2/organizations/limits/namespaces/{namespaceName}/defaults";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (namespaceName != null) localVarPathParams.Add("namespaceName", this.Configuration.ApiClient.ParameterToString(namespaceName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespaceDefaults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespaceDefaults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LimitsEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (LimitsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitsEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get the available limit namespaces 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 100)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>LimitsEntityListing</returns>
-        public LimitsEntityListing GetOrganizationsLimitsNamespaces (int? pageSize = null, int? pageNumber = null)
+        /// <returns>PagedNamespaceListing</returns>
+        public PagedNamespaceListing GetOrganizationsLimitsNamespaces (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<LimitsEntityListing> localVarResponse = GetOrganizationsLimitsNamespacesWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<PagedNamespaceListing> localVarResponse = GetOrganizationsLimitsNamespacesWithHttpInfo(pageSize, pageNumber);
              return localVarResponse.Data;
         }
 
@@ -2124,8 +2361,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 100)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of LimitsEntityListing</returns>
-        public ApiResponse< LimitsEntityListing > GetOrganizationsLimitsNamespacesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        /// <returns>ApiResponse of PagedNamespaceListing</returns>
+        public ApiResponse< PagedNamespaceListing > GetOrganizationsLimitsNamespacesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
             var localVarPath = "/api/v2/organizations/limits/namespaces";
@@ -2192,9 +2429,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespaces: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<LimitsEntityListing>(localVarStatusCode,
+            return new ApiResponse<PagedNamespaceListing>(localVarStatusCode,
                 localVarHeaders,
-                (LimitsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitsEntityListing)),
+                (PagedNamespaceListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagedNamespaceListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -2206,10 +2443,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 100)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of LimitsEntityListing</returns>
-        public async System.Threading.Tasks.Task<LimitsEntityListing> GetOrganizationsLimitsNamespacesAsync (int? pageSize = null, int? pageNumber = null)
+        /// <returns>Task of PagedNamespaceListing</returns>
+        public async System.Threading.Tasks.Task<PagedNamespaceListing> GetOrganizationsLimitsNamespacesAsync (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<LimitsEntityListing> localVarResponse = await GetOrganizationsLimitsNamespacesAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<PagedNamespaceListing> localVarResponse = await GetOrganizationsLimitsNamespacesAsyncWithHttpInfo(pageSize, pageNumber);
              return localVarResponse.Data;
 
         }
@@ -2220,8 +2457,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 100)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (LimitsEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LimitsEntityListing>> GetOrganizationsLimitsNamespacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        /// <returns>Task of ApiResponse (PagedNamespaceListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PagedNamespaceListing>> GetOrganizationsLimitsNamespacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
             var localVarPath = "/api/v2/organizations/limits/namespaces";
@@ -2288,9 +2525,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespaces: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<LimitsEntityListing>(localVarStatusCode,
+            return new ApiResponse<PagedNamespaceListing>(localVarStatusCode,
                 localVarHeaders,
-                (LimitsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitsEntityListing)),
+                (PagedNamespaceListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagedNamespaceListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

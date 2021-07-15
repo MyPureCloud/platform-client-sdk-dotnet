@@ -187,6 +187,26 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
         
         /// <summary>
+        /// Disable generated calendar link for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns></returns>
+        void DeleteWorkforcemanagementCalendarUrlIcs ();
+
+        /// <summary>
+        /// Disable generated calendar link for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteWorkforcemanagementCalendarUrlIcsWithHttpInfo ();
+        
+        /// <summary>
         /// Delete management unit
         /// </summary>
         /// <remarks>
@@ -975,6 +995,48 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<BusinessUnitListing> GetWorkforcemanagementBusinessunitsDivisionviewsWithHttpInfo (List<string> divisionId = null);
         
         /// <summary>
+        /// Get ics formatted calendar based on shareable link
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="calendarId">The id of the ics-formatted calendar</param>
+        /// <returns>string</returns>
+        string GetWorkforcemanagementCalendarDataIcs (string calendarId);
+
+        /// <summary>
+        /// Get ics formatted calendar based on shareable link
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="calendarId">The id of the ics-formatted calendar</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> GetWorkforcemanagementCalendarDataIcsWithHttpInfo (string calendarId);
+        
+        /// <summary>
+        /// Get existing calendar link for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>CalendarUrlResponse</returns>
+        CalendarUrlResponse GetWorkforcemanagementCalendarUrlIcs ();
+
+        /// <summary>
+        /// Get existing calendar link for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of CalendarUrlResponse</returns>
+        ApiResponse<CalendarUrlResponse> GetWorkforcemanagementCalendarUrlIcsWithHttpInfo ();
+        
+        /// <summary>
         /// Retrieves delete job status for historical data imports of the organization
         /// </summary>
         /// <remarks>
@@ -1347,8 +1409,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to fetch</param>
+        /// <param name="includeOnly">limit response to the specified fields (optional)</param>
         /// <returns>WorkPlan</returns>
-        WorkPlan GetWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId);
+        WorkPlan GetWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, List<string> includeOnly = null);
 
         /// <summary>
         /// Get a work plan
@@ -1359,8 +1422,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to fetch</param>
+        /// <param name="includeOnly">limit response to the specified fields (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
-        ApiResponse<WorkPlan> GetWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId);
+        ApiResponse<WorkPlan> GetWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId, List<string> includeOnly = null);
         
         /// <summary>
         /// Get a work plan rotation
@@ -2269,6 +2333,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<BusinessUnit> PostWorkforcemanagementBusinessunitsWithHttpInfo (CreateBusinessUnitRequest body = null);
         
         /// <summary>
+        /// Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)</param>
+        /// <returns>CalendarUrlResponse</returns>
+        CalendarUrlResponse PostWorkforcemanagementCalendarUrlIcs (string language = null);
+
+        /// <summary>
+        /// Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)</param>
+        /// <returns>ApiResponse of CalendarUrlResponse</returns>
+        ApiResponse<CalendarUrlResponse> PostWorkforcemanagementCalendarUrlIcsWithHttpInfo (string language = null);
+        
+        /// <summary>
         /// Delete the entries of the historical data imports in the organization
         /// </summary>
         /// <remarks>
@@ -2957,6 +3043,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
+        
+        /// <summary>
+        /// Disable generated calendar link for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteWorkforcemanagementCalendarUrlIcsAsync ();
+
+        /// <summary>
+        /// Disable generated calendar link for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo ();
         
         /// <summary>
         /// Delete management unit
@@ -3747,6 +3853,48 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitListing>> GetWorkforcemanagementBusinessunitsDivisionviewsAsyncWithHttpInfo (List<string> divisionId = null);
         
         /// <summary>
+        /// Get ics formatted calendar based on shareable link
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="calendarId">The id of the ics-formatted calendar</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> GetWorkforcemanagementCalendarDataIcsAsync (string calendarId);
+
+        /// <summary>
+        /// Get ics formatted calendar based on shareable link
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="calendarId">The id of the ics-formatted calendar</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> GetWorkforcemanagementCalendarDataIcsAsyncWithHttpInfo (string calendarId);
+        
+        /// <summary>
+        /// Get existing calendar link for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of CalendarUrlResponse</returns>
+        System.Threading.Tasks.Task<CalendarUrlResponse> GetWorkforcemanagementCalendarUrlIcsAsync ();
+
+        /// <summary>
+        /// Get existing calendar link for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (CalendarUrlResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CalendarUrlResponse>> GetWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo ();
+        
+        /// <summary>
         /// Retrieves delete job status for historical data imports of the organization
         /// </summary>
         /// <remarks>
@@ -4119,8 +4267,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to fetch</param>
+        /// <param name="includeOnly">limit response to the specified fields (optional)</param>
         /// <returns>Task of WorkPlan</returns>
-        System.Threading.Tasks.Task<WorkPlan> GetWorkforcemanagementManagementunitWorkplanAsync (string managementUnitId, string workPlanId);
+        System.Threading.Tasks.Task<WorkPlan> GetWorkforcemanagementManagementunitWorkplanAsync (string managementUnitId, string workPlanId, List<string> includeOnly = null);
 
         /// <summary>
         /// Get a work plan
@@ -4131,8 +4280,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to fetch</param>
+        /// <param name="includeOnly">limit response to the specified fields (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkPlan>> GetWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId);
+        System.Threading.Tasks.Task<ApiResponse<WorkPlan>> GetWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId, List<string> includeOnly = null);
         
         /// <summary>
         /// Get a work plan rotation
@@ -5039,6 +5189,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnit)</returns>
         System.Threading.Tasks.Task<ApiResponse<BusinessUnit>> PostWorkforcemanagementBusinessunitsAsyncWithHttpInfo (CreateBusinessUnitRequest body = null);
+        
+        /// <summary>
+        /// Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)</param>
+        /// <returns>Task of CalendarUrlResponse</returns>
+        System.Threading.Tasks.Task<CalendarUrlResponse> PostWorkforcemanagementCalendarUrlIcsAsync (string language = null);
+
+        /// <summary>
+        /// Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)</param>
+        /// <returns>Task of ApiResponse (CalendarUrlResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CalendarUrlResponse>> PostWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo (string language = null);
         
         /// <summary>
         /// Delete the entries of the historical data imports in the organization
@@ -7081,6 +7253,184 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementBusinessunitWeekShorttermforecast: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementBusinessunitWeekShorttermforecast: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Disable generated calendar link for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns></returns>
+        public void DeleteWorkforcemanagementCalendarUrlIcs ()
+        {
+             DeleteWorkforcemanagementCalendarUrlIcsWithHttpInfo();
+        }
+
+        /// <summary>
+        /// Disable generated calendar link for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteWorkforcemanagementCalendarUrlIcsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/calendar/url/ics";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementCalendarUrlIcs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementCalendarUrlIcs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Disable generated calendar link for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteWorkforcemanagementCalendarUrlIcsAsync ()
+        {
+             await DeleteWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo();
+
+        }
+
+        /// <summary>
+        /// Disable generated calendar link for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/calendar/url/ics";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementCalendarUrlIcs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementCalendarUrlIcs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -13710,6 +14060,367 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get ics formatted calendar based on shareable link 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="calendarId">The id of the ics-formatted calendar</param>
+        /// <returns>string</returns>
+        public string GetWorkforcemanagementCalendarDataIcs (string calendarId)
+        {
+             ApiResponse<string> localVarResponse = GetWorkforcemanagementCalendarDataIcsWithHttpInfo(calendarId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get ics formatted calendar based on shareable link 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="calendarId">The id of the ics-formatted calendar</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > GetWorkforcemanagementCalendarDataIcsWithHttpInfo (string calendarId)
+        { 
+            // verify the required parameter 'calendarId' is set
+            if (calendarId == null)
+                throw new ApiException(400, "Missing required parameter 'calendarId' when calling WorkforceManagementApi->GetWorkforcemanagementCalendarDataIcs");
+
+            var localVarPath = "/api/v2/workforcemanagement/calendar/data/ics";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "text/calendar"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (calendarId != null) localVarQueryParams.Add(new Tuple<string, string>("calendarId", this.Configuration.ApiClient.ParameterToString(calendarId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementCalendarDataIcs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementCalendarDataIcs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarHeaders,
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get ics formatted calendar based on shareable link 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="calendarId">The id of the ics-formatted calendar</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> GetWorkforcemanagementCalendarDataIcsAsync (string calendarId)
+        {
+             ApiResponse<string> localVarResponse = await GetWorkforcemanagementCalendarDataIcsAsyncWithHttpInfo(calendarId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get ics formatted calendar based on shareable link 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="calendarId">The id of the ics-formatted calendar</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> GetWorkforcemanagementCalendarDataIcsAsyncWithHttpInfo (string calendarId)
+        { 
+            // verify the required parameter 'calendarId' is set
+            if (calendarId == null)
+                throw new ApiException(400, "Missing required parameter 'calendarId' when calling WorkforceManagementApi->GetWorkforcemanagementCalendarDataIcs");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/calendar/data/ics";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "text/calendar"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (calendarId != null) localVarQueryParams.Add(new Tuple<string, string>("calendarId", this.Configuration.ApiClient.ParameterToString(calendarId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementCalendarDataIcs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementCalendarDataIcs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarHeaders,
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get existing calendar link for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>CalendarUrlResponse</returns>
+        public CalendarUrlResponse GetWorkforcemanagementCalendarUrlIcs ()
+        {
+             ApiResponse<CalendarUrlResponse> localVarResponse = GetWorkforcemanagementCalendarUrlIcsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get existing calendar link for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of CalendarUrlResponse</returns>
+        public ApiResponse< CalendarUrlResponse > GetWorkforcemanagementCalendarUrlIcsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/calendar/url/ics";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementCalendarUrlIcs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementCalendarUrlIcs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CalendarUrlResponse>(localVarStatusCode,
+                localVarHeaders,
+                (CalendarUrlResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CalendarUrlResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get existing calendar link for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of CalendarUrlResponse</returns>
+        public async System.Threading.Tasks.Task<CalendarUrlResponse> GetWorkforcemanagementCalendarUrlIcsAsync ()
+        {
+             ApiResponse<CalendarUrlResponse> localVarResponse = await GetWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get existing calendar link for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (CalendarUrlResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CalendarUrlResponse>> GetWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/calendar/url/ics";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementCalendarUrlIcs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementCalendarUrlIcs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CalendarUrlResponse>(localVarStatusCode,
+                localVarHeaders,
+                (CalendarUrlResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CalendarUrlResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Retrieves delete job status for historical data imports of the organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16761,10 +17472,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to fetch</param>
+        /// <param name="includeOnly">limit response to the specified fields (optional)</param>
         /// <returns>WorkPlan</returns>
-        public WorkPlan GetWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId)
+        public WorkPlan GetWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, List<string> includeOnly = null)
         {
-             ApiResponse<WorkPlan> localVarResponse = GetWorkforcemanagementManagementunitWorkplanWithHttpInfo(managementUnitId, workPlanId);
+             ApiResponse<WorkPlan> localVarResponse = GetWorkforcemanagementManagementunitWorkplanWithHttpInfo(managementUnitId, workPlanId, includeOnly);
              return localVarResponse.Data;
         }
 
@@ -16774,8 +17486,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to fetch</param>
+        /// <param name="includeOnly">limit response to the specified fields (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
-        public ApiResponse< WorkPlan > GetWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId)
+        public ApiResponse< WorkPlan > GetWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId, List<string> includeOnly = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -16819,6 +17532,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (workPlanId != null) localVarPathParams.Add("workPlanId", this.Configuration.ApiClient.ParameterToString(workPlanId));
 
             // Query params
+            if (includeOnly != null) includeOnly.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("includeOnly", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -16862,10 +17576,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to fetch</param>
+        /// <param name="includeOnly">limit response to the specified fields (optional)</param>
         /// <returns>Task of WorkPlan</returns>
-        public async System.Threading.Tasks.Task<WorkPlan> GetWorkforcemanagementManagementunitWorkplanAsync (string managementUnitId, string workPlanId)
+        public async System.Threading.Tasks.Task<WorkPlan> GetWorkforcemanagementManagementunitWorkplanAsync (string managementUnitId, string workPlanId, List<string> includeOnly = null)
         {
-             ApiResponse<WorkPlan> localVarResponse = await GetWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo(managementUnitId, workPlanId);
+             ApiResponse<WorkPlan> localVarResponse = await GetWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo(managementUnitId, workPlanId, includeOnly);
              return localVarResponse.Data;
 
         }
@@ -16876,8 +17591,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to fetch</param>
+        /// <param name="includeOnly">limit response to the specified fields (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WorkPlan>> GetWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkPlan>> GetWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId, List<string> includeOnly = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -16923,6 +17639,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (workPlanId != null) localVarPathParams.Add("workPlanId", this.Configuration.ApiClient.ParameterToString(workPlanId));
 
             // Query params
+            if (includeOnly != null) includeOnly.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("includeOnly", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -24605,6 +25322,192 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<BusinessUnit>(localVarStatusCode,
                 localVarHeaders,
                 (BusinessUnit) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessUnit)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)</param>
+        /// <returns>CalendarUrlResponse</returns>
+        public CalendarUrlResponse PostWorkforcemanagementCalendarUrlIcs (string language = null)
+        {
+             ApiResponse<CalendarUrlResponse> localVarResponse = PostWorkforcemanagementCalendarUrlIcsWithHttpInfo(language);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)</param>
+        /// <returns>ApiResponse of CalendarUrlResponse</returns>
+        public ApiResponse< CalendarUrlResponse > PostWorkforcemanagementCalendarUrlIcsWithHttpInfo (string language = null)
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/calendar/url/ics";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementCalendarUrlIcs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementCalendarUrlIcs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CalendarUrlResponse>(localVarStatusCode,
+                localVarHeaders,
+                (CalendarUrlResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CalendarUrlResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)</param>
+        /// <returns>Task of CalendarUrlResponse</returns>
+        public async System.Threading.Tasks.Task<CalendarUrlResponse> PostWorkforcemanagementCalendarUrlIcsAsync (string language = null)
+        {
+             ApiResponse<CalendarUrlResponse> localVarResponse = await PostWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo(language);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)</param>
+        /// <returns>Task of ApiResponse (CalendarUrlResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CalendarUrlResponse>> PostWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo (string language = null)
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/calendar/url/ics";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementCalendarUrlIcs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementCalendarUrlIcs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CalendarUrlResponse>(localVarStatusCode,
+                localVarHeaders,
+                (CalendarUrlResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CalendarUrlResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

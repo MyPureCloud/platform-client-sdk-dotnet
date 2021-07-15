@@ -1,13 +1,12 @@
 ---
-title: EntityListing
+title: PagedNamespaceListing
 ---
-## ININ.PureCloudApi.Model.EntityListing
+## ININ.PureCloudApi.Model.PagedNamespaceListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | **List&lt;Object&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

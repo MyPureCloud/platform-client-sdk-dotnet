@@ -338,7 +338,7 @@ namespace Example
             try
             { 
                 // Get list of supported Speech & Text Analytics dialects
-                List&lt;Object&gt; result = apiInstance.GetSpeechandtextanalyticsDialects();
+                List<Object> result = apiInstance.GetSpeechandtextanalyticsDialects();
                 Debug.WriteLine(result);
             }
             catch (Exception e)

@@ -1314,7 +1314,7 @@ namespace Example
             var apiInstance = new RoutingApi();
             var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
-            var limit = limit_example;  // string | Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional) 
+            var limit = limit_example;  // string | Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var queueId = new List<string>(); // List<string> | Queue ID(s) to filter assessments by. (optional) 
 
@@ -1340,7 +1340,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
-| **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. | [optional]  |
+| **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **queueId** | [**List<string>**](string.html)| Queue ID(s) to filter assessments by. | [optional]  |
 {: class="table table-striped"}
@@ -2112,7 +2112,7 @@ namespace Example
             var apiInstance = new RoutingApi();
             var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
-            var limit = limit_example;  // string | Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional) 
+            var limit = limit_example;  // string | Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var queueId = new List<string>(); // List<string> | Comma-separated list of queue Ids to filter by. (optional) 
 
@@ -2138,7 +2138,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
-| **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. | [optional]  |
+| **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **queueId** | [**List<string>**](string.html)| Comma-separated list of queue Ids to filter by. | [optional]  |
 {: class="table table-striped"}
@@ -2187,7 +2187,7 @@ namespace Example
             try
             { 
                 // Get a list of Key Performance Indicators available for the predictors.
-                List&lt;KeyPerformanceIndicator&gt; result = apiInstance.GetRoutingPredictorsKeyperformanceindicators();
+                List<KeyPerformanceIndicator> result = apiInstance.GetRoutingPredictorsKeyperformanceindicators();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5944,7 +5944,7 @@ namespace Example
             try
             { 
                 // Add up to 100 wrap-up codes to a queue
-                List&lt;WrapupCode&gt; result = apiInstance.PostRoutingQueueWrapupcodes(queueId, body);
+                List<WrapupCode> result = apiInstance.PostRoutingQueueWrapupcodes(queueId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)

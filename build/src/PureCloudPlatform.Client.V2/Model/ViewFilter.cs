@@ -37,6 +37,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Unknown for "unknown"
+            /// </summary>
+            [EnumMember(Value = "unknown")]
+            Unknown,
+            
+            /// <summary>
             /// Enum Callback for "callback"
             /// </summary>
             [EnumMember(Value = "callback")]
@@ -1116,6 +1122,411 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets BotMessageTypes
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum BotMessageTypesEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Phone for "Phone"
+            /// </summary>
+            [EnumMember(Value = "Phone")]
+            Phone,
+            
+            /// <summary>
+            /// Enum Sms for "SMS"
+            /// </summary>
+            [EnumMember(Value = "SMS")]
+            Sms,
+            
+            /// <summary>
+            /// Enum Genesyschatwidget for "GenesysChatWidget"
+            /// </summary>
+            [EnumMember(Value = "GenesysChatWidget")]
+            Genesyschatwidget,
+            
+            /// <summary>
+            /// Enum Facebookmessenger for "FacebookMessenger"
+            /// </summary>
+            [EnumMember(Value = "FacebookMessenger")]
+            Facebookmessenger,
+            
+            /// <summary>
+            /// Enum Wechat for "WeChat"
+            /// </summary>
+            [EnumMember(Value = "WeChat")]
+            Wechat,
+            
+            /// <summary>
+            /// Enum Whatsapp for "Whatsapp"
+            /// </summary>
+            [EnumMember(Value = "Whatsapp")]
+            Whatsapp,
+            
+            /// <summary>
+            /// Enum Applebusinesschat for "AppleBusinessChat"
+            /// </summary>
+            [EnumMember(Value = "AppleBusinessChat")]
+            Applebusinesschat,
+            
+            /// <summary>
+            /// Enum Telegram for "Telegram"
+            /// </summary>
+            [EnumMember(Value = "Telegram")]
+            Telegram,
+            
+            /// <summary>
+            /// Enum Slack for "Slack"
+            /// </summary>
+            [EnumMember(Value = "Slack")]
+            Slack,
+            
+            /// <summary>
+            /// Enum Signal for "Signal"
+            /// </summary>
+            [EnumMember(Value = "Signal")]
+            Signal,
+            
+            /// <summary>
+            /// Enum Line for "Line"
+            /// </summary>
+            [EnumMember(Value = "Line")]
+            Line,
+            
+            /// <summary>
+            /// Enum Discord for "Discord"
+            /// </summary>
+            [EnumMember(Value = "Discord")]
+            Discord,
+            
+            /// <summary>
+            /// Enum Twitterdirectmessage for "TwitterDirectMessage"
+            /// </summary>
+            [EnumMember(Value = "TwitterDirectMessage")]
+            Twitterdirectmessage,
+            
+            /// <summary>
+            /// Enum Other for "Other"
+            /// </summary>
+            [EnumMember(Value = "Other")]
+            Other
+        }
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets BotProviderList
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum BotProviderListEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Genesys for "Genesys"
+            /// </summary>
+            [EnumMember(Value = "Genesys")]
+            Genesys,
+            
+            /// <summary>
+            /// Enum Amazon for "Amazon"
+            /// </summary>
+            [EnumMember(Value = "Amazon")]
+            Amazon,
+            
+            /// <summary>
+            /// Enum Google for "Google"
+            /// </summary>
+            [EnumMember(Value = "Google")]
+            Google,
+            
+            /// <summary>
+            /// Enum Nuance for "Nuance"
+            /// </summary>
+            [EnumMember(Value = "Nuance")]
+            Nuance
+        }
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets BotProductList
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum BotProductListEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Genesysdialogengine for "GenesysDialogEngine"
+            /// </summary>
+            [EnumMember(Value = "GenesysDialogEngine")]
+            Genesysdialogengine,
+            
+            /// <summary>
+            /// Enum Amazonlex for "AmazonLex"
+            /// </summary>
+            [EnumMember(Value = "AmazonLex")]
+            Amazonlex,
+            
+            /// <summary>
+            /// Enum Googledialogflow for "GoogleDialogFlow"
+            /// </summary>
+            [EnumMember(Value = "GoogleDialogFlow")]
+            Googledialogflow,
+            
+            /// <summary>
+            /// Enum Googledialogflowresell for "GoogleDialogFlowResell"
+            /// </summary>
+            [EnumMember(Value = "GoogleDialogFlowResell")]
+            Googledialogflowresell,
+            
+            /// <summary>
+            /// Enum Genesysbotflow for "GenesysBotFlow"
+            /// </summary>
+            [EnumMember(Value = "GenesysBotFlow")]
+            Genesysbotflow,
+            
+            /// <summary>
+            /// Enum Nuancedlg for "NuanceDlg"
+            /// </summary>
+            [EnumMember(Value = "NuanceDlg")]
+            Nuancedlg,
+            
+            /// <summary>
+            /// Enum Googledialogflowcx for "GoogleDialogFlowCx"
+            /// </summary>
+            [EnumMember(Value = "GoogleDialogFlowCx")]
+            Googledialogflowcx,
+            
+            /// <summary>
+            /// Enum Genesysbyob for "GenesysByob"
+            /// </summary>
+            [EnumMember(Value = "GenesysByob")]
+            Genesysbyob
+        }
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets BotRecognitionFailureReasonList
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum BotRecognitionFailureReasonListEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Noinputcollection for "NoInputCollection"
+            /// </summary>
+            [EnumMember(Value = "NoInputCollection")]
+            Noinputcollection,
+            
+            /// <summary>
+            /// Enum Noinputconfirmation for "NoInputConfirmation"
+            /// </summary>
+            [EnumMember(Value = "NoInputConfirmation")]
+            Noinputconfirmation,
+            
+            /// <summary>
+            /// Enum Nomatchcollection for "NoMatchCollection"
+            /// </summary>
+            [EnumMember(Value = "NoMatchCollection")]
+            Nomatchcollection,
+            
+            /// <summary>
+            /// Enum Nomatchconfirmation for "NoMatchConfirmation"
+            /// </summary>
+            [EnumMember(Value = "NoMatchConfirmation")]
+            Nomatchconfirmation,
+            
+            /// <summary>
+            /// Enum Maxwrongmatch for "MaxWrongMatch"
+            /// </summary>
+            [EnumMember(Value = "MaxWrongMatch")]
+            Maxwrongmatch
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets BotResultList
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum BotResultListEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Exitrequestedbyuser for "ExitRequestedByUser"
+            /// </summary>
+            [EnumMember(Value = "ExitRequestedByUser")]
+            Exitrequestedbyuser,
+            
+            /// <summary>
+            /// Enum Exitrequestedbybot for "ExitRequestedByBot"
+            /// </summary>
+            [EnumMember(Value = "ExitRequestedByBot")]
+            Exitrequestedbybot,
+            
+            /// <summary>
+            /// Enum Exiterror for "ExitError"
+            /// </summary>
+            [EnumMember(Value = "ExitError")]
+            Exiterror,
+            
+            /// <summary>
+            /// Enum Exitrecognitionfailure for "ExitRecognitionFailure"
+            /// </summary>
+            [EnumMember(Value = "ExitRecognitionFailure")]
+            Exitrecognitionfailure,
+            
+            /// <summary>
+            /// Enum Disconnectrequestedbyuser for "DisconnectRequestedByUser"
+            /// </summary>
+            [EnumMember(Value = "DisconnectRequestedByUser")]
+            Disconnectrequestedbyuser,
+            
+            /// <summary>
+            /// Enum Disconnectrequestedbybot for "DisconnectRequestedByBot"
+            /// </summary>
+            [EnumMember(Value = "DisconnectRequestedByBot")]
+            Disconnectrequestedbybot,
+            
+            /// <summary>
+            /// Enum Disconnectsessionexpired for "DisconnectSessionExpired"
+            /// </summary>
+            [EnumMember(Value = "DisconnectSessionExpired")]
+            Disconnectsessionexpired,
+            
+            /// <summary>
+            /// Enum Disconnecterror for "DisconnectError"
+            /// </summary>
+            [EnumMember(Value = "DisconnectError")]
+            Disconnecterror,
+            
+            /// <summary>
+            /// Enum Disconnectrecognitionfailure for "DisconnectRecognitionFailure"
+            /// </summary>
+            [EnumMember(Value = "DisconnectRecognitionFailure")]
+            Disconnectrecognitionfailure
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1430,7 +1841,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalTags">The list of external Tags used to filter conversation data.</param>
         /// <param name="IsNotResponding">Indicates filtering for not responding users.</param>
         /// <param name="IsAuthenticated">Indicates filtering for the authenticated chat.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null, List<DevelopmentRoleListEnum> DevelopmentRoleList = null, List<DevelopmentTypeListEnum> DevelopmentTypeList = null, List<DevelopmentStatusListEnum> DevelopmentStatusList = null, List<string> DevelopmentModuleIds = null, bool? DevelopmentActivityOverdue = null, NumericRange CustomerSentimentScore = null, NumericRange CustomerSentimentTrend = null, List<string> FlowTransferTargets = null, string DevelopmentName = null, List<string> TopicIds = null, List<string> ExternalTags = null, bool? IsNotResponding = null, bool? IsAuthenticated = null)
+        /// <param name="BotIds">The list of bot IDs used to filter bot views.</param>
+        /// <param name="BotVersions">The list of bot versions used to filter bot views.</param>
+        /// <param name="BotMessageTypes">The list of bot message types used to filter bot views.</param>
+        /// <param name="BotProviderList">The list of bot providers used to filter bot views.</param>
+        /// <param name="BotProductList">The list of bot products used to filter bot views.</param>
+        /// <param name="BotRecognitionFailureReasonList">The list of bot recognition failure reasons used to filter bot views.</param>
+        /// <param name="BotIntentList">The list of bot intents used to filter bot views.</param>
+        /// <param name="BotFinalIntentList">The list of bot final intents used to filter bot views.</param>
+        /// <param name="BotSlotList">The list of bot slots used to filter bot views.</param>
+        /// <param name="BotResultList">The list of bot results used to filter bot views.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null, List<DevelopmentRoleListEnum> DevelopmentRoleList = null, List<DevelopmentTypeListEnum> DevelopmentTypeList = null, List<DevelopmentStatusListEnum> DevelopmentStatusList = null, List<string> DevelopmentModuleIds = null, bool? DevelopmentActivityOverdue = null, NumericRange CustomerSentimentScore = null, NumericRange CustomerSentimentTrend = null, List<string> FlowTransferTargets = null, string DevelopmentName = null, List<string> TopicIds = null, List<string> ExternalTags = null, bool? IsNotResponding = null, bool? IsAuthenticated = null, List<string> BotIds = null, List<string> BotVersions = null, List<BotMessageTypesEnum> BotMessageTypes = null, List<BotProviderListEnum> BotProviderList = null, List<BotProductListEnum> BotProductList = null, List<BotRecognitionFailureReasonListEnum> BotRecognitionFailureReasonList = null, List<string> BotIntentList = null, List<string> BotFinalIntentList = null, List<string> BotSlotList = null, List<BotResultListEnum> BotResultList = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -1538,6 +1959,16 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalTags = ExternalTags;
             this.IsNotResponding = IsNotResponding;
             this.IsAuthenticated = IsAuthenticated;
+            this.BotIds = BotIds;
+            this.BotVersions = BotVersions;
+            this.BotMessageTypes = BotMessageTypes;
+            this.BotProviderList = BotProviderList;
+            this.BotProductList = BotProductList;
+            this.BotRecognitionFailureReasonList = BotRecognitionFailureReasonList;
+            this.BotIntentList = BotIntentList;
+            this.BotFinalIntentList = BotFinalIntentList;
+            this.BotSlotList = BotSlotList;
+            this.BotResultList = BotResultList;
             
         }
         
@@ -2496,6 +2927,96 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? IsAuthenticated { get; set; }
         
         
+        
+        /// <summary>
+        /// The list of bot IDs used to filter bot views
+        /// </summary>
+        /// <value>The list of bot IDs used to filter bot views</value>
+        [DataMember(Name="botIds", EmitDefaultValue=false)]
+        public List<string> BotIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of bot versions used to filter bot views
+        /// </summary>
+        /// <value>The list of bot versions used to filter bot views</value>
+        [DataMember(Name="botVersions", EmitDefaultValue=false)]
+        public List<string> BotVersions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of bot message types used to filter bot views
+        /// </summary>
+        /// <value>The list of bot message types used to filter bot views</value>
+        [DataMember(Name="botMessageTypes", EmitDefaultValue=false)]
+        public List<BotMessageTypesEnum> BotMessageTypes { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of bot providers used to filter bot views
+        /// </summary>
+        /// <value>The list of bot providers used to filter bot views</value>
+        [DataMember(Name="botProviderList", EmitDefaultValue=false)]
+        public List<BotProviderListEnum> BotProviderList { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of bot products used to filter bot views
+        /// </summary>
+        /// <value>The list of bot products used to filter bot views</value>
+        [DataMember(Name="botProductList", EmitDefaultValue=false)]
+        public List<BotProductListEnum> BotProductList { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of bot recognition failure reasons used to filter bot views
+        /// </summary>
+        /// <value>The list of bot recognition failure reasons used to filter bot views</value>
+        [DataMember(Name="botRecognitionFailureReasonList", EmitDefaultValue=false)]
+        public List<BotRecognitionFailureReasonListEnum> BotRecognitionFailureReasonList { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of bot intents used to filter bot views
+        /// </summary>
+        /// <value>The list of bot intents used to filter bot views</value>
+        [DataMember(Name="botIntentList", EmitDefaultValue=false)]
+        public List<string> BotIntentList { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of bot final intents used to filter bot views
+        /// </summary>
+        /// <value>The list of bot final intents used to filter bot views</value>
+        [DataMember(Name="botFinalIntentList", EmitDefaultValue=false)]
+        public List<string> BotFinalIntentList { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of bot slots used to filter bot views
+        /// </summary>
+        /// <value>The list of bot slots used to filter bot views</value>
+        [DataMember(Name="botSlotList", EmitDefaultValue=false)]
+        public List<string> BotSlotList { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of bot results used to filter bot views
+        /// </summary>
+        /// <value>The list of bot results used to filter bot views</value>
+        [DataMember(Name="botResultList", EmitDefaultValue=false)]
+        public List<BotResultListEnum> BotResultList { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -2611,6 +3132,16 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalTags: ").Append(ExternalTags).Append("\n");
             sb.Append("  IsNotResponding: ").Append(IsNotResponding).Append("\n");
             sb.Append("  IsAuthenticated: ").Append(IsAuthenticated).Append("\n");
+            sb.Append("  BotIds: ").Append(BotIds).Append("\n");
+            sb.Append("  BotVersions: ").Append(BotVersions).Append("\n");
+            sb.Append("  BotMessageTypes: ").Append(BotMessageTypes).Append("\n");
+            sb.Append("  BotProviderList: ").Append(BotProviderList).Append("\n");
+            sb.Append("  BotProductList: ").Append(BotProductList).Append("\n");
+            sb.Append("  BotRecognitionFailureReasonList: ").Append(BotRecognitionFailureReasonList).Append("\n");
+            sb.Append("  BotIntentList: ").Append(BotIntentList).Append("\n");
+            sb.Append("  BotFinalIntentList: ").Append(BotFinalIntentList).Append("\n");
+            sb.Append("  BotSlotList: ").Append(BotSlotList).Append("\n");
+            sb.Append("  BotResultList: ").Append(BotResultList).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -3176,6 +3707,56 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IsAuthenticated == other.IsAuthenticated ||
                     this.IsAuthenticated != null &&
                     this.IsAuthenticated.Equals(other.IsAuthenticated)
+                ) &&
+                (
+                    this.BotIds == other.BotIds ||
+                    this.BotIds != null &&
+                    this.BotIds.SequenceEqual(other.BotIds)
+                ) &&
+                (
+                    this.BotVersions == other.BotVersions ||
+                    this.BotVersions != null &&
+                    this.BotVersions.SequenceEqual(other.BotVersions)
+                ) &&
+                (
+                    this.BotMessageTypes == other.BotMessageTypes ||
+                    this.BotMessageTypes != null &&
+                    this.BotMessageTypes.SequenceEqual(other.BotMessageTypes)
+                ) &&
+                (
+                    this.BotProviderList == other.BotProviderList ||
+                    this.BotProviderList != null &&
+                    this.BotProviderList.SequenceEqual(other.BotProviderList)
+                ) &&
+                (
+                    this.BotProductList == other.BotProductList ||
+                    this.BotProductList != null &&
+                    this.BotProductList.SequenceEqual(other.BotProductList)
+                ) &&
+                (
+                    this.BotRecognitionFailureReasonList == other.BotRecognitionFailureReasonList ||
+                    this.BotRecognitionFailureReasonList != null &&
+                    this.BotRecognitionFailureReasonList.SequenceEqual(other.BotRecognitionFailureReasonList)
+                ) &&
+                (
+                    this.BotIntentList == other.BotIntentList ||
+                    this.BotIntentList != null &&
+                    this.BotIntentList.SequenceEqual(other.BotIntentList)
+                ) &&
+                (
+                    this.BotFinalIntentList == other.BotFinalIntentList ||
+                    this.BotFinalIntentList != null &&
+                    this.BotFinalIntentList.SequenceEqual(other.BotFinalIntentList)
+                ) &&
+                (
+                    this.BotSlotList == other.BotSlotList ||
+                    this.BotSlotList != null &&
+                    this.BotSlotList.SequenceEqual(other.BotSlotList)
+                ) &&
+                (
+                    this.BotResultList == other.BotResultList ||
+                    this.BotResultList != null &&
+                    this.BotResultList.SequenceEqual(other.BotResultList)
                 );
         }
 
@@ -3508,6 +4089,36 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.IsAuthenticated != null)
                     hash = hash * 59 + this.IsAuthenticated.GetHashCode();
+                
+                if (this.BotIds != null)
+                    hash = hash * 59 + this.BotIds.GetHashCode();
+                
+                if (this.BotVersions != null)
+                    hash = hash * 59 + this.BotVersions.GetHashCode();
+                
+                if (this.BotMessageTypes != null)
+                    hash = hash * 59 + this.BotMessageTypes.GetHashCode();
+                
+                if (this.BotProviderList != null)
+                    hash = hash * 59 + this.BotProviderList.GetHashCode();
+                
+                if (this.BotProductList != null)
+                    hash = hash * 59 + this.BotProductList.GetHashCode();
+                
+                if (this.BotRecognitionFailureReasonList != null)
+                    hash = hash * 59 + this.BotRecognitionFailureReasonList.GetHashCode();
+                
+                if (this.BotIntentList != null)
+                    hash = hash * 59 + this.BotIntentList.GetHashCode();
+                
+                if (this.BotFinalIntentList != null)
+                    hash = hash * 59 + this.BotFinalIntentList.GetHashCode();
+                
+                if (this.BotSlotList != null)
+                    hash = hash * 59 + this.BotSlotList.GetHashCode();
+                
+                if (this.BotResultList != null)
+                    hash = hash * 59 + this.BotResultList.GetHashCode();
                 
                 return hash;
             }

@@ -163,6 +163,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Unknown for "unknown"
+            /// </summary>
+            [EnumMember(Value = "unknown")]
+            Unknown,
+            
+            /// <summary>
             /// Enum Callback for "callback"
             /// </summary>
             [EnumMember(Value = "callback")]

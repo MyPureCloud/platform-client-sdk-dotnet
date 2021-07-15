@@ -23,6 +23,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The type of SCIM error when httpStatus is a \"400\" error.
         /// </summary>
@@ -110,15 +113,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
         /// <summary>
         /// The type of SCIM error when httpStatus is a \"400\" error.
         /// </summary>
         /// <value>The type of SCIM error when httpStatus is a \"400\" error.</value>
         [DataMember(Name="scimType", EmitDefaultValue=false)]
         public ScimTypeEnum? ScimType { get; set; }
-        
-        
         
         
         
@@ -133,6 +133,15 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Schemas = Schemas;
             
         }
+        
+        
+        
+        /// <summary>
+        /// The list of schemas for the SCIM error.
+        /// </summary>
+        /// <value>The list of schemas for the SCIM error.</value>
+        [DataMember(Name="schemas", EmitDefaultValue=false)]
+        public List<string> Schemas { get; set; }
         
         
         
@@ -155,15 +164,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Detail { get; private set; }
         
         
-        
-        /// <summary>
-        /// The list of schemas for the SCIM error.
-        /// </summary>
-        /// <value>The list of schemas for the SCIM error.</value>
-        [DataMember(Name="schemas", EmitDefaultValue=false)]
-        public List<string> Schemas { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -173,10 +173,10 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ScimError {\n");
             
+            sb.Append("  Schemas: ").Append(Schemas).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  ScimType: ").Append(ScimType).Append("\n");
             sb.Append("  Detail: ").Append(Detail).Append("\n");
-            sb.Append("  Schemas: ").Append(Schemas).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -214,6 +214,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Schemas == other.Schemas ||
+                    this.Schemas != null &&
+                    this.Schemas.SequenceEqual(other.Schemas)
+                ) &&
+                (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
@@ -227,11 +232,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Detail == other.Detail ||
                     this.Detail != null &&
                     this.Detail.Equals(other.Detail)
-                ) &&
-                (
-                    this.Schemas == other.Schemas ||
-                    this.Schemas != null &&
-                    this.Schemas.SequenceEqual(other.Schemas)
                 );
         }
 
@@ -247,6 +247,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.Schemas != null)
+                    hash = hash * 59 + this.Schemas.GetHashCode();
+                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
                 
@@ -255,9 +258,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Detail != null)
                     hash = hash * 59 + this.Detail.GetHashCode();
-                
-                if (this.Schemas != null)
-                    hash = hash * 59 + this.Schemas.GetHashCode();
                 
                 return hash;
             }

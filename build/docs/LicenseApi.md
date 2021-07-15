@@ -123,7 +123,7 @@ namespace Example
             try
             { 
                 // Get all PureCloud license definitions available for the organization.
-                List&lt;LicenseDefinition&gt; result = apiInstance.GetLicenseDefinitions();
+                List<LicenseDefinition> result = apiInstance.GetLicenseDefinitions();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -379,7 +379,7 @@ namespace Example
             try
             { 
                 // Get a list of licenses inferred based on a list of roleIds
-                List&lt;string&gt; result = apiInstance.PostLicenseInfer(body);
+                List<string> result = apiInstance.PostLicenseInfer(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -444,7 +444,7 @@ namespace Example
             try
             { 
                 // Update the organization's license assignments in a batch.
-                List&lt;LicenseUpdateStatus&gt; result = apiInstance.PostLicenseOrganization(body);
+                List<LicenseUpdateStatus> result = apiInstance.PostLicenseOrganization(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -573,7 +573,7 @@ namespace Example
             try
             { 
                 // Fetch user licenses in a batch.
-                Dictionary&lt;string, Object&gt; result = apiInstance.PostLicenseUsers(body);
+                Dictionary<string, Object> result = apiInstance.PostLicenseUsers(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)

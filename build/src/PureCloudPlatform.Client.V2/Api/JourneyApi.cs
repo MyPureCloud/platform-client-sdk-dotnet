@@ -194,7 +194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ActionTargetListing</returns>
         ActionTargetListing GetJourneyActiontargets (int? pageNumber = null, int? pageSize = null);
 
@@ -206,7 +206,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of ActionTargetListing</returns>
         ApiResponse<ActionTargetListing> GetJourneyActiontargetsWithHttpInfo (int? pageNumber = null, int? pageSize = null);
         
@@ -788,7 +788,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ActionTargetListing</returns>
         System.Threading.Tasks.Task<ActionTargetListing> GetJourneyActiontargetsAsync (int? pageNumber = null, int? pageSize = null);
 
@@ -800,7 +800,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ActionTargetListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ActionTargetListing>> GetJourneyActiontargetsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
         
@@ -2681,7 +2681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ActionTargetListing</returns>
         public ActionTargetListing GetJourneyActiontargets (int? pageNumber = null, int? pageSize = null)
         {
@@ -2694,7 +2694,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of ActionTargetListing</returns>
         public ApiResponse< ActionTargetListing > GetJourneyActiontargetsWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         { 
@@ -2776,7 +2776,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ActionTargetListing</returns>
         public async System.Threading.Tasks.Task<ActionTargetListing> GetJourneyActiontargetsAsync (int? pageNumber = null, int? pageSize = null)
         {
@@ -2790,7 +2790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ActionTargetListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ActionTargetListing>> GetJourneyActiontargetsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         { 

@@ -73,11 +73,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Country">2 Letter Country code, like US or GB (required).</param>
         /// <param name="A1">State or Province (required).</param>
         /// <param name="A3">City or township (required).</param>
-        /// <param name="RD">RD.</param>
-        /// <param name="HNO">HNO.</param>
-        /// <param name="LOC">LOC.</param>
-        /// <param name="NAM">NAM.</param>
-        /// <param name="PC">PC.</param>
+        /// <param name="RD">Number and street (required).</param>
+        /// <param name="HNO">House Number (required).</param>
+        /// <param name="LOC">extra location info like suite 300.</param>
+        /// <param name="NAM">Name of the customer.</param>
+        /// <param name="PC">Postal code (required).</param>
         public StreetAddress(string Country = null, string A1 = null, string A3 = null, string RD = null, string HNO = null, string LOC = null, string NAM = null, string PC = null)
         {
             this.Country = Country;
@@ -121,40 +121,45 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets RD
+        /// Number and street
         /// </summary>
+        /// <value>Number and street</value>
         [DataMember(Name="RD", EmitDefaultValue=false)]
         public string RD { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets HNO
+        /// House Number
         /// </summary>
+        /// <value>House Number</value>
         [DataMember(Name="HNO", EmitDefaultValue=false)]
         public string HNO { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets LOC
+        /// extra location info like suite 300
         /// </summary>
+        /// <value>extra location info like suite 300</value>
         [DataMember(Name="LOC", EmitDefaultValue=false)]
         public string LOC { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets NAM
+        /// Name of the customer
         /// </summary>
+        /// <value>Name of the customer</value>
         [DataMember(Name="NAM", EmitDefaultValue=false)]
         public string NAM { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets PC
+        /// Postal code
         /// </summary>
+        /// <value>Postal code</value>
         [DataMember(Name="PC", EmitDefaultValue=false)]
         public string PC { get; set; }
         

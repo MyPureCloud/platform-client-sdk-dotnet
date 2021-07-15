@@ -124,9 +124,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Metric</returns>
-        Metric GetGamificationMetric (string metricId, string performanceProfileId = null);
+        Metric GetGamificationMetric (string metricId, String workday = null, string performanceProfileId = null);
 
         /// <summary>
         /// Gamified metric by id
@@ -136,9 +137,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>ApiResponse of Metric</returns>
-        ApiResponse<Metric> GetGamificationMetricWithHttpInfo (string metricId, string performanceProfileId = null);
+        ApiResponse<Metric> GetGamificationMetricWithHttpInfo (string metricId, String workday = null, string performanceProfileId = null);
         
         /// <summary>
         /// Metric definition by id
@@ -190,8 +192,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>GetMetricsResponse</returns>
-        GetMetricsResponse GetGamificationMetrics (string performanceProfileId = null);
+        GetMetricsResponse GetGamificationMetrics (string performanceProfileId = null, String workday = null);
 
         /// <summary>
         /// All gamified metrics for a given profile
@@ -201,8 +204,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of GetMetricsResponse</returns>
-        ApiResponse<GetMetricsResponse> GetGamificationMetricsWithHttpInfo (string performanceProfileId = null);
+        ApiResponse<GetMetricsResponse> GetGamificationMetricsWithHttpInfo (string performanceProfileId = null, String workday = null);
         
         /// <summary>
         /// Performance profile by id
@@ -942,9 +946,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Task of Metric</returns>
-        System.Threading.Tasks.Task<Metric> GetGamificationMetricAsync (string metricId, string performanceProfileId = null);
+        System.Threading.Tasks.Task<Metric> GetGamificationMetricAsync (string metricId, String workday = null, string performanceProfileId = null);
 
         /// <summary>
         /// Gamified metric by id
@@ -954,9 +959,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Metric>> GetGamificationMetricAsyncWithHttpInfo (string metricId, string performanceProfileId = null);
+        System.Threading.Tasks.Task<ApiResponse<Metric>> GetGamificationMetricAsyncWithHttpInfo (string metricId, String workday = null, string performanceProfileId = null);
         
         /// <summary>
         /// Metric definition by id
@@ -1008,8 +1014,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of GetMetricsResponse</returns>
-        System.Threading.Tasks.Task<GetMetricsResponse> GetGamificationMetricsAsync (string performanceProfileId = null);
+        System.Threading.Tasks.Task<GetMetricsResponse> GetGamificationMetricsAsync (string performanceProfileId = null, String workday = null);
 
         /// <summary>
         /// All gamified metrics for a given profile
@@ -1019,8 +1026,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (GetMetricsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetMetricsResponse>> GetGamificationMetricsAsyncWithHttpInfo (string performanceProfileId = null);
+        System.Threading.Tasks.Task<ApiResponse<GetMetricsResponse>> GetGamificationMetricsAsyncWithHttpInfo (string performanceProfileId = null, String workday = null);
         
         /// <summary>
         /// Performance profile by id
@@ -2581,11 +2589,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Metric</returns>
-        public Metric GetGamificationMetric (string metricId, string performanceProfileId = null)
+        public Metric GetGamificationMetric (string metricId, String workday = null, string performanceProfileId = null)
         {
-             ApiResponse<Metric> localVarResponse = GetGamificationMetricWithHttpInfo(metricId, performanceProfileId);
+             ApiResponse<Metric> localVarResponse = GetGamificationMetricWithHttpInfo(metricId, workday, performanceProfileId);
              return localVarResponse.Data;
         }
 
@@ -2594,9 +2603,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>ApiResponse of Metric</returns>
-        public ApiResponse< Metric > GetGamificationMetricWithHttpInfo (string metricId, string performanceProfileId = null)
+        public ApiResponse< Metric > GetGamificationMetricWithHttpInfo (string metricId, String workday = null, string performanceProfileId = null)
         { 
             // verify the required parameter 'metricId' is set
             if (metricId == null)
@@ -2636,7 +2646,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
 
             // Query params
-            if (performanceProfileId != null) localVarQueryParams.Add(new Tuple<string, string>("performance profile id", this.Configuration.ApiClient.ParameterToString(performanceProfileId)));
+            if (workday != null) localVarQueryParams.Add(new Tuple<string, string>("workday", this.Configuration.ApiClient.ParameterToString(workday)));
+            if (performanceProfileId != null) localVarQueryParams.Add(new Tuple<string, string>("performanceProfileId", this.Configuration.ApiClient.ParameterToString(performanceProfileId)));
 
             // Header params
 
@@ -2679,11 +2690,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Task of Metric</returns>
-        public async System.Threading.Tasks.Task<Metric> GetGamificationMetricAsync (string metricId, string performanceProfileId = null)
+        public async System.Threading.Tasks.Task<Metric> GetGamificationMetricAsync (string metricId, String workday = null, string performanceProfileId = null)
         {
-             ApiResponse<Metric> localVarResponse = await GetGamificationMetricAsyncWithHttpInfo(metricId, performanceProfileId);
+             ApiResponse<Metric> localVarResponse = await GetGamificationMetricAsyncWithHttpInfo(metricId, workday, performanceProfileId);
              return localVarResponse.Data;
 
         }
@@ -2693,9 +2705,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Metric>> GetGamificationMetricAsyncWithHttpInfo (string metricId, string performanceProfileId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Metric>> GetGamificationMetricAsyncWithHttpInfo (string metricId, String workday = null, string performanceProfileId = null)
         { 
             // verify the required parameter 'metricId' is set
             if (metricId == null)
@@ -2736,7 +2749,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
 
             // Query params
-            if (performanceProfileId != null) localVarQueryParams.Add(new Tuple<string, string>("performance profile id", this.Configuration.ApiClient.ParameterToString(performanceProfileId)));
+            if (workday != null) localVarQueryParams.Add(new Tuple<string, string>("workday", this.Configuration.ApiClient.ParameterToString(workday)));
+            if (performanceProfileId != null) localVarQueryParams.Add(new Tuple<string, string>("performanceProfileId", this.Configuration.ApiClient.ParameterToString(performanceProfileId)));
 
             // Header params
 
@@ -3153,10 +3167,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>GetMetricsResponse</returns>
-        public GetMetricsResponse GetGamificationMetrics (string performanceProfileId = null)
+        public GetMetricsResponse GetGamificationMetrics (string performanceProfileId = null, String workday = null)
         {
-             ApiResponse<GetMetricsResponse> localVarResponse = GetGamificationMetricsWithHttpInfo(performanceProfileId);
+             ApiResponse<GetMetricsResponse> localVarResponse = GetGamificationMetricsWithHttpInfo(performanceProfileId, workday);
              return localVarResponse.Data;
         }
 
@@ -3165,8 +3180,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of GetMetricsResponse</returns>
-        public ApiResponse< GetMetricsResponse > GetGamificationMetricsWithHttpInfo (string performanceProfileId = null)
+        public ApiResponse< GetMetricsResponse > GetGamificationMetricsWithHttpInfo (string performanceProfileId = null, String workday = null)
         { 
 
             var localVarPath = "/api/v2/gamification/metrics";
@@ -3202,7 +3218,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (performanceProfileId != null) localVarQueryParams.Add(new Tuple<string, string>("performance profile id", this.Configuration.ApiClient.ParameterToString(performanceProfileId)));
+            if (performanceProfileId != null) localVarQueryParams.Add(new Tuple<string, string>("performanceProfileId", this.Configuration.ApiClient.ParameterToString(performanceProfileId)));
+            if (workday != null) localVarQueryParams.Add(new Tuple<string, string>("workday", this.Configuration.ApiClient.ParameterToString(workday)));
 
             // Header params
 
@@ -3245,10 +3262,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of GetMetricsResponse</returns>
-        public async System.Threading.Tasks.Task<GetMetricsResponse> GetGamificationMetricsAsync (string performanceProfileId = null)
+        public async System.Threading.Tasks.Task<GetMetricsResponse> GetGamificationMetricsAsync (string performanceProfileId = null, String workday = null)
         {
-             ApiResponse<GetMetricsResponse> localVarResponse = await GetGamificationMetricsAsyncWithHttpInfo(performanceProfileId);
+             ApiResponse<GetMetricsResponse> localVarResponse = await GetGamificationMetricsAsyncWithHttpInfo(performanceProfileId, workday);
              return localVarResponse.Data;
 
         }
@@ -3258,8 +3276,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (GetMetricsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetMetricsResponse>> GetGamificationMetricsAsyncWithHttpInfo (string performanceProfileId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<GetMetricsResponse>> GetGamificationMetricsAsyncWithHttpInfo (string performanceProfileId = null, String workday = null)
         { 
 
             var localVarPath = "/api/v2/gamification/metrics";
@@ -3295,7 +3314,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (performanceProfileId != null) localVarQueryParams.Add(new Tuple<string, string>("performance profile id", this.Configuration.ApiClient.ParameterToString(performanceProfileId)));
+            if (performanceProfileId != null) localVarQueryParams.Add(new Tuple<string, string>("performanceProfileId", this.Configuration.ApiClient.ParameterToString(performanceProfileId)));
+            if (workday != null) localVarQueryParams.Add(new Tuple<string, string>("workday", this.Configuration.ApiClient.ParameterToString(workday)));
 
             // Header params
 
@@ -8088,7 +8108,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
 
             // Query params
-            if (performanceProfileId != null) localVarQueryParams.Add(new Tuple<string, string>("performance profile id", this.Configuration.ApiClient.ParameterToString(performanceProfileId)));
+            if (performanceProfileId != null) localVarQueryParams.Add(new Tuple<string, string>("performanceProfileId", this.Configuration.ApiClient.ParameterToString(performanceProfileId)));
 
             // Header params
 
@@ -8199,7 +8219,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
 
             // Query params
-            if (performanceProfileId != null) localVarQueryParams.Add(new Tuple<string, string>("performance profile id", this.Configuration.ApiClient.ParameterToString(performanceProfileId)));
+            if (performanceProfileId != null) localVarQueryParams.Add(new Tuple<string, string>("performanceProfileId", this.Configuration.ApiClient.ParameterToString(performanceProfileId)));
 
             // Header params
 

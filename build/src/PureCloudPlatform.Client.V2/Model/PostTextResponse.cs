@@ -82,12 +82,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The state of the bot after completion of the request
         /// </summary>
         /// <value>The state of the bot after completion of the request</value>
         [DataMember(Name="botState", EmitDefaultValue=false)]
         public BotStateEnum? BotState { get; set; }
+        
+        
         
         
         
@@ -125,7 +130,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="GoogleDialogFlow">Raw data response from Google Dialogflow (if called).</param>
         /// <param name="GenesysDialogEngine">Raw data response from Genesys&#39; Dialogengine (if called).</param>
         /// <param name="GenesysBotConnector">Raw data response from Genesys&#39; BotConnector (if called).</param>
-        public PostTextResponse(BotStateEnum? BotState = null, List<PostTextMessage> ReplyMessages = null, string IntentName = null, Dictionary<string, string> Slots = null, string BotCorrelationId = null, Dictionary<string, Object> AmazonLex = null, Dictionary<string, Object> GoogleDialogFlow = null, Dictionary<string, Object> GenesysDialogEngine = null, Dictionary<string, Object> GenesysBotConnector = null)
+        /// <param name="NuanceMixDlg">Raw data response from Nuance Mix Dlg (if called).</param>
+        public PostTextResponse(BotStateEnum? BotState = null, List<PostTextMessage> ReplyMessages = null, string IntentName = null, Dictionary<string, string> Slots = null, string BotCorrelationId = null, Dictionary<string, Object> AmazonLex = null, Dictionary<string, Object> GoogleDialogFlow = null, Dictionary<string, Object> GenesysDialogEngine = null, Dictionary<string, Object> GenesysBotConnector = null, Dictionary<string, Object> NuanceMixDlg = null)
         {
             this.BotState = BotState;
             this.ReplyMessages = ReplyMessages;
@@ -136,6 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.GoogleDialogFlow = GoogleDialogFlow;
             this.GenesysDialogEngine = GenesysDialogEngine;
             this.GenesysBotConnector = GenesysBotConnector;
+            this.NuanceMixDlg = NuanceMixDlg;
             
         }
         
@@ -214,6 +221,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Dictionary<string, Object> GenesysBotConnector { get; set; }
         
         
+        
+        /// <summary>
+        /// Raw data response from Nuance Mix Dlg (if called)
+        /// </summary>
+        /// <value>Raw data response from Nuance Mix Dlg (if called)</value>
+        [DataMember(Name="nuanceMixDlg", EmitDefaultValue=false)]
+        public Dictionary<string, Object> NuanceMixDlg { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -232,6 +248,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  GoogleDialogFlow: ").Append(GoogleDialogFlow).Append("\n");
             sb.Append("  GenesysDialogEngine: ").Append(GenesysDialogEngine).Append("\n");
             sb.Append("  GenesysBotConnector: ").Append(GenesysBotConnector).Append("\n");
+            sb.Append("  NuanceMixDlg: ").Append(NuanceMixDlg).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -312,6 +329,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.GenesysBotConnector == other.GenesysBotConnector ||
                     this.GenesysBotConnector != null &&
                     this.GenesysBotConnector.SequenceEqual(other.GenesysBotConnector)
+                ) &&
+                (
+                    this.NuanceMixDlg == other.NuanceMixDlg ||
+                    this.NuanceMixDlg != null &&
+                    this.NuanceMixDlg.SequenceEqual(other.NuanceMixDlg)
                 );
         }
 
@@ -353,6 +375,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.GenesysBotConnector != null)
                     hash = hash * 59 + this.GenesysBotConnector.GetHashCode();
+                
+                if (this.NuanceMixDlg != null)
+                    hash = hash * 59 + this.NuanceMixDlg.GetHashCode();
                 
                 return hash;
             }

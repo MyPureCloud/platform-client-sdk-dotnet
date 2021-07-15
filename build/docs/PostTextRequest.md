@@ -17,9 +17,10 @@ title: PostTextRequest
 | **BotChannels** | **List&lt;string&gt;** | The channels this bot is utilizing | [optional] |
 | **BotCorrelationId** | **string** | Id for tracking the activity - this will be returned in the response | [optional] |
 | **MessagingPlatformType** | **string** | If the channels list contains a &#39;Messaging&#39; item and the messaging platform is known, include it here to get accurate analytics | [optional] |
-| **AmazonLexRequest** | [**AmazonLexRequest**](AmazonLexRequest.html) |  | [optional] |
-| **GoogleDialogflow** | [**GoogleDialogflowCustomSettings**](GoogleDialogflowCustomSettings.html) |  | [optional] |
-| **GenesysBotConnector** | [**GenesysBotConnector**](GenesysBotConnector.html) |  | [optional] |
+| **AmazonLexRequest** | [**AmazonLexRequest**](AmazonLexRequest.html) | Provider specific settings, if any | [optional] |
+| **GoogleDialogflow** | [**GoogleDialogflowCustomSettings**](GoogleDialogflowCustomSettings.html) | Provider specific settings, if any | [optional] |
+| **GenesysBotConnector** | [**GenesysBotConnector**](GenesysBotConnector.html) | Provider specific settings, if any | [optional] |
+| **NuanceMixDlg** | [**NuanceMixDlgSettings**](NuanceMixDlgSettings.html) | Provider specific settings, if any | [optional] |
 {: class="table table-striped"}
 
 

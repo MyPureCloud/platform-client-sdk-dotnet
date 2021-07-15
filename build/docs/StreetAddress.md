@@ -10,11 +10,11 @@ title: StreetAddress
 | **Country** | **string** | 2 Letter Country code, like US or GB | |
 | **A1** | **string** | State or Province | |
 | **A3** | **string** | City or township | |
-| **RD** | **string** |  | [optional] |
-| **HNO** | **string** |  | [optional] |
-| **LOC** | **string** |  | [optional] |
-| **NAM** | **string** |  | [optional] |
-| **PC** | **string** |  | [optional] |
+| **RD** | **string** | Number and street | |
+| **HNO** | **string** | House Number | |
+| **LOC** | **string** | extra location info like suite 300 | [optional] |
+| **NAM** | **string** | Name of the customer | [optional] |
+| **PC** | **string** | Postal code | |
 {: class="table table-striped"}
 
 

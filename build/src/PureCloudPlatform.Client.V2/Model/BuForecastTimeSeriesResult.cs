@@ -211,6 +211,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Theta,
             
             /// <summary>
+            /// Enum Ensemble for "Ensemble"
+            /// </summary>
+            [EnumMember(Value = "Ensemble")]
+            Ensemble,
+            
+            /// <summary>
             /// Enum Other for "Other"
             /// </summary>
             [EnumMember(Value = "Other")]

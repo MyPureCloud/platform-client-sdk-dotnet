@@ -107,6 +107,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ChannelEntityListing> GetNotificationsChannelsWithHttpInfo (string includechannels = null);
         
         /// <summary>
+        /// Verify a channel still exists and is valid
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="channelId">Channel ID</param>
+        /// <returns>bool?</returns>
+        bool? HeadNotificationsChannel (string channelId);
+
+        /// <summary>
+        /// Verify a channel still exists and is valid
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="channelId">Channel ID</param>
+        /// <returns>ApiResponse of bool?</returns>
+        ApiResponse<bool?> HeadNotificationsChannelWithHttpInfo (string channelId);
+        
+        /// <summary>
         /// Add a list of subscriptions to the existing list of subscriptions
         /// </summary>
         /// <remarks>
@@ -267,6 +289,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includechannels">Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional, default to token)</param>
         /// <returns>Task of ApiResponse (ChannelEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ChannelEntityListing>> GetNotificationsChannelsAsyncWithHttpInfo (string includechannels = null);
+        
+        /// <summary>
+        /// Verify a channel still exists and is valid
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="channelId">Channel ID</param>
+        /// <returns>Task of bool?</returns>
+        System.Threading.Tasks.Task<bool?> HeadNotificationsChannelAsync (string channelId);
+
+        /// <summary>
+        /// Verify a channel still exists and is valid
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="channelId">Channel ID</param>
+        /// <returns>Task of ApiResponse (bool?)</returns>
+        System.Threading.Tasks.Task<ApiResponse<bool?>> HeadNotificationsChannelAsyncWithHttpInfo (string channelId);
         
         /// <summary>
         /// Add a list of subscriptions to the existing list of subscriptions
@@ -1184,6 +1228,199 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ChannelEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (ChannelEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChannelEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Verify a channel still exists and is valid 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="channelId">Channel ID</param>
+        /// <returns>bool?</returns>
+        public bool? HeadNotificationsChannel (string channelId)
+        {
+             ApiResponse<bool?> localVarResponse = HeadNotificationsChannelWithHttpInfo(channelId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Verify a channel still exists and is valid 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="channelId">Channel ID</param>
+        /// <returns>ApiResponse of bool?</returns>
+        public ApiResponse< bool? > HeadNotificationsChannelWithHttpInfo (string channelId)
+        { 
+            // verify the required parameter 'channelId' is set
+            if (channelId == null)
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->HeadNotificationsChannel");
+
+            var localVarPath = "/api/v2/notifications/channels/{channelId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (channelId != null) localVarPathParams.Add("channelId", this.Configuration.ApiClient.ParameterToString(channelId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.HEAD, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling HeadNotificationsChannel: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling HeadNotificationsChannel: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<bool?>(localVarStatusCode,
+                localVarHeaders,
+                (bool?) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(bool?)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Verify a channel still exists and is valid 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="channelId">Channel ID</param>
+        /// <returns>Task of bool?</returns>
+        public async System.Threading.Tasks.Task<bool?> HeadNotificationsChannelAsync (string channelId)
+        {
+             ApiResponse<bool?> localVarResponse = await HeadNotificationsChannelAsyncWithHttpInfo(channelId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Verify a channel still exists and is valid 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="channelId">Channel ID</param>
+        /// <returns>Task of ApiResponse (bool?)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<bool?>> HeadNotificationsChannelAsyncWithHttpInfo (string channelId)
+        { 
+            // verify the required parameter 'channelId' is set
+            if (channelId == null)
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->HeadNotificationsChannel");
+            
+
+            var localVarPath = "/api/v2/notifications/channels/{channelId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (channelId != null) localVarPathParams.Add("channelId", this.Configuration.ApiClient.ParameterToString(channelId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.HEAD, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling HeadNotificationsChannel: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling HeadNotificationsChannel: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<bool?>(localVarStatusCode,
+                localVarHeaders,
+                (bool?) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(bool?)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

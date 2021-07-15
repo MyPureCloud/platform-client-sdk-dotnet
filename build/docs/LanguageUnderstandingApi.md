@@ -10,6 +10,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteLanguageunderstandingDomain**](LanguageUnderstandingApi.html#deletelanguageunderstandingdomain) | **DELETE** /api/v2/languageunderstanding/domains/{domainId} | Delete an NLU Domain. |
 | [**DeleteLanguageunderstandingDomainFeedbackFeedbackId**](LanguageUnderstandingApi.html#deletelanguageunderstandingdomainfeedbackfeedbackid) | **DELETE** /api/v2/languageunderstanding/domains/{domainId}/feedback/{feedbackId} | Delete the feedback on the NLU Domain Version. |
 | [**DeleteLanguageunderstandingDomainVersion**](LanguageUnderstandingApi.html#deletelanguageunderstandingdomainversion) | **DELETE** /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId} | Delete an NLU Domain Version |
+| [**DeleteLanguageunderstandingMiner**](LanguageUnderstandingApi.html#deletelanguageunderstandingminer) | **DELETE** /api/v2/languageunderstanding/miners/{minerId} | Delete a miner. |
+| [**DeleteLanguageunderstandingMinerDraft**](LanguageUnderstandingApi.html#deletelanguageunderstandingminerdraft) | **DELETE** /api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId} | Delete a draft |
 | [**GetLanguageunderstandingDomain**](LanguageUnderstandingApi.html#getlanguageunderstandingdomain) | **GET** /api/v2/languageunderstanding/domains/{domainId} | Find an NLU Domain. |
 | [**GetLanguageunderstandingDomainFeedback**](LanguageUnderstandingApi.html#getlanguageunderstandingdomainfeedback) | **GET** /api/v2/languageunderstanding/domains/{domainId}/feedback | Get all feedback in the given NLU Domain Version. |
 | [**GetLanguageunderstandingDomainFeedbackFeedbackId**](LanguageUnderstandingApi.html#getlanguageunderstandingdomainfeedbackfeedbackid) | **GET** /api/v2/languageunderstanding/domains/{domainId}/feedback/{feedbackId} | Find a Feedback |
@@ -17,13 +19,23 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetLanguageunderstandingDomainVersionReport**](LanguageUnderstandingApi.html#getlanguageunderstandingdomainversionreport) | **GET** /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/report | Retrieved quality report for the specified NLU Domain Version |
 | [**GetLanguageunderstandingDomainVersions**](LanguageUnderstandingApi.html#getlanguageunderstandingdomainversions) | **GET** /api/v2/languageunderstanding/domains/{domainId}/versions | Get all NLU Domain Versions for a given Domain. |
 | [**GetLanguageunderstandingDomains**](LanguageUnderstandingApi.html#getlanguageunderstandingdomains) | **GET** /api/v2/languageunderstanding/domains | Get all NLU Domains. |
+| [**GetLanguageunderstandingMiner**](LanguageUnderstandingApi.html#getlanguageunderstandingminer) | **GET** /api/v2/languageunderstanding/miners/{minerId} | Get information about a miner. |
+| [**GetLanguageunderstandingMinerDraft**](LanguageUnderstandingApi.html#getlanguageunderstandingminerdraft) | **GET** /api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId} | Get information about a draft. |
+| [**GetLanguageunderstandingMinerDrafts**](LanguageUnderstandingApi.html#getlanguageunderstandingminerdrafts) | **GET** /api/v2/languageunderstanding/miners/{minerId}/drafts | Retrieve the list of drafts created. |
+| [**GetLanguageunderstandingMinerIntent**](LanguageUnderstandingApi.html#getlanguageunderstandingminerintent) | **GET** /api/v2/languageunderstanding/miners/{minerId}/intents/{intentId} | Get information about a mined intent |
+| [**GetLanguageunderstandingMinerIntents**](LanguageUnderstandingApi.html#getlanguageunderstandingminerintents) | **GET** /api/v2/languageunderstanding/miners/{minerId}/intents | Retrieve a list of mined intents. |
+| [**GetLanguageunderstandingMiners**](LanguageUnderstandingApi.html#getlanguageunderstandingminers) | **GET** /api/v2/languageunderstanding/miners | Retrieve the list of miners created. |
 | [**PatchLanguageunderstandingDomain**](LanguageUnderstandingApi.html#patchlanguageunderstandingdomain) | **PATCH** /api/v2/languageunderstanding/domains/{domainId} | Update an NLU Domain. |
+| [**PatchLanguageunderstandingMinerDraft**](LanguageUnderstandingApi.html#patchlanguageunderstandingminerdraft) | **PATCH** /api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId} | Save information for the draft |
 | [**PostLanguageunderstandingDomainFeedback**](LanguageUnderstandingApi.html#postlanguageunderstandingdomainfeedback) | **POST** /api/v2/languageunderstanding/domains/{domainId}/feedback | Create feedback for the NLU Domain Version. |
 | [**PostLanguageunderstandingDomainVersionDetect**](LanguageUnderstandingApi.html#postlanguageunderstandingdomainversiondetect) | **POST** /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/detect | Detect intent, entities, etc. in the submitted text using the specified NLU domain version. |
 | [**PostLanguageunderstandingDomainVersionPublish**](LanguageUnderstandingApi.html#postlanguageunderstandingdomainversionpublish) | **POST** /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/publish | Publish the draft NLU Domain Version. |
 | [**PostLanguageunderstandingDomainVersionTrain**](LanguageUnderstandingApi.html#postlanguageunderstandingdomainversiontrain) | **POST** /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/train | Train the draft NLU Domain Version. |
 | [**PostLanguageunderstandingDomainVersions**](LanguageUnderstandingApi.html#postlanguageunderstandingdomainversions) | **POST** /api/v2/languageunderstanding/domains/{domainId}/versions | Create an NLU Domain Version. |
 | [**PostLanguageunderstandingDomains**](LanguageUnderstandingApi.html#postlanguageunderstandingdomains) | **POST** /api/v2/languageunderstanding/domains | Create an NLU Domain. |
+| [**PostLanguageunderstandingMinerDrafts**](LanguageUnderstandingApi.html#postlanguageunderstandingminerdrafts) | **POST** /api/v2/languageunderstanding/miners/{minerId}/drafts | Create a new draft resource. |
+| [**PostLanguageunderstandingMinerExecute**](LanguageUnderstandingApi.html#postlanguageunderstandingminerexecute) | **POST** /api/v2/languageunderstanding/miners/{minerId}/execute | Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. |
+| [**PostLanguageunderstandingMiners**](LanguageUnderstandingApi.html#postlanguageunderstandingminers) | **POST** /api/v2/languageunderstanding/miners | Create a unique miner. |
 | [**PutLanguageunderstandingDomainVersion**](LanguageUnderstandingApi.html#putlanguageunderstandingdomainversion) | **PUT** /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId} | Update an NLU Domain Version. |
 {: class="table table-striped"}
 
@@ -220,6 +232,136 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **domainVersionId** | **string**| ID of the NLU domain version. |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deletelanguageunderstandingminer"></a>
+
+## void DeleteLanguageunderstandingMiner (string minerId)
+
+
+
+Delete a miner.
+
+
+
+Requires ALL permissions: 
+
+* languageUnderstanding:miner:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteLanguageunderstandingMinerExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var minerId = minerId_example;  // string | Miner ID
+
+            try
+            { 
+                // Delete a miner.
+                apiInstance.DeleteLanguageunderstandingMiner(minerId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.DeleteLanguageunderstandingMiner: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **minerId** | **string**| Miner ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deletelanguageunderstandingminerdraft"></a>
+
+## void DeleteLanguageunderstandingMinerDraft (string minerId, string draftId)
+
+
+
+Delete a draft
+
+
+
+Requires ALL permissions: 
+
+* languageUnderstanding:draft:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteLanguageunderstandingMinerDraftExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var minerId = minerId_example;  // string | Miner ID
+            var draftId = draftId_example;  // string | Draft ID
+
+            try
+            { 
+                // Delete a draft
+                apiInstance.DeleteLanguageunderstandingMinerDraft(minerId, draftId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.DeleteLanguageunderstandingMinerDraft: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **minerId** | **string**| Miner ID |  |
+| **draftId** | **string**| Draft ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -726,6 +868,399 @@ namespace Example
 
 [**NluDomainListing**](NluDomainListing.html)
 
+<a name="getlanguageunderstandingminer"></a>
+
+## [**Miner**](Miner.html) GetLanguageunderstandingMiner (string minerId)
+
+
+
+Get information about a miner.
+
+
+
+Requires ALL permissions: 
+
+* languageUnderstanding:miner:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLanguageunderstandingMinerExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var minerId = minerId_example;  // string | Miner ID
+
+            try
+            { 
+                // Get information about a miner.
+                Miner result = apiInstance.GetLanguageunderstandingMiner(minerId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.GetLanguageunderstandingMiner: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **minerId** | **string**| Miner ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Miner**](Miner.html)
+
+<a name="getlanguageunderstandingminerdraft"></a>
+
+## [**Draft**](Draft.html) GetLanguageunderstandingMinerDraft (string minerId, string draftId)
+
+
+
+Get information about a draft.
+
+
+
+Requires ALL permissions: 
+
+* languageUnderstanding:draft:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLanguageunderstandingMinerDraftExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var minerId = minerId_example;  // string | Miner ID
+            var draftId = draftId_example;  // string | Draft ID
+
+            try
+            { 
+                // Get information about a draft.
+                Draft result = apiInstance.GetLanguageunderstandingMinerDraft(minerId, draftId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.GetLanguageunderstandingMinerDraft: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **minerId** | **string**| Miner ID |  |
+| **draftId** | **string**| Draft ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Draft**](Draft.html)
+
+<a name="getlanguageunderstandingminerdrafts"></a>
+
+## [**DraftListing**](DraftListing.html) GetLanguageunderstandingMinerDrafts (string minerId)
+
+
+
+Retrieve the list of drafts created.
+
+
+
+Requires ALL permissions: 
+
+* languageUnderstanding:draft:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLanguageunderstandingMinerDraftsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var minerId = minerId_example;  // string | Miner ID
+
+            try
+            { 
+                // Retrieve the list of drafts created.
+                DraftListing result = apiInstance.GetLanguageunderstandingMinerDrafts(minerId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.GetLanguageunderstandingMinerDrafts: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **minerId** | **string**| Miner ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DraftListing**](DraftListing.html)
+
+<a name="getlanguageunderstandingminerintent"></a>
+
+## [**MinerIntent**](MinerIntent.html) GetLanguageunderstandingMinerIntent (string minerId, string intentId, string expand = null)
+
+
+
+Get information about a mined intent
+
+
+
+Requires ALL permissions: 
+
+* languageUnderstanding:minerIntent:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLanguageunderstandingMinerIntentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var minerId = minerId_example;  // string | Miner ID
+            var intentId = intentId_example;  // string | The ID of the intent to be retrieved.
+            var expand = expand_example;  // string | Option to fetch utterances (optional) 
+
+            try
+            { 
+                // Get information about a mined intent
+                MinerIntent result = apiInstance.GetLanguageunderstandingMinerIntent(minerId, intentId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.GetLanguageunderstandingMinerIntent: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **minerId** | **string**| Miner ID |  |
+| **intentId** | **string**| The ID of the intent to be retrieved. |  |
+| **expand** | **string**| Option to fetch utterances | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MinerIntent**](MinerIntent.html)
+
+<a name="getlanguageunderstandingminerintents"></a>
+
+## [**MinedIntentsListing**](MinedIntentsListing.html) GetLanguageunderstandingMinerIntents (string minerId, string expand = null)
+
+
+
+Retrieve a list of mined intents.
+
+
+
+Requires ALL permissions: 
+
+* languageUnderstanding:minerIntent:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLanguageunderstandingMinerIntentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var minerId = minerId_example;  // string | Miner ID
+            var expand = expand_example;  // string | Option to fetch utterances. (optional) 
+
+            try
+            { 
+                // Retrieve a list of mined intents.
+                MinedIntentsListing result = apiInstance.GetLanguageunderstandingMinerIntents(minerId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.GetLanguageunderstandingMinerIntents: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **minerId** | **string**| Miner ID |  |
+| **expand** | **string**| Option to fetch utterances. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MinedIntentsListing**](MinedIntentsListing.html)
+
+<a name="getlanguageunderstandingminers"></a>
+
+## [**MinerListing**](MinerListing.html) GetLanguageunderstandingMiners ()
+
+
+
+Retrieve the list of miners created.
+
+
+
+Requires ALL permissions: 
+
+* languageUnderstanding:miner:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLanguageunderstandingMinersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+
+            try
+            { 
+                // Retrieve the list of miners created.
+                MinerListing result = apiInstance.GetLanguageunderstandingMiners();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.GetLanguageunderstandingMiners: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**MinerListing**](MinerListing.html)
+
 <a name="patchlanguageunderstandingdomain"></a>
 
 ## [**NluDomain**](NluDomain.html) PatchLanguageunderstandingDomain (string domainId, NluDomain body)
@@ -793,6 +1328,75 @@ namespace Example
 ### Return type
 
 [**NluDomain**](NluDomain.html)
+
+<a name="patchlanguageunderstandingminerdraft"></a>
+
+## [**Draft**](Draft.html) PatchLanguageunderstandingMinerDraft (string minerId, string draftId, DraftRequest body = null)
+
+
+
+Save information for the draft
+
+
+
+Requires ALL permissions: 
+
+* languageUnderstanding:draft:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchLanguageunderstandingMinerDraftExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var minerId = minerId_example;  // string | Miner ID
+            var draftId = draftId_example;  // string | Draft ID
+            var body = new DraftRequest(); // DraftRequest |  (optional) 
+
+            try
+            { 
+                // Save information for the draft
+                Draft result = apiInstance.PatchLanguageunderstandingMinerDraft(minerId, draftId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.PatchLanguageunderstandingMinerDraft: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **minerId** | **string**| Miner ID |  |
+| **draftId** | **string**| Draft ID |  |
+| **body** | [**DraftRequest**](DraftRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Draft**](Draft.html)
 
 <a name="postlanguageunderstandingdomainfeedback"></a>
 
@@ -1201,6 +1805,205 @@ namespace Example
 ### Return type
 
 [**NluDomain**](NluDomain.html)
+
+<a name="postlanguageunderstandingminerdrafts"></a>
+
+## [**Draft**](Draft.html) PostLanguageunderstandingMinerDrafts (string minerId, Draft body)
+
+
+
+Create a new draft resource.
+
+
+
+Requires ALL permissions: 
+
+* languageUnderstanding:draft:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLanguageunderstandingMinerDraftsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var minerId = minerId_example;  // string | Miner ID
+            var body = new Draft(); // Draft | Details for creating draft resource
+
+            try
+            { 
+                // Create a new draft resource.
+                Draft result = apiInstance.PostLanguageunderstandingMinerDrafts(minerId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.PostLanguageunderstandingMinerDrafts: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **minerId** | **string**| Miner ID |  |
+| **body** | [**Draft**](Draft.html)| Details for creating draft resource |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Draft**](Draft.html)
+
+<a name="postlanguageunderstandingminerexecute"></a>
+
+## [**Miner**](Miner.html) PostLanguageunderstandingMinerExecute (string minerId, MinerExecuteRequest body = null)
+
+
+
+Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
+
+
+
+Requires ALL permissions: 
+
+* languageUnderstanding:miner:execute
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLanguageunderstandingMinerExecuteExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var minerId = minerId_example;  // string | Miner ID
+            var body = new MinerExecuteRequest(); // MinerExecuteRequest |  (optional) 
+
+            try
+            { 
+                // Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
+                Miner result = apiInstance.PostLanguageunderstandingMinerExecute(minerId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.PostLanguageunderstandingMinerExecute: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **minerId** | **string**| Miner ID |  |
+| **body** | [**MinerExecuteRequest**](MinerExecuteRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Miner**](Miner.html)
+
+<a name="postlanguageunderstandingminers"></a>
+
+## [**Miner**](Miner.html) PostLanguageunderstandingMiners (Miner body)
+
+
+
+Create a unique miner.
+
+
+
+Requires ALL permissions: 
+
+* languageUnderstanding:miner:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLanguageunderstandingMinersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var body = new Miner(); // Miner | Details for creating a new miner resource.
+
+            try
+            { 
+                // Create a unique miner.
+                Miner result = apiInstance.PostLanguageunderstandingMiners(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.PostLanguageunderstandingMiners: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**Miner**](Miner.html)| Details for creating a new miner resource. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Miner**](Miner.html)
 
 <a name="putlanguageunderstandingdomainversion"></a>
 

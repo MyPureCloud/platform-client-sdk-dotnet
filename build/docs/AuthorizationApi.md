@@ -621,7 +621,7 @@ namespace Example
             try
             { 
                 // Returns which divisions the current user has the given permission in.
-                List&lt;AuthzDivision&gt; result = apiInstance.GetAuthorizationDivisionspermittedMe(permission, name);
+                List<AuthzDivision> result = apiInstance.GetAuthorizationDivisionspermittedMe(permission, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1442,7 +1442,7 @@ namespace Example
             try
             { 
                 // Get the count of roles granted to a list of subjects
-                Dictionary&lt;string, Object&gt; result = apiInstance.GetAuthorizationSubjectsRolecounts(id);
+                Dictionary<string, Object> result = apiInstance.GetAuthorizationSubjectsRolecounts(id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2514,7 +2514,7 @@ namespace Example
             try
             { 
                 // Sets the users for the role
-                List&lt;string&gt; result = apiInstance.PutAuthorizationRoleUsersAdd(roleId, body);
+                List<string> result = apiInstance.PutAuthorizationRoleUsersAdd(roleId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2581,7 +2581,7 @@ namespace Example
             try
             { 
                 // Removes the users from the role
-                List&lt;string&gt; result = apiInstance.PutAuthorizationRoleUsersRemove(roleId, body);
+                List<string> result = apiInstance.PutAuthorizationRoleUsersRemove(roleId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)

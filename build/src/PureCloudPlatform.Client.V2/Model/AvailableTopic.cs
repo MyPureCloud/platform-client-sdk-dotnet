@@ -38,6 +38,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Visibility of this topic (Public or Preview)
         /// </summary>
@@ -132,6 +135,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Visibility of this topic (Public or Preview)
         /// </summary>
@@ -159,6 +164,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PermissionDetails">Full detailed permissions required to subscribe to the topic.</param>
         /// <param name="RequiresPermissions">Permissions required to subscribe to the topic.</param>
         /// <param name="RequiresDivisionPermissions">True if the subscribing user must belong to the same division as the topic object ID.</param>
+        /// <param name="RequiresAnyValidator">If multiple permissions are required for this topic, such as both requiresCurrentUser and requiresDivisionPermissions, then true here indicates that meeting any one condition will satisfy the requirements; false indicates all conditions must be met..</param>
         /// <param name="Enforced">Whether or not the permissions on this topic are enforced.</param>
         /// <param name="Visibility">Visibility of this topic (Public or Preview).</param>
         /// <param name="Schema">Schema.</param>
@@ -166,13 +172,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RequiresCurrentUserOrPermission">True if permissions are only required when the topic user ID does not match the subscribing user ID.</param>
         /// <param name="Transports">Transports that support events for the topic.</param>
         /// <param name="PublicApiTemplateUriPaths">PublicApiTemplateUriPaths.</param>
-        public AvailableTopic(string Description = null, string Id = null, List<PermissionDetails> PermissionDetails = null, List<string> RequiresPermissions = null, bool? RequiresDivisionPermissions = null, bool? Enforced = null, VisibilityEnum? Visibility = null, Dictionary<string, Object> Schema = null, bool? RequiresCurrentUser = null, bool? RequiresCurrentUserOrPermission = null, List<TransportsEnum> Transports = null, List<string> PublicApiTemplateUriPaths = null)
+        public AvailableTopic(string Description = null, string Id = null, List<PermissionDetails> PermissionDetails = null, List<string> RequiresPermissions = null, bool? RequiresDivisionPermissions = null, bool? RequiresAnyValidator = null, bool? Enforced = null, VisibilityEnum? Visibility = null, Dictionary<string, Object> Schema = null, bool? RequiresCurrentUser = null, bool? RequiresCurrentUserOrPermission = null, List<TransportsEnum> Transports = null, List<string> PublicApiTemplateUriPaths = null)
         {
             this.Description = Description;
             this.Id = Id;
             this.PermissionDetails = PermissionDetails;
             this.RequiresPermissions = RequiresPermissions;
             this.RequiresDivisionPermissions = RequiresDivisionPermissions;
+            this.RequiresAnyValidator = RequiresAnyValidator;
             this.Enforced = Enforced;
             this.Visibility = Visibility;
             this.Schema = Schema;
@@ -225,6 +232,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>True if the subscribing user must belong to the same division as the topic object ID</value>
         [DataMember(Name="requiresDivisionPermissions", EmitDefaultValue=false)]
         public bool? RequiresDivisionPermissions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// If multiple permissions are required for this topic, such as both requiresCurrentUser and requiresDivisionPermissions, then true here indicates that meeting any one condition will satisfy the requirements; false indicates all conditions must be met.
+        /// </summary>
+        /// <value>If multiple permissions are required for this topic, such as both requiresCurrentUser and requiresDivisionPermissions, then true here indicates that meeting any one condition will satisfy the requirements; false indicates all conditions must be met.</value>
+        [DataMember(Name="requiresAnyValidator", EmitDefaultValue=false)]
+        public bool? RequiresAnyValidator { get; set; }
         
         
         
@@ -295,6 +311,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PermissionDetails: ").Append(PermissionDetails).Append("\n");
             sb.Append("  RequiresPermissions: ").Append(RequiresPermissions).Append("\n");
             sb.Append("  RequiresDivisionPermissions: ").Append(RequiresDivisionPermissions).Append("\n");
+            sb.Append("  RequiresAnyValidator: ").Append(RequiresAnyValidator).Append("\n");
             sb.Append("  Enforced: ").Append(Enforced).Append("\n");
             sb.Append("  Visibility: ").Append(Visibility).Append("\n");
             sb.Append("  Schema: ").Append(Schema).Append("\n");
@@ -364,6 +381,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RequiresDivisionPermissions.Equals(other.RequiresDivisionPermissions)
                 ) &&
                 (
+                    this.RequiresAnyValidator == other.RequiresAnyValidator ||
+                    this.RequiresAnyValidator != null &&
+                    this.RequiresAnyValidator.Equals(other.RequiresAnyValidator)
+                ) &&
+                (
                     this.Enforced == other.Enforced ||
                     this.Enforced != null &&
                     this.Enforced.Equals(other.Enforced)
@@ -426,6 +448,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RequiresDivisionPermissions != null)
                     hash = hash * 59 + this.RequiresDivisionPermissions.GetHashCode();
+                
+                if (this.RequiresAnyValidator != null)
+                    hash = hash * 59 + this.RequiresAnyValidator.GetHashCode();
                 
                 if (this.Enforced != null)
                     hash = hash * 59 + this.Enforced.GetHashCode();
