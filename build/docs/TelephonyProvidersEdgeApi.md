@@ -2583,7 +2583,7 @@ namespace Example
 
 ### Parameters
 This endpoint does require any parameters.
-{: class="table table-striped"}
+
 
 ### Return type
 
@@ -2643,7 +2643,7 @@ namespace Example
 
 ### Parameters
 This endpoint does require any parameters.
-{: class="table table-striped"}
+
 
 ### Return type
 
@@ -3329,7 +3329,7 @@ namespace Example
 
 ### Parameters
 This endpoint does require any parameters.
-{: class="table table-striped"}
+
 
 ### Return type
 

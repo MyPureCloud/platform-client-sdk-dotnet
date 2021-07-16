@@ -23,7 +23,8 @@ namespace PureCloudPlatform.Client.V2.Client
     {
         private JsonSerializerSettings serializerSettings = new JsonSerializerSettings
         {
-            ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
+            ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor,
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore
         };
 
         /// <summary>
@@ -220,7 +221,7 @@ namespace PureCloudPlatform.Client.V2.Client
             RestClient.UserAgent = Configuration.UserAgent;
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "125.0.0");
+            request.AddHeader("purecloud-sdk", "125.0.1");
 
             Retry retry = new Retry(this.RetryConfig);
             IRestResponse response;
