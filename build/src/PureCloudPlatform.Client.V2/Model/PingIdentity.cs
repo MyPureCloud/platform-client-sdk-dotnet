@@ -65,6 +65,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="PingIdentity" /> class.
@@ -73,15 +83,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Disabled">Disabled.</param>
         /// <param name="IssuerURI">IssuerURI.</param>
         /// <param name="SsoTargetURI">SsoTargetURI.</param>
+        /// <param name="SloURI">SloURI.</param>
+        /// <param name="SloBinding">SloBinding.</param>
         /// <param name="Certificate">Certificate.</param>
         /// <param name="Certificates">Certificates.</param>
         /// <param name="RelyingPartyIdentifier">RelyingPartyIdentifier.</param>
-        public PingIdentity(string Name = null, bool? Disabled = null, string IssuerURI = null, string SsoTargetURI = null, string Certificate = null, List<string> Certificates = null, string RelyingPartyIdentifier = null)
+        public PingIdentity(string Name = null, bool? Disabled = null, string IssuerURI = null, string SsoTargetURI = null, string SloURI = null, string SloBinding = null, string Certificate = null, List<string> Certificates = null, string RelyingPartyIdentifier = null)
         {
             this.Name = Name;
             this.Disabled = Disabled;
             this.IssuerURI = IssuerURI;
             this.SsoTargetURI = SsoTargetURI;
+            this.SloURI = SloURI;
+            this.SloBinding = SloBinding;
             this.Certificate = Certificate;
             this.Certificates = Certificates;
             this.RelyingPartyIdentifier = RelyingPartyIdentifier;
@@ -132,6 +146,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets SloURI
+        /// </summary>
+        [DataMember(Name="sloURI", EmitDefaultValue=false)]
+        public string SloURI { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets SloBinding
+        /// </summary>
+        [DataMember(Name="sloBinding", EmitDefaultValue=false)]
+        public string SloBinding { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Certificate
         /// </summary>
         [DataMember(Name="certificate", EmitDefaultValue=false)]
@@ -177,6 +207,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
             sb.Append("  IssuerURI: ").Append(IssuerURI).Append("\n");
             sb.Append("  SsoTargetURI: ").Append(SsoTargetURI).Append("\n");
+            sb.Append("  SloURI: ").Append(SloURI).Append("\n");
+            sb.Append("  SloBinding: ").Append(SloBinding).Append("\n");
             sb.Append("  Certificate: ").Append(Certificate).Append("\n");
             sb.Append("  Certificates: ").Append(Certificates).Append("\n");
             sb.Append("  RelyingPartyIdentifier: ").Append(RelyingPartyIdentifier).Append("\n");
@@ -247,6 +279,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SsoTargetURI.Equals(other.SsoTargetURI)
                 ) &&
                 (
+                    this.SloURI == other.SloURI ||
+                    this.SloURI != null &&
+                    this.SloURI.Equals(other.SloURI)
+                ) &&
+                (
+                    this.SloBinding == other.SloBinding ||
+                    this.SloBinding != null &&
+                    this.SloBinding.Equals(other.SloBinding)
+                ) &&
+                (
                     this.Certificate == other.Certificate ||
                     this.Certificate != null &&
                     this.Certificate.Equals(other.Certificate)
@@ -294,6 +336,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SsoTargetURI != null)
                     hash = hash * 59 + this.SsoTargetURI.GetHashCode();
+                
+                if (this.SloURI != null)
+                    hash = hash * 59 + this.SloURI.GetHashCode();
+                
+                if (this.SloBinding != null)
+                    hash = hash * 59 + this.SloBinding.GetHashCode();
                 
                 if (this.Certificate != null)
                     hash = hash * 59 + this.Certificate.GetHashCode();

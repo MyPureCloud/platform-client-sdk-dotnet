@@ -24,11 +24,14 @@ title: AnalyticsSession
 | **CallbackUserName** | **string** | The name of the user requesting a call back | [optional] |
 | **CobrowseRole** | **string** | Describes side of the cobrowse (sharer or viewer) | [optional] |
 | **CobrowseRoomId** | **string** | A unique identifier for a PureCloud cobrowse room | [optional] |
+| **DeliveryStatus** | **string** | The email delivery status | [optional] |
+| **DeliveryStatusChangeDate** | **DateTime?** | Date and time of the most recent delivery status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Direction** | **string** | The direction of the communication | [optional] |
 | **DispositionAnalyzer** | **string** | (Dialer) Analyzer (for example speech.person) | [optional] |
 | **DispositionName** | **string** | (Dialer) Result of the analysis (for example disposition.classification.callable.machine) | [optional] |
 | **Dnis** | **string** | Dialed number identification service (number dialed by the calling party) | [optional] |
 | **EdgeId** | **string** | Unique identifier of the edge device | [optional] |
+| **EligibleAgentCounts** | **List&lt;int?&gt;** | Number of eligible agents for each predictive routing attempt | [optional] |
 | **FlowInType** | **string** | Type of flow in that occurred when entering ACD. | [optional] |
 | **FlowOutType** | **string** | Type of flow out that occurred when emitting tFlowOut. | [optional] |
 | **JourneyActionId** | **string** | Identifier of the journey action. | [optional] |
@@ -69,6 +72,7 @@ title: AnalyticsSession
 | **UsedRouting** | **string** | Complete routing method | [optional] |
 | **VideoAddressSelf** | **string** | Direct Video address | [optional] |
 | **VideoRoomId** | **string** | A unique identifier for a PureCloud video room | [optional] |
+| **WaitingInteractionCounts** | **List&lt;int?&gt;** | Number of waiting interactions for each predictive routing attempt | [optional] |
 | **ProposedAgents** | [**List&lt;AnalyticsProposedAgent&gt;**](AnalyticsProposedAgent.html) | Proposed agents | [optional] |
 | **MediaEndpointStats** | [**List&lt;AnalyticsMediaEndpointStat&gt;**](AnalyticsMediaEndpointStat.html) | MediaEndpointStats associated with this session | [optional] |
 | **Flow** | [**AnalyticsFlow**](AnalyticsFlow.html) | IVR flow execution associated with this session | [optional] |

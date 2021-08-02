@@ -30,50 +30,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ButtonComponent" /> class.
         /// </summary>
-        /// <param name="Id">The ID of this component..</param>
-        /// <param name="Text">Deprecated - Use title instead..</param>
         /// <param name="Title">Text to show inside the button..</param>
         /// <param name="Actions">The button actions..</param>
-        public ButtonComponent(string Id = null, string Text = null, string Title = null, ContentActions Actions = null)
+        public ButtonComponent(string Title = null, ContentActions Actions = null)
         {
-            this.Id = Id;
-            this.Text = Text;
             this.Title = Title;
             this.Actions = Actions;
             
         }
-        
-        
-        
-        /// <summary>
-        /// The ID of this component.
-        /// </summary>
-        /// <value>The ID of this component.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Deprecated - Use title instead.
-        /// </summary>
-        /// <value>Deprecated - Use title instead.</value>
-        [DataMember(Name="text", EmitDefaultValue=false)]
-        public string Text { get; set; }
         
         
         
@@ -103,8 +71,6 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ButtonComponent {\n");
             
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Actions: ").Append(Actions).Append("\n");
             sb.Append("}\n");
@@ -148,16 +114,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Text == other.Text ||
-                    this.Text != null &&
-                    this.Text.Equals(other.Text)
-                ) &&
-                (
                     this.Title == other.Title ||
                     this.Title != null &&
                     this.Title.Equals(other.Title)
@@ -180,12 +136,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Text != null)
-                    hash = hash * 59 + this.Text.GetHashCode();
                 
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();

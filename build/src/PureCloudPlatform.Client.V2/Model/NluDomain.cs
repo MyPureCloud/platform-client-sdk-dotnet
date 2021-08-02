@@ -60,6 +60,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDomain" /> class.
@@ -74,12 +79,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Language">The language culture of the NLU domain, e.g. `en-us`, `de-de`..</param>
         /// <param name="DraftVersion">The draft version of that NLU domain..</param>
         /// <param name="LastPublishedVersion">The last published version of that NLU domain..</param>
-        public NluDomain(string Name = null, string Language = null, NluDomainVersion DraftVersion = null, NluDomainVersion LastPublishedVersion = null)
+        /// <param name="EngineVersion">The version of the NLU engine to use..</param>
+        public NluDomain(string Name = null, string Language = null, NluDomainVersion DraftVersion = null, NluDomainVersion LastPublishedVersion = null, string EngineVersion = null)
         {
             this.Name = Name;
             this.Language = Language;
             this.DraftVersion = DraftVersion;
             this.LastPublishedVersion = LastPublishedVersion;
+            this.EngineVersion = EngineVersion;
             
         }
         
@@ -149,6 +156,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The version of the NLU engine to use.
+        /// </summary>
+        /// <value>The version of the NLU engine to use.</value>
+        [DataMember(Name="engineVersion", EmitDefaultValue=false)]
+        public string EngineVersion { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -172,6 +188,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LastPublishedVersion: ").Append(LastPublishedVersion).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  EngineVersion: ").Append(EngineVersion).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -249,6 +266,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateModified.Equals(other.DateModified)
                 ) &&
                 (
+                    this.EngineVersion == other.EngineVersion ||
+                    this.EngineVersion != null &&
+                    this.EngineVersion.Equals(other.EngineVersion)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -287,6 +309,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
+                if (this.EngineVersion != null)
+                    hash = hash * 59 + this.EngineVersion.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

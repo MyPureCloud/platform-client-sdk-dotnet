@@ -56,6 +56,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets SystemType
         /// </summary>
@@ -230,7 +233,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
         /// <summary>
         /// Gets or Sets SystemType
         /// </summary>
@@ -284,8 +286,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Document" /> class.
@@ -299,6 +299,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Workspace">Workspace.</param>
         /// <param name="CreatedBy">CreatedBy.</param>
         /// <param name="UploadedBy">UploadedBy.</param>
+        /// <param name="SharingUri">SharingUri.</param>
         /// <param name="ContentType">ContentType.</param>
         /// <param name="ContentLength">ContentLength.</param>
         /// <param name="SystemType">SystemType.</param>
@@ -317,9 +318,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LockInfo">LockInfo.</param>
         /// <param name="Acl">A list of permitted action rights for the user making the request.</param>
         /// <param name="SharingStatus">SharingStatus.</param>
-        /// <param name="SharingUri">SharingUri.</param>
         /// <param name="DownloadSharingUri">DownloadSharingUri.</param>
-        public Document(string Name = null, int? ChangeNumber = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateUploaded = null, string ContentUri = null, DomainEntityRef Workspace = null, DomainEntityRef CreatedBy = null, DomainEntityRef UploadedBy = null, string ContentType = null, long? ContentLength = null, SystemTypeEnum? SystemType = null, string Filename = null, long? PageCount = null, bool? Read = null, string CallerAddress = null, string ReceiverAddress = null, List<string> Tags = null, List<TagValue> TagValues = null, List<DocumentAttribute> Attributes = null, List<DocumentThumbnail> Thumbnails = null, DomainEntityRef UploadStatus = null, string UploadDestinationUri = null, UploadMethodEnum? UploadMethod = null, LockInfo LockInfo = null, List<string> Acl = null, SharingStatusEnum? SharingStatus = null, string SharingUri = null, string DownloadSharingUri = null)
+        public Document(string Name = null, int? ChangeNumber = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateUploaded = null, string ContentUri = null, DomainEntityRef Workspace = null, DomainEntityRef CreatedBy = null, DomainEntityRef UploadedBy = null, string SharingUri = null, string ContentType = null, long? ContentLength = null, SystemTypeEnum? SystemType = null, string Filename = null, long? PageCount = null, bool? Read = null, string CallerAddress = null, string ReceiverAddress = null, List<string> Tags = null, List<TagValue> TagValues = null, List<DocumentAttribute> Attributes = null, List<DocumentThumbnail> Thumbnails = null, DomainEntityRef UploadStatus = null, string UploadDestinationUri = null, UploadMethodEnum? UploadMethod = null, LockInfo LockInfo = null, List<string> Acl = null, SharingStatusEnum? SharingStatus = null, string DownloadSharingUri = null)
         {
             this.Name = Name;
             this.ChangeNumber = ChangeNumber;
@@ -330,6 +330,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Workspace = Workspace;
             this.CreatedBy = CreatedBy;
             this.UploadedBy = UploadedBy;
+            this.SharingUri = SharingUri;
             this.ContentType = ContentType;
             this.ContentLength = ContentLength;
             this.SystemType = SystemType;
@@ -348,7 +349,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LockInfo = LockInfo;
             this.Acl = Acl;
             this.SharingStatus = SharingStatus;
-            this.SharingUri = SharingUri;
             this.DownloadSharingUri = DownloadSharingUri;
             
         }
@@ -436,6 +436,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="uploadedBy", EmitDefaultValue=false)]
         public DomainEntityRef UploadedBy { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets SharingUri
+        /// </summary>
+        [DataMember(Name="sharingUri", EmitDefaultValue=false)]
+        public string SharingUri { get; set; }
         
         
         
@@ -567,14 +575,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets SharingUri
-        /// </summary>
-        [DataMember(Name="sharingUri", EmitDefaultValue=false)]
-        public string SharingUri { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets DownloadSharingUri
         /// </summary>
         [DataMember(Name="downloadSharingUri", EmitDefaultValue=false)]
@@ -609,6 +609,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  UploadedBy: ").Append(UploadedBy).Append("\n");
+            sb.Append("  SharingUri: ").Append(SharingUri).Append("\n");
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  ContentLength: ").Append(ContentLength).Append("\n");
             sb.Append("  SystemType: ").Append(SystemType).Append("\n");
@@ -627,7 +628,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LockInfo: ").Append(LockInfo).Append("\n");
             sb.Append("  Acl: ").Append(Acl).Append("\n");
             sb.Append("  SharingStatus: ").Append(SharingStatus).Append("\n");
-            sb.Append("  SharingUri: ").Append(SharingUri).Append("\n");
             sb.Append("  DownloadSharingUri: ").Append(DownloadSharingUri).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -721,6 +721,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UploadedBy.Equals(other.UploadedBy)
                 ) &&
                 (
+                    this.SharingUri == other.SharingUri ||
+                    this.SharingUri != null &&
+                    this.SharingUri.Equals(other.SharingUri)
+                ) &&
+                (
                     this.ContentType == other.ContentType ||
                     this.ContentType != null &&
                     this.ContentType.Equals(other.ContentType)
@@ -811,11 +816,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SharingStatus.Equals(other.SharingStatus)
                 ) &&
                 (
-                    this.SharingUri == other.SharingUri ||
-                    this.SharingUri != null &&
-                    this.SharingUri.Equals(other.SharingUri)
-                ) &&
-                (
                     this.DownloadSharingUri == other.DownloadSharingUri ||
                     this.DownloadSharingUri != null &&
                     this.DownloadSharingUri.Equals(other.DownloadSharingUri)
@@ -868,6 +868,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.UploadedBy != null)
                     hash = hash * 59 + this.UploadedBy.GetHashCode();
+                
+                if (this.SharingUri != null)
+                    hash = hash * 59 + this.SharingUri.GetHashCode();
                 
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
@@ -922,9 +925,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SharingStatus != null)
                     hash = hash * 59 + this.SharingStatus.GetHashCode();
-                
-                if (this.SharingUri != null)
-                    hash = hash * 59 + this.SharingUri.GetHashCode();
                 
                 if (this.DownloadSharingUri != null)
                     hash = hash * 59 + this.DownloadSharingUri.GetHashCode();

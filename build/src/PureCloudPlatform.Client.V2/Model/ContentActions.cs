@@ -35,16 +35,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentActions" /> class.
@@ -52,15 +42,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Url">A URL of a web page to direct the user to..</param>
         /// <param name="UrlTarget">The target window in which to open the URL. If empty will open a blank page or tab..</param>
         /// <param name="Textback">Text to be sent back in reply when the item is selected..</param>
-        /// <param name="CommandName">Execute an organization&#39;s specific command..</param>
-        /// <param name="Context">Additional context for the command..</param>
-        public ContentActions(string Url = null, string UrlTarget = null, string Textback = null, string CommandName = null, Dictionary<string, Object> Context = null)
+        public ContentActions(string Url = null, string UrlTarget = null, string Textback = null)
         {
             this.Url = Url;
             this.UrlTarget = UrlTarget;
             this.Textback = Textback;
-            this.CommandName = CommandName;
-            this.Context = Context;
             
         }
         
@@ -92,24 +78,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Textback { get; set; }
         
         
-        
-        /// <summary>
-        /// Execute an organization&#39;s specific command.
-        /// </summary>
-        /// <value>Execute an organization&#39;s specific command.</value>
-        [DataMember(Name="commandName", EmitDefaultValue=false)]
-        public string CommandName { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Additional context for the command.
-        /// </summary>
-        /// <value>Additional context for the command.</value>
-        [DataMember(Name="context", EmitDefaultValue=false)]
-        public Dictionary<string, Object> Context { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -122,8 +90,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  UrlTarget: ").Append(UrlTarget).Append("\n");
             sb.Append("  Textback: ").Append(Textback).Append("\n");
-            sb.Append("  CommandName: ").Append(CommandName).Append("\n");
-            sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -178,16 +144,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Textback == other.Textback ||
                     this.Textback != null &&
                     this.Textback.Equals(other.Textback)
-                ) &&
-                (
-                    this.CommandName == other.CommandName ||
-                    this.CommandName != null &&
-                    this.CommandName.Equals(other.CommandName)
-                ) &&
-                (
-                    this.Context == other.Context ||
-                    this.Context != null &&
-                    this.Context.SequenceEqual(other.Context)
                 );
         }
 
@@ -211,12 +167,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Textback != null)
                     hash = hash * 59 + this.Textback.GetHashCode();
-                
-                if (this.CommandName != null)
-                    hash = hash * 59 + this.CommandName.GetHashCode();
-                
-                if (this.Context != null)
-                    hash = hash * 59 + this.Context.GetHashCode();
                 
                 return hash;
             }

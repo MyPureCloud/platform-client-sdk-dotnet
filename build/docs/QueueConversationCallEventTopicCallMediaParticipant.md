@@ -50,6 +50,7 @@ title: QueueConversationCallEventTopicCallMediaParticipant
 | **Dnis** | **string** |  | [optional] |
 | **DocumentId** | **string** |  | [optional] |
 | **MonitoredParticipantId** | **string** |  | [optional] |
+| **CoachedParticipantId** | **string** |  | [optional] |
 | **ConsultParticipantId** | **string** |  | [optional] |
 | **FaxStatus** | [**QueueConversationCallEventTopicFaxStatus**](QueueConversationCallEventTopicFaxStatus.html) |  | [optional] |
 {: class="table table-striped"}

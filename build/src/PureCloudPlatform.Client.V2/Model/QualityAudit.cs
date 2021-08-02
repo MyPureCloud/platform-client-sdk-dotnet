@@ -88,23 +88,23 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="User">User.</param>
         /// <param name="JobId">JobId.</param>
         /// <param name="Action">Action.</param>
-        /// <param name="Entity">Entity.</param>
         /// <param name="Level">Level.</param>
+        /// <param name="Entity">Entity.</param>
+        /// <param name="Changes">Changes.</param>
         /// <param name="Timestamp">Timestamp.</param>
         /// <param name="Status">Status.</param>
-        /// <param name="Changes">Changes.</param>
         /// <param name="EntityType">EntityType.</param>
-        public QualityAudit(string Name = null, User User = null, string JobId = null, string Action = null, AuditEntity Entity = null, string Level = null, string Timestamp = null, string Status = null, List<Change> Changes = null, string EntityType = null)
+        public QualityAudit(string Name = null, User User = null, string JobId = null, string Action = null, string Level = null, AuditEntity Entity = null, List<Change> Changes = null, string Timestamp = null, string Status = null, string EntityType = null)
         {
             this.Name = Name;
             this.User = User;
             this.JobId = JobId;
             this.Action = Action;
-            this.Entity = Entity;
             this.Level = Level;
+            this.Entity = Entity;
+            this.Changes = Changes;
             this.Timestamp = Timestamp;
             this.Status = Status;
-            this.Changes = Changes;
             this.EntityType = EntityType;
             
         }
@@ -153,6 +153,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets Level
+        /// </summary>
+        [DataMember(Name="level", EmitDefaultValue=false)]
+        public string Level { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Entity
         /// </summary>
         [DataMember(Name="entity", EmitDefaultValue=false)]
@@ -161,10 +169,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Level
+        /// Gets or Sets Changes
         /// </summary>
-        [DataMember(Name="level", EmitDefaultValue=false)]
-        public string Level { get; set; }
+        [DataMember(Name="changes", EmitDefaultValue=false)]
+        public List<Change> Changes { get; set; }
         
         
         
@@ -181,14 +189,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Changes
-        /// </summary>
-        [DataMember(Name="changes", EmitDefaultValue=false)]
-        public List<Change> Changes { get; set; }
         
         
         
@@ -222,11 +222,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  JobId: ").Append(JobId).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
-            sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("  Level: ").Append(Level).Append("\n");
+            sb.Append("  Entity: ").Append(Entity).Append("\n");
+            sb.Append("  Changes: ").Append(Changes).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  Changes: ").Append(Changes).Append("\n");
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -295,14 +295,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Action.Equals(other.Action)
                 ) &&
                 (
+                    this.Level == other.Level ||
+                    this.Level != null &&
+                    this.Level.Equals(other.Level)
+                ) &&
+                (
                     this.Entity == other.Entity ||
                     this.Entity != null &&
                     this.Entity.Equals(other.Entity)
                 ) &&
                 (
-                    this.Level == other.Level ||
-                    this.Level != null &&
-                    this.Level.Equals(other.Level)
+                    this.Changes == other.Changes ||
+                    this.Changes != null &&
+                    this.Changes.SequenceEqual(other.Changes)
                 ) &&
                 (
                     this.Timestamp == other.Timestamp ||
@@ -313,11 +318,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) &&
-                (
-                    this.Changes == other.Changes ||
-                    this.Changes != null &&
-                    this.Changes.SequenceEqual(other.Changes)
                 ) &&
                 (
                     this.EntityType == other.EntityType ||
@@ -358,20 +358,20 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
                 
+                if (this.Level != null)
+                    hash = hash * 59 + this.Level.GetHashCode();
+                
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
                 
-                if (this.Level != null)
-                    hash = hash * 59 + this.Level.GetHashCode();
+                if (this.Changes != null)
+                    hash = hash * 59 + this.Changes.GetHashCode();
                 
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
                 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
-                if (this.Changes != null)
-                    hash = hash * 59 + this.Changes.GetHashCode();
                 
                 if (this.EntityType != null)
                     hash = hash * 59 + this.EntityType.GetHashCode();

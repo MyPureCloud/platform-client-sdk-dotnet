@@ -451,6 +451,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -554,6 +557,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationCallEventTopicCallMediaParticipant" /> class.
@@ -601,9 +606,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Dnis">Dnis.</param>
         /// <param name="DocumentId">DocumentId.</param>
         /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
+        /// <param name="CoachedParticipantId">CoachedParticipantId.</param>
         /// <param name="ConsultParticipantId">ConsultParticipantId.</param>
         /// <param name="FaxStatus">FaxStatus.</param>
-        public QueueConversationCallEventTopicCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationCallEventTopicUriReference User = null, QueueConversationCallEventTopicUriReference Queue = null, QueueConversationCallEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationCallEventTopicErrorBody ErrorInfo = null, QueueConversationCallEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationCallEventTopicUriReference ExternalContact = null, QueueConversationCallEventTopicUriReference ExternalOrganization = null, QueueConversationCallEventTopicWrapup Wrapup = null, QueueConversationCallEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationCallEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, QueueConversationCallEventTopicUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, QueueConversationCallEventTopicFaxStatus FaxStatus = null)
+        public QueueConversationCallEventTopicCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationCallEventTopicUriReference User = null, QueueConversationCallEventTopicUriReference Queue = null, QueueConversationCallEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationCallEventTopicErrorBody ErrorInfo = null, QueueConversationCallEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationCallEventTopicUriReference ExternalContact = null, QueueConversationCallEventTopicUriReference ExternalOrganization = null, QueueConversationCallEventTopicWrapup Wrapup = null, QueueConversationCallEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationCallEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, QueueConversationCallEventTopicUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string ConsultParticipantId = null, QueueConversationCallEventTopicFaxStatus FaxStatus = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -648,6 +654,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Dnis = Dnis;
             this.DocumentId = DocumentId;
             this.MonitoredParticipantId = MonitoredParticipantId;
+            this.CoachedParticipantId = CoachedParticipantId;
             this.ConsultParticipantId = ConsultParticipantId;
             this.FaxStatus = FaxStatus;
             
@@ -970,6 +977,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets CoachedParticipantId
+        /// </summary>
+        [DataMember(Name="coachedParticipantId", EmitDefaultValue=false)]
+        public string CoachedParticipantId { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets ConsultParticipantId
         /// </summary>
         [DataMember(Name="consultParticipantId", EmitDefaultValue=false)]
@@ -1036,6 +1051,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Dnis: ").Append(Dnis).Append("\n");
             sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
+            sb.Append("  CoachedParticipantId: ").Append(CoachedParticipantId).Append("\n");
             sb.Append("  ConsultParticipantId: ").Append(ConsultParticipantId).Append("\n");
             sb.Append("  FaxStatus: ").Append(FaxStatus).Append("\n");
             sb.Append("}\n");
@@ -1294,6 +1310,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MonitoredParticipantId.Equals(other.MonitoredParticipantId)
                 ) &&
                 (
+                    this.CoachedParticipantId == other.CoachedParticipantId ||
+                    this.CoachedParticipantId != null &&
+                    this.CoachedParticipantId.Equals(other.CoachedParticipantId)
+                ) &&
+                (
                     this.ConsultParticipantId == other.ConsultParticipantId ||
                     this.ConsultParticipantId != null &&
                     this.ConsultParticipantId.Equals(other.ConsultParticipantId)
@@ -1445,6 +1466,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MonitoredParticipantId != null)
                     hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();
+                
+                if (this.CoachedParticipantId != null)
+                    hash = hash * 59 + this.CoachedParticipantId.GetHashCode();
                 
                 if (this.ConsultParticipantId != null)
                     hash = hash * 59 + this.ConsultParticipantId.GetHashCode();

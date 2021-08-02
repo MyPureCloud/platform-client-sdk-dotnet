@@ -636,6 +636,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Surveyinvite,
             
             /// <summary>
+            /// Enum Voicemail for "voicemail"
+            /// </summary>
+            [EnumMember(Value = "voicemail")]
+            Voicemail,
+            
+            /// <summary>
             /// Enum Workflow for "workflow"
             /// </summary>
             [EnumMember(Value = "workflow")]
@@ -1501,6 +1507,76 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets BlockedReasons
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum BlockedReasonsEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Pageurlconditionsnotmatching for "PageUrlConditionsNotMatching"
+            /// </summary>
+            [EnumMember(Value = "PageUrlConditionsNotMatching")]
+            Pageurlconditionsnotmatching,
+            
+            /// <summary>
+            /// Enum Alreadyexistingoffer for "AlreadyExistingOffer"
+            /// </summary>
+            [EnumMember(Value = "AlreadyExistingOffer")]
+            Alreadyexistingoffer,
+            
+            /// <summary>
+            /// Enum Triggerdateinfuture for "TriggerDateInFuture"
+            /// </summary>
+            [EnumMember(Value = "TriggerDateInFuture")]
+            Triggerdateinfuture,
+            
+            /// <summary>
+            /// Enum Multiplesimultaneousoffers for "MultipleSimultaneousOffers"
+            /// </summary>
+            [EnumMember(Value = "MultipleSimultaneousOffers")]
+            Multiplesimultaneousoffers,
+            
+            /// <summary>
+            /// Enum Frequencycapping for "FrequencyCapping"
+            /// </summary>
+            [EnumMember(Value = "FrequencyCapping")]
+            Frequencycapping,
+            
+            /// <summary>
+            /// Enum Offeredoutsideschedule for "OfferedOutsideSchedule"
+            /// </summary>
+            [EnumMember(Value = "OfferedOutsideSchedule")]
+            Offeredoutsideschedule,
+            
+            /// <summary>
+            /// Enum Servicelevelthrottling for "ServiceLevelThrottling"
+            /// </summary>
+            [EnumMember(Value = "ServiceLevelThrottling")]
+            Servicelevelthrottling,
+            
+            /// <summary>
+            /// Enum Noavailableagents for "NoAvailableAgents"
+            /// </summary>
+            [EnumMember(Value = "NoAvailableAgents")]
+            Noavailableagents
+        }
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1851,7 +1927,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BotFinalIntentList">The list of bot final intents used to filter bot views.</param>
         /// <param name="BotSlotList">The list of bot slots used to filter bot views.</param>
         /// <param name="BotResultList">The list of bot results used to filter bot views.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null, List<DevelopmentRoleListEnum> DevelopmentRoleList = null, List<DevelopmentTypeListEnum> DevelopmentTypeList = null, List<DevelopmentStatusListEnum> DevelopmentStatusList = null, List<string> DevelopmentModuleIds = null, bool? DevelopmentActivityOverdue = null, NumericRange CustomerSentimentScore = null, NumericRange CustomerSentimentTrend = null, List<string> FlowTransferTargets = null, string DevelopmentName = null, List<string> TopicIds = null, List<string> ExternalTags = null, bool? IsNotResponding = null, bool? IsAuthenticated = null, List<string> BotIds = null, List<string> BotVersions = null, List<BotMessageTypesEnum> BotMessageTypes = null, List<BotProviderListEnum> BotProviderList = null, List<BotProductListEnum> BotProductList = null, List<BotRecognitionFailureReasonListEnum> BotRecognitionFailureReasonList = null, List<string> BotIntentList = null, List<string> BotFinalIntentList = null, List<string> BotSlotList = null, List<BotResultListEnum> BotResultList = null)
+        /// <param name="BlockedReasons">The list of blocked reason used to filter action map constraints views.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null, List<DevelopmentRoleListEnum> DevelopmentRoleList = null, List<DevelopmentTypeListEnum> DevelopmentTypeList = null, List<DevelopmentStatusListEnum> DevelopmentStatusList = null, List<string> DevelopmentModuleIds = null, bool? DevelopmentActivityOverdue = null, NumericRange CustomerSentimentScore = null, NumericRange CustomerSentimentTrend = null, List<string> FlowTransferTargets = null, string DevelopmentName = null, List<string> TopicIds = null, List<string> ExternalTags = null, bool? IsNotResponding = null, bool? IsAuthenticated = null, List<string> BotIds = null, List<string> BotVersions = null, List<BotMessageTypesEnum> BotMessageTypes = null, List<BotProviderListEnum> BotProviderList = null, List<BotProductListEnum> BotProductList = null, List<BotRecognitionFailureReasonListEnum> BotRecognitionFailureReasonList = null, List<string> BotIntentList = null, List<string> BotFinalIntentList = null, List<string> BotSlotList = null, List<BotResultListEnum> BotResultList = null, List<BlockedReasonsEnum> BlockedReasons = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -1969,6 +2046,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.BotFinalIntentList = BotFinalIntentList;
             this.BotSlotList = BotSlotList;
             this.BotResultList = BotResultList;
+            this.BlockedReasons = BlockedReasons;
             
         }
         
@@ -3017,6 +3095,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<BotResultListEnum> BotResultList { get; set; }
         
         
+        
+        /// <summary>
+        /// The list of blocked reason used to filter action map constraints views
+        /// </summary>
+        /// <value>The list of blocked reason used to filter action map constraints views</value>
+        [DataMember(Name="blockedReasons", EmitDefaultValue=false)]
+        public List<BlockedReasonsEnum> BlockedReasons { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -3142,6 +3229,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  BotFinalIntentList: ").Append(BotFinalIntentList).Append("\n");
             sb.Append("  BotSlotList: ").Append(BotSlotList).Append("\n");
             sb.Append("  BotResultList: ").Append(BotResultList).Append("\n");
+            sb.Append("  BlockedReasons: ").Append(BlockedReasons).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -3761,6 +3849,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.BotResultList == other.BotResultList ||
                     this.BotResultList != null &&
                     this.BotResultList.SequenceEqual(other.BotResultList)
+                ) &&
+                (
+                    this.BlockedReasons == other.BlockedReasons ||
+                    this.BlockedReasons != null &&
+                    this.BlockedReasons.SequenceEqual(other.BlockedReasons)
                 );
         }
 
@@ -4123,6 +4216,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.BotResultList != null)
                     hash = hash * 59 + this.BotResultList.GetHashCode();
+                
+                if (this.BlockedReasons != null)
+                    hash = hash * 59 + this.BlockedReasons.GetHashCode();
                 
                 return hash;
             }

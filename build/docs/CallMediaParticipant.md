@@ -50,6 +50,7 @@ title: CallMediaParticipant
 | **DocumentId** | **string** | The ID of the Content Management document if the call is a fax. | [optional] |
 | **FaxStatus** | [**FaxStatus**](FaxStatus.html) | Extra fax information if the call is a fax. | [optional] |
 | **MonitoredParticipantId** | **string** | The ID of the participant being monitored when performing a call monitor. | [optional] |
+| **CoachedParticipantId** | **string** | The ID of the participant being coached when performing a call coach. | [optional] |
 | **ConsultParticipantId** | **string** | The ID of the consult transfer target participant when performing a consult transfer. | [optional] |
 | **UuiData** | **string** | User-to-User information which maps to a SIP header field defined in RFC7433. UUI data is used in the Public Switched Telephone Network (PSTN) for use cases described in RFC6567. | [optional] |
 {: class="table table-striped"}

@@ -142,6 +142,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The interaction type for this response.
         /// </summary>
@@ -161,6 +164,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The response type represented by the response.</value>
         [DataMember(Name="responseType", EmitDefaultValue=false)]
         public ResponseTypeEnum? ResponseType { get; set; }
+        
+        
         
         
         
@@ -187,7 +192,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SubstitutionsSchema">Metadata about the text substitutions in json schema format..</param>
         /// <param name="ResponseType">The response type represented by the response..</param>
         /// <param name="MessagingTemplate">An optional messaging template definition for responseType.MessagingTemplate..</param>
-        public Response(string Name = null, int? Version = null, List<DomainEntityRef> Libraries = null, List<ResponseText> Texts = null, User CreatedBy = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null, ResponseTypeEnum? ResponseType = null, MessagingTemplate MessagingTemplate = null)
+        /// <param name="Assets">Assets used in the response.</param>
+        public Response(string Name = null, int? Version = null, List<DomainEntityRef> Libraries = null, List<ResponseText> Texts = null, User CreatedBy = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null, ResponseTypeEnum? ResponseType = null, MessagingTemplate MessagingTemplate = null, List<AddressableEntityRef> Assets = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -199,6 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SubstitutionsSchema = SubstitutionsSchema;
             this.ResponseType = ResponseType;
             this.MessagingTemplate = MessagingTemplate;
+            this.Assets = Assets;
             
         }
         
@@ -298,6 +305,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Assets used in the response
+        /// </summary>
+        /// <value>Assets used in the response</value>
+        [DataMember(Name="assets", EmitDefaultValue=false)]
+        public List<AddressableEntityRef> Assets { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -326,6 +342,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SubstitutionsSchema: ").Append(SubstitutionsSchema).Append("\n");
             sb.Append("  ResponseType: ").Append(ResponseType).Append("\n");
             sb.Append("  MessagingTemplate: ").Append(MessagingTemplate).Append("\n");
+            sb.Append("  Assets: ").Append(Assets).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -428,6 +445,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessagingTemplate.Equals(other.MessagingTemplate)
                 ) &&
                 (
+                    this.Assets == other.Assets ||
+                    this.Assets != null &&
+                    this.Assets.SequenceEqual(other.Assets)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -481,6 +503,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MessagingTemplate != null)
                     hash = hash * 59 + this.MessagingTemplate.GetHashCode();
+                
+                if (this.Assets != null)
+                    hash = hash * 59 + this.Assets.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

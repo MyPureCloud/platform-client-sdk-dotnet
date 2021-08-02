@@ -93,6 +93,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Integrations,
             
             /// <summary>
+            /// Enum Knowledge for "Knowledge"
+            /// </summary>
+            [EnumMember(Value = "Knowledge")]
+            Knowledge,
+            
+            /// <summary>
             /// Enum Languageunderstanding for "LanguageUnderstanding"
             /// </summary>
             [EnumMember(Value = "LanguageUnderstanding")]
@@ -175,6 +181,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Triggers")]
             Triggers,
+            
+            /// <summary>
+            /// Enum Processautomation for "ProcessAutomation"
+            /// </summary>
+            [EnumMember(Value = "ProcessAutomation")]
+            Processautomation,
             
             /// <summary>
             /// Enum Webdeployments for "WebDeployments"

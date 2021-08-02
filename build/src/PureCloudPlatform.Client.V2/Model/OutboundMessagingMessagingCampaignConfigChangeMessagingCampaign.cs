@@ -126,11 +126,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets CampaignStatus
         /// </summary>
         [DataMember(Name="campaignStatus", EmitDefaultValue=false)]
         public CampaignStatusEnum? CampaignStatus { get; set; }
+        
+        
         
         
         
@@ -170,8 +175,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContactSorts">ContactSorts.</param>
         /// <param name="MessagesPerMinute">MessagesPerMinute.</param>
         /// <param name="SmsConfig">SmsConfig.</param>
+        /// <param name="EmailConfig">EmailConfig.</param>
         /// <param name="Errors">Errors.</param>
-        public OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign(string Id = null, OutboundMessagingMessagingCampaignConfigChangeUriReference Division = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, CampaignStatusEnum? CampaignStatus = null, OutboundMessagingMessagingCampaignConfigChangeUriReference CallableTimeSet = null, OutboundMessagingMessagingCampaignConfigChangeUriReference ContactList = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> DncLists = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> ContactListFilters = null, bool? AlwaysRunning = null, List<OutboundMessagingMessagingCampaignConfigChangeContactSort> ContactSorts = null, int? MessagesPerMinute = null, OutboundMessagingMessagingCampaignConfigChangeSmsConfig SmsConfig = null, List<OutboundMessagingMessagingCampaignConfigChangeErrorDetail> Errors = null)
+        public OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign(string Id = null, OutboundMessagingMessagingCampaignConfigChangeUriReference Division = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, CampaignStatusEnum? CampaignStatus = null, OutboundMessagingMessagingCampaignConfigChangeUriReference CallableTimeSet = null, OutboundMessagingMessagingCampaignConfigChangeUriReference ContactList = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> DncLists = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> ContactListFilters = null, bool? AlwaysRunning = null, List<OutboundMessagingMessagingCampaignConfigChangeContactSort> ContactSorts = null, int? MessagesPerMinute = null, OutboundMessagingMessagingCampaignConfigChangeSmsConfig SmsConfig = null, OutboundMessagingMessagingCampaignConfigChangeEmailConfig EmailConfig = null, List<OutboundMessagingMessagingCampaignConfigChangeErrorDetail> Errors = null)
         {
             this.Id = Id;
             this.Division = Division;
@@ -188,6 +194,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ContactSorts = ContactSorts;
             this.MessagesPerMinute = MessagesPerMinute;
             this.SmsConfig = SmsConfig;
+            this.EmailConfig = EmailConfig;
             this.Errors = Errors;
             
         }
@@ -309,6 +316,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets EmailConfig
+        /// </summary>
+        [DataMember(Name="emailConfig", EmitDefaultValue=false)]
+        public OutboundMessagingMessagingCampaignConfigChangeEmailConfig EmailConfig { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Errors
         /// </summary>
         [DataMember(Name="errors", EmitDefaultValue=false)]
@@ -339,6 +354,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContactSorts: ").Append(ContactSorts).Append("\n");
             sb.Append("  MessagesPerMinute: ").Append(MessagesPerMinute).Append("\n");
             sb.Append("  SmsConfig: ").Append(SmsConfig).Append("\n");
+            sb.Append("  EmailConfig: ").Append(EmailConfig).Append("\n");
             sb.Append("  Errors: ").Append(Errors).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -456,6 +472,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SmsConfig.Equals(other.SmsConfig)
                 ) &&
                 (
+                    this.EmailConfig == other.EmailConfig ||
+                    this.EmailConfig != null &&
+                    this.EmailConfig.Equals(other.EmailConfig)
+                ) &&
+                (
                     this.Errors == other.Errors ||
                     this.Errors != null &&
                     this.Errors.SequenceEqual(other.Errors)
@@ -518,6 +539,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SmsConfig != null)
                     hash = hash * 59 + this.SmsConfig.GetHashCode();
+                
+                if (this.EmailConfig != null)
+                    hash = hash * 59 + this.EmailConfig.GetHashCode();
                 
                 if (this.Errors != null)
                     hash = hash * 59 + this.Errors.GetHashCode();

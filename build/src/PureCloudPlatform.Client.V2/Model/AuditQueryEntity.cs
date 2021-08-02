@@ -390,6 +390,24 @@ namespace PureCloudPlatform.Client.V2.Model
             Ivr,
             
             /// <summary>
+            /// Enum Knowledgebase for "KnowledgeBase"
+            /// </summary>
+            [EnumMember(Value = "KnowledgeBase")]
+            Knowledgebase,
+            
+            /// <summary>
+            /// Enum Knowledgecategory for "KnowledgeCategory"
+            /// </summary>
+            [EnumMember(Value = "KnowledgeCategory")]
+            Knowledgecategory,
+            
+            /// <summary>
+            /// Enum Knowledgedocument for "KnowledgeDocument"
+            /// </summary>
+            [EnumMember(Value = "KnowledgeDocument")]
+            Knowledgedocument,
+            
+            /// <summary>
             /// Enum Line for "Line"
             /// </summary>
             [EnumMember(Value = "Line")]

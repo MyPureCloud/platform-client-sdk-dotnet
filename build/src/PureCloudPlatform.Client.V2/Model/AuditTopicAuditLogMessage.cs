@@ -458,6 +458,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Accesstoken,
             
             /// <summary>
+            /// Enum Actionmap for "ActionMap"
+            /// </summary>
+            [EnumMember(Value = "ActionMap")]
+            Actionmap,
+            
+            /// <summary>
+            /// Enum Actiontemplate for "ActionTemplate"
+            /// </summary>
+            [EnumMember(Value = "ActionTemplate")]
+            Actiontemplate,
+            
+            /// <summary>
             /// Enum Attemptlimits for "AttemptLimits"
             /// </summary>
             [EnumMember(Value = "AttemptLimits")]

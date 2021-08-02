@@ -12,6 +12,8 @@ title: Okta
 | **Disabled** | **bool?** |  | [optional] |
 | **IssuerURI** | **string** |  | [optional] |
 | **SsoTargetURI** | **string** |  | [optional] |
+| **SloURI** | **string** |  | [optional] |
+| **SloBinding** | **string** |  | [optional] |
 | **Certificate** | **string** |  | [optional] |
 | **Certificates** | **List&lt;string&gt;** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

@@ -7,7 +7,6 @@ title: ContentGeneric
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** | A unique ID assigned to this rich message content. | [optional] |
 | **Title** | **string** | Text to show in the title. | [optional] |
 | **Description** | **string** | Text to show in the description. | [optional] |
 | **Image** | **string** | URL of an image. | [optional] |

@@ -22,6 +22,7 @@ title: OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign
 | **ContactSorts** | [**List&lt;OutboundMessagingMessagingCampaignConfigChangeContactSort&gt;**](OutboundMessagingMessagingCampaignConfigChangeContactSort.html) |  | [optional] |
 | **MessagesPerMinute** | **int?** |  | [optional] |
 | **SmsConfig** | [**OutboundMessagingMessagingCampaignConfigChangeSmsConfig**](OutboundMessagingMessagingCampaignConfigChangeSmsConfig.html) |  | [optional] |
+| **EmailConfig** | [**OutboundMessagingMessagingCampaignConfigChangeEmailConfig**](OutboundMessagingMessagingCampaignConfigChangeEmailConfig.html) |  | [optional] |
 | **Errors** | [**List&lt;OutboundMessagingMessagingCampaignConfigChangeErrorDetail&gt;**](OutboundMessagingMessagingCampaignConfigChangeErrorDetail.html) |  | [optional] |
 {: class="table table-striped"}
 

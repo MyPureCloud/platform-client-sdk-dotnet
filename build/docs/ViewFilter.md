@@ -123,6 +123,7 @@ title: ViewFilter
 | **BotFinalIntentList** | **List&lt;string&gt;** | The list of bot final intents used to filter bot views | [optional] |
 | **BotSlotList** | **List&lt;string&gt;** | The list of bot slots used to filter bot views | [optional] |
 | **BotResultList** | **List&lt;string&gt;** | The list of bot results used to filter bot views | [optional] |
+| **BlockedReasons** | **List&lt;string&gt;** | The list of blocked reason used to filter action map constraints views | [optional] |
 {: class="table table-striped"}
 
 

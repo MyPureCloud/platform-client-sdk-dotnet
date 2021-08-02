@@ -72,6 +72,70 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The email delivery status
+        /// </summary>
+        /// <value>The email delivery status</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum DeliveryStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Deliveryfailed for "DeliveryFailed"
+            /// </summary>
+            [EnumMember(Value = "DeliveryFailed")]
+            Deliveryfailed,
+            
+            /// <summary>
+            /// Enum Deliverysuccess for "DeliverySuccess"
+            /// </summary>
+            [EnumMember(Value = "DeliverySuccess")]
+            Deliverysuccess,
+            
+            /// <summary>
+            /// Enum Failed for "Failed"
+            /// </summary>
+            [EnumMember(Value = "Failed")]
+            Failed,
+            
+            /// <summary>
+            /// Enum Queued for "Queued"
+            /// </summary>
+            [EnumMember(Value = "Queued")]
+            Queued,
+            
+            /// <summary>
+            /// Enum Read for "Read"
+            /// </summary>
+            [EnumMember(Value = "Read")]
+            Read,
+            
+            /// <summary>
+            /// Enum Received for "Received"
+            /// </summary>
+            [EnumMember(Value = "Received")]
+            Received,
+            
+            /// <summary>
+            /// Enum Sent for "Sent"
+            /// </summary>
+            [EnumMember(Value = "Sent")]
+            Sent
+        }
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
         /// The direction of the communication
         /// </summary>
         /// <value>The direction of the communication</value>
@@ -98,6 +162,9 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
+        
+        
+        
         
         
         
@@ -459,12 +526,28 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        /// <summary>
+        /// The email delivery status
+        /// </summary>
+        /// <value>The email delivery status</value>
+        [DataMember(Name="deliveryStatus", EmitDefaultValue=false)]
+        public DeliveryStatusEnum? DeliveryStatus { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The direction of the communication
         /// </summary>
         /// <value>The direction of the communication</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
+        
+        
         
         
         
@@ -579,6 +662,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsSession" /> class.
@@ -600,11 +685,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallbackUserName">The name of the user requesting a call back.</param>
         /// <param name="CobrowseRole">Describes side of the cobrowse (sharer or viewer).</param>
         /// <param name="CobrowseRoomId">A unique identifier for a PureCloud cobrowse room.</param>
+        /// <param name="DeliveryStatus">The email delivery status.</param>
+        /// <param name="DeliveryStatusChangeDate">Date and time of the most recent delivery status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Direction">The direction of the communication.</param>
         /// <param name="DispositionAnalyzer">(Dialer) Analyzer (for example speech.person).</param>
         /// <param name="DispositionName">(Dialer) Result of the analysis (for example disposition.classification.callable.machine).</param>
         /// <param name="Dnis">Dialed number identification service (number dialed by the calling party).</param>
         /// <param name="EdgeId">Unique identifier of the edge device.</param>
+        /// <param name="EligibleAgentCounts">Number of eligible agents for each predictive routing attempt.</param>
         /// <param name="FlowInType">Type of flow in that occurred when entering ACD..</param>
         /// <param name="FlowOutType">Type of flow out that occurred when emitting tFlowOut..</param>
         /// <param name="JourneyActionId">Identifier of the journey action..</param>
@@ -645,12 +733,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UsedRouting">Complete routing method.</param>
         /// <param name="VideoAddressSelf">Direct Video address.</param>
         /// <param name="VideoRoomId">A unique identifier for a PureCloud video room.</param>
+        /// <param name="WaitingInteractionCounts">Number of waiting interactions for each predictive routing attempt.</param>
         /// <param name="ProposedAgents">Proposed agents.</param>
         /// <param name="MediaEndpointStats">MediaEndpointStats associated with this session.</param>
         /// <param name="Flow">IVR flow execution associated with this session.</param>
         /// <param name="Metrics">List of metrics for this session.</param>
         /// <param name="Segments">List of segments for this session.</param>
-        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, string CobrowseRole = null, string CobrowseRoomId = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null)
+        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, string CobrowseRole = null, string CobrowseRoomId = null, DeliveryStatusEnum? DeliveryStatus = null, DateTime? DeliveryStatusChangeDate = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<int?> WaitingInteractionCounts = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null)
         {
             this.ActiveSkillIds = ActiveSkillIds;
             this.AcwSkipped = AcwSkipped;
@@ -669,11 +758,14 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CallbackUserName = CallbackUserName;
             this.CobrowseRole = CobrowseRole;
             this.CobrowseRoomId = CobrowseRoomId;
+            this.DeliveryStatus = DeliveryStatus;
+            this.DeliveryStatusChangeDate = DeliveryStatusChangeDate;
             this.Direction = Direction;
             this.DispositionAnalyzer = DispositionAnalyzer;
             this.DispositionName = DispositionName;
             this.Dnis = Dnis;
             this.EdgeId = EdgeId;
+            this.EligibleAgentCounts = EligibleAgentCounts;
             this.FlowInType = FlowInType;
             this.FlowOutType = FlowOutType;
             this.JourneyActionId = JourneyActionId;
@@ -714,6 +806,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.UsedRouting = UsedRouting;
             this.VideoAddressSelf = VideoAddressSelf;
             this.VideoRoomId = VideoRoomId;
+            this.WaitingInteractionCounts = WaitingInteractionCounts;
             this.ProposedAgents = ProposedAgents;
             this.MediaEndpointStats = MediaEndpointStats;
             this.Flow = Flow;
@@ -880,6 +973,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Date and time of the most recent delivery status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Date and time of the most recent delivery status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="deliveryStatusChangeDate", EmitDefaultValue=false)]
+        public DateTime? DeliveryStatusChangeDate { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
         /// (Dialer) Analyzer (for example speech.person)
         /// </summary>
         /// <value>(Dialer) Analyzer (for example speech.person)</value>
@@ -912,6 +1016,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Unique identifier of the edge device</value>
         [DataMember(Name="edgeId", EmitDefaultValue=false)]
         public string EdgeId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Number of eligible agents for each predictive routing attempt
+        /// </summary>
+        /// <value>Number of eligible agents for each predictive routing attempt</value>
+        [DataMember(Name="eligibleAgentCounts", EmitDefaultValue=false)]
+        public List<int?> EligibleAgentCounts { get; set; }
         
         
         
@@ -1262,6 +1375,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Number of waiting interactions for each predictive routing attempt
+        /// </summary>
+        /// <value>Number of waiting interactions for each predictive routing attempt</value>
+        [DataMember(Name="waitingInteractionCounts", EmitDefaultValue=false)]
+        public List<int?> WaitingInteractionCounts { get; set; }
+        
+        
+        
+        /// <summary>
         /// Proposed agents
         /// </summary>
         /// <value>Proposed agents</value>
@@ -1331,11 +1453,14 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
             sb.Append("  CobrowseRole: ").Append(CobrowseRole).Append("\n");
             sb.Append("  CobrowseRoomId: ").Append(CobrowseRoomId).Append("\n");
+            sb.Append("  DeliveryStatus: ").Append(DeliveryStatus).Append("\n");
+            sb.Append("  DeliveryStatusChangeDate: ").Append(DeliveryStatusChangeDate).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  DispositionAnalyzer: ").Append(DispositionAnalyzer).Append("\n");
             sb.Append("  DispositionName: ").Append(DispositionName).Append("\n");
             sb.Append("  Dnis: ").Append(Dnis).Append("\n");
             sb.Append("  EdgeId: ").Append(EdgeId).Append("\n");
+            sb.Append("  EligibleAgentCounts: ").Append(EligibleAgentCounts).Append("\n");
             sb.Append("  FlowInType: ").Append(FlowInType).Append("\n");
             sb.Append("  FlowOutType: ").Append(FlowOutType).Append("\n");
             sb.Append("  JourneyActionId: ").Append(JourneyActionId).Append("\n");
@@ -1376,6 +1501,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UsedRouting: ").Append(UsedRouting).Append("\n");
             sb.Append("  VideoAddressSelf: ").Append(VideoAddressSelf).Append("\n");
             sb.Append("  VideoRoomId: ").Append(VideoRoomId).Append("\n");
+            sb.Append("  WaitingInteractionCounts: ").Append(WaitingInteractionCounts).Append("\n");
             sb.Append("  ProposedAgents: ").Append(ProposedAgents).Append("\n");
             sb.Append("  MediaEndpointStats: ").Append(MediaEndpointStats).Append("\n");
             sb.Append("  Flow: ").Append(Flow).Append("\n");
@@ -1507,6 +1633,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CobrowseRoomId.Equals(other.CobrowseRoomId)
                 ) &&
                 (
+                    this.DeliveryStatus == other.DeliveryStatus ||
+                    this.DeliveryStatus != null &&
+                    this.DeliveryStatus.Equals(other.DeliveryStatus)
+                ) &&
+                (
+                    this.DeliveryStatusChangeDate == other.DeliveryStatusChangeDate ||
+                    this.DeliveryStatusChangeDate != null &&
+                    this.DeliveryStatusChangeDate.Equals(other.DeliveryStatusChangeDate)
+                ) &&
+                (
                     this.Direction == other.Direction ||
                     this.Direction != null &&
                     this.Direction.Equals(other.Direction)
@@ -1530,6 +1666,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EdgeId == other.EdgeId ||
                     this.EdgeId != null &&
                     this.EdgeId.Equals(other.EdgeId)
+                ) &&
+                (
+                    this.EligibleAgentCounts == other.EligibleAgentCounts ||
+                    this.EligibleAgentCounts != null &&
+                    this.EligibleAgentCounts.SequenceEqual(other.EligibleAgentCounts)
                 ) &&
                 (
                     this.FlowInType == other.FlowInType ||
@@ -1732,6 +1873,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.VideoRoomId.Equals(other.VideoRoomId)
                 ) &&
                 (
+                    this.WaitingInteractionCounts == other.WaitingInteractionCounts ||
+                    this.WaitingInteractionCounts != null &&
+                    this.WaitingInteractionCounts.SequenceEqual(other.WaitingInteractionCounts)
+                ) &&
+                (
                     this.ProposedAgents == other.ProposedAgents ||
                     this.ProposedAgents != null &&
                     this.ProposedAgents.SequenceEqual(other.ProposedAgents)
@@ -1821,6 +1967,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.CobrowseRoomId != null)
                     hash = hash * 59 + this.CobrowseRoomId.GetHashCode();
                 
+                if (this.DeliveryStatus != null)
+                    hash = hash * 59 + this.DeliveryStatus.GetHashCode();
+                
+                if (this.DeliveryStatusChangeDate != null)
+                    hash = hash * 59 + this.DeliveryStatusChangeDate.GetHashCode();
+                
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
                 
@@ -1835,6 +1987,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.EdgeId != null)
                     hash = hash * 59 + this.EdgeId.GetHashCode();
+                
+                if (this.EligibleAgentCounts != null)
+                    hash = hash * 59 + this.EligibleAgentCounts.GetHashCode();
                 
                 if (this.FlowInType != null)
                     hash = hash * 59 + this.FlowInType.GetHashCode();
@@ -1955,6 +2110,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.VideoRoomId != null)
                     hash = hash * 59 + this.VideoRoomId.GetHashCode();
+                
+                if (this.WaitingInteractionCounts != null)
+                    hash = hash * 59 + this.WaitingInteractionCounts.GetHashCode();
                 
                 if (this.ProposedAgents != null)
                     hash = hash * 59 + this.ProposedAgents.GetHashCode();

@@ -50,25 +50,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentGeneric" /> class.
         /// </summary>
-        /// <param name="Id">A unique ID assigned to this rich message content..</param>
         /// <param name="Title">Text to show in the title..</param>
         /// <param name="Description">Text to show in the description..</param>
         /// <param name="Image">URL of an image..</param>
         /// <param name="Video">URL of a video..</param>
         /// <param name="Actions">Actions to be taken..</param>
         /// <param name="Components">An array of component objects..</param>
-        public ContentGeneric(string Id = null, string Title = null, string Description = null, string Image = null, string Video = null, ContentActions Actions = null, List<ButtonComponent> Components = null)
+        public ContentGeneric(string Title = null, string Description = null, string Image = null, string Video = null, ContentActions Actions = null, List<ButtonComponent> Components = null)
         {
-            this.Id = Id;
             this.Title = Title;
             this.Description = Description;
             this.Image = Image;
@@ -77,15 +70,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Components = Components;
             
         }
-        
-        
-        
-        /// <summary>
-        /// A unique ID assigned to this rich message content.
-        /// </summary>
-        /// <value>A unique ID assigned to this rich message content.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
         
         
         
@@ -151,7 +135,6 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ContentGeneric {\n");
             
-            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Image: ").Append(Image).Append("\n");
@@ -199,11 +182,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
                     this.Title == other.Title ||
                     this.Title != null &&
                     this.Title.Equals(other.Title)
@@ -246,9 +224,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();

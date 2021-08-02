@@ -10,11 +10,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteKnowledgeKnowledgebase**](KnowledgeApi.html#deleteknowledgeknowledgebase) | **DELETE** /api/v2/knowledge/knowledgebases/{knowledgeBaseId} | Delete knowledge base |
 | [**DeleteKnowledgeKnowledgebaseLanguageCategory**](KnowledgeApi.html#deleteknowledgeknowledgebaselanguagecategory) | **DELETE** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId} | Delete category |
 | [**DeleteKnowledgeKnowledgebaseLanguageDocument**](KnowledgeApi.html#deleteknowledgeknowledgebaselanguagedocument) | **DELETE** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId} | Delete document |
+| [**DeleteKnowledgeKnowledgebaseLanguageDocumentsImport**](KnowledgeApi.html#deleteknowledgeknowledgebaselanguagedocumentsimport) | **DELETE** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId} | Delete import operation |
 | [**GetKnowledgeKnowledgebase**](KnowledgeApi.html#getknowledgeknowledgebase) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId} | Get knowledge base |
 | [**GetKnowledgeKnowledgebaseLanguageCategories**](KnowledgeApi.html#getknowledgeknowledgebaselanguagecategories) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories | Get categories |
 | [**GetKnowledgeKnowledgebaseLanguageCategory**](KnowledgeApi.html#getknowledgeknowledgebaselanguagecategory) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId} | Get category |
 | [**GetKnowledgeKnowledgebaseLanguageDocument**](KnowledgeApi.html#getknowledgeknowledgebaselanguagedocument) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId} | Get document |
 | [**GetKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeApi.html#getknowledgeknowledgebaselanguagedocuments) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents | Get documents |
+| [**GetKnowledgeKnowledgebaseLanguageDocumentsImport**](KnowledgeApi.html#getknowledgeknowledgebaselanguagedocumentsimport) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId} | Get import operation report |
 | [**GetKnowledgeKnowledgebaseLanguageTraining**](KnowledgeApi.html#getknowledgeknowledgebaselanguagetraining) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings/{trainingId} | Get training detail |
 | [**GetKnowledgeKnowledgebaseLanguageTrainings**](KnowledgeApi.html#getknowledgeknowledgebaselanguagetrainings) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings | Get all trainings information for a knowledgebase |
 | [**GetKnowledgeKnowledgebases**](KnowledgeApi.html#getknowledgeknowledgebases) | **GET** /api/v2/knowledge/knowledgebases | Get knowledge bases |
@@ -22,8 +24,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchKnowledgeKnowledgebaseLanguageCategory**](KnowledgeApi.html#patchknowledgeknowledgebaselanguagecategory) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId} | Update category |
 | [**PatchKnowledgeKnowledgebaseLanguageDocument**](KnowledgeApi.html#patchknowledgeknowledgebaselanguagedocument) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId} | Update document |
 | [**PatchKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeApi.html#patchknowledgeknowledgebaselanguagedocuments) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents | Update documents collection |
+| [**PatchKnowledgeKnowledgebaseLanguageDocumentsImport**](KnowledgeApi.html#patchknowledgeknowledgebaselanguagedocumentsimport) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId} | Start import operation |
+| [**PostKnowledgeDocumentuploads**](KnowledgeApi.html#postknowledgedocumentuploads) | **POST** /api/v2/knowledge/documentuploads | Creates a presigned URL for uploading a knowledge import file with a set of documents |
 | [**PostKnowledgeKnowledgebaseLanguageCategories**](KnowledgeApi.html#postknowledgeknowledgebaselanguagecategories) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories | Create new category |
 | [**PostKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeApi.html#postknowledgeknowledgebaselanguagedocuments) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents | Create document |
+| [**PostKnowledgeKnowledgebaseLanguageDocumentsImports**](KnowledgeApi.html#postknowledgeknowledgebaselanguagedocumentsimports) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports | Create import operation |
 | [**PostKnowledgeKnowledgebaseLanguageTrainingPromote**](KnowledgeApi.html#postknowledgeknowledgebaselanguagetrainingpromote) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings/{trainingId}/promote | Promote trained documents from draft state to active. |
 | [**PostKnowledgeKnowledgebaseLanguageTrainings**](KnowledgeApi.html#postknowledgeknowledgebaselanguagetrainings) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings | Trigger training |
 | [**PostKnowledgeKnowledgebaseSearch**](KnowledgeApi.html#postknowledgeknowledgebasesearch) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/search | Search Documents |
@@ -232,6 +237,74 @@ namespace Example
 ### Return type
 
 [**KnowledgeDocument**](KnowledgeDocument.html)
+
+<a name="deleteknowledgeknowledgebaselanguagedocumentsimport"></a>
+
+## void DeleteKnowledgeKnowledgebaseLanguageDocumentsImport (string knowledgeBaseId, string languageCode, string importId)
+
+
+
+Delete import operation
+
+
+
+Requires ALL permissions: 
+
+* knowledge:document:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteKnowledgeKnowledgebaseLanguageDocumentsImportExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var languageCode = en-US;  // string | Language code, format: iso2-LOCALE
+            var importId = importId_example;  // string | Import ID
+
+            try
+            { 
+                // Delete import operation
+                apiInstance.DeleteKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId, languageCode, importId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.DeleteKnowledgeKnowledgebaseLanguageDocumentsImport: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
+| **importId** | **string**| Import ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="getknowledgeknowledgebase"></a>
 
@@ -593,6 +666,75 @@ namespace Example
 ### Return type
 
 [**DocumentListing**](DocumentListing.html)
+
+<a name="getknowledgeknowledgebaselanguagedocumentsimport"></a>
+
+## [**KnowledgeImport**](KnowledgeImport.html) GetKnowledgeKnowledgebaseLanguageDocumentsImport (string knowledgeBaseId, string languageCode, string importId)
+
+
+
+Get import operation report
+
+
+
+Requires ALL permissions: 
+
+* knowledge:document:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseLanguageDocumentsImportExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var languageCode = en-US;  // string | Language code, format: iso2-LOCALE
+            var importId = importId_example;  // string | Import ID
+
+            try
+            { 
+                // Get import operation report
+                KnowledgeImport result = apiInstance.GetKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId, languageCode, importId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseLanguageDocumentsImport: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
+| **importId** | **string**| Import ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeImport**](KnowledgeImport.html)
 
 <a name="getknowledgeknowledgebaselanguagetraining"></a>
 
@@ -1095,6 +1237,143 @@ namespace Example
 
 [**DocumentListing**](DocumentListing.html)
 
+<a name="patchknowledgeknowledgebaselanguagedocumentsimport"></a>
+
+## [**KnowledgeImport**](KnowledgeImport.html) PatchKnowledgeKnowledgebaseLanguageDocumentsImport (string knowledgeBaseId, string languageCode, string importId, ImportStatusRequest body)
+
+
+
+Start import operation
+
+
+
+Requires ALL permissions: 
+
+* knowledge:document:edit
+* knowledge:document:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchKnowledgeKnowledgebaseLanguageDocumentsImportExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var languageCode = en-US;  // string | Language code, format: iso2-LOCALE
+            var importId = importId_example;  // string | Import ID
+            var body = new ImportStatusRequest(); // ImportStatusRequest | 
+
+            try
+            { 
+                // Start import operation
+                KnowledgeImport result = apiInstance.PatchKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId, languageCode, importId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PatchKnowledgeKnowledgebaseLanguageDocumentsImport: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
+| **importId** | **string**| Import ID |  |
+| **body** | [**ImportStatusRequest**](ImportStatusRequest.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeImport**](KnowledgeImport.html)
+
+<a name="postknowledgedocumentuploads"></a>
+
+## [**UploadUrlResponse**](UploadUrlResponse.html) PostKnowledgeDocumentuploads (UploadUrlRequest body)
+
+
+
+Creates a presigned URL for uploading a knowledge import file with a set of documents
+
+
+
+Requires ALL permissions: 
+
+* knowledge:document:upload
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeDocumentuploadsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var body = new UploadUrlRequest(); // UploadUrlRequest | query
+
+            try
+            { 
+                // Creates a presigned URL for uploading a knowledge import file with a set of documents
+                UploadUrlResponse result = apiInstance.PostKnowledgeDocumentuploads(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeDocumentuploads: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**UploadUrlRequest**](UploadUrlRequest.html)| query |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse.html)
+
 <a name="postknowledgeknowledgebaselanguagecategories"></a>
 
 ## [**KnowledgeExtendedCategory**](KnowledgeExtendedCategory.html) PostKnowledgeKnowledgebaseLanguageCategories (string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body)
@@ -1232,6 +1511,75 @@ namespace Example
 ### Return type
 
 [**KnowledgeDocument**](KnowledgeDocument.html)
+
+<a name="postknowledgeknowledgebaselanguagedocumentsimports"></a>
+
+## [**KnowledgeImport**](KnowledgeImport.html) PostKnowledgeKnowledgebaseLanguageDocumentsImports (string knowledgeBaseId, string languageCode, KnowledgeImport body)
+
+
+
+Create import operation
+
+
+
+Requires ALL permissions: 
+
+* knowledge:document:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseLanguageDocumentsImportsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var languageCode = en-US;  // string | Language code, format: iso2-LOCALE
+            var body = new KnowledgeImport(); // KnowledgeImport | 
+
+            try
+            { 
+                // Create import operation
+                KnowledgeImport result = apiInstance.PostKnowledgeKnowledgebaseLanguageDocumentsImports(knowledgeBaseId, languageCode, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseLanguageDocumentsImports: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, de-DE |
+| **body** | [**KnowledgeImport**](KnowledgeImport.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeImport**](KnowledgeImport.html)
 
 <a name="postknowledgeknowledgebaselanguagetrainingpromote"></a>
 

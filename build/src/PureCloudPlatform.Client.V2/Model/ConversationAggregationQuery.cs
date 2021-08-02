@@ -130,6 +130,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Convertedto,
             
             /// <summary>
+            /// Enum Deliverystatus for "deliveryStatus"
+            /// </summary>
+            [EnumMember(Value = "deliveryStatus")]
+            Deliverystatus,
+            
+            /// <summary>
             /// Enum Direction for "direction"
             /// </summary>
             [EnumMember(Value = "direction")]
@@ -158,6 +164,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "edgeId")]
             Edgeid,
+            
+            /// <summary>
+            /// Enum Eligibleagentcount for "eligibleAgentCount"
+            /// </summary>
+            [EnumMember(Value = "eligibleAgentCount")]
+            Eligibleagentcount,
             
             /// <summary>
             /// Enum Externalcontactid for "externalContactId"
@@ -446,6 +458,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "userId")]
             Userid,
+            
+            /// <summary>
+            /// Enum Waitinginteractioncount for "waitingInteractionCount"
+            /// </summary>
+            [EnumMember(Value = "waitingInteractionCount")]
+            Waitinginteractioncount,
             
             /// <summary>
             /// Enum Wrapupcode for "wrapUpCode"

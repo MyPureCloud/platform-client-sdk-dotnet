@@ -521,7 +521,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum TopicTrendDetailView for "TOPIC_TREND_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "TOPIC_TREND_DETAIL_VIEW")]
-            TopicTrendDetailView
+            TopicTrendDetailView,
+            
+            /// <summary>
+            /// Enum ActionMapBlockedConstraintsDetailView for "ACTION_MAP_BLOCKED_CONSTRAINTS_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "ACTION_MAP_BLOCKED_CONSTRAINTS_DETAIL_VIEW")]
+            ActionMapBlockedConstraintsDetailView,
+            
+            /// <summary>
+            /// Enum ActionMapBlockedConstraintsIntervalDetailView for "ACTION_MAP_BLOCKED_CONSTRAINTS_INTERVAL_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "ACTION_MAP_BLOCKED_CONSTRAINTS_INTERVAL_DETAIL_VIEW")]
+            ActionMapBlockedConstraintsIntervalDetailView
         }
         
         
