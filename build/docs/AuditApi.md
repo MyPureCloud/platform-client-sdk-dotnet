@@ -12,7 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAuditsQueryTransactionId**](AuditApi.html#getauditsquerytransactionid) | **GET** /api/v2/audits/query/{transactionId} | Get status of audit query execution |
 | [**GetAuditsQueryTransactionIdResults**](AuditApi.html#getauditsquerytransactionidresults) | **GET** /api/v2/audits/query/{transactionId}/results | Get results of audit query |
 | [**PostAuditsQuery**](AuditApi.html#postauditsquery) | **POST** /api/v2/audits/query | Create audit query execution |
-| [**PostAuditsQueryRealtime**](AuditApi.html#postauditsqueryrealtime) | **POST** /api/v2/audits/query/realtime | This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits. |
+| [**PostAuditsQueryRealtime**](AuditApi.html#postauditsqueryrealtime) | **POST** /api/v2/audits/query/realtime | This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. |
 {: class="table table-striped"}
 
 <a name="getauditsqueryrealtimeservicemapping"></a>
@@ -342,7 +342,7 @@ namespace Example
 
 
 
-This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
+This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
 
 
 
@@ -377,7 +377,7 @@ namespace Example
 
             try
             { 
-                // This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
+                // This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
                 AuditRealtimeQueryResultsResponse result = apiInstance.PostAuditsQueryRealtime(body, expand);
                 Debug.WriteLine(result);
             }

@@ -949,7 +949,7 @@ namespace Example
 
 <a name="getspeechandtextanalyticstopics"></a>
 
-## [**TopicsEntityListing**](TopicsEntityListing.html) GetSpeechandtextanalyticsTopics (string nextPage = null, int? pageSize = null)
+## [**TopicsEntityListing**](TopicsEntityListing.html) GetSpeechandtextanalyticsTopics (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null)
 
 
 
@@ -985,11 +985,14 @@ namespace Example
             var apiInstance = new SpeechTextAnalyticsApi();
             var nextPage = nextPage_example;  // string | The key for listing the next page (optional) 
             var pageSize = 56;  // int? | The page size for the listing (optional)  (default to 20)
+            var state = state_example;  // string | Topic state (optional) 
+            var name = name_example;  // string | Case insensitive partial name to filter by (optional) 
+            var ids = new List<string>(); // List<string> | Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional) 
 
             try
             { 
                 // Get the list of Speech & Text Analytics topics
-                TopicsEntityListing result = apiInstance.GetSpeechandtextanalyticsTopics(nextPage, pageSize);
+                TopicsEntityListing result = apiInstance.GetSpeechandtextanalyticsTopics(nextPage, pageSize, state, name, ids);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1008,6 +1011,9 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **nextPage** | **string**| The key for listing the next page | [optional]  |
 | **pageSize** | **int?**| The page size for the listing | [optional] [default to 20] |
+| **state** | **string**| Topic state | [optional] <br />**Values**: latest, published |
+| **name** | **string**| Case insensitive partial name to filter by | [optional]  |
+| **ids** | [**List<string>**](string.html)| Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

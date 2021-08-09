@@ -27,9 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The recipient messaging address messenger type. Currently SMS is the only one supported. WhatsApp will be supported in a future release.
+        /// The recipient messaging address messenger type. Currently SMS and Open are the only supported types. WhatsApp will be supported in a future release
         /// </summary>
-        /// <value>The recipient messaging address messenger type. Currently SMS is the only one supported. WhatsApp will be supported in a future release.</value>
+        /// <value>The recipient messaging address messenger type. Currently SMS and Open are the only supported types. WhatsApp will be supported in a future release</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ToAddressMessengerTypeEnum
         {
@@ -99,9 +99,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The recipient messaging address messenger type. Currently SMS is the only one supported. WhatsApp will be supported in a future release.
+        /// The recipient messaging address messenger type. Currently SMS and Open are the only supported types. WhatsApp will be supported in a future release
         /// </summary>
-        /// <value>The recipient messaging address messenger type. Currently SMS is the only one supported. WhatsApp will be supported in a future release.</value>
+        /// <value>The recipient messaging address messenger type. Currently SMS and Open are the only supported types. WhatsApp will be supported in a future release</value>
         [DataMember(Name="toAddressMessengerType", EmitDefaultValue=false)]
         public ToAddressMessengerTypeEnum? ToAddressMessengerType { get; set; }
         
@@ -122,7 +122,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="FromAddress">The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned SMS phone number. For a WhatsApp messenger type use the provisioned WhatsApp integration’s ID (required).</param>
         /// <param name="ToAddress">The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234. (required).</param>
-        /// <param name="ToAddressMessengerType">The recipient messaging address messenger type. Currently SMS is the only one supported. WhatsApp will be supported in a future release. (required).</param>
+        /// <param name="ToAddressMessengerType">The recipient messaging address messenger type. Currently SMS and Open are the only supported types. WhatsApp will be supported in a future release (required).</param>
         /// <param name="TextBody">The text of the message to send. This field is required in the case of SMS messenger type.</param>
         /// <param name="MessagingTemplate">The messaging template to use in the case of WhatsApp messenger type. This field is required when using WhatsApp messenger type.</param>
         public SendAgentlessOutboundMessageRequest(string FromAddress = null, string ToAddress = null, ToAddressMessengerTypeEnum? ToAddressMessengerType = null, string TextBody = null, MessagingTemplateRequest MessagingTemplate = null)

@@ -2277,6 +2277,7 @@ Requires ANY permissions:
 
 * outbound:campaign:view
 * outbound:messagingCampaign:view
+* outbound:emailCampaign:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2333,7 +2334,7 @@ namespace Example
 | **id** | [**List<string>**](string.html)| Campaign ID(s) | [optional]  |
 | **name** | **string**| Campaign name(s) | [optional]  |
 | **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
-| **mediaType** | [**List<string>**](string.html)| Media type(s) | [optional] <br />**Values**: sms, voice |
+| **mediaType** | [**List<string>**](string.html)| Media type(s) | [optional] <br />**Values**: email, sms, voice |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
@@ -2355,6 +2356,7 @@ Requires ANY permissions:
 
 * outbound:campaign:search
 * outbound:messagingCampaign:search
+* outbound:emailCampaign:search
 
 ### Example
 ```{"language":"csharp"}
@@ -2411,7 +2413,7 @@ namespace Example
 | **id** | [**List<string>**](string.html)| Campaign ID(s) | [optional]  |
 | **name** | **string**| Campaign name(s) | [optional]  |
 | **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
-| **mediaType** | [**List<string>**](string.html)| Media type(s) | [optional] <br />**Values**: sms, voice |
+| **mediaType** | [**List<string>**](string.html)| Media type(s) | [optional] <br />**Values**: email, sms, voice |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
@@ -4000,6 +4002,7 @@ Query a list of Messaging Campaigns
 Requires ANY permissions: 
 
 * outbound:messagingCampaign:view
+* outbound:emailCampaign:view
 
 ### Example
 ```{"language":"csharp"}

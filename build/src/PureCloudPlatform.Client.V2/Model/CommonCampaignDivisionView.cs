@@ -45,6 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Email for "email"
+            /// </summary>
+            [EnumMember(Value = "email")]
+            Email,
+            
+            /// <summary>
             /// Enum Sms for "sms"
             /// </summary>
             [EnumMember(Value = "sms")]

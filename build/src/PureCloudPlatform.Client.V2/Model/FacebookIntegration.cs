@@ -53,6 +53,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Status of asynchronous create operation
         /// </summary>
@@ -86,6 +92,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Error")]
             Error
         }
+        
+        
+        
+        
         
         
         
@@ -207,6 +217,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The name of the Facebook page
+        /// </summary>
+        /// <value>The name of the Facebook page</value>
+        [DataMember(Name="pageName", EmitDefaultValue=false)]
+        public string PageName { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The url of the profile image of the Facebook page
+        /// </summary>
+        /// <value>The url of the profile image of the Facebook page</value>
+        [DataMember(Name="pageProfileImageUrl", EmitDefaultValue=false)]
+        public string PageProfileImageUrl { get; private set; }
+        
+        
+        
+        /// <summary>
         /// The status of the Facebook Integration
         /// </summary>
         /// <value>The status of the Facebook Integration</value>
@@ -301,6 +329,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("  PageId: ").Append(PageId).Append("\n");
+            sb.Append("  PageName: ").Append(PageName).Append("\n");
+            sb.Append("  PageProfileImageUrl: ").Append(PageProfileImageUrl).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Recipient: ").Append(Recipient).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -370,6 +400,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PageId == other.PageId ||
                     this.PageId != null &&
                     this.PageId.Equals(other.PageId)
+                ) &&
+                (
+                    this.PageName == other.PageName ||
+                    this.PageName != null &&
+                    this.PageName.Equals(other.PageName)
+                ) &&
+                (
+                    this.PageProfileImageUrl == other.PageProfileImageUrl ||
+                    this.PageProfileImageUrl != null &&
+                    this.PageProfileImageUrl.Equals(other.PageProfileImageUrl)
                 ) &&
                 (
                     this.Status == other.Status ||
@@ -446,6 +486,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PageId != null)
                     hash = hash * 59 + this.PageId.GetHashCode();
+                
+                if (this.PageName != null)
+                    hash = hash * 59 + this.PageName.GetHashCode();
+                
+                if (this.PageProfileImageUrl != null)
+                    hash = hash * 59 + this.PageProfileImageUrl.GetHashCode();
                 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();

@@ -129,7 +129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AuditQueryExecutionStatusResponse> PostAuditsQueryWithHttpInfo (AuditQueryRequest body);
         
         /// <summary>
-        /// This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
+        /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
         /// </summary>
         /// <remarks>
         /// 
@@ -141,7 +141,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AuditRealtimeQueryResultsResponse PostAuditsQueryRealtime (AuditRealtimeQueryRequest body, List<string> expand = null);
 
         /// <summary>
-        /// This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
+        /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
         /// </summary>
         /// <remarks>
         /// 
@@ -269,7 +269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionStatusResponse>> PostAuditsQueryAsyncWithHttpInfo (AuditQueryRequest body);
         
         /// <summary>
-        /// This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
+        /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
         /// </summary>
         /// <remarks>
         /// 
@@ -281,7 +281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AuditRealtimeQueryResultsResponse> PostAuditsQueryRealtimeAsync (AuditRealtimeQueryRequest body, List<string> expand = null);
 
         /// <summary>
-        /// This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
+        /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
         /// </summary>
         /// <remarks>
         /// 
@@ -1350,7 +1350,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits. 
+        /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -1363,7 +1363,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits. 
+        /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -1452,7 +1452,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits. 
+        /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -1466,7 +1466,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits. 
+        /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>

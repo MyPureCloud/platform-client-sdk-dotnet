@@ -1161,8 +1161,9 @@ Get a list of scheduled report jobs
 
 Get a list of scheduled report jobs.
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
 
 ### Example
 ```{"language":"csharp"}
@@ -2262,8 +2263,9 @@ Place a scheduled report immediately into the reporting queue
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
 
 ### Example
 ```{"language":"csharp"}

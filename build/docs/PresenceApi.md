@@ -821,7 +821,7 @@ Update bulk user Presences
 
 Requires ANY permissions: 
 
-* directory:user:edit
+* presence:userPresence:edit
 
 ### Example
 ```{"language":"csharp"}

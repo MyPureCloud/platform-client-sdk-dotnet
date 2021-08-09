@@ -30,16 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="GamificationStatus" /> class.
         /// </summary>
         /// <param name="IsActive">Gamification status of the organization..</param>
         /// <param name="DateStart">Gamification start date. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
-        public GamificationStatus(bool? IsActive = null, String DateStart = null)
+        /// <param name="AutomaticUserAssignment">Automatic assignment of users to the default profile.</param>
+        public GamificationStatus(bool? IsActive = null, String DateStart = null, bool? AutomaticUserAssignment = null)
         {
             this.IsActive = IsActive;
             this.DateStart = DateStart;
+            this.AutomaticUserAssignment = AutomaticUserAssignment;
             
         }
         
@@ -62,6 +69,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public String DateStart { get; set; }
         
         
+        
+        /// <summary>
+        /// Automatic assignment of users to the default profile
+        /// </summary>
+        /// <value>Automatic assignment of users to the default profile</value>
+        [DataMember(Name="automaticUserAssignment", EmitDefaultValue=false)]
+        public bool? AutomaticUserAssignment { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -73,6 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
             sb.Append("  DateStart: ").Append(DateStart).Append("\n");
+            sb.Append("  AutomaticUserAssignment: ").Append(AutomaticUserAssignment).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -122,6 +139,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateStart == other.DateStart ||
                     this.DateStart != null &&
                     this.DateStart.Equals(other.DateStart)
+                ) &&
+                (
+                    this.AutomaticUserAssignment == other.AutomaticUserAssignment ||
+                    this.AutomaticUserAssignment != null &&
+                    this.AutomaticUserAssignment.Equals(other.AutomaticUserAssignment)
                 );
         }
 
@@ -142,6 +164,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DateStart != null)
                     hash = hash * 59 + this.DateStart.GetHashCode();
+                
+                if (this.AutomaticUserAssignment != null)
+                    hash = hash * 59 + this.AutomaticUserAssignment.GetHashCode();
                 
                 return hash;
             }

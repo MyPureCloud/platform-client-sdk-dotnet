@@ -176,7 +176,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete Outbound Route
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -187,7 +187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete Outbound Route
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -1458,7 +1458,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get outbound route
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -1469,7 +1469,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get outbound route
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -2167,30 +2167,6 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TrunkRecordingEnabledCount> GetTelephonyProvidersEdgesTrunkswithrecordingWithHttpInfo (string trunkType = null);
         
         /// <summary>
-        /// Scales the ASG to match the desired capacity
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asgId">Id of the asg that is to be scaled</param>
-        /// <param name="body">AsgScaleRequest</param>
-        /// <returns>ScaleASGResponse</returns>
-        ScaleASGResponse PatchTelephonyProvidersEdgesAutoscalinggroupCapacity (string asgId, AsgScaleRequest body);
-
-        /// <summary>
-        /// Scales the ASG to match the desired capacity
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asgId">Id of the asg that is to be scaled</param>
-        /// <param name="body">AsgScaleRequest</param>
-        /// <returns>ApiResponse of ScaleASGResponse</returns>
-        ApiResponse<ScaleASGResponse> PatchTelephonyProvidersEdgesAutoscalinggroupCapacityWithHttpInfo (string asgId, AsgScaleRequest body);
-        
-        /// <summary>
         /// Nslookup request command to collect networking-related information from an Edge for a target IP or host.
         /// </summary>
         /// <remarks>
@@ -2590,7 +2566,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create outbound rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">OutboundRoute</param>
@@ -2601,7 +2577,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create outbound rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">OutboundRoute</param>
@@ -3036,7 +3012,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update outbound route
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -3048,7 +3024,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update outbound route
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -3366,7 +3342,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete Outbound Route
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -3377,7 +3353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete Outbound Route
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -4648,7 +4624,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get outbound route
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -4659,7 +4635,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get outbound route
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -5357,30 +5333,6 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<TrunkRecordingEnabledCount>> GetTelephonyProvidersEdgesTrunkswithrecordingAsyncWithHttpInfo (string trunkType = null);
         
         /// <summary>
-        /// Scales the ASG to match the desired capacity
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asgId">Id of the asg that is to be scaled</param>
-        /// <param name="body">AsgScaleRequest</param>
-        /// <returns>Task of ScaleASGResponse</returns>
-        System.Threading.Tasks.Task<ScaleASGResponse> PatchTelephonyProvidersEdgesAutoscalinggroupCapacityAsync (string asgId, AsgScaleRequest body);
-
-        /// <summary>
-        /// Scales the ASG to match the desired capacity
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asgId">Id of the asg that is to be scaled</param>
-        /// <param name="body">AsgScaleRequest</param>
-        /// <returns>Task of ApiResponse (ScaleASGResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScaleASGResponse>> PatchTelephonyProvidersEdgesAutoscalinggroupCapacityAsyncWithHttpInfo (string asgId, AsgScaleRequest body);
-        
-        /// <summary>
         /// Nslookup request command to collect networking-related information from an Edge for a target IP or host.
         /// </summary>
         /// <remarks>
@@ -5780,7 +5732,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create outbound rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">OutboundRoute</param>
@@ -5791,7 +5743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create outbound rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">OutboundRoute</param>
@@ -6226,7 +6178,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update outbound route
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -6238,7 +6190,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update outbound route
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -7835,7 +7787,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Delete Outbound Route 
+        /// Delete Outbound Route This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -7846,7 +7798,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete Outbound Route 
+        /// Delete Outbound Route This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -7929,7 +7881,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Delete Outbound Route 
+        /// Delete Outbound Route This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -7941,7 +7893,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete Outbound Route 
+        /// Delete Outbound Route This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -18280,7 +18232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get outbound route 
+        /// Get outbound route This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -18292,7 +18244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get outbound route 
+        /// Get outbound route This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -18375,7 +18327,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get outbound route 
+        /// Get outbound route This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -18388,7 +18340,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get outbound route 
+        /// Get outbound route This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -23789,220 +23741,6 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Scales the ASG to match the desired capacity 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asgId">Id of the asg that is to be scaled</param>
-        /// <param name="body">AsgScaleRequest</param>
-        /// <returns>ScaleASGResponse</returns>
-        public ScaleASGResponse PatchTelephonyProvidersEdgesAutoscalinggroupCapacity (string asgId, AsgScaleRequest body)
-        {
-             ApiResponse<ScaleASGResponse> localVarResponse = PatchTelephonyProvidersEdgesAutoscalinggroupCapacityWithHttpInfo(asgId, body);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Scales the ASG to match the desired capacity 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asgId">Id of the asg that is to be scaled</param>
-        /// <param name="body">AsgScaleRequest</param>
-        /// <returns>ApiResponse of ScaleASGResponse</returns>
-        public ApiResponse< ScaleASGResponse > PatchTelephonyProvidersEdgesAutoscalinggroupCapacityWithHttpInfo (string asgId, AsgScaleRequest body)
-        { 
-            // verify the required parameter 'asgId' is set
-            if (asgId == null)
-                throw new ApiException(400, "Missing required parameter 'asgId' when calling TelephonyProvidersEdgeApi->PatchTelephonyProvidersEdgesAutoscalinggroupCapacity");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PatchTelephonyProvidersEdgesAutoscalinggroupCapacity");
-
-            var localVarPath = "/api/v2/telephony/providers/edges/autoscalinggroups/{asgId}/capacity";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                
-                "application/json"
-                
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                
-                "application/json"
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (asgId != null) localVarPathParams.Add("asgId", this.Configuration.ApiClient.ParameterToString(asgId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
-
-            
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchTelephonyProvidersEdgesAutoscalinggroupCapacity: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PatchTelephonyProvidersEdgesAutoscalinggroupCapacity: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ScaleASGResponse>(localVarStatusCode,
-                localVarHeaders,
-                (ScaleASGResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScaleASGResponse)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-        
-        /// <summary>
-        /// Scales the ASG to match the desired capacity 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asgId">Id of the asg that is to be scaled</param>
-        /// <param name="body">AsgScaleRequest</param>
-        /// <returns>Task of ScaleASGResponse</returns>
-        public async System.Threading.Tasks.Task<ScaleASGResponse> PatchTelephonyProvidersEdgesAutoscalinggroupCapacityAsync (string asgId, AsgScaleRequest body)
-        {
-             ApiResponse<ScaleASGResponse> localVarResponse = await PatchTelephonyProvidersEdgesAutoscalinggroupCapacityAsyncWithHttpInfo(asgId, body);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Scales the ASG to match the desired capacity 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asgId">Id of the asg that is to be scaled</param>
-        /// <param name="body">AsgScaleRequest</param>
-        /// <returns>Task of ApiResponse (ScaleASGResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScaleASGResponse>> PatchTelephonyProvidersEdgesAutoscalinggroupCapacityAsyncWithHttpInfo (string asgId, AsgScaleRequest body)
-        { 
-            // verify the required parameter 'asgId' is set
-            if (asgId == null)
-                throw new ApiException(400, "Missing required parameter 'asgId' when calling TelephonyProvidersEdgeApi->PatchTelephonyProvidersEdgesAutoscalinggroupCapacity");
-            
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PatchTelephonyProvidersEdgesAutoscalinggroupCapacity");
-            
-
-            var localVarPath = "/api/v2/telephony/providers/edges/autoscalinggroups/{asgId}/capacity";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                
-                "application/json"
-                
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                
-                "application/json"
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (asgId != null) localVarPathParams.Add("asgId", this.Configuration.ApiClient.ParameterToString(asgId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-            
-
-            
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchTelephonyProvidersEdgesAutoscalinggroupCapacity: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PatchTelephonyProvidersEdgesAutoscalinggroupCapacity: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ScaleASGResponse>(localVarStatusCode,
-                localVarHeaders,
-                (ScaleASGResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScaleASGResponse)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-        
-        
-        /// <summary>
         /// Nslookup request command to collect networking-related information from an Edge for a target IP or host. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27539,7 +27277,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Create outbound rule 
+        /// Create outbound rule This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">OutboundRoute</param>
@@ -27551,7 +27289,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create outbound rule 
+        /// Create outbound rule This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">OutboundRoute</param>
@@ -27638,7 +27376,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Create outbound rule 
+        /// Create outbound rule This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">OutboundRoute</param>
@@ -27651,7 +27389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create outbound rule 
+        /// Create outbound rule This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">OutboundRoute</param>
@@ -31518,7 +31256,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update outbound route 
+        /// Update outbound route This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -31531,7 +31269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update outbound route 
+        /// Update outbound route This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -31623,7 +31361,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update outbound route 
+        /// Update outbound route This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
@@ -31637,7 +31375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update outbound route 
+        /// Update outbound route This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>

@@ -71,7 +71,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchRoutingConversation**](RoutingApi.html#patchroutingconversation) | **PATCH** /api/v2/routing/conversations/{conversationId} | Update attributes of an in-queue conversation |
 | [**PatchRoutingEmailDomain**](RoutingApi.html#patchroutingemaildomain) | **PATCH** /api/v2/routing/email/domains/{domainId} | Update domain settings |
 | [**PatchRoutingEmailDomainValidate**](RoutingApi.html#patchroutingemaildomainvalidate) | **PATCH** /api/v2/routing/email/domains/{domainId}/validate | Validate domain settings |
-| [**PatchRoutingEmailOutboundDomain**](RoutingApi.html#patchroutingemailoutbounddomain) | **PATCH** /api/v2/routing/email/outbound/domains/{domainId} | Request an update of the emails from /replyTo of an outbound domain |
 | [**PatchRoutingPredictor**](RoutingApi.html#patchroutingpredictor) | **PATCH** /api/v2/routing/predictors/{predictorId} | Update single predictor. |
 | [**PatchRoutingQueueMember**](RoutingApi.html#patchroutingqueuemember) | **PATCH** /api/v2/routing/queues/{queueId}/members/{memberId} | Update the ring number OR joined status for a queue member. |
 | [**PatchRoutingQueueMembers**](RoutingApi.html#patchroutingqueuemembers) | **PATCH** /api/v2/routing/queues/{queueId}/members | Join or unjoin a set of users for a queue |
@@ -2542,7 +2541,7 @@ namespace Example
 
 <a name="getroutingqueuemembers"></a>
 
-## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) GetRoutingQueueMembers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) GetRoutingQueueMembers (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null, string memberBy = null, bool? joined = null)
 
 
 
@@ -2578,22 +2577,23 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var queueId = queueId_example;  // string | Queue ID
-            var pageSize = 56;  // int? | Page size [max 100] (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            var pageNumber = 56;  // int? |  (optional)  (default to 1)
+            var pageSize = 56;  // int? | Max value is 100 (optional)  (default to 25)
+            var sortOrder = sortOrder_example;  // string | Note: results are sorted by name. (optional)  (default to asc)
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            var joined = true;  // bool? | Filter by joined status (optional) 
             var name = name_example;  // string | Filter by queue member name (optional) 
             var profileSkills = new List<string>(); // List<string> | Filter by profile skill (optional) 
             var skills = new List<string>(); // List<string> | Filter by skill (optional) 
             var languages = new List<string>(); // List<string> | Filter by language (optional) 
             var routingStatus = new List<string>(); // List<string> | Filter by routing status (optional) 
             var presence = new List<string>(); // List<string> | Filter by presence (optional) 
+            var memberBy = memberBy_example;  // string | Filter by member type (optional) 
+            var joined = true;  // bool? | Filter by joined status (optional) 
 
             try
             { 
                 // Get the members of this queue.
-                QueueMemberEntityListing result = apiInstance.GetRoutingQueueMembers(queueId, pageSize, pageNumber, sortBy, expand, joined, name, profileSkills, skills, languages, routingStatus, presence);
+                QueueMemberEntityListing result = apiInstance.GetRoutingQueueMembers(queueId, pageNumber, pageSize, sortOrder, expand, name, profileSkills, skills, languages, routingStatus, presence, memberBy, joined);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2611,17 +2611,18 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
-| **pageSize** | **int?**| Page size [max 100] | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortBy** | **string**| Sort by | [optional] [default to name] |
+| **pageNumber** | **int?**|  | [optional] [default to 1] |
+| **pageSize** | **int?**| Max value is 100 | [optional] [default to 25] |
+| **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
-| **joined** | **bool?**| Filter by joined status | [optional]  |
 | **name** | **string**| Filter by queue member name | [optional]  |
 | **profileSkills** | [**List<string>**](string.html)| Filter by profile skill | [optional]  |
 | **skills** | [**List<string>**](string.html)| Filter by skill | [optional]  |
 | **languages** | [**List<string>**](string.html)| Filter by language | [optional]  |
 | **routingStatus** | [**List<string>**](string.html)| Filter by routing status | [optional]  |
 | **presence** | [**List<string>**](string.html)| Filter by presence | [optional]  |
+| **memberBy** | **string**| Filter by member type | [optional] <br />**Values**: user, group |
+| **joined** | **bool?**| Filter by joined status | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2630,7 +2631,7 @@ namespace Example
 
 <a name="getroutingqueueusers"></a>
 
-## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) GetRoutingQueueUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) GetRoutingQueueUsers (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -2666,9 +2667,9 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var queueId = queueId_example;  // string | Queue ID
-            var pageSize = 56;  // int? | Page size [max 100] (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            var pageNumber = 56;  // int? |  (optional)  (default to 1)
+            var pageSize = 56;  // int? | Max value is 100 (optional)  (default to 25)
+            var sortOrder = sortOrder_example;  // string | Note: results are sorted by name. (optional)  (default to asc)
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
             var joined = true;  // bool? | Filter by joined status (optional) 
             var name = name_example;  // string | Filter by queue member name (optional) 
@@ -2681,7 +2682,7 @@ namespace Example
             try
             { 
                 // DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue.
-                QueueMemberEntityListing result = apiInstance.GetRoutingQueueUsers(queueId, pageSize, pageNumber, sortBy, expand, joined, name, profileSkills, skills, languages, routingStatus, presence);
+                QueueMemberEntityListing result = apiInstance.GetRoutingQueueUsers(queueId, pageNumber, pageSize, sortOrder, expand, joined, name, profileSkills, skills, languages, routingStatus, presence);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2699,9 +2700,9 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
-| **pageSize** | **int?**| Page size [max 100] | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortBy** | **string**| Sort by | [optional] [default to name] |
+| **pageNumber** | **int?**|  | [optional] [default to 1] |
+| **pageSize** | **int?**| Max value is 100 | [optional] [default to 25] |
+| **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
 | **joined** | **bool?**| Filter by joined status | [optional]  |
 | **name** | **string**| Filter by queue member name | [optional]  |
@@ -2787,7 +2788,7 @@ namespace Example
 
 <a name="getroutingqueues"></a>
 
-## [**QueueEntityListing**](QueueEntityListing.html) GetRoutingQueues (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, List<string> id = null, List<string> divisionId = null)
+## [**QueueEntityListing**](QueueEntityListing.html) GetRoutingQueues (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
 
 
 
@@ -2821,17 +2822,17 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new RoutingApi();
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
-            var name = name_example;  // string | Name (optional) 
-            var id = new List<string>(); // List<string> | ID(s) (optional) 
-            var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortOrder = sortOrder_example;  // string | Note: results are sorted by name. (optional)  (default to asc)
+            var name = name_example;  // string | Filter by queue name (optional) 
+            var id = new List<string>(); // List<string> | Filter by queue ID(s) (optional) 
+            var divisionId = new List<string>(); // List<string> | Filter by queue division ID(s) (optional) 
 
             try
             { 
                 // Get list of queues.
-                QueueEntityListing result = apiInstance.GetRoutingQueues(pageSize, pageNumber, sortBy, name, id, divisionId);
+                QueueEntityListing result = apiInstance.GetRoutingQueues(pageNumber, pageSize, sortOrder, name, id, divisionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2848,12 +2849,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortBy** | **string**| Sort by | [optional] [default to name] |
-| **name** | **string**| Name | [optional]  |
-| **id** | [**List<string>**](string.html)| ID(s) | [optional]  |
-| **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
+| **name** | **string**| Filter by queue name | [optional]  |
+| **id** | [**List<string>**](string.html)| Filter by queue ID(s) | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| Filter by queue division ID(s) | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3010,7 +3011,7 @@ namespace Example
 
 <a name="getroutingqueuesme"></a>
 
-## [**UserQueueEntityListing**](UserQueueEntityListing.html) GetRoutingQueuesMe (bool? joined = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+## [**UserQueueEntityListing**](UserQueueEntityListing.html) GetRoutingQueuesMe (int? pageNumber = null, int? pageSize = null, bool? joined = null, string sortOrder = null)
 
 
 
@@ -3043,16 +3044,15 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new RoutingApi();
-            var joined = true;  // bool? | Joined (optional) 
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var joined = true;  // bool? | Filter by joined status. (optional) 
+            var sortOrder = sortOrder_example;  // string | Note: results are sorted by name. (optional)  (default to asc)
 
             try
             { 
                 // Get a paged listing of queues the user is a member of.
-                UserQueueEntityListing result = apiInstance.GetRoutingQueuesMe(joined, pageSize, pageNumber, sortBy, sortOrder);
+                UserQueueEntityListing result = apiInstance.GetRoutingQueuesMe(pageNumber, pageSize, joined, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3069,11 +3069,10 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **joined** | **bool?**| Joined | [optional]  |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortBy** | **string**| Sort by | [optional] [default to name] |
-| **sortOrder** | **string**| Sort order | [optional] [default to asc] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **joined** | **bool?**| Filter by joined status. | [optional]  |
+| **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
 {: class="table table-striped"}
 
 ### Return type
@@ -4221,13 +4220,13 @@ namespace Example
 
 <a name="patchroutingconversation"></a>
 
-## [**RoutingConversationAttributes**](RoutingConversationAttributes.html) PatchRoutingConversation (string conversationId, RoutingConversationAttributes body)
+## [**RoutingConversationAttributesResponse**](RoutingConversationAttributesResponse.html) PatchRoutingConversation (string conversationId, RoutingConversationAttributesRequest body)
 
 
 
 Update attributes of an in-queue conversation
 
-Returns an object indicating the updated values of all settable attributes.  Supported attributes: priority (each point of priority is equivalent to one minute of time in queue).
+Returns an object indicating the updated values of all settable attributes. Supported attributes: priority (each point of priority is equivalent to one minute of time in queue), skillIds and languageId.
 
 Requires ANY permissions: 
 
@@ -4256,12 +4255,12 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var conversationId = conversationId_example;  // string | Conversation ID
-            var body = new RoutingConversationAttributes(); // RoutingConversationAttributes | Conversation Attributes
+            var body = new RoutingConversationAttributesRequest(); // RoutingConversationAttributesRequest | Conversation Attributes
 
             try
             { 
                 // Update attributes of an in-queue conversation
-                RoutingConversationAttributes result = apiInstance.PatchRoutingConversation(conversationId, body);
+                RoutingConversationAttributesResponse result = apiInstance.PatchRoutingConversation(conversationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4279,12 +4278,12 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
-| **body** | [**RoutingConversationAttributes**](RoutingConversationAttributes.html)| Conversation Attributes |  |
+| **body** | [**RoutingConversationAttributesRequest**](RoutingConversationAttributesRequest.html)| Conversation Attributes |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**RoutingConversationAttributes**](RoutingConversationAttributes.html)
+[**RoutingConversationAttributesResponse**](RoutingConversationAttributesResponse.html)
 
 <a name="patchroutingemaildomain"></a>
 
@@ -4419,73 +4418,6 @@ namespace Example
 ### Return type
 
 [**InboundDomain**](InboundDomain.html)
-
-<a name="patchroutingemailoutbounddomain"></a>
-
-## [**OutboundDomain**](OutboundDomain.html) PatchRoutingEmailOutboundDomain (string domainId, OutboundDomain body)
-
-
-
-Request an update of the emails from /replyTo of an outbound domain
-
-
-
-Requires ALL permissions: 
-
-* routing:email:manage
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PatchRoutingEmailOutboundDomainExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new RoutingApi();
-            var domainId = domainId_example;  // string | domain ID
-            var body = new OutboundDomain(); // OutboundDomain | domain with emails that need update set
-
-            try
-            { 
-                // Request an update of the emails from /replyTo of an outbound domain
-                OutboundDomain result = apiInstance.PatchRoutingEmailOutboundDomain(domainId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RoutingApi.PatchRoutingEmailOutboundDomain: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **domainId** | **string**| domain ID |  |
-| **body** | [**OutboundDomain**](OutboundDomain.html)| domain with emails that need update set |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**OutboundDomain**](OutboundDomain.html)
 
 <a name="patchroutingpredictor"></a>
 

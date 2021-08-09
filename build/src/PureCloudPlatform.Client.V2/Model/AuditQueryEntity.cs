@@ -66,6 +66,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Appointment,
             
             /// <summary>
+            /// Enum Assignment for "Assignment"
+            /// </summary>
+            [EnumMember(Value = "Assignment")]
+            Assignment,
+            
+            /// <summary>
             /// Enum Attemptlimits for "AttemptLimits"
             /// </summary>
             [EnumMember(Value = "AttemptLimits")]
@@ -408,6 +414,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Knowledgedocument,
             
             /// <summary>
+            /// Enum Knowledgesearchfeedback for "KnowledgeSearchFeedback"
+            /// </summary>
+            [EnumMember(Value = "KnowledgeSearchFeedback")]
+            Knowledgesearchfeedback,
+            
+            /// <summary>
+            /// Enum Knowledgetraining for "KnowledgeTraining"
+            /// </summary>
+            [EnumMember(Value = "KnowledgeTraining")]
+            Knowledgetraining,
+            
+            /// <summary>
             /// Enum Line for "Line"
             /// </summary>
             [EnumMember(Value = "Line")]
@@ -442,6 +460,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Metric")]
             Metric,
+            
+            /// <summary>
+            /// Enum Module for "Module"
+            /// </summary>
+            [EnumMember(Value = "Module")]
+            Module,
             
             /// <summary>
             /// Enum Numberplan for "NumberPlan"
@@ -610,6 +634,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "RoutingTranscriptionSettings")]
             Routingtranscriptionsettings,
+            
+            /// <summary>
+            /// Enum Rule for "Rule"
+            /// </summary>
+            [EnumMember(Value = "Rule")]
+            Rule,
             
             /// <summary>
             /// Enum Ruleset for "RuleSet"
@@ -954,6 +984,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "RestoreComplete")]
             Restorecomplete,
+            
+            /// <summary>
+            /// Enum Promote for "Promote"
+            /// </summary>
+            [EnumMember(Value = "Promote")]
+            Promote,
             
             /// <summary>
             /// Enum Publish for "Publish"

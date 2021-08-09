@@ -160,6 +160,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Languageunderstanding,
             
             /// <summary>
+            /// Enum Learning for "Learning"
+            /// </summary>
+            [EnumMember(Value = "Learning")]
+            Learning,
+            
+            /// <summary>
             /// Enum Limits for "Limits"
             /// </summary>
             [EnumMember(Value = "Limits")]

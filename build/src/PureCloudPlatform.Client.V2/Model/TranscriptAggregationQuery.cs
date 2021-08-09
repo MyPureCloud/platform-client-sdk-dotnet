@@ -174,7 +174,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Ocustomersentiment for "oCustomerSentiment"
             /// </summary>
             [EnumMember(Value = "oCustomerSentiment")]
-            Ocustomersentiment
+            Ocustomersentiment,
+            
+            /// <summary>
+            /// Enum Osentimentscore for "oSentimentScore"
+            /// </summary>
+            [EnumMember(Value = "oSentimentScore")]
+            Osentimentscore
         }
         
         
