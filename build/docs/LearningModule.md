@@ -22,7 +22,10 @@ title: LearningModule
 | **IsPublished** | **bool?** | If true, learning module is published | [optional] |
 | **Description** | **string** | The description of learning module | [optional] |
 | **CompletionTimeInDays** | **int?** | The completion time of learning module in days | |
+| **Type** | **string** | The type for the learning module | [optional] |
 | **InformSteps** | [**List&lt;LearningModuleInformStep&gt;**](LearningModuleInformStep.html) | The list of inform steps in a learning module | [optional] |
+| **AssessmentForm** | [**AssessmentForm**](AssessmentForm.html) | The assessment form for learning module | [optional] |
+| **SummaryData** | [**LearningModuleSummary**](LearningModuleSummary.html) | The learning module summary data | [optional] |
 {: class="table table-striped"}
 
 

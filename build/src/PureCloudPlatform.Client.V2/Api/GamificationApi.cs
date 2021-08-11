@@ -763,6 +763,50 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Metric> PostGamificationMetricsWithHttpInfo (Metric body);
         
         /// <summary>
+        /// Activate a performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <returns>PerformanceProfile</returns>
+        PerformanceProfile PostGamificationProfileActivate (string performanceProfileId);
+
+        /// <summary>
+        /// Activate a performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <returns>ApiResponse of PerformanceProfile</returns>
+        ApiResponse<PerformanceProfile> PostGamificationProfileActivateWithHttpInfo (string performanceProfileId);
+        
+        /// <summary>
+        /// Deactivate a performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <returns>PerformanceProfile</returns>
+        PerformanceProfile PostGamificationProfileDeactivate (string performanceProfileId);
+
+        /// <summary>
+        /// Deactivate a performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <returns>ApiResponse of PerformanceProfile</returns>
+        ApiResponse<PerformanceProfile> PostGamificationProfileDeactivateWithHttpInfo (string performanceProfileId);
+        
+        /// <summary>
         /// Updates a metric
         /// </summary>
         /// <remarks>
@@ -1583,6 +1627,50 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Metric</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
         System.Threading.Tasks.Task<ApiResponse<Metric>> PostGamificationMetricsAsyncWithHttpInfo (Metric body);
+        
+        /// <summary>
+        /// Activate a performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <returns>Task of PerformanceProfile</returns>
+        System.Threading.Tasks.Task<PerformanceProfile> PostGamificationProfileActivateAsync (string performanceProfileId);
+
+        /// <summary>
+        /// Activate a performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileActivateAsyncWithHttpInfo (string performanceProfileId);
+        
+        /// <summary>
+        /// Deactivate a performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <returns>Task of PerformanceProfile</returns>
+        System.Threading.Tasks.Task<PerformanceProfile> PostGamificationProfileDeactivateAsync (string performanceProfileId);
+
+        /// <summary>
+        /// Deactivate a performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileDeactivateAsyncWithHttpInfo (string performanceProfileId);
         
         /// <summary>
         /// Updates a metric
@@ -8037,6 +8125,392 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Metric>(localVarStatusCode,
                 localVarHeaders,
                 (Metric) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Metric)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Activate a performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <returns>PerformanceProfile</returns>
+        public PerformanceProfile PostGamificationProfileActivate (string performanceProfileId)
+        {
+             ApiResponse<PerformanceProfile> localVarResponse = PostGamificationProfileActivateWithHttpInfo(performanceProfileId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Activate a performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <returns>ApiResponse of PerformanceProfile</returns>
+        public ApiResponse< PerformanceProfile > PostGamificationProfileActivateWithHttpInfo (string performanceProfileId)
+        { 
+            // verify the required parameter 'performanceProfileId' is set
+            if (performanceProfileId == null)
+                throw new ApiException(400, "Missing required parameter 'performanceProfileId' when calling GamificationApi->PostGamificationProfileActivate");
+
+            var localVarPath = "/api/v2/gamification/profiles/{performanceProfileId}/activate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (performanceProfileId != null) localVarPathParams.Add("performanceProfileId", this.Configuration.ApiClient.ParameterToString(performanceProfileId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationProfileActivate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationProfileActivate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PerformanceProfile>(localVarStatusCode,
+                localVarHeaders,
+                (PerformanceProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PerformanceProfile)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Activate a performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <returns>Task of PerformanceProfile</returns>
+        public async System.Threading.Tasks.Task<PerformanceProfile> PostGamificationProfileActivateAsync (string performanceProfileId)
+        {
+             ApiResponse<PerformanceProfile> localVarResponse = await PostGamificationProfileActivateAsyncWithHttpInfo(performanceProfileId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Activate a performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileActivateAsyncWithHttpInfo (string performanceProfileId)
+        { 
+            // verify the required parameter 'performanceProfileId' is set
+            if (performanceProfileId == null)
+                throw new ApiException(400, "Missing required parameter 'performanceProfileId' when calling GamificationApi->PostGamificationProfileActivate");
+            
+
+            var localVarPath = "/api/v2/gamification/profiles/{performanceProfileId}/activate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (performanceProfileId != null) localVarPathParams.Add("performanceProfileId", this.Configuration.ApiClient.ParameterToString(performanceProfileId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationProfileActivate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationProfileActivate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PerformanceProfile>(localVarStatusCode,
+                localVarHeaders,
+                (PerformanceProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PerformanceProfile)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Deactivate a performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <returns>PerformanceProfile</returns>
+        public PerformanceProfile PostGamificationProfileDeactivate (string performanceProfileId)
+        {
+             ApiResponse<PerformanceProfile> localVarResponse = PostGamificationProfileDeactivateWithHttpInfo(performanceProfileId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Deactivate a performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <returns>ApiResponse of PerformanceProfile</returns>
+        public ApiResponse< PerformanceProfile > PostGamificationProfileDeactivateWithHttpInfo (string performanceProfileId)
+        { 
+            // verify the required parameter 'performanceProfileId' is set
+            if (performanceProfileId == null)
+                throw new ApiException(400, "Missing required parameter 'performanceProfileId' when calling GamificationApi->PostGamificationProfileDeactivate");
+
+            var localVarPath = "/api/v2/gamification/profiles/{performanceProfileId}/deactivate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (performanceProfileId != null) localVarPathParams.Add("performanceProfileId", this.Configuration.ApiClient.ParameterToString(performanceProfileId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationProfileDeactivate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationProfileDeactivate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PerformanceProfile>(localVarStatusCode,
+                localVarHeaders,
+                (PerformanceProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PerformanceProfile)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Deactivate a performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <returns>Task of PerformanceProfile</returns>
+        public async System.Threading.Tasks.Task<PerformanceProfile> PostGamificationProfileDeactivateAsync (string performanceProfileId)
+        {
+             ApiResponse<PerformanceProfile> localVarResponse = await PostGamificationProfileDeactivateAsyncWithHttpInfo(performanceProfileId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Deactivate a performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileDeactivateAsyncWithHttpInfo (string performanceProfileId)
+        { 
+            // verify the required parameter 'performanceProfileId' is set
+            if (performanceProfileId == null)
+                throw new ApiException(400, "Missing required parameter 'performanceProfileId' when calling GamificationApi->PostGamificationProfileDeactivate");
+            
+
+            var localVarPath = "/api/v2/gamification/profiles/{performanceProfileId}/deactivate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (performanceProfileId != null) localVarPathParams.Add("performanceProfileId", this.Configuration.ApiClient.ParameterToString(performanceProfileId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationProfileDeactivate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationProfileDeactivate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PerformanceProfile>(localVarStatusCode,
+                localVarHeaders,
+                (PerformanceProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PerformanceProfile)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

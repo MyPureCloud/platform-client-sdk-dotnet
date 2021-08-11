@@ -25,14 +25,35 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningAssignmentAggregateQueryResponseStats" /> class.
         /// </summary>
         /// <param name="Count">The count for this metric.</param>
-        public LearningAssignmentAggregateQueryResponseStats(int? Count = null)
+        /// <param name="Min">The minimum value in this metric.</param>
+        /// <param name="Max">The maximum value in this metric.</param>
+        /// <param name="Sum">The total of the values for this metric.</param>
+        public LearningAssignmentAggregateQueryResponseStats(int? Count = null, int? Min = null, int? Max = null, int? Sum = null)
         {
             this.Count = Count;
+            this.Min = Min;
+            this.Max = Max;
+            this.Sum = Sum;
             
         }
         
@@ -46,6 +67,33 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? Count { get; set; }
         
         
+        
+        /// <summary>
+        /// The minimum value in this metric
+        /// </summary>
+        /// <value>The minimum value in this metric</value>
+        [DataMember(Name="min", EmitDefaultValue=false)]
+        public int? Min { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The maximum value in this metric
+        /// </summary>
+        /// <value>The maximum value in this metric</value>
+        [DataMember(Name="max", EmitDefaultValue=false)]
+        public int? Max { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The total of the values for this metric
+        /// </summary>
+        /// <value>The total of the values for this metric</value>
+        [DataMember(Name="sum", EmitDefaultValue=false)]
+        public int? Sum { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -56,6 +104,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class LearningAssignmentAggregateQueryResponseStats {\n");
             
             sb.Append("  Count: ").Append(Count).Append("\n");
+            sb.Append("  Min: ").Append(Min).Append("\n");
+            sb.Append("  Max: ").Append(Max).Append("\n");
+            sb.Append("  Sum: ").Append(Sum).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -100,6 +151,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Count == other.Count ||
                     this.Count != null &&
                     this.Count.Equals(other.Count)
+                ) &&
+                (
+                    this.Min == other.Min ||
+                    this.Min != null &&
+                    this.Min.Equals(other.Min)
+                ) &&
+                (
+                    this.Max == other.Max ||
+                    this.Max != null &&
+                    this.Max.Equals(other.Max)
+                ) &&
+                (
+                    this.Sum == other.Sum ||
+                    this.Sum != null &&
+                    this.Sum.Equals(other.Sum)
                 );
         }
 
@@ -117,6 +183,15 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
+                
+                if (this.Min != null)
+                    hash = hash * 59 + this.Min.GetHashCode();
+                
+                if (this.Max != null)
+                    hash = hash * 59 + this.Max.GetHashCode();
+                
+                if (this.Sum != null)
+                    hash = hash * 59 + this.Sum.GetHashCode();
                 
                 return hash;
             }

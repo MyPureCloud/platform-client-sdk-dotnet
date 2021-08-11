@@ -1,0 +1,566 @@
+using System;
+using System.Linq;
+using System.IO;
+using System.Text;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using PureCloudPlatform.Client.V2.Client;
+
+namespace PureCloudPlatform.Client.V2.Model
+{
+    /// <summary>
+    /// Details about the configuration version of a Web Deployment
+    /// </summary>
+    [DataContract]
+    public partial class WebDeploymentConfigurationVersion :  IEquatable<WebDeploymentConfigurationVersion>
+    {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The current status of the configuration version
+        /// </summary>
+        /// <value>The current status of the configuration version</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Pending for "Pending"
+            /// </summary>
+            [EnumMember(Value = "Pending")]
+            Pending,
+            
+            /// <summary>
+            /// Enum Active for "Active"
+            /// </summary>
+            [EnumMember(Value = "Active")]
+            Active,
+            
+            /// <summary>
+            /// Enum Inactive for "Inactive"
+            /// </summary>
+            [EnumMember(Value = "Inactive")]
+            Inactive,
+            
+            /// <summary>
+            /// Enum Error for "Error"
+            /// </summary>
+            [EnumMember(Value = "Error")]
+            Error,
+            
+            /// <summary>
+            /// Enum Deleting for "Deleting"
+            /// </summary>
+            [EnumMember(Value = "Deleting")]
+            Deleting
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The current status of the configuration version
+        /// </summary>
+        /// <value>The current status of the configuration version</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+        
+        
+        
+        
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebDeploymentConfigurationVersion" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected WebDeploymentConfigurationVersion() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebDeploymentConfigurationVersion" /> class.
+        /// </summary>
+        /// <param name="Name">The configuration version name (required).</param>
+        /// <param name="Description">The description of the configuration.</param>
+        /// <param name="Languages">A list of languages supported on the configuration.</param>
+        /// <param name="DefaultLanguage">The default language to use for the configuration.</param>
+        /// <param name="Messenger">The settings for messenger.</param>
+        /// <param name="JourneyEvents">The settings for journey events.</param>
+        /// <param name="AuthenticationSettings">The settings for authenticated deployments.</param>
+        /// <param name="LastModifiedUser">A reference to the user who most recently modified the configuration version.</param>
+        /// <param name="CreatedUser">A reference to the user who created the configuration version.</param>
+        /// <param name="PublishedUser">A reference to the user who published the configuration version.</param>
+        /// <param name="Status">The current status of the configuration version.</param>
+        public WebDeploymentConfigurationVersion(string Name = null, string Description = null, List<string> Languages = null, string DefaultLanguage = null, MessengerSettings Messenger = null, JourneyEventsSettings JourneyEvents = null, AuthenticationSettings AuthenticationSettings = null, AddressableEntityRef LastModifiedUser = null, AddressableEntityRef CreatedUser = null, AddressableEntityRef PublishedUser = null, StatusEnum? Status = null)
+        {
+            this.Name = Name;
+            this.Description = Description;
+            this.Languages = Languages;
+            this.DefaultLanguage = DefaultLanguage;
+            this.Messenger = Messenger;
+            this.JourneyEvents = JourneyEvents;
+            this.AuthenticationSettings = AuthenticationSettings;
+            this.LastModifiedUser = LastModifiedUser;
+            this.CreatedUser = CreatedUser;
+            this.PublishedUser = PublishedUser;
+            this.Status = Status;
+            
+        }
+        
+        
+        
+        /// <summary>
+        /// The configuration version ID
+        /// </summary>
+        /// <value>The configuration version ID</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The configuration version name
+        /// </summary>
+        /// <value>The configuration version name</value>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The version of the configuration
+        /// </summary>
+        /// <value>The version of the configuration</value>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public string Version { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The description of the configuration
+        /// </summary>
+        /// <value>The description of the configuration</value>
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A list of languages supported on the configuration
+        /// </summary>
+        /// <value>A list of languages supported on the configuration</value>
+        [DataMember(Name="languages", EmitDefaultValue=false)]
+        public List<string> Languages { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The default language to use for the configuration
+        /// </summary>
+        /// <value>The default language to use for the configuration</value>
+        [DataMember(Name="defaultLanguage", EmitDefaultValue=false)]
+        public string DefaultLanguage { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The settings for messenger
+        /// </summary>
+        /// <value>The settings for messenger</value>
+        [DataMember(Name="messenger", EmitDefaultValue=false)]
+        public MessengerSettings Messenger { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The settings for journey events
+        /// </summary>
+        /// <value>The settings for journey events</value>
+        [DataMember(Name="journeyEvents", EmitDefaultValue=false)]
+        public JourneyEventsSettings JourneyEvents { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The settings for authenticated deployments
+        /// </summary>
+        /// <value>The settings for authenticated deployments</value>
+        [DataMember(Name="authenticationSettings", EmitDefaultValue=false)]
+        public AuthenticationSettings AuthenticationSettings { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The date the configuration version was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date the configuration version was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The date the configuration version was most recently modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date the configuration version was most recently modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateModified", EmitDefaultValue=false)]
+        public DateTime? DateModified { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The date the configuration version was most recently published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date the configuration version was most recently published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="datePublished", EmitDefaultValue=false)]
+        public DateTime? DatePublished { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// A reference to the user who most recently modified the configuration version
+        /// </summary>
+        /// <value>A reference to the user who most recently modified the configuration version</value>
+        [DataMember(Name="lastModifiedUser", EmitDefaultValue=false)]
+        public AddressableEntityRef LastModifiedUser { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A reference to the user who created the configuration version
+        /// </summary>
+        /// <value>A reference to the user who created the configuration version</value>
+        [DataMember(Name="createdUser", EmitDefaultValue=false)]
+        public AddressableEntityRef CreatedUser { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A reference to the user who published the configuration version
+        /// </summary>
+        /// <value>A reference to the user who published the configuration version</value>
+        [DataMember(Name="publishedUser", EmitDefaultValue=false)]
+        public AddressableEntityRef PublishedUser { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
+        
+        
+        /// <summary>
+        /// Returns the string presentation of the object
+        /// </summary>
+        /// <returns>String presentation of the object</returns>
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.Append("class WebDeploymentConfigurationVersion {\n");
+            
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Languages: ").Append(Languages).Append("\n");
+            sb.Append("  DefaultLanguage: ").Append(DefaultLanguage).Append("\n");
+            sb.Append("  Messenger: ").Append(Messenger).Append("\n");
+            sb.Append("  JourneyEvents: ").Append(JourneyEvents).Append("\n");
+            sb.Append("  AuthenticationSettings: ").Append(AuthenticationSettings).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  DatePublished: ").Append(DatePublished).Append("\n");
+            sb.Append("  LastModifiedUser: ").Append(LastModifiedUser).Append("\n");
+            sb.Append("  CreatedUser: ").Append(CreatedUser).Append("\n");
+            sb.Append("  PublishedUser: ").Append(PublishedUser).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
+        }
+  
+        /// <summary>
+        /// Returns the JSON string presentation of the object
+        /// </summary>
+        /// <returns>JSON string presentation of the object</returns>
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this, new JsonSerializerSettings
+            {
+                MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+                Formatting = Formatting.Indented
+            });
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="obj">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object obj)
+        {
+            // credit: http://stackoverflow.com/a/10454552/677735
+            return this.Equals(obj as WebDeploymentConfigurationVersion);
+        }
+
+        /// <summary>
+        /// Returns true if WebDeploymentConfigurationVersion instances are equal
+        /// </summary>
+        /// <param name="other">Instance of WebDeploymentConfigurationVersion to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(WebDeploymentConfigurationVersion other)
+        {
+            // credit: http://stackoverflow.com/a/10454552/677735
+            if (other == null)
+                return false;
+
+            return true &&
+                (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.Version == other.Version ||
+                    this.Version != null &&
+                    this.Version.Equals(other.Version)
+                ) &&
+                (
+                    this.Description == other.Description ||
+                    this.Description != null &&
+                    this.Description.Equals(other.Description)
+                ) &&
+                (
+                    this.Languages == other.Languages ||
+                    this.Languages != null &&
+                    this.Languages.SequenceEqual(other.Languages)
+                ) &&
+                (
+                    this.DefaultLanguage == other.DefaultLanguage ||
+                    this.DefaultLanguage != null &&
+                    this.DefaultLanguage.Equals(other.DefaultLanguage)
+                ) &&
+                (
+                    this.Messenger == other.Messenger ||
+                    this.Messenger != null &&
+                    this.Messenger.Equals(other.Messenger)
+                ) &&
+                (
+                    this.JourneyEvents == other.JourneyEvents ||
+                    this.JourneyEvents != null &&
+                    this.JourneyEvents.Equals(other.JourneyEvents)
+                ) &&
+                (
+                    this.AuthenticationSettings == other.AuthenticationSettings ||
+                    this.AuthenticationSettings != null &&
+                    this.AuthenticationSettings.Equals(other.AuthenticationSettings)
+                ) &&
+                (
+                    this.DateCreated == other.DateCreated ||
+                    this.DateCreated != null &&
+                    this.DateCreated.Equals(other.DateCreated)
+                ) &&
+                (
+                    this.DateModified == other.DateModified ||
+                    this.DateModified != null &&
+                    this.DateModified.Equals(other.DateModified)
+                ) &&
+                (
+                    this.DatePublished == other.DatePublished ||
+                    this.DatePublished != null &&
+                    this.DatePublished.Equals(other.DatePublished)
+                ) &&
+                (
+                    this.LastModifiedUser == other.LastModifiedUser ||
+                    this.LastModifiedUser != null &&
+                    this.LastModifiedUser.Equals(other.LastModifiedUser)
+                ) &&
+                (
+                    this.CreatedUser == other.CreatedUser ||
+                    this.CreatedUser != null &&
+                    this.CreatedUser.Equals(other.CreatedUser)
+                ) &&
+                (
+                    this.PublishedUser == other.PublishedUser ||
+                    this.PublishedUser != null &&
+                    this.PublishedUser.Equals(other.PublishedUser)
+                ) &&
+                (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            // credit: http://stackoverflow.com/a/263416/677735
+            unchecked // Overflow is fine, just wrap
+            {
+                int hash = 41;
+                // Suitable nullity checks etc, of course :)
+                
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.Version != null)
+                    hash = hash * 59 + this.Version.GetHashCode();
+                
+                if (this.Description != null)
+                    hash = hash * 59 + this.Description.GetHashCode();
+                
+                if (this.Languages != null)
+                    hash = hash * 59 + this.Languages.GetHashCode();
+                
+                if (this.DefaultLanguage != null)
+                    hash = hash * 59 + this.DefaultLanguage.GetHashCode();
+                
+                if (this.Messenger != null)
+                    hash = hash * 59 + this.Messenger.GetHashCode();
+                
+                if (this.JourneyEvents != null)
+                    hash = hash * 59 + this.JourneyEvents.GetHashCode();
+                
+                if (this.AuthenticationSettings != null)
+                    hash = hash * 59 + this.AuthenticationSettings.GetHashCode();
+                
+                if (this.DateCreated != null)
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
+                
+                if (this.DateModified != null)
+                    hash = hash * 59 + this.DateModified.GetHashCode();
+                
+                if (this.DatePublished != null)
+                    hash = hash * 59 + this.DatePublished.GetHashCode();
+                
+                if (this.LastModifiedUser != null)
+                    hash = hash * 59 + this.LastModifiedUser.GetHashCode();
+                
+                if (this.CreatedUser != null)
+                    hash = hash * 59 + this.CreatedUser.GetHashCode();
+                
+                if (this.PublishedUser != null)
+                    hash = hash * 59 + this.PublishedUser.GetHashCode();
+                
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
+                
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
+                
+                return hash;
+            }
+        }
+    }
+
+}

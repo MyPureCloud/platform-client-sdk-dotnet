@@ -1,13 +1,13 @@
 ---
-title: QualityAuditPage
+title: FailedRecordingsEntityListing
 ---
-## ININ.PureCloudApi.Model.QualityAuditPage
+## ININ.PureCloudApi.Model.FailedRecordingsEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;QualityAudit&gt;**](QualityAudit.html) |  | [optional] |
+| **Entities** | [**List&lt;RecordingJobFailedRecording&gt;**](RecordingJobFailedRecording.html) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |

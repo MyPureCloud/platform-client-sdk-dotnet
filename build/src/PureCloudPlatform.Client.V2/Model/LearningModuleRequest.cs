@@ -32,10 +32,67 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The type for the learning module
+        /// </summary>
+        /// <value>The type for the learning module</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Informational for "Informational"
+            /// </summary>
+            [EnumMember(Value = "Informational")]
+            Informational,
+            
+            /// <summary>
+            /// Enum Assessedcontent for "AssessedContent"
+            /// </summary>
+            [EnumMember(Value = "AssessedContent")]
+            Assessedcontent,
+            
+            /// <summary>
+            /// Enum Questionnaire for "Questionnaire"
+            /// </summary>
+            [EnumMember(Value = "Questionnaire")]
+            Questionnaire,
+            
+            /// <summary>
+            /// Enum Assessment for "Assessment"
+            /// </summary>
+            [EnumMember(Value = "Assessment")]
+            Assessment
+        }
         
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The type for the learning module
+        /// </summary>
+        /// <value>The type for the learning module</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
         
         
         
@@ -54,12 +111,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">The description of learning module.</param>
         /// <param name="CompletionTimeInDays">The completion time of learning module in days (required).</param>
         /// <param name="InformSteps">The list of inform steps in a learning module.</param>
-        public LearningModuleRequest(string Name = null, string Description = null, int? CompletionTimeInDays = null, List<LearningModuleInformStepRequest> InformSteps = null)
+        /// <param name="Type">The type for the learning module.</param>
+        /// <param name="AssessmentForm">The assessment form for learning module.</param>
+        public LearningModuleRequest(string Name = null, string Description = null, int? CompletionTimeInDays = null, List<LearningModuleInformStepRequest> InformSteps = null, TypeEnum? Type = null, AssessmentForm AssessmentForm = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.CompletionTimeInDays = CompletionTimeInDays;
             this.InformSteps = InformSteps;
+            this.Type = Type;
+            this.AssessmentForm = AssessmentForm;
             
         }
         
@@ -100,6 +161,17 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<LearningModuleInformStepRequest> InformSteps { get; set; }
         
         
+        
+        
+        
+        /// <summary>
+        /// The assessment form for learning module
+        /// </summary>
+        /// <value>The assessment form for learning module</value>
+        [DataMember(Name="assessmentForm", EmitDefaultValue=false)]
+        public AssessmentForm AssessmentForm { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,6 +185,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  CompletionTimeInDays: ").Append(CompletionTimeInDays).Append("\n");
             sb.Append("  InformSteps: ").Append(InformSteps).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  AssessmentForm: ").Append(AssessmentForm).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -172,6 +246,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InformSteps == other.InformSteps ||
                     this.InformSteps != null &&
                     this.InformSteps.SequenceEqual(other.InformSteps)
+                ) &&
+                (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
+                ) &&
+                (
+                    this.AssessmentForm == other.AssessmentForm ||
+                    this.AssessmentForm != null &&
+                    this.AssessmentForm.Equals(other.AssessmentForm)
                 );
         }
 
@@ -198,6 +282,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.InformSteps != null)
                     hash = hash * 59 + this.InformSteps.GetHashCode();
+                
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
+                
+                if (this.AssessmentForm != null)
+                    hash = hash * 59 + this.AssessmentForm.GetHashCode();
                 
                 return hash;
             }

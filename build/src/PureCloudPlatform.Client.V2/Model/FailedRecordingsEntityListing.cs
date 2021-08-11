@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// QualityAuditPage
+    /// FailedRecordingsEntityListing
     /// </summary>
     [DataContract]
-    public partial class QualityAuditPage :  IEquatable<QualityAuditPage>, IPagedResource<QualityAudit>
+    public partial class FailedRecordingsEntityListing :  IEquatable<FailedRecordingsEntityListing>, IPagedResource<RecordingJobFailedRecording>
     {
         
         
@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="QualityAuditPage" /> class.
+        /// Initializes a new instance of the <see cref="FailedRecordingsEntityListing" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
         /// <param name="PageSize">PageSize.</param>
@@ -84,7 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PreviousUri">PreviousUri.</param>
         /// <param name="LastUri">LastUri.</param>
         /// <param name="PageCount">PageCount.</param>
-        public QualityAuditPage(List<QualityAudit> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string FirstUri = null, string SelfUri = null, string NextUri = null, string PreviousUri = null, string LastUri = null, int? PageCount = null)
+        public FailedRecordingsEntityListing(List<RecordingJobFailedRecording> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string FirstUri = null, string SelfUri = null, string NextUri = null, string PreviousUri = null, string LastUri = null, int? PageCount = null)
         {
             this.Entities = Entities;
             this.PageSize = PageSize;
@@ -105,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<QualityAudit> Entities { get; set; }
+        public List<RecordingJobFailedRecording> Entities { get; set; }
         
         
         
@@ -187,7 +187,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class QualityAuditPage {\n");
+            sb.Append("class FailedRecordingsEntityListing {\n");
             
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
@@ -224,15 +224,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as QualityAuditPage);
+            return this.Equals(obj as FailedRecordingsEntityListing);
         }
 
         /// <summary>
-        /// Returns true if QualityAuditPage instances are equal
+        /// Returns true if FailedRecordingsEntityListing instances are equal
         /// </summary>
-        /// <param name="other">Instance of QualityAuditPage to be compared</param>
+        /// <param name="other">Instance of FailedRecordingsEntityListing to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(QualityAuditPage other)
+        public bool Equals(FailedRecordingsEntityListing other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

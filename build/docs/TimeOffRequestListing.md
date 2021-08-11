@@ -7,7 +7,7 @@ title: TimeOffRequestListing
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;TimeOffRequest&gt;**](TimeOffRequest.html) | List of time off request look up objects | |
+| **Entities** | [**List&lt;TimeOffRequest&gt;**](TimeOffRequest.html) | List of time off requests | |
 {: class="table table-striped"}
 
 

@@ -146,6 +146,12 @@ namespace PureCloudPlatform.Client.V2.Model
             ImportError,
             
             /// <summary>
+            /// Enum MessageRestriction for "MESSAGE_RESTRICTION"
+            /// </summary>
+            [EnumMember(Value = "MESSAGE_RESTRICTION")]
+            MessageRestriction,
+            
+            /// <summary>
             /// Enum MessagingCampaign for "MESSAGING_CAMPAIGN"
             /// </summary>
             [EnumMember(Value = "MESSAGING_CAMPAIGN")]

@@ -97,6 +97,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)</param>
+        /// <param name="minPercentageScore">The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
+        /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="userId">Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)</param>
@@ -104,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>LearningAssignmentsDomainEntity</returns>
-        LearningAssignmentsDomainEntity GetLearningAssignments (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null);
+        LearningAssignmentsDomainEntity GetLearningAssignments (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null);
 
         /// <summary>
         /// List of Learning module Assignments
@@ -119,6 +122,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)</param>
+        /// <param name="minPercentageScore">The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
+        /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="userId">Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)</param>
@@ -126,7 +132,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentsDomainEntity</returns>
-        ApiResponse<LearningAssignmentsDomainEntity> GetLearningAssignmentsWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null);
+        ApiResponse<LearningAssignmentsDomainEntity> GetLearningAssignmentsWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null);
         
         /// <summary>
         /// List of Learning Assignments assigned to current user
@@ -141,13 +147,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)</param>
+        /// <param name="minPercentageScore">The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
+        /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="types">Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>LearningAssignmentsDomainEntity</returns>
-        LearningAssignmentsDomainEntity GetLearningAssignmentsMe (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null);
+        LearningAssignmentsDomainEntity GetLearningAssignmentsMe (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null);
 
         /// <summary>
         /// List of Learning Assignments assigned to current user
@@ -162,13 +171,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)</param>
+        /// <param name="minPercentageScore">The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
+        /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="types">Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentsDomainEntity</returns>
-        ApiResponse<LearningAssignmentsDomainEntity> GetLearningAssignmentsMeWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null);
+        ApiResponse<LearningAssignmentsDomainEntity> GetLearningAssignmentsMeWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null);
         
         /// <summary>
         /// Get a learning module
@@ -257,8 +269,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="searchTerm">Search Term (searchable by name) (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
+        /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <returns>LearningModulesDomainEntityListing</returns>
-        LearningModulesDomainEntityListing GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null);
+        LearningModulesDomainEntityListing GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null);
 
         /// <summary>
         /// Get all learning modules of an organization
@@ -275,8 +288,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="searchTerm">Search Term (searchable by name) (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
+        /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <returns>ApiResponse of LearningModulesDomainEntityListing</returns>
-        ApiResponse<LearningModulesDomainEntityListing> GetLearningModulesWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null);
+        ApiResponse<LearningModulesDomainEntityListing> GetLearningModulesWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null);
         
         /// <summary>
         /// Update Learning Assignment
@@ -301,6 +315,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Learning Assignment to be updated (optional)</param>
         /// <returns>ApiResponse of LearningAssignment</returns>
         ApiResponse<LearningAssignment> PatchLearningAssignmentWithHttpInfo (string assignmentId, LearningAssignmentUpdate body = null);
+        
+        /// <summary>
+        /// Score learning assessment for preview
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Assessment form and answers to score</param>
+        /// <returns>AssessmentScoringSet</returns>
+        AssessmentScoringSet PostLearningAssessmentsScoring (LearningAssessmentScoringRequest body);
+
+        /// <summary>
+        /// Score learning assessment for preview
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Assessment form and answers to score</param>
+        /// <returns>ApiResponse of AssessmentScoringSet</returns>
+        ApiResponse<AssessmentScoringSet> PostLearningAssessmentsScoringWithHttpInfo (LearningAssessmentScoringRequest body);
         
         /// <summary>
         /// Create Learning Assignment
@@ -593,6 +629,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)</param>
+        /// <param name="minPercentageScore">The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
+        /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="userId">Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)</param>
@@ -600,7 +639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of LearningAssignmentsDomainEntity</returns>
-        System.Threading.Tasks.Task<LearningAssignmentsDomainEntity> GetLearningAssignmentsAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null);
+        System.Threading.Tasks.Task<LearningAssignmentsDomainEntity> GetLearningAssignmentsAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null);
 
         /// <summary>
         /// List of Learning module Assignments
@@ -615,6 +654,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)</param>
+        /// <param name="minPercentageScore">The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
+        /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="userId">Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)</param>
@@ -622,7 +664,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentsDomainEntity)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LearningAssignmentsDomainEntity>> GetLearningAssignmentsAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<LearningAssignmentsDomainEntity>> GetLearningAssignmentsAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null);
         
         /// <summary>
         /// List of Learning Assignments assigned to current user
@@ -637,13 +679,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)</param>
+        /// <param name="minPercentageScore">The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
+        /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="types">Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of LearningAssignmentsDomainEntity</returns>
-        System.Threading.Tasks.Task<LearningAssignmentsDomainEntity> GetLearningAssignmentsMeAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null);
+        System.Threading.Tasks.Task<LearningAssignmentsDomainEntity> GetLearningAssignmentsMeAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null);
 
         /// <summary>
         /// List of Learning Assignments assigned to current user
@@ -658,13 +703,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)</param>
+        /// <param name="minPercentageScore">The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
+        /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="types">Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentsDomainEntity)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LearningAssignmentsDomainEntity>> GetLearningAssignmentsMeAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<LearningAssignmentsDomainEntity>> GetLearningAssignmentsMeAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null);
         
         /// <summary>
         /// Get a learning module
@@ -753,8 +801,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="searchTerm">Search Term (searchable by name) (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
+        /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <returns>Task of LearningModulesDomainEntityListing</returns>
-        System.Threading.Tasks.Task<LearningModulesDomainEntityListing> GetLearningModulesAsync (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null);
+        System.Threading.Tasks.Task<LearningModulesDomainEntityListing> GetLearningModulesAsync (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null);
 
         /// <summary>
         /// Get all learning modules of an organization
@@ -771,8 +820,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="searchTerm">Search Term (searchable by name) (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
+        /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <returns>Task of ApiResponse (LearningModulesDomainEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LearningModulesDomainEntityListing>> GetLearningModulesAsyncWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<LearningModulesDomainEntityListing>> GetLearningModulesAsyncWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null);
         
         /// <summary>
         /// Update Learning Assignment
@@ -797,6 +847,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Learning Assignment to be updated (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignment)</returns>
         System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PatchLearningAssignmentAsyncWithHttpInfo (string assignmentId, LearningAssignmentUpdate body = null);
+        
+        /// <summary>
+        /// Score learning assessment for preview
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Assessment form and answers to score</param>
+        /// <returns>Task of AssessmentScoringSet</returns>
+        System.Threading.Tasks.Task<AssessmentScoringSet> PostLearningAssessmentsScoringAsync (LearningAssessmentScoringRequest body);
+
+        /// <summary>
+        /// Score learning assessment for preview
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Assessment form and answers to score</param>
+        /// <returns>Task of ApiResponse (AssessmentScoringSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AssessmentScoringSet>> PostLearningAssessmentsScoringAsyncWithHttpInfo (LearningAssessmentScoringRequest body);
         
         /// <summary>
         /// Create Learning Assignment
@@ -1687,6 +1759,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)</param>
+        /// <param name="minPercentageScore">The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
+        /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="userId">Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)</param>
@@ -1694,9 +1769,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>LearningAssignmentsDomainEntity</returns>
-        public LearningAssignmentsDomainEntity GetLearningAssignments (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null)
+        public LearningAssignmentsDomainEntity GetLearningAssignments (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null)
         {
-             ApiResponse<LearningAssignmentsDomainEntity> localVarResponse = GetLearningAssignmentsWithHttpInfo(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, sortOrder, sortBy, userId, types, states, expand);
+             ApiResponse<LearningAssignmentsDomainEntity> localVarResponse = GetLearningAssignmentsWithHttpInfo(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, pass, minPercentageScore, maxPercentageScore, sortOrder, sortBy, userId, types, states, expand);
              return localVarResponse.Data;
         }
 
@@ -1710,6 +1785,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)</param>
+        /// <param name="minPercentageScore">The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
+        /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="userId">Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)</param>
@@ -1717,7 +1795,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentsDomainEntity</returns>
-        public ApiResponse< LearningAssignmentsDomainEntity > GetLearningAssignmentsWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null)
+        public ApiResponse< LearningAssignmentsDomainEntity > GetLearningAssignmentsWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/learning/assignments";
@@ -1759,6 +1837,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (overdue != null) localVarQueryParams.Add(new Tuple<string, string>("overdue", this.Configuration.ApiClient.ParameterToString(overdue)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pass != null) localVarQueryParams.Add(new Tuple<string, string>("pass", this.Configuration.ApiClient.ParameterToString(pass)));
+            if (minPercentageScore != null) localVarQueryParams.Add(new Tuple<string, string>("minPercentageScore", this.Configuration.ApiClient.ParameterToString(minPercentageScore)));
+            if (maxPercentageScore != null) localVarQueryParams.Add(new Tuple<string, string>("maxPercentageScore", this.Configuration.ApiClient.ParameterToString(maxPercentageScore)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (userId != null) userId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("userId", this.Configuration.ApiClient.ParameterToString(obj))); });
@@ -1812,6 +1893,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)</param>
+        /// <param name="minPercentageScore">The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
+        /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="userId">Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)</param>
@@ -1819,9 +1903,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of LearningAssignmentsDomainEntity</returns>
-        public async System.Threading.Tasks.Task<LearningAssignmentsDomainEntity> GetLearningAssignmentsAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<LearningAssignmentsDomainEntity> GetLearningAssignmentsAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null)
         {
-             ApiResponse<LearningAssignmentsDomainEntity> localVarResponse = await GetLearningAssignmentsAsyncWithHttpInfo(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, sortOrder, sortBy, userId, types, states, expand);
+             ApiResponse<LearningAssignmentsDomainEntity> localVarResponse = await GetLearningAssignmentsAsyncWithHttpInfo(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, pass, minPercentageScore, maxPercentageScore, sortOrder, sortBy, userId, types, states, expand);
              return localVarResponse.Data;
 
         }
@@ -1836,6 +1920,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)</param>
+        /// <param name="minPercentageScore">The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
+        /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="userId">Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)</param>
@@ -1843,7 +1930,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentsDomainEntity)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentsDomainEntity>> GetLearningAssignmentsAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentsDomainEntity>> GetLearningAssignmentsAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/learning/assignments";
@@ -1885,6 +1972,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (overdue != null) localVarQueryParams.Add(new Tuple<string, string>("overdue", this.Configuration.ApiClient.ParameterToString(overdue)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pass != null) localVarQueryParams.Add(new Tuple<string, string>("pass", this.Configuration.ApiClient.ParameterToString(pass)));
+            if (minPercentageScore != null) localVarQueryParams.Add(new Tuple<string, string>("minPercentageScore", this.Configuration.ApiClient.ParameterToString(minPercentageScore)));
+            if (maxPercentageScore != null) localVarQueryParams.Add(new Tuple<string, string>("maxPercentageScore", this.Configuration.ApiClient.ParameterToString(maxPercentageScore)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (userId != null) userId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("userId", this.Configuration.ApiClient.ParameterToString(obj))); });
@@ -1939,15 +2029,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)</param>
+        /// <param name="minPercentageScore">The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
+        /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="types">Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>LearningAssignmentsDomainEntity</returns>
-        public LearningAssignmentsDomainEntity GetLearningAssignmentsMe (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null)
+        public LearningAssignmentsDomainEntity GetLearningAssignmentsMe (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null)
         {
-             ApiResponse<LearningAssignmentsDomainEntity> localVarResponse = GetLearningAssignmentsMeWithHttpInfo(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, sortOrder, sortBy, types, states, expand);
+             ApiResponse<LearningAssignmentsDomainEntity> localVarResponse = GetLearningAssignmentsMeWithHttpInfo(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, pass, minPercentageScore, maxPercentageScore, sortOrder, sortBy, types, states, expand);
              return localVarResponse.Data;
         }
 
@@ -1961,13 +2054,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)</param>
+        /// <param name="minPercentageScore">The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
+        /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="types">Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentsDomainEntity</returns>
-        public ApiResponse< LearningAssignmentsDomainEntity > GetLearningAssignmentsMeWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null)
+        public ApiResponse< LearningAssignmentsDomainEntity > GetLearningAssignmentsMeWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/learning/assignments/me";
@@ -2009,6 +2105,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (overdue != null) localVarQueryParams.Add(new Tuple<string, string>("overdue", this.Configuration.ApiClient.ParameterToString(overdue)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pass != null) localVarQueryParams.Add(new Tuple<string, string>("pass", this.Configuration.ApiClient.ParameterToString(pass)));
+            if (minPercentageScore != null) localVarQueryParams.Add(new Tuple<string, string>("minPercentageScore", this.Configuration.ApiClient.ParameterToString(minPercentageScore)));
+            if (maxPercentageScore != null) localVarQueryParams.Add(new Tuple<string, string>("maxPercentageScore", this.Configuration.ApiClient.ParameterToString(maxPercentageScore)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (types != null) types.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("types", this.Configuration.ApiClient.ParameterToString(obj))); });
@@ -2061,15 +2160,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)</param>
+        /// <param name="minPercentageScore">The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
+        /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="types">Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of LearningAssignmentsDomainEntity</returns>
-        public async System.Threading.Tasks.Task<LearningAssignmentsDomainEntity> GetLearningAssignmentsMeAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<LearningAssignmentsDomainEntity> GetLearningAssignmentsMeAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null)
         {
-             ApiResponse<LearningAssignmentsDomainEntity> localVarResponse = await GetLearningAssignmentsMeAsyncWithHttpInfo(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, sortOrder, sortBy, types, states, expand);
+             ApiResponse<LearningAssignmentsDomainEntity> localVarResponse = await GetLearningAssignmentsMeAsyncWithHttpInfo(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, pass, minPercentageScore, maxPercentageScore, sortOrder, sortBy, types, states, expand);
              return localVarResponse.Data;
 
         }
@@ -2084,13 +2186,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)</param>
+        /// <param name="minPercentageScore">The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
+        /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="types">Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentsDomainEntity)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentsDomainEntity>> GetLearningAssignmentsMeAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentsDomainEntity>> GetLearningAssignmentsMeAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/learning/assignments/me";
@@ -2132,6 +2237,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (overdue != null) localVarQueryParams.Add(new Tuple<string, string>("overdue", this.Configuration.ApiClient.ParameterToString(overdue)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pass != null) localVarQueryParams.Add(new Tuple<string, string>("pass", this.Configuration.ApiClient.ParameterToString(pass)));
+            if (minPercentageScore != null) localVarQueryParams.Add(new Tuple<string, string>("minPercentageScore", this.Configuration.ApiClient.ParameterToString(minPercentageScore)));
+            if (maxPercentageScore != null) localVarQueryParams.Add(new Tuple<string, string>("maxPercentageScore", this.Configuration.ApiClient.ParameterToString(maxPercentageScore)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (types != null) types.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("types", this.Configuration.ApiClient.ParameterToString(obj))); });
@@ -2791,10 +2899,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="searchTerm">Search Term (searchable by name) (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
+        /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <returns>LearningModulesDomainEntityListing</returns>
-        public LearningModulesDomainEntityListing GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null)
+        public LearningModulesDomainEntityListing GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null)
         {
-             ApiResponse<LearningModulesDomainEntityListing> localVarResponse = GetLearningModulesWithHttpInfo(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand);
+             ApiResponse<LearningModulesDomainEntityListing> localVarResponse = GetLearningModulesWithHttpInfo(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished);
              return localVarResponse.Data;
         }
 
@@ -2810,8 +2919,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="searchTerm">Search Term (searchable by name) (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
+        /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <returns>ApiResponse of LearningModulesDomainEntityListing</returns>
-        public ApiResponse< LearningModulesDomainEntityListing > GetLearningModulesWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null)
+        public ApiResponse< LearningModulesDomainEntityListing > GetLearningModulesWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null)
         { 
 
             var localVarPath = "/api/v2/learning/modules";
@@ -2855,6 +2965,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (searchTerm != null) localVarQueryParams.Add(new Tuple<string, string>("searchTerm", this.Configuration.ApiClient.ParameterToString(searchTerm)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (isPublished != null) localVarQueryParams.Add(new Tuple<string, string>("isPublished", this.Configuration.ApiClient.ParameterToString(isPublished)));
 
             // Header params
 
@@ -2904,10 +3015,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="searchTerm">Search Term (searchable by name) (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
+        /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <returns>Task of LearningModulesDomainEntityListing</returns>
-        public async System.Threading.Tasks.Task<LearningModulesDomainEntityListing> GetLearningModulesAsync (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<LearningModulesDomainEntityListing> GetLearningModulesAsync (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null)
         {
-             ApiResponse<LearningModulesDomainEntityListing> localVarResponse = await GetLearningModulesAsyncWithHttpInfo(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand);
+             ApiResponse<LearningModulesDomainEntityListing> localVarResponse = await GetLearningModulesAsyncWithHttpInfo(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished);
              return localVarResponse.Data;
 
         }
@@ -2924,8 +3036,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="searchTerm">Search Term (searchable by name) (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
+        /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <returns>Task of ApiResponse (LearningModulesDomainEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LearningModulesDomainEntityListing>> GetLearningModulesAsyncWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LearningModulesDomainEntityListing>> GetLearningModulesAsyncWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null)
         { 
 
             var localVarPath = "/api/v2/learning/modules";
@@ -2969,6 +3082,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (searchTerm != null) localVarQueryParams.Add(new Tuple<string, string>("searchTerm", this.Configuration.ApiClient.ParameterToString(searchTerm)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (isPublished != null) localVarQueryParams.Add(new Tuple<string, string>("isPublished", this.Configuration.ApiClient.ParameterToString(isPublished)));
 
             // Header params
 
@@ -3208,6 +3322,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<LearningAssignment>(localVarStatusCode,
                 localVarHeaders,
                 (LearningAssignment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningAssignment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Score learning assessment for preview 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Assessment form and answers to score</param>
+        /// <returns>AssessmentScoringSet</returns>
+        public AssessmentScoringSet PostLearningAssessmentsScoring (LearningAssessmentScoringRequest body)
+        {
+             ApiResponse<AssessmentScoringSet> localVarResponse = PostLearningAssessmentsScoringWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Score learning assessment for preview 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Assessment form and answers to score</param>
+        /// <returns>ApiResponse of AssessmentScoringSet</returns>
+        public ApiResponse< AssessmentScoringSet > PostLearningAssessmentsScoringWithHttpInfo (LearningAssessmentScoringRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningAssessmentsScoring");
+
+            var localVarPath = "/api/v2/learning/assessments/scoring";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningAssessmentsScoring: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningAssessmentsScoring: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AssessmentScoringSet>(localVarStatusCode,
+                localVarHeaders,
+                (AssessmentScoringSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssessmentScoringSet)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Score learning assessment for preview 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Assessment form and answers to score</param>
+        /// <returns>Task of AssessmentScoringSet</returns>
+        public async System.Threading.Tasks.Task<AssessmentScoringSet> PostLearningAssessmentsScoringAsync (LearningAssessmentScoringRequest body)
+        {
+             ApiResponse<AssessmentScoringSet> localVarResponse = await PostLearningAssessmentsScoringAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Score learning assessment for preview 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Assessment form and answers to score</param>
+        /// <returns>Task of ApiResponse (AssessmentScoringSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AssessmentScoringSet>> PostLearningAssessmentsScoringAsyncWithHttpInfo (LearningAssessmentScoringRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningAssessmentsScoring");
+            
+
+            var localVarPath = "/api/v2/learning/assessments/scoring";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningAssessmentsScoring: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningAssessmentsScoring: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AssessmentScoringSet>(localVarStatusCode,
+                localVarHeaders,
+                (AssessmentScoringSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssessmentScoringSet)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

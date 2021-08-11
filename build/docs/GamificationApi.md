@@ -38,6 +38,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetGamificationTemplate**](GamificationApi.html#getgamificationtemplate) | **GET** /api/v2/gamification/templates/{templateId} | Objective template by id |
 | [**GetGamificationTemplates**](GamificationApi.html#getgamificationtemplates) | **GET** /api/v2/gamification/templates | All objective templates |
 | [**PostGamificationMetrics**](GamificationApi.html#postgamificationmetrics) | **POST** /api/v2/gamification/metrics | Creates a gamified metric with a given metric definition and metric objective |
+| [**PostGamificationProfileActivate**](GamificationApi.html#postgamificationprofileactivate) | **POST** /api/v2/gamification/profiles/{performanceProfileId}/activate | Activate a performance profile |
+| [**PostGamificationProfileDeactivate**](GamificationApi.html#postgamificationprofiledeactivate) | **POST** /api/v2/gamification/profiles/{performanceProfileId}/deactivate | Deactivate a performance profile |
 | [**PutGamificationMetric**](GamificationApi.html#putgamificationmetric) | **PUT** /api/v2/gamification/metrics/{metricId} | Updates a metric |
 | [**PutGamificationProfile**](GamificationApi.html#putgamificationprofile) | **PUT** /api/v2/gamification/profiles/{performanceProfileId} | Updates a performance profile |
 | [**PutGamificationStatus**](GamificationApi.html#putgamificationstatus) | **PUT** /api/v2/gamification/status | Update gamification activation status |
@@ -2109,6 +2111,136 @@ namespace Example
 ### Return type
 
 [**Metric**](Metric.html)
+
+<a name="postgamificationprofileactivate"></a>
+
+## [**PerformanceProfile**](PerformanceProfile.html) PostGamificationProfileActivate (string performanceProfileId)
+
+
+
+Activate a performance profile
+
+
+
+Requires ANY permissions: 
+
+* gamification:profile:update
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostGamificationProfileActivateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var performanceProfileId = performanceProfileId_example;  // string | Performance Profile Id
+
+            try
+            { 
+                // Activate a performance profile
+                PerformanceProfile result = apiInstance.PostGamificationProfileActivate(performanceProfileId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.PostGamificationProfileActivate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **performanceProfileId** | **string**| Performance Profile Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PerformanceProfile**](PerformanceProfile.html)
+
+<a name="postgamificationprofiledeactivate"></a>
+
+## [**PerformanceProfile**](PerformanceProfile.html) PostGamificationProfileDeactivate (string performanceProfileId)
+
+
+
+Deactivate a performance profile
+
+
+
+Requires ANY permissions: 
+
+* gamification:profile:update
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostGamificationProfileDeactivateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var performanceProfileId = performanceProfileId_example;  // string | Performance Profile Id
+
+            try
+            { 
+                // Deactivate a performance profile
+                PerformanceProfile result = apiInstance.PostGamificationProfileDeactivate(performanceProfileId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.PostGamificationProfileDeactivate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **performanceProfileId** | **string**| Performance Profile Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PerformanceProfile**](PerformanceProfile.html)
 
 <a name="putgamificationmetric"></a>
 

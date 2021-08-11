@@ -275,6 +275,12 @@ namespace PureCloudPlatform.Client.V2.Model
             InvalidAgent,
             
             /// <summary>
+            /// Enum InvalidEmailAddress for "INVALID_EMAIL_ADDRESS"
+            /// </summary>
+            [EnumMember(Value = "INVALID_EMAIL_ADDRESS")]
+            InvalidEmailAddress,
+            
+            /// <summary>
             /// Enum InvalidPhoneNumber for "INVALID_PHONE_NUMBER"
             /// </summary>
             [EnumMember(Value = "INVALID_PHONE_NUMBER")]

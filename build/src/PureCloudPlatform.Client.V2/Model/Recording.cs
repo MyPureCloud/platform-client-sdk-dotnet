@@ -212,6 +212,31 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Status of a recording that cannot be returned because of an error
+        /// </summary>
+        /// <value>Status of a recording that cannot be returned because of an error</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum RecordingErrorStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum EmailTranscriptTooLarge for "EMAIL_TRANSCRIPT_TOO_LARGE"
+            /// </summary>
+            [EnumMember(Value = "EMAIL_TRANSCRIPT_TOO_LARGE")]
+            EmailTranscriptTooLarge
+        }
+        
+        
+        
+        
         
         
         
@@ -293,6 +318,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Status of a recording that cannot be returned because of an error
+        /// </summary>
+        /// <value>Status of a recording that cannot be returned because of an error</value>
+        [DataMember(Name="recordingErrorStatus", EmitDefaultValue=false)]
+        public RecordingErrorStatusEnum? RecordingErrorStatus { get; set; }
+        
+        
+        
         
     
         /// <summary>
@@ -325,7 +359,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SessionId">The session id represents an external resource id, such as email, call, chat, etc.</param>
         /// <param name="Users">The users participating in the conversation.</param>
         /// <param name="RecordingFileRole">Role of the file recording. It can be either customer_experience or adhoc..</param>
-        public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<RecordingEmailMessage> EmailTranscript = null, List<RecordingMessagingMessage> MessagingTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, DateTime? ExportDate = null, DateTime? ExportedDate = null, int? OutputDurationMs = null, int? OutputSizeInBytes = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null, List<User> Users = null, RecordingFileRoleEnum? RecordingFileRole = null)
+        /// <param name="RecordingErrorStatus">Status of a recording that cannot be returned because of an error.</param>
+        public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<RecordingEmailMessage> EmailTranscript = null, List<RecordingMessagingMessage> MessagingTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, DateTime? ExportDate = null, DateTime? ExportedDate = null, int? OutputDurationMs = null, int? OutputSizeInBytes = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null, List<User> Users = null, RecordingFileRoleEnum? RecordingFileRole = null, RecordingErrorStatusEnum? RecordingErrorStatus = null)
         {
             this.Name = Name;
             this.ConversationId = ConversationId;
@@ -354,6 +389,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SessionId = SessionId;
             this.Users = Users;
             this.RecordingFileRole = RecordingFileRole;
+            this.RecordingErrorStatus = RecordingErrorStatus;
             
         }
         
@@ -585,6 +621,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -630,6 +668,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
             sb.Append("  Users: ").Append(Users).Append("\n");
             sb.Append("  RecordingFileRole: ").Append(RecordingFileRole).Append("\n");
+            sb.Append("  RecordingErrorStatus: ").Append(RecordingErrorStatus).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -812,6 +851,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RecordingFileRole.Equals(other.RecordingFileRole)
                 ) &&
                 (
+                    this.RecordingErrorStatus == other.RecordingErrorStatus ||
+                    this.RecordingErrorStatus != null &&
+                    this.RecordingErrorStatus.Equals(other.RecordingErrorStatus)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -913,6 +957,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RecordingFileRole != null)
                     hash = hash * 59 + this.RecordingFileRole.GetHashCode();
+                
+                if (this.RecordingErrorStatus != null)
+                    hash = hash * 59 + this.RecordingErrorStatus.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

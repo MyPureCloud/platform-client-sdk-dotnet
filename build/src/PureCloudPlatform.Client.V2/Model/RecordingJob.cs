@@ -108,12 +108,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current state of the job.
         /// </summary>
         /// <value>The current state of the job.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -232,6 +237,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Get IDs of recordings that the bulk job failed for
+        /// </summary>
+        /// <value>Get IDs of recordings that the bulk job failed for</value>
+        [DataMember(Name="failedRecordings", EmitDefaultValue=false)]
+        public string FailedRecordings { get; private set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -266,6 +280,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TotalProcessedRecordings: ").Append(TotalProcessedRecordings).Append("\n");
             sb.Append("  PercentProgress: ").Append(PercentProgress).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            sb.Append("  FailedRecordings: ").Append(FailedRecordings).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("}\n");
@@ -354,6 +369,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ErrorMessage.Equals(other.ErrorMessage)
                 ) &&
                 (
+                    this.FailedRecordings == other.FailedRecordings ||
+                    this.FailedRecordings != null &&
+                    this.FailedRecordings.Equals(other.FailedRecordings)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -403,6 +423,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ErrorMessage != null)
                     hash = hash * 59 + this.ErrorMessage.GetHashCode();
+                
+                if (this.FailedRecordings != null)
+                    hash = hash * 59 + this.FailedRecordings.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

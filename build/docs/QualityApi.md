@@ -15,7 +15,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetQualityAgentsActivity**](QualityApi.html#getqualityagentsactivity) | **GET** /api/v2/quality/agents/activity | Gets a list of Agent Activities |
 | [**GetQualityCalibration**](QualityApi.html#getqualitycalibration) | **GET** /api/v2/quality/calibrations/{calibrationId} | Get a calibration by id.  Requires either calibrator id or conversation id |
 | [**GetQualityCalibrations**](QualityApi.html#getqualitycalibrations) | **GET** /api/v2/quality/calibrations | Get the list of calibrations |
-| [**GetQualityConversationAudits**](QualityApi.html#getqualityconversationaudits) | **GET** /api/v2/quality/conversations/{conversationId}/audits | Get audits for conversation or recording |
 | [**GetQualityConversationEvaluation**](QualityApi.html#getqualityconversationevaluation) | **GET** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Get an evaluation |
 | [**GetQualityConversationSurveys**](QualityApi.html#getqualityconversationsurveys) | **GET** /api/v2/quality/conversations/{conversationId}/surveys | Get the surveys for a conversation |
 | [**GetQualityConversationsAuditsQueryTransactionId**](QualityApi.html#getqualityconversationsauditsquerytransactionid) | **GET** /api/v2/quality/conversations/audits/query/{transactionId} | Get status of audit query execution |
@@ -629,92 +628,6 @@ namespace Example
 ### Return type
 
 [**CalibrationEntityListing**](CalibrationEntityListing.html)
-
-<a name="getqualityconversationaudits"></a>
-
-## [**QualityAuditPage**](QualityAuditPage.html) GetQualityConversationAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Get audits for conversation or recording
-
-Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.This endpoint is deprecated. Use following async endpoints, To query for audits POST /api/v2/quality/conversations/audits/queryTo get status of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}To get results of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}/results
-
-Requires ANY permissions: 
-
-* quality:calibration:viewAudit
-* quality:evaluation:viewAudit
-* quality:survey:viewAudit
-* recording:recording:viewAudit
-* recording:annotation:viewAudit
-* recording:screenRecording:viewAudit
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetQualityConversationAuditsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new QualityApi();
-            var conversationId = conversationId_example;  // string | Conversation ID
-            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            var nextPage = nextPage_example;  // string | next page token (optional) 
-            var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            var recordingId = recordingId_example;  // string | id of the recording (optional) 
-            var entityType = entityType_example;  // string | entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional)  (default to Recording)
-
-            try
-            { 
-                // Get audits for conversation or recording
-                QualityAuditPage result = apiInstance.GetQualityConversationAudits(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling QualityApi.GetQualityConversationAudits: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **conversationId** | **string**| Conversation ID |  |
-| **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
-| **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
-| **nextPage** | **string**| next page token | [optional]  |
-| **previousPage** | **string**| Previous page token | [optional]  |
-| **recordingId** | **string**| id of the recording | [optional]  |
-| **entityType** | **string**| entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording | [optional] [default to Recording] |
-{: class="table table-striped"}
-
-### Return type
-
-[**QualityAuditPage**](QualityAuditPage.html)
 
 <a name="getqualityconversationevaluation"></a>
 

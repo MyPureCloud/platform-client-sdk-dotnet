@@ -1555,10 +1555,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">The direction to sort (optional, default to a)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="type">Campaign Type (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="senderSmsPhoneNumber">Sender SMS Phone Number (optional)</param>
         /// <returns>MessagingCampaignDivisionViewEntityListing</returns>
-        MessagingCampaignDivisionViewEntityListing GetOutboundMessagingcampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null, string senderSmsPhoneNumber = null);
+        MessagingCampaignDivisionViewEntityListing GetOutboundMessagingcampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null);
 
         /// <summary>
         /// Query a list of basic Messaging Campaign information objects
@@ -1571,10 +1572,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">The direction to sort (optional, default to a)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="type">Campaign Type (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="senderSmsPhoneNumber">Sender SMS Phone Number (optional)</param>
         /// <returns>ApiResponse of MessagingCampaignDivisionViewEntityListing</returns>
-        ApiResponse<MessagingCampaignDivisionViewEntityListing> GetOutboundMessagingcampaignsDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null, string senderSmsPhoneNumber = null);
+        ApiResponse<MessagingCampaignDivisionViewEntityListing> GetOutboundMessagingcampaignsDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null);
         
         /// <summary>
         /// Get a Rule Set by ID.
@@ -4315,10 +4317,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">The direction to sort (optional, default to a)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="type">Campaign Type (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="senderSmsPhoneNumber">Sender SMS Phone Number (optional)</param>
         /// <returns>Task of MessagingCampaignDivisionViewEntityListing</returns>
-        System.Threading.Tasks.Task<MessagingCampaignDivisionViewEntityListing> GetOutboundMessagingcampaignsDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null, string senderSmsPhoneNumber = null);
+        System.Threading.Tasks.Task<MessagingCampaignDivisionViewEntityListing> GetOutboundMessagingcampaignsDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null);
 
         /// <summary>
         /// Query a list of basic Messaging Campaign information objects
@@ -4331,10 +4334,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">The direction to sort (optional, default to a)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="type">Campaign Type (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="senderSmsPhoneNumber">Sender SMS Phone Number (optional)</param>
         /// <returns>Task of ApiResponse (MessagingCampaignDivisionViewEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MessagingCampaignDivisionViewEntityListing>> GetOutboundMessagingcampaignsDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null, string senderSmsPhoneNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<MessagingCampaignDivisionViewEntityListing>> GetOutboundMessagingcampaignsDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null);
         
         /// <summary>
         /// Get a Rule Set by ID.
@@ -17468,12 +17472,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">The direction to sort (optional, default to a)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="type">Campaign Type (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="senderSmsPhoneNumber">Sender SMS Phone Number (optional)</param>
         /// <returns>MessagingCampaignDivisionViewEntityListing</returns>
-        public MessagingCampaignDivisionViewEntityListing GetOutboundMessagingcampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null, string senderSmsPhoneNumber = null)
+        public MessagingCampaignDivisionViewEntityListing GetOutboundMessagingcampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null)
         {
-             ApiResponse<MessagingCampaignDivisionViewEntityListing> localVarResponse = GetOutboundMessagingcampaignsDivisionviewsWithHttpInfo(pageSize, pageNumber, sortOrder, name, id, senderSmsPhoneNumber);
+             ApiResponse<MessagingCampaignDivisionViewEntityListing> localVarResponse = GetOutboundMessagingcampaignsDivisionviewsWithHttpInfo(pageSize, pageNumber, sortOrder, name, type, id, senderSmsPhoneNumber);
              return localVarResponse.Data;
         }
 
@@ -17485,10 +17490,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">The direction to sort (optional, default to a)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="type">Campaign Type (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="senderSmsPhoneNumber">Sender SMS Phone Number (optional)</param>
         /// <returns>ApiResponse of MessagingCampaignDivisionViewEntityListing</returns>
-        public ApiResponse< MessagingCampaignDivisionViewEntityListing > GetOutboundMessagingcampaignsDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null, string senderSmsPhoneNumber = null)
+        public ApiResponse< MessagingCampaignDivisionViewEntityListing > GetOutboundMessagingcampaignsDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null)
         { 
 
             var localVarPath = "/api/v2/outbound/messagingcampaigns/divisionviews";
@@ -17528,6 +17534,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", this.Configuration.ApiClient.ParameterToString(type)));
             if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (senderSmsPhoneNumber != null) localVarQueryParams.Add(new Tuple<string, string>("senderSmsPhoneNumber", this.Configuration.ApiClient.ParameterToString(senderSmsPhoneNumber)));
 
@@ -17575,12 +17582,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">The direction to sort (optional, default to a)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="type">Campaign Type (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="senderSmsPhoneNumber">Sender SMS Phone Number (optional)</param>
         /// <returns>Task of MessagingCampaignDivisionViewEntityListing</returns>
-        public async System.Threading.Tasks.Task<MessagingCampaignDivisionViewEntityListing> GetOutboundMessagingcampaignsDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null, string senderSmsPhoneNumber = null)
+        public async System.Threading.Tasks.Task<MessagingCampaignDivisionViewEntityListing> GetOutboundMessagingcampaignsDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null)
         {
-             ApiResponse<MessagingCampaignDivisionViewEntityListing> localVarResponse = await GetOutboundMessagingcampaignsDivisionviewsAsyncWithHttpInfo(pageSize, pageNumber, sortOrder, name, id, senderSmsPhoneNumber);
+             ApiResponse<MessagingCampaignDivisionViewEntityListing> localVarResponse = await GetOutboundMessagingcampaignsDivisionviewsAsyncWithHttpInfo(pageSize, pageNumber, sortOrder, name, type, id, senderSmsPhoneNumber);
              return localVarResponse.Data;
 
         }
@@ -17593,10 +17601,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">The direction to sort (optional, default to a)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="type">Campaign Type (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="senderSmsPhoneNumber">Sender SMS Phone Number (optional)</param>
         /// <returns>Task of ApiResponse (MessagingCampaignDivisionViewEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignDivisionViewEntityListing>> GetOutboundMessagingcampaignsDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null, string senderSmsPhoneNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignDivisionViewEntityListing>> GetOutboundMessagingcampaignsDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null)
         { 
 
             var localVarPath = "/api/v2/outbound/messagingcampaigns/divisionviews";
@@ -17636,6 +17645,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", this.Configuration.ApiClient.ParameterToString(type)));
             if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (senderSmsPhoneNumber != null) localVarQueryParams.Add(new Tuple<string, string>("senderSmsPhoneNumber", this.Configuration.ApiClient.ParameterToString(senderSmsPhoneNumber)));
 

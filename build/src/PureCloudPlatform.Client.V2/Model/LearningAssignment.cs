@@ -47,6 +47,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The Learning Assignment state
         /// </summary>
@@ -121,6 +130,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The Learning Assignment state
         /// </summary>
@@ -137,10 +155,13 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningAssignment" /> class.
         /// </summary>
+        /// <param name="Assessment">The assessment associated with this assignment.</param>
         /// <param name="CreatedBy">The user who created the assignment.</param>
         /// <param name="ModifiedBy">The user who modified the assignment.</param>
         /// <param name="State">The Learning Assignment state.</param>
@@ -148,8 +169,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">The version of Learning module assigned.</param>
         /// <param name="Module">The Learning module object associated with this assignment.</param>
         /// <param name="User">The user to whom the assignment is assigned.</param>
-        public LearningAssignment(UserReference CreatedBy = null, UserReference ModifiedBy = null, StateEnum? State = null, DateTime? DateRecommendedForCompletion = null, int? Version = null, LearningModule Module = null, UserReference User = null)
+        /// <param name="AssessmentForm">The assessment form associated with this assignment.</param>
+        public LearningAssignment(LearningAssessment Assessment = null, UserReference CreatedBy = null, UserReference ModifiedBy = null, StateEnum? State = null, DateTime? DateRecommendedForCompletion = null, int? Version = null, LearningModule Module = null, UserReference User = null, AssessmentForm AssessmentForm = null)
         {
+            this.Assessment = Assessment;
             this.CreatedBy = CreatedBy;
             this.ModifiedBy = ModifiedBy;
             this.State = State;
@@ -157,6 +180,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Version = Version;
             this.Module = Module;
             this.User = User;
+            this.AssessmentForm = AssessmentForm;
             
         }
         
@@ -168,6 +192,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The assessment associated with this assignment
+        /// </summary>
+        /// <value>The assessment associated with this assignment</value>
+        [DataMember(Name="assessment", EmitDefaultValue=false)]
+        public LearningAssessment Assessment { get; set; }
         
         
         
@@ -217,6 +250,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The user&#39;s percentage score for this assignment
+        /// </summary>
+        /// <value>The user&#39;s percentage score for this assignment</value>
+        [DataMember(Name="percentageScore", EmitDefaultValue=false)]
+        public float? PercentageScore { get; private set; }
+        
+        
+        
+        /// <summary>
         /// True if this assignment was created by a Rule
         /// </summary>
         /// <value>True if this assignment was created by a Rule</value>
@@ -231,6 +273,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>True if this assignment was created manually</value>
         [DataMember(Name="isManual", EmitDefaultValue=false)]
         public bool? IsManual { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// True if the assessment was passed
+        /// </summary>
+        /// <value>True if the assessment was passed</value>
+        [DataMember(Name="isPassed", EmitDefaultValue=false)]
+        public bool? IsPassed { get; private set; }
         
         
         
@@ -280,6 +331,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public UserReference User { get; set; }
         
         
+        
+        /// <summary>
+        /// The assessment form associated with this assignment
+        /// </summary>
+        /// <value>The assessment form associated with this assignment</value>
+        [DataMember(Name="assessmentForm", EmitDefaultValue=false)]
+        public AssessmentForm AssessmentForm { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -290,19 +350,23 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class LearningAssignment {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Assessment: ").Append(Assessment).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  IsOverdue: ").Append(IsOverdue).Append("\n");
+            sb.Append("  PercentageScore: ").Append(PercentageScore).Append("\n");
             sb.Append("  IsRule: ").Append(IsRule).Append("\n");
             sb.Append("  IsManual: ").Append(IsManual).Append("\n");
+            sb.Append("  IsPassed: ").Append(IsPassed).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  DateRecommendedForCompletion: ").Append(DateRecommendedForCompletion).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Module: ").Append(Module).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  AssessmentForm: ").Append(AssessmentForm).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -349,6 +413,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.Assessment == other.Assessment ||
+                    this.Assessment != null &&
+                    this.Assessment.Equals(other.Assessment)
+                ) &&
+                (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
@@ -374,6 +443,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IsOverdue.Equals(other.IsOverdue)
                 ) &&
                 (
+                    this.PercentageScore == other.PercentageScore ||
+                    this.PercentageScore != null &&
+                    this.PercentageScore.Equals(other.PercentageScore)
+                ) &&
+                (
                     this.IsRule == other.IsRule ||
                     this.IsRule != null &&
                     this.IsRule.Equals(other.IsRule)
@@ -382,6 +456,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IsManual == other.IsManual ||
                     this.IsManual != null &&
                     this.IsManual.Equals(other.IsManual)
+                ) &&
+                (
+                    this.IsPassed == other.IsPassed ||
+                    this.IsPassed != null &&
+                    this.IsPassed.Equals(other.IsPassed)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -412,6 +491,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
+                ) &&
+                (
+                    this.AssessmentForm == other.AssessmentForm ||
+                    this.AssessmentForm != null &&
+                    this.AssessmentForm.Equals(other.AssessmentForm)
                 );
         }
 
@@ -430,6 +514,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
+                if (this.Assessment != null)
+                    hash = hash * 59 + this.Assessment.GetHashCode();
+                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
                 
@@ -445,11 +532,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.IsOverdue != null)
                     hash = hash * 59 + this.IsOverdue.GetHashCode();
                 
+                if (this.PercentageScore != null)
+                    hash = hash * 59 + this.PercentageScore.GetHashCode();
+                
                 if (this.IsRule != null)
                     hash = hash * 59 + this.IsRule.GetHashCode();
                 
                 if (this.IsManual != null)
                     hash = hash * 59 + this.IsManual.GetHashCode();
+                
+                if (this.IsPassed != null)
+                    hash = hash * 59 + this.IsPassed.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
@@ -468,6 +561,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
+                if (this.AssessmentForm != null)
+                    hash = hash * 59 + this.AssessmentForm.GetHashCode();
                 
                 return hash;
             }

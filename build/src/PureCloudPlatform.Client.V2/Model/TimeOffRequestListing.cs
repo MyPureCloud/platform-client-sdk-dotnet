@@ -35,7 +35,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequestListing" /> class.
         /// </summary>
-        /// <param name="Entities">List of time off request look up objects (required).</param>
+        /// <param name="Entities">List of time off requests (required).</param>
         public TimeOffRequestListing(List<TimeOffRequest> Entities = null)
         {
             this.Entities = Entities;
@@ -45,9 +45,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// List of time off request look up objects
+        /// List of time off requests
         /// </summary>
-        /// <value>List of time off request look up objects</value>
+        /// <value>List of time off requests</value>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<TimeOffRequest> Entities { get; set; }
         

@@ -10,8 +10,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetDate**](UtilitiesApi.html#getdate) | **GET** /api/v2/date | Get the current system date/time |
 | [**GetIpranges**](UtilitiesApi.html#getipranges) | **GET** /api/v2/ipranges | Get public ip address ranges for PureCloud |
 | [**GetTimezones**](UtilitiesApi.html#gettimezones) | **GET** /api/v2/timezones | Get time zones list |
-| [**GetUploadsV1Publicasset**](UtilitiesApi.html#getuploadsv1publicasset) | **GET** /uploads/v1/publicassets/{subResources} | 301 redirect. |
-| [**GetWebdeploymentsV1SubResources**](UtilitiesApi.html#getwebdeploymentsv1subresources) | **GET** /webdeployments/v1/{subResources} | 301 redirect. |
 | [**PostCertificateDetails**](UtilitiesApi.html#postcertificatedetails) | **POST** /api/v2/certificate/details | Returns the information about an X509 PEM encoded certificate or certificate chain. |
 {: class="table table-striped"}
 
@@ -198,110 +196,6 @@ namespace Example
 ### Return type
 
 [**TimeZoneEntityListing**](TimeZoneEntityListing.html)
-
-<a name="getuploadsv1publicasset"></a>
-
-## void GetUploadsV1Publicasset ()
-
-
-
-301 redirect.
-
-
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetUploadsV1PublicassetExample
-    {
-        public void main()
-        { 
-
-            var apiInstance = new UtilitiesApi();
-
-            try
-            { 
-                // 301 redirect.
-                apiInstance.GetUploadsV1Publicasset();
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling UtilitiesApi.GetUploadsV1Publicasset: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-
-
-### Return type
-
-void (empty response body)
-
-<a name="getwebdeploymentsv1subresources"></a>
-
-## void GetWebdeploymentsV1SubResources ()
-
-
-
-301 redirect.
-
-
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetWebdeploymentsV1SubResourcesExample
-    {
-        public void main()
-        { 
-
-            var apiInstance = new UtilitiesApi();
-
-            try
-            { 
-                // 301 redirect.
-                apiInstance.GetWebdeploymentsV1SubResources();
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling UtilitiesApi.GetWebdeploymentsV1SubResources: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-
-
-### Return type
-
-void (empty response body)
 
 <a name="postcertificatedetails"></a>
 

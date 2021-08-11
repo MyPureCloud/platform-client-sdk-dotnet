@@ -63,7 +63,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Noverdueactivities for "nOverdueActivities"
             /// </summary>
             [EnumMember(Value = "nOverdueActivities")]
-            Noverdueactivities
+            Noverdueactivities,
+            
+            /// <summary>
+            /// Enum Npassedactivities for "nPassedActivities"
+            /// </summary>
+            [EnumMember(Value = "nPassedActivities")]
+            Npassedactivities,
+            
+            /// <summary>
+            /// Enum Nfailedactivities for "nFailedActivities"
+            /// </summary>
+            [EnumMember(Value = "nFailedActivities")]
+            Nfailedactivities,
+            
+            /// <summary>
+            /// Enum Oactivityscore for "oActivityScore"
+            /// </summary>
+            [EnumMember(Value = "oActivityScore")]
+            Oactivityscore
         }
         
         

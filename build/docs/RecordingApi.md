@@ -27,6 +27,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRecordingCrossplatformMediaretentionpolicies**](RecordingApi.html#getrecordingcrossplatformmediaretentionpolicies) | **GET** /api/v2/recording/crossplatform/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
 | [**GetRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#getrecordingcrossplatformmediaretentionpolicy) | **GET** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Get a media retention policy |
 | [**GetRecordingJob**](RecordingApi.html#getrecordingjob) | **GET** /api/v2/recording/jobs/{jobId} | Get the status of the job associated with the job id. |
+| [**GetRecordingJobFailedrecordings**](RecordingApi.html#getrecordingjobfailedrecordings) | **GET** /api/v2/recording/jobs/{jobId}/failedrecordings | Get IDs of recordings that the bulk job failed for |
 | [**GetRecordingJobs**](RecordingApi.html#getrecordingjobs) | **GET** /api/v2/recording/jobs | Get the status of all jobs within the user&#39;s organization |
 | [**GetRecordingLocalkeysSetting**](RecordingApi.html#getrecordinglocalkeyssetting) | **GET** /api/v2/recording/localkeys/settings/{settingsId} | Get the local encryption settings |
 | [**GetRecordingLocalkeysSettings**](RecordingApi.html#getrecordinglocalkeyssettings) | **GET** /api/v2/recording/localkeys/settings | gets a list local key settings data |
@@ -1431,6 +1432,75 @@ namespace Example
 ### Return type
 
 [**RecordingJob**](RecordingJob.html)
+
+<a name="getrecordingjobfailedrecordings"></a>
+
+## [**FailedRecordingsEntityListing**](FailedRecordingsEntityListing.html) GetRecordingJobFailedrecordings (string jobId, int? pageSize = null, int? pageNumber = null)
+
+
+
+Get IDs of recordings that the bulk job failed for
+
+
+
+Requires ALL permissions: 
+
+* recording:job:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRecordingJobFailedrecordingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RecordingApi();
+            var jobId = jobId_example;  // string | jobId
+            var pageSize = 56;  // int? | Page size. Maximum is 100. (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // Get IDs of recordings that the bulk job failed for
+                FailedRecordingsEntityListing result = apiInstance.GetRecordingJobFailedrecordings(jobId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetRecordingJobFailedrecordings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+| **pageSize** | **int?**| Page size. Maximum is 100. | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**FailedRecordingsEntityListing**](FailedRecordingsEntityListing.html)
 
 <a name="getrecordingjobs"></a>
 

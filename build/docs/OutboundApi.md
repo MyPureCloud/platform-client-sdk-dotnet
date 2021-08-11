@@ -4083,9 +4083,10 @@ Get a basic Messaging Campaign information object
 
 This returns a simplified version of a Messaging Campaign, consisting of id, name, and division.
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * outbound:messagingCampaign:search
+* outbound:emailCampaign:search
 
 ### Example
 ```{"language":"csharp"}
@@ -4140,7 +4141,7 @@ namespace Example
 
 <a name="getoutboundmessagingcampaignsdivisionviews"></a>
 
-## [**MessagingCampaignDivisionViewEntityListing**](MessagingCampaignDivisionViewEntityListing.html) GetOutboundMessagingcampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null, string senderSmsPhoneNumber = null)
+## [**MessagingCampaignDivisionViewEntityListing**](MessagingCampaignDivisionViewEntityListing.html) GetOutboundMessagingcampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null)
 
 
 
@@ -4148,9 +4149,10 @@ Query a list of basic Messaging Campaign information objects
 
 This returns a listing of simplified Messaging Campaigns, each consisting of id, name, and division.
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * outbound:messagingCampaign:search
+* outbound:emailCampaign:search
 
 ### Example
 ```{"language":"csharp"}
@@ -4178,13 +4180,14 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortOrder = sortOrder_example;  // string | The direction to sort (optional)  (default to a)
             var name = name_example;  // string | Name (optional) 
+            var type = type_example;  // string | Campaign Type (optional) 
             var id = new List<string>(); // List<string> | id (optional) 
             var senderSmsPhoneNumber = senderSmsPhoneNumber_example;  // string | Sender SMS Phone Number (optional) 
 
             try
             { 
                 // Query a list of basic Messaging Campaign information objects
-                MessagingCampaignDivisionViewEntityListing result = apiInstance.GetOutboundMessagingcampaignsDivisionviews(pageSize, pageNumber, sortOrder, name, id, senderSmsPhoneNumber);
+                MessagingCampaignDivisionViewEntityListing result = apiInstance.GetOutboundMessagingcampaignsDivisionviews(pageSize, pageNumber, sortOrder, name, type, id, senderSmsPhoneNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4205,6 +4208,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| The direction to sort | [optional] [default to a]<br />**Values**: ascending, descending |
 | **name** | **string**| Name | [optional]  |
+| **type** | **string**| Campaign Type | [optional] <br />**Values**: EMAIL, SMS |
 | **id** | [**List<string>**](string.html)| id | [optional]  |
 | **senderSmsPhoneNumber** | **string**| Sender SMS Phone Number | [optional]  |
 {: class="table table-striped"}

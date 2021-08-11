@@ -17,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetLearningModuleVersion**](LearningApi.html#getlearningmoduleversion) | **GET** /api/v2/learning/modules/{moduleId}/versions/{versionId} | Get specific version of a published module |
 | [**GetLearningModules**](LearningApi.html#getlearningmodules) | **GET** /api/v2/learning/modules | Get all learning modules of an organization |
 | [**PatchLearningAssignment**](LearningApi.html#patchlearningassignment) | **PATCH** /api/v2/learning/assignments/{assignmentId} | Update Learning Assignment |
+| [**PostLearningAssessmentsScoring**](LearningApi.html#postlearningassessmentsscoring) | **POST** /api/v2/learning/assessments/scoring | Score learning assessment for preview |
 | [**PostLearningAssignments**](LearningApi.html#postlearningassignments) | **POST** /api/v2/learning/assignments | Create Learning Assignment |
 | [**PostLearningAssignmentsAggregatesQuery**](LearningApi.html#postlearningassignmentsaggregatesquery) | **POST** /api/v2/learning/assignments/aggregates/query | Retrieve aggregated assignment data |
 | [**PostLearningAssignmentsBulkadd**](LearningApi.html#postlearningassignmentsbulkadd) | **POST** /api/v2/learning/assignments/bulkadd | Add multiple learning assignments |
@@ -225,7 +226,7 @@ namespace Example
 
 <a name="getlearningassignments"></a>
 
-## [**LearningAssignmentsDomainEntity**](LearningAssignmentsDomainEntity.html) GetLearningAssignments (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null)
+## [**LearningAssignmentsDomainEntity**](LearningAssignmentsDomainEntity.html) GetLearningAssignments (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null)
 
 
 
@@ -265,6 +266,9 @@ namespace Example
             var overdue = overdue_example;  // string | Specifies if only the non-overdue (overdue is \"False\") or overdue (overdue is \"True\") assignments are returned. If overdue is \"Any\" or if the overdue parameter is not supplied, all assignments are returned (optional)  (default to Any)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pass = pass_example;  // string | Specifies if only the failed (pass is \"False\") or passed (pass is \"True\") assignments (completed with assessment)are returned. If pass is \"Any\" or if the pass parameter is not supplied, all assignments are returned (optional)  (default to Any)
+            var minPercentageScore = 3.4;  // float? | The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) 
+            var maxPercentageScore = 3.4;  // float? | The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) 
             var sortOrder = sortOrder_example;  // string | Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional)  (default to Desc)
             var sortBy = sortBy_example;  // string | Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional) 
             var userId = new List<string>(); // List<string> | Specifies the list of user IDs to be queried, up to 100 user IDs. (optional) 
@@ -275,7 +279,7 @@ namespace Example
             try
             { 
                 // List of Learning module Assignments
-                LearningAssignmentsDomainEntity result = apiInstance.GetLearningAssignments(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, sortOrder, sortBy, userId, types, states, expand);
+                LearningAssignmentsDomainEntity result = apiInstance.GetLearningAssignments(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, pass, minPercentageScore, maxPercentageScore, sortOrder, sortBy, userId, types, states, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -298,6 +302,9 @@ namespace Example
 | **overdue** | **string**| Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned | [optional] [default to Any]<br />**Values**: True, False, Any |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pass** | **string**| Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned | [optional] [default to Any]<br />**Values**: True, False, Any |
+| **minPercentageScore** | **float?**| The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) | [optional]  |
+| **maxPercentageScore** | **float?**| The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) | [optional]  |
 | **sortOrder** | **string**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: Asc, Desc |
 | **sortBy** | **string**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional] <br />**Values**: RecommendedCompletionDate, DateModified |
 | **userId** | [**List<string>**](string.html)| Specifies the list of user IDs to be queried, up to 100 user IDs. | [optional]  |
@@ -312,7 +319,7 @@ namespace Example
 
 <a name="getlearningassignmentsme"></a>
 
-## [**LearningAssignmentsDomainEntity**](LearningAssignmentsDomainEntity.html) GetLearningAssignmentsMe (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null)
+## [**LearningAssignmentsDomainEntity**](LearningAssignmentsDomainEntity.html) GetLearningAssignmentsMe (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null)
 
 
 
@@ -351,6 +358,9 @@ namespace Example
             var overdue = overdue_example;  // string | Specifies if only the non-overdue (overdue is \"False\") or overdue (overdue is \"True\") assignments are returned. If overdue is \"Any\" or if the overdue parameter is not supplied, all assignments are returned (optional)  (default to Any)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pass = pass_example;  // string | Specifies if only the failed (pass is \"False\") or passed (pass is \"True\") assignments (completed with assessment)are returned. If pass is \"Any\" or if the pass parameter is not supplied, all assignments are returned (optional)  (default to Any)
+            var minPercentageScore = 3.4;  // float? | The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) 
+            var maxPercentageScore = 3.4;  // float? | The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) 
             var sortOrder = sortOrder_example;  // string | Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional)  (default to Desc)
             var sortBy = sortBy_example;  // string | Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional) 
             var types = new List<string>(); // List<string> | Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned (optional) 
@@ -360,7 +370,7 @@ namespace Example
             try
             { 
                 // List of Learning Assignments assigned to current user
-                LearningAssignmentsDomainEntity result = apiInstance.GetLearningAssignmentsMe(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, sortOrder, sortBy, types, states, expand);
+                LearningAssignmentsDomainEntity result = apiInstance.GetLearningAssignmentsMe(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, pass, minPercentageScore, maxPercentageScore, sortOrder, sortBy, types, states, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -383,6 +393,9 @@ namespace Example
 | **overdue** | **string**| Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned | [optional] [default to Any]<br />**Values**: True, False, Any |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pass** | **string**| Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned | [optional] [default to Any]<br />**Values**: True, False, Any |
+| **minPercentageScore** | **float?**| The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) | [optional]  |
+| **maxPercentageScore** | **float?**| The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) | [optional]  |
 | **sortOrder** | **string**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: Asc, Desc |
 | **sortBy** | **string**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional] <br />**Values**: RecommendedCompletionDate, DateModified |
 | **types** | [**List<string>**](string.html)| Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned | [optional] <br />**Values**: Informational, AssessedContent, Questionnaire, Assessment |
@@ -597,7 +610,7 @@ namespace Example
 
 <a name="getlearningmodules"></a>
 
-## [**LearningModulesDomainEntityListing**](LearningModulesDomainEntityListing.html) GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null)
+## [**LearningModulesDomainEntityListing**](LearningModulesDomainEntityListing.html) GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null)
 
 
 
@@ -639,11 +652,12 @@ namespace Example
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
             var searchTerm = searchTerm_example;  // string | Search Term (searchable by name) (optional) 
             var expand = new List<string>(); // List<string> | Fields to expand in response(case insensitive) (optional) 
+            var isPublished = isPublished_example;  // string | Specifies if only the Unpublished (isPublished is \"False\") or Published (isPublished is \"True\") modules are returned. If isPublished is \"Any\" or omitted, both types are returned (optional)  (default to Any)
 
             try
             { 
                 // Get all learning modules of an organization
-                LearningModulesDomainEntityListing result = apiInstance.GetLearningModules(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand);
+                LearningModulesDomainEntityListing result = apiInstance.GetLearningModules(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -668,6 +682,7 @@ namespace Example
 | **sortBy** | **string**| Sort by | [optional] [default to name]<br />**Values**: name |
 | **searchTerm** | **string**| Search Term (searchable by name) | [optional]  |
 | **expand** | [**List<string>**](string.html)| Fields to expand in response(case insensitive) | [optional] <br />**Values**: rule, summaryData |
+| **isPublished** | **string**| Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned | [optional] [default to Any]<br />**Values**: True, False, Any |
 {: class="table table-striped"}
 
 ### Return type
@@ -739,6 +754,73 @@ namespace Example
 ### Return type
 
 [**LearningAssignment**](LearningAssignment.html)
+
+<a name="postlearningassessmentsscoring"></a>
+
+## [**AssessmentScoringSet**](AssessmentScoringSet.html) PostLearningAssessmentsScoring (LearningAssessmentScoringRequest body)
+
+
+
+Score learning assessment for preview
+
+
+
+Requires ANY permissions: 
+
+* learning:module:view
+* learning:module:add
+* learning:module:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLearningAssessmentsScoringExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LearningApi();
+            var body = new LearningAssessmentScoringRequest(); // LearningAssessmentScoringRequest | Assessment form and answers to score
+
+            try
+            { 
+                // Score learning assessment for preview
+                AssessmentScoringSet result = apiInstance.PostLearningAssessmentsScoring(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LearningApi.PostLearningAssessmentsScoring: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**LearningAssessmentScoringRequest**](LearningAssessmentScoringRequest.html)| Assessment form and answers to score |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AssessmentScoringSet**](AssessmentScoringSet.html)
 
 <a name="postlearningassignments"></a>
 

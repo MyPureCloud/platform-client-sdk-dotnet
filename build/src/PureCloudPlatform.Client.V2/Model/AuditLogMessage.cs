@@ -860,6 +860,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Document,
             
             /// <summary>
+            /// Enum Dynamicgroup for "DynamicGroup"
+            /// </summary>
+            [EnumMember(Value = "DynamicGroup")]
+            Dynamicgroup,
+            
+            /// <summary>
             /// Enum Edge for "Edge"
             /// </summary>
             [EnumMember(Value = "Edge")]
