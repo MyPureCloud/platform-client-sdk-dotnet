@@ -2386,7 +2386,7 @@ namespace Example
 
 Get the list of week schedules for the specified week
 
-Use \"recent\" for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+Use \"recent\" (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
 
 Requires ANY permissions: 
 
@@ -2416,7 +2416,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
-            var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format, or 'recent' to get recent schedules
+            var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format, or 'recent' (without quotes) to get recent schedules
             var includeOnlyPublished = true;  // bool? | includeOnlyPublished (optional) 
             var expand = expand_example;  // string | expand (optional) 
 
@@ -2441,7 +2441,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
-| **weekId** | **string**| First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; to get recent schedules |  |
+| **weekId** | **string**| First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; (without quotes) to get recent schedules |  |
 | **includeOnlyPublished** | **bool?**| includeOnlyPublished | [optional]  |
 | **expand** | **string**| expand | [optional] <br />**Values**: forecast.description |
 {: class="table table-striped"}
@@ -2813,7 +2813,7 @@ namespace Example
 
 Get short term forecasts
 
-Use \"recent\" for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+Use \"recent\" (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
 
 Requires ANY permissions: 
 
@@ -2843,7 +2843,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
-            var weekDateId = weekDateId_example;  // string | The week start date of the forecast in yyyy-MM-dd format or 'recent' to fetch recent forecasts
+            var weekDateId = weekDateId_example;  // string | The week start date of the forecast in yyyy-MM-dd format or 'recent' (without quotes) to fetch recent forecasts
 
             try
             { 
@@ -2866,7 +2866,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
-| **weekDateId** | **string**| The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; to fetch recent forecasts |  |
+| **weekDateId** | **string**| The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts |  |
 {: class="table table-striped"}
 
 ### Return type

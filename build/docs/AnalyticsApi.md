@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteAnalyticsConversationsDetailsJob**](AnalyticsApi.html#deleteanalyticsconversationsdetailsjob) | **DELETE** /api/v2/analytics/conversations/details/jobs/{jobId} | Delete/cancel an async request |
 | [**DeleteAnalyticsReportingSchedule**](AnalyticsApi.html#deleteanalyticsreportingschedule) | **DELETE** /api/v2/analytics/reporting/schedules/{scheduleId} | Delete a scheduled report job. |
 | [**DeleteAnalyticsUsersDetailsJob**](AnalyticsApi.html#deleteanalyticsusersdetailsjob) | **DELETE** /api/v2/analytics/users/details/jobs/{jobId} | Delete/cancel an async request |
+| [**GetAnalyticsBotflowReportingturns**](AnalyticsApi.html#getanalyticsbotflowreportingturns) | **GET** /api/v2/analytics/botflows/{botFlowId}/reportingturns | Get Reporting Turns. |
 | [**GetAnalyticsConversationDetails**](AnalyticsApi.html#getanalyticsconversationdetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
 | [**GetAnalyticsConversationsDetails**](AnalyticsApi.html#getanalyticsconversationsdetails) | **GET** /api/v2/analytics/conversations/details | Gets multiple conversations by id |
 | [**GetAnalyticsConversationsDetailsJob**](AnalyticsApi.html#getanalyticsconversationsdetailsjob) | **GET** /api/v2/analytics/conversations/details/jobs/{jobId} | Get status for async query for conversation details |
@@ -242,6 +243,79 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="getanalyticsbotflowreportingturns"></a>
+
+## [**ReportingTurnsResponse**](ReportingTurnsResponse.html) GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null)
+
+
+
+Get Reporting Turns.
+
+
+
+Requires ANY permissions: 
+
+* analytics:botFlowReportingTurn:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsBotflowReportingturnsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var botFlowId = botFlowId_example;  // string | ID of the bot flow.
+            var after = after_example;  // string | The cursor that points to the ID of the last item in the list of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Max number of entities to return. Maximum of 250 (optional)  (default to 50)
+            var actionId = actionId_example;  // string | Optional action ID to get the reporting turns associated to a particular flow action (optional) 
+            var sessionId = sessionId_example;  // string | Optional session ID to get the reporting turns for a particular session (optional) 
+
+            try
+            { 
+                // Get Reporting Turns.
+                ReportingTurnsResponse result = apiInstance.GetAnalyticsBotflowReportingturns(botFlowId, after, pageSize, actionId, sessionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsBotflowReportingturns: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **botFlowId** | **string**| ID of the bot flow. |  |
+| **after** | **string**| The cursor that points to the ID of the last item in the list of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Max number of entities to return. Maximum of 250 | [optional] [default to 50] |
+| **actionId** | **string**| Optional action ID to get the reporting turns associated to a particular flow action | [optional]  |
+| **sessionId** | **string**| Optional session ID to get the reporting turns for a particular session | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ReportingTurnsResponse**](ReportingTurnsResponse.html)
 
 <a name="getanalyticsconversationdetails"></a>
 

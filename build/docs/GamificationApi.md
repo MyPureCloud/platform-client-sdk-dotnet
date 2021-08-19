@@ -9,14 +9,19 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**GetGamificationLeaderboard**](GamificationApi.html#getgamificationleaderboard) | **GET** /api/v2/gamification/leaderboard | Leaderboard of the requesting user&#39;s division or performance profile |
 | [**GetGamificationLeaderboardAll**](GamificationApi.html#getgamificationleaderboardall) | **GET** /api/v2/gamification/leaderboard/all | Leaderboard by filter type |
-| [**GetGamificationLeaderboardAllBestpoints**](GamificationApi.html#getgamificationleaderboardallbestpoints) | **GET** /api/v2/gamification/leaderboard/all/bestpoints | Best Points by division |
-| [**GetGamificationLeaderboardBestpoints**](GamificationApi.html#getgamificationleaderboardbestpoints) | **GET** /api/v2/gamification/leaderboard/bestpoints | Best Points of the requesting user&#39;s division |
+| [**GetGamificationLeaderboardAllBestpoints**](GamificationApi.html#getgamificationleaderboardallbestpoints) | **GET** /api/v2/gamification/leaderboard/all/bestpoints | Best Points by division or performance profile |
+| [**GetGamificationLeaderboardBestpoints**](GamificationApi.html#getgamificationleaderboardbestpoints) | **GET** /api/v2/gamification/leaderboard/bestpoints | Best Points of the requesting user&#39;s current performance profile or division |
 | [**GetGamificationMetric**](GamificationApi.html#getgamificationmetric) | **GET** /api/v2/gamification/metrics/{metricId} | Gamified metric by id |
 | [**GetGamificationMetricdefinition**](GamificationApi.html#getgamificationmetricdefinition) | **GET** /api/v2/gamification/metricdefinitions/{metricDefinitionId} | Metric definition by id |
 | [**GetGamificationMetricdefinitions**](GamificationApi.html#getgamificationmetricdefinitions) | **GET** /api/v2/gamification/metricdefinitions | All metric definitions |
 | [**GetGamificationMetrics**](GamificationApi.html#getgamificationmetrics) | **GET** /api/v2/gamification/metrics | All gamified metrics for a given profile |
 | [**GetGamificationProfile**](GamificationApi.html#getgamificationprofile) | **GET** /api/v2/gamification/profiles/{performanceProfileId} | Performance profile by id |
+| [**GetGamificationProfileMetric**](GamificationApi.html#getgamificationprofilemetric) | **GET** /api/v2/gamification/profiles/{profileId}/metrics/{metricId} | Performance profile gamified metric by id |
+| [**GetGamificationProfileMetrics**](GamificationApi.html#getgamificationprofilemetrics) | **GET** /api/v2/gamification/profiles/{profileId}/metrics | All gamified metrics for a given performance profile |
+| [**GetGamificationProfileMetricsObjectivedetails**](GamificationApi.html#getgamificationprofilemetricsobjectivedetails) | **GET** /api/v2/gamification/profiles/{profileId}/metrics/objectivedetails | All metrics for a given performance profile with objective details such as order and maxPoints |
 | [**GetGamificationProfiles**](GamificationApi.html#getgamificationprofiles) | **GET** /api/v2/gamification/profiles | All performance profiles |
+| [**GetGamificationProfilesUser**](GamificationApi.html#getgamificationprofilesuser) | **GET** /api/v2/gamification/profiles/users/{userId} | Performance profile of a user |
+| [**GetGamificationProfilesUsersMe**](GamificationApi.html#getgamificationprofilesusersme) | **GET** /api/v2/gamification/profiles/users/me | Performance profile of the requesting user |
 | [**GetGamificationScorecards**](GamificationApi.html#getgamificationscorecards) | **GET** /api/v2/gamification/scorecards | Workday performance metrics of the requesting user |
 | [**GetGamificationScorecardsAttendance**](GamificationApi.html#getgamificationscorecardsattendance) | **GET** /api/v2/gamification/scorecards/attendance | Attendance status metrics of the requesting user |
 | [**GetGamificationScorecardsBestpoints**](GamificationApi.html#getgamificationscorecardsbestpoints) | **GET** /api/v2/gamification/scorecards/bestpoints | Best points of the requesting user |
@@ -40,8 +45,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostGamificationMetrics**](GamificationApi.html#postgamificationmetrics) | **POST** /api/v2/gamification/metrics | Creates a gamified metric with a given metric definition and metric objective |
 | [**PostGamificationProfileActivate**](GamificationApi.html#postgamificationprofileactivate) | **POST** /api/v2/gamification/profiles/{performanceProfileId}/activate | Activate a performance profile |
 | [**PostGamificationProfileDeactivate**](GamificationApi.html#postgamificationprofiledeactivate) | **POST** /api/v2/gamification/profiles/{performanceProfileId}/deactivate | Deactivate a performance profile |
+| [**PostGamificationProfileMetrics**](GamificationApi.html#postgamificationprofilemetrics) | **POST** /api/v2/gamification/profiles/{profileId}/metrics | Creates a gamified metric with a given metric definition and metric objective under in a performance profile |
 | [**PutGamificationMetric**](GamificationApi.html#putgamificationmetric) | **PUT** /api/v2/gamification/metrics/{metricId} | Updates a metric |
 | [**PutGamificationProfile**](GamificationApi.html#putgamificationprofile) | **PUT** /api/v2/gamification/profiles/{performanceProfileId} | Updates a performance profile |
+| [**PutGamificationProfileMetric**](GamificationApi.html#putgamificationprofilemetric) | **PUT** /api/v2/gamification/profiles/{profileId}/metrics/{metricId} | Updates a metric in performance profile |
 | [**PutGamificationStatus**](GamificationApi.html#putgamificationstatus) | **PUT** /api/v2/gamification/status | Update gamification activation status |
 {: class="table table-striped"}
 
@@ -151,7 +158,7 @@ namespace Example
 
             var apiInstance = new GamificationApi();
             var filterType = filterType_example;  // string | Filter type for the query request.
-            var filterId = filterId_example;  // string | ID for the filter type. For example, division Id
+            var filterId = filterId_example;  // string | ID for the filter type. For example, division or performance profile Id
             var startWorkday = 2013-10-20;  // String | Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var endWorkday = 2013-10-20;  // String | End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var metricId = metricId_example;  // string | Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional) 
@@ -177,7 +184,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **filterType** | **string**| Filter type for the query request. | <br />**Values**: PerformanceProfile, Division |
-| **filterId** | **string**| ID for the filter type. For example, division Id |  |
+| **filterId** | **string**| ID for the filter type. For example, division or performance profile Id |  |
 | **startWorkday** | **String**| Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **endWorkday** | **String**| End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **metricId** | **string**| Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. | [optional]  |
@@ -193,7 +200,7 @@ namespace Example
 
 
 
-Best Points by division
+Best Points by division or performance profile
 
 
 
@@ -224,11 +231,11 @@ namespace Example
 
             var apiInstance = new GamificationApi();
             var filterType = filterType_example;  // string | Filter type for the query request.
-            var filterId = filterId_example;  // string | ID for the filter type. For example, division Id
+            var filterId = filterId_example;  // string | ID for the filter type. For example, division or performance profile Id
 
             try
             { 
-                // Best Points by division
+                // Best Points by division or performance profile
                 OverallBestPoints result = apiInstance.GetGamificationLeaderboardAllBestpoints(filterType, filterId);
                 Debug.WriteLine(result);
             }
@@ -247,7 +254,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **filterType** | **string**| Filter type for the query request. | <br />**Values**: PerformanceProfile, Division |
-| **filterId** | **string**| ID for the filter type. For example, division Id |  |
+| **filterId** | **string**| ID for the filter type. For example, division or performance profile Id |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -260,7 +267,7 @@ namespace Example
 
 
 
-Best Points of the requesting user's division
+Best Points of the requesting user's current performance profile or division
 
 
 
@@ -293,7 +300,7 @@ namespace Example
 
             try
             { 
-                // Best Points of the requesting user's division
+                // Best Points of the requesting user's current performance profile or division
                 OverallBestPoints result = apiInstance.GetGamificationLeaderboardBestpoints();
                 Debug.WriteLine(result);
             }
@@ -644,6 +651,217 @@ namespace Example
 
 [**PerformanceProfile**](PerformanceProfile.html)
 
+<a name="getgamificationprofilemetric"></a>
+
+## [**Metric**](Metric.html) GetGamificationProfileMetric (string profileId, string metricId, String workday = null)
+
+
+
+Performance profile gamified metric by id
+
+
+
+Requires ANY permissions: 
+
+* gamification:profile:view
+* gamification:leaderboard:view
+* gamification:scorecard:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationProfileMetricExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var profileId = profileId_example;  // string | Performance Profile Id
+            var metricId = metricId_example;  // string | Metric Id
+            var workday = 2013-10-20;  // String | The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+
+            try
+            { 
+                // Performance profile gamified metric by id
+                Metric result = apiInstance.GetGamificationProfileMetric(profileId, metricId, workday);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationProfileMetric: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **profileId** | **string**| Performance Profile Id |  |
+| **metricId** | **string**| Metric Id |  |
+| **workday** | **String**| The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Metric**](Metric.html)
+
+<a name="getgamificationprofilemetrics"></a>
+
+## [**GetMetricResponse**](GetMetricResponse.html) GetGamificationProfileMetrics (string profileId, List<string> expand = null, String workday = null)
+
+
+
+All gamified metrics for a given performance profile
+
+
+
+Requires ANY permissions: 
+
+* gamification:profile:view
+* gamification:leaderboard:view
+* gamification:scorecard:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationProfileMetricsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var profileId = profileId_example;  // string | Performance Profile Id
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
+            var workday = 2013-10-20;  // String | The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+
+            try
+            { 
+                // All gamified metrics for a given performance profile
+                GetMetricResponse result = apiInstance.GetGamificationProfileMetrics(profileId, expand, workday);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationProfileMetrics: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **profileId** | **string**| Performance Profile Id |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: objective |
+| **workday** | **String**| The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**GetMetricResponse**](GetMetricResponse.html)
+
+<a name="getgamificationprofilemetricsobjectivedetails"></a>
+
+## [**GetMetricsResponse**](GetMetricsResponse.html) GetGamificationProfileMetricsObjectivedetails (string profileId, String workday = null)
+
+
+
+All metrics for a given performance profile with objective details such as order and maxPoints
+
+
+
+Requires ANY permissions: 
+
+* gamification:profile:view
+* gamification:leaderboard:view
+* gamification:scorecard:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationProfileMetricsObjectivedetailsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var profileId = profileId_example;  // string | Performance Profile Id
+            var workday = 2013-10-20;  // String | The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+
+            try
+            { 
+                // All metrics for a given performance profile with objective details such as order and maxPoints
+                GetMetricsResponse result = apiInstance.GetGamificationProfileMetricsObjectivedetails(profileId, workday);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationProfileMetricsObjectivedetails: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **profileId** | **string**| Performance Profile Id |  |
+| **workday** | **String**| The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**GetMetricsResponse**](GetMetricsResponse.html)
+
 <a name="getgamificationprofiles"></a>
 
 ## [**GetProfilesResponse**](GetProfilesResponse.html) GetGamificationProfiles ()
@@ -703,6 +921,137 @@ This endpoint does require any parameters.
 ### Return type
 
 [**GetProfilesResponse**](GetProfilesResponse.html)
+
+<a name="getgamificationprofilesuser"></a>
+
+## [**PerformanceProfile**](PerformanceProfile.html) GetGamificationProfilesUser (string userId, String workday = null)
+
+
+
+Performance profile of a user
+
+
+
+Requires ANY permissions: 
+
+* gamification:profile:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationProfilesUserExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var userId = userId_example;  // string | 
+            var workday = 2013-10-20;  // String | Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+
+            try
+            { 
+                // Performance profile of a user
+                PerformanceProfile result = apiInstance.GetGamificationProfilesUser(userId, workday);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationProfilesUser: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**|  |  |
+| **workday** | **String**| Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PerformanceProfile**](PerformanceProfile.html)
+
+<a name="getgamificationprofilesusersme"></a>
+
+## [**PerformanceProfile**](PerformanceProfile.html) GetGamificationProfilesUsersMe (String workday = null)
+
+
+
+Performance profile of the requesting user
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationProfilesUsersMeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var workday = 2013-10-20;  // String | Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+
+            try
+            { 
+                // Performance profile of the requesting user
+                PerformanceProfile result = apiInstance.GetGamificationProfilesUsersMe(workday);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationProfilesUsersMe: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **workday** | **String**| Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PerformanceProfile**](PerformanceProfile.html)
 
 <a name="getgamificationscorecards"></a>
 
@@ -2242,6 +2591,73 @@ namespace Example
 
 [**PerformanceProfile**](PerformanceProfile.html)
 
+<a name="postgamificationprofilemetrics"></a>
+
+## [**Metric**](Metric.html) PostGamificationProfileMetrics (string profileId, Metric body)
+
+
+
+Creates a gamified metric with a given metric definition and metric objective under in a performance profile
+
+
+
+Requires ALL permissions: 
+
+* gamification:profile:update
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostGamificationProfileMetricsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var profileId = profileId_example;  // string | Performance Profile Id
+            var body = new Metric(); // Metric | Metric
+
+            try
+            { 
+                // Creates a gamified metric with a given metric definition and metric objective under in a performance profile
+                Metric result = apiInstance.PostGamificationProfileMetrics(profileId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.PostGamificationProfileMetrics: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **profileId** | **string**| Performance Profile Id |  |
+| **body** | [**Metric**](Metric.html)| Metric |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Metric**](Metric.html)
+
 <a name="putgamificationmetric"></a>
 
 ## [**Metric**](Metric.html) PutGamificationMetric (string metricId, Metric body, string performanceProfileId = null)
@@ -2377,6 +2793,75 @@ namespace Example
 ### Return type
 
 [**PerformanceProfile**](PerformanceProfile.html)
+
+<a name="putgamificationprofilemetric"></a>
+
+## [**Metric**](Metric.html) PutGamificationProfileMetric (string profileId, string metricId, Metric body)
+
+
+
+Updates a metric in performance profile
+
+
+
+Requires ALL permissions: 
+
+* gamification:profile:update
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutGamificationProfileMetricExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var profileId = profileId_example;  // string | Performance Profile Id
+            var metricId = metricId_example;  // string | Metric Id
+            var body = new Metric(); // Metric | Metric
+
+            try
+            { 
+                // Updates a metric in performance profile
+                Metric result = apiInstance.PutGamificationProfileMetric(profileId, metricId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.PutGamificationProfileMetric: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **profileId** | **string**| Performance Profile Id |  |
+| **metricId** | **string**| Metric Id |  |
+| **body** | [**Metric**](Metric.html)| Metric |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Metric**](Metric.html)
 
 <a name="putgamificationstatus"></a>
 

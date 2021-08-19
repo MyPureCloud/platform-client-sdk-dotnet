@@ -83,6 +83,36 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteAnalyticsUsersDetailsJobWithHttpInfo (string jobId);
         
         /// <summary>
+        /// Get Reporting Turns.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to 50)</param>
+        /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
+        /// <returns>ReportingTurnsResponse</returns>
+        ReportingTurnsResponse GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null);
+
+        /// <summary>
+        /// Get Reporting Turns.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to 50)</param>
+        /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
+        /// <returns>ApiResponse of ReportingTurnsResponse</returns>
+        ApiResponse<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null);
+        
+        /// <summary>
         /// Get a conversation by id
         /// </summary>
         /// <remarks>
@@ -1049,6 +1079,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAnalyticsUsersDetailsJobAsyncWithHttpInfo (string jobId);
+        
+        /// <summary>
+        /// Get Reporting Turns.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to 50)</param>
+        /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
+        /// <returns>Task of ReportingTurnsResponse</returns>
+        System.Threading.Tasks.Task<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsAsync (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null);
+
+        /// <summary>
+        /// Get Reporting Turns.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to 50)</param>
+        /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
+        /// <returns>Task of ApiResponse (ReportingTurnsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ReportingTurnsResponse>> GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null);
         
         /// <summary>
         /// Get a conversation by id
@@ -2607,6 +2667,223 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get Reporting Turns. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to 50)</param>
+        /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
+        /// <returns>ReportingTurnsResponse</returns>
+        public ReportingTurnsResponse GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null)
+        {
+             ApiResponse<ReportingTurnsResponse> localVarResponse = GetAnalyticsBotflowReportingturnsWithHttpInfo(botFlowId, after, pageSize, actionId, sessionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Reporting Turns. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to 50)</param>
+        /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
+        /// <returns>ApiResponse of ReportingTurnsResponse</returns>
+        public ApiResponse< ReportingTurnsResponse > GetAnalyticsBotflowReportingturnsWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null)
+        { 
+            // verify the required parameter 'botFlowId' is set
+            if (botFlowId == null)
+                throw new ApiException(400, "Missing required parameter 'botFlowId' when calling AnalyticsApi->GetAnalyticsBotflowReportingturns");
+
+            var localVarPath = "/api/v2/analytics/botflows/{botFlowId}/reportingturns";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (botFlowId != null) localVarPathParams.Add("botFlowId", this.Configuration.ApiClient.ParameterToString(botFlowId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (actionId != null) localVarQueryParams.Add(new Tuple<string, string>("actionId", this.Configuration.ApiClient.ParameterToString(actionId)));
+            if (sessionId != null) localVarQueryParams.Add(new Tuple<string, string>("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsBotflowReportingturns: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsBotflowReportingturns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReportingTurnsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ReportingTurnsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportingTurnsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get Reporting Turns. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to 50)</param>
+        /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
+        /// <returns>Task of ReportingTurnsResponse</returns>
+        public async System.Threading.Tasks.Task<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsAsync (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null)
+        {
+             ApiResponse<ReportingTurnsResponse> localVarResponse = await GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo(botFlowId, after, pageSize, actionId, sessionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Reporting Turns. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to 50)</param>
+        /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
+        /// <returns>Task of ApiResponse (ReportingTurnsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ReportingTurnsResponse>> GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null)
+        { 
+            // verify the required parameter 'botFlowId' is set
+            if (botFlowId == null)
+                throw new ApiException(400, "Missing required parameter 'botFlowId' when calling AnalyticsApi->GetAnalyticsBotflowReportingturns");
+            
+
+            var localVarPath = "/api/v2/analytics/botflows/{botFlowId}/reportingturns";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (botFlowId != null) localVarPathParams.Add("botFlowId", this.Configuration.ApiClient.ParameterToString(botFlowId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (actionId != null) localVarQueryParams.Add(new Tuple<string, string>("actionId", this.Configuration.ApiClient.ParameterToString(actionId)));
+            if (sessionId != null) localVarQueryParams.Add(new Tuple<string, string>("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsBotflowReportingturns: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsBotflowReportingturns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReportingTurnsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ReportingTurnsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportingTurnsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

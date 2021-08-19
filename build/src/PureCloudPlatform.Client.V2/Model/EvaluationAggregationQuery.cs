@@ -64,6 +64,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Conversationid,
             
             /// <summary>
+            /// Enum Conversationstart for "conversationStart"
+            /// </summary>
+            [EnumMember(Value = "conversationStart")]
+            Conversationstart,
+            
+            /// <summary>
             /// Enum Divisionid for "divisionId"
             /// </summary>
             [EnumMember(Value = "divisionId")]
@@ -82,6 +88,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Evaluationid,
             
             /// <summary>
+            /// Enum Evaluationreleasedate for "evaluationReleaseDate"
+            /// </summary>
+            [EnumMember(Value = "evaluationReleaseDate")]
+            Evaluationreleasedate,
+            
+            /// <summary>
             /// Enum Evaluatorid for "evaluatorId"
             /// </summary>
             [EnumMember(Value = "evaluatorId")]
@@ -98,6 +110,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "queueId")]
             Queueid,
+            
+            /// <summary>
+            /// Enum Released for "released"
+            /// </summary>
+            [EnumMember(Value = "released")]
+            Released,
             
             /// <summary>
             /// Enum Rescored for "rescored"
@@ -196,10 +214,22 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Conversationstart for "conversationStart"
+            /// </summary>
+            [EnumMember(Value = "conversationStart")]
+            Conversationstart,
+            
+            /// <summary>
             /// Enum Evaluationcreateddate for "evaluationCreatedDate"
             /// </summary>
             [EnumMember(Value = "evaluationCreatedDate")]
             Evaluationcreateddate,
+            
+            /// <summary>
+            /// Enum Evaluationreleasedate for "evaluationReleaseDate"
+            /// </summary>
+            [EnumMember(Value = "evaluationReleaseDate")]
+            Evaluationreleasedate,
             
             /// <summary>
             /// Enum Eventtime for "eventTime"

@@ -22,6 +22,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSpeechandtextanalyticsSettings**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticssettings) | **GET** /api/v2/speechandtextanalytics/settings | Get Speech And Text Analytics Settings |
 | [**GetSpeechandtextanalyticsTopic**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticstopic) | **GET** /api/v2/speechandtextanalytics/topics/{topicId} | Get a Speech &amp; Text Analytics topic by id |
 | [**GetSpeechandtextanalyticsTopics**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticstopics) | **GET** /api/v2/speechandtextanalytics/topics | Get the list of Speech &amp; Text Analytics topics |
+| [**GetSpeechandtextanalyticsTopicsDialects**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticstopicsdialects) | **GET** /api/v2/speechandtextanalytics/topics/dialects | Get list of supported Speech &amp; Text Analytics topics dialects |
 | [**GetSpeechandtextanalyticsTopicsGeneral**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticstopicsgeneral) | **GET** /api/v2/speechandtextanalytics/topics/general | Get the Speech &amp; Text Analytics general topics for a given dialect |
 | [**GetSpeechandtextanalyticsTopicsPublishjob**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticstopicspublishjob) | **GET** /api/v2/speechandtextanalytics/topics/publishjobs/{jobId} | Get a Speech &amp; Text Analytics publish topics job by id |
 | [**PatchSpeechandtextanalyticsSettings**](SpeechTextAnalyticsApi.html#patchspeechandtextanalyticssettings) | **PATCH** /api/v2/speechandtextanalytics/settings | Patch Speech And Text Analytics Settings |
@@ -1019,6 +1020,65 @@ namespace Example
 ### Return type
 
 [**TopicsEntityListing**](TopicsEntityListing.html)
+
+<a name="getspeechandtextanalyticstopicsdialects"></a>
+
+## [**EntityListing**](EntityListing.html) GetSpeechandtextanalyticsTopicsDialects ()
+
+
+
+Get list of supported Speech & Text Analytics topics dialects
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsTopicsDialectsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+
+            try
+            { 
+                // Get list of supported Speech & Text Analytics topics dialects
+                EntityListing result = apiInstance.GetSpeechandtextanalyticsTopicsDialects();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsTopicsDialects: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**EntityListing**](EntityListing.html)
 
 <a name="getspeechandtextanalyticstopicsgeneral"></a>
 

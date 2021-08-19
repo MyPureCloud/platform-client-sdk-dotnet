@@ -20,7 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteOutboundContactlists**](OutboundApi.html#deleteoutboundcontactlists) | **DELETE** /api/v2/outbound/contactlists | Delete multiple contact lists. |
 | [**DeleteOutboundDnclist**](OutboundApi.html#deleteoutbounddnclist) | **DELETE** /api/v2/outbound/dnclists/{dncListId} | Delete dialer DNC list |
 | [**DeleteOutboundMessagingcampaign**](OutboundApi.html#deleteoutboundmessagingcampaign) | **DELETE** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Delete an Outbound Messaging Campaign |
-| [**DeleteOutboundRuleset**](OutboundApi.html#deleteoutboundruleset) | **DELETE** /api/v2/outbound/rulesets/{ruleSetId} | Delete a Rule set. |
+| [**DeleteOutboundRuleset**](OutboundApi.html#deleteoutboundruleset) | **DELETE** /api/v2/outbound/rulesets/{ruleSetId} | Delete a Rule Set. |
 | [**DeleteOutboundSchedulesCampaign**](OutboundApi.html#deleteoutboundschedulescampaign) | **DELETE** /api/v2/outbound/schedules/campaigns/{campaignId} | Delete a dialer campaign schedule. |
 | [**DeleteOutboundSchedulesSequence**](OutboundApi.html#deleteoutboundschedulessequence) | **DELETE** /api/v2/outbound/schedules/sequences/{sequenceId} | Delete a dialer sequence schedule. |
 | [**DeleteOutboundSequence**](OutboundApi.html#deleteoutboundsequence) | **DELETE** /api/v2/outbound/sequences/{sequenceId} | Delete a dialer campaign sequence. |
@@ -99,7 +99,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundDnclists**](OutboundApi.html#postoutbounddnclists) | **POST** /api/v2/outbound/dnclists | Create dialer DNC list |
 | [**PostOutboundMessagingcampaigns**](OutboundApi.html#postoutboundmessagingcampaigns) | **POST** /api/v2/outbound/messagingcampaigns | Create a Messaging Campaign |
 | [**PostOutboundMessagingcampaignsProgress**](OutboundApi.html#postoutboundmessagingcampaignsprogress) | **POST** /api/v2/outbound/messagingcampaigns/progress | Get progress for a list of messaging campaigns |
-| [**PostOutboundRulesets**](OutboundApi.html#postoutboundrulesets) | **POST** /api/v2/outbound/rulesets | Create a Dialer Call Analysis Response Set. |
+| [**PostOutboundRulesets**](OutboundApi.html#postoutboundrulesets) | **POST** /api/v2/outbound/rulesets | Create a Rule Set. |
 | [**PostOutboundSequences**](OutboundApi.html#postoutboundsequences) | **POST** /api/v2/outbound/sequences | Create a new campaign sequence. |
 | [**PutOutboundAttemptlimit**](OutboundApi.html#putoutboundattemptlimit) | **PUT** /api/v2/outbound/attemptlimits/{attemptLimitsId} | Update attempt limits |
 | [**PutOutboundCallabletimeset**](OutboundApi.html#putoutboundcallabletimeset) | **PUT** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Update callable time set |
@@ -112,7 +112,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutOutboundContactlistfilter**](OutboundApi.html#putoutboundcontactlistfilter) | **PUT** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Update Contact List Filter |
 | [**PutOutboundDnclist**](OutboundApi.html#putoutbounddnclist) | **PUT** /api/v2/outbound/dnclists/{dncListId} | Update dialer DNC list |
 | [**PutOutboundMessagingcampaign**](OutboundApi.html#putoutboundmessagingcampaign) | **PUT** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Update an Outbound Messaging Campaign |
-| [**PutOutboundRuleset**](OutboundApi.html#putoutboundruleset) | **PUT** /api/v2/outbound/rulesets/{ruleSetId} | Update a RuleSet. |
+| [**PutOutboundRuleset**](OutboundApi.html#putoutboundruleset) | **PUT** /api/v2/outbound/rulesets/{ruleSetId} | Update a Rule Set. |
 | [**PutOutboundSchedulesCampaign**](OutboundApi.html#putoutboundschedulescampaign) | **PUT** /api/v2/outbound/schedules/campaigns/{campaignId} | Update a new campaign schedule. |
 | [**PutOutboundSchedulesSequence**](OutboundApi.html#putoutboundschedulessequence) | **PUT** /api/v2/outbound/schedules/sequences/{sequenceId} | Update a new sequence schedule. |
 | [**PutOutboundSequence**](OutboundApi.html#putoutboundsequence) | **PUT** /api/v2/outbound/sequences/{sequenceId} | Update a new campaign sequence. |
@@ -964,7 +964,7 @@ namespace Example
 
 
 
-Delete a Rule set.
+Delete a Rule Set.
 
 
 
@@ -998,7 +998,7 @@ namespace Example
 
             try
             { 
-                // Delete a Rule set.
+                // Delete a Rule Set.
                 apiInstance.DeleteOutboundRuleset(ruleSetId);
             }
             catch (Exception e)
@@ -6396,7 +6396,7 @@ namespace Example
 
 
 
-Create a Dialer Call Analysis Response Set.
+Create a Rule Set.
 
 
 
@@ -6430,7 +6430,7 @@ namespace Example
 
             try
             { 
-                // Create a Dialer Call Analysis Response Set.
+                // Create a Rule Set.
                 RuleSet result = apiInstance.PostOutboundRulesets(body);
                 Debug.WriteLine(result);
             }
@@ -7267,7 +7267,7 @@ namespace Example
 
 
 
-Update a RuleSet.
+Update a Rule Set.
 
 
 
@@ -7302,7 +7302,7 @@ namespace Example
 
             try
             { 
-                // Update a RuleSet.
+                // Update a Rule Set.
                 RuleSet result = apiInstance.PutOutboundRuleset(ruleSetId, body);
                 Debug.WriteLine(result);
             }

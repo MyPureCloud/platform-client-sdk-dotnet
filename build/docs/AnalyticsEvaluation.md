@@ -16,6 +16,7 @@ title: AnalyticsEvaluation
 | **FormId** | **string** | ID of the evaluation form used | [optional] |
 | **FormName** | **string** | Name of the evaluation form used | [optional] |
 | **QueueId** | **string** | The ID of the associated queue | [optional] |
+| **Released** | **bool?** | Whether the evaluation has been released | [optional] |
 | **Rescored** | **bool?** | Whether the evaluation has been rescored at least once | [optional] |
 | **UserId** | **string** | ID of the agent the evaluation was performed against | [optional] |
 | **OTotalCriticalScore** | **long?** |  | [optional] |

@@ -625,7 +625,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Add for "Add"
             /// </summary>
             [EnumMember(Value = "Add")]
-            Add
+            Add,
+            
+            /// <summary>
+            /// Enum Assign for "Assign"
+            /// </summary>
+            [EnumMember(Value = "Assign")]
+            Assign,
+            
+            /// <summary>
+            /// Enum Unassign for "Unassign"
+            /// </summary>
+            [EnumMember(Value = "Unassign")]
+            Unassign
         }
         
         

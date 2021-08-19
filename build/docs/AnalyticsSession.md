@@ -22,6 +22,7 @@ title: AnalyticsSession
 | **CallbackNumbers** | **List&lt;string&gt;** | Callback phone number(s) | [optional] |
 | **CallbackScheduledTime** | **DateTime?** | Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CallbackUserName** | **string** | The name of the user requesting a call back | [optional] |
+| **CoachedParticipantId** | **string** | The participantId being coached (if someone (e.g. an agent) is being coached, this would correspond to one of the other participantIds present in the conversation) | [optional] |
 | **CobrowseRole** | **string** | Describes side of the cobrowse (sharer or viewer) | [optional] |
 | **CobrowseRoomId** | **string** | A unique identifier for a PureCloud cobrowse room | [optional] |
 | **DeliveryStatus** | **string** | The email delivery status | [optional] |
@@ -45,7 +46,7 @@ title: AnalyticsSession
 | **MediaCount** | **int?** | Count of any media (images, files, etc) included in this session | [optional] |
 | **MediaType** | **string** | The session media type | [optional] |
 | **MessageType** | **string** | Message type for messaging services. E.g.: sms, facebook, twitter, line | [optional] |
-| **MonitoredParticipantId** | **string** | The participantId being monitored (if someone (e.g. an agent) is being monitored, this would be the ID of the participant that was monitored that would correspond to other participantIds present in the conversation) | [optional] |
+| **MonitoredParticipantId** | **string** | The participantId being monitored (if someone (e.g. an agent) is being monitored, this would correspond to one of the other participantIds present in the conversation) | [optional] |
 | **OutboundCampaignId** | **string** | (Dialer) Unique identifier of the outbound campaign | [optional] |
 | **OutboundContactId** | **string** | (Dialer) Unique identifier of the contact | [optional] |
 | **OutboundContactListId** | **string** | (Dialer) Unique identifier of the contact list that this contact belongs to | [optional] |

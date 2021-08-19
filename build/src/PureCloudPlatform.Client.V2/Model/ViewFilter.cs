@@ -37,12 +37,6 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Unknown for "unknown"
-            /// </summary>
-            [EnumMember(Value = "unknown")]
-            Unknown,
-            
-            /// <summary>
             /// Enum Callback for "callback"
             /// </summary>
             [EnumMember(Value = "callback")]
@@ -77,6 +71,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "screenshare")]
             Screenshare,
+            
+            /// <summary>
+            /// Enum Unknown for "unknown"
+            /// </summary>
+            [EnumMember(Value = "unknown")]
+            Unknown,
             
             /// <summary>
             /// Enum Video for "video"

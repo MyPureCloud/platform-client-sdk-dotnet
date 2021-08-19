@@ -85,6 +85,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsEvaluation" /> class.
@@ -98,11 +103,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FormId">ID of the evaluation form used.</param>
         /// <param name="FormName">Name of the evaluation form used.</param>
         /// <param name="QueueId">The ID of the associated queue.</param>
+        /// <param name="Released">Whether the evaluation has been released.</param>
         /// <param name="Rescored">Whether the evaluation has been rescored at least once.</param>
         /// <param name="UserId">ID of the agent the evaluation was performed against.</param>
         /// <param name="OTotalCriticalScore">OTotalCriticalScore.</param>
         /// <param name="OTotalScore">OTotalScore.</param>
-        public AnalyticsEvaluation(string CalibrationId = null, string ContextId = null, bool? Deleted = null, string EvaluationId = null, string EvaluatorId = null, DateTime? EventTime = null, string FormId = null, string FormName = null, string QueueId = null, bool? Rescored = null, string UserId = null, long? OTotalCriticalScore = null, long? OTotalScore = null)
+        public AnalyticsEvaluation(string CalibrationId = null, string ContextId = null, bool? Deleted = null, string EvaluationId = null, string EvaluatorId = null, DateTime? EventTime = null, string FormId = null, string FormName = null, string QueueId = null, bool? Released = null, bool? Rescored = null, string UserId = null, long? OTotalCriticalScore = null, long? OTotalScore = null)
         {
             this.CalibrationId = CalibrationId;
             this.ContextId = ContextId;
@@ -113,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FormId = FormId;
             this.FormName = FormName;
             this.QueueId = QueueId;
+            this.Released = Released;
             this.Rescored = Rescored;
             this.UserId = UserId;
             this.OTotalCriticalScore = OTotalCriticalScore;
@@ -204,6 +211,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Whether the evaluation has been released
+        /// </summary>
+        /// <value>Whether the evaluation has been released</value>
+        [DataMember(Name="released", EmitDefaultValue=false)]
+        public bool? Released { get; set; }
+        
+        
+        
+        /// <summary>
         /// Whether the evaluation has been rescored at least once
         /// </summary>
         /// <value>Whether the evaluation has been rescored at least once</value>
@@ -254,6 +270,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FormId: ").Append(FormId).Append("\n");
             sb.Append("  FormName: ").Append(FormName).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
+            sb.Append("  Released: ").Append(Released).Append("\n");
             sb.Append("  Rescored: ").Append(Rescored).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  OTotalCriticalScore: ").Append(OTotalCriticalScore).Append("\n");
@@ -344,6 +361,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QueueId.Equals(other.QueueId)
                 ) &&
                 (
+                    this.Released == other.Released ||
+                    this.Released != null &&
+                    this.Released.Equals(other.Released)
+                ) &&
+                (
                     this.Rescored == other.Rescored ||
                     this.Rescored != null &&
                     this.Rescored.Equals(other.Rescored)
@@ -403,6 +425,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
+                
+                if (this.Released != null)
+                    hash = hash * 59 + this.Released.GetHashCode();
                 
                 if (this.Rescored != null)
                     hash = hash * 59 + this.Rescored.GetHashCode();

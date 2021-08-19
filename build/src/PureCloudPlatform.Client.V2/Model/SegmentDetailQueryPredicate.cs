@@ -121,6 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Callbackscheduledtime,
             
             /// <summary>
+            /// Enum Coachedparticipantid for "coachedParticipantId"
+            /// </summary>
+            [EnumMember(Value = "coachedParticipantId")]
+            Coachedparticipantid,
+            
+            /// <summary>
             /// Enum Conference for "conference"
             /// </summary>
             [EnumMember(Value = "conference")]

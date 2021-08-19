@@ -111,12 +111,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The current state of the job.
         /// </summary>
         /// <value>The current state of the job.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
+        
         
         
         
@@ -210,6 +220,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Total number of recordings that have been skipped.
+        /// </summary>
+        /// <value>Total number of recordings that have been skipped.</value>
+        [DataMember(Name="totalSkippedRecordings", EmitDefaultValue=false)]
+        public int? TotalSkippedRecordings { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// Total number of recordings that the bulk job failed to process.
+        /// </summary>
+        /// <value>Total number of recordings that the bulk job failed to process.</value>
+        [DataMember(Name="totalFailedRecordings", EmitDefaultValue=false)]
+        public int? TotalFailedRecordings { get; private set; }
+        
+        
+        
+        /// <summary>
         /// Total number of recordings have been processed.
         /// </summary>
         /// <value>Total number of recordings have been processed.</value>
@@ -277,6 +305,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  TotalConversations: ").Append(TotalConversations).Append("\n");
             sb.Append("  TotalRecordings: ").Append(TotalRecordings).Append("\n");
+            sb.Append("  TotalSkippedRecordings: ").Append(TotalSkippedRecordings).Append("\n");
+            sb.Append("  TotalFailedRecordings: ").Append(TotalFailedRecordings).Append("\n");
             sb.Append("  TotalProcessedRecordings: ").Append(TotalProcessedRecordings).Append("\n");
             sb.Append("  PercentProgress: ").Append(PercentProgress).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -354,6 +384,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TotalRecordings.Equals(other.TotalRecordings)
                 ) &&
                 (
+                    this.TotalSkippedRecordings == other.TotalSkippedRecordings ||
+                    this.TotalSkippedRecordings != null &&
+                    this.TotalSkippedRecordings.Equals(other.TotalSkippedRecordings)
+                ) &&
+                (
+                    this.TotalFailedRecordings == other.TotalFailedRecordings ||
+                    this.TotalFailedRecordings != null &&
+                    this.TotalFailedRecordings.Equals(other.TotalFailedRecordings)
+                ) &&
+                (
                     this.TotalProcessedRecordings == other.TotalProcessedRecordings ||
                     this.TotalProcessedRecordings != null &&
                     this.TotalProcessedRecordings.Equals(other.TotalProcessedRecordings)
@@ -414,6 +454,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TotalRecordings != null)
                     hash = hash * 59 + this.TotalRecordings.GetHashCode();
+                
+                if (this.TotalSkippedRecordings != null)
+                    hash = hash * 59 + this.TotalSkippedRecordings.GetHashCode();
+                
+                if (this.TotalFailedRecordings != null)
+                    hash = hash * 59 + this.TotalFailedRecordings.GetHashCode();
                 
                 if (this.TotalProcessedRecordings != null)
                     hash = hash * 59 + this.TotalProcessedRecordings.GetHashCode();

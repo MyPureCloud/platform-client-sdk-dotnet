@@ -57,8 +57,17 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Buttonresponse for "ButtonResponse"
             /// </summary>
             [EnumMember(Value = "ButtonResponse")]
-            Buttonresponse
+            Buttonresponse,
+            
+            /// <summary>
+            /// Enum Generictemplate for "GenericTemplate"
+            /// </summary>
+            [EnumMember(Value = "GenericTemplate")]
+            Generictemplate
         }
+        
+        
+        
         
         
         
@@ -92,6 +101,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationMessageContent" /> class.
@@ -107,13 +118,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QuickReply">Quick reply content..</param>
         /// <param name="Template">Template notification content..</param>
         /// <param name="ButtonResponse">Button response content..</param>
-        public ConversationMessageContent(ContentTypeEnum? ContentType = null, ConversationContentAttachment Attachment = null, ConversationContentQuickReply QuickReply = null, ConversationContentNotificationTemplate Template = null, ConversationContentButtonResponse ButtonResponse = null)
+        /// <param name="Generic">Generic Template Object.</param>
+        public ConversationMessageContent(ContentTypeEnum? ContentType = null, ConversationContentAttachment Attachment = null, ConversationContentQuickReply QuickReply = null, ConversationContentNotificationTemplate Template = null, ConversationContentButtonResponse ButtonResponse = null, ContentGeneric Generic = null)
         {
             this.ContentType = ContentType;
             this.Attachment = Attachment;
             this.QuickReply = QuickReply;
             this.Template = Template;
             this.ButtonResponse = ButtonResponse;
+            this.Generic = Generic;
             
         }
         
@@ -156,6 +169,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ConversationContentButtonResponse ButtonResponse { get; set; }
         
         
+        
+        /// <summary>
+        /// Generic Template Object
+        /// </summary>
+        /// <value>Generic Template Object</value>
+        [DataMember(Name="generic", EmitDefaultValue=false)]
+        public ContentGeneric Generic { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -170,6 +192,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  QuickReply: ").Append(QuickReply).Append("\n");
             sb.Append("  Template: ").Append(Template).Append("\n");
             sb.Append("  ButtonResponse: ").Append(ButtonResponse).Append("\n");
+            sb.Append("  Generic: ").Append(Generic).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -234,6 +257,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ButtonResponse == other.ButtonResponse ||
                     this.ButtonResponse != null &&
                     this.ButtonResponse.Equals(other.ButtonResponse)
+                ) &&
+                (
+                    this.Generic == other.Generic ||
+                    this.Generic != null &&
+                    this.Generic.Equals(other.Generic)
                 );
         }
 
@@ -263,6 +291,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ButtonResponse != null)
                     hash = hash * 59 + this.ButtonResponse.GetHashCode();
+                
+                if (this.Generic != null)
+                    hash = hash * 59 + this.Generic.GetHashCode();
                 
                 return hash;
             }

@@ -202,6 +202,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Callback,
             
             /// <summary>
+            /// Enum Coaching for "coaching"
+            /// </summary>
+            [EnumMember(Value = "coaching")]
+            Coaching,
+            
+            /// <summary>
             /// Enum Contacting for "contacting"
             /// </summary>
             [EnumMember(Value = "contacting")]

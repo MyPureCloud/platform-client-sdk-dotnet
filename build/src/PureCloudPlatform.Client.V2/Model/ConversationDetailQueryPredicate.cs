@@ -308,6 +308,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Tcallbackcomplete,
             
             /// <summary>
+            /// Enum Tcoaching for "tCoaching"
+            /// </summary>
+            [EnumMember(Value = "tCoaching")]
+            Tcoaching,
+            
+            /// <summary>
+            /// Enum Tcoachingcomplete for "tCoachingComplete"
+            /// </summary>
+            [EnumMember(Value = "tCoachingComplete")]
+            Tcoachingcomplete,
+            
+            /// <summary>
             /// Enum Tcontacting for "tContacting"
             /// </summary>
             [EnumMember(Value = "tContacting")]
@@ -384,6 +396,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "tMonitoring")]
             Tmonitoring,
+            
+            /// <summary>
+            /// Enum Tmonitoringcomplete for "tMonitoringComplete"
+            /// </summary>
+            [EnumMember(Value = "tMonitoringComplete")]
+            Tmonitoringcomplete,
             
             /// <summary>
             /// Enum Tnotresponding for "tNotResponding"

@@ -762,11 +762,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the list of week schedules for the specified week
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+        /// Use \&quot;recent\&quot; (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
-        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; to get recent schedules</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; (without quotes) to get recent schedules</param>
         /// <param name="includeOnlyPublished">includeOnlyPublished (optional)</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>BuScheduleListing</returns>
@@ -776,11 +776,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the list of week schedules for the specified week
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+        /// Use \&quot;recent\&quot; (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
-        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; to get recent schedules</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; (without quotes) to get recent schedules</param>
         /// <param name="includeOnlyPublished">includeOnlyPublished (optional)</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of BuScheduleListing</returns>
@@ -928,11 +928,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get short term forecasts
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+        /// Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; to fetch recent forecasts</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>BuShortTermForecastListing</returns>
         BuShortTermForecastListing GetWorkforcemanagementBusinessunitWeekShorttermforecasts (string businessUnitId, string weekDateId);
 
@@ -940,11 +940,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get short term forecasts
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+        /// Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; to fetch recent forecasts</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>ApiResponse of BuShortTermForecastListing</returns>
         ApiResponse<BuShortTermForecastListing> GetWorkforcemanagementBusinessunitWeekShorttermforecastsWithHttpInfo (string businessUnitId, string weekDateId);
         
@@ -3620,11 +3620,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the list of week schedules for the specified week
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+        /// Use \&quot;recent\&quot; (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
-        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; to get recent schedules</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; (without quotes) to get recent schedules</param>
         /// <param name="includeOnlyPublished">includeOnlyPublished (optional)</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of BuScheduleListing</returns>
@@ -3634,11 +3634,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the list of week schedules for the specified week
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+        /// Use \&quot;recent\&quot; (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
-        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; to get recent schedules</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; (without quotes) to get recent schedules</param>
         /// <param name="includeOnlyPublished">includeOnlyPublished (optional)</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (BuScheduleListing)</returns>
@@ -3786,11 +3786,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get short term forecasts
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+        /// Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; to fetch recent forecasts</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>Task of BuShortTermForecastListing</returns>
         System.Threading.Tasks.Task<BuShortTermForecastListing> GetWorkforcemanagementBusinessunitWeekShorttermforecastsAsync (string businessUnitId, string weekDateId);
 
@@ -3798,11 +3798,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get short term forecasts
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+        /// Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; to fetch recent forecasts</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>Task of ApiResponse (BuShortTermForecastListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuShortTermForecastListing>> GetWorkforcemanagementBusinessunitWeekShorttermforecastsAsyncWithHttpInfo (string businessUnitId, string weekDateId);
         
@@ -12139,11 +12139,11 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get the list of week schedules for the specified week Use \&quot;recent\&quot; for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+        /// Get the list of week schedules for the specified week Use \&quot;recent\&quot; (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
-        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; to get recent schedules</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; (without quotes) to get recent schedules</param>
         /// <param name="includeOnlyPublished">includeOnlyPublished (optional)</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>BuScheduleListing</returns>
@@ -12154,11 +12154,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of week schedules for the specified week Use \&quot;recent\&quot; for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+        /// Get the list of week schedules for the specified week Use \&quot;recent\&quot; (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
-        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; to get recent schedules</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; (without quotes) to get recent schedules</param>
         /// <param name="includeOnlyPublished">includeOnlyPublished (optional)</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of BuScheduleListing</returns>
@@ -12246,11 +12246,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get the list of week schedules for the specified week Use \&quot;recent\&quot; for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+        /// Get the list of week schedules for the specified week Use \&quot;recent\&quot; (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
-        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; to get recent schedules</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; (without quotes) to get recent schedules</param>
         /// <param name="includeOnlyPublished">includeOnlyPublished (optional)</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of BuScheduleListing</returns>
@@ -12262,11 +12262,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of week schedules for the specified week Use \&quot;recent\&quot; for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+        /// Get the list of week schedules for the specified week Use \&quot;recent\&quot; (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
-        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; to get recent schedules</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; (without quotes) to get recent schedules</param>
         /// <param name="includeOnlyPublished">includeOnlyPublished (optional)</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (BuScheduleListing)</returns>
@@ -13476,11 +13476,11 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get short term forecasts Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+        /// Get short term forecasts Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; to fetch recent forecasts</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>BuShortTermForecastListing</returns>
         public BuShortTermForecastListing GetWorkforcemanagementBusinessunitWeekShorttermforecasts (string businessUnitId, string weekDateId)
         {
@@ -13489,11 +13489,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get short term forecasts Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+        /// Get short term forecasts Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; to fetch recent forecasts</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>ApiResponse of BuShortTermForecastListing</returns>
         public ApiResponse< BuShortTermForecastListing > GetWorkforcemanagementBusinessunitWeekShorttermforecastsWithHttpInfo (string businessUnitId, string weekDateId)
         { 
@@ -13577,11 +13577,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get short term forecasts Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+        /// Get short term forecasts Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; to fetch recent forecasts</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>Task of BuShortTermForecastListing</returns>
         public async System.Threading.Tasks.Task<BuShortTermForecastListing> GetWorkforcemanagementBusinessunitWeekShorttermforecastsAsync (string businessUnitId, string weekDateId)
         {
@@ -13591,11 +13591,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get short term forecasts Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+        /// Get short term forecasts Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
-        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; to fetch recent forecasts</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>Task of ApiResponse (BuShortTermForecastListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<BuShortTermForecastListing>> GetWorkforcemanagementBusinessunitWeekShorttermforecastsAsyncWithHttpInfo (string businessUnitId, string weekDateId)
         { 

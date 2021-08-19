@@ -307,7 +307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<MessagingCampaign> DeleteOutboundMessagingcampaignWithHttpInfo (string messagingCampaignId);
         
         /// <summary>
-        /// Delete a Rule set.
+        /// Delete a Rule Set.
         /// </summary>
         /// <remarks>
         /// 
@@ -318,7 +318,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteOutboundRuleset (string ruleSetId);
 
         /// <summary>
-        /// Delete a Rule set.
+        /// Delete a Rule Set.
         /// </summary>
         /// <remarks>
         /// 
@@ -2345,7 +2345,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<CampaignProgress>> PostOutboundMessagingcampaignsProgressWithHttpInfo (List<string> body);
         
         /// <summary>
-        /// Create a Dialer Call Analysis Response Set.
+        /// Create a Rule Set.
         /// </summary>
         /// <remarks>
         /// 
@@ -2356,7 +2356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         RuleSet PostOutboundRulesets (RuleSet body);
 
         /// <summary>
-        /// Create a Dialer Call Analysis Response Set.
+        /// Create a Rule Set.
         /// </summary>
         /// <remarks>
         /// 
@@ -2657,7 +2657,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<MessagingCampaign> PutOutboundMessagingcampaignWithHttpInfo (string messagingCampaignId, MessagingCampaign body);
         
         /// <summary>
-        /// Update a RuleSet.
+        /// Update a Rule Set.
         /// </summary>
         /// <remarks>
         /// 
@@ -2669,7 +2669,7 @@ namespace PureCloudPlatform.Client.V2.Api
         RuleSet PutOutboundRuleset (string ruleSetId, RuleSet body);
 
         /// <summary>
-        /// Update a RuleSet.
+        /// Update a Rule Set.
         /// </summary>
         /// <remarks>
         /// 
@@ -3069,7 +3069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<MessagingCampaign>> DeleteOutboundMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId);
         
         /// <summary>
-        /// Delete a Rule set.
+        /// Delete a Rule Set.
         /// </summary>
         /// <remarks>
         /// 
@@ -3080,7 +3080,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteOutboundRulesetAsync (string ruleSetId);
 
         /// <summary>
-        /// Delete a Rule set.
+        /// Delete a Rule Set.
         /// </summary>
         /// <remarks>
         /// 
@@ -5107,7 +5107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<CampaignProgress>>> PostOutboundMessagingcampaignsProgressAsyncWithHttpInfo (List<string> body);
         
         /// <summary>
-        /// Create a Dialer Call Analysis Response Set.
+        /// Create a Rule Set.
         /// </summary>
         /// <remarks>
         /// 
@@ -5118,7 +5118,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<RuleSet> PostOutboundRulesetsAsync (RuleSet body);
 
         /// <summary>
-        /// Create a Dialer Call Analysis Response Set.
+        /// Create a Rule Set.
         /// </summary>
         /// <remarks>
         /// 
@@ -5419,7 +5419,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<MessagingCampaign>> PutOutboundMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId, MessagingCampaign body);
         
         /// <summary>
-        /// Update a RuleSet.
+        /// Update a Rule Set.
         /// </summary>
         /// <remarks>
         /// 
@@ -5431,7 +5431,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<RuleSet> PutOutboundRulesetAsync (string ruleSetId, RuleSet body);
 
         /// <summary>
-        /// Update a RuleSet.
+        /// Update a Rule Set.
         /// </summary>
         /// <remarks>
         /// 
@@ -8142,7 +8142,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Delete a Rule set. 
+        /// Delete a Rule Set. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
@@ -8153,7 +8153,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Rule set. 
+        /// Delete a Rule Set. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
@@ -8236,7 +8236,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Delete a Rule set. 
+        /// Delete a Rule Set. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
@@ -8248,7 +8248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Rule set. 
+        /// Delete a Rule Set. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
@@ -24298,7 +24298,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Create a Dialer Call Analysis Response Set. 
+        /// Create a Rule Set. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RuleSet</param>
@@ -24310,7 +24310,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a Dialer Call Analysis Response Set. 
+        /// Create a Rule Set. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RuleSet</param>
@@ -24397,7 +24397,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Create a Dialer Call Analysis Response Set. 
+        /// Create a Rule Set. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RuleSet</param>
@@ -24410,7 +24410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a Dialer Call Analysis Response Set. 
+        /// Create a Rule Set. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RuleSet</param>
@@ -27080,7 +27080,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update a RuleSet. 
+        /// Update a Rule Set. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
@@ -27093,7 +27093,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a RuleSet. 
+        /// Update a Rule Set. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
@@ -27185,7 +27185,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update a RuleSet. 
+        /// Update a Rule Set. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
@@ -27199,7 +27199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a RuleSet. 
+        /// Update a Rule Set. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>

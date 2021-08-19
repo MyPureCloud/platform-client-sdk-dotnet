@@ -26,6 +26,33 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The type of message sent
+        /// </summary>
+        /// <value>The type of message sent</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MessageTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Sms for "Sms"
+            /// </summary>
+            [EnumMember(Value = "Sms")]
+            Sms,
+            
+            /// <summary>
+            /// Enum Email for "Email"
+            /// </summary>
+            [EnumMember(Value = "Email")]
+            Email
+        }
         
         
         
@@ -34,6 +61,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The type of message sent
+        /// </summary>
+        /// <value>The type of message sent</value>
+        [DataMember(Name="messageType", EmitDefaultValue=false)]
+        public MessageTypeEnum? MessageType { get; set; }
         
         
         
@@ -44,14 +84,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageEvaluation" /> class.
         /// </summary>
-        /// <param name="ContactColumn">ContactColumn.</param>
-        /// <param name="ContactAddress">ContactAddress.</param>
-        /// <param name="WrapupCodeId">WrapupCodeId.</param>
-        /// <param name="Timestamp">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public MessageEvaluation(string ContactColumn = null, string ContactAddress = null, string WrapupCodeId = null, DateTime? Timestamp = null)
+        /// <param name="ContactColumn">The name of the contact column that was wrapped up.</param>
+        /// <param name="ContactAddress">The address (phone or email) that was wrapped up.</param>
+        /// <param name="MessageType">The type of message sent.</param>
+        /// <param name="WrapupCodeId">The id of the wrap-up code.</param>
+        /// <param name="Timestamp">The time that the wrap-up was applied. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        public MessageEvaluation(string ContactColumn = null, string ContactAddress = null, MessageTypeEnum? MessageType = null, string WrapupCodeId = null, DateTime? Timestamp = null)
         {
             this.ContactColumn = ContactColumn;
             this.ContactAddress = ContactAddress;
+            this.MessageType = MessageType;
             this.WrapupCodeId = WrapupCodeId;
             this.Timestamp = Timestamp;
             
@@ -60,33 +102,38 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets ContactColumn
+        /// The name of the contact column that was wrapped up
         /// </summary>
+        /// <value>The name of the contact column that was wrapped up</value>
         [DataMember(Name="contactColumn", EmitDefaultValue=false)]
         public string ContactColumn { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ContactAddress
+        /// The address (phone or email) that was wrapped up
         /// </summary>
+        /// <value>The address (phone or email) that was wrapped up</value>
         [DataMember(Name="contactAddress", EmitDefaultValue=false)]
         public string ContactAddress { get; set; }
         
         
         
+        
+        
         /// <summary>
-        /// Gets or Sets WrapupCodeId
+        /// The id of the wrap-up code
         /// </summary>
+        /// <value>The id of the wrap-up code</value>
         [DataMember(Name="wrapupCodeId", EmitDefaultValue=false)]
         public string WrapupCodeId { get; set; }
         
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// The time that the wrap-up was applied. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>The time that the wrap-up was applied. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public DateTime? Timestamp { get; set; }
         
@@ -102,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  ContactColumn: ").Append(ContactColumn).Append("\n");
             sb.Append("  ContactAddress: ").Append(ContactAddress).Append("\n");
+            sb.Append("  MessageType: ").Append(MessageType).Append("\n");
             sb.Append("  WrapupCodeId: ").Append(WrapupCodeId).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("}\n");
@@ -155,6 +203,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContactAddress.Equals(other.ContactAddress)
                 ) &&
                 (
+                    this.MessageType == other.MessageType ||
+                    this.MessageType != null &&
+                    this.MessageType.Equals(other.MessageType)
+                ) &&
+                (
                     this.WrapupCodeId == other.WrapupCodeId ||
                     this.WrapupCodeId != null &&
                     this.WrapupCodeId.Equals(other.WrapupCodeId)
@@ -183,6 +236,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ContactAddress != null)
                     hash = hash * 59 + this.ContactAddress.GetHashCode();
+                
+                if (this.MessageType != null)
+                    hash = hash * 59 + this.MessageType.GetHashCode();
                 
                 if (this.WrapupCodeId != null)
                     hash = hash * 59 + this.WrapupCodeId.GetHashCode();

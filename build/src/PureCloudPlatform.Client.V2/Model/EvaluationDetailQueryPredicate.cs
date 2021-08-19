@@ -127,6 +127,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Queueid,
             
             /// <summary>
+            /// Enum Released for "released"
+            /// </summary>
+            [EnumMember(Value = "released")]
+            Released,
+            
+            /// <summary>
             /// Enum Rescored for "rescored"
             /// </summary>
             [EnumMember(Value = "rescored")]

@@ -45,6 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WritableDialerContact" /> class.
@@ -58,13 +63,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="ContactListId">The identifier of the contact list containing this contact. (required).</param>
         /// <param name="Data">An ordered map of the contact&#39;s columns and corresponding values. (required).</param>
+        /// <param name="LatestSmsEvaluations">A map of SMS records for the contact phone columns..</param>
         /// <param name="Callable">Indicates whether or not the contact can be called..</param>
         /// <param name="PhoneNumberStatus">A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not..</param>
-        public WritableDialerContact(string Id = null, string ContactListId = null, Dictionary<string, Object> Data = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null)
+        public WritableDialerContact(string Id = null, string ContactListId = null, Dictionary<string, Object> Data = null, Dictionary<string, MessageEvaluation> LatestSmsEvaluations = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null)
         {
             this.Id = Id;
             this.ContactListId = ContactListId;
             this.Data = Data;
+            this.LatestSmsEvaluations = LatestSmsEvaluations;
             this.Callable = Callable;
             this.PhoneNumberStatus = PhoneNumberStatus;
             
@@ -100,6 +107,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// A map of SMS records for the contact phone columns.
+        /// </summary>
+        /// <value>A map of SMS records for the contact phone columns.</value>
+        [DataMember(Name="latestSmsEvaluations", EmitDefaultValue=false)]
+        public Dictionary<string, MessageEvaluation> LatestSmsEvaluations { get; set; }
+        
+        
+        
+        /// <summary>
         /// Indicates whether or not the contact can be called.
         /// </summary>
         /// <value>Indicates whether or not the contact can be called.</value>
@@ -128,6 +144,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ContactListId: ").Append(ContactListId).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
+            sb.Append("  LatestSmsEvaluations: ").Append(LatestSmsEvaluations).Append("\n");
             sb.Append("  Callable: ").Append(Callable).Append("\n");
             sb.Append("  PhoneNumberStatus: ").Append(PhoneNumberStatus).Append("\n");
             sb.Append("}\n");
@@ -186,6 +203,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Data.SequenceEqual(other.Data)
                 ) &&
                 (
+                    this.LatestSmsEvaluations == other.LatestSmsEvaluations ||
+                    this.LatestSmsEvaluations != null &&
+                    this.LatestSmsEvaluations.SequenceEqual(other.LatestSmsEvaluations)
+                ) &&
+                (
                     this.Callable == other.Callable ||
                     this.Callable != null &&
                     this.Callable.Equals(other.Callable)
@@ -217,6 +239,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Data != null)
                     hash = hash * 59 + this.Data.GetHashCode();
+                
+                if (this.LatestSmsEvaluations != null)
+                    hash = hash * 59 + this.LatestSmsEvaluations.GetHashCode();
                 
                 if (this.Callable != null)
                     hash = hash * 59 + this.Callable.GetHashCode();

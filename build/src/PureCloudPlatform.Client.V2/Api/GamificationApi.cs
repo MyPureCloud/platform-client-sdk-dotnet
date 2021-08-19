@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <param name="startWorkday">Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
@@ -65,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <param name="startWorkday">Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
@@ -73,31 +73,31 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Leaderboard> GetGamificationLeaderboardAllWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string metricId = null);
         
         /// <summary>
-        /// Best Points by division
+        /// Best Points by division or performance profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <returns>OverallBestPoints</returns>
         OverallBestPoints GetGamificationLeaderboardAllBestpoints (string filterType, string filterId);
 
         /// <summary>
-        /// Best Points by division
+        /// Best Points by division or performance profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <returns>ApiResponse of OverallBestPoints</returns>
         ApiResponse<OverallBestPoints> GetGamificationLeaderboardAllBestpointsWithHttpInfo (string filterType, string filterId);
         
         /// <summary>
-        /// Best Points of the requesting user&#39;s division
+        /// Best Points of the requesting user&#39;s current performance profile or division
         /// </summary>
         /// <remarks>
         /// 
@@ -107,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         OverallBestPoints GetGamificationLeaderboardBestpoints ();
 
         /// <summary>
-        /// Best Points of the requesting user&#39;s division
+        /// Best Points of the requesting user&#39;s current performance profile or division
         /// </summary>
         /// <remarks>
         /// 
@@ -231,6 +231,82 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<PerformanceProfile> GetGamificationProfileWithHttpInfo (string performanceProfileId);
         
         /// <summary>
+        /// Performance profile gamified metric by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="metricId">Metric Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Metric</returns>
+        Metric GetGamificationProfileMetric (string profileId, string metricId, String workday = null);
+
+        /// <summary>
+        /// Performance profile gamified metric by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="metricId">Metric Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>ApiResponse of Metric</returns>
+        ApiResponse<Metric> GetGamificationProfileMetricWithHttpInfo (string profileId, string metricId, String workday = null);
+        
+        /// <summary>
+        /// All gamified metrics for a given performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>GetMetricResponse</returns>
+        GetMetricResponse GetGamificationProfileMetrics (string profileId, List<string> expand = null, String workday = null);
+
+        /// <summary>
+        /// All gamified metrics for a given performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>ApiResponse of GetMetricResponse</returns>
+        ApiResponse<GetMetricResponse> GetGamificationProfileMetricsWithHttpInfo (string profileId, List<string> expand = null, String workday = null);
+        
+        /// <summary>
+        /// All metrics for a given performance profile with objective details such as order and maxPoints
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>GetMetricsResponse</returns>
+        GetMetricsResponse GetGamificationProfileMetricsObjectivedetails (string profileId, String workday = null);
+
+        /// <summary>
+        /// All metrics for a given performance profile with objective details such as order and maxPoints
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>ApiResponse of GetMetricsResponse</returns>
+        ApiResponse<GetMetricsResponse> GetGamificationProfileMetricsObjectivedetailsWithHttpInfo (string profileId, String workday = null);
+        
+        /// <summary>
         /// All performance profiles
         /// </summary>
         /// <remarks>
@@ -249,6 +325,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GetProfilesResponse</returns>
         ApiResponse<GetProfilesResponse> GetGamificationProfilesWithHttpInfo ();
+        
+        /// <summary>
+        /// Performance profile of a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>PerformanceProfile</returns>
+        PerformanceProfile GetGamificationProfilesUser (string userId, String workday = null);
+
+        /// <summary>
+        /// Performance profile of a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>ApiResponse of PerformanceProfile</returns>
+        ApiResponse<PerformanceProfile> GetGamificationProfilesUserWithHttpInfo (string userId, String workday = null);
+        
+        /// <summary>
+        /// Performance profile of the requesting user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>PerformanceProfile</returns>
+        PerformanceProfile GetGamificationProfilesUsersMe (String workday = null);
+
+        /// <summary>
+        /// Performance profile of the requesting user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>ApiResponse of PerformanceProfile</returns>
+        ApiResponse<PerformanceProfile> GetGamificationProfilesUsersMeWithHttpInfo (String workday = null);
         
         /// <summary>
         /// Workday performance metrics of the requesting user
@@ -807,6 +929,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<PerformanceProfile> PostGamificationProfileDeactivateWithHttpInfo (string performanceProfileId);
         
         /// <summary>
+        /// Creates a gamified metric with a given metric definition and metric objective under in a performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="body">Metric</param>
+        /// <returns>Metric</returns>
+        Metric PostGamificationProfileMetrics (string profileId, Metric body);
+
+        /// <summary>
+        /// Creates a gamified metric with a given metric definition and metric objective under in a performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="body">Metric</param>
+        /// <returns>ApiResponse of Metric</returns>
+        ApiResponse<Metric> PostGamificationProfileMetricsWithHttpInfo (string profileId, Metric body);
+        
+        /// <summary>
         /// Updates a metric
         /// </summary>
         /// <remarks>
@@ -855,6 +1001,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
         ApiResponse<PerformanceProfile> PutGamificationProfileWithHttpInfo (string performanceProfileId, PerformanceProfile body = null);
+        
+        /// <summary>
+        /// Updates a metric in performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="metricId">Metric Id</param>
+        /// <param name="body">Metric</param>
+        /// <returns>Metric</returns>
+        Metric PutGamificationProfileMetric (string profileId, string metricId, Metric body);
+
+        /// <summary>
+        /// Updates a metric in performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="metricId">Metric Id</param>
+        /// <param name="body">Metric</param>
+        /// <returns>ApiResponse of Metric</returns>
+        ApiResponse<Metric> PutGamificationProfileMetricWithHttpInfo (string profileId, string metricId, Metric body);
         
         /// <summary>
         /// Update gamification activation status
@@ -916,7 +1088,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <param name="startWorkday">Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
@@ -931,7 +1103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <param name="startWorkday">Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
@@ -939,31 +1111,31 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Leaderboard>> GetGamificationLeaderboardAllAsyncWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string metricId = null);
         
         /// <summary>
-        /// Best Points by division
+        /// Best Points by division or performance profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <returns>Task of OverallBestPoints</returns>
         System.Threading.Tasks.Task<OverallBestPoints> GetGamificationLeaderboardAllBestpointsAsync (string filterType, string filterId);
 
         /// <summary>
-        /// Best Points by division
+        /// Best Points by division or performance profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <returns>Task of ApiResponse (OverallBestPoints)</returns>
         System.Threading.Tasks.Task<ApiResponse<OverallBestPoints>> GetGamificationLeaderboardAllBestpointsAsyncWithHttpInfo (string filterType, string filterId);
         
         /// <summary>
-        /// Best Points of the requesting user&#39;s division
+        /// Best Points of the requesting user&#39;s current performance profile or division
         /// </summary>
         /// <remarks>
         /// 
@@ -973,7 +1145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<OverallBestPoints> GetGamificationLeaderboardBestpointsAsync ();
 
         /// <summary>
-        /// Best Points of the requesting user&#39;s division
+        /// Best Points of the requesting user&#39;s current performance profile or division
         /// </summary>
         /// <remarks>
         /// 
@@ -1097,6 +1269,82 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfileAsyncWithHttpInfo (string performanceProfileId);
         
         /// <summary>
+        /// Performance profile gamified metric by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="metricId">Metric Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of Metric</returns>
+        System.Threading.Tasks.Task<Metric> GetGamificationProfileMetricAsync (string profileId, string metricId, String workday = null);
+
+        /// <summary>
+        /// Performance profile gamified metric by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="metricId">Metric Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of ApiResponse (Metric)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Metric>> GetGamificationProfileMetricAsyncWithHttpInfo (string profileId, string metricId, String workday = null);
+        
+        /// <summary>
+        /// All gamified metrics for a given performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of GetMetricResponse</returns>
+        System.Threading.Tasks.Task<GetMetricResponse> GetGamificationProfileMetricsAsync (string profileId, List<string> expand = null, String workday = null);
+
+        /// <summary>
+        /// All gamified metrics for a given performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of ApiResponse (GetMetricResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetMetricResponse>> GetGamificationProfileMetricsAsyncWithHttpInfo (string profileId, List<string> expand = null, String workday = null);
+        
+        /// <summary>
+        /// All metrics for a given performance profile with objective details such as order and maxPoints
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of GetMetricsResponse</returns>
+        System.Threading.Tasks.Task<GetMetricsResponse> GetGamificationProfileMetricsObjectivedetailsAsync (string profileId, String workday = null);
+
+        /// <summary>
+        /// All metrics for a given performance profile with objective details such as order and maxPoints
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of ApiResponse (GetMetricsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetMetricsResponse>> GetGamificationProfileMetricsObjectivedetailsAsyncWithHttpInfo (string profileId, String workday = null);
+        
+        /// <summary>
         /// All performance profiles
         /// </summary>
         /// <remarks>
@@ -1115,6 +1363,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GetProfilesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetProfilesResponse>> GetGamificationProfilesAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// Performance profile of a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of PerformanceProfile</returns>
+        System.Threading.Tasks.Task<PerformanceProfile> GetGamificationProfilesUserAsync (string userId, String workday = null);
+
+        /// <summary>
+        /// Performance profile of a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfilesUserAsyncWithHttpInfo (string userId, String workday = null);
+        
+        /// <summary>
+        /// Performance profile of the requesting user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of PerformanceProfile</returns>
+        System.Threading.Tasks.Task<PerformanceProfile> GetGamificationProfilesUsersMeAsync (String workday = null);
+
+        /// <summary>
+        /// Performance profile of the requesting user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfilesUsersMeAsyncWithHttpInfo (String workday = null);
         
         /// <summary>
         /// Workday performance metrics of the requesting user
@@ -1673,6 +1967,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileDeactivateAsyncWithHttpInfo (string performanceProfileId);
         
         /// <summary>
+        /// Creates a gamified metric with a given metric definition and metric objective under in a performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="body">Metric</param>
+        /// <returns>Task of Metric</returns>
+        System.Threading.Tasks.Task<Metric> PostGamificationProfileMetricsAsync (string profileId, Metric body);
+
+        /// <summary>
+        /// Creates a gamified metric with a given metric definition and metric objective under in a performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="body">Metric</param>
+        /// <returns>Task of ApiResponse (Metric)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Metric>> PostGamificationProfileMetricsAsyncWithHttpInfo (string profileId, Metric body);
+        
+        /// <summary>
         /// Updates a metric
         /// </summary>
         /// <remarks>
@@ -1721,6 +2039,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
         System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PutGamificationProfileAsyncWithHttpInfo (string performanceProfileId, PerformanceProfile body = null);
+        
+        /// <summary>
+        /// Updates a metric in performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="metricId">Metric Id</param>
+        /// <param name="body">Metric</param>
+        /// <returns>Task of Metric</returns>
+        System.Threading.Tasks.Task<Metric> PutGamificationProfileMetricAsync (string profileId, string metricId, Metric body);
+
+        /// <summary>
+        /// Updates a metric in performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="metricId">Metric Id</param>
+        /// <param name="body">Metric</param>
+        /// <returns>Task of ApiResponse (Metric)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Metric>> PutGamificationProfileMetricAsyncWithHttpInfo (string profileId, string metricId, Metric body);
         
         /// <summary>
         /// Update gamification activation status
@@ -2053,7 +2397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <param name="startWorkday">Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
@@ -2069,7 +2413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <param name="startWorkday">Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
@@ -2169,7 +2513,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <param name="startWorkday">Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
@@ -2186,7 +2530,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <param name="startWorkday">Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
@@ -2287,11 +2631,11 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Best Points by division 
+        /// Best Points by division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <returns>OverallBestPoints</returns>
         public OverallBestPoints GetGamificationLeaderboardAllBestpoints (string filterType, string filterId)
         {
@@ -2300,11 +2644,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Best Points by division 
+        /// Best Points by division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <returns>ApiResponse of OverallBestPoints</returns>
         public ApiResponse< OverallBestPoints > GetGamificationLeaderboardAllBestpointsWithHttpInfo (string filterType, string filterId)
         { 
@@ -2388,11 +2732,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Best Points by division 
+        /// Best Points by division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <returns>Task of OverallBestPoints</returns>
         public async System.Threading.Tasks.Task<OverallBestPoints> GetGamificationLeaderboardAllBestpointsAsync (string filterType, string filterId)
         {
@@ -2402,11 +2746,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Best Points by division 
+        /// Best Points by division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <returns>Task of ApiResponse (OverallBestPoints)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OverallBestPoints>> GetGamificationLeaderboardAllBestpointsAsyncWithHttpInfo (string filterType, string filterId)
         { 
@@ -2493,7 +2837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Best Points of the requesting user&#39;s division 
+        /// Best Points of the requesting user&#39;s current performance profile or division 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OverallBestPoints</returns>
@@ -2504,7 +2848,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Best Points of the requesting user&#39;s division 
+        /// Best Points of the requesting user&#39;s current performance profile or division 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OverallBestPoints</returns>
@@ -2582,7 +2926,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Best Points of the requesting user&#39;s division 
+        /// Best Points of the requesting user&#39;s current performance profile or division 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OverallBestPoints</returns>
@@ -2594,7 +2938,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Best Points of the requesting user&#39;s division 
+        /// Best Points of the requesting user&#39;s current performance profile or division 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OverallBestPoints)</returns>
@@ -3636,6 +3980,622 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Performance profile gamified metric by id 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="metricId">Metric Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Metric</returns>
+        public Metric GetGamificationProfileMetric (string profileId, string metricId, String workday = null)
+        {
+             ApiResponse<Metric> localVarResponse = GetGamificationProfileMetricWithHttpInfo(profileId, metricId, workday);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Performance profile gamified metric by id 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="metricId">Metric Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>ApiResponse of Metric</returns>
+        public ApiResponse< Metric > GetGamificationProfileMetricWithHttpInfo (string profileId, string metricId, String workday = null)
+        { 
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationProfileMetric");
+            // verify the required parameter 'metricId' is set
+            if (metricId == null)
+                throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->GetGamificationProfileMetric");
+
+            var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics/{metricId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
+            if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
+
+            // Query params
+            if (workday != null) localVarQueryParams.Add(new Tuple<string, string>("workday", this.Configuration.ApiClient.ParameterToString(workday)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfileMetric: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfileMetric: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Metric>(localVarStatusCode,
+                localVarHeaders,
+                (Metric) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Metric)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Performance profile gamified metric by id 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="metricId">Metric Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of Metric</returns>
+        public async System.Threading.Tasks.Task<Metric> GetGamificationProfileMetricAsync (string profileId, string metricId, String workday = null)
+        {
+             ApiResponse<Metric> localVarResponse = await GetGamificationProfileMetricAsyncWithHttpInfo(profileId, metricId, workday);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Performance profile gamified metric by id 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="metricId">Metric Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of ApiResponse (Metric)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Metric>> GetGamificationProfileMetricAsyncWithHttpInfo (string profileId, string metricId, String workday = null)
+        { 
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationProfileMetric");
+            
+            // verify the required parameter 'metricId' is set
+            if (metricId == null)
+                throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->GetGamificationProfileMetric");
+            
+
+            var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics/{metricId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
+            if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
+
+            // Query params
+            if (workday != null) localVarQueryParams.Add(new Tuple<string, string>("workday", this.Configuration.ApiClient.ParameterToString(workday)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfileMetric: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfileMetric: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Metric>(localVarStatusCode,
+                localVarHeaders,
+                (Metric) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Metric)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// All gamified metrics for a given performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>GetMetricResponse</returns>
+        public GetMetricResponse GetGamificationProfileMetrics (string profileId, List<string> expand = null, String workday = null)
+        {
+             ApiResponse<GetMetricResponse> localVarResponse = GetGamificationProfileMetricsWithHttpInfo(profileId, expand, workday);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// All gamified metrics for a given performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>ApiResponse of GetMetricResponse</returns>
+        public ApiResponse< GetMetricResponse > GetGamificationProfileMetricsWithHttpInfo (string profileId, List<string> expand = null, String workday = null)
+        { 
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationProfileMetrics");
+
+            var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (workday != null) localVarQueryParams.Add(new Tuple<string, string>("workday", this.Configuration.ApiClient.ParameterToString(workday)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfileMetrics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfileMetrics: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GetMetricResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GetMetricResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetMetricResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// All gamified metrics for a given performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of GetMetricResponse</returns>
+        public async System.Threading.Tasks.Task<GetMetricResponse> GetGamificationProfileMetricsAsync (string profileId, List<string> expand = null, String workday = null)
+        {
+             ApiResponse<GetMetricResponse> localVarResponse = await GetGamificationProfileMetricsAsyncWithHttpInfo(profileId, expand, workday);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// All gamified metrics for a given performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of ApiResponse (GetMetricResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetMetricResponse>> GetGamificationProfileMetricsAsyncWithHttpInfo (string profileId, List<string> expand = null, String workday = null)
+        { 
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationProfileMetrics");
+            
+
+            var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (workday != null) localVarQueryParams.Add(new Tuple<string, string>("workday", this.Configuration.ApiClient.ParameterToString(workday)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfileMetrics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfileMetrics: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GetMetricResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GetMetricResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetMetricResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// All metrics for a given performance profile with objective details such as order and maxPoints 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>GetMetricsResponse</returns>
+        public GetMetricsResponse GetGamificationProfileMetricsObjectivedetails (string profileId, String workday = null)
+        {
+             ApiResponse<GetMetricsResponse> localVarResponse = GetGamificationProfileMetricsObjectivedetailsWithHttpInfo(profileId, workday);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// All metrics for a given performance profile with objective details such as order and maxPoints 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>ApiResponse of GetMetricsResponse</returns>
+        public ApiResponse< GetMetricsResponse > GetGamificationProfileMetricsObjectivedetailsWithHttpInfo (string profileId, String workday = null)
+        { 
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationProfileMetricsObjectivedetails");
+
+            var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics/objectivedetails";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
+
+            // Query params
+            if (workday != null) localVarQueryParams.Add(new Tuple<string, string>("workday", this.Configuration.ApiClient.ParameterToString(workday)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfileMetricsObjectivedetails: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfileMetricsObjectivedetails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GetMetricsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GetMetricsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetMetricsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// All metrics for a given performance profile with objective details such as order and maxPoints 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of GetMetricsResponse</returns>
+        public async System.Threading.Tasks.Task<GetMetricsResponse> GetGamificationProfileMetricsObjectivedetailsAsync (string profileId, String workday = null)
+        {
+             ApiResponse<GetMetricsResponse> localVarResponse = await GetGamificationProfileMetricsObjectivedetailsAsyncWithHttpInfo(profileId, workday);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// All metrics for a given performance profile with objective details such as order and maxPoints 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of ApiResponse (GetMetricsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetMetricsResponse>> GetGamificationProfileMetricsObjectivedetailsAsyncWithHttpInfo (string profileId, String workday = null)
+        { 
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationProfileMetricsObjectivedetails");
+            
+
+            var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics/objectivedetails";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
+
+            // Query params
+            if (workday != null) localVarQueryParams.Add(new Tuple<string, string>("workday", this.Configuration.ApiClient.ParameterToString(workday)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfileMetricsObjectivedetails: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfileMetricsObjectivedetails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GetMetricsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GetMetricsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetMetricsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// All performance profiles 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3809,6 +4769,391 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<GetProfilesResponse>(localVarStatusCode,
                 localVarHeaders,
                 (GetProfilesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetProfilesResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Performance profile of a user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>PerformanceProfile</returns>
+        public PerformanceProfile GetGamificationProfilesUser (string userId, String workday = null)
+        {
+             ApiResponse<PerformanceProfile> localVarResponse = GetGamificationProfilesUserWithHttpInfo(userId, workday);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Performance profile of a user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>ApiResponse of PerformanceProfile</returns>
+        public ApiResponse< PerformanceProfile > GetGamificationProfilesUserWithHttpInfo (string userId, String workday = null)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GamificationApi->GetGamificationProfilesUser");
+
+            var localVarPath = "/api/v2/gamification/profiles/users/{userId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+            if (workday != null) localVarQueryParams.Add(new Tuple<string, string>("workday", this.Configuration.ApiClient.ParameterToString(workday)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfilesUser: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfilesUser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PerformanceProfile>(localVarStatusCode,
+                localVarHeaders,
+                (PerformanceProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PerformanceProfile)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Performance profile of a user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of PerformanceProfile</returns>
+        public async System.Threading.Tasks.Task<PerformanceProfile> GetGamificationProfilesUserAsync (string userId, String workday = null)
+        {
+             ApiResponse<PerformanceProfile> localVarResponse = await GetGamificationProfilesUserAsyncWithHttpInfo(userId, workday);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Performance profile of a user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfilesUserAsyncWithHttpInfo (string userId, String workday = null)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GamificationApi->GetGamificationProfilesUser");
+            
+
+            var localVarPath = "/api/v2/gamification/profiles/users/{userId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+            if (workday != null) localVarQueryParams.Add(new Tuple<string, string>("workday", this.Configuration.ApiClient.ParameterToString(workday)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfilesUser: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfilesUser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PerformanceProfile>(localVarStatusCode,
+                localVarHeaders,
+                (PerformanceProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PerformanceProfile)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Performance profile of the requesting user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>PerformanceProfile</returns>
+        public PerformanceProfile GetGamificationProfilesUsersMe (String workday = null)
+        {
+             ApiResponse<PerformanceProfile> localVarResponse = GetGamificationProfilesUsersMeWithHttpInfo(workday);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Performance profile of the requesting user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>ApiResponse of PerformanceProfile</returns>
+        public ApiResponse< PerformanceProfile > GetGamificationProfilesUsersMeWithHttpInfo (String workday = null)
+        { 
+
+            var localVarPath = "/api/v2/gamification/profiles/users/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (workday != null) localVarQueryParams.Add(new Tuple<string, string>("workday", this.Configuration.ApiClient.ParameterToString(workday)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfilesUsersMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfilesUsersMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PerformanceProfile>(localVarStatusCode,
+                localVarHeaders,
+                (PerformanceProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PerformanceProfile)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Performance profile of the requesting user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of PerformanceProfile</returns>
+        public async System.Threading.Tasks.Task<PerformanceProfile> GetGamificationProfilesUsersMeAsync (String workday = null)
+        {
+             ApiResponse<PerformanceProfile> localVarResponse = await GetGamificationProfilesUsersMeAsyncWithHttpInfo(workday);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Performance profile of the requesting user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfilesUsersMeAsyncWithHttpInfo (String workday = null)
+        { 
+
+            var localVarPath = "/api/v2/gamification/profiles/users/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (workday != null) localVarQueryParams.Add(new Tuple<string, string>("workday", this.Configuration.ApiClient.ParameterToString(workday)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfilesUsersMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationProfilesUsersMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PerformanceProfile>(localVarStatusCode,
+                localVarHeaders,
+                (PerformanceProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PerformanceProfile)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8518,6 +9863,220 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Creates a gamified metric with a given metric definition and metric objective under in a performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="body">Metric</param>
+        /// <returns>Metric</returns>
+        public Metric PostGamificationProfileMetrics (string profileId, Metric body)
+        {
+             ApiResponse<Metric> localVarResponse = PostGamificationProfileMetricsWithHttpInfo(profileId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates a gamified metric with a given metric definition and metric objective under in a performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="body">Metric</param>
+        /// <returns>ApiResponse of Metric</returns>
+        public ApiResponse< Metric > PostGamificationProfileMetricsWithHttpInfo (string profileId, Metric body)
+        { 
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->PostGamificationProfileMetrics");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationProfileMetrics");
+
+            var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationProfileMetrics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationProfileMetrics: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Metric>(localVarStatusCode,
+                localVarHeaders,
+                (Metric) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Metric)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Creates a gamified metric with a given metric definition and metric objective under in a performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="body">Metric</param>
+        /// <returns>Task of Metric</returns>
+        public async System.Threading.Tasks.Task<Metric> PostGamificationProfileMetricsAsync (string profileId, Metric body)
+        {
+             ApiResponse<Metric> localVarResponse = await PostGamificationProfileMetricsAsyncWithHttpInfo(profileId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates a gamified metric with a given metric definition and metric objective under in a performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="body">Metric</param>
+        /// <returns>Task of ApiResponse (Metric)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Metric>> PostGamificationProfileMetricsAsyncWithHttpInfo (string profileId, Metric body)
+        { 
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->PostGamificationProfileMetrics");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationProfileMetrics");
+            
+
+            var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationProfileMetrics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationProfileMetrics: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Metric>(localVarStatusCode,
+                localVarHeaders,
+                (Metric) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Metric)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Updates a metric 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8938,6 +10497,233 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<PerformanceProfile>(localVarStatusCode,
                 localVarHeaders,
                 (PerformanceProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PerformanceProfile)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Updates a metric in performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="metricId">Metric Id</param>
+        /// <param name="body">Metric</param>
+        /// <returns>Metric</returns>
+        public Metric PutGamificationProfileMetric (string profileId, string metricId, Metric body)
+        {
+             ApiResponse<Metric> localVarResponse = PutGamificationProfileMetricWithHttpInfo(profileId, metricId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Updates a metric in performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="metricId">Metric Id</param>
+        /// <param name="body">Metric</param>
+        /// <returns>ApiResponse of Metric</returns>
+        public ApiResponse< Metric > PutGamificationProfileMetricWithHttpInfo (string profileId, string metricId, Metric body)
+        { 
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->PutGamificationProfileMetric");
+            // verify the required parameter 'metricId' is set
+            if (metricId == null)
+                throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->PutGamificationProfileMetric");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PutGamificationProfileMetric");
+
+            var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics/{metricId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
+            if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutGamificationProfileMetric: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutGamificationProfileMetric: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Metric>(localVarStatusCode,
+                localVarHeaders,
+                (Metric) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Metric)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Updates a metric in performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="metricId">Metric Id</param>
+        /// <param name="body">Metric</param>
+        /// <returns>Task of Metric</returns>
+        public async System.Threading.Tasks.Task<Metric> PutGamificationProfileMetricAsync (string profileId, string metricId, Metric body)
+        {
+             ApiResponse<Metric> localVarResponse = await PutGamificationProfileMetricAsyncWithHttpInfo(profileId, metricId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Updates a metric in performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">Performance Profile Id</param>
+        /// <param name="metricId">Metric Id</param>
+        /// <param name="body">Metric</param>
+        /// <returns>Task of ApiResponse (Metric)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Metric>> PutGamificationProfileMetricAsyncWithHttpInfo (string profileId, string metricId, Metric body)
+        { 
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->PutGamificationProfileMetric");
+            
+            // verify the required parameter 'metricId' is set
+            if (metricId == null)
+                throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->PutGamificationProfileMetric");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PutGamificationProfileMetric");
+            
+
+            var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics/{metricId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
+            if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutGamificationProfileMetric: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutGamificationProfileMetric: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Metric>(localVarStatusCode,
+                localVarHeaders,
+                (Metric) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Metric)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

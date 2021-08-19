@@ -71,6 +71,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The email delivery status
         /// </summary>
@@ -230,12 +233,6 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Unknown for "unknown"
-            /// </summary>
-            [EnumMember(Value = "unknown")]
-            Unknown,
-            
-            /// <summary>
             /// Enum Callback for "callback"
             /// </summary>
             [EnumMember(Value = "callback")]
@@ -270,6 +267,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "screenshare")]
             Screenshare,
+            
+            /// <summary>
+            /// Enum Unknown for "unknown"
+            /// </summary>
+            [EnumMember(Value = "unknown")]
+            Unknown,
             
             /// <summary>
             /// Enum Video for "video"
@@ -529,6 +532,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The email delivery status
         /// </summary>
@@ -683,6 +688,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallbackNumbers">Callback phone number(s).</param>
         /// <param name="CallbackScheduledTime">Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CallbackUserName">The name of the user requesting a call back.</param>
+        /// <param name="CoachedParticipantId">The participantId being coached (if someone (e.g. an agent) is being coached, this would correspond to one of the other participantIds present in the conversation).</param>
         /// <param name="CobrowseRole">Describes side of the cobrowse (sharer or viewer).</param>
         /// <param name="CobrowseRoomId">A unique identifier for a PureCloud cobrowse room.</param>
         /// <param name="DeliveryStatus">The email delivery status.</param>
@@ -706,7 +712,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaCount">Count of any media (images, files, etc) included in this session.</param>
         /// <param name="MediaType">The session media type.</param>
         /// <param name="MessageType">Message type for messaging services. E.g.: sms, facebook, twitter, line.</param>
-        /// <param name="MonitoredParticipantId">The participantId being monitored (if someone (e.g. an agent) is being monitored, this would be the ID of the participant that was monitored that would correspond to other participantIds present in the conversation).</param>
+        /// <param name="MonitoredParticipantId">The participantId being monitored (if someone (e.g. an agent) is being monitored, this would correspond to one of the other participantIds present in the conversation).</param>
         /// <param name="OutboundCampaignId">(Dialer) Unique identifier of the outbound campaign.</param>
         /// <param name="OutboundContactId">(Dialer) Unique identifier of the contact.</param>
         /// <param name="OutboundContactListId">(Dialer) Unique identifier of the contact list that this contact belongs to.</param>
@@ -739,7 +745,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Flow">IVR flow execution associated with this session.</param>
         /// <param name="Metrics">List of metrics for this session.</param>
         /// <param name="Segments">List of segments for this session.</param>
-        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, string CobrowseRole = null, string CobrowseRoomId = null, DeliveryStatusEnum? DeliveryStatus = null, DateTime? DeliveryStatusChangeDate = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<int?> WaitingInteractionCounts = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null)
+        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, string CoachedParticipantId = null, string CobrowseRole = null, string CobrowseRoomId = null, DeliveryStatusEnum? DeliveryStatus = null, DateTime? DeliveryStatusChangeDate = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<int?> WaitingInteractionCounts = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null)
         {
             this.ActiveSkillIds = ActiveSkillIds;
             this.AcwSkipped = AcwSkipped;
@@ -756,6 +762,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CallbackNumbers = CallbackNumbers;
             this.CallbackScheduledTime = CallbackScheduledTime;
             this.CallbackUserName = CallbackUserName;
+            this.CoachedParticipantId = CoachedParticipantId;
             this.CobrowseRole = CobrowseRole;
             this.CobrowseRoomId = CobrowseRoomId;
             this.DeliveryStatus = DeliveryStatus;
@@ -953,6 +960,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The participantId being coached (if someone (e.g. an agent) is being coached, this would correspond to one of the other participantIds present in the conversation)
+        /// </summary>
+        /// <value>The participantId being coached (if someone (e.g. an agent) is being coached, this would correspond to one of the other participantIds present in the conversation)</value>
+        [DataMember(Name="coachedParticipantId", EmitDefaultValue=false)]
+        public string CoachedParticipantId { get; set; }
+        
+        
+        
+        /// <summary>
         /// Describes side of the cobrowse (sharer or viewer)
         /// </summary>
         /// <value>Describes side of the cobrowse (sharer or viewer)</value>
@@ -1139,9 +1155,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The participantId being monitored (if someone (e.g. an agent) is being monitored, this would be the ID of the participant that was monitored that would correspond to other participantIds present in the conversation)
+        /// The participantId being monitored (if someone (e.g. an agent) is being monitored, this would correspond to one of the other participantIds present in the conversation)
         /// </summary>
-        /// <value>The participantId being monitored (if someone (e.g. an agent) is being monitored, this would be the ID of the participant that was monitored that would correspond to other participantIds present in the conversation)</value>
+        /// <value>The participantId being monitored (if someone (e.g. an agent) is being monitored, this would correspond to one of the other participantIds present in the conversation)</value>
         [DataMember(Name="monitoredParticipantId", EmitDefaultValue=false)]
         public string MonitoredParticipantId { get; set; }
         
@@ -1451,6 +1467,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
             sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
+            sb.Append("  CoachedParticipantId: ").Append(CoachedParticipantId).Append("\n");
             sb.Append("  CobrowseRole: ").Append(CobrowseRole).Append("\n");
             sb.Append("  CobrowseRoomId: ").Append(CobrowseRoomId).Append("\n");
             sb.Append("  DeliveryStatus: ").Append(DeliveryStatus).Append("\n");
@@ -1621,6 +1638,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CallbackUserName == other.CallbackUserName ||
                     this.CallbackUserName != null &&
                     this.CallbackUserName.Equals(other.CallbackUserName)
+                ) &&
+                (
+                    this.CoachedParticipantId == other.CoachedParticipantId ||
+                    this.CoachedParticipantId != null &&
+                    this.CoachedParticipantId.Equals(other.CoachedParticipantId)
                 ) &&
                 (
                     this.CobrowseRole == other.CobrowseRole ||
@@ -1960,6 +1982,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CallbackUserName != null)
                     hash = hash * 59 + this.CallbackUserName.GetHashCode();
+                
+                if (this.CoachedParticipantId != null)
+                    hash = hash * 59 + this.CoachedParticipantId.GetHashCode();
                 
                 if (this.CobrowseRole != null)
                     hash = hash * 59 + this.CobrowseRole.GetHashCode();
