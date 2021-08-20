@@ -234,7 +234,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Supportability for "Supportability"
             /// </summary>
             [EnumMember(Value = "Supportability")]
-            Supportability
+            Supportability,
+            
+            /// <summary>
+            /// Enum Callback for "Callback"
+            /// </summary>
+            [EnumMember(Value = "Callback")]
+            Callback
         }
         
         
@@ -637,7 +643,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Unassign for "Unassign"
             /// </summary>
             [EnumMember(Value = "Unassign")]
-            Unassign
+            Unassign,
+            
+            /// <summary>
+            /// Enum Reassign for "Reassign"
+            /// </summary>
+            [EnumMember(Value = "Reassign")]
+            Reassign,
+            
+            /// <summary>
+            /// Enum Reschedule for "Reschedule"
+            /// </summary>
+            [EnumMember(Value = "Reschedule")]
+            Reschedule,
+            
+            /// <summary>
+            /// Enum Cancel for "Cancel"
+            /// </summary>
+            [EnumMember(Value = "Cancel")]
+            Cancel
         }
         
         
@@ -1469,7 +1493,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Wrapupcodemapping for "WrapUpCodeMapping"
             /// </summary>
             [EnumMember(Value = "WrapUpCodeMapping")]
-            Wrapupcodemapping
+            Wrapupcodemapping,
+            
+            /// <summary>
+            /// Enum Participant for "Participant"
+            /// </summary>
+            [EnumMember(Value = "Participant")]
+            Participant
         }
         
         

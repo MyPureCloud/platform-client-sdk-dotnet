@@ -222,7 +222,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Supportability for "Supportability"
             /// </summary>
             [EnumMember(Value = "Supportability")]
-            Supportability
+            Supportability,
+            
+            /// <summary>
+            /// Enum Callback for "Callback"
+            /// </summary>
+            [EnumMember(Value = "Callback")]
+            Callback
         }
         
         

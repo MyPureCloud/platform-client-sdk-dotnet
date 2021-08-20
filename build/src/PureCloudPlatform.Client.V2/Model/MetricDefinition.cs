@@ -54,6 +54,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Percent,
             
             /// <summary>
+            /// Enum Currency for "Currency"
+            /// </summary>
+            [EnumMember(Value = "Currency")]
+            Currency,
+            
+            /// <summary>
             /// Enum Seconds for "Seconds"
             /// </summary>
             [EnumMember(Value = "Seconds")]

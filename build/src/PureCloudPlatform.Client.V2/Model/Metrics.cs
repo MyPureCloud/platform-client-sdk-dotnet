@@ -35,6 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Corresponding unit type for this metric
         /// </summary>
@@ -61,6 +64,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Percent")]
             Percent,
+            
+            /// <summary>
+            /// Enum Currency for "Currency"
+            /// </summary>
+            [EnumMember(Value = "Currency")]
+            Currency,
             
             /// <summary>
             /// Enum Seconds for "Seconds"
@@ -116,12 +125,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Corresponding unit type for this metric
         /// </summary>
         /// <value>Corresponding unit type for this metric</value>
         [DataMember(Name="unitType", EmitDefaultValue=false)]
         public UnitTypeEnum? UnitType { get; set; }
+        
+        
+        
+        
         
         
         
@@ -142,17 +163,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Order">The order of metric within a performance profile.</param>
         /// <param name="MetricDefinitionName">The name of associated metric definition.</param>
         /// <param name="MetricDefinitionId">The id of associated metric definition.</param>
+        /// <param name="ExternalMetricDefinitionId">The id of associated external metric definition.</param>
         /// <param name="UnitType">Corresponding unit type for this metric.</param>
         /// <param name="Enabled">A flag for whether this metric is enabled for a performance profile.</param>
         /// <param name="TemplateName">The name of associated objective template.</param>
         /// <param name="MaxPoints">Achievable maximum points for this metric.</param>
         /// <param name="PerformanceProfileId">Performance profile id of this metric.</param>
-        public Metrics(string Name = null, int? Order = null, string MetricDefinitionName = null, string MetricDefinitionId = null, UnitTypeEnum? UnitType = null, bool? Enabled = null, string TemplateName = null, int? MaxPoints = null, string PerformanceProfileId = null)
+        public Metrics(string Name = null, int? Order = null, string MetricDefinitionName = null, string MetricDefinitionId = null, string ExternalMetricDefinitionId = null, UnitTypeEnum? UnitType = null, bool? Enabled = null, string TemplateName = null, int? MaxPoints = null, string PerformanceProfileId = null)
         {
             this.Name = Name;
             this.Order = Order;
             this.MetricDefinitionName = MetricDefinitionName;
             this.MetricDefinitionId = MetricDefinitionId;
+            this.ExternalMetricDefinitionId = ExternalMetricDefinitionId;
             this.UnitType = UnitType;
             this.Enabled = Enabled;
             this.TemplateName = TemplateName;
@@ -207,6 +230,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The id of associated external metric definition
+        /// </summary>
+        /// <value>The id of associated external metric definition</value>
+        [DataMember(Name="externalMetricDefinitionId", EmitDefaultValue=false)]
+        public string ExternalMetricDefinitionId { get; set; }
+        
+        
+        
         
         
         /// <summary>
@@ -246,6 +278,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Unit definition of linked external metric
+        /// </summary>
+        /// <value>Unit definition of linked external metric</value>
+        [DataMember(Name="unitDefinition", EmitDefaultValue=false)]
+        public string UnitDefinition { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// Precision of linked external metric
+        /// </summary>
+        /// <value>Precision of linked external metric</value>
+        [DataMember(Name="precision", EmitDefaultValue=false)]
+        public int? Precision { get; private set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -267,11 +317,14 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  MetricDefinitionName: ").Append(MetricDefinitionName).Append("\n");
             sb.Append("  MetricDefinitionId: ").Append(MetricDefinitionId).Append("\n");
+            sb.Append("  ExternalMetricDefinitionId: ").Append(ExternalMetricDefinitionId).Append("\n");
             sb.Append("  UnitType: ").Append(UnitType).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  TemplateName: ").Append(TemplateName).Append("\n");
             sb.Append("  MaxPoints: ").Append(MaxPoints).Append("\n");
             sb.Append("  PerformanceProfileId: ").Append(PerformanceProfileId).Append("\n");
+            sb.Append("  UnitDefinition: ").Append(UnitDefinition).Append("\n");
+            sb.Append("  Precision: ").Append(Precision).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -339,6 +392,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MetricDefinitionId.Equals(other.MetricDefinitionId)
                 ) &&
                 (
+                    this.ExternalMetricDefinitionId == other.ExternalMetricDefinitionId ||
+                    this.ExternalMetricDefinitionId != null &&
+                    this.ExternalMetricDefinitionId.Equals(other.ExternalMetricDefinitionId)
+                ) &&
+                (
                     this.UnitType == other.UnitType ||
                     this.UnitType != null &&
                     this.UnitType.Equals(other.UnitType)
@@ -362,6 +420,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PerformanceProfileId == other.PerformanceProfileId ||
                     this.PerformanceProfileId != null &&
                     this.PerformanceProfileId.Equals(other.PerformanceProfileId)
+                ) &&
+                (
+                    this.UnitDefinition == other.UnitDefinition ||
+                    this.UnitDefinition != null &&
+                    this.UnitDefinition.Equals(other.UnitDefinition)
+                ) &&
+                (
+                    this.Precision == other.Precision ||
+                    this.Precision != null &&
+                    this.Precision.Equals(other.Precision)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -397,6 +465,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.MetricDefinitionId != null)
                     hash = hash * 59 + this.MetricDefinitionId.GetHashCode();
                 
+                if (this.ExternalMetricDefinitionId != null)
+                    hash = hash * 59 + this.ExternalMetricDefinitionId.GetHashCode();
+                
                 if (this.UnitType != null)
                     hash = hash * 59 + this.UnitType.GetHashCode();
                 
@@ -411,6 +482,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PerformanceProfileId != null)
                     hash = hash * 59 + this.PerformanceProfileId.GetHashCode();
+                
+                if (this.UnitDefinition != null)
+                    hash = hash * 59 + this.UnitDefinition.GetHashCode();
+                
+                if (this.Precision != null)
+                    hash = hash * 59 + this.Precision.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

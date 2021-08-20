@@ -68,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The team name (required).</param>
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Description">Team information..</param>
-        public Team(string Name = null, Division Division = null, string Description = null)
+        public Team(string Name = null, WritableDivision Division = null, string Description = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -101,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public Division Division { get; set; }
+        public WritableDivision Division { get; set; }
         
         
         

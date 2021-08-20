@@ -233,6 +233,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -279,6 +282,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Evaluation" /> class.
@@ -305,7 +310,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ResourceType">The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources..</param>
         /// <param name="Redacted">Is only true when the user making the request does not have sufficient permissions to see evaluation.</param>
         /// <param name="IsScoringIndex">IsScoringIndex.</param>
-        public Evaluation(string Name = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null)
+        /// <param name="AuthorizedActions">List of user authorized actions on evaluation. Possible values: edit, editScore, editAgentSignoff, delete, viewAudit.</param>
+        public Evaluation(string Name = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -329,6 +335,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ResourceType = ResourceType;
             this.Redacted = Redacted;
             this.IsScoringIndex = IsScoringIndex;
+            this.AuthorizedActions = AuthorizedActions;
             
         }
         
@@ -519,6 +526,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// List of user authorized actions on evaluation. Possible values: edit, editScore, editAgentSignoff, delete, viewAudit
+        /// </summary>
+        /// <value>List of user authorized actions on evaluation. Possible values: edit, editScore, editAgentSignoff, delete, viewAudit</value>
+        [DataMember(Name="authorizedActions", EmitDefaultValue=false)]
+        public List<string> AuthorizedActions { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -558,6 +574,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ResourceType: ").Append(ResourceType).Append("\n");
             sb.Append("  Redacted: ").Append(Redacted).Append("\n");
             sb.Append("  IsScoringIndex: ").Append(IsScoringIndex).Append("\n");
+            sb.Append("  AuthorizedActions: ").Append(AuthorizedActions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -715,6 +732,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IsScoringIndex.Equals(other.IsScoringIndex)
                 ) &&
                 (
+                    this.AuthorizedActions == other.AuthorizedActions ||
+                    this.AuthorizedActions != null &&
+                    this.AuthorizedActions.SequenceEqual(other.AuthorizedActions)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -801,6 +823,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.IsScoringIndex != null)
                     hash = hash * 59 + this.IsScoringIndex.GetHashCode();
+                
+                if (this.AuthorizedActions != null)
+                    hash = hash * 59 + this.AuthorizedActions.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

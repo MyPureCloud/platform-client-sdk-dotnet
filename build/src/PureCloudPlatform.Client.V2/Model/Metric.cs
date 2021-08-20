@@ -70,6 +70,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Metric" /> class.
@@ -82,14 +87,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of this metric (required).</param>
         /// <param name="MetricDefinitionId">The id of associated metric definition.</param>
+        /// <param name="ExternalMetricDefinitionId">The id of associated external metric definition.</param>
         /// <param name="Objective">Associated objective for this metric.</param>
         /// <param name="PerformanceProfileId">Performance profile id of this metric.</param>
         /// <param name="LinkedMetric">The linked metric entity reference.</param>
         /// <param name="SourcePerformanceProfile">The source performance profile when this metric is linked.</param>
-        public Metric(string Name = null, string MetricDefinitionId = null, Objective Objective = null, string PerformanceProfileId = null, AddressableEntityRef LinkedMetric = null, PerformanceProfile SourcePerformanceProfile = null)
+        public Metric(string Name = null, string MetricDefinitionId = null, string ExternalMetricDefinitionId = null, Objective Objective = null, string PerformanceProfileId = null, AddressableEntityRef LinkedMetric = null, PerformanceProfile SourcePerformanceProfile = null)
         {
             this.Name = Name;
             this.MetricDefinitionId = MetricDefinitionId;
+            this.ExternalMetricDefinitionId = ExternalMetricDefinitionId;
             this.Objective = Objective;
             this.PerformanceProfileId = PerformanceProfileId;
             this.LinkedMetric = LinkedMetric;
@@ -123,6 +130,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The id of associated metric definition</value>
         [DataMember(Name="metricDefinitionId", EmitDefaultValue=false)]
         public string MetricDefinitionId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The id of associated external metric definition
+        /// </summary>
+        /// <value>The id of associated external metric definition</value>
+        [DataMember(Name="externalMetricDefinitionId", EmitDefaultValue=false)]
+        public string ExternalMetricDefinitionId { get; set; }
         
         
         
@@ -200,6 +216,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  MetricDefinitionId: ").Append(MetricDefinitionId).Append("\n");
+            sb.Append("  ExternalMetricDefinitionId: ").Append(ExternalMetricDefinitionId).Append("\n");
             sb.Append("  Objective: ").Append(Objective).Append("\n");
             sb.Append("  PerformanceProfileId: ").Append(PerformanceProfileId).Append("\n");
             sb.Append("  LinkedMetric: ").Append(LinkedMetric).Append("\n");
@@ -263,6 +280,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MetricDefinitionId.Equals(other.MetricDefinitionId)
                 ) &&
                 (
+                    this.ExternalMetricDefinitionId == other.ExternalMetricDefinitionId ||
+                    this.ExternalMetricDefinitionId != null &&
+                    this.ExternalMetricDefinitionId.Equals(other.ExternalMetricDefinitionId)
+                ) &&
+                (
                     this.Objective == other.Objective ||
                     this.Objective != null &&
                     this.Objective.Equals(other.Objective)
@@ -319,6 +341,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MetricDefinitionId != null)
                     hash = hash * 59 + this.MetricDefinitionId.GetHashCode();
+                
+                if (this.ExternalMetricDefinitionId != null)
+                    hash = hash * 59 + this.ExternalMetricDefinitionId.GetHashCode();
                 
                 if (this.Objective != null)
                     hash = hash * 59 + this.Objective.GetHashCode();
