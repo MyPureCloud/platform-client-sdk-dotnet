@@ -466,7 +466,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum ActionMapBlockedConstraintsIntervalDetailView for "ACTION_MAP_BLOCKED_CONSTRAINTS_INTERVAL_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "ACTION_MAP_BLOCKED_CONSTRAINTS_INTERVAL_DETAIL_VIEW")]
-            ActionMapBlockedConstraintsIntervalDetailView
+            ActionMapBlockedConstraintsIntervalDetailView,
+            
+            /// <summary>
+            /// Enum FlowMilestonePerformanceDetailView for "FLOW_MILESTONE_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "FLOW_MILESTONE_PERFORMANCE_DETAIL_VIEW")]
+            FlowMilestonePerformanceDetailView,
+            
+            /// <summary>
+            /// Enum FlowMilestonePerformanceIntervalDetailView for "FLOW_MILESTONE_PERFORMANCE_INTERVAL_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "FLOW_MILESTONE_PERFORMANCE_INTERVAL_DETAIL_VIEW")]
+            FlowMilestonePerformanceIntervalDetailView
         }
         
         

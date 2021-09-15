@@ -950,7 +950,7 @@ namespace Example
 
 <a name="getspeechandtextanalyticstopics"></a>
 
-## [**TopicsEntityListing**](TopicsEntityListing.html) GetSpeechandtextanalyticsTopics (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null)
+## [**TopicsEntityListing**](TopicsEntityListing.html) GetSpeechandtextanalyticsTopics (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null)
 
 
 
@@ -986,14 +986,16 @@ namespace Example
             var apiInstance = new SpeechTextAnalyticsApi();
             var nextPage = nextPage_example;  // string | The key for listing the next page (optional) 
             var pageSize = 56;  // int? | The page size for the listing (optional)  (default to 20)
-            var state = state_example;  // string | Topic state (optional) 
+            var state = state_example;  // string | Topic state. Defaults to latest (optional) 
             var name = name_example;  // string | Case insensitive partial name to filter by (optional) 
             var ids = new List<string>(); // List<string> | Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional) 
+            var sortBy = sortBy_example;  // string | Sort results by. Defaults to name (optional) 
+            var sortOrder = sortOrder_example;  // string | Sort order. Defaults to asc (optional) 
 
             try
             { 
                 // Get the list of Speech & Text Analytics topics
-                TopicsEntityListing result = apiInstance.GetSpeechandtextanalyticsTopics(nextPage, pageSize, state, name, ids);
+                TopicsEntityListing result = apiInstance.GetSpeechandtextanalyticsTopics(nextPage, pageSize, state, name, ids, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1012,9 +1014,11 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **nextPage** | **string**| The key for listing the next page | [optional]  |
 | **pageSize** | **int?**| The page size for the listing | [optional] [default to 20] |
-| **state** | **string**| Topic state | [optional] <br />**Values**: latest, published |
+| **state** | **string**| Topic state. Defaults to latest | [optional] <br />**Values**: latest, published |
 | **name** | **string**| Case insensitive partial name to filter by | [optional]  |
 | **ids** | [**List<string>**](string.html)| Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. | [optional]  |
+| **sortBy** | **string**| Sort results by. Defaults to name | [optional] <br />**Values**: name |
+| **sortOrder** | **string**| Sort order. Defaults to asc | [optional] <br />**Values**: asc, desc |
 {: class="table table-striped"}
 
 ### Return type
@@ -1138,7 +1142,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **dialect** | **string**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional] <br />**Values**: en-US, es-US, en-AU, en-GB, en-ZA, es-ES, en-IN |
+| **dialect** | **string**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional] <br />**Values**: en-US, es-US, en-AU, en-GB, en-ZA, es-ES, en-IN, fr-FR, fr-CA, it-IT, de-DE, pt-BR |
 {: class="table table-striped"}
 
 ### Return type

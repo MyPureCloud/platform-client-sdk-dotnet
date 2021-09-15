@@ -20,6 +20,7 @@ title: MessageData
 | **Media** | [**List&lt;MessageMedia&gt;**](MessageMedia.html) | The media details associated to a message. | [optional] |
 | **Stickers** | [**List&lt;MessageSticker&gt;**](MessageSticker.html) | The sticker details associated to a message. | [optional] |
 | **CreatedBy** | [**User**](User.html) | User who sent this message. | [optional] |
+| **ConversationId** | **string** | The id of the conversation of this message. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -21,6 +21,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetJourneyOutcomes**](JourneyApi.html#getjourneyoutcomes) | **GET** /api/v2/journey/outcomes | Retrieve all outcomes. |
 | [**GetJourneySegment**](JourneyApi.html#getjourneysegment) | **GET** /api/v2/journey/segments/{segmentId} | Retrieve a single segment. |
 | [**GetJourneySegments**](JourneyApi.html#getjourneysegments) | **GET** /api/v2/journey/segments | Retrieve all segments. |
+| [**GetJourneySession**](JourneyApi.html#getjourneysession) | **GET** /api/v2/journey/sessions/{sessionId} | Retrieve a single session. |
+| [**GetJourneySessionOutcomescores**](JourneyApi.html#getjourneysessionoutcomescores) | **GET** /api/v2/journey/sessions/{sessionId}/outcomescores | Retrieve latest outcome score associated with a session for all outcomes. |
 | [**PatchJourneyActionmap**](JourneyApi.html#patchjourneyactionmap) | **PATCH** /api/v2/journey/actionmaps/{actionMapId} | Update single action map. |
 | [**PatchJourneyActiontarget**](JourneyApi.html#patchjourneyactiontarget) | **PATCH** /api/v2/journey/actiontargets/{actionTargetId} | Update a single action target. |
 | [**PatchJourneyActiontemplate**](JourneyApi.html#patchjourneyactiontemplate) | **PATCH** /api/v2/journey/actiontemplates/{actionTemplateId} | Update a single action template. |
@@ -990,6 +992,136 @@ namespace Example
 ### Return type
 
 [**SegmentListing**](SegmentListing.html)
+
+<a name="getjourneysession"></a>
+
+## [**Session**](Session.html) GetJourneySession (string sessionId)
+
+
+
+Retrieve a single session.
+
+
+
+Requires ANY permissions: 
+
+* journey:session:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneySessionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var sessionId = sessionId_example;  // string | ID of the session.
+
+            try
+            { 
+                // Retrieve a single session.
+                Session result = apiInstance.GetJourneySession(sessionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneySession: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sessionId** | **string**| ID of the session. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Session**](Session.html)
+
+<a name="getjourneysessionoutcomescores"></a>
+
+## [**OutcomeScoresResult**](OutcomeScoresResult.html) GetJourneySessionOutcomescores (string sessionId)
+
+
+
+Retrieve latest outcome score associated with a session for all outcomes.
+
+
+
+Requires ANY permissions: 
+
+* journey:outcomescores:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneySessionOutcomescoresExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var sessionId = sessionId_example;  // string | ID of the session.
+
+            try
+            { 
+                // Retrieve latest outcome score associated with a session for all outcomes.
+                OutcomeScoresResult result = apiInstance.GetJourneySessionOutcomescores(sessionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneySessionOutcomescores: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sessionId** | **string**| ID of the session. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OutcomeScoresResult**](OutcomeScoresResult.html)
 
 <a name="patchjourneyactionmap"></a>
 

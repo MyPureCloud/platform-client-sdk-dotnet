@@ -377,6 +377,50 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SegmentListing> GetJourneySegmentsWithHttpInfo (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null);
         
         /// <summary>
+        /// Retrieve a single session.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">ID of the session.</param>
+        /// <returns>Session</returns>
+        Session GetJourneySession (string sessionId);
+
+        /// <summary>
+        /// Retrieve a single session.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">ID of the session.</param>
+        /// <returns>ApiResponse of Session</returns>
+        ApiResponse<Session> GetJourneySessionWithHttpInfo (string sessionId);
+        
+        /// <summary>
+        /// Retrieve latest outcome score associated with a session for all outcomes.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">ID of the session.</param>
+        /// <returns>OutcomeScoresResult</returns>
+        OutcomeScoresResult GetJourneySessionOutcomescores (string sessionId);
+
+        /// <summary>
+        /// Retrieve latest outcome score associated with a session for all outcomes.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">ID of the session.</param>
+        /// <returns>ApiResponse of OutcomeScoresResult</returns>
+        ApiResponse<OutcomeScoresResult> GetJourneySessionOutcomescoresWithHttpInfo (string sessionId);
+        
+        /// <summary>
         /// Update single action map.
         /// </summary>
         /// <remarks>
@@ -969,6 +1013,50 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (SegmentListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<SegmentListing>> GetJourneySegmentsAsyncWithHttpInfo (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null);
+        
+        /// <summary>
+        /// Retrieve a single session.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">ID of the session.</param>
+        /// <returns>Task of Session</returns>
+        System.Threading.Tasks.Task<Session> GetJourneySessionAsync (string sessionId);
+
+        /// <summary>
+        /// Retrieve a single session.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">ID of the session.</param>
+        /// <returns>Task of ApiResponse (Session)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Session>> GetJourneySessionAsyncWithHttpInfo (string sessionId);
+        
+        /// <summary>
+        /// Retrieve latest outcome score associated with a session for all outcomes.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">ID of the session.</param>
+        /// <returns>Task of OutcomeScoresResult</returns>
+        System.Threading.Tasks.Task<OutcomeScoresResult> GetJourneySessionOutcomescoresAsync (string sessionId);
+
+        /// <summary>
+        /// Retrieve latest outcome score associated with a session for all outcomes.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">ID of the session.</param>
+        /// <returns>Task of ApiResponse (OutcomeScoresResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OutcomeScoresResult>> GetJourneySessionOutcomescoresAsyncWithHttpInfo (string sessionId);
         
         /// <summary>
         /// Update single action map.
@@ -4101,6 +4189,392 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<SegmentListing>(localVarStatusCode,
                 localVarHeaders,
                 (SegmentListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SegmentListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Retrieve a single session. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">ID of the session.</param>
+        /// <returns>Session</returns>
+        public Session GetJourneySession (string sessionId)
+        {
+             ApiResponse<Session> localVarResponse = GetJourneySessionWithHttpInfo(sessionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve a single session. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">ID of the session.</param>
+        /// <returns>ApiResponse of Session</returns>
+        public ApiResponse< Session > GetJourneySessionWithHttpInfo (string sessionId)
+        { 
+            // verify the required parameter 'sessionId' is set
+            if (sessionId == null)
+                throw new ApiException(400, "Missing required parameter 'sessionId' when calling JourneyApi->GetJourneySession");
+
+            var localVarPath = "/api/v2/journey/sessions/{sessionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sessionId != null) localVarPathParams.Add("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneySession: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneySession: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Session>(localVarStatusCode,
+                localVarHeaders,
+                (Session) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Session)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieve a single session. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">ID of the session.</param>
+        /// <returns>Task of Session</returns>
+        public async System.Threading.Tasks.Task<Session> GetJourneySessionAsync (string sessionId)
+        {
+             ApiResponse<Session> localVarResponse = await GetJourneySessionAsyncWithHttpInfo(sessionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve a single session. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">ID of the session.</param>
+        /// <returns>Task of ApiResponse (Session)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Session>> GetJourneySessionAsyncWithHttpInfo (string sessionId)
+        { 
+            // verify the required parameter 'sessionId' is set
+            if (sessionId == null)
+                throw new ApiException(400, "Missing required parameter 'sessionId' when calling JourneyApi->GetJourneySession");
+            
+
+            var localVarPath = "/api/v2/journey/sessions/{sessionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sessionId != null) localVarPathParams.Add("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneySession: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneySession: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Session>(localVarStatusCode,
+                localVarHeaders,
+                (Session) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Session)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Retrieve latest outcome score associated with a session for all outcomes. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">ID of the session.</param>
+        /// <returns>OutcomeScoresResult</returns>
+        public OutcomeScoresResult GetJourneySessionOutcomescores (string sessionId)
+        {
+             ApiResponse<OutcomeScoresResult> localVarResponse = GetJourneySessionOutcomescoresWithHttpInfo(sessionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve latest outcome score associated with a session for all outcomes. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">ID of the session.</param>
+        /// <returns>ApiResponse of OutcomeScoresResult</returns>
+        public ApiResponse< OutcomeScoresResult > GetJourneySessionOutcomescoresWithHttpInfo (string sessionId)
+        { 
+            // verify the required parameter 'sessionId' is set
+            if (sessionId == null)
+                throw new ApiException(400, "Missing required parameter 'sessionId' when calling JourneyApi->GetJourneySessionOutcomescores");
+
+            var localVarPath = "/api/v2/journey/sessions/{sessionId}/outcomescores";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sessionId != null) localVarPathParams.Add("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneySessionOutcomescores: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneySessionOutcomescores: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OutcomeScoresResult>(localVarStatusCode,
+                localVarHeaders,
+                (OutcomeScoresResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutcomeScoresResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieve latest outcome score associated with a session for all outcomes. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">ID of the session.</param>
+        /// <returns>Task of OutcomeScoresResult</returns>
+        public async System.Threading.Tasks.Task<OutcomeScoresResult> GetJourneySessionOutcomescoresAsync (string sessionId)
+        {
+             ApiResponse<OutcomeScoresResult> localVarResponse = await GetJourneySessionOutcomescoresAsyncWithHttpInfo(sessionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve latest outcome score associated with a session for all outcomes. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">ID of the session.</param>
+        /// <returns>Task of ApiResponse (OutcomeScoresResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OutcomeScoresResult>> GetJourneySessionOutcomescoresAsyncWithHttpInfo (string sessionId)
+        { 
+            // verify the required parameter 'sessionId' is set
+            if (sessionId == null)
+                throw new ApiException(400, "Missing required parameter 'sessionId' when calling JourneyApi->GetJourneySessionOutcomescores");
+            
+
+            var localVarPath = "/api/v2/journey/sessions/{sessionId}/outcomescores";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sessionId != null) localVarPathParams.Add("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneySessionOutcomescores: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneySessionOutcomescores: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OutcomeScoresResult>(localVarStatusCode,
+                localVarHeaders,
+                (OutcomeScoresResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutcomeScoresResult)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

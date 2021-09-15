@@ -110,23 +110,23 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Verify a channel still exists and is valid
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns a 200 OK if channel exists, and a 404 Not Found if it doesn&#39;t
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
-        /// <returns>bool?</returns>
-        bool? HeadNotificationsChannel (string channelId);
+        /// <returns></returns>
+        void HeadNotificationsChannel (string channelId);
 
         /// <summary>
         /// Verify a channel still exists and is valid
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns a 200 OK if channel exists, and a 404 Not Found if it doesn&#39;t
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
-        /// <returns>ApiResponse of bool?</returns>
-        ApiResponse<bool?> HeadNotificationsChannelWithHttpInfo (string channelId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadNotificationsChannelWithHttpInfo (string channelId);
         
         /// <summary>
         /// Add a list of subscriptions to the existing list of subscriptions
@@ -294,23 +294,23 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Verify a channel still exists and is valid
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns a 200 OK if channel exists, and a 404 Not Found if it doesn&#39;t
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
-        /// <returns>Task of bool?</returns>
-        System.Threading.Tasks.Task<bool?> HeadNotificationsChannelAsync (string channelId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadNotificationsChannelAsync (string channelId);
 
         /// <summary>
         /// Verify a channel still exists and is valid
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns a 200 OK if channel exists, and a 404 Not Found if it doesn&#39;t
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
-        /// <returns>Task of ApiResponse (bool?)</returns>
-        System.Threading.Tasks.Task<ApiResponse<bool?>> HeadNotificationsChannelAsyncWithHttpInfo (string channelId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadNotificationsChannelAsyncWithHttpInfo (string channelId);
         
         /// <summary>
         /// Add a list of subscriptions to the existing list of subscriptions
@@ -1235,24 +1235,23 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Verify a channel still exists and is valid 
+        /// Verify a channel still exists and is valid Returns a 200 OK if channel exists, and a 404 Not Found if it doesn&#39;t
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
-        /// <returns>bool?</returns>
-        public bool? HeadNotificationsChannel (string channelId)
+        /// <returns></returns>
+        public void HeadNotificationsChannel (string channelId)
         {
-             ApiResponse<bool?> localVarResponse = HeadNotificationsChannelWithHttpInfo(channelId);
-             return localVarResponse.Data;
+             HeadNotificationsChannelWithHttpInfo(channelId);
         }
 
         /// <summary>
-        /// Verify a channel still exists and is valid 
+        /// Verify a channel still exists and is valid Returns a 200 OK if channel exists, and a 404 Not Found if it doesn&#39;t
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
-        /// <returns>ApiResponse of bool?</returns>
-        public ApiResponse< bool? > HeadNotificationsChannelWithHttpInfo (string channelId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> HeadNotificationsChannelWithHttpInfo (string channelId)
         { 
             // verify the required parameter 'channelId' is set
             if (channelId == null)
@@ -1321,34 +1320,33 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling HeadNotificationsChannel: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<bool?>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (bool?) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(bool?)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
         
         /// <summary>
-        /// Verify a channel still exists and is valid 
+        /// Verify a channel still exists and is valid Returns a 200 OK if channel exists, and a 404 Not Found if it doesn&#39;t
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
-        /// <returns>Task of bool?</returns>
-        public async System.Threading.Tasks.Task<bool?> HeadNotificationsChannelAsync (string channelId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task HeadNotificationsChannelAsync (string channelId)
         {
-             ApiResponse<bool?> localVarResponse = await HeadNotificationsChannelAsyncWithHttpInfo(channelId);
-             return localVarResponse.Data;
+             await HeadNotificationsChannelAsyncWithHttpInfo(channelId);
 
         }
 
         /// <summary>
-        /// Verify a channel still exists and is valid 
+        /// Verify a channel still exists and is valid Returns a 200 OK if channel exists, and a 404 Not Found if it doesn&#39;t
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
-        /// <returns>Task of ApiResponse (bool?)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<bool?>> HeadNotificationsChannelAsyncWithHttpInfo (string channelId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadNotificationsChannelAsyncWithHttpInfo (string channelId)
         { 
             // verify the required parameter 'channelId' is set
             if (channelId == null)
@@ -1418,9 +1416,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling HeadNotificationsChannel: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<bool?>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (bool?) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(bool?)),
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

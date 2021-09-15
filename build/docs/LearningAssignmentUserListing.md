@@ -14,8 +14,8 @@ title: LearningAssignmentUserListing
 | **UnfilteredTotal** | **int?** | The total number of users | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-| **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
+| **NextUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

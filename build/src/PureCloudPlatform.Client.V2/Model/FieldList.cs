@@ -65,6 +65,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldList" /> class.
@@ -78,7 +83,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="State">State.</param>
         /// <param name="Type">Type.</param>
         /// <param name="Required">Required.</param>
-        public FieldList(bool? CustomLabels = null, string InstructionText = null, string Key = null, List<string> LabelKeys = null, Dictionary<string, Object> _Params = null, bool? Repeatable = null, string State = null, string Type = null, bool? Required = null)
+        /// <param name="Gdpr">Gdpr.</param>
+        public FieldList(bool? CustomLabels = null, string InstructionText = null, string Key = null, List<string> LabelKeys = null, Dictionary<string, Object> _Params = null, bool? Repeatable = null, string State = null, string Type = null, bool? Required = null, bool? Gdpr = null)
         {
             this.CustomLabels = CustomLabels;
             this.InstructionText = InstructionText;
@@ -89,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.State = State;
             this.Type = Type;
             this.Required = Required;
+            this.Gdpr = Gdpr;
             
         }
         
@@ -165,6 +172,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Required { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets Gdpr
+        /// </summary>
+        [DataMember(Name="gdpr", EmitDefaultValue=false)]
+        public bool? Gdpr { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -183,6 +198,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Required: ").Append(Required).Append("\n");
+            sb.Append("  Gdpr: ").Append(Gdpr).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -267,6 +283,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Required == other.Required ||
                     this.Required != null &&
                     this.Required.Equals(other.Required)
+                ) &&
+                (
+                    this.Gdpr == other.Gdpr ||
+                    this.Gdpr != null &&
+                    this.Gdpr.Equals(other.Gdpr)
                 );
         }
 
@@ -308,6 +329,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Required != null)
                     hash = hash * 59 + this.Required.GetHashCode();
+                
+                if (this.Gdpr != null)
+                    hash = hash * 59 + this.Gdpr.GetHashCode();
                 
                 return hash;
             }

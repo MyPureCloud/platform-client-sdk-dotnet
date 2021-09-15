@@ -133,12 +133,32 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Corresponding unit type for this metric
         /// </summary>
         /// <value>Corresponding unit type for this metric</value>
         [DataMember(Name="unitType", EmitDefaultValue=false)]
         public UnitTypeEnum? UnitType { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -169,7 +189,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TemplateName">The name of associated objective template.</param>
         /// <param name="MaxPoints">Achievable maximum points for this metric.</param>
         /// <param name="PerformanceProfileId">Performance profile id of this metric.</param>
-        public Metrics(string Name = null, int? Order = null, string MetricDefinitionName = null, string MetricDefinitionId = null, string ExternalMetricDefinitionId = null, UnitTypeEnum? UnitType = null, bool? Enabled = null, string TemplateName = null, int? MaxPoints = null, string PerformanceProfileId = null)
+        /// <param name="LinkedMetric">The linked metric entity reference.</param>
+        /// <param name="SourcePerformanceProfile">The source performance profile when this metric is linked.</param>
+        public Metrics(string Name = null, int? Order = null, string MetricDefinitionName = null, string MetricDefinitionId = null, string ExternalMetricDefinitionId = null, UnitTypeEnum? UnitType = null, bool? Enabled = null, string TemplateName = null, int? MaxPoints = null, string PerformanceProfileId = null, AddressableEntityRef LinkedMetric = null, PerformanceProfile SourcePerformanceProfile = null)
         {
             this.Name = Name;
             this.Order = Order;
@@ -181,6 +203,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.TemplateName = TemplateName;
             this.MaxPoints = MaxPoints;
             this.PerformanceProfileId = PerformanceProfileId;
+            this.LinkedMetric = LinkedMetric;
+            this.SourcePerformanceProfile = SourcePerformanceProfile;
             
         }
         
@@ -278,6 +302,42 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The linked metric entity reference
+        /// </summary>
+        /// <value>The linked metric entity reference</value>
+        [DataMember(Name="linkedMetric", EmitDefaultValue=false)]
+        public AddressableEntityRef LinkedMetric { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The created date of this metric
+        /// </summary>
+        /// <value>The created date of this metric</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public long? DateCreated { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The unlinked workday for this metric if this metric was ever unlinked. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// </summary>
+        /// <value>The unlinked workday for this metric if this metric was ever unlinked. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        [DataMember(Name="dateUnlinked", EmitDefaultValue=false)]
+        public String DateUnlinked { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The source performance profile when this metric is linked
+        /// </summary>
+        /// <value>The source performance profile when this metric is linked</value>
+        [DataMember(Name="sourcePerformanceProfile", EmitDefaultValue=false)]
+        public PerformanceProfile SourcePerformanceProfile { get; set; }
+        
+        
+        
+        /// <summary>
         /// Unit definition of linked external metric
         /// </summary>
         /// <value>Unit definition of linked external metric</value>
@@ -323,6 +383,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TemplateName: ").Append(TemplateName).Append("\n");
             sb.Append("  MaxPoints: ").Append(MaxPoints).Append("\n");
             sb.Append("  PerformanceProfileId: ").Append(PerformanceProfileId).Append("\n");
+            sb.Append("  LinkedMetric: ").Append(LinkedMetric).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  DateUnlinked: ").Append(DateUnlinked).Append("\n");
+            sb.Append("  SourcePerformanceProfile: ").Append(SourcePerformanceProfile).Append("\n");
             sb.Append("  UnitDefinition: ").Append(UnitDefinition).Append("\n");
             sb.Append("  Precision: ").Append(Precision).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -422,6 +486,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PerformanceProfileId.Equals(other.PerformanceProfileId)
                 ) &&
                 (
+                    this.LinkedMetric == other.LinkedMetric ||
+                    this.LinkedMetric != null &&
+                    this.LinkedMetric.Equals(other.LinkedMetric)
+                ) &&
+                (
+                    this.DateCreated == other.DateCreated ||
+                    this.DateCreated != null &&
+                    this.DateCreated.Equals(other.DateCreated)
+                ) &&
+                (
+                    this.DateUnlinked == other.DateUnlinked ||
+                    this.DateUnlinked != null &&
+                    this.DateUnlinked.Equals(other.DateUnlinked)
+                ) &&
+                (
+                    this.SourcePerformanceProfile == other.SourcePerformanceProfile ||
+                    this.SourcePerformanceProfile != null &&
+                    this.SourcePerformanceProfile.Equals(other.SourcePerformanceProfile)
+                ) &&
+                (
                     this.UnitDefinition == other.UnitDefinition ||
                     this.UnitDefinition != null &&
                     this.UnitDefinition.Equals(other.UnitDefinition)
@@ -482,6 +566,18 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PerformanceProfileId != null)
                     hash = hash * 59 + this.PerformanceProfileId.GetHashCode();
+                
+                if (this.LinkedMetric != null)
+                    hash = hash * 59 + this.LinkedMetric.GetHashCode();
+                
+                if (this.DateCreated != null)
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
+                
+                if (this.DateUnlinked != null)
+                    hash = hash * 59 + this.DateUnlinked.GetHashCode();
+                
+                if (this.SourcePerformanceProfile != null)
+                    hash = hash * 59 + this.SourcePerformanceProfile.GetHashCode();
                 
                 if (this.UnitDefinition != null)
                     hash = hash * 59 + this.UnitDefinition.GetHashCode();

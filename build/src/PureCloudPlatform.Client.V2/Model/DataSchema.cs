@@ -104,14 +104,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DataSchema" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the schema.  Only required if a schema is used for custom fields during external entity creation or updates..</param>
         /// <param name="Name">Name.</param>
         /// <param name="Version">The schema&#39;s version, a positive integer. Required for updates. (required).</param>
         /// <param name="AppliesTo">One of \&quot;CONTACT\&quot; or \&quot;EXTERNAL_ORGANIZATION\&quot;.  Indicates the built-in entity type to which this schema applies..</param>
         /// <param name="Enabled">The schema&#39;s enabled/disabled status. A disabled schema cannot be assigned to any other entities, but the data on those entities from the schema still exists..</param>
         /// <param name="CreatedBy">The URI of the user that created this schema..</param>
         /// <param name="JsonSchema">A JSON schema defining the extension to the built-in entity type. (required).</param>
-        public DataSchema(string Name = null, int? Version = null, List<AppliesToEnum> AppliesTo = null, bool? Enabled = null, DomainEntityRef CreatedBy = null, JsonSchemaDocument JsonSchema = null)
+        public DataSchema(string Id = null, string Name = null, int? Version = null, List<AppliesToEnum> AppliesTo = null, bool? Enabled = null, DomainEntityRef CreatedBy = null, JsonSchemaDocument JsonSchema = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.Version = Version;
             this.AppliesTo = AppliesTo;
@@ -124,11 +126,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The globally unique identifier for the schema.  Only required if a schema is used for custom fields during external entity creation or updates.
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The globally unique identifier for the schema.  Only required if a schema is used for custom fields during external entity creation or updates.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         
         
         

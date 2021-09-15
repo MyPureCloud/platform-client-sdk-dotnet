@@ -161,12 +161,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The skill evaluation method to use when routing conversations.
         /// </summary>
         /// <value>The skill evaluation method to use when routing conversations.</value>
         [DataMember(Name="skillEvaluationMethod", EmitDefaultValue=false)]
         public SkillEvaluationMethodEnum? SkillEvaluationMethod { get; set; }
+        
+        
+        
+        
         
         
         
@@ -213,7 +223,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Bullseye">The bulls-eye settings for the queue..</param>
         /// <param name="AcwSettings">The ACW settings for the queue..</param>
         /// <param name="SkillEvaluationMethod">The skill evaluation method to use when routing conversations..</param>
-        /// <param name="QueueFlow">The in-queue flow to use for conversations waiting in queue..</param>
+        /// <param name="QueueFlow">The in-queue flow to use for call conversations waiting in queue..</param>
+        /// <param name="EmailInQueueFlow">The in-queue flow to use for email conversations waiting in queue..</param>
+        /// <param name="MessageInQueueFlow">The in-queue flow to use for message conversations waiting in queue..</param>
         /// <param name="WhisperPrompt">The prompt used for whisper on the queue, if configured..</param>
         /// <param name="AutoAnswerOnly">Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered..</param>
         /// <param name="EnableTranscription">Indicates whether voice transcription is enabled for this queue..</param>
@@ -223,7 +235,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultScripts">The default script Ids for the communication types..</param>
         /// <param name="OutboundMessagingAddresses">The messaging addresses for the queue..</param>
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
-        public QueueRequest(string Name = null, WritableDivision Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, Dictionary<string, MediaSetting> MediaSettings = null, List<RoutingRule> RoutingRules = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, DomainEntityRef QueueFlow = null, DomainEntityRef WhisperPrompt = null, bool? AutoAnswerOnly = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null)
+        public QueueRequest(string Name = null, WritableDivision Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, Dictionary<string, MediaSetting> MediaSettings = null, List<RoutingRule> RoutingRules = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, bool? AutoAnswerOnly = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -238,6 +250,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AcwSettings = AcwSettings;
             this.SkillEvaluationMethod = SkillEvaluationMethod;
             this.QueueFlow = QueueFlow;
+            this.EmailInQueueFlow = EmailInQueueFlow;
+            this.MessageInQueueFlow = MessageInQueueFlow;
             this.WhisperPrompt = WhisperPrompt;
             this.AutoAnswerOnly = AutoAnswerOnly;
             this.EnableTranscription = EnableTranscription;
@@ -381,11 +395,29 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The in-queue flow to use for conversations waiting in queue.
+        /// The in-queue flow to use for call conversations waiting in queue.
         /// </summary>
-        /// <value>The in-queue flow to use for conversations waiting in queue.</value>
+        /// <value>The in-queue flow to use for call conversations waiting in queue.</value>
         [DataMember(Name="queueFlow", EmitDefaultValue=false)]
         public DomainEntityRef QueueFlow { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The in-queue flow to use for email conversations waiting in queue.
+        /// </summary>
+        /// <value>The in-queue flow to use for email conversations waiting in queue.</value>
+        [DataMember(Name="emailInQueueFlow", EmitDefaultValue=false)]
+        public DomainEntityRef EmailInQueueFlow { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The in-queue flow to use for message conversations waiting in queue.
+        /// </summary>
+        /// <value>The in-queue flow to use for message conversations waiting in queue.</value>
+        [DataMember(Name="messageInQueueFlow", EmitDefaultValue=false)]
+        public DomainEntityRef MessageInQueueFlow { get; set; }
         
         
         
@@ -502,6 +534,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AcwSettings: ").Append(AcwSettings).Append("\n");
             sb.Append("  SkillEvaluationMethod: ").Append(SkillEvaluationMethod).Append("\n");
             sb.Append("  QueueFlow: ").Append(QueueFlow).Append("\n");
+            sb.Append("  EmailInQueueFlow: ").Append(EmailInQueueFlow).Append("\n");
+            sb.Append("  MessageInQueueFlow: ").Append(MessageInQueueFlow).Append("\n");
             sb.Append("  WhisperPrompt: ").Append(WhisperPrompt).Append("\n");
             sb.Append("  AutoAnswerOnly: ").Append(AutoAnswerOnly).Append("\n");
             sb.Append("  EnableTranscription: ").Append(EnableTranscription).Append("\n");
@@ -633,6 +667,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QueueFlow.Equals(other.QueueFlow)
                 ) &&
                 (
+                    this.EmailInQueueFlow == other.EmailInQueueFlow ||
+                    this.EmailInQueueFlow != null &&
+                    this.EmailInQueueFlow.Equals(other.EmailInQueueFlow)
+                ) &&
+                (
+                    this.MessageInQueueFlow == other.MessageInQueueFlow ||
+                    this.MessageInQueueFlow != null &&
+                    this.MessageInQueueFlow.Equals(other.MessageInQueueFlow)
+                ) &&
+                (
                     this.WhisperPrompt == other.WhisperPrompt ||
                     this.WhisperPrompt != null &&
                     this.WhisperPrompt.Equals(other.WhisperPrompt)
@@ -743,6 +787,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.QueueFlow != null)
                     hash = hash * 59 + this.QueueFlow.GetHashCode();
+                
+                if (this.EmailInQueueFlow != null)
+                    hash = hash * 59 + this.EmailInQueueFlow.GetHashCode();
+                
+                if (this.MessageInQueueFlow != null)
+                    hash = hash * 59 + this.MessageInQueueFlow.GetHashCode();
                 
                 if (this.WhisperPrompt != null)
                     hash = hash * 59 + this.WhisperPrompt.GetHashCode();

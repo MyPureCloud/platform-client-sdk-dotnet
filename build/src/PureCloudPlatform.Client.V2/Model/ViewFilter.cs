@@ -1034,7 +1034,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Coaching for "Coaching"
             /// </summary>
             [EnumMember(Value = "Coaching")]
-            Coaching
+            Coaching,
+            
+            /// <summary>
+            /// Enum Assessment for "Assessment"
+            /// </summary>
+            [EnumMember(Value = "Assessment")]
+            Assessment,
+            
+            /// <summary>
+            /// Enum Assessedcontent for "AssessedContent"
+            /// </summary>
+            [EnumMember(Value = "AssessedContent")]
+            Assessedcontent
         }
         
         
@@ -1822,6 +1834,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ViewFilter" /> class.
@@ -1946,7 +1968,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsRecorded">Indicates filtering for recorded.</param>
         /// <param name="HasEvaluation">Indicates filtering for evaluation.</param>
         /// <param name="HasScoredEvaluation">Indicates filtering for scored evaluation.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null, List<DevelopmentRoleListEnum> DevelopmentRoleList = null, List<DevelopmentTypeListEnum> DevelopmentTypeList = null, List<DevelopmentStatusListEnum> DevelopmentStatusList = null, List<string> DevelopmentModuleIds = null, bool? DevelopmentActivityOverdue = null, NumericRange CustomerSentimentScore = null, NumericRange CustomerSentimentTrend = null, List<string> FlowTransferTargets = null, string DevelopmentName = null, List<string> TopicIds = null, List<string> ExternalTags = null, bool? IsNotResponding = null, bool? IsAuthenticated = null, List<string> BotIds = null, List<string> BotVersions = null, List<BotMessageTypesEnum> BotMessageTypes = null, List<BotProviderListEnum> BotProviderList = null, List<BotProductListEnum> BotProductList = null, List<BotRecognitionFailureReasonListEnum> BotRecognitionFailureReasonList = null, List<string> BotIntentList = null, List<string> BotFinalIntentList = null, List<string> BotSlotList = null, List<BotResultListEnum> BotResultList = null, List<BlockedReasonsEnum> BlockedReasons = null, bool? IsRecorded = null, bool? HasEvaluation = null, bool? HasScoredEvaluation = null)
+        /// <param name="IsAgentOwnedCallback">Indicates filtering for agent owned callback interactions.</param>
+        /// <param name="AgentCallbackOwnerIds">The list of callback owners used to filter interactions.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null, List<DevelopmentRoleListEnum> DevelopmentRoleList = null, List<DevelopmentTypeListEnum> DevelopmentTypeList = null, List<DevelopmentStatusListEnum> DevelopmentStatusList = null, List<string> DevelopmentModuleIds = null, bool? DevelopmentActivityOverdue = null, NumericRange CustomerSentimentScore = null, NumericRange CustomerSentimentTrend = null, List<string> FlowTransferTargets = null, string DevelopmentName = null, List<string> TopicIds = null, List<string> ExternalTags = null, bool? IsNotResponding = null, bool? IsAuthenticated = null, List<string> BotIds = null, List<string> BotVersions = null, List<BotMessageTypesEnum> BotMessageTypes = null, List<BotProviderListEnum> BotProviderList = null, List<BotProductListEnum> BotProductList = null, List<BotRecognitionFailureReasonListEnum> BotRecognitionFailureReasonList = null, List<string> BotIntentList = null, List<string> BotFinalIntentList = null, List<string> BotSlotList = null, List<BotResultListEnum> BotResultList = null, List<BlockedReasonsEnum> BlockedReasons = null, bool? IsRecorded = null, bool? HasEvaluation = null, bool? HasScoredEvaluation = null, bool? IsAgentOwnedCallback = null, List<string> AgentCallbackOwnerIds = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -2068,6 +2092,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.IsRecorded = IsRecorded;
             this.HasEvaluation = HasEvaluation;
             this.HasScoredEvaluation = HasScoredEvaluation;
+            this.IsAgentOwnedCallback = IsAgentOwnedCallback;
+            this.AgentCallbackOwnerIds = AgentCallbackOwnerIds;
             
         }
         
@@ -3152,6 +3178,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? HasScoredEvaluation { get; set; }
         
         
+        
+        /// <summary>
+        /// Indicates filtering for agent owned callback interactions
+        /// </summary>
+        /// <value>Indicates filtering for agent owned callback interactions</value>
+        [DataMember(Name="isAgentOwnedCallback", EmitDefaultValue=false)]
+        public bool? IsAgentOwnedCallback { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of callback owners used to filter interactions
+        /// </summary>
+        /// <value>The list of callback owners used to filter interactions</value>
+        [DataMember(Name="agentCallbackOwnerIds", EmitDefaultValue=false)]
+        public List<string> AgentCallbackOwnerIds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -3281,6 +3325,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IsRecorded: ").Append(IsRecorded).Append("\n");
             sb.Append("  HasEvaluation: ").Append(HasEvaluation).Append("\n");
             sb.Append("  HasScoredEvaluation: ").Append(HasScoredEvaluation).Append("\n");
+            sb.Append("  IsAgentOwnedCallback: ").Append(IsAgentOwnedCallback).Append("\n");
+            sb.Append("  AgentCallbackOwnerIds: ").Append(AgentCallbackOwnerIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -3920,6 +3966,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HasScoredEvaluation == other.HasScoredEvaluation ||
                     this.HasScoredEvaluation != null &&
                     this.HasScoredEvaluation.Equals(other.HasScoredEvaluation)
+                ) &&
+                (
+                    this.IsAgentOwnedCallback == other.IsAgentOwnedCallback ||
+                    this.IsAgentOwnedCallback != null &&
+                    this.IsAgentOwnedCallback.Equals(other.IsAgentOwnedCallback)
+                ) &&
+                (
+                    this.AgentCallbackOwnerIds == other.AgentCallbackOwnerIds ||
+                    this.AgentCallbackOwnerIds != null &&
+                    this.AgentCallbackOwnerIds.SequenceEqual(other.AgentCallbackOwnerIds)
                 );
         }
 
@@ -4294,6 +4350,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.HasScoredEvaluation != null)
                     hash = hash * 59 + this.HasScoredEvaluation.GetHashCode();
+                
+                if (this.IsAgentOwnedCallback != null)
+                    hash = hash * 59 + this.IsAgentOwnedCallback.GetHashCode();
+                
+                if (this.AgentCallbackOwnerIds != null)
+                    hash = hash * 59 + this.AgentCallbackOwnerIds.GetHashCode();
                 
                 return hash;
             }

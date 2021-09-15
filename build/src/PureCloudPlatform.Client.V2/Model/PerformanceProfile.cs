@@ -70,6 +70,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="PerformanceProfile" /> class.
@@ -85,16 +90,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">A description about this performance profile (required).</param>
         /// <param name="MetricOrders">Order of the associated metrics. The list should contain valid ids for metrics (required).</param>
         /// <param name="ReportingIntervals">The reporting interval periods for this performance profile.</param>
-        /// <param name="Active">The flag for active profiles.</param>
         /// <param name="MaxLeaderboardRankSize">The maximum rank size for the leaderboard. This counts the number of ranks can be retrieved in a leaderboard queries.</param>
-        public PerformanceProfile(string Name = null, Division Division = null, string Description = null, List<string> MetricOrders = null, List<ReportingInterval> ReportingIntervals = null, bool? Active = null, int? MaxLeaderboardRankSize = null)
+        public PerformanceProfile(string Name = null, Division Division = null, string Description = null, List<string> MetricOrders = null, List<ReportingInterval> ReportingIntervals = null, int? MaxLeaderboardRankSize = null)
         {
             this.Name = Name;
             this.Division = Division;
             this.Description = Description;
             this.MetricOrders = MetricOrders;
             this.ReportingIntervals = ReportingIntervals;
-            this.Active = Active;
             this.MaxLeaderboardRankSize = MaxLeaderboardRankSize;
             
         }
@@ -169,7 +172,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The flag for active profiles</value>
         [DataMember(Name="active", EmitDefaultValue=false)]
-        public bool? Active { get; set; }
+        public bool? Active { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The number of members in this performance profile
+        /// </summary>
+        /// <value>The number of members in this performance profile</value>
+        [DataMember(Name="memberCount", EmitDefaultValue=false)]
+        public int? MemberCount { get; private set; }
         
         
         
@@ -207,6 +219,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  ReportingIntervals: ").Append(ReportingIntervals).Append("\n");
             sb.Append("  Active: ").Append(Active).Append("\n");
+            sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
             sb.Append("  MaxLeaderboardRankSize: ").Append(MaxLeaderboardRankSize).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -290,6 +303,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Active.Equals(other.Active)
                 ) &&
                 (
+                    this.MemberCount == other.MemberCount ||
+                    this.MemberCount != null &&
+                    this.MemberCount.Equals(other.MemberCount)
+                ) &&
+                (
                     this.MaxLeaderboardRankSize == other.MaxLeaderboardRankSize ||
                     this.MaxLeaderboardRankSize != null &&
                     this.MaxLeaderboardRankSize.Equals(other.MaxLeaderboardRankSize)
@@ -336,6 +354,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
+                
+                if (this.MemberCount != null)
+                    hash = hash * 59 + this.MemberCount.GetHashCode();
                 
                 if (this.MaxLeaderboardRankSize != null)
                     hash = hash * 59 + this.MaxLeaderboardRankSize.GetHashCode();

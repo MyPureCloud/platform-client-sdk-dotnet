@@ -1511,6 +1511,64 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DataTablesDomainEntityListing> GetFlowsDatatablesWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null);
         
         /// <summary>
+        /// Returns a specific datatable by id
+        /// </summary>
+        /// <remarks>
+        /// Given a datatableId returns the datatable object and schema associated with it.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>DataTable</returns>
+        DataTable GetFlowsDatatablesDivisionview (string datatableId, string expand = null);
+
+        /// <summary>
+        /// Returns a specific datatable by id
+        /// </summary>
+        /// <remarks>
+        /// Given a datatableId returns the datatable object and schema associated with it.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>ApiResponse of DataTable</returns>
+        ApiResponse<DataTable> GetFlowsDatatablesDivisionviewWithHttpInfo (string datatableId, string expand = null);
+        
+        /// <summary>
+        /// Retrieve a list of datatables for the org
+        /// </summary>
+        /// <remarks>
+        /// Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="divisionId">division ID(s) (optional)</param>
+        /// <param name="name">Name to filter by (optional)</param>
+        /// <returns>DataTablesDomainEntityListing</returns>
+        DataTablesDomainEntityListing GetFlowsDatatablesDivisionviews (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null);
+
+        /// <summary>
+        /// Retrieve a list of datatables for the org
+        /// </summary>
+        /// <remarks>
+        /// Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="divisionId">division ID(s) (optional)</param>
+        /// <param name="name">Name to filter by (optional)</param>
+        /// <returns>ApiResponse of DataTablesDomainEntityListing</returns>
+        ApiResponse<DataTablesDomainEntityListing> GetFlowsDatatablesDivisionviewsWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null);
+        
+        /// <summary>
         /// Get a pageable list of basic flow information objects filterable by query parameters.
         /// </summary>
         /// <remarks>
@@ -4141,6 +4199,64 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name to filter by (optional)</param>
         /// <returns>Task of ApiResponse (DataTablesDomainEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataTablesDomainEntityListing>> GetFlowsDatatablesAsyncWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null);
+        
+        /// <summary>
+        /// Returns a specific datatable by id
+        /// </summary>
+        /// <remarks>
+        /// Given a datatableId returns the datatable object and schema associated with it.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of DataTable</returns>
+        System.Threading.Tasks.Task<DataTable> GetFlowsDatatablesDivisionviewAsync (string datatableId, string expand = null);
+
+        /// <summary>
+        /// Returns a specific datatable by id
+        /// </summary>
+        /// <remarks>
+        /// Given a datatableId returns the datatable object and schema associated with it.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of ApiResponse (DataTable)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataTable>> GetFlowsDatatablesDivisionviewAsyncWithHttpInfo (string datatableId, string expand = null);
+        
+        /// <summary>
+        /// Retrieve a list of datatables for the org
+        /// </summary>
+        /// <remarks>
+        /// Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="divisionId">division ID(s) (optional)</param>
+        /// <param name="name">Name to filter by (optional)</param>
+        /// <returns>Task of DataTablesDomainEntityListing</returns>
+        System.Threading.Tasks.Task<DataTablesDomainEntityListing> GetFlowsDatatablesDivisionviewsAsync (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null);
+
+        /// <summary>
+        /// Retrieve a list of datatables for the org
+        /// </summary>
+        /// <remarks>
+        /// Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="divisionId">division ID(s) (optional)</param>
+        /// <param name="name">Name to filter by (optional)</param>
+        /// <returns>Task of ApiResponse (DataTablesDomainEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataTablesDomainEntityListing>> GetFlowsDatatablesDivisionviewsAsyncWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null);
         
         /// <summary>
         /// Get a pageable list of basic flow information objects filterable by query parameters.
@@ -16838,6 +16954,427 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatables: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatables: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataTablesDomainEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (DataTablesDomainEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTablesDomainEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Returns a specific datatable by id Given a datatableId returns the datatable object and schema associated with it.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>DataTable</returns>
+        public DataTable GetFlowsDatatablesDivisionview (string datatableId, string expand = null)
+        {
+             ApiResponse<DataTable> localVarResponse = GetFlowsDatatablesDivisionviewWithHttpInfo(datatableId, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns a specific datatable by id Given a datatableId returns the datatable object and schema associated with it.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>ApiResponse of DataTable</returns>
+        public ApiResponse< DataTable > GetFlowsDatatablesDivisionviewWithHttpInfo (string datatableId, string expand = null)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatablesDivisionview");
+
+            var localVarPath = "/api/v2/flows/datatables/divisionviews/{datatableId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatablesDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatablesDivisionview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataTable>(localVarStatusCode,
+                localVarHeaders,
+                (DataTable) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTable)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Returns a specific datatable by id Given a datatableId returns the datatable object and schema associated with it.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of DataTable</returns>
+        public async System.Threading.Tasks.Task<DataTable> GetFlowsDatatablesDivisionviewAsync (string datatableId, string expand = null)
+        {
+             ApiResponse<DataTable> localVarResponse = await GetFlowsDatatablesDivisionviewAsyncWithHttpInfo(datatableId, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns a specific datatable by id Given a datatableId returns the datatable object and schema associated with it.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of ApiResponse (DataTable)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataTable>> GetFlowsDatatablesDivisionviewAsyncWithHttpInfo (string datatableId, string expand = null)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatablesDivisionview");
+            
+
+            var localVarPath = "/api/v2/flows/datatables/divisionviews/{datatableId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatablesDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatablesDivisionview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataTable>(localVarStatusCode,
+                localVarHeaders,
+                (DataTable) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTable)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="divisionId">division ID(s) (optional)</param>
+        /// <param name="name">Name to filter by (optional)</param>
+        /// <returns>DataTablesDomainEntityListing</returns>
+        public DataTablesDomainEntityListing GetFlowsDatatablesDivisionviews (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
+        {
+             ApiResponse<DataTablesDomainEntityListing> localVarResponse = GetFlowsDatatablesDivisionviewsWithHttpInfo(expand, pageNumber, pageSize, sortBy, sortOrder, divisionId, name);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="divisionId">division ID(s) (optional)</param>
+        /// <param name="name">Name to filter by (optional)</param>
+        /// <returns>ApiResponse of DataTablesDomainEntityListing</returns>
+        public ApiResponse< DataTablesDomainEntityListing > GetFlowsDatatablesDivisionviewsWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
+        { 
+
+            var localVarPath = "/api/v2/flows/datatables/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatablesDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatablesDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataTablesDomainEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (DataTablesDomainEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTablesDomainEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="divisionId">division ID(s) (optional)</param>
+        /// <param name="name">Name to filter by (optional)</param>
+        /// <returns>Task of DataTablesDomainEntityListing</returns>
+        public async System.Threading.Tasks.Task<DataTablesDomainEntityListing> GetFlowsDatatablesDivisionviewsAsync (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
+        {
+             ApiResponse<DataTablesDomainEntityListing> localVarResponse = await GetFlowsDatatablesDivisionviewsAsyncWithHttpInfo(expand, pageNumber, pageSize, sortBy, sortOrder, divisionId, name);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="divisionId">division ID(s) (optional)</param>
+        /// <param name="name">Name to filter by (optional)</param>
+        /// <returns>Task of ApiResponse (DataTablesDomainEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataTablesDomainEntityListing>> GetFlowsDatatablesDivisionviewsAsyncWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
+        { 
+
+            var localVarPath = "/api/v2/flows/datatables/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatablesDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatablesDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DataTablesDomainEntityListing>(localVarStatusCode,
                 localVarHeaders,

@@ -219,6 +219,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The direction of the message.
         /// </summary>
@@ -255,6 +258,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageData" /> class.
@@ -277,7 +282,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Media">The media details associated to a message..</param>
         /// <param name="Stickers">The sticker details associated to a message..</param>
         /// <param name="CreatedBy">User who sent this message..</param>
-        public MessageData(string Name = null, string ProviderMessageId = null, DateTime? Timestamp = null, string FromAddress = null, string ToAddress = null, DirectionEnum? Direction = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, StatusEnum? Status = null, List<MessageMedia> Media = null, List<MessageSticker> Stickers = null, User CreatedBy = null)
+        /// <param name="ConversationId">The id of the conversation of this message..</param>
+        public MessageData(string Name = null, string ProviderMessageId = null, DateTime? Timestamp = null, string FromAddress = null, string ToAddress = null, DirectionEnum? Direction = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, StatusEnum? Status = null, List<MessageMedia> Media = null, List<MessageSticker> Stickers = null, User CreatedBy = null, string ConversationId = null)
         {
             this.Name = Name;
             this.ProviderMessageId = ProviderMessageId;
@@ -291,6 +297,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Media = Media;
             this.Stickers = Stickers;
             this.CreatedBy = CreatedBy;
+            this.ConversationId = ConversationId;
             
         }
         
@@ -392,6 +399,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The id of the conversation of this message.
+        /// </summary>
+        /// <value>The id of the conversation of this message.</value>
+        [DataMember(Name="conversationId", EmitDefaultValue=false)]
+        public string ConversationId { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -421,6 +437,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Media: ").Append(Media).Append("\n");
             sb.Append("  Stickers: ").Append(Stickers).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
+            sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -528,6 +545,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CreatedBy.Equals(other.CreatedBy)
                 ) &&
                 (
+                    this.ConversationId == other.ConversationId ||
+                    this.ConversationId != null &&
+                    this.ConversationId.Equals(other.ConversationId)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -584,6 +606,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
+                
+                if (this.ConversationId != null)
+                    hash = hash * 59 + this.ConversationId.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -233,6 +233,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Indicates the type of message platform from which the message originated.
         /// </summary>
@@ -346,6 +349,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -393,12 +399,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Indicates the type of message platform from which the message originated.
         /// </summary>
         /// <value>Indicates the type of message platform from which the message originated.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
         
         
         
@@ -440,6 +450,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Provider">The source provider for the message..</param>
+        /// <param name="Authenticated">If true, the participant member is authenticated..</param>
         /// <param name="Type">Indicates the type of message platform from which the message originated..</param>
         /// <param name="RecipientCountry">Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format..</param>
         /// <param name="RecipientType">The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type..</param>
@@ -452,7 +463,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
         /// <param name="AfterCallWork">After-call work for the communication..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
-        public Message(StateEnum? State = null, string Id = null, bool? Held = null, List<Segment> Segments = null, DirectionEnum? Direction = null, string RecordingId = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ScriptId = null, string PeerId = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, JourneyContext JourneyContext = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null)
+        /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
+        public Message(StateEnum? State = null, string Id = null, bool? Held = null, List<Segment> Segments = null, DirectionEnum? Direction = null, string RecordingId = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, bool? Authenticated = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ScriptId = null, string PeerId = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, JourneyContext JourneyContext = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
         {
             this.State = State;
             this.Id = Id;
@@ -467,6 +479,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
             this.Provider = Provider;
+            this.Authenticated = Authenticated;
             this.Type = Type;
             this.RecipientCountry = RecipientCountry;
             this.RecipientType = RecipientType;
@@ -479,6 +492,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Wrapup = Wrapup;
             this.AfterCallWork = AfterCallWork;
             this.AfterCallWorkRequired = AfterCallWorkRequired;
+            this.AgentAssistantId = AgentAssistantId;
             
         }
         
@@ -576,6 +590,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The source provider for the message.</value>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
+        
+        
+        
+        /// <summary>
+        /// If true, the participant member is authenticated.
+        /// </summary>
+        /// <value>If true, the participant member is authenticated.</value>
+        [DataMember(Name="authenticated", EmitDefaultValue=false)]
+        public bool? Authenticated { get; set; }
         
         
         
@@ -679,6 +702,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? AfterCallWorkRequired { get; set; }
         
         
+        
+        /// <summary>
+        /// UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation.
+        /// </summary>
+        /// <value>UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation.</value>
+        [DataMember(Name="agentAssistantId", EmitDefaultValue=false)]
+        public string AgentAssistantId { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -701,6 +733,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            sb.Append("  Authenticated: ").Append(Authenticated).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  RecipientCountry: ").Append(RecipientCountry).Append("\n");
             sb.Append("  RecipientType: ").Append(RecipientType).Append("\n");
@@ -713,6 +746,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
+            sb.Append("  AgentAssistantId: ").Append(AgentAssistantId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -819,6 +853,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Provider.Equals(other.Provider)
                 ) &&
                 (
+                    this.Authenticated == other.Authenticated ||
+                    this.Authenticated != null &&
+                    this.Authenticated.Equals(other.Authenticated)
+                ) &&
+                (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
@@ -877,6 +916,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AfterCallWorkRequired == other.AfterCallWorkRequired ||
                     this.AfterCallWorkRequired != null &&
                     this.AfterCallWorkRequired.Equals(other.AfterCallWorkRequired)
+                ) &&
+                (
+                    this.AgentAssistantId == other.AgentAssistantId ||
+                    this.AgentAssistantId != null &&
+                    this.AgentAssistantId.Equals(other.AgentAssistantId)
                 );
         }
 
@@ -931,6 +975,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
                 
+                if (this.Authenticated != null)
+                    hash = hash * 59 + this.Authenticated.GetHashCode();
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
                 
@@ -966,6 +1013,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AfterCallWorkRequired != null)
                     hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();
+                
+                if (this.AgentAssistantId != null)
+                    hash = hash * 59 + this.AgentAssistantId.GetHashCode();
                 
                 return hash;
             }

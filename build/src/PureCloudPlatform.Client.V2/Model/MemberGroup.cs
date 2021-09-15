@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// AssignmentGroup
+    /// MemberGroup
     /// </summary>
     [DataContract]
-    public partial class AssignmentGroup :  IEquatable<AssignmentGroup>
+    public partial class MemberGroup :  IEquatable<MemberGroup>
     {
         
         
@@ -30,8 +30,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Type
+        /// The type of group, e.g. TEAM, etc.
         /// </summary>
+        /// <value>The type of group, e.g. TEAM, etc.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -60,37 +61,49 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
-        /// Gets or Sets Type
+        /// The type of group, e.g. TEAM, etc.
         /// </summary>
+        /// <value>The type of group, e.g. TEAM, etc.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         
         
+        
+        
+        
+        
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="AssignmentGroup" /> class.
+        /// Initializes a new instance of the <see cref="MemberGroup" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
         /// <param name="Name">Name.</param>
-        /// <param name="SelfUri">SelfUri.</param>
-        /// <param name="Type">Type.</param>
-        public AssignmentGroup(string Id = null, string Name = null, string SelfUri = null, TypeEnum? Type = null)
+        /// <param name="Division">The division to which this entity belongs..</param>
+        /// <param name="Type">The type of group, e.g. TEAM, etc..</param>
+        /// <param name="MemberCount">The number of members in this group.</param>
+        public MemberGroup(string Name = null, Division Division = null, TypeEnum? Type = null, int? MemberCount = null)
         {
-            this.Id = Id;
             this.Name = Name;
-            this.SelfUri = SelfUri;
+            this.Division = Division;
             this.Type = Type;
+            this.MemberCount = MemberCount;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The globally unique identifier for the object.
         /// </summary>
+        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        public string Id { get; private set; }
         
         
         
@@ -103,12 +116,31 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets SelfUri
+        /// The division to which this entity belongs.
         /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public Division Division { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The number of members in this group
+        /// </summary>
+        /// <value>The number of members in this group</value>
+        [DataMember(Name="memberCount", EmitDefaultValue=false)]
+        public int? MemberCount { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-        
-        
+        public string SelfUri { get; private set; }
         
         
         /// <summary>
@@ -118,12 +150,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AssignmentGroup {\n");
+            sb.Append("class MemberGroup {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -149,15 +183,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as AssignmentGroup);
+            return this.Equals(obj as MemberGroup);
         }
 
         /// <summary>
-        /// Returns true if AssignmentGroup instances are equal
+        /// Returns true if MemberGroup instances are equal
         /// </summary>
-        /// <param name="other">Instance of AssignmentGroup to be compared</param>
+        /// <param name="other">Instance of MemberGroup to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AssignmentGroup other)
+        public bool Equals(MemberGroup other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -175,14 +209,24 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
                 ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
+                ) &&
+                (
+                    this.MemberCount == other.MemberCount ||
+                    this.MemberCount != null &&
+                    this.MemberCount.Equals(other.MemberCount)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -204,11 +248,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
+                if (this.MemberCount != null)
+                    hash = hash * 59 + this.MemberCount.GetHashCode();
+                
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

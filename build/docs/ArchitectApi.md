@@ -62,6 +62,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlowsDatatableRow**](ArchitectApi.html#getflowsdatatablerow) | **GET** /api/v2/flows/datatables/{datatableId}/rows/{rowId} | Returns a specific row for the datatable |
 | [**GetFlowsDatatableRows**](ArchitectApi.html#getflowsdatatablerows) | **GET** /api/v2/flows/datatables/{datatableId}/rows | Returns the rows for the datatable with the given id |
 | [**GetFlowsDatatables**](ArchitectApi.html#getflowsdatatables) | **GET** /api/v2/flows/datatables | Retrieve a list of datatables for the org |
+| [**GetFlowsDatatablesDivisionview**](ArchitectApi.html#getflowsdatatablesdivisionview) | **GET** /api/v2/flows/datatables/divisionviews/{datatableId} | Returns a specific datatable by id |
+| [**GetFlowsDatatablesDivisionviews**](ArchitectApi.html#getflowsdatatablesdivisionviews) | **GET** /api/v2/flows/datatables/divisionviews | Retrieve a list of datatables for the org |
 | [**GetFlowsDivisionviews**](ArchitectApi.html#getflowsdivisionviews) | **GET** /api/v2/flows/divisionviews | Get a pageable list of basic flow information objects filterable by query parameters. |
 | [**GetFlowsExecution**](ArchitectApi.html#getflowsexecution) | **GET** /api/v2/flows/executions/{flowExecutionId} | Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. |
 | [**GetFlowsMilestone**](ArchitectApi.html#getflowsmilestone) | **GET** /api/v2/flows/milestones/{milestoneId} | Get a flow milestone |
@@ -3931,6 +3933,150 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling ArchitectApi.GetFlowsDatatables: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **expand** | **string**| Expand instructions for the result | [optional] <br />**Values**: schema |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortBy** | **string**| Sort by | [optional] [default to id]<br />**Values**: id, name |
+| **sortOrder** | **string**| Sort order | [optional] [default to ascending] |
+| **divisionId** | [**List<string>**](string.html)| division ID(s) | [optional]  |
+| **name** | **string**| Name to filter by | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DataTablesDomainEntityListing**](DataTablesDomainEntityListing.html)
+
+<a name="getflowsdatatablesdivisionview"></a>
+
+## [**DataTable**](DataTable.html) GetFlowsDatatablesDivisionview (string datatableId, string expand = null)
+
+
+
+Returns a specific datatable by id
+
+Given a datatableId returns the datatable object and schema associated with it.
+
+Requires ALL permissions: 
+
+* architect:datatable:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsDatatablesDivisionviewExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var datatableId = datatableId_example;  // string | id of datatable
+            var expand = expand_example;  // string | Expand instructions for the result (optional) 
+
+            try
+            { 
+                // Returns a specific datatable by id
+                DataTable result = apiInstance.GetFlowsDatatablesDivisionview(datatableId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsDatatablesDivisionview: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **datatableId** | **string**| id of datatable |  |
+| **expand** | **string**| Expand instructions for the result | [optional] <br />**Values**: schema |
+{: class="table table-striped"}
+
+### Return type
+
+[**DataTable**](DataTable.html)
+
+<a name="getflowsdatatablesdivisionviews"></a>
+
+## [**DataTablesDomainEntityListing**](DataTablesDomainEntityListing.html) GetFlowsDatatablesDivisionviews (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
+
+
+
+Retrieve a list of datatables for the org
+
+Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
+
+Requires ALL permissions: 
+
+* architect:datatable:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsDatatablesDivisionviewsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var expand = expand_example;  // string | Expand instructions for the result (optional) 
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
+            var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
+            var name = name_example;  // string | Name to filter by (optional) 
+
+            try
+            { 
+                // Retrieve a list of datatables for the org
+                DataTablesDomainEntityListing result = apiInstance.GetFlowsDatatablesDivisionviews(expand, pageNumber, pageSize, sortBy, sortOrder, divisionId, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsDatatablesDivisionviews: " + e.Message );
             }
         }
     }

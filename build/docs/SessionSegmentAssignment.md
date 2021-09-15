@@ -1,0 +1,14 @@
+---
+title: SessionSegmentAssignment
+---
+## ININ.PureCloudApi.Model.SessionSegmentAssignment
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Segment** | [**AssignedSegment**](AssignedSegment.html) | The segment that was assigned. | [optional] |
+| **AssignedDate** | **DateTime?** | Timestamp indicating when the segment was assigned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+{: class="table table-striped"}
+
+

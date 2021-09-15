@@ -276,13 +276,13 @@ namespace Example
 
 <a name="headnotificationschannel"></a>
 
-## **bool?** HeadNotificationsChannel (string channelId)
+## void HeadNotificationsChannel (string channelId)
 
 
 
 Verify a channel still exists and is valid
 
-
+Returns a 200 OK if channel exists, and a 404 Not Found if it doesn't
 
 Requires NO permissions: 
 
@@ -314,8 +314,7 @@ namespace Example
             try
             { 
                 // Verify a channel still exists and is valid
-                bool? result = apiInstance.HeadNotificationsChannel(channelId);
-                Debug.WriteLine(result);
+                apiInstance.HeadNotificationsChannel(channelId);
             }
             catch (Exception e)
             {
@@ -336,7 +335,7 @@ namespace Example
 
 ### Return type
 
-**bool?**
+void (empty response body)
 
 <a name="postnotificationschannelsubscriptions"></a>
 

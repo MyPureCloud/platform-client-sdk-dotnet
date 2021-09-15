@@ -95,12 +95,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The predictor state.
         /// </summary>
         /// <value>The predictor state.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -213,6 +218,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Predictor error code - optional details on why the predictor went into error state.
+        /// </summary>
+        /// <value>Predictor error code - optional details on why the predictor went into error state.</value>
+        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        public string ErrorCode { get; private set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -238,6 +252,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  WorkloadBalancingConfig: ").Append(WorkloadBalancingConfig).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -325,6 +340,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WorkloadBalancingConfig.Equals(other.WorkloadBalancingConfig)
                 ) &&
                 (
+                    this.ErrorCode == other.ErrorCode ||
+                    this.ErrorCode != null &&
+                    this.ErrorCode.Equals(other.ErrorCode)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -369,6 +389,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.WorkloadBalancingConfig != null)
                     hash = hash * 59 + this.WorkloadBalancingConfig.GetHashCode();
+                
+                if (this.ErrorCode != null)
+                    hash = hash * 59 + this.ErrorCode.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

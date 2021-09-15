@@ -34,8 +34,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimGenesysUserExternalId" /> class.
         /// </summary>
-        /// <param name="Authority">Authority, or scope, of \&quot;externalId\&quot;. Allows multiple external identifiers to be defined. Represents the source of the external identifier..</param>
-        /// <param name="Value">Identifier of the user in an external system..</param>
+        [JsonConstructorAttribute]
+        protected ScimGenesysUserExternalId() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ScimGenesysUserExternalId" /> class.
+        /// </summary>
+        /// <param name="Authority">Authority, or scope, of \&quot;externalId\&quot;. Allows multiple external identifiers to be defined. Represents the source of the external identifier. (required).</param>
+        /// <param name="Value">Identifier of the user in an external system. (required).</param>
         public ScimGenesysUserExternalId(string Authority = null, string Value = null)
         {
             this.Authority = Authority;

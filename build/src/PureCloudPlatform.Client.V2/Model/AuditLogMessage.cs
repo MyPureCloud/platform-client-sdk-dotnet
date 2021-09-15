@@ -634,6 +634,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Add,
             
             /// <summary>
+            /// Enum Verify for "Verify"
+            /// </summary>
+            [EnumMember(Value = "Verify")]
+            Verify,
+            
+            /// <summary>
             /// Enum Assign for "Assign"
             /// </summary>
             [EnumMember(Value = "Assign")]
@@ -1092,6 +1098,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "LineBase")]
             Linebase,
+            
+            /// <summary>
+            /// Enum Location for "Location"
+            /// </summary>
+            [EnumMember(Value = "Location")]
+            Location,
             
             /// <summary>
             /// Enum Maxorgroutingutilizationcapacity for "MaxOrgRoutingUtilizationCapacity"

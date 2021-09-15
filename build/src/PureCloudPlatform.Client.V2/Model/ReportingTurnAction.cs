@@ -140,6 +140,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Getexternalcontactaction,
             
             /// <summary>
+            /// Enum Getexternalorganizationaction for "GetExternalOrganizationAction"
+            /// </summary>
+            [EnumMember(Value = "GetExternalOrganizationAction")]
+            Getexternalorganizationaction,
+            
+            /// <summary>
             /// Enum Loopaction for "LoopAction"
             /// </summary>
             [EnumMember(Value = "LoopAction")]

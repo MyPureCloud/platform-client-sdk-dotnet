@@ -903,7 +903,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>UserEntityListing</returns>
         UserEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
@@ -921,7 +921,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
         ApiResponse<UserEntityListing> GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
@@ -2813,7 +2813,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of UserEntityListing</returns>
         System.Threading.Tasks.Task<UserEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
@@ -2831,7 +2831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
@@ -11135,7 +11135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>UserEntityListing</returns>
         public UserEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
@@ -11154,7 +11154,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
         public ApiResponse< UserEntityListing > GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
@@ -11248,7 +11248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of UserEntityListing</returns>
         public async System.Threading.Tasks.Task<UserEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
@@ -11268,7 +11268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)</param>
+        /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)

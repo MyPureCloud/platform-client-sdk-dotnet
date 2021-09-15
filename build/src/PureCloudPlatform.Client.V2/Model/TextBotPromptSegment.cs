@@ -42,8 +42,17 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Text for "Text"
             /// </summary>
             [EnumMember(Value = "Text")]
-            Text
+            Text,
+            
+            /// <summary>
+            /// Enum Richmedia for "RichMedia"
+            /// </summary>
+            [EnumMember(Value = "RichMedia")]
+            Richmedia
         }
+        
+        
+        
         
         
         
@@ -64,6 +73,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotPromptSegment" /> class.
@@ -77,11 +88,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Text">The text of this prompt segment. (required).</param>
         /// <param name="Type">The segment type which describes any semantics about the &#39;text&#39; and also indicates which other field might include additional relevant info. (required).</param>
         /// <param name="Format">Additional details describing the segment’s contents, which the client should honour where possible..</param>
-        public TextBotPromptSegment(string Text = null, TypeEnum? Type = null, Format Format = null)
+        /// <param name="Content">Details to display Rich Media content. This is only populated when the segment &#39;type&#39; is &#39;Rich Media&#39;..</param>
+        public TextBotPromptSegment(string Text = null, TypeEnum? Type = null, Format Format = null, List<MessageContent> Content = null)
         {
             this.Text = Text;
             this.Type = Type;
             this.Format = Format;
+            this.Content = Content;
             
         }
         
@@ -106,6 +119,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Format Format { get; set; }
         
         
+        
+        /// <summary>
+        /// Details to display Rich Media content. This is only populated when the segment &#39;type&#39; is &#39;Rich Media&#39;.
+        /// </summary>
+        /// <value>Details to display Rich Media content. This is only populated when the segment &#39;type&#39; is &#39;Rich Media&#39;.</value>
+        [DataMember(Name="content", EmitDefaultValue=false)]
+        public List<MessageContent> Content { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,6 +140,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Format: ").Append(Format).Append("\n");
+            sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -172,6 +195,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Format == other.Format ||
                     this.Format != null &&
                     this.Format.Equals(other.Format)
+                ) &&
+                (
+                    this.Content == other.Content ||
+                    this.Content != null &&
+                    this.Content.SequenceEqual(other.Content)
                 );
         }
 
@@ -195,6 +223,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Format != null)
                     hash = hash * 59 + this.Format.GetHashCode();
+                
+                if (this.Content != null)
+                    hash = hash * 59 + this.Content.GetHashCode();
                 
                 return hash;
             }

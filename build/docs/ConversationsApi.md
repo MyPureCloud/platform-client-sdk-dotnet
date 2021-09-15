@@ -57,7 +57,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsEmails**](ConversationsApi.html#getconversationsemails) | **GET** /api/v2/conversations/emails | Get active email conversations for the logged in user |
 | [**GetConversationsMessage**](ConversationsApi.html#getconversationsmessage) | **GET** /api/v2/conversations/messages/{conversationId} | Get message conversation |
 | [**GetConversationsMessageCommunicationMessagesMediaMediaId**](ConversationsApi.html#getconversationsmessagecommunicationmessagesmediamediaid) | **GET** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/{mediaId} | Get media |
-| [**GetConversationsMessageMessage**](ConversationsApi.html#getconversationsmessagemessage) | **GET** /api/v2/conversations/messages/{conversationId}/messages/{messageId} | Get message |
+| [**GetConversationsMessageDetails**](ConversationsApi.html#getconversationsmessagedetails) | **GET** /api/v2/conversations/messages/{messageId}/details | Get message |
+| [**GetConversationsMessageMessage**](ConversationsApi.html#getconversationsmessagemessage) | **GET** /api/v2/conversations/messages/{conversationId}/messages/{messageId} | Get conversation message |
 | [**GetConversationsMessageParticipantWrapup**](ConversationsApi.html#getconversationsmessageparticipantwrapup) | **GET** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetConversationsMessageParticipantWrapupcodes**](ConversationsApi.html#getconversationsmessageparticipantwrapupcodes) | **GET** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetConversationsMessages**](ConversationsApi.html#getconversationsmessages) | **GET** /api/v2/conversations/messages | Get active message conversations for the logged in user |
@@ -3403,13 +3404,79 @@ namespace Example
 
 [**MessageMediaData**](MessageMediaData.html)
 
+<a name="getconversationsmessagedetails"></a>
+
+## [**MessageData**](MessageData.html) GetConversationsMessageDetails (string messageId)
+
+
+
+Get message
+
+
+
+Requires ANY permissions: 
+
+* conversation:message:view
+* conversation:webmessaging:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessageDetailsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var messageId = messageId_example;  // string | messageId
+
+            try
+            { 
+                // Get message
+                MessageData result = apiInstance.GetConversationsMessageDetails(messageId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessageDetails: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messageId** | **string**| messageId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessageData**](MessageData.html)
+
 <a name="getconversationsmessagemessage"></a>
 
 ## [**MessageData**](MessageData.html) GetConversationsMessageMessage (string conversationId, string messageId)
 
 
 
-Get message
+Get conversation message
 
 
 
@@ -3445,7 +3512,7 @@ namespace Example
 
             try
             { 
-                // Get message
+                // Get conversation message
                 MessageData result = apiInstance.GetConversationsMessageMessage(conversationId, messageId);
                 Debug.WriteLine(result);
             }

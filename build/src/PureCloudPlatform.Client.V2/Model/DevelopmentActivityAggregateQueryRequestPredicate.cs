@@ -51,7 +51,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Moduleid for "moduleId"
             /// </summary>
             [EnumMember(Value = "moduleId")]
-            Moduleid
+            Moduleid,
+            
+            /// <summary>
+            /// Enum Ispassed for "isPassed"
+            /// </summary>
+            [EnumMember(Value = "isPassed")]
+            Ispassed
         }
         
         
@@ -82,7 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DevelopmentActivityAggregateQueryRequestPredicate" /> class.
         /// </summary>
         /// <param name="Dimension">Each predicates specifies a dimension. (required).</param>
-        /// <param name="Value">Corresponding value for dimensions in predicates. If the dimensions is type, Valid Values: Informational, Coaching (required).</param>
+        /// <param name="Value">Corresponding value for dimensions in predicates. If the dimension is type, Valid Values: Informational, AssessedContent, Assessment, Coaching (required).</param>
         public DevelopmentActivityAggregateQueryRequestPredicate(DimensionEnum? Dimension = null, string Value = null)
         {
             this.Dimension = Dimension;
@@ -95,9 +101,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Corresponding value for dimensions in predicates. If the dimensions is type, Valid Values: Informational, Coaching
+        /// Corresponding value for dimensions in predicates. If the dimension is type, Valid Values: Informational, AssessedContent, Assessment, Coaching
         /// </summary>
-        /// <value>Corresponding value for dimensions in predicates. If the dimensions is type, Valid Values: Informational, Coaching</value>
+        /// <value>Corresponding value for dimensions in predicates. If the dimension is type, Valid Values: Informational, AssessedContent, Assessment, Coaching</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
         

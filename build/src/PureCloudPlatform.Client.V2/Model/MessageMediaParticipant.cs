@@ -462,6 +462,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting
         /// </summary>
@@ -558,6 +561,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageMediaParticipant" /> class.
@@ -601,7 +606,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Indicates the type of message platform from which the message originated..</param>
         /// <param name="RecipientCountry">Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format..</param>
         /// <param name="RecipientType">The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type..</param>
-        public MessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null)
+        /// <param name="Authenticated">If true, the participant member is authenticated..</param>
+        public MessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, bool? Authenticated = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -642,6 +648,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Type = Type;
             this.RecipientCountry = RecipientCountry;
             this.RecipientType = RecipientType;
+            this.Authenticated = Authenticated;
             
         }
         
@@ -962,6 +969,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string RecipientType { get; set; }
         
         
+        
+        /// <summary>
+        /// If true, the participant member is authenticated.
+        /// </summary>
+        /// <value>If true, the participant member is authenticated.</value>
+        [DataMember(Name="authenticated", EmitDefaultValue=false)]
+        public bool? Authenticated { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1010,6 +1026,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  RecipientCountry: ").Append(RecipientCountry).Append("\n");
             sb.Append("  RecipientType: ").Append(RecipientType).Append("\n");
+            sb.Append("  Authenticated: ").Append(Authenticated).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1244,6 +1261,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RecipientType == other.RecipientType ||
                     this.RecipientType != null &&
                     this.RecipientType.Equals(other.RecipientType)
+                ) &&
+                (
+                    this.Authenticated == other.Authenticated ||
+                    this.Authenticated != null &&
+                    this.Authenticated.Equals(other.Authenticated)
                 );
         }
 
@@ -1375,6 +1397,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RecipientType != null)
                     hash = hash * 59 + this.RecipientType.GetHashCode();
+                
+                if (this.Authenticated != null)
+                    hash = hash * 59 + this.Authenticated.GetHashCode();
                 
                 return hash;
             }

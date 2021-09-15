@@ -14,9 +14,9 @@ title: GenericSAML
 | **SsoTargetURI** | **string** |  | [optional] |
 | **SloURI** | **string** |  | [optional] |
 | **SloBinding** | **string** |  | [optional] |
+| **RelyingPartyIdentifier** | **string** |  | [optional] |
 | **Certificate** | **string** |  | [optional] |
 | **Certificates** | **List&lt;string&gt;** |  | [optional] |
-| **RelyingPartyIdentifier** | **string** |  | [optional] |
 | **LogoImageData** | **string** |  | [optional] |
 | **EndpointCompression** | **bool?** |  | [optional] |
 | **NameIdentifierFormat** | **string** |  | [optional] |

@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Bullseye" /> class.
         /// </summary>
-        /// <param name="Rings">Rings.</param>
+        /// <param name="Rings">The bullseye rings configured for this queue..</param>
         public Bullseye(List<Ring> Rings = null)
         {
             this.Rings = Rings;
@@ -39,8 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Rings
+        /// The bullseye rings configured for this queue.
         /// </summary>
+        /// <value>The bullseye rings configured for this queue.</value>
         [DataMember(Name="rings", EmitDefaultValue=false)]
         public List<Ring> Rings { get; set; }
         

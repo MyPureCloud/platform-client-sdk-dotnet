@@ -62,6 +62,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Architect,
             
             /// <summary>
+            /// Enum Analyticsreporting for "AnalyticsReporting"
+            /// </summary>
+            [EnumMember(Value = "AnalyticsReporting")]
+            Analyticsreporting,
+            
+            /// <summary>
             /// Enum Contactcenter for "ContactCenter"
             /// </summary>
             [EnumMember(Value = "ContactCenter")]
@@ -96,6 +102,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "LanguageUnderstanding")]
             Languageunderstanding,
+            
+            /// <summary>
+            /// Enum Learning for "Learning"
+            /// </summary>
+            [EnumMember(Value = "Learning")]
+            Learning,
             
             /// <summary>
             /// Enum Outbound for "Outbound"
@@ -431,7 +443,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Processed for "Processed"
             /// </summary>
             [EnumMember(Value = "Processed")]
-            Processed
+            Processed,
+            
+            /// <summary>
+            /// Enum Assign for "Assign"
+            /// </summary>
+            [EnumMember(Value = "Assign")]
+            Assign,
+            
+            /// <summary>
+            /// Enum Unassign for "Unassign"
+            /// </summary>
+            [EnumMember(Value = "Unassign")]
+            Unassign
         }
         
         
@@ -468,6 +492,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ActionTemplate")]
             Actiontemplate,
+            
+            /// <summary>
+            /// Enum Assignment for "Assignment"
+            /// </summary>
+            [EnumMember(Value = "Assignment")]
+            Assignment,
             
             /// <summary>
             /// Enum Attemptlimits for "AttemptLimits"
@@ -554,6 +584,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Contactlistfilter,
             
             /// <summary>
+            /// Enum Dashboardsettings for "DashboardSettings"
+            /// </summary>
+            [EnumMember(Value = "DashboardSettings")]
+            Dashboardsettings,
+            
+            /// <summary>
             /// Enum Did for "DID"
             /// </summary>
             [EnumMember(Value = "DID")]
@@ -590,6 +626,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Document,
             
             /// <summary>
+            /// Enum Dynamicgroup for "DynamicGroup"
+            /// </summary>
+            [EnumMember(Value = "DynamicGroup")]
+            Dynamicgroup,
+            
+            /// <summary>
             /// Enum Edge for "Edge"
             /// </summary>
             [EnumMember(Value = "Edge")]
@@ -612,6 +654,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "EventType")]
             Eventtype,
+            
+            /// <summary>
+            /// Enum Exports for "Exports"
+            /// </summary>
+            [EnumMember(Value = "Exports")]
+            Exports,
             
             /// <summary>
             /// Enum Extension for "Extension"
@@ -674,6 +722,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Historicaldata,
             
             /// <summary>
+            /// Enum Insightsettings for "InsightSettings"
+            /// </summary>
+            [EnumMember(Value = "InsightSettings")]
+            Insightsettings,
+            
+            /// <summary>
             /// Enum Ivr for "IVR"
             /// </summary>
             [EnumMember(Value = "IVR")]
@@ -708,6 +762,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Metric")]
             Metric,
+            
+            /// <summary>
+            /// Enum Module for "Module"
+            /// </summary>
+            [EnumMember(Value = "Module")]
+            Module,
             
             /// <summary>
             /// Enum Numberplan for "NumberPlan"
@@ -824,6 +884,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Routingtranscriptionsettings,
             
             /// <summary>
+            /// Enum Rule for "Rule"
+            /// </summary>
+            [EnumMember(Value = "Rule")]
+            Rule,
+            
+            /// <summary>
             /// Enum Ruleset for "RuleSet"
             /// </summary>
             [EnumMember(Value = "RuleSet")]
@@ -834,6 +900,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Schedule")]
             Schedule,
+            
+            /// <summary>
+            /// Enum Scheduledexports for "ScheduledExports"
+            /// </summary>
+            [EnumMember(Value = "ScheduledExports")]
+            Scheduledexports,
             
             /// <summary>
             /// Enum Schedulegroup for "ScheduleGroup"

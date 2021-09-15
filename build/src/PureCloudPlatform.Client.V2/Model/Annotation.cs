@@ -93,7 +93,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecordingLocation">Offset of annotation (milliseconds) from start of recording, adjusted for any recording cuts.</param>
         /// <param name="RecordingDurationMs">Duration of annotation (milliseconds), adjusted for any recording cuts..</param>
         /// <param name="User">User that created this annotation (if any)..</param>
-        /// <param name="Description">Text of annotation..</param>
+        /// <param name="Description">Text of annotation. Maximum character limit is 500..</param>
         public Annotation(string Name = null, string Type = null, long? Location = null, long? DurationMs = null, long? AbsoluteLocation = null, long? AbsoluteDurationMs = null, long? RecordingLocation = null, long? RecordingDurationMs = null, User User = null, string Description = null)
         {
             this.Name = Name;
@@ -200,9 +200,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Text of annotation.
+        /// Text of annotation. Maximum character limit is 500.
         /// </summary>
-        /// <value>Text of annotation.</value>
+        /// <value>Text of annotation. Maximum character limit is 500.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
         

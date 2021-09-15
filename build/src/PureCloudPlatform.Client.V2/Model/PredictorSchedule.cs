@@ -39,7 +39,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Houronhouroff for "HourOnHourOff"
             /// </summary>
             [EnumMember(Value = "HourOnHourOff")]
-            Houronhouroff
+            Houronhouroff,
+            
+            /// <summary>
+            /// Enum Ongoingvaluemonitoring for "OngoingValueMonitoring"
+            /// </summary>
+            [EnumMember(Value = "OngoingValueMonitoring")]
+            Ongoingvaluemonitoring
         }
         
         

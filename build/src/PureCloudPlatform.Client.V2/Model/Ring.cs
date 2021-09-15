@@ -34,8 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Ring" /> class.
         /// </summary>
-        /// <param name="ExpansionCriteria">ExpansionCriteria.</param>
-        /// <param name="Actions">Actions.</param>
+        /// <param name="ExpansionCriteria">The conditions that will trigger conversations to move to the next bullseye ring..</param>
+        /// <param name="Actions">The actions that will be performed just before moving conversations to the next bullseye ring..</param>
         public Ring(List<ExpansionCriterium> ExpansionCriteria = null, Actions Actions = null)
         {
             this.ExpansionCriteria = ExpansionCriteria;
@@ -46,16 +46,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets ExpansionCriteria
+        /// The conditions that will trigger conversations to move to the next bullseye ring.
         /// </summary>
+        /// <value>The conditions that will trigger conversations to move to the next bullseye ring.</value>
         [DataMember(Name="expansionCriteria", EmitDefaultValue=false)]
         public List<ExpansionCriterium> ExpansionCriteria { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Actions
+        /// The actions that will be performed just before moving conversations to the next bullseye ring.
         /// </summary>
+        /// <value>The actions that will be performed just before moving conversations to the next bullseye ring.</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public Actions Actions { get; set; }
         

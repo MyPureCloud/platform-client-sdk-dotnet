@@ -48,7 +48,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Min">The minimum value in this metric.</param>
         /// <param name="Max">The maximum value in this metric.</param>
         /// <param name="Sum">The total of the values for this metric.</param>
-        public DevelopmentActivityAggregateQueryResponseStatistics(int? Count = null, int? Min = null, int? Max = null, int? Sum = null)
+        public DevelopmentActivityAggregateQueryResponseStatistics(int? Count = null, double? Min = null, double? Max = null, double? Sum = null)
         {
             this.Count = Count;
             this.Min = Min;
@@ -73,7 +73,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The minimum value in this metric</value>
         [DataMember(Name="min", EmitDefaultValue=false)]
-        public int? Min { get; set; }
+        public double? Min { get; set; }
         
         
         
@@ -82,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The maximum value in this metric</value>
         [DataMember(Name="max", EmitDefaultValue=false)]
-        public int? Max { get; set; }
+        public double? Max { get; set; }
         
         
         
@@ -91,7 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The total of the values for this metric</value>
         [DataMember(Name="sum", EmitDefaultValue=false)]
-        public int? Sum { get; set; }
+        public double? Sum { get; set; }
         
         
         /// <summary>

@@ -75,7 +75,37 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Enin for "en-IN"
             /// </summary>
             [EnumMember(Value = "en-IN")]
-            Enin
+            Enin,
+            
+            /// <summary>
+            /// Enum Frfr for "fr-FR"
+            /// </summary>
+            [EnumMember(Value = "fr-FR")]
+            Frfr,
+            
+            /// <summary>
+            /// Enum Frca for "fr-CA"
+            /// </summary>
+            [EnumMember(Value = "fr-CA")]
+            Frca,
+            
+            /// <summary>
+            /// Enum Itit for "it-IT"
+            /// </summary>
+            [EnumMember(Value = "it-IT")]
+            Itit,
+            
+            /// <summary>
+            /// Enum Dede for "de-DE"
+            /// </summary>
+            [EnumMember(Value = "de-DE")]
+            Dede,
+            
+            /// <summary>
+            /// Enum Ptbr for "pt-BR"
+            /// </summary>
+            [EnumMember(Value = "pt-BR")]
+            Ptbr
         }
         
         

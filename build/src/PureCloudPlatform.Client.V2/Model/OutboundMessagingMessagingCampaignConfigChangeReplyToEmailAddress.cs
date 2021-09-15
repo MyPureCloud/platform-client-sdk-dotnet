@@ -35,11 +35,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress" /> class.
         /// </summary>
         /// <param name="Domain">Domain.</param>
-        /// <param name="RouteId">RouteId.</param>
-        public OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress(OutboundMessagingMessagingCampaignConfigChangeUriReference Domain = null, OutboundMessagingMessagingCampaignConfigChangeUriReference RouteId = null)
+        /// <param name="Route">Route.</param>
+        public OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress(OutboundMessagingMessagingCampaignConfigChangeUriReference Domain = null, OutboundMessagingMessagingCampaignConfigChangeUriReference Route = null)
         {
             this.Domain = Domain;
-            this.RouteId = RouteId;
+            this.Route = Route;
             
         }
         
@@ -54,10 +54,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets RouteId
+        /// Gets or Sets Route
         /// </summary>
-        [DataMember(Name="routeId", EmitDefaultValue=false)]
-        public OutboundMessagingMessagingCampaignConfigChangeUriReference RouteId { get; set; }
+        [DataMember(Name="route", EmitDefaultValue=false)]
+        public OutboundMessagingMessagingCampaignConfigChangeUriReference Route { get; set; }
         
         
         /// <summary>
@@ -70,7 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress {\n");
             
             sb.Append("  Domain: ").Append(Domain).Append("\n");
-            sb.Append("  RouteId: ").Append(RouteId).Append("\n");
+            sb.Append("  Route: ").Append(Route).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -117,9 +117,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Domain.Equals(other.Domain)
                 ) &&
                 (
-                    this.RouteId == other.RouteId ||
-                    this.RouteId != null &&
-                    this.RouteId.Equals(other.RouteId)
+                    this.Route == other.Route ||
+                    this.Route != null &&
+                    this.Route.Equals(other.Route)
                 );
         }
 
@@ -138,8 +138,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
                 
-                if (this.RouteId != null)
-                    hash = hash * 59 + this.RouteId.GetHashCode();
+                if (this.Route != null)
+                    hash = hash * 59 + this.Route.GetHashCode();
                 
                 return hash;
             }

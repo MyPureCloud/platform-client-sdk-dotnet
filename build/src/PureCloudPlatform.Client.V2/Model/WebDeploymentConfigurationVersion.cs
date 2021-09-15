@@ -65,6 +65,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current status of the configuration version
         /// </summary>
@@ -148,6 +151,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The current status of the configuration version
         /// </summary>
@@ -173,19 +178,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Languages">A list of languages supported on the configuration.</param>
         /// <param name="DefaultLanguage">The default language to use for the configuration.</param>
         /// <param name="Messenger">The settings for messenger.</param>
+        /// <param name="Cobrowse">The settings for cobrowse.</param>
         /// <param name="JourneyEvents">The settings for journey events.</param>
         /// <param name="AuthenticationSettings">The settings for authenticated deployments.</param>
         /// <param name="LastModifiedUser">A reference to the user who most recently modified the configuration version.</param>
         /// <param name="CreatedUser">A reference to the user who created the configuration version.</param>
         /// <param name="PublishedUser">A reference to the user who published the configuration version.</param>
         /// <param name="Status">The current status of the configuration version.</param>
-        public WebDeploymentConfigurationVersion(string Name = null, string Description = null, List<string> Languages = null, string DefaultLanguage = null, MessengerSettings Messenger = null, JourneyEventsSettings JourneyEvents = null, AuthenticationSettings AuthenticationSettings = null, AddressableEntityRef LastModifiedUser = null, AddressableEntityRef CreatedUser = null, AddressableEntityRef PublishedUser = null, StatusEnum? Status = null)
+        public WebDeploymentConfigurationVersion(string Name = null, string Description = null, List<string> Languages = null, string DefaultLanguage = null, MessengerSettings Messenger = null, CobrowseSettings Cobrowse = null, JourneyEventsSettings JourneyEvents = null, AuthenticationSettings AuthenticationSettings = null, AddressableEntityRef LastModifiedUser = null, AddressableEntityRef CreatedUser = null, AddressableEntityRef PublishedUser = null, StatusEnum? Status = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.Languages = Languages;
             this.DefaultLanguage = DefaultLanguage;
             this.Messenger = Messenger;
+            this.Cobrowse = Cobrowse;
             this.JourneyEvents = JourneyEvents;
             this.AuthenticationSettings = AuthenticationSettings;
             this.LastModifiedUser = LastModifiedUser;
@@ -257,6 +264,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The settings for messenger</value>
         [DataMember(Name="messenger", EmitDefaultValue=false)]
         public MessengerSettings Messenger { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The settings for cobrowse
+        /// </summary>
+        /// <value>The settings for cobrowse</value>
+        [DataMember(Name="cobrowse", EmitDefaultValue=false)]
+        public CobrowseSettings Cobrowse { get; set; }
         
         
         
@@ -358,6 +374,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Languages: ").Append(Languages).Append("\n");
             sb.Append("  DefaultLanguage: ").Append(DefaultLanguage).Append("\n");
             sb.Append("  Messenger: ").Append(Messenger).Append("\n");
+            sb.Append("  Cobrowse: ").Append(Cobrowse).Append("\n");
             sb.Append("  JourneyEvents: ").Append(JourneyEvents).Append("\n");
             sb.Append("  AuthenticationSettings: ").Append(AuthenticationSettings).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -444,6 +461,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Messenger.Equals(other.Messenger)
                 ) &&
                 (
+                    this.Cobrowse == other.Cobrowse ||
+                    this.Cobrowse != null &&
+                    this.Cobrowse.Equals(other.Cobrowse)
+                ) &&
+                (
                     this.JourneyEvents == other.JourneyEvents ||
                     this.JourneyEvents != null &&
                     this.JourneyEvents.Equals(other.JourneyEvents)
@@ -527,6 +549,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Messenger != null)
                     hash = hash * 59 + this.Messenger.GetHashCode();
+                
+                if (this.Cobrowse != null)
+                    hash = hash * 59 + this.Cobrowse.GetHashCode();
                 
                 if (this.JourneyEvents != null)
                     hash = hash * 59 + this.JourneyEvents.GetHashCode();

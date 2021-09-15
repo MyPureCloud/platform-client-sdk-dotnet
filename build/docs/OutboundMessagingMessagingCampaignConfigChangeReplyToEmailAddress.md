@@ -8,7 +8,7 @@ title: OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Domain** | [**OutboundMessagingMessagingCampaignConfigChangeUriReference**](OutboundMessagingMessagingCampaignConfigChangeUriReference.html) |  | [optional] |
-| **RouteId** | [**OutboundMessagingMessagingCampaignConfigChangeUriReference**](OutboundMessagingMessagingCampaignConfigChangeUriReference.html) |  | [optional] |
+| **Route** | [**OutboundMessagingMessagingCampaignConfigChangeUriReference**](OutboundMessagingMessagingCampaignConfigChangeUriReference.html) |  | [optional] |
 {: class="table table-striped"}
 
 

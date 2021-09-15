@@ -99,7 +99,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Invalidmediacontentlength for "InvalidMediaContentLength"
             /// </summary>
             [EnumMember(Value = "InvalidMediaContentLength")]
-            Invalidmediacontentlength
+            Invalidmediacontentlength,
+            
+            /// <summary>
+            /// Enum Recipientoptedout for "RecipientOptedOut"
+            /// </summary>
+            [EnumMember(Value = "RecipientOptedOut")]
+            Recipientoptedout
         }
         
         

@@ -14,9 +14,9 @@ title: ADFS
 | **SsoTargetURI** | **string** |  | [optional] |
 | **SloURI** | **string** |  | [optional] |
 | **SloBinding** | **string** |  | [optional] |
+| **RelyingPartyIdentifier** | **string** |  | [optional] |
 | **Certificate** | **string** |  | [optional] |
 | **Certificates** | **List&lt;string&gt;** |  | [optional] |
-| **RelyingPartyIdentifier** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 
