@@ -29,10 +29,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ArticleContent" /> class.
         /// </summary>
-        /// <param name="Body">Body of the article content..</param>
-        public ArticleContent(ArticleContentBody Body = null)
+        public ArticleContent()
         {
-            this.Body = Body;
             
         }
         
@@ -43,7 +41,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Body of the article content.</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
-        public ArticleContentBody Body { get; set; }
+        public ArticleContentBody Body { get; private set; }
         
         
         /// <summary>

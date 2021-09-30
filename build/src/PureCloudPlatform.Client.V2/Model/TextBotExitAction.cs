@@ -82,12 +82,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The reason for the exit.
         /// </summary>
         /// <value>The reason for the exit.</value>
         [DataMember(Name="reason", EmitDefaultValue=false)]
         public ReasonEnum? Reason { get; set; }
+        
+        
         
         
         
@@ -113,13 +118,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ActiveIntent">The active intent at the time of the exit..</param>
         /// <param name="FlowLocation">Describes where in the Bot Flow the user was when the exit occurred..</param>
         /// <param name="OutputData">The output data for the bot flow..</param>
-        public TextBotExitAction(ReasonEnum? Reason = null, string ReasonExtendedInfo = null, string ActiveIntent = null, TextBotFlowLocation FlowLocation = null, TextBotInputOutputData OutputData = null)
+        /// <param name="FlowOutcomes">The list of Flow Outcomes for the bot flow and their details..</param>
+        public TextBotExitAction(ReasonEnum? Reason = null, string ReasonExtendedInfo = null, string ActiveIntent = null, TextBotFlowLocation FlowLocation = null, TextBotInputOutputData OutputData = null, List<TextBotFlowOutcome> FlowOutcomes = null)
         {
             this.Reason = Reason;
             this.ReasonExtendedInfo = ReasonExtendedInfo;
             this.ActiveIntent = ActiveIntent;
             this.FlowLocation = FlowLocation;
             this.OutputData = OutputData;
+            this.FlowOutcomes = FlowOutcomes;
             
         }
         
@@ -162,6 +169,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public TextBotInputOutputData OutputData { get; set; }
         
         
+        
+        /// <summary>
+        /// The list of Flow Outcomes for the bot flow and their details.
+        /// </summary>
+        /// <value>The list of Flow Outcomes for the bot flow and their details.</value>
+        [DataMember(Name="flowOutcomes", EmitDefaultValue=false)]
+        public List<TextBotFlowOutcome> FlowOutcomes { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -176,6 +192,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ActiveIntent: ").Append(ActiveIntent).Append("\n");
             sb.Append("  FlowLocation: ").Append(FlowLocation).Append("\n");
             sb.Append("  OutputData: ").Append(OutputData).Append("\n");
+            sb.Append("  FlowOutcomes: ").Append(FlowOutcomes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -240,6 +257,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OutputData == other.OutputData ||
                     this.OutputData != null &&
                     this.OutputData.Equals(other.OutputData)
+                ) &&
+                (
+                    this.FlowOutcomes == other.FlowOutcomes ||
+                    this.FlowOutcomes != null &&
+                    this.FlowOutcomes.SequenceEqual(other.FlowOutcomes)
                 );
         }
 
@@ -269,6 +291,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.OutputData != null)
                     hash = hash * 59 + this.OutputData.GetHashCode();
+                
+                if (this.FlowOutcomes != null)
+                    hash = hash * 59 + this.FlowOutcomes.GetHashCode();
                 
                 return hash;
             }

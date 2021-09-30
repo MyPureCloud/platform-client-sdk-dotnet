@@ -51,11 +51,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="SupportedContentReference" /> class.
         /// </summary>
         /// <param name="Id">The SupportedContent unique identifier associated with this integration (required).</param>
-        /// <param name="MediaTypes">Media types definition for the supported content.</param>
-        public SupportedContentReference(string Id = null, MediaTypes MediaTypes = null)
+        public SupportedContentReference(string Id = null)
         {
             this.Id = Id;
-            this.MediaTypes = MediaTypes;
             
         }
         
@@ -93,7 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Media types definition for the supported content</value>
         [DataMember(Name="mediaTypes", EmitDefaultValue=false)]
-        public MediaTypes MediaTypes { get; set; }
+        public MediaTypes MediaTypes { get; private set; }
         
         
         /// <summary>

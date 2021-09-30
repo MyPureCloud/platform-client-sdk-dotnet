@@ -39,10 +39,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CredentialSpecification" /> class.
         /// </summary>
-        /// <param name="CredentialTypes">List of acceptable credential types that can be provided for this credential..</param>
-        public CredentialSpecification(List<string> CredentialTypes = null)
+        public CredentialSpecification()
         {
-            this.CredentialTypes = CredentialTypes;
             
         }
         
@@ -71,7 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of acceptable credential types that can be provided for this credential.</value>
         [DataMember(Name="credentialTypes", EmitDefaultValue=false)]
-        public List<string> CredentialTypes { get; set; }
+        public List<string> CredentialTypes { get; private set; }
         
         
         /// <summary>

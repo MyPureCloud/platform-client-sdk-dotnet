@@ -66,13 +66,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Draft" /> class.
         /// </summary>
         /// <param name="Name">Draft name (required).</param>
-        /// <param name="Miner">Miner to which the draft belongs..</param>
-        /// <param name="Intents">Draft intent object..</param>
-        public Draft(string Name = null, Miner Miner = null, List<DraftIntents> Intents = null)
+        public Draft(string Name = null)
         {
             this.Name = Name;
-            this.Miner = Miner;
-            this.Intents = Intents;
             
         }
         
@@ -101,7 +97,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Miner to which the draft belongs.</value>
         [DataMember(Name="miner", EmitDefaultValue=false)]
-        public Miner Miner { get; set; }
+        public Miner Miner { get; private set; }
         
         
         
@@ -110,7 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Draft intent object.</value>
         [DataMember(Name="intents", EmitDefaultValue=false)]
-        public List<DraftIntents> Intents { get; set; }
+        public List<DraftIntents> Intents { get; private set; }
         
         
         

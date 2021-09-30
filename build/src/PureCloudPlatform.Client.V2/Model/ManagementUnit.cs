@@ -156,8 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Settings">The configuration settings for this management unit.</param>
         /// <param name="Metadata">Version info metadata for this management unit. Deprecated, use settings.metadata.</param>
         /// <param name="Division">The division to which this entity belongs..</param>
-        /// <param name="ModifiedBy">The user who last modified this entity.  Deprecated, use field from settings.metadata instead.</param>
-        public ManagementUnit(string Name = null, BusinessUnitReference BusinessUnit = null, StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, ManagementUnitSettingsResponse Settings = null, WfmVersionedEntityMetadata Metadata = null, DivisionReference Division = null, UserReference ModifiedBy = null)
+        public ManagementUnit(string Name = null, BusinessUnitReference BusinessUnit = null, StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, ManagementUnitSettingsResponse Settings = null, WfmVersionedEntityMetadata Metadata = null, DivisionReference Division = null)
         {
             this.Name = Name;
             this.BusinessUnit = BusinessUnit;
@@ -166,7 +165,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Settings = Settings;
             this.Metadata = Metadata;
             this.Division = Division;
-            this.ModifiedBy = ModifiedBy;
             
         }
         
@@ -259,7 +257,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user who last modified this entity.  Deprecated, use field from settings.metadata instead</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public UserReference ModifiedBy { get; set; }
+        public UserReference ModifiedBy { get; private set; }
         
         
         

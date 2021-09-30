@@ -90,10 +90,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingSlot" /> class.
         /// </summary>
-        /// <param name="WfmSchedule">Workforce Management schedule information associated with the slot.</param>
-        public CoachingSlot(WfmScheduleReference WfmSchedule = null)
+        public CoachingSlot()
         {
-            this.WfmSchedule = WfmSchedule;
             
         }
         
@@ -133,7 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Workforce Management schedule information associated with the slot</value>
         [DataMember(Name="wfmSchedule", EmitDefaultValue=false)]
-        public WfmScheduleReference WfmSchedule { get; set; }
+        public WfmScheduleReference WfmSchedule { get; private set; }
         
         
         /// <summary>

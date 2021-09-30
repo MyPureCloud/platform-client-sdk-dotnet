@@ -64,14 +64,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimConfigResourceType" /> class.
         /// </summary>
-        /// <param name="Schemas">The list of supported schemas..</param>
-        /// <param name="SchemaExtensions">The list of schema extensions for the resource type..</param>
-        /// <param name="Meta">The metadata of the SCIM resource. Only \&quot;location\&quot; and \&quot;resourceType\&quot; are set for \&quot;ResourceType\&quot; resources..</param>
-        public ScimConfigResourceType(List<string> Schemas = null, List<ScimConfigResourceTypeSchemaExtension> SchemaExtensions = null, ScimMetadata Meta = null)
+        public ScimConfigResourceType()
         {
-            this.Schemas = Schemas;
-            this.SchemaExtensions = SchemaExtensions;
-            this.Meta = Meta;
             
         }
         
@@ -91,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of supported schemas.</value>
         [DataMember(Name="schemas", EmitDefaultValue=false)]
-        public List<string> Schemas { get; set; }
+        public List<string> Schemas { get; private set; }
         
         
         
@@ -127,7 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of schema extensions for the resource type.</value>
         [DataMember(Name="schemaExtensions", EmitDefaultValue=false)]
-        public List<ScimConfigResourceTypeSchemaExtension> SchemaExtensions { get; set; }
+        public List<ScimConfigResourceTypeSchemaExtension> SchemaExtensions { get; private set; }
         
         
         
@@ -145,7 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The metadata of the SCIM resource. Only \&quot;location\&quot; and \&quot;resourceType\&quot; are set for \&quot;ResourceType\&quot; resources.</value>
         [DataMember(Name="meta", EmitDefaultValue=false)]
-        public ScimMetadata Meta { get; set; }
+        public ScimMetadata Meta { get; private set; }
         
         
         /// <summary>

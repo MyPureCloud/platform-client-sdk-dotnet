@@ -34,10 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustUserDetails" /> class.
         /// </summary>
-        /// <param name="CreatedBy">User that added trusted user..</param>
-        public TrustUserDetails(OrgUser CreatedBy = null)
+        public TrustUserDetails()
         {
-            this.CreatedBy = CreatedBy;
             
         }
         
@@ -57,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User that added trusted user.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public OrgUser CreatedBy { get; set; }
+        public OrgUser CreatedBy { get; private set; }
         
         
         /// <summary>

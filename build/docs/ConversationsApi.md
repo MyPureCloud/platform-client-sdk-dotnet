@@ -150,6 +150,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsMessagingIntegrationsTwitter**](ConversationsApi.html#postconversationsmessagingintegrationstwitter) | **POST** /api/v2/conversations/messaging/integrations/twitter | Create a Twitter Integration |
 | [**PostConversationsMessagingIntegrationsWhatsapp**](ConversationsApi.html#postconversationsmessagingintegrationswhatsapp) | **POST** /api/v2/conversations/messaging/integrations/whatsapp | Create a WhatsApp Integration |
 | [**PutConversationParticipantFlaggedreason**](ConversationsApi.html#putconversationparticipantflaggedreason) | **PUT** /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason | Set flagged reason on conversation participant to indicate bad conversation quality. |
+| [**PutConversationTags**](ConversationsApi.html#putconversationtags) | **PUT** /api/v2/conversations/{conversationId}/tags | Update the tags on a conversation. |
 | [**PutConversationsCallParticipantCommunicationUuidata**](ConversationsApi.html#putconversationscallparticipantcommunicationuuidata) | **PUT** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/uuidata | Set uuiData to be sent on future commands. |
 | [**PutConversationsEmailMessagesDraft**](ConversationsApi.html#putconversationsemailmessagesdraft) | **PUT** /api/v2/conversations/emails/{conversationId}/messages/draft | Update conversation draft reply |
 | [**PutConversationsMessagingIntegrationsLineIntegrationId**](ConversationsApi.html#putconversationsmessagingintegrationslineintegrationid) | **PUT** /api/v2/conversations/messaging/integrations/line/{integrationId} | Update a LINE messenger integration |
@@ -9630,6 +9631,73 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="putconversationtags"></a>
+
+## **string** PutConversationTags (string conversationId, ConversationTagsUpdate body)
+
+
+
+Update the tags on a conversation.
+
+
+
+Requires ANY permissions: 
+
+* conversation:externalTag:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationTagsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversation ID
+            var body = new ConversationTagsUpdate(); // ConversationTagsUpdate | Conversation Tags
+
+            try
+            { 
+                // Update the tags on a conversation.
+                string result = apiInstance.PutConversationTags(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationTags: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+| **body** | [**ConversationTagsUpdate**](ConversationTagsUpdate.html)| Conversation Tags |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
 
 <a name="putconversationscallparticipantcommunicationuuidata"></a>
 

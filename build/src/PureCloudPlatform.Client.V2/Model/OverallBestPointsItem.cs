@@ -95,10 +95,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OverallBestPointsItem" /> class.
         /// </summary>
-        /// <param name="Users">List of associated users with the equal points..</param>
-        public OverallBestPointsItem(List<UserReference> Users = null)
+        public OverallBestPointsItem()
         {
-            this.Users = Users;
             
         }
         
@@ -111,7 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of associated users with the equal points.</value>
         [DataMember(Name="users", EmitDefaultValue=false)]
-        public List<UserReference> Users { get; set; }
+        public List<UserReference> Users { get; private set; }
         
         
         

@@ -75,15 +75,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartTime">The time when the conversation started. This will be the time when the first participant joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="EndTime">The time when the conversation ended. This will be the time when the last participant left the conversation, or null when the conversation is still active. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Divisions">Identifiers of divisions associated with this conversation.</param>
-        /// <param name="Participants">Participants.</param>
-        public ConversationBasic(string Name = null, string ExternalTag = null, DateTime? StartTime = null, DateTime? EndTime = null, List<ConversationDivisionMembership> Divisions = null, List<ParticipantBasic> Participants = null)
+        public ConversationBasic(string Name = null, string ExternalTag = null, DateTime? StartTime = null, DateTime? EndTime = null, List<ConversationDivisionMembership> Divisions = null)
         {
             this.Name = Name;
             this.ExternalTag = ExternalTag;
             this.StartTime = StartTime;
             this.EndTime = EndTime;
             this.Divisions = Divisions;
-            this.Participants = Participants;
             
         }
         
@@ -155,7 +153,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Participants
         /// </summary>
         [DataMember(Name="participants", EmitDefaultValue=false)]
-        public List<ParticipantBasic> Participants { get; set; }
+        public List<ParticipantBasic> Participants { get; private set; }
         
         
         /// <summary>

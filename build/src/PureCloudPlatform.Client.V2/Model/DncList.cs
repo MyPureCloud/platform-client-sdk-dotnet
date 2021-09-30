@@ -138,16 +138,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the DncList. (required).</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        /// <param name="ImportStatus">The status of the import process.</param>
         /// <param name="LoginId">A dnc.com loginId. Required if the dncSourceType is dnc.com..</param>
         /// <param name="DncCodes">The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com..</param>
         /// <param name="LicenseId">A gryphon license number. Required if the dncSourceType is gryphon..</param>
         /// <param name="Division">The division this DncList belongs to..</param>
-        public DncList(string Name = null, int? Version = null, ImportStatus ImportStatus = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null, DomainEntityRef Division = null)
+        public DncList(string Name = null, int? Version = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null, DomainEntityRef Division = null)
         {
             this.Name = Name;
             this.Version = Version;
-            this.ImportStatus = ImportStatus;
             this.LoginId = LoginId;
             this.DncCodes = DncCodes;
             this.LicenseId = LicenseId;
@@ -207,7 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The status of the import process</value>
         [DataMember(Name="importStatus", EmitDefaultValue=false)]
-        public ImportStatus ImportStatus { get; set; }
+        public ImportStatus ImportStatus { get; private set; }
         
         
         

@@ -49,17 +49,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TokenInfo" /> class.
         /// </summary>
-        /// <param name="Organization">The current organization.</param>
-        /// <param name="HomeOrganization">The token&#39;s home organization.</param>
-        /// <param name="AuthorizedScope">The list of scopes authorized for the OAuth client.</param>
-        /// <param name="ClonedUser">Only present when a user is a clone of trustee user in the trustor org..</param>
         /// <param name="OAuthClient">OAuthClient.</param>
-        public TokenInfo(NamedEntity Organization = null, NamedEntity HomeOrganization = null, List<string> AuthorizedScope = null, TokenInfoClonedUser ClonedUser = null, OrgOAuthClient OAuthClient = null)
+        public TokenInfo(OrgOAuthClient OAuthClient = null)
         {
-            this.Organization = Organization;
-            this.HomeOrganization = HomeOrganization;
-            this.AuthorizedScope = AuthorizedScope;
-            this.ClonedUser = ClonedUser;
             this.OAuthClient = OAuthClient;
             
         }
@@ -71,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The current organization</value>
         [DataMember(Name="organization", EmitDefaultValue=false)]
-        public NamedEntity Organization { get; set; }
+        public NamedEntity Organization { get; private set; }
         
         
         
@@ -80,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The token&#39;s home organization</value>
         [DataMember(Name="homeOrganization", EmitDefaultValue=false)]
-        public NamedEntity HomeOrganization { get; set; }
+        public NamedEntity HomeOrganization { get; private set; }
         
         
         
@@ -89,7 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of scopes authorized for the OAuth client</value>
         [DataMember(Name="authorizedScope", EmitDefaultValue=false)]
-        public List<string> AuthorizedScope { get; set; }
+        public List<string> AuthorizedScope { get; private set; }
         
         
         
@@ -98,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Only present when a user is a clone of trustee user in the trustor org.</value>
         [DataMember(Name="clonedUser", EmitDefaultValue=false)]
-        public TokenInfoClonedUser ClonedUser { get; set; }
+        public TokenInfoClonedUser ClonedUser { get; private set; }
         
         
         

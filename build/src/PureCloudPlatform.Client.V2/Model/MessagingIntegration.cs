@@ -209,14 +209,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessagingIntegration" /> class.
         /// </summary>
-        /// <param name="Recipient">The recipient associated to the Integration. This recipient is used to associate a flow to an integration.</param>
-        /// <param name="CreatedBy">User reference that created this Integration.</param>
-        /// <param name="ModifiedBy">User reference that last modified this Integration.</param>
-        public MessagingIntegration(DomainEntityRef Recipient = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null)
+        public MessagingIntegration()
         {
-            this.Recipient = Recipient;
-            this.CreatedBy = CreatedBy;
-            this.ModifiedBy = ModifiedBy;
             
         }
         
@@ -249,7 +243,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The recipient associated to the Integration. This recipient is used to associate a flow to an integration</value>
         [DataMember(Name="recipient", EmitDefaultValue=false)]
-        public DomainEntityRef Recipient { get; set; }
+        public DomainEntityRef Recipient { get; private set; }
         
         
         
@@ -276,7 +270,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User reference that created this Integration</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public DomainEntityRef CreatedBy { get; set; }
+        public DomainEntityRef CreatedBy { get; private set; }
         
         
         
@@ -285,7 +279,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User reference that last modified this Integration</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public DomainEntityRef ModifiedBy { get; set; }
+        public DomainEntityRef ModifiedBy { get; private set; }
         
         
         

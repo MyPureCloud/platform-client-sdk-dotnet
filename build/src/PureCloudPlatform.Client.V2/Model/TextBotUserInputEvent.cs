@@ -70,7 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="TextBotUserInputEvent" /> class.
         /// </summary>
         /// <param name="Mode">The input mode. (required).</param>
-        /// <param name="Alternatives">The input alternatives..</param>
+        /// <param name="Alternatives">The input alternatives. (required).</param>
         public TextBotUserInputEvent(ModeEnum? Mode = null, List<TextBotUserInputAlternative> Alternatives = null)
         {
             this.Mode = Mode;

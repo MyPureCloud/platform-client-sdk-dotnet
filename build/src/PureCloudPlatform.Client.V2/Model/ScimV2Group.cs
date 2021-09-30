@@ -54,16 +54,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2Group" /> class.
         /// </summary>
-        /// <param name="Schemas">The list of supported schemas..</param>
         /// <param name="ExternalId">The external ID of the group. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;..</param>
         /// <param name="Members">The list of members in the group..</param>
-        /// <param name="Meta">The metadata of the SCIM resource..</param>
-        public ScimV2Group(List<string> Schemas = null, string ExternalId = null, List<ScimV2MemberReference> Members = null, ScimMetadata Meta = null)
+        public ScimV2Group(string ExternalId = null, List<ScimV2MemberReference> Members = null)
         {
-            this.Schemas = Schemas;
             this.ExternalId = ExternalId;
             this.Members = Members;
-            this.Meta = Meta;
             
         }
         
@@ -83,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of supported schemas.</value>
         [DataMember(Name="schemas", EmitDefaultValue=false)]
-        public List<string> Schemas { get; set; }
+        public List<string> Schemas { get; private set; }
         
         
         
@@ -119,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The metadata of the SCIM resource.</value>
         [DataMember(Name="meta", EmitDefaultValue=false)]
-        public ScimMetadata Meta { get; set; }
+        public ScimMetadata Meta { get; private set; }
         
         
         /// <summary>

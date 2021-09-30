@@ -54,10 +54,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeSearchResponse" /> class.
         /// </summary>
-        /// <param name="Results">Results associated to the search response.</param>
-        public KnowledgeSearchResponse(List<KnowledgeSearchDocument> Results = null)
+        public KnowledgeSearchResponse()
         {
-            this.Results = Results;
             
         }
         
@@ -113,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Results associated to the search response</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
-        public List<KnowledgeSearchDocument> Results { get; set; }
+        public List<KnowledgeSearchDocument> Results { get; private set; }
         
         
         /// <summary>

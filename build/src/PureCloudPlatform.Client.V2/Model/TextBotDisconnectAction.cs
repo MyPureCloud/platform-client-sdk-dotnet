@@ -76,12 +76,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The reason for the disconnect.
         /// </summary>
         /// <value>The reason for the disconnect.</value>
         [DataMember(Name="reason", EmitDefaultValue=false)]
         public ReasonEnum? Reason { get; set; }
+        
+        
         
         
         
@@ -101,11 +106,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Reason">The reason for the disconnect. (required).</param>
         /// <param name="ReasonExtendedInfo">Extended information related to the reason, if available..</param>
         /// <param name="FlowLocation">Describes where in the Bot Flow the user was when the disconnect occurred..</param>
-        public TextBotDisconnectAction(ReasonEnum? Reason = null, string ReasonExtendedInfo = null, TextBotFlowLocation FlowLocation = null)
+        /// <param name="FlowOutcomes">The list of Flow Outcomes for the bot flow and their details..</param>
+        public TextBotDisconnectAction(ReasonEnum? Reason = null, string ReasonExtendedInfo = null, TextBotFlowLocation FlowLocation = null, List<TextBotFlowOutcome> FlowOutcomes = null)
         {
             this.Reason = Reason;
             this.ReasonExtendedInfo = ReasonExtendedInfo;
             this.FlowLocation = FlowLocation;
+            this.FlowOutcomes = FlowOutcomes;
             
         }
         
@@ -130,6 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public TextBotFlowLocation FlowLocation { get; set; }
         
         
+        
+        /// <summary>
+        /// The list of Flow Outcomes for the bot flow and their details.
+        /// </summary>
+        /// <value>The list of Flow Outcomes for the bot flow and their details.</value>
+        [DataMember(Name="flowOutcomes", EmitDefaultValue=false)]
+        public List<TextBotFlowOutcome> FlowOutcomes { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -142,6 +158,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Reason: ").Append(Reason).Append("\n");
             sb.Append("  ReasonExtendedInfo: ").Append(ReasonExtendedInfo).Append("\n");
             sb.Append("  FlowLocation: ").Append(FlowLocation).Append("\n");
+            sb.Append("  FlowOutcomes: ").Append(FlowOutcomes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -196,6 +213,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FlowLocation == other.FlowLocation ||
                     this.FlowLocation != null &&
                     this.FlowLocation.Equals(other.FlowLocation)
+                ) &&
+                (
+                    this.FlowOutcomes == other.FlowOutcomes ||
+                    this.FlowOutcomes != null &&
+                    this.FlowOutcomes.SequenceEqual(other.FlowOutcomes)
                 );
         }
 
@@ -219,6 +241,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.FlowLocation != null)
                     hash = hash * 59 + this.FlowLocation.GetHashCode();
+                
+                if (this.FlowOutcomes != null)
+                    hash = hash * 59 + this.FlowOutcomes.GetHashCode();
                 
                 return hash;
             }

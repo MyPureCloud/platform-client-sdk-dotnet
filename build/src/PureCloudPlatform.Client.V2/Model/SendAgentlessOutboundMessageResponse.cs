@@ -146,8 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TextBody">The body of the text message..</param>
         /// <param name="MessagingTemplate">The messaging template sent.</param>
         /// <param name="Timestamp">The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="User">Details of the user created the job.</param>
-        public SendAgentlessOutboundMessageResponse(string ConversationId = null, string FromAddress = null, string ToAddress = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, MessagingTemplateRequest MessagingTemplate = null, DateTime? Timestamp = null, AddressableEntityRef User = null)
+        public SendAgentlessOutboundMessageResponse(string ConversationId = null, string FromAddress = null, string ToAddress = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, MessagingTemplateRequest MessagingTemplate = null, DateTime? Timestamp = null)
         {
             this.ConversationId = ConversationId;
             this.FromAddress = FromAddress;
@@ -156,7 +155,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.TextBody = TextBody;
             this.MessagingTemplate = MessagingTemplate;
             this.Timestamp = Timestamp;
-            this.User = User;
             
         }
         
@@ -241,7 +239,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Details of the user created the job</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public AddressableEntityRef User { get; set; }
+        public AddressableEntityRef User { get; private set; }
         
         
         /// <summary>

@@ -115,20 +115,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Division">The division this entity belongs to..</param>
         /// <param name="ColumnNames">The names of the contact data columns. (required).</param>
         /// <param name="PhoneColumns">Indicates which columns are phone numbers..</param>
-        /// <param name="ImportStatus">The status of the import process..</param>
         /// <param name="PreviewModeColumnName">A column to check if a contact should always be dialed in preview mode..</param>
         /// <param name="PreviewModeAcceptedValues">The values in the previewModeColumnName column that indicate a contact should always be dialed in preview mode..</param>
         /// <param name="AttemptLimits">AttemptLimits for this ContactList..</param>
         /// <param name="AutomaticTimeZoneMapping">Indicates if automatic time zone mapping is to be used for this ContactList..</param>
         /// <param name="ZipCodeColumnName">The name of contact list column containing the zip code for use with automatic time zone mapping. Only allowed if &#39;automaticTimeZoneMapping&#39; is set to true..</param>
-        public ContactList(string Name = null, int? Version = null, DomainEntityRef Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, DomainEntityRef AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null)
+        public ContactList(string Name = null, int? Version = null, DomainEntityRef Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, DomainEntityRef AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null)
         {
             this.Name = Name;
             this.Version = Version;
             this.Division = Division;
             this.ColumnNames = ColumnNames;
             this.PhoneColumns = PhoneColumns;
-            this.ImportStatus = ImportStatus;
             this.PreviewModeColumnName = PreviewModeColumnName;
             this.PreviewModeAcceptedValues = PreviewModeAcceptedValues;
             this.AttemptLimits = AttemptLimits;
@@ -215,7 +213,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The status of the import process.</value>
         [DataMember(Name="importStatus", EmitDefaultValue=false)]
-        public ImportStatus ImportStatus { get; set; }
+        public ImportStatus ImportStatus { get; private set; }
         
         
         

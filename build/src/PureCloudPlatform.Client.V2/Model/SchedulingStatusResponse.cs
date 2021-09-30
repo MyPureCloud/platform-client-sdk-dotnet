@@ -102,10 +102,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SchedulingStatusResponse" /> class.
         /// </summary>
-        /// <param name="ErrorDetails">If the request could not be properly processed, error details will be given here..</param>
-        public SchedulingStatusResponse(List<SchedulingProcessingError> ErrorDetails = null)
+        public SchedulingStatusResponse()
         {
-            this.ErrorDetails = ErrorDetails;
             
         }
         
@@ -127,7 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>If the request could not be properly processed, error details will be given here.</value>
         [DataMember(Name="errorDetails", EmitDefaultValue=false)]
-        public List<SchedulingProcessingError> ErrorDetails { get; set; }
+        public List<SchedulingProcessingError> ErrorDetails { get; private set; }
         
         
         

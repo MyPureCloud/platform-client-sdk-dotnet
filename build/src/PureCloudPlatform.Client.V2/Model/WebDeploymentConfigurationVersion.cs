@@ -181,11 +181,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Cobrowse">The settings for cobrowse.</param>
         /// <param name="JourneyEvents">The settings for journey events.</param>
         /// <param name="AuthenticationSettings">The settings for authenticated deployments.</param>
-        /// <param name="LastModifiedUser">A reference to the user who most recently modified the configuration version.</param>
-        /// <param name="CreatedUser">A reference to the user who created the configuration version.</param>
-        /// <param name="PublishedUser">A reference to the user who published the configuration version.</param>
         /// <param name="Status">The current status of the configuration version.</param>
-        public WebDeploymentConfigurationVersion(string Name = null, string Description = null, List<string> Languages = null, string DefaultLanguage = null, MessengerSettings Messenger = null, CobrowseSettings Cobrowse = null, JourneyEventsSettings JourneyEvents = null, AuthenticationSettings AuthenticationSettings = null, AddressableEntityRef LastModifiedUser = null, AddressableEntityRef CreatedUser = null, AddressableEntityRef PublishedUser = null, StatusEnum? Status = null)
+        public WebDeploymentConfigurationVersion(string Name = null, string Description = null, List<string> Languages = null, string DefaultLanguage = null, MessengerSettings Messenger = null, CobrowseSettings Cobrowse = null, JourneyEventsSettings JourneyEvents = null, AuthenticationSettings AuthenticationSettings = null, StatusEnum? Status = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -195,9 +192,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Cobrowse = Cobrowse;
             this.JourneyEvents = JourneyEvents;
             this.AuthenticationSettings = AuthenticationSettings;
-            this.LastModifiedUser = LastModifiedUser;
-            this.CreatedUser = CreatedUser;
-            this.PublishedUser = PublishedUser;
             this.Status = Status;
             
         }
@@ -326,7 +320,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A reference to the user who most recently modified the configuration version</value>
         [DataMember(Name="lastModifiedUser", EmitDefaultValue=false)]
-        public AddressableEntityRef LastModifiedUser { get; set; }
+        public AddressableEntityRef LastModifiedUser { get; private set; }
         
         
         
@@ -335,7 +329,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A reference to the user who created the configuration version</value>
         [DataMember(Name="createdUser", EmitDefaultValue=false)]
-        public AddressableEntityRef CreatedUser { get; set; }
+        public AddressableEntityRef CreatedUser { get; private set; }
         
         
         
@@ -344,7 +338,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A reference to the user who published the configuration version</value>
         [DataMember(Name="publishedUser", EmitDefaultValue=false)]
-        public AddressableEntityRef PublishedUser { get; set; }
+        public AddressableEntityRef PublishedUser { get; private set; }
         
         
         

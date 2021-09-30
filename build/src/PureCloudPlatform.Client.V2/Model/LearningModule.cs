@@ -121,12 +121,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Assessedcontent,
             
             /// <summary>
-            /// Enum Questionnaire for "Questionnaire"
-            /// </summary>
-            [EnumMember(Value = "Questionnaire")]
-            Questionnaire,
-            
-            /// <summary>
             /// Enum Assessment for "Assessment"
             /// </summary>
             [EnumMember(Value = "Assessment")]
@@ -208,21 +202,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="LearningModule" /> class.
         /// </summary>
         /// <param name="Name">The name of learning module (required).</param>
-        /// <param name="CreatedBy">The user who created learning module.</param>
-        /// <param name="ModifiedBy">The user who modified learning module.</param>
-        /// <param name="Rule">The rule for learning module; read-only, and only populated when requested via expand param..</param>
         /// <param name="Description">The description of learning module.</param>
         /// <param name="CompletionTimeInDays">The completion time of learning module in days (required).</param>
         /// <param name="Type">The type for the learning module.</param>
         /// <param name="InformSteps">The list of inform steps in a learning module.</param>
         /// <param name="AssessmentForm">The assessment form for learning module.</param>
         /// <param name="SummaryData">The learning module summary data.</param>
-        public LearningModule(string Name = null, UserReference CreatedBy = null, UserReference ModifiedBy = null, LearningModuleRule Rule = null, string Description = null, int? CompletionTimeInDays = null, TypeEnum? Type = null, List<LearningModuleInformStep> InformSteps = null, AssessmentForm AssessmentForm = null, LearningModuleSummary SummaryData = null)
+        public LearningModule(string Name = null, string Description = null, int? CompletionTimeInDays = null, TypeEnum? Type = null, List<LearningModuleInformStep> InformSteps = null, AssessmentForm AssessmentForm = null, LearningModuleSummary SummaryData = null)
         {
             this.Name = Name;
-            this.CreatedBy = CreatedBy;
-            this.ModifiedBy = ModifiedBy;
-            this.Rule = Rule;
             this.Description = Description;
             this.CompletionTimeInDays = CompletionTimeInDays;
             this.Type = Type;
@@ -257,7 +245,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user who created learning module</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public UserReference CreatedBy { get; set; }
+        public UserReference CreatedBy { get; private set; }
         
         
         
@@ -275,7 +263,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user who modified learning module</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public UserReference ModifiedBy { get; set; }
+        public UserReference ModifiedBy { get; private set; }
         
         
         
@@ -313,7 +301,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The rule for learning module; read-only, and only populated when requested via expand param.</value>
         [DataMember(Name="rule", EmitDefaultValue=false)]
-        public LearningModuleRule Rule { get; set; }
+        public LearningModuleRule Rule { get; private set; }
         
         
         

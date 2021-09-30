@@ -110,13 +110,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingAnnotation" /> class.
         /// </summary>
-        /// <param name="CreatedBy">The user who created the annotation..</param>
-        /// <param name="ModifiedBy">The last user to modify the annotation..</param>
         /// <param name="Text">The text of the annotation. (required).</param>
-        public CoachingAnnotation(UserReference CreatedBy = null, UserReference ModifiedBy = null, string Text = null)
+        public CoachingAnnotation(string Text = null)
         {
-            this.CreatedBy = CreatedBy;
-            this.ModifiedBy = ModifiedBy;
             this.Text = Text;
             
         }
@@ -137,7 +133,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user who created the annotation.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public UserReference CreatedBy { get; set; }
+        public UserReference CreatedBy { get; private set; }
         
         
         
@@ -155,7 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The last user to modify the annotation.</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public UserReference ModifiedBy { get; set; }
+        public UserReference ModifiedBy { get; private set; }
         
         
         

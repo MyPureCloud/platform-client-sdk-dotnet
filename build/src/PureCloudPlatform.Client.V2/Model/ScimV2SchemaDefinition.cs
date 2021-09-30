@@ -49,12 +49,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2SchemaDefinition" /> class.
         /// </summary>
-        /// <param name="Attributes">The list of service provider attributes..</param>
-        /// <param name="Meta">The metadata of the SCIM resource. Only \&quot;location\&quot; and \&quot;resourceType\&quot; are set for \&quot;Schema\&quot; resources..</param>
-        public ScimV2SchemaDefinition(List<ScimV2SchemaAttribute> Attributes = null, ScimMetadata Meta = null)
+        public ScimV2SchemaDefinition()
         {
-            this.Attributes = Attributes;
-            this.Meta = Meta;
             
         }
         
@@ -92,7 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of service provider attributes.</value>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
-        public List<ScimV2SchemaAttribute> Attributes { get; set; }
+        public List<ScimV2SchemaAttribute> Attributes { get; private set; }
         
         
         
@@ -101,7 +97,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The metadata of the SCIM resource. Only \&quot;location\&quot; and \&quot;resourceType\&quot; are set for \&quot;Schema\&quot; resources.</value>
         [DataMember(Name="meta", EmitDefaultValue=false)]
-        public ScimMetadata Meta { get; set; }
+        public ScimMetadata Meta { get; private set; }
         
         
         /// <summary>

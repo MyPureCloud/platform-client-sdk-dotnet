@@ -44,16 +44,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserStations" /> class.
         /// </summary>
-        /// <param name="AssociatedStation">Current associated station for this user..</param>
-        /// <param name="EffectiveStation">The station where the user can be reached based on their default and associated station..</param>
-        /// <param name="DefaultStation">Default station to be used if not associated with a station..</param>
-        /// <param name="LastAssociatedStation">Last associated station for this user..</param>
-        public UserStations(UserStation AssociatedStation = null, UserStation EffectiveStation = null, UserStation DefaultStation = null, UserStation LastAssociatedStation = null)
+        public UserStations()
         {
-            this.AssociatedStation = AssociatedStation;
-            this.EffectiveStation = EffectiveStation;
-            this.DefaultStation = DefaultStation;
-            this.LastAssociatedStation = LastAssociatedStation;
             
         }
         
@@ -64,7 +56,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Current associated station for this user.</value>
         [DataMember(Name="associatedStation", EmitDefaultValue=false)]
-        public UserStation AssociatedStation { get; set; }
+        public UserStation AssociatedStation { get; private set; }
         
         
         
@@ -73,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The station where the user can be reached based on their default and associated station.</value>
         [DataMember(Name="effectiveStation", EmitDefaultValue=false)]
-        public UserStation EffectiveStation { get; set; }
+        public UserStation EffectiveStation { get; private set; }
         
         
         
@@ -82,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Default station to be used if not associated with a station.</value>
         [DataMember(Name="defaultStation", EmitDefaultValue=false)]
-        public UserStation DefaultStation { get; set; }
+        public UserStation DefaultStation { get; private set; }
         
         
         
@@ -91,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Last associated station for this user.</value>
         [DataMember(Name="lastAssociatedStation", EmitDefaultValue=false)]
-        public UserStation LastAssociatedStation { get; set; }
+        public UserStation LastAssociatedStation { get; private set; }
         
         
         /// <summary>

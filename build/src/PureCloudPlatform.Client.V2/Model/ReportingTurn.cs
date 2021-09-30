@@ -190,8 +190,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Knowledge">The knowledge data captured during this reporting turn..</param>
         /// <param name="DateCreated">Timestamp indicating when the original turn was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="AskActionResult">Result of the bot flow &#39;ask&#39; action..</param>
-        /// <param name="Conversation">The conversation details, across potentially multiple Cicero sessions..</param>
-        public ReportingTurn(string UserInput = null, List<string> BotPrompts = null, string SessionId = null, ReportingTurnAction AskAction = null, ReportingTurnIntent Intent = null, ReportingTurnKnowledge Knowledge = null, DateTime? DateCreated = null, AskActionResultEnum? AskActionResult = null, AddressableEntityRef Conversation = null)
+        public ReportingTurn(string UserInput = null, List<string> BotPrompts = null, string SessionId = null, ReportingTurnAction AskAction = null, ReportingTurnIntent Intent = null, ReportingTurnKnowledge Knowledge = null, DateTime? DateCreated = null, AskActionResultEnum? AskActionResult = null)
         {
             this.UserInput = UserInput;
             this.BotPrompts = BotPrompts;
@@ -201,7 +200,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Knowledge = Knowledge;
             this.DateCreated = DateCreated;
             this.AskActionResult = AskActionResult;
-            this.Conversation = Conversation;
             
         }
         
@@ -277,7 +275,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The conversation details, across potentially multiple Cicero sessions.</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
-        public AddressableEntityRef Conversation { get; set; }
+        public AddressableEntityRef Conversation { get; private set; }
         
         
         /// <summary>

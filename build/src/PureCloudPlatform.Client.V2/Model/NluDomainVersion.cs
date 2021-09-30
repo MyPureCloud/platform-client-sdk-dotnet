@@ -205,15 +205,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDomainVersion" /> class.
         /// </summary>
-        /// <param name="Domain">The NLU domain of the version..</param>
         /// <param name="Description">The description of the NLU domain version..</param>
         /// <param name="Language">The language that the NLU domain version supports. (required).</param>
         /// <param name="Intents">The intents defined for this NLU domain version..</param>
         /// <param name="EntityTypes">The entity types defined for this NLU domain version..</param>
         /// <param name="Entities">The entities defined for this NLU domain version.This field is mutually exclusive with entityTypeBindings.</param>
-        public NluDomainVersion(NluDomain Domain = null, string Description = null, string Language = null, List<IntentDefinition> Intents = null, List<NamedEntityTypeDefinition> EntityTypes = null, List<NamedEntityDefinition> Entities = null)
+        public NluDomainVersion(string Description = null, string Language = null, List<IntentDefinition> Intents = null, List<NamedEntityTypeDefinition> EntityTypes = null, List<NamedEntityDefinition> Entities = null)
         {
-            this.Domain = Domain;
             this.Description = Description;
             this.Language = Language;
             this.Intents = Intents;
@@ -238,7 +236,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The NLU domain of the version.</value>
         [DataMember(Name="domain", EmitDefaultValue=false)]
-        public NluDomain Domain { get; set; }
+        public NluDomain Domain { get; private set; }
         
         
         

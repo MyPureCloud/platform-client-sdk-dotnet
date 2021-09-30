@@ -49,14 +49,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkdayMetric" /> class.
         /// </summary>
-        /// <param name="Metric">Gamification metric.</param>
-        /// <param name="Objective">Current objective for this metric.</param>
-        /// <param name="PunctualityEvents">List of schedule activity events for punctuality metrics.</param>
-        public WorkdayMetric(Metric Metric = null, Objective Objective = null, List<PunctualityEvent> PunctualityEvents = null)
+        public WorkdayMetric()
         {
-            this.Metric = Metric;
-            this.Objective = Objective;
-            this.PunctualityEvents = PunctualityEvents;
             
         }
         
@@ -67,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Gamification metric</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
-        public Metric Metric { get; set; }
+        public Metric Metric { get; private set; }
         
         
         
@@ -76,7 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Current objective for this metric</value>
         [DataMember(Name="objective", EmitDefaultValue=false)]
-        public Objective Objective { get; set; }
+        public Objective Objective { get; private set; }
         
         
         
@@ -103,7 +97,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of schedule activity events for punctuality metrics</value>
         [DataMember(Name="punctualityEvents", EmitDefaultValue=false)]
-        public List<PunctualityEvent> PunctualityEvents { get; set; }
+        public List<PunctualityEvent> PunctualityEvents { get; private set; }
         
         
         /// <summary>

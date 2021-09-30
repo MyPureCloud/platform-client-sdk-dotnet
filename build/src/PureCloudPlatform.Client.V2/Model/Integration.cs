@@ -116,18 +116,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Integration" /> class.
         /// </summary>
-        /// <param name="IntegrationType">Type of the integration.</param>
         /// <param name="IntendedState">Configured state of the integration. (required).</param>
-        /// <param name="Config">Configuration information for the integration..</param>
-        /// <param name="ReportedState">Last reported status of the integration..</param>
-        /// <param name="Attributes">Read-only attributes for the integration..</param>
-        public Integration(IntegrationType IntegrationType = null, IntendedStateEnum? IntendedState = null, IntegrationConfigurationInfo Config = null, IntegrationStatusInfo ReportedState = null, Dictionary<string, string> Attributes = null)
+        public Integration(IntendedStateEnum? IntendedState = null)
         {
-            this.IntegrationType = IntegrationType;
             this.IntendedState = IntendedState;
-            this.Config = Config;
-            this.ReportedState = ReportedState;
-            this.Attributes = Attributes;
             
         }
         
@@ -156,7 +148,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Type of the integration</value>
         [DataMember(Name="integrationType", EmitDefaultValue=false)]
-        public IntegrationType IntegrationType { get; set; }
+        public IntegrationType IntegrationType { get; private set; }
         
         
         
@@ -176,7 +168,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Configuration information for the integration.</value>
         [DataMember(Name="config", EmitDefaultValue=false)]
-        public IntegrationConfigurationInfo Config { get; set; }
+        public IntegrationConfigurationInfo Config { get; private set; }
         
         
         
@@ -185,7 +177,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Last reported status of the integration.</value>
         [DataMember(Name="reportedState", EmitDefaultValue=false)]
-        public IntegrationStatusInfo ReportedState { get; set; }
+        public IntegrationStatusInfo ReportedState { get; private set; }
         
         
         
@@ -194,7 +186,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Read-only attributes for the integration.</value>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
-        public Dictionary<string, string> Attributes { get; set; }
+        public Dictionary<string, string> Attributes { get; private set; }
         
         
         

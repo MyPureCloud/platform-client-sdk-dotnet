@@ -106,13 +106,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="AssessmentScoringSet" /> class.
         /// </summary>
         /// <param name="QuestionGroupScores">The individual scores for each question group (required).</param>
-        /// <param name="FailureReasons">If the assessment was not passed, the reasons for failure..</param>
         /// <param name="Comments">Comments provided for these answers..</param>
         /// <param name="AgentComments">Comments provided by agent..</param>
-        public AssessmentScoringSet(List<AssessmentQuestionGroupScore> QuestionGroupScores = null, List<FailureReasonsEnum> FailureReasons = null, string Comments = null, string AgentComments = null)
+        public AssessmentScoringSet(List<AssessmentQuestionGroupScore> QuestionGroupScores = null, string Comments = null, string AgentComments = null)
         {
             this.QuestionGroupScores = QuestionGroupScores;
-            this.FailureReasons = FailureReasons;
             this.Comments = Comments;
             this.AgentComments = AgentComments;
             
@@ -161,7 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>If the assessment was not passed, the reasons for failure.</value>
         [DataMember(Name="failureReasons", EmitDefaultValue=false)]
-        public List<FailureReasonsEnum> FailureReasons { get; set; }
+        public List<FailureReasonsEnum> FailureReasons { get; private set; }
         
         
         

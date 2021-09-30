@@ -107,12 +107,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Category name (required).</param>
         /// <param name="Description">Category description.</param>
-        /// <param name="KnowledgeBase">Knowledge base which category does belong to.</param>
-        public KnowledgeCategory(string Name = null, string Description = null, KnowledgeBase KnowledgeBase = null)
+        public KnowledgeCategory(string Name = null, string Description = null)
         {
             this.Name = Name;
             this.Description = Description;
-            this.KnowledgeBase = KnowledgeBase;
             
         }
         
@@ -150,7 +148,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Knowledge base which category does belong to</value>
         [DataMember(Name="knowledgeBase", EmitDefaultValue=false)]
-        public KnowledgeBase KnowledgeBase { get; set; }
+        public KnowledgeBase KnowledgeBase { get; private set; }
         
         
         

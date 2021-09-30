@@ -139,6 +139,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Deliverystatus,
             
             /// <summary>
+            /// Enum Destinationaddress for "destinationAddress"
+            /// </summary>
+            [EnumMember(Value = "destinationAddress")]
+            Destinationaddress,
+            
+            /// <summary>
             /// Enum Destinationconversationid for "destinationConversationId"
             /// </summary>
             [EnumMember(Value = "destinationConversationId")]

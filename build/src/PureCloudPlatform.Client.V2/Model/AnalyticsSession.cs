@@ -138,6 +138,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The direction of the communication
         /// </summary>
@@ -545,6 +548,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The direction of the communication
         /// </summary>
@@ -693,6 +698,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CobrowseRoomId">A unique identifier for a PureCloud cobrowse room.</param>
         /// <param name="DeliveryStatus">The email delivery status.</param>
         /// <param name="DeliveryStatusChangeDate">Date and time of the most recent delivery status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="DestinationAddresses">Destination address(es) of transfers or consults.</param>
         /// <param name="Direction">The direction of the communication.</param>
         /// <param name="DispositionAnalyzer">(Dialer) Analyzer (for example speech.person).</param>
         /// <param name="DispositionName">(Dialer) Result of the analysis (for example disposition.classification.callable.machine).</param>
@@ -745,7 +751,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Flow">IVR flow execution associated with this session.</param>
         /// <param name="Metrics">List of metrics for this session.</param>
         /// <param name="Segments">List of segments for this session.</param>
-        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, string CoachedParticipantId = null, string CobrowseRole = null, string CobrowseRoomId = null, DeliveryStatusEnum? DeliveryStatus = null, DateTime? DeliveryStatusChangeDate = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<int?> WaitingInteractionCounts = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null)
+        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, string CoachedParticipantId = null, string CobrowseRole = null, string CobrowseRoomId = null, DeliveryStatusEnum? DeliveryStatus = null, DateTime? DeliveryStatusChangeDate = null, List<string> DestinationAddresses = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<int?> WaitingInteractionCounts = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null)
         {
             this.ActiveSkillIds = ActiveSkillIds;
             this.AcwSkipped = AcwSkipped;
@@ -767,6 +773,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CobrowseRoomId = CobrowseRoomId;
             this.DeliveryStatus = DeliveryStatus;
             this.DeliveryStatusChangeDate = DeliveryStatusChangeDate;
+            this.DestinationAddresses = DestinationAddresses;
             this.Direction = Direction;
             this.DispositionAnalyzer = DispositionAnalyzer;
             this.DispositionName = DispositionName;
@@ -994,6 +1001,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Date and time of the most recent delivery status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="deliveryStatusChangeDate", EmitDefaultValue=false)]
         public DateTime? DeliveryStatusChangeDate { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Destination address(es) of transfers or consults
+        /// </summary>
+        /// <value>Destination address(es) of transfers or consults</value>
+        [DataMember(Name="destinationAddresses", EmitDefaultValue=false)]
+        public List<string> DestinationAddresses { get; set; }
         
         
         
@@ -1472,6 +1488,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CobrowseRoomId: ").Append(CobrowseRoomId).Append("\n");
             sb.Append("  DeliveryStatus: ").Append(DeliveryStatus).Append("\n");
             sb.Append("  DeliveryStatusChangeDate: ").Append(DeliveryStatusChangeDate).Append("\n");
+            sb.Append("  DestinationAddresses: ").Append(DestinationAddresses).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  DispositionAnalyzer: ").Append(DispositionAnalyzer).Append("\n");
             sb.Append("  DispositionName: ").Append(DispositionName).Append("\n");
@@ -1663,6 +1680,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DeliveryStatusChangeDate == other.DeliveryStatusChangeDate ||
                     this.DeliveryStatusChangeDate != null &&
                     this.DeliveryStatusChangeDate.Equals(other.DeliveryStatusChangeDate)
+                ) &&
+                (
+                    this.DestinationAddresses == other.DestinationAddresses ||
+                    this.DestinationAddresses != null &&
+                    this.DestinationAddresses.SequenceEqual(other.DestinationAddresses)
                 ) &&
                 (
                     this.Direction == other.Direction ||
@@ -1997,6 +2019,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DeliveryStatusChangeDate != null)
                     hash = hash * 59 + this.DeliveryStatusChangeDate.GetHashCode();
+                
+                if (this.DestinationAddresses != null)
+                    hash = hash * 59 + this.DestinationAddresses.GetHashCode();
                 
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();

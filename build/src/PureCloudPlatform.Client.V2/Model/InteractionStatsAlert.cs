@@ -428,14 +428,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="InteractionStatsAlert" /> class.
         /// </summary>
         /// <param name="Unread">Indicates if the alert has been read. (required).</param>
-        /// <param name="NotificationUsers">The ids of users who were notified of alarm state change. (required).</param>
-        /// <param name="AlertTypes">A collection of notification methods. (required).</param>
         /// <param name="RuleUri">RuleUri.</param>
-        public InteractionStatsAlert(bool? Unread = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null, string RuleUri = null)
+        public InteractionStatsAlert(bool? Unread = null, string RuleUri = null)
         {
             this.Unread = Unread;
-            this.NotificationUsers = NotificationUsers;
-            this.AlertTypes = AlertTypes;
             this.RuleUri = RuleUri;
             
         }
@@ -529,7 +525,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The ids of users who were notified of alarm state change.</value>
         [DataMember(Name="notificationUsers", EmitDefaultValue=false)]
-        public List<User> NotificationUsers { get; set; }
+        public List<User> NotificationUsers { get; private set; }
         
         
         
@@ -538,7 +534,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A collection of notification methods.</value>
         [DataMember(Name="alertTypes", EmitDefaultValue=false)]
-        public List<AlertTypesEnum> AlertTypes { get; set; }
+        public List<AlertTypesEnum> AlertTypes { get; private set; }
         
         
         

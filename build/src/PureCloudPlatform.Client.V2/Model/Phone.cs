@@ -212,13 +212,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Lines">Lines (required).</param>
         /// <param name="Status">The status of the phone and lines from the primary Edge..</param>
         /// <param name="SecondaryStatus">The status of the phone and lines from the secondary Edge..</param>
-        /// <param name="UserAgentInfo">User Agent Information for this phone. This includes model, firmware version, and manufacturer..</param>
         /// <param name="Properties">Properties.</param>
         /// <param name="Capabilities">Capabilities.</param>
         /// <param name="WebRtcUser">This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones..</param>
         /// <param name="PrimaryEdge">PrimaryEdge.</param>
         /// <param name="SecondaryEdge">SecondaryEdge.</param>
-        public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, DomainEntityRef Site = null, DomainEntityRef PhoneBaseSettings = null, DomainEntityRef LineBaseSettings = null, DomainEntityRef PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, UserAgentInfo UserAgentInfo = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, DomainEntityRef WebRtcUser = null, Edge PrimaryEdge = null, Edge SecondaryEdge = null)
+        public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, DomainEntityRef Site = null, DomainEntityRef PhoneBaseSettings = null, DomainEntityRef LineBaseSettings = null, DomainEntityRef PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, DomainEntityRef WebRtcUser = null, Edge PrimaryEdge = null, Edge SecondaryEdge = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -236,7 +235,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Lines = Lines;
             this.Status = Status;
             this.SecondaryStatus = SecondaryStatus;
-            this.UserAgentInfo = UserAgentInfo;
             this.Properties = Properties;
             this.Capabilities = Capabilities;
             this.WebRtcUser = WebRtcUser;
@@ -405,7 +403,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User Agent Information for this phone. This includes model, firmware version, and manufacturer.</value>
         [DataMember(Name="userAgentInfo", EmitDefaultValue=false)]
-        public UserAgentInfo UserAgentInfo { get; set; }
+        public UserAgentInfo UserAgentInfo { get; private set; }
         
         
         

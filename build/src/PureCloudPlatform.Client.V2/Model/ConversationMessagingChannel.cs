@@ -129,12 +129,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationMessagingChannel" /> class.
         /// </summary>
-        /// <param name="To">Information about the recipient the message is sent to..</param>
-        /// <param name="From">Information about the recipient the message is received from..</param>
-        public ConversationMessagingChannel(ConversationMessagingToRecipient To = null, ConversationMessagingFromRecipient From = null)
+        public ConversationMessagingChannel()
         {
-            this.To = To;
-            this.From = From;
             
         }
         
@@ -165,7 +161,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Information about the recipient the message is sent to.</value>
         [DataMember(Name="to", EmitDefaultValue=false)]
-        public ConversationMessagingToRecipient To { get; set; }
+        public ConversationMessagingToRecipient To { get; private set; }
         
         
         
@@ -174,7 +170,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Information about the recipient the message is received from.</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
-        public ConversationMessagingFromRecipient From { get; set; }
+        public ConversationMessagingFromRecipient From { get; private set; }
         
         
         

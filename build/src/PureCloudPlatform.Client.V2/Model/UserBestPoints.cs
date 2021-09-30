@@ -34,12 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserBestPoints" /> class.
         /// </summary>
-        /// <param name="User">The requested user for the best points.</param>
-        /// <param name="BestPoints">List of best point for the requested user.</param>
-        public UserBestPoints(UserReference User = null, List<UserBestPointsItem> BestPoints = null)
+        public UserBestPoints()
         {
-            this.User = User;
-            this.BestPoints = BestPoints;
             
         }
         
@@ -50,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The requested user for the best points</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public UserReference User { get; set; }
+        public UserReference User { get; private set; }
         
         
         
@@ -59,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of best point for the requested user</value>
         [DataMember(Name="bestPoints", EmitDefaultValue=false)]
-        public List<UserBestPointsItem> BestPoints { get; set; }
+        public List<UserBestPointsItem> BestPoints { get; private set; }
         
         
         /// <summary>

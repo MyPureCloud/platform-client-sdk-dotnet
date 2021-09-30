@@ -124,29 +124,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailMessage" /> class.
         /// </summary>
-        /// <param name="Conversation">The conversation that the voicemail message is associated with.</param>
         /// <param name="Read">Whether the voicemail message is marked as read.</param>
-        /// <param name="CallerUser">Optionally the user that left the voicemail message if the caller was a known user.</param>
         /// <param name="Deleted">Whether the voicemail message has been marked as deleted.</param>
         /// <param name="Note">An optional note.</param>
-        /// <param name="User">The user that the voicemail message belongs to or null which means the voicemail message belongs to a group or queue.</param>
-        /// <param name="Group">The group that the voicemail message belongs to or null which means the voicemail message belongs to a user or queue.</param>
-        /// <param name="Queue">The queue that the voicemail message belongs to or null which means the voicemail message belongs to a user or group.</param>
-        /// <param name="CopiedFrom">Represents where this voicemail message was copied from.</param>
-        /// <param name="CopiedTo">Represents where this voicemail has been copied to.</param>
         /// <param name="DeleteRetentionPolicy">The retention policy for this voicemail when deleted is set to true.</param>
-        public VoicemailMessage(Conversation Conversation = null, bool? Read = null, User CallerUser = null, bool? Deleted = null, string Note = null, User User = null, Group Group = null, Queue Queue = null, VoicemailCopyRecord CopiedFrom = null, List<VoicemailCopyRecord> CopiedTo = null, VoicemailRetentionPolicy DeleteRetentionPolicy = null)
+        public VoicemailMessage(bool? Read = null, bool? Deleted = null, string Note = null, VoicemailRetentionPolicy DeleteRetentionPolicy = null)
         {
-            this.Conversation = Conversation;
             this.Read = Read;
-            this.CallerUser = CallerUser;
             this.Deleted = Deleted;
             this.Note = Note;
-            this.User = User;
-            this.Group = Group;
-            this.Queue = Queue;
-            this.CopiedFrom = CopiedFrom;
-            this.CopiedTo = CopiedTo;
             this.DeleteRetentionPolicy = DeleteRetentionPolicy;
             
         }
@@ -167,7 +153,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The conversation that the voicemail message is associated with</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
-        public Conversation Conversation { get; set; }
+        public Conversation Conversation { get; private set; }
         
         
         
@@ -248,7 +234,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Optionally the user that left the voicemail message if the caller was a known user</value>
         [DataMember(Name="callerUser", EmitDefaultValue=false)]
-        public User CallerUser { get; set; }
+        public User CallerUser { get; private set; }
         
         
         
@@ -275,7 +261,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user that the voicemail message belongs to or null which means the voicemail message belongs to a group or queue</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public User User { get; set; }
+        public User User { get; private set; }
         
         
         
@@ -284,7 +270,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The group that the voicemail message belongs to or null which means the voicemail message belongs to a user or queue</value>
         [DataMember(Name="group", EmitDefaultValue=false)]
-        public Group Group { get; set; }
+        public Group Group { get; private set; }
         
         
         
@@ -293,7 +279,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The queue that the voicemail message belongs to or null which means the voicemail message belongs to a user or group</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
-        public Queue Queue { get; set; }
+        public Queue Queue { get; private set; }
         
         
         
@@ -302,7 +288,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Represents where this voicemail message was copied from</value>
         [DataMember(Name="copiedFrom", EmitDefaultValue=false)]
-        public VoicemailCopyRecord CopiedFrom { get; set; }
+        public VoicemailCopyRecord CopiedFrom { get; private set; }
         
         
         
@@ -311,7 +297,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Represents where this voicemail has been copied to</value>
         [DataMember(Name="copiedTo", EmitDefaultValue=false)]
-        public List<VoicemailCopyRecord> CopiedTo { get; set; }
+        public List<VoicemailCopyRecord> CopiedTo { get; private set; }
         
         
         

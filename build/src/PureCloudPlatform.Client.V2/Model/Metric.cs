@@ -90,17 +90,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalMetricDefinitionId">The id of associated external metric definition.</param>
         /// <param name="Objective">Associated objective for this metric.</param>
         /// <param name="PerformanceProfileId">Performance profile id of this metric.</param>
-        /// <param name="LinkedMetric">The linked metric entity reference.</param>
-        /// <param name="SourcePerformanceProfile">The source performance profile when this metric is linked.</param>
-        public Metric(string Name = null, string MetricDefinitionId = null, string ExternalMetricDefinitionId = null, Objective Objective = null, string PerformanceProfileId = null, AddressableEntityRef LinkedMetric = null, PerformanceProfile SourcePerformanceProfile = null)
+        public Metric(string Name = null, string MetricDefinitionId = null, string ExternalMetricDefinitionId = null, Objective Objective = null, string PerformanceProfileId = null)
         {
             this.Name = Name;
             this.MetricDefinitionId = MetricDefinitionId;
             this.ExternalMetricDefinitionId = ExternalMetricDefinitionId;
             this.Objective = Objective;
             this.PerformanceProfileId = PerformanceProfileId;
-            this.LinkedMetric = LinkedMetric;
-            this.SourcePerformanceProfile = SourcePerformanceProfile;
             
         }
         
@@ -165,7 +161,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The linked metric entity reference</value>
         [DataMember(Name="linkedMetric", EmitDefaultValue=false)]
-        public AddressableEntityRef LinkedMetric { get; set; }
+        public AddressableEntityRef LinkedMetric { get; private set; }
         
         
         
@@ -192,7 +188,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The source performance profile when this metric is linked</value>
         [DataMember(Name="sourcePerformanceProfile", EmitDefaultValue=false)]
-        public PerformanceProfile SourcePerformanceProfile { get; set; }
+        public PerformanceProfile SourcePerformanceProfile { get; private set; }
         
         
         

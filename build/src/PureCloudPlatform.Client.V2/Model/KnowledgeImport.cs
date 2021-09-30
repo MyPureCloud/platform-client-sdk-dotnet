@@ -241,16 +241,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UploadKey">Upload key (required).</param>
         /// <param name="FileType">file type of the document (required).</param>
         /// <param name="IgnoreHeaders">Ignore headers for the specified file.</param>
-        /// <param name="Report">Report of the import operation.</param>
-        /// <param name="KnowledgeBase">Knowledge base which document import does belong to.</param>
-        public KnowledgeImport(string Name = null, string UploadKey = null, FileTypeEnum? FileType = null, bool? IgnoreHeaders = null, ImportReport Report = null, KnowledgeBase KnowledgeBase = null)
+        public KnowledgeImport(string Name = null, string UploadKey = null, FileTypeEnum? FileType = null, bool? IgnoreHeaders = null)
         {
             this.Name = Name;
             this.UploadKey = UploadKey;
             this.FileType = FileType;
             this.IgnoreHeaders = IgnoreHeaders;
-            this.Report = Report;
-            this.KnowledgeBase = KnowledgeBase;
             
         }
         
@@ -301,7 +297,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Report of the import operation</value>
         [DataMember(Name="report", EmitDefaultValue=false)]
-        public ImportReport Report { get; set; }
+        public ImportReport Report { get; private set; }
         
         
         
@@ -310,7 +306,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Knowledge base which document import does belong to</value>
         [DataMember(Name="knowledgeBase", EmitDefaultValue=false)]
-        public KnowledgeBase KnowledgeBase { get; set; }
+        public KnowledgeBase KnowledgeBase { get; private set; }
         
         
         

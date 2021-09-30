@@ -190,8 +190,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalSystemUrl">A string that identifies an external system-of-record resource that may have more detailed information on the contact. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace..</param>
         /// <param name="Schema">The schema defining custom fields for this contact.</param>
         /// <param name="CustomFields">Custom fields defined in the schema referenced by schemaId and schemaVersion..</param>
-        /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
-        public ExternalContact(string Id = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, TwitterId TwitterId = null, LineId LineId = null, WhatsAppId WhatsAppId = null, FacebookId FacebookId = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null, List<ExternalDataSource> ExternalDataSources = null)
+        public ExternalContact(string Id = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, TwitterId TwitterId = null, LineId LineId = null, WhatsAppId WhatsAppId = null, FacebookId FacebookId = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null)
         {
             this.Id = Id;
             this.FirstName = FirstName;
@@ -218,7 +217,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalSystemUrl = ExternalSystemUrl;
             this.Schema = Schema;
             this.CustomFields = CustomFields;
-            this.ExternalDataSources = ExternalDataSources;
             
         }
         
@@ -437,7 +435,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.</value>
         [DataMember(Name="externalDataSources", EmitDefaultValue=false)]
-        public List<ExternalDataSource> ExternalDataSources { get; set; }
+        public List<ExternalDataSource> ExternalDataSources { get; private set; }
         
         
         

@@ -230,8 +230,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RulesVisible">Are membership rules visible to the person requesting to view the group (required).</param>
         /// <param name="Visibility">Who can view this group (required).</param>
         /// <param name="Owners">Owners of the group.</param>
-        /// <param name="CreatedBy">The user that added trusted group..</param>
-        public TrustGroup(string Name = null, string Description = null, TypeEnum? Type = null, List<UserImage> Images = null, List<GroupContact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null, List<User> Owners = null, OrgUser CreatedBy = null)
+        public TrustGroup(string Name = null, string Description = null, TypeEnum? Type = null, List<UserImage> Images = null, List<GroupContact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null, List<User> Owners = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -241,7 +240,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RulesVisible = RulesVisible;
             this.Visibility = Visibility;
             this.Owners = Owners;
-            this.CreatedBy = CreatedBy;
             
         }
         
@@ -354,7 +352,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user that added trusted group.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public OrgUser CreatedBy { get; set; }
+        public OrgUser CreatedBy { get; private set; }
         
         
         /// <summary>

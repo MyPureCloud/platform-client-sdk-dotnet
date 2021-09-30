@@ -582,6 +582,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Product,
             
             /// <summary>
+            /// Enum Profile for "Profile"
+            /// </summary>
+            [EnumMember(Value = "Profile")]
+            Profile,
+            
+            /// <summary>
+            /// Enum Profilemembers for "ProfileMembers"
+            /// </summary>
+            [EnumMember(Value = "ProfileMembers")]
+            Profilemembers,
+            
+            /// <summary>
             /// Enum Program for "Program"
             /// </summary>
             [EnumMember(Value = "Program")]

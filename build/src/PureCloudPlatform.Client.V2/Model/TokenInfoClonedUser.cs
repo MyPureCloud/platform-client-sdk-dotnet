@@ -34,10 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TokenInfoClonedUser" /> class.
         /// </summary>
-        /// <param name="Organization">Organization of the original native user.</param>
-        public TokenInfoClonedUser(Entity Organization = null)
+        public TokenInfoClonedUser()
         {
-            this.Organization = Organization;
             
         }
         
@@ -57,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Organization of the original native user</value>
         [DataMember(Name="organization", EmitDefaultValue=false)]
-        public Entity Organization { get; set; }
+        public Entity Organization { get; private set; }
         
         
         /// <summary>

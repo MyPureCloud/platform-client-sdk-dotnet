@@ -91,11 +91,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntentFeedback" /> class.
         /// </summary>
-        /// <param name="Entities">The collection of named entities detected..</param>
         /// <param name="Assessment">The assessment on the detection for feedback text..</param>
-        public IntentFeedback(List<DetectedNamedEntity> Entities = null, AssessmentEnum? Assessment = null)
+        public IntentFeedback(AssessmentEnum? Assessment = null)
         {
-            this.Entities = Entities;
             this.Assessment = Assessment;
             
         }
@@ -125,7 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The collection of named entities detected.</value>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<DetectedNamedEntity> Entities { get; set; }
+        public List<DetectedNamedEntity> Entities { get; private set; }
         
         
         

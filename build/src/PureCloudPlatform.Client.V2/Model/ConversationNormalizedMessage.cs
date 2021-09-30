@@ -255,20 +255,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNormalizedMessage" /> class.
         /// </summary>
-        /// <param name="Channel">Channel-specific information that describes the message and the message channel/provider..</param>
         /// <param name="Type">Message type. (required).</param>
         /// <param name="Text">Message text..</param>
         /// <param name="Content">List of content elements.</param>
-        /// <param name="Reasons">List of reasons for a message receipt that indicates the message has failed. Only used with Failed status..</param>
         /// <param name="OriginatingEntity">Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies..</param>
         /// <param name="Metadata">Additional metadata about this message..</param>
-        public ConversationNormalizedMessage(ConversationMessagingChannel Channel = null, TypeEnum? Type = null, string Text = null, List<ConversationMessageContent> Content = null, List<ConversationReason> Reasons = null, OriginatingEntityEnum? OriginatingEntity = null, Dictionary<string, string> Metadata = null)
+        public ConversationNormalizedMessage(TypeEnum? Type = null, string Text = null, List<ConversationMessageContent> Content = null, OriginatingEntityEnum? OriginatingEntity = null, Dictionary<string, string> Metadata = null)
         {
-            this.Channel = Channel;
             this.Type = Type;
             this.Text = Text;
             this.Content = Content;
-            this.Reasons = Reasons;
             this.OriginatingEntity = OriginatingEntity;
             this.Metadata = Metadata;
             
@@ -290,7 +286,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Channel-specific information that describes the message and the message channel/provider.</value>
         [DataMember(Name="channel", EmitDefaultValue=false)]
-        public ConversationMessagingChannel Channel { get; set; }
+        public ConversationMessagingChannel Channel { get; private set; }
         
         
         
@@ -321,7 +317,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of reasons for a message receipt that indicates the message has failed. Only used with Failed status.</value>
         [DataMember(Name="reasons", EmitDefaultValue=false)]
-        public List<ConversationReason> Reasons { get; set; }
+        public List<ConversationReason> Reasons { get; private set; }
         
         
         

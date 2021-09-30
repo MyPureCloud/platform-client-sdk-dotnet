@@ -160,8 +160,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Trustor">Trustor.</param>
         /// <param name="Schema">The schema defining custom fields for this contact.</param>
         /// <param name="CustomFields">Custom fields defined in the schema referenced by schemaId and schemaVersion..</param>
-        /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
-        public ExternalOrganization(string Id = null, string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, string ExternalSystemUrl = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, Trustor Trustor = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null, List<ExternalDataSource> ExternalDataSources = null)
+        public ExternalOrganization(string Id = null, string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, string ExternalSystemUrl = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, Trustor Trustor = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -183,7 +182,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Trustor = Trustor;
             this.Schema = Schema;
             this.CustomFields = CustomFields;
-            this.ExternalDataSources = ExternalDataSources;
             
         }
         
@@ -361,7 +359,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.</value>
         [DataMember(Name="externalDataSources", EmitDefaultValue=false)]
-        public List<ExternalDataSource> ExternalDataSources { get; set; }
+        public List<ExternalDataSource> ExternalDataSources { get; private set; }
         
         
         

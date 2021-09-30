@@ -52,13 +52,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the intent. (required).</param>
         /// <param name="EntityTypeBindings">The bindings for the named entity types used in this intent.This field is mutually exclusive with entityNameReferences and entities.</param>
-        /// <param name="EntityNameReferences">The references for the named entity used in this intent.This field is mutually exclusive with entityTypeBindings.</param>
         /// <param name="Utterances">The utterances that act as training phrases for the intent. (required).</param>
-        public IntentDefinition(string Name = null, List<NamedEntityTypeBinding> EntityTypeBindings = null, List<string> EntityNameReferences = null, List<NluUtterance> Utterances = null)
+        public IntentDefinition(string Name = null, List<NamedEntityTypeBinding> EntityTypeBindings = null, List<NluUtterance> Utterances = null)
         {
             this.Name = Name;
             this.EntityTypeBindings = EntityTypeBindings;
-            this.EntityNameReferences = EntityNameReferences;
             this.Utterances = Utterances;
             
         }
@@ -88,7 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The references for the named entity used in this intent.This field is mutually exclusive with entityTypeBindings</value>
         [DataMember(Name="entityNameReferences", EmitDefaultValue=false)]
-        public List<string> EntityNameReferences { get; set; }
+        public List<string> EntityNameReferences { get; private set; }
         
         
         

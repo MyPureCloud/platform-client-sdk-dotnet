@@ -293,11 +293,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Authenticated">Indicates whether or not the session is authenticated..</param>
         /// <param name="CreatedDate">Timestamp indicating when the session was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EndedDate">Timestamp indicating when the session was ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ExternalContact">The external contact associated with this session..</param>
         /// <param name="AwayDate">Timestamp indicating when the visitor should be considered as away. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="IdleDate">Timestamp indicating when the visitor should be considered as idle. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="Conversation">The conversation for this session..</param>
-        public Session(string CustomerId = null, string CustomerIdType = null, string Type = null, string ExternalId = null, string ExternalUrl = null, string ShortId = null, List<OutcomeAchievement> OutcomeAchievements = null, List<SessionSegmentAssignment> SegmentAssignments = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttributeList> AttributeLists = null, Browser Browser = null, Device Device = null, JourneyGeolocation Geolocation = null, string IpAddress = null, string IpOrganization = null, JourneyPage LastPage = null, JourneyCampaign MktCampaign = null, Referrer Referrer = null, List<string> SearchTerms = null, string UserAgentString = null, int? DurationInSeconds = null, int? EventCount = null, int? PageviewCount = null, int? ScreenviewCount = null, SessionLastEvent LastEvent = null, ConnectedQueue LastConnectedQueue = null, ConnectedUser LastConnectedUser = null, ConversationUserDisposition LastUserDisposition = null, List<ConversationChannel> ConversationChannels = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, bool? Authenticated = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, AddressableEntityRef ExternalContact = null, DateTime? AwayDate = null, DateTime? IdleDate = null, AddressableEntityRef Conversation = null)
+        public Session(string CustomerId = null, string CustomerIdType = null, string Type = null, string ExternalId = null, string ExternalUrl = null, string ShortId = null, List<OutcomeAchievement> OutcomeAchievements = null, List<SessionSegmentAssignment> SegmentAssignments = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttributeList> AttributeLists = null, Browser Browser = null, Device Device = null, JourneyGeolocation Geolocation = null, string IpAddress = null, string IpOrganization = null, JourneyPage LastPage = null, JourneyCampaign MktCampaign = null, Referrer Referrer = null, List<string> SearchTerms = null, string UserAgentString = null, int? DurationInSeconds = null, int? EventCount = null, int? PageviewCount = null, int? ScreenviewCount = null, SessionLastEvent LastEvent = null, ConnectedQueue LastConnectedQueue = null, ConnectedUser LastConnectedUser = null, ConversationUserDisposition LastUserDisposition = null, List<ConversationChannel> ConversationChannels = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, bool? Authenticated = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, DateTime? AwayDate = null, DateTime? IdleDate = null)
         {
             this.CustomerId = CustomerId;
             this.CustomerIdType = CustomerIdType;
@@ -333,10 +331,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Authenticated = Authenticated;
             this.CreatedDate = CreatedDate;
             this.EndedDate = EndedDate;
-            this.ExternalContact = ExternalContact;
             this.AwayDate = AwayDate;
             this.IdleDate = IdleDate;
-            this.Conversation = Conversation;
             
         }
         
@@ -664,7 +660,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The external contact associated with this session.</value>
         [DataMember(Name="externalContact", EmitDefaultValue=false)]
-        public AddressableEntityRef ExternalContact { get; set; }
+        public AddressableEntityRef ExternalContact { get; private set; }
         
         
         
@@ -691,7 +687,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The conversation for this session.</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
-        public AddressableEntityRef Conversation { get; set; }
+        public AddressableEntityRef Conversation { get; private set; }
         
         
         /// <summary>

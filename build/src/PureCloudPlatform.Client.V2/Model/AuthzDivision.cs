@@ -62,12 +62,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Description">A helpful description for the division. (required).</param>
-        /// <param name="ObjectCounts">A count of objects in this division, grouped by type..</param>
-        public AuthzDivision(string Name = null, string Description = null, Dictionary<string, long?> ObjectCounts = null)
+        public AuthzDivision(string Name = null, string Description = null)
         {
             this.Name = Name;
             this.Description = Description;
-            this.ObjectCounts = ObjectCounts;
             
         }
         
@@ -113,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A count of objects in this division, grouped by type.</value>
         [DataMember(Name="objectCounts", EmitDefaultValue=false)]
-        public Dictionary<string, long?> ObjectCounts { get; set; }
+        public Dictionary<string, long?> ObjectCounts { get; private set; }
         
         
         

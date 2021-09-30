@@ -186,20 +186,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">Version number required for updates..</param>
         /// <param name="Libraries">One or more libraries response is associated with. (required).</param>
         /// <param name="Texts">One or more texts associated with the response. (required).</param>
-        /// <param name="CreatedBy">User that created the response.</param>
         /// <param name="InteractionType">The interaction type for this response..</param>
         /// <param name="Substitutions">Details about any text substitutions used in the texts for this response..</param>
         /// <param name="SubstitutionsSchema">Metadata about the text substitutions in json schema format..</param>
         /// <param name="ResponseType">The response type represented by the response..</param>
         /// <param name="MessagingTemplate">An optional messaging template definition for responseType.MessagingTemplate..</param>
         /// <param name="Assets">Assets used in the response.</param>
-        public Response(string Name = null, int? Version = null, List<DomainEntityRef> Libraries = null, List<ResponseText> Texts = null, User CreatedBy = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null, ResponseTypeEnum? ResponseType = null, MessagingTemplate MessagingTemplate = null, List<AddressableEntityRef> Assets = null)
+        public Response(string Name = null, int? Version = null, List<DomainEntityRef> Libraries = null, List<ResponseText> Texts = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null, ResponseTypeEnum? ResponseType = null, MessagingTemplate MessagingTemplate = null, List<AddressableEntityRef> Assets = null)
         {
             this.Name = Name;
             this.Version = Version;
             this.Libraries = Libraries;
             this.Texts = Texts;
-            this.CreatedBy = CreatedBy;
             this.InteractionType = InteractionType;
             this.Substitutions = Substitutions;
             this.SubstitutionsSchema = SubstitutionsSchema;
@@ -260,7 +258,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User that created the response</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public User CreatedBy { get; set; }
+        public User CreatedBy { get; private set; }
         
         
         

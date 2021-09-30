@@ -333,7 +333,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PhoneNumber">A phone number provisioned for SMS communications in E.164 format. E.g. +13175555555 or +34234234234 (required).</param>
         /// <param name="ProvisionedThroughPureCloud">Is set to false, if the phone number is provisioned through a SMS provider, outside of PureCloud.</param>
         /// <param name="PhoneNumberStatus">Status of the provisioned phone number..</param>
-        /// <param name="Capabilities">The capabilities of the phone number available for provisioning..</param>
         /// <param name="CountryCode">The ISO 3166-1 alpha-2 country code of the country this phone number is associated with..</param>
         /// <param name="DateCreated">Date this phone number was provisioned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">Date this phone number was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -346,13 +345,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutoRenewable">Renewal time period of this phone number, if the phoneNumberType is shortcode..</param>
         /// <param name="AddressId">The id of an address attached to this phone number..</param>
         /// <param name="ShortCodeBillingType">BillingType of this phone number, if the phoneNumberType is shortcode..</param>
-        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, List<CapabilitiesEnum> Capabilities = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null, SmsAddress AddressId = null, ShortCodeBillingTypeEnum? ShortCodeBillingType = null)
+        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null, SmsAddress AddressId = null, ShortCodeBillingTypeEnum? ShortCodeBillingType = null)
         {
             this.Name = Name;
             this.PhoneNumber = PhoneNumber;
             this.ProvisionedThroughPureCloud = ProvisionedThroughPureCloud;
             this.PhoneNumberStatus = PhoneNumberStatus;
-            this.Capabilities = Capabilities;
             this.CountryCode = CountryCode;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
@@ -414,7 +412,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The capabilities of the phone number available for provisioning.</value>
         [DataMember(Name="capabilities", EmitDefaultValue=false)]
-        public List<CapabilitiesEnum> Capabilities { get; set; }
+        public List<CapabilitiesEnum> Capabilities { get; private set; }
         
         
         

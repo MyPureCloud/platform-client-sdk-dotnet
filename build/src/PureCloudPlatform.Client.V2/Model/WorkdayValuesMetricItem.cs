@@ -109,12 +109,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkdayValuesMetricItem" /> class.
         /// </summary>
-        /// <param name="MetricDefinition">Gamification metric for the average and the trend.</param>
-        /// <param name="Trend">The metric value trend.</param>
-        public WorkdayValuesMetricItem(DomainEntityRef MetricDefinition = null, List<WorkdayValuesTrendItem> Trend = null)
+        public WorkdayValuesMetricItem()
         {
-            this.MetricDefinition = MetricDefinition;
-            this.Trend = Trend;
             
         }
         
@@ -125,7 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Gamification metric for the average and the trend</value>
         [DataMember(Name="metricDefinition", EmitDefaultValue=false)]
-        public DomainEntityRef MetricDefinition { get; set; }
+        public DomainEntityRef MetricDefinition { get; private set; }
         
         
         
@@ -145,7 +141,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The metric value trend</value>
         [DataMember(Name="trend", EmitDefaultValue=false)]
-        public List<WorkdayValuesTrendItem> Trend { get; set; }
+        public List<WorkdayValuesTrendItem> Trend { get; private set; }
         
         
         /// <summary>

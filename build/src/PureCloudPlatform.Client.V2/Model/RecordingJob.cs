@@ -160,13 +160,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="RecordingJob" /> class.
         /// </summary>
         /// <param name="State">The current state of the job. (required).</param>
-        /// <param name="RecordingJobsQuery">Original query of the job..</param>
-        /// <param name="User">Details of the user created the job.</param>
-        public RecordingJob(StateEnum? State = null, RecordingJobsQuery RecordingJobsQuery = null, AddressableEntityRef User = null)
+        public RecordingJob(StateEnum? State = null)
         {
             this.State = State;
-            this.RecordingJobsQuery = RecordingJobsQuery;
-            this.User = User;
             
         }
         
@@ -188,7 +184,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Original query of the job.</value>
         [DataMember(Name="recordingJobsQuery", EmitDefaultValue=false)]
-        public RecordingJobsQuery RecordingJobsQuery { get; set; }
+        public RecordingJobsQuery RecordingJobsQuery { get; private set; }
         
         
         
@@ -287,7 +283,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Details of the user created the job</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public AddressableEntityRef User { get; set; }
+        public AddressableEntityRef User { get; private set; }
         
         
         /// <summary>

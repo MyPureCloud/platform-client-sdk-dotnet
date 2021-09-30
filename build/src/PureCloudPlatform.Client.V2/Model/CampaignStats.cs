@@ -54,10 +54,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignStats" /> class.
         /// </summary>
-        /// <param name="ContactRate">Information regarding the campaign&#39;s connect rate.</param>
-        public CampaignStats(ConnectRate ContactRate = null)
+        public CampaignStats()
         {
-            this.ContactRate = ContactRate;
             
         }
         
@@ -68,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Information regarding the campaign&#39;s connect rate</value>
         [DataMember(Name="contactRate", EmitDefaultValue=false)]
-        public ConnectRate ContactRate { get; set; }
+        public ConnectRate ContactRate { get; private set; }
         
         
         

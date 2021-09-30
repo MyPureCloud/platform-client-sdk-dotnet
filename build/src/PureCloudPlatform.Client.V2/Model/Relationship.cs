@@ -63,13 +63,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="User">The user associated with the external organization. When creating or updating a relationship, only User.id is required. User object is fully populated when expanding a note. (required).</param>
         /// <param name="ExternalOrganization">The external organization this relationship is attached to (required).</param>
         /// <param name="_Relationship">The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant (required).</param>
-        /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
-        public Relationship(User User = null, ExternalOrganization ExternalOrganization = null, string _Relationship = null, List<ExternalDataSource> ExternalDataSources = null)
+        public Relationship(User User = null, ExternalOrganization ExternalOrganization = null, string _Relationship = null)
         {
             this.User = User;
             this.ExternalOrganization = ExternalOrganization;
             this._Relationship = _Relationship;
-            this.ExternalDataSources = ExternalDataSources;
             
         }
         
@@ -116,7 +114,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.</value>
         [DataMember(Name="externalDataSources", EmitDefaultValue=false)]
-        public List<ExternalDataSource> ExternalDataSources { get; set; }
+        public List<ExternalDataSource> ExternalDataSources { get; private set; }
         
         
         

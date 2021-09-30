@@ -44,10 +44,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DetectedNamedEntity" /> class.
         /// </summary>
-        /// <param name="Value">The value of the detected named entity..</param>
-        public DetectedNamedEntity(DetectedNamedEntityValue Value = null)
+        public DetectedNamedEntity()
         {
-            this.Value = Value;
             
         }
         
@@ -85,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The value of the detected named entity.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
-        public DetectedNamedEntityValue Value { get; set; }
+        public DetectedNamedEntityValue Value { get; private set; }
         
         
         /// <summary>

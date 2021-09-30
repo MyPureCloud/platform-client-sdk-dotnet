@@ -116,8 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreatedBy">When creating or updating a note, only User.id is required. User object is fully populated when expanding a note. (required).</param>
-        /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
-        public Note(string EntityId = null, EntityTypeEnum? EntityType = null, string NoteText = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, User CreatedBy = null, List<ExternalDataSource> ExternalDataSources = null)
+        public Note(string EntityId = null, EntityTypeEnum? EntityType = null, string NoteText = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, User CreatedBy = null)
         {
             this.EntityId = EntityId;
             this.EntityType = EntityType;
@@ -125,7 +124,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ModifyDate = ModifyDate;
             this.CreateDate = CreateDate;
             this.CreatedBy = CreatedBy;
-            this.ExternalDataSources = ExternalDataSources;
             
         }
         
@@ -191,7 +189,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.</value>
         [DataMember(Name="externalDataSources", EmitDefaultValue=false)]
-        public List<ExternalDataSource> ExternalDataSources { get; set; }
+        public List<ExternalDataSource> ExternalDataSources { get; private set; }
         
         
         

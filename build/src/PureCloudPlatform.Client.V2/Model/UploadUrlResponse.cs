@@ -39,10 +39,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UploadUrlResponse" /> class.
         /// </summary>
-        /// <param name="Headers">Required headers when uploading a file through PUT request to the URL.</param>
-        public UploadUrlResponse(Dictionary<string, string> Headers = null)
+        public UploadUrlResponse()
         {
-            this.Headers = Headers;
             
         }
         
@@ -71,7 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Required headers when uploading a file through PUT request to the URL</value>
         [DataMember(Name="headers", EmitDefaultValue=false)]
-        public Dictionary<string, string> Headers { get; set; }
+        public Dictionary<string, string> Headers { get; private set; }
         
         
         /// <summary>

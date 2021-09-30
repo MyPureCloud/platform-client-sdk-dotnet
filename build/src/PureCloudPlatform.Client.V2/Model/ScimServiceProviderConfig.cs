@@ -74,26 +74,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimServiceProviderConfig" /> class.
         /// </summary>
-        /// <param name="Schemas">The list of supported schemas..</param>
-        /// <param name="Patch">The \&quot;patch\&quot; configuration options..</param>
-        /// <param name="Filter">The \&quot;filter\&quot; configuration options..</param>
-        /// <param name="Etag">The \&quot;etag\&quot; configuration options..</param>
-        /// <param name="Sort">The \&quot;sort\&quot; configuration options..</param>
-        /// <param name="Bulk">The \&quot;bulk\&quot; configuration options..</param>
-        /// <param name="ChangePassword">The \&quot;changePassword\&quot; configuration options..</param>
-        /// <param name="AuthenticationSchemes">The list of supported authentication schemes..</param>
-        /// <param name="Meta">The metadata of the SCIM resource..</param>
-        public ScimServiceProviderConfig(List<string> Schemas = null, ScimServiceProviderConfigSimpleFeature Patch = null, ScimServiceProviderConfigFilterFeature Filter = null, ScimServiceProviderConfigSimpleFeature Etag = null, ScimServiceProviderConfigSimpleFeature Sort = null, ScimServiceProviderConfigBulkFeature Bulk = null, ScimServiceProviderConfigSimpleFeature ChangePassword = null, List<ScimServiceProviderConfigAuthenticationScheme> AuthenticationSchemes = null, ScimMetadata Meta = null)
+        public ScimServiceProviderConfig()
         {
-            this.Schemas = Schemas;
-            this.Patch = Patch;
-            this.Filter = Filter;
-            this.Etag = Etag;
-            this.Sort = Sort;
-            this.Bulk = Bulk;
-            this.ChangePassword = ChangePassword;
-            this.AuthenticationSchemes = AuthenticationSchemes;
-            this.Meta = Meta;
             
         }
         
@@ -104,7 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of supported schemas.</value>
         [DataMember(Name="schemas", EmitDefaultValue=false)]
-        public List<string> Schemas { get; set; }
+        public List<string> Schemas { get; private set; }
         
         
         
@@ -122,7 +104,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The \&quot;patch\&quot; configuration options.</value>
         [DataMember(Name="patch", EmitDefaultValue=false)]
-        public ScimServiceProviderConfigSimpleFeature Patch { get; set; }
+        public ScimServiceProviderConfigSimpleFeature Patch { get; private set; }
         
         
         
@@ -131,7 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The \&quot;filter\&quot; configuration options.</value>
         [DataMember(Name="filter", EmitDefaultValue=false)]
-        public ScimServiceProviderConfigFilterFeature Filter { get; set; }
+        public ScimServiceProviderConfigFilterFeature Filter { get; private set; }
         
         
         
@@ -140,7 +122,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The \&quot;etag\&quot; configuration options.</value>
         [DataMember(Name="etag", EmitDefaultValue=false)]
-        public ScimServiceProviderConfigSimpleFeature Etag { get; set; }
+        public ScimServiceProviderConfigSimpleFeature Etag { get; private set; }
         
         
         
@@ -149,7 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The \&quot;sort\&quot; configuration options.</value>
         [DataMember(Name="sort", EmitDefaultValue=false)]
-        public ScimServiceProviderConfigSimpleFeature Sort { get; set; }
+        public ScimServiceProviderConfigSimpleFeature Sort { get; private set; }
         
         
         
@@ -158,7 +140,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The \&quot;bulk\&quot; configuration options.</value>
         [DataMember(Name="bulk", EmitDefaultValue=false)]
-        public ScimServiceProviderConfigBulkFeature Bulk { get; set; }
+        public ScimServiceProviderConfigBulkFeature Bulk { get; private set; }
         
         
         
@@ -167,7 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The \&quot;changePassword\&quot; configuration options.</value>
         [DataMember(Name="changePassword", EmitDefaultValue=false)]
-        public ScimServiceProviderConfigSimpleFeature ChangePassword { get; set; }
+        public ScimServiceProviderConfigSimpleFeature ChangePassword { get; private set; }
         
         
         
@@ -176,7 +158,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of supported authentication schemes.</value>
         [DataMember(Name="authenticationSchemes", EmitDefaultValue=false)]
-        public List<ScimServiceProviderConfigAuthenticationScheme> AuthenticationSchemes { get; set; }
+        public List<ScimServiceProviderConfigAuthenticationScheme> AuthenticationSchemes { get; private set; }
         
         
         
@@ -185,7 +167,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The metadata of the SCIM resource.</value>
         [DataMember(Name="meta", EmitDefaultValue=false)]
-        public ScimMetadata Meta { get; set; }
+        public ScimMetadata Meta { get; private set; }
         
         
         /// <summary>

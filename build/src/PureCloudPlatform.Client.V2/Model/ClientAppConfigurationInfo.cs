@@ -34,12 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ClientAppConfigurationInfo" /> class.
         /// </summary>
-        /// <param name="Current">The current, active configuration for the integration..</param>
-        /// <param name="Effective">The effective configuration for the app, containing the integration specific configuration along with overrides specified in the integration type..</param>
-        public ClientAppConfigurationInfo(IntegrationConfiguration Current = null, EffectiveConfiguration Effective = null)
+        public ClientAppConfigurationInfo()
         {
-            this.Current = Current;
-            this.Effective = Effective;
             
         }
         
@@ -50,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The current, active configuration for the integration.</value>
         [DataMember(Name="current", EmitDefaultValue=false)]
-        public IntegrationConfiguration Current { get; set; }
+        public IntegrationConfiguration Current { get; private set; }
         
         
         
@@ -59,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The effective configuration for the app, containing the integration specific configuration along with overrides specified in the integration type.</value>
         [DataMember(Name="effective", EmitDefaultValue=false)]
-        public EffectiveConfiguration Effective { get; set; }
+        public EffectiveConfiguration Effective { get; private set; }
         
         
         /// <summary>

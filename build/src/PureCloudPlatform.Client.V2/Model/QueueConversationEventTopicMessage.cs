@@ -323,6 +323,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -384,6 +387,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationEventTopicMessage" /> class.
@@ -410,8 +415,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Wrapup">Wrapup.</param>
         /// <param name="AfterCallWork">AfterCallWork.</param>
         /// <param name="AfterCallWorkRequired">AfterCallWorkRequired.</param>
+        /// <param name="AgentAssistantId">AgentAssistantId.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationEventTopicMessage(string Id = null, StateEnum? State = null, bool? Held = null, QueueConversationEventTopicErrorDetails ErrorInfo = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationEventTopicAddress ToAddress = null, QueueConversationEventTopicAddress FromAddress = null, List<QueueConversationEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, QueueConversationEventTopicJourneyContext JourneyContext = null, QueueConversationEventTopicWrapup Wrapup = null, QueueConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, Object AdditionalProperties = null)
+        public QueueConversationEventTopicMessage(string Id = null, StateEnum? State = null, bool? Held = null, QueueConversationEventTopicErrorDetails ErrorInfo = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationEventTopicAddress ToAddress = null, QueueConversationEventTopicAddress FromAddress = null, List<QueueConversationEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, QueueConversationEventTopicJourneyContext JourneyContext = null, QueueConversationEventTopicWrapup Wrapup = null, QueueConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.State = State;
@@ -435,6 +441,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Wrapup = Wrapup;
             this.AfterCallWork = AfterCallWork;
             this.AfterCallWorkRequired = AfterCallWorkRequired;
+            this.AgentAssistantId = AgentAssistantId;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -600,6 +607,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets AgentAssistantId
+        /// </summary>
+        [DataMember(Name="agentAssistantId", EmitDefaultValue=false)]
+        public string AgentAssistantId { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -637,6 +652,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
+            sb.Append("  AgentAssistantId: ").Append(AgentAssistantId).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -789,6 +805,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AfterCallWorkRequired.Equals(other.AfterCallWorkRequired)
                 ) &&
                 (
+                    this.AgentAssistantId == other.AgentAssistantId ||
+                    this.AgentAssistantId != null &&
+                    this.AgentAssistantId.Equals(other.AgentAssistantId)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -872,6 +893,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AfterCallWorkRequired != null)
                     hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();
+                
+                if (this.AgentAssistantId != null)
+                    hash = hash * 59 + this.AgentAssistantId.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

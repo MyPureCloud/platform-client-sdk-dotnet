@@ -194,8 +194,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RoleDivisions">Set of roles and their corresponding divisions associated with this client. Roles and divisions only apply to clients using the client_credential grant.</param>
         /// <param name="State">The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted..</param>
         /// <param name="DateToDelete">The time at which this client will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="Organization">The  oauth client&#39;s organization..</param>
-        public OrgOAuthClient(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null, List<string> Scope = null, List<RoleDivision> RoleDivisions = null, StateEnum? State = null, DateTime? DateToDelete = null, NamedEntity Organization = null)
+        public OrgOAuthClient(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null, List<string> Scope = null, List<RoleDivision> RoleDivisions = null, StateEnum? State = null, DateTime? DateToDelete = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -207,7 +206,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RoleDivisions = RoleDivisions;
             this.State = State;
             this.DateToDelete = DateToDelete;
-            this.Organization = Organization;
             
         }
         
@@ -303,7 +301,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The  oauth client&#39;s organization.</value>
         [DataMember(Name="organization", EmitDefaultValue=false)]
-        public NamedEntity Organization { get; set; }
+        public NamedEntity Organization { get; private set; }
         
         
         /// <summary>

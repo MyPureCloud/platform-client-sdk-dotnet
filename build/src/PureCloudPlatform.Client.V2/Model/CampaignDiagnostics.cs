@@ -49,14 +49,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignDiagnostics" /> class.
         /// </summary>
-        /// <param name="CallableContacts">Campaign properties that can impact which contacts are callable.</param>
-        /// <param name="QueueUtilizationDiagnostic">Information regarding the campaign&#39;s queue.</param>
-        /// <param name="RuleSetDiagnostics">Information regarding the campaign&#39;s rule sets.</param>
-        public CampaignDiagnostics(CallableContactsDiagnostic CallableContacts = null, QueueUtilizationDiagnostic QueueUtilizationDiagnostic = null, List<RuleSetDiagnostic> RuleSetDiagnostics = null)
+        public CampaignDiagnostics()
         {
-            this.CallableContacts = CallableContacts;
-            this.QueueUtilizationDiagnostic = QueueUtilizationDiagnostic;
-            this.RuleSetDiagnostics = RuleSetDiagnostics;
             
         }
         
@@ -67,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Campaign properties that can impact which contacts are callable</value>
         [DataMember(Name="callableContacts", EmitDefaultValue=false)]
-        public CallableContactsDiagnostic CallableContacts { get; set; }
+        public CallableContactsDiagnostic CallableContacts { get; private set; }
         
         
         
@@ -76,7 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Information regarding the campaign&#39;s queue</value>
         [DataMember(Name="queueUtilizationDiagnostic", EmitDefaultValue=false)]
-        public QueueUtilizationDiagnostic QueueUtilizationDiagnostic { get; set; }
+        public QueueUtilizationDiagnostic QueueUtilizationDiagnostic { get; private set; }
         
         
         
@@ -85,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Information regarding the campaign&#39;s rule sets</value>
         [DataMember(Name="ruleSetDiagnostics", EmitDefaultValue=false)]
-        public List<RuleSetDiagnostic> RuleSetDiagnostics { get; set; }
+        public List<RuleSetDiagnostic> RuleSetDiagnostics { get; private set; }
         
         
         

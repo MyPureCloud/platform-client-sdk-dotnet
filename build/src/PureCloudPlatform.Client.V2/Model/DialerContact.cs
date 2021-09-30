@@ -88,23 +88,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="ContactListId">The identifier of the contact list containing this contact. (required).</param>
         /// <param name="Data">An ordered map of the contact&#39;s columns and corresponding values. (required).</param>
-        /// <param name="CallRecords">A map of call records for the contact phone columns..</param>
-        /// <param name="LatestSmsEvaluations">A map of SMS records for the contact phone columns..</param>
         /// <param name="Callable">Indicates whether or not the contact can be called..</param>
         /// <param name="PhoneNumberStatus">A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not..</param>
-        /// <param name="ContactColumnTimeZones">Map containing data about the timezone the contact is mapped to. This will only be populated if the contact list has automatic timezone mapping turned on. The key is the column name. The value is the timezone it mapped to and the type of column: Phone or Zip.</param>
-        /// <param name="ConfigurationOverrides">the priority property within ConfigurationOverides indicates whether or not the contact to be placed in front of the queue or at the end of the queue.</param>
-        public DialerContact(string Name = null, string ContactListId = null, Dictionary<string, Object> Data = null, Dictionary<string, CallRecord> CallRecords = null, Dictionary<string, MessageEvaluation> LatestSmsEvaluations = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null, Dictionary<string, ContactColumnTimeZone> ContactColumnTimeZones = null, ConfigurationOverrides ConfigurationOverrides = null)
+        public DialerContact(string Name = null, string ContactListId = null, Dictionary<string, Object> Data = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null)
         {
             this.Name = Name;
             this.ContactListId = ContactListId;
             this.Data = Data;
-            this.CallRecords = CallRecords;
-            this.LatestSmsEvaluations = LatestSmsEvaluations;
             this.Callable = Callable;
             this.PhoneNumberStatus = PhoneNumberStatus;
-            this.ContactColumnTimeZones = ContactColumnTimeZones;
-            this.ConfigurationOverrides = ConfigurationOverrides;
             
         }
         
@@ -150,7 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A map of call records for the contact phone columns.</value>
         [DataMember(Name="callRecords", EmitDefaultValue=false)]
-        public Dictionary<string, CallRecord> CallRecords { get; set; }
+        public Dictionary<string, CallRecord> CallRecords { get; private set; }
         
         
         
@@ -159,7 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A map of SMS records for the contact phone columns.</value>
         [DataMember(Name="latestSmsEvaluations", EmitDefaultValue=false)]
-        public Dictionary<string, MessageEvaluation> LatestSmsEvaluations { get; set; }
+        public Dictionary<string, MessageEvaluation> LatestSmsEvaluations { get; private set; }
         
         
         
@@ -186,7 +178,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Map containing data about the timezone the contact is mapped to. This will only be populated if the contact list has automatic timezone mapping turned on. The key is the column name. The value is the timezone it mapped to and the type of column: Phone or Zip</value>
         [DataMember(Name="contactColumnTimeZones", EmitDefaultValue=false)]
-        public Dictionary<string, ContactColumnTimeZone> ContactColumnTimeZones { get; set; }
+        public Dictionary<string, ContactColumnTimeZone> ContactColumnTimeZones { get; private set; }
         
         
         
@@ -195,7 +187,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>the priority property within ConfigurationOverides indicates whether or not the contact to be placed in front of the queue or at the end of the queue</value>
         [DataMember(Name="configurationOverrides", EmitDefaultValue=false)]
-        public ConfigurationOverrides ConfigurationOverrides { get; set; }
+        public ConfigurationOverrides ConfigurationOverrides { get; private set; }
         
         
         

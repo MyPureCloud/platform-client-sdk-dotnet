@@ -126,18 +126,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationEvent" /> class.
         /// </summary>
-        /// <param name="Message">Message indicating what happened.</param>
-        /// <param name="Entities">Collection of entities affected by or pertaining to the event (e.g. a list of Integrations or Bridge connectors).</param>
-        /// <param name="ContextAttributes">Map of context attributes specific to this event..</param>
         /// <param name="DetailMessage">Message with additional details about the event. (e.g. an exception cause.).</param>
-        /// <param name="User">User that took an action that resulted in the event..</param>
-        public IntegrationEvent(MessageInfo Message = null, List<EventEntity> Entities = null, Dictionary<string, string> ContextAttributes = null, MessageInfo DetailMessage = null, User User = null)
+        public IntegrationEvent(MessageInfo DetailMessage = null)
         {
-            this.Message = Message;
-            this.Entities = Entities;
-            this.ContextAttributes = ContextAttributes;
             this.DetailMessage = DetailMessage;
-            this.User = User;
             
         }
         
@@ -195,7 +187,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Message indicating what happened</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
-        public MessageInfo Message { get; set; }
+        public MessageInfo Message { get; private set; }
         
         
         
@@ -204,7 +196,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Collection of entities affected by or pertaining to the event (e.g. a list of Integrations or Bridge connectors)</value>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<EventEntity> Entities { get; set; }
+        public List<EventEntity> Entities { get; private set; }
         
         
         
@@ -213,7 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Map of context attributes specific to this event.</value>
         [DataMember(Name="contextAttributes", EmitDefaultValue=false)]
-        public Dictionary<string, string> ContextAttributes { get; set; }
+        public Dictionary<string, string> ContextAttributes { get; private set; }
         
         
         
@@ -231,7 +223,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User that took an action that resulted in the event.</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public User User { get; set; }
+        public User User { get; private set; }
         
         
         /// <summary>

@@ -54,16 +54,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Leaderboard" /> class.
         /// </summary>
-        /// <param name="Division">The targeted division for this leaderboard.</param>
-        /// <param name="Metric">The metric id if the leaderboard is about a specific metric.</param>
-        /// <param name="Leaders">The list of leaders generated..</param>
-        /// <param name="UserRank">The requesting user&#39;s rank.</param>
-        public Leaderboard(Division Division = null, AddressableEntityRef Metric = null, List<LeaderboardItem> Leaders = null, LeaderboardItem UserRank = null)
+        public Leaderboard()
         {
-            this.Division = Division;
-            this.Metric = Metric;
-            this.Leaders = Leaders;
-            this.UserRank = UserRank;
             
         }
         
@@ -74,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The targeted division for this leaderboard</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public Division Division { get; set; }
+        public Division Division { get; private set; }
         
         
         
@@ -83,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The metric id if the leaderboard is about a specific metric</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
-        public AddressableEntityRef Metric { get; set; }
+        public AddressableEntityRef Metric { get; private set; }
         
         
         
@@ -110,7 +102,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of leaders generated.</value>
         [DataMember(Name="leaders", EmitDefaultValue=false)]
-        public List<LeaderboardItem> Leaders { get; set; }
+        public List<LeaderboardItem> Leaders { get; private set; }
         
         
         
@@ -119,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The requesting user&#39;s rank</value>
         [DataMember(Name="userRank", EmitDefaultValue=false)]
-        public LeaderboardItem UserRank { get; set; }
+        public LeaderboardItem UserRank { get; private set; }
         
         
         /// <summary>

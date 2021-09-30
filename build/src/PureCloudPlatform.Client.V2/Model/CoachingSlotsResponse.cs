@@ -39,14 +39,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingSlotsResponse" /> class.
         /// </summary>
-        /// <param name="SuggestedSlots">List of slots where coaching appointment can be scheduled.</param>
-        /// <param name="AttendeeSchedules">Periods of availability for attendees to schedule coaching appointment.</param>
-        /// <param name="FacilitatorSchedules">Periods of availability for facilitators to schedule coaching appointment.</param>
-        public CoachingSlotsResponse(List<CoachingSlot> SuggestedSlots = null, List<UserAvailableTimes> AttendeeSchedules = null, List<UserAvailableTimes> FacilitatorSchedules = null)
+        public CoachingSlotsResponse()
         {
-            this.SuggestedSlots = SuggestedSlots;
-            this.AttendeeSchedules = AttendeeSchedules;
-            this.FacilitatorSchedules = FacilitatorSchedules;
             
         }
         
@@ -57,7 +51,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of slots where coaching appointment can be scheduled</value>
         [DataMember(Name="suggestedSlots", EmitDefaultValue=false)]
-        public List<CoachingSlot> SuggestedSlots { get; set; }
+        public List<CoachingSlot> SuggestedSlots { get; private set; }
         
         
         
@@ -66,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Periods of availability for attendees to schedule coaching appointment</value>
         [DataMember(Name="attendeeSchedules", EmitDefaultValue=false)]
-        public List<UserAvailableTimes> AttendeeSchedules { get; set; }
+        public List<UserAvailableTimes> AttendeeSchedules { get; private set; }
         
         
         
@@ -75,7 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Periods of availability for facilitators to schedule coaching appointment</value>
         [DataMember(Name="facilitatorSchedules", EmitDefaultValue=false)]
-        public List<UserAvailableTimes> FacilitatorSchedules { get; set; }
+        public List<UserAvailableTimes> FacilitatorSchedules { get; private set; }
         
         
         /// <summary>

@@ -58,14 +58,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LengthMinutes">The length of this shift in minutes.</param>
         /// <param name="Activities">The activities associated with this shift.</param>
         /// <param name="ManuallyEdited">Whether this shift was manually edited. This is only set by clients and is used for rescheduling.</param>
-        /// <param name="Schedule">The schedule to which this shift belongs.</param>
-        public BuAgentScheduleShift(DateTime? StartDate = null, int? LengthMinutes = null, List<BuAgentScheduleActivity> Activities = null, bool? ManuallyEdited = null, BuScheduleReference Schedule = null)
+        public BuAgentScheduleShift(DateTime? StartDate = null, int? LengthMinutes = null, List<BuAgentScheduleActivity> Activities = null, bool? ManuallyEdited = null)
         {
             this.StartDate = StartDate;
             this.LengthMinutes = LengthMinutes;
             this.Activities = Activities;
             this.ManuallyEdited = ManuallyEdited;
-            this.Schedule = Schedule;
             
         }
         
@@ -121,7 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The schedule to which this shift belongs</value>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
-        public BuScheduleReference Schedule { get; set; }
+        public BuScheduleReference Schedule { get; private set; }
         
         
         /// <summary>

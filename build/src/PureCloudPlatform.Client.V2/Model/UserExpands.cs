@@ -59,22 +59,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserExpands" /> class.
         /// </summary>
-        /// <param name="RoutingStatus">ACD routing status.</param>
-        /// <param name="Presence">Active presence.</param>
-        /// <param name="ConversationSummary">Summary of conversion statistics for conversation types..</param>
-        /// <param name="OutOfOffice">Determine if out of office is enabled.</param>
-        /// <param name="Geolocation">Current geolocation position.</param>
-        /// <param name="Station">Effective, default, and last station information.</param>
-        /// <param name="Authorization">Roles and permissions assigned to the user.</param>
-        public UserExpands(RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null)
+        public UserExpands()
         {
-            this.RoutingStatus = RoutingStatus;
-            this.Presence = Presence;
-            this.ConversationSummary = ConversationSummary;
-            this.OutOfOffice = OutOfOffice;
-            this.Geolocation = Geolocation;
-            this.Station = Station;
-            this.Authorization = Authorization;
             
         }
         
@@ -85,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>ACD routing status</value>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
-        public RoutingStatus RoutingStatus { get; set; }
+        public RoutingStatus RoutingStatus { get; private set; }
         
         
         
@@ -94,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Active presence</value>
         [DataMember(Name="presence", EmitDefaultValue=false)]
-        public UserPresence Presence { get; set; }
+        public UserPresence Presence { get; private set; }
         
         
         
@@ -103,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Summary of conversion statistics for conversation types.</value>
         [DataMember(Name="conversationSummary", EmitDefaultValue=false)]
-        public UserConversationSummary ConversationSummary { get; set; }
+        public UserConversationSummary ConversationSummary { get; private set; }
         
         
         
@@ -112,7 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Determine if out of office is enabled</value>
         [DataMember(Name="outOfOffice", EmitDefaultValue=false)]
-        public OutOfOffice OutOfOffice { get; set; }
+        public OutOfOffice OutOfOffice { get; private set; }
         
         
         
@@ -121,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Current geolocation position</value>
         [DataMember(Name="geolocation", EmitDefaultValue=false)]
-        public Geolocation Geolocation { get; set; }
+        public Geolocation Geolocation { get; private set; }
         
         
         
@@ -130,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Effective, default, and last station information</value>
         [DataMember(Name="station", EmitDefaultValue=false)]
-        public UserStations Station { get; set; }
+        public UserStations Station { get; private set; }
         
         
         
@@ -139,7 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Roles and permissions assigned to the user</value>
         [DataMember(Name="authorization", EmitDefaultValue=false)]
-        public UserAuthorization Authorization { get; set; }
+        public UserAuthorization Authorization { get; private set; }
         
         
         /// <summary>

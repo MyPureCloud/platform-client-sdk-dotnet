@@ -50,15 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CredentialType" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Properties">Properties describing credentials of this type..</param>
-        /// <param name="DisplayOrder">Order in which properties should be displayed in the UI..</param>
-        /// <param name="Required">Properties that are required fields..</param>
-        public CredentialType(string Name = null, Object Properties = null, List<string> DisplayOrder = null, List<string> Required = null)
+        public CredentialType(string Name = null)
         {
             this.Name = Name;
-            this.Properties = Properties;
-            this.DisplayOrder = DisplayOrder;
-            this.Required = Required;
             
         }
         
@@ -86,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Properties describing credentials of this type.</value>
         [DataMember(Name="properties", EmitDefaultValue=false)]
-        public Object Properties { get; set; }
+        public Object Properties { get; private set; }
         
         
         
@@ -95,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Order in which properties should be displayed in the UI.</value>
         [DataMember(Name="displayOrder", EmitDefaultValue=false)]
-        public List<string> DisplayOrder { get; set; }
+        public List<string> DisplayOrder { get; private set; }
         
         
         
@@ -104,7 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Properties that are required fields.</value>
         [DataMember(Name="required", EmitDefaultValue=false)]
-        public List<string> Required { get; set; }
+        public List<string> Required { get; private set; }
         
         
         /// <summary>

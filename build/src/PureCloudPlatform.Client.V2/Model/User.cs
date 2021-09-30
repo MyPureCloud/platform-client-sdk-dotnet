@@ -246,7 +246,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Chat">Chat.</param>
         /// <param name="Department">Department.</param>
         /// <param name="Email">Email.</param>
-        /// <param name="PrimaryContactInfo">Auto populated from addresses..</param>
         /// <param name="Addresses">Email addresses and phone numbers for this user.</param>
         /// <param name="Title">Title.</param>
         /// <param name="Username">Username.</param>
@@ -256,29 +255,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Certifications">Certifications.</param>
         /// <param name="Biography">Biography.</param>
         /// <param name="EmployerInfo">EmployerInfo.</param>
-        /// <param name="RoutingStatus">ACD routing status.</param>
-        /// <param name="Presence">Active presence.</param>
-        /// <param name="ConversationSummary">Summary of conversion statistics for conversation types..</param>
-        /// <param name="OutOfOffice">Determine if out of office is enabled.</param>
-        /// <param name="Geolocation">Current geolocation position.</param>
-        /// <param name="Station">Effective, default, and last station information.</param>
-        /// <param name="Authorization">Roles and permissions assigned to the user.</param>
-        /// <param name="ProfileSkills">Profile skills possessed by the user.</param>
-        /// <param name="Locations">The user placement at each site location..</param>
-        /// <param name="Groups">The groups the user is a member of.</param>
-        /// <param name="Team">The team the user is a member of.</param>
-        /// <param name="Skills">Routing (ACD) skills possessed by the user.</param>
-        /// <param name="Languages">Routing (ACD) languages possessed by the user.</param>
         /// <param name="AcdAutoAnswer">acd auto answer.</param>
         /// <param name="LastTokenIssued">LastTokenIssued.</param>
-        public User(string Name = null, Division Division = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, List<string> Certifications = null, Biography Biography = null, EmployerInfo EmployerInfo = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, Team Team = null, List<UserRoutingSkill> Skills = null, List<UserRoutingLanguage> Languages = null, bool? AcdAutoAnswer = null, OAuthLastTokenIssued LastTokenIssued = null)
+        public User(string Name = null, Division Division = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, List<string> Certifications = null, Biography Biography = null, EmployerInfo EmployerInfo = null, bool? AcdAutoAnswer = null, OAuthLastTokenIssued LastTokenIssued = null)
         {
             this.Name = Name;
             this.Division = Division;
             this.Chat = Chat;
             this.Department = Department;
             this.Email = Email;
-            this.PrimaryContactInfo = PrimaryContactInfo;
             this.Addresses = Addresses;
             this.Title = Title;
             this.Username = Username;
@@ -288,19 +273,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Certifications = Certifications;
             this.Biography = Biography;
             this.EmployerInfo = EmployerInfo;
-            this.RoutingStatus = RoutingStatus;
-            this.Presence = Presence;
-            this.ConversationSummary = ConversationSummary;
-            this.OutOfOffice = OutOfOffice;
-            this.Geolocation = Geolocation;
-            this.Station = Station;
-            this.Authorization = Authorization;
-            this.ProfileSkills = ProfileSkills;
-            this.Locations = Locations;
-            this.Groups = Groups;
-            this.Team = Team;
-            this.Skills = Skills;
-            this.Languages = Languages;
             this.AcdAutoAnswer = AcdAutoAnswer;
             this.LastTokenIssued = LastTokenIssued;
             
@@ -363,7 +335,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Auto populated from addresses.</value>
         [DataMember(Name="primaryContactInfo", EmitDefaultValue=false)]
-        public List<Contact> PrimaryContactInfo { get; set; }
+        public List<Contact> PrimaryContactInfo { get; private set; }
         
         
         
@@ -448,7 +420,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>ACD routing status</value>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
-        public RoutingStatus RoutingStatus { get; set; }
+        public RoutingStatus RoutingStatus { get; private set; }
         
         
         
@@ -457,7 +429,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Active presence</value>
         [DataMember(Name="presence", EmitDefaultValue=false)]
-        public UserPresence Presence { get; set; }
+        public UserPresence Presence { get; private set; }
         
         
         
@@ -466,7 +438,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Summary of conversion statistics for conversation types.</value>
         [DataMember(Name="conversationSummary", EmitDefaultValue=false)]
-        public UserConversationSummary ConversationSummary { get; set; }
+        public UserConversationSummary ConversationSummary { get; private set; }
         
         
         
@@ -475,7 +447,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Determine if out of office is enabled</value>
         [DataMember(Name="outOfOffice", EmitDefaultValue=false)]
-        public OutOfOffice OutOfOffice { get; set; }
+        public OutOfOffice OutOfOffice { get; private set; }
         
         
         
@@ -484,7 +456,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Current geolocation position</value>
         [DataMember(Name="geolocation", EmitDefaultValue=false)]
-        public Geolocation Geolocation { get; set; }
+        public Geolocation Geolocation { get; private set; }
         
         
         
@@ -493,7 +465,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Effective, default, and last station information</value>
         [DataMember(Name="station", EmitDefaultValue=false)]
-        public UserStations Station { get; set; }
+        public UserStations Station { get; private set; }
         
         
         
@@ -502,7 +474,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Roles and permissions assigned to the user</value>
         [DataMember(Name="authorization", EmitDefaultValue=false)]
-        public UserAuthorization Authorization { get; set; }
+        public UserAuthorization Authorization { get; private set; }
         
         
         
@@ -511,7 +483,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Profile skills possessed by the user</value>
         [DataMember(Name="profileSkills", EmitDefaultValue=false)]
-        public List<string> ProfileSkills { get; set; }
+        public List<string> ProfileSkills { get; private set; }
         
         
         
@@ -520,7 +492,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user placement at each site location.</value>
         [DataMember(Name="locations", EmitDefaultValue=false)]
-        public List<Location> Locations { get; set; }
+        public List<Location> Locations { get; private set; }
         
         
         
@@ -529,7 +501,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The groups the user is a member of</value>
         [DataMember(Name="groups", EmitDefaultValue=false)]
-        public List<Group> Groups { get; set; }
+        public List<Group> Groups { get; private set; }
         
         
         
@@ -538,7 +510,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The team the user is a member of</value>
         [DataMember(Name="team", EmitDefaultValue=false)]
-        public Team Team { get; set; }
+        public Team Team { get; private set; }
         
         
         
@@ -547,7 +519,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Routing (ACD) skills possessed by the user</value>
         [DataMember(Name="skills", EmitDefaultValue=false)]
-        public List<UserRoutingSkill> Skills { get; set; }
+        public List<UserRoutingSkill> Skills { get; private set; }
         
         
         
@@ -556,7 +528,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Routing (ACD) languages possessed by the user</value>
         [DataMember(Name="languages", EmitDefaultValue=false)]
-        public List<UserRoutingLanguage> Languages { get; set; }
+        public List<UserRoutingLanguage> Languages { get; private set; }
         
         
         

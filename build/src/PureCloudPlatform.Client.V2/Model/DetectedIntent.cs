@@ -39,10 +39,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DetectedIntent" /> class.
         /// </summary>
-        /// <param name="Entities">The collection of named entities detected..</param>
-        public DetectedIntent(List<DetectedNamedEntity> Entities = null)
+        public DetectedIntent()
         {
-            this.Entities = Entities;
             
         }
         
@@ -71,7 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The collection of named entities detected.</value>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<DetectedNamedEntity> Entities { get; set; }
+        public List<DetectedNamedEntity> Entities { get; private set; }
         
         
         /// <summary>

@@ -91,12 +91,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingAppointmentStatusResponse" /> class.
         /// </summary>
-        /// <param name="Appointment">The coaching appointment this status belongs to.</param>
-        /// <param name="CreatedBy">User who updated the status.</param>
-        public CoachingAppointmentStatusResponse(CoachingAppointmentReference Appointment = null, UserReference CreatedBy = null)
+        public CoachingAppointmentStatusResponse()
         {
-            this.Appointment = Appointment;
-            this.CreatedBy = CreatedBy;
             
         }
         
@@ -107,7 +103,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The coaching appointment this status belongs to</value>
         [DataMember(Name="appointment", EmitDefaultValue=false)]
-        public CoachingAppointmentReference Appointment { get; set; }
+        public CoachingAppointmentReference Appointment { get; private set; }
         
         
         
@@ -116,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User who updated the status</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public UserReference CreatedBy { get; set; }
+        public UserReference CreatedBy { get; private set; }
         
         
         

@@ -59,22 +59,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustRequest" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected TrustRequest() { }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TrustRequest" /> class.
-        /// </summary>
-        /// <param name="CreatedBy">User who created this request..</param>
-        /// <param name="Trustee">Trustee organization who generated this request. (required).</param>
-        /// <param name="Users">The list of trustee users that are requesting access..</param>
-        /// <param name="Groups">The list of trustee groups that are requesting access..</param>
-        public TrustRequest(OrgUser CreatedBy = null, Organization Trustee = null, List<OrgUser> Users = null, List<TrustGroup> Groups = null)
+        public TrustRequest()
         {
-            this.CreatedBy = CreatedBy;
-            this.Trustee = Trustee;
-            this.Users = Users;
-            this.Groups = Groups;
             
         }
         
@@ -94,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User who created this request.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public OrgUser CreatedBy { get; set; }
+        public OrgUser CreatedBy { get; private set; }
         
         
         
@@ -112,7 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Trustee organization who generated this request.</value>
         [DataMember(Name="trustee", EmitDefaultValue=false)]
-        public Organization Trustee { get; set; }
+        public Organization Trustee { get; private set; }
         
         
         
@@ -121,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of trustee users that are requesting access.</value>
         [DataMember(Name="users", EmitDefaultValue=false)]
-        public List<OrgUser> Users { get; set; }
+        public List<OrgUser> Users { get; private set; }
         
         
         
@@ -130,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of trustee groups that are requesting access.</value>
         [DataMember(Name="groups", EmitDefaultValue=false)]
-        public List<TrustGroup> Groups { get; set; }
+        public List<TrustGroup> Groups { get; private set; }
         
         
         

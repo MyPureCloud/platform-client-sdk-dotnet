@@ -97,10 +97,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationStatusInfo" /> class.
         /// </summary>
-        /// <param name="Detail">Localizable status details for the integration..</param>
-        public IntegrationStatusInfo(MessageInfo Detail = null)
+        public IntegrationStatusInfo()
         {
-            this.Detail = Detail;
             
         }
         
@@ -122,7 +120,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Localizable status details for the integration.</value>
         [DataMember(Name="detail", EmitDefaultValue=false)]
-        public MessageInfo Detail { get; set; }
+        public MessageInfo Detail { get; private set; }
         
         
         

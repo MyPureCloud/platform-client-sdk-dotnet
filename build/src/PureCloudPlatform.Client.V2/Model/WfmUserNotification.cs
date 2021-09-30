@@ -112,18 +112,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">The immutable globally unique identifier for the object. (required).</param>
         /// <param name="MutableGroupId">The group ID of the notification (mutable, may change  on update) (required).</param>
-        /// <param name="ShiftTrade">A shift trade notification.  Only set if type == ShiftTrade.</param>
-        /// <param name="TimeOffRequest">A time off request notification.  Only set if type == TimeOffRequest.</param>
         /// <param name="MarkedAsRead">Whether this notification has been marked \&quot;read\&quot; (required).</param>
-        /// <param name="OtherNotificationIdsInGroup">Other notification IDs in group.  This field is only populated in real-time notifications.</param>
-        public WfmUserNotification(string Id = null, string MutableGroupId = null, ShiftTradeNotification ShiftTrade = null, TimeOffRequestNotification TimeOffRequest = null, bool? MarkedAsRead = null, List<string> OtherNotificationIdsInGroup = null)
+        public WfmUserNotification(string Id = null, string MutableGroupId = null, bool? MarkedAsRead = null)
         {
             this.Id = Id;
             this.MutableGroupId = MutableGroupId;
-            this.ShiftTrade = ShiftTrade;
-            this.TimeOffRequest = TimeOffRequest;
             this.MarkedAsRead = MarkedAsRead;
-            this.OtherNotificationIdsInGroup = OtherNotificationIdsInGroup;
             
         }
         
@@ -163,7 +157,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A shift trade notification.  Only set if type == ShiftTrade</value>
         [DataMember(Name="shiftTrade", EmitDefaultValue=false)]
-        public ShiftTradeNotification ShiftTrade { get; set; }
+        public ShiftTradeNotification ShiftTrade { get; private set; }
         
         
         
@@ -172,7 +166,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A time off request notification.  Only set if type == TimeOffRequest</value>
         [DataMember(Name="timeOffRequest", EmitDefaultValue=false)]
-        public TimeOffRequestNotification TimeOffRequest { get; set; }
+        public TimeOffRequestNotification TimeOffRequest { get; private set; }
         
         
         
@@ -199,7 +193,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Other notification IDs in group.  This field is only populated in real-time notifications</value>
         [DataMember(Name="otherNotificationIdsInGroup", EmitDefaultValue=false)]
-        public List<string> OtherNotificationIdsInGroup { get; set; }
+        public List<string> OtherNotificationIdsInGroup { get; private set; }
         
         
         /// <summary>

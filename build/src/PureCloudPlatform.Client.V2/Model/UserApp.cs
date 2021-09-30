@@ -49,11 +49,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserApp" /> class.
         /// </summary>
-        /// <param name="IntegrationType">Integration Type for the userApp.</param>
         /// <param name="Config">Config.</param>
-        public UserApp(IntegrationType IntegrationType = null, UserAppConfigurationInfo Config = null)
+        public UserApp(UserAppConfigurationInfo Config = null)
         {
-            this.IntegrationType = IntegrationType;
             this.Config = Config;
             
         }
@@ -83,7 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Integration Type for the userApp</value>
         [DataMember(Name="integrationType", EmitDefaultValue=false)]
-        public IntegrationType IntegrationType { get; set; }
+        public IntegrationType IntegrationType { get; private set; }
         
         
         

@@ -136,7 +136,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a list of Agent Activities
         /// </summary>
         /// <remarks>
-        /// Including the number of evaluations and average evaluation score
+        /// Includes the number of evaluations and average evaluation score. These statistics include released evaluations only when evaluatorUserId is provided. In the absence of evaluatorUserId in the request, the api excludes evaluations which are set to never release for the calculation of evaluation statistics. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -145,8 +145,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
-        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="startTime">Start time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">End time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="agentUserId">user id of agent requested (optional)</param>
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
@@ -158,7 +158,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a list of Agent Activities
         /// </summary>
         /// <remarks>
-        /// Including the number of evaluations and average evaluation score
+        /// Includes the number of evaluations and average evaluation score. These statistics include released evaluations only when evaluatorUserId is provided. In the absence of evaluatorUserId in the request, the api excludes evaluations which are set to never release for the calculation of evaluation statistics. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -167,8 +167,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
-        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="startTime">Start time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">End time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="agentUserId">user id of agent requested (optional)</param>
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
@@ -1520,7 +1520,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a list of Agent Activities
         /// </summary>
         /// <remarks>
-        /// Including the number of evaluations and average evaluation score
+        /// Includes the number of evaluations and average evaluation score. These statistics include released evaluations only when evaluatorUserId is provided. In the absence of evaluatorUserId in the request, the api excludes evaluations which are set to never release for the calculation of evaluation statistics. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -1529,8 +1529,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
-        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="startTime">Start time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">End time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="agentUserId">user id of agent requested (optional)</param>
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
@@ -1542,7 +1542,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a list of Agent Activities
         /// </summary>
         /// <remarks>
-        /// Including the number of evaluations and average evaluation score
+        /// Includes the number of evaluations and average evaluation score. These statistics include released evaluations only when evaluatorUserId is provided. In the absence of evaluatorUserId in the request, the api excludes evaluations which are set to never release for the calculation of evaluation statistics. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -1551,8 +1551,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
-        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="startTime">Start time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">End time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="agentUserId">user id of agent requested (optional)</param>
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
@@ -3864,7 +3864,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Gets a list of Agent Activities Including the number of evaluations and average evaluation score
+        /// Gets a list of Agent Activities Includes the number of evaluations and average evaluation score. These statistics include released evaluations only when evaluatorUserId is provided. In the absence of evaluatorUserId in the request, the api excludes evaluations which are set to never release for the calculation of evaluation statistics. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -3873,8 +3873,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
-        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="startTime">Start time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">End time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="agentUserId">user id of agent requested (optional)</param>
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
@@ -3887,7 +3887,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets a list of Agent Activities Including the number of evaluations and average evaluation score
+        /// Gets a list of Agent Activities Includes the number of evaluations and average evaluation score. These statistics include released evaluations only when evaluatorUserId is provided. In the absence of evaluatorUserId in the request, the api excludes evaluations which are set to never release for the calculation of evaluation statistics. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -3896,8 +3896,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
-        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="startTime">Start time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">End time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="agentUserId">user id of agent requested (optional)</param>
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
@@ -3989,7 +3989,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Gets a list of Agent Activities Including the number of evaluations and average evaluation score
+        /// Gets a list of Agent Activities Includes the number of evaluations and average evaluation score. These statistics include released evaluations only when evaluatorUserId is provided. In the absence of evaluatorUserId in the request, the api excludes evaluations which are set to never release for the calculation of evaluation statistics. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -3998,8 +3998,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
-        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="startTime">Start time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">End time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="agentUserId">user id of agent requested (optional)</param>
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
@@ -4013,7 +4013,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets a list of Agent Activities Including the number of evaluations and average evaluation score
+        /// Gets a list of Agent Activities Includes the number of evaluations and average evaluation score. These statistics include released evaluations only when evaluatorUserId is provided. In the absence of evaluatorUserId in the request, the api excludes evaluations which are set to never release for the calculation of evaluation statistics. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -4022,8 +4022,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="startTime">Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
-        /// <param name="endTime">End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="startTime">Start time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
+        /// <param name="endTime">End time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)</param>
         /// <param name="agentUserId">user id of agent requested (optional)</param>
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>

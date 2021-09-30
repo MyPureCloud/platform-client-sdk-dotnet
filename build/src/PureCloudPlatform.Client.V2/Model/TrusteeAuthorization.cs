@@ -29,10 +29,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrusteeAuthorization" /> class.
         /// </summary>
-        /// <param name="Permissions">Permissions that the trustee user has in the trustor organization.</param>
-        public TrusteeAuthorization(List<string> Permissions = null)
+        public TrusteeAuthorization()
         {
-            this.Permissions = Permissions;
             
         }
         
@@ -43,7 +41,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Permissions that the trustee user has in the trustor organization</value>
         [DataMember(Name="permissions", EmitDefaultValue=false)]
-        public List<string> Permissions { get; set; }
+        public List<string> Permissions { get; private set; }
         
         
         /// <summary>

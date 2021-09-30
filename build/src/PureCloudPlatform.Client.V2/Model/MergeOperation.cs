@@ -39,14 +39,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MergeOperation" /> class.
         /// </summary>
-        /// <param name="SourceContact">The source contact for the merge operation.</param>
-        /// <param name="TargetContact">The target contact for the merge operation.</param>
-        /// <param name="ResultingContact">The contact created as a result of the merge operation.</param>
-        public MergeOperation(AddressableEntityRef SourceContact = null, AddressableEntityRef TargetContact = null, AddressableEntityRef ResultingContact = null)
+        public MergeOperation()
         {
-            this.SourceContact = SourceContact;
-            this.TargetContact = TargetContact;
-            this.ResultingContact = ResultingContact;
             
         }
         
@@ -57,7 +51,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The source contact for the merge operation</value>
         [DataMember(Name="sourceContact", EmitDefaultValue=false)]
-        public AddressableEntityRef SourceContact { get; set; }
+        public AddressableEntityRef SourceContact { get; private set; }
         
         
         
@@ -66,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The target contact for the merge operation</value>
         [DataMember(Name="targetContact", EmitDefaultValue=false)]
-        public AddressableEntityRef TargetContact { get; set; }
+        public AddressableEntityRef TargetContact { get; private set; }
         
         
         
@@ -75,7 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The contact created as a result of the merge operation</value>
         [DataMember(Name="resultingContact", EmitDefaultValue=false)]
-        public AddressableEntityRef ResultingContact { get; set; }
+        public AddressableEntityRef ResultingContact { get; private set; }
         
         
         /// <summary>

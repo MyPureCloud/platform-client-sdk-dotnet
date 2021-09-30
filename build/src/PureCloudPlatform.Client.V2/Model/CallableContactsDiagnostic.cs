@@ -44,16 +44,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableContactsDiagnostic" /> class.
         /// </summary>
-        /// <param name="AttemptLimits">Attempt limits for the campaign&#39;s contact list.</param>
-        /// <param name="DncLists">Do not call lists for the campaign.</param>
-        /// <param name="CallableTimeSet">Callable time sets for the campaign.</param>
-        /// <param name="RuleSets">Rule sets for the campaign.</param>
-        public CallableContactsDiagnostic(DomainEntityRef AttemptLimits = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, List<DomainEntityRef> RuleSets = null)
+        public CallableContactsDiagnostic()
         {
-            this.AttemptLimits = AttemptLimits;
-            this.DncLists = DncLists;
-            this.CallableTimeSet = CallableTimeSet;
-            this.RuleSets = RuleSets;
             
         }
         
@@ -64,7 +56,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Attempt limits for the campaign&#39;s contact list</value>
         [DataMember(Name="attemptLimits", EmitDefaultValue=false)]
-        public DomainEntityRef AttemptLimits { get; set; }
+        public DomainEntityRef AttemptLimits { get; private set; }
         
         
         
@@ -73,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Do not call lists for the campaign</value>
         [DataMember(Name="dncLists", EmitDefaultValue=false)]
-        public List<DomainEntityRef> DncLists { get; set; }
+        public List<DomainEntityRef> DncLists { get; private set; }
         
         
         
@@ -82,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Callable time sets for the campaign</value>
         [DataMember(Name="callableTimeSet", EmitDefaultValue=false)]
-        public DomainEntityRef CallableTimeSet { get; set; }
+        public DomainEntityRef CallableTimeSet { get; private set; }
         
         
         
@@ -91,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Rule sets for the campaign</value>
         [DataMember(Name="ruleSets", EmitDefaultValue=false)]
-        public List<DomainEntityRef> RuleSets { get; set; }
+        public List<DomainEntityRef> RuleSets { get; private set; }
         
         
         /// <summary>

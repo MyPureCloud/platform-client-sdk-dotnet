@@ -117,16 +117,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Category name (required).</param>
         /// <param name="Description">Category description.</param>
-        /// <param name="KnowledgeBase">Knowledge base which category does belong to.</param>
-        /// <param name="Parent">Category parent.</param>
-        /// <param name="Children">Category children.</param>
-        public KnowledgeExtendedCategory(string Name = null, string Description = null, KnowledgeBase KnowledgeBase = null, KnowledgeCategory Parent = null, List<KnowledgeCategory> Children = null)
+        public KnowledgeExtendedCategory(string Name = null, string Description = null)
         {
             this.Name = Name;
             this.Description = Description;
-            this.KnowledgeBase = KnowledgeBase;
-            this.Parent = Parent;
-            this.Children = Children;
             
         }
         
@@ -164,7 +158,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Knowledge base which category does belong to</value>
         [DataMember(Name="knowledgeBase", EmitDefaultValue=false)]
-        public KnowledgeBase KnowledgeBase { get; set; }
+        public KnowledgeBase KnowledgeBase { get; private set; }
         
         
         
@@ -193,7 +187,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Category parent</value>
         [DataMember(Name="parent", EmitDefaultValue=false)]
-        public KnowledgeCategory Parent { get; set; }
+        public KnowledgeCategory Parent { get; private set; }
         
         
         
@@ -202,7 +196,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Category children</value>
         [DataMember(Name="children", EmitDefaultValue=false)]
-        public List<KnowledgeCategory> Children { get; set; }
+        public List<KnowledgeCategory> Children { get; private set; }
         
         
         

@@ -349,13 +349,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TrunkMetabase">The metabase used to create this trunk..</param>
         /// <param name="EdgeGroup">The edge group associated with this trunk..</param>
         /// <param name="Enabled">True if the Edge used by this trunk is in-service.</param>
-        /// <param name="LogicalInterface">The Logical Interface on the Edge to which the trunk is assigned..</param>
-        /// <param name="ConnectedStatus">The connected status of the trunk.</param>
-        /// <param name="OptionsStatus">The trunk optionsStatus.</param>
-        /// <param name="RegistersStatus">The trunk registersStatus.</param>
-        /// <param name="IpStatus">The trunk ipStatus.</param>
-        /// <param name="ProxyAddressList">The list of proxy addresses (ports if provided) for the trunk.</param>
-        public Trunk(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, TrunkTypeEnum? TrunkType = null, DomainEntityRef Edge = null, DomainEntityRef TrunkBase = null, DomainEntityRef TrunkMetabase = null, DomainEntityRef EdgeGroup = null, bool? Enabled = null, DomainEntityRef LogicalInterface = null, TrunkConnectedStatus ConnectedStatus = null, List<TrunkMetricsOptions> OptionsStatus = null, List<TrunkMetricsRegisters> RegistersStatus = null, TrunkMetricsNetworkTypeIp IpStatus = null, List<string> ProxyAddressList = null)
+        public Trunk(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, TrunkTypeEnum? TrunkType = null, DomainEntityRef Edge = null, DomainEntityRef TrunkBase = null, DomainEntityRef TrunkMetabase = null, DomainEntityRef EdgeGroup = null, bool? Enabled = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -372,12 +366,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.TrunkMetabase = TrunkMetabase;
             this.EdgeGroup = EdgeGroup;
             this.Enabled = Enabled;
-            this.LogicalInterface = LogicalInterface;
-            this.ConnectedStatus = ConnectedStatus;
-            this.OptionsStatus = OptionsStatus;
-            this.RegistersStatus = RegistersStatus;
-            this.IpStatus = IpStatus;
-            this.ProxyAddressList = ProxyAddressList;
             
         }
         
@@ -536,7 +524,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The Logical Interface on the Edge to which the trunk is assigned.</value>
         [DataMember(Name="logicalInterface", EmitDefaultValue=false)]
-        public DomainEntityRef LogicalInterface { get; set; }
+        public DomainEntityRef LogicalInterface { get; private set; }
         
         
         
@@ -545,7 +533,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The connected status of the trunk</value>
         [DataMember(Name="connectedStatus", EmitDefaultValue=false)]
-        public TrunkConnectedStatus ConnectedStatus { get; set; }
+        public TrunkConnectedStatus ConnectedStatus { get; private set; }
         
         
         
@@ -554,7 +542,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The trunk optionsStatus</value>
         [DataMember(Name="optionsStatus", EmitDefaultValue=false)]
-        public List<TrunkMetricsOptions> OptionsStatus { get; set; }
+        public List<TrunkMetricsOptions> OptionsStatus { get; private set; }
         
         
         
@@ -563,7 +551,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The trunk registersStatus</value>
         [DataMember(Name="registersStatus", EmitDefaultValue=false)]
-        public List<TrunkMetricsRegisters> RegistersStatus { get; set; }
+        public List<TrunkMetricsRegisters> RegistersStatus { get; private set; }
         
         
         
@@ -572,7 +560,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The trunk ipStatus</value>
         [DataMember(Name="ipStatus", EmitDefaultValue=false)]
-        public TrunkMetricsNetworkTypeIp IpStatus { get; set; }
+        public TrunkMetricsNetworkTypeIp IpStatus { get; private set; }
         
         
         
@@ -594,7 +582,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of proxy addresses (ports if provided) for the trunk</value>
         [DataMember(Name="proxyAddressList", EmitDefaultValue=false)]
-        public List<string> ProxyAddressList { get; set; }
+        public List<string> ProxyAddressList { get; private set; }
         
         
         

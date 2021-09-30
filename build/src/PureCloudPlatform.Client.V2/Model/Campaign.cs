@@ -333,7 +333,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DncLists">DncLists for this Campaign to check before placing a call..</param>
         /// <param name="CallableTimeSet">The callable time set for this campaign to check before placing a call..</param>
         /// <param name="CallAnalysisResponseSet">The call analysis response set to handle call analysis results from the edge. Required for all dialing modes except preview..</param>
-        /// <param name="Errors">A list of current error conditions associated with the campaign..</param>
         /// <param name="CallerName">The caller id name to be displayed on the outbound call. (required).</param>
         /// <param name="CallerAddress">The caller id phone number to be displayed on the outbound call. (required).</param>
         /// <param name="OutboundLineCount">The number of outbound lines to be concurrently dialed. Only applicable to non-preview campaigns; only required for agentless..</param>
@@ -348,7 +347,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Priority">The priority of this campaign relative to other campaigns that are running on the same queue. 5 is the highest priority, 1 the lowest..</param>
         /// <param name="ContactListFilters">Filter to apply to the contact list before dialing. Currently a campaign can only have one filter applied..</param>
         /// <param name="Division">The division this campaign belongs to..</param>
-        public Campaign(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef Queue = null, DialingModeEnum? DialingMode = null, DomainEntityRef Script = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DomainEntityRef> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DomainEntityRef> ContactListFilters = null, DomainEntityRef Division = null)
+        public Campaign(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef Queue = null, DialingModeEnum? DialingMode = null, DomainEntityRef Script = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DomainEntityRef> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DomainEntityRef> ContactListFilters = null, DomainEntityRef Division = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -364,7 +363,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DncLists = DncLists;
             this.CallableTimeSet = CallableTimeSet;
             this.CallAnalysisResponseSet = CallAnalysisResponseSet;
-            this.Errors = Errors;
             this.CallerName = CallerName;
             this.CallerAddress = CallerAddress;
             this.OutboundLineCount = OutboundLineCount;
@@ -528,7 +526,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A list of current error conditions associated with the campaign.</value>
         [DataMember(Name="errors", EmitDefaultValue=false)]
-        public List<RestErrorDetail> Errors { get; set; }
+        public List<RestErrorDetail> Errors { get; private set; }
         
         
         

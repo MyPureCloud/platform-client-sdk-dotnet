@@ -75,13 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Assessment for "Assessment"
             /// </summary>
             [EnumMember(Value = "Assessment")]
-            Assessment,
-            
-            /// <summary>
-            /// Enum Questionnaire for "Questionnaire"
-            /// </summary>
-            [EnumMember(Value = "Questionnaire")]
-            Questionnaire
+            Assessment
         }
         
         
@@ -184,7 +178,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DevelopmentActivity" /> class.
         /// </summary>
-        /// <param name="CreatedBy">User that created activity.</param>
         /// <param name="Name">The name of the activity.</param>
         /// <param name="Type">The type of activity.</param>
         /// <param name="Status">The status of the activity.</param>
@@ -192,9 +185,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Facilitator">Facilitator of the activity.</param>
         /// <param name="Attendees">List of users attending the activity.</param>
         /// <param name="IsOverdue">Indicates if the activity is overdue.</param>
-        public DevelopmentActivity(UserReference CreatedBy = null, string Name = null, TypeEnum? Type = null, StatusEnum? Status = null, DateTime? DateDue = null, UserReference Facilitator = null, List<UserReference> Attendees = null, bool? IsOverdue = null)
+        public DevelopmentActivity(string Name = null, TypeEnum? Type = null, StatusEnum? Status = null, DateTime? DateDue = null, UserReference Facilitator = null, List<UserReference> Attendees = null, bool? IsOverdue = null)
         {
-            this.CreatedBy = CreatedBy;
             this.Name = Name;
             this.Type = Type;
             this.Status = Status;
@@ -230,7 +222,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User that created activity</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public UserReference CreatedBy { get; set; }
+        public UserReference CreatedBy { get; private set; }
         
         
         

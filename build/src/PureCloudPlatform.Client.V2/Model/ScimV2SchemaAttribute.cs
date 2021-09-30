@@ -325,14 +325,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2SchemaAttribute" /> class.
         /// </summary>
-        /// <param name="SubAttributes">The list of subattributes for an attribute of the type \&quot;complex\&quot;. Uses the same schema as \&quot;attributes\&quot;..</param>
-        /// <param name="CanonicalValues">The list of standard values that service providers may use. Service providers may ignore unsupported values..</param>
-        /// <param name="ReferenceTypes">The list of SCIM resource types that may be referenced. Only applies when \&quot;type\&quot; is set to \&quot;reference\&quot;..</param>
-        public ScimV2SchemaAttribute(List<ScimV2SchemaAttribute> SubAttributes = null, List<string> CanonicalValues = null, List<ReferenceTypesEnum> ReferenceTypes = null)
+        public ScimV2SchemaAttribute()
         {
-            this.SubAttributes = SubAttributes;
-            this.CanonicalValues = CanonicalValues;
-            this.ReferenceTypes = ReferenceTypes;
             
         }
         
@@ -354,7 +348,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of subattributes for an attribute of the type \&quot;complex\&quot;. Uses the same schema as \&quot;attributes\&quot;.</value>
         [DataMember(Name="subAttributes", EmitDefaultValue=false)]
-        public List<ScimV2SchemaAttribute> SubAttributes { get; set; }
+        public List<ScimV2SchemaAttribute> SubAttributes { get; private set; }
         
         
         
@@ -390,7 +384,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of standard values that service providers may use. Service providers may ignore unsupported values.</value>
         [DataMember(Name="canonicalValues", EmitDefaultValue=false)]
-        public List<string> CanonicalValues { get; set; }
+        public List<string> CanonicalValues { get; private set; }
         
         
         
@@ -414,7 +408,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of SCIM resource types that may be referenced. Only applies when \&quot;type\&quot; is set to \&quot;reference\&quot;.</value>
         [DataMember(Name="referenceTypes", EmitDefaultValue=false)]
-        public List<ReferenceTypesEnum> ReferenceTypes { get; set; }
+        public List<ReferenceTypesEnum> ReferenceTypes { get; private set; }
         
         
         /// <summary>

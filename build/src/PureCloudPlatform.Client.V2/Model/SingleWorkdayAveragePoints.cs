@@ -39,10 +39,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SingleWorkdayAveragePoints" /> class.
         /// </summary>
-        /// <param name="Division">The targeted division for the average points.</param>
-        public SingleWorkdayAveragePoints(Division Division = null)
+        public SingleWorkdayAveragePoints()
         {
-            this.Division = Division;
             
         }
         
@@ -62,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The targeted division for the average points</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public Division Division { get; set; }
+        public Division Division { get; private set; }
         
         
         

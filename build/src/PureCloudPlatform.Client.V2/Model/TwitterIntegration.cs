@@ -204,14 +204,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Status">The status of the Twitter Integration.</param>
         /// <param name="Tier">The type of twitter account to be used for the integration (required).</param>
         /// <param name="EnvName">The Twitter environment name, e.g.: env-beta (required for premium tier).</param>
-        /// <param name="Recipient">The recipient associated to the Twitter Integration. This recipient is used to associate a flow to an integration.</param>
         /// <param name="DateCreated">Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreatedBy">User reference that created this Integration.</param>
         /// <param name="ModifiedBy">User reference that last modified this Integration.</param>
         /// <param name="Version">Version number required for updates. (required).</param>
-        /// <param name="CreateError">Error information returned, if createStatus is set to Error.</param>
-        public TwitterIntegration(string Name = null, string AccessTokenKey = null, string ConsumerKey = null, string Username = null, string UserId = null, string Status = null, TierEnum? Tier = null, string EnvName = null, DomainEntityRef Recipient = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, int? Version = null, ErrorBody CreateError = null)
+        public TwitterIntegration(string Name = null, string AccessTokenKey = null, string ConsumerKey = null, string Username = null, string UserId = null, string Status = null, TierEnum? Tier = null, string EnvName = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, int? Version = null)
         {
             this.Name = Name;
             this.AccessTokenKey = AccessTokenKey;
@@ -221,13 +219,11 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Status = Status;
             this.Tier = Tier;
             this.EnvName = EnvName;
-            this.Recipient = Recipient;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.CreatedBy = CreatedBy;
             this.ModifiedBy = ModifiedBy;
             this.Version = Version;
-            this.CreateError = CreateError;
             
         }
         
@@ -312,7 +308,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The recipient associated to the Twitter Integration. This recipient is used to associate a flow to an integration</value>
         [DataMember(Name="recipient", EmitDefaultValue=false)]
-        public DomainEntityRef Recipient { get; set; }
+        public DomainEntityRef Recipient { get; private set; }
         
         
         
@@ -368,7 +364,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Error information returned, if createStatus is set to Error</value>
         [DataMember(Name="createError", EmitDefaultValue=false)]
-        public ErrorBody CreateError { get; set; }
+        public ErrorBody CreateError { get; private set; }
         
         
         

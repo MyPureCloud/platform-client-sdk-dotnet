@@ -66,15 +66,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Trustor" /> class.
         /// </summary>
         /// <param name="Enabled">If disabled no trustee user will have access, even if they were previously added. (required).</param>
-        /// <param name="CreatedBy">User that created trust..</param>
-        /// <param name="Organization">Organization associated with this trust..</param>
-        /// <param name="Authorization">Authorization for the trustee user has in this trustor organization.</param>
-        public Trustor(bool? Enabled = null, OrgUser CreatedBy = null, Organization Organization = null, TrusteeAuthorization Authorization = null)
+        public Trustor(bool? Enabled = null)
         {
             this.Enabled = Enabled;
-            this.CreatedBy = CreatedBy;
-            this.Organization = Organization;
-            this.Authorization = Authorization;
             
         }
         
@@ -112,7 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User that created trust.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public OrgUser CreatedBy { get; set; }
+        public OrgUser CreatedBy { get; private set; }
         
         
         
@@ -121,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Organization associated with this trust.</value>
         [DataMember(Name="organization", EmitDefaultValue=false)]
-        public Organization Organization { get; set; }
+        public Organization Organization { get; private set; }
         
         
         
@@ -130,7 +124,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Authorization for the trustee user has in this trustor organization</value>
         [DataMember(Name="authorization", EmitDefaultValue=false)]
-        public TrusteeAuthorization Authorization { get; set; }
+        public TrusteeAuthorization Authorization { get; private set; }
         
         
         

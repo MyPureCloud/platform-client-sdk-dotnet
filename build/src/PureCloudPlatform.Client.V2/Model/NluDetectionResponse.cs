@@ -39,12 +39,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDetectionResponse" /> class.
         /// </summary>
-        /// <param name="Version">The NLU domain version which performed the detection..</param>
         /// <param name="Output">Output.</param>
         /// <param name="Input">Input.</param>
-        public NluDetectionResponse(NluDomainVersion Version = null, NluDetectionOutput Output = null, NluDetectionInput Input = null)
+        public NluDetectionResponse(NluDetectionOutput Output = null, NluDetectionInput Input = null)
         {
-            this.Version = Version;
             this.Output = Output;
             this.Input = Input;
             
@@ -57,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The NLU domain version which performed the detection.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public NluDomainVersion Version { get; set; }
+        public NluDomainVersion Version { get; private set; }
         
         
         

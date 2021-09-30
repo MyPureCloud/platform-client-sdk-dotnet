@@ -170,17 +170,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Document type (required).</param>
         /// <param name="Faq">FAQ document details.</param>
         /// <param name="Categories">Document categories.</param>
-        /// <param name="KnowledgeBase">Knowledge base which document does belong to.</param>
         /// <param name="ExternalUrl">External URL to the document.</param>
         /// <param name="Article">Article.</param>
-        public KnowledgeSearchDocument(string Name = null, LanguageCodeEnum? LanguageCode = null, TypeEnum? Type = null, DocumentFaq Faq = null, List<KnowledgeCategory> Categories = null, KnowledgeBase KnowledgeBase = null, string ExternalUrl = null, DocumentArticle Article = null)
+        public KnowledgeSearchDocument(string Name = null, LanguageCodeEnum? LanguageCode = null, TypeEnum? Type = null, DocumentFaq Faq = null, List<KnowledgeCategory> Categories = null, string ExternalUrl = null, DocumentArticle Article = null)
         {
             this.Name = Name;
             this.LanguageCode = LanguageCode;
             this.Type = Type;
             this.Faq = Faq;
             this.Categories = Categories;
-            this.KnowledgeBase = KnowledgeBase;
             this.ExternalUrl = ExternalUrl;
             this.Article = Article;
             
@@ -250,7 +248,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Knowledge base which document does belong to</value>
         [DataMember(Name="knowledgeBase", EmitDefaultValue=false)]
-        public KnowledgeBase KnowledgeBase { get; set; }
+        public KnowledgeBase KnowledgeBase { get; private set; }
         
         
         

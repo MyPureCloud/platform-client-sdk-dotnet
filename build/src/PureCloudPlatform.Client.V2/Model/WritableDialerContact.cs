@@ -63,15 +63,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="ContactListId">The identifier of the contact list containing this contact. (required).</param>
         /// <param name="Data">An ordered map of the contact&#39;s columns and corresponding values. (required).</param>
-        /// <param name="LatestSmsEvaluations">A map of SMS records for the contact phone columns..</param>
         /// <param name="Callable">Indicates whether or not the contact can be called..</param>
         /// <param name="PhoneNumberStatus">A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not..</param>
-        public WritableDialerContact(string Id = null, string ContactListId = null, Dictionary<string, Object> Data = null, Dictionary<string, MessageEvaluation> LatestSmsEvaluations = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null)
+        public WritableDialerContact(string Id = null, string ContactListId = null, Dictionary<string, Object> Data = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null)
         {
             this.Id = Id;
             this.ContactListId = ContactListId;
             this.Data = Data;
-            this.LatestSmsEvaluations = LatestSmsEvaluations;
             this.Callable = Callable;
             this.PhoneNumberStatus = PhoneNumberStatus;
             
@@ -111,7 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A map of SMS records for the contact phone columns.</value>
         [DataMember(Name="latestSmsEvaluations", EmitDefaultValue=false)]
-        public Dictionary<string, MessageEvaluation> LatestSmsEvaluations { get; set; }
+        public Dictionary<string, MessageEvaluation> LatestSmsEvaluations { get; private set; }
         
         
         

@@ -50,11 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ScimV2SchemaListResponse" /> class.
         /// </summary>
         /// <param name="Schemas">The list of supported schemas..</param>
-        /// <param name="Resources">The list of requested resources..</param>
-        public ScimV2SchemaListResponse(List<string> Schemas = null, List<ScimV2SchemaDefinition> Resources = null)
+        public ScimV2SchemaListResponse(List<string> Schemas = null)
         {
             this.Schemas = Schemas;
-            this.Resources = Resources;
             
         }
         
@@ -101,7 +99,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of requested resources.</value>
         [DataMember(Name="Resources", EmitDefaultValue=false)]
-        public List<ScimV2SchemaDefinition> Resources { get; set; }
+        public List<ScimV2SchemaDefinition> Resources { get; private set; }
         
         
         /// <summary>

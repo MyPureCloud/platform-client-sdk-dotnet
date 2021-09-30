@@ -56,12 +56,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Text">The feedback text..</param>
         /// <param name="Intents">Detected intent of the utterance.</param>
-        /// <param name="Version">The domain version of the feedback..</param>
-        public NluFeedbackResponse(string Text = null, List<IntentFeedback> Intents = null, NluDomainVersion Version = null)
+        public NluFeedbackResponse(string Text = null, List<IntentFeedback> Intents = null)
         {
             this.Text = Text;
             this.Intents = Intents;
-            this.Version = Version;
             
         }
         
@@ -99,7 +97,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The domain version of the feedback.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public NluDomainVersion Version { get; set; }
+        public NluDomainVersion Version { get; private set; }
         
         
         

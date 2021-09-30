@@ -109,13 +109,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="State">The state of the user resource.</param>
         /// <param name="Version">The version of the group resource (required).</param>
-        /// <param name="Expands">User information expansions.</param>
-        public UserProfile(string Name = null, StateEnum? State = null, long? Version = null, UserExpands Expands = null)
+        public UserProfile(string Name = null, StateEnum? State = null, long? Version = null)
         {
             this.Name = Name;
             this.State = State;
             this.Version = Version;
-            this.Expands = Expands;
             
         }
         
@@ -163,7 +161,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User information expansions</value>
         [DataMember(Name="expands", EmitDefaultValue=false)]
-        public UserExpands Expands { get; set; }
+        public UserExpands Expands { get; private set; }
         
         
         

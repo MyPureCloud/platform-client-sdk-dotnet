@@ -100,12 +100,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BenefitAssessment" /> class.
         /// </summary>
-        /// <param name="Queues">The list of queues that are assessed for Predictive Routing benefit..</param>
-        /// <param name="KpiAssessments">A set of key performance indicators applied on the queue to determine suitability of Predictive Routing..</param>
-        public BenefitAssessment(List<AddressableEntityRef> Queues = null, List<KeyPerformanceIndicatorAssessment> KpiAssessments = null)
+        public BenefitAssessment()
         {
-            this.Queues = Queues;
-            this.KpiAssessments = KpiAssessments;
             
         }
         
@@ -125,7 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of queues that are assessed for Predictive Routing benefit.</value>
         [DataMember(Name="queues", EmitDefaultValue=false)]
-        public List<AddressableEntityRef> Queues { get; set; }
+        public List<AddressableEntityRef> Queues { get; private set; }
         
         
         
@@ -134,7 +130,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A set of key performance indicators applied on the queue to determine suitability of Predictive Routing.</value>
         [DataMember(Name="kpiAssessments", EmitDefaultValue=false)]
-        public List<KeyPerformanceIndicatorAssessment> KpiAssessments { get; set; }
+        public List<KeyPerformanceIndicatorAssessment> KpiAssessments { get; private set; }
         
         
         

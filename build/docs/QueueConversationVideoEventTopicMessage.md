@@ -29,6 +29,7 @@ title: QueueConversationVideoEventTopicMessage
 | **Wrapup** | [**QueueConversationVideoEventTopicWrapup**](QueueConversationVideoEventTopicWrapup.html) |  | [optional] |
 | **AfterCallWork** | [**QueueConversationVideoEventTopicAfterCallWork**](QueueConversationVideoEventTopicAfterCallWork.html) |  | [optional] |
 | **AfterCallWorkRequired** | **bool?** |  | [optional] |
+| **AgentAssistantId** | **string** |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

@@ -107,12 +107,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Library" /> class.
         /// </summary>
         /// <param name="Name">The library name. (required).</param>
-        /// <param name="CreatedBy">User that created the library..</param>
         /// <param name="ResponseType">This value is deprecated. Responses representing message templates may be added to any library..</param>
-        public Library(string Name = null, User CreatedBy = null, ResponseTypeEnum? ResponseType = null)
+        public Library(string Name = null, ResponseTypeEnum? ResponseType = null)
         {
             this.Name = Name;
-            this.CreatedBy = CreatedBy;
             this.ResponseType = ResponseType;
             
         }
@@ -151,7 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User that created the library.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public User CreatedBy { get; set; }
+        public User CreatedBy { get; private set; }
         
         
         

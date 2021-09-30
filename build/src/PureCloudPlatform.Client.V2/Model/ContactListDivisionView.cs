@@ -74,14 +74,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="ColumnNames">The names of the contact data columns. (required).</param>
         /// <param name="PhoneColumns">Indicates which columns are phone numbers..</param>
-        /// <param name="ImportStatus">The status of the import process..</param>
-        public ContactListDivisionView(string Name = null, Division Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null)
+        public ContactListDivisionView(string Name = null, Division Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null)
         {
             this.Name = Name;
             this.Division = Division;
             this.ColumnNames = ColumnNames;
             this.PhoneColumns = PhoneColumns;
-            this.ImportStatus = ImportStatus;
             
         }
         
@@ -136,7 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The status of the import process.</value>
         [DataMember(Name="importStatus", EmitDefaultValue=false)]
-        public ImportStatus ImportStatus { get; set; }
+        public ImportStatus ImportStatus { get; private set; }
         
         
         

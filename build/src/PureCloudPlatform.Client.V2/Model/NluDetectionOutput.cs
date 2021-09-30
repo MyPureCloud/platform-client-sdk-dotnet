@@ -34,12 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDetectionOutput" /> class.
         /// </summary>
-        /// <param name="Intents">The detected intents..</param>
-        /// <param name="DialogActs">The detected dialog acts..</param>
-        public NluDetectionOutput(List<DetectedIntent> Intents = null, List<DetectedDialogAct> DialogActs = null)
+        public NluDetectionOutput()
         {
-            this.Intents = Intents;
-            this.DialogActs = DialogActs;
             
         }
         
@@ -50,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The detected intents.</value>
         [DataMember(Name="intents", EmitDefaultValue=false)]
-        public List<DetectedIntent> Intents { get; set; }
+        public List<DetectedIntent> Intents { get; private set; }
         
         
         
@@ -59,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The detected dialog acts.</value>
         [DataMember(Name="dialogActs", EmitDefaultValue=false)]
-        public List<DetectedDialogAct> DialogActs { get; set; }
+        public List<DetectedDialogAct> DialogActs { get; private set; }
         
         
         /// <summary>

@@ -59,14 +59,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleShift" /> class.
         /// </summary>
-        /// <param name="WeekSchedule">The schedule to which this shift belongs.</param>
         /// <param name="Id">ID of the schedule shift. This is only for the case of updating and deleting an existing shift.</param>
         /// <param name="Activities">List of activities in this shift.</param>
         /// <param name="Delete">If marked true for updating this schedule shift, it will be deleted.</param>
         /// <param name="ManuallyEdited">Whether the shift was set as manually edited.</param>
-        public UserScheduleShift(WeekScheduleReference WeekSchedule = null, string Id = null, List<UserScheduleActivity> Activities = null, bool? Delete = null, bool? ManuallyEdited = null)
+        public UserScheduleShift(string Id = null, List<UserScheduleActivity> Activities = null, bool? Delete = null, bool? ManuallyEdited = null)
         {
-            this.WeekSchedule = WeekSchedule;
             this.Id = Id;
             this.Activities = Activities;
             this.Delete = Delete;
@@ -81,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The schedule to which this shift belongs</value>
         [DataMember(Name="weekSchedule", EmitDefaultValue=false)]
-        public WeekScheduleReference WeekSchedule { get; set; }
+        public WeekScheduleReference WeekSchedule { get; private set; }
         
         
         

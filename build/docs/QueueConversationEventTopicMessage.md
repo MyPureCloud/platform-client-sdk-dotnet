@@ -29,6 +29,7 @@ title: QueueConversationEventTopicMessage
 | **Wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup.html) |  | [optional] |
 | **AfterCallWork** | [**QueueConversationEventTopicAfterCallWork**](QueueConversationEventTopicAfterCallWork.html) |  | [optional] |
 | **AfterCallWorkRequired** | **bool?** |  | [optional] |
+| **AgentAssistantId** | **string** |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

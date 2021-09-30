@@ -146,12 +146,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="State">Current state of the location entity.</param>
         /// <param name="Notes">Notes for the location entity.</param>
         /// <param name="Version">Current version of the location entity, value to be supplied should be retrieved by a GET or on create/update response.</param>
-        /// <param name="Path">A list of ancestor IDs in order.</param>
-        /// <param name="ProfileImage">Profile image of the location entity, retrieved with ?expand=images query parameter.</param>
-        /// <param name="FloorplanImage">Floorplan images of the location entity, retrieved with ?expand=images query parameter.</param>
-        /// <param name="AddressVerificationDetails">Address verification information, retrieve dwith the ?expand=addressVerificationDetails query parameter.</param>
         /// <param name="Images">Images.</param>
-        public LocationDefinition(string Name = null, AddressableEntityRef ContactUser = null, LocationEmergencyNumber EmergencyNumber = null, LocationAddress Address = null, StateEnum? State = null, string Notes = null, int? Version = null, List<string> Path = null, List<LocationImage> ProfileImage = null, List<LocationImage> FloorplanImage = null, LocationAddressVerificationDetails AddressVerificationDetails = null, string Images = null)
+        public LocationDefinition(string Name = null, AddressableEntityRef ContactUser = null, LocationEmergencyNumber EmergencyNumber = null, LocationAddress Address = null, StateEnum? State = null, string Notes = null, int? Version = null, string Images = null)
         {
             this.Name = Name;
             this.ContactUser = ContactUser;
@@ -160,10 +156,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.State = State;
             this.Notes = Notes;
             this.Version = Version;
-            this.Path = Path;
-            this.ProfileImage = ProfileImage;
-            this.FloorplanImage = FloorplanImage;
-            this.AddressVerificationDetails = AddressVerificationDetails;
             this.Images = Images;
             
         }
@@ -238,7 +230,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A list of ancestor IDs in order</value>
         [DataMember(Name="path", EmitDefaultValue=false)]
-        public List<string> Path { get; set; }
+        public List<string> Path { get; private set; }
         
         
         
@@ -247,7 +239,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Profile image of the location entity, retrieved with ?expand=images query parameter</value>
         [DataMember(Name="profileImage", EmitDefaultValue=false)]
-        public List<LocationImage> ProfileImage { get; set; }
+        public List<LocationImage> ProfileImage { get; private set; }
         
         
         
@@ -256,7 +248,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Floorplan images of the location entity, retrieved with ?expand=images query parameter</value>
         [DataMember(Name="floorplanImage", EmitDefaultValue=false)]
-        public List<LocationImage> FloorplanImage { get; set; }
+        public List<LocationImage> FloorplanImage { get; private set; }
         
         
         
@@ -265,7 +257,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Address verification information, retrieve dwith the ?expand=addressVerificationDetails query parameter</value>
         [DataMember(Name="addressVerificationDetails", EmitDefaultValue=false)]
-        public LocationAddressVerificationDetails AddressVerificationDetails { get; set; }
+        public LocationAddressVerificationDetails AddressVerificationDetails { get; private set; }
         
         
         

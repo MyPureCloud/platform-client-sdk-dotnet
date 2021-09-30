@@ -92,10 +92,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="KeyPerformanceIndicatorAssessment" /> class.
         /// </summary>
-        /// <param name="Checks">Set of checks executed as part of an assessment..</param>
-        public KeyPerformanceIndicatorAssessment(List<Check> Checks = null)
+        public KeyPerformanceIndicatorAssessment()
         {
-            this.Checks = Checks;
             
         }
         
@@ -117,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Set of checks executed as part of an assessment.</value>
         [DataMember(Name="checks", EmitDefaultValue=false)]
-        public List<Check> Checks { get; set; }
+        public List<Check> Checks { get; private set; }
         
         
         /// <summary>

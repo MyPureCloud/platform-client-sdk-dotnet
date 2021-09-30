@@ -207,8 +207,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Enabled">Enabled.</param>
         /// <param name="Distribution">Distribution.</param>
         /// <param name="ExternalTrunkBases">Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing..</param>
-        /// <param name="Site">The site associated to the outbound route..</param>
-        public OutboundRoute(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<string> ClassificationTypes = null, bool? Enabled = null, DistributionEnum? Distribution = null, List<DomainEntityRef> ExternalTrunkBases = null, Site Site = null)
+        public OutboundRoute(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<string> ClassificationTypes = null, bool? Enabled = null, DistributionEnum? Distribution = null, List<DomainEntityRef> ExternalTrunkBases = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -223,7 +222,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Enabled = Enabled;
             this.Distribution = Distribution;
             this.ExternalTrunkBases = ExternalTrunkBases;
-            this.Site = Site;
             
         }
         
@@ -354,7 +352,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The site associated to the outbound route.</value>
         [DataMember(Name="site", EmitDefaultValue=false)]
-        public Site Site { get; set; }
+        public Site Site { get; private set; }
         
         
         

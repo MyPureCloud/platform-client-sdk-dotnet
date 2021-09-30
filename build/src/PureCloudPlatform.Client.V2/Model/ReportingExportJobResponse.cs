@@ -545,7 +545,43 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum FlowMilestonePerformanceIntervalDetailView for "FLOW_MILESTONE_PERFORMANCE_INTERVAL_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "FLOW_MILESTONE_PERFORMANCE_INTERVAL_DETAIL_VIEW")]
-            FlowMilestonePerformanceIntervalDetailView
+            FlowMilestonePerformanceIntervalDetailView,
+            
+            /// <summary>
+            /// Enum AgentTopicSummaryView for "AGENT_TOPIC_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_TOPIC_SUMMARY_VIEW")]
+            AgentTopicSummaryView,
+            
+            /// <summary>
+            /// Enum AgentTopicDetailView for "AGENT_TOPIC_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_TOPIC_DETAIL_VIEW")]
+            AgentTopicDetailView,
+            
+            /// <summary>
+            /// Enum QueueTopicSummaryView for "QUEUE_TOPIC_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "QUEUE_TOPIC_SUMMARY_VIEW")]
+            QueueTopicSummaryView,
+            
+            /// <summary>
+            /// Enum QueueTopicDetailView for "QUEUE_TOPIC_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "QUEUE_TOPIC_DETAIL_VIEW")]
+            QueueTopicDetailView,
+            
+            /// <summary>
+            /// Enum FlowTopicSummaryView for "FLOW_TOPIC_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "FLOW_TOPIC_SUMMARY_VIEW")]
+            FlowTopicSummaryView,
+            
+            /// <summary>
+            /// Enum FlowTopicDetailView for "FLOW_TOPIC_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "FLOW_TOPIC_DETAIL_VIEW")]
+            FlowTopicDetailView
         }
         
         

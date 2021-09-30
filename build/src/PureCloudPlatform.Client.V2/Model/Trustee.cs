@@ -73,15 +73,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Enabled">If disabled no trustee user will have access, even if they were previously added. (required).</param>
         /// <param name="UsesDefaultRole">Denotes if trustee uses admin role by default..</param>
         /// <param name="DateExpired">The expiration date of the trust. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="CreatedBy">User that created trust..</param>
-        /// <param name="Organization">Organization associated with this trust..</param>
-        public Trustee(bool? Enabled = null, bool? UsesDefaultRole = null, DateTime? DateExpired = null, OrgUser CreatedBy = null, Organization Organization = null)
+        public Trustee(bool? Enabled = null, bool? UsesDefaultRole = null, DateTime? DateExpired = null)
         {
             this.Enabled = Enabled;
             this.UsesDefaultRole = UsesDefaultRole;
             this.DateExpired = DateExpired;
-            this.CreatedBy = CreatedBy;
-            this.Organization = Organization;
             
         }
         
@@ -137,7 +133,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User that created trust.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public OrgUser CreatedBy { get; set; }
+        public OrgUser CreatedBy { get; private set; }
         
         
         
@@ -146,7 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Organization associated with this trust.</value>
         [DataMember(Name="organization", EmitDefaultValue=false)]
-        public Organization Organization { get; set; }
+        public Organization Organization { get; private set; }
         
         
         

@@ -34,12 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingJobFailedRecording" /> class.
         /// </summary>
-        /// <param name="Conversation">Conversation.</param>
-        /// <param name="Recording">Recording.</param>
-        public RecordingJobFailedRecording(AddressableEntityRef Conversation = null, AddressableEntityRef Recording = null)
+        public RecordingJobFailedRecording()
         {
-            this.Conversation = Conversation;
-            this.Recording = Recording;
             
         }
         
@@ -50,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Conversation</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
-        public AddressableEntityRef Conversation { get; set; }
+        public AddressableEntityRef Conversation { get; private set; }
         
         
         
@@ -59,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Recording</value>
         [DataMember(Name="recording", EmitDefaultValue=false)]
-        public AddressableEntityRef Recording { get; set; }
+        public AddressableEntityRef Recording { get; private set; }
         
         
         /// <summary>

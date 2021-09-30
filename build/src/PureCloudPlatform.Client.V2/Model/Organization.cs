@@ -221,8 +221,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultSiteId">DefaultSiteId.</param>
         /// <param name="SupportURI">Email address where support tickets are sent to..</param>
         /// <param name="VoicemailEnabled">VoicemailEnabled.</param>
-        /// <param name="Features">The state of features available for the organization..</param>
-        public Organization(string Name = null, string DefaultLanguage = null, string DefaultCountryCode = null, string ThirdPartyURI = null, string Domain = null, int? Version = null, StateEnum? State = null, string DefaultSiteId = null, string SupportURI = null, bool? VoicemailEnabled = null, Dictionary<string, bool?> Features = null)
+        public Organization(string Name = null, string DefaultLanguage = null, string DefaultCountryCode = null, string ThirdPartyURI = null, string Domain = null, int? Version = null, StateEnum? State = null, string DefaultSiteId = null, string SupportURI = null, bool? VoicemailEnabled = null)
         {
             this.Name = Name;
             this.DefaultLanguage = DefaultLanguage;
@@ -234,7 +233,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DefaultSiteId = DefaultSiteId;
             this.SupportURI = SupportURI;
             this.VoicemailEnabled = VoicemailEnabled;
-            this.Features = Features;
             
         }
         
@@ -352,7 +350,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The state of features available for the organization.</value>
         [DataMember(Name="features", EmitDefaultValue=false)]
-        public Dictionary<string, bool?> Features { get; set; }
+        public Dictionary<string, bool?> Features { get; private set; }
         
         
         /// <summary>

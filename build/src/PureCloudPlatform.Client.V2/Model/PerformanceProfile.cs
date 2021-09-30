@@ -86,15 +86,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="PerformanceProfile" /> class.
         /// </summary>
         /// <param name="Name">A name for this performance profile (required).</param>
-        /// <param name="Division">The division for this performance profile associate to.</param>
         /// <param name="Description">A description about this performance profile (required).</param>
         /// <param name="MetricOrders">Order of the associated metrics. The list should contain valid ids for metrics (required).</param>
         /// <param name="ReportingIntervals">The reporting interval periods for this performance profile.</param>
         /// <param name="MaxLeaderboardRankSize">The maximum rank size for the leaderboard. This counts the number of ranks can be retrieved in a leaderboard queries.</param>
-        public PerformanceProfile(string Name = null, Division Division = null, string Description = null, List<string> MetricOrders = null, List<ReportingInterval> ReportingIntervals = null, int? MaxLeaderboardRankSize = null)
+        public PerformanceProfile(string Name = null, string Description = null, List<string> MetricOrders = null, List<ReportingInterval> ReportingIntervals = null, int? MaxLeaderboardRankSize = null)
         {
             this.Name = Name;
-            this.Division = Division;
             this.Description = Description;
             this.MetricOrders = MetricOrders;
             this.ReportingIntervals = ReportingIntervals;
@@ -127,7 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The division for this performance profile associate to</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public Division Division { get; set; }
+        public Division Division { get; private set; }
         
         
         

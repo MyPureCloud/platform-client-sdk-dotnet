@@ -40,6 +40,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserRoutinglanguages**](UsersApi.html#getuserroutinglanguages) | **GET** /api/v2/users/{userId}/routinglanguages | List routing language for user |
 | [**GetUserRoutingskills**](UsersApi.html#getuserroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
 | [**GetUserRoutingstatus**](UsersApi.html#getuserroutingstatus) | **GET** /api/v2/users/{userId}/routingstatus | Fetch the routing status of a user |
+| [**GetUserState**](UsersApi.html#getuserstate) | **GET** /api/v2/users/{userId}/state | Get user state information. |
 | [**GetUserStation**](UsersApi.html#getuserstation) | **GET** /api/v2/users/{userId}/station | Get station information for user |
 | [**GetUserSuperiors**](UsersApi.html#getusersuperiors) | **GET** /api/v2/users/{userId}/superiors | Get superiors |
 | [**GetUserTrustors**](UsersApi.html#getusertrustors) | **GET** /api/v2/users/{userId}/trustors | List the organizations that have authorized/trusted the user. |
@@ -82,6 +83,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutUserRoutingskill**](UsersApi.html#putuserroutingskill) | **PUT** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
 | [**PutUserRoutingskillsBulk**](UsersApi.html#putuserroutingskillsbulk) | **PUT** /api/v2/users/{userId}/routingskills/bulk | Replace all routing skills assigned to a user |
 | [**PutUserRoutingstatus**](UsersApi.html#putuserroutingstatus) | **PUT** /api/v2/users/{userId}/routingstatus | Update the routing status of a user |
+| [**PutUserState**](UsersApi.html#putuserstate) | **PUT** /api/v2/users/{userId}/state | Update user state information. |
 | [**PutUserStationAssociatedstationStationId**](UsersApi.html#putuserstationassociatedstationstationid) | **PUT** /api/v2/users/{userId}/station/associatedstation/{stationId} | Set associated station |
 | [**PutUserStationDefaultstationStationId**](UsersApi.html#putuserstationdefaultstationstationid) | **PUT** /api/v2/users/{userId}/station/defaultstation/{stationId} | Set default station |
 {: class="table table-striped"}
@@ -2281,6 +2283,71 @@ namespace Example
 
 [**RoutingStatus**](RoutingStatus.html)
 
+<a name="getuserstate"></a>
+
+## [**UserState**](UserState.html) GetUserState (string userId)
+
+
+
+Get user state information.
+
+
+
+Requires ANY permissions: 
+
+* directory:userStateChange:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUserStateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+
+            try
+            { 
+                // Get user state information.
+                UserState result = apiInstance.GetUserState(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetUserState: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserState**](UserState.html)
+
 <a name="getuserstation"></a>
 
 ## [**UserStations**](UserStations.html) GetUserStation (string userId)
@@ -2635,7 +2702,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: Asc, Desc |
-| **types** | [**List<string>**](string.html)| Specifies the activity types. | [optional] <br />**Values**: Informational, Coaching, AssessedContent, Questionnaire, Assessment |
+| **types** | [**List<string>**](string.html)| Specifies the activity types. | [optional] <br />**Values**: Informational, Coaching, AssessedContent, Assessment |
 | **statuses** | [**List<string>**](string.html)| Specifies the activity statuses to filter by | [optional] <br />**Values**: Planned, InProgress, Completed, InvalidSchedule |
 | **relationship** | [**List<string>**](string.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional] <br />**Values**: Creator, Facilitator, Attendee |
 {: class="table table-striped"}
@@ -2717,7 +2784,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: Asc, Desc |
-| **types** | [**List<string>**](string.html)| Specifies the activity types. | [optional] <br />**Values**: Informational, Coaching, AssessedContent, Questionnaire, Assessment |
+| **types** | [**List<string>**](string.html)| Specifies the activity types. | [optional] <br />**Values**: Informational, Coaching, AssessedContent, Assessment |
 | **statuses** | [**List<string>**](string.html)| Specifies the activity statuses to filter by | [optional] <br />**Values**: Planned, InProgress, Completed, InvalidSchedule |
 | **relationship** | [**List<string>**](string.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional] <br />**Values**: Creator, Facilitator, Attendee |
 {: class="table table-striped"}
@@ -2787,7 +2854,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **activityId** | **string**| Specifies the activity ID, maps to either assignment or appointment ID |  |
-| **type** | **string**| Specifies the activity type. | <br />**Values**: Informational, Coaching, AssessedContent, Assessment, Questionnaire |
+| **type** | **string**| Specifies the activity type. | <br />**Values**: Informational, Coaching, AssessedContent, Assessment |
 {: class="table table-striped"}
 
 ### Return type
@@ -5136,6 +5203,73 @@ namespace Example
 ### Return type
 
 [**RoutingStatus**](RoutingStatus.html)
+
+<a name="putuserstate"></a>
+
+## [**UserState**](UserState.html) PutUserState (string userId, UserState body)
+
+
+
+Update user state information.
+
+
+
+Requires ANY permissions: 
+
+* directory:user:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutUserStateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+            var body = new UserState(); // UserState | User
+
+            try
+            { 
+                // Update user state information.
+                UserState result = apiInstance.PutUserState(userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PutUserState: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **body** | [**UserState**](UserState.html)| User |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserState**](UserState.html)
 
 <a name="putuserstationassociatedstationstationid"></a>
 

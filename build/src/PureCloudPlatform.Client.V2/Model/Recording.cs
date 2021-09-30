@@ -263,6 +263,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Represents the current file state for a recording. Examples: Uploading, Archived, etc
         /// </summary>
@@ -328,6 +331,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Recording" /> class.
@@ -360,7 +365,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Users">The users participating in the conversation.</param>
         /// <param name="RecordingFileRole">Role of the file recording. It can be either customer_experience or adhoc..</param>
         /// <param name="RecordingErrorStatus">Status of a recording that cannot be returned because of an error.</param>
-        public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<RecordingEmailMessage> EmailTranscript = null, List<RecordingMessagingMessage> MessagingTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, DateTime? ExportDate = null, DateTime? ExportedDate = null, int? OutputDurationMs = null, int? OutputSizeInBytes = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null, List<User> Users = null, RecordingFileRoleEnum? RecordingFileRole = null, RecordingErrorStatusEnum? RecordingErrorStatus = null)
+        /// <param name="OriginalRecordingStartTime">The start time of the full recording, before any segment access restrictions are applied. Null when there is no playable media. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<RecordingEmailMessage> EmailTranscript = null, List<RecordingMessagingMessage> MessagingTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, DateTime? ExportDate = null, DateTime? ExportedDate = null, int? OutputDurationMs = null, int? OutputSizeInBytes = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null, List<User> Users = null, RecordingFileRoleEnum? RecordingFileRole = null, RecordingErrorStatusEnum? RecordingErrorStatus = null, DateTime? OriginalRecordingStartTime = null)
         {
             this.Name = Name;
             this.ConversationId = ConversationId;
@@ -390,6 +396,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Users = Users;
             this.RecordingFileRole = RecordingFileRole;
             this.RecordingErrorStatus = RecordingErrorStatus;
+            this.OriginalRecordingStartTime = OriginalRecordingStartTime;
             
         }
         
@@ -624,6 +631,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The start time of the full recording, before any segment access restrictions are applied. Null when there is no playable media. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The start time of the full recording, before any segment access restrictions are applied. Null when there is no playable media. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="originalRecordingStartTime", EmitDefaultValue=false)]
+        public DateTime? OriginalRecordingStartTime { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -669,6 +685,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Users: ").Append(Users).Append("\n");
             sb.Append("  RecordingFileRole: ").Append(RecordingFileRole).Append("\n");
             sb.Append("  RecordingErrorStatus: ").Append(RecordingErrorStatus).Append("\n");
+            sb.Append("  OriginalRecordingStartTime: ").Append(OriginalRecordingStartTime).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -856,6 +873,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RecordingErrorStatus.Equals(other.RecordingErrorStatus)
                 ) &&
                 (
+                    this.OriginalRecordingStartTime == other.OriginalRecordingStartTime ||
+                    this.OriginalRecordingStartTime != null &&
+                    this.OriginalRecordingStartTime.Equals(other.OriginalRecordingStartTime)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -960,6 +982,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RecordingErrorStatus != null)
                     hash = hash * 59 + this.RecordingErrorStatus.GetHashCode();
+                
+                if (this.OriginalRecordingStartTime != null)
+                    hash = hash * 59 + this.OriginalRecordingStartTime.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

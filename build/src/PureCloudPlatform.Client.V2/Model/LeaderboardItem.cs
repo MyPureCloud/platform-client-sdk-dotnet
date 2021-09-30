@@ -39,10 +39,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LeaderboardItem" /> class.
         /// </summary>
-        /// <param name="User">The user object for this leaderboard rank.</param>
-        public LeaderboardItem(UserReference User = null)
+        public LeaderboardItem()
         {
-            this.User = User;
             
         }
         
@@ -53,7 +51,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user object for this leaderboard rank</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public UserReference User { get; set; }
+        public UserReference User { get; private set; }
         
         
         

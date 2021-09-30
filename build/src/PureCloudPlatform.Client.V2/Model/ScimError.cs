@@ -127,10 +127,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimError" /> class.
         /// </summary>
-        /// <param name="Schemas">The list of schemas for the SCIM error..</param>
-        public ScimError(List<string> Schemas = null)
+        public ScimError()
         {
-            this.Schemas = Schemas;
             
         }
         
@@ -141,7 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of schemas for the SCIM error.</value>
         [DataMember(Name="schemas", EmitDefaultValue=false)]
-        public List<string> Schemas { get; set; }
+        public List<string> Schemas { get; private set; }
         
         
         

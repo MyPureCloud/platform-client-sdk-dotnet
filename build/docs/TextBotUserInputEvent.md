@@ -8,7 +8,7 @@ title: TextBotUserInputEvent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Mode** | **string** | The input mode. | |
-| **Alternatives** | [**List&lt;TextBotUserInputAlternative&gt;**](TextBotUserInputAlternative.html) | The input alternatives. | [optional] |
+| **Alternatives** | [**List&lt;TextBotUserInputAlternative&gt;**](TextBotUserInputAlternative.html) | The input alternatives. | |
 {: class="table table-striped"}
 
 

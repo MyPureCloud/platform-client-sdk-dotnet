@@ -187,14 +187,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="GDPRRequest" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="CreatedBy">The user that created this request (required).</param>
         /// <param name="ReplacementTerms">The replacement terms for the provided search terms, in the case of a GDPR_UPDATE request.</param>
         /// <param name="RequestType">The type of GDPR request (required).</param>
         /// <param name="Subject">The subject of the GDPR request (required).</param>
-        public GDPRRequest(string Name = null, DomainEntityRef CreatedBy = null, List<ReplacementTerm> ReplacementTerms = null, RequestTypeEnum? RequestType = null, GDPRSubject Subject = null)
+        public GDPRRequest(string Name = null, List<ReplacementTerm> ReplacementTerms = null, RequestTypeEnum? RequestType = null, GDPRSubject Subject = null)
         {
             this.Name = Name;
-            this.CreatedBy = CreatedBy;
             this.ReplacementTerms = ReplacementTerms;
             this.RequestType = RequestType;
             this.Subject = Subject;
@@ -225,7 +223,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user that created this request</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public DomainEntityRef CreatedBy { get; set; }
+        public DomainEntityRef CreatedBy { get; private set; }
         
         
         

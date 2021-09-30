@@ -46,12 +46,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DocumentArticle" /> class.
         /// </summary>
         /// <param name="Title">The title of the Article. (required).</param>
-        /// <param name="Content">The content of the Article..</param>
         /// <param name="Alternatives">List of Alternative questions related to the title which helps in improving the likelihood of a match to user query..</param>
-        public DocumentArticle(string Title = null, ArticleContent Content = null, List<string> Alternatives = null)
+        public DocumentArticle(string Title = null, List<string> Alternatives = null)
         {
             this.Title = Title;
-            this.Content = Content;
             this.Alternatives = Alternatives;
             
         }
@@ -72,7 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The content of the Article.</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public ArticleContent Content { get; set; }
+        public ArticleContent Content { get; private set; }
         
         
         

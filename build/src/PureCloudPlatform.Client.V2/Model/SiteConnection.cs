@@ -161,10 +161,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Managed">Managed.</param>
         /// <param name="Type">Connection method from site to site (Direct, Indirect, CloudProxy.</param>
         /// <param name="Enabled">Indicates if the current site is linked.</param>
-        /// <param name="EdgeList">All of the edges to which the site connects.</param>
-        /// <param name="PrimaryCoreSites">List of site ids names and selfUris for the primary core sites.</param>
-        /// <param name="SecondaryCoreSites">List of site ids names and selfUris for the secondary core sites.</param>
-        public SiteConnection(string Id = null, string Name = null, string SelfUri = null, bool? Managed = null, TypeEnum? Type = null, bool? Enabled = null, List<ConnectedEdge> EdgeList = null, List<DomainEntityRef> PrimaryCoreSites = null, List<DomainEntityRef> SecondaryCoreSites = null)
+        public SiteConnection(string Id = null, string Name = null, string SelfUri = null, bool? Managed = null, TypeEnum? Type = null, bool? Enabled = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -172,9 +169,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Managed = Managed;
             this.Type = Type;
             this.Enabled = Enabled;
-            this.EdgeList = EdgeList;
-            this.PrimaryCoreSites = PrimaryCoreSites;
-            this.SecondaryCoreSites = SecondaryCoreSites;
             
         }
         
@@ -230,7 +224,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>All of the edges to which the site connects</value>
         [DataMember(Name="edgeList", EmitDefaultValue=false)]
-        public List<ConnectedEdge> EdgeList { get; set; }
+        public List<ConnectedEdge> EdgeList { get; private set; }
         
         
         
@@ -248,7 +242,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of site ids names and selfUris for the primary core sites</value>
         [DataMember(Name="primaryCoreSites", EmitDefaultValue=false)]
-        public List<DomainEntityRef> PrimaryCoreSites { get; set; }
+        public List<DomainEntityRef> PrimaryCoreSites { get; private set; }
         
         
         
@@ -257,7 +251,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of site ids names and selfUris for the secondary core sites</value>
         [DataMember(Name="secondaryCoreSites", EmitDefaultValue=false)]
-        public List<DomainEntityRef> SecondaryCoreSites { get; set; }
+        public List<DomainEntityRef> SecondaryCoreSites { get; private set; }
         
         
         /// <summary>

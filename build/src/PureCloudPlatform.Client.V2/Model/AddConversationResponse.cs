@@ -34,12 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AddConversationResponse" /> class.
         /// </summary>
-        /// <param name="Conversation">The conversation reference.</param>
-        /// <param name="Appointment">The appointment reference.</param>
-        public AddConversationResponse(ConversationReference Conversation = null, CoachingAppointmentReference Appointment = null)
+        public AddConversationResponse()
         {
-            this.Conversation = Conversation;
-            this.Appointment = Appointment;
             
         }
         
@@ -50,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The conversation reference</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
-        public ConversationReference Conversation { get; set; }
+        public ConversationReference Conversation { get; private set; }
         
         
         
@@ -59,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The appointment reference</value>
         [DataMember(Name="appointment", EmitDefaultValue=false)]
-        public CoachingAppointmentReference Appointment { get; set; }
+        public CoachingAppointmentReference Appointment { get; private set; }
         
         
         /// <summary>

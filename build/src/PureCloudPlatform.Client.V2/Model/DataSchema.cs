@@ -107,18 +107,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The globally unique identifier for the schema.  Only required if a schema is used for custom fields during external entity creation or updates..</param>
         /// <param name="Name">Name.</param>
         /// <param name="Version">The schema&#39;s version, a positive integer. Required for updates. (required).</param>
-        /// <param name="AppliesTo">One of \&quot;CONTACT\&quot; or \&quot;EXTERNAL_ORGANIZATION\&quot;.  Indicates the built-in entity type to which this schema applies..</param>
         /// <param name="Enabled">The schema&#39;s enabled/disabled status. A disabled schema cannot be assigned to any other entities, but the data on those entities from the schema still exists..</param>
-        /// <param name="CreatedBy">The URI of the user that created this schema..</param>
         /// <param name="JsonSchema">A JSON schema defining the extension to the built-in entity type. (required).</param>
-        public DataSchema(string Id = null, string Name = null, int? Version = null, List<AppliesToEnum> AppliesTo = null, bool? Enabled = null, DomainEntityRef CreatedBy = null, JsonSchemaDocument JsonSchema = null)
+        public DataSchema(string Id = null, string Name = null, int? Version = null, bool? Enabled = null, JsonSchemaDocument JsonSchema = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Version = Version;
-            this.AppliesTo = AppliesTo;
             this.Enabled = Enabled;
-            this.CreatedBy = CreatedBy;
             this.JsonSchema = JsonSchema;
             
         }
@@ -156,7 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>One of \&quot;CONTACT\&quot; or \&quot;EXTERNAL_ORGANIZATION\&quot;.  Indicates the built-in entity type to which this schema applies.</value>
         [DataMember(Name="appliesTo", EmitDefaultValue=false)]
-        public List<AppliesToEnum> AppliesTo { get; set; }
+        public List<AppliesToEnum> AppliesTo { get; private set; }
         
         
         
@@ -174,7 +170,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The URI of the user that created this schema.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public DomainEntityRef CreatedBy { get; set; }
+        public DomainEntityRef CreatedBy { get; private set; }
         
         
         

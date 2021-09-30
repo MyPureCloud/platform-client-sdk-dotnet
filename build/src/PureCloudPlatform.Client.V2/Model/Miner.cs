@@ -307,14 +307,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Chat Corpus Name. (required).</param>
         /// <param name="Language">Language Localization code..</param>
-        /// <param name="QueueIds">List of queue IDs for filtering conversations..</param>
-        /// <param name="LatestDraftVersion">Latest draft details of the miner..</param>
-        public Miner(string Name = null, LanguageEnum? Language = null, List<string> QueueIds = null, Draft LatestDraftVersion = null)
+        public Miner(string Name = null, LanguageEnum? Language = null)
         {
             this.Name = Name;
             this.Language = Language;
-            this.QueueIds = QueueIds;
-            this.LatestDraftVersion = LatestDraftVersion;
             
         }
         
@@ -403,7 +399,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of queue IDs for filtering conversations.</value>
         [DataMember(Name="queueIds", EmitDefaultValue=false)]
-        public List<string> QueueIds { get; set; }
+        public List<string> QueueIds { get; private set; }
         
         
         
@@ -430,7 +426,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Latest draft details of the miner.</value>
         [DataMember(Name="latestDraftVersion", EmitDefaultValue=false)]
-        public Draft LatestDraftVersion { get; set; }
+        public Draft LatestDraftVersion { get; private set; }
         
         
         

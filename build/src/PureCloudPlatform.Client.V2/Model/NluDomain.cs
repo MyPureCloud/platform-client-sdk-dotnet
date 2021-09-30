@@ -77,15 +77,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the NLU domain. (required).</param>
         /// <param name="Language">The language culture of the NLU domain, e.g. `en-us`, `de-de`..</param>
-        /// <param name="DraftVersion">The draft version of that NLU domain..</param>
-        /// <param name="LastPublishedVersion">The last published version of that NLU domain..</param>
         /// <param name="EngineVersion">The version of the NLU engine to use..</param>
-        public NluDomain(string Name = null, string Language = null, NluDomainVersion DraftVersion = null, NluDomainVersion LastPublishedVersion = null, string EngineVersion = null)
+        public NluDomain(string Name = null, string Language = null, string EngineVersion = null)
         {
             this.Name = Name;
             this.Language = Language;
-            this.DraftVersion = DraftVersion;
-            this.LastPublishedVersion = LastPublishedVersion;
             this.EngineVersion = EngineVersion;
             
         }
@@ -124,7 +120,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The draft version of that NLU domain.</value>
         [DataMember(Name="draftVersion", EmitDefaultValue=false)]
-        public NluDomainVersion DraftVersion { get; set; }
+        public NluDomainVersion DraftVersion { get; private set; }
         
         
         
@@ -133,7 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The last published version of that NLU domain.</value>
         [DataMember(Name="lastPublishedVersion", EmitDefaultValue=false)]
-        public NluDomainVersion LastPublishedVersion { get; set; }
+        public NluDomainVersion LastPublishedVersion { get; private set; }
         
         
         

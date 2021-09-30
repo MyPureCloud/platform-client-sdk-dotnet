@@ -398,7 +398,7 @@ void (empty response body)
 
 Gets a list of Agent Activities
 
-Including the number of evaluations and average evaluation score
+Includes the number of evaluations and average evaluation score. These statistics include released evaluations only when evaluatorUserId is provided. In the absence of evaluatorUserId in the request, the api excludes evaluations which are set to never release for the calculation of evaluation statistics. 
 
 Requires ANY permissions: 
 
@@ -432,8 +432,8 @@ namespace Example
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            var startTime = 2013-10-20T19:20:30+01:00;  // DateTime? | Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional) 
-            var endTime = 2013-10-20T19:20:30+01:00;  // DateTime? | End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional) 
+            var startTime = 2013-10-20T19:20:30+01:00;  // DateTime? | Start time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional) 
+            var endTime = 2013-10-20T19:20:30+01:00;  // DateTime? | End time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional) 
             var agentUserId = new List<string>(); // List<string> | user id of agent requested (optional) 
             var evaluatorUserId = evaluatorUserId_example;  // string | user id of the evaluator (optional) 
             var name = name_example;  // string | name (optional) 
@@ -465,8 +465,8 @@ namespace Example
 | **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-| **startTime** | **DateTime?**| Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional]  |
-| **endTime** | **DateTime?**| End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional]  |
+| **startTime** | **DateTime?**| Start time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional]  |
+| **endTime** | **DateTime?**| End time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional]  |
 | **agentUserId** | [**List<string>**](string.html)| user id of agent requested | [optional]  |
 | **evaluatorUserId** | **string**| user id of the evaluator | [optional]  |
 | **name** | **string**| name | [optional]  |

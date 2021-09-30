@@ -127,6 +127,7 @@ title: ViewFilter
 | **IsRecorded** | **bool?** | Indicates filtering for recorded | [optional] |
 | **HasEvaluation** | **bool?** | Indicates filtering for evaluation | [optional] |
 | **HasScoredEvaluation** | **bool?** | Indicates filtering for scored evaluation | [optional] |
+| **EmailDeliveryStatusList** | **List&lt;string&gt;** | The list of email delivery statuses used to filter views | [optional] |
 | **IsAgentOwnedCallback** | **bool?** | Indicates filtering for agent owned callback interactions | [optional] |
 | **AgentCallbackOwnerIds** | **List&lt;string&gt;** | The list of callback owners used to filter interactions | [optional] |
 {: class="table table-striped"}

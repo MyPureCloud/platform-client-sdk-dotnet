@@ -39,10 +39,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AllTimePoints" /> class.
         /// </summary>
-        /// <param name="User">Queried user.</param>
-        public AllTimePoints(UserReference User = null)
+        public AllTimePoints()
         {
-            this.User = User;
             
         }
         
@@ -53,7 +51,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Queried user</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public UserReference User { get; set; }
+        public UserReference User { get; private set; }
         
         
         

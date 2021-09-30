@@ -189,9 +189,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TemplateName">The name of associated objective template.</param>
         /// <param name="MaxPoints">Achievable maximum points for this metric.</param>
         /// <param name="PerformanceProfileId">Performance profile id of this metric.</param>
-        /// <param name="LinkedMetric">The linked metric entity reference.</param>
-        /// <param name="SourcePerformanceProfile">The source performance profile when this metric is linked.</param>
-        public Metrics(string Name = null, int? Order = null, string MetricDefinitionName = null, string MetricDefinitionId = null, string ExternalMetricDefinitionId = null, UnitTypeEnum? UnitType = null, bool? Enabled = null, string TemplateName = null, int? MaxPoints = null, string PerformanceProfileId = null, AddressableEntityRef LinkedMetric = null, PerformanceProfile SourcePerformanceProfile = null)
+        public Metrics(string Name = null, int? Order = null, string MetricDefinitionName = null, string MetricDefinitionId = null, string ExternalMetricDefinitionId = null, UnitTypeEnum? UnitType = null, bool? Enabled = null, string TemplateName = null, int? MaxPoints = null, string PerformanceProfileId = null)
         {
             this.Name = Name;
             this.Order = Order;
@@ -203,8 +201,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.TemplateName = TemplateName;
             this.MaxPoints = MaxPoints;
             this.PerformanceProfileId = PerformanceProfileId;
-            this.LinkedMetric = LinkedMetric;
-            this.SourcePerformanceProfile = SourcePerformanceProfile;
             
         }
         
@@ -306,7 +302,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The linked metric entity reference</value>
         [DataMember(Name="linkedMetric", EmitDefaultValue=false)]
-        public AddressableEntityRef LinkedMetric { get; set; }
+        public AddressableEntityRef LinkedMetric { get; private set; }
         
         
         
@@ -333,7 +329,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The source performance profile when this metric is linked</value>
         [DataMember(Name="sourcePerformanceProfile", EmitDefaultValue=false)]
-        public PerformanceProfile SourcePerformanceProfile { get; set; }
+        public PerformanceProfile SourcePerformanceProfile { get; private set; }
         
         
         

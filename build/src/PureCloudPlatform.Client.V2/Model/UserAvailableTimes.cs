@@ -34,12 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserAvailableTimes" /> class.
         /// </summary>
-        /// <param name="User">User reference.</param>
-        /// <param name="AvailableTimes">Periods of availability to schedule coaching appointment for an user.</param>
-        public UserAvailableTimes(UserReference User = null, List<AvailableTime> AvailableTimes = null)
+        public UserAvailableTimes()
         {
-            this.User = User;
-            this.AvailableTimes = AvailableTimes;
             
         }
         
@@ -50,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User reference</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public UserReference User { get; set; }
+        public UserReference User { get; private set; }
         
         
         
@@ -59,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Periods of availability to schedule coaching appointment for an user</value>
         [DataMember(Name="availableTimes", EmitDefaultValue=false)]
-        public List<AvailableTime> AvailableTimes { get; set; }
+        public List<AvailableTime> AvailableTimes { get; private set; }
         
         
         /// <summary>

@@ -146,25 +146,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OutboundNotificationWebhookSignatureSecretToken">The outbound notification webhook signature secret token. (required).</param>
         /// <param name="WebhookHeaders">The user specified headers for the Open messaging integration..</param>
         /// <param name="Status">The status of the Open Integration.</param>
-        /// <param name="Recipient">The recipient associated to the Open messaging Integration. This recipient is used to associate a flow to an integration.</param>
         /// <param name="DateCreated">Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">Date this Integration was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreatedBy">User reference that created this Integration.</param>
         /// <param name="ModifiedBy">User reference that last modified this Integration.</param>
-        /// <param name="CreateError">Error information returned, if createStatus is set to Error.</param>
-        public OpenIntegration(string Name = null, string OutboundNotificationWebhookUrl = null, string OutboundNotificationWebhookSignatureSecretToken = null, Dictionary<string, string> WebhookHeaders = null, string Status = null, DomainEntityRef Recipient = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, ErrorBody CreateError = null)
+        public OpenIntegration(string Name = null, string OutboundNotificationWebhookUrl = null, string OutboundNotificationWebhookSignatureSecretToken = null, Dictionary<string, string> WebhookHeaders = null, string Status = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null)
         {
             this.Name = Name;
             this.OutboundNotificationWebhookUrl = OutboundNotificationWebhookUrl;
             this.OutboundNotificationWebhookSignatureSecretToken = OutboundNotificationWebhookSignatureSecretToken;
             this.WebhookHeaders = WebhookHeaders;
             this.Status = Status;
-            this.Recipient = Recipient;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.CreatedBy = CreatedBy;
             this.ModifiedBy = ModifiedBy;
-            this.CreateError = CreateError;
             
         }
         
@@ -229,7 +225,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The recipient associated to the Open messaging Integration. This recipient is used to associate a flow to an integration</value>
         [DataMember(Name="recipient", EmitDefaultValue=false)]
-        public DomainEntityRef Recipient { get; set; }
+        public DomainEntityRef Recipient { get; private set; }
         
         
         
@@ -276,7 +272,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Error information returned, if createStatus is set to Error</value>
         [DataMember(Name="createError", EmitDefaultValue=false)]
-        public ErrorBody CreateError { get; set; }
+        public ErrorBody CreateError { get; private set; }
         
         
         

@@ -49,12 +49,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Schema" /> class.
         /// </summary>
-        /// <param name="Type">An array of fundamental JSON Schema primitive types on which the core type is based.</param>
-        /// <param name="Items">Denotes the type and pattern of the items in an enum core type.</param>
-        public Schema(List<string> Type = null, Items Items = null)
+        public Schema()
         {
-            this.Type = Type;
-            this.Items = Items;
             
         }
         
@@ -83,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>An array of fundamental JSON Schema primitive types on which the core type is based</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public List<string> Type { get; set; }
+        public List<string> Type { get; private set; }
         
         
         
@@ -92,7 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Denotes the type and pattern of the items in an enum core type</value>
         [DataMember(Name="items", EmitDefaultValue=false)]
-        public Items Items { get; set; }
+        public Items Items { get; private set; }
         
         
         

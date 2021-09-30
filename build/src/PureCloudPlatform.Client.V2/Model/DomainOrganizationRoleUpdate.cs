@@ -94,19 +94,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">Description.</param>
         /// <param name="DefaultRoleId">DefaultRoleId.</param>
         /// <param name="Permissions">Permissions.</param>
-        /// <param name="UnusedPermissions">A collection of the permissions the role is not using.</param>
         /// <param name="PermissionPolicies">PermissionPolicies.</param>
         /// <param name="UserCount">UserCount.</param>
         /// <param name="RoleNeedsUpdate">Optional unless patch operation..</param>
         /// <param name="_Default">_Default.</param>
         /// <param name="_Base">_Base.</param>
-        public DomainOrganizationRoleUpdate(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<string> UnusedPermissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Default = null, bool? _Base = null)
+        public DomainOrganizationRoleUpdate(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Default = null, bool? _Base = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.DefaultRoleId = DefaultRoleId;
             this.Permissions = Permissions;
-            this.UnusedPermissions = UnusedPermissions;
             this.PermissionPolicies = PermissionPolicies;
             this.UserCount = UserCount;
             this.RoleNeedsUpdate = RoleNeedsUpdate;
@@ -164,7 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A collection of the permissions the role is not using</value>
         [DataMember(Name="unusedPermissions", EmitDefaultValue=false)]
-        public List<string> UnusedPermissions { get; set; }
+        public List<string> UnusedPermissions { get; private set; }
         
         
         

@@ -180,7 +180,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Chat">Chat.</param>
         /// <param name="Department">Department.</param>
         /// <param name="Email">Email.</param>
-        /// <param name="PrimaryContactInfo">The address(s) used for primary contact. Updates to the corresponding address in the addresses list will be reflected here..</param>
         /// <param name="Addresses">Email address, phone number, and/or extension for this user. One entry is allowed per media type.</param>
         /// <param name="Title">Title.</param>
         /// <param name="Username">Username.</param>
@@ -195,13 +194,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Certifications">Certifications.</param>
         /// <param name="Biography">Biography.</param>
         /// <param name="EmployerInfo">EmployerInfo.</param>
-        public UpdateUser(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, string Manager = null, List<UserImage> Images = null, int? Version = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, StateEnum? State = null, bool? AcdAutoAnswer = null, List<string> Certifications = null, Biography Biography = null, EmployerInfo EmployerInfo = null)
+        public UpdateUser(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Username = null, string Manager = null, List<UserImage> Images = null, int? Version = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, StateEnum? State = null, bool? AcdAutoAnswer = null, List<string> Certifications = null, Biography Biography = null, EmployerInfo EmployerInfo = null)
         {
             this.Name = Name;
             this.Chat = Chat;
             this.Department = Department;
             this.Email = Email;
-            this.PrimaryContactInfo = PrimaryContactInfo;
             this.Addresses = Addresses;
             this.Title = Title;
             this.Username = Username;
@@ -267,7 +265,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The address(s) used for primary contact. Updates to the corresponding address in the addresses list will be reflected here.</value>
         [DataMember(Name="primaryContactInfo", EmitDefaultValue=false)]
-        public List<Contact> PrimaryContactInfo { get; set; }
+        public List<Contact> PrimaryContactInfo { get; private set; }
         
         
         

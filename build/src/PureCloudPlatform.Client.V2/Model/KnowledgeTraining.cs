@@ -168,10 +168,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeTraining" /> class.
         /// </summary>
-        /// <param name="KnowledgeBase">Knowledge Base that the training belongs to..</param>
-        public KnowledgeTraining(KnowledgeBase KnowledgeBase = null)
+        public KnowledgeTraining()
         {
-            this.KnowledgeBase = KnowledgeBase;
             
         }
         
@@ -220,7 +218,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Knowledge Base that the training belongs to.</value>
         [DataMember(Name="knowledgeBase", EmitDefaultValue=false)]
-        public KnowledgeBase KnowledgeBase { get; set; }
+        public KnowledgeBase KnowledgeBase { get; private set; }
         
         
         

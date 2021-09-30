@@ -46,11 +46,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WfmVersionedEntityMetadata" /> class.
         /// </summary>
         /// <param name="Version">The version of the associated entity.  Used to prevent conflicts on concurrent edits (required).</param>
-        /// <param name="ModifiedBy">The user who last modified the associated entity.</param>
-        public WfmVersionedEntityMetadata(int? Version = null, UserReference ModifiedBy = null)
+        public WfmVersionedEntityMetadata(int? Version = null)
         {
             this.Version = Version;
-            this.ModifiedBy = ModifiedBy;
             
         }
         
@@ -70,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user who last modified the associated entity</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public UserReference ModifiedBy { get; set; }
+        public UserReference ModifiedBy { get; private set; }
         
         
         

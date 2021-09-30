@@ -56,6 +56,42 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets DurationMode
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum DurationModeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Between for "Between"
+            /// </summary>
+            [EnumMember(Value = "Between")]
+            Between,
+            
+            /// <summary>
+            /// Enum Over for "Over"
+            /// </summary>
+            [EnumMember(Value = "Over")]
+            Over,
+            
+            /// <summary>
+            /// Enum Under for "Under"
+            /// </summary>
+            [EnumMember(Value = "Under")]
+            Under
+        }
+        
+        
+        
+        
         
         /// <summary>
         /// Gets or Sets DurationTarget
@@ -68,6 +104,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// Gets or Sets DurationMode
+        /// </summary>
+        [DataMember(Name="durationMode", EmitDefaultValue=false)]
+        public DurationModeEnum? DurationMode { get; set; }
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DurationCondition" /> class.
@@ -75,11 +119,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DurationTarget">DurationTarget.</param>
         /// <param name="DurationOperator">DurationOperator.</param>
         /// <param name="DurationRange">DurationRange.</param>
-        public DurationCondition(DurationTargetEnum? DurationTarget = null, string DurationOperator = null, string DurationRange = null)
+        /// <param name="DurationMode">DurationMode.</param>
+        public DurationCondition(DurationTargetEnum? DurationTarget = null, string DurationOperator = null, string DurationRange = null, DurationModeEnum? DurationMode = null)
         {
             this.DurationTarget = DurationTarget;
             this.DurationOperator = DurationOperator;
             this.DurationRange = DurationRange;
+            this.DurationMode = DurationMode;
             
         }
         
@@ -102,6 +148,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public string DurationRange { get; set; }
         
         
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -114,6 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DurationTarget: ").Append(DurationTarget).Append("\n");
             sb.Append("  DurationOperator: ").Append(DurationOperator).Append("\n");
             sb.Append("  DurationRange: ").Append(DurationRange).Append("\n");
+            sb.Append("  DurationMode: ").Append(DurationMode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -168,6 +217,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DurationRange == other.DurationRange ||
                     this.DurationRange != null &&
                     this.DurationRange.Equals(other.DurationRange)
+                ) &&
+                (
+                    this.DurationMode == other.DurationMode ||
+                    this.DurationMode != null &&
+                    this.DurationMode.Equals(other.DurationMode)
                 );
         }
 
@@ -191,6 +245,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DurationRange != null)
                     hash = hash * 59 + this.DurationRange.GetHashCode();
+                
+                if (this.DurationMode != null)
+                    hash = hash * 59 + this.DurationMode.GetHashCode();
                 
                 return hash;
             }

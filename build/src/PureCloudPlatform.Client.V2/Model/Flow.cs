@@ -388,10 +388,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DebugVersion">DebugVersion.</param>
         /// <param name="PublishedBy">PublishedBy.</param>
         /// <param name="CurrentOperation">CurrentOperation.</param>
-        /// <param name="NluInfo">Information about the natural language understanding configuration for the published version of the flow.</param>
-        /// <param name="SupportedLanguages">List of supported languages for the published version of the flow..</param>
-        /// <param name="CompatibleFlowTypes">Compatible flow types designate which flow types are allowed to embed a flow’s configuration within their own flow configuration.  Currently the only flows that can be embedded are Common Module flows and the embedding flow can invoke them using the Call Common Module action..</param>
-        public Flow(string Id = null, string Name = null, WritableDivision Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, DomainEntityRef LockedClient = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, FlowVersion DebugVersion = null, User PublishedBy = null, Operation CurrentOperation = null, NluInfo NluInfo = null, List<SupportedLanguage> SupportedLanguages = null, List<CompatibleFlowTypesEnum> CompatibleFlowTypes = null)
+        public Flow(string Id = null, string Name = null, WritableDivision Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, DomainEntityRef LockedClient = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, FlowVersion DebugVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -411,9 +408,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DebugVersion = DebugVersion;
             this.PublishedBy = PublishedBy;
             this.CurrentOperation = CurrentOperation;
-            this.NluInfo = NluInfo;
-            this.SupportedLanguages = SupportedLanguages;
-            this.CompatibleFlowTypes = CompatibleFlowTypes;
             
         }
         
@@ -569,7 +563,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Information about the natural language understanding configuration for the published version of the flow</value>
         [DataMember(Name="nluInfo", EmitDefaultValue=false)]
-        public NluInfo NluInfo { get; set; }
+        public NluInfo NluInfo { get; private set; }
         
         
         
@@ -578,7 +572,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of supported languages for the published version of the flow.</value>
         [DataMember(Name="supportedLanguages", EmitDefaultValue=false)]
-        public List<SupportedLanguage> SupportedLanguages { get; set; }
+        public List<SupportedLanguage> SupportedLanguages { get; private set; }
         
         
         
@@ -587,7 +581,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Compatible flow types designate which flow types are allowed to embed a flow’s configuration within their own flow configuration.  Currently the only flows that can be embedded are Common Module flows and the embedding flow can invoke them using the Call Common Module action.</value>
         [DataMember(Name="compatibleFlowTypes", EmitDefaultValue=false)]
-        public List<CompatibleFlowTypesEnum> CompatibleFlowTypes { get; set; }
+        public List<CompatibleFlowTypesEnum> CompatibleFlowTypes { get; private set; }
         
         
         

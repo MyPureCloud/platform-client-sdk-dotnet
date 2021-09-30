@@ -510,17 +510,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="UserScheduleAdherence" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="User">The user for whom this status applies.</param>
-        /// <param name="ManagementUnit">The management unit to which this user belongs.</param>
-        /// <param name="Team">The team to which this user belongs.</param>
-        /// <param name="ActiveQueues">The list of queues to which this user is joined.</param>
-        public UserScheduleAdherence(string Name = null, UserReference User = null, ManagementUnit ManagementUnit = null, Team Team = null, List<QueueReference> ActiveQueues = null)
+        public UserScheduleAdherence(string Name = null)
         {
             this.Name = Name;
-            this.User = User;
-            this.ManagementUnit = ManagementUnit;
-            this.Team = Team;
-            this.ActiveQueues = ActiveQueues;
             
         }
         
@@ -548,7 +540,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user for whom this status applies</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public UserReference User { get; set; }
+        public UserReference User { get; private set; }
         
         
         
@@ -557,7 +549,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The management unit to which this user belongs</value>
         [DataMember(Name="managementUnit", EmitDefaultValue=false)]
-        public ManagementUnit ManagementUnit { get; set; }
+        public ManagementUnit ManagementUnit { get; private set; }
         
         
         
@@ -566,7 +558,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The team to which this user belongs</value>
         [DataMember(Name="team", EmitDefaultValue=false)]
-        public Team Team { get; set; }
+        public Team Team { get; private set; }
         
         
         
@@ -623,7 +615,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of queues to which this user is joined</value>
         [DataMember(Name="activeQueues", EmitDefaultValue=false)]
-        public List<QueueReference> ActiveQueues { get; set; }
+        public List<QueueReference> ActiveQueues { get; private set; }
         
         
         

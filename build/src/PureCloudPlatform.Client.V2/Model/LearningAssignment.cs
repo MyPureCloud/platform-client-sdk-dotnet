@@ -162,19 +162,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="LearningAssignment" /> class.
         /// </summary>
         /// <param name="Assessment">The assessment associated with this assignment.</param>
-        /// <param name="CreatedBy">The user who created the assignment.</param>
-        /// <param name="ModifiedBy">The user who modified the assignment.</param>
         /// <param name="State">The Learning Assignment state.</param>
         /// <param name="DateRecommendedForCompletion">The recommended completion date of the assignment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Version">The version of Learning module assigned.</param>
         /// <param name="Module">The Learning module object associated with this assignment.</param>
         /// <param name="User">The user to whom the assignment is assigned.</param>
         /// <param name="AssessmentForm">The assessment form associated with this assignment.</param>
-        public LearningAssignment(LearningAssessment Assessment = null, UserReference CreatedBy = null, UserReference ModifiedBy = null, StateEnum? State = null, DateTime? DateRecommendedForCompletion = null, int? Version = null, LearningModule Module = null, UserReference User = null, AssessmentForm AssessmentForm = null)
+        public LearningAssignment(LearningAssessment Assessment = null, StateEnum? State = null, DateTime? DateRecommendedForCompletion = null, int? Version = null, LearningModule Module = null, UserReference User = null, AssessmentForm AssessmentForm = null)
         {
             this.Assessment = Assessment;
-            this.CreatedBy = CreatedBy;
-            this.ModifiedBy = ModifiedBy;
             this.State = State;
             this.DateRecommendedForCompletion = DateRecommendedForCompletion;
             this.Version = Version;
@@ -209,7 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user who created the assignment</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public UserReference CreatedBy { get; set; }
+        public UserReference CreatedBy { get; private set; }
         
         
         
@@ -227,7 +223,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user who modified the assignment</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public UserReference ModifiedBy { get; set; }
+        public UserReference ModifiedBy { get; private set; }
         
         
         

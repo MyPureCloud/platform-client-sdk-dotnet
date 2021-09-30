@@ -111,7 +111,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="VoicemailGroupPolicy" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Group">The group associated with the policy.</param>
         /// <param name="Enabled">Whether voicemail is enabled for the group.</param>
         /// <param name="SendEmailNotifications">Whether email notifications are sent to group members when a new voicemail is received.</param>
         /// <param name="DisableEmailPii">Removes any PII from group emails. This is overridden by the analogous organization configuration value. This is always true if HIPAA is enabled or unknown for an organization..</param>
@@ -119,10 +118,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StopRingingAfterRotations">How many rotations to go through.</param>
         /// <param name="OverflowGroupId"> A fallback group to contact when all of the members in this group did not answer the call..</param>
         /// <param name="GroupAlertType">Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin..</param>
-        public VoicemailGroupPolicy(string Name = null, Group Group = null, bool? Enabled = null, bool? SendEmailNotifications = null, bool? DisableEmailPii = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null, string OverflowGroupId = null, GroupAlertTypeEnum? GroupAlertType = null)
+        public VoicemailGroupPolicy(string Name = null, bool? Enabled = null, bool? SendEmailNotifications = null, bool? DisableEmailPii = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null, string OverflowGroupId = null, GroupAlertTypeEnum? GroupAlertType = null)
         {
             this.Name = Name;
-            this.Group = Group;
             this.Enabled = Enabled;
             this.SendEmailNotifications = SendEmailNotifications;
             this.DisableEmailPii = DisableEmailPii;
@@ -148,7 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The group associated with the policy</value>
         [DataMember(Name="group", EmitDefaultValue=false)]
-        public Group Group { get; set; }
+        public Group Group { get; private set; }
         
         
         

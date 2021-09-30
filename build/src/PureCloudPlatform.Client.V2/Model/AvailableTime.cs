@@ -120,10 +120,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableTime" /> class.
         /// </summary>
-        /// <param name="WfmSchedule">Workforce Management schedule information associated with the available time.</param>
-        public AvailableTime(WfmScheduleReference WfmSchedule = null)
+        public AvailableTime()
         {
-            this.WfmSchedule = WfmSchedule;
             
         }
         
@@ -163,7 +161,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Workforce Management schedule information associated with the available time</value>
         [DataMember(Name="wfmSchedule", EmitDefaultValue=false)]
-        public WfmScheduleReference WfmSchedule { get; set; }
+        public WfmScheduleReference WfmSchedule { get; private set; }
         
         
         /// <summary>

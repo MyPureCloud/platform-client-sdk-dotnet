@@ -152,20 +152,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">The ID of the integration type. (required).</param>
         /// <param name="Name">Name.</param>
-        /// <param name="Images">Collection of logos..</param>
-        /// <param name="HelpLinks">List of links to additional help resources.</param>
-        /// <param name="Credentials">Map of credentials for integrations of this type. The key is the name of a credential that can be provided in the credentials property of the integration configuration..</param>
-        /// <param name="UserPermissions">List of permissions required to permit user access to the integration type..</param>
-        /// <param name="VendorOAuthClientIds">List of OAuth Client IDs that must be authorized when the integration is created..</param>
-        public IntegrationType(string Id = null, string Name = null, List<UserImage> Images = null, List<HelpLink> HelpLinks = null, Dictionary<string, CredentialSpecification> Credentials = null, List<string> UserPermissions = null, List<string> VendorOAuthClientIds = null)
+        public IntegrationType(string Id = null, string Name = null)
         {
             this.Id = Id;
             this.Name = Name;
-            this.Images = Images;
-            this.HelpLinks = HelpLinks;
-            this.Credentials = Credentials;
-            this.UserPermissions = UserPermissions;
-            this.VendorOAuthClientIds = VendorOAuthClientIds;
             
         }
         
@@ -220,7 +210,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Collection of logos.</value>
         [DataMember(Name="images", EmitDefaultValue=false)]
-        public List<UserImage> Images { get; set; }
+        public List<UserImage> Images { get; private set; }
         
         
         
@@ -328,7 +318,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of links to additional help resources</value>
         [DataMember(Name="helpLinks", EmitDefaultValue=false)]
-        public List<HelpLink> HelpLinks { get; set; }
+        public List<HelpLink> HelpLinks { get; private set; }
         
         
         
@@ -337,7 +327,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Map of credentials for integrations of this type. The key is the name of a credential that can be provided in the credentials property of the integration configuration.</value>
         [DataMember(Name="credentials", EmitDefaultValue=false)]
-        public Dictionary<string, CredentialSpecification> Credentials { get; set; }
+        public Dictionary<string, CredentialSpecification> Credentials { get; private set; }
         
         
         
@@ -364,7 +354,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of permissions required to permit user access to the integration type.</value>
         [DataMember(Name="userPermissions", EmitDefaultValue=false)]
-        public List<string> UserPermissions { get; set; }
+        public List<string> UserPermissions { get; private set; }
         
         
         
@@ -373,7 +363,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of OAuth Client IDs that must be authorized when the integration is created.</value>
         [DataMember(Name="vendorOAuthClientIds", EmitDefaultValue=false)]
-        public List<string> VendorOAuthClientIds { get; set; }
+        public List<string> VendorOAuthClientIds { get; private set; }
         
         
         

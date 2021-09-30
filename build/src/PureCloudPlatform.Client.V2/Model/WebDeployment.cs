@@ -153,17 +153,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Configuration">The config version this deployment uses (required).</param>
         /// <param name="AllowAllDomains">Property indicates whether all domains are allowed or not. allowedDomains must be empty when this is set as true..</param>
         /// <param name="AllowedDomains">The list of domains that are approved to use this deployment; the list will be added to CORS headers for ease of web use..</param>
-        /// <param name="LastModifiedUser">A reference to the user who most recently modified the deployment.</param>
         /// <param name="Flow">A reference to the inboundshortmessage flow used by this deployment.</param>
         /// <param name="Status">The current status of the deployment.</param>
-        public WebDeployment(string Name = null, string Description = null, WebDeploymentConfigurationVersionEntityRef Configuration = null, bool? AllowAllDomains = null, List<string> AllowedDomains = null, AddressableEntityRef LastModifiedUser = null, DomainEntityRef Flow = null, StatusEnum? Status = null)
+        public WebDeployment(string Name = null, string Description = null, WebDeploymentConfigurationVersionEntityRef Configuration = null, bool? AllowAllDomains = null, List<string> AllowedDomains = null, DomainEntityRef Flow = null, StatusEnum? Status = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.Configuration = Configuration;
             this.AllowAllDomains = AllowAllDomains;
             this.AllowedDomains = AllowedDomains;
-            this.LastModifiedUser = LastModifiedUser;
             this.Flow = Flow;
             this.Status = Status;
             
@@ -257,7 +255,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A reference to the user who most recently modified the deployment</value>
         [DataMember(Name="lastModifiedUser", EmitDefaultValue=false)]
-        public AddressableEntityRef LastModifiedUser { get; set; }
+        public AddressableEntityRef LastModifiedUser { get; private set; }
         
         
         

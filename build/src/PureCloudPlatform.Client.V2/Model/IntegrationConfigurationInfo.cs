@@ -29,10 +29,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationConfigurationInfo" /> class.
         /// </summary>
-        /// <param name="Current">The current, active configuration for the integration..</param>
-        public IntegrationConfigurationInfo(IntegrationConfiguration Current = null)
+        public IntegrationConfigurationInfo()
         {
-            this.Current = Current;
             
         }
         
@@ -43,7 +41,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The current, active configuration for the integration.</value>
         [DataMember(Name="current", EmitDefaultValue=false)]
-        public IntegrationConfiguration Current { get; set; }
+        public IntegrationConfiguration Current { get; private set; }
         
         
         /// <summary>

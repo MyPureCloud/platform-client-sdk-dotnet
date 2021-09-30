@@ -50,6 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingData" /> class.
@@ -66,7 +71,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SkillIds">A list of skill identifiers to be considered in routing.</param>
         /// <param name="PreferredAgentIds">A list of agents to be preferred in routing.</param>
         /// <param name="ScoredAgents">A list of scored agents for routing decisions.</param>
-        public RoutingData(string QueueId = null, string LanguageId = null, int? Priority = null, List<string> SkillIds = null, List<string> PreferredAgentIds = null, List<ScoredAgent> ScoredAgents = null)
+        /// <param name="RoutingFlags">An array of flags indicating how the conversation should be routed.</param>
+        public RoutingData(string QueueId = null, string LanguageId = null, int? Priority = null, List<string> SkillIds = null, List<string> PreferredAgentIds = null, List<ScoredAgent> ScoredAgents = null, List<string> RoutingFlags = null)
         {
             this.QueueId = QueueId;
             this.LanguageId = LanguageId;
@@ -74,6 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SkillIds = SkillIds;
             this.PreferredAgentIds = PreferredAgentIds;
             this.ScoredAgents = ScoredAgents;
+            this.RoutingFlags = RoutingFlags;
             
         }
         
@@ -132,6 +139,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ScoredAgent> ScoredAgents { get; set; }
         
         
+        
+        /// <summary>
+        /// An array of flags indicating how the conversation should be routed
+        /// </summary>
+        /// <value>An array of flags indicating how the conversation should be routed</value>
+        [DataMember(Name="routingFlags", EmitDefaultValue=false)]
+        public List<string> RoutingFlags { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -147,6 +163,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
             sb.Append("  PreferredAgentIds: ").Append(PreferredAgentIds).Append("\n");
             sb.Append("  ScoredAgents: ").Append(ScoredAgents).Append("\n");
+            sb.Append("  RoutingFlags: ").Append(RoutingFlags).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -216,6 +233,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScoredAgents == other.ScoredAgents ||
                     this.ScoredAgents != null &&
                     this.ScoredAgents.SequenceEqual(other.ScoredAgents)
+                ) &&
+                (
+                    this.RoutingFlags == other.RoutingFlags ||
+                    this.RoutingFlags != null &&
+                    this.RoutingFlags.SequenceEqual(other.RoutingFlags)
                 );
         }
 
@@ -248,6 +270,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ScoredAgents != null)
                     hash = hash * 59 + this.ScoredAgents.GetHashCode();
+                
+                if (this.RoutingFlags != null)
+                    hash = hash * 59 + this.RoutingFlags.GetHashCode();
                 
                 return hash;
             }

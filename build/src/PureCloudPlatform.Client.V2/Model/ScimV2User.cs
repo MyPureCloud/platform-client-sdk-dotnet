@@ -99,7 +99,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2User" /> class.
         /// </summary>
-        /// <param name="Schemas">The list of supported schemas..</param>
         /// <param name="Active">Indicates whether the user&#39;s administrative status is active..</param>
         /// <param name="UserName">The user&#39;s Genesys Cloud email address. Must be unique..</param>
         /// <param name="DisplayName">The display name of the user..</param>
@@ -112,10 +111,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Roles">The list of roles assigned to the user..</param>
         /// <param name="Urnietfparamsscimschemasextensionenterprise20User">The URI of the schema for the enterprise user..</param>
         /// <param name="Urnietfparamsscimschemasextensiongenesyspurecloud20User">The URI of the schema for the Genesys Cloud user..</param>
-        /// <param name="Meta">The metadata of the SCIM resource..</param>
-        public ScimV2User(List<string> Schemas = null, bool? Active = null, string UserName = null, string DisplayName = null, string Password = null, string Title = null, List<ScimPhoneNumber> PhoneNumbers = null, List<ScimEmail> Emails = null, string ExternalId = null, List<ScimV2GroupReference> Groups = null, List<ScimUserRole> Roles = null, ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User = null, ScimUserExtensions Urnietfparamsscimschemasextensiongenesyspurecloud20User = null, ScimMetadata Meta = null)
+        public ScimV2User(bool? Active = null, string UserName = null, string DisplayName = null, string Password = null, string Title = null, List<ScimPhoneNumber> PhoneNumbers = null, List<ScimEmail> Emails = null, string ExternalId = null, List<ScimV2GroupReference> Groups = null, List<ScimUserRole> Roles = null, ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User = null, ScimUserExtensions Urnietfparamsscimschemasextensiongenesyspurecloud20User = null)
         {
-            this.Schemas = Schemas;
             this.Active = Active;
             this.UserName = UserName;
             this.DisplayName = DisplayName;
@@ -128,7 +125,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Roles = Roles;
             this.Urnietfparamsscimschemasextensionenterprise20User = Urnietfparamsscimschemasextensionenterprise20User;
             this.Urnietfparamsscimschemasextensiongenesyspurecloud20User = Urnietfparamsscimschemasextensiongenesyspurecloud20User;
-            this.Meta = Meta;
             
         }
         
@@ -148,7 +144,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of supported schemas.</value>
         [DataMember(Name="schemas", EmitDefaultValue=false)]
-        public List<string> Schemas { get; set; }
+        public List<string> Schemas { get; private set; }
         
         
         
@@ -265,7 +261,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The metadata of the SCIM resource.</value>
         [DataMember(Name="meta", EmitDefaultValue=false)]
-        public ScimMetadata Meta { get; set; }
+        public ScimMetadata Meta { get; private set; }
         
         
         /// <summary>

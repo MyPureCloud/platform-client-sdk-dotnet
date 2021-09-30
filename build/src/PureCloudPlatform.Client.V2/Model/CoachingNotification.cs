@@ -215,13 +215,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CoachingNotification" /> class.
         /// </summary>
         /// <param name="MarkedAsRead">Indicates if notification is read or unread.</param>
-        /// <param name="User">The user of this notification.</param>
-        /// <param name="Appointment">The appointment.</param>
-        public CoachingNotification(bool? MarkedAsRead = null, UserReference User = null, CoachingAppointmentResponse Appointment = null)
+        public CoachingNotification(bool? MarkedAsRead = null)
         {
             this.MarkedAsRead = MarkedAsRead;
-            this.User = User;
-            this.Appointment = Appointment;
             
         }
         
@@ -283,7 +279,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user of this notification</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public UserReference User { get; set; }
+        public UserReference User { get; private set; }
         
         
         
@@ -292,7 +288,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The appointment</value>
         [DataMember(Name="appointment", EmitDefaultValue=false)]
-        public CoachingAppointmentResponse Appointment { get; set; }
+        public CoachingAppointmentResponse Appointment { get; private set; }
         
         
         

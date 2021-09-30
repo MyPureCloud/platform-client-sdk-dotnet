@@ -234,15 +234,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RequestedValue">Requested limit value for a given key (required).</param>
         /// <param name="Description">Description of the need for the limit change request (required).</param>
         /// <param name="SupportCaseUrl">The support case url created by Care (required).</param>
-        /// <param name="StatusHistory">List of statuses that a limit change request has gone through.</param>
-        public LimitChangeRequestDetails(string Key = null, string _Namespace = null, double? RequestedValue = null, string Description = null, string SupportCaseUrl = null, List<StatusChange> StatusHistory = null)
+        public LimitChangeRequestDetails(string Key = null, string _Namespace = null, double? RequestedValue = null, string Description = null, string SupportCaseUrl = null)
         {
             this.Key = Key;
             this._Namespace = _Namespace;
             this.RequestedValue = RequestedValue;
             this.Description = Description;
             this.SupportCaseUrl = SupportCaseUrl;
-            this.StatusHistory = StatusHistory;
             
         }
         
@@ -336,7 +334,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of statuses that a limit change request has gone through</value>
         [DataMember(Name="statusHistory", EmitDefaultValue=false)]
-        public List<StatusChange> StatusHistory { get; set; }
+        public List<StatusChange> StatusHistory { get; private set; }
         
         
         

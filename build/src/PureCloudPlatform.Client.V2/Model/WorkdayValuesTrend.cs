@@ -54,14 +54,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkdayValuesTrend" /> class.
         /// </summary>
-        /// <param name="Division">The targeted division for the query.</param>
-        /// <param name="User">The targeted user for the query.</param>
-        /// <param name="Results">The metric value trends.</param>
-        public WorkdayValuesTrend(Division Division = null, UserReference User = null, List<WorkdayValuesMetricItem> Results = null)
+        public WorkdayValuesTrend()
         {
-            this.Division = Division;
-            this.User = User;
-            this.Results = Results;
             
         }
         
@@ -90,7 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The targeted division for the query</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public Division Division { get; set; }
+        public Division Division { get; private set; }
         
         
         
@@ -99,7 +93,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The targeted user for the query</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public UserReference User { get; set; }
+        public UserReference User { get; private set; }
         
         
         
@@ -117,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The metric value trends</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
-        public List<WorkdayValuesMetricItem> Results { get; set; }
+        public List<WorkdayValuesMetricItem> Results { get; private set; }
         
         
         /// <summary>

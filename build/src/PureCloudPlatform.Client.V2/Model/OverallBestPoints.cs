@@ -34,12 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OverallBestPoints" /> class.
         /// </summary>
-        /// <param name="Division">The requested division.</param>
-        /// <param name="BestPoints">List of gamification best point items.</param>
-        public OverallBestPoints(Division Division = null, List<OverallBestPointsItem> BestPoints = null)
+        public OverallBestPoints()
         {
-            this.Division = Division;
-            this.BestPoints = BestPoints;
             
         }
         
@@ -50,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The requested division</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public Division Division { get; set; }
+        public Division Division { get; private set; }
         
         
         
@@ -59,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of gamification best point items</value>
         [DataMember(Name="bestPoints", EmitDefaultValue=false)]
-        public List<OverallBestPointsItem> BestPoints { get; set; }
+        public List<OverallBestPointsItem> BestPoints { get; private set; }
         
         
         /// <summary>

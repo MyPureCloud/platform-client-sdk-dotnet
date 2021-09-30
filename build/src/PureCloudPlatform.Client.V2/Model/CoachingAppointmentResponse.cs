@@ -151,20 +151,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingAppointmentResponse" /> class.
         /// </summary>
-        /// <param name="Facilitator">The facilitator of coaching appointment.</param>
-        /// <param name="Attendees">The list of attendees attending the coaching.</param>
-        /// <param name="CreatedBy">The user who created the coaching appointment.</param>
-        /// <param name="ModifiedBy">The last user to modify the coaching appointment.</param>
-        /// <param name="Conversations">The list of conversations associated with coaching appointment..</param>
-        /// <param name="Documents">The list of documents associated with coaching appointment..</param>
-        public CoachingAppointmentResponse(UserReference Facilitator = null, List<UserReference> Attendees = null, UserReference CreatedBy = null, UserReference ModifiedBy = null, List<ConversationReference> Conversations = null, List<DocumentReference> Documents = null)
+        public CoachingAppointmentResponse()
         {
-            this.Facilitator = Facilitator;
-            this.Attendees = Attendees;
-            this.CreatedBy = CreatedBy;
-            this.ModifiedBy = ModifiedBy;
-            this.Conversations = Conversations;
-            this.Documents = Documents;
             
         }
         
@@ -222,7 +210,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The facilitator of coaching appointment</value>
         [DataMember(Name="facilitator", EmitDefaultValue=false)]
-        public UserReference Facilitator { get; set; }
+        public UserReference Facilitator { get; private set; }
         
         
         
@@ -231,7 +219,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of attendees attending the coaching</value>
         [DataMember(Name="attendees", EmitDefaultValue=false)]
-        public List<UserReference> Attendees { get; set; }
+        public List<UserReference> Attendees { get; private set; }
         
         
         
@@ -240,7 +228,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user who created the coaching appointment</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public UserReference CreatedBy { get; set; }
+        public UserReference CreatedBy { get; private set; }
         
         
         
@@ -258,7 +246,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The last user to modify the coaching appointment</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public UserReference ModifiedBy { get; set; }
+        public UserReference ModifiedBy { get; private set; }
         
         
         
@@ -276,7 +264,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of conversations associated with coaching appointment.</value>
         [DataMember(Name="conversations", EmitDefaultValue=false)]
-        public List<ConversationReference> Conversations { get; set; }
+        public List<ConversationReference> Conversations { get; private set; }
         
         
         
@@ -285,7 +273,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of documents associated with coaching appointment.</value>
         [DataMember(Name="documents", EmitDefaultValue=false)]
-        public List<DocumentReference> Documents { get; set; }
+        public List<DocumentReference> Documents { get; private set; }
         
         
         

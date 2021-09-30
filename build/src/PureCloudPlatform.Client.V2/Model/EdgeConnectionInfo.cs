@@ -60,12 +60,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="EdgeConnectionInfo" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="ConnectionErrors">Connection errors.</param>
         /// <param name="Site">Site.</param>
-        public EdgeConnectionInfo(string Name = null, List<string> ConnectionErrors = null, AddressableEntityRef Site = null)
+        public EdgeConnectionInfo(string Name = null, AddressableEntityRef Site = null)
         {
             this.Name = Name;
-            this.ConnectionErrors = ConnectionErrors;
             this.Site = Site;
             
         }
@@ -112,7 +110,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Connection errors</value>
         [DataMember(Name="connectionErrors", EmitDefaultValue=false)]
-        public List<string> ConnectionErrors { get; set; }
+        public List<string> ConnectionErrors { get; private set; }
         
         
         

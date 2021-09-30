@@ -119,12 +119,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkdayPointsTrend" /> class.
         /// </summary>
-        /// <param name="User">The targeted user for the query.</param>
-        /// <param name="Trend">Daily points trends.</param>
-        public WorkdayPointsTrend(UserReference User = null, List<WorkdayPointsTrendItem> Trend = null)
+        public WorkdayPointsTrend()
         {
-            this.User = User;
-            this.Trend = Trend;
             
         }
         
@@ -153,7 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The targeted user for the query</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public UserReference User { get; set; }
+        public UserReference User { get; private set; }
         
         
         
@@ -173,7 +169,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Daily points trends</value>
         [DataMember(Name="trend", EmitDefaultValue=false)]
-        public List<WorkdayPointsTrendItem> Trend { get; set; }
+        public List<WorkdayPointsTrendItem> Trend { get; private set; }
         
         
         /// <summary>

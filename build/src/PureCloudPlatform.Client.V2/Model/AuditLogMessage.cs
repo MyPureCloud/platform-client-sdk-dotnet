@@ -87,6 +87,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Datatables,
             
             /// <summary>
+            /// Enum Directory for "Directory"
+            /// </summary>
+            [EnumMember(Value = "Directory")]
+            Directory,
+            
+            /// <summary>
             /// Enum Gamification for "Gamification"
             /// </summary>
             [EnumMember(Value = "Gamification")]
@@ -1236,6 +1242,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Product")]
             Product,
+            
+            /// <summary>
+            /// Enum Profile for "Profile"
+            /// </summary>
+            [EnumMember(Value = "Profile")]
+            Profile,
+            
+            /// <summary>
+            /// Enum Profilemembers for "ProfileMembers"
+            /// </summary>
+            [EnumMember(Value = "ProfileMembers")]
+            Profilemembers,
             
             /// <summary>
             /// Enum Program for "Program"
