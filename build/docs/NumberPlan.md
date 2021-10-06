@@ -21,7 +21,7 @@ title: NumberPlan
 | **Match** | **string** |  | [optional] |
 | **NormalizedFormat** | **string** |  | [optional] |
 | **Priority** | **int?** |  | [optional] |
-| **Numbers** | **List&lt;double?&gt;** |  | [optional] |
+| **Numbers** | [**List&lt;Number&gt;**](Number.html) |  | [optional] |
 | **DigitLength** | [**DigitLength**](DigitLength.html) |  | [optional] |
 | **Classification** | **string** |  | [optional] |
 | **MatchType** | **string** |  | [optional] |
