@@ -14,8 +14,9 @@ title: VoicemailGroupPolicy
 | **DisableEmailPii** | **bool?** | Removes any PII from group emails. This is overridden by the analogous organization configuration value. This is always true if HIPAA is enabled or unknown for an organization. | [optional] |
 | **RotateCallsSecs** | **int?** | How many seconds to ring before rotating to the next member in the group | [optional] |
 | **StopRingingAfterRotations** | **int?** | How many rotations to go through | [optional] |
-| **OverflowGroupId** | **string** |  A fallback group to contact when all of the members in this group did not answer the call. | [optional] |
+| **OverflowGroupId** | **string** | A fallback group to contact when all of the members in this group did not answer the call. | [optional] |
 | **GroupAlertType** | **string** | Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin. | [optional] |
+| **InteractiveResponsePromptId** | **string** | The prompt to use when connecting a user to a Group Ring call | [optional] |
 {: class="table table-striped"}
 
 

@@ -130,6 +130,7 @@ title: ViewFilter
 | **EmailDeliveryStatusList** | **List&lt;string&gt;** | The list of email delivery statuses used to filter views | [optional] |
 | **IsAgentOwnedCallback** | **bool?** | Indicates filtering for agent owned callback interactions | [optional] |
 | **AgentCallbackOwnerIds** | **List&lt;string&gt;** | The list of callback owners used to filter interactions | [optional] |
+| **TranscriptTopics** | [**List&lt;TranscriptTopics&gt;**](TranscriptTopics.html) | The list of transcript topics requested in filter | [optional] |
 {: class="table table-striped"}
 
 

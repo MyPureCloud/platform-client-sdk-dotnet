@@ -35,6 +35,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SingleWorkdayAveragePoints" /> class.
@@ -72,6 +77,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public double? AveragePoints { get; private set; }
         
         
+        
+        /// <summary>
+        /// The targeted performance profile for the average points
+        /// </summary>
+        /// <value>The targeted performance profile for the average points</value>
+        [DataMember(Name="performanceProfile", EmitDefaultValue=false)]
+        public AddressableEntityRef PerformanceProfile { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,6 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateWorkday: ").Append(DateWorkday).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  AveragePoints: ").Append(AveragePoints).Append("\n");
+            sb.Append("  PerformanceProfile: ").Append(PerformanceProfile).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,6 +153,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AveragePoints == other.AveragePoints ||
                     this.AveragePoints != null &&
                     this.AveragePoints.Equals(other.AveragePoints)
+                ) &&
+                (
+                    this.PerformanceProfile == other.PerformanceProfile ||
+                    this.PerformanceProfile != null &&
+                    this.PerformanceProfile.Equals(other.PerformanceProfile)
                 );
         }
 
@@ -161,6 +181,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AveragePoints != null)
                     hash = hash * 59 + this.AveragePoints.GetHashCode();
+                
+                if (this.PerformanceProfile != null)
+                    hash = hash * 59 + this.PerformanceProfile.GetHashCode();
                 
                 return hash;
             }

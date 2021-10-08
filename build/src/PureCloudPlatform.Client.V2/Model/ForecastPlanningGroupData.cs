@@ -39,9 +39,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ForecastPlanningGroupData" /> class.
         /// </summary>
-        /// <param name="PlanningGroupId">The ID of the planning group to which this data applies. Note this is a snapshot of the planning group at the time of forecast creation and may not correspond to the current configuration.</param>
-        /// <param name="OfferedPerInterval">Forecast offered counts per interval for this week of the forecast.</param>
-        /// <param name="AverageHandleTimeSecondsPerInterval">Forecast average handle time per interval in seconds.</param>
+        [JsonConstructorAttribute]
+        protected ForecastPlanningGroupData() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ForecastPlanningGroupData" /> class.
+        /// </summary>
+        /// <param name="PlanningGroupId">The ID of the planning group to which this data applies. Note this is a snapshot of the planning group at the time of forecast creation and may not correspond to the current configuration (required).</param>
+        /// <param name="OfferedPerInterval">Forecast offered counts per interval for this week of the forecast (required).</param>
+        /// <param name="AverageHandleTimeSecondsPerInterval">Forecast average handle time per interval in seconds (required).</param>
         public ForecastPlanningGroupData(string PlanningGroupId = null, List<double?> OfferedPerInterval = null, List<double?> AverageHandleTimeSecondsPerInterval = null)
         {
             this.PlanningGroupId = PlanningGroupId;

@@ -42,6 +42,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Attachment,
             
             /// <summary>
+            /// Enum Location for "Location"
+            /// </summary>
+            [EnumMember(Value = "Location")]
+            Location,
+            
+            /// <summary>
             /// Enum Quickreply for "QuickReply"
             /// </summary>
             [EnumMember(Value = "QuickReply")]
@@ -85,12 +91,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Type of this content element. If contentType = \"Attachment\" only one item is allowed.
         /// </summary>
         /// <value>Type of this content element. If contentType = \"Attachment\" only one item is allowed.</value>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public ContentTypeEnum? ContentType { get; set; }
+        
+        
         
         
         
@@ -114,14 +125,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ConversationMessageContent" /> class.
         /// </summary>
         /// <param name="ContentType">Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. (required).</param>
+        /// <param name="Location">Location content..</param>
         /// <param name="Attachment">Attachment content..</param>
         /// <param name="QuickReply">Quick reply content..</param>
         /// <param name="Template">Template notification content..</param>
         /// <param name="ButtonResponse">Button response content..</param>
         /// <param name="Generic">Generic Template Object.</param>
-        public ConversationMessageContent(ContentTypeEnum? ContentType = null, ConversationContentAttachment Attachment = null, ConversationContentQuickReply QuickReply = null, ConversationContentNotificationTemplate Template = null, ConversationContentButtonResponse ButtonResponse = null, ContentGeneric Generic = null)
+        public ConversationMessageContent(ContentTypeEnum? ContentType = null, ConversationContentLocation Location = null, ConversationContentAttachment Attachment = null, ConversationContentQuickReply QuickReply = null, ConversationContentNotificationTemplate Template = null, ConversationContentButtonResponse ButtonResponse = null, ConversationContentGeneric Generic = null)
         {
             this.ContentType = ContentType;
+            this.Location = Location;
             this.Attachment = Attachment;
             this.QuickReply = QuickReply;
             this.Template = Template;
@@ -131,6 +144,15 @@ namespace PureCloudPlatform.Client.V2.Model
         }
         
         
+        
+        
+        
+        /// <summary>
+        /// Location content.
+        /// </summary>
+        /// <value>Location content.</value>
+        [DataMember(Name="location", EmitDefaultValue=false)]
+        public ConversationContentLocation Location { get; set; }
         
         
         
@@ -175,7 +197,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Generic Template Object</value>
         [DataMember(Name="generic", EmitDefaultValue=false)]
-        public ContentGeneric Generic { get; set; }
+        public ConversationContentGeneric Generic { get; set; }
         
         
         /// <summary>
@@ -188,6 +210,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ConversationMessageContent {\n");
             
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
+            sb.Append("  Location: ").Append(Location).Append("\n");
             sb.Append("  Attachment: ").Append(Attachment).Append("\n");
             sb.Append("  QuickReply: ").Append(QuickReply).Append("\n");
             sb.Append("  Template: ").Append(Template).Append("\n");
@@ -239,6 +262,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContentType.Equals(other.ContentType)
                 ) &&
                 (
+                    this.Location == other.Location ||
+                    this.Location != null &&
+                    this.Location.Equals(other.Location)
+                ) &&
+                (
                     this.Attachment == other.Attachment ||
                     this.Attachment != null &&
                     this.Attachment.Equals(other.Attachment)
@@ -279,6 +307,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
+                
+                if (this.Location != null)
+                    hash = hash * 59 + this.Location.GetHashCode();
                 
                 if (this.Attachment != null)
                     hash = hash * 59 + this.Attachment.GetHashCode();

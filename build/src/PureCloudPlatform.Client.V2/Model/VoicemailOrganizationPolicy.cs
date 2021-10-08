@@ -60,22 +60,29 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailOrganizationPolicy" /> class.
         /// </summary>
-        /// <param name="AlertTimeoutSeconds">The organization&#39;s default number of seconds to ring a user&#39;s phone before a call is transfered to voicemail.</param>
+        /// <param name="AlertTimeoutSeconds">The organization&#39;s default number of seconds to ring a user&#39;s phone before a call is transferred to voicemail.</param>
         /// <param name="PinConfiguration">The configuration for user PINs to access their voicemail from a phone.</param>
         /// <param name="VoicemailExtension">The extension for voicemail retrieval.  The default value is *86..</param>
         /// <param name="PinRequired">If this is true, a PIN is required when accessing a user&#39;s voicemail from a phone..</param>
+        /// <param name="InteractiveResponseRequired">Whether user should be prompted with a confirmation prompt when connecting to a Group Ring call.</param>
         /// <param name="SendEmailNotifications">Whether email notifications are sent for new voicemails in the organization. If false, new voicemail email notifications are not be sent for the organization overriding any user or group setting..</param>
         /// <param name="DisableEmailPii">Removes any PII from emails. This overrides any analogous group configuration value. This is always true if HIPAA is enabled or unknown for an organization..</param>
-        public VoicemailOrganizationPolicy(int? AlertTimeoutSeconds = null, PINConfiguration PinConfiguration = null, string VoicemailExtension = null, bool? PinRequired = null, bool? SendEmailNotifications = null, bool? DisableEmailPii = null)
+        public VoicemailOrganizationPolicy(int? AlertTimeoutSeconds = null, PINConfiguration PinConfiguration = null, string VoicemailExtension = null, bool? PinRequired = null, bool? InteractiveResponseRequired = null, bool? SendEmailNotifications = null, bool? DisableEmailPii = null)
         {
             this.AlertTimeoutSeconds = AlertTimeoutSeconds;
             this.PinConfiguration = PinConfiguration;
             this.VoicemailExtension = VoicemailExtension;
             this.PinRequired = PinRequired;
+            this.InteractiveResponseRequired = InteractiveResponseRequired;
             this.SendEmailNotifications = SendEmailNotifications;
             this.DisableEmailPii = DisableEmailPii;
             
@@ -84,18 +91,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Whether voicemail is enable for this organization
+        /// Whether voicemail is enabled for this organization
         /// </summary>
-        /// <value>Whether voicemail is enable for this organization</value>
+        /// <value>Whether voicemail is enabled for this organization</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; private set; }
         
         
         
         /// <summary>
-        /// The organization&#39;s default number of seconds to ring a user&#39;s phone before a call is transfered to voicemail
+        /// The organization&#39;s default number of seconds to ring a user&#39;s phone before a call is transferred to voicemail
         /// </summary>
-        /// <value>The organization&#39;s default number of seconds to ring a user&#39;s phone before a call is transfered to voicemail</value>
+        /// <value>The organization&#39;s default number of seconds to ring a user&#39;s phone before a call is transferred to voicemail</value>
         [DataMember(Name="alertTimeoutSeconds", EmitDefaultValue=false)]
         public int? AlertTimeoutSeconds { get; set; }
         
@@ -125,6 +132,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>If this is true, a PIN is required when accessing a user&#39;s voicemail from a phone.</value>
         [DataMember(Name="pinRequired", EmitDefaultValue=false)]
         public bool? PinRequired { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Whether user should be prompted with a confirmation prompt when connecting to a Group Ring call
+        /// </summary>
+        /// <value>Whether user should be prompted with a confirmation prompt when connecting to a Group Ring call</value>
+        [DataMember(Name="interactiveResponseRequired", EmitDefaultValue=false)]
+        public bool? InteractiveResponseRequired { get; set; }
         
         
         
@@ -168,6 +184,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PinConfiguration: ").Append(PinConfiguration).Append("\n");
             sb.Append("  VoicemailExtension: ").Append(VoicemailExtension).Append("\n");
             sb.Append("  PinRequired: ").Append(PinRequired).Append("\n");
+            sb.Append("  InteractiveResponseRequired: ").Append(InteractiveResponseRequired).Append("\n");
             sb.Append("  SendEmailNotifications: ").Append(SendEmailNotifications).Append("\n");
             sb.Append("  DisableEmailPii: ").Append(DisableEmailPii).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
@@ -237,6 +254,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PinRequired.Equals(other.PinRequired)
                 ) &&
                 (
+                    this.InteractiveResponseRequired == other.InteractiveResponseRequired ||
+                    this.InteractiveResponseRequired != null &&
+                    this.InteractiveResponseRequired.Equals(other.InteractiveResponseRequired)
+                ) &&
+                (
                     this.SendEmailNotifications == other.SendEmailNotifications ||
                     this.SendEmailNotifications != null &&
                     this.SendEmailNotifications.Equals(other.SendEmailNotifications)
@@ -279,6 +301,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PinRequired != null)
                     hash = hash * 59 + this.PinRequired.GetHashCode();
+                
+                if (this.InteractiveResponseRequired != null)
+                    hash = hash * 59 + this.InteractiveResponseRequired.GetHashCode();
                 
                 if (this.SendEmailNotifications != null)
                     hash = hash * 59 + this.SendEmailNotifications.GetHashCode();

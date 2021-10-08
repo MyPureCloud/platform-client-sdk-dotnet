@@ -39,9 +39,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LongTermForecastPlanningGroupData" /> class.
         /// </summary>
-        /// <param name="PlanningGroupId">The ID of the planning group to which this data applies. Note this is a snapshot of the planning group at the time of forecast creation and may not correspond to the current configuration.</param>
-        /// <param name="OfferedPerDay">Forecast offered counts per day for this planning group.</param>
-        /// <param name="AverageHandleTimeSecondsPerDay">Forecast average handle time per day in seconds.</param>
+        [JsonConstructorAttribute]
+        protected LongTermForecastPlanningGroupData() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LongTermForecastPlanningGroupData" /> class.
+        /// </summary>
+        /// <param name="PlanningGroupId">The ID of the planning group to which this data applies. Note this is a snapshot of the planning group at the time of forecast creation and may not correspond to the current configuration (required).</param>
+        /// <param name="OfferedPerDay">Forecast offered counts per day for this planning group (required).</param>
+        /// <param name="AverageHandleTimeSecondsPerDay">Forecast average handle time per day in seconds (required).</param>
         public LongTermForecastPlanningGroupData(string PlanningGroupId = null, List<double?> OfferedPerDay = null, List<double?> AverageHandleTimeSecondsPerDay = null)
         {
             this.PlanningGroupId = PlanningGroupId;

@@ -54,14 +54,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BuAgentScheduleShift" /> class.
         /// </summary>
-        /// <param name="StartDate">The start date of this shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="LengthMinutes">The length of this shift in minutes.</param>
+        /// <param name="Id">The ID of the shift.</param>
         /// <param name="Activities">The activities associated with this shift.</param>
         /// <param name="ManuallyEdited">Whether this shift was manually edited. This is only set by clients and is used for rescheduling.</param>
-        public BuAgentScheduleShift(DateTime? StartDate = null, int? LengthMinutes = null, List<BuAgentScheduleActivity> Activities = null, bool? ManuallyEdited = null)
+        public BuAgentScheduleShift(string Id = null, List<BuAgentScheduleActivity> Activities = null, bool? ManuallyEdited = null)
         {
-            this.StartDate = StartDate;
-            this.LengthMinutes = LengthMinutes;
+            this.Id = Id;
             this.Activities = Activities;
             this.ManuallyEdited = ManuallyEdited;
             
@@ -70,11 +68,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The ID of the shift
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The ID of the shift</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         
         
         
@@ -83,7 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The start date of this shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
-        public DateTime? StartDate { get; set; }
+        public DateTime? StartDate { get; private set; }
         
         
         
@@ -92,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The length of this shift in minutes</value>
         [DataMember(Name="lengthMinutes", EmitDefaultValue=false)]
-        public int? LengthMinutes { get; set; }
+        public int? LengthMinutes { get; private set; }
         
         
         

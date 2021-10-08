@@ -51,6 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Facebook,
             
             /// <summary>
+            /// Enum Instagram for "Instagram"
+            /// </summary>
+            [EnumMember(Value = "Instagram")]
+            Instagram,
+            
+            /// <summary>
             /// Enum Line for "Line"
             /// </summary>
             [EnumMember(Value = "Line")]

@@ -50,6 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkdayValuesTrend" /> class.
@@ -114,6 +119,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<WorkdayValuesMetricItem> Results { get; private set; }
         
         
+        
+        /// <summary>
+        /// The targeted performance profile for the average points
+        /// </summary>
+        /// <value>The targeted performance profile for the average points</value>
+        [DataMember(Name="performanceProfile", EmitDefaultValue=false)]
+        public AddressableEntityRef PerformanceProfile { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -129,6 +143,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Timezone: ").Append(Timezone).Append("\n");
             sb.Append("  Results: ").Append(Results).Append("\n");
+            sb.Append("  PerformanceProfile: ").Append(PerformanceProfile).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -198,6 +213,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Results == other.Results ||
                     this.Results != null &&
                     this.Results.SequenceEqual(other.Results)
+                ) &&
+                (
+                    this.PerformanceProfile == other.PerformanceProfile ||
+                    this.PerformanceProfile != null &&
+                    this.PerformanceProfile.Equals(other.PerformanceProfile)
                 );
         }
 
@@ -230,6 +250,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
+                
+                if (this.PerformanceProfile != null)
+                    hash = hash * 59 + this.PerformanceProfile.GetHashCode();
                 
                 return hash;
             }

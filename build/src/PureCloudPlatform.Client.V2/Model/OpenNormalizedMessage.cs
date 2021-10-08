@@ -45,7 +45,74 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Text for "Text"
             /// </summary>
             [EnumMember(Value = "Text")]
-            Text
+            Text,
+            
+            /// <summary>
+            /// Enum Receipt for "Receipt"
+            /// </summary>
+            [EnumMember(Value = "Receipt")]
+            Receipt
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Message receipt status, only used with type Receipt.
+        /// </summary>
+        /// <value>Message receipt status, only used with type Receipt.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Sent for "Sent"
+            /// </summary>
+            [EnumMember(Value = "Sent")]
+            Sent,
+            
+            /// <summary>
+            /// Enum Delivered for "Delivered"
+            /// </summary>
+            [EnumMember(Value = "Delivered")]
+            Delivered,
+            
+            /// <summary>
+            /// Enum Read for "Read"
+            /// </summary>
+            [EnumMember(Value = "Read")]
+            Read,
+            
+            /// <summary>
+            /// Enum Failed for "Failed"
+            /// </summary>
+            [EnumMember(Value = "Failed")]
+            Failed,
+            
+            /// <summary>
+            /// Enum Published for "Published"
+            /// </summary>
+            [EnumMember(Value = "Published")]
+            Published,
+            
+            /// <summary>
+            /// Enum Removed for "Removed"
+            /// </summary>
+            [EnumMember(Value = "Removed")]
+            Removed
         }
         
         
@@ -93,6 +160,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Message type.
         /// </summary>
@@ -107,11 +177,26 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Message receipt status, only used with type Receipt.
+        /// </summary>
+        /// <value>Message receipt status, only used with type Receipt.</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
         /// The direction of the message.
         /// </summary>
         /// <value>The direction of the message.</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
+        
+        
         
         
     
@@ -128,12 +213,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Message type. (required).</param>
         /// <param name="Text">Message text..</param>
         /// <param name="Content">List of content elements..</param>
-        public OpenNormalizedMessage(OpenMessagingChannel Channel = null, TypeEnum? Type = null, string Text = null, List<OpenMessageContent> Content = null)
+        /// <param name="Metadata">Additional metadata about this message..</param>
+        public OpenNormalizedMessage(OpenMessagingChannel Channel = null, TypeEnum? Type = null, string Text = null, List<OpenMessageContent> Content = null, Dictionary<string, string> Metadata = null)
         {
             this.Channel = Channel;
             this.Type = Type;
             this.Text = Text;
             this.Content = Content;
+            this.Metadata = Metadata;
             
         }
         
@@ -178,6 +265,35 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// List of reasons for a message receipt that indicates the message has failed. Only used with Failed status.
+        /// </summary>
+        /// <value>List of reasons for a message receipt that indicates the message has failed. Only used with Failed status.</value>
+        [DataMember(Name="reasons", EmitDefaultValue=false)]
+        public List<Reason> Reasons { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates if this is the last message receipt for this message, or if another message receipt can be expected.
+        /// </summary>
+        /// <value>Indicates if this is the last message receipt for this message, or if another message receipt can be expected.</value>
+        [DataMember(Name="isFinalReceipt", EmitDefaultValue=false)]
+        public bool? IsFinalReceipt { get; private set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Additional metadata about this message.
+        /// </summary>
+        /// <value>Additional metadata about this message.</value>
+        [DataMember(Name="metadata", EmitDefaultValue=false)]
+        public Dictionary<string, string> Metadata { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -192,7 +308,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  Reasons: ").Append(Reasons).Append("\n");
+            sb.Append("  IsFinalReceipt: ").Append(IsFinalReceipt).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -259,9 +379,29 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Content.SequenceEqual(other.Content)
                 ) &&
                 (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
+                ) &&
+                (
+                    this.Reasons == other.Reasons ||
+                    this.Reasons != null &&
+                    this.Reasons.SequenceEqual(other.Reasons)
+                ) &&
+                (
+                    this.IsFinalReceipt == other.IsFinalReceipt ||
+                    this.IsFinalReceipt != null &&
+                    this.IsFinalReceipt.Equals(other.IsFinalReceipt)
+                ) &&
+                (
                     this.Direction == other.Direction ||
                     this.Direction != null &&
                     this.Direction.Equals(other.Direction)
+                ) &&
+                (
+                    this.Metadata == other.Metadata ||
+                    this.Metadata != null &&
+                    this.Metadata.SequenceEqual(other.Metadata)
                 );
         }
 
@@ -292,8 +432,20 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Content != null)
                     hash = hash * 59 + this.Content.GetHashCode();
                 
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
+                
+                if (this.Reasons != null)
+                    hash = hash * 59 + this.Reasons.GetHashCode();
+                
+                if (this.IsFinalReceipt != null)
+                    hash = hash * 59 + this.IsFinalReceipt.GetHashCode();
+                
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
+                
+                if (this.Metadata != null)
+                    hash = hash * 59 + this.Metadata.GetHashCode();
                 
                 return hash;
             }

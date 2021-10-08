@@ -250,6 +250,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Ivr,
             
             /// <summary>
+            /// Enum Monitoring for "monitoring"
+            /// </summary>
+            [EnumMember(Value = "monitoring")]
+            Monitoring,
+            
+            /// <summary>
             /// Enum Scheduled for "scheduled"
             /// </summary>
             [EnumMember(Value = "scheduled")]

@@ -98,12 +98,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin.
         /// </summary>
         /// <value>Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin.</value>
         [DataMember(Name="groupAlertType", EmitDefaultValue=false)]
         public GroupAlertTypeEnum? GroupAlertType { get; set; }
+        
+        
         
         
     
@@ -116,9 +121,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisableEmailPii">Removes any PII from group emails. This is overridden by the analogous organization configuration value. This is always true if HIPAA is enabled or unknown for an organization..</param>
         /// <param name="RotateCallsSecs">How many seconds to ring before rotating to the next member in the group.</param>
         /// <param name="StopRingingAfterRotations">How many rotations to go through.</param>
-        /// <param name="OverflowGroupId"> A fallback group to contact when all of the members in this group did not answer the call..</param>
+        /// <param name="OverflowGroupId">A fallback group to contact when all of the members in this group did not answer the call..</param>
         /// <param name="GroupAlertType">Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin..</param>
-        public VoicemailGroupPolicy(string Name = null, bool? Enabled = null, bool? SendEmailNotifications = null, bool? DisableEmailPii = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null, string OverflowGroupId = null, GroupAlertTypeEnum? GroupAlertType = null)
+        /// <param name="InteractiveResponsePromptId">The prompt to use when connecting a user to a Group Ring call.</param>
+        public VoicemailGroupPolicy(string Name = null, bool? Enabled = null, bool? SendEmailNotifications = null, bool? DisableEmailPii = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null, string OverflowGroupId = null, GroupAlertTypeEnum? GroupAlertType = null, string InteractiveResponsePromptId = null)
         {
             this.Name = Name;
             this.Enabled = Enabled;
@@ -128,6 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.StopRingingAfterRotations = StopRingingAfterRotations;
             this.OverflowGroupId = OverflowGroupId;
             this.GroupAlertType = GroupAlertType;
+            this.InteractiveResponsePromptId = InteractiveResponsePromptId;
             
         }
         
@@ -196,13 +203,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        ///  A fallback group to contact when all of the members in this group did not answer the call.
+        /// A fallback group to contact when all of the members in this group did not answer the call.
         /// </summary>
-        /// <value> A fallback group to contact when all of the members in this group did not answer the call.</value>
+        /// <value>A fallback group to contact when all of the members in this group did not answer the call.</value>
         [DataMember(Name="overflowGroupId", EmitDefaultValue=false)]
         public string OverflowGroupId { get; set; }
         
         
+        
+        
+        
+        /// <summary>
+        /// The prompt to use when connecting a user to a Group Ring call
+        /// </summary>
+        /// <value>The prompt to use when connecting a user to a Group Ring call</value>
+        [DataMember(Name="interactiveResponsePromptId", EmitDefaultValue=false)]
+        public string InteractiveResponsePromptId { get; set; }
         
         
         /// <summary>
@@ -223,6 +239,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StopRingingAfterRotations: ").Append(StopRingingAfterRotations).Append("\n");
             sb.Append("  OverflowGroupId: ").Append(OverflowGroupId).Append("\n");
             sb.Append("  GroupAlertType: ").Append(GroupAlertType).Append("\n");
+            sb.Append("  InteractiveResponsePromptId: ").Append(InteractiveResponsePromptId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -307,6 +324,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.GroupAlertType == other.GroupAlertType ||
                     this.GroupAlertType != null &&
                     this.GroupAlertType.Equals(other.GroupAlertType)
+                ) &&
+                (
+                    this.InteractiveResponsePromptId == other.InteractiveResponsePromptId ||
+                    this.InteractiveResponsePromptId != null &&
+                    this.InteractiveResponsePromptId.Equals(other.InteractiveResponsePromptId)
                 );
         }
 
@@ -348,6 +370,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.GroupAlertType != null)
                     hash = hash * 59 + this.GroupAlertType.GetHashCode();
+                
+                if (this.InteractiveResponsePromptId != null)
+                    hash = hash * 59 + this.InteractiveResponsePromptId.GetHashCode();
                 
                 return hash;
             }

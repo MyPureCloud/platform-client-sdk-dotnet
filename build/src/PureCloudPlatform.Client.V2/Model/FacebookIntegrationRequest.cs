@@ -71,11 +71,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="FacebookIntegrationRequest" /> class.
         /// </summary>
         /// <param name="Name">The name of the Facebook Integration (required).</param>
-        /// <param name="PageAccessToken">The long-lived Page Access Token of a facebook page.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When a pageAccessToken is provided, pageId and userAccessToken are not required..</param>
-        /// <param name="UserAccessToken">The short-lived User Access Token of the facebook user logged into the facebook app.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When userAccessToken is provided, pageId is mandatory.  When userAccessToken/pageId combination is provided, pageAccessToken is not required..</param>
-        /// <param name="PageId">The page Id of a facebook page. The pageId is required when userAccessToken is provided..</param>
-        /// <param name="AppId">The app Id of a facebook app. The appId is required when a customer wants to use their own approved facebook app..</param>
-        /// <param name="AppSecret">The app Secret of a facebook app. The appSecret is required when appId is provided..</param>
+        /// <param name="PageAccessToken">The long-lived Page Access Token of Facebook page.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When a pageAccessToken is provided, pageId and userAccessToken are not required..</param>
+        /// <param name="UserAccessToken">The short-lived User Access Token of the Facebook user logged into the Facebook app.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When userAccessToken is provided, pageId is mandatory.  When userAccessToken/pageId combination is provided, pageAccessToken is not required..</param>
+        /// <param name="PageId">The page Id of Facebook page. The pageId is required when userAccessToken is provided..</param>
+        /// <param name="AppId">The app Id of Facebook app. The appId is required when a customer wants to use their own approved Facebook app..</param>
+        /// <param name="AppSecret">The app Secret of Facebook app. The appSecret is required when appId is provided..</param>
         public FacebookIntegrationRequest(string Name = null, string PageAccessToken = null, string UserAccessToken = null, string PageId = null, string AppId = null, string AppSecret = null)
         {
             this.Name = Name;
@@ -108,45 +108,45 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The long-lived Page Access Token of a facebook page.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When a pageAccessToken is provided, pageId and userAccessToken are not required.
+        /// The long-lived Page Access Token of Facebook page.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When a pageAccessToken is provided, pageId and userAccessToken are not required.
         /// </summary>
-        /// <value>The long-lived Page Access Token of a facebook page.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When a pageAccessToken is provided, pageId and userAccessToken are not required.</value>
+        /// <value>The long-lived Page Access Token of Facebook page.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When a pageAccessToken is provided, pageId and userAccessToken are not required.</value>
         [DataMember(Name="pageAccessToken", EmitDefaultValue=false)]
         public string PageAccessToken { get; set; }
         
         
         
         /// <summary>
-        /// The short-lived User Access Token of the facebook user logged into the facebook app.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When userAccessToken is provided, pageId is mandatory.  When userAccessToken/pageId combination is provided, pageAccessToken is not required.
+        /// The short-lived User Access Token of the Facebook user logged into the Facebook app.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When userAccessToken is provided, pageId is mandatory.  When userAccessToken/pageId combination is provided, pageAccessToken is not required.
         /// </summary>
-        /// <value>The short-lived User Access Token of the facebook user logged into the facebook app.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When userAccessToken is provided, pageId is mandatory.  When userAccessToken/pageId combination is provided, pageAccessToken is not required.</value>
+        /// <value>The short-lived User Access Token of the Facebook user logged into the Facebook app.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When userAccessToken is provided, pageId is mandatory.  When userAccessToken/pageId combination is provided, pageAccessToken is not required.</value>
         [DataMember(Name="userAccessToken", EmitDefaultValue=false)]
         public string UserAccessToken { get; set; }
         
         
         
         /// <summary>
-        /// The page Id of a facebook page. The pageId is required when userAccessToken is provided.
+        /// The page Id of Facebook page. The pageId is required when userAccessToken is provided.
         /// </summary>
-        /// <value>The page Id of a facebook page. The pageId is required when userAccessToken is provided.</value>
+        /// <value>The page Id of Facebook page. The pageId is required when userAccessToken is provided.</value>
         [DataMember(Name="pageId", EmitDefaultValue=false)]
         public string PageId { get; set; }
         
         
         
         /// <summary>
-        /// The app Id of a facebook app. The appId is required when a customer wants to use their own approved facebook app.
+        /// The app Id of Facebook app. The appId is required when a customer wants to use their own approved Facebook app.
         /// </summary>
-        /// <value>The app Id of a facebook app. The appId is required when a customer wants to use their own approved facebook app.</value>
+        /// <value>The app Id of Facebook app. The appId is required when a customer wants to use their own approved Facebook app.</value>
         [DataMember(Name="appId", EmitDefaultValue=false)]
         public string AppId { get; set; }
         
         
         
         /// <summary>
-        /// The app Secret of a facebook app. The appSecret is required when appId is provided.
+        /// The app Secret of Facebook app. The appSecret is required when appId is provided.
         /// </summary>
-        /// <value>The app Secret of a facebook app. The appSecret is required when appId is provided.</value>
+        /// <value>The app Secret of Facebook app. The appSecret is required when appId is provided.</value>
         [DataMember(Name="appSecret", EmitDefaultValue=false)]
         public string AppSecret { get; set; }
         

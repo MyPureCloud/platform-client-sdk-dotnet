@@ -1791,7 +1791,7 @@ namespace Example
 
 <a name="getqualityformssurveysbulkcontexts"></a>
 
-## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityFormsSurveysBulkContexts (List<string> contextId, bool? published = null)
+## [**List&lt;SurveyForm&gt;**](SurveyForm.html) GetQualityFormsSurveysBulkContexts (List<string> contextId, bool? published = null)
 
 
 
@@ -1831,7 +1831,7 @@ namespace Example
             try
             { 
                 // Retrieve a list of the latest form versions by context ids
-                SurveyFormEntityListing result = apiInstance.GetQualityFormsSurveysBulkContexts(contextId, published);
+                List<SurveyForm> result = apiInstance.GetQualityFormsSurveysBulkContexts(contextId, published);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1854,7 +1854,7 @@ namespace Example
 
 ### Return type
 
-[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
+[**List<SurveyForm>**](SurveyForm.html)
 
 <a name="getqualitypublishedform"></a>
 

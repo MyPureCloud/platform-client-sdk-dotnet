@@ -45,7 +45,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Modifycontactattribute for "modifyContactAttribute"
             /// </summary>
             [EnumMember(Value = "modifyContactAttribute")]
-            Modifycontactattribute
+            Modifycontactattribute,
+            
+            /// <summary>
+            /// Enum Dataactionbehavior for "dataActionBehavior"
+            /// </summary>
+            [EnumMember(Value = "dataActionBehavior")]
+            Dataactionbehavior
         }
         
         
@@ -118,7 +124,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum SetSkills for "SET_SKILLS"
             /// </summary>
             [EnumMember(Value = "SET_SKILLS")]
-            SetSkills
+            SetSkills,
+            
+            /// <summary>
+            /// Enum DataAction for "DATA_ACTION"
+            /// </summary>
+            [EnumMember(Value = "DATA_ACTION")]
+            DataAction
         }
         
         

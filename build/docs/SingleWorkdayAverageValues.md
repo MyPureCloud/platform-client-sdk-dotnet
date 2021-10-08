@@ -12,6 +12,7 @@ title: SingleWorkdayAverageValues
 | **User** | [**UserReference**](UserReference.html) | The targeted user for the metrics | [optional] |
 | **Timezone** | **string** | The time zone used for aggregating metric values | [optional] |
 | **Results** | [**List&lt;WorkdayValuesMetricItem&gt;**](WorkdayValuesMetricItem.html) | The metric value averages | [optional] |
+| **PerformanceProfile** | [**AddressableEntityRef**](AddressableEntityRef.html) | The targeted performance profile for the average points | [optional] |
 {: class="table table-striped"}
 
 

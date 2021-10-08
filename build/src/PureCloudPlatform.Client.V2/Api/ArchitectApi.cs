@@ -2610,10 +2610,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">datatable json-schema</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
-        /// <param name="body">datatable json-schema (optional)</param>
         /// <returns>DataTable</returns>
-        DataTable PutFlowsDatatable (string datatableId, string expand = null, DataTable body = null);
+        DataTable PutFlowsDatatable (string datatableId, DataTable body, string expand = null);
 
         /// <summary>
         /// Updates a specific datatable by id
@@ -2623,10 +2623,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">datatable json-schema</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
-        /// <param name="body">datatable json-schema (optional)</param>
         /// <returns>ApiResponse of DataTable</returns>
-        ApiResponse<DataTable> PutFlowsDatatableWithHttpInfo (string datatableId, string expand = null, DataTable body = null);
+        ApiResponse<DataTable> PutFlowsDatatableWithHttpInfo (string datatableId, DataTable body, string expand = null);
         
         /// <summary>
         /// Update a row entry
@@ -5300,10 +5300,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">datatable json-schema</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
-        /// <param name="body">datatable json-schema (optional)</param>
         /// <returns>Task of DataTable</returns>
-        System.Threading.Tasks.Task<DataTable> PutFlowsDatatableAsync (string datatableId, string expand = null, DataTable body = null);
+        System.Threading.Tasks.Task<DataTable> PutFlowsDatatableAsync (string datatableId, DataTable body, string expand = null);
 
         /// <summary>
         /// Updates a specific datatable by id
@@ -5313,10 +5313,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">datatable json-schema</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
-        /// <param name="body">datatable json-schema (optional)</param>
         /// <returns>Task of ApiResponse (DataTable)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DataTable>> PutFlowsDatatableAsyncWithHttpInfo (string datatableId, string expand = null, DataTable body = null);
+        System.Threading.Tasks.Task<ApiResponse<DataTable>> PutFlowsDatatableAsyncWithHttpInfo (string datatableId, DataTable body, string expand = null);
         
         /// <summary>
         /// Update a row entry
@@ -26057,12 +26057,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">datatable json-schema</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
-        /// <param name="body">datatable json-schema (optional)</param>
         /// <returns>DataTable</returns>
-        public DataTable PutFlowsDatatable (string datatableId, string expand = null, DataTable body = null)
+        public DataTable PutFlowsDatatable (string datatableId, DataTable body, string expand = null)
         {
-             ApiResponse<DataTable> localVarResponse = PutFlowsDatatableWithHttpInfo(datatableId, expand, body);
+             ApiResponse<DataTable> localVarResponse = PutFlowsDatatableWithHttpInfo(datatableId, body, expand);
              return localVarResponse.Data;
         }
 
@@ -26071,14 +26071,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">datatable json-schema</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
-        /// <param name="body">datatable json-schema (optional)</param>
         /// <returns>ApiResponse of DataTable</returns>
-        public ApiResponse< DataTable > PutFlowsDatatableWithHttpInfo (string datatableId, string expand = null, DataTable body = null)
+        public ApiResponse< DataTable > PutFlowsDatatableWithHttpInfo (string datatableId, DataTable body, string expand = null)
         { 
             // verify the required parameter 'datatableId' is set
             if (datatableId == null)
                 throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->PutFlowsDatatable");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutFlowsDatatable");
 
             var localVarPath = "/api/v2/flows/datatables/{datatableId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -26162,12 +26165,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">datatable json-schema</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
-        /// <param name="body">datatable json-schema (optional)</param>
         /// <returns>Task of DataTable</returns>
-        public async System.Threading.Tasks.Task<DataTable> PutFlowsDatatableAsync (string datatableId, string expand = null, DataTable body = null)
+        public async System.Threading.Tasks.Task<DataTable> PutFlowsDatatableAsync (string datatableId, DataTable body, string expand = null)
         {
-             ApiResponse<DataTable> localVarResponse = await PutFlowsDatatableAsyncWithHttpInfo(datatableId, expand, body);
+             ApiResponse<DataTable> localVarResponse = await PutFlowsDatatableAsyncWithHttpInfo(datatableId, body, expand);
              return localVarResponse.Data;
 
         }
@@ -26177,14 +26180,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">datatable json-schema</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
-        /// <param name="body">datatable json-schema (optional)</param>
         /// <returns>Task of ApiResponse (DataTable)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DataTable>> PutFlowsDatatableAsyncWithHttpInfo (string datatableId, string expand = null, DataTable body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DataTable>> PutFlowsDatatableAsyncWithHttpInfo (string datatableId, DataTable body, string expand = null)
         { 
             // verify the required parameter 'datatableId' is set
             if (datatableId == null)
                 throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->PutFlowsDatatable");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutFlowsDatatable");
             
 
             var localVarPath = "/api/v2/flows/datatables/{datatableId}";

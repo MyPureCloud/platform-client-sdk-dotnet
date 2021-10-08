@@ -84,6 +84,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Webmessaging,
             
             /// <summary>
+            /// Enum Instagram for "instagram"
+            /// </summary>
+            [EnumMember(Value = "instagram")]
+            Instagram,
+            
+            /// <summary>
             /// Enum Open for "open"
             /// </summary>
             [EnumMember(Value = "open")]

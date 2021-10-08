@@ -137,12 +137,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Visibility of this topic (Public or Preview)
         /// </summary>
         /// <value>Visibility of this topic (Public or Preview)</value>
         [DataMember(Name="visibility", EmitDefaultValue=false)]
         public VisibilityEnum? Visibility { get; set; }
+        
+        
         
         
         
@@ -172,7 +177,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RequiresCurrentUserOrPermission">True if permissions are only required when the topic user ID does not match the subscribing user ID.</param>
         /// <param name="Transports">Transports that support events for the topic.</param>
         /// <param name="PublicApiTemplateUriPaths">PublicApiTemplateUriPaths.</param>
-        public AvailableTopic(string Description = null, string Id = null, List<PermissionDetails> PermissionDetails = null, List<string> RequiresPermissions = null, bool? RequiresDivisionPermissions = null, bool? RequiresAnyValidator = null, bool? Enforced = null, VisibilityEnum? Visibility = null, Dictionary<string, Object> Schema = null, bool? RequiresCurrentUser = null, bool? RequiresCurrentUserOrPermission = null, List<TransportsEnum> Transports = null, List<string> PublicApiTemplateUriPaths = null)
+        /// <param name="TopicParameters">Parameters in the topic name that can be substituted.</param>
+        public AvailableTopic(string Description = null, string Id = null, List<PermissionDetails> PermissionDetails = null, List<string> RequiresPermissions = null, bool? RequiresDivisionPermissions = null, bool? RequiresAnyValidator = null, bool? Enforced = null, VisibilityEnum? Visibility = null, Dictionary<string, Object> Schema = null, bool? RequiresCurrentUser = null, bool? RequiresCurrentUserOrPermission = null, List<TransportsEnum> Transports = null, List<string> PublicApiTemplateUriPaths = null, List<string> TopicParameters = null)
         {
             this.Description = Description;
             this.Id = Id;
@@ -187,6 +193,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RequiresCurrentUserOrPermission = RequiresCurrentUserOrPermission;
             this.Transports = Transports;
             this.PublicApiTemplateUriPaths = PublicApiTemplateUriPaths;
+            this.TopicParameters = TopicParameters;
             
         }
         
@@ -297,6 +304,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> PublicApiTemplateUriPaths { get; set; }
         
         
+        
+        /// <summary>
+        /// Parameters in the topic name that can be substituted
+        /// </summary>
+        /// <value>Parameters in the topic name that can be substituted</value>
+        [DataMember(Name="topicParameters", EmitDefaultValue=false)]
+        public List<string> TopicParameters { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -319,6 +335,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RequiresCurrentUserOrPermission: ").Append(RequiresCurrentUserOrPermission).Append("\n");
             sb.Append("  Transports: ").Append(Transports).Append("\n");
             sb.Append("  PublicApiTemplateUriPaths: ").Append(PublicApiTemplateUriPaths).Append("\n");
+            sb.Append("  TopicParameters: ").Append(TopicParameters).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -423,6 +440,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PublicApiTemplateUriPaths == other.PublicApiTemplateUriPaths ||
                     this.PublicApiTemplateUriPaths != null &&
                     this.PublicApiTemplateUriPaths.SequenceEqual(other.PublicApiTemplateUriPaths)
+                ) &&
+                (
+                    this.TopicParameters == other.TopicParameters ||
+                    this.TopicParameters != null &&
+                    this.TopicParameters.SequenceEqual(other.TopicParameters)
                 );
         }
 
@@ -476,6 +498,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PublicApiTemplateUriPaths != null)
                     hash = hash * 59 + this.PublicApiTemplateUriPaths.GetHashCode();
+                
+                if (this.TopicParameters != null)
+                    hash = hash * 59 + this.TopicParameters.GetHashCode();
                 
                 return hash;
             }

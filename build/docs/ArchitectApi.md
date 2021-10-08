@@ -6941,7 +6941,7 @@ namespace Example
 
 <a name="putflowsdatatable"></a>
 
-## [**DataTable**](DataTable.html) PutFlowsDatatable (string datatableId, string expand = null, DataTable body = null)
+## [**DataTable**](DataTable.html) PutFlowsDatatable (string datatableId, DataTable body, string expand = null)
 
 
 
@@ -6976,13 +6976,13 @@ namespace Example
 
             var apiInstance = new ArchitectApi();
             var datatableId = datatableId_example;  // string | id of datatable
+            var body = new DataTable(); // DataTable | datatable json-schema
             var expand = expand_example;  // string | Expand instructions for the result (optional) 
-            var body = new DataTable(); // DataTable | datatable json-schema (optional) 
 
             try
             { 
                 // Updates a specific datatable by id
-                DataTable result = apiInstance.PutFlowsDatatable(datatableId, expand, body);
+                DataTable result = apiInstance.PutFlowsDatatable(datatableId, body, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7000,8 +7000,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **datatableId** | **string**| id of datatable |  |
+| **body** | [**DataTable**](DataTable.html)| datatable json-schema |  |
 | **expand** | **string**| Expand instructions for the result | [optional] <br />**Values**: schema |
-| **body** | [**DataTable**](DataTable.html)| datatable json-schema | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

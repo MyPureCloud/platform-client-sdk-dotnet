@@ -20,6 +20,7 @@ title: AvailableTopic
 | **RequiresCurrentUserOrPermission** | **bool?** | True if permissions are only required when the topic user ID does not match the subscribing user ID | [optional] |
 | **Transports** | **List&lt;string&gt;** | Transports that support events for the topic | [optional] |
 | **PublicApiTemplateUriPaths** | **List&lt;string&gt;** |  | [optional] |
+| **TopicParameters** | **List&lt;string&gt;** | Parameters in the topic name that can be substituted | [optional] |
 {: class="table table-striped"}
 
 

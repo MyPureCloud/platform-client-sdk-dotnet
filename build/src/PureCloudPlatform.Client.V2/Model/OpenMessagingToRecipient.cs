@@ -74,12 +74,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The recipient ID type. This is used to indicate the format used for the ID.
         /// </summary>
         /// <value>The recipient ID type. This is used to indicate the format used for the ID.</value>
         [DataMember(Name="idType", EmitDefaultValue=false)]
         public IdTypeEnum? IdType { get; set; }
+        
+        
+        
+        
         
         
         
@@ -97,9 +107,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="OpenMessagingToRecipient" /> class.
         /// </summary>
         /// <param name="Id">The recipient ID specific to the provider. (required).</param>
-        public OpenMessagingToRecipient(string Id = null)
+        /// <param name="Email">E-mail address of the recipient..</param>
+        public OpenMessagingToRecipient(string Id = null, string Email = null)
         {
             this.Id = Id;
+            this.Email = Email;
             
         }
         
@@ -142,6 +154,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public string LastName { get; private set; }
         
         
+        
+        /// <summary>
+        /// URL of an image that represents the recipient.
+        /// </summary>
+        /// <value>URL of an image that represents the recipient.</value>
+        [DataMember(Name="image", EmitDefaultValue=false)]
+        public string Image { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// E-mail address of the recipient.
+        /// </summary>
+        /// <value>E-mail address of the recipient.</value>
+        [DataMember(Name="email", EmitDefaultValue=false)]
+        public string Email { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -156,6 +186,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IdType: ").Append(IdType).Append("\n");
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
             sb.Append("  LastName: ").Append(LastName).Append("\n");
+            sb.Append("  Image: ").Append(Image).Append("\n");
+            sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -220,6 +252,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LastName == other.LastName ||
                     this.LastName != null &&
                     this.LastName.Equals(other.LastName)
+                ) &&
+                (
+                    this.Image == other.Image ||
+                    this.Image != null &&
+                    this.Image.Equals(other.Image)
+                ) &&
+                (
+                    this.Email == other.Email ||
+                    this.Email != null &&
+                    this.Email.Equals(other.Email)
                 );
         }
 
@@ -249,6 +291,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.LastName != null)
                     hash = hash * 59 + this.LastName.GetHashCode();
+                
+                if (this.Image != null)
+                    hash = hash * 59 + this.Image.GetHashCode();
+                
+                if (this.Email != null)
+                    hash = hash * 59 + this.Email.GetHashCode();
                 
                 return hash;
             }

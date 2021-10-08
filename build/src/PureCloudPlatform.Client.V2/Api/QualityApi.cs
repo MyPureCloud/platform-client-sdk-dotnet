@@ -723,8 +723,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
         /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
-        /// <returns>SurveyFormEntityListing</returns>
-        SurveyFormEntityListing GetQualityFormsSurveysBulkContexts (List<string> contextId, bool? published = null);
+        /// <returns>List&lt;SurveyForm&gt;</returns>
+        List<SurveyForm> GetQualityFormsSurveysBulkContexts (List<string> contextId, bool? published = null);
 
         /// <summary>
         /// Retrieve a list of the latest form versions by context ids
@@ -735,8 +735,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
         /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
-        /// <returns>ApiResponse of SurveyFormEntityListing</returns>
-        ApiResponse<SurveyFormEntityListing> GetQualityFormsSurveysBulkContextsWithHttpInfo (List<string> contextId, bool? published = null);
+        /// <returns>ApiResponse of List&lt;SurveyForm&gt;</returns>
+        ApiResponse<List<SurveyForm>> GetQualityFormsSurveysBulkContextsWithHttpInfo (List<string> contextId, bool? published = null);
         
         /// <summary>
         /// Get the published evaluation forms.
@@ -2107,8 +2107,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
         /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
-        /// <returns>Task of SurveyFormEntityListing</returns>
-        System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityFormsSurveysBulkContextsAsync (List<string> contextId, bool? published = null);
+        /// <returns>Task of List&lt;SurveyForm&gt;</returns>
+        System.Threading.Tasks.Task<List<SurveyForm>> GetQualityFormsSurveysBulkContextsAsync (List<string> contextId, bool? published = null);
 
         /// <summary>
         /// Retrieve a list of the latest form versions by context ids
@@ -2119,8 +2119,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
         /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
-        /// <returns>Task of ApiResponse (SurveyFormEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityFormsSurveysBulkContextsAsyncWithHttpInfo (List<string> contextId, bool? published = null);
+        /// <returns>Task of ApiResponse (List&lt;SurveyForm&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SurveyForm>>> GetQualityFormsSurveysBulkContextsAsyncWithHttpInfo (List<string> contextId, bool? published = null);
         
         /// <summary>
         /// Get the published evaluation forms.
@@ -7993,10 +7993,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
         /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
-        /// <returns>SurveyFormEntityListing</returns>
-        public SurveyFormEntityListing GetQualityFormsSurveysBulkContexts (List<string> contextId, bool? published = null)
+        /// <returns>List&lt;SurveyForm&gt;</returns>
+        public List<SurveyForm> GetQualityFormsSurveysBulkContexts (List<string> contextId, bool? published = null)
         {
-             ApiResponse<SurveyFormEntityListing> localVarResponse = GetQualityFormsSurveysBulkContextsWithHttpInfo(contextId, published);
+             ApiResponse<List<SurveyForm>> localVarResponse = GetQualityFormsSurveysBulkContextsWithHttpInfo(contextId, published);
              return localVarResponse.Data;
         }
 
@@ -8006,8 +8006,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
         /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
-        /// <returns>ApiResponse of SurveyFormEntityListing</returns>
-        public ApiResponse< SurveyFormEntityListing > GetQualityFormsSurveysBulkContextsWithHttpInfo (List<string> contextId, bool? published = null)
+        /// <returns>ApiResponse of List&lt;SurveyForm&gt;</returns>
+        public ApiResponse< List<SurveyForm> > GetQualityFormsSurveysBulkContextsWithHttpInfo (List<string> contextId, bool? published = null)
         { 
             // verify the required parameter 'contextId' is set
             if (contextId == null)
@@ -8077,9 +8077,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsSurveysBulkContexts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<SurveyFormEntityListing>(localVarStatusCode,
+            return new ApiResponse<List<SurveyForm>>(localVarStatusCode,
                 localVarHeaders,
-                (SurveyFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SurveyFormEntityListing)),
+                (List<SurveyForm>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SurveyForm>)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8091,10 +8091,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
         /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
-        /// <returns>Task of SurveyFormEntityListing</returns>
-        public async System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityFormsSurveysBulkContextsAsync (List<string> contextId, bool? published = null)
+        /// <returns>Task of List&lt;SurveyForm&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SurveyForm>> GetQualityFormsSurveysBulkContextsAsync (List<string> contextId, bool? published = null)
         {
-             ApiResponse<SurveyFormEntityListing> localVarResponse = await GetQualityFormsSurveysBulkContextsAsyncWithHttpInfo(contextId, published);
+             ApiResponse<List<SurveyForm>> localVarResponse = await GetQualityFormsSurveysBulkContextsAsyncWithHttpInfo(contextId, published);
              return localVarResponse.Data;
 
         }
@@ -8105,8 +8105,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
         /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
-        /// <returns>Task of ApiResponse (SurveyFormEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityFormsSurveysBulkContextsAsyncWithHttpInfo (List<string> contextId, bool? published = null)
+        /// <returns>Task of ApiResponse (List&lt;SurveyForm&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SurveyForm>>> GetQualityFormsSurveysBulkContextsAsyncWithHttpInfo (List<string> contextId, bool? published = null)
         { 
             // verify the required parameter 'contextId' is set
             if (contextId == null)
@@ -8177,9 +8177,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsSurveysBulkContexts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<SurveyFormEntityListing>(localVarStatusCode,
+            return new ApiResponse<List<SurveyForm>>(localVarStatusCode,
                 localVarHeaders,
-                (SurveyFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SurveyFormEntityListing)),
+                (List<SurveyForm>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SurveyForm>)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

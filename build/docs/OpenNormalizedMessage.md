@@ -12,7 +12,11 @@ title: OpenNormalizedMessage
 | **Type** | **string** | Message type. | |
 | **Text** | **string** | Message text. | [optional] |
 | **Content** | [**List&lt;OpenMessageContent&gt;**](OpenMessageContent.html) | List of content elements. | [optional] |
+| **Status** | **string** | Message receipt status, only used with type Receipt. | [optional] |
+| **Reasons** | [**List&lt;Reason&gt;**](Reason.html) | List of reasons for a message receipt that indicates the message has failed. Only used with Failed status. | [optional] |
+| **IsFinalReceipt** | **bool?** | Indicates if this is the last message receipt for this message, or if another message receipt can be expected. | [optional] |
 | **Direction** | **string** | The direction of the message. | [optional] |
+| **Metadata** | **Dictionary&lt;string, string&gt;** | Additional metadata about this message. | [optional] |
 {: class="table table-striped"}
 
 

@@ -86,7 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CreatePerformanceProfile" /> class.
         /// </summary>
         /// <param name="Name">A name for this performance profile (required).</param>
-        /// <param name="Division">The associated division for this Performance Profile.</param>
+        /// <param name="Division">The associated division for this Performance Profile (required).</param>
         /// <param name="Description">A description about this performance profile (required).</param>
         /// <param name="ReportingIntervals">The reporting interval periods for this performance profile (required).</param>
         /// <param name="Active">The flag for active profiles (required).</param>

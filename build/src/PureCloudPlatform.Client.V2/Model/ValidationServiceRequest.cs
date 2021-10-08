@@ -30,6 +30,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidationServiceRequest" /> class.
@@ -41,11 +46,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ValidationServiceRequest" /> class.
         /// </summary>
         /// <param name="DateImportEnded">The last day of the data you are importing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
-        /// <param name="FileUrl">Path to the file in the storage including the file name (required).</param>
-        public ValidationServiceRequest(DateTime? DateImportEnded = null, string FileUrl = null)
+        /// <param name="FileUrl">File URL is deprecated, please use upload key.</param>
+        /// <param name="UploadKey">S3 key for the uploaded file.</param>
+        public ValidationServiceRequest(DateTime? DateImportEnded = null, string FileUrl = null, string UploadKey = null)
         {
             this.DateImportEnded = DateImportEnded;
             this.FileUrl = FileUrl;
+            this.UploadKey = UploadKey;
             
         }
         
@@ -61,11 +68,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Path to the file in the storage including the file name
+        /// File URL is deprecated, please use upload key
         /// </summary>
-        /// <value>Path to the file in the storage including the file name</value>
+        /// <value>File URL is deprecated, please use upload key</value>
         [DataMember(Name="fileUrl", EmitDefaultValue=false)]
         public string FileUrl { get; set; }
+        
+        
+        
+        /// <summary>
+        /// S3 key for the uploaded file
+        /// </summary>
+        /// <value>S3 key for the uploaded file</value>
+        [DataMember(Name="uploadKey", EmitDefaultValue=false)]
+        public string UploadKey { get; set; }
         
         
         /// <summary>
@@ -79,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  DateImportEnded: ").Append(DateImportEnded).Append("\n");
             sb.Append("  FileUrl: ").Append(FileUrl).Append("\n");
+            sb.Append("  UploadKey: ").Append(UploadKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -128,6 +145,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FileUrl == other.FileUrl ||
                     this.FileUrl != null &&
                     this.FileUrl.Equals(other.FileUrl)
+                ) &&
+                (
+                    this.UploadKey == other.UploadKey ||
+                    this.UploadKey != null &&
+                    this.UploadKey.Equals(other.UploadKey)
                 );
         }
 
@@ -148,6 +170,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.FileUrl != null)
                     hash = hash * 59 + this.FileUrl.GetHashCode();
+                
+                if (this.UploadKey != null)
+                    hash = hash * 59 + this.UploadKey.GetHashCode();
                 
                 return hash;
             }

@@ -239,9 +239,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
         /// <param name="title">Filter by document title. (optional)</param>
+        /// <param name="sortBy">Sort by. (optional)</param>
+        /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <param name="documentIds">Comma-separated list of document identifiers to fetch by. (optional)</param>
         /// <returns>DocumentListing</returns>
-        DocumentListing GetKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, List<string> documentIds = null);
+        DocumentListing GetKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null);
 
         /// <summary>
         /// Get documents
@@ -258,9 +260,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
         /// <param name="title">Filter by document title. (optional)</param>
+        /// <param name="sortBy">Sort by. (optional)</param>
+        /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <param name="documentIds">Comma-separated list of document identifiers to fetch by. (optional)</param>
         /// <returns>ApiResponse of DocumentListing</returns>
-        ApiResponse<DocumentListing> GetKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, List<string> documentIds = null);
+        ApiResponse<DocumentListing> GetKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null);
         
         /// <summary>
         /// Get import operation report
@@ -362,8 +366,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter by Name. (optional)</param>
         /// <param name="coreLanguage">Filter by core language. (optional)</param>
         /// <param name="published">Filter by published status. (optional)</param>
+        /// <param name="sortBy">Sort by. (optional)</param>
+        /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <returns>KnowledgeBaseListing</returns>
-        KnowledgeBaseListing GetKnowledgeKnowledgebases (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null);
+        KnowledgeBaseListing GetKnowledgeKnowledgebases (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get knowledge bases
@@ -379,8 +385,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter by Name. (optional)</param>
         /// <param name="coreLanguage">Filter by core language. (optional)</param>
         /// <param name="published">Filter by published status. (optional)</param>
+        /// <param name="sortBy">Sort by. (optional)</param>
+        /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <returns>ApiResponse of KnowledgeBaseListing</returns>
-        ApiResponse<KnowledgeBaseListing> GetKnowledgeKnowledgebasesWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null);
+        ApiResponse<KnowledgeBaseListing> GetKnowledgeKnowledgebasesWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Update knowledge base
@@ -939,9 +947,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
         /// <param name="title">Filter by document title. (optional)</param>
+        /// <param name="sortBy">Sort by. (optional)</param>
+        /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <param name="documentIds">Comma-separated list of document identifiers to fetch by. (optional)</param>
         /// <returns>Task of DocumentListing</returns>
-        System.Threading.Tasks.Task<DocumentListing> GetKnowledgeKnowledgebaseLanguageDocumentsAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, List<string> documentIds = null);
+        System.Threading.Tasks.Task<DocumentListing> GetKnowledgeKnowledgebaseLanguageDocumentsAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null);
 
         /// <summary>
         /// Get documents
@@ -958,9 +968,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
         /// <param name="title">Filter by document title. (optional)</param>
+        /// <param name="sortBy">Sort by. (optional)</param>
+        /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <param name="documentIds">Comma-separated list of document identifiers to fetch by. (optional)</param>
         /// <returns>Task of ApiResponse (DocumentListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentListing>> GetKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, List<string> documentIds = null);
+        System.Threading.Tasks.Task<ApiResponse<DocumentListing>> GetKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null);
         
         /// <summary>
         /// Get import operation report
@@ -1062,8 +1074,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter by Name. (optional)</param>
         /// <param name="coreLanguage">Filter by core language. (optional)</param>
         /// <param name="published">Filter by published status. (optional)</param>
+        /// <param name="sortBy">Sort by. (optional)</param>
+        /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <returns>Task of KnowledgeBaseListing</returns>
-        System.Threading.Tasks.Task<KnowledgeBaseListing> GetKnowledgeKnowledgebasesAsync (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null);
+        System.Threading.Tasks.Task<KnowledgeBaseListing> GetKnowledgeKnowledgebasesAsync (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get knowledge bases
@@ -1079,8 +1093,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter by Name. (optional)</param>
         /// <param name="coreLanguage">Filter by core language. (optional)</param>
         /// <param name="published">Filter by published status. (optional)</param>
+        /// <param name="sortBy">Sort by. (optional)</param>
+        /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeBaseListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<KnowledgeBaseListing>> GetKnowledgeKnowledgebasesAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null);
+        System.Threading.Tasks.Task<ApiResponse<KnowledgeBaseListing>> GetKnowledgeKnowledgebasesAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Update knowledge base
@@ -3231,11 +3247,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
         /// <param name="title">Filter by document title. (optional)</param>
+        /// <param name="sortBy">Sort by. (optional)</param>
+        /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <param name="documentIds">Comma-separated list of document identifiers to fetch by. (optional)</param>
         /// <returns>DocumentListing</returns>
-        public DocumentListing GetKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, List<string> documentIds = null)
+        public DocumentListing GetKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null)
         {
-             ApiResponse<DocumentListing> localVarResponse = GetKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize, categories, title, documentIds);
+             ApiResponse<DocumentListing> localVarResponse = GetKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize, categories, title, sortBy, sortOrder, documentIds);
              return localVarResponse.Data;
         }
 
@@ -3251,9 +3269,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
         /// <param name="title">Filter by document title. (optional)</param>
+        /// <param name="sortBy">Sort by. (optional)</param>
+        /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <param name="documentIds">Comma-separated list of document identifiers to fetch by. (optional)</param>
         /// <returns>ApiResponse of DocumentListing</returns>
-        public ApiResponse< DocumentListing > GetKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, List<string> documentIds = null)
+        public ApiResponse< DocumentListing > GetKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -3303,6 +3323,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (categories != null) localVarQueryParams.Add(new Tuple<string, string>("categories", this.Configuration.ApiClient.ParameterToString(categories)));
             if (title != null) localVarQueryParams.Add(new Tuple<string, string>("title", this.Configuration.ApiClient.ParameterToString(title)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (documentIds != null) documentIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("documentIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
@@ -3353,11 +3375,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
         /// <param name="title">Filter by document title. (optional)</param>
+        /// <param name="sortBy">Sort by. (optional)</param>
+        /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <param name="documentIds">Comma-separated list of document identifiers to fetch by. (optional)</param>
         /// <returns>Task of DocumentListing</returns>
-        public async System.Threading.Tasks.Task<DocumentListing> GetKnowledgeKnowledgebaseLanguageDocumentsAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, List<string> documentIds = null)
+        public async System.Threading.Tasks.Task<DocumentListing> GetKnowledgeKnowledgebaseLanguageDocumentsAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null)
         {
-             ApiResponse<DocumentListing> localVarResponse = await GetKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize, categories, title, documentIds);
+             ApiResponse<DocumentListing> localVarResponse = await GetKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize, categories, title, sortBy, sortOrder, documentIds);
              return localVarResponse.Data;
 
         }
@@ -3374,9 +3398,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="categories">Filter by categories ids, comma separated values expected. (optional)</param>
         /// <param name="title">Filter by document title. (optional)</param>
+        /// <param name="sortBy">Sort by. (optional)</param>
+        /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <param name="documentIds">Comma-separated list of document identifiers to fetch by. (optional)</param>
         /// <returns>Task of ApiResponse (DocumentListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentListing>> GetKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, List<string> documentIds = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentListing>> GetKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -3428,6 +3454,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (categories != null) localVarQueryParams.Add(new Tuple<string, string>("categories", this.Configuration.ApiClient.ParameterToString(categories)));
             if (title != null) localVarQueryParams.Add(new Tuple<string, string>("title", this.Configuration.ApiClient.ParameterToString(title)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (documentIds != null) documentIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("documentIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
@@ -4152,10 +4180,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter by Name. (optional)</param>
         /// <param name="coreLanguage">Filter by core language. (optional)</param>
         /// <param name="published">Filter by published status. (optional)</param>
+        /// <param name="sortBy">Sort by. (optional)</param>
+        /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <returns>KnowledgeBaseListing</returns>
-        public KnowledgeBaseListing GetKnowledgeKnowledgebases (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null)
+        public KnowledgeBaseListing GetKnowledgeKnowledgebases (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<KnowledgeBaseListing> localVarResponse = GetKnowledgeKnowledgebasesWithHttpInfo(before, after, limit, pageSize, name, coreLanguage, published);
+             ApiResponse<KnowledgeBaseListing> localVarResponse = GetKnowledgeKnowledgebasesWithHttpInfo(before, after, limit, pageSize, name, coreLanguage, published, sortBy, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -4170,8 +4200,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter by Name. (optional)</param>
         /// <param name="coreLanguage">Filter by core language. (optional)</param>
         /// <param name="published">Filter by published status. (optional)</param>
+        /// <param name="sortBy">Sort by. (optional)</param>
+        /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <returns>ApiResponse of KnowledgeBaseListing</returns>
-        public ApiResponse< KnowledgeBaseListing > GetKnowledgeKnowledgebasesWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null)
+        public ApiResponse< KnowledgeBaseListing > GetKnowledgeKnowledgebasesWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/knowledge/knowledgebases";
@@ -4214,6 +4246,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (coreLanguage != null) localVarQueryParams.Add(new Tuple<string, string>("coreLanguage", this.Configuration.ApiClient.ParameterToString(coreLanguage)));
             if (published != null) localVarQueryParams.Add(new Tuple<string, string>("published", this.Configuration.ApiClient.ParameterToString(published)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 
@@ -4262,10 +4296,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter by Name. (optional)</param>
         /// <param name="coreLanguage">Filter by core language. (optional)</param>
         /// <param name="published">Filter by published status. (optional)</param>
+        /// <param name="sortBy">Sort by. (optional)</param>
+        /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <returns>Task of KnowledgeBaseListing</returns>
-        public async System.Threading.Tasks.Task<KnowledgeBaseListing> GetKnowledgeKnowledgebasesAsync (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null)
+        public async System.Threading.Tasks.Task<KnowledgeBaseListing> GetKnowledgeKnowledgebasesAsync (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<KnowledgeBaseListing> localVarResponse = await GetKnowledgeKnowledgebasesAsyncWithHttpInfo(before, after, limit, pageSize, name, coreLanguage, published);
+             ApiResponse<KnowledgeBaseListing> localVarResponse = await GetKnowledgeKnowledgebasesAsyncWithHttpInfo(before, after, limit, pageSize, name, coreLanguage, published, sortBy, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -4281,8 +4317,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter by Name. (optional)</param>
         /// <param name="coreLanguage">Filter by core language. (optional)</param>
         /// <param name="published">Filter by published status. (optional)</param>
+        /// <param name="sortBy">Sort by. (optional)</param>
+        /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeBaseListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeBaseListing>> GetKnowledgeKnowledgebasesAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null)
+        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeBaseListing>> GetKnowledgeKnowledgebasesAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/knowledge/knowledgebases";
@@ -4325,6 +4363,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (coreLanguage != null) localVarQueryParams.Add(new Tuple<string, string>("coreLanguage", this.Configuration.ApiClient.ParameterToString(coreLanguage)));
             if (published != null) localVarQueryParams.Add(new Tuple<string, string>("published", this.Configuration.ApiClient.ParameterToString(published)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 
