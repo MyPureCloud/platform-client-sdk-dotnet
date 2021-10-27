@@ -21,7 +21,7 @@ title: Schedule
 | **CreatedByApp** | **string** | The application that created the resource. | [optional] |
 | **Start** | [**DateTime?**](LocalDateTime.html) | Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS | |
 | **End** | [**DateTime?**](LocalDateTime.html) | Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS | |
-| **Rrule** | **string** | An iCal Recurrence Rule (RRULE) string. | |
+| **Rrule** | **string** | An iCal Recurrence Rule (RRULE) string. It is required to be set for schedules determining when upgrades to the Edge software can be applied. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

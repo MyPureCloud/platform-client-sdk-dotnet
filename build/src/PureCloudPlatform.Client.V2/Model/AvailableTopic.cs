@@ -177,7 +177,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RequiresCurrentUserOrPermission">True if permissions are only required when the topic user ID does not match the subscribing user ID.</param>
         /// <param name="Transports">Transports that support events for the topic.</param>
         /// <param name="PublicApiTemplateUriPaths">PublicApiTemplateUriPaths.</param>
-        /// <param name="TopicParameters">Parameters in the topic name that can be substituted.</param>
+        /// <param name="TopicParameters">Parameters in the topic name that can be substituted, in the order they appear in the topic name.</param>
         public AvailableTopic(string Description = null, string Id = null, List<PermissionDetails> PermissionDetails = null, List<string> RequiresPermissions = null, bool? RequiresDivisionPermissions = null, bool? RequiresAnyValidator = null, bool? Enforced = null, VisibilityEnum? Visibility = null, Dictionary<string, Object> Schema = null, bool? RequiresCurrentUser = null, bool? RequiresCurrentUserOrPermission = null, List<TransportsEnum> Transports = null, List<string> PublicApiTemplateUriPaths = null, List<string> TopicParameters = null)
         {
             this.Description = Description;
@@ -306,9 +306,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Parameters in the topic name that can be substituted
+        /// Parameters in the topic name that can be substituted, in the order they appear in the topic name
         /// </summary>
-        /// <value>Parameters in the topic name that can be substituted</value>
+        /// <value>Parameters in the topic name that can be substituted, in the order they appear in the topic name</value>
         [DataMember(Name="topicParameters", EmitDefaultValue=false)]
         public List<string> TopicParameters { get; set; }
         

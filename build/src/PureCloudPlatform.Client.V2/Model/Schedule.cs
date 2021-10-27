@@ -163,7 +163,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedByApp">The application that created the resource..</param>
         /// <param name="Start">Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS (required).</param>
         /// <param name="End">Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS (required).</param>
-        /// <param name="Rrule">An iCal Recurrence Rule (RRULE) string. (required).</param>
+        /// <param name="Rrule">An iCal Recurrence Rule (RRULE) string. It is required to be set for schedules determining when upgrades to the Edge software can be applied..</param>
         public Schedule(string Name = null, Division Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, DateTime? Start = null, DateTime? End = null, string Rrule = null)
         {
             this.Name = Name;
@@ -304,9 +304,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// An iCal Recurrence Rule (RRULE) string.
+        /// An iCal Recurrence Rule (RRULE) string. It is required to be set for schedules determining when upgrades to the Edge software can be applied.
         /// </summary>
-        /// <value>An iCal Recurrence Rule (RRULE) string.</value>
+        /// <value>An iCal Recurrence Rule (RRULE) string. It is required to be set for schedules determining when upgrades to the Edge software can be applied.</value>
         [DataMember(Name="rrule", EmitDefaultValue=false)]
         public string Rrule { get; set; }
         

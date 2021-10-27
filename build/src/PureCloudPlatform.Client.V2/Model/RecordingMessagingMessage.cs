@@ -65,20 +65,32 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingMessagingMessage" /> class.
         /// </summary>
-        /// <param name="From">From.</param>
-        /// <param name="FromUser">FromUser.</param>
-        /// <param name="FromExternalContact">FromExternalContact.</param>
-        /// <param name="To">To.</param>
-        /// <param name="Timestamp">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="Id">Id.</param>
-        /// <param name="MessageText">MessageText.</param>
-        /// <param name="MessageMediaAttachments">MessageMediaAttachments.</param>
-        /// <param name="MessageStickerAttachments">MessageStickerAttachments.</param>
-        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null)
+        /// <param name="From">The message sender session id..</param>
+        /// <param name="FromUser">The user who sent this message..</param>
+        /// <param name="FromExternalContact">The PureCloud external contact sender details..</param>
+        /// <param name="To">The message recipient..</param>
+        /// <param name="Timestamp">The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="Id">A globally unique identifier for this communication..</param>
+        /// <param name="MessageText">The content of this message..</param>
+        /// <param name="MessageMediaAttachments">List of media objects attached  with this message..</param>
+        /// <param name="MessageStickerAttachments">List of message stickers attached with this message..</param>
+        /// <param name="QuickReplies">List of quick reply options offered with this message..</param>
+        /// <param name="ButtonResponse">Button Response selected by user for this message..</param>
+        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null)
         {
             this.From = From;
             this.FromUser = FromUser;
@@ -89,81 +101,109 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MessageText = MessageText;
             this.MessageMediaAttachments = MessageMediaAttachments;
             this.MessageStickerAttachments = MessageStickerAttachments;
+            this.QuickReplies = QuickReplies;
+            this.ButtonResponse = ButtonResponse;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets From
+        /// The message sender session id.
         /// </summary>
+        /// <value>The message sender session id.</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public string From { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets FromUser
+        /// The user who sent this message.
         /// </summary>
+        /// <value>The user who sent this message.</value>
         [DataMember(Name="fromUser", EmitDefaultValue=false)]
         public User FromUser { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets FromExternalContact
+        /// The PureCloud external contact sender details.
         /// </summary>
+        /// <value>The PureCloud external contact sender details.</value>
         [DataMember(Name="fromExternalContact", EmitDefaultValue=false)]
         public ExternalContact FromExternalContact { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets To
+        /// The message recipient.
         /// </summary>
+        /// <value>The message recipient.</value>
         [DataMember(Name="to", EmitDefaultValue=false)]
         public string To { get; set; }
         
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public DateTime? Timestamp { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// A globally unique identifier for this communication.
         /// </summary>
+        /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MessageText
+        /// The content of this message.
         /// </summary>
+        /// <value>The content of this message.</value>
         [DataMember(Name="messageText", EmitDefaultValue=false)]
         public string MessageText { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MessageMediaAttachments
+        /// List of media objects attached  with this message.
         /// </summary>
+        /// <value>List of media objects attached  with this message.</value>
         [DataMember(Name="messageMediaAttachments", EmitDefaultValue=false)]
         public List<MessageMediaAttachment> MessageMediaAttachments { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MessageStickerAttachments
+        /// List of message stickers attached with this message.
         /// </summary>
+        /// <value>List of message stickers attached with this message.</value>
         [DataMember(Name="messageStickerAttachments", EmitDefaultValue=false)]
         public List<MessageStickerAttachment> MessageStickerAttachments { get; set; }
+        
+        
+        
+        /// <summary>
+        /// List of quick reply options offered with this message.
+        /// </summary>
+        /// <value>List of quick reply options offered with this message.</value>
+        [DataMember(Name="quickReplies", EmitDefaultValue=false)]
+        public List<QuickReply> QuickReplies { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Button Response selected by user for this message.
+        /// </summary>
+        /// <value>Button Response selected by user for this message.</value>
+        [DataMember(Name="buttonResponse", EmitDefaultValue=false)]
+        public ButtonResponse ButtonResponse { get; set; }
         
         
         /// <summary>
@@ -184,6 +224,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessageText: ").Append(MessageText).Append("\n");
             sb.Append("  MessageMediaAttachments: ").Append(MessageMediaAttachments).Append("\n");
             sb.Append("  MessageStickerAttachments: ").Append(MessageStickerAttachments).Append("\n");
+            sb.Append("  QuickReplies: ").Append(QuickReplies).Append("\n");
+            sb.Append("  ButtonResponse: ").Append(ButtonResponse).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -268,6 +310,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessageStickerAttachments == other.MessageStickerAttachments ||
                     this.MessageStickerAttachments != null &&
                     this.MessageStickerAttachments.SequenceEqual(other.MessageStickerAttachments)
+                ) &&
+                (
+                    this.QuickReplies == other.QuickReplies ||
+                    this.QuickReplies != null &&
+                    this.QuickReplies.SequenceEqual(other.QuickReplies)
+                ) &&
+                (
+                    this.ButtonResponse == other.ButtonResponse ||
+                    this.ButtonResponse != null &&
+                    this.ButtonResponse.Equals(other.ButtonResponse)
                 );
         }
 
@@ -309,6 +361,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MessageStickerAttachments != null)
                     hash = hash * 59 + this.MessageStickerAttachments.GetHashCode();
+                
+                if (this.QuickReplies != null)
+                    hash = hash * 59 + this.QuickReplies.GetHashCode();
+                
+                if (this.ButtonResponse != null)
+                    hash = hash * 59 + this.ButtonResponse.GetHashCode();
                 
                 return hash;
             }

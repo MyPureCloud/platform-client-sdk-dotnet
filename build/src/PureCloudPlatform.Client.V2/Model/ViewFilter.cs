@@ -1913,6 +1913,71 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ViewFilter" /> class.
@@ -2041,7 +2106,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsAgentOwnedCallback">Indicates filtering for agent owned callback interactions.</param>
         /// <param name="AgentCallbackOwnerIds">The list of callback owners used to filter interactions.</param>
         /// <param name="TranscriptTopics">The list of transcript topics requested in filter.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null, List<DevelopmentRoleListEnum> DevelopmentRoleList = null, List<DevelopmentTypeListEnum> DevelopmentTypeList = null, List<DevelopmentStatusListEnum> DevelopmentStatusList = null, List<string> DevelopmentModuleIds = null, bool? DevelopmentActivityOverdue = null, NumericRange CustomerSentimentScore = null, NumericRange CustomerSentimentTrend = null, List<string> FlowTransferTargets = null, string DevelopmentName = null, List<string> TopicIds = null, List<string> ExternalTags = null, bool? IsNotResponding = null, bool? IsAuthenticated = null, List<string> BotIds = null, List<string> BotVersions = null, List<BotMessageTypesEnum> BotMessageTypes = null, List<BotProviderListEnum> BotProviderList = null, List<BotProductListEnum> BotProductList = null, List<BotRecognitionFailureReasonListEnum> BotRecognitionFailureReasonList = null, List<string> BotIntentList = null, List<string> BotFinalIntentList = null, List<string> BotSlotList = null, List<BotResultListEnum> BotResultList = null, List<BlockedReasonsEnum> BlockedReasons = null, bool? IsRecorded = null, bool? HasEvaluation = null, bool? HasScoredEvaluation = null, List<EmailDeliveryStatusListEnum> EmailDeliveryStatusList = null, bool? IsAgentOwnedCallback = null, List<string> AgentCallbackOwnerIds = null, List<TranscriptTopics> TranscriptTopics = null)
+        /// <param name="JourneyFrequencyCapReasons">The list of frequency cap reasons to filter offer constraints.</param>
+        /// <param name="JourneyBlockingActionMapIds">The list of blocking action maps to filter offer constraints.</param>
+        /// <param name="JourneyActionTargetIds">The list of action targets to filter offer constraints.</param>
+        /// <param name="JourneyBlockingScheduleGroupIds">The list of blocking schedule groups to filter offer constraints.</param>
+        /// <param name="JourneyBlockingEmergencyScheduleGroupIds">The list of emergency schedule groups to filter offer constraints.</param>
+        /// <param name="JourneyUrlEqualConditions">The list of url equal conditions to filter offer constraints.</param>
+        /// <param name="JourneyUrlNotEqualConditions">The list of url not equal conditions to filter offer constraints.</param>
+        /// <param name="JourneyUrlStartsWithConditions">The list of url starts with conditions to filter offer constraints.</param>
+        /// <param name="JourneyUrlEndsWithConditions">The list of url ends with conditions to filter offer constraints.</param>
+        /// <param name="JourneyUrlContainsAnyConditions">The list of url contains any conditions to filter offer constraints.</param>
+        /// <param name="JourneyUrlNotContainsAnyConditions">The list of url not contains any conditions to filter offer constraints.</param>
+        /// <param name="JourneyUrlContainsAllConditions">The list of url contains all conditions to filter offer constraints.</param>
+        /// <param name="JourneyUrlNotContainsAllConditions">The list of url not contains all conditions to filter offer constraints.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null, List<DevelopmentRoleListEnum> DevelopmentRoleList = null, List<DevelopmentTypeListEnum> DevelopmentTypeList = null, List<DevelopmentStatusListEnum> DevelopmentStatusList = null, List<string> DevelopmentModuleIds = null, bool? DevelopmentActivityOverdue = null, NumericRange CustomerSentimentScore = null, NumericRange CustomerSentimentTrend = null, List<string> FlowTransferTargets = null, string DevelopmentName = null, List<string> TopicIds = null, List<string> ExternalTags = null, bool? IsNotResponding = null, bool? IsAuthenticated = null, List<string> BotIds = null, List<string> BotVersions = null, List<BotMessageTypesEnum> BotMessageTypes = null, List<BotProviderListEnum> BotProviderList = null, List<BotProductListEnum> BotProductList = null, List<BotRecognitionFailureReasonListEnum> BotRecognitionFailureReasonList = null, List<string> BotIntentList = null, List<string> BotFinalIntentList = null, List<string> BotSlotList = null, List<BotResultListEnum> BotResultList = null, List<BlockedReasonsEnum> BlockedReasons = null, bool? IsRecorded = null, bool? HasEvaluation = null, bool? HasScoredEvaluation = null, List<EmailDeliveryStatusListEnum> EmailDeliveryStatusList = null, bool? IsAgentOwnedCallback = null, List<string> AgentCallbackOwnerIds = null, List<TranscriptTopics> TranscriptTopics = null, List<string> JourneyFrequencyCapReasons = null, List<string> JourneyBlockingActionMapIds = null, List<string> JourneyActionTargetIds = null, List<string> JourneyBlockingScheduleGroupIds = null, List<string> JourneyBlockingEmergencyScheduleGroupIds = null, List<string> JourneyUrlEqualConditions = null, List<string> JourneyUrlNotEqualConditions = null, List<string> JourneyUrlStartsWithConditions = null, List<string> JourneyUrlEndsWithConditions = null, List<string> JourneyUrlContainsAnyConditions = null, List<string> JourneyUrlNotContainsAnyConditions = null, List<string> JourneyUrlContainsAllConditions = null, List<string> JourneyUrlNotContainsAllConditions = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -2167,6 +2245,19 @@ namespace PureCloudPlatform.Client.V2.Model
             this.IsAgentOwnedCallback = IsAgentOwnedCallback;
             this.AgentCallbackOwnerIds = AgentCallbackOwnerIds;
             this.TranscriptTopics = TranscriptTopics;
+            this.JourneyFrequencyCapReasons = JourneyFrequencyCapReasons;
+            this.JourneyBlockingActionMapIds = JourneyBlockingActionMapIds;
+            this.JourneyActionTargetIds = JourneyActionTargetIds;
+            this.JourneyBlockingScheduleGroupIds = JourneyBlockingScheduleGroupIds;
+            this.JourneyBlockingEmergencyScheduleGroupIds = JourneyBlockingEmergencyScheduleGroupIds;
+            this.JourneyUrlEqualConditions = JourneyUrlEqualConditions;
+            this.JourneyUrlNotEqualConditions = JourneyUrlNotEqualConditions;
+            this.JourneyUrlStartsWithConditions = JourneyUrlStartsWithConditions;
+            this.JourneyUrlEndsWithConditions = JourneyUrlEndsWithConditions;
+            this.JourneyUrlContainsAnyConditions = JourneyUrlContainsAnyConditions;
+            this.JourneyUrlNotContainsAnyConditions = JourneyUrlNotContainsAnyConditions;
+            this.JourneyUrlContainsAllConditions = JourneyUrlContainsAllConditions;
+            this.JourneyUrlNotContainsAllConditions = JourneyUrlNotContainsAllConditions;
             
         }
         
@@ -3287,6 +3378,123 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<TranscriptTopics> TranscriptTopics { get; set; }
         
         
+        
+        /// <summary>
+        /// The list of frequency cap reasons to filter offer constraints
+        /// </summary>
+        /// <value>The list of frequency cap reasons to filter offer constraints</value>
+        [DataMember(Name="journeyFrequencyCapReasons", EmitDefaultValue=false)]
+        public List<string> JourneyFrequencyCapReasons { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of blocking action maps to filter offer constraints
+        /// </summary>
+        /// <value>The list of blocking action maps to filter offer constraints</value>
+        [DataMember(Name="journeyBlockingActionMapIds", EmitDefaultValue=false)]
+        public List<string> JourneyBlockingActionMapIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of action targets to filter offer constraints
+        /// </summary>
+        /// <value>The list of action targets to filter offer constraints</value>
+        [DataMember(Name="journeyActionTargetIds", EmitDefaultValue=false)]
+        public List<string> JourneyActionTargetIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of blocking schedule groups to filter offer constraints
+        /// </summary>
+        /// <value>The list of blocking schedule groups to filter offer constraints</value>
+        [DataMember(Name="journeyBlockingScheduleGroupIds", EmitDefaultValue=false)]
+        public List<string> JourneyBlockingScheduleGroupIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of emergency schedule groups to filter offer constraints
+        /// </summary>
+        /// <value>The list of emergency schedule groups to filter offer constraints</value>
+        [DataMember(Name="journeyBlockingEmergencyScheduleGroupIds", EmitDefaultValue=false)]
+        public List<string> JourneyBlockingEmergencyScheduleGroupIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of url equal conditions to filter offer constraints
+        /// </summary>
+        /// <value>The list of url equal conditions to filter offer constraints</value>
+        [DataMember(Name="journeyUrlEqualConditions", EmitDefaultValue=false)]
+        public List<string> JourneyUrlEqualConditions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of url not equal conditions to filter offer constraints
+        /// </summary>
+        /// <value>The list of url not equal conditions to filter offer constraints</value>
+        [DataMember(Name="journeyUrlNotEqualConditions", EmitDefaultValue=false)]
+        public List<string> JourneyUrlNotEqualConditions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of url starts with conditions to filter offer constraints
+        /// </summary>
+        /// <value>The list of url starts with conditions to filter offer constraints</value>
+        [DataMember(Name="journeyUrlStartsWithConditions", EmitDefaultValue=false)]
+        public List<string> JourneyUrlStartsWithConditions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of url ends with conditions to filter offer constraints
+        /// </summary>
+        /// <value>The list of url ends with conditions to filter offer constraints</value>
+        [DataMember(Name="journeyUrlEndsWithConditions", EmitDefaultValue=false)]
+        public List<string> JourneyUrlEndsWithConditions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of url contains any conditions to filter offer constraints
+        /// </summary>
+        /// <value>The list of url contains any conditions to filter offer constraints</value>
+        [DataMember(Name="journeyUrlContainsAnyConditions", EmitDefaultValue=false)]
+        public List<string> JourneyUrlContainsAnyConditions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of url not contains any conditions to filter offer constraints
+        /// </summary>
+        /// <value>The list of url not contains any conditions to filter offer constraints</value>
+        [DataMember(Name="journeyUrlNotContainsAnyConditions", EmitDefaultValue=false)]
+        public List<string> JourneyUrlNotContainsAnyConditions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of url contains all conditions to filter offer constraints
+        /// </summary>
+        /// <value>The list of url contains all conditions to filter offer constraints</value>
+        [DataMember(Name="journeyUrlContainsAllConditions", EmitDefaultValue=false)]
+        public List<string> JourneyUrlContainsAllConditions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of url not contains all conditions to filter offer constraints
+        /// </summary>
+        /// <value>The list of url not contains all conditions to filter offer constraints</value>
+        [DataMember(Name="journeyUrlNotContainsAllConditions", EmitDefaultValue=false)]
+        public List<string> JourneyUrlNotContainsAllConditions { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -3420,6 +3628,19 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IsAgentOwnedCallback: ").Append(IsAgentOwnedCallback).Append("\n");
             sb.Append("  AgentCallbackOwnerIds: ").Append(AgentCallbackOwnerIds).Append("\n");
             sb.Append("  TranscriptTopics: ").Append(TranscriptTopics).Append("\n");
+            sb.Append("  JourneyFrequencyCapReasons: ").Append(JourneyFrequencyCapReasons).Append("\n");
+            sb.Append("  JourneyBlockingActionMapIds: ").Append(JourneyBlockingActionMapIds).Append("\n");
+            sb.Append("  JourneyActionTargetIds: ").Append(JourneyActionTargetIds).Append("\n");
+            sb.Append("  JourneyBlockingScheduleGroupIds: ").Append(JourneyBlockingScheduleGroupIds).Append("\n");
+            sb.Append("  JourneyBlockingEmergencyScheduleGroupIds: ").Append(JourneyBlockingEmergencyScheduleGroupIds).Append("\n");
+            sb.Append("  JourneyUrlEqualConditions: ").Append(JourneyUrlEqualConditions).Append("\n");
+            sb.Append("  JourneyUrlNotEqualConditions: ").Append(JourneyUrlNotEqualConditions).Append("\n");
+            sb.Append("  JourneyUrlStartsWithConditions: ").Append(JourneyUrlStartsWithConditions).Append("\n");
+            sb.Append("  JourneyUrlEndsWithConditions: ").Append(JourneyUrlEndsWithConditions).Append("\n");
+            sb.Append("  JourneyUrlContainsAnyConditions: ").Append(JourneyUrlContainsAnyConditions).Append("\n");
+            sb.Append("  JourneyUrlNotContainsAnyConditions: ").Append(JourneyUrlNotContainsAnyConditions).Append("\n");
+            sb.Append("  JourneyUrlContainsAllConditions: ").Append(JourneyUrlContainsAllConditions).Append("\n");
+            sb.Append("  JourneyUrlNotContainsAllConditions: ").Append(JourneyUrlNotContainsAllConditions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -4079,6 +4300,71 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TranscriptTopics == other.TranscriptTopics ||
                     this.TranscriptTopics != null &&
                     this.TranscriptTopics.SequenceEqual(other.TranscriptTopics)
+                ) &&
+                (
+                    this.JourneyFrequencyCapReasons == other.JourneyFrequencyCapReasons ||
+                    this.JourneyFrequencyCapReasons != null &&
+                    this.JourneyFrequencyCapReasons.SequenceEqual(other.JourneyFrequencyCapReasons)
+                ) &&
+                (
+                    this.JourneyBlockingActionMapIds == other.JourneyBlockingActionMapIds ||
+                    this.JourneyBlockingActionMapIds != null &&
+                    this.JourneyBlockingActionMapIds.SequenceEqual(other.JourneyBlockingActionMapIds)
+                ) &&
+                (
+                    this.JourneyActionTargetIds == other.JourneyActionTargetIds ||
+                    this.JourneyActionTargetIds != null &&
+                    this.JourneyActionTargetIds.SequenceEqual(other.JourneyActionTargetIds)
+                ) &&
+                (
+                    this.JourneyBlockingScheduleGroupIds == other.JourneyBlockingScheduleGroupIds ||
+                    this.JourneyBlockingScheduleGroupIds != null &&
+                    this.JourneyBlockingScheduleGroupIds.SequenceEqual(other.JourneyBlockingScheduleGroupIds)
+                ) &&
+                (
+                    this.JourneyBlockingEmergencyScheduleGroupIds == other.JourneyBlockingEmergencyScheduleGroupIds ||
+                    this.JourneyBlockingEmergencyScheduleGroupIds != null &&
+                    this.JourneyBlockingEmergencyScheduleGroupIds.SequenceEqual(other.JourneyBlockingEmergencyScheduleGroupIds)
+                ) &&
+                (
+                    this.JourneyUrlEqualConditions == other.JourneyUrlEqualConditions ||
+                    this.JourneyUrlEqualConditions != null &&
+                    this.JourneyUrlEqualConditions.SequenceEqual(other.JourneyUrlEqualConditions)
+                ) &&
+                (
+                    this.JourneyUrlNotEqualConditions == other.JourneyUrlNotEqualConditions ||
+                    this.JourneyUrlNotEqualConditions != null &&
+                    this.JourneyUrlNotEqualConditions.SequenceEqual(other.JourneyUrlNotEqualConditions)
+                ) &&
+                (
+                    this.JourneyUrlStartsWithConditions == other.JourneyUrlStartsWithConditions ||
+                    this.JourneyUrlStartsWithConditions != null &&
+                    this.JourneyUrlStartsWithConditions.SequenceEqual(other.JourneyUrlStartsWithConditions)
+                ) &&
+                (
+                    this.JourneyUrlEndsWithConditions == other.JourneyUrlEndsWithConditions ||
+                    this.JourneyUrlEndsWithConditions != null &&
+                    this.JourneyUrlEndsWithConditions.SequenceEqual(other.JourneyUrlEndsWithConditions)
+                ) &&
+                (
+                    this.JourneyUrlContainsAnyConditions == other.JourneyUrlContainsAnyConditions ||
+                    this.JourneyUrlContainsAnyConditions != null &&
+                    this.JourneyUrlContainsAnyConditions.SequenceEqual(other.JourneyUrlContainsAnyConditions)
+                ) &&
+                (
+                    this.JourneyUrlNotContainsAnyConditions == other.JourneyUrlNotContainsAnyConditions ||
+                    this.JourneyUrlNotContainsAnyConditions != null &&
+                    this.JourneyUrlNotContainsAnyConditions.SequenceEqual(other.JourneyUrlNotContainsAnyConditions)
+                ) &&
+                (
+                    this.JourneyUrlContainsAllConditions == other.JourneyUrlContainsAllConditions ||
+                    this.JourneyUrlContainsAllConditions != null &&
+                    this.JourneyUrlContainsAllConditions.SequenceEqual(other.JourneyUrlContainsAllConditions)
+                ) &&
+                (
+                    this.JourneyUrlNotContainsAllConditions == other.JourneyUrlNotContainsAllConditions ||
+                    this.JourneyUrlNotContainsAllConditions != null &&
+                    this.JourneyUrlNotContainsAllConditions.SequenceEqual(other.JourneyUrlNotContainsAllConditions)
                 );
         }
 
@@ -4465,6 +4751,45 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TranscriptTopics != null)
                     hash = hash * 59 + this.TranscriptTopics.GetHashCode();
+                
+                if (this.JourneyFrequencyCapReasons != null)
+                    hash = hash * 59 + this.JourneyFrequencyCapReasons.GetHashCode();
+                
+                if (this.JourneyBlockingActionMapIds != null)
+                    hash = hash * 59 + this.JourneyBlockingActionMapIds.GetHashCode();
+                
+                if (this.JourneyActionTargetIds != null)
+                    hash = hash * 59 + this.JourneyActionTargetIds.GetHashCode();
+                
+                if (this.JourneyBlockingScheduleGroupIds != null)
+                    hash = hash * 59 + this.JourneyBlockingScheduleGroupIds.GetHashCode();
+                
+                if (this.JourneyBlockingEmergencyScheduleGroupIds != null)
+                    hash = hash * 59 + this.JourneyBlockingEmergencyScheduleGroupIds.GetHashCode();
+                
+                if (this.JourneyUrlEqualConditions != null)
+                    hash = hash * 59 + this.JourneyUrlEqualConditions.GetHashCode();
+                
+                if (this.JourneyUrlNotEqualConditions != null)
+                    hash = hash * 59 + this.JourneyUrlNotEqualConditions.GetHashCode();
+                
+                if (this.JourneyUrlStartsWithConditions != null)
+                    hash = hash * 59 + this.JourneyUrlStartsWithConditions.GetHashCode();
+                
+                if (this.JourneyUrlEndsWithConditions != null)
+                    hash = hash * 59 + this.JourneyUrlEndsWithConditions.GetHashCode();
+                
+                if (this.JourneyUrlContainsAnyConditions != null)
+                    hash = hash * 59 + this.JourneyUrlContainsAnyConditions.GetHashCode();
+                
+                if (this.JourneyUrlNotContainsAnyConditions != null)
+                    hash = hash * 59 + this.JourneyUrlNotContainsAnyConditions.GetHashCode();
+                
+                if (this.JourneyUrlContainsAllConditions != null)
+                    hash = hash * 59 + this.JourneyUrlContainsAllConditions.GetHashCode();
+                
+                if (this.JourneyUrlNotContainsAllConditions != null)
+                    hash = hash * 59 + this.JourneyUrlNotContainsAllConditions.GetHashCode();
                 
                 return hash;
             }

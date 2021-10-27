@@ -45,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ScheduleGenerationResult" /> class.
         /// </summary>
         /// <param name="Failed">Whether the schedule generation run failed.</param>
-        /// <param name="RunId">The run ID for the schedule generation. Reference this when requesting support.</param>
+        /// <param name="RunId">The ID of the schedule generation run. Reference this when requesting support.</param>
         /// <param name="MessageCount">The number of schedule generation messages for this schedule generation run.</param>
         /// <param name="Messages">User facing messages related to the schedule generation run.</param>
         public ScheduleGenerationResult(bool? Failed = null, string RunId = null, int? MessageCount = null, List<ScheduleGenerationMessage> Messages = null)
@@ -69,9 +69,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The run ID for the schedule generation. Reference this when requesting support
+        /// The ID of the schedule generation run. Reference this when requesting support
         /// </summary>
-        /// <value>The run ID for the schedule generation. Reference this when requesting support</value>
+        /// <value>The ID of the schedule generation run. Reference this when requesting support</value>
         [DataMember(Name="runId", EmitDefaultValue=false)]
         public string RunId { get; set; }
         

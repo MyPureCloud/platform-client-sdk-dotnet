@@ -494,6 +494,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Actiontemplate,
             
             /// <summary>
+            /// Enum Agentroutinginfo for "AgentRoutingInfo"
+            /// </summary>
+            [EnumMember(Value = "AgentRoutingInfo")]
+            Agentroutinginfo,
+            
+            /// <summary>
             /// Enum Assignment for "Assignment"
             /// </summary>
             [EnumMember(Value = "Assignment")]
@@ -896,6 +902,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Routingtranscriptionsettings,
             
             /// <summary>
+            /// Enum Routingutilizationtag for "RoutingUtilizationTag"
+            /// </summary>
+            [EnumMember(Value = "RoutingUtilizationTag")]
+            Routingutilizationtag,
+            
+            /// <summary>
             /// Enum Rule for "Rule"
             /// </summary>
             [EnumMember(Value = "Rule")]
@@ -950,6 +962,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Sessiontype,
             
             /// <summary>
+            /// Enum Shifttrade for "ShiftTrade"
+            /// </summary>
+            [EnumMember(Value = "ShiftTrade")]
+            Shifttrade,
+            
+            /// <summary>
             /// Enum Site for "Site"
             /// </summary>
             [EnumMember(Value = "Site")]
@@ -972,6 +990,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Team")]
             Team,
+            
+            /// <summary>
+            /// Enum Timeoffrequest for "TimeOffRequest"
+            /// </summary>
+            [EnumMember(Value = "TimeOffRequest")]
+            Timeoffrequest,
             
             /// <summary>
             /// Enum Topic for "Topic"

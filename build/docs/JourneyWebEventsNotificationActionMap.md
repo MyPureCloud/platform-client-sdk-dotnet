@@ -1,0 +1,16 @@
+---
+title: JourneyWebEventsNotificationActionMap
+---
+## ININ.PureCloudApi.Model.JourneyWebEventsNotificationActionMap
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Id** | **string** |  | [optional] |
+| **SelfUri** | **string** |  | [optional] |
+| **DisplayName** | **string** |  | [optional] |
+| **Version** | **int?** |  | [optional] |
+{: class="table table-striped"}
+
+

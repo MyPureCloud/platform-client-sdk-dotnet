@@ -40,6 +40,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SchedulingTestingOptionsRequest" /> class.
@@ -48,12 +53,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DelayScheduling">Whether to force delayed scheduling.</param>
         /// <param name="FailScheduling">Whether to force scheduling to fail.</param>
         /// <param name="PopulateWarnings">Whether to populate warnings in the generated schedule.</param>
-        public SchedulingTestingOptionsRequest(bool? FastScheduling = null, bool? DelayScheduling = null, bool? FailScheduling = null, bool? PopulateWarnings = null)
+        /// <param name="PopulateDeprecatedWarnings">Whether to populate deprecated warnings in the generated schedule.</param>
+        public SchedulingTestingOptionsRequest(bool? FastScheduling = null, bool? DelayScheduling = null, bool? FailScheduling = null, bool? PopulateWarnings = null, bool? PopulateDeprecatedWarnings = null)
         {
             this.FastScheduling = FastScheduling;
             this.DelayScheduling = DelayScheduling;
             this.FailScheduling = FailScheduling;
             this.PopulateWarnings = PopulateWarnings;
+            this.PopulateDeprecatedWarnings = PopulateDeprecatedWarnings;
             
         }
         
@@ -94,6 +101,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? PopulateWarnings { get; set; }
         
         
+        
+        /// <summary>
+        /// Whether to populate deprecated warnings in the generated schedule
+        /// </summary>
+        /// <value>Whether to populate deprecated warnings in the generated schedule</value>
+        [DataMember(Name="populateDeprecatedWarnings", EmitDefaultValue=false)]
+        public bool? PopulateDeprecatedWarnings { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -107,6 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DelayScheduling: ").Append(DelayScheduling).Append("\n");
             sb.Append("  FailScheduling: ").Append(FailScheduling).Append("\n");
             sb.Append("  PopulateWarnings: ").Append(PopulateWarnings).Append("\n");
+            sb.Append("  PopulateDeprecatedWarnings: ").Append(PopulateDeprecatedWarnings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -166,6 +183,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PopulateWarnings == other.PopulateWarnings ||
                     this.PopulateWarnings != null &&
                     this.PopulateWarnings.Equals(other.PopulateWarnings)
+                ) &&
+                (
+                    this.PopulateDeprecatedWarnings == other.PopulateDeprecatedWarnings ||
+                    this.PopulateDeprecatedWarnings != null &&
+                    this.PopulateDeprecatedWarnings.Equals(other.PopulateDeprecatedWarnings)
                 );
         }
 
@@ -192,6 +214,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PopulateWarnings != null)
                     hash = hash * 59 + this.PopulateWarnings.GetHashCode();
+                
+                if (this.PopulateDeprecatedWarnings != null)
+                    hash = hash * 59 + this.PopulateDeprecatedWarnings.GetHashCode();
                 
                 return hash;
             }

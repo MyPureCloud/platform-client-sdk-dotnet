@@ -77,8 +77,9 @@ Delete integration.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -332,8 +333,9 @@ Get integration.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:view
 
 ### Example
 ```{"language":"csharp"}
@@ -408,8 +410,9 @@ Get integration configuration.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:view
 
 ### Example
 ```{"language":"csharp"}
@@ -472,8 +475,9 @@ List integrations
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2623,8 +2627,9 @@ Get integration type.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2687,8 +2692,9 @@ Get properties config schema for an integration type.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2753,8 +2759,9 @@ List integration types
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2903,8 +2910,9 @@ Update an integration.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -3115,8 +3123,9 @@ Create an integration.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:add
 
 ### Example
 ```{"language":"csharp"}
@@ -3772,8 +3781,9 @@ Update integration configuration.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:edit
 
 ### Example
 ```{"language":"csharp"}

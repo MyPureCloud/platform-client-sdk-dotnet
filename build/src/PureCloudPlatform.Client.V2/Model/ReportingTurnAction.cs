@@ -212,6 +212,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Sendresponseaction,
             
             /// <summary>
+            /// Enum Getresponseaction for "GetResponseAction"
+            /// </summary>
+            [EnumMember(Value = "GetResponseAction")]
+            Getresponseaction,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

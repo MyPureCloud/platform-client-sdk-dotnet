@@ -45,7 +45,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Content for "Content"
             /// </summary>
             [EnumMember(Value = "Content")]
-            Content
+            Content,
+            
+            /// <summary>
+            /// Enum Richtext for "RichText"
+            /// </summary>
+            [EnumMember(Value = "RichText")]
+            Richtext
         }
         
         

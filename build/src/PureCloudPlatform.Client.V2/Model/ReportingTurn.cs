@@ -105,6 +105,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Error,
             
             /// <summary>
+            /// Enum Expressionerror for "ExpressionError"
+            /// </summary>
+            [EnumMember(Value = "ExpressionError")]
+            Expressionerror,
+            
+            /// <summary>
             /// Enum Noinputcollection for "NoInputCollection"
             /// </summary>
             [EnumMember(Value = "NoInputCollection")]
@@ -271,9 +277,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The conversation details, across potentially multiple Cicero sessions.
+        /// The conversation details, across potentially multiple Bot Flow sessions.
         /// </summary>
-        /// <value>The conversation details, across potentially multiple Cicero sessions.</value>
+        /// <value>The conversation details, across potentially multiple Bot Flow sessions.</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
         public AddressableEntityRef Conversation { get; private set; }
         

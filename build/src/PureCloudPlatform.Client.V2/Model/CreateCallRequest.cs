@@ -80,6 +80,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCallRequest" /> class.
@@ -96,7 +101,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationIds">The list of existing call conversations to merge into a new ad-hoc conference..</param>
         /// <param name="Participants">The list of participants to call to create a new ad-hoc conference..</param>
         /// <param name="UuiData">User to User Information (UUI) data managed by SIP session application..</param>
-        public CreateCallRequest(string PhoneNumber = null, string CallerId = null, string CallerIdName = null, string CallFromQueueId = null, string CallQueueId = null, string CallUserId = null, int? Priority = null, string LanguageId = null, List<string> RoutingSkillsIds = null, List<string> ConversationIds = null, List<Destination> Participants = null, string UuiData = null)
+        /// <param name="ExternalContactId">The external contact with which to associate the call..</param>
+        public CreateCallRequest(string PhoneNumber = null, string CallerId = null, string CallerIdName = null, string CallFromQueueId = null, string CallQueueId = null, string CallUserId = null, int? Priority = null, string LanguageId = null, List<string> RoutingSkillsIds = null, List<string> ConversationIds = null, List<Destination> Participants = null, string UuiData = null, string ExternalContactId = null)
         {
             this.PhoneNumber = PhoneNumber;
             this.CallerId = CallerId;
@@ -110,6 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConversationIds = ConversationIds;
             this.Participants = Participants;
             this.UuiData = UuiData;
+            this.ExternalContactId = ExternalContactId;
             
         }
         
@@ -222,6 +229,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string UuiData { get; set; }
         
         
+        
+        /// <summary>
+        /// The external contact with which to associate the call.
+        /// </summary>
+        /// <value>The external contact with which to associate the call.</value>
+        [DataMember(Name="externalContactId", EmitDefaultValue=false)]
+        public string ExternalContactId { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -243,6 +259,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationIds: ").Append(ConversationIds).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  UuiData: ").Append(UuiData).Append("\n");
+            sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -342,6 +359,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UuiData == other.UuiData ||
                     this.UuiData != null &&
                     this.UuiData.Equals(other.UuiData)
+                ) &&
+                (
+                    this.ExternalContactId == other.ExternalContactId ||
+                    this.ExternalContactId != null &&
+                    this.ExternalContactId.Equals(other.ExternalContactId)
                 );
         }
 
@@ -392,6 +414,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.UuiData != null)
                     hash = hash * 59 + this.UuiData.GetHashCode();
+                
+                if (this.ExternalContactId != null)
+                    hash = hash * 59 + this.ExternalContactId.GetHashCode();
                 
                 return hash;
             }

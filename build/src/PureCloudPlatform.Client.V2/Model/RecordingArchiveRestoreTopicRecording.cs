@@ -60,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaUris">MediaUris.</param>
         /// <param name="EstimatedTranscodeTimeMs">EstimatedTranscodeTimeMs.</param>
         /// <param name="ActualTranscodeTimeMs">ActualTranscodeTimeMs.</param>
-        public RecordingArchiveRestoreTopicRecording(string Id = null, string ConversationId = null, string FileState = null, List<RecordingArchiveRestoreTopicMediaResult> MediaUris = null, double? EstimatedTranscodeTimeMs = null, double? ActualTranscodeTimeMs = null)
+        public RecordingArchiveRestoreTopicRecording(string Id = null, string ConversationId = null, string FileState = null, List<RecordingArchiveRestoreTopicMediaResult> MediaUris = null, int? EstimatedTranscodeTimeMs = null, int? ActualTranscodeTimeMs = null)
         {
             this.Id = Id;
             this.ConversationId = ConversationId;
@@ -109,7 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets EstimatedTranscodeTimeMs
         /// </summary>
         [DataMember(Name="estimatedTranscodeTimeMs", EmitDefaultValue=false)]
-        public double? EstimatedTranscodeTimeMs { get; set; }
+        public int? EstimatedTranscodeTimeMs { get; set; }
         
         
         
@@ -117,7 +117,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ActualTranscodeTimeMs
         /// </summary>
         [DataMember(Name="actualTranscodeTimeMs", EmitDefaultValue=false)]
-        public double? ActualTranscodeTimeMs { get; set; }
+        public int? ActualTranscodeTimeMs { get; set; }
         
         
         /// <summary>

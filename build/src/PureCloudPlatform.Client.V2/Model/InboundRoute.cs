@@ -107,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Skills">The skills to use for routing..</param>
         /// <param name="Language">The language to use for routing..</param>
         /// <param name="FromName">The sender name to use for outgoing replies. (required).</param>
-        /// <param name="FromEmail">The sender email to use for outgoing replies. (required).</param>
+        /// <param name="FromEmail">The sender email to use for outgoing replies..</param>
         /// <param name="Flow">The flow to use for processing the email..</param>
         /// <param name="ReplyEmailAddress">The route to use for email replies..</param>
         /// <param name="AutoBcc">The recipients that should be  automatically blind copied on outbound emails associated with this InboundRoute..</param>

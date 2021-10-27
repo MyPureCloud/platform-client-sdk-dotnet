@@ -716,6 +716,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Actiontemplate,
             
             /// <summary>
+            /// Enum Agentroutinginfo for "AgentRoutingInfo"
+            /// </summary>
+            [EnumMember(Value = "AgentRoutingInfo")]
+            Agentroutinginfo,
+            
+            /// <summary>
             /// Enum Annotation for "Annotation"
             /// </summary>
             [EnumMember(Value = "Annotation")]
@@ -834,6 +840,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ContactListFilter")]
             Contactlistfilter,
+            
+            /// <summary>
+            /// Enum Conversationattributes for "ConversationAttributes"
+            /// </summary>
+            [EnumMember(Value = "ConversationAttributes")]
+            Conversationattributes,
             
             /// <summary>
             /// Enum Conversationaccount for "ConversationAccount"
@@ -1322,6 +1334,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Routingtranscriptionsettings,
             
             /// <summary>
+            /// Enum Routingutilizationtag for "RoutingUtilizationTag"
+            /// </summary>
+            [EnumMember(Value = "RoutingUtilizationTag")]
+            Routingutilizationtag,
+            
+            /// <summary>
             /// Enum Rule for "Rule"
             /// </summary>
             [EnumMember(Value = "Rule")]
@@ -1394,6 +1412,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Sessiontype,
             
             /// <summary>
+            /// Enum Shifttrade for "ShiftTrade"
+            /// </summary>
+            [EnumMember(Value = "ShiftTrade")]
+            Shifttrade,
+            
+            /// <summary>
             /// Enum Site for "Site"
             /// </summary>
             [EnumMember(Value = "Site")]
@@ -1440,6 +1464,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Team")]
             Team,
+            
+            /// <summary>
+            /// Enum Timeoffrequest for "TimeOffRequest"
+            /// </summary>
+            [EnumMember(Value = "TimeOffRequest")]
+            Timeoffrequest,
             
             /// <summary>
             /// Enum Topic for "Topic"

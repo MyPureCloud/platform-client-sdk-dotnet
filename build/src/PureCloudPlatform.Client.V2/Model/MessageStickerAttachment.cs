@@ -35,7 +35,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="MessageStickerAttachment" /> class.
         /// </summary>
         /// <param name="Url">The location of the media, useful for retrieving it.</param>
-        /// <param name="Id">Id.</param>
+        /// <param name="Id">A globally unique identifier for the media object..</param>
         public MessageStickerAttachment(string Url = null, string Id = null)
         {
             this.Url = Url;
@@ -55,8 +55,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// A globally unique identifier for the media object.
         /// </summary>
+        /// <value>A globally unique identifier for the media object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         

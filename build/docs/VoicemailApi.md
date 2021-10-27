@@ -31,6 +31,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostVoicemailSearch**](VoicemailApi.html#postvoicemailsearch) | **POST** /api/v2/voicemail/search | Search voicemails |
 | [**PutVoicemailMessage**](VoicemailApi.html#putvoicemailmessage) | **PUT** /api/v2/voicemail/messages/{messageId} | Update a voicemail message |
 | [**PutVoicemailPolicy**](VoicemailApi.html#putvoicemailpolicy) | **PUT** /api/v2/voicemail/policy | Update a policy |
+| [**PutVoicemailUserpolicy**](VoicemailApi.html#putvoicemailuserpolicy) | **PUT** /api/v2/voicemail/userpolicies/{userId} | Update a user&#39;s voicemail policy |
 {: class="table table-striped"}
 
 <a name="deletevoicemailmessage"></a>
@@ -1574,4 +1575,71 @@ namespace Example
 ### Return type
 
 [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html)
+
+<a name="putvoicemailuserpolicy"></a>
+
+## [**VoicemailUserPolicy**](VoicemailUserPolicy.html) PutVoicemailUserpolicy (string userId, VoicemailUserPolicy body)
+
+
+
+Update a user's voicemail policy
+
+
+
+Requires ALL permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutVoicemailUserpolicyExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new VoicemailApi();
+            var userId = userId_example;  // string | User ID
+            var body = new VoicemailUserPolicy(); // VoicemailUserPolicy | The user's voicemail policy
+
+            try
+            { 
+                // Update a user's voicemail policy
+                VoicemailUserPolicy result = apiInstance.PutVoicemailUserpolicy(userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VoicemailApi.PutVoicemailUserpolicy: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **body** | [**VoicemailUserPolicy**](VoicemailUserPolicy.html)| The user&#39;s voicemail policy |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**VoicemailUserPolicy**](VoicemailUserPolicy.html)
 

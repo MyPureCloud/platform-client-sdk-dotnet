@@ -16,6 +16,8 @@ Package info can be found at [https://www.nuget.org/packages/PureCloudPlatform.C
 
 ## Using the Library
 
+**Warning:** This library is generated using the Genesys Cloud public API swagger definition. Function parameter ordering can change without notice and cause breaking changes. To avoid this, it is recommended to use [named arguments](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments#named-arguments) when making API requests.
+
 ### Referencing the Library
 
 If you've used the [Package Manager Console](https://docs.nuget.org/consume/package-manager-console) to install the package, there are no additional steps.

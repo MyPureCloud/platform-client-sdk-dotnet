@@ -131,6 +131,19 @@ title: ViewFilter
 | **IsAgentOwnedCallback** | **bool?** | Indicates filtering for agent owned callback interactions | [optional] |
 | **AgentCallbackOwnerIds** | **List&lt;string&gt;** | The list of callback owners used to filter interactions | [optional] |
 | **TranscriptTopics** | [**List&lt;TranscriptTopics&gt;**](TranscriptTopics.html) | The list of transcript topics requested in filter | [optional] |
+| **JourneyFrequencyCapReasons** | **List&lt;string&gt;** | The list of frequency cap reasons to filter offer constraints | [optional] |
+| **JourneyBlockingActionMapIds** | **List&lt;string&gt;** | The list of blocking action maps to filter offer constraints | [optional] |
+| **JourneyActionTargetIds** | **List&lt;string&gt;** | The list of action targets to filter offer constraints | [optional] |
+| **JourneyBlockingScheduleGroupIds** | **List&lt;string&gt;** | The list of blocking schedule groups to filter offer constraints | [optional] |
+| **JourneyBlockingEmergencyScheduleGroupIds** | **List&lt;string&gt;** | The list of emergency schedule groups to filter offer constraints | [optional] |
+| **JourneyUrlEqualConditions** | **List&lt;string&gt;** | The list of url equal conditions to filter offer constraints | [optional] |
+| **JourneyUrlNotEqualConditions** | **List&lt;string&gt;** | The list of url not equal conditions to filter offer constraints | [optional] |
+| **JourneyUrlStartsWithConditions** | **List&lt;string&gt;** | The list of url starts with conditions to filter offer constraints | [optional] |
+| **JourneyUrlEndsWithConditions** | **List&lt;string&gt;** | The list of url ends with conditions to filter offer constraints | [optional] |
+| **JourneyUrlContainsAnyConditions** | **List&lt;string&gt;** | The list of url contains any conditions to filter offer constraints | [optional] |
+| **JourneyUrlNotContainsAnyConditions** | **List&lt;string&gt;** | The list of url not contains any conditions to filter offer constraints | [optional] |
+| **JourneyUrlContainsAllConditions** | **List&lt;string&gt;** | The list of url contains all conditions to filter offer constraints | [optional] |
+| **JourneyUrlNotContainsAllConditions** | **List&lt;string&gt;** | The list of url not contains all conditions to filter offer constraints | [optional] |
 {: class="table table-striped"}
 
 

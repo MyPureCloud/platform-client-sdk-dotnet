@@ -1540,7 +1540,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update attributes of an in-queue conversation
         /// </summary>
         /// <remarks>
-        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: priority (each point of priority is equivalent to one minute of time in queue), skillIds and languageId.
+        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -1552,7 +1552,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update attributes of an in-queue conversation
         /// </summary>
         /// <remarks>
-        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: priority (each point of priority is equivalent to one minute of time in queue), skillIds and languageId.
+        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -4084,7 +4084,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update attributes of an in-queue conversation
         /// </summary>
         /// <remarks>
-        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: priority (each point of priority is equivalent to one minute of time in queue), skillIds and languageId.
+        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -4096,7 +4096,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update attributes of an in-queue conversation
         /// </summary>
         /// <remarks>
-        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: priority (each point of priority is equivalent to one minute of time in queue), skillIds and languageId.
+        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -17382,7 +17382,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update attributes of an in-queue conversation Returns an object indicating the updated values of all settable attributes. Supported attributes: priority (each point of priority is equivalent to one minute of time in queue), skillIds and languageId.
+        /// Update attributes of an in-queue conversation Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -17395,7 +17395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update attributes of an in-queue conversation Returns an object indicating the updated values of all settable attributes. Supported attributes: priority (each point of priority is equivalent to one minute of time in queue), skillIds and languageId.
+        /// Update attributes of an in-queue conversation Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -17487,7 +17487,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update attributes of an in-queue conversation Returns an object indicating the updated values of all settable attributes. Supported attributes: priority (each point of priority is equivalent to one minute of time in queue), skillIds and languageId.
+        /// Update attributes of an in-queue conversation Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -17501,7 +17501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update attributes of an in-queue conversation Returns an object indicating the updated values of all settable attributes. Supported attributes: priority (each point of priority is equivalent to one minute of time in queue), skillIds and languageId.
+        /// Update attributes of an in-queue conversation Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>

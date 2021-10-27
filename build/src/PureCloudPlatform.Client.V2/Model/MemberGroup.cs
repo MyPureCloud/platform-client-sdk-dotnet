@@ -30,9 +30,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The type of group, e.g. TEAM, etc.
+        /// The group type
         /// </summary>
-        /// <value>The type of group, e.g. TEAM, etc.</value>
+        /// <value>The group type</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -48,7 +48,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Team for "TEAM"
             /// </summary>
             [EnumMember(Value = "TEAM")]
-            Team
+            Team,
+            
+            /// <summary>
+            /// Enum Group for "GROUP"
+            /// </summary>
+            [EnumMember(Value = "GROUP")]
+            Group
         }
         
         
@@ -68,9 +74,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The type of group, e.g. TEAM, etc.
+        /// The group type
         /// </summary>
-        /// <value>The type of group, e.g. TEAM, etc.</value>
+        /// <value>The group type</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         
@@ -85,14 +91,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Division">The division to which this entity belongs..</param>
-        /// <param name="Type">The type of group, e.g. TEAM, etc..</param>
-        /// <param name="MemberCount">The number of members in this group.</param>
-        public MemberGroup(string Name = null, Division Division = null, TypeEnum? Type = null, int? MemberCount = null)
+        /// <param name="Type">The group type.</param>
+        public MemberGroup(string Name = null, Division Division = null, TypeEnum? Type = null)
         {
             this.Name = Name;
             this.Division = Division;
             this.Type = Type;
-            this.MemberCount = MemberCount;
             
         }
         
@@ -131,7 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The number of members in this group</value>
         [DataMember(Name="memberCount", EmitDefaultValue=false)]
-        public int? MemberCount { get; set; }
+        public int? MemberCount { get; private set; }
         
         
         

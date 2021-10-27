@@ -170,6 +170,7 @@ Delete/cancel an async request
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
+* analytics:agentConversationDetail:view
 
 ### Example
 ```{"language":"csharp"}
@@ -947,6 +948,7 @@ Get status for async query for conversation details
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
+* analytics:agentConversationDetail:view
 
 ### Example
 ```{"language":"csharp"}
@@ -1012,6 +1014,7 @@ Fetch a page of results for an async query
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
+* analytics:agentConversationDetail:view
 
 ### Example
 ```{"language":"csharp"}
@@ -6923,6 +6926,7 @@ Query for conversation details asynchronously
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
+* analytics:agentConversationDetail:view
 
 ### Example
 ```{"language":"csharp"}
@@ -6988,6 +6992,7 @@ Query for conversation details
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
+* analytics:agentConversationDetail:view
 
 ### Example
 ```{"language":"csharp"}

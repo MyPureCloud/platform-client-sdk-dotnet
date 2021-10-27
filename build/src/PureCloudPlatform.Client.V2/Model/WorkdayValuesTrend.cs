@@ -55,6 +55,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkdayValuesTrend" /> class.
@@ -81,6 +91,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The end workday for the query range for the metric value trend. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateEndWorkday", EmitDefaultValue=false)]
         public String DateEndWorkday { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The reference workday used to determine the metric definition. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// </summary>
+        /// <value>The reference workday used to determine the metric definition. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        [DataMember(Name="dateReferenceWorkday", EmitDefaultValue=false)]
+        public String DateReferenceWorkday { get; private set; }
         
         
         
@@ -128,6 +147,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public AddressableEntityRef PerformanceProfile { get; private set; }
         
         
+        
+        /// <summary>
+        /// The targeted metric for the average points
+        /// </summary>
+        /// <value>The targeted metric for the average points</value>
+        [DataMember(Name="metric", EmitDefaultValue=false)]
+        public AddressableEntityRef Metric { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -139,11 +167,13 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  DateStartWorkday: ").Append(DateStartWorkday).Append("\n");
             sb.Append("  DateEndWorkday: ").Append(DateEndWorkday).Append("\n");
+            sb.Append("  DateReferenceWorkday: ").Append(DateReferenceWorkday).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Timezone: ").Append(Timezone).Append("\n");
             sb.Append("  Results: ").Append(Results).Append("\n");
             sb.Append("  PerformanceProfile: ").Append(PerformanceProfile).Append("\n");
+            sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -195,6 +225,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateEndWorkday.Equals(other.DateEndWorkday)
                 ) &&
                 (
+                    this.DateReferenceWorkday == other.DateReferenceWorkday ||
+                    this.DateReferenceWorkday != null &&
+                    this.DateReferenceWorkday.Equals(other.DateReferenceWorkday)
+                ) &&
+                (
                     this.Division == other.Division ||
                     this.Division != null &&
                     this.Division.Equals(other.Division)
@@ -218,6 +253,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PerformanceProfile == other.PerformanceProfile ||
                     this.PerformanceProfile != null &&
                     this.PerformanceProfile.Equals(other.PerformanceProfile)
+                ) &&
+                (
+                    this.Metric == other.Metric ||
+                    this.Metric != null &&
+                    this.Metric.Equals(other.Metric)
                 );
         }
 
@@ -239,6 +279,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.DateEndWorkday != null)
                     hash = hash * 59 + this.DateEndWorkday.GetHashCode();
                 
+                if (this.DateReferenceWorkday != null)
+                    hash = hash * 59 + this.DateReferenceWorkday.GetHashCode();
+                
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
                 
@@ -253,6 +296,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PerformanceProfile != null)
                     hash = hash * 59 + this.PerformanceProfile.GetHashCode();
+                
+                if (this.Metric != null)
+                    hash = hash * 59 + this.Metric.GetHashCode();
                 
                 return hash;
             }

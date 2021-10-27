@@ -15,7 +15,7 @@ title: InboundRoute
 | **Skills** | [**List&lt;DomainEntityRef&gt;**](DomainEntityRef.html) | The skills to use for routing. | [optional] |
 | **Language** | [**DomainEntityRef**](DomainEntityRef.html) | The language to use for routing. | [optional] |
 | **FromName** | **string** | The sender name to use for outgoing replies. | |
-| **FromEmail** | **string** | The sender email to use for outgoing replies. | |
+| **FromEmail** | **string** | The sender email to use for outgoing replies. | [optional] |
 | **Flow** | [**DomainEntityRef**](DomainEntityRef.html) | The flow to use for processing the email. | [optional] |
 | **ReplyEmailAddress** | [**QueueEmailAddress**](QueueEmailAddress.html) | The route to use for email replies. | [optional] |
 | **AutoBcc** | [**List&lt;EmailAddress&gt;**](EmailAddress.html) | The recipients that should be  automatically blind copied on outbound emails associated with this InboundRoute. | [optional] |

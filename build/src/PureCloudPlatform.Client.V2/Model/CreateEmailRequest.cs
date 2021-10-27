@@ -118,12 +118,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Specify OUTBOUND to send an email on behalf of a queue, or INBOUND to create an external conversation. An external conversation is one where the provider is not PureCloud based.
         /// </summary>
         /// <value>Specify OUTBOUND to send an email on behalf of a queue, or INBOUND to create an external conversation. An external conversation is one where the provider is not PureCloud based.</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
+        
+        
         
         
         
@@ -155,7 +160,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Direction">Specify OUTBOUND to send an email on behalf of a queue, or INBOUND to create an external conversation. An external conversation is one where the provider is not PureCloud based..</param>
         /// <param name="HtmlBody">An HTML body content of the email..</param>
         /// <param name="TextBody">A text body content of the email..</param>
-        public CreateEmailRequest(string QueueId = null, string FlowId = null, string Provider = null, List<string> SkillIds = null, string LanguageId = null, long? Priority = null, Dictionary<string, string> Attributes = null, string ToAddress = null, string ToName = null, string FromAddress = null, string FromName = null, string Subject = null, DirectionEnum? Direction = null, string HtmlBody = null, string TextBody = null)
+        /// <param name="ExternalContactId">The external contact with which the email should be associated. This field is only valid for OUTBOUND email..</param>
+        public CreateEmailRequest(string QueueId = null, string FlowId = null, string Provider = null, List<string> SkillIds = null, string LanguageId = null, long? Priority = null, Dictionary<string, string> Attributes = null, string ToAddress = null, string ToName = null, string FromAddress = null, string FromName = null, string Subject = null, DirectionEnum? Direction = null, string HtmlBody = null, string TextBody = null, string ExternalContactId = null)
         {
             this.QueueId = QueueId;
             this.FlowId = FlowId;
@@ -172,6 +178,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Direction = Direction;
             this.HtmlBody = HtmlBody;
             this.TextBody = TextBody;
+            this.ExternalContactId = ExternalContactId;
             
         }
         
@@ -304,6 +311,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string TextBody { get; set; }
         
         
+        
+        /// <summary>
+        /// The external contact with which the email should be associated. This field is only valid for OUTBOUND email.
+        /// </summary>
+        /// <value>The external contact with which the email should be associated. This field is only valid for OUTBOUND email.</value>
+        [DataMember(Name="externalContactId", EmitDefaultValue=false)]
+        public string ExternalContactId { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -328,6 +344,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  HtmlBody: ").Append(HtmlBody).Append("\n");
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
+            sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -442,6 +459,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TextBody == other.TextBody ||
                     this.TextBody != null &&
                     this.TextBody.Equals(other.TextBody)
+                ) &&
+                (
+                    this.ExternalContactId == other.ExternalContactId ||
+                    this.ExternalContactId != null &&
+                    this.ExternalContactId.Equals(other.ExternalContactId)
                 );
         }
 
@@ -501,6 +523,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TextBody != null)
                     hash = hash * 59 + this.TextBody.GetHashCode();
+                
+                if (this.ExternalContactId != null)
+                    hash = hash * 59 + this.ExternalContactId.GetHashCode();
                 
                 return hash;
             }

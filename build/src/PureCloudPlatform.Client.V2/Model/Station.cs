@@ -96,11 +96,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
+        
+        
         
         
         
@@ -257,6 +262,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The number of call appearances on the station.
+        /// </summary>
+        /// <value>The number of call appearances on the station.</value>
+        [DataMember(Name="webRtcCallAppearances", EmitDefaultValue=false)]
+        public int? WebRtcCallAppearances { get; private set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -286,6 +300,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WebRtcMediaDscp: ").Append(WebRtcMediaDscp).Append("\n");
             sb.Append("  WebRtcPersistentEnabled: ").Append(WebRtcPersistentEnabled).Append("\n");
             sb.Append("  WebRtcForceTurn: ").Append(WebRtcForceTurn).Append("\n");
+            sb.Append("  WebRtcCallAppearances: ").Append(WebRtcCallAppearances).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -393,6 +408,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WebRtcForceTurn.Equals(other.WebRtcForceTurn)
                 ) &&
                 (
+                    this.WebRtcCallAppearances == other.WebRtcCallAppearances ||
+                    this.WebRtcCallAppearances != null &&
+                    this.WebRtcCallAppearances.Equals(other.WebRtcCallAppearances)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -449,6 +469,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.WebRtcForceTurn != null)
                     hash = hash * 59 + this.WebRtcForceTurn.GetHashCode();
+                
+                if (this.WebRtcCallAppearances != null)
+                    hash = hash * 59 + this.WebRtcCallAppearances.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

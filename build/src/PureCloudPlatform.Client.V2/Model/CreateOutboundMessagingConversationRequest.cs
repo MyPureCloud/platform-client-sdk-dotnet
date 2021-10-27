@@ -104,17 +104,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// The messaging address messenger type.
         /// </summary>
         /// <value>The messaging address messenger type.</value>
         [DataMember(Name="toAddressMessengerType", EmitDefaultValue=false)]
         public ToAddressMessengerTypeEnum? ToAddressMessengerType { get; set; }
-        
-        
         
         
         
@@ -135,16 +130,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ToAddress">The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234 (required).</param>
         /// <param name="ToAddressMessengerType">The messaging address messenger type. (required).</param>
         /// <param name="UseExistingConversation">An override to use an existing conversation.  If set to true, an existing conversation will be used if there is one within the conversation window.  If set to false, create request fails if there is a conversation within the conversation window..</param>
-        /// <param name="ExternalContactId">The external contact Id of the recipient of the message..</param>
-        /// <param name="ExternalOrganizationId">The external organization Id of the recipient of the message..</param>
-        public CreateOutboundMessagingConversationRequest(string QueueId = null, string ToAddress = null, ToAddressMessengerTypeEnum? ToAddressMessengerType = null, bool? UseExistingConversation = null, string ExternalContactId = null, string ExternalOrganizationId = null)
+        /// <param name="ExternalContactId">The external contact with which the message will be associated..</param>
+        public CreateOutboundMessagingConversationRequest(string QueueId = null, string ToAddress = null, ToAddressMessengerTypeEnum? ToAddressMessengerType = null, bool? UseExistingConversation = null, string ExternalContactId = null)
         {
             this.QueueId = QueueId;
             this.ToAddress = ToAddress;
             this.ToAddressMessengerType = ToAddressMessengerType;
             this.UseExistingConversation = UseExistingConversation;
             this.ExternalContactId = ExternalContactId;
-            this.ExternalOrganizationId = ExternalOrganizationId;
             
         }
         
@@ -180,20 +173,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The external contact Id of the recipient of the message.
+        /// The external contact with which the message will be associated.
         /// </summary>
-        /// <value>The external contact Id of the recipient of the message.</value>
+        /// <value>The external contact with which the message will be associated.</value>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
         public string ExternalContactId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The external organization Id of the recipient of the message.
-        /// </summary>
-        /// <value>The external organization Id of the recipient of the message.</value>
-        [DataMember(Name="externalOrganizationId", EmitDefaultValue=false)]
-        public string ExternalOrganizationId { get; set; }
         
         
         /// <summary>
@@ -210,7 +194,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ToAddressMessengerType: ").Append(ToAddressMessengerType).Append("\n");
             sb.Append("  UseExistingConversation: ").Append(UseExistingConversation).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
-            sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -275,11 +258,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalContactId == other.ExternalContactId ||
                     this.ExternalContactId != null &&
                     this.ExternalContactId.Equals(other.ExternalContactId)
-                ) &&
-                (
-                    this.ExternalOrganizationId == other.ExternalOrganizationId ||
-                    this.ExternalOrganizationId != null &&
-                    this.ExternalOrganizationId.Equals(other.ExternalOrganizationId)
                 );
         }
 
@@ -309,9 +287,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
-                
-                if (this.ExternalOrganizationId != null)
-                    hash = hash * 59 + this.ExternalOrganizationId.GetHashCode();
                 
                 return hash;
             }

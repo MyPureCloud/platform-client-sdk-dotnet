@@ -93,8 +93,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Url">The location of the media, useful for retrieving it.</param>
         /// <param name="MediaType">The optional internet media type of the the media object.If null then the media type should be dictated by the url..</param>
         /// <param name="ContentLength">The optional content length of the the media object, in bytes..</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Id">Id.</param>
+        /// <param name="Name">The name of the media object..</param>
+        /// <param name="Id">A globally unique identifier for the media object..</param>
         public MessageMediaAttachment(string Url = null, MediaTypeEnum? MediaType = null, long? ContentLength = null, string Name = null, string Id = null)
         {
             this.Url = Url;
@@ -128,16 +128,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the media object.
         /// </summary>
+        /// <value>The name of the media object.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// A globally unique identifier for the media object.
         /// </summary>
+        /// <value>A globally unique identifier for the media object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         

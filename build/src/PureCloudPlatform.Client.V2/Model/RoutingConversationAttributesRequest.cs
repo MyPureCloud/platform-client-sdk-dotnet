@@ -39,9 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingConversationAttributesRequest" /> class.
         /// </summary>
-        /// <param name="Priority">Priority to be updated on in-queue conversation. Range:[-25000000, 25000000].</param>
-        /// <param name="SkillIds">Skills to be updated on in-queue conversation..</param>
-        /// <param name="LanguageId">Language required on the in-queue conversation..</param>
+        /// <param name="Priority">Priority for the conversation.  Each point of priority is equivalent to one minute of time in queue.  Range:[-25000000, 25000000].  To reset, specify 0..</param>
+        /// <param name="SkillIds">Skill requirements for the conversation.  To remove all skill requirements, specify an empty list, i.e. []..</param>
+        /// <param name="LanguageId">Language requirement for the conversation.  To remove the language requirement, specify an empty string, i.e., \&quot;\&quot;..</param>
         public RoutingConversationAttributesRequest(int? Priority = null, List<string> SkillIds = null, string LanguageId = null)
         {
             this.Priority = Priority;
@@ -53,27 +53,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Priority to be updated on in-queue conversation. Range:[-25000000, 25000000]
+        /// Priority for the conversation.  Each point of priority is equivalent to one minute of time in queue.  Range:[-25000000, 25000000].  To reset, specify 0.
         /// </summary>
-        /// <value>Priority to be updated on in-queue conversation. Range:[-25000000, 25000000]</value>
+        /// <value>Priority for the conversation.  Each point of priority is equivalent to one minute of time in queue.  Range:[-25000000, 25000000].  To reset, specify 0.</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
         
         
         
         /// <summary>
-        /// Skills to be updated on in-queue conversation.
+        /// Skill requirements for the conversation.  To remove all skill requirements, specify an empty list, i.e. [].
         /// </summary>
-        /// <value>Skills to be updated on in-queue conversation.</value>
+        /// <value>Skill requirements for the conversation.  To remove all skill requirements, specify an empty list, i.e. [].</value>
         [DataMember(Name="skillIds", EmitDefaultValue=false)]
         public List<string> SkillIds { get; set; }
         
         
         
         /// <summary>
-        /// Language required on the in-queue conversation.
+        /// Language requirement for the conversation.  To remove the language requirement, specify an empty string, i.e., \&quot;\&quot;.
         /// </summary>
-        /// <value>Language required on the in-queue conversation.</value>
+        /// <value>Language requirement for the conversation.  To remove the language requirement, specify an empty string, i.e., \&quot;\&quot;.</value>
         [DataMember(Name="languageId", EmitDefaultValue=false)]
         public string LanguageId { get; set; }
         
