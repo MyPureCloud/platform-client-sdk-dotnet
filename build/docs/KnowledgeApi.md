@@ -21,6 +21,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetKnowledgeKnowledgebaseLanguageTrainings**](KnowledgeApi.html#getknowledgeknowledgebaselanguagetrainings) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings | Get all trainings information for a knowledgebase |
 | [**GetKnowledgeKnowledgebases**](KnowledgeApi.html#getknowledgeknowledgebases) | **GET** /api/v2/knowledge/knowledgebases | Get knowledge bases |
 | [**PatchKnowledgeKnowledgebase**](KnowledgeApi.html#patchknowledgeknowledgebase) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId} | Update knowledge base |
+| [**PatchKnowledgeKnowledgebaseContext**](KnowledgeApi.html#patchknowledgeknowledgebasecontext) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/contexts/{contextId} | Update specific context data of the knowledge base. |
+| [**PatchKnowledgeKnowledgebaseContextValue**](KnowledgeApi.html#patchknowledgeknowledgebasecontextvalue) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/contexts/{contextId}/values/{contextValueId} | Update context value. |
 | [**PatchKnowledgeKnowledgebaseLanguageCategory**](KnowledgeApi.html#patchknowledgeknowledgebaselanguagecategory) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId} | Update category |
 | [**PatchKnowledgeKnowledgebaseLanguageDocument**](KnowledgeApi.html#patchknowledgeknowledgebaselanguagedocument) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId} | Update document |
 | [**PatchKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeApi.html#patchknowledgeknowledgebaselanguagedocuments) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents | Update documents collection |
@@ -1033,6 +1035,146 @@ namespace Example
 ### Return type
 
 [**KnowledgeBase**](KnowledgeBase.html)
+
+<a name="patchknowledgeknowledgebasecontext"></a>
+
+## [**KnowledgeContextResponse**](KnowledgeContextResponse.html) PatchKnowledgeKnowledgebaseContext (string knowledgeBaseId, string contextId, KnowledgeContextRequest body = null)
+
+
+
+Update specific context data of the knowledge base.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:context:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchKnowledgeKnowledgebaseContextExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID.
+            var contextId = contextId_example;  // string | Context ID.
+            var body = new KnowledgeContextRequest(); // KnowledgeContextRequest |  (optional) 
+
+            try
+            { 
+                // Update specific context data of the knowledge base.
+                KnowledgeContextResponse result = apiInstance.PatchKnowledgeKnowledgebaseContext(knowledgeBaseId, contextId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PatchKnowledgeKnowledgebaseContext: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID. |  |
+| **contextId** | **string**| Context ID. |  |
+| **body** | [**KnowledgeContextRequest**](KnowledgeContextRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeContextResponse**](KnowledgeContextResponse.html)
+
+<a name="patchknowledgeknowledgebasecontextvalue"></a>
+
+## [**KnowledgeContextValueResponse**](KnowledgeContextValueResponse.html) PatchKnowledgeKnowledgebaseContextValue (string knowledgeBaseId, string contextId, string contextValueId, KnowledgeContextValueRequest body = null)
+
+
+
+Update context value.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:context:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchKnowledgeKnowledgebaseContextValueExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID.
+            var contextId = contextId_example;  // string | Context ID.
+            var contextValueId = contextValueId_example;  // string | Context Value ID.
+            var body = new KnowledgeContextValueRequest(); // KnowledgeContextValueRequest |  (optional) 
+
+            try
+            { 
+                // Update context value.
+                KnowledgeContextValueResponse result = apiInstance.PatchKnowledgeKnowledgebaseContextValue(knowledgeBaseId, contextId, contextValueId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PatchKnowledgeKnowledgebaseContextValue: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID. |  |
+| **contextId** | **string**| Context ID. |  |
+| **contextValueId** | **string**| Context Value ID. |  |
+| **body** | [**KnowledgeContextValueRequest**](KnowledgeContextValueRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeContextValueResponse**](KnowledgeContextValueResponse.html)
 
 <a name="patchknowledgeknowledgebaselanguagecategory"></a>
 

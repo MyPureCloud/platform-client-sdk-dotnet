@@ -144,6 +144,7 @@ title: ViewFilter
 | **JourneyUrlNotContainsAnyConditions** | **List&lt;string&gt;** | The list of url not contains any conditions to filter offer constraints | [optional] |
 | **JourneyUrlContainsAllConditions** | **List&lt;string&gt;** | The list of url contains all conditions to filter offer constraints | [optional] |
 | **JourneyUrlNotContainsAllConditions** | **List&lt;string&gt;** | The list of url not contains all conditions to filter offer constraints | [optional] |
+| **FlowMilestoneIds** | **List&lt;string&gt;** | The list of flow milestones to filter exports | [optional] |
 {: class="table table-striped"}
 
 

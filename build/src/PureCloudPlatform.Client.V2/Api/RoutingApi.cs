@@ -274,8 +274,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
+        /// <param name="async">Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number.  (optional, default to false)</param>
         /// <returns></returns>
-        void DeleteRoutingSmsPhonenumber (string addressId);
+        void DeleteRoutingSmsPhonenumber (string addressId, bool? async = null);
 
         /// <summary>
         /// Delete a phone number provisioned for SMS.
@@ -285,8 +286,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
+        /// <param name="async">Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number.  (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteRoutingSmsPhonenumberWithHttpInfo (string addressId);
+        ApiResponse<Object> DeleteRoutingSmsPhonenumberWithHttpInfo (string addressId, bool? async = null);
         
         /// <summary>
         /// Delete the user&#39;s max utilization settings and revert to the organization-wide default.
@@ -2210,8 +2212,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
+        /// <param name="async">Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber&#39;s provisioningStatus for completion of this request. (optional, default to false)</param>
         /// <returns>SmsPhoneNumber</returns>
-        SmsPhoneNumber PostRoutingSmsPhonenumbers (SmsPhoneNumberProvision body);
+        SmsPhoneNumber PostRoutingSmsPhonenumbers (SmsPhoneNumberProvision body, bool? async = null);
 
         /// <summary>
         /// Provision a phone number for SMS
@@ -2221,8 +2224,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
+        /// <param name="async">Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber&#39;s provisioningStatus for completion of this request. (optional, default to false)</param>
         /// <returns>ApiResponse of SmsPhoneNumber</returns>
-        ApiResponse<SmsPhoneNumber> PostRoutingSmsPhonenumbersWithHttpInfo (SmsPhoneNumberProvision body);
+        ApiResponse<SmsPhoneNumber> PostRoutingSmsPhonenumbersWithHttpInfo (SmsPhoneNumberProvision body, bool? async = null);
         
         /// <summary>
         /// Create a wrap-up code
@@ -2421,8 +2425,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <param name="body">SmsPhoneNumber</param>
+        /// <param name="async">Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber&#39;s provisioningStatus for the progress of this request. (optional, default to false)</param>
         /// <returns>SmsPhoneNumber</returns>
-        SmsPhoneNumber PutRoutingSmsPhonenumber (string addressId, SmsPhoneNumber body);
+        SmsPhoneNumber PutRoutingSmsPhonenumber (string addressId, SmsPhoneNumber body, bool? async = null);
 
         /// <summary>
         /// Update a phone number provisioned for SMS.
@@ -2433,8 +2438,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <param name="body">SmsPhoneNumber</param>
+        /// <param name="async">Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber&#39;s provisioningStatus for the progress of this request. (optional, default to false)</param>
         /// <returns>ApiResponse of SmsPhoneNumber</returns>
-        ApiResponse<SmsPhoneNumber> PutRoutingSmsPhonenumberWithHttpInfo (string addressId, SmsPhoneNumber body);
+        ApiResponse<SmsPhoneNumber> PutRoutingSmsPhonenumberWithHttpInfo (string addressId, SmsPhoneNumber body, bool? async = null);
         
         /// <summary>
         /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
@@ -2818,8 +2824,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
+        /// <param name="async">Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number.  (optional, default to false)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteRoutingSmsPhonenumberAsync (string addressId);
+        System.Threading.Tasks.Task DeleteRoutingSmsPhonenumberAsync (string addressId, bool? async = null);
 
         /// <summary>
         /// Delete a phone number provisioned for SMS.
@@ -2829,8 +2836,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
+        /// <param name="async">Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number.  (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId, bool? async = null);
         
         /// <summary>
         /// Delete the user&#39;s max utilization settings and revert to the organization-wide default.
@@ -4754,8 +4762,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
+        /// <param name="async">Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber&#39;s provisioningStatus for completion of this request. (optional, default to false)</param>
         /// <returns>Task of SmsPhoneNumber</returns>
-        System.Threading.Tasks.Task<SmsPhoneNumber> PostRoutingSmsPhonenumbersAsync (SmsPhoneNumberProvision body);
+        System.Threading.Tasks.Task<SmsPhoneNumber> PostRoutingSmsPhonenumbersAsync (SmsPhoneNumberProvision body, bool? async = null);
 
         /// <summary>
         /// Provision a phone number for SMS
@@ -4765,8 +4774,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
+        /// <param name="async">Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber&#39;s provisioningStatus for completion of this request. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PostRoutingSmsPhonenumbersAsyncWithHttpInfo (SmsPhoneNumberProvision body);
+        System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PostRoutingSmsPhonenumbersAsyncWithHttpInfo (SmsPhoneNumberProvision body, bool? async = null);
         
         /// <summary>
         /// Create a wrap-up code
@@ -4965,8 +4975,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <param name="body">SmsPhoneNumber</param>
+        /// <param name="async">Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber&#39;s provisioningStatus for the progress of this request. (optional, default to false)</param>
         /// <returns>Task of SmsPhoneNumber</returns>
-        System.Threading.Tasks.Task<SmsPhoneNumber> PutRoutingSmsPhonenumberAsync (string addressId, SmsPhoneNumber body);
+        System.Threading.Tasks.Task<SmsPhoneNumber> PutRoutingSmsPhonenumberAsync (string addressId, SmsPhoneNumber body, bool? async = null);
 
         /// <summary>
         /// Update a phone number provisioned for SMS.
@@ -4977,8 +4988,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <param name="body">SmsPhoneNumber</param>
+        /// <param name="async">Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber&#39;s provisioningStatus for the progress of this request. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PutRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId, SmsPhoneNumber body);
+        System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PutRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId, SmsPhoneNumber body, bool? async = null);
         
         /// <summary>
         /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
@@ -7343,10 +7355,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
+        /// <param name="async">Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number.  (optional, default to false)</param>
         /// <returns></returns>
-        public void DeleteRoutingSmsPhonenumber (string addressId)
+        public void DeleteRoutingSmsPhonenumber (string addressId, bool? async = null)
         {
-             DeleteRoutingSmsPhonenumberWithHttpInfo(addressId);
+             DeleteRoutingSmsPhonenumberWithHttpInfo(addressId, async);
         }
 
         /// <summary>
@@ -7354,8 +7367,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
+        /// <param name="async">Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number.  (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteRoutingSmsPhonenumberWithHttpInfo (string addressId)
+        public ApiResponse<Object> DeleteRoutingSmsPhonenumberWithHttpInfo (string addressId, bool? async = null)
         { 
             // verify the required parameter 'addressId' is set
             if (addressId == null)
@@ -7395,6 +7409,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (addressId != null) localVarPathParams.Add("addressId", this.Configuration.ApiClient.ParameterToString(addressId));
 
             // Query params
+            if (async != null) localVarQueryParams.Add(new Tuple<string, string>("async", this.Configuration.ApiClient.ParameterToString(async)));
 
             // Header params
 
@@ -7437,10 +7452,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
+        /// <param name="async">Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number.  (optional, default to false)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteRoutingSmsPhonenumberAsync (string addressId)
+        public async System.Threading.Tasks.Task DeleteRoutingSmsPhonenumberAsync (string addressId, bool? async = null)
         {
-             await DeleteRoutingSmsPhonenumberAsyncWithHttpInfo(addressId);
+             await DeleteRoutingSmsPhonenumberAsyncWithHttpInfo(addressId, async);
 
         }
 
@@ -7449,8 +7465,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
+        /// <param name="async">Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number.  (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId, bool? async = null)
         { 
             // verify the required parameter 'addressId' is set
             if (addressId == null)
@@ -7491,6 +7508,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (addressId != null) localVarPathParams.Add("addressId", this.Configuration.ApiClient.ParameterToString(addressId));
 
             // Query params
+            if (async != null) localVarQueryParams.Add(new Tuple<string, string>("async", this.Configuration.ApiClient.ParameterToString(async)));
 
             // Header params
 
@@ -23273,10 +23291,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
+        /// <param name="async">Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber&#39;s provisioningStatus for completion of this request. (optional, default to false)</param>
         /// <returns>SmsPhoneNumber</returns>
-        public SmsPhoneNumber PostRoutingSmsPhonenumbers (SmsPhoneNumberProvision body)
+        public SmsPhoneNumber PostRoutingSmsPhonenumbers (SmsPhoneNumberProvision body, bool? async = null)
         {
-             ApiResponse<SmsPhoneNumber> localVarResponse = PostRoutingSmsPhonenumbersWithHttpInfo(body);
+             ApiResponse<SmsPhoneNumber> localVarResponse = PostRoutingSmsPhonenumbersWithHttpInfo(body, async);
              return localVarResponse.Data;
         }
 
@@ -23285,8 +23304,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
+        /// <param name="async">Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber&#39;s provisioningStatus for completion of this request. (optional, default to false)</param>
         /// <returns>ApiResponse of SmsPhoneNumber</returns>
-        public ApiResponse< SmsPhoneNumber > PostRoutingSmsPhonenumbersWithHttpInfo (SmsPhoneNumberProvision body)
+        public ApiResponse< SmsPhoneNumber > PostRoutingSmsPhonenumbersWithHttpInfo (SmsPhoneNumberProvision body, bool? async = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -23325,6 +23345,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (async != null) localVarQueryParams.Add(new Tuple<string, string>("async", this.Configuration.ApiClient.ParameterToString(async)));
 
             // Header params
 
@@ -23372,10 +23393,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
+        /// <param name="async">Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber&#39;s provisioningStatus for completion of this request. (optional, default to false)</param>
         /// <returns>Task of SmsPhoneNumber</returns>
-        public async System.Threading.Tasks.Task<SmsPhoneNumber> PostRoutingSmsPhonenumbersAsync (SmsPhoneNumberProvision body)
+        public async System.Threading.Tasks.Task<SmsPhoneNumber> PostRoutingSmsPhonenumbersAsync (SmsPhoneNumberProvision body, bool? async = null)
         {
-             ApiResponse<SmsPhoneNumber> localVarResponse = await PostRoutingSmsPhonenumbersAsyncWithHttpInfo(body);
+             ApiResponse<SmsPhoneNumber> localVarResponse = await PostRoutingSmsPhonenumbersAsyncWithHttpInfo(body, async);
              return localVarResponse.Data;
 
         }
@@ -23385,8 +23407,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
+        /// <param name="async">Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber&#39;s provisioningStatus for completion of this request. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PostRoutingSmsPhonenumbersAsyncWithHttpInfo (SmsPhoneNumberProvision body)
+        public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PostRoutingSmsPhonenumbersAsyncWithHttpInfo (SmsPhoneNumberProvision body, bool? async = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -23426,6 +23449,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (async != null) localVarQueryParams.Add(new Tuple<string, string>("async", this.Configuration.ApiClient.ParameterToString(async)));
 
             // Header params
 
@@ -25161,10 +25185,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <param name="body">SmsPhoneNumber</param>
+        /// <param name="async">Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber&#39;s provisioningStatus for the progress of this request. (optional, default to false)</param>
         /// <returns>SmsPhoneNumber</returns>
-        public SmsPhoneNumber PutRoutingSmsPhonenumber (string addressId, SmsPhoneNumber body)
+        public SmsPhoneNumber PutRoutingSmsPhonenumber (string addressId, SmsPhoneNumber body, bool? async = null)
         {
-             ApiResponse<SmsPhoneNumber> localVarResponse = PutRoutingSmsPhonenumberWithHttpInfo(addressId, body);
+             ApiResponse<SmsPhoneNumber> localVarResponse = PutRoutingSmsPhonenumberWithHttpInfo(addressId, body, async);
              return localVarResponse.Data;
         }
 
@@ -25174,8 +25199,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <param name="body">SmsPhoneNumber</param>
+        /// <param name="async">Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber&#39;s provisioningStatus for the progress of this request. (optional, default to false)</param>
         /// <returns>ApiResponse of SmsPhoneNumber</returns>
-        public ApiResponse< SmsPhoneNumber > PutRoutingSmsPhonenumberWithHttpInfo (string addressId, SmsPhoneNumber body)
+        public ApiResponse< SmsPhoneNumber > PutRoutingSmsPhonenumberWithHttpInfo (string addressId, SmsPhoneNumber body, bool? async = null)
         { 
             // verify the required parameter 'addressId' is set
             if (addressId == null)
@@ -25218,6 +25244,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (addressId != null) localVarPathParams.Add("addressId", this.Configuration.ApiClient.ParameterToString(addressId));
 
             // Query params
+            if (async != null) localVarQueryParams.Add(new Tuple<string, string>("async", this.Configuration.ApiClient.ParameterToString(async)));
 
             // Header params
 
@@ -25266,10 +25293,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <param name="body">SmsPhoneNumber</param>
+        /// <param name="async">Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber&#39;s provisioningStatus for the progress of this request. (optional, default to false)</param>
         /// <returns>Task of SmsPhoneNumber</returns>
-        public async System.Threading.Tasks.Task<SmsPhoneNumber> PutRoutingSmsPhonenumberAsync (string addressId, SmsPhoneNumber body)
+        public async System.Threading.Tasks.Task<SmsPhoneNumber> PutRoutingSmsPhonenumberAsync (string addressId, SmsPhoneNumber body, bool? async = null)
         {
-             ApiResponse<SmsPhoneNumber> localVarResponse = await PutRoutingSmsPhonenumberAsyncWithHttpInfo(addressId, body);
+             ApiResponse<SmsPhoneNumber> localVarResponse = await PutRoutingSmsPhonenumberAsyncWithHttpInfo(addressId, body, async);
              return localVarResponse.Data;
 
         }
@@ -25280,8 +25308,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <param name="body">SmsPhoneNumber</param>
+        /// <param name="async">Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber&#39;s provisioningStatus for the progress of this request. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PutRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId, SmsPhoneNumber body)
+        public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PutRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId, SmsPhoneNumber body, bool? async = null)
         { 
             // verify the required parameter 'addressId' is set
             if (addressId == null)
@@ -25326,6 +25355,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (addressId != null) localVarPathParams.Add("addressId", this.Configuration.ApiClient.ParameterToString(addressId));
 
             // Query params
+            if (async != null) localVarQueryParams.Add(new Tuple<string, string>("async", this.Configuration.ApiClient.ParameterToString(async)));
 
             // Header params
 

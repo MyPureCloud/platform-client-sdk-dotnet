@@ -477,7 +477,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum FlowTopicDetailView for "FLOW_TOPIC_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "FLOW_TOPIC_DETAIL_VIEW")]
-            FlowTopicDetailView
+            FlowTopicDetailView,
+            
+            /// <summary>
+            /// Enum AgentInteractionsMeView for "AGENT_INTERACTIONS_ME_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_INTERACTIONS_ME_VIEW")]
+            AgentInteractionsMeView
         }
         
         

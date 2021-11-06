@@ -118,7 +118,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum PendingCancellation for "PENDING_CANCELLATION"
             /// </summary>
             [EnumMember(Value = "PENDING_CANCELLATION")]
-            PendingCancellation
+            PendingCancellation,
+            
+            /// <summary>
+            /// Enum Initiated for "INITIATED"
+            /// </summary>
+            [EnumMember(Value = "INITIATED")]
+            Initiated
         }
         
         
@@ -258,6 +264,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Type of the phone number provisioned.
         /// </summary>
@@ -319,6 +328,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsPhoneNumber" /> class.
@@ -345,7 +356,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutoRenewable">Renewal time period of this phone number, if the phoneNumberType is shortcode..</param>
         /// <param name="AddressId">The id of an address attached to this phone number..</param>
         /// <param name="ShortCodeBillingType">BillingType of this phone number, if the phoneNumberType is shortcode..</param>
-        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null, SmsAddress AddressId = null, ShortCodeBillingTypeEnum? ShortCodeBillingType = null)
+        /// <param name="ProvisioningStatus">Status of latest asynchronous provisioning action.</param>
+        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null, SmsAddress AddressId = null, ShortCodeBillingTypeEnum? ShortCodeBillingType = null, SmsProvisioningStatus ProvisioningStatus = null)
         {
             this.Name = Name;
             this.PhoneNumber = PhoneNumber;
@@ -363,6 +375,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AutoRenewable = AutoRenewable;
             this.AddressId = AddressId;
             this.ShortCodeBillingType = ShortCodeBillingType;
+            this.ProvisioningStatus = ProvisioningStatus;
             
         }
         
@@ -511,6 +524,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Status of latest asynchronous provisioning action
+        /// </summary>
+        /// <value>Status of latest asynchronous provisioning action</value>
+        [DataMember(Name="provisioningStatus", EmitDefaultValue=false)]
+        public SmsProvisioningStatus ProvisioningStatus { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -546,6 +568,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AutoRenewable: ").Append(AutoRenewable).Append("\n");
             sb.Append("  AddressId: ").Append(AddressId).Append("\n");
             sb.Append("  ShortCodeBillingType: ").Append(ShortCodeBillingType).Append("\n");
+            sb.Append("  ProvisioningStatus: ").Append(ProvisioningStatus).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -683,6 +706,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ShortCodeBillingType.Equals(other.ShortCodeBillingType)
                 ) &&
                 (
+                    this.ProvisioningStatus == other.ProvisioningStatus ||
+                    this.ProvisioningStatus != null &&
+                    this.ProvisioningStatus.Equals(other.ProvisioningStatus)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -757,6 +785,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ShortCodeBillingType != null)
                     hash = hash * 59 + this.ShortCodeBillingType.GetHashCode();
+                
+                if (this.ProvisioningStatus != null)
+                    hash = hash * 59 + this.ProvisioningStatus.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

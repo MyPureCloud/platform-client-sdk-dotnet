@@ -173,12 +173,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current state for this user.
         /// </summary>
         /// <value>The current state for this user.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -561,6 +566,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The last time the user logged in using username and password. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The last time the user logged in using username and password. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateLastLogin", EmitDefaultValue=false)]
+        public DateTime? DateLastLogin { get; private set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Organization
         /// </summary>
         [DataMember(Name="organization", EmitDefaultValue=false)]
@@ -609,6 +623,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AcdAutoAnswer: ").Append(AcdAutoAnswer).Append("\n");
             sb.Append("  LanguagePreference: ").Append(LanguagePreference).Append("\n");
             sb.Append("  LastTokenIssued: ").Append(LastTokenIssued).Append("\n");
+            sb.Append("  DateLastLogin: ").Append(DateLastLogin).Append("\n");
             sb.Append("  Organization: ").Append(Organization).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -816,6 +831,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LastTokenIssued.Equals(other.LastTokenIssued)
                 ) &&
                 (
+                    this.DateLastLogin == other.DateLastLogin ||
+                    this.DateLastLogin != null &&
+                    this.DateLastLogin.Equals(other.DateLastLogin)
+                ) &&
+                (
                     this.Organization == other.Organization ||
                     this.Organization != null &&
                     this.Organization.Equals(other.Organization)
@@ -932,6 +952,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.LastTokenIssued != null)
                     hash = hash * 59 + this.LastTokenIssued.GetHashCode();
+                
+                if (this.DateLastLogin != null)
+                    hash = hash * 59 + this.DateLastLogin.GetHashCode();
                 
                 if (this.Organization != null)
                     hash = hash * 59 + this.Organization.GetHashCode();

@@ -9,6 +9,7 @@ title: ConversationMessageContent
 |------------ | ------------- | ------------- | -------------|
 | **ContentType** | **string** | Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. | |
 | **Location** | [**ConversationContentLocation**](ConversationContentLocation.html) | Location content. | [optional] |
+| **Story** | [**ConversationContentStory**](ConversationContentStory.html) | Ephemeral story content. | [optional] |
 | **Attachment** | [**ConversationContentAttachment**](ConversationContentAttachment.html) | Attachment content. | [optional] |
 | **QuickReply** | [**ConversationContentQuickReply**](ConversationContentQuickReply.html) | Quick reply content. | [optional] |
 | **Template** | [**ConversationContentNotificationTemplate**](ConversationContentNotificationTemplate.html) | Template notification content. | [optional] |

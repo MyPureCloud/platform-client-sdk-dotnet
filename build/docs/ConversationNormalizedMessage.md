@@ -12,6 +12,7 @@ title: ConversationNormalizedMessage
 | **Type** | **string** | Message type. | |
 | **Text** | **string** | Message text. | [optional] |
 | **Content** | [**List&lt;ConversationMessageContent&gt;**](ConversationMessageContent.html) | List of content elements | [optional] |
+| **Events** | [**List&lt;ConversationMessageEvent&gt;**](ConversationMessageEvent.html) | List of event elements. | [optional] |
 | **Status** | **string** | Message receipt status, only used with type Receipt. | [optional] |
 | **Reasons** | [**List&lt;ConversationReason&gt;**](ConversationReason.html) | List of reasons for a message receipt that indicates the message has failed. Only used with Failed status. | [optional] |
 | **OriginatingEntity** | **string** | Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies. | [optional] |

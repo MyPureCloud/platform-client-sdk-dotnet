@@ -827,7 +827,7 @@ void (empty response body)
 
 <a name="deleteroutingsmsphonenumber"></a>
 
-## void DeleteRoutingSmsPhonenumber (string addressId)
+## void DeleteRoutingSmsPhonenumber (string addressId, bool? async = null)
 
 
 
@@ -862,11 +862,12 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var addressId = addressId_example;  // string | Address ID
+            var async = true;  // bool? | Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number.  (optional)  (default to false)
 
             try
             { 
                 // Delete a phone number provisioned for SMS.
-                apiInstance.DeleteRoutingSmsPhonenumber(addressId);
+                apiInstance.DeleteRoutingSmsPhonenumber(addressId, async);
             }
             catch (Exception e)
             {
@@ -883,6 +884,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **addressId** | **string**| Address ID |  |
+| **async** | **bool?**| Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number.  | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -2614,7 +2616,7 @@ namespace Example
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 | **pageSize** | **int?**| Max value is 100 | [optional] [default to 25] |
 | **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, dateLastLogin, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
 | **name** | **string**| Filter by queue member name | [optional]  |
 | **profileSkills** | [**List<string>**](string.html)| Filter by profile skill | [optional]  |
 | **skills** | [**List<string>**](string.html)| Filter by skill | [optional]  |
@@ -2703,7 +2705,7 @@ namespace Example
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 | **pageSize** | **int?**| Max value is 100 | [optional] [default to 25] |
 | **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, dateLastLogin, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
 | **joined** | **bool?**| Filter by joined status | [optional]  |
 | **name** | **string**| Filter by queue member name | [optional]  |
 | **profileSkills** | [**List<string>**](string.html)| Filter by profile skill | [optional]  |
@@ -6098,7 +6100,7 @@ namespace Example
 
 <a name="postroutingsmsphonenumbers"></a>
 
-## [**SmsPhoneNumber**](SmsPhoneNumber.html) PostRoutingSmsPhonenumbers (SmsPhoneNumberProvision body)
+## [**SmsPhoneNumber**](SmsPhoneNumber.html) PostRoutingSmsPhonenumbers (SmsPhoneNumberProvision body, bool? async = null)
 
 
 
@@ -6133,11 +6135,12 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var body = new SmsPhoneNumberProvision(); // SmsPhoneNumberProvision | SmsPhoneNumber
+            var async = true;  // bool? | Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber's provisioningStatus for completion of this request. (optional)  (default to false)
 
             try
             { 
                 // Provision a phone number for SMS
-                SmsPhoneNumber result = apiInstance.PostRoutingSmsPhonenumbers(body);
+                SmsPhoneNumber result = apiInstance.PostRoutingSmsPhonenumbers(body, async);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6155,6 +6158,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SmsPhoneNumberProvision**](SmsPhoneNumberProvision.html)| SmsPhoneNumber |  |
+| **async** | **bool?**| Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber&#39;s provisioningStatus for completion of this request. | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -6696,7 +6700,7 @@ namespace Example
 
 <a name="putroutingsmsphonenumber"></a>
 
-## [**SmsPhoneNumber**](SmsPhoneNumber.html) PutRoutingSmsPhonenumber (string addressId, SmsPhoneNumber body)
+## [**SmsPhoneNumber**](SmsPhoneNumber.html) PutRoutingSmsPhonenumber (string addressId, SmsPhoneNumber body, bool? async = null)
 
 
 
@@ -6732,11 +6736,12 @@ namespace Example
             var apiInstance = new RoutingApi();
             var addressId = addressId_example;  // string | Address ID
             var body = new SmsPhoneNumber(); // SmsPhoneNumber | SmsPhoneNumber
+            var async = true;  // bool? | Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber's provisioningStatus for the progress of this request. (optional)  (default to false)
 
             try
             { 
                 // Update a phone number provisioned for SMS.
-                SmsPhoneNumber result = apiInstance.PutRoutingSmsPhonenumber(addressId, body);
+                SmsPhoneNumber result = apiInstance.PutRoutingSmsPhonenumber(addressId, body, async);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6755,6 +6760,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **addressId** | **string**| Address ID |  |
 | **body** | [**SmsPhoneNumber**](SmsPhoneNumber.html)| SmsPhoneNumber |  |
+| **async** | **bool?**| Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber&#39;s provisioningStatus for the progress of this request. | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type

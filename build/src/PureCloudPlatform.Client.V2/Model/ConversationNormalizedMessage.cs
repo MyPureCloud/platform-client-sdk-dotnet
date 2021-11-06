@@ -57,8 +57,17 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Receipt for "Receipt"
             /// </summary>
             [EnumMember(Value = "Receipt")]
-            Receipt
+            Receipt,
+            
+            /// <summary>
+            /// Enum Event for "Event"
+            /// </summary>
+            [EnumMember(Value = "Event")]
+            Event
         }
+        
+        
+        
         
         
         
@@ -213,6 +222,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Message receipt status, only used with type Receipt.
         /// </summary>
@@ -258,13 +269,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Message type. (required).</param>
         /// <param name="Text">Message text..</param>
         /// <param name="Content">List of content elements.</param>
+        /// <param name="Events">List of event elements..</param>
         /// <param name="OriginatingEntity">Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies..</param>
         /// <param name="Metadata">Additional metadata about this message..</param>
-        public ConversationNormalizedMessage(TypeEnum? Type = null, string Text = null, List<ConversationMessageContent> Content = null, OriginatingEntityEnum? OriginatingEntity = null, Dictionary<string, string> Metadata = null)
+        public ConversationNormalizedMessage(TypeEnum? Type = null, string Text = null, List<ConversationMessageContent> Content = null, List<ConversationMessageEvent> Events = null, OriginatingEntityEnum? OriginatingEntity = null, Dictionary<string, string> Metadata = null)
         {
             this.Type = Type;
             this.Text = Text;
             this.Content = Content;
+            this.Events = Events;
             this.OriginatingEntity = OriginatingEntity;
             this.Metadata = Metadata;
             
@@ -307,6 +320,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>List of content elements</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public List<ConversationMessageContent> Content { get; set; }
+        
+        
+        
+        /// <summary>
+        /// List of event elements.
+        /// </summary>
+        /// <value>List of event elements.</value>
+        [DataMember(Name="events", EmitDefaultValue=false)]
+        public List<ConversationMessageEvent> Events { get; set; }
         
         
         
@@ -356,6 +378,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
+            sb.Append("  Events: ").Append(Events).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Reasons: ").Append(Reasons).Append("\n");
             sb.Append("  OriginatingEntity: ").Append(OriginatingEntity).Append("\n");
@@ -428,6 +451,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Content.SequenceEqual(other.Content)
                 ) &&
                 (
+                    this.Events == other.Events ||
+                    this.Events != null &&
+                    this.Events.SequenceEqual(other.Events)
+                ) &&
+                (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
@@ -485,6 +513,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Content != null)
                     hash = hash * 59 + this.Content.GetHashCode();
+                
+                if (this.Events != null)
+                    hash = hash * 59 + this.Events.GetHashCode();
                 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();

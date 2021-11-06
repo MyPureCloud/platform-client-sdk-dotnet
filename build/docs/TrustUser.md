@@ -40,6 +40,7 @@ title: TrustUser
 | **AcdAutoAnswer** | **bool?** | acd auto answer | [optional] |
 | **LanguagePreference** | **string** | preferred language by the user | [optional] |
 | **LastTokenIssued** | [**OAuthLastTokenIssued**](OAuthLastTokenIssued.html) |  | [optional] |
+| **DateLastLogin** | **DateTime?** | The last time the user logged in using username and password. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **TrustUserDetails** | [**TrustUserDetails**](TrustUserDetails.html) |  | [optional] |
 {: class="table table-striped"}
 
