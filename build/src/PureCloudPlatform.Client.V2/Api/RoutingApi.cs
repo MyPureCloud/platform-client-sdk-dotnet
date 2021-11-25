@@ -1061,7 +1061,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<QueueEntityListing> GetRoutingQueuesDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
         
         /// <summary>
-        /// Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization.
+        /// Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization.
         /// </summary>
         /// <remarks>
         /// 
@@ -1069,13 +1069,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size [max value is 500] (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>QueueEntityListing</returns>
-        QueueEntityListing GetRoutingQueuesDivisionviewsAll (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+        QueueEntityListing GetRoutingQueuesDivisionviewsAll (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
-        /// Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization.
+        /// Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization.
         /// </summary>
         /// <remarks>
         /// 
@@ -1083,10 +1082,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size [max value is 500] (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>ApiResponse of QueueEntityListing</returns>
-        ApiResponse<QueueEntityListing> GetRoutingQueuesDivisionviewsAllWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<QueueEntityListing> GetRoutingQueuesDivisionviewsAllWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         
         /// <summary>
         /// Get a paged listing of queues the user is a member of.
@@ -3611,7 +3609,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
         
         /// <summary>
-        /// Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization.
+        /// Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization.
         /// </summary>
         /// <remarks>
         /// 
@@ -3619,13 +3617,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size [max value is 500] (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>Task of QueueEntityListing</returns>
-        System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesDivisionviewsAllAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesDivisionviewsAllAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
-        /// Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization.
+        /// Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization.
         /// </summary>
         /// <remarks>
         /// 
@@ -3633,10 +3630,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size [max value is 500] (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesDivisionviewsAllAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesDivisionviewsAllAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         
         /// <summary>
         /// Get a paged listing of queues the user is a member of.
@@ -13616,30 +13612,28 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization. 
+        /// Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size [max value is 500] (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>QueueEntityListing</returns>
-        public QueueEntityListing GetRoutingQueuesDivisionviewsAll (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        public QueueEntityListing GetRoutingQueuesDivisionviewsAll (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<QueueEntityListing> localVarResponse = GetRoutingQueuesDivisionviewsAllWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder);
+             ApiResponse<QueueEntityListing> localVarResponse = GetRoutingQueuesDivisionviewsAllWithHttpInfo(pageSize, pageNumber, sortOrder);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization. 
+        /// Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size [max value is 500] (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>ApiResponse of QueueEntityListing</returns>
-        public ApiResponse< QueueEntityListing > GetRoutingQueuesDivisionviewsAllWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< QueueEntityListing > GetRoutingQueuesDivisionviewsAllWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/routing/queues/divisionviews/all";
@@ -13677,7 +13671,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
@@ -13717,31 +13710,29 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization. 
+        /// Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size [max value is 500] (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>Task of QueueEntityListing</returns>
-        public async System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesDivisionviewsAllAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesDivisionviewsAllAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<QueueEntityListing> localVarResponse = await GetRoutingQueuesDivisionviewsAllAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder);
+             ApiResponse<QueueEntityListing> localVarResponse = await GetRoutingQueuesDivisionviewsAllAsyncWithHttpInfo(pageSize, pageNumber, sortOrder);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization. 
+        /// Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size [max value is 500] (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesDivisionviewsAllAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesDivisionviewsAllAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/routing/queues/divisionviews/all";
@@ -13779,7 +13770,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params

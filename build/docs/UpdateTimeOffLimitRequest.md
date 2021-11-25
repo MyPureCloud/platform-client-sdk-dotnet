@@ -1,0 +1,14 @@
+---
+title: UpdateTimeOffLimitRequest
+---
+## ININ.PureCloudApi.Model.UpdateTimeOffLimitRequest
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **DefaultLimitMinutes** | **int?** | The default time off limit value in minutes per granularity | [optional] |
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for the time off limit | |
+{: class="table table-striped"}
+
+

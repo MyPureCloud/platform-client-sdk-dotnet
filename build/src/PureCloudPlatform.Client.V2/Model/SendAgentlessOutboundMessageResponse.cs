@@ -123,12 +123,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Type of messenger.
         /// </summary>
         /// <value>Type of messenger.</value>
         [DataMember(Name="messengerType", EmitDefaultValue=false)]
         public MessengerTypeEnum? MessengerType { get; set; }
+        
+        
         
         
         
@@ -151,8 +156,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessengerType">Type of messenger..</param>
         /// <param name="TextBody">The body of the text message..</param>
         /// <param name="MessagingTemplate">The messaging template sent.</param>
+        /// <param name="UseExistingActiveConversation">Use an existing active conversation to send the agentless outbound message. Set this parameter to &#39;true&#39; to use active conversation. Default value: false.</param>
         /// <param name="Timestamp">The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public SendAgentlessOutboundMessageResponse(string ConversationId = null, string FromAddress = null, string ToAddress = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, MessagingTemplateRequest MessagingTemplate = null, DateTime? Timestamp = null)
+        public SendAgentlessOutboundMessageResponse(string ConversationId = null, string FromAddress = null, string ToAddress = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, MessagingTemplateRequest MessagingTemplate = null, bool? UseExistingActiveConversation = null, DateTime? Timestamp = null)
         {
             this.ConversationId = ConversationId;
             this.FromAddress = FromAddress;
@@ -160,6 +166,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MessengerType = MessengerType;
             this.TextBody = TextBody;
             this.MessagingTemplate = MessagingTemplate;
+            this.UseExistingActiveConversation = UseExistingActiveConversation;
             this.Timestamp = Timestamp;
             
         }
@@ -223,6 +230,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Use an existing active conversation to send the agentless outbound message. Set this parameter to &#39;true&#39; to use active conversation. Default value: false
+        /// </summary>
+        /// <value>Use an existing active conversation to send the agentless outbound message. Set this parameter to &#39;true&#39; to use active conversation. Default value: false</value>
+        [DataMember(Name="useExistingActiveConversation", EmitDefaultValue=false)]
+        public bool? UseExistingActiveConversation { get; set; }
+        
+        
+        
+        /// <summary>
         /// The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -264,6 +280,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessengerType: ").Append(MessengerType).Append("\n");
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
             sb.Append("  MessagingTemplate: ").Append(MessagingTemplate).Append("\n");
+            sb.Append("  UseExistingActiveConversation: ").Append(UseExistingActiveConversation).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
@@ -343,6 +360,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessagingTemplate.Equals(other.MessagingTemplate)
                 ) &&
                 (
+                    this.UseExistingActiveConversation == other.UseExistingActiveConversation ||
+                    this.UseExistingActiveConversation != null &&
+                    this.UseExistingActiveConversation.Equals(other.UseExistingActiveConversation)
+                ) &&
+                (
                     this.Timestamp == other.Timestamp ||
                     this.Timestamp != null &&
                     this.Timestamp.Equals(other.Timestamp)
@@ -391,6 +413,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MessagingTemplate != null)
                     hash = hash * 59 + this.MessagingTemplate.GetHashCode();
+                
+                if (this.UseExistingActiveConversation != null)
+                    hash = hash * 59 + this.UseExistingActiveConversation.GetHashCode();
                 
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();

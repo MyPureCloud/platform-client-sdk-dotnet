@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// KnowledgeContextRequest
+    /// Structured template button object.
     /// </summary>
     [DataContract]
-    public partial class KnowledgeContextRequest :  IEquatable<KnowledgeContextRequest>
+    public partial class RecordingButtonComponent :  IEquatable<RecordingButtonComponent>
     {
         
         
@@ -30,42 +30,49 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="KnowledgeContextRequest" /> class.
+        /// Initializes a new instance of the <see cref="RecordingButtonComponent" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected KnowledgeContextRequest() { }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="KnowledgeContextRequest" /> class.
-        /// </summary>
-        /// <param name="Name">Context name. (required).</param>
-        /// <param name="Description">Context description..</param>
-        public KnowledgeContextRequest(string Name = null, string Description = null)
+        /// <param name="Title">Title.</param>
+        /// <param name="Actions">Actions.</param>
+        /// <param name="IsSelected">IsSelected.</param>
+        public RecordingButtonComponent(string Title = null, RecordingContentActions Actions = null, bool? IsSelected = null)
         {
-            this.Name = Name;
-            this.Description = Description;
+            this.Title = Title;
+            this.Actions = Actions;
+            this.IsSelected = IsSelected;
             
         }
         
         
         
         /// <summary>
-        /// Context name.
+        /// Gets or Sets Title
         /// </summary>
-        /// <value>Context name.</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        [DataMember(Name="title", EmitDefaultValue=false)]
+        public string Title { get; set; }
         
         
         
         /// <summary>
-        /// Context description.
+        /// Gets or Sets Actions
         /// </summary>
-        /// <value>Context description.</value>
-        [DataMember(Name="description", EmitDefaultValue=false)]
-        public string Description { get; set; }
+        [DataMember(Name="actions", EmitDefaultValue=false)]
+        public RecordingContentActions Actions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets IsSelected
+        /// </summary>
+        [DataMember(Name="isSelected", EmitDefaultValue=false)]
+        public bool? IsSelected { get; set; }
         
         
         /// <summary>
@@ -75,10 +82,11 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class KnowledgeContextRequest {\n");
+            sb.Append("class RecordingButtonComponent {\n");
             
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Title: ").Append(Title).Append("\n");
+            sb.Append("  Actions: ").Append(Actions).Append("\n");
+            sb.Append("  IsSelected: ").Append(IsSelected).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -104,15 +112,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as KnowledgeContextRequest);
+            return this.Equals(obj as RecordingButtonComponent);
         }
 
         /// <summary>
-        /// Returns true if KnowledgeContextRequest instances are equal
+        /// Returns true if RecordingButtonComponent instances are equal
         /// </summary>
-        /// <param name="other">Instance of KnowledgeContextRequest to be compared</param>
+        /// <param name="other">Instance of RecordingButtonComponent to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(KnowledgeContextRequest other)
+        public bool Equals(RecordingButtonComponent other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -120,14 +128,19 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Title == other.Title ||
+                    this.Title != null &&
+                    this.Title.Equals(other.Title)
                 ) &&
                 (
-                    this.Description == other.Description ||
-                    this.Description != null &&
-                    this.Description.Equals(other.Description)
+                    this.Actions == other.Actions ||
+                    this.Actions != null &&
+                    this.Actions.Equals(other.Actions)
+                ) &&
+                (
+                    this.IsSelected == other.IsSelected ||
+                    this.IsSelected != null &&
+                    this.IsSelected.Equals(other.IsSelected)
                 );
         }
 
@@ -143,11 +156,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                if (this.Title != null)
+                    hash = hash * 59 + this.Title.GetHashCode();
                 
-                if (this.Description != null)
-                    hash = hash * 59 + this.Description.GetHashCode();
+                if (this.Actions != null)
+                    hash = hash * 59 + this.Actions.GetHashCode();
+                
+                if (this.IsSelected != null)
+                    hash = hash * 59 + this.IsSelected.GetHashCode();
                 
                 return hash;
             }

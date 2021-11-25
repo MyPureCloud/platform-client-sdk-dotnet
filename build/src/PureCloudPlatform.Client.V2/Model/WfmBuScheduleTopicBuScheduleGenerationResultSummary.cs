@@ -35,6 +35,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuScheduleTopicBuScheduleGenerationResultSummary" /> class.
@@ -42,11 +47,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Failed">Failed.</param>
         /// <param name="RunId">RunId.</param>
         /// <param name="MessageCount">MessageCount.</param>
-        public WfmBuScheduleTopicBuScheduleGenerationResultSummary(bool? Failed = null, string RunId = null, int? MessageCount = null)
+        /// <param name="MessageSeverityCounts">MessageSeverityCounts.</param>
+        public WfmBuScheduleTopicBuScheduleGenerationResultSummary(bool? Failed = null, string RunId = null, int? MessageCount = null, List<WfmBuScheduleTopicSchedulerMessageSeverityCount> MessageSeverityCounts = null)
         {
             this.Failed = Failed;
             this.RunId = RunId;
             this.MessageCount = MessageCount;
+            this.MessageSeverityCounts = MessageSeverityCounts;
             
         }
         
@@ -75,6 +82,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? MessageCount { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets MessageSeverityCounts
+        /// </summary>
+        [DataMember(Name="messageSeverityCounts", EmitDefaultValue=false)]
+        public List<WfmBuScheduleTopicSchedulerMessageSeverityCount> MessageSeverityCounts { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -87,6 +102,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Failed: ").Append(Failed).Append("\n");
             sb.Append("  RunId: ").Append(RunId).Append("\n");
             sb.Append("  MessageCount: ").Append(MessageCount).Append("\n");
+            sb.Append("  MessageSeverityCounts: ").Append(MessageSeverityCounts).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,6 +157,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessageCount == other.MessageCount ||
                     this.MessageCount != null &&
                     this.MessageCount.Equals(other.MessageCount)
+                ) &&
+                (
+                    this.MessageSeverityCounts == other.MessageSeverityCounts ||
+                    this.MessageSeverityCounts != null &&
+                    this.MessageSeverityCounts.SequenceEqual(other.MessageSeverityCounts)
                 );
         }
 
@@ -164,6 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MessageCount != null)
                     hash = hash * 59 + this.MessageCount.GetHashCode();
+                
+                if (this.MessageSeverityCounts != null)
+                    hash = hash * 59 + this.MessageSeverityCounts.GetHashCode();
                 
                 return hash;
             }

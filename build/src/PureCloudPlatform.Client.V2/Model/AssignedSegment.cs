@@ -30,19 +30,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AssignedSegment" /> class.
         /// </summary>
-        /// <param name="Segment">The ID of the segment assigned..</param>
-        public AssignedSegment(AddressableEntityRef Segment = null)
+        public AssignedSegment()
         {
-            this.Segment = Segment;
             
         }
         
@@ -54,15 +47,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
-        /// <summary>
-        /// The ID of the segment assigned.
-        /// </summary>
-        /// <value>The ID of the segment assigned.</value>
-        [DataMember(Name="segment", EmitDefaultValue=false)]
-        public AddressableEntityRef Segment { get; set; }
         
         
         
@@ -84,7 +68,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class AssignedSegment {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Segment: ").Append(Segment).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -132,11 +115,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Segment == other.Segment ||
-                    this.Segment != null &&
-                    this.Segment.Equals(other.Segment)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -157,9 +135,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Segment != null)
-                    hash = hash * 59 + this.Segment.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

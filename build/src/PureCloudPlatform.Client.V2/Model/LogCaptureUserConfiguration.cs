@@ -39,8 +39,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LogCaptureUserConfiguration" /> class.
         /// </summary>
-        public LogCaptureUserConfiguration()
+        [JsonConstructorAttribute]
+        protected LogCaptureUserConfiguration() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LogCaptureUserConfiguration" /> class.
+        /// </summary>
+        /// <param name="DateExpired">Indicates when log capture will be turned off for the user. (Must be within 24 hours). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
+        public LogCaptureUserConfiguration(DateTime? DateExpired = null)
         {
+            this.DateExpired = DateExpired;
             
         }
         
@@ -56,11 +64,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Indicates when log capture will be turned off for the user. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// Indicates when log capture will be turned off for the user. (Must be within 24 hours). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Indicates when log capture will be turned off for the user. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>Indicates when log capture will be turned off for the user. (Must be within 24 hours). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateExpired", EmitDefaultValue=false)]
-        public DateTime? DateExpired { get; private set; }
+        public DateTime? DateExpired { get; set; }
         
         
         

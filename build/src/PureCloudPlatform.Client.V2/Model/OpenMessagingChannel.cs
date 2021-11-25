@@ -88,6 +88,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The provider type.
         /// </summary>
@@ -113,6 +116,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenMessagingChannel" /> class.
@@ -128,13 +133,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="To">Information about the recipient the message is sent to. (required).</param>
         /// <param name="From">Information about the recipient the message is received from. (required).</param>
         /// <param name="Time">Original time of the event. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
-        public OpenMessagingChannel(TypeEnum? Type = null, string MessageId = null, OpenMessagingToRecipient To = null, OpenMessagingFromRecipient From = null, DateTime? Time = null)
+        /// <param name="Metadata">Information about the channel..</param>
+        public OpenMessagingChannel(TypeEnum? Type = null, string MessageId = null, OpenMessagingToRecipient To = null, OpenMessagingFromRecipient From = null, DateTime? Time = null, ChannelMetadata Metadata = null)
         {
             this.Type = Type;
             this.MessageId = MessageId;
             this.To = To;
             this.From = From;
             this.Time = Time;
+            this.Metadata = Metadata;
             
         }
         
@@ -188,6 +195,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? Time { get; set; }
         
         
+        
+        /// <summary>
+        /// Information about the channel.
+        /// </summary>
+        /// <value>Information about the channel.</value>
+        [DataMember(Name="metadata", EmitDefaultValue=false)]
+        public ChannelMetadata Metadata { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -204,6 +220,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  To: ").Append(To).Append("\n");
             sb.Append("  From: ").Append(From).Append("\n");
             sb.Append("  Time: ").Append(Time).Append("\n");
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -278,6 +295,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Time == other.Time ||
                     this.Time != null &&
                     this.Time.Equals(other.Time)
+                ) &&
+                (
+                    this.Metadata == other.Metadata ||
+                    this.Metadata != null &&
+                    this.Metadata.Equals(other.Metadata)
                 );
         }
 
@@ -313,6 +335,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
+                
+                if (this.Metadata != null)
+                    hash = hash * 59 + this.Metadata.GetHashCode();
                 
                 return hash;
             }

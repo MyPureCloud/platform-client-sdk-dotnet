@@ -69,7 +69,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Enza for "en-za"
             /// </summary>
             [EnumMember(Value = "en-za")]
-            Enza
+            Enza,
+            
+            /// <summary>
+            /// Enum Esus for "es-us"
+            /// </summary>
+            [EnumMember(Value = "es-us")]
+            Esus
         }
         
         

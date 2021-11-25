@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// KnowledgeContextValueRequest
+    /// TimeOffRequestReference
     /// </summary>
     [DataContract]
-    public partial class KnowledgeContextValueRequest :  IEquatable<KnowledgeContextValueRequest>
+    public partial class TimeOffRequestReference :  IEquatable<TimeOffRequestReference>
     {
         
         
@@ -32,40 +32,32 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="KnowledgeContextValueRequest" /> class.
+        /// Initializes a new instance of the <see cref="TimeOffRequestReference" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected KnowledgeContextValueRequest() { }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="KnowledgeContextValueRequest" /> class.
-        /// </summary>
-        /// <param name="Name">Context value name. (required).</param>
-        /// <param name="Description">Context value description..</param>
-        public KnowledgeContextValueRequest(string Name = null, string Description = null)
+        /// <param name="Id">The id of the time off request.</param>
+        public TimeOffRequestReference(string Id = null)
         {
-            this.Name = Name;
-            this.Description = Description;
+            this.Id = Id;
             
         }
         
         
         
         /// <summary>
-        /// Context value name.
+        /// The id of the time off request
         /// </summary>
-        /// <value>Context value name.</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        /// <value>The id of the time off request</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Context value description.
+        /// The URI for this object
         /// </summary>
-        /// <value>Context value description.</value>
-        [DataMember(Name="description", EmitDefaultValue=false)]
-        public string Description { get; set; }
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
         
         
         /// <summary>
@@ -75,10 +67,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class KnowledgeContextValueRequest {\n");
+            sb.Append("class TimeOffRequestReference {\n");
             
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -104,15 +96,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as KnowledgeContextValueRequest);
+            return this.Equals(obj as TimeOffRequestReference);
         }
 
         /// <summary>
-        /// Returns true if KnowledgeContextValueRequest instances are equal
+        /// Returns true if TimeOffRequestReference instances are equal
         /// </summary>
-        /// <param name="other">Instance of KnowledgeContextValueRequest to be compared</param>
+        /// <param name="other">Instance of TimeOffRequestReference to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(KnowledgeContextValueRequest other)
+        public bool Equals(TimeOffRequestReference other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -120,14 +112,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Description == other.Description ||
-                    this.Description != null &&
-                    this.Description.Equals(other.Description)
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -143,11 +135,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.Description != null)
-                    hash = hash * 59 + this.Description.GetHashCode();
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

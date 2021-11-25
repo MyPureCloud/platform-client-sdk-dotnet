@@ -72,7 +72,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Architectflow for "architectFlow"
             /// </summary>
             [EnumMember(Value = "architectFlow")]
-            Architectflow
+            Architectflow,
+            
+            /// <summary>
+            /// Enum Openaction for "openAction"
+            /// </summary>
+            [EnumMember(Value = "openAction")]
+            Openaction
         }
         
         

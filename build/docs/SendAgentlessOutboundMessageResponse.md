@@ -14,6 +14,7 @@ title: SendAgentlessOutboundMessageResponse
 | **MessengerType** | **string** | Type of messenger. | [optional] |
 | **TextBody** | **string** | The body of the text message. | [optional] |
 | **MessagingTemplate** | [**MessagingTemplateRequest**](MessagingTemplateRequest.html) | The messaging template sent | [optional] |
+| **UseExistingActiveConversation** | **bool?** | Use an existing active conversation to send the agentless outbound message. Set this parameter to &#39;true&#39; to use active conversation. Default value: false | [optional] |
 | **Timestamp** | **DateTime?** | The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 | **User** | [**AddressableEntityRef**](AddressableEntityRef.html) | Details of the user created the job | [optional] |

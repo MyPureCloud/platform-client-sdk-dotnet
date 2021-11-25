@@ -19,7 +19,7 @@ title: Metrics
 | **MaxPoints** | **int?** | Achievable maximum points for this metric | [optional] |
 | **PerformanceProfileId** | **string** | Performance profile id of this metric | [optional] |
 | **LinkedMetric** | [**AddressableEntityRef**](AddressableEntityRef.html) | The linked metric entity reference | [optional] |
-| **DateCreated** | **long?** | The created date of this metric | [optional] |
+| **DateCreated** | **DateTime?** | The created date of this metric. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateUnlinked** | **String** | The unlinked workday for this metric if this metric was ever unlinked. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **SourcePerformanceProfile** | [**PerformanceProfile**](PerformanceProfile.html) | The source performance profile when this metric is linked | [optional] |
 | **UnitDefinition** | **string** | Unit definition of linked external metric | [optional] |

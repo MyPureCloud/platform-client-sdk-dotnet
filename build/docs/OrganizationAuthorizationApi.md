@@ -8,17 +8,23 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteOrgauthorizationTrustee**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrustee) | **DELETE** /api/v2/orgauthorization/trustees/{trusteeOrgId} | Delete Org Trust |
+| [**DeleteOrgauthorizationTrusteeCloneduser**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrusteecloneduser) | **DELETE** /api/v2/orgauthorization/trustees/{trusteeOrgId}/clonedusers/{trusteeUserId} | Deletes cloned user |
 | [**DeleteOrgauthorizationTrusteeUser**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrusteeuser) | **DELETE** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId} | Delete Trustee User |
 | [**DeleteOrgauthorizationTrusteeUserRoles**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrusteeuserroles) | **DELETE** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles | Delete Trustee User Roles |
 | [**DeleteOrgauthorizationTrustor**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrustor) | **DELETE** /api/v2/orgauthorization/trustors/{trustorOrgId} | Delete Org Trust |
+| [**DeleteOrgauthorizationTrustorCloneduser**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrustorcloneduser) | **DELETE** /api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId} | Delete Cloned User |
 | [**DeleteOrgauthorizationTrustorUser**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrustoruser) | **DELETE** /api/v2/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId} | Delete Trustee User |
 | [**GetOrgauthorizationPairing**](OrganizationAuthorizationApi.html#getorgauthorizationpairing) | **GET** /api/v2/orgauthorization/pairings/{pairingId} | Get Pairing Info |
 | [**GetOrgauthorizationTrustee**](OrganizationAuthorizationApi.html#getorgauthorizationtrustee) | **GET** /api/v2/orgauthorization/trustees/{trusteeOrgId} | Get Org Trust |
+| [**GetOrgauthorizationTrusteeClonedusers**](OrganizationAuthorizationApi.html#getorgauthorizationtrusteeclonedusers) | **GET** /api/v2/orgauthorization/trustees/{trusteeOrgId}/clonedusers | The list of cloned users from the trustee organization (i.e. users with a native user record). |
 | [**GetOrgauthorizationTrusteeUser**](OrganizationAuthorizationApi.html#getorgauthorizationtrusteeuser) | **GET** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId} | Get Trustee User |
 | [**GetOrgauthorizationTrusteeUserRoles**](OrganizationAuthorizationApi.html#getorgauthorizationtrusteeuserroles) | **GET** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles | Get Trustee User Roles |
 | [**GetOrgauthorizationTrusteeUsers**](OrganizationAuthorizationApi.html#getorgauthorizationtrusteeusers) | **GET** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users | The list of trustee users for this organization (i.e. users granted access to this organization). |
 | [**GetOrgauthorizationTrustees**](OrganizationAuthorizationApi.html#getorgauthorizationtrustees) | **GET** /api/v2/orgauthorization/trustees | The list of trustees for this organization (i.e. organizations granted access to this organization). |
+| [**GetOrgauthorizationTrusteesDefault**](OrganizationAuthorizationApi.html#getorgauthorizationtrusteesdefault) | **GET** /api/v2/orgauthorization/trustees/default | Get organization authorization trust with Customer Care, if one exists. |
 | [**GetOrgauthorizationTrustor**](OrganizationAuthorizationApi.html#getorgauthorizationtrustor) | **GET** /api/v2/orgauthorization/trustors/{trustorOrgId} | Get Org Trust |
+| [**GetOrgauthorizationTrustorCloneduser**](OrganizationAuthorizationApi.html#getorgauthorizationtrustorcloneduser) | **GET** /api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId} | Get Cloned User |
+| [**GetOrgauthorizationTrustorClonedusers**](OrganizationAuthorizationApi.html#getorgauthorizationtrustorclonedusers) | **GET** /api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers | The list of cloned users in the trustor organization (i.e. users with a native user record). |
 | [**GetOrgauthorizationTrustorUser**](OrganizationAuthorizationApi.html#getorgauthorizationtrustoruser) | **GET** /api/v2/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId} | Get Trustee User |
 | [**GetOrgauthorizationTrustorUsers**](OrganizationAuthorizationApi.html#getorgauthorizationtrustorusers) | **GET** /api/v2/orgauthorization/trustors/{trustorOrgId}/users | The list of users in the trustor organization (i.e. users granted access). |
 | [**GetOrgauthorizationTrustors**](OrganizationAuthorizationApi.html#getorgauthorizationtrustors) | **GET** /api/v2/orgauthorization/trustors | The list of organizations that have authorized/trusted your organization. |
@@ -26,10 +32,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOrgauthorizationTrusteeUsers**](OrganizationAuthorizationApi.html#postorgauthorizationtrusteeusers) | **POST** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users | Add a user to the trust. |
 | [**PostOrgauthorizationTrustees**](OrganizationAuthorizationApi.html#postorgauthorizationtrustees) | **POST** /api/v2/orgauthorization/trustees | Create a new organization authorization trust. This is required to grant other organizations access to your organization. |
 | [**PostOrgauthorizationTrusteesAudits**](OrganizationAuthorizationApi.html#postorgauthorizationtrusteesaudits) | **POST** /api/v2/orgauthorization/trustees/audits | Get Org Trustee Audits |
+| [**PostOrgauthorizationTrusteesDefault**](OrganizationAuthorizationApi.html#postorgauthorizationtrusteesdefault) | **POST** /api/v2/orgauthorization/trustees/default | Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization. |
 | [**PostOrgauthorizationTrustorAudits**](OrganizationAuthorizationApi.html#postorgauthorizationtrustoraudits) | **POST** /api/v2/orgauthorization/trustor/audits | Get Org Trustor Audits |
 | [**PutOrgauthorizationTrustee**](OrganizationAuthorizationApi.html#putorgauthorizationtrustee) | **PUT** /api/v2/orgauthorization/trustees/{trusteeOrgId} | Update Org Trust |
 | [**PutOrgauthorizationTrusteeUserRoledivisions**](OrganizationAuthorizationApi.html#putorgauthorizationtrusteeuserroledivisions) | **PUT** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roledivisions | Update Trustee User Roles |
 | [**PutOrgauthorizationTrusteeUserRoles**](OrganizationAuthorizationApi.html#putorgauthorizationtrusteeuserroles) | **PUT** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles | Update Trustee User Roles |
+| [**PutOrgauthorizationTrustorCloneduser**](OrganizationAuthorizationApi.html#putorgauthorizationtrustorcloneduser) | **PUT** /api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId} | Creates a clone of the trustee user in the trustor org. |
 | [**PutOrgauthorizationTrustorUser**](OrganizationAuthorizationApi.html#putorgauthorizationtrustoruser) | **PUT** /api/v2/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId} | Add a Trustee user to the trust. |
 {: class="table table-striped"}
 
@@ -91,6 +99,72 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **trusteeOrgId** | **string**| Trustee Organization Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteorgauthorizationtrusteecloneduser"></a>
+
+## void DeleteOrgauthorizationTrusteeCloneduser (string trusteeOrgId, string trusteeUserId)
+
+
+
+Deletes cloned user
+
+
+
+Requires ANY permissions: 
+
+* directory:user:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOrgauthorizationTrusteeCloneduserExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
+            var trusteeUserId = trusteeUserId_example;  // string | Id of the cloned user to delete
+
+            try
+            { 
+                // Deletes cloned user
+                apiInstance.DeleteOrgauthorizationTrusteeCloneduser(trusteeOrgId, trusteeUserId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.DeleteOrgauthorizationTrusteeCloneduser: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trusteeOrgId** | **string**| Trustee Organization Id |  |
+| **trusteeUserId** | **string**| Id of the cloned user to delete |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -293,6 +367,72 @@ namespace Example
 
 void (empty response body)
 
+<a name="deleteorgauthorizationtrustorcloneduser"></a>
+
+## void DeleteOrgauthorizationTrustorCloneduser (string trustorOrgId, string trusteeUserId)
+
+
+
+Delete Cloned User
+
+
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeUser:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOrgauthorizationTrustorCloneduserExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trustorOrgId = trustorOrgId_example;  // string | Trustor Organization Id
+            var trusteeUserId = trusteeUserId_example;  // string | Trustee User Id
+
+            try
+            { 
+                // Delete Cloned User
+                apiInstance.DeleteOrgauthorizationTrustorCloneduser(trustorOrgId, trusteeUserId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.DeleteOrgauthorizationTrustorCloneduser: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trustorOrgId** | **string**| Trustor Organization Id |  |
+| **trusteeUserId** | **string**| Trustee User Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="deleteorgauthorizationtrustoruser"></a>
 
 ## void DeleteOrgauthorizationTrustorUser (string trustorOrgId, string trusteeUserId)
@@ -489,6 +629,71 @@ namespace Example
 ### Return type
 
 [**Trustee**](Trustee.html)
+
+<a name="getorgauthorizationtrusteeclonedusers"></a>
+
+## [**ClonedUserEntityListing**](ClonedUserEntityListing.html) GetOrgauthorizationTrusteeClonedusers (string trusteeOrgId)
+
+
+
+The list of cloned users from the trustee organization (i.e. users with a native user record).
+
+There can be no more than 5 cloned users per organization, so results are represented as simple list and not paged
+
+Requires ANY permissions: 
+
+* directory:user:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrgauthorizationTrusteeClonedusersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
+
+            try
+            { 
+                // The list of cloned users from the trustee organization (i.e. users with a native user record).
+                ClonedUserEntityListing result = apiInstance.GetOrgauthorizationTrusteeClonedusers(trusteeOrgId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.GetOrgauthorizationTrusteeClonedusers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trusteeOrgId** | **string**| Trustee Organization Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ClonedUserEntityListing**](ClonedUserEntityListing.html)
 
 <a name="getorgauthorizationtrusteeuser"></a>
 
@@ -760,6 +965,67 @@ namespace Example
 
 [**TrustEntityListing**](TrustEntityListing.html)
 
+<a name="getorgauthorizationtrusteesdefault"></a>
+
+## [**Trustee**](Trustee.html) GetOrgauthorizationTrusteesDefault ()
+
+
+
+Get organization authorization trust with Customer Care, if one exists.
+
+
+
+Requires ANY permissions: 
+
+* authorization:orgTrustee:view
+* authorization:orgTrusteeUser:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrgauthorizationTrusteesDefaultExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+
+            try
+            { 
+                // Get organization authorization trust with Customer Care, if one exists.
+                Trustee result = apiInstance.GetOrgauthorizationTrusteesDefault();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.GetOrgauthorizationTrusteesDefault: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**Trustee**](Trustee.html)
+
 <a name="getorgauthorizationtrustor"></a>
 
 ## [**Trustor**](Trustor.html) GetOrgauthorizationTrustor (string trustorOrgId)
@@ -824,6 +1090,138 @@ namespace Example
 ### Return type
 
 [**Trustor**](Trustor.html)
+
+<a name="getorgauthorizationtrustorcloneduser"></a>
+
+## [**ClonedUser**](ClonedUser.html) GetOrgauthorizationTrustorCloneduser (string trustorOrgId, string trusteeUserId)
+
+
+
+Get Cloned User
+
+
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeUser:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrgauthorizationTrustorCloneduserExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trustorOrgId = trustorOrgId_example;  // string | Trustor Organization Id
+            var trusteeUserId = trusteeUserId_example;  // string | Trustee User Id
+
+            try
+            { 
+                // Get Cloned User
+                ClonedUser result = apiInstance.GetOrgauthorizationTrustorCloneduser(trustorOrgId, trusteeUserId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.GetOrgauthorizationTrustorCloneduser: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trustorOrgId** | **string**| Trustor Organization Id |  |
+| **trusteeUserId** | **string**| Trustee User Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ClonedUser**](ClonedUser.html)
+
+<a name="getorgauthorizationtrustorclonedusers"></a>
+
+## [**ClonedUserEntityListing**](ClonedUserEntityListing.html) GetOrgauthorizationTrustorClonedusers (string trustorOrgId)
+
+
+
+The list of cloned users in the trustor organization (i.e. users with a native user record).
+
+
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeUser:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrgauthorizationTrustorClonedusersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trustorOrgId = trustorOrgId_example;  // string | Trustor Organization Id
+
+            try
+            { 
+                // The list of cloned users in the trustor organization (i.e. users with a native user record).
+                ClonedUserEntityListing result = apiInstance.GetOrgauthorizationTrustorClonedusers(trustorOrgId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.GetOrgauthorizationTrustorClonedusers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trustorOrgId** | **string**| Trustor Organization Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ClonedUserEntityListing**](ClonedUserEntityListing.html)
 
 <a name="getorgauthorizationtrustoruser"></a>
 
@@ -1299,6 +1697,74 @@ namespace Example
 
 [**AuditQueryResponse**](AuditQueryResponse.html)
 
+<a name="postorgauthorizationtrusteesdefault"></a>
+
+## [**Trustee**](Trustee.html) PostOrgauthorizationTrusteesDefault (bool? assignDefaultRole = null, bool? autoExpire = null)
+
+
+
+Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
+
+
+
+Requires ALL permissions: 
+
+* authorization:orgTrustee:add
+* authorization:orgTrusteeUser:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOrgauthorizationTrusteesDefaultExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var assignDefaultRole = true;  // bool? | Assign Admin role to default pairing with Customer Care (optional) 
+            var autoExpire = true;  // bool? | Automatically expire pairing after 30 days (optional) 
+
+            try
+            { 
+                // Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
+                Trustee result = apiInstance.PostOrgauthorizationTrusteesDefault(assignDefaultRole, autoExpire);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.PostOrgauthorizationTrusteesDefault: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **assignDefaultRole** | **bool?**| Assign Admin role to default pairing with Customer Care | [optional]  |
+| **autoExpire** | **bool?**| Automatically expire pairing after 30 days | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Trustee**](Trustee.html)
+
 <a name="postorgauthorizationtrustoraudits"></a>
 
 ## [**AuditQueryResponse**](AuditQueryResponse.html) PostOrgauthorizationTrustorAudits (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
@@ -1576,6 +2042,73 @@ namespace Example
 ### Return type
 
 [**UserAuthorization**](UserAuthorization.html)
+
+<a name="putorgauthorizationtrustorcloneduser"></a>
+
+## [**ClonedUser**](ClonedUser.html) PutOrgauthorizationTrustorCloneduser (string trustorOrgId, string trusteeUserId)
+
+
+
+Creates a clone of the trustee user in the trustor org.
+
+
+
+Requires ALL permissions: 
+
+* authorization:orgTrusteeUser:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutOrgauthorizationTrustorCloneduserExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trustorOrgId = trustorOrgId_example;  // string | Trustor Organization Id
+            var trusteeUserId = trusteeUserId_example;  // string | Trustee User Id
+
+            try
+            { 
+                // Creates a clone of the trustee user in the trustor org.
+                ClonedUser result = apiInstance.PutOrgauthorizationTrustorCloneduser(trustorOrgId, trusteeUserId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.PutOrgauthorizationTrustorCloneduser: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trustorOrgId** | **string**| Trustor Organization Id |  |
+| **trusteeUserId** | **string**| Trustee User Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ClonedUser**](ClonedUser.html)
 
 <a name="putorgauthorizationtrustoruser"></a>
 

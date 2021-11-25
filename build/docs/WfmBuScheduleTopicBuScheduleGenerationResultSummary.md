@@ -10,6 +10,7 @@ title: WfmBuScheduleTopicBuScheduleGenerationResultSummary
 | **Failed** | **bool?** |  | [optional] |
 | **RunId** | **string** |  | [optional] |
 | **MessageCount** | **int?** |  | [optional] |
+| **MessageSeverityCounts** | [**List&lt;WfmBuScheduleTopicSchedulerMessageSeverityCount&gt;**](WfmBuScheduleTopicSchedulerMessageSeverityCount.html) |  | [optional] |
 {: class="table table-striped"}
 
 

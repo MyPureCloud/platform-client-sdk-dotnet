@@ -520,7 +520,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum AgentInteractionsMeView for "AGENT_INTERACTIONS_ME_VIEW"
             /// </summary>
             [EnumMember(Value = "AGENT_INTERACTIONS_ME_VIEW")]
-            AgentInteractionsMeView
+            AgentInteractionsMeView,
+            
+            /// <summary>
+            /// Enum AlertRulesView for "ALERT_RULES_VIEW"
+            /// </summary>
+            [EnumMember(Value = "ALERT_RULES_VIEW")]
+            AlertRulesView,
+            
+            /// <summary>
+            /// Enum ConfigureAlertRuleView for "CONFIGURE_ALERT_RULE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "CONFIGURE_ALERT_RULE_VIEW")]
+            ConfigureAlertRuleView
         }
         
         

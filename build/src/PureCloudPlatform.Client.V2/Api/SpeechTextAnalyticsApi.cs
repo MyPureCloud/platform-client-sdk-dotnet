@@ -154,7 +154,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get list of supported Speech &amp; Text Analytics dialects
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api has been deprecated. Use api/v2/topics/dialects instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
@@ -164,7 +164,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get list of supported Speech &amp; Text Analytics dialects
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api has been deprecated. Use api/v2/topics/dialects instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
@@ -904,7 +904,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get list of supported Speech &amp; Text Analytics dialects
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api has been deprecated. Use api/v2/topics/dialects instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
@@ -914,7 +914,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get list of supported Speech &amp; Text Analytics dialects
         /// </summary>
         /// <remarks>
-        /// 
+        /// This api has been deprecated. Use api/v2/topics/dialects instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
@@ -2761,7 +2761,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get list of supported Speech &amp; Text Analytics dialects 
+        /// Get list of supported Speech &amp; Text Analytics dialects This api has been deprecated. Use api/v2/topics/dialects instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
@@ -2772,7 +2772,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get list of supported Speech &amp; Text Analytics dialects 
+        /// Get list of supported Speech &amp; Text Analytics dialects This api has been deprecated. Use api/v2/topics/dialects instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
@@ -2850,7 +2850,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get list of supported Speech &amp; Text Analytics dialects 
+        /// Get list of supported Speech &amp; Text Analytics dialects This api has been deprecated. Use api/v2/topics/dialects instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
@@ -2862,7 +2862,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get list of supported Speech &amp; Text Analytics dialects 
+        /// Get list of supported Speech &amp; Text Analytics dialects This api has been deprecated. Use api/v2/topics/dialects instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>

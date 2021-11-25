@@ -105,11 +105,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -135,7 +140,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SchedulingCanceledBy">SchedulingCanceledBy.</param>
         /// <param name="SchedulingCompletedTime">SchedulingCompletedTime.</param>
         /// <param name="MessageCount">MessageCount.</param>
-        public WfmBuScheduleRunTopicBuScheduleRun(string Id = null, double? PercentComplete = null, bool? IntradayRescheduling = null, StateEnum? State = null, int? WeekCount = null, WfmBuScheduleRunTopicBuScheduleReference Schedule = null, WfmBuScheduleRunTopicUserReference SchedulingCanceledBy = null, string SchedulingCompletedTime = null, int? MessageCount = null)
+        /// <param name="MessageSeverityCounts">MessageSeverityCounts.</param>
+        public WfmBuScheduleRunTopicBuScheduleRun(string Id = null, double? PercentComplete = null, bool? IntradayRescheduling = null, StateEnum? State = null, int? WeekCount = null, WfmBuScheduleRunTopicBuScheduleReference Schedule = null, WfmBuScheduleRunTopicUserReference SchedulingCanceledBy = null, string SchedulingCompletedTime = null, int? MessageCount = null, List<WfmBuScheduleRunTopicSchedulerMessageSeverityCount> MessageSeverityCounts = null)
         {
             this.Id = Id;
             this.PercentComplete = PercentComplete;
@@ -146,6 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SchedulingCanceledBy = SchedulingCanceledBy;
             this.SchedulingCompletedTime = SchedulingCompletedTime;
             this.MessageCount = MessageCount;
+            this.MessageSeverityCounts = MessageSeverityCounts;
             
         }
         
@@ -216,6 +223,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? MessageCount { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets MessageSeverityCounts
+        /// </summary>
+        [DataMember(Name="messageSeverityCounts", EmitDefaultValue=false)]
+        public List<WfmBuScheduleRunTopicSchedulerMessageSeverityCount> MessageSeverityCounts { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -234,6 +249,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SchedulingCanceledBy: ").Append(SchedulingCanceledBy).Append("\n");
             sb.Append("  SchedulingCompletedTime: ").Append(SchedulingCompletedTime).Append("\n");
             sb.Append("  MessageCount: ").Append(MessageCount).Append("\n");
+            sb.Append("  MessageSeverityCounts: ").Append(MessageSeverityCounts).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -318,6 +334,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessageCount == other.MessageCount ||
                     this.MessageCount != null &&
                     this.MessageCount.Equals(other.MessageCount)
+                ) &&
+                (
+                    this.MessageSeverityCounts == other.MessageSeverityCounts ||
+                    this.MessageSeverityCounts != null &&
+                    this.MessageSeverityCounts.SequenceEqual(other.MessageSeverityCounts)
                 );
         }
 
@@ -359,6 +380,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MessageCount != null)
                     hash = hash * 59 + this.MessageCount.GetHashCode();
+                
+                if (this.MessageSeverityCounts != null)
+                    hash = hash * 59 + this.MessageSeverityCounts.GetHashCode();
                 
                 return hash;
             }

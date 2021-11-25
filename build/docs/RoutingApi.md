@@ -49,7 +49,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingQueueWrapupcodes**](RoutingApi.html#getroutingqueuewrapupcodes) | **GET** /api/v2/routing/queues/{queueId}/wrapupcodes | Get the wrap-up codes for a queue |
 | [**GetRoutingQueues**](RoutingApi.html#getroutingqueues) | **GET** /api/v2/routing/queues | Get list of queues. |
 | [**GetRoutingQueuesDivisionviews**](RoutingApi.html#getroutingqueuesdivisionviews) | **GET** /api/v2/routing/queues/divisionviews | Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s). |
-| [**GetRoutingQueuesDivisionviewsAll**](RoutingApi.html#getroutingqueuesdivisionviewsall) | **GET** /api/v2/routing/queues/divisionviews/all | Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization. |
+| [**GetRoutingQueuesDivisionviewsAll**](RoutingApi.html#getroutingqueuesdivisionviewsall) | **GET** /api/v2/routing/queues/divisionviews/all | Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization. |
 | [**GetRoutingQueuesMe**](RoutingApi.html#getroutingqueuesme) | **GET** /api/v2/routing/queues/me | Get a paged listing of queues the user is a member of. |
 | [**GetRoutingSettings**](RoutingApi.html#getroutingsettings) | **GET** /api/v2/routing/settings | Get an organization&#39;s routing settings |
 | [**GetRoutingSettingsContactcenter**](RoutingApi.html#getroutingsettingscontactcenter) | **GET** /api/v2/routing/settings/contactcenter | Get Contact Center Settings |
@@ -2554,6 +2554,8 @@ Get the members of this queue.
 Requires ANY permissions: 
 
 * routing:queue:view
+* routing:queue:edit
+* routing:queue:readonly
 * routing:queueMember:manage
 
 ### Example
@@ -2930,7 +2932,7 @@ namespace Example
 | **pageSize** | **int?**| Page size [max value is 100] | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number [max value is 5] | [optional] [default to 1] |
 | **sortBy** | **string**| Sort by | [optional] [default to name]<br />**Values**: name, id, divisionId |
-| **sortOrder** | **string**| Sort order | [optional] [default to asc]<br />**Values**: asc, desc, score |
+| **sortOrder** | **string**| Sort order | [optional] [default to asc]<br />**Values**: asc, desc |
 | **name** | **string**| Name | [optional]  |
 | **id** | [**List<string>**](string.html)| Queue ID(s) | [optional]  |
 | **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
@@ -2942,11 +2944,11 @@ namespace Example
 
 <a name="getroutingqueuesdivisionviewsall"></a>
 
-## [**QueueEntityListing**](QueueEntityListing.html) GetRoutingQueuesDivisionviewsAll (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+## [**QueueEntityListing**](QueueEntityListing.html) GetRoutingQueuesDivisionviewsAll (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 
 
-Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization.
+Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization.
 
 
 
@@ -2978,13 +2980,12 @@ namespace Example
             var apiInstance = new RoutingApi();
             var pageSize = 56;  // int? | Page size [max value is 500] (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
 
             try
             { 
-                // Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization.
-                QueueEntityListing result = apiInstance.GetRoutingQueuesDivisionviewsAll(pageSize, pageNumber, sortBy, sortOrder);
+                // Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization.
+                QueueEntityListing result = apiInstance.GetRoutingQueuesDivisionviewsAll(pageSize, pageNumber, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3003,8 +3004,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size [max value is 500] | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortBy** | **string**| Sort by | [optional] [default to name]<br />**Values**: name, id, divisionId |
-| **sortOrder** | **string**| Sort order | [optional] [default to asc]<br />**Values**: asc, desc, score |
+| **sortOrder** | **string**| Sort order | [optional] [default to asc]<br />**Values**: asc, desc |
 {: class="table table-striped"}
 
 ### Return type

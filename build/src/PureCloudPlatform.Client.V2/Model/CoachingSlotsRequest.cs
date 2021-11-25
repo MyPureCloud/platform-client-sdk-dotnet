@@ -40,6 +40,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingSlotsRequest" /> class.
@@ -54,12 +59,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LengthInMinutes">The duration of coaching appointment to schedule in 15 minutes granularity up to maximum of 60 minutes (required).</param>
         /// <param name="AttendeeIds">List of attendees to determine coaching appointment slots (required).</param>
         /// <param name="FacilitatorIds">List of facilitators to determine coaching appointment slots.</param>
-        public CoachingSlotsRequest(string Interval = null, int? LengthInMinutes = null, List<string> AttendeeIds = null, List<string> FacilitatorIds = null)
+        /// <param name="InterruptibleAppointmentIds">List of appointment ids to exclude from consideration when determining blocked slots.</param>
+        public CoachingSlotsRequest(string Interval = null, int? LengthInMinutes = null, List<string> AttendeeIds = null, List<string> FacilitatorIds = null, List<string> InterruptibleAppointmentIds = null)
         {
             this.Interval = Interval;
             this.LengthInMinutes = LengthInMinutes;
             this.AttendeeIds = AttendeeIds;
             this.FacilitatorIds = FacilitatorIds;
+            this.InterruptibleAppointmentIds = InterruptibleAppointmentIds;
             
         }
         
@@ -100,6 +107,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> FacilitatorIds { get; set; }
         
         
+        
+        /// <summary>
+        /// List of appointment ids to exclude from consideration when determining blocked slots
+        /// </summary>
+        /// <value>List of appointment ids to exclude from consideration when determining blocked slots</value>
+        [DataMember(Name="interruptibleAppointmentIds", EmitDefaultValue=false)]
+        public List<string> InterruptibleAppointmentIds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,6 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
             sb.Append("  AttendeeIds: ").Append(AttendeeIds).Append("\n");
             sb.Append("  FacilitatorIds: ").Append(FacilitatorIds).Append("\n");
+            sb.Append("  InterruptibleAppointmentIds: ").Append(InterruptibleAppointmentIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -172,6 +189,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FacilitatorIds == other.FacilitatorIds ||
                     this.FacilitatorIds != null &&
                     this.FacilitatorIds.SequenceEqual(other.FacilitatorIds)
+                ) &&
+                (
+                    this.InterruptibleAppointmentIds == other.InterruptibleAppointmentIds ||
+                    this.InterruptibleAppointmentIds != null &&
+                    this.InterruptibleAppointmentIds.SequenceEqual(other.InterruptibleAppointmentIds)
                 );
         }
 
@@ -198,6 +220,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.FacilitatorIds != null)
                     hash = hash * 59 + this.FacilitatorIds.GetHashCode();
+                
+                if (this.InterruptibleAppointmentIds != null)
+                    hash = hash * 59 + this.InterruptibleAppointmentIds.GetHashCode();
                 
                 return hash;
             }

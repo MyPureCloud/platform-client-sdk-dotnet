@@ -431,11 +431,11 @@ namespace Example
 
 ## **List&lt;Object&gt;** GetSpeechandtextanalyticsDialects ()
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get list of supported Speech & Text Analytics dialects
 
-
+This api has been deprecated. Use api/v2/topics/dialects instead
 
 Requires NO permissions: 
 

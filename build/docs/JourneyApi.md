@@ -701,7 +701,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy=name,-createdDate). | [optional]  |
-| **mediaType** | **string**| Media type | [optional] <br />**Values**: webchat, webMessagingOffer, contentOffer, integrationAction, architectFlow |
+| **mediaType** | **string**| Media type | [optional] <br />**Values**: webchat, webMessagingOffer, contentOffer, integrationAction, architectFlow, openAction |
 | **state** | **string**| Action template state. | [optional] <br />**Values**: Active, Inactive, Deleted |
 | **queryFields** | [**List<string>**](string.html)| ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional]  |
 | **queryValue** | **string**| Value to query on. Requires &#39;queryFields&#39; to also be set. | [optional]  |

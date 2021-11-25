@@ -63,8 +63,17 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Architectflow for "architectFlow"
             /// </summary>
             [EnumMember(Value = "architectFlow")]
-            Architectflow
+            Architectflow,
+            
+            /// <summary>
+            /// Enum Openaction for "openAction"
+            /// </summary>
+            [EnumMember(Value = "openAction")]
+            Openaction
         }
+        
+        
+        
         
         
         
@@ -93,6 +102,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchAction" /> class.
@@ -107,12 +118,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ActionTemplate">Action template associated with the action map..</param>
         /// <param name="ArchitectFlowFields">Architect Flow Id and input contract..</param>
         /// <param name="WebMessagingOfferFields">Admin-configurable fields of a web messaging offer action..</param>
-        public PatchAction(MediaTypeEnum? MediaType = null, ActionMapActionTemplate ActionTemplate = null, ArchitectFlowFields ArchitectFlowFields = null, WebMessagingOfferFields WebMessagingOfferFields = null)
+        /// <param name="OpenActionFields">Admin-configurable fields of an open action..</param>
+        public PatchAction(MediaTypeEnum? MediaType = null, ActionMapActionTemplate ActionTemplate = null, ArchitectFlowFields ArchitectFlowFields = null, WebMessagingOfferFields WebMessagingOfferFields = null, OpenActionFields OpenActionFields = null)
         {
             this.MediaType = MediaType;
             this.ActionTemplate = ActionTemplate;
             this.ArchitectFlowFields = ArchitectFlowFields;
             this.WebMessagingOfferFields = WebMessagingOfferFields;
+            this.OpenActionFields = OpenActionFields;
             
         }
         
@@ -146,6 +159,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public WebMessagingOfferFields WebMessagingOfferFields { get; set; }
         
         
+        
+        /// <summary>
+        /// Admin-configurable fields of an open action.
+        /// </summary>
+        /// <value>Admin-configurable fields of an open action.</value>
+        [DataMember(Name="openActionFields", EmitDefaultValue=false)]
+        public OpenActionFields OpenActionFields { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -159,6 +181,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ActionTemplate: ").Append(ActionTemplate).Append("\n");
             sb.Append("  ArchitectFlowFields: ").Append(ArchitectFlowFields).Append("\n");
             sb.Append("  WebMessagingOfferFields: ").Append(WebMessagingOfferFields).Append("\n");
+            sb.Append("  OpenActionFields: ").Append(OpenActionFields).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -218,6 +241,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WebMessagingOfferFields == other.WebMessagingOfferFields ||
                     this.WebMessagingOfferFields != null &&
                     this.WebMessagingOfferFields.Equals(other.WebMessagingOfferFields)
+                ) &&
+                (
+                    this.OpenActionFields == other.OpenActionFields ||
+                    this.OpenActionFields != null &&
+                    this.OpenActionFields.Equals(other.OpenActionFields)
                 );
         }
 
@@ -244,6 +272,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.WebMessagingOfferFields != null)
                     hash = hash * 59 + this.WebMessagingOfferFields.GetHashCode();
+                
+                if (this.OpenActionFields != null)
+                    hash = hash * 59 + this.OpenActionFields.GetHashCode();
                 
                 return hash;
             }

@@ -75,9 +75,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The email delivery status
+        /// The email or SMS delivery status
         /// </summary>
-        /// <value>The email delivery status</value>
+        /// <value>The email or SMS delivery status</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DeliveryStatusEnum
         {
@@ -538,9 +538,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The email delivery status
+        /// The email or SMS delivery status
         /// </summary>
-        /// <value>The email delivery status</value>
+        /// <value>The email or SMS delivery status</value>
         [DataMember(Name="deliveryStatus", EmitDefaultValue=false)]
         public DeliveryStatusEnum? DeliveryStatus { get; set; }
         
@@ -696,7 +696,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CoachedParticipantId">The participantId being coached (if someone (e.g. an agent) is being coached, this would correspond to one of the other participantIds present in the conversation).</param>
         /// <param name="CobrowseRole">Describes side of the cobrowse (sharer or viewer).</param>
         /// <param name="CobrowseRoomId">A unique identifier for a PureCloud cobrowse room.</param>
-        /// <param name="DeliveryStatus">The email delivery status.</param>
+        /// <param name="DeliveryStatus">The email or SMS delivery status.</param>
         /// <param name="DeliveryStatusChangeDate">Date and time of the most recent delivery status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DestinationAddresses">Destination address(es) of transfers or consults.</param>
         /// <param name="Direction">The direction of the communication.</param>

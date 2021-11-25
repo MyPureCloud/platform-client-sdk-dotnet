@@ -229,6 +229,54 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId);
         
         /// <summary>
+        /// Deletes a time off limit object
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
+        /// <returns></returns>
+        void DeleteWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId);
+
+        /// <summary>
+        /// Deletes a time off limit object
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId);
+        
+        /// <summary>
+        /// Deletes a time off plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
+        /// <returns></returns>
+        void DeleteWorkforcemanagementManagementunitTimeoffplan (string managementUnitId, string timeOffPlanId);
+
+        /// <summary>
+        /// Deletes a time off plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId);
+        
+        /// <summary>
         /// Delete a work plan
         /// </summary>
         /// <remarks>
@@ -1241,6 +1289,98 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WfmUserEntityListing> GetWorkforcemanagementManagementunitShifttradesUsersWithHttpInfo (string managementUnitId);
         
         /// <summary>
+        /// Gets a time off limit object
+        /// </summary>
+        /// <remarks>
+        /// Returns properties of time off limit object, but not daily values.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
+        /// <returns>TimeOffLimit</returns>
+        TimeOffLimit GetWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId);
+
+        /// <summary>
+        /// Gets a time off limit object
+        /// </summary>
+        /// <remarks>
+        /// Returns properties of time off limit object, but not daily values.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
+        /// <returns>ApiResponse of TimeOffLimit</returns>
+        ApiResponse<TimeOffLimit> GetWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId);
+        
+        /// <summary>
+        /// Gets a list of time off limit objects under management unit.
+        /// </summary>
+        /// <remarks>
+        /// Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <returns>TimeOffLimitListing</returns>
+        TimeOffLimitListing GetWorkforcemanagementManagementunitTimeofflimits (string managementUnitId);
+
+        /// <summary>
+        /// Gets a list of time off limit objects under management unit.
+        /// </summary>
+        /// <remarks>
+        /// Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <returns>ApiResponse of TimeOffLimitListing</returns>
+        ApiResponse<TimeOffLimitListing> GetWorkforcemanagementManagementunitTimeofflimitsWithHttpInfo (string managementUnitId);
+        
+        /// <summary>
+        /// Gets a time off plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
+        /// <returns>TimeOffPlan</returns>
+        TimeOffPlan GetWorkforcemanagementManagementunitTimeoffplan (string managementUnitId, string timeOffPlanId);
+
+        /// <summary>
+        /// Gets a time off plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
+        /// <returns>ApiResponse of TimeOffPlan</returns>
+        ApiResponse<TimeOffPlan> GetWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId);
+        
+        /// <summary>
+        /// Gets a list of time off plans
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <returns>TimeOffPlanListing</returns>
+        TimeOffPlanListing GetWorkforcemanagementManagementunitTimeoffplans (string managementUnitId);
+
+        /// <summary>
+        /// Gets a list of time off plans
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <returns>ApiResponse of TimeOffPlanListing</returns>
+        ApiResponse<TimeOffPlanListing> GetWorkforcemanagementManagementunitTimeoffplansWithHttpInfo (string managementUnitId);
+        
+        /// <summary>
         /// Get a time off request
         /// </summary>
         /// <remarks>
@@ -1265,6 +1405,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
         ApiResponse<TimeOffRequestResponse> GetWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId);
+        
+        /// <summary>
+        /// Retrieves time off limit, allocated and waitlisted values according to specific time off request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="userId">The userId to whom the time off request applies.</param>
+        /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
+        /// <returns>QueryTimeOffLimitValuesResponse</returns>
+        QueryTimeOffLimitValuesResponse GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits (string managementUnitId, string userId, string timeOffRequestId);
+
+        /// <summary>
+        /// Retrieves time off limit, allocated and waitlisted values according to specific time off request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="userId">The userId to whom the time off request applies.</param>
+        /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
+        /// <returns>ApiResponse of QueryTimeOffLimitValuesResponse</returns>
+        ApiResponse<QueryTimeOffLimitValuesResponse> GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId);
         
         /// <summary>
         /// Get a list of time off requests for a given user
@@ -1635,6 +1801,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TimeOffRequestResponse> GetWorkforcemanagementTimeoffrequestWithHttpInfo (string timeOffRequestId);
         
         /// <summary>
+        /// Get the daily waitlist positions of a time off request for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <returns>WaitlistPositionListing</returns>
+        WaitlistPositionListing GetWorkforcemanagementTimeoffrequestWaitlistpositions (string timeOffRequestId);
+
+        /// <summary>
+        /// Get the daily waitlist positions of a time off request for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <returns>ApiResponse of WaitlistPositionListing</returns>
+        ApiResponse<WaitlistPositionListing> GetWorkforcemanagementTimeoffrequestWaitlistpositionsWithHttpInfo (string timeOffRequestId);
+        
+        /// <summary>
         /// Get a list of time off requests for the current user
         /// </summary>
         /// <remarks>
@@ -1807,6 +1995,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ManagementUnit</returns>
         ApiResponse<ManagementUnit> PatchWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId, UpdateManagementUnitRequest body = null);
+        
+        /// <summary>
+        /// Updates a time off limit object.
+        /// </summary>
+        /// <remarks>
+        /// Updates time off limit object properties, but not daily values.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The id of time off limit object to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>TimeOffLimit</returns>
+        TimeOffLimit PatchWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null);
+
+        /// <summary>
+        /// Updates a time off limit object.
+        /// </summary>
+        /// <remarks>
+        /// Updates time off limit object properties, but not daily values.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The id of time off limit object to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of TimeOffLimit</returns>
+        ApiResponse<TimeOffLimit> PatchWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null);
+        
+        /// <summary>
+        /// Updates a time off plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>TimeOffPlan</returns>
+        TimeOffPlan PatchWorkforcemanagementManagementunitTimeoffplan (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null);
+
+        /// <summary>
+        /// Updates a time off plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of TimeOffPlan</returns>
+        ApiResponse<TimeOffPlan> PatchWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null);
         
         /// <summary>
         /// Update a time off request
@@ -2497,6 +2737,78 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserScheduleContainer> PostWorkforcemanagementManagementunitSchedulesSearchWithHttpInfo (string managementUnitId, UserListScheduleRequestBody body = null);
         
         /// <summary>
+        /// Creates a new time off limit object under management unit.
+        /// </summary>
+        /// <remarks>
+        /// Only one limit object is allowed under management unit, so an attempt to create second object will fail.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>TimeOffLimit</returns>
+        TimeOffLimit PostWorkforcemanagementManagementunitTimeofflimits (string managementUnitId, CreateTimeOffLimitRequest body = null);
+
+        /// <summary>
+        /// Creates a new time off limit object under management unit.
+        /// </summary>
+        /// <remarks>
+        /// Only one limit object is allowed under management unit, so an attempt to create second object will fail.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of TimeOffLimit</returns>
+        ApiResponse<TimeOffLimit> PostWorkforcemanagementManagementunitTimeofflimitsWithHttpInfo (string managementUnitId, CreateTimeOffLimitRequest body = null);
+        
+        /// <summary>
+        /// Retrieves time off limit related values based on a given set of filters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>QueryTimeOffLimitValuesResponse</returns>
+        QueryTimeOffLimitValuesResponse PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery (string managementUnitId, QueryTimeOffLimitValuesRequest body = null);
+
+        /// <summary>
+        /// Retrieves time off limit related values based on a given set of filters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of QueryTimeOffLimitValuesResponse</returns>
+        ApiResponse<QueryTimeOffLimitValuesResponse> PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryWithHttpInfo (string managementUnitId, QueryTimeOffLimitValuesRequest body = null);
+        
+        /// <summary>
+        /// Creates a new time off plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>TimeOffPlan</returns>
+        TimeOffPlan PostWorkforcemanagementManagementunitTimeoffplans (string managementUnitId, CreateTimeOffPlanRequest body = null);
+
+        /// <summary>
+        /// Creates a new time off plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of TimeOffPlan</returns>
+        ApiResponse<TimeOffPlan> PostWorkforcemanagementManagementunitTimeoffplansWithHttpInfo (string managementUnitId, CreateTimeOffPlanRequest body = null);
+        
+        /// <summary>
         /// Create a new time off request
         /// </summary>
         /// <remarks>
@@ -2543,6 +2855,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestListing</returns>
         ApiResponse<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null);
+        
+        /// <summary>
+        /// Retrieves daily waitlist position for a list of time off requests
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>WaitlistPositionListing</returns>
+        WaitlistPositionListing PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery (string managementUnitId, QueryWaitlistPositionsRequest body = null);
+
+        /// <summary>
+        /// Retrieves daily waitlist position for a list of time off requests
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of WaitlistPositionListing</returns>
+        ApiResponse<WaitlistPositionListing> PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryWithHttpInfo (string managementUnitId, QueryWaitlistPositionsRequest body = null);
         
         /// <summary>
         /// Matches a shift trade. This route can only be called by the receiving agent
@@ -2849,6 +3185,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserScheduleContainer> PostWorkforcemanagementSchedulesWithHttpInfo (CurrentUserScheduleRequestBody body = null);
         
         /// <summary>
+        /// Queries available time off for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>AvailableTimeOffResponse</returns>
+        AvailableTimeOffResponse PostWorkforcemanagementTimeofflimitsAvailableQuery (AvailableTimeOffRequest body = null);
+
+        /// <summary>
+        /// Queries available time off for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of AvailableTimeOffResponse</returns>
+        ApiResponse<AvailableTimeOffResponse> PostWorkforcemanagementTimeofflimitsAvailableQueryWithHttpInfo (AvailableTimeOffRequest body = null);
+        
+        /// <summary>
         /// Create a time off request for the current user
         /// </summary>
         /// <remarks>
@@ -2869,6 +3227,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
         ApiResponse<TimeOffRequestResponse> PostWorkforcemanagementTimeoffrequestsWithHttpInfo (CreateAgentTimeOffRequest body = null);
+        
+        /// <summary>
+        /// Sets daily values for a date range of time off limit object
+        /// </summary>
+        /// <remarks>
+        /// Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>TimeOffLimit</returns>
+        TimeOffLimit PutWorkforcemanagementManagementunitTimeofflimitValues (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null);
+
+        /// <summary>
+        /// Sets daily values for a date range of time off limit object
+        /// </summary>
+        /// <remarks>
+        /// Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of TimeOffLimit</returns>
+        ApiResponse<TimeOffLimit> PutWorkforcemanagementManagementunitTimeofflimitValuesWithHttpInfo (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null);
         
         #endregion Synchronous Operations
         
@@ -3085,6 +3469,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId);
+        
+        /// <summary>
+        /// Deletes a time off limit object
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitTimeofflimitAsync (string managementUnitId, string timeOffLimitId);
+
+        /// <summary>
+        /// Deletes a time off limit object
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId);
+        
+        /// <summary>
+        /// Deletes a time off plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitTimeoffplanAsync (string managementUnitId, string timeOffPlanId);
+
+        /// <summary>
+        /// Deletes a time off plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId);
         
         /// <summary>
         /// Delete a work plan
@@ -4099,6 +4531,98 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitShifttradesUsersAsyncWithHttpInfo (string managementUnitId);
         
         /// <summary>
+        /// Gets a time off limit object
+        /// </summary>
+        /// <remarks>
+        /// Returns properties of time off limit object, but not daily values.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
+        /// <returns>Task of TimeOffLimit</returns>
+        System.Threading.Tasks.Task<TimeOffLimit> GetWorkforcemanagementManagementunitTimeofflimitAsync (string managementUnitId, string timeOffLimitId);
+
+        /// <summary>
+        /// Gets a time off limit object
+        /// </summary>
+        /// <remarks>
+        /// Returns properties of time off limit object, but not daily values.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
+        /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> GetWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId);
+        
+        /// <summary>
+        /// Gets a list of time off limit objects under management unit.
+        /// </summary>
+        /// <remarks>
+        /// Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <returns>Task of TimeOffLimitListing</returns>
+        System.Threading.Tasks.Task<TimeOffLimitListing> GetWorkforcemanagementManagementunitTimeofflimitsAsync (string managementUnitId);
+
+        /// <summary>
+        /// Gets a list of time off limit objects under management unit.
+        /// </summary>
+        /// <remarks>
+        /// Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <returns>Task of ApiResponse (TimeOffLimitListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TimeOffLimitListing>> GetWorkforcemanagementManagementunitTimeofflimitsAsyncWithHttpInfo (string managementUnitId);
+        
+        /// <summary>
+        /// Gets a time off plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
+        /// <returns>Task of TimeOffPlan</returns>
+        System.Threading.Tasks.Task<TimeOffPlan> GetWorkforcemanagementManagementunitTimeoffplanAsync (string managementUnitId, string timeOffPlanId);
+
+        /// <summary>
+        /// Gets a time off plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
+        /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> GetWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId);
+        
+        /// <summary>
+        /// Gets a list of time off plans
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <returns>Task of TimeOffPlanListing</returns>
+        System.Threading.Tasks.Task<TimeOffPlanListing> GetWorkforcemanagementManagementunitTimeoffplansAsync (string managementUnitId);
+
+        /// <summary>
+        /// Gets a list of time off plans
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <returns>Task of ApiResponse (TimeOffPlanListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TimeOffPlanListing>> GetWorkforcemanagementManagementunitTimeoffplansAsyncWithHttpInfo (string managementUnitId);
+        
+        /// <summary>
         /// Get a time off request
         /// </summary>
         /// <remarks>
@@ -4123,6 +4647,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> GetWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId);
+        
+        /// <summary>
+        /// Retrieves time off limit, allocated and waitlisted values according to specific time off request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="userId">The userId to whom the time off request applies.</param>
+        /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
+        /// <returns>Task of QueryTimeOffLimitValuesResponse</returns>
+        System.Threading.Tasks.Task<QueryTimeOffLimitValuesResponse> GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsAsync (string managementUnitId, string userId, string timeOffRequestId);
+
+        /// <summary>
+        /// Retrieves time off limit, allocated and waitlisted values according to specific time off request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="userId">The userId to whom the time off request applies.</param>
+        /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
+        /// <returns>Task of ApiResponse (QueryTimeOffLimitValuesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QueryTimeOffLimitValuesResponse>> GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsAsyncWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId);
         
         /// <summary>
         /// Get a list of time off requests for a given user
@@ -4493,6 +5043,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> GetWorkforcemanagementTimeoffrequestAsyncWithHttpInfo (string timeOffRequestId);
         
         /// <summary>
+        /// Get the daily waitlist positions of a time off request for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <returns>Task of WaitlistPositionListing</returns>
+        System.Threading.Tasks.Task<WaitlistPositionListing> GetWorkforcemanagementTimeoffrequestWaitlistpositionsAsync (string timeOffRequestId);
+
+        /// <summary>
+        /// Get the daily waitlist positions of a time off request for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <returns>Task of ApiResponse (WaitlistPositionListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WaitlistPositionListing>> GetWorkforcemanagementTimeoffrequestWaitlistpositionsAsyncWithHttpInfo (string timeOffRequestId);
+        
+        /// <summary>
         /// Get a list of time off requests for the current user
         /// </summary>
         /// <remarks>
@@ -4665,6 +5237,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnit)</returns>
         System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> PatchWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId, UpdateManagementUnitRequest body = null);
+        
+        /// <summary>
+        /// Updates a time off limit object.
+        /// </summary>
+        /// <remarks>
+        /// Updates time off limit object properties, but not daily values.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The id of time off limit object to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of TimeOffLimit</returns>
+        System.Threading.Tasks.Task<TimeOffLimit> PatchWorkforcemanagementManagementunitTimeofflimitAsync (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null);
+
+        /// <summary>
+        /// Updates a time off limit object.
+        /// </summary>
+        /// <remarks>
+        /// Updates time off limit object properties, but not daily values.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The id of time off limit object to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> PatchWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null);
+        
+        /// <summary>
+        /// Updates a time off plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of TimeOffPlan</returns>
+        System.Threading.Tasks.Task<TimeOffPlan> PatchWorkforcemanagementManagementunitTimeoffplanAsync (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null);
+
+        /// <summary>
+        /// Updates a time off plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> PatchWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null);
         
         /// <summary>
         /// Update a time off request
@@ -5355,6 +5979,78 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitSchedulesSearchAsyncWithHttpInfo (string managementUnitId, UserListScheduleRequestBody body = null);
         
         /// <summary>
+        /// Creates a new time off limit object under management unit.
+        /// </summary>
+        /// <remarks>
+        /// Only one limit object is allowed under management unit, so an attempt to create second object will fail.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of TimeOffLimit</returns>
+        System.Threading.Tasks.Task<TimeOffLimit> PostWorkforcemanagementManagementunitTimeofflimitsAsync (string managementUnitId, CreateTimeOffLimitRequest body = null);
+
+        /// <summary>
+        /// Creates a new time off limit object under management unit.
+        /// </summary>
+        /// <remarks>
+        /// Only one limit object is allowed under management unit, so an attempt to create second object will fail.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> PostWorkforcemanagementManagementunitTimeofflimitsAsyncWithHttpInfo (string managementUnitId, CreateTimeOffLimitRequest body = null);
+        
+        /// <summary>
+        /// Retrieves time off limit related values based on a given set of filters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of QueryTimeOffLimitValuesResponse</returns>
+        System.Threading.Tasks.Task<QueryTimeOffLimitValuesResponse> PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryAsync (string managementUnitId, QueryTimeOffLimitValuesRequest body = null);
+
+        /// <summary>
+        /// Retrieves time off limit related values based on a given set of filters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (QueryTimeOffLimitValuesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QueryTimeOffLimitValuesResponse>> PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryAsyncWithHttpInfo (string managementUnitId, QueryTimeOffLimitValuesRequest body = null);
+        
+        /// <summary>
+        /// Creates a new time off plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of TimeOffPlan</returns>
+        System.Threading.Tasks.Task<TimeOffPlan> PostWorkforcemanagementManagementunitTimeoffplansAsync (string managementUnitId, CreateTimeOffPlanRequest body = null);
+
+        /// <summary>
+        /// Creates a new time off plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> PostWorkforcemanagementManagementunitTimeoffplansAsyncWithHttpInfo (string managementUnitId, CreateTimeOffPlanRequest body = null);
+        
+        /// <summary>
         /// Create a new time off request
         /// </summary>
         /// <remarks>
@@ -5401,6 +6097,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestListing>> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null);
+        
+        /// <summary>
+        /// Retrieves daily waitlist position for a list of time off requests
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of WaitlistPositionListing</returns>
+        System.Threading.Tasks.Task<WaitlistPositionListing> PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryAsync (string managementUnitId, QueryWaitlistPositionsRequest body = null);
+
+        /// <summary>
+        /// Retrieves daily waitlist position for a list of time off requests
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (WaitlistPositionListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WaitlistPositionListing>> PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryAsyncWithHttpInfo (string managementUnitId, QueryWaitlistPositionsRequest body = null);
         
         /// <summary>
         /// Matches a shift trade. This route can only be called by the receiving agent
@@ -5707,6 +6427,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementSchedulesAsyncWithHttpInfo (CurrentUserScheduleRequestBody body = null);
         
         /// <summary>
+        /// Queries available time off for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of AvailableTimeOffResponse</returns>
+        System.Threading.Tasks.Task<AvailableTimeOffResponse> PostWorkforcemanagementTimeofflimitsAvailableQueryAsync (AvailableTimeOffRequest body = null);
+
+        /// <summary>
+        /// Queries available time off for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (AvailableTimeOffResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AvailableTimeOffResponse>> PostWorkforcemanagementTimeofflimitsAvailableQueryAsyncWithHttpInfo (AvailableTimeOffRequest body = null);
+        
+        /// <summary>
         /// Create a time off request for the current user
         /// </summary>
         /// <remarks>
@@ -5727,6 +6469,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> PostWorkforcemanagementTimeoffrequestsAsyncWithHttpInfo (CreateAgentTimeOffRequest body = null);
+        
+        /// <summary>
+        /// Sets daily values for a date range of time off limit object
+        /// </summary>
+        /// <remarks>
+        /// Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of TimeOffLimit</returns>
+        System.Threading.Tasks.Task<TimeOffLimit> PutWorkforcemanagementManagementunitTimeofflimitValuesAsync (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null);
+
+        /// <summary>
+        /// Sets daily values for a date range of time off limit object
+        /// </summary>
+        /// <remarks>
+        /// Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> PutWorkforcemanagementManagementunitTimeofflimitValuesAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null);
         
         #endregion Asynchronous Operations
         
@@ -7622,6 +8390,414 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementManagementunit: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementManagementunit: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Deletes a time off limit object 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
+        /// <returns></returns>
+        public void DeleteWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId)
+        {
+             DeleteWorkforcemanagementManagementunitTimeofflimitWithHttpInfo(managementUnitId, timeOffLimitId);
+        }
+
+        /// <summary>
+        /// Deletes a time off limit object 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitTimeofflimit");
+            // verify the required parameter 'timeOffLimitId' is set
+            if (timeOffLimitId == null)
+                throw new ApiException(400, "Missing required parameter 'timeOffLimitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitTimeofflimit");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (timeOffLimitId != null) localVarPathParams.Add("timeOffLimitId", this.Configuration.ApiClient.ParameterToString(timeOffLimitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementManagementunitTimeofflimit: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementManagementunitTimeofflimit: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Deletes a time off limit object 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitTimeofflimitAsync (string managementUnitId, string timeOffLimitId)
+        {
+             await DeleteWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo(managementUnitId, timeOffLimitId);
+
+        }
+
+        /// <summary>
+        /// Deletes a time off limit object 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitTimeofflimit");
+            
+            // verify the required parameter 'timeOffLimitId' is set
+            if (timeOffLimitId == null)
+                throw new ApiException(400, "Missing required parameter 'timeOffLimitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitTimeofflimit");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (timeOffLimitId != null) localVarPathParams.Add("timeOffLimitId", this.Configuration.ApiClient.ParameterToString(timeOffLimitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementManagementunitTimeofflimit: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementManagementunitTimeofflimit: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Deletes a time off plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
+        /// <returns></returns>
+        public void DeleteWorkforcemanagementManagementunitTimeoffplan (string managementUnitId, string timeOffPlanId)
+        {
+             DeleteWorkforcemanagementManagementunitTimeoffplanWithHttpInfo(managementUnitId, timeOffPlanId);
+        }
+
+        /// <summary>
+        /// Deletes a time off plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitTimeoffplan");
+            // verify the required parameter 'timeOffPlanId' is set
+            if (timeOffPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'timeOffPlanId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitTimeoffplan");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (timeOffPlanId != null) localVarPathParams.Add("timeOffPlanId", this.Configuration.ApiClient.ParameterToString(timeOffPlanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementManagementunitTimeoffplan: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementManagementunitTimeoffplan: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Deletes a time off plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitTimeoffplanAsync (string managementUnitId, string timeOffPlanId)
+        {
+             await DeleteWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo(managementUnitId, timeOffPlanId);
+
+        }
+
+        /// <summary>
+        /// Deletes a time off plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitTimeoffplan");
+            
+            // verify the required parameter 'timeOffPlanId' is set
+            if (timeOffPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'timeOffPlanId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitTimeoffplan");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (timeOffPlanId != null) localVarPathParams.Add("timeOffPlanId", this.Configuration.ApiClient.ParameterToString(timeOffPlanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementManagementunitTimeoffplan: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementManagementunitTimeoffplan: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -16176,6 +17352,804 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Gets a time off limit object Returns properties of time off limit object, but not daily values.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
+        /// <returns>TimeOffLimit</returns>
+        public TimeOffLimit GetWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId)
+        {
+             ApiResponse<TimeOffLimit> localVarResponse = GetWorkforcemanagementManagementunitTimeofflimitWithHttpInfo(managementUnitId, timeOffLimitId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets a time off limit object Returns properties of time off limit object, but not daily values.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
+        /// <returns>ApiResponse of TimeOffLimit</returns>
+        public ApiResponse< TimeOffLimit > GetWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeofflimit");
+            // verify the required parameter 'timeOffLimitId' is set
+            if (timeOffLimitId == null)
+                throw new ApiException(400, "Missing required parameter 'timeOffLimitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeofflimit");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (timeOffLimitId != null) localVarPathParams.Add("timeOffLimitId", this.Configuration.ApiClient.ParameterToString(timeOffLimitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitTimeofflimit: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitTimeofflimit: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffLimit>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffLimit) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffLimit)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Gets a time off limit object Returns properties of time off limit object, but not daily values.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
+        /// <returns>Task of TimeOffLimit</returns>
+        public async System.Threading.Tasks.Task<TimeOffLimit> GetWorkforcemanagementManagementunitTimeofflimitAsync (string managementUnitId, string timeOffLimitId)
+        {
+             ApiResponse<TimeOffLimit> localVarResponse = await GetWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo(managementUnitId, timeOffLimitId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets a time off limit object Returns properties of time off limit object, but not daily values.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
+        /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> GetWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeofflimit");
+            
+            // verify the required parameter 'timeOffLimitId' is set
+            if (timeOffLimitId == null)
+                throw new ApiException(400, "Missing required parameter 'timeOffLimitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeofflimit");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (timeOffLimitId != null) localVarPathParams.Add("timeOffLimitId", this.Configuration.ApiClient.ParameterToString(timeOffLimitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitTimeofflimit: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitTimeofflimit: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffLimit>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffLimit) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffLimit)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Gets a list of time off limit objects under management unit. Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <returns>TimeOffLimitListing</returns>
+        public TimeOffLimitListing GetWorkforcemanagementManagementunitTimeofflimits (string managementUnitId)
+        {
+             ApiResponse<TimeOffLimitListing> localVarResponse = GetWorkforcemanagementManagementunitTimeofflimitsWithHttpInfo(managementUnitId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets a list of time off limit objects under management unit. Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <returns>ApiResponse of TimeOffLimitListing</returns>
+        public ApiResponse< TimeOffLimitListing > GetWorkforcemanagementManagementunitTimeofflimitsWithHttpInfo (string managementUnitId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeofflimits");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitTimeofflimits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitTimeofflimits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffLimitListing>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffLimitListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffLimitListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Gets a list of time off limit objects under management unit. Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <returns>Task of TimeOffLimitListing</returns>
+        public async System.Threading.Tasks.Task<TimeOffLimitListing> GetWorkforcemanagementManagementunitTimeofflimitsAsync (string managementUnitId)
+        {
+             ApiResponse<TimeOffLimitListing> localVarResponse = await GetWorkforcemanagementManagementunitTimeofflimitsAsyncWithHttpInfo(managementUnitId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets a list of time off limit objects under management unit. Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <returns>Task of ApiResponse (TimeOffLimitListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffLimitListing>> GetWorkforcemanagementManagementunitTimeofflimitsAsyncWithHttpInfo (string managementUnitId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeofflimits");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitTimeofflimits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitTimeofflimits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffLimitListing>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffLimitListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffLimitListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Gets a time off plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
+        /// <returns>TimeOffPlan</returns>
+        public TimeOffPlan GetWorkforcemanagementManagementunitTimeoffplan (string managementUnitId, string timeOffPlanId)
+        {
+             ApiResponse<TimeOffPlan> localVarResponse = GetWorkforcemanagementManagementunitTimeoffplanWithHttpInfo(managementUnitId, timeOffPlanId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets a time off plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
+        /// <returns>ApiResponse of TimeOffPlan</returns>
+        public ApiResponse< TimeOffPlan > GetWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeoffplan");
+            // verify the required parameter 'timeOffPlanId' is set
+            if (timeOffPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'timeOffPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeoffplan");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (timeOffPlanId != null) localVarPathParams.Add("timeOffPlanId", this.Configuration.ApiClient.ParameterToString(timeOffPlanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitTimeoffplan: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitTimeoffplan: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffPlan>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffPlan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffPlan)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Gets a time off plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
+        /// <returns>Task of TimeOffPlan</returns>
+        public async System.Threading.Tasks.Task<TimeOffPlan> GetWorkforcemanagementManagementunitTimeoffplanAsync (string managementUnitId, string timeOffPlanId)
+        {
+             ApiResponse<TimeOffPlan> localVarResponse = await GetWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo(managementUnitId, timeOffPlanId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets a time off plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
+        /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> GetWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeoffplan");
+            
+            // verify the required parameter 'timeOffPlanId' is set
+            if (timeOffPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'timeOffPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeoffplan");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (timeOffPlanId != null) localVarPathParams.Add("timeOffPlanId", this.Configuration.ApiClient.ParameterToString(timeOffPlanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitTimeoffplan: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitTimeoffplan: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffPlan>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffPlan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffPlan)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Gets a list of time off plans 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <returns>TimeOffPlanListing</returns>
+        public TimeOffPlanListing GetWorkforcemanagementManagementunitTimeoffplans (string managementUnitId)
+        {
+             ApiResponse<TimeOffPlanListing> localVarResponse = GetWorkforcemanagementManagementunitTimeoffplansWithHttpInfo(managementUnitId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets a list of time off plans 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <returns>ApiResponse of TimeOffPlanListing</returns>
+        public ApiResponse< TimeOffPlanListing > GetWorkforcemanagementManagementunitTimeoffplansWithHttpInfo (string managementUnitId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeoffplans");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitTimeoffplans: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitTimeoffplans: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffPlanListing>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffPlanListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffPlanListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Gets a list of time off plans 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <returns>Task of TimeOffPlanListing</returns>
+        public async System.Threading.Tasks.Task<TimeOffPlanListing> GetWorkforcemanagementManagementunitTimeoffplansAsync (string managementUnitId)
+        {
+             ApiResponse<TimeOffPlanListing> localVarResponse = await GetWorkforcemanagementManagementunitTimeoffplansAsyncWithHttpInfo(managementUnitId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets a list of time off plans 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <returns>Task of ApiResponse (TimeOffPlanListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffPlanListing>> GetWorkforcemanagementManagementunitTimeoffplansAsyncWithHttpInfo (string managementUnitId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeoffplans");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitTimeoffplans: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitTimeoffplans: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffPlanListing>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffPlanListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffPlanListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get a time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16388,6 +18362,225 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TimeOffRequestResponse>(localVarStatusCode,
                 localVarHeaders,
                 (TimeOffRequestResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequestResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Retrieves time off limit, allocated and waitlisted values according to specific time off request 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="userId">The userId to whom the time off request applies.</param>
+        /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
+        /// <returns>QueryTimeOffLimitValuesResponse</returns>
+        public QueryTimeOffLimitValuesResponse GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits (string managementUnitId, string userId, string timeOffRequestId)
+        {
+             ApiResponse<QueryTimeOffLimitValuesResponse> localVarResponse = GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsWithHttpInfo(managementUnitId, userId, timeOffRequestId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieves time off limit, allocated and waitlisted values according to specific time off request 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="userId">The userId to whom the time off request applies.</param>
+        /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
+        /// <returns>ApiResponse of QueryTimeOffLimitValuesResponse</returns>
+        public ApiResponse< QueryTimeOffLimitValuesResponse > GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits");
+            // verify the required parameter 'timeOffRequestId' is set
+            if (timeOffRequestId == null)
+                throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}/timeofflimits";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", this.Configuration.ApiClient.ParameterToString(timeOffRequestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QueryTimeOffLimitValuesResponse>(localVarStatusCode,
+                localVarHeaders,
+                (QueryTimeOffLimitValuesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryTimeOffLimitValuesResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieves time off limit, allocated and waitlisted values according to specific time off request 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="userId">The userId to whom the time off request applies.</param>
+        /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
+        /// <returns>Task of QueryTimeOffLimitValuesResponse</returns>
+        public async System.Threading.Tasks.Task<QueryTimeOffLimitValuesResponse> GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsAsync (string managementUnitId, string userId, string timeOffRequestId)
+        {
+             ApiResponse<QueryTimeOffLimitValuesResponse> localVarResponse = await GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsAsyncWithHttpInfo(managementUnitId, userId, timeOffRequestId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieves time off limit, allocated and waitlisted values according to specific time off request 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="userId">The userId to whom the time off request applies.</param>
+        /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
+        /// <returns>Task of ApiResponse (QueryTimeOffLimitValuesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QueryTimeOffLimitValuesResponse>> GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsAsyncWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits");
+            
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits");
+            
+            // verify the required parameter 'timeOffRequestId' is set
+            if (timeOffRequestId == null)
+                throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}/timeofflimits";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", this.Configuration.ApiClient.ParameterToString(timeOffRequestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QueryTimeOffLimitValuesResponse>(localVarStatusCode,
+                localVarHeaders,
+                (QueryTimeOffLimitValuesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryTimeOffLimitValuesResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -19425,6 +21618,199 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get the daily waitlist positions of a time off request for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <returns>WaitlistPositionListing</returns>
+        public WaitlistPositionListing GetWorkforcemanagementTimeoffrequestWaitlistpositions (string timeOffRequestId)
+        {
+             ApiResponse<WaitlistPositionListing> localVarResponse = GetWorkforcemanagementTimeoffrequestWaitlistpositionsWithHttpInfo(timeOffRequestId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the daily waitlist positions of a time off request for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <returns>ApiResponse of WaitlistPositionListing</returns>
+        public ApiResponse< WaitlistPositionListing > GetWorkforcemanagementTimeoffrequestWaitlistpositionsWithHttpInfo (string timeOffRequestId)
+        { 
+            // verify the required parameter 'timeOffRequestId' is set
+            if (timeOffRequestId == null)
+                throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->GetWorkforcemanagementTimeoffrequestWaitlistpositions");
+
+            var localVarPath = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}/waitlistpositions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", this.Configuration.ApiClient.ParameterToString(timeOffRequestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementTimeoffrequestWaitlistpositions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementTimeoffrequestWaitlistpositions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WaitlistPositionListing>(localVarStatusCode,
+                localVarHeaders,
+                (WaitlistPositionListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WaitlistPositionListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the daily waitlist positions of a time off request for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <returns>Task of WaitlistPositionListing</returns>
+        public async System.Threading.Tasks.Task<WaitlistPositionListing> GetWorkforcemanagementTimeoffrequestWaitlistpositionsAsync (string timeOffRequestId)
+        {
+             ApiResponse<WaitlistPositionListing> localVarResponse = await GetWorkforcemanagementTimeoffrequestWaitlistpositionsAsyncWithHttpInfo(timeOffRequestId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the daily waitlist positions of a time off request for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <returns>Task of ApiResponse (WaitlistPositionListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WaitlistPositionListing>> GetWorkforcemanagementTimeoffrequestWaitlistpositionsAsyncWithHttpInfo (string timeOffRequestId)
+        { 
+            // verify the required parameter 'timeOffRequestId' is set
+            if (timeOffRequestId == null)
+                throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->GetWorkforcemanagementTimeoffrequestWaitlistpositions");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}/waitlistpositions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", this.Configuration.ApiClient.ParameterToString(timeOffRequestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementTimeoffrequestWaitlistpositions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementTimeoffrequestWaitlistpositions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WaitlistPositionListing>(localVarStatusCode,
+                localVarHeaders,
+                (WaitlistPositionListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WaitlistPositionListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get a list of time off requests for the current user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -20896,6 +23282,446 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ManagementUnit>(localVarStatusCode,
                 localVarHeaders,
                 (ManagementUnit) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagementUnit)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Updates a time off limit object. Updates time off limit object properties, but not daily values.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The id of time off limit object to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>TimeOffLimit</returns>
+        public TimeOffLimit PatchWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null)
+        {
+             ApiResponse<TimeOffLimit> localVarResponse = PatchWorkforcemanagementManagementunitTimeofflimitWithHttpInfo(managementUnitId, timeOffLimitId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Updates a time off limit object. Updates time off limit object properties, but not daily values.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The id of time off limit object to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of TimeOffLimit</returns>
+        public ApiResponse< TimeOffLimit > PatchWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitTimeofflimit");
+            // verify the required parameter 'timeOffLimitId' is set
+            if (timeOffLimitId == null)
+                throw new ApiException(400, "Missing required parameter 'timeOffLimitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitTimeofflimit");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (timeOffLimitId != null) localVarPathParams.Add("timeOffLimitId", this.Configuration.ApiClient.ParameterToString(timeOffLimitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitTimeofflimit: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitTimeofflimit: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffLimit>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffLimit) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffLimit)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Updates a time off limit object. Updates time off limit object properties, but not daily values.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The id of time off limit object to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of TimeOffLimit</returns>
+        public async System.Threading.Tasks.Task<TimeOffLimit> PatchWorkforcemanagementManagementunitTimeofflimitAsync (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null)
+        {
+             ApiResponse<TimeOffLimit> localVarResponse = await PatchWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo(managementUnitId, timeOffLimitId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Updates a time off limit object. Updates time off limit object properties, but not daily values.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The id of time off limit object to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> PatchWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitTimeofflimit");
+            
+            // verify the required parameter 'timeOffLimitId' is set
+            if (timeOffLimitId == null)
+                throw new ApiException(400, "Missing required parameter 'timeOffLimitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitTimeofflimit");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (timeOffLimitId != null) localVarPathParams.Add("timeOffLimitId", this.Configuration.ApiClient.ParameterToString(timeOffLimitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitTimeofflimit: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitTimeofflimit: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffLimit>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffLimit) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffLimit)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Updates a time off plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>TimeOffPlan</returns>
+        public TimeOffPlan PatchWorkforcemanagementManagementunitTimeoffplan (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null)
+        {
+             ApiResponse<TimeOffPlan> localVarResponse = PatchWorkforcemanagementManagementunitTimeoffplanWithHttpInfo(managementUnitId, timeOffPlanId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Updates a time off plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of TimeOffPlan</returns>
+        public ApiResponse< TimeOffPlan > PatchWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitTimeoffplan");
+            // verify the required parameter 'timeOffPlanId' is set
+            if (timeOffPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'timeOffPlanId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitTimeoffplan");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (timeOffPlanId != null) localVarPathParams.Add("timeOffPlanId", this.Configuration.ApiClient.ParameterToString(timeOffPlanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitTimeoffplan: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitTimeoffplan: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffPlan>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffPlan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffPlan)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Updates a time off plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of TimeOffPlan</returns>
+        public async System.Threading.Tasks.Task<TimeOffPlan> PatchWorkforcemanagementManagementunitTimeoffplanAsync (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null)
+        {
+             ApiResponse<TimeOffPlan> localVarResponse = await PatchWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo(managementUnitId, timeOffPlanId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Updates a time off plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> PatchWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitTimeoffplan");
+            
+            // verify the required parameter 'timeOffPlanId' is set
+            if (timeOffPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'timeOffPlanId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitTimeoffplan");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (timeOffPlanId != null) localVarPathParams.Add("timeOffPlanId", this.Configuration.ApiClient.ParameterToString(timeOffPlanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitTimeoffplan: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitTimeoffplan: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffPlan>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffPlan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffPlan)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -26727,6 +29553,627 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Creates a new time off limit object under management unit. Only one limit object is allowed under management unit, so an attempt to create second object will fail.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>TimeOffLimit</returns>
+        public TimeOffLimit PostWorkforcemanagementManagementunitTimeofflimits (string managementUnitId, CreateTimeOffLimitRequest body = null)
+        {
+             ApiResponse<TimeOffLimit> localVarResponse = PostWorkforcemanagementManagementunitTimeofflimitsWithHttpInfo(managementUnitId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates a new time off limit object under management unit. Only one limit object is allowed under management unit, so an attempt to create second object will fail.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of TimeOffLimit</returns>
+        public ApiResponse< TimeOffLimit > PostWorkforcemanagementManagementunitTimeofflimitsWithHttpInfo (string managementUnitId, CreateTimeOffLimitRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeofflimits");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeofflimits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeofflimits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffLimit>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffLimit) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffLimit)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Creates a new time off limit object under management unit. Only one limit object is allowed under management unit, so an attempt to create second object will fail.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of TimeOffLimit</returns>
+        public async System.Threading.Tasks.Task<TimeOffLimit> PostWorkforcemanagementManagementunitTimeofflimitsAsync (string managementUnitId, CreateTimeOffLimitRequest body = null)
+        {
+             ApiResponse<TimeOffLimit> localVarResponse = await PostWorkforcemanagementManagementunitTimeofflimitsAsyncWithHttpInfo(managementUnitId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates a new time off limit object under management unit. Only one limit object is allowed under management unit, so an attempt to create second object will fail.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> PostWorkforcemanagementManagementunitTimeofflimitsAsyncWithHttpInfo (string managementUnitId, CreateTimeOffLimitRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeofflimits");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeofflimits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeofflimits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffLimit>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffLimit) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffLimit)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Retrieves time off limit related values based on a given set of filters. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>QueryTimeOffLimitValuesResponse</returns>
+        public QueryTimeOffLimitValuesResponse PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery (string managementUnitId, QueryTimeOffLimitValuesRequest body = null)
+        {
+             ApiResponse<QueryTimeOffLimitValuesResponse> localVarResponse = PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryWithHttpInfo(managementUnitId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieves time off limit related values based on a given set of filters. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of QueryTimeOffLimitValuesResponse</returns>
+        public ApiResponse< QueryTimeOffLimitValuesResponse > PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryWithHttpInfo (string managementUnitId, QueryTimeOffLimitValuesRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/values/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QueryTimeOffLimitValuesResponse>(localVarStatusCode,
+                localVarHeaders,
+                (QueryTimeOffLimitValuesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryTimeOffLimitValuesResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieves time off limit related values based on a given set of filters. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of QueryTimeOffLimitValuesResponse</returns>
+        public async System.Threading.Tasks.Task<QueryTimeOffLimitValuesResponse> PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryAsync (string managementUnitId, QueryTimeOffLimitValuesRequest body = null)
+        {
+             ApiResponse<QueryTimeOffLimitValuesResponse> localVarResponse = await PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryAsyncWithHttpInfo(managementUnitId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieves time off limit related values based on a given set of filters. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (QueryTimeOffLimitValuesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QueryTimeOffLimitValuesResponse>> PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryAsyncWithHttpInfo (string managementUnitId, QueryTimeOffLimitValuesRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/values/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QueryTimeOffLimitValuesResponse>(localVarStatusCode,
+                localVarHeaders,
+                (QueryTimeOffLimitValuesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryTimeOffLimitValuesResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Creates a new time off plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>TimeOffPlan</returns>
+        public TimeOffPlan PostWorkforcemanagementManagementunitTimeoffplans (string managementUnitId, CreateTimeOffPlanRequest body = null)
+        {
+             ApiResponse<TimeOffPlan> localVarResponse = PostWorkforcemanagementManagementunitTimeoffplansWithHttpInfo(managementUnitId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates a new time off plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of TimeOffPlan</returns>
+        public ApiResponse< TimeOffPlan > PostWorkforcemanagementManagementunitTimeoffplansWithHttpInfo (string managementUnitId, CreateTimeOffPlanRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffplans");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeoffplans: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeoffplans: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffPlan>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffPlan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffPlan)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Creates a new time off plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of TimeOffPlan</returns>
+        public async System.Threading.Tasks.Task<TimeOffPlan> PostWorkforcemanagementManagementunitTimeoffplansAsync (string managementUnitId, CreateTimeOffPlanRequest body = null)
+        {
+             ApiResponse<TimeOffPlan> localVarResponse = await PostWorkforcemanagementManagementunitTimeoffplansAsyncWithHttpInfo(managementUnitId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates a new time off plan 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> PostWorkforcemanagementManagementunitTimeoffplansAsyncWithHttpInfo (string managementUnitId, CreateTimeOffPlanRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffplans");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeoffplans: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeoffplans: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffPlan>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffPlan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffPlan)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Create a new time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27134,6 +30581,213 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TimeOffRequestListing>(localVarStatusCode,
                 localVarHeaders,
                 (TimeOffRequestListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequestListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Retrieves daily waitlist position for a list of time off requests 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>WaitlistPositionListing</returns>
+        public WaitlistPositionListing PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery (string managementUnitId, QueryWaitlistPositionsRequest body = null)
+        {
+             ApiResponse<WaitlistPositionListing> localVarResponse = PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryWithHttpInfo(managementUnitId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieves daily waitlist position for a list of time off requests 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of WaitlistPositionListing</returns>
+        public ApiResponse< WaitlistPositionListing > PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryWithHttpInfo (string managementUnitId, QueryWaitlistPositionsRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/waitlistpositions/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WaitlistPositionListing>(localVarStatusCode,
+                localVarHeaders,
+                (WaitlistPositionListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WaitlistPositionListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieves daily waitlist position for a list of time off requests 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of WaitlistPositionListing</returns>
+        public async System.Threading.Tasks.Task<WaitlistPositionListing> PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryAsync (string managementUnitId, QueryWaitlistPositionsRequest body = null)
+        {
+             ApiResponse<WaitlistPositionListing> localVarResponse = await PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryAsyncWithHttpInfo(managementUnitId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieves daily waitlist position for a list of time off requests 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (WaitlistPositionListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WaitlistPositionListing>> PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryAsyncWithHttpInfo (string managementUnitId, QueryWaitlistPositionsRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/waitlistpositions/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WaitlistPositionListing>(localVarStatusCode,
+                localVarHeaders,
+                (WaitlistPositionListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WaitlistPositionListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -29736,6 +33390,200 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Queries available time off for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>AvailableTimeOffResponse</returns>
+        public AvailableTimeOffResponse PostWorkforcemanagementTimeofflimitsAvailableQuery (AvailableTimeOffRequest body = null)
+        {
+             ApiResponse<AvailableTimeOffResponse> localVarResponse = PostWorkforcemanagementTimeofflimitsAvailableQueryWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Queries available time off for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of AvailableTimeOffResponse</returns>
+        public ApiResponse< AvailableTimeOffResponse > PostWorkforcemanagementTimeofflimitsAvailableQueryWithHttpInfo (AvailableTimeOffRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/timeofflimits/available/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementTimeofflimitsAvailableQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementTimeofflimitsAvailableQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AvailableTimeOffResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AvailableTimeOffResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AvailableTimeOffResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Queries available time off for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of AvailableTimeOffResponse</returns>
+        public async System.Threading.Tasks.Task<AvailableTimeOffResponse> PostWorkforcemanagementTimeofflimitsAvailableQueryAsync (AvailableTimeOffRequest body = null)
+        {
+             ApiResponse<AvailableTimeOffResponse> localVarResponse = await PostWorkforcemanagementTimeofflimitsAvailableQueryAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Queries available time off for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (AvailableTimeOffResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AvailableTimeOffResponse>> PostWorkforcemanagementTimeofflimitsAvailableQueryAsyncWithHttpInfo (AvailableTimeOffRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/timeofflimits/available/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementTimeofflimitsAvailableQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementTimeofflimitsAvailableQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AvailableTimeOffResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AvailableTimeOffResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AvailableTimeOffResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Create a time off request for the current user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -29923,6 +33771,226 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TimeOffRequestResponse>(localVarStatusCode,
                 localVarHeaders,
                 (TimeOffRequestResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequestResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Sets daily values for a date range of time off limit object Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>TimeOffLimit</returns>
+        public TimeOffLimit PutWorkforcemanagementManagementunitTimeofflimitValues (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null)
+        {
+             ApiResponse<TimeOffLimit> localVarResponse = PutWorkforcemanagementManagementunitTimeofflimitValuesWithHttpInfo(managementUnitId, timeOffLimitId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Sets daily values for a date range of time off limit object Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of TimeOffLimit</returns>
+        public ApiResponse< TimeOffLimit > PutWorkforcemanagementManagementunitTimeofflimitValuesWithHttpInfo (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PutWorkforcemanagementManagementunitTimeofflimitValues");
+            // verify the required parameter 'timeOffLimitId' is set
+            if (timeOffLimitId == null)
+                throw new ApiException(400, "Missing required parameter 'timeOffLimitId' when calling WorkforceManagementApi->PutWorkforcemanagementManagementunitTimeofflimitValues");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}/values";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (timeOffLimitId != null) localVarPathParams.Add("timeOffLimitId", this.Configuration.ApiClient.ParameterToString(timeOffLimitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutWorkforcemanagementManagementunitTimeofflimitValues: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutWorkforcemanagementManagementunitTimeofflimitValues: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffLimit>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffLimit) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffLimit)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Sets daily values for a date range of time off limit object Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of TimeOffLimit</returns>
+        public async System.Threading.Tasks.Task<TimeOffLimit> PutWorkforcemanagementManagementunitTimeofflimitValuesAsync (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null)
+        {
+             ApiResponse<TimeOffLimit> localVarResponse = await PutWorkforcemanagementManagementunitTimeofflimitValuesAsyncWithHttpInfo(managementUnitId, timeOffLimitId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Sets daily values for a date range of time off limit object Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> PutWorkforcemanagementManagementunitTimeofflimitValuesAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PutWorkforcemanagementManagementunitTimeofflimitValues");
+            
+            // verify the required parameter 'timeOffLimitId' is set
+            if (timeOffLimitId == null)
+                throw new ApiException(400, "Missing required parameter 'timeOffLimitId' when calling WorkforceManagementApi->PutWorkforcemanagementManagementunitTimeofflimitValues");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}/values";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (timeOffLimitId != null) localVarPathParams.Add("timeOffLimitId", this.Configuration.ApiClient.ParameterToString(timeOffLimitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutWorkforcemanagementManagementunitTimeofflimitValues: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutWorkforcemanagementManagementunitTimeofflimitValues: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffLimit>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffLimit) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffLimit)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// KnowledgeContextValueResponse
+    /// DraftTopics
     /// </summary>
     [DataContract]
-    public partial class KnowledgeContextValueResponse :  IEquatable<KnowledgeContextValueResponse>
+    public partial class DraftTopics :  IEquatable<DraftTopics>
     {
         
         
@@ -40,85 +40,53 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="KnowledgeContextValueResponse" /> class.
+        /// Initializes a new instance of the <see cref="DraftTopics" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected KnowledgeContextValueResponse() { }
+        protected DraftTopics() { }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="KnowledgeContextValueResponse" /> class.
+        /// Initializes a new instance of the <see cref="DraftTopics" /> class.
         /// </summary>
-        /// <param name="Id">Context value ID. (required).</param>
-        /// <param name="Name">Context value name. (required).</param>
-        /// <param name="Description">Context value description..</param>
-        /// <param name="DateCreated">The date when the context value was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
-        /// <param name="DateModified">The date when the context value was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
-        public KnowledgeContextValueResponse(string Id = null, string Name = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null)
+        /// <param name="Id">Id for a topic. (required).</param>
+        /// <param name="Name">Name/Label for a topic. (required).</param>
+        /// <param name="Phrases">The phrases that are extracted for a topic. (required).</param>
+        public DraftTopics(string Id = null, string Name = null, List<string> Phrases = null)
         {
             this.Id = Id;
             this.Name = Name;
-            this.Description = Description;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
+            this.Phrases = Phrases;
             
         }
         
         
         
         /// <summary>
-        /// Context value ID.
+        /// Id for a topic.
         /// </summary>
-        /// <value>Context value ID.</value>
+        /// <value>Id for a topic.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Context value name.
+        /// Name/Label for a topic.
         /// </summary>
-        /// <value>Context value name.</value>
+        /// <value>Name/Label for a topic.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
         
         
         /// <summary>
-        /// Context value description.
+        /// The phrases that are extracted for a topic.
         /// </summary>
-        /// <value>Context value description.</value>
-        [DataMember(Name="description", EmitDefaultValue=false)]
-        public string Description { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The date when the context value was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>The date when the context value was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The date when the context value was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>The date when the context value was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
+        /// <value>The phrases that are extracted for a topic.</value>
+        [DataMember(Name="phrases", EmitDefaultValue=false)]
+        public List<string> Phrases { get; set; }
         
         
         
@@ -137,13 +105,11 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class KnowledgeContextValueResponse {\n");
+            sb.Append("class DraftTopics {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  Phrases: ").Append(Phrases).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -170,15 +136,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as KnowledgeContextValueResponse);
+            return this.Equals(obj as DraftTopics);
         }
 
         /// <summary>
-        /// Returns true if KnowledgeContextValueResponse instances are equal
+        /// Returns true if DraftTopics instances are equal
         /// </summary>
-        /// <param name="other">Instance of KnowledgeContextValueResponse to be compared</param>
+        /// <param name="other">Instance of DraftTopics to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(KnowledgeContextValueResponse other)
+        public bool Equals(DraftTopics other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -196,19 +162,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
-                    this.Description == other.Description ||
-                    this.Description != null &&
-                    this.Description.Equals(other.Description)
-                ) &&
-                (
-                    this.DateCreated == other.DateCreated ||
-                    this.DateCreated != null &&
-                    this.DateCreated.Equals(other.DateCreated)
-                ) &&
-                (
-                    this.DateModified == other.DateModified ||
-                    this.DateModified != null &&
-                    this.DateModified.Equals(other.DateModified)
+                    this.Phrases == other.Phrases ||
+                    this.Phrases != null &&
+                    this.Phrases.SequenceEqual(other.Phrases)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -235,14 +191,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 
-                if (this.Description != null)
-                    hash = hash * 59 + this.Description.GetHashCode();
-                
-                if (this.DateCreated != null)
-                    hash = hash * 59 + this.DateCreated.GetHashCode();
-                
-                if (this.DateModified != null)
-                    hash = hash * 59 + this.DateModified.GetHashCode();
+                if (this.Phrases != null)
+                    hash = hash * 59 + this.Phrases.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

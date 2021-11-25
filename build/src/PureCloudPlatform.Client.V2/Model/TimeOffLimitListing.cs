@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// AnalyticsReportingSettings
+    /// The list of time off limit objects
     /// </summary>
     [DataContract]
-    public partial class AnalyticsReportingSettings :  IEquatable<AnalyticsReportingSettings>
+    public partial class TimeOffLimitListing :  IEquatable<TimeOffLimitListing>
     {
         
         
@@ -27,23 +27,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="AnalyticsReportingSettings" /> class.
+        /// Initializes a new instance of the <see cref="TimeOffLimitListing" /> class.
         /// </summary>
-        /// <param name="PiiMaskingEnabled">Indication of whether or not personal data is masked in data export and the Analytics/Reporting UI.</param>
-        public AnalyticsReportingSettings(bool? PiiMaskingEnabled = null)
+        /// <param name="Entities">Entities.</param>
+        public TimeOffLimitListing(List<TimeOffLimit> Entities = null)
         {
-            this.PiiMaskingEnabled = PiiMaskingEnabled;
+            this.Entities = Entities;
             
         }
         
         
         
         /// <summary>
-        /// Indication of whether or not personal data is masked in data export and the Analytics/Reporting UI
+        /// Gets or Sets Entities
         /// </summary>
-        /// <value>Indication of whether or not personal data is masked in data export and the Analytics/Reporting UI</value>
-        [DataMember(Name="piiMaskingEnabled", EmitDefaultValue=false)]
-        public bool? PiiMaskingEnabled { get; set; }
+        [DataMember(Name="entities", EmitDefaultValue=false)]
+        public List<TimeOffLimit> Entities { get; set; }
         
         
         /// <summary>
@@ -53,9 +52,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AnalyticsReportingSettings {\n");
+            sb.Append("class TimeOffLimitListing {\n");
             
-            sb.Append("  PiiMaskingEnabled: ").Append(PiiMaskingEnabled).Append("\n");
+            sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -81,15 +80,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as AnalyticsReportingSettings);
+            return this.Equals(obj as TimeOffLimitListing);
         }
 
         /// <summary>
-        /// Returns true if AnalyticsReportingSettings instances are equal
+        /// Returns true if TimeOffLimitListing instances are equal
         /// </summary>
-        /// <param name="other">Instance of AnalyticsReportingSettings to be compared</param>
+        /// <param name="other">Instance of TimeOffLimitListing to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AnalyticsReportingSettings other)
+        public bool Equals(TimeOffLimitListing other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -97,9 +96,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.PiiMaskingEnabled == other.PiiMaskingEnabled ||
-                    this.PiiMaskingEnabled != null &&
-                    this.PiiMaskingEnabled.Equals(other.PiiMaskingEnabled)
+                    this.Entities == other.Entities ||
+                    this.Entities != null &&
+                    this.Entities.SequenceEqual(other.Entities)
                 );
         }
 
@@ -115,8 +114,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.PiiMaskingEnabled != null)
-                    hash = hash * 59 + this.PiiMaskingEnabled.GetHashCode();
+                if (this.Entities != null)
+                    hash = hash * 59 + this.Entities.GetHashCode();
                 
                 return hash;
             }

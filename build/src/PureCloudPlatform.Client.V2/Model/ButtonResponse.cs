@@ -57,6 +57,43 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Button response message type that captures QuickReply , Cards and Carousel .This is used  as label for Card selection
+        /// </summary>
+        /// <value>Button response message type that captures QuickReply , Cards and Carousel .This is used  as label for Card selection</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MessageTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Quickreply for "QuickReply"
+            /// </summary>
+            [EnumMember(Value = "QuickReply")]
+            Quickreply,
+            
+            /// <summary>
+            /// Enum Card for "Card"
+            /// </summary>
+            [EnumMember(Value = "Card")]
+            Card,
+            
+            /// <summary>
+            /// Enum Carousel for "Carousel"
+            /// </summary>
+            [EnumMember(Value = "Carousel")]
+            Carousel
+        }
+        
+        
+        
+        
         
         /// <summary>
         /// Button response type that captures Button and QuickReply type responses
@@ -70,6 +107,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// Button response message type that captures QuickReply , Cards and Carousel .This is used  as label for Card selection
+        /// </summary>
+        /// <value>Button response message type that captures QuickReply , Cards and Carousel .This is used  as label for Card selection</value>
+        [DataMember(Name="messageType", EmitDefaultValue=false)]
+        public MessageTypeEnum? MessageType { get; set; }
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ButtonResponse" /> class.
@@ -77,11 +123,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Button response type that captures Button and QuickReply type responses.</param>
         /// <param name="Text">Text to show inside the Button reply. This is also used as the response text after clicking on the Button..</param>
         /// <param name="Payload">Content of the textback payload after clicking a button.</param>
-        public ButtonResponse(TypeEnum? Type = null, string Text = null, string Payload = null)
+        /// <param name="MessageType">Button response message type that captures QuickReply , Cards and Carousel .This is used  as label for Card selection.</param>
+        public ButtonResponse(TypeEnum? Type = null, string Text = null, string Payload = null, MessageTypeEnum? MessageType = null)
         {
             this.Type = Type;
             this.Text = Text;
             this.Payload = Payload;
+            this.MessageType = MessageType;
             
         }
         
@@ -106,6 +154,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Payload { get; set; }
         
         
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,6 +168,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Payload: ").Append(Payload).Append("\n");
+            sb.Append("  MessageType: ").Append(MessageType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -172,6 +223,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Payload == other.Payload ||
                     this.Payload != null &&
                     this.Payload.Equals(other.Payload)
+                ) &&
+                (
+                    this.MessageType == other.MessageType ||
+                    this.MessageType != null &&
+                    this.MessageType.Equals(other.MessageType)
                 );
         }
 
@@ -195,6 +251,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Payload != null)
                     hash = hash * 59 + this.Payload.GetHashCode();
+                
+                if (this.MessageType != null)
+                    hash = hash * 59 + this.MessageType.GetHashCode();
                 
                 return hash;
             }

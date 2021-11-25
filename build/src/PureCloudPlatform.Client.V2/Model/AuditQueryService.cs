@@ -78,6 +78,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Directory,
             
             /// <summary>
+            /// Enum Dynamicschema for "DynamicSchema"
+            /// </summary>
+            [EnumMember(Value = "DynamicSchema")]
+            Dynamicschema,
+            
+            /// <summary>
             /// Enum Gamification for "Gamification"
             /// </summary>
             [EnumMember(Value = "Gamification")]

@@ -25,7 +25,7 @@ title: AnalyticsSession
 | **CoachedParticipantId** | **string** | The participantId being coached (if someone (e.g. an agent) is being coached, this would correspond to one of the other participantIds present in the conversation) | [optional] |
 | **CobrowseRole** | **string** | Describes side of the cobrowse (sharer or viewer) | [optional] |
 | **CobrowseRoomId** | **string** | A unique identifier for a PureCloud cobrowse room | [optional] |
-| **DeliveryStatus** | **string** | The email delivery status | [optional] |
+| **DeliveryStatus** | **string** | The email or SMS delivery status | [optional] |
 | **DeliveryStatusChangeDate** | **DateTime?** | Date and time of the most recent delivery status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DestinationAddresses** | **List&lt;string&gt;** | Destination address(es) of transfers or consults | [optional] |
 | **Direction** | **string** | The direction of the communication | [optional] |

@@ -487,7 +487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<NluDomain> PatchLanguageunderstandingDomainWithHttpInfo (string domainId, NluDomain body);
         
         /// <summary>
-        /// Save information for the draft
+        /// Save information for the draft. Either topic draft or intent draft should be sent.
         /// </summary>
         /// <remarks>
         /// 
@@ -500,7 +500,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Draft PatchLanguageunderstandingMinerDraft (string minerId, string draftId, DraftRequest body = null);
 
         /// <summary>
-        /// Save information for the draft
+        /// Save information for the draft. Either topic draft or intent draft should be sent.
         /// </summary>
         /// <remarks>
         /// 
@@ -681,7 +681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Draft> PostLanguageunderstandingMinerDraftsWithHttpInfo (string minerId, Draft body);
         
         /// <summary>
-        /// Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
+        /// Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
         /// </summary>
         /// <remarks>
         /// 
@@ -693,7 +693,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Miner PostLanguageunderstandingMinerExecute (string minerId, MinerExecuteRequest body = null);
 
         /// <summary>
-        /// Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
+        /// Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
         /// </summary>
         /// <remarks>
         /// 
@@ -1227,7 +1227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<NluDomain>> PatchLanguageunderstandingDomainAsyncWithHttpInfo (string domainId, NluDomain body);
         
         /// <summary>
-        /// Save information for the draft
+        /// Save information for the draft. Either topic draft or intent draft should be sent.
         /// </summary>
         /// <remarks>
         /// 
@@ -1240,7 +1240,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Draft> PatchLanguageunderstandingMinerDraftAsync (string minerId, string draftId, DraftRequest body = null);
 
         /// <summary>
-        /// Save information for the draft
+        /// Save information for the draft. Either topic draft or intent draft should be sent.
         /// </summary>
         /// <remarks>
         /// 
@@ -1421,7 +1421,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Draft>> PostLanguageunderstandingMinerDraftsAsyncWithHttpInfo (string minerId, Draft body);
         
         /// <summary>
-        /// Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
+        /// Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
         /// </summary>
         /// <remarks>
         /// 
@@ -1433,7 +1433,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Miner> PostLanguageunderstandingMinerExecuteAsync (string minerId, MinerExecuteRequest body = null);
 
         /// <summary>
-        /// Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
+        /// Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
         /// </summary>
         /// <remarks>
         /// 
@@ -5455,7 +5455,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Save information for the draft 
+        /// Save information for the draft. Either topic draft or intent draft should be sent. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
@@ -5469,7 +5469,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Save information for the draft 
+        /// Save information for the draft. Either topic draft or intent draft should be sent. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
@@ -5563,7 +5563,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Save information for the draft 
+        /// Save information for the draft. Either topic draft or intent draft should be sent. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
@@ -5578,7 +5578,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Save information for the draft 
+        /// Save information for the draft. Either topic draft or intent draft should be sent. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
@@ -7157,7 +7157,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. 
+        /// Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
@@ -7170,7 +7170,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. 
+        /// Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
@@ -7259,7 +7259,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. 
+        /// Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
@@ -7273,7 +7273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. 
+        /// Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>

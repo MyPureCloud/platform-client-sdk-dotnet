@@ -75,6 +75,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Outcome" /> class.
@@ -92,9 +97,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsPositive">Whether or not the outcome is positive..</param>
         /// <param name="Context">The context of the outcome..</param>
         /// <param name="Journey">The pattern of rules defining the filter of the outcome..</param>
+        /// <param name="AssociatedValueField">The field from the event indicating the associated value..</param>
         /// <param name="CreatedDate">Timestamp indicating when the outcome was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ModifiedDate">Timestamp indicating when the outcome was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public Outcome(bool? IsActive = null, string DisplayName = null, int? Version = null, string Description = null, bool? IsPositive = null, Context Context = null, Journey Journey = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null)
+        public Outcome(bool? IsActive = null, string DisplayName = null, int? Version = null, string Description = null, bool? IsPositive = null, Context Context = null, Journey Journey = null, AssociatedValueField AssociatedValueField = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null)
         {
             this.IsActive = IsActive;
             this.DisplayName = DisplayName;
@@ -103,6 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.IsPositive = IsPositive;
             this.Context = Context;
             this.Journey = Journey;
+            this.AssociatedValueField = AssociatedValueField;
             this.CreatedDate = CreatedDate;
             this.ModifiedDate = ModifiedDate;
             
@@ -183,6 +190,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The field from the event indicating the associated value.
+        /// </summary>
+        /// <value>The field from the event indicating the associated value.</value>
+        [DataMember(Name="associatedValueField", EmitDefaultValue=false)]
+        public AssociatedValueField AssociatedValueField { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -225,6 +241,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IsPositive: ").Append(IsPositive).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("  Journey: ").Append(Journey).Append("\n");
+            sb.Append("  AssociatedValueField: ").Append(AssociatedValueField).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
@@ -309,6 +326,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Journey.Equals(other.Journey)
                 ) &&
                 (
+                    this.AssociatedValueField == other.AssociatedValueField ||
+                    this.AssociatedValueField != null &&
+                    this.AssociatedValueField.Equals(other.AssociatedValueField)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -360,6 +382,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Journey != null)
                     hash = hash * 59 + this.Journey.GetHashCode();
+                
+                if (this.AssociatedValueField != null)
+                    hash = hash * 59 + this.AssociatedValueField.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -29,10 +29,74 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The Sentiment Trend Class
+        /// </summary>
+        /// <value>The Sentiment Trend Class</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SentimentTrendClassEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Notcalculated for "NotCalculated"
+            /// </summary>
+            [EnumMember(Value = "NotCalculated")]
+            Notcalculated,
+            
+            /// <summary>
+            /// Enum Declining for "Declining"
+            /// </summary>
+            [EnumMember(Value = "Declining")]
+            Declining,
+            
+            /// <summary>
+            /// Enum Slightlydeclining for "SlightlyDeclining"
+            /// </summary>
+            [EnumMember(Value = "SlightlyDeclining")]
+            Slightlydeclining,
+            
+            /// <summary>
+            /// Enum Nochange for "NoChange"
+            /// </summary>
+            [EnumMember(Value = "NoChange")]
+            Nochange,
+            
+            /// <summary>
+            /// Enum Slightlyimproving for "SlightlyImproving"
+            /// </summary>
+            [EnumMember(Value = "SlightlyImproving")]
+            Slightlyimproving,
+            
+            /// <summary>
+            /// Enum Improving for "Improving"
+            /// </summary>
+            [EnumMember(Value = "Improving")]
+            Improving
+        }
         
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The Sentiment Trend Class
+        /// </summary>
+        /// <value>The Sentiment Trend Class</value>
+        [DataMember(Name="sentimentTrendClass", EmitDefaultValue=false)]
+        public SentimentTrendClassEnum? SentimentTrendClass { get; set; }
         
         
     
@@ -42,11 +106,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Conversation">The Conversation Reference.</param>
         /// <param name="SentimentScore">The Sentiment Score.</param>
         /// <param name="SentimentTrend">The Sentiment Trend.</param>
-        public ConversationMetrics(AddressableEntityRef Conversation = null, double? SentimentScore = null, double? SentimentTrend = null)
+        /// <param name="SentimentTrendClass">The Sentiment Trend Class.</param>
+        public ConversationMetrics(AddressableEntityRef Conversation = null, double? SentimentScore = null, double? SentimentTrend = null, SentimentTrendClassEnum? SentimentTrendClass = null)
         {
             this.Conversation = Conversation;
             this.SentimentScore = SentimentScore;
             this.SentimentTrend = SentimentTrend;
+            this.SentimentTrendClass = SentimentTrendClass;
             
         }
         
@@ -78,6 +144,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public double? SentimentTrend { get; set; }
         
         
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,6 +158,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
             sb.Append("  SentimentScore: ").Append(SentimentScore).Append("\n");
             sb.Append("  SentimentTrend: ").Append(SentimentTrend).Append("\n");
+            sb.Append("  SentimentTrendClass: ").Append(SentimentTrendClass).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -144,6 +213,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SentimentTrend == other.SentimentTrend ||
                     this.SentimentTrend != null &&
                     this.SentimentTrend.Equals(other.SentimentTrend)
+                ) &&
+                (
+                    this.SentimentTrendClass == other.SentimentTrendClass ||
+                    this.SentimentTrendClass != null &&
+                    this.SentimentTrendClass.Equals(other.SentimentTrendClass)
                 );
         }
 
@@ -167,6 +241,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SentimentTrend != null)
                     hash = hash * 59 + this.SentimentTrend.GetHashCode();
+                
+                if (this.SentimentTrendClass != null)
+                    hash = hash * 59 + this.SentimentTrendClass.GetHashCode();
                 
                 return hash;
             }

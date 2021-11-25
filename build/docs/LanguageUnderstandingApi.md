@@ -26,7 +26,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetLanguageunderstandingMinerIntents**](LanguageUnderstandingApi.html#getlanguageunderstandingminerintents) | **GET** /api/v2/languageunderstanding/miners/{minerId}/intents | Retrieve a list of mined intents. |
 | [**GetLanguageunderstandingMiners**](LanguageUnderstandingApi.html#getlanguageunderstandingminers) | **GET** /api/v2/languageunderstanding/miners | Retrieve the list of miners created. |
 | [**PatchLanguageunderstandingDomain**](LanguageUnderstandingApi.html#patchlanguageunderstandingdomain) | **PATCH** /api/v2/languageunderstanding/domains/{domainId} | Update an NLU Domain. |
-| [**PatchLanguageunderstandingMinerDraft**](LanguageUnderstandingApi.html#patchlanguageunderstandingminerdraft) | **PATCH** /api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId} | Save information for the draft |
+| [**PatchLanguageunderstandingMinerDraft**](LanguageUnderstandingApi.html#patchlanguageunderstandingminerdraft) | **PATCH** /api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId} | Save information for the draft. Either topic draft or intent draft should be sent. |
 | [**PostLanguageunderstandingDomainFeedback**](LanguageUnderstandingApi.html#postlanguageunderstandingdomainfeedback) | **POST** /api/v2/languageunderstanding/domains/{domainId}/feedback | Create feedback for the NLU Domain Version. |
 | [**PostLanguageunderstandingDomainVersionDetect**](LanguageUnderstandingApi.html#postlanguageunderstandingdomainversiondetect) | **POST** /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/detect | Detect intent, entities, etc. in the submitted text using the specified NLU domain version. |
 | [**PostLanguageunderstandingDomainVersionPublish**](LanguageUnderstandingApi.html#postlanguageunderstandingdomainversionpublish) | **POST** /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/publish | Publish the draft NLU Domain Version. |
@@ -34,7 +34,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostLanguageunderstandingDomainVersions**](LanguageUnderstandingApi.html#postlanguageunderstandingdomainversions) | **POST** /api/v2/languageunderstanding/domains/{domainId}/versions | Create an NLU Domain Version. |
 | [**PostLanguageunderstandingDomains**](LanguageUnderstandingApi.html#postlanguageunderstandingdomains) | **POST** /api/v2/languageunderstanding/domains | Create an NLU Domain. |
 | [**PostLanguageunderstandingMinerDrafts**](LanguageUnderstandingApi.html#postlanguageunderstandingminerdrafts) | **POST** /api/v2/languageunderstanding/miners/{minerId}/drafts | Create a new draft resource. |
-| [**PostLanguageunderstandingMinerExecute**](LanguageUnderstandingApi.html#postlanguageunderstandingminerexecute) | **POST** /api/v2/languageunderstanding/miners/{minerId}/execute | Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. |
+| [**PostLanguageunderstandingMinerExecute**](LanguageUnderstandingApi.html#postlanguageunderstandingminerexecute) | **POST** /api/v2/languageunderstanding/miners/{minerId}/execute | Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. |
 | [**PostLanguageunderstandingMiners**](LanguageUnderstandingApi.html#postlanguageunderstandingminers) | **POST** /api/v2/languageunderstanding/miners | Create a unique miner. |
 | [**PutLanguageunderstandingDomainVersion**](LanguageUnderstandingApi.html#putlanguageunderstandingdomainversion) | **PUT** /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId} | Update an NLU Domain Version. |
 {: class="table table-striped"}
@@ -1335,7 +1335,7 @@ namespace Example
 
 
 
-Save information for the draft
+Save information for the draft. Either topic draft or intent draft should be sent.
 
 
 
@@ -1371,7 +1371,7 @@ namespace Example
 
             try
             { 
-                // Save information for the draft
+                // Save information for the draft. Either topic draft or intent draft should be sent.
                 Draft result = apiInstance.PatchLanguageunderstandingMinerDraft(minerId, draftId, body);
                 Debug.WriteLine(result);
             }
@@ -1879,7 +1879,7 @@ namespace Example
 
 
 
-Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
+Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
 
 
 
@@ -1914,7 +1914,7 @@ namespace Example
 
             try
             { 
-                // Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
+                // Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
                 Miner result = apiInstance.PostLanguageunderstandingMinerExecute(minerId, body);
                 Debug.WriteLine(result);
             }

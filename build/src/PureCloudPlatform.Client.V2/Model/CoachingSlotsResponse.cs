@@ -35,6 +35,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingSlotsResponse" /> class.
@@ -72,6 +77,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<UserAvailableTimes> FacilitatorSchedules { get; private set; }
         
         
+        
+        /// <summary>
+        /// Detailed data for WFM scheduled activities
+        /// </summary>
+        /// <value>Detailed data for WFM scheduled activities</value>
+        [DataMember(Name="wfmScheduleActivities", EmitDefaultValue=false)]
+        public List<WfmScheduleActivity> WfmScheduleActivities { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,6 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SuggestedSlots: ").Append(SuggestedSlots).Append("\n");
             sb.Append("  AttendeeSchedules: ").Append(AttendeeSchedules).Append("\n");
             sb.Append("  FacilitatorSchedules: ").Append(FacilitatorSchedules).Append("\n");
+            sb.Append("  WfmScheduleActivities: ").Append(WfmScheduleActivities).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,6 +153,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FacilitatorSchedules == other.FacilitatorSchedules ||
                     this.FacilitatorSchedules != null &&
                     this.FacilitatorSchedules.SequenceEqual(other.FacilitatorSchedules)
+                ) &&
+                (
+                    this.WfmScheduleActivities == other.WfmScheduleActivities ||
+                    this.WfmScheduleActivities != null &&
+                    this.WfmScheduleActivities.SequenceEqual(other.WfmScheduleActivities)
                 );
         }
 
@@ -161,6 +181,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.FacilitatorSchedules != null)
                     hash = hash * 59 + this.FacilitatorSchedules.GetHashCode();
+                
+                if (this.WfmScheduleActivities != null)
+                    hash = hash * 59 + this.WfmScheduleActivities.GetHashCode();
                 
                 return hash;
             }

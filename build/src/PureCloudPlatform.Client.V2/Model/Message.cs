@@ -309,7 +309,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Open for "open"
             /// </summary>
             [EnumMember(Value = "open")]
-            Open
+            Open,
+            
+            /// <summary>
+            /// Enum Instagram for "instagram"
+            /// </summary>
+            [EnumMember(Value = "instagram")]
+            Instagram
         }
         
         

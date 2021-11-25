@@ -264,6 +264,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Dynamicgroup,
             
             /// <summary>
+            /// Enum Dynamicschema for "DynamicSchema"
+            /// </summary>
+            [EnumMember(Value = "DynamicSchema")]
+            Dynamicschema,
+            
+            /// <summary>
             /// Enum Edge for "Edge"
             /// </summary>
             [EnumMember(Value = "Edge")]
@@ -1319,7 +1325,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Cancel for "Cancel"
             /// </summary>
             [EnumMember(Value = "Cancel")]
-            Cancel
+            Cancel,
+            
+            /// <summary>
+            /// Enum Softdelete for "SoftDelete"
+            /// </summary>
+            [EnumMember(Value = "SoftDelete")]
+            Softdelete
         }
         
         

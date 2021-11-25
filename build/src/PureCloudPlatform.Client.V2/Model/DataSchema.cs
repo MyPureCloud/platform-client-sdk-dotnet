@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum ExternalOrganization for "EXTERNAL_ORGANIZATION"
             /// </summary>
             [EnumMember(Value = "EXTERNAL_ORGANIZATION")]
-            ExternalOrganization
+            ExternalOrganization,
+            
+            /// <summary>
+            /// Enum OpenAction for "OPEN_ACTION"
+            /// </summary>
+            [EnumMember(Value = "OPEN_ACTION")]
+            OpenAction
         }
         
         

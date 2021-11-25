@@ -30,19 +30,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AchievedOutcome" /> class.
         /// </summary>
-        /// <param name="Outcome">The ID of the outcome achieved..</param>
-        public AchievedOutcome(AddressableEntityRef Outcome = null)
+        public AchievedOutcome()
         {
-            this.Outcome = Outcome;
             
         }
         
@@ -54,15 +47,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
-        /// <summary>
-        /// The ID of the outcome achieved.
-        /// </summary>
-        /// <value>The ID of the outcome achieved.</value>
-        [DataMember(Name="outcome", EmitDefaultValue=false)]
-        public AddressableEntityRef Outcome { get; set; }
         
         
         
@@ -84,7 +68,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class AchievedOutcome {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Outcome: ").Append(Outcome).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -132,11 +115,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Outcome == other.Outcome ||
-                    this.Outcome != null &&
-                    this.Outcome.Equals(other.Outcome)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -157,9 +135,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Outcome != null)
-                    hash = hash * 59 + this.Outcome.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

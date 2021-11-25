@@ -66,9 +66,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Token,
             
             /// <summary>
-            /// Enum Saml2bearer for "SAML2BEARER"
+            /// Enum Saml2bearer for "SAML2-BEARER"
             /// </summary>
-            [EnumMember(Value = "SAML2BEARER")]
+            [EnumMember(Value = "SAML2-BEARER")]
             Saml2bearer,
             
             /// <summary>
@@ -78,10 +78,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Password,
             
             /// <summary>
-            /// Enum ClientCredentials for "CLIENT_CREDENTIALS"
+            /// Enum Clientcredentials for "CLIENT-CREDENTIALS"
             /// </summary>
-            [EnumMember(Value = "CLIENT_CREDENTIALS")]
-            ClientCredentials
+            [EnumMember(Value = "CLIENT-CREDENTIALS")]
+            Clientcredentials
         }
         
         
