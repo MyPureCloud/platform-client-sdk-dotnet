@@ -360,7 +360,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Nwebactionsofferedoutsideschedule for "nWebActionsOfferedOutsideSchedule"
             /// </summary>
             [EnumMember(Value = "nWebActionsOfferedOutsideSchedule")]
-            Nwebactionsofferedoutsideschedule
+            Nwebactionsofferedoutsideschedule,
+            
+            /// <summary>
+            /// Enum Ojourneyoutcomevalue for "oJourneyOutcomeValue"
+            /// </summary>
+            [EnumMember(Value = "oJourneyOutcomeValue")]
+            Ojourneyoutcomevalue
         }
         
         
