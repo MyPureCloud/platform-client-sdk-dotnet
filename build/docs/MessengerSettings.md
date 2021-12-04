@@ -11,6 +11,7 @@ title: MessengerSettings
 | **Styles** | [**MessengerStyles**](MessengerStyles.html) | The style settings for messenger | [optional] |
 | **LauncherButton** | [**LauncherButtonSettings**](LauncherButtonSettings.html) | The launcher button settings for messenger | [optional] |
 | **FileUpload** | [**FileUploadSettings**](FileUploadSettings.html) | The file upload settings for messenger | [optional] |
+| **Position** | [**MessengerPositionSettings**](MessengerPositionSettings.html) | The position settings for messenger | [optional] |
 {: class="table table-striped"}
 
 

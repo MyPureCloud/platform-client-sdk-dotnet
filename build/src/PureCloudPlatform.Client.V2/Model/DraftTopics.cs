@@ -40,6 +40,31 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DraftTopics" /> class.
@@ -51,7 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DraftTopics" /> class.
         /// </summary>
         /// <param name="Id">Id for a topic. (required).</param>
-        /// <param name="Name">Name/Label for a topic. (required).</param>
+        /// <param name="Name">Topic name..</param>
         /// <param name="Phrases">The phrases that are extracted for a topic. (required).</param>
         public DraftTopics(string Id = null, string Name = null, List<string> Phrases = null)
         {
@@ -73,11 +98,56 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Name/Label for a topic.
+        /// Topic name.
         /// </summary>
-        /// <value>Name/Label for a topic.</value>
+        /// <value>Topic name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The miner to which the topic belongs.
+        /// </summary>
+        /// <value>The miner to which the topic belongs.</value>
+        [DataMember(Name="miner", EmitDefaultValue=false)]
+        public Miner Miner { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// Number of conversations where a topic has occurred.
+        /// </summary>
+        /// <value>Number of conversations where a topic has occurred.</value>
+        [DataMember(Name="conversationCount", EmitDefaultValue=false)]
+        public int? ConversationCount { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// Percentage of conversations where a topic has occurred.
+        /// </summary>
+        /// <value>Percentage of conversations where a topic has occurred.</value>
+        [DataMember(Name="conversationPercent", EmitDefaultValue=false)]
+        public float? ConversationPercent { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// Number of unique utterances where a topic has occurred.
+        /// </summary>
+        /// <value>Number of unique utterances where a topic has occurred.</value>
+        [DataMember(Name="utteranceCount", EmitDefaultValue=false)]
+        public int? UtteranceCount { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// Number of unique phrases (sub-utterances) where a topic has occurred.
+        /// </summary>
+        /// <value>Number of unique phrases (sub-utterances) where a topic has occurred.</value>
+        [DataMember(Name="phraseCount", EmitDefaultValue=false)]
+        public int? PhraseCount { get; private set; }
         
         
         
@@ -109,6 +179,11 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Miner: ").Append(Miner).Append("\n");
+            sb.Append("  ConversationCount: ").Append(ConversationCount).Append("\n");
+            sb.Append("  ConversationPercent: ").Append(ConversationPercent).Append("\n");
+            sb.Append("  UtteranceCount: ").Append(UtteranceCount).Append("\n");
+            sb.Append("  PhraseCount: ").Append(PhraseCount).Append("\n");
             sb.Append("  Phrases: ").Append(Phrases).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -162,6 +237,31 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.Miner == other.Miner ||
+                    this.Miner != null &&
+                    this.Miner.Equals(other.Miner)
+                ) &&
+                (
+                    this.ConversationCount == other.ConversationCount ||
+                    this.ConversationCount != null &&
+                    this.ConversationCount.Equals(other.ConversationCount)
+                ) &&
+                (
+                    this.ConversationPercent == other.ConversationPercent ||
+                    this.ConversationPercent != null &&
+                    this.ConversationPercent.Equals(other.ConversationPercent)
+                ) &&
+                (
+                    this.UtteranceCount == other.UtteranceCount ||
+                    this.UtteranceCount != null &&
+                    this.UtteranceCount.Equals(other.UtteranceCount)
+                ) &&
+                (
+                    this.PhraseCount == other.PhraseCount ||
+                    this.PhraseCount != null &&
+                    this.PhraseCount.Equals(other.PhraseCount)
+                ) &&
+                (
                     this.Phrases == other.Phrases ||
                     this.Phrases != null &&
                     this.Phrases.SequenceEqual(other.Phrases)
@@ -190,6 +290,21 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.Miner != null)
+                    hash = hash * 59 + this.Miner.GetHashCode();
+                
+                if (this.ConversationCount != null)
+                    hash = hash * 59 + this.ConversationCount.GetHashCode();
+                
+                if (this.ConversationPercent != null)
+                    hash = hash * 59 + this.ConversationPercent.GetHashCode();
+                
+                if (this.UtteranceCount != null)
+                    hash = hash * 59 + this.UtteranceCount.GetHashCode();
+                
+                if (this.PhraseCount != null)
+                    hash = hash * 59 + this.PhraseCount.GetHashCode();
                 
                 if (this.Phrases != null)
                     hash = hash * 59 + this.Phrases.GetHashCode();

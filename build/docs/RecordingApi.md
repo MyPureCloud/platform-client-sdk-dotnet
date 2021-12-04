@@ -1435,7 +1435,7 @@ namespace Example
 
 <a name="getrecordingjobfailedrecordings"></a>
 
-## [**FailedRecordingsEntityListing**](FailedRecordingsEntityListing.html) GetRecordingJobFailedrecordings (string jobId, int? pageSize = null, int? pageNumber = null)
+## [**FailedRecordingEntityListing**](FailedRecordingEntityListing.html) GetRecordingJobFailedrecordings (string jobId, int? pageSize = null, int? pageNumber = null, bool? includeTotal = null, string cursor = null)
 
 
 
@@ -1472,11 +1472,13 @@ namespace Example
             var jobId = jobId_example;  // string | jobId
             var pageSize = 56;  // int? | Page size. Maximum is 100. (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var includeTotal = true;  // bool? | If false, cursor will be used to locate the page instead of pageNumber. (optional) 
+            var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page) (optional) 
 
             try
             { 
                 // Get IDs of recordings that the bulk job failed for
-                FailedRecordingsEntityListing result = apiInstance.GetRecordingJobFailedrecordings(jobId, pageSize, pageNumber);
+                FailedRecordingEntityListing result = apiInstance.GetRecordingJobFailedrecordings(jobId, pageSize, pageNumber, includeTotal, cursor);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1496,15 +1498,17 @@ namespace Example
 | **jobId** | **string**| jobId |  |
 | **pageSize** | **int?**| Page size. Maximum is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **includeTotal** | **bool?**| If false, cursor will be used to locate the page instead of pageNumber. | [optional]  |
+| **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**FailedRecordingsEntityListing**](FailedRecordingsEntityListing.html)
+[**FailedRecordingEntityListing**](FailedRecordingEntityListing.html)
 
 <a name="getrecordingjobs"></a>
 
-## [**RecordingJobEntityListing**](RecordingJobEntityListing.html) GetRecordingJobs (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null)
+## [**RecordingJobEntityListing**](RecordingJobEntityListing.html) GetRecordingJobs (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null, bool? includeTotal = null, string cursor = null)
 
 
 
@@ -1544,11 +1548,13 @@ namespace Example
             var state = state_example;  // string | Filter by state (optional) 
             var showOnlyMyJobs = true;  // bool? | Show only my jobs (optional) 
             var jobType = jobType_example;  // string | Job Type (Can be left empty for both) (optional) 
+            var includeTotal = true;  // bool? | If false, cursor will be used to locate the page instead of pageNumber. (optional) 
+            var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page) (optional) 
 
             try
             { 
                 // Get the status of all jobs within the user's organization
-                RecordingJobEntityListing result = apiInstance.GetRecordingJobs(pageSize, pageNumber, sortBy, state, showOnlyMyJobs, jobType);
+                RecordingJobEntityListing result = apiInstance.GetRecordingJobs(pageSize, pageNumber, sortBy, state, showOnlyMyJobs, jobType, includeTotal, cursor);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1571,6 +1577,8 @@ namespace Example
 | **state** | **string**| Filter by state | [optional] <br />**Values**: FULFILLED, PENDING, READY, PROCESSING, CANCELLED, FAILED |
 | **showOnlyMyJobs** | **bool?**| Show only my jobs | [optional]  |
 | **jobType** | **string**| Job Type (Can be left empty for both) | [optional] <br />**Values**: DELETE, EXPORT |
+| **includeTotal** | **bool?**| If false, cursor will be used to locate the page instead of pageNumber. | [optional]  |
+| **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

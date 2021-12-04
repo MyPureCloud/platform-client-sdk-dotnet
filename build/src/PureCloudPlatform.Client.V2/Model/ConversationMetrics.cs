@@ -91,12 +91,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The Sentiment Trend Class
         /// </summary>
         /// <value>The Sentiment Trend Class</value>
         [DataMember(Name="sentimentTrendClass", EmitDefaultValue=false)]
         public SentimentTrendClassEnum? SentimentTrendClass { get; set; }
+        
+        
         
         
     
@@ -107,12 +112,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SentimentScore">The Sentiment Score.</param>
         /// <param name="SentimentTrend">The Sentiment Trend.</param>
         /// <param name="SentimentTrendClass">The Sentiment Trend Class.</param>
-        public ConversationMetrics(AddressableEntityRef Conversation = null, double? SentimentScore = null, double? SentimentTrend = null, SentimentTrendClassEnum? SentimentTrendClass = null)
+        /// <param name="ParticipantMetrics">The Participant Metrics.</param>
+        public ConversationMetrics(AddressableEntityRef Conversation = null, double? SentimentScore = null, double? SentimentTrend = null, SentimentTrendClassEnum? SentimentTrendClass = null, ParticipantMetrics ParticipantMetrics = null)
         {
             this.Conversation = Conversation;
             this.SentimentScore = SentimentScore;
             this.SentimentTrend = SentimentTrend;
             this.SentimentTrendClass = SentimentTrendClass;
+            this.ParticipantMetrics = ParticipantMetrics;
             
         }
         
@@ -146,6 +153,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// The Participant Metrics
+        /// </summary>
+        /// <value>The Participant Metrics</value>
+        [DataMember(Name="participantMetrics", EmitDefaultValue=false)]
+        public ParticipantMetrics ParticipantMetrics { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -159,6 +175,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SentimentScore: ").Append(SentimentScore).Append("\n");
             sb.Append("  SentimentTrend: ").Append(SentimentTrend).Append("\n");
             sb.Append("  SentimentTrendClass: ").Append(SentimentTrendClass).Append("\n");
+            sb.Append("  ParticipantMetrics: ").Append(ParticipantMetrics).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -218,6 +235,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SentimentTrendClass == other.SentimentTrendClass ||
                     this.SentimentTrendClass != null &&
                     this.SentimentTrendClass.Equals(other.SentimentTrendClass)
+                ) &&
+                (
+                    this.ParticipantMetrics == other.ParticipantMetrics ||
+                    this.ParticipantMetrics != null &&
+                    this.ParticipantMetrics.Equals(other.ParticipantMetrics)
                 );
         }
 
@@ -244,6 +266,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SentimentTrendClass != null)
                     hash = hash * 59 + this.SentimentTrendClass.GetHashCode();
+                
+                if (this.ParticipantMetrics != null)
+                    hash = hash * 59 + this.ParticipantMetrics.GetHashCode();
                 
                 return hash;
             }

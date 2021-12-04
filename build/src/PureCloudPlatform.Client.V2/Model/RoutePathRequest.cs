@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Route path configuration
+    /// RoutePathRequest
     /// </summary>
     [DataContract]
     public partial class RoutePathRequest :  IEquatable<RoutePathRequest>
@@ -112,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaType">The media type of the given queue to associate with the route path (required).</param>
         /// <param name="LanguageId">The ID of the language to associate with the route path.</param>
         /// <param name="SkillIds">The set of skill IDs to associate with the route path.</param>
-        /// <param name="SourcePlanningGroup">The planning group from which to copy route paths.</param>
+        /// <param name="SourcePlanningGroup">The planning group from which to take route paths. This property is only needed if a route path already exists in another planning group.Note that taking a route path from another planning group will modify the other planning group.</param>
         public RoutePathRequest(string QueueId = null, MediaTypeEnum? MediaType = null, string LanguageId = null, List<string> SkillIds = null, SourcePlanningGroupRequest SourcePlanningGroup = null)
         {
             this.QueueId = QueueId;
@@ -155,9 +155,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The planning group from which to copy route paths
+        /// The planning group from which to take route paths. This property is only needed if a route path already exists in another planning group.Note that taking a route path from another planning group will modify the other planning group
         /// </summary>
-        /// <value>The planning group from which to copy route paths</value>
+        /// <value>The planning group from which to take route paths. This property is only needed if a route path already exists in another planning group.Note that taking a route path from another planning group will modify the other planning group</value>
         [DataMember(Name="sourcePlanningGroup", EmitDefaultValue=false)]
         public SourcePlanningGroupRequest SourcePlanningGroup { get; set; }
         

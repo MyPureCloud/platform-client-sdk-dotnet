@@ -11,6 +11,7 @@ title: ConversationMetrics
 | **SentimentScore** | **double?** | The Sentiment Score | [optional] |
 | **SentimentTrend** | **double?** | The Sentiment Trend | [optional] |
 | **SentimentTrendClass** | **string** | The Sentiment Trend Class | [optional] |
+| **ParticipantMetrics** | [**ParticipantMetrics**](ParticipantMetrics.html) | The Participant Metrics | [optional] |
 {: class="table table-striped"}
 
 

@@ -42,6 +42,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Dynamiclist for "DynamicList"
+            /// </summary>
+            [EnumMember(Value = "DynamicList")]
+            Dynamiclist,
+            
+            /// <summary>
             /// Enum List for "List"
             /// </summary>
             [EnumMember(Value = "List")]

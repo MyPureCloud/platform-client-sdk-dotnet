@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Route path configuration
+    /// RoutePathResponse
     /// </summary>
     [DataContract]
     public partial class RoutePathResponse :  IEquatable<RoutePathResponse>

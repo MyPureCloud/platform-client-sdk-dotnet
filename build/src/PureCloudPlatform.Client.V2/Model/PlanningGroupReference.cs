@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Planning Group
+    /// PlanningGroupReference
     /// </summary>
     [DataContract]
     public partial class PlanningGroupReference :  IEquatable<PlanningGroupReference>

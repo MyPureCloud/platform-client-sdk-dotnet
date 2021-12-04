@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Source planning group
+    /// SourcePlanningGroupRequest
     /// </summary>
     [DataContract]
     public partial class SourcePlanningGroupRequest :  IEquatable<SourcePlanningGroupRequest>
