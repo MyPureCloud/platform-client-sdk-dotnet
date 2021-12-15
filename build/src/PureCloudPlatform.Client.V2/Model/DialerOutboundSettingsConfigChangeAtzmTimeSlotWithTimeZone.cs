@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// DialerOutboundSettingsConfigChangeAtzmTimeSlotWithTimeZone
+    /// The time interval to place outbound calls
     /// </summary>
     [DataContract]
     public partial class DialerOutboundSettingsConfigChangeAtzmTimeSlotWithTimeZone :  IEquatable<DialerOutboundSettingsConfigChangeAtzmTimeSlotWithTimeZone>
@@ -39,40 +39,43 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerOutboundSettingsConfigChangeAtzmTimeSlotWithTimeZone" /> class.
         /// </summary>
-        /// <param name="EarliestCallableTime">EarliestCallableTime.</param>
-        /// <param name="LatestCallableTime">LatestCallableTime.</param>
-        /// <param name="TimeZoneId">TimeZoneId.</param>
-        public DialerOutboundSettingsConfigChangeAtzmTimeSlotWithTimeZone(string EarliestCallableTime = null, string LatestCallableTime = null, string TimeZoneId = null)
+        /// <param name="TimeZoneId">The time zone to use for contacts that cannot be mapped.</param>
+        /// <param name="EarliestCallableTime">The earliest time to dial a contact.</param>
+        /// <param name="LatestCallableTime">The latest time to dial a contact.</param>
+        public DialerOutboundSettingsConfigChangeAtzmTimeSlotWithTimeZone(string TimeZoneId = null, string EarliestCallableTime = null, string LatestCallableTime = null)
         {
+            this.TimeZoneId = TimeZoneId;
             this.EarliestCallableTime = EarliestCallableTime;
             this.LatestCallableTime = LatestCallableTime;
-            this.TimeZoneId = TimeZoneId;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets EarliestCallableTime
+        /// The time zone to use for contacts that cannot be mapped
         /// </summary>
+        /// <value>The time zone to use for contacts that cannot be mapped</value>
+        [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
+        public string TimeZoneId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The earliest time to dial a contact
+        /// </summary>
+        /// <value>The earliest time to dial a contact</value>
         [DataMember(Name="earliestCallableTime", EmitDefaultValue=false)]
         public string EarliestCallableTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets LatestCallableTime
+        /// The latest time to dial a contact
         /// </summary>
+        /// <value>The latest time to dial a contact</value>
         [DataMember(Name="latestCallableTime", EmitDefaultValue=false)]
         public string LatestCallableTime { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets TimeZoneId
-        /// </summary>
-        [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
-        public string TimeZoneId { get; set; }
         
         
         /// <summary>
@@ -84,9 +87,9 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class DialerOutboundSettingsConfigChangeAtzmTimeSlotWithTimeZone {\n");
             
+            sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
             sb.Append("  EarliestCallableTime: ").Append(EarliestCallableTime).Append("\n");
             sb.Append("  LatestCallableTime: ").Append(LatestCallableTime).Append("\n");
-            sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -128,6 +131,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.TimeZoneId == other.TimeZoneId ||
+                    this.TimeZoneId != null &&
+                    this.TimeZoneId.Equals(other.TimeZoneId)
+                ) &&
+                (
                     this.EarliestCallableTime == other.EarliestCallableTime ||
                     this.EarliestCallableTime != null &&
                     this.EarliestCallableTime.Equals(other.EarliestCallableTime)
@@ -136,11 +144,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LatestCallableTime == other.LatestCallableTime ||
                     this.LatestCallableTime != null &&
                     this.LatestCallableTime.Equals(other.LatestCallableTime)
-                ) &&
-                (
-                    this.TimeZoneId == other.TimeZoneId ||
-                    this.TimeZoneId != null &&
-                    this.TimeZoneId.Equals(other.TimeZoneId)
                 );
         }
 
@@ -156,14 +159,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.TimeZoneId != null)
+                    hash = hash * 59 + this.TimeZoneId.GetHashCode();
+                
                 if (this.EarliestCallableTime != null)
                     hash = hash * 59 + this.EarliestCallableTime.GetHashCode();
                 
                 if (this.LatestCallableTime != null)
                     hash = hash * 59 + this.LatestCallableTime.GetHashCode();
-                
-                if (this.TimeZoneId != null)
-                    hash = hash * 59 + this.TimeZoneId.GetHashCode();
                 
                 return hash;
             }

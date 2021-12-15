@@ -89,11 +89,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MemberGroup" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="Name">Name.</param>
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Type">The group type.</param>
-        public MemberGroup(string Name = null, Division Division = null, TypeEnum? Type = null)
+        public MemberGroup(string Id = null, string Name = null, WritableDivision Division = null, TypeEnum? Type = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.Division = Division;
             this.Type = Type;
@@ -107,7 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         
         
         
@@ -124,7 +126,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public Division Division { get; set; }
+        public WritableDivision Division { get; set; }
         
         
         

@@ -20,24 +20,6 @@ namespace PureCloudPlatform.Client.V2.Model
     {
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets CampaignStatus
         /// </summary>
@@ -53,35 +35,41 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum On for "ON"
+            /// Enum On for "on"
             /// </summary>
-            [EnumMember(Value = "ON")]
+            [EnumMember(Value = "on")]
             On,
             
             /// <summary>
-            /// Enum Off for "OFF"
+            /// Enum Off for "off"
             /// </summary>
-            [EnumMember(Value = "OFF")]
+            [EnumMember(Value = "off")]
             Off,
             
             /// <summary>
-            /// Enum Complete for "COMPLETE"
+            /// Enum Complete for "complete"
             /// </summary>
-            [EnumMember(Value = "COMPLETE")]
+            [EnumMember(Value = "complete")]
             Complete,
             
             /// <summary>
-            /// Enum Stopping for "STOPPING"
+            /// Enum Stopping for "stopping"
             /// </summary>
-            [EnumMember(Value = "STOPPING")]
+            [EnumMember(Value = "stopping")]
             Stopping,
             
             /// <summary>
-            /// Enum Invalid for "INVALID"
+            /// Enum Invalid for "invalid"
             /// </summary>
-            [EnumMember(Value = "INVALID")]
+            [EnumMember(Value = "invalid")]
             Invalid
         }
+        
+        
+        
+        
+        
+        
         
         
         
@@ -156,35 +144,41 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Division">Division.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="DateCreated">DateCreated.</param>
-        /// <param name="DateModified">DateModified.</param>
-        /// <param name="Version">Version.</param>
         /// <param name="CampaignStatus">CampaignStatus.</param>
         /// <param name="CallableTimeSet">CallableTimeSet.</param>
-        /// <param name="ContactList">ContactList.</param>
-        /// <param name="DncLists">DncLists.</param>
-        /// <param name="ContactListFilters">ContactListFilters.</param>
-        /// <param name="AlwaysRunning">AlwaysRunning.</param>
-        /// <param name="ContactSorts">ContactSorts.</param>
-        /// <param name="MessagesPerMinute">MessagesPerMinute.</param>
+        /// <param name="ContactList">A UriReference for a resource.</param>
+        /// <param name="DncLists">The dnc lists to check before sending a message for this messaging campaign..</param>
+        /// <param name="ContactListFilters">The contact list filters to check before sending a message for this messaging campaign..</param>
+        /// <param name="AlwaysRunning">Whether this messaging campaign is always running..</param>
+        /// <param name="ContactSorts">The order in which to sort contacts for dialing, based on up to four columns..</param>
+        /// <param name="MessagesPerMinute">How many messages this messaging campaign will send per minute..</param>
         /// <param name="SmsConfig">SmsConfig.</param>
         /// <param name="EmailConfig">EmailConfig.</param>
-        /// <param name="Errors">Errors.</param>
-        public OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign(string Id = null, OutboundMessagingMessagingCampaignConfigChangeUriReference Division = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, CampaignStatusEnum? CampaignStatus = null, OutboundMessagingMessagingCampaignConfigChangeUriReference CallableTimeSet = null, OutboundMessagingMessagingCampaignConfigChangeUriReference ContactList = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> DncLists = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> ContactListFilters = null, bool? AlwaysRunning = null, List<OutboundMessagingMessagingCampaignConfigChangeContactSort> ContactSorts = null, int? MessagesPerMinute = null, OutboundMessagingMessagingCampaignConfigChangeSmsConfig SmsConfig = null, OutboundMessagingMessagingCampaignConfigChangeEmailConfig EmailConfig = null, List<OutboundMessagingMessagingCampaignConfigChangeErrorDetail> Errors = null)
+        /// <param name="Errors">A list of current error conditions associated with this messaging campaign.</param>
+        /// <param name="Id">The globally unique identifier for the object..</param>
+        /// <param name="Division">A UriReference for a resource.</param>
+        /// <param name="Name">The UI-visible name of the object.</param>
+        /// <param name="DateCreated">Creation time of the entity.</param>
+        /// <param name="DateModified">Last modified time of the entity.</param>
+        /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
+        public OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign(CampaignStatusEnum? CampaignStatus = null, OutboundMessagingMessagingCampaignConfigChangeUriReference CallableTimeSet = null, OutboundMessagingMessagingCampaignConfigChangeUriReference ContactList = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> DncLists = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> ContactListFilters = null, bool? AlwaysRunning = null, List<OutboundMessagingMessagingCampaignConfigChangeContactSort> ContactSorts = null, int? MessagesPerMinute = null, OutboundMessagingMessagingCampaignConfigChangeSmsConfig SmsConfig = null, OutboundMessagingMessagingCampaignConfigChangeEmailConfig EmailConfig = null, List<OutboundMessagingMessagingCampaignConfigChangeErrorDetail> Errors = null, string Id = null, OutboundMessagingMessagingCampaignConfigChangeUriReference Division = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
         {
-            this.Id = Id;
-            this.Division = Division;
-            this.Name = Name;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.Version = Version;
             this.CampaignStatus = CampaignStatus;
             this.CallableTimeSet = CallableTimeSet;
             this.ContactList = ContactList;
@@ -196,56 +190,14 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SmsConfig = SmsConfig;
             this.EmailConfig = EmailConfig;
             this.Errors = Errors;
+            this.Id = Id;
+            this.Division = Division;
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.Version = Version;
             
         }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Id
-        /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Division
-        /// </summary>
-        [DataMember(Name="division", EmitDefaultValue=false)]
-        public OutboundMessagingMessagingCampaignConfigChangeUriReference Division { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateCreated
-        /// </summary>
-        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateModified
-        /// </summary>
-        [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Version
-        /// </summary>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
         
         
         
@@ -260,48 +212,54 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets ContactList
+        /// A UriReference for a resource
         /// </summary>
+        /// <value>A UriReference for a resource</value>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
         public OutboundMessagingMessagingCampaignConfigChangeUriReference ContactList { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets DncLists
+        /// The dnc lists to check before sending a message for this messaging campaign.
         /// </summary>
+        /// <value>The dnc lists to check before sending a message for this messaging campaign.</value>
         [DataMember(Name="dncLists", EmitDefaultValue=false)]
         public List<OutboundMessagingMessagingCampaignConfigChangeUriReference> DncLists { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ContactListFilters
+        /// The contact list filters to check before sending a message for this messaging campaign.
         /// </summary>
+        /// <value>The contact list filters to check before sending a message for this messaging campaign.</value>
         [DataMember(Name="contactListFilters", EmitDefaultValue=false)]
         public List<OutboundMessagingMessagingCampaignConfigChangeUriReference> ContactListFilters { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AlwaysRunning
+        /// Whether this messaging campaign is always running.
         /// </summary>
+        /// <value>Whether this messaging campaign is always running.</value>
         [DataMember(Name="alwaysRunning", EmitDefaultValue=false)]
         public bool? AlwaysRunning { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ContactSorts
+        /// The order in which to sort contacts for dialing, based on up to four columns.
         /// </summary>
+        /// <value>The order in which to sort contacts for dialing, based on up to four columns.</value>
         [DataMember(Name="contactSorts", EmitDefaultValue=false)]
         public List<OutboundMessagingMessagingCampaignConfigChangeContactSort> ContactSorts { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MessagesPerMinute
+        /// How many messages this messaging campaign will send per minute.
         /// </summary>
+        /// <value>How many messages this messaging campaign will send per minute.</value>
         [DataMember(Name="messagesPerMinute", EmitDefaultValue=false)]
         public int? MessagesPerMinute { get; set; }
         
@@ -324,10 +282,65 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Errors
+        /// A list of current error conditions associated with this messaging campaign
         /// </summary>
+        /// <value>A list of current error conditions associated with this messaging campaign</value>
         [DataMember(Name="errors", EmitDefaultValue=false)]
         public List<OutboundMessagingMessagingCampaignConfigChangeErrorDetail> Errors { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The globally unique identifier for the object.
+        /// </summary>
+        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A UriReference for a resource
+        /// </summary>
+        /// <value>A UriReference for a resource</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public OutboundMessagingMessagingCampaignConfigChangeUriReference Division { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The UI-visible name of the object
+        /// </summary>
+        /// <value>The UI-visible name of the object</value>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Creation time of the entity
+        /// </summary>
+        /// <value>Creation time of the entity</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Last modified time of the entity
+        /// </summary>
+        /// <value>Last modified time of the entity</value>
+        [DataMember(Name="dateModified", EmitDefaultValue=false)]
+        public DateTime? DateModified { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Required for updates, must match the version number of the most recent update
+        /// </summary>
+        /// <value>Required for updates, must match the version number of the most recent update</value>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public int? Version { get; set; }
         
         
         /// <summary>
@@ -339,12 +352,6 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign {\n");
             
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Division: ").Append(Division).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  CampaignStatus: ").Append(CampaignStatus).Append("\n");
             sb.Append("  CallableTimeSet: ").Append(CallableTimeSet).Append("\n");
             sb.Append("  ContactList: ").Append(ContactList).Append("\n");
@@ -356,6 +363,12 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SmsConfig: ").Append(SmsConfig).Append("\n");
             sb.Append("  EmailConfig: ").Append(EmailConfig).Append("\n");
             sb.Append("  Errors: ").Append(Errors).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -396,36 +409,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 return false;
 
             return true &&
-                (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Division == other.Division ||
-                    this.Division != null &&
-                    this.Division.Equals(other.Division)
-                ) &&
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
-                    this.DateCreated == other.DateCreated ||
-                    this.DateCreated != null &&
-                    this.DateCreated.Equals(other.DateCreated)
-                ) &&
-                (
-                    this.DateModified == other.DateModified ||
-                    this.DateModified != null &&
-                    this.DateModified.Equals(other.DateModified)
-                ) &&
-                (
-                    this.Version == other.Version ||
-                    this.Version != null &&
-                    this.Version.Equals(other.Version)
-                ) &&
                 (
                     this.CampaignStatus == other.CampaignStatus ||
                     this.CampaignStatus != null &&
@@ -480,6 +463,36 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Errors == other.Errors ||
                     this.Errors != null &&
                     this.Errors.SequenceEqual(other.Errors)
+                ) &&
+                (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.DateCreated == other.DateCreated ||
+                    this.DateCreated != null &&
+                    this.DateCreated.Equals(other.DateCreated)
+                ) &&
+                (
+                    this.DateModified == other.DateModified ||
+                    this.DateModified != null &&
+                    this.DateModified.Equals(other.DateModified)
+                ) &&
+                (
+                    this.Version == other.Version ||
+                    this.Version != null &&
+                    this.Version.Equals(other.Version)
                 );
         }
 
@@ -494,24 +507,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Division != null)
-                    hash = hash * 59 + this.Division.GetHashCode();
-                
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-                
-                if (this.DateCreated != null)
-                    hash = hash * 59 + this.DateCreated.GetHashCode();
-                
-                if (this.DateModified != null)
-                    hash = hash * 59 + this.DateModified.GetHashCode();
-                
-                if (this.Version != null)
-                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.CampaignStatus != null)
                     hash = hash * 59 + this.CampaignStatus.GetHashCode();
@@ -545,6 +540,24 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Errors != null)
                     hash = hash * 59 + this.Errors.GetHashCode();
+                
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
+                
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.DateCreated != null)
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
+                
+                if (this.DateModified != null)
+                    hash = hash * 59 + this.DateModified.GetHashCode();
+                
+                if (this.Version != null)
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 return hash;
             }

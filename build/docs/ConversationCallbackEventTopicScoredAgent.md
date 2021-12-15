@@ -7,8 +7,8 @@ title: ConversationCallbackEventTopicScoredAgent
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Agent** | [**ConversationCallbackEventTopicUriReference**](ConversationCallbackEventTopicUriReference.html) |  | [optional] |
-| **Score** | **int?** |  | [optional] |
+| **Agent** | [**ConversationCallbackEventTopicUriReference**](ConversationCallbackEventTopicUriReference.html) | A UriReference for a resource | [optional] |
+| **Score** | **int?** | Agent&#39;s score for the current conversation, from 0 - 100, higher being better | [optional] |
 {: class="table table-striped"}
 
 

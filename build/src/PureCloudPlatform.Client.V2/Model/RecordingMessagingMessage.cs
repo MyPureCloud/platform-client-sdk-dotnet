@@ -75,6 +75,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingMessagingMessage" /> class.
@@ -90,7 +95,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageStickerAttachments">List of message stickers attached with this message..</param>
         /// <param name="QuickReplies">List of quick reply options offered with this message..</param>
         /// <param name="ButtonResponse">Button Response selected by user for this message..</param>
-        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null)
+        /// <param name="Story">Ephemeral story content..</param>
+        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, RecordingContentStory Story = null)
         {
             this.From = From;
             this.FromUser = FromUser;
@@ -103,6 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MessageStickerAttachments = MessageStickerAttachments;
             this.QuickReplies = QuickReplies;
             this.ButtonResponse = ButtonResponse;
+            this.Story = Story;
             
         }
         
@@ -206,6 +213,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ButtonResponse ButtonResponse { get; set; }
         
         
+        
+        /// <summary>
+        /// Ephemeral story content.
+        /// </summary>
+        /// <value>Ephemeral story content.</value>
+        [DataMember(Name="story", EmitDefaultValue=false)]
+        public RecordingContentStory Story { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -226,6 +242,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessageStickerAttachments: ").Append(MessageStickerAttachments).Append("\n");
             sb.Append("  QuickReplies: ").Append(QuickReplies).Append("\n");
             sb.Append("  ButtonResponse: ").Append(ButtonResponse).Append("\n");
+            sb.Append("  Story: ").Append(Story).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -320,6 +337,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ButtonResponse == other.ButtonResponse ||
                     this.ButtonResponse != null &&
                     this.ButtonResponse.Equals(other.ButtonResponse)
+                ) &&
+                (
+                    this.Story == other.Story ||
+                    this.Story != null &&
+                    this.Story.Equals(other.Story)
                 );
         }
 
@@ -367,6 +389,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ButtonResponse != null)
                     hash = hash * 59 + this.ButtonResponse.GetHashCode();
+                
+                if (this.Story != null)
+                    hash = hash * 59 + this.Story.GetHashCode();
                 
                 return hash;
             }

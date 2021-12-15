@@ -30,23 +30,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactlistDownloadReadyExportUri" /> class.
         /// </summary>
         /// <param name="Uri">Uri.</param>
         /// <param name="ExportTimestamp">ExportTimestamp.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ContactlistDownloadReadyExportUri(string Uri = null, string ExportTimestamp = null, Object AdditionalProperties = null)
+        public ContactlistDownloadReadyExportUri(string Uri = null, string ExportTimestamp = null)
         {
             this.Uri = Uri;
             this.ExportTimestamp = ExportTimestamp;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -67,14 +60,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ExportTimestamp { get; set; }
         
         
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +71,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Uri: ").Append(Uri).Append("\n");
             sb.Append("  ExportTimestamp: ").Append(ExportTimestamp).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -136,11 +120,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExportTimestamp == other.ExportTimestamp ||
                     this.ExportTimestamp != null &&
                     this.ExportTimestamp.Equals(other.ExportTimestamp)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -161,9 +140,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ExportTimestamp != null)
                     hash = hash * 59 + this.ExportTimestamp.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

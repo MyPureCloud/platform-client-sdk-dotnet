@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ConversationEventTopicConversationRoutingData
+    /// Information on how a communication should be routed to an agent.
     /// </summary>
     [DataContract]
     public partial class ConversationEventTopicConversationRoutingData :  IEquatable<ConversationEventTopicConversationRoutingData>
@@ -50,10 +50,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ConversationEventTopicConversationRoutingData" /> class.
         /// </summary>
         /// <param name="Queue">Queue.</param>
-        /// <param name="Language">Language.</param>
-        /// <param name="Priority">Priority.</param>
-        /// <param name="Skills">Skills.</param>
-        /// <param name="ScoredAgents">ScoredAgents.</param>
+        /// <param name="Language">A UriReference for a resource.</param>
+        /// <param name="Priority">The priority of the conversation to use for routing decisions.</param>
+        /// <param name="Skills">The skills to use for routing decisions.</param>
+        /// <param name="ScoredAgents">A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents.</param>
         public ConversationEventTopicConversationRoutingData(ConversationEventTopicUriReference Queue = null, ConversationEventTopicUriReference Language = null, int? Priority = null, List<ConversationEventTopicUriReference> Skills = null, List<ConversationEventTopicScoredAgent> ScoredAgents = null)
         {
             this.Queue = Queue;
@@ -75,32 +75,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Language
+        /// A UriReference for a resource
         /// </summary>
+        /// <value>A UriReference for a resource</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public ConversationEventTopicUriReference Language { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Priority
+        /// The priority of the conversation to use for routing decisions
         /// </summary>
+        /// <value>The priority of the conversation to use for routing decisions</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Skills
+        /// The skills to use for routing decisions
         /// </summary>
+        /// <value>The skills to use for routing decisions</value>
         [DataMember(Name="skills", EmitDefaultValue=false)]
         public List<ConversationEventTopicUriReference> Skills { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ScoredAgents
+        /// A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents
         /// </summary>
+        /// <value>A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents</value>
         [DataMember(Name="scoredAgents", EmitDefaultValue=false)]
         public List<ConversationEventTopicScoredAgent> ScoredAgents { get; set; }
         

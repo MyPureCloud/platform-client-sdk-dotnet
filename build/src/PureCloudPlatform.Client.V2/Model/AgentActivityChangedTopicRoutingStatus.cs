@@ -21,8 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Status
+        /// Indicates the Routing State of the agent.
         /// </summary>
+        /// <value>Indicates the Routing State of the agent.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StatusEnum
         {
@@ -73,8 +74,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Status
+        /// Indicates the Routing State of the agent.
         /// </summary>
+        /// <value>Indicates the Routing State of the agent.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         
@@ -85,8 +87,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentActivityChangedTopicRoutingStatus" /> class.
         /// </summary>
-        /// <param name="Status">Status.</param>
-        /// <param name="StartTime">StartTime.</param>
+        /// <param name="Status">Indicates the Routing State of the agent..</param>
+        /// <param name="StartTime">The timestamp when the agent went into this state..</param>
         public AgentActivityChangedTopicRoutingStatus(StatusEnum? Status = null, DateTime? StartTime = null)
         {
             this.Status = Status;
@@ -99,8 +101,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets StartTime
+        /// The timestamp when the agent went into this state.
         /// </summary>
+        /// <value>The timestamp when the agent went into this state.</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
         

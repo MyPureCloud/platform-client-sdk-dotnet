@@ -21,8 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets State
+        /// The connection state of this communication.
         /// </summary>
+        /// <value>The connection state of this communication.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
@@ -35,51 +36,51 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Alerting for "ALERTING"
+            /// Enum Alerting for "alerting"
             /// </summary>
-            [EnumMember(Value = "ALERTING")]
+            [EnumMember(Value = "alerting")]
             Alerting,
             
             /// <summary>
-            /// Enum Dialing for "DIALING"
+            /// Enum Dialing for "dialing"
             /// </summary>
-            [EnumMember(Value = "DIALING")]
+            [EnumMember(Value = "dialing")]
             Dialing,
             
             /// <summary>
-            /// Enum Contacting for "CONTACTING"
+            /// Enum Contacting for "contacting"
             /// </summary>
-            [EnumMember(Value = "CONTACTING")]
+            [EnumMember(Value = "contacting")]
             Contacting,
             
             /// <summary>
-            /// Enum Offering for "OFFERING"
+            /// Enum Offering for "offering"
             /// </summary>
-            [EnumMember(Value = "OFFERING")]
+            [EnumMember(Value = "offering")]
             Offering,
             
             /// <summary>
-            /// Enum Connected for "CONNECTED"
+            /// Enum Connected for "connected"
             /// </summary>
-            [EnumMember(Value = "CONNECTED")]
+            [EnumMember(Value = "connected")]
             Connected,
             
             /// <summary>
-            /// Enum Disconnected for "DISCONNECTED"
+            /// Enum Disconnected for "disconnected"
             /// </summary>
-            [EnumMember(Value = "DISCONNECTED")]
+            [EnumMember(Value = "disconnected")]
             Disconnected,
             
             /// <summary>
-            /// Enum Terminated for "TERMINATED"
+            /// Enum Terminated for "terminated"
             /// </summary>
-            [EnumMember(Value = "TERMINATED")]
+            [EnumMember(Value = "terminated")]
             Terminated,
             
             /// <summary>
-            /// Enum None for "NONE"
+            /// Enum None for "none"
             /// </summary>
-            [EnumMember(Value = "NONE")]
+            [EnumMember(Value = "none")]
             None
         }
         
@@ -108,8 +109,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets DisconnectType
+        /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
+        /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DisconnectTypeEnum
         {
@@ -122,99 +124,99 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Endpoint for "ENDPOINT"
+            /// Enum Endpoint for "endpoint"
             /// </summary>
-            [EnumMember(Value = "ENDPOINT")]
+            [EnumMember(Value = "endpoint")]
             Endpoint,
             
             /// <summary>
-            /// Enum Client for "CLIENT"
+            /// Enum Client for "client"
             /// </summary>
-            [EnumMember(Value = "CLIENT")]
+            [EnumMember(Value = "client")]
             Client,
             
             /// <summary>
-            /// Enum System for "SYSTEM"
+            /// Enum System for "system"
             /// </summary>
-            [EnumMember(Value = "SYSTEM")]
+            [EnumMember(Value = "system")]
             System,
             
             /// <summary>
-            /// Enum Timeout for "TIMEOUT"
+            /// Enum Timeout for "timeout"
             /// </summary>
-            [EnumMember(Value = "TIMEOUT")]
+            [EnumMember(Value = "timeout")]
             Timeout,
             
             /// <summary>
-            /// Enum Transfer for "TRANSFER"
+            /// Enum Transfer for "transfer"
             /// </summary>
-            [EnumMember(Value = "TRANSFER")]
+            [EnumMember(Value = "transfer")]
             Transfer,
             
             /// <summary>
-            /// Enum TransferConference for "TRANSFER_CONFERENCE"
+            /// Enum Transferconference for "transfer.conference"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_CONFERENCE")]
-            TransferConference,
+            [EnumMember(Value = "transfer.conference")]
+            Transferconference,
             
             /// <summary>
-            /// Enum TransferConsult for "TRANSFER_CONSULT"
+            /// Enum Transferconsult for "transfer.consult"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_CONSULT")]
-            TransferConsult,
+            [EnumMember(Value = "transfer.consult")]
+            Transferconsult,
             
             /// <summary>
-            /// Enum TransferForward for "TRANSFER_FORWARD"
+            /// Enum Transferforward for "transfer.forward"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_FORWARD")]
-            TransferForward,
+            [EnumMember(Value = "transfer.forward")]
+            Transferforward,
             
             /// <summary>
-            /// Enum TransferNoanswer for "TRANSFER_NOANSWER"
+            /// Enum Transfernoanswer for "transfer.noanswer"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_NOANSWER")]
-            TransferNoanswer,
+            [EnumMember(Value = "transfer.noanswer")]
+            Transfernoanswer,
             
             /// <summary>
-            /// Enum TransferNotavailable for "TRANSFER_NOTAVAILABLE"
+            /// Enum Transfernotavailable for "transfer.notavailable"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_NOTAVAILABLE")]
-            TransferNotavailable,
+            [EnumMember(Value = "transfer.notavailable")]
+            Transfernotavailable,
             
             /// <summary>
-            /// Enum TransportFailure for "TRANSPORT_FAILURE"
+            /// Enum Transportfailure for "transport.failure"
             /// </summary>
-            [EnumMember(Value = "TRANSPORT_FAILURE")]
-            TransportFailure,
+            [EnumMember(Value = "transport.failure")]
+            Transportfailure,
             
             /// <summary>
-            /// Enum Error for "ERROR"
+            /// Enum Error for "error"
             /// </summary>
-            [EnumMember(Value = "ERROR")]
+            [EnumMember(Value = "error")]
             Error,
             
             /// <summary>
-            /// Enum Peer for "PEER"
+            /// Enum Peer for "peer"
             /// </summary>
-            [EnumMember(Value = "PEER")]
+            [EnumMember(Value = "peer")]
             Peer,
             
             /// <summary>
-            /// Enum Other for "OTHER"
+            /// Enum Other for "other"
             /// </summary>
-            [EnumMember(Value = "OTHER")]
+            [EnumMember(Value = "other")]
             Other,
             
             /// <summary>
-            /// Enum Spam for "SPAM"
+            /// Enum Spam for "spam"
             /// </summary>
-            [EnumMember(Value = "SPAM")]
+            [EnumMember(Value = "spam")]
             Spam,
             
             /// <summary>
-            /// Enum Uncallable for "UNCALLABLE"
+            /// Enum Uncallable for "uncallable"
             /// </summary>
-            [EnumMember(Value = "UNCALLABLE")]
+            [EnumMember(Value = "uncallable")]
             Uncallable
         }
         
@@ -237,12 +239,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
-        /// Gets or Sets State
+        /// The connection state of this communication.
         /// </summary>
+        /// <value>The connection state of this communication.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         
@@ -263,12 +263,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets DisconnectType
+        /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
+        /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
-        
-        
         
         
         
@@ -285,22 +284,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationEventTopicScreenshare" /> class.
         /// </summary>
-        /// <param name="State">State.</param>
-        /// <param name="Self">Self.</param>
-        /// <param name="Id">Id.</param>
-        /// <param name="Context">Context.</param>
-        /// <param name="Sharing">Sharing.</param>
-        /// <param name="Provider">Provider.</param>
-        /// <param name="ScriptId">ScriptId.</param>
-        /// <param name="PeerId">PeerId.</param>
-        /// <param name="DisconnectType">DisconnectType.</param>
-        /// <param name="ConnectedTime">ConnectedTime.</param>
-        /// <param name="DisconnectedTime">DisconnectedTime.</param>
-        /// <param name="Wrapup">Wrapup.</param>
-        /// <param name="AfterCallWork">AfterCallWork.</param>
-        /// <param name="AfterCallWorkRequired">AfterCallWorkRequired.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationEventTopicScreenshare(StateEnum? State = null, ConversationEventTopicAddress Self = null, string Id = null, string Context = null, bool? Sharing = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, ConversationEventTopicWrapup Wrapup = null, ConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, Object AdditionalProperties = null)
+        /// <param name="State">The connection state of this communication..</param>
+        /// <param name="Self">Address and name data for a call endpoint..</param>
+        /// <param name="Id">A globally unique identifier for this communication..</param>
+        /// <param name="Context">The room id context (xmpp jid) for the conference session..</param>
+        /// <param name="Sharing">Indicates whether this participant is sharing their screen to the session..</param>
+        /// <param name="Provider">The source provider of the screen share..</param>
+        /// <param name="ScriptId">The UUID of the script to use..</param>
+        /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
+        /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
+        /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock..</param>
+        /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock..</param>
+        /// <param name="Wrapup">Call wrap up or disposition data..</param>
+        /// <param name="AfterCallWork">A communication&#39;s after-call work data..</param>
+        /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
+        public ConversationEventTopicScreenshare(StateEnum? State = null, ConversationEventTopicAddress Self = null, string Id = null, string Context = null, bool? Sharing = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, ConversationEventTopicWrapup Wrapup = null, ConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null)
         {
             this.State = State;
             this.Self = Self;
@@ -316,7 +314,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Wrapup = Wrapup;
             this.AfterCallWork = AfterCallWork;
             this.AfterCallWorkRequired = AfterCallWorkRequired;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -325,56 +322,63 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Self
+        /// Address and name data for a call endpoint.
         /// </summary>
+        /// <value>Address and name data for a call endpoint.</value>
         [DataMember(Name="self", EmitDefaultValue=false)]
         public ConversationEventTopicAddress Self { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// A globally unique identifier for this communication.
         /// </summary>
+        /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Context
+        /// The room id context (xmpp jid) for the conference session.
         /// </summary>
+        /// <value>The room id context (xmpp jid) for the conference session.</value>
         [DataMember(Name="context", EmitDefaultValue=false)]
         public string Context { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Sharing
+        /// Indicates whether this participant is sharing their screen to the session.
         /// </summary>
+        /// <value>Indicates whether this participant is sharing their screen to the session.</value>
         [DataMember(Name="sharing", EmitDefaultValue=false)]
         public bool? Sharing { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Provider
+        /// The source provider of the screen share.
         /// </summary>
+        /// <value>The source provider of the screen share.</value>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ScriptId
+        /// The UUID of the script to use.
         /// </summary>
+        /// <value>The UUID of the script to use.</value>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets PeerId
+        /// The id of the peer communication corresponding to a matching leg for this communication.
         /// </summary>
+        /// <value>The id of the peer communication corresponding to a matching leg for this communication.</value>
         [DataMember(Name="peerId", EmitDefaultValue=false)]
         public string PeerId { get; set; }
         
@@ -383,50 +387,47 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets ConnectedTime
+        /// The timestamp when this communication was connected in the cloud clock.
         /// </summary>
+        /// <value>The timestamp when this communication was connected in the cloud clock.</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets DisconnectedTime
+        /// The timestamp when this communication disconnected from the conversation in the provider clock.
         /// </summary>
+        /// <value>The timestamp when this communication disconnected from the conversation in the provider clock.</value>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Wrapup
+        /// Call wrap up or disposition data.
         /// </summary>
+        /// <value>Call wrap up or disposition data.</value>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public ConversationEventTopicWrapup Wrapup { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AfterCallWork
+        /// A communication&#39;s after-call work data.
         /// </summary>
+        /// <value>A communication&#39;s after-call work data.</value>
         [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
         public ConversationEventTopicAfterCallWork AfterCallWork { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AfterCallWorkRequired
+        /// Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested.
         /// </summary>
+        /// <value>Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested.</value>
         [DataMember(Name="afterCallWorkRequired", EmitDefaultValue=false)]
         public bool? AfterCallWorkRequired { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -452,7 +453,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -562,11 +562,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AfterCallWorkRequired == other.AfterCallWorkRequired ||
                     this.AfterCallWorkRequired != null &&
                     this.AfterCallWorkRequired.Equals(other.AfterCallWorkRequired)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -623,9 +618,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AfterCallWorkRequired != null)
                     hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

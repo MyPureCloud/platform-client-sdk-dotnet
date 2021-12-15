@@ -40,69 +40,58 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerRulesetConfigChangeAction" /> class.
         /// </summary>
-        /// <param name="Type">Type.</param>
-        /// <param name="ActionTypeName">ActionTypeName.</param>
-        /// <param name="UpdateOption">UpdateOption.</param>
-        /// <param name="Properties">Properties.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerRulesetConfigChangeAction(string Type = null, string ActionTypeName = null, string UpdateOption = null, Dictionary<string, string> Properties = null, Object AdditionalProperties = null)
+        /// <param name="Type">Type of the action.</param>
+        /// <param name="ActionTypeName">Identifier of the action.</param>
+        /// <param name="UpdateOption">Indicator of the type of update action (applicable only to certain types of actions).</param>
+        /// <param name="Properties">Map of key-value pairs pertinent to the action (different actions require different properties).</param>
+        public DialerRulesetConfigChangeAction(string Type = null, string ActionTypeName = null, string UpdateOption = null, Dictionary<string, string> Properties = null)
         {
             this.Type = Type;
             this.ActionTypeName = ActionTypeName;
             this.UpdateOption = UpdateOption;
             this.Properties = Properties;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Type
+        /// Type of the action
         /// </summary>
+        /// <value>Type of the action</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ActionTypeName
+        /// Identifier of the action
         /// </summary>
+        /// <value>Identifier of the action</value>
         [DataMember(Name="actionTypeName", EmitDefaultValue=false)]
         public string ActionTypeName { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets UpdateOption
+        /// Indicator of the type of update action (applicable only to certain types of actions)
         /// </summary>
+        /// <value>Indicator of the type of update action (applicable only to certain types of actions)</value>
         [DataMember(Name="updateOption", EmitDefaultValue=false)]
         public string UpdateOption { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Properties
+        /// Map of key-value pairs pertinent to the action (different actions require different properties)
         /// </summary>
+        /// <value>Map of key-value pairs pertinent to the action (different actions require different properties)</value>
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public Dictionary<string, string> Properties { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -118,7 +107,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ActionTypeName: ").Append(ActionTypeName).Append("\n");
             sb.Append("  UpdateOption: ").Append(UpdateOption).Append("\n");
             sb.Append("  Properties: ").Append(Properties).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -178,11 +166,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Properties == other.Properties ||
                     this.Properties != null &&
                     this.Properties.SequenceEqual(other.Properties)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -209,9 +192,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

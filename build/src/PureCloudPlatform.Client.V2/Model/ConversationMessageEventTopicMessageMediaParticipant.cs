@@ -386,81 +386,81 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Unknown for "UNKNOWN"
+            /// Enum Unknown for "unknown"
             /// </summary>
-            [EnumMember(Value = "UNKNOWN")]
+            [EnumMember(Value = "unknown")]
             Unknown,
             
             /// <summary>
-            /// Enum Sms for "SMS"
+            /// Enum Sms for "sms"
             /// </summary>
-            [EnumMember(Value = "SMS")]
+            [EnumMember(Value = "sms")]
             Sms,
             
             /// <summary>
-            /// Enum Twitter for "TWITTER"
+            /// Enum Twitter for "twitter"
             /// </summary>
-            [EnumMember(Value = "TWITTER")]
+            [EnumMember(Value = "twitter")]
             Twitter,
             
             /// <summary>
-            /// Enum Facebook for "FACEBOOK"
+            /// Enum Facebook for "facebook"
             /// </summary>
-            [EnumMember(Value = "FACEBOOK")]
+            [EnumMember(Value = "facebook")]
             Facebook,
             
             /// <summary>
-            /// Enum Line for "LINE"
+            /// Enum Line for "line"
             /// </summary>
-            [EnumMember(Value = "LINE")]
+            [EnumMember(Value = "line")]
             Line,
             
             /// <summary>
-            /// Enum Viber for "VIBER"
+            /// Enum Viber for "viber"
             /// </summary>
-            [EnumMember(Value = "VIBER")]
+            [EnumMember(Value = "viber")]
             Viber,
             
             /// <summary>
-            /// Enum Wechat for "WECHAT"
+            /// Enum Wechat for "wechat"
             /// </summary>
-            [EnumMember(Value = "WECHAT")]
+            [EnumMember(Value = "wechat")]
             Wechat,
             
             /// <summary>
-            /// Enum Whatsapp for "WHATSAPP"
+            /// Enum Whatsapp for "whatsapp"
             /// </summary>
-            [EnumMember(Value = "WHATSAPP")]
+            [EnumMember(Value = "whatsapp")]
             Whatsapp,
             
             /// <summary>
-            /// Enum Telegram for "TELEGRAM"
+            /// Enum Telegram for "telegram"
             /// </summary>
-            [EnumMember(Value = "TELEGRAM")]
+            [EnumMember(Value = "telegram")]
             Telegram,
             
             /// <summary>
-            /// Enum Kakao for "KAKAO"
+            /// Enum Kakao for "kakao"
             /// </summary>
-            [EnumMember(Value = "KAKAO")]
+            [EnumMember(Value = "kakao")]
             Kakao,
             
             /// <summary>
-            /// Enum Webmessaging for "WEBMESSAGING"
+            /// Enum Webmessaging for "webmessaging"
             /// </summary>
-            [EnumMember(Value = "WEBMESSAGING")]
+            [EnumMember(Value = "webmessaging")]
             Webmessaging,
             
             /// <summary>
-            /// Enum Open for "OPEN"
+            /// Enum Open for "open"
             /// </summary>
-            [EnumMember(Value = "OPEN")]
+            [EnumMember(Value = "open")]
             Open,
             
             /// <summary>
-            /// Enum Instagram for "INSTAGRAM"
+            /// Enum Instagram for "instagram"
             /// </summary>
-            [EnumMember(Value = "INSTAGRAM")]
+            [EnumMember(Value = "instagram")]
             Instagram
         }
         

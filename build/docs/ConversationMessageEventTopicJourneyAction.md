@@ -7,7 +7,7 @@ title: ConversationMessageEventTopicJourneyAction
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
+| **Id** | **string** | The ID of an action from the Journey System (an action is spawned from an actionMap) | [optional] |
 | **ActionMap** | [**ConversationMessageEventTopicJourneyActionMap**](ConversationMessageEventTopicJourneyActionMap.html) |  | [optional] |
 {: class="table table-striped"}
 

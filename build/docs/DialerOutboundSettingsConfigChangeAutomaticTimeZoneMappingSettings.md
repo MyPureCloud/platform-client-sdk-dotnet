@@ -7,7 +7,7 @@ title: DialerOutboundSettingsConfigChangeAutomaticTimeZoneMappingSettings
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **CallableWindows** | [**List&lt;DialerOutboundSettingsConfigChangeCallableWindow&gt;**](DialerOutboundSettingsConfigChangeCallableWindow.html) |  | [optional] |
+| **CallableWindows** | [**List&lt;DialerOutboundSettingsConfigChangeCallableWindow&gt;**](DialerOutboundSettingsConfigChangeCallableWindow.html) | The time intervals to use for automatic time zone mapping | [optional] |
 {: class="table table-striped"}
 
 

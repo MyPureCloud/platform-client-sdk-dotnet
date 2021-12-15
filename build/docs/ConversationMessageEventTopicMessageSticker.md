@@ -7,8 +7,8 @@ title: ConversationMessageEventTopicMessageSticker
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Url** | **string** |  | [optional] |
-| **Id** | **string** |  | [optional] |
+| **Url** | **string** | The location of the sticker, useful for retrieving it | [optional] |
+| **Id** | **string** | The unique id of the the sticker object. | [optional] |
 {: class="table table-striped"}
 
 

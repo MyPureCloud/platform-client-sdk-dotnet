@@ -29,24 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
-        /// Gets or Sets FilterType
+        /// Contact list filter type
         /// </summary>
+        /// <value>Contact list filter type</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum FilterTypeEnum
         {
@@ -94,11 +80,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
-        /// Gets or Sets FilterType
+        /// Contact list filter type
         /// </summary>
+        /// <value>Contact list filter type</value>
         [DataMember(Name="filterType", EmitDefaultValue=false)]
         public FilterTypeEnum? FilterType { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -107,70 +104,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerContactlistfilterConfigChangeContactListFilter" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="DateCreated">DateCreated.</param>
-        /// <param name="DateModified">DateModified.</param>
-        /// <param name="Version">Version.</param>
         /// <param name="ContactList">ContactList.</param>
-        /// <param name="ContactListColumns">ContactListColumns.</param>
+        /// <param name="ContactListColumns">The list of contact list columns.</param>
         /// <param name="Clauses">Clauses.</param>
-        /// <param name="FilterType">FilterType.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerContactlistfilterConfigChangeContactListFilter(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DialerContactlistfilterConfigChangeUriReference ContactList = null, List<string> ContactListColumns = null, List<DialerContactlistfilterConfigChangeFilterClause> Clauses = null, FilterTypeEnum? FilterType = null, Object AdditionalProperties = null)
+        /// <param name="FilterType">Contact list filter type.</param>
+        /// <param name="Id">The globally unique identifier for the object..</param>
+        /// <param name="Name">The UI-visible name of the object.</param>
+        /// <param name="DateCreated">Creation time of the entity.</param>
+        /// <param name="DateModified">Last modified time of the entity.</param>
+        /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
+        public DialerContactlistfilterConfigChangeContactListFilter(DialerContactlistfilterConfigChangeUriReference ContactList = null, List<string> ContactListColumns = null, List<DialerContactlistfilterConfigChangeFilterClause> Clauses = null, FilterTypeEnum? FilterType = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
         {
+            this.ContactList = ContactList;
+            this.ContactListColumns = ContactListColumns;
+            this.Clauses = Clauses;
+            this.FilterType = FilterType;
             this.Id = Id;
             this.Name = Name;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.Version = Version;
-            this.ContactList = ContactList;
-            this.ContactListColumns = ContactListColumns;
-            this.Clauses = Clauses;
-            this.FilterType = FilterType;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Id
-        /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateCreated
-        /// </summary>
-        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateModified
-        /// </summary>
-        [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Version
-        /// </summary>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
         
         
         
@@ -183,8 +138,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets ContactListColumns
+        /// The list of contact list columns
         /// </summary>
+        /// <value>The list of contact list columns</value>
         [DataMember(Name="contactListColumns", EmitDefaultValue=false)]
         public List<string> ContactListColumns { get; set; }
         
@@ -201,10 +157,47 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets AdditionalProperties
+        /// The globally unique identifier for the object.
         /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
+        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The UI-visible name of the object
+        /// </summary>
+        /// <value>The UI-visible name of the object</value>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Creation time of the entity
+        /// </summary>
+        /// <value>Creation time of the entity</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Last modified time of the entity
+        /// </summary>
+        /// <value>Last modified time of the entity</value>
+        [DataMember(Name="dateModified", EmitDefaultValue=false)]
+        public DateTime? DateModified { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Required for updates, must match the version number of the most recent update
+        /// </summary>
+        /// <value>Required for updates, must match the version number of the most recent update</value>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public int? Version { get; set; }
         
         
         /// <summary>
@@ -216,16 +209,15 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class DialerContactlistfilterConfigChangeContactListFilter {\n");
             
+            sb.Append("  ContactList: ").Append(ContactList).Append("\n");
+            sb.Append("  ContactListColumns: ").Append(ContactListColumns).Append("\n");
+            sb.Append("  Clauses: ").Append(Clauses).Append("\n");
+            sb.Append("  FilterType: ").Append(FilterType).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
-            sb.Append("  ContactList: ").Append(ContactList).Append("\n");
-            sb.Append("  ContactListColumns: ").Append(ContactListColumns).Append("\n");
-            sb.Append("  Clauses: ").Append(Clauses).Append("\n");
-            sb.Append("  FilterType: ").Append(FilterType).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -267,6 +259,26 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.ContactList == other.ContactList ||
+                    this.ContactList != null &&
+                    this.ContactList.Equals(other.ContactList)
+                ) &&
+                (
+                    this.ContactListColumns == other.ContactListColumns ||
+                    this.ContactListColumns != null &&
+                    this.ContactListColumns.SequenceEqual(other.ContactListColumns)
+                ) &&
+                (
+                    this.Clauses == other.Clauses ||
+                    this.Clauses != null &&
+                    this.Clauses.SequenceEqual(other.Clauses)
+                ) &&
+                (
+                    this.FilterType == other.FilterType ||
+                    this.FilterType != null &&
+                    this.FilterType.Equals(other.FilterType)
+                ) &&
+                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
@@ -290,31 +302,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) &&
-                (
-                    this.ContactList == other.ContactList ||
-                    this.ContactList != null &&
-                    this.ContactList.Equals(other.ContactList)
-                ) &&
-                (
-                    this.ContactListColumns == other.ContactListColumns ||
-                    this.ContactListColumns != null &&
-                    this.ContactListColumns.SequenceEqual(other.ContactListColumns)
-                ) &&
-                (
-                    this.Clauses == other.Clauses ||
-                    this.Clauses != null &&
-                    this.Clauses.SequenceEqual(other.Clauses)
-                ) &&
-                (
-                    this.FilterType == other.FilterType ||
-                    this.FilterType != null &&
-                    this.FilterType.Equals(other.FilterType)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -330,6 +317,18 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.ContactList != null)
+                    hash = hash * 59 + this.ContactList.GetHashCode();
+                
+                if (this.ContactListColumns != null)
+                    hash = hash * 59 + this.ContactListColumns.GetHashCode();
+                
+                if (this.Clauses != null)
+                    hash = hash * 59 + this.Clauses.GetHashCode();
+                
+                if (this.FilterType != null)
+                    hash = hash * 59 + this.FilterType.GetHashCode();
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
@@ -344,21 +343,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
-                if (this.ContactList != null)
-                    hash = hash * 59 + this.ContactList.GetHashCode();
-                
-                if (this.ContactListColumns != null)
-                    hash = hash * 59 + this.ContactListColumns.GetHashCode();
-                
-                if (this.Clauses != null)
-                    hash = hash * 59 + this.Clauses.GetHashCode();
-                
-                if (this.FilterType != null)
-                    hash = hash * 59 + this.FilterType.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

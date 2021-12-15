@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ConversationMessageEventTopicJourneyAction
+    /// A subset of the Journey System&#39;s action data relevant to a part of a conversation (for external linkage and internal usage/context)
     /// </summary>
     [DataContract]
     public partial class ConversationMessageEventTopicJourneyAction :  IEquatable<ConversationMessageEventTopicJourneyAction>
@@ -34,7 +34,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationMessageEventTopicJourneyAction" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
+        /// <param name="Id">The ID of an action from the Journey System (an action is spawned from an actionMap).</param>
         /// <param name="ActionMap">ActionMap.</param>
         public ConversationMessageEventTopicJourneyAction(string Id = null, ConversationMessageEventTopicJourneyActionMap ActionMap = null)
         {
@@ -46,8 +46,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The ID of an action from the Journey System (an action is spawned from an actionMap)
         /// </summary>
+        /// <value>The ID of an action from the Journey System (an action is spawned from an actionMap)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         

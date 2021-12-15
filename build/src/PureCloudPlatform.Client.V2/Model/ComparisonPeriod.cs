@@ -65,6 +65,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ComparisonPeriod" /> class.
@@ -149,6 +154,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// KPI results for each metric
+        /// </summary>
+        /// <value>KPI results for each metric</value>
+        [DataMember(Name="kpiResults", EmitDefaultValue=false)]
+        public List<KpiResult> KpiResults { get; private set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -173,6 +187,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  KpiTotalOff: ").Append(KpiTotalOff).Append("\n");
             sb.Append("  InteractionCountOn: ").Append(InteractionCountOn).Append("\n");
             sb.Append("  InteractionCountOff: ").Append(InteractionCountOff).Append("\n");
+            sb.Append("  KpiResults: ").Append(KpiResults).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -255,6 +270,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InteractionCountOff.Equals(other.InteractionCountOff)
                 ) &&
                 (
+                    this.KpiResults == other.KpiResults ||
+                    this.KpiResults != null &&
+                    this.KpiResults.SequenceEqual(other.KpiResults)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -296,6 +316,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.InteractionCountOff != null)
                     hash = hash * 59 + this.InteractionCountOff.GetHashCode();
+                
+                if (this.KpiResults != null)
+                    hash = hash * 59 + this.KpiResults.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

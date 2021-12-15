@@ -34,8 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationSocialExpressionEventTopicMessageSticker" /> class.
         /// </summary>
-        /// <param name="Url">Url.</param>
-        /// <param name="Id">Id.</param>
+        /// <param name="Url">The location of the sticker, useful for retrieving it.</param>
+        /// <param name="Id">The unique id of the the sticker object..</param>
         public QueueConversationSocialExpressionEventTopicMessageSticker(string Url = null, string Id = null)
         {
             this.Url = Url;
@@ -46,16 +46,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Url
+        /// The location of the sticker, useful for retrieving it
         /// </summary>
+        /// <value>The location of the sticker, useful for retrieving it</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The unique id of the the sticker object.
         /// </summary>
+        /// <value>The unique id of the the sticker object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         

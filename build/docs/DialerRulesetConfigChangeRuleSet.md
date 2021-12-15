@@ -7,15 +7,14 @@ title: DialerRulesetConfigChangeRuleSet
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
-| **Name** | **string** |  | [optional] |
-| **DateCreated** | **DateTime?** |  | [optional] |
-| **DateModified** | **DateTime?** |  | [optional] |
-| **Version** | **int?** |  | [optional] |
 | **ContactList** | [**DialerRulesetConfigChangeUriReference**](DialerRulesetConfigChangeUriReference.html) |  | [optional] |
-| **Queue** | [**DialerRulesetConfigChangeUriReference**](DialerRulesetConfigChangeUriReference.html) |  | [optional] |
+| **Queue** | [**DialerRulesetConfigChangeUriReference**](DialerRulesetConfigChangeUriReference.html) | A UriReference for a resource | [optional] |
 | **Rules** | [**List&lt;DialerRulesetConfigChangeRule&gt;**](DialerRulesetConfigChangeRule.html) |  | [optional] |
-| **AdditionalProperties** | **Object** |  | [optional] |
+| **Id** | **string** | The globally unique identifier for the object. | [optional] |
+| **Name** | **string** | The UI-visible name of the object | [optional] |
+| **DateCreated** | **DateTime?** | Creation time of the entity | [optional] |
+| **DateModified** | **DateTime?** | Last modified time of the entity | [optional] |
+| **Version** | **int?** | Required for updates, must match the version number of the most recent update | [optional] |
 {: class="table table-striped"}
 
 

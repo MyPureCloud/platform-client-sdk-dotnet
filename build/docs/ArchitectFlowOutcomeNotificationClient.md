@@ -7,8 +7,8 @@ title: ArchitectFlowOutcomeNotificationClient
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
-| **Name** | **string** |  | [optional] |
+| **Id** | **string** | The ID of the client. | [optional] |
+| **Name** | **string** | The name of the client, if available. | [optional] |
 {: class="table table-striped"}
 
 

@@ -38,6 +38,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets EventType
         /// </summary>
@@ -53,28 +56,10 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Webevent for "WebEvent"
-            /// </summary>
-            [EnumMember(Value = "WebEvent")]
-            Webevent,
-            
-            /// <summary>
-            /// Enum Webactionevent for "WebActionEvent"
-            /// </summary>
-            [EnumMember(Value = "WebActionEvent")]
-            Webactionevent,
-            
-            /// <summary>
             /// Enum Outcomeachievedevent for "OutcomeAchievedEvent"
             /// </summary>
             [EnumMember(Value = "OutcomeAchievedEvent")]
             Outcomeachievedevent,
-            
-            /// <summary>
-            /// Enum Blockedwebactionofferevent for "BlockedWebActionOfferEvent"
-            /// </summary>
-            [EnumMember(Value = "BlockedWebActionOfferEvent")]
-            Blockedwebactionofferevent,
             
             /// <summary>
             /// Enum Outcomeattributionevent for "OutcomeAttributionEvent"
@@ -82,7 +67,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OutcomeAttributionEvent")]
             Outcomeattributionevent
         }
-        
         
         
         
@@ -119,8 +103,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyOutcomeEventsNotificationOutcomeEventsNotification" /> class.
@@ -131,11 +113,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedDate">CreatedDate.</param>
         /// <param name="CustomerId">CustomerId.</param>
         /// <param name="CustomerIdType">CustomerIdType.</param>
-        /// <param name="EventType">EventType.</param>
         /// <param name="Session">Session.</param>
+        /// <param name="EventType">EventType.</param>
         /// <param name="OutcomeAchievedEvent">OutcomeAchievedEvent.</param>
         /// <param name="OutcomeAttributionEventMessage">OutcomeAttributionEventMessage.</param>
-        public JourneyOutcomeEventsNotificationOutcomeEventsNotification(string Id = null, string CorrelationId = null, JourneyOutcomeEventsNotificationExternalContact ExternalContact = null, DateTime? CreatedDate = null, string CustomerId = null, string CustomerIdType = null, EventTypeEnum? EventType = null, JourneyOutcomeEventsNotificationSession Session = null, JourneyOutcomeEventsNotificationOutcomeAchievedMessage OutcomeAchievedEvent = null, JourneyOutcomeEventsNotificationOutcomeAttributionMessage OutcomeAttributionEventMessage = null)
+        public JourneyOutcomeEventsNotificationOutcomeEventsNotification(string Id = null, string CorrelationId = null, JourneyOutcomeEventsNotificationExternalContact ExternalContact = null, DateTime? CreatedDate = null, string CustomerId = null, string CustomerIdType = null, JourneyOutcomeEventsNotificationSession Session = null, EventTypeEnum? EventType = null, JourneyOutcomeEventsNotificationOutcomeAchievedMessage OutcomeAchievedEvent = null, JourneyOutcomeEventsNotificationOutcomeAttributionMessage OutcomeAttributionEventMessage = null)
         {
             this.Id = Id;
             this.CorrelationId = CorrelationId;
@@ -143,8 +125,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CreatedDate = CreatedDate;
             this.CustomerId = CustomerId;
             this.CustomerIdType = CustomerIdType;
-            this.EventType = EventType;
             this.Session = Session;
+            this.EventType = EventType;
             this.OutcomeAchievedEvent = OutcomeAchievedEvent;
             this.OutcomeAttributionEventMessage = OutcomeAttributionEventMessage;
             
@@ -200,13 +182,13 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
         /// <summary>
         /// Gets or Sets Session
         /// </summary>
         [DataMember(Name="session", EmitDefaultValue=false)]
         public JourneyOutcomeEventsNotificationSession Session { get; set; }
+        
+        
         
         
         
@@ -240,8 +222,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  CustomerId: ").Append(CustomerId).Append("\n");
             sb.Append("  CustomerIdType: ").Append(CustomerIdType).Append("\n");
-            sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("  Session: ").Append(Session).Append("\n");
+            sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("  OutcomeAchievedEvent: ").Append(OutcomeAchievedEvent).Append("\n");
             sb.Append("  OutcomeAttributionEventMessage: ").Append(OutcomeAttributionEventMessage).Append("\n");
             sb.Append("}\n");
@@ -315,14 +297,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CustomerIdType.Equals(other.CustomerIdType)
                 ) &&
                 (
-                    this.EventType == other.EventType ||
-                    this.EventType != null &&
-                    this.EventType.Equals(other.EventType)
-                ) &&
-                (
                     this.Session == other.Session ||
                     this.Session != null &&
                     this.Session.Equals(other.Session)
+                ) &&
+                (
+                    this.EventType == other.EventType ||
+                    this.EventType != null &&
+                    this.EventType.Equals(other.EventType)
                 ) &&
                 (
                     this.OutcomeAchievedEvent == other.OutcomeAchievedEvent ||
@@ -366,11 +348,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.CustomerIdType != null)
                     hash = hash * 59 + this.CustomerIdType.GetHashCode();
                 
-                if (this.EventType != null)
-                    hash = hash * 59 + this.EventType.GetHashCode();
-                
                 if (this.Session != null)
                     hash = hash * 59 + this.Session.GetHashCode();
+                
+                if (this.EventType != null)
+                    hash = hash * 59 + this.EventType.GetHashCode();
                 
                 if (this.OutcomeAchievedEvent != null)
                     hash = hash * 59 + this.OutcomeAchievedEvent.GetHashCode();

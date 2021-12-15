@@ -34,8 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCampaignRuleConfigChangeCampaignRuleEntities" /> class.
         /// </summary>
-        /// <param name="Campaigns">Campaigns.</param>
-        /// <param name="Sequences">Sequences.</param>
+        /// <param name="Campaigns">A list of campaignIds to act on.</param>
+        /// <param name="Sequences">A list of sequenceIds to act on.</param>
         public DialerCampaignRuleConfigChangeCampaignRuleEntities(List<DialerCampaignRuleConfigChangeUriReference> Campaigns = null, List<DialerCampaignRuleConfigChangeUriReference> Sequences = null)
         {
             this.Campaigns = Campaigns;
@@ -46,16 +46,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Campaigns
+        /// A list of campaignIds to act on
         /// </summary>
+        /// <value>A list of campaignIds to act on</value>
         [DataMember(Name="campaigns", EmitDefaultValue=false)]
         public List<DialerCampaignRuleConfigChangeUriReference> Campaigns { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Sequences
+        /// A list of sequenceIds to act on
         /// </summary>
+        /// <value>A list of sequenceIds to act on</value>
         [DataMember(Name="sequences", EmitDefaultValue=false)]
         public List<DialerCampaignRuleConfigChangeUriReference> Sequences { get; set; }
         

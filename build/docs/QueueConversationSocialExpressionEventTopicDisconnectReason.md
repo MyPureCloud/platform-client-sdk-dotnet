@@ -7,9 +7,9 @@ title: QueueConversationSocialExpressionEventTopicDisconnectReason
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Type** | **string** |  | [optional] |
-| **Code** | **int?** |  | [optional] |
-| **Phrase** | **string** |  | [optional] |
+| **Type** | **string** | Disconnect reason protocol type. | [optional] |
+| **Code** | **int?** | Protocol specific reason code. See the Q.850 and SIP specs. | [optional] |
+| **Phrase** | **string** | Human readable English description of the disconnect reason. | [optional] |
 {: class="table table-striped"}
 
 

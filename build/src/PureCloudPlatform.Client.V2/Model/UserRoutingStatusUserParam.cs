@@ -30,23 +30,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserRoutingStatusUserParam" /> class.
         /// </summary>
         /// <param name="Key">Key.</param>
         /// <param name="Value">Value.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public UserRoutingStatusUserParam(string Key = null, string Value = null, Object AdditionalProperties = null)
+        public UserRoutingStatusUserParam(string Key = null, string Value = null)
         {
             this.Key = Key;
             this.Value = Value;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -67,14 +60,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Value { get; set; }
         
         
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +71,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Key: ").Append(Key).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -136,11 +120,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Value == other.Value ||
                     this.Value != null &&
                     this.Value.Equals(other.Value)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -161,9 +140,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

@@ -27,8 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets ConditionType
+        /// The type of this condition
         /// </summary>
+        /// <value>The type of this condition</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ConditionTypeEnum
         {
@@ -41,16 +42,16 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum CampaignProgress for "CAMPAIGN_PROGRESS"
+            /// Enum Campaignprogress for "campaignProgress"
             /// </summary>
-            [EnumMember(Value = "CAMPAIGN_PROGRESS")]
-            CampaignProgress,
+            [EnumMember(Value = "campaignProgress")]
+            Campaignprogress,
             
             /// <summary>
-            /// Enum CampaignAgents for "CAMPAIGN_AGENTS"
+            /// Enum Campaignagents for "campaignAgents"
             /// </summary>
-            [EnumMember(Value = "CAMPAIGN_AGENTS")]
-            CampaignAgents
+            [EnumMember(Value = "campaignAgents")]
+            Campaignagents
         }
         
         
@@ -61,60 +62,48 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
-        /// Gets or Sets ConditionType
+        /// The type of this condition
         /// </summary>
+        /// <value>The type of this condition</value>
         [DataMember(Name="conditionType", EmitDefaultValue=false)]
         public ConditionTypeEnum? ConditionType { get; set; }
-        
-        
         
         
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCampaignRuleConfigChangeCampaignRuleCondition" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Parameters">Parameters.</param>
-        /// <param name="ConditionType">ConditionType.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerCampaignRuleConfigChangeCampaignRuleCondition(string Id = null, Dictionary<string, string> Parameters = null, ConditionTypeEnum? ConditionType = null, Object AdditionalProperties = null)
+        /// <param name="Id">The globally unique identifier for the condition.</param>
+        /// <param name="Parameters">The parameters to match this condition.</param>
+        /// <param name="ConditionType">The type of this condition.</param>
+        public DialerCampaignRuleConfigChangeCampaignRuleCondition(string Id = null, Dictionary<string, string> Parameters = null, ConditionTypeEnum? ConditionType = null)
         {
             this.Id = Id;
             this.Parameters = Parameters;
             this.ConditionType = ConditionType;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The globally unique identifier for the condition
         /// </summary>
+        /// <value>The globally unique identifier for the condition</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Parameters
+        /// The parameters to match this condition
         /// </summary>
+        /// <value>The parameters to match this condition</value>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public Dictionary<string, string> Parameters { get; set; }
         
         
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -129,7 +118,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
             sb.Append("  ConditionType: ").Append(ConditionType).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -184,11 +172,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConditionType == other.ConditionType ||
                     this.ConditionType != null &&
                     this.ConditionType.Equals(other.ConditionType)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -212,9 +195,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ConditionType != null)
                     hash = hash * 59 + this.ConditionType.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

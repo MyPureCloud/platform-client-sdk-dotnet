@@ -26,24 +26,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
-        /// Gets or Sets DncSourceType
+        /// the type of dnc list being created, rds (csv file), gryphon, or dnc.com
         /// </summary>
+        /// <value>the type of dnc list being created, rds (csv file), gryphon, or dnc.com</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DncSourceTypeEnum
         {
@@ -56,21 +42,21 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Rds for "RDS"
+            /// Enum Rds for "rds"
             /// </summary>
-            [EnumMember(Value = "RDS")]
+            [EnumMember(Value = "rds")]
             Rds,
             
             /// <summary>
-            /// Enum DncCom for "DNC_COM"
+            /// Enum Dnccom for "dnc.com"
             /// </summary>
-            [EnumMember(Value = "DNC_COM")]
-            DncCom,
+            [EnumMember(Value = "dnc.com")]
+            Dnccom,
             
             /// <summary>
-            /// Enum Gryphon for "GRYPHON"
+            /// Enum Gryphon for "gryphon"
             /// </summary>
-            [EnumMember(Value = "GRYPHON")]
+            [EnumMember(Value = "gryphon")]
             Gryphon
         }
         
@@ -137,9 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
-        /// Gets or Sets DncSourceType
+        /// the type of dnc list being created, rds (csv file), gryphon, or dnc.com
         /// </summary>
+        /// <value>the type of dnc list being created, rds (csv file), gryphon, or dnc.com</value>
         [DataMember(Name="dncSourceType", EmitDefaultValue=false)]
         public DncSourceTypeEnum? DncSourceType { get; set; }
         
@@ -162,31 +151,33 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerDnclistConfigChangeDncList" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="DateCreated">DateCreated.</param>
-        /// <param name="DateModified">DateModified.</param>
-        /// <param name="Version">Version.</param>
         /// <param name="ImportStatus">ImportStatus.</param>
-        /// <param name="Size">Size.</param>
-        /// <param name="DncSourceType">DncSourceType.</param>
-        /// <param name="LoginId">LoginId.</param>
-        /// <param name="DncCodes">DncCodes.</param>
-        /// <param name="LicenseId">LicenseId.</param>
+        /// <param name="Size">the number of phone numbers in the do not call list.</param>
+        /// <param name="DncSourceType">the type of dnc list being created, rds (csv file), gryphon, or dnc.com.</param>
+        /// <param name="LoginId">the loginId if the dncSourceType is dnc.com.</param>
+        /// <param name="DncCodes">the list of dnc.com codes to be treated as DNC.</param>
+        /// <param name="LicenseId">the license number if the dncSourceType is gryphon.</param>
         /// <param name="ContactMethod">ContactMethod.</param>
         /// <param name="Division">Division.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerDnclistConfigChangeDncList(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DialerDnclistConfigChangeImportStatus ImportStatus = null, int? Size = null, DncSourceTypeEnum? DncSourceType = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null, ContactMethodEnum? ContactMethod = null, DialerDnclistConfigChangeUriReference Division = null, Object AdditionalProperties = null)
+        /// <param name="Id">The globally unique identifier for the object..</param>
+        /// <param name="Name">The UI-visible name of the object.</param>
+        /// <param name="DateCreated">Creation time of the entity.</param>
+        /// <param name="DateModified">Last modified time of the entity.</param>
+        /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
+        public DialerDnclistConfigChangeDncList(DialerDnclistConfigChangeImportStatus ImportStatus = null, int? Size = null, DncSourceTypeEnum? DncSourceType = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null, ContactMethodEnum? ContactMethod = null, DialerDnclistConfigChangeUriReference Division = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.Version = Version;
             this.ImportStatus = ImportStatus;
             this.Size = Size;
             this.DncSourceType = DncSourceType;
@@ -195,49 +186,13 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LicenseId = LicenseId;
             this.ContactMethod = ContactMethod;
             this.Division = Division;
-            this.AdditionalProperties = AdditionalProperties;
+            this.Id = Id;
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.Version = Version;
             
         }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Id
-        /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateCreated
-        /// </summary>
-        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateModified
-        /// </summary>
-        [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Version
-        /// </summary>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
         
         
         
@@ -250,8 +205,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Size
+        /// the number of phone numbers in the do not call list
         /// </summary>
+        /// <value>the number of phone numbers in the do not call list</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
         public int? Size { get; set; }
         
@@ -260,24 +216,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets LoginId
+        /// the loginId if the dncSourceType is dnc.com
         /// </summary>
+        /// <value>the loginId if the dncSourceType is dnc.com</value>
         [DataMember(Name="loginId", EmitDefaultValue=false)]
         public string LoginId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets DncCodes
+        /// the list of dnc.com codes to be treated as DNC
         /// </summary>
+        /// <value>the list of dnc.com codes to be treated as DNC</value>
         [DataMember(Name="dncCodes", EmitDefaultValue=false)]
         public List<string> DncCodes { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets LicenseId
+        /// the license number if the dncSourceType is gryphon
         /// </summary>
+        /// <value>the license number if the dncSourceType is gryphon</value>
         [DataMember(Name="licenseId", EmitDefaultValue=false)]
         public string LicenseId { get; set; }
         
@@ -294,10 +253,47 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets AdditionalProperties
+        /// The globally unique identifier for the object.
         /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
+        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The UI-visible name of the object
+        /// </summary>
+        /// <value>The UI-visible name of the object</value>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Creation time of the entity
+        /// </summary>
+        /// <value>Creation time of the entity</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Last modified time of the entity
+        /// </summary>
+        /// <value>Last modified time of the entity</value>
+        [DataMember(Name="dateModified", EmitDefaultValue=false)]
+        public DateTime? DateModified { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Required for updates, must match the version number of the most recent update
+        /// </summary>
+        /// <value>Required for updates, must match the version number of the most recent update</value>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public int? Version { get; set; }
         
         
         /// <summary>
@@ -309,11 +305,6 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class DialerDnclistConfigChangeDncList {\n");
             
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("  DncSourceType: ").Append(DncSourceType).Append("\n");
@@ -322,7 +313,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LicenseId: ").Append(LicenseId).Append("\n");
             sb.Append("  ContactMethod: ").Append(ContactMethod).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -364,31 +359,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
-                    this.DateCreated == other.DateCreated ||
-                    this.DateCreated != null &&
-                    this.DateCreated.Equals(other.DateCreated)
-                ) &&
-                (
-                    this.DateModified == other.DateModified ||
-                    this.DateModified != null &&
-                    this.DateModified.Equals(other.DateModified)
-                ) &&
-                (
-                    this.Version == other.Version ||
-                    this.Version != null &&
-                    this.Version.Equals(other.Version)
-                ) &&
-                (
                     this.ImportStatus == other.ImportStatus ||
                     this.ImportStatus != null &&
                     this.ImportStatus.Equals(other.ImportStatus)
@@ -429,9 +399,29 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Division.Equals(other.Division)
                 ) &&
                 (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.DateCreated == other.DateCreated ||
+                    this.DateCreated != null &&
+                    this.DateCreated.Equals(other.DateCreated)
+                ) &&
+                (
+                    this.DateModified == other.DateModified ||
+                    this.DateModified != null &&
+                    this.DateModified.Equals(other.DateModified)
+                ) &&
+                (
+                    this.Version == other.Version ||
+                    this.Version != null &&
+                    this.Version.Equals(other.Version)
                 );
         }
 
@@ -446,21 +436,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-                
-                if (this.DateCreated != null)
-                    hash = hash * 59 + this.DateCreated.GetHashCode();
-                
-                if (this.DateModified != null)
-                    hash = hash * 59 + this.DateModified.GetHashCode();
-                
-                if (this.Version != null)
-                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.ImportStatus != null)
                     hash = hash * 59 + this.ImportStatus.GetHashCode();
@@ -486,8 +461,20 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
                 
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.DateCreated != null)
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
+                
+                if (this.DateModified != null)
+                    hash = hash * 59 + this.DateModified.GetHashCode();
+                
+                if (this.Version != null)
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 return hash;
             }

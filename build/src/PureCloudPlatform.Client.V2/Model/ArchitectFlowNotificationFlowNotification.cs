@@ -64,13 +64,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchitectFlowNotificationFlowNotification" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Deleted">Deleted.</param>
+        /// <param name="Id">The flow ID.</param>
+        /// <param name="Name">The flow name.</param>
+        /// <param name="Description">The flow description.</param>
+        /// <param name="Deleted">The flow deleted state.</param>
         /// <param name="CheckedInVersion">CheckedInVersion.</param>
-        /// <param name="SavedVersion">SavedVersion.</param>
-        /// <param name="PublishedVersion">PublishedVersion.</param>
+        /// <param name="SavedVersion">A bare-bones flow version object.</param>
+        /// <param name="PublishedVersion">A bare-bones flow version object.</param>
         /// <param name="CurrentOperation">CurrentOperation.</param>
         public ArchitectFlowNotificationFlowNotification(string Id = null, string Name = null, string Description = null, bool? Deleted = null, ArchitectFlowNotificationFlowVersion CheckedInVersion = null, ArchitectFlowNotificationFlowVersion SavedVersion = null, ArchitectFlowNotificationFlowVersion PublishedVersion = null, ArchitectFlowNotificationArchitectOperation CurrentOperation = null)
         {
@@ -88,32 +88,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The flow ID
         /// </summary>
+        /// <value>The flow ID</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The flow name
         /// </summary>
+        /// <value>The flow name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Description
+        /// The flow description
         /// </summary>
+        /// <value>The flow description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Deleted
+        /// The flow deleted state
         /// </summary>
+        /// <value>The flow deleted state</value>
         [DataMember(Name="deleted", EmitDefaultValue=false)]
         public bool? Deleted { get; set; }
         
@@ -128,16 +132,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets SavedVersion
+        /// A bare-bones flow version object
         /// </summary>
+        /// <value>A bare-bones flow version object</value>
         [DataMember(Name="savedVersion", EmitDefaultValue=false)]
         public ArchitectFlowNotificationFlowVersion SavedVersion { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets PublishedVersion
+        /// A bare-bones flow version object
         /// </summary>
+        /// <value>A bare-bones flow version object</value>
         [DataMember(Name="publishedVersion", EmitDefaultValue=false)]
         public ArchitectFlowNotificationFlowVersion PublishedVersion { get; set; }
         

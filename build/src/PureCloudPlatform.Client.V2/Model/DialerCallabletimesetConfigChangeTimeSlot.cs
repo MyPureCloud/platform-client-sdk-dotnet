@@ -35,59 +35,47 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCallabletimesetConfigChangeTimeSlot" /> class.
         /// </summary>
-        /// <param name="StartTime">StartTime.</param>
-        /// <param name="StopTime">StopTime.</param>
-        /// <param name="Day">Day.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerCallabletimesetConfigChangeTimeSlot(string StartTime = null, string StopTime = null, int? Day = null, Object AdditionalProperties = null)
+        /// <param name="StartTime">The start time of this time slot.</param>
+        /// <param name="StopTime">The stop time of this time slot.</param>
+        /// <param name="Day">The day this time slot applies.</param>
+        public DialerCallabletimesetConfigChangeTimeSlot(string StartTime = null, string StopTime = null, int? Day = null)
         {
             this.StartTime = StartTime;
             this.StopTime = StopTime;
             this.Day = Day;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets StartTime
+        /// The start time of this time slot
         /// </summary>
+        /// <value>The start time of this time slot</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets StopTime
+        /// The stop time of this time slot
         /// </summary>
+        /// <value>The stop time of this time slot</value>
         [DataMember(Name="stopTime", EmitDefaultValue=false)]
         public string StopTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Day
+        /// The day this time slot applies
         /// </summary>
+        /// <value>The day this time slot applies</value>
         [DataMember(Name="day", EmitDefaultValue=false)]
         public int? Day { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -102,7 +90,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  StopTime: ").Append(StopTime).Append("\n");
             sb.Append("  Day: ").Append(Day).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -157,11 +144,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Day == other.Day ||
                     this.Day != null &&
                     this.Day.Equals(other.Day)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -185,9 +167,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Day != null)
                     hash = hash * 59 + this.Day.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// DialerOutboundSettingsConfigChangeAtzmTimeSlot
+    /// The time interval to place outbound calls
     /// </summary>
     [DataContract]
     public partial class DialerOutboundSettingsConfigChangeAtzmTimeSlot :  IEquatable<DialerOutboundSettingsConfigChangeAtzmTimeSlot>
@@ -34,8 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerOutboundSettingsConfigChangeAtzmTimeSlot" /> class.
         /// </summary>
-        /// <param name="EarliestCallableTime">EarliestCallableTime.</param>
-        /// <param name="LatestCallableTime">LatestCallableTime.</param>
+        /// <param name="EarliestCallableTime">The earliest time to dial a contact.</param>
+        /// <param name="LatestCallableTime">The latest time to dial a contact.</param>
         public DialerOutboundSettingsConfigChangeAtzmTimeSlot(string EarliestCallableTime = null, string LatestCallableTime = null)
         {
             this.EarliestCallableTime = EarliestCallableTime;
@@ -46,16 +46,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets EarliestCallableTime
+        /// The earliest time to dial a contact
         /// </summary>
+        /// <value>The earliest time to dial a contact</value>
         [DataMember(Name="earliestCallableTime", EmitDefaultValue=false)]
         public string EarliestCallableTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets LatestCallableTime
+        /// The latest time to dial a contact
         /// </summary>
+        /// <value>The latest time to dial a contact</value>
         [DataMember(Name="latestCallableTime", EmitDefaultValue=false)]
         public string LatestCallableTime { get; set; }
         

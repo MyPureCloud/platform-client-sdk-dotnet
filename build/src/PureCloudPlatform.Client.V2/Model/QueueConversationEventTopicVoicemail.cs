@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// QueueConversationEventTopicVoicemail
+    /// The voicemail data to be used when this callback is an ACD voicemail.
     /// </summary>
     [DataContract]
     public partial class QueueConversationEventTopicVoicemail :  IEquatable<QueueConversationEventTopicVoicemail>
@@ -24,8 +24,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets UploadStatus
+        /// current state of the voicemail upload
         /// </summary>
+        /// <value>current state of the voicemail upload</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum UploadStatusEnum
         {
@@ -38,33 +39,33 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Pending for "PENDING"
+            /// Enum Pending for "pending"
             /// </summary>
-            [EnumMember(Value = "PENDING")]
+            [EnumMember(Value = "pending")]
             Pending,
             
             /// <summary>
-            /// Enum Complete for "COMPLETE"
+            /// Enum Complete for "complete"
             /// </summary>
-            [EnumMember(Value = "COMPLETE")]
+            [EnumMember(Value = "complete")]
             Complete,
             
             /// <summary>
-            /// Enum Failed for "FAILED"
+            /// Enum Failed for "failed"
             /// </summary>
-            [EnumMember(Value = "FAILED")]
+            [EnumMember(Value = "failed")]
             Failed,
             
             /// <summary>
-            /// Enum Timeout for "TIMEOUT"
+            /// Enum Timeout for "timeout"
             /// </summary>
-            [EnumMember(Value = "TIMEOUT")]
+            [EnumMember(Value = "timeout")]
             Timeout,
             
             /// <summary>
-            /// Enum None for "NONE"
+            /// Enum None for "none"
             /// </summary>
-            [EnumMember(Value = "NONE")]
+            [EnumMember(Value = "none")]
             None
         }
         
@@ -75,8 +76,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets UploadStatus
+        /// current state of the voicemail upload
         /// </summary>
+        /// <value>current state of the voicemail upload</value>
         [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
         public UploadStatusEnum? UploadStatus { get; set; }
         
@@ -85,8 +87,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationEventTopicVoicemail" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="UploadStatus">UploadStatus.</param>
+        /// <param name="Id">The voicemail id.</param>
+        /// <param name="UploadStatus">current state of the voicemail upload.</param>
         public QueueConversationEventTopicVoicemail(string Id = null, UploadStatusEnum? UploadStatus = null)
         {
             this.Id = Id;
@@ -97,8 +99,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The voicemail id
         /// </summary>
+        /// <value>The voicemail id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         

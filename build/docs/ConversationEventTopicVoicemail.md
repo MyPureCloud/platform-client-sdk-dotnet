@@ -7,8 +7,8 @@ title: ConversationEventTopicVoicemail
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
-| **UploadStatus** | **string** |  | [optional] |
+| **Id** | **string** | The voicemail id | [optional] |
+| **UploadStatus** | **string** | current state of the voicemail upload | [optional] |
 {: class="table table-striped"}
 
 

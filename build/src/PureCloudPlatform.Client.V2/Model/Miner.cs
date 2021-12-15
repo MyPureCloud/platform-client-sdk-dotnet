@@ -75,7 +75,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Esus for "es-us"
             /// </summary>
             [EnumMember(Value = "es-us")]
-            Esus
+            Esus,
+            
+            /// <summary>
+            /// Enum Eses for "es-es"
+            /// </summary>
+            [EnumMember(Value = "es-es")]
+            Eses
         }
         
         

@@ -494,6 +494,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Actiontemplate,
             
             /// <summary>
+            /// Enum Activitycode for "ActivityCode"
+            /// </summary>
+            [EnumMember(Value = "ActivityCode")]
+            Activitycode,
+            
+            /// <summary>
             /// Enum Agentroutinginfo for "AgentRoutingInfo"
             /// </summary>
             [EnumMember(Value = "AgentRoutingInfo")]
@@ -528,6 +534,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "BulkActions")]
             Bulkactions,
+            
+            /// <summary>
+            /// Enum Businessunit for "BusinessUnit"
+            /// </summary>
+            [EnumMember(Value = "BusinessUnit")]
+            Businessunit,
             
             /// <summary>
             /// Enum Callanalysisresponseset for "CallAnalysisResponseSet"
@@ -752,6 +764,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Linebase,
             
             /// <summary>
+            /// Enum Managementunit for "ManagementUnit"
+            /// </summary>
+            [EnumMember(Value = "ManagementUnit")]
+            Managementunit,
+            
+            /// <summary>
             /// Enum Maxorgroutingutilizationcapacity for "MaxOrgRoutingUtilizationCapacity"
             /// </summary>
             [EnumMember(Value = "MaxOrgRoutingUtilizationCapacity")]
@@ -834,6 +852,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "PhoneBase")]
             Phonebase,
+            
+            /// <summary>
+            /// Enum Planninggroup for "PlanningGroup"
+            /// </summary>
+            [EnumMember(Value = "PlanningGroup")]
+            Planninggroup,
             
             /// <summary>
             /// Enum Predictor for "Predictor"
@@ -956,6 +980,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Sequenceschedule,
             
             /// <summary>
+            /// Enum Servicegoaltemplate for "ServiceGoalTemplate"
+            /// </summary>
+            [EnumMember(Value = "ServiceGoalTemplate")]
+            Servicegoaltemplate,
+            
+            /// <summary>
             /// Enum Sessiontype for "SessionType"
             /// </summary>
             [EnumMember(Value = "SessionType")]
@@ -1050,6 +1080,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "WorkPlan")]
             Workplan,
+            
+            /// <summary>
+            /// Enum Workplanrotation for "WorkPlanRotation"
+            /// </summary>
+            [EnumMember(Value = "WorkPlanRotation")]
+            Workplanrotation,
             
             /// <summary>
             /// Enum Workspace for "Workspace"

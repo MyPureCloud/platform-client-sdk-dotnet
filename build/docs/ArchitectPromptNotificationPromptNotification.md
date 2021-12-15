@@ -7,9 +7,9 @@ title: ArchitectPromptNotificationPromptNotification
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
-| **Name** | **string** |  | [optional] |
-| **Description** | **string** |  | [optional] |
+| **Id** | **string** | The prompt ID | [optional] |
+| **Name** | **string** | The prompt name | [optional] |
+| **Description** | **string** | The prompt description | [optional] |
 | **CurrentOperation** | [**ArchitectPromptNotificationArchitectOperation**](ArchitectPromptNotificationArchitectOperation.html) |  | [optional] |
 {: class="table table-striped"}
 

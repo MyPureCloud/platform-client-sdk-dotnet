@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// QueueConversationCallbackEventTopicJourneyCustomerSession
+    /// A subset of the Journey System&#39;s tracked customer session data at a point-in-time (for external linkage and internal usage/context)
     /// </summary>
     [DataContract]
     public partial class QueueConversationCallbackEventTopicJourneyCustomerSession :  IEquatable<QueueConversationCallbackEventTopicJourneyCustomerSession>
@@ -34,8 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationCallbackEventTopicJourneyCustomerSession" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Type">Type.</param>
+        /// <param name="Id">An ID of a Customer/User&#39;s session within the Journey System at a point-in-time.</param>
+        /// <param name="Type">The type of the Customer/User&#39;s session within the Journey System (e.g. web, app).</param>
         public QueueConversationCallbackEventTopicJourneyCustomerSession(string Id = null, string Type = null)
         {
             this.Id = Id;
@@ -46,16 +46,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// An ID of a Customer/User&#39;s session within the Journey System at a point-in-time
         /// </summary>
+        /// <value>An ID of a Customer/User&#39;s session within the Journey System at a point-in-time</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Type
+        /// The type of the Customer/User&#39;s session within the Journey System (e.g. web, app)
         /// </summary>
+        /// <value>The type of the Customer/User&#39;s session within the Journey System (e.g. web, app)</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
         

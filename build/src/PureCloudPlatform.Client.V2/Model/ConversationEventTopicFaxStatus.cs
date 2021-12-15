@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ConversationEventTopicFaxStatus
+    /// Extra information on fax transmission.
     /// </summary>
     [DataContract]
     public partial class ConversationEventTopicFaxStatus :  IEquatable<ConversationEventTopicFaxStatus>
@@ -64,14 +64,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationEventTopicFaxStatus" /> class.
         /// </summary>
-        /// <param name="Direction">Direction.</param>
-        /// <param name="ExpectedPages">ExpectedPages.</param>
-        /// <param name="ActivePage">ActivePage.</param>
-        /// <param name="LinesTransmitted">LinesTransmitted.</param>
-        /// <param name="BytesTransmitted">BytesTransmitted.</param>
-        /// <param name="BaudRate">BaudRate.</param>
-        /// <param name="PageErrors">PageErrors.</param>
-        /// <param name="LineErrors">LineErrors.</param>
+        /// <param name="Direction">The fax direction, either \&quot;send\&quot; or \&quot;receive\&quot;..</param>
+        /// <param name="ExpectedPages">Total number of expected pages, if known..</param>
+        /// <param name="ActivePage">Active page of the transmission..</param>
+        /// <param name="LinesTransmitted">Number of lines that have completed transmission..</param>
+        /// <param name="BytesTransmitted">Number of bytes that have competed transmission..</param>
+        /// <param name="BaudRate">Current signaling rate of transmission, baud rate..</param>
+        /// <param name="PageErrors">Number of page errors..</param>
+        /// <param name="LineErrors">Number of line errors..</param>
         public ConversationEventTopicFaxStatus(string Direction = null, int? ExpectedPages = null, int? ActivePage = null, int? LinesTransmitted = null, int? BytesTransmitted = null, int? BaudRate = null, int? PageErrors = null, int? LineErrors = null)
         {
             this.Direction = Direction;
@@ -88,64 +88,72 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Direction
+        /// The fax direction, either \&quot;send\&quot; or \&quot;receive\&quot;.
         /// </summary>
+        /// <value>The fax direction, either \&quot;send\&quot; or \&quot;receive\&quot;.</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public string Direction { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ExpectedPages
+        /// Total number of expected pages, if known.
         /// </summary>
+        /// <value>Total number of expected pages, if known.</value>
         [DataMember(Name="expectedPages", EmitDefaultValue=false)]
         public int? ExpectedPages { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ActivePage
+        /// Active page of the transmission.
         /// </summary>
+        /// <value>Active page of the transmission.</value>
         [DataMember(Name="activePage", EmitDefaultValue=false)]
         public int? ActivePage { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets LinesTransmitted
+        /// Number of lines that have completed transmission.
         /// </summary>
+        /// <value>Number of lines that have completed transmission.</value>
         [DataMember(Name="linesTransmitted", EmitDefaultValue=false)]
         public int? LinesTransmitted { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets BytesTransmitted
+        /// Number of bytes that have competed transmission.
         /// </summary>
+        /// <value>Number of bytes that have competed transmission.</value>
         [DataMember(Name="bytesTransmitted", EmitDefaultValue=false)]
         public int? BytesTransmitted { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets BaudRate
+        /// Current signaling rate of transmission, baud rate.
         /// </summary>
+        /// <value>Current signaling rate of transmission, baud rate.</value>
         [DataMember(Name="baudRate", EmitDefaultValue=false)]
         public int? BaudRate { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets PageErrors
+        /// Number of page errors.
         /// </summary>
+        /// <value>Number of page errors.</value>
         [DataMember(Name="pageErrors", EmitDefaultValue=false)]
         public int? PageErrors { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets LineErrors
+        /// Number of line errors.
         /// </summary>
+        /// <value>Number of line errors.</value>
         [DataMember(Name="lineErrors", EmitDefaultValue=false)]
         public int? LineErrors { get; set; }
         

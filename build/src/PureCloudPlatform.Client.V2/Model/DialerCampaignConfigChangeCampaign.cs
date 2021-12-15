@@ -26,24 +26,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
-        /// Gets or Sets DialingMode
+        /// dialing mode of the campaign
         /// </summary>
+        /// <value>dialing mode of the campaign</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DialingModeEnum
         {
@@ -56,39 +42,39 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Agentless for "AGENTLESS"
+            /// Enum Agentless for "agentless"
             /// </summary>
-            [EnumMember(Value = "AGENTLESS")]
+            [EnumMember(Value = "agentless")]
             Agentless,
             
             /// <summary>
-            /// Enum External for "EXTERNAL"
+            /// Enum External for "external"
             /// </summary>
-            [EnumMember(Value = "EXTERNAL")]
+            [EnumMember(Value = "external")]
             External,
             
             /// <summary>
-            /// Enum Preview for "PREVIEW"
+            /// Enum Preview for "preview"
             /// </summary>
-            [EnumMember(Value = "PREVIEW")]
+            [EnumMember(Value = "preview")]
             Preview,
             
             /// <summary>
-            /// Enum Power for "POWER"
+            /// Enum Power for "power"
             /// </summary>
-            [EnumMember(Value = "POWER")]
+            [EnumMember(Value = "power")]
             Power,
             
             /// <summary>
-            /// Enum Predictive for "PREDICTIVE"
+            /// Enum Predictive for "predictive"
             /// </summary>
-            [EnumMember(Value = "PREDICTIVE")]
+            [EnumMember(Value = "predictive")]
             Predictive,
             
             /// <summary>
-            /// Enum Progressive for "PROGRESSIVE"
+            /// Enum Progressive for "progressive"
             /// </summary>
-            [EnumMember(Value = "PROGRESSIVE")]
+            [EnumMember(Value = "progressive")]
             Progressive
         }
         
@@ -119,33 +105,33 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum On for "ON"
+            /// Enum On for "on"
             /// </summary>
-            [EnumMember(Value = "ON")]
+            [EnumMember(Value = "on")]
             On,
             
             /// <summary>
-            /// Enum Off for "OFF"
+            /// Enum Off for "off"
             /// </summary>
-            [EnumMember(Value = "OFF")]
+            [EnumMember(Value = "off")]
             Off,
             
             /// <summary>
-            /// Enum Complete for "COMPLETE"
+            /// Enum Complete for "complete"
             /// </summary>
-            [EnumMember(Value = "COMPLETE")]
+            [EnumMember(Value = "complete")]
             Complete,
             
             /// <summary>
-            /// Enum Stopping for "STOPPING"
+            /// Enum Stopping for "stopping"
             /// </summary>
-            [EnumMember(Value = "STOPPING")]
+            [EnumMember(Value = "stopping")]
             Stopping,
             
             /// <summary>
-            /// Enum Invalid for "INVALID"
+            /// Enum Invalid for "invalid"
             /// </summary>
-            [EnumMember(Value = "INVALID")]
+            [EnumMember(Value = "invalid")]
             Invalid
         }
         
@@ -233,9 +219,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
-        /// Gets or Sets DialingMode
+        /// dialing mode of the campaign
         /// </summary>
+        /// <value>dialing mode of the campaign</value>
         [DataMember(Name="dialingMode", EmitDefaultValue=false)]
         public DialingModeEnum? DialingMode { get; set; }
         
@@ -298,51 +287,53 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCampaignConfigChangeCampaign" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="DateCreated">DateCreated.</param>
-        /// <param name="DateModified">DateModified.</param>
-        /// <param name="Version">Version.</param>
         /// <param name="ContactList">ContactList.</param>
-        /// <param name="Queue">Queue.</param>
-        /// <param name="DialingMode">DialingMode.</param>
-        /// <param name="Script">Script.</param>
-        /// <param name="EdgeGroup">EdgeGroup.</param>
-        /// <param name="Site">Site.</param>
+        /// <param name="Queue">A UriReference for a resource.</param>
+        /// <param name="DialingMode">dialing mode of the campaign.</param>
+        /// <param name="Script">A UriReference for a resource.</param>
+        /// <param name="EdgeGroup">A UriReference for a resource.</param>
+        /// <param name="Site">A UriReference for a resource.</param>
         /// <param name="CampaignStatus">CampaignStatus.</param>
-        /// <param name="PhoneColumns">PhoneColumns.</param>
-        /// <param name="AbandonRate">AbandonRate.</param>
-        /// <param name="DncLists">DncLists.</param>
-        /// <param name="CallableTimeSet">CallableTimeSet.</param>
-        /// <param name="CallAnalysisResponseSet">CallAnalysisResponseSet.</param>
-        /// <param name="CallerName">CallerName.</param>
-        /// <param name="CallerAddress">CallerAddress.</param>
-        /// <param name="OutboundLineCount">OutboundLineCount.</param>
-        /// <param name="Errors">Errors.</param>
-        /// <param name="RuleSets">RuleSets.</param>
-        /// <param name="SkipPreviewDisabled">SkipPreviewDisabled.</param>
-        /// <param name="PreviewTimeOutSeconds">PreviewTimeOutSeconds.</param>
-        /// <param name="SingleNumberPreview">SingleNumberPreview.</param>
+        /// <param name="PhoneColumns">the contact list phone columns to be called for the campaign.</param>
+        /// <param name="AbandonRate">the targeted abandon rate percentage.</param>
+        /// <param name="DncLists">identifiers of the do not call lists.</param>
+        /// <param name="CallableTimeSet">A UriReference for a resource.</param>
+        /// <param name="CallAnalysisResponseSet">A UriReference for a resource.</param>
+        /// <param name="CallerName">caller id name to be displayed on the outbound call.</param>
+        /// <param name="CallerAddress">caller id phone number to be displayed on the outbound call.</param>
+        /// <param name="OutboundLineCount">for agentless campaigns, the number of outbound lines to be concurrently dialed.</param>
+        /// <param name="Errors">a list of current error conditions associated with the campaign.</param>
+        /// <param name="RuleSets">identifiers of the rule sets.</param>
+        /// <param name="SkipPreviewDisabled">for preview campaigns, indicator of whether the agent can skip a preview without placing a call.</param>
+        /// <param name="PreviewTimeOutSeconds">for preview campaigns, number of seconds before a call will be automatically placed. A value of 0 indicates no automatic placement of calls.</param>
+        /// <param name="SingleNumberPreview">for preview campaigns with multiple phone columns, indicator if one (true) or multiple (false) phone numbers will be available to call for each preview.</param>
         /// <param name="ContactSort">ContactSort.</param>
-        /// <param name="ContactSorts">ContactSorts.</param>
-        /// <param name="NoAnswerTimeout">NoAnswerTimeout.</param>
-        /// <param name="CallAnalysisLanguage">CallAnalysisLanguage.</param>
-        /// <param name="Priority">Priority.</param>
-        /// <param name="ContactListFilters">ContactListFilters.</param>
-        /// <param name="Division">Division.</param>
-        /// <param name="AgentOwnedColumn">AgentOwnedColumn.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerCampaignConfigChangeCampaign(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DialerCampaignConfigChangeUriReference ContactList = null, DialerCampaignConfigChangeUriReference Queue = null, DialingModeEnum? DialingMode = null, DialerCampaignConfigChangeUriReference Script = null, DialerCampaignConfigChangeUriReference EdgeGroup = null, DialerCampaignConfigChangeUriReference Site = null, CampaignStatusEnum? CampaignStatus = null, List<DialerCampaignConfigChangePhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DialerCampaignConfigChangeUriReference> DncLists = null, DialerCampaignConfigChangeUriReference CallableTimeSet = null, DialerCampaignConfigChangeUriReference CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DialerCampaignConfigChangeRestErrorDetail> Errors = null, List<DialerCampaignConfigChangeUriReference> RuleSets = null, bool? SkipPreviewDisabled = null, int? PreviewTimeOutSeconds = null, bool? SingleNumberPreview = null, DialerCampaignConfigChangeContactSort ContactSort = null, List<DialerCampaignConfigChangeContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DialerCampaignConfigChangeUriReference> ContactListFilters = null, DialerCampaignConfigChangeUriReference Division = null, string AgentOwnedColumn = null, Object AdditionalProperties = null)
+        /// <param name="ContactSorts">List of contact sort objects..</param>
+        /// <param name="NoAnswerTimeout">for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds.</param>
+        /// <param name="CallAnalysisLanguage">The language the edge will use to analyze the call.</param>
+        /// <param name="Priority">The priority of this campaign relative to other campaigns.</param>
+        /// <param name="ContactListFilters">List of contact filters.</param>
+        /// <param name="Division">A UriReference for a resource.</param>
+        /// <param name="AgentOwnedColumn">For Preview Campaigns. Name of the contact column in the contact list containing the userIds of agents to assign specific contact records to..</param>
+        /// <param name="Id">The globally unique identifier for the object..</param>
+        /// <param name="Name">The UI-visible name of the object.</param>
+        /// <param name="DateCreated">Creation time of the entity.</param>
+        /// <param name="DateModified">Last modified time of the entity.</param>
+        /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
+        public DialerCampaignConfigChangeCampaign(DialerCampaignConfigChangeUriReference ContactList = null, DialerCampaignConfigChangeUriReference Queue = null, DialingModeEnum? DialingMode = null, DialerCampaignConfigChangeUriReference Script = null, DialerCampaignConfigChangeUriReference EdgeGroup = null, DialerCampaignConfigChangeUriReference Site = null, CampaignStatusEnum? CampaignStatus = null, List<DialerCampaignConfigChangePhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DialerCampaignConfigChangeUriReference> DncLists = null, DialerCampaignConfigChangeUriReference CallableTimeSet = null, DialerCampaignConfigChangeUriReference CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DialerCampaignConfigChangeRestErrorDetail> Errors = null, List<DialerCampaignConfigChangeUriReference> RuleSets = null, bool? SkipPreviewDisabled = null, int? PreviewTimeOutSeconds = null, bool? SingleNumberPreview = null, DialerCampaignConfigChangeContactSort ContactSort = null, List<DialerCampaignConfigChangeContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DialerCampaignConfigChangeUriReference> ContactListFilters = null, DialerCampaignConfigChangeUriReference Division = null, string AgentOwnedColumn = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.Version = Version;
             this.ContactList = ContactList;
             this.Queue = Queue;
             this.DialingMode = DialingMode;
@@ -371,49 +362,13 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ContactListFilters = ContactListFilters;
             this.Division = Division;
             this.AgentOwnedColumn = AgentOwnedColumn;
-            this.AdditionalProperties = AdditionalProperties;
+            this.Id = Id;
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.Version = Version;
             
         }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Id
-        /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateCreated
-        /// </summary>
-        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateModified
-        /// </summary>
-        [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Version
-        /// </summary>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
         
         
         
@@ -426,8 +381,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Queue
+        /// A UriReference for a resource
         /// </summary>
+        /// <value>A UriReference for a resource</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public DialerCampaignConfigChangeUriReference Queue { get; set; }
         
@@ -436,24 +392,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Script
+        /// A UriReference for a resource
         /// </summary>
+        /// <value>A UriReference for a resource</value>
         [DataMember(Name="script", EmitDefaultValue=false)]
         public DialerCampaignConfigChangeUriReference Script { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets EdgeGroup
+        /// A UriReference for a resource
         /// </summary>
+        /// <value>A UriReference for a resource</value>
         [DataMember(Name="edgeGroup", EmitDefaultValue=false)]
         public DialerCampaignConfigChangeUriReference EdgeGroup { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Site
+        /// A UriReference for a resource
         /// </summary>
+        /// <value>A UriReference for a resource</value>
         [DataMember(Name="site", EmitDefaultValue=false)]
         public DialerCampaignConfigChangeUriReference Site { get; set; }
         
@@ -462,104 +421,117 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets PhoneColumns
+        /// the contact list phone columns to be called for the campaign
         /// </summary>
+        /// <value>the contact list phone columns to be called for the campaign</value>
         [DataMember(Name="phoneColumns", EmitDefaultValue=false)]
         public List<DialerCampaignConfigChangePhoneColumn> PhoneColumns { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AbandonRate
+        /// the targeted abandon rate percentage
         /// </summary>
+        /// <value>the targeted abandon rate percentage</value>
         [DataMember(Name="abandonRate", EmitDefaultValue=false)]
         public double? AbandonRate { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets DncLists
+        /// identifiers of the do not call lists
         /// </summary>
+        /// <value>identifiers of the do not call lists</value>
         [DataMember(Name="dncLists", EmitDefaultValue=false)]
         public List<DialerCampaignConfigChangeUriReference> DncLists { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CallableTimeSet
+        /// A UriReference for a resource
         /// </summary>
+        /// <value>A UriReference for a resource</value>
         [DataMember(Name="callableTimeSet", EmitDefaultValue=false)]
         public DialerCampaignConfigChangeUriReference CallableTimeSet { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CallAnalysisResponseSet
+        /// A UriReference for a resource
         /// </summary>
+        /// <value>A UriReference for a resource</value>
         [DataMember(Name="callAnalysisResponseSet", EmitDefaultValue=false)]
         public DialerCampaignConfigChangeUriReference CallAnalysisResponseSet { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CallerName
+        /// caller id name to be displayed on the outbound call
         /// </summary>
+        /// <value>caller id name to be displayed on the outbound call</value>
         [DataMember(Name="callerName", EmitDefaultValue=false)]
         public string CallerName { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CallerAddress
+        /// caller id phone number to be displayed on the outbound call
         /// </summary>
+        /// <value>caller id phone number to be displayed on the outbound call</value>
         [DataMember(Name="callerAddress", EmitDefaultValue=false)]
         public string CallerAddress { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets OutboundLineCount
+        /// for agentless campaigns, the number of outbound lines to be concurrently dialed
         /// </summary>
+        /// <value>for agentless campaigns, the number of outbound lines to be concurrently dialed</value>
         [DataMember(Name="outboundLineCount", EmitDefaultValue=false)]
         public int? OutboundLineCount { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Errors
+        /// a list of current error conditions associated with the campaign
         /// </summary>
+        /// <value>a list of current error conditions associated with the campaign</value>
         [DataMember(Name="errors", EmitDefaultValue=false)]
         public List<DialerCampaignConfigChangeRestErrorDetail> Errors { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets RuleSets
+        /// identifiers of the rule sets
         /// </summary>
+        /// <value>identifiers of the rule sets</value>
         [DataMember(Name="ruleSets", EmitDefaultValue=false)]
         public List<DialerCampaignConfigChangeUriReference> RuleSets { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets SkipPreviewDisabled
+        /// for preview campaigns, indicator of whether the agent can skip a preview without placing a call
         /// </summary>
+        /// <value>for preview campaigns, indicator of whether the agent can skip a preview without placing a call</value>
         [DataMember(Name="skipPreviewDisabled", EmitDefaultValue=false)]
         public bool? SkipPreviewDisabled { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets PreviewTimeOutSeconds
+        /// for preview campaigns, number of seconds before a call will be automatically placed. A value of 0 indicates no automatic placement of calls
         /// </summary>
+        /// <value>for preview campaigns, number of seconds before a call will be automatically placed. A value of 0 indicates no automatic placement of calls</value>
         [DataMember(Name="previewTimeOutSeconds", EmitDefaultValue=false)]
         public int? PreviewTimeOutSeconds { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets SingleNumberPreview
+        /// for preview campaigns with multiple phone columns, indicator if one (true) or multiple (false) phone numbers will be available to call for each preview
         /// </summary>
+        /// <value>for preview campaigns with multiple phone columns, indicator if one (true) or multiple (false) phone numbers will be available to call for each preview</value>
         [DataMember(Name="singleNumberPreview", EmitDefaultValue=false)]
         public bool? SingleNumberPreview { get; set; }
         
@@ -574,66 +546,110 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets ContactSorts
+        /// List of contact sort objects.
         /// </summary>
+        /// <value>List of contact sort objects.</value>
         [DataMember(Name="contactSorts", EmitDefaultValue=false)]
         public List<DialerCampaignConfigChangeContactSort> ContactSorts { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets NoAnswerTimeout
+        /// for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds
         /// </summary>
+        /// <value>for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds</value>
         [DataMember(Name="noAnswerTimeout", EmitDefaultValue=false)]
         public int? NoAnswerTimeout { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CallAnalysisLanguage
+        /// The language the edge will use to analyze the call
         /// </summary>
+        /// <value>The language the edge will use to analyze the call</value>
         [DataMember(Name="callAnalysisLanguage", EmitDefaultValue=false)]
         public string CallAnalysisLanguage { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Priority
+        /// The priority of this campaign relative to other campaigns
         /// </summary>
+        /// <value>The priority of this campaign relative to other campaigns</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ContactListFilters
+        /// List of contact filters
         /// </summary>
+        /// <value>List of contact filters</value>
         [DataMember(Name="contactListFilters", EmitDefaultValue=false)]
         public List<DialerCampaignConfigChangeUriReference> ContactListFilters { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Division
+        /// A UriReference for a resource
         /// </summary>
+        /// <value>A UriReference for a resource</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public DialerCampaignConfigChangeUriReference Division { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AgentOwnedColumn
+        /// For Preview Campaigns. Name of the contact column in the contact list containing the userIds of agents to assign specific contact records to.
         /// </summary>
+        /// <value>For Preview Campaigns. Name of the contact column in the contact list containing the userIds of agents to assign specific contact records to.</value>
         [DataMember(Name="agentOwnedColumn", EmitDefaultValue=false)]
         public string AgentOwnedColumn { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AdditionalProperties
+        /// The globally unique identifier for the object.
         /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
+        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The UI-visible name of the object
+        /// </summary>
+        /// <value>The UI-visible name of the object</value>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Creation time of the entity
+        /// </summary>
+        /// <value>Creation time of the entity</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Last modified time of the entity
+        /// </summary>
+        /// <value>Last modified time of the entity</value>
+        [DataMember(Name="dateModified", EmitDefaultValue=false)]
+        public DateTime? DateModified { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Required for updates, must match the version number of the most recent update
+        /// </summary>
+        /// <value>Required for updates, must match the version number of the most recent update</value>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public int? Version { get; set; }
         
         
         /// <summary>
@@ -645,11 +661,6 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class DialerCampaignConfigChangeCampaign {\n");
             
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  ContactList: ").Append(ContactList).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  DialingMode: ").Append(DialingMode).Append("\n");
@@ -678,7 +689,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContactListFilters: ").Append(ContactListFilters).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  AgentOwnedColumn: ").Append(AgentOwnedColumn).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -719,31 +734,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 return false;
 
             return true &&
-                (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
-                    this.DateCreated == other.DateCreated ||
-                    this.DateCreated != null &&
-                    this.DateCreated.Equals(other.DateCreated)
-                ) &&
-                (
-                    this.DateModified == other.DateModified ||
-                    this.DateModified != null &&
-                    this.DateModified.Equals(other.DateModified)
-                ) &&
-                (
-                    this.Version == other.Version ||
-                    this.Version != null &&
-                    this.Version.Equals(other.Version)
-                ) &&
                 (
                     this.ContactList == other.ContactList ||
                     this.ContactList != null &&
@@ -885,9 +875,29 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentOwnedColumn.Equals(other.AgentOwnedColumn)
                 ) &&
                 (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.DateCreated == other.DateCreated ||
+                    this.DateCreated != null &&
+                    this.DateCreated.Equals(other.DateCreated)
+                ) &&
+                (
+                    this.DateModified == other.DateModified ||
+                    this.DateModified != null &&
+                    this.DateModified.Equals(other.DateModified)
+                ) &&
+                (
+                    this.Version == other.Version ||
+                    this.Version != null &&
+                    this.Version.Equals(other.Version)
                 );
         }
 
@@ -902,21 +912,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-                
-                if (this.DateCreated != null)
-                    hash = hash * 59 + this.DateCreated.GetHashCode();
-                
-                if (this.DateModified != null)
-                    hash = hash * 59 + this.DateModified.GetHashCode();
-                
-                if (this.Version != null)
-                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.ContactList != null)
                     hash = hash * 59 + this.ContactList.GetHashCode();
@@ -1002,8 +997,20 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.AgentOwnedColumn != null)
                     hash = hash * 59 + this.AgentOwnedColumn.GetHashCode();
                 
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.DateCreated != null)
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
+                
+                if (this.DateModified != null)
+                    hash = hash * 59 + this.DateModified.GetHashCode();
+                
+                if (this.Version != null)
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 return hash;
             }

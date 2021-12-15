@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// DialerCampaignConfigChangeContactSort
+    /// information determining the order in which the contacts will be dialed
     /// </summary>
     [DataContract]
     public partial class DialerCampaignConfigChangeContactSort :  IEquatable<DialerCampaignConfigChangeContactSort>
@@ -59,16 +59,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
-        
-        
         
         
         
@@ -79,14 +74,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="FieldName">FieldName.</param>
         /// <param name="Direction">Direction.</param>
-        /// <param name="Numeric">Numeric.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerCampaignConfigChangeContactSort(string FieldName = null, DirectionEnum? Direction = null, bool? Numeric = null, Object AdditionalProperties = null)
+        /// <param name="Numeric">Whether that column contains numeric data.</param>
+        public DialerCampaignConfigChangeContactSort(string FieldName = null, DirectionEnum? Direction = null, bool? Numeric = null)
         {
             this.FieldName = FieldName;
             this.Direction = Direction;
             this.Numeric = Numeric;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -103,18 +96,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Numeric
+        /// Whether that column contains numeric data
         /// </summary>
+        /// <value>Whether that column contains numeric data</value>
         [DataMember(Name="numeric", EmitDefaultValue=false)]
         public bool? Numeric { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -129,7 +115,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  Numeric: ").Append(Numeric).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -184,11 +169,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Numeric == other.Numeric ||
                     this.Numeric != null &&
                     this.Numeric.Equals(other.Numeric)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -212,9 +192,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Numeric != null)
                     hash = hash * 59 + this.Numeric.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

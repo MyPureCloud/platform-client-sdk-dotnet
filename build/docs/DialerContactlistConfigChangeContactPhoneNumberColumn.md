@@ -7,10 +7,9 @@ title: DialerContactlistConfigChangeContactPhoneNumberColumn
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ColumnName** | **string** |  | [optional] |
-| **Type** | **string** |  | [optional] |
-| **CallableTimeColumn** | **string** |  | [optional] |
-| **AdditionalProperties** | **Object** |  | [optional] |
+| **ColumnName** | **string** | name of the phone column | [optional] |
+| **Type** | **string** | type of the phone column, for example, &#39;cell&#39; or &#39;home&#39; | [optional] |
+| **CallableTimeColumn** | **string** | name of the column indicating the timezone to be considered for determining callable times | [optional] |
 {: class="table table-striped"}
 
 

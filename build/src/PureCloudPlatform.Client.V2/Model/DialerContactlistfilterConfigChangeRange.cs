@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// DialerContactlistfilterConfigChangeRange
+    /// FilterRange is one of the attributes of a FilterPredicate
     /// </summary>
     [DataContract]
     public partial class DialerContactlistfilterConfigChangeRange :  IEquatable<DialerContactlistfilterConfigChangeRange>
@@ -45,79 +45,69 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerContactlistfilterConfigChangeRange" /> class.
         /// </summary>
-        /// <param name="Min">Min.</param>
-        /// <param name="Max">Max.</param>
-        /// <param name="MinInclusive">MinInclusive.</param>
-        /// <param name="MaxInclusive">MaxInclusive.</param>
-        /// <param name="InSet">InSet.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerContactlistfilterConfigChangeRange(string Min = null, string Max = null, bool? MinInclusive = null, bool? MaxInclusive = null, List<string> InSet = null, Object AdditionalProperties = null)
+        /// <param name="Min">Minimum end of the range.</param>
+        /// <param name="Max">Maximum end of the range.</param>
+        /// <param name="MinInclusive">Whether or not to include the minimum in the range.</param>
+        /// <param name="MaxInclusive">Whether or not to include the maximum in the range.</param>
+        /// <param name="InSet">Elements that apply to the IN operator.</param>
+        public DialerContactlistfilterConfigChangeRange(string Min = null, string Max = null, bool? MinInclusive = null, bool? MaxInclusive = null, List<string> InSet = null)
         {
             this.Min = Min;
             this.Max = Max;
             this.MinInclusive = MinInclusive;
             this.MaxInclusive = MaxInclusive;
             this.InSet = InSet;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Min
+        /// Minimum end of the range
         /// </summary>
+        /// <value>Minimum end of the range</value>
         [DataMember(Name="min", EmitDefaultValue=false)]
         public string Min { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Max
+        /// Maximum end of the range
         /// </summary>
+        /// <value>Maximum end of the range</value>
         [DataMember(Name="max", EmitDefaultValue=false)]
         public string Max { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MinInclusive
+        /// Whether or not to include the minimum in the range
         /// </summary>
+        /// <value>Whether or not to include the minimum in the range</value>
         [DataMember(Name="minInclusive", EmitDefaultValue=false)]
         public bool? MinInclusive { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MaxInclusive
+        /// Whether or not to include the maximum in the range
         /// </summary>
+        /// <value>Whether or not to include the maximum in the range</value>
         [DataMember(Name="maxInclusive", EmitDefaultValue=false)]
         public bool? MaxInclusive { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets InSet
+        /// Elements that apply to the IN operator
         /// </summary>
+        /// <value>Elements that apply to the IN operator</value>
         [DataMember(Name="inSet", EmitDefaultValue=false)]
         public List<string> InSet { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -134,7 +124,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MinInclusive: ").Append(MinInclusive).Append("\n");
             sb.Append("  MaxInclusive: ").Append(MaxInclusive).Append("\n");
             sb.Append("  InSet: ").Append(InSet).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -199,11 +188,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InSet == other.InSet ||
                     this.InSet != null &&
                     this.InSet.SequenceEqual(other.InSet)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -233,9 +217,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.InSet != null)
                     hash = hash * 59 + this.InSet.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

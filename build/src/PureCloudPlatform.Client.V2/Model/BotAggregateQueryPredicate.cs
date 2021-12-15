@@ -145,6 +145,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Externalcontactid,
             
             /// <summary>
+            /// Enum Knowledgebaseid for "knowledgeBaseId"
+            /// </summary>
+            [EnumMember(Value = "knowledgeBaseId")]
+            Knowledgebaseid,
+            
+            /// <summary>
             /// Enum Lastactionid for "lastActionId"
             /// </summary>
             [EnumMember(Value = "lastActionId")]
@@ -166,7 +172,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Messagetype for "messageType"
             /// </summary>
             [EnumMember(Value = "messageType")]
-            Messagetype
+            Messagetype,
+            
+            /// <summary>
+            /// Enum Selfserved for "selfServed"
+            /// </summary>
+            [EnumMember(Value = "selfServed")]
+            Selfserved
         }
         
         

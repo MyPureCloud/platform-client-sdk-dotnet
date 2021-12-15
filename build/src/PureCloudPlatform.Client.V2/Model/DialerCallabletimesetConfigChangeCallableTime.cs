@@ -30,49 +30,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCallabletimesetConfigChangeCallableTime" /> class.
         /// </summary>
-        /// <param name="TimeSlots">TimeSlots.</param>
-        /// <param name="TimeZoneId">TimeZoneId.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerCallabletimesetConfigChangeCallableTime(List<DialerCallabletimesetConfigChangeTimeSlot> TimeSlots = null, string TimeZoneId = null, Object AdditionalProperties = null)
+        /// <param name="TimeSlots">The time slots.</param>
+        /// <param name="TimeZoneId">The ISO ID for the timezone.</param>
+        public DialerCallabletimesetConfigChangeCallableTime(List<DialerCallabletimesetConfigChangeTimeSlot> TimeSlots = null, string TimeZoneId = null)
         {
             this.TimeSlots = TimeSlots;
             this.TimeZoneId = TimeZoneId;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets TimeSlots
+        /// The time slots
         /// </summary>
+        /// <value>The time slots</value>
         [DataMember(Name="timeSlots", EmitDefaultValue=false)]
         public List<DialerCallabletimesetConfigChangeTimeSlot> TimeSlots { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets TimeZoneId
+        /// The ISO ID for the timezone
         /// </summary>
+        /// <value>The ISO ID for the timezone</value>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -86,7 +73,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  TimeSlots: ").Append(TimeSlots).Append("\n");
             sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -136,11 +122,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TimeZoneId == other.TimeZoneId ||
                     this.TimeZoneId != null &&
                     this.TimeZoneId.Equals(other.TimeZoneId)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -161,9 +142,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TimeZoneId != null)
                     hash = hash * 59 + this.TimeZoneId.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

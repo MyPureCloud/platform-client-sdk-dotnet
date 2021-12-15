@@ -35,59 +35,47 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerContactlistConfigChangeContactPhoneNumberColumn" /> class.
         /// </summary>
-        /// <param name="ColumnName">ColumnName.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="CallableTimeColumn">CallableTimeColumn.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerContactlistConfigChangeContactPhoneNumberColumn(string ColumnName = null, string Type = null, string CallableTimeColumn = null, Object AdditionalProperties = null)
+        /// <param name="ColumnName">name of the phone column.</param>
+        /// <param name="Type">type of the phone column, for example, &#39;cell&#39; or &#39;home&#39;.</param>
+        /// <param name="CallableTimeColumn">name of the column indicating the timezone to be considered for determining callable times.</param>
+        public DialerContactlistConfigChangeContactPhoneNumberColumn(string ColumnName = null, string Type = null, string CallableTimeColumn = null)
         {
             this.ColumnName = ColumnName;
             this.Type = Type;
             this.CallableTimeColumn = CallableTimeColumn;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets ColumnName
+        /// name of the phone column
         /// </summary>
+        /// <value>name of the phone column</value>
         [DataMember(Name="columnName", EmitDefaultValue=false)]
         public string ColumnName { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Type
+        /// type of the phone column, for example, &#39;cell&#39; or &#39;home&#39;
         /// </summary>
+        /// <value>type of the phone column, for example, &#39;cell&#39; or &#39;home&#39;</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CallableTimeColumn
+        /// name of the column indicating the timezone to be considered for determining callable times
         /// </summary>
+        /// <value>name of the column indicating the timezone to be considered for determining callable times</value>
         [DataMember(Name="callableTimeColumn", EmitDefaultValue=false)]
         public string CallableTimeColumn { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -102,7 +90,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  CallableTimeColumn: ").Append(CallableTimeColumn).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -157,11 +144,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CallableTimeColumn == other.CallableTimeColumn ||
                     this.CallableTimeColumn != null &&
                     this.CallableTimeColumn.Equals(other.CallableTimeColumn)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -185,9 +167,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CallableTimeColumn != null)
                     hash = hash * 59 + this.CallableTimeColumn.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// OutboundMessagingMessagingCampaignConfigChangeResponseRef
+    /// A reference for a Response
     /// </summary>
     [DataContract]
     public partial class OutboundMessagingMessagingCampaignConfigChangeResponseRef :  IEquatable<OutboundMessagingMessagingCampaignConfigChangeResponseRef>
@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundMessagingMessagingCampaignConfigChangeResponseRef" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
+        /// <param name="Id">The unique response id.</param>
         public OutboundMessagingMessagingCampaignConfigChangeResponseRef(string Id = null)
         {
             this.Id = Id;
@@ -39,8 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The unique response id
         /// </summary>
+        /// <value>The unique response id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// QueueConversationVideoEventTopicAddress
+    /// Address and name data for a call endpoint.
     /// </summary>
     [DataContract]
     public partial class QueueConversationVideoEventTopicAddress :  IEquatable<QueueConversationVideoEventTopicAddress>
@@ -45,79 +45,69 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationVideoEventTopicAddress" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="NameRaw">NameRaw.</param>
-        /// <param name="AddressNormalized">AddressNormalized.</param>
-        /// <param name="AddressRaw">AddressRaw.</param>
-        /// <param name="AddressDisplayable">AddressDisplayable.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationVideoEventTopicAddress(string Name = null, string NameRaw = null, string AddressNormalized = null, string AddressRaw = null, string AddressDisplayable = null, Object AdditionalProperties = null)
+        /// <param name="Name">This will be nameRaw if present, or a locality lookup of the address field otherwise..</param>
+        /// <param name="NameRaw">The name as close to the bits on the wire as possible..</param>
+        /// <param name="AddressNormalized">The normalized address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table..</param>
+        /// <param name="AddressRaw">The address as close to the bits on the wire as possible..</param>
+        /// <param name="AddressDisplayable">The displayable address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table..</param>
+        public QueueConversationVideoEventTopicAddress(string Name = null, string NameRaw = null, string AddressNormalized = null, string AddressRaw = null, string AddressDisplayable = null)
         {
             this.Name = Name;
             this.NameRaw = NameRaw;
             this.AddressNormalized = AddressNormalized;
             this.AddressRaw = AddressRaw;
             this.AddressDisplayable = AddressDisplayable;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// This will be nameRaw if present, or a locality lookup of the address field otherwise.
         /// </summary>
+        /// <value>This will be nameRaw if present, or a locality lookup of the address field otherwise.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets NameRaw
+        /// The name as close to the bits on the wire as possible.
         /// </summary>
+        /// <value>The name as close to the bits on the wire as possible.</value>
         [DataMember(Name="nameRaw", EmitDefaultValue=false)]
         public string NameRaw { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AddressNormalized
+        /// The normalized address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table.
         /// </summary>
+        /// <value>The normalized address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table.</value>
         [DataMember(Name="addressNormalized", EmitDefaultValue=false)]
         public string AddressNormalized { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AddressRaw
+        /// The address as close to the bits on the wire as possible.
         /// </summary>
+        /// <value>The address as close to the bits on the wire as possible.</value>
         [DataMember(Name="addressRaw", EmitDefaultValue=false)]
         public string AddressRaw { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AddressDisplayable
+        /// The displayable address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table.
         /// </summary>
+        /// <value>The displayable address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table.</value>
         [DataMember(Name="addressDisplayable", EmitDefaultValue=false)]
         public string AddressDisplayable { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -134,7 +124,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AddressNormalized: ").Append(AddressNormalized).Append("\n");
             sb.Append("  AddressRaw: ").Append(AddressRaw).Append("\n");
             sb.Append("  AddressDisplayable: ").Append(AddressDisplayable).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -199,11 +188,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AddressDisplayable == other.AddressDisplayable ||
                     this.AddressDisplayable != null &&
                     this.AddressDisplayable.Equals(other.AddressDisplayable)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -233,9 +217,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AddressDisplayable != null)
                     hash = hash * 59 + this.AddressDisplayable.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

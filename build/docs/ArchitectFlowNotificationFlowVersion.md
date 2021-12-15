@@ -7,7 +7,7 @@ title: ArchitectFlowNotificationFlowVersion
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
+| **Id** | **string** | The version ID | [optional] |
 {: class="table table-striped"}
 
 

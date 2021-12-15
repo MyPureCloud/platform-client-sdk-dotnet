@@ -44,9 +44,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchitectFlowOutcomeNotificationFlowOutcomeNotification" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
+        /// <param name="Id">The flow outcome ID.</param>
+        /// <param name="Name">The flow outcome name.</param>
+        /// <param name="Description">The flow outcome description.</param>
         /// <param name="CurrentOperation">CurrentOperation.</param>
         public ArchitectFlowOutcomeNotificationFlowOutcomeNotification(string Id = null, string Name = null, string Description = null, ArchitectFlowOutcomeNotificationArchitectOperation CurrentOperation = null)
         {
@@ -60,24 +60,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The flow outcome ID
         /// </summary>
+        /// <value>The flow outcome ID</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The flow outcome name
         /// </summary>
+        /// <value>The flow outcome name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Description
+        /// The flow outcome description
         /// </summary>
+        /// <value>The flow outcome description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
         

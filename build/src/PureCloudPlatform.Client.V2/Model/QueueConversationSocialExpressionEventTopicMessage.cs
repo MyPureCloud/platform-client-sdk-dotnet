@@ -24,8 +24,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets State
+        /// The connection state of this communication.
         /// </summary>
+        /// <value>The connection state of this communication.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
@@ -38,21 +39,21 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Alerting for "ALERTING"
+            /// Enum Alerting for "alerting"
             /// </summary>
-            [EnumMember(Value = "ALERTING")]
+            [EnumMember(Value = "alerting")]
             Alerting,
             
             /// <summary>
-            /// Enum Connected for "CONNECTED"
+            /// Enum Connected for "connected"
             /// </summary>
-            [EnumMember(Value = "CONNECTED")]
+            [EnumMember(Value = "connected")]
             Connected,
             
             /// <summary>
-            /// Enum Disconnected for "DISCONNECTED"
+            /// Enum Disconnected for "disconnected"
             /// </summary>
-            [EnumMember(Value = "DISCONNECTED")]
+            [EnumMember(Value = "disconnected")]
             Disconnected
         }
         
@@ -75,8 +76,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets DisconnectType
+        /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
+        /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DisconnectTypeEnum
         {
@@ -89,99 +91,99 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Endpoint for "ENDPOINT"
+            /// Enum Endpoint for "endpoint"
             /// </summary>
-            [EnumMember(Value = "ENDPOINT")]
+            [EnumMember(Value = "endpoint")]
             Endpoint,
             
             /// <summary>
-            /// Enum Client for "CLIENT"
+            /// Enum Client for "client"
             /// </summary>
-            [EnumMember(Value = "CLIENT")]
+            [EnumMember(Value = "client")]
             Client,
             
             /// <summary>
-            /// Enum System for "SYSTEM"
+            /// Enum System for "system"
             /// </summary>
-            [EnumMember(Value = "SYSTEM")]
+            [EnumMember(Value = "system")]
             System,
             
             /// <summary>
-            /// Enum Timeout for "TIMEOUT"
+            /// Enum Timeout for "timeout"
             /// </summary>
-            [EnumMember(Value = "TIMEOUT")]
+            [EnumMember(Value = "timeout")]
             Timeout,
             
             /// <summary>
-            /// Enum Transfer for "TRANSFER"
+            /// Enum Transfer for "transfer"
             /// </summary>
-            [EnumMember(Value = "TRANSFER")]
+            [EnumMember(Value = "transfer")]
             Transfer,
             
             /// <summary>
-            /// Enum TransferConference for "TRANSFER_CONFERENCE"
+            /// Enum Transferconference for "transfer.conference"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_CONFERENCE")]
-            TransferConference,
+            [EnumMember(Value = "transfer.conference")]
+            Transferconference,
             
             /// <summary>
-            /// Enum TransferConsult for "TRANSFER_CONSULT"
+            /// Enum Transferconsult for "transfer.consult"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_CONSULT")]
-            TransferConsult,
+            [EnumMember(Value = "transfer.consult")]
+            Transferconsult,
             
             /// <summary>
-            /// Enum TransferForward for "TRANSFER_FORWARD"
+            /// Enum Transferforward for "transfer.forward"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_FORWARD")]
-            TransferForward,
+            [EnumMember(Value = "transfer.forward")]
+            Transferforward,
             
             /// <summary>
-            /// Enum TransferNoanswer for "TRANSFER_NOANSWER"
+            /// Enum Transfernoanswer for "transfer.noanswer"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_NOANSWER")]
-            TransferNoanswer,
+            [EnumMember(Value = "transfer.noanswer")]
+            Transfernoanswer,
             
             /// <summary>
-            /// Enum TransferNotavailable for "TRANSFER_NOTAVAILABLE"
+            /// Enum Transfernotavailable for "transfer.notavailable"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_NOTAVAILABLE")]
-            TransferNotavailable,
+            [EnumMember(Value = "transfer.notavailable")]
+            Transfernotavailable,
             
             /// <summary>
-            /// Enum TransportFailure for "TRANSPORT_FAILURE"
+            /// Enum Transportfailure for "transport.failure"
             /// </summary>
-            [EnumMember(Value = "TRANSPORT_FAILURE")]
-            TransportFailure,
+            [EnumMember(Value = "transport.failure")]
+            Transportfailure,
             
             /// <summary>
-            /// Enum Error for "ERROR"
+            /// Enum Error for "error"
             /// </summary>
-            [EnumMember(Value = "ERROR")]
+            [EnumMember(Value = "error")]
             Error,
             
             /// <summary>
-            /// Enum Peer for "PEER"
+            /// Enum Peer for "peer"
             /// </summary>
-            [EnumMember(Value = "PEER")]
+            [EnumMember(Value = "peer")]
             Peer,
             
             /// <summary>
-            /// Enum Other for "OTHER"
+            /// Enum Other for "other"
             /// </summary>
-            [EnumMember(Value = "OTHER")]
+            [EnumMember(Value = "other")]
             Other,
             
             /// <summary>
-            /// Enum Spam for "SPAM"
+            /// Enum Spam for "spam"
             /// </summary>
-            [EnumMember(Value = "SPAM")]
+            [EnumMember(Value = "spam")]
             Spam,
             
             /// <summary>
-            /// Enum Uncallable for "UNCALLABLE"
+            /// Enum Uncallable for "uncallable"
             /// </summary>
-            [EnumMember(Value = "UNCALLABLE")]
+            [EnumMember(Value = "uncallable")]
             Uncallable
         }
         
@@ -210,8 +212,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Type
+        /// Indicates the type of message platform from which the message originated.
         /// </summary>
+        /// <value>Indicates the type of message platform from which the message originated.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -224,81 +227,81 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Unknown for "UNKNOWN"
+            /// Enum Unknown for "unknown"
             /// </summary>
-            [EnumMember(Value = "UNKNOWN")]
+            [EnumMember(Value = "unknown")]
             Unknown,
             
             /// <summary>
-            /// Enum Sms for "SMS"
+            /// Enum Sms for "sms"
             /// </summary>
-            [EnumMember(Value = "SMS")]
+            [EnumMember(Value = "sms")]
             Sms,
             
             /// <summary>
-            /// Enum Twitter for "TWITTER"
+            /// Enum Twitter for "twitter"
             /// </summary>
-            [EnumMember(Value = "TWITTER")]
+            [EnumMember(Value = "twitter")]
             Twitter,
             
             /// <summary>
-            /// Enum Facebook for "FACEBOOK"
+            /// Enum Facebook for "facebook"
             /// </summary>
-            [EnumMember(Value = "FACEBOOK")]
+            [EnumMember(Value = "facebook")]
             Facebook,
             
             /// <summary>
-            /// Enum Line for "LINE"
+            /// Enum Line for "line"
             /// </summary>
-            [EnumMember(Value = "LINE")]
+            [EnumMember(Value = "line")]
             Line,
             
             /// <summary>
-            /// Enum Viber for "VIBER"
+            /// Enum Viber for "viber"
             /// </summary>
-            [EnumMember(Value = "VIBER")]
+            [EnumMember(Value = "viber")]
             Viber,
             
             /// <summary>
-            /// Enum Wechat for "WECHAT"
+            /// Enum Wechat for "wechat"
             /// </summary>
-            [EnumMember(Value = "WECHAT")]
+            [EnumMember(Value = "wechat")]
             Wechat,
             
             /// <summary>
-            /// Enum Whatsapp for "WHATSAPP"
+            /// Enum Whatsapp for "whatsapp"
             /// </summary>
-            [EnumMember(Value = "WHATSAPP")]
+            [EnumMember(Value = "whatsapp")]
             Whatsapp,
             
             /// <summary>
-            /// Enum Telegram for "TELEGRAM"
+            /// Enum Telegram for "telegram"
             /// </summary>
-            [EnumMember(Value = "TELEGRAM")]
+            [EnumMember(Value = "telegram")]
             Telegram,
             
             /// <summary>
-            /// Enum Kakao for "KAKAO"
+            /// Enum Kakao for "kakao"
             /// </summary>
-            [EnumMember(Value = "KAKAO")]
+            [EnumMember(Value = "kakao")]
             Kakao,
             
             /// <summary>
-            /// Enum Webmessaging for "WEBMESSAGING"
+            /// Enum Webmessaging for "webmessaging"
             /// </summary>
-            [EnumMember(Value = "WEBMESSAGING")]
+            [EnumMember(Value = "webmessaging")]
             Webmessaging,
             
             /// <summary>
-            /// Enum Open for "OPEN"
+            /// Enum Open for "open"
             /// </summary>
-            [EnumMember(Value = "OPEN")]
+            [EnumMember(Value = "open")]
             Open,
             
             /// <summary>
-            /// Enum Instagram for "INSTAGRAM"
+            /// Enum Instagram for "instagram"
             /// </summary>
-            [EnumMember(Value = "INSTAGRAM")]
+            [EnumMember(Value = "instagram")]
             Instagram
         }
         
@@ -329,12 +332,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
-        /// Gets or Sets State
+        /// The connection state of this communication.
         /// </summary>
+        /// <value>The connection state of this communication.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         
@@ -351,8 +352,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets DisconnectType
+        /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
+        /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
         
@@ -373,12 +375,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Type
+        /// Indicates the type of message platform from which the message originated.
         /// </summary>
+        /// <value>Indicates the type of message platform from which the message originated.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
         
         
         
@@ -399,31 +400,30 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationSocialExpressionEventTopicMessage" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="State">State.</param>
-        /// <param name="Held">Held.</param>
-        /// <param name="ErrorInfo">ErrorInfo.</param>
-        /// <param name="Provider">Provider.</param>
-        /// <param name="ScriptId">ScriptId.</param>
-        /// <param name="PeerId">PeerId.</param>
-        /// <param name="DisconnectType">DisconnectType.</param>
-        /// <param name="StartHoldTime">StartHoldTime.</param>
-        /// <param name="ConnectedTime">ConnectedTime.</param>
-        /// <param name="DisconnectedTime">DisconnectedTime.</param>
-        /// <param name="ToAddress">ToAddress.</param>
-        /// <param name="FromAddress">FromAddress.</param>
-        /// <param name="Messages">Messages.</param>
-        /// <param name="MessagesTranscriptUri">MessagesTranscriptUri.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="RecipientCountry">RecipientCountry.</param>
-        /// <param name="RecipientType">RecipientType.</param>
-        /// <param name="JourneyContext">JourneyContext.</param>
-        /// <param name="Wrapup">Wrapup.</param>
-        /// <param name="AfterCallWork">AfterCallWork.</param>
-        /// <param name="AfterCallWorkRequired">AfterCallWorkRequired.</param>
-        /// <param name="AgentAssistantId">AgentAssistantId.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationSocialExpressionEventTopicMessage(string Id = null, StateEnum? State = null, bool? Held = null, QueueConversationSocialExpressionEventTopicErrorDetails ErrorInfo = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationSocialExpressionEventTopicAddress ToAddress = null, QueueConversationSocialExpressionEventTopicAddress FromAddress = null, List<QueueConversationSocialExpressionEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, QueueConversationSocialExpressionEventTopicJourneyContext JourneyContext = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, Object AdditionalProperties = null)
+        /// <param name="Id">A globally unique identifier for this communication..</param>
+        /// <param name="State">The connection state of this communication..</param>
+        /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
+        /// <param name="ErrorInfo">Detailed information about an error response..</param>
+        /// <param name="Provider">The source provider of the email..</param>
+        /// <param name="ScriptId">The UUID of the script to use..</param>
+        /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
+        /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
+        /// <param name="StartHoldTime">The timestamp the email was placed on hold in the cloud clock if the email is currently on hold..</param>
+        /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock..</param>
+        /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock..</param>
+        /// <param name="ToAddress">Address and name data for a call endpoint..</param>
+        /// <param name="FromAddress">Address and name data for a call endpoint..</param>
+        /// <param name="Messages">The messages sent on this communication channel..</param>
+        /// <param name="MessagesTranscriptUri">the messages transcript file uri..</param>
+        /// <param name="Type">Indicates the type of message platform from which the message originated..</param>
+        /// <param name="RecipientCountry">Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format..</param>
+        /// <param name="RecipientType">The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type..</param>
+        /// <param name="JourneyContext">A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context)..</param>
+        /// <param name="Wrapup">Call wrap up or disposition data..</param>
+        /// <param name="AfterCallWork">A communication&#39;s after-call work data..</param>
+        /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
+        /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
+        public QueueConversationSocialExpressionEventTopicMessage(string Id = null, StateEnum? State = null, bool? Held = null, QueueConversationSocialExpressionEventTopicErrorDetails ErrorInfo = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationSocialExpressionEventTopicAddress ToAddress = null, QueueConversationSocialExpressionEventTopicAddress FromAddress = null, List<QueueConversationSocialExpressionEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, QueueConversationSocialExpressionEventTopicJourneyContext JourneyContext = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
         {
             this.Id = Id;
             this.State = State;
@@ -448,15 +448,15 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AfterCallWork = AfterCallWork;
             this.AfterCallWorkRequired = AfterCallWorkRequired;
             this.AgentAssistantId = AgentAssistantId;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// A globally unique identifier for this communication.
         /// </summary>
+        /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
@@ -465,40 +465,45 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Held
+        /// True if this call is held and the person on this side hears silence.
         /// </summary>
+        /// <value>True if this call is held and the person on this side hears silence.</value>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ErrorInfo
+        /// Detailed information about an error response.
         /// </summary>
+        /// <value>Detailed information about an error response.</value>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public QueueConversationSocialExpressionEventTopicErrorDetails ErrorInfo { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Provider
+        /// The source provider of the email.
         /// </summary>
+        /// <value>The source provider of the email.</value>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ScriptId
+        /// The UUID of the script to use.
         /// </summary>
+        /// <value>The UUID of the script to use.</value>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets PeerId
+        /// The id of the peer communication corresponding to a matching leg for this communication.
         /// </summary>
+        /// <value>The id of the peer communication corresponding to a matching leg for this communication.</value>
         [DataMember(Name="peerId", EmitDefaultValue=false)]
         public string PeerId { get; set; }
         
@@ -507,56 +512,63 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets StartHoldTime
+        /// The timestamp the email was placed on hold in the cloud clock if the email is currently on hold.
         /// </summary>
+        /// <value>The timestamp the email was placed on hold in the cloud clock if the email is currently on hold.</value>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ConnectedTime
+        /// The timestamp when this communication was connected in the cloud clock.
         /// </summary>
+        /// <value>The timestamp when this communication was connected in the cloud clock.</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets DisconnectedTime
+        /// The timestamp when this communication disconnected from the conversation in the provider clock.
         /// </summary>
+        /// <value>The timestamp when this communication disconnected from the conversation in the provider clock.</value>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ToAddress
+        /// Address and name data for a call endpoint.
         /// </summary>
+        /// <value>Address and name data for a call endpoint.</value>
         [DataMember(Name="toAddress", EmitDefaultValue=false)]
         public QueueConversationSocialExpressionEventTopicAddress ToAddress { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets FromAddress
+        /// Address and name data for a call endpoint.
         /// </summary>
+        /// <value>Address and name data for a call endpoint.</value>
         [DataMember(Name="fromAddress", EmitDefaultValue=false)]
         public QueueConversationSocialExpressionEventTopicAddress FromAddress { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Messages
+        /// The messages sent on this communication channel.
         /// </summary>
+        /// <value>The messages sent on this communication channel.</value>
         [DataMember(Name="messages", EmitDefaultValue=false)]
         public List<QueueConversationSocialExpressionEventTopicMessageDetails> Messages { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MessagesTranscriptUri
+        /// the messages transcript file uri.
         /// </summary>
+        /// <value>the messages transcript file uri.</value>
         [DataMember(Name="messagesTranscriptUri", EmitDefaultValue=false)]
         public string MessagesTranscriptUri { get; set; }
         
@@ -565,66 +577,65 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets RecipientCountry
+        /// Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format.
         /// </summary>
+        /// <value>Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format.</value>
         [DataMember(Name="recipientCountry", EmitDefaultValue=false)]
         public string RecipientCountry { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets RecipientType
+        /// The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type.
         /// </summary>
+        /// <value>The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type.</value>
         [DataMember(Name="recipientType", EmitDefaultValue=false)]
         public string RecipientType { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets JourneyContext
+        /// A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context).
         /// </summary>
+        /// <value>A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context).</value>
         [DataMember(Name="journeyContext", EmitDefaultValue=false)]
         public QueueConversationSocialExpressionEventTopicJourneyContext JourneyContext { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Wrapup
+        /// Call wrap up or disposition data.
         /// </summary>
+        /// <value>Call wrap up or disposition data.</value>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public QueueConversationSocialExpressionEventTopicWrapup Wrapup { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AfterCallWork
+        /// A communication&#39;s after-call work data.
         /// </summary>
+        /// <value>A communication&#39;s after-call work data.</value>
         [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
         public QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AfterCallWorkRequired
+        /// Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested.
         /// </summary>
+        /// <value>Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested.</value>
         [DataMember(Name="afterCallWorkRequired", EmitDefaultValue=false)]
         public bool? AfterCallWorkRequired { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AgentAssistantId
+        /// UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation.
         /// </summary>
+        /// <value>UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation.</value>
         [DataMember(Name="agentAssistantId", EmitDefaultValue=false)]
         public string AgentAssistantId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -659,7 +670,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
             sb.Append("  AgentAssistantId: ").Append(AgentAssistantId).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -814,11 +824,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentAssistantId == other.AgentAssistantId ||
                     this.AgentAssistantId != null &&
                     this.AgentAssistantId.Equals(other.AgentAssistantId)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -902,9 +907,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AgentAssistantId != null)
                     hash = hash * 59 + this.AgentAssistantId.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

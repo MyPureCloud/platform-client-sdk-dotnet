@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// DialerOutboundSettingsConfigChangeAutomaticTimeZoneMappingSettings
+    /// The settings for automatic time zone mapping
     /// </summary>
     [DataContract]
     public partial class DialerOutboundSettingsConfigChangeAutomaticTimeZoneMappingSettings :  IEquatable<DialerOutboundSettingsConfigChangeAutomaticTimeZoneMappingSettings>
@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerOutboundSettingsConfigChangeAutomaticTimeZoneMappingSettings" /> class.
         /// </summary>
-        /// <param name="CallableWindows">CallableWindows.</param>
+        /// <param name="CallableWindows">The time intervals to use for automatic time zone mapping.</param>
         public DialerOutboundSettingsConfigChangeAutomaticTimeZoneMappingSettings(List<DialerOutboundSettingsConfigChangeCallableWindow> CallableWindows = null)
         {
             this.CallableWindows = CallableWindows;
@@ -39,8 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets CallableWindows
+        /// The time intervals to use for automatic time zone mapping
         /// </summary>
+        /// <value>The time intervals to use for automatic time zone mapping</value>
         [DataMember(Name="callableWindows", EmitDefaultValue=false)]
         public List<DialerOutboundSettingsConfigChangeCallableWindow> CallableWindows { get; set; }
         

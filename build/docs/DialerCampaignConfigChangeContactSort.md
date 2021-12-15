@@ -9,8 +9,7 @@ title: DialerCampaignConfigChangeContactSort
 |------------ | ------------- | ------------- | -------------|
 | **FieldName** | **string** |  | [optional] |
 | **Direction** | **string** |  | [optional] |
-| **Numeric** | **bool?** |  | [optional] |
-| **AdditionalProperties** | **Object** |  | [optional] |
+| **Numeric** | **bool?** | Whether that column contains numeric data | [optional] |
 {: class="table table-striped"}
 
 

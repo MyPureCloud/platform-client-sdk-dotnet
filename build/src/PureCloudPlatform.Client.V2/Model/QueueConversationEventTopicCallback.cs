@@ -21,8 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets State
+        /// The connection state of this communication.
         /// </summary>
+        /// <value>The connection state of this communication.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
@@ -35,63 +36,63 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Alerting for "ALERTING"
+            /// Enum Alerting for "alerting"
             /// </summary>
-            [EnumMember(Value = "ALERTING")]
+            [EnumMember(Value = "alerting")]
             Alerting,
             
             /// <summary>
-            /// Enum Dialing for "DIALING"
+            /// Enum Dialing for "dialing"
             /// </summary>
-            [EnumMember(Value = "DIALING")]
+            [EnumMember(Value = "dialing")]
             Dialing,
             
             /// <summary>
-            /// Enum Contacting for "CONTACTING"
+            /// Enum Contacting for "contacting"
             /// </summary>
-            [EnumMember(Value = "CONTACTING")]
+            [EnumMember(Value = "contacting")]
             Contacting,
             
             /// <summary>
-            /// Enum Offering for "OFFERING"
+            /// Enum Offering for "offering"
             /// </summary>
-            [EnumMember(Value = "OFFERING")]
+            [EnumMember(Value = "offering")]
             Offering,
             
             /// <summary>
-            /// Enum Connected for "CONNECTED"
+            /// Enum Connected for "connected"
             /// </summary>
-            [EnumMember(Value = "CONNECTED")]
+            [EnumMember(Value = "connected")]
             Connected,
             
             /// <summary>
-            /// Enum Disconnected for "DISCONNECTED"
+            /// Enum Disconnected for "disconnected"
             /// </summary>
-            [EnumMember(Value = "DISCONNECTED")]
+            [EnumMember(Value = "disconnected")]
             Disconnected,
             
             /// <summary>
-            /// Enum Terminated for "TERMINATED"
+            /// Enum Terminated for "terminated"
             /// </summary>
-            [EnumMember(Value = "TERMINATED")]
+            [EnumMember(Value = "terminated")]
             Terminated,
             
             /// <summary>
-            /// Enum Scheduled for "SCHEDULED"
+            /// Enum Scheduled for "scheduled"
             /// </summary>
-            [EnumMember(Value = "SCHEDULED")]
+            [EnumMember(Value = "scheduled")]
             Scheduled,
             
             /// <summary>
-            /// Enum Uploading for "UPLOADING"
+            /// Enum Uploading for "uploading"
             /// </summary>
-            [EnumMember(Value = "UPLOADING")]
+            [EnumMember(Value = "uploading")]
             Uploading,
             
             /// <summary>
-            /// Enum None for "NONE"
+            /// Enum None for "none"
             /// </summary>
-            [EnumMember(Value = "NONE")]
+            [EnumMember(Value = "none")]
             None
         }
         
@@ -102,8 +103,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Direction
+        /// The direction of the call
         /// </summary>
+        /// <value>The direction of the call</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DirectionEnum
         {
@@ -116,15 +118,15 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Inbound for "INBOUND"
+            /// Enum Inbound for "inbound"
             /// </summary>
-            [EnumMember(Value = "INBOUND")]
+            [EnumMember(Value = "inbound")]
             Inbound,
             
             /// <summary>
-            /// Enum Outbound for "OUTBOUND"
+            /// Enum Outbound for "outbound"
             /// </summary>
-            [EnumMember(Value = "OUTBOUND")]
+            [EnumMember(Value = "outbound")]
             Outbound
         }
         
@@ -135,8 +137,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets DisconnectType
+        /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
+        /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DisconnectTypeEnum
         {
@@ -149,99 +152,99 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Endpoint for "ENDPOINT"
+            /// Enum Endpoint for "endpoint"
             /// </summary>
-            [EnumMember(Value = "ENDPOINT")]
+            [EnumMember(Value = "endpoint")]
             Endpoint,
             
             /// <summary>
-            /// Enum Client for "CLIENT"
+            /// Enum Client for "client"
             /// </summary>
-            [EnumMember(Value = "CLIENT")]
+            [EnumMember(Value = "client")]
             Client,
             
             /// <summary>
-            /// Enum System for "SYSTEM"
+            /// Enum System for "system"
             /// </summary>
-            [EnumMember(Value = "SYSTEM")]
+            [EnumMember(Value = "system")]
             System,
             
             /// <summary>
-            /// Enum Timeout for "TIMEOUT"
+            /// Enum Timeout for "timeout"
             /// </summary>
-            [EnumMember(Value = "TIMEOUT")]
+            [EnumMember(Value = "timeout")]
             Timeout,
             
             /// <summary>
-            /// Enum Transfer for "TRANSFER"
+            /// Enum Transfer for "transfer"
             /// </summary>
-            [EnumMember(Value = "TRANSFER")]
+            [EnumMember(Value = "transfer")]
             Transfer,
             
             /// <summary>
-            /// Enum TransferConference for "TRANSFER_CONFERENCE"
+            /// Enum Transferconference for "transfer.conference"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_CONFERENCE")]
-            TransferConference,
+            [EnumMember(Value = "transfer.conference")]
+            Transferconference,
             
             /// <summary>
-            /// Enum TransferConsult for "TRANSFER_CONSULT"
+            /// Enum Transferconsult for "transfer.consult"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_CONSULT")]
-            TransferConsult,
+            [EnumMember(Value = "transfer.consult")]
+            Transferconsult,
             
             /// <summary>
-            /// Enum TransferNoanswer for "TRANSFER_NOANSWER"
+            /// Enum Transfernoanswer for "transfer.noanswer"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_NOANSWER")]
-            TransferNoanswer,
+            [EnumMember(Value = "transfer.noanswer")]
+            Transfernoanswer,
             
             /// <summary>
-            /// Enum TransferNotavailable for "TRANSFER_NOTAVAILABLE"
+            /// Enum Transfernotavailable for "transfer.notavailable"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_NOTAVAILABLE")]
-            TransferNotavailable,
+            [EnumMember(Value = "transfer.notavailable")]
+            Transfernotavailable,
             
             /// <summary>
-            /// Enum TransferForward for "TRANSFER_FORWARD"
+            /// Enum Transferforward for "transfer.forward"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_FORWARD")]
-            TransferForward,
+            [EnumMember(Value = "transfer.forward")]
+            Transferforward,
             
             /// <summary>
-            /// Enum TransportFailure for "TRANSPORT_FAILURE"
+            /// Enum Transportfailure for "transport.failure"
             /// </summary>
-            [EnumMember(Value = "TRANSPORT_FAILURE")]
-            TransportFailure,
+            [EnumMember(Value = "transport.failure")]
+            Transportfailure,
             
             /// <summary>
-            /// Enum Error for "ERROR"
+            /// Enum Error for "error"
             /// </summary>
-            [EnumMember(Value = "ERROR")]
+            [EnumMember(Value = "error")]
             Error,
             
             /// <summary>
-            /// Enum Peer for "PEER"
+            /// Enum Peer for "peer"
             /// </summary>
-            [EnumMember(Value = "PEER")]
+            [EnumMember(Value = "peer")]
             Peer,
             
             /// <summary>
-            /// Enum Other for "OTHER"
+            /// Enum Other for "other"
             /// </summary>
-            [EnumMember(Value = "OTHER")]
+            [EnumMember(Value = "other")]
             Other,
             
             /// <summary>
-            /// Enum Spam for "SPAM"
+            /// Enum Spam for "spam"
             /// </summary>
-            [EnumMember(Value = "SPAM")]
+            [EnumMember(Value = "spam")]
             Spam,
             
             /// <summary>
-            /// Enum Uncallable for "UNCALLABLE"
+            /// Enum Uncallable for "uncallable"
             /// </summary>
-            [EnumMember(Value = "UNCALLABLE")]
+            [EnumMember(Value = "uncallable")]
             Uncallable
         }
         
@@ -309,12 +312,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
-        /// Gets or Sets State
+        /// The connection state of this communication.
         /// </summary>
+        /// <value>The connection state of this communication.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         
@@ -323,8 +324,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Direction
+        /// The direction of the call
         /// </summary>
+        /// <value>The direction of the call</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
         
@@ -333,12 +335,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets DisconnectType
+        /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
+        /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
-        
-        
         
         
         
@@ -385,33 +386,32 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationEventTopicCallback" /> class.
         /// </summary>
-        /// <param name="State">State.</param>
-        /// <param name="Id">Id.</param>
-        /// <param name="Direction">Direction.</param>
-        /// <param name="Held">Held.</param>
-        /// <param name="DisconnectType">DisconnectType.</param>
-        /// <param name="StartHoldTime">StartHoldTime.</param>
+        /// <param name="State">The connection state of this communication..</param>
+        /// <param name="Id">A globally unique identifier for this communication..</param>
+        /// <param name="Direction">The direction of the call.</param>
+        /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
+        /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
+        /// <param name="StartHoldTime">The timestamp the callback was placed on hold in the cloud clock if the callback is currently on hold..</param>
         /// <param name="DialerPreview">DialerPreview.</param>
         /// <param name="Voicemail">Voicemail.</param>
-        /// <param name="CallbackNumbers">CallbackNumbers.</param>
-        /// <param name="CallbackUserName">CallbackUserName.</param>
-        /// <param name="ScriptId">ScriptId.</param>
-        /// <param name="PeerId">PeerId.</param>
-        /// <param name="ExternalCampaign">ExternalCampaign.</param>
-        /// <param name="SkipEnabled">SkipEnabled.</param>
-        /// <param name="Provider">Provider.</param>
-        /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
-        /// <param name="ConnectedTime">ConnectedTime.</param>
-        /// <param name="DisconnectedTime">DisconnectedTime.</param>
-        /// <param name="CallbackScheduledTime">CallbackScheduledTime.</param>
-        /// <param name="AutomatedCallbackConfigId">AutomatedCallbackConfigId.</param>
-        /// <param name="Wrapup">Wrapup.</param>
-        /// <param name="AfterCallWork">AfterCallWork.</param>
-        /// <param name="AfterCallWorkRequired">AfterCallWorkRequired.</param>
-        /// <param name="CallerId">CallerId.</param>
-        /// <param name="CallerIdName">CallerIdName.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationEventTopicCallback(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, QueueConversationEventTopicDialerPreview DialerPreview = null, QueueConversationEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, QueueConversationEventTopicWrapup Wrapup = null, QueueConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string CallerId = null, string CallerIdName = null, Object AdditionalProperties = null)
+        /// <param name="CallbackNumbers">The phone number(s) to use to place the callback..</param>
+        /// <param name="CallbackUserName">The name of the user requesting a callback..</param>
+        /// <param name="ScriptId">The UUID of the script to use..</param>
+        /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
+        /// <param name="ExternalCampaign">True if the call for the callback uses external dialing..</param>
+        /// <param name="SkipEnabled">True if the ability to skip a callback should be enabled..</param>
+        /// <param name="Provider">The source provider of the callback..</param>
+        /// <param name="TimeoutSeconds">The number of seconds before the system automatically places a call for a callback.  0 means the automatic placement is disabled..</param>
+        /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock..</param>
+        /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock..</param>
+        /// <param name="CallbackScheduledTime">The timestamp when this communication is scheduled in the provider clock. If this value is missing it indicates the callback will be placed immediately..</param>
+        /// <param name="AutomatedCallbackConfigId">The id of the config for automatically placing the callback (and handling the disposition). If null, the callback will not be placed automatically but routed to an agent as per normal..</param>
+        /// <param name="Wrapup">Call wrap up or disposition data..</param>
+        /// <param name="AfterCallWork">A communication&#39;s after-call work data..</param>
+        /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
+        /// <param name="CallerId">The phone number displayed to recipients of the phone call. The value should conform to the E164 format..</param>
+        /// <param name="CallerIdName">The name displayed to recipients of the phone call..</param>
+        public QueueConversationEventTopicCallback(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, QueueConversationEventTopicDialerPreview DialerPreview = null, QueueConversationEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, QueueConversationEventTopicWrapup Wrapup = null, QueueConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string CallerId = null, string CallerIdName = null)
         {
             this.State = State;
             this.Id = Id;
@@ -438,7 +438,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AfterCallWorkRequired = AfterCallWorkRequired;
             this.CallerId = CallerId;
             this.CallerIdName = CallerIdName;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -447,8 +446,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// A globally unique identifier for this communication.
         /// </summary>
+        /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
@@ -457,8 +457,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Held
+        /// True if this call is held and the person on this side hears silence.
         /// </summary>
+        /// <value>True if this call is held and the person on this side hears silence.</value>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
         
@@ -467,8 +468,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets StartHoldTime
+        /// The timestamp the callback was placed on hold in the cloud clock if the callback is currently on hold.
         /// </summary>
+        /// <value>The timestamp the callback was placed on hold in the cloud clock if the callback is currently on hold.</value>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
         
@@ -491,146 +493,155 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets CallbackNumbers
+        /// The phone number(s) to use to place the callback.
         /// </summary>
+        /// <value>The phone number(s) to use to place the callback.</value>
         [DataMember(Name="callbackNumbers", EmitDefaultValue=false)]
         public List<string> CallbackNumbers { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CallbackUserName
+        /// The name of the user requesting a callback.
         /// </summary>
+        /// <value>The name of the user requesting a callback.</value>
         [DataMember(Name="callbackUserName", EmitDefaultValue=false)]
         public string CallbackUserName { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ScriptId
+        /// The UUID of the script to use.
         /// </summary>
+        /// <value>The UUID of the script to use.</value>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets PeerId
+        /// The id of the peer communication corresponding to a matching leg for this communication.
         /// </summary>
+        /// <value>The id of the peer communication corresponding to a matching leg for this communication.</value>
         [DataMember(Name="peerId", EmitDefaultValue=false)]
         public string PeerId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ExternalCampaign
+        /// True if the call for the callback uses external dialing.
         /// </summary>
+        /// <value>True if the call for the callback uses external dialing.</value>
         [DataMember(Name="externalCampaign", EmitDefaultValue=false)]
         public bool? ExternalCampaign { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets SkipEnabled
+        /// True if the ability to skip a callback should be enabled.
         /// </summary>
+        /// <value>True if the ability to skip a callback should be enabled.</value>
         [DataMember(Name="skipEnabled", EmitDefaultValue=false)]
         public bool? SkipEnabled { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Provider
+        /// The source provider of the callback.
         /// </summary>
+        /// <value>The source provider of the callback.</value>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets TimeoutSeconds
+        /// The number of seconds before the system automatically places a call for a callback.  0 means the automatic placement is disabled.
         /// </summary>
+        /// <value>The number of seconds before the system automatically places a call for a callback.  0 means the automatic placement is disabled.</value>
         [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
         public int? TimeoutSeconds { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ConnectedTime
+        /// The timestamp when this communication was connected in the cloud clock.
         /// </summary>
+        /// <value>The timestamp when this communication was connected in the cloud clock.</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets DisconnectedTime
+        /// The timestamp when this communication disconnected from the conversation in the provider clock.
         /// </summary>
+        /// <value>The timestamp when this communication disconnected from the conversation in the provider clock.</value>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CallbackScheduledTime
+        /// The timestamp when this communication is scheduled in the provider clock. If this value is missing it indicates the callback will be placed immediately.
         /// </summary>
+        /// <value>The timestamp when this communication is scheduled in the provider clock. If this value is missing it indicates the callback will be placed immediately.</value>
         [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
         public DateTime? CallbackScheduledTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AutomatedCallbackConfigId
+        /// The id of the config for automatically placing the callback (and handling the disposition). If null, the callback will not be placed automatically but routed to an agent as per normal.
         /// </summary>
+        /// <value>The id of the config for automatically placing the callback (and handling the disposition). If null, the callback will not be placed automatically but routed to an agent as per normal.</value>
         [DataMember(Name="automatedCallbackConfigId", EmitDefaultValue=false)]
         public string AutomatedCallbackConfigId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Wrapup
+        /// Call wrap up or disposition data.
         /// </summary>
+        /// <value>Call wrap up or disposition data.</value>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public QueueConversationEventTopicWrapup Wrapup { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AfterCallWork
+        /// A communication&#39;s after-call work data.
         /// </summary>
+        /// <value>A communication&#39;s after-call work data.</value>
         [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
         public QueueConversationEventTopicAfterCallWork AfterCallWork { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AfterCallWorkRequired
+        /// Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested.
         /// </summary>
+        /// <value>Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested.</value>
         [DataMember(Name="afterCallWorkRequired", EmitDefaultValue=false)]
         public bool? AfterCallWorkRequired { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CallerId
+        /// The phone number displayed to recipients of the phone call. The value should conform to the E164 format.
         /// </summary>
+        /// <value>The phone number displayed to recipients of the phone call. The value should conform to the E164 format.</value>
         [DataMember(Name="callerId", EmitDefaultValue=false)]
         public string CallerId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CallerIdName
+        /// The name displayed to recipients of the phone call.
         /// </summary>
+        /// <value>The name displayed to recipients of the phone call.</value>
         [DataMember(Name="callerIdName", EmitDefaultValue=false)]
         public string CallerIdName { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -667,7 +678,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
             sb.Append("  CallerId: ").Append(CallerId).Append("\n");
             sb.Append("  CallerIdName: ").Append(CallerIdName).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -832,11 +842,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CallerIdName == other.CallerIdName ||
                     this.CallerIdName != null &&
                     this.CallerIdName.Equals(other.CallerIdName)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -926,9 +931,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CallerIdName != null)
                     hash = hash * 59 + this.CallerIdName.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

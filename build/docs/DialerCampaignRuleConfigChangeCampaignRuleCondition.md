@@ -7,10 +7,9 @@ title: DialerCampaignRuleConfigChangeCampaignRuleCondition
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
-| **Parameters** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-| **ConditionType** | **string** |  | [optional] |
-| **AdditionalProperties** | **Object** |  | [optional] |
+| **Id** | **string** | The globally unique identifier for the condition | [optional] |
+| **Parameters** | **Dictionary&lt;string, string&gt;** | The parameters to match this condition | [optional] |
+| **ConditionType** | **string** | The type of this condition | [optional] |
 {: class="table table-striped"}
 
 

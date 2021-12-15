@@ -7,15 +7,14 @@ title: DialerCampaignScheduleConfigChangeCampaignSchedule
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
-| **Name** | **string** |  | [optional] |
-| **DateCreated** | **DateTime?** |  | [optional] |
-| **DateModified** | **DateTime?** |  | [optional] |
-| **Version** | **int?** |  | [optional] |
-| **Intervals** | [**List&lt;DialerCampaignScheduleConfigChangeScheduleInterval&gt;**](DialerCampaignScheduleConfigChangeScheduleInterval.html) |  | [optional] |
-| **TimeZone** | **string** |  | [optional] |
+| **Intervals** | [**List&lt;DialerCampaignScheduleConfigChangeScheduleInterval&gt;**](DialerCampaignScheduleConfigChangeScheduleInterval.html) | a list of start and end times | [optional] |
+| **TimeZone** | **string** | time zone identifier to be applied to the intervals; for example Africa/Abidjan | [optional] |
 | **Campaign** | [**DialerCampaignScheduleConfigChangeUriReference**](DialerCampaignScheduleConfigChangeUriReference.html) |  | [optional] |
-| **AdditionalProperties** | **Object** |  | [optional] |
+| **Id** | **string** | The globally unique identifier for the object. | [optional] |
+| **Name** | **string** | The UI-visible name of the object | [optional] |
+| **DateCreated** | **DateTime?** | Creation time of the entity | [optional] |
+| **DateModified** | **DateTime?** | Last modified time of the entity | [optional] |
+| **Version** | **int?** | Required for updates, must match the version number of the most recent update | [optional] |
 {: class="table table-striped"}
 
 

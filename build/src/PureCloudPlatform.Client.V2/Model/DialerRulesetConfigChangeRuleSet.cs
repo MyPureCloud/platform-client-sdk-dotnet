@@ -60,77 +60,30 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerRulesetConfigChangeRuleSet" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="DateCreated">DateCreated.</param>
-        /// <param name="DateModified">DateModified.</param>
-        /// <param name="Version">Version.</param>
         /// <param name="ContactList">ContactList.</param>
-        /// <param name="Queue">Queue.</param>
+        /// <param name="Queue">A UriReference for a resource.</param>
         /// <param name="Rules">Rules.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerRulesetConfigChangeRuleSet(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DialerRulesetConfigChangeUriReference ContactList = null, DialerRulesetConfigChangeUriReference Queue = null, List<DialerRulesetConfigChangeRule> Rules = null, Object AdditionalProperties = null)
+        /// <param name="Id">The globally unique identifier for the object..</param>
+        /// <param name="Name">The UI-visible name of the object.</param>
+        /// <param name="DateCreated">Creation time of the entity.</param>
+        /// <param name="DateModified">Last modified time of the entity.</param>
+        /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
+        public DialerRulesetConfigChangeRuleSet(DialerRulesetConfigChangeUriReference ContactList = null, DialerRulesetConfigChangeUriReference Queue = null, List<DialerRulesetConfigChangeRule> Rules = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
         {
+            this.ContactList = ContactList;
+            this.Queue = Queue;
+            this.Rules = Rules;
             this.Id = Id;
             this.Name = Name;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.Version = Version;
-            this.ContactList = ContactList;
-            this.Queue = Queue;
-            this.Rules = Rules;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Id
-        /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateCreated
-        /// </summary>
-        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateModified
-        /// </summary>
-        [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Version
-        /// </summary>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
         
         
         
@@ -143,8 +96,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Queue
+        /// A UriReference for a resource
         /// </summary>
+        /// <value>A UriReference for a resource</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public DialerRulesetConfigChangeUriReference Queue { get; set; }
         
@@ -159,10 +113,47 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets AdditionalProperties
+        /// The globally unique identifier for the object.
         /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
+        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The UI-visible name of the object
+        /// </summary>
+        /// <value>The UI-visible name of the object</value>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Creation time of the entity
+        /// </summary>
+        /// <value>Creation time of the entity</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Last modified time of the entity
+        /// </summary>
+        /// <value>Last modified time of the entity</value>
+        [DataMember(Name="dateModified", EmitDefaultValue=false)]
+        public DateTime? DateModified { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Required for updates, must match the version number of the most recent update
+        /// </summary>
+        /// <value>Required for updates, must match the version number of the most recent update</value>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public int? Version { get; set; }
         
         
         /// <summary>
@@ -174,15 +165,14 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class DialerRulesetConfigChangeRuleSet {\n");
             
+            sb.Append("  ContactList: ").Append(ContactList).Append("\n");
+            sb.Append("  Queue: ").Append(Queue).Append("\n");
+            sb.Append("  Rules: ").Append(Rules).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
-            sb.Append("  ContactList: ").Append(ContactList).Append("\n");
-            sb.Append("  Queue: ").Append(Queue).Append("\n");
-            sb.Append("  Rules: ").Append(Rules).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -224,6 +214,21 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.ContactList == other.ContactList ||
+                    this.ContactList != null &&
+                    this.ContactList.Equals(other.ContactList)
+                ) &&
+                (
+                    this.Queue == other.Queue ||
+                    this.Queue != null &&
+                    this.Queue.Equals(other.Queue)
+                ) &&
+                (
+                    this.Rules == other.Rules ||
+                    this.Rules != null &&
+                    this.Rules.SequenceEqual(other.Rules)
+                ) &&
+                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
@@ -247,26 +252,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) &&
-                (
-                    this.ContactList == other.ContactList ||
-                    this.ContactList != null &&
-                    this.ContactList.Equals(other.ContactList)
-                ) &&
-                (
-                    this.Queue == other.Queue ||
-                    this.Queue != null &&
-                    this.Queue.Equals(other.Queue)
-                ) &&
-                (
-                    this.Rules == other.Rules ||
-                    this.Rules != null &&
-                    this.Rules.SequenceEqual(other.Rules)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -282,6 +267,15 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.ContactList != null)
+                    hash = hash * 59 + this.ContactList.GetHashCode();
+                
+                if (this.Queue != null)
+                    hash = hash * 59 + this.Queue.GetHashCode();
+                
+                if (this.Rules != null)
+                    hash = hash * 59 + this.Rules.GetHashCode();
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
@@ -296,18 +290,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
-                if (this.ContactList != null)
-                    hash = hash * 59 + this.ContactList.GetHashCode();
-                
-                if (this.Queue != null)
-                    hash = hash * 59 + this.Queue.GetHashCode();
-                
-                if (this.Rules != null)
-                    hash = hash * 59 + this.Rules.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

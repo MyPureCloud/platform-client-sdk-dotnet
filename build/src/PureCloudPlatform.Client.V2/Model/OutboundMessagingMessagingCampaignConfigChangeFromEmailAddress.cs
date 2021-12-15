@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress
+    /// An outbound-messaging messaging campaign email address
     /// </summary>
     [DataContract]
     public partial class OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress :  IEquatable<OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress>
@@ -39,9 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress" /> class.
         /// </summary>
-        /// <param name="FriendlyName">FriendlyName.</param>
-        /// <param name="LocalPart">LocalPart.</param>
-        /// <param name="Domain">Domain.</param>
+        /// <param name="FriendlyName">The friendly name of the email address..</param>
+        /// <param name="LocalPart">The local part of the email address..</param>
+        /// <param name="Domain">A UriReference for a resource.</param>
         public OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress(string FriendlyName = null, string LocalPart = null, OutboundMessagingMessagingCampaignConfigChangeUriReference Domain = null)
         {
             this.FriendlyName = FriendlyName;
@@ -53,24 +53,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets FriendlyName
+        /// The friendly name of the email address.
         /// </summary>
+        /// <value>The friendly name of the email address.</value>
         [DataMember(Name="friendlyName", EmitDefaultValue=false)]
         public string FriendlyName { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets LocalPart
+        /// The local part of the email address.
         /// </summary>
+        /// <value>The local part of the email address.</value>
         [DataMember(Name="localPart", EmitDefaultValue=false)]
         public string LocalPart { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Domain
+        /// A UriReference for a resource
         /// </summary>
+        /// <value>A UriReference for a resource</value>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public OutboundMessagingMessagingCampaignConfigChangeUriReference Domain { get; set; }
         

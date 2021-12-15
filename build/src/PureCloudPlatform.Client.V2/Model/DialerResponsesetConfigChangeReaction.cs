@@ -41,32 +41,29 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Hangup for "HANGUP"
+            /// Enum Hangup for "hangup"
             /// </summary>
-            [EnumMember(Value = "HANGUP")]
+            [EnumMember(Value = "hangup")]
             Hangup,
             
             /// <summary>
-            /// Enum Transfer for "TRANSFER"
+            /// Enum Transfer for "transfer"
             /// </summary>
-            [EnumMember(Value = "TRANSFER")]
+            [EnumMember(Value = "transfer")]
             Transfer,
             
             /// <summary>
-            /// Enum TransferFlow for "TRANSFER_FLOW"
+            /// Enum TransferFlow for "transfer_flow"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_FLOW")]
+            [EnumMember(Value = "transfer_flow")]
             TransferFlow,
             
             /// <summary>
-            /// Enum PlayFile for "PLAY_FILE"
+            /// Enum PlayFile for "play_file"
             /// </summary>
-            [EnumMember(Value = "PLAY_FILE")]
+            [EnumMember(Value = "play_file")]
             PlayFile
         }
-        
-        
-        
         
         
         
@@ -83,8 +80,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public ReactionTypeEnum? ReactionType { get; set; }
         
         
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerResponsesetConfigChangeReaction" /> class.
@@ -92,13 +87,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Data">Data.</param>
         /// <param name="Name">Name.</param>
         /// <param name="ReactionType">ReactionType.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerResponsesetConfigChangeReaction(string Data = null, string Name = null, ReactionTypeEnum? ReactionType = null, Object AdditionalProperties = null)
+        public DialerResponsesetConfigChangeReaction(string Data = null, string Name = null, ReactionTypeEnum? ReactionType = null)
         {
             this.Data = Data;
             this.Name = Name;
             this.ReactionType = ReactionType;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -121,14 +114,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -141,7 +126,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ReactionType: ").Append(ReactionType).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -196,11 +180,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ReactionType == other.ReactionType ||
                     this.ReactionType != null &&
                     this.ReactionType.Equals(other.ReactionType)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -224,9 +203,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ReactionType != null)
                     hash = hash * 59 + this.ReactionType.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

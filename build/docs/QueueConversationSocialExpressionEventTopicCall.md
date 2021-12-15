@@ -7,33 +7,32 @@ title: QueueConversationSocialExpressionEventTopicCall
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
-| **State** | **string** |  | [optional] |
-| **Recording** | **bool?** |  | [optional] |
-| **RecordingState** | **string** |  | [optional] |
-| **Muted** | **bool?** |  | [optional] |
-| **Confined** | **bool?** |  | [optional] |
-| **Held** | **bool?** |  | [optional] |
+| **Id** | **string** | A globally unique identifier for this communication. | [optional] |
+| **State** | **string** | The connection state of this communication. | [optional] |
+| **Recording** | **bool?** | True if this call is being recorded. | [optional] |
+| **RecordingState** | **string** | State of recording on this call. | [optional] |
+| **Muted** | **bool?** | True if this call is muted so that remote participants can&#39;t hear any audio from this end. | [optional] |
+| **Confined** | **bool?** | True if this call is held and the person on this side hears hold music. | [optional] |
+| **Held** | **bool?** | True if this call is held and the person on this side hears silence. | [optional] |
 | **ErrorInfo** | [**QueueConversationSocialExpressionEventTopicErrorDetails**](QueueConversationSocialExpressionEventTopicErrorDetails.html) |  | [optional] |
-| **DisconnectType** | **string** |  | [optional] |
-| **StartHoldTime** | **DateTime?** |  | [optional] |
-| **Direction** | **string** |  | [optional] |
-| **DocumentId** | **string** |  | [optional] |
+| **DisconnectType** | **string** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
+| **StartHoldTime** | **DateTime?** | The timestamp the call was placed on hold in the cloud clock if the call is currently on hold. | [optional] |
+| **Direction** | **string** | Whether a call is inbound or outbound. | [optional] |
+| **DocumentId** | **string** | If call is a fax of a document in content management, the id of the document in content management. | [optional] |
 | **Self** | [**QueueConversationSocialExpressionEventTopicAddress**](QueueConversationSocialExpressionEventTopicAddress.html) |  | [optional] |
-| **Other** | [**QueueConversationSocialExpressionEventTopicAddress**](QueueConversationSocialExpressionEventTopicAddress.html) |  | [optional] |
-| **Provider** | **string** |  | [optional] |
-| **ScriptId** | **string** |  | [optional] |
-| **PeerId** | **string** |  | [optional] |
-| **ConnectedTime** | **DateTime?** |  | [optional] |
-| **DisconnectedTime** | **DateTime?** |  | [optional] |
-| **DisconnectReasons** | [**List&lt;QueueConversationSocialExpressionEventTopicDisconnectReason&gt;**](QueueConversationSocialExpressionEventTopicDisconnectReason.html) |  | [optional] |
+| **Other** | [**QueueConversationSocialExpressionEventTopicAddress**](QueueConversationSocialExpressionEventTopicAddress.html) | Address and name data for a call endpoint. | [optional] |
+| **Provider** | **string** | The source provider of the call. | [optional] |
+| **ScriptId** | **string** | The UUID of the script to use. | [optional] |
+| **PeerId** | **string** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
+| **ConnectedTime** | **DateTime?** | The timestamp when this communication was connected in the cloud clock. | [optional] |
+| **DisconnectedTime** | **DateTime?** | The timestamp when this communication disconnected from the conversation in the provider clock. | [optional] |
+| **DisconnectReasons** | [**List&lt;QueueConversationSocialExpressionEventTopicDisconnectReason&gt;**](QueueConversationSocialExpressionEventTopicDisconnectReason.html) | List of reasons that this call was disconnected. This will be set once the call disconnects. | [optional] |
 | **FaxStatus** | [**QueueConversationSocialExpressionEventTopicFaxStatus**](QueueConversationSocialExpressionEventTopicFaxStatus.html) |  | [optional] |
-| **UuiData** | **string** |  | [optional] |
-| **Wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup.html) |  | [optional] |
+| **UuiData** | **string** | User to User Information (UUI) data managed by SIP session application. | [optional] |
+| **Wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup.html) | Call wrap up or disposition data. | [optional] |
 | **AfterCallWork** | [**QueueConversationSocialExpressionEventTopicAfterCallWork**](QueueConversationSocialExpressionEventTopicAfterCallWork.html) |  | [optional] |
-| **AfterCallWorkRequired** | **bool?** |  | [optional] |
-| **AgentAssistantId** | **string** |  | [optional] |
-| **AdditionalProperties** | **Object** |  | [optional] |
+| **AfterCallWorkRequired** | **bool?** | Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
+| **AgentAssistantId** | **string** | UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. | [optional] |
 {: class="table table-striped"}
 
 

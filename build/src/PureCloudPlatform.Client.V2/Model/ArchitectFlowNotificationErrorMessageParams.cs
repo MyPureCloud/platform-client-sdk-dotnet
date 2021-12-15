@@ -13,36 +13,21 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ArchitectFlowNotificationErrorMessageParams
+    /// The error message params, if the action failed
     /// </summary>
     [DataContract]
     public partial class ArchitectFlowNotificationErrorMessageParams :  IEquatable<ArchitectFlowNotificationErrorMessageParams>
     {
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchitectFlowNotificationErrorMessageParams" /> class.
         /// </summary>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ArchitectFlowNotificationErrorMessageParams(Dictionary<string, string> AdditionalProperties = null)
+        public ArchitectFlowNotificationErrorMessageParams()
         {
-            this.AdditionalProperties = AdditionalProperties;
             
         }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Dictionary<string, string> AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -54,7 +39,6 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ArchitectFlowNotificationErrorMessageParams {\n");
             
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -94,12 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
-                );
+            return true && false;
         }
 
         /// <summary>
@@ -113,9 +92,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

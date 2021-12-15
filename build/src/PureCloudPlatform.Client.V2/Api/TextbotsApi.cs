@@ -17,6 +17,34 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
         
         /// <summary>
+        /// Find bots using the currently configured friendly name or ID.
+        /// </summary>
+        /// <remarks>
+        /// The name does allow case-insensitive partial string matches or by IDs (up to 50), but not both at the same time. Optionally you can limit the scope of the search by providing one or more bot types.  You can specify the maximum results to return, up to a limit of 100
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botType">Bot types (optional)</param>
+        /// <param name="botName">Bot name (optional)</param>
+        /// <param name="botId">Bot IDs (optional)</param>
+        /// <param name="pageSize">The maximum results to return (optional, default to 25)</param>
+        /// <returns>BotSearchResponseEntityListing</returns>
+        BotSearchResponseEntityListing GetTextbotsBotsSearch (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null);
+
+        /// <summary>
+        /// Find bots using the currently configured friendly name or ID.
+        /// </summary>
+        /// <remarks>
+        /// The name does allow case-insensitive partial string matches or by IDs (up to 50), but not both at the same time. Optionally you can limit the scope of the search by providing one or more bot types.  You can specify the maximum results to return, up to a limit of 100
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botType">Bot types (optional)</param>
+        /// <param name="botName">Bot name (optional)</param>
+        /// <param name="botId">Bot IDs (optional)</param>
+        /// <param name="pageSize">The maximum results to return (optional, default to 25)</param>
+        /// <returns>ApiResponse of BotSearchResponseEntityListing</returns>
+        ApiResponse<BotSearchResponseEntityListing> GetTextbotsBotsSearchWithHttpInfo (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null);
+        
+        /// <summary>
         /// Issue a bot flow turn event
         /// </summary>
         /// <remarks>
@@ -87,6 +115,34 @@ namespace PureCloudPlatform.Client.V2.Api
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
+        
+        /// <summary>
+        /// Find bots using the currently configured friendly name or ID.
+        /// </summary>
+        /// <remarks>
+        /// The name does allow case-insensitive partial string matches or by IDs (up to 50), but not both at the same time. Optionally you can limit the scope of the search by providing one or more bot types.  You can specify the maximum results to return, up to a limit of 100
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botType">Bot types (optional)</param>
+        /// <param name="botName">Bot name (optional)</param>
+        /// <param name="botId">Bot IDs (optional)</param>
+        /// <param name="pageSize">The maximum results to return (optional, default to 25)</param>
+        /// <returns>Task of BotSearchResponseEntityListing</returns>
+        System.Threading.Tasks.Task<BotSearchResponseEntityListing> GetTextbotsBotsSearchAsync (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null);
+
+        /// <summary>
+        /// Find bots using the currently configured friendly name or ID.
+        /// </summary>
+        /// <remarks>
+        /// The name does allow case-insensitive partial string matches or by IDs (up to 50), but not both at the same time. Optionally you can limit the scope of the search by providing one or more bot types.  You can specify the maximum results to return, up to a limit of 100
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botType">Bot types (optional)</param>
+        /// <param name="botName">Bot name (optional)</param>
+        /// <param name="botId">Bot IDs (optional)</param>
+        /// <param name="pageSize">The maximum results to return (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (BotSearchResponseEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BotSearchResponseEntityListing>> GetTextbotsBotsSearchAsyncWithHttpInfo (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null);
         
         /// <summary>
         /// Issue a bot flow turn event
@@ -247,6 +303,210 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
+        
+        /// <summary>
+        /// Find bots using the currently configured friendly name or ID. The name does allow case-insensitive partial string matches or by IDs (up to 50), but not both at the same time. Optionally you can limit the scope of the search by providing one or more bot types.  You can specify the maximum results to return, up to a limit of 100
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botType">Bot types (optional)</param>
+        /// <param name="botName">Bot name (optional)</param>
+        /// <param name="botId">Bot IDs (optional)</param>
+        /// <param name="pageSize">The maximum results to return (optional, default to 25)</param>
+        /// <returns>BotSearchResponseEntityListing</returns>
+        public BotSearchResponseEntityListing GetTextbotsBotsSearch (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null)
+        {
+             ApiResponse<BotSearchResponseEntityListing> localVarResponse = GetTextbotsBotsSearchWithHttpInfo(botType, botName, botId, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Find bots using the currently configured friendly name or ID. The name does allow case-insensitive partial string matches or by IDs (up to 50), but not both at the same time. Optionally you can limit the scope of the search by providing one or more bot types.  You can specify the maximum results to return, up to a limit of 100
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botType">Bot types (optional)</param>
+        /// <param name="botName">Bot name (optional)</param>
+        /// <param name="botId">Bot IDs (optional)</param>
+        /// <param name="pageSize">The maximum results to return (optional, default to 25)</param>
+        /// <returns>ApiResponse of BotSearchResponseEntityListing</returns>
+        public ApiResponse< BotSearchResponseEntityListing > GetTextbotsBotsSearchWithHttpInfo (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null)
+        { 
+
+            var localVarPath = "/api/v2/textbots/bots/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (botType != null) botType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("botType", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (botName != null) localVarQueryParams.Add(new Tuple<string, string>("botName", this.Configuration.ApiClient.ParameterToString(botName)));
+            if (botId != null) botId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("botId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTextbotsBotsSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTextbotsBotsSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BotSearchResponseEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (BotSearchResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BotSearchResponseEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Find bots using the currently configured friendly name or ID. The name does allow case-insensitive partial string matches or by IDs (up to 50), but not both at the same time. Optionally you can limit the scope of the search by providing one or more bot types.  You can specify the maximum results to return, up to a limit of 100
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botType">Bot types (optional)</param>
+        /// <param name="botName">Bot name (optional)</param>
+        /// <param name="botId">Bot IDs (optional)</param>
+        /// <param name="pageSize">The maximum results to return (optional, default to 25)</param>
+        /// <returns>Task of BotSearchResponseEntityListing</returns>
+        public async System.Threading.Tasks.Task<BotSearchResponseEntityListing> GetTextbotsBotsSearchAsync (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null)
+        {
+             ApiResponse<BotSearchResponseEntityListing> localVarResponse = await GetTextbotsBotsSearchAsyncWithHttpInfo(botType, botName, botId, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Find bots using the currently configured friendly name or ID. The name does allow case-insensitive partial string matches or by IDs (up to 50), but not both at the same time. Optionally you can limit the scope of the search by providing one or more bot types.  You can specify the maximum results to return, up to a limit of 100
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botType">Bot types (optional)</param>
+        /// <param name="botName">Bot name (optional)</param>
+        /// <param name="botId">Bot IDs (optional)</param>
+        /// <param name="pageSize">The maximum results to return (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (BotSearchResponseEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BotSearchResponseEntityListing>> GetTextbotsBotsSearchAsyncWithHttpInfo (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null)
+        { 
+
+            var localVarPath = "/api/v2/textbots/bots/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (botType != null) botType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("botType", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (botName != null) localVarQueryParams.Add(new Tuple<string, string>("botName", this.Configuration.ApiClient.ParameterToString(botName)));
+            if (botId != null) botId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("botId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTextbotsBotsSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTextbotsBotsSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BotSearchResponseEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (BotSearchResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BotSearchResponseEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
         
         /// <summary>
         /// Issue a bot flow turn event Send a turn event to an executing bot flow and produce the next action to take.

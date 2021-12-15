@@ -13,8 +13,8 @@ title: JourneyWebEventsNotificationWebEventsNotification
 | **CreatedDate** | **DateTime?** |  | [optional] |
 | **CustomerId** | **string** |  | [optional] |
 | **CustomerIdType** | **string** |  | [optional] |
-| **EventType** | **string** |  | [optional] |
 | **Session** | [**JourneyWebEventsNotificationSession**](JourneyWebEventsNotificationSession.html) |  | [optional] |
+| **EventType** | **string** |  | [optional] |
 | **WebEvent** | [**JourneyWebEventsNotificationWebMessage**](JourneyWebEventsNotificationWebMessage.html) |  | [optional] |
 | **WebActionEvent** | [**JourneyWebEventsNotificationWebActionMessage**](JourneyWebEventsNotificationWebActionMessage.html) |  | [optional] |
 | **OutcomeAchievedEvent** | [**JourneyWebEventsNotificationOutcomeAchievedMessage**](JourneyWebEventsNotificationOutcomeAchievedMessage.html) |  | [optional] |

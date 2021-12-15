@@ -7,12 +7,12 @@ title: ArchitectSystemPromptResourceNotificationSystemPromptResourceNotification
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **PromptId** | **string** |  | [optional] |
-| **Id** | **string** |  | [optional] |
-| **Language** | **string** |  | [optional] |
-| **MediaUri** | **string** |  | [optional] |
-| **UploadStatus** | **string** |  | [optional] |
-| **DurationSeconds** | **double?** |  | [optional] |
+| **PromptId** | **string** | Id of the prompt that this notification is for. | [optional] |
+| **Id** | **string** | Id of the prompt resource that this notification is for. | [optional] |
+| **Language** | **string** | Language resource that this notification is for. | [optional] |
+| **MediaUri** | **string** | Uri to the file for this system prompt resource. | [optional] |
+| **UploadStatus** | **string** | Current upload status of the prompt resource (created, uploaded, transcoded, transcodeFailed). | [optional] |
+| **DurationSeconds** | **double?** | Duration (in seconds) for the transcoded audio file. | [optional] |
 {: class="table table-striped"}
 
 

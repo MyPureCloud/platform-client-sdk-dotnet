@@ -21,8 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets FilterType
+        /// Contact list filter type
         /// </summary>
+        /// <value>Contact list filter type</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum FilterTypeEnum
         {
@@ -54,16 +55,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
-        /// Gets or Sets FilterType
+        /// Contact list filter type
         /// </summary>
+        /// <value>Contact list filter type</value>
         [DataMember(Name="filterType", EmitDefaultValue=false)]
         public FilterTypeEnum? FilterType { get; set; }
-        
-        
         
         
         
@@ -72,14 +69,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerContactlistfilterConfigChangeFilterClause" /> class.
         /// </summary>
-        /// <param name="FilterType">FilterType.</param>
-        /// <param name="Predicates">Predicates.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerContactlistfilterConfigChangeFilterClause(FilterTypeEnum? FilterType = null, List<DialerContactlistfilterConfigChangeFilterPredicate> Predicates = null, Object AdditionalProperties = null)
+        /// <param name="FilterType">Contact list filter type.</param>
+        /// <param name="Predicates">The list of predicates in that clause.</param>
+        public DialerContactlistfilterConfigChangeFilterClause(FilterTypeEnum? FilterType = null, List<DialerContactlistfilterConfigChangeFilterPredicate> Predicates = null)
         {
             this.FilterType = FilterType;
             this.Predicates = Predicates;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -88,18 +83,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Predicates
+        /// The list of predicates in that clause
         /// </summary>
+        /// <value>The list of predicates in that clause</value>
         [DataMember(Name="predicates", EmitDefaultValue=false)]
         public List<DialerContactlistfilterConfigChangeFilterPredicate> Predicates { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -113,7 +101,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  FilterType: ").Append(FilterType).Append("\n");
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -163,11 +150,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Predicates == other.Predicates ||
                     this.Predicates != null &&
                     this.Predicates.SequenceEqual(other.Predicates)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -188,9 +170,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Predicates != null)
                     hash = hash * 59 + this.Predicates.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

@@ -30,49 +30,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCampaignScheduleConfigChangeScheduleInterval" /> class.
         /// </summary>
-        /// <param name="Start">Start.</param>
-        /// <param name="End">End.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerCampaignScheduleConfigChangeScheduleInterval(string Start = null, string End = null, Object AdditionalProperties = null)
+        /// <param name="Start">scheduled start time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="End">scheduled end time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        public DialerCampaignScheduleConfigChangeScheduleInterval(string Start = null, string End = null)
         {
             this.Start = Start;
             this.End = End;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Start
+        /// scheduled start time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
+        /// <value>scheduled start time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="start", EmitDefaultValue=false)]
         public string Start { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets End
+        /// scheduled end time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
+        /// <value>scheduled end time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="end", EmitDefaultValue=false)]
         public string End { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -86,7 +73,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Start: ").Append(Start).Append("\n");
             sb.Append("  End: ").Append(End).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -136,11 +122,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.End == other.End ||
                     this.End != null &&
                     this.End.Equals(other.End)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -161,9 +142,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.End != null)
                     hash = hash * 59 + this.End.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

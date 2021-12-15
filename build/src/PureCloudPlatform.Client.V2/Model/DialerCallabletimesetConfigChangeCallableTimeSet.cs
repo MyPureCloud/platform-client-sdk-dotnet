@@ -50,89 +50,80 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCallabletimesetConfigChangeCallableTimeSet" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="DateCreated">DateCreated.</param>
-        /// <param name="DateModified">DateModified.</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="CallableTimes">CallableTimes.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerCallabletimesetConfigChangeCallableTimeSet(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<DialerCallabletimesetConfigChangeCallableTime> CallableTimes = null, Object AdditionalProperties = null)
+        /// <param name="CallableTimes">The list of callable times.</param>
+        /// <param name="Id">The globally unique identifier for the object..</param>
+        /// <param name="Name">The UI-visible name of the object.</param>
+        /// <param name="DateCreated">Creation time of the entity.</param>
+        /// <param name="DateModified">Last modified time of the entity.</param>
+        /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
+        public DialerCallabletimesetConfigChangeCallableTimeSet(List<DialerCallabletimesetConfigChangeCallableTime> CallableTimes = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
         {
+            this.CallableTimes = CallableTimes;
             this.Id = Id;
             this.Name = Name;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.Version = Version;
-            this.CallableTimes = CallableTimes;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The list of callable times
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateCreated
-        /// </summary>
-        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateModified
-        /// </summary>
-        [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Version
-        /// </summary>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets CallableTimes
-        /// </summary>
+        /// <value>The list of callable times</value>
         [DataMember(Name="callableTimes", EmitDefaultValue=false)]
         public List<DialerCallabletimesetConfigChangeCallableTime> CallableTimes { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AdditionalProperties
+        /// The globally unique identifier for the object.
         /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
+        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The UI-visible name of the object
+        /// </summary>
+        /// <value>The UI-visible name of the object</value>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Creation time of the entity
+        /// </summary>
+        /// <value>Creation time of the entity</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Last modified time of the entity
+        /// </summary>
+        /// <value>Last modified time of the entity</value>
+        [DataMember(Name="dateModified", EmitDefaultValue=false)]
+        public DateTime? DateModified { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Required for updates, must match the version number of the most recent update
+        /// </summary>
+        /// <value>Required for updates, must match the version number of the most recent update</value>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public int? Version { get; set; }
         
         
         /// <summary>
@@ -144,13 +135,12 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class DialerCallabletimesetConfigChangeCallableTimeSet {\n");
             
+            sb.Append("  CallableTimes: ").Append(CallableTimes).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
-            sb.Append("  CallableTimes: ").Append(CallableTimes).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -192,6 +182,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.CallableTimes == other.CallableTimes ||
+                    this.CallableTimes != null &&
+                    this.CallableTimes.SequenceEqual(other.CallableTimes)
+                ) &&
+                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
@@ -215,16 +210,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) &&
-                (
-                    this.CallableTimes == other.CallableTimes ||
-                    this.CallableTimes != null &&
-                    this.CallableTimes.SequenceEqual(other.CallableTimes)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -240,6 +225,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.CallableTimes != null)
+                    hash = hash * 59 + this.CallableTimes.GetHashCode();
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
@@ -254,12 +242,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
-                if (this.CallableTimes != null)
-                    hash = hash * 59 + this.CallableTimes.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

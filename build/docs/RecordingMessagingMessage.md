@@ -18,6 +18,7 @@ title: RecordingMessagingMessage
 | **MessageStickerAttachments** | [**List&lt;MessageStickerAttachment&gt;**](MessageStickerAttachment.html) | List of message stickers attached with this message. | [optional] |
 | **QuickReplies** | [**List&lt;QuickReply&gt;**](QuickReply.html) | List of quick reply options offered with this message. | [optional] |
 | **ButtonResponse** | [**ButtonResponse**](ButtonResponse.html) | Button Response selected by user for this message. | [optional] |
+| **Story** | [**RecordingContentStory**](RecordingContentStory.html) | Ephemeral story content. | [optional] |
 {: class="table table-striped"}
 
 

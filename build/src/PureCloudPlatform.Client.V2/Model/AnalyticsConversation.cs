@@ -41,6 +41,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The original direction of the conversation
         /// </summary>
@@ -99,12 +102,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
         /// <summary>
         /// The original direction of the conversation
         /// </summary>
         /// <value>The original direction of the conversation</value>
         [DataMember(Name="originatingDirection", EmitDefaultValue=false)]
         public OriginatingDirectionEnum? OriginatingDirection { get; set; }
+        
+        
         
         
         
@@ -124,23 +134,27 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationStart">The start time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DivisionIds">Identifier(s) of division(s) associated with a conversation.</param>
         /// <param name="ExternalTag">External tag for the conversation.</param>
+        /// <param name="KnowledgeBaseIds">The unique identifier(s) of the knowledge base(s) used.</param>
         /// <param name="MediaStatsMinConversationMos">The lowest estimated average MOS among all the audio streams belonging to this conversation.</param>
         /// <param name="MediaStatsMinConversationRFactor">The lowest R-factor value among all of the audio streams belonging to this conversation.</param>
         /// <param name="OriginatingDirection">The original direction of the conversation.</param>
+        /// <param name="SelfServed">Indicates whether all flow sessions were self serviced.</param>
         /// <param name="Evaluations">Evaluations associated with this conversation.</param>
         /// <param name="Surveys">Surveys associated with this conversation.</param>
         /// <param name="Resolutions">Resolutions associated with this conversation.</param>
         /// <param name="Participants">Participants in the conversation.</param>
-        public AnalyticsConversation(DateTime? ConversationEnd = null, string ConversationId = null, DateTime? ConversationStart = null, List<string> DivisionIds = null, string ExternalTag = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<AnalyticsResolution> Resolutions = null, List<AnalyticsParticipant> Participants = null)
+        public AnalyticsConversation(DateTime? ConversationEnd = null, string ConversationId = null, DateTime? ConversationStart = null, List<string> DivisionIds = null, string ExternalTag = null, List<string> KnowledgeBaseIds = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, bool? SelfServed = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<AnalyticsResolution> Resolutions = null, List<AnalyticsParticipant> Participants = null)
         {
             this.ConversationEnd = ConversationEnd;
             this.ConversationId = ConversationId;
             this.ConversationStart = ConversationStart;
             this.DivisionIds = DivisionIds;
             this.ExternalTag = ExternalTag;
+            this.KnowledgeBaseIds = KnowledgeBaseIds;
             this.MediaStatsMinConversationMos = MediaStatsMinConversationMos;
             this.MediaStatsMinConversationRFactor = MediaStatsMinConversationRFactor;
             this.OriginatingDirection = OriginatingDirection;
+            this.SelfServed = SelfServed;
             this.Evaluations = Evaluations;
             this.Surveys = Surveys;
             this.Resolutions = Resolutions;
@@ -196,6 +210,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The unique identifier(s) of the knowledge base(s) used
+        /// </summary>
+        /// <value>The unique identifier(s) of the knowledge base(s) used</value>
+        [DataMember(Name="knowledgeBaseIds", EmitDefaultValue=false)]
+        public List<string> KnowledgeBaseIds { get; set; }
+        
+        
+        
+        /// <summary>
         /// The lowest estimated average MOS among all the audio streams belonging to this conversation
         /// </summary>
         /// <value>The lowest estimated average MOS among all the audio streams belonging to this conversation</value>
@@ -212,6 +235,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public double? MediaStatsMinConversationRFactor { get; set; }
         
         
+        
+        
+        
+        /// <summary>
+        /// Indicates whether all flow sessions were self serviced
+        /// </summary>
+        /// <value>Indicates whether all flow sessions were self serviced</value>
+        [DataMember(Name="selfServed", EmitDefaultValue=false)]
+        public bool? SelfServed { get; set; }
         
         
         
@@ -264,9 +296,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationStart: ").Append(ConversationStart).Append("\n");
             sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
             sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
+            sb.Append("  KnowledgeBaseIds: ").Append(KnowledgeBaseIds).Append("\n");
             sb.Append("  MediaStatsMinConversationMos: ").Append(MediaStatsMinConversationMos).Append("\n");
             sb.Append("  MediaStatsMinConversationRFactor: ").Append(MediaStatsMinConversationRFactor).Append("\n");
             sb.Append("  OriginatingDirection: ").Append(OriginatingDirection).Append("\n");
+            sb.Append("  SelfServed: ").Append(SelfServed).Append("\n");
             sb.Append("  Evaluations: ").Append(Evaluations).Append("\n");
             sb.Append("  Surveys: ").Append(Surveys).Append("\n");
             sb.Append("  Resolutions: ").Append(Resolutions).Append("\n");
@@ -337,6 +371,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalTag.Equals(other.ExternalTag)
                 ) &&
                 (
+                    this.KnowledgeBaseIds == other.KnowledgeBaseIds ||
+                    this.KnowledgeBaseIds != null &&
+                    this.KnowledgeBaseIds.SequenceEqual(other.KnowledgeBaseIds)
+                ) &&
+                (
                     this.MediaStatsMinConversationMos == other.MediaStatsMinConversationMos ||
                     this.MediaStatsMinConversationMos != null &&
                     this.MediaStatsMinConversationMos.Equals(other.MediaStatsMinConversationMos)
@@ -350,6 +389,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OriginatingDirection == other.OriginatingDirection ||
                     this.OriginatingDirection != null &&
                     this.OriginatingDirection.Equals(other.OriginatingDirection)
+                ) &&
+                (
+                    this.SelfServed == other.SelfServed ||
+                    this.SelfServed != null &&
+                    this.SelfServed.Equals(other.SelfServed)
                 ) &&
                 (
                     this.Evaluations == other.Evaluations ||
@@ -400,6 +444,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.ExternalTag != null)
                     hash = hash * 59 + this.ExternalTag.GetHashCode();
                 
+                if (this.KnowledgeBaseIds != null)
+                    hash = hash * 59 + this.KnowledgeBaseIds.GetHashCode();
+                
                 if (this.MediaStatsMinConversationMos != null)
                     hash = hash * 59 + this.MediaStatsMinConversationMos.GetHashCode();
                 
@@ -408,6 +455,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.OriginatingDirection != null)
                     hash = hash * 59 + this.OriginatingDirection.GetHashCode();
+                
+                if (this.SelfServed != null)
+                    hash = hash * 59 + this.SelfServed.GetHashCode();
                 
                 if (this.Evaluations != null)
                     hash = hash * 59 + this.Evaluations.GetHashCode();

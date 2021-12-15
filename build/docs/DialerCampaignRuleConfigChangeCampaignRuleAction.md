@@ -7,11 +7,10 @@ title: DialerCampaignRuleConfigChangeCampaignRuleAction
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
-| **Parameters** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-| **ActionType** | **string** |  | [optional] |
+| **Id** | **string** | The globally unique identifier for the action | [optional] |
+| **Parameters** | **Dictionary&lt;string, string&gt;** | The parameters to match this action | [optional] |
+| **ActionType** | **string** | The type of this action | [optional] |
 | **CampaignRuleActionEntities** | [**DialerCampaignRuleConfigChangeCampaignRuleActionEntities**](DialerCampaignRuleConfigChangeCampaignRuleActionEntities.html) |  | [optional] |
-| **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 
 

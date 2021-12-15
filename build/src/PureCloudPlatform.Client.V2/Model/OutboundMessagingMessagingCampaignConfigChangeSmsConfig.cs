@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// OutboundMessagingMessagingCampaignConfigChangeSmsConfig
+    /// An outbound-messaging messaging campaign SMS Config
     /// </summary>
     [DataContract]
     public partial class OutboundMessagingMessagingCampaignConfigChangeSmsConfig :  IEquatable<OutboundMessagingMessagingCampaignConfigChangeSmsConfig>
@@ -44,8 +44,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundMessagingMessagingCampaignConfigChangeSmsConfig" /> class.
         /// </summary>
-        /// <param name="MessageColumn">MessageColumn.</param>
-        /// <param name="PhoneColumn">PhoneColumn.</param>
+        /// <param name="MessageColumn">The Contact List column specifying the message to send to the contact..</param>
+        /// <param name="PhoneColumn">The Contact List column specifying the phone number to send a message to..</param>
         /// <param name="SenderSmsPhoneNumber">SenderSmsPhoneNumber.</param>
         /// <param name="ContentTemplate">ContentTemplate.</param>
         public OutboundMessagingMessagingCampaignConfigChangeSmsConfig(string MessageColumn = null, string PhoneColumn = null, OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef SenderSmsPhoneNumber = null, OutboundMessagingMessagingCampaignConfigChangeResponseRef ContentTemplate = null)
@@ -60,16 +60,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets MessageColumn
+        /// The Contact List column specifying the message to send to the contact.
         /// </summary>
+        /// <value>The Contact List column specifying the message to send to the contact.</value>
         [DataMember(Name="messageColumn", EmitDefaultValue=false)]
         public string MessageColumn { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets PhoneColumn
+        /// The Contact List column specifying the phone number to send a message to.
         /// </summary>
+        /// <value>The Contact List column specifying the phone number to send a message to.</value>
         [DataMember(Name="phoneColumn", EmitDefaultValue=false)]
         public string PhoneColumn { get; set; }
         

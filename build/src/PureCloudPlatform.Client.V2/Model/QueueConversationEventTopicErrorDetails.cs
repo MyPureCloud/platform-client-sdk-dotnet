@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// QueueConversationEventTopicErrorDetails
+    /// Detailed information about an error response.
     /// </summary>
     [DataContract]
     public partial class QueueConversationEventTopicErrorDetails :  IEquatable<QueueConversationEventTopicErrorDetails>
@@ -55,24 +55,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationEventTopicErrorDetails" /> class.
         /// </summary>
-        /// <param name="Status">Status.</param>
-        /// <param name="Code">Code.</param>
-        /// <param name="Message">Message.</param>
-        /// <param name="MessageWithParams">MessageWithParams.</param>
-        /// <param name="MessageParams">MessageParams.</param>
-        /// <param name="ContextId">ContextId.</param>
+        /// <param name="Status">The HTTP status code for this message (400, 401, 403, 404, 500, etc..</param>
+        /// <param name="Code">A code unique to this error..</param>
+        /// <param name="Message">Friendly description of this error..</param>
+        /// <param name="MessageWithParams">This is the same as message except it uses template fields for variable replacement. For instance: &#39;User {username} was not found&#39;.</param>
+        /// <param name="MessageParams">Used in conjunction with messageWithParams. These are the template parameters. For instance: UserParam.key = &#39;username&#39;, UserParam.value = &#39;john.doe&#39;.</param>
+        /// <param name="ContextId">The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header &#39;ININ-Correlation-Id&#39; instead..</param>
         /// <param name="Uri">Uri.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationEventTopicErrorDetails(int? Status = null, string Code = null, string Message = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string ContextId = null, string Uri = null, Object AdditionalProperties = null)
+        public QueueConversationEventTopicErrorDetails(int? Status = null, string Code = null, string Message = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string ContextId = null, string Uri = null)
         {
             this.Status = Status;
             this.Code = Code;
@@ -81,55 +75,60 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MessageParams = MessageParams;
             this.ContextId = ContextId;
             this.Uri = Uri;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Status
+        /// The HTTP status code for this message (400, 401, 403, 404, 500, etc.
         /// </summary>
+        /// <value>The HTTP status code for this message (400, 401, 403, 404, 500, etc.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Code
+        /// A code unique to this error.
         /// </summary>
+        /// <value>A code unique to this error.</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Message
+        /// Friendly description of this error.
         /// </summary>
+        /// <value>Friendly description of this error.</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MessageWithParams
+        /// This is the same as message except it uses template fields for variable replacement. For instance: &#39;User {username} was not found&#39;
         /// </summary>
+        /// <value>This is the same as message except it uses template fields for variable replacement. For instance: &#39;User {username} was not found&#39;</value>
         [DataMember(Name="messageWithParams", EmitDefaultValue=false)]
         public string MessageWithParams { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MessageParams
+        /// Used in conjunction with messageWithParams. These are the template parameters. For instance: UserParam.key = &#39;username&#39;, UserParam.value = &#39;john.doe&#39;
         /// </summary>
+        /// <value>Used in conjunction with messageWithParams. These are the template parameters. For instance: UserParam.key = &#39;username&#39;, UserParam.value = &#39;john.doe&#39;</value>
         [DataMember(Name="messageParams", EmitDefaultValue=false)]
         public Dictionary<string, string> MessageParams { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ContextId
+        /// The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header &#39;ININ-Correlation-Id&#39; instead.
         /// </summary>
+        /// <value>The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header &#39;ININ-Correlation-Id&#39; instead.</value>
         [DataMember(Name="contextId", EmitDefaultValue=false)]
         public string ContextId { get; set; }
         
@@ -140,14 +139,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="uri", EmitDefaultValue=false)]
         public string Uri { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -166,7 +157,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessageParams: ").Append(MessageParams).Append("\n");
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  Uri: ").Append(Uri).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -241,11 +231,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Uri == other.Uri ||
                     this.Uri != null &&
                     this.Uri.Equals(other.Uri)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -281,9 +266,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Uri != null)
                     hash = hash * 59 + this.Uri.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

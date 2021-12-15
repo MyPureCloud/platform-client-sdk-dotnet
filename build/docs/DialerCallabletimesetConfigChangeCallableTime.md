@@ -7,9 +7,8 @@ title: DialerCallabletimesetConfigChangeCallableTime
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **TimeSlots** | [**List&lt;DialerCallabletimesetConfigChangeTimeSlot&gt;**](DialerCallabletimesetConfigChangeTimeSlot.html) |  | [optional] |
-| **TimeZoneId** | **string** |  | [optional] |
-| **AdditionalProperties** | **Object** |  | [optional] |
+| **TimeSlots** | [**List&lt;DialerCallabletimesetConfigChangeTimeSlot&gt;**](DialerCallabletimesetConfigChangeTimeSlot.html) | The time slots | [optional] |
+| **TimeZoneId** | **string** | The ISO ID for the timezone | [optional] |
 {: class="table table-striped"}
 
 

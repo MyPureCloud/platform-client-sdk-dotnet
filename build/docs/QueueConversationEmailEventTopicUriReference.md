@@ -7,8 +7,8 @@ title: QueueConversationEmailEventTopicUriReference
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
-| **Name** | **string** |  | [optional] |
+| **Id** | **string** | The ID of the resource | [optional] |
+| **Name** | **string** | The name of the resource | [optional] |
 {: class="table table-striped"}
 
 

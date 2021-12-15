@@ -7,10 +7,82 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**GetTextbotsBotsSearch**](TextbotsApi.html#gettextbotsbotssearch) | **GET** /api/v2/textbots/bots/search | Find bots using the currently configured friendly name or ID. |
 | [**PostTextbotsBotflowsSessionTurns**](TextbotsApi.html#posttextbotsbotflowssessionturns) | **POST** /api/v2/textbots/botflows/sessions/{sessionId}/turns | Issue a bot flow turn event |
 | [**PostTextbotsBotflowsSessions**](TextbotsApi.html#posttextbotsbotflowssessions) | **POST** /api/v2/textbots/botflows/sessions | Create an execution instance of a bot flow definition. |
 | [**PostTextbotsBotsExecute**](TextbotsApi.html#posttextbotsbotsexecute) | **POST** /api/v2/textbots/bots/execute | Send an intent to a bot to start a dialog/interact with it via text |
 {: class="table table-striped"}
+
+<a name="gettextbotsbotssearch"></a>
+
+## [**BotSearchResponseEntityListing**](BotSearchResponseEntityListing.html) GetTextbotsBotsSearch (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null)
+
+
+
+Find bots using the currently configured friendly name or ID.
+
+The name does allow case-insensitive partial string matches or by IDs (up to 50), but not both at the same time. Optionally you can limit the scope of the search by providing one or more bot types.  You can specify the maximum results to return, up to a limit of 100
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTextbotsBotsSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TextbotsApi();
+            var botType = new List<string>(); // List<string> | Bot types (optional) 
+            var botName = botName_example;  // string | Bot name (optional) 
+            var botId = new List<string>(); // List<string> | Bot IDs (optional) 
+            var pageSize = 56;  // int? | The maximum results to return (optional)  (default to 25)
+
+            try
+            { 
+                // Find bots using the currently configured friendly name or ID.
+                BotSearchResponseEntityListing result = apiInstance.GetTextbotsBotsSearch(botType, botName, botId, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TextbotsApi.GetTextbotsBotsSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **botType** | [**List<string>**](string.html)| Bot types | [optional] <br />**Values**: GenesysBotConnector, GenesysDialogEngine, AmazonLex, GoogleDialogFlowES, GoogleDialogFlowCX, NuanceDlg, GenesysBotFlow |
+| **botName** | **string**| Bot name | [optional]  |
+| **botId** | [**List<string>**](string.html)| Bot IDs | [optional]  |
+| **pageSize** | **int?**| The maximum results to return | [optional] [default to 25] |
+{: class="table table-striped"}
+
+### Return type
+
+[**BotSearchResponseEntityListing**](BotSearchResponseEntityListing.html)
 
 <a name="posttextbotsbotflowssessionturns"></a>
 

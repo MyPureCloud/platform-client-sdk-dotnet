@@ -280,6 +280,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Journeycustomersessionidtype,
             
             /// <summary>
+            /// Enum Knowledgebaseid for "knowledgeBaseId"
+            /// </summary>
+            [EnumMember(Value = "knowledgeBaseId")]
+            Knowledgebaseid,
+            
+            /// <summary>
             /// Enum Mediacount for "mediaCount"
             /// </summary>
             [EnumMember(Value = "mediaCount")]
@@ -428,6 +434,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "selectedAgentRank")]
             Selectedagentrank,
+            
+            /// <summary>
+            /// Enum Selfserved for "selfServed"
+            /// </summary>
+            [EnumMember(Value = "selfServed")]
+            Selfserved,
             
             /// <summary>
             /// Enum Sessiondnis for "sessionDnis"
@@ -597,6 +609,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Omediacount,
             
             /// <summary>
+            /// Enum Omessageturn for "oMessageTurn"
+            /// </summary>
+            [EnumMember(Value = "oMessageTurn")]
+            Omessageturn,
+            
+            /// <summary>
             /// Enum Oservicelevel for "oServiceLevel"
             /// </summary>
             [EnumMember(Value = "oServiceLevel")]
@@ -667,6 +685,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "tCoachingComplete")]
             Tcoachingcomplete,
+            
+            /// <summary>
+            /// Enum Tconnected for "tConnected"
+            /// </summary>
+            [EnumMember(Value = "tConnected")]
+            Tconnected,
             
             /// <summary>
             /// Enum Tcontacting for "tContacting"

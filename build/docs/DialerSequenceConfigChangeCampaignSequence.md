@@ -7,17 +7,16 @@ title: DialerSequenceConfigChangeCampaignSequence
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
-| **Name** | **string** |  | [optional] |
-| **DateCreated** | **DateTime?** |  | [optional] |
-| **DateModified** | **DateTime?** |  | [optional] |
-| **Version** | **int?** |  | [optional] |
-| **Campaigns** | [**List&lt;DialerSequenceConfigChangeUriReference&gt;**](DialerSequenceConfigChangeUriReference.html) |  | [optional] |
-| **CurrentCampaign** | **int?** |  | [optional] |
+| **Campaigns** | [**List&lt;DialerSequenceConfigChangeUriReference&gt;**](DialerSequenceConfigChangeUriReference.html) | the ordered list of campaign identifiers | [optional] |
+| **CurrentCampaign** | **int?** | the zero-based index of the current campaign in the campaigns list | [optional] |
 | **Status** | **string** |  | [optional] |
-| **StopMessage** | **string** |  | [optional] |
-| **Repeat** | **bool?** |  | [optional] |
-| **AdditionalProperties** | **Object** |  | [optional] |
+| **StopMessage** | **string** | if a sequence has unexpectedly stopped, this message provides the reason | [optional] |
+| **Repeat** | **bool?** | indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false | [optional] |
+| **Id** | **string** | The globally unique identifier for the object. | [optional] |
+| **Name** | **string** | The UI-visible name of the object | [optional] |
+| **DateCreated** | **DateTime?** | Creation time of the entity | [optional] |
+| **DateModified** | **DateTime?** | Last modified time of the entity | [optional] |
+| **Version** | **int?** | Required for updates, must match the version number of the most recent update | [optional] |
 {: class="table table-striped"}
 
 

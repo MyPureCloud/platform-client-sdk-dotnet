@@ -35,14 +35,21 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="NluInfo" /> class.
         /// </summary>
         /// <param name="Intents">Intents.</param>
-        public NluInfo(List<Intent> Intents = null)
+        /// <param name="EngineVersion">EngineVersion.</param>
+        public NluInfo(List<Intent> Intents = null, string EngineVersion = null)
         {
             this.Intents = Intents;
+            this.EngineVersion = EngineVersion;
             
         }
         
@@ -71,6 +78,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<Intent> Intents { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets EngineVersion
+        /// </summary>
+        [DataMember(Name="engineVersion", EmitDefaultValue=false)]
+        public string EngineVersion { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,6 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Intents: ").Append(Intents).Append("\n");
+            sb.Append("  EngineVersion: ").Append(EngineVersion).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -137,6 +153,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Intents == other.Intents ||
                     this.Intents != null &&
                     this.Intents.SequenceEqual(other.Intents)
+                ) &&
+                (
+                    this.EngineVersion == other.EngineVersion ||
+                    this.EngineVersion != null &&
+                    this.EngineVersion.Equals(other.EngineVersion)
                 );
         }
 
@@ -160,6 +181,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Intents != null)
                     hash = hash * 59 + this.Intents.GetHashCode();
+                
+                if (this.EngineVersion != null)
+                    hash = hash * 59 + this.EngineVersion.GetHashCode();
                 
                 return hash;
             }

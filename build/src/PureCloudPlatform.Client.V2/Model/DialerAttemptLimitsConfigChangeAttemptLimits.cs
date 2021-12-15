@@ -29,24 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
-        /// Gets or Sets ResetPeriod
+        /// After how long the number of attempts will be set back to 0
         /// </summary>
+        /// <value>After how long the number of attempts will be set back to 0</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ResetPeriodEnum
         {
@@ -100,11 +86,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
-        /// Gets or Sets ResetPeriod
+        /// After how long the number of attempts will be set back to 0
         /// </summary>
+        /// <value>After how long the number of attempts will be set back to 0</value>
         [DataMember(Name="resetPeriod", EmitDefaultValue=false)]
         public ResetPeriodEnum? ResetPeriod { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -117,74 +114,32 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerAttemptLimitsConfigChangeAttemptLimits" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="DateCreated">DateCreated.</param>
-        /// <param name="DateModified">DateModified.</param>
-        /// <param name="Version">Version.</param>
         /// <param name="MaxAttemptsPerContact">MaxAttemptsPerContact.</param>
         /// <param name="MaxAttemptsPerNumber">MaxAttemptsPerNumber.</param>
-        /// <param name="TimeZoneId">TimeZoneId.</param>
-        /// <param name="ResetPeriod">ResetPeriod.</param>
-        /// <param name="RecallEntries">RecallEntries.</param>
-        /// <param name="BreadthFirstRecalls">BreadthFirstRecalls.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerAttemptLimitsConfigChangeAttemptLimits(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, int? MaxAttemptsPerContact = null, int? MaxAttemptsPerNumber = null, string TimeZoneId = null, ResetPeriodEnum? ResetPeriod = null, Dictionary<string, DialerAttemptLimitsConfigChangeRecallEntry> RecallEntries = null, bool? BreadthFirstRecalls = null, Object AdditionalProperties = null)
+        /// <param name="TimeZoneId">The timezone is necessary to define when \&quot;today\&quot; starts and ends.</param>
+        /// <param name="ResetPeriod">After how long the number of attempts will be set back to 0.</param>
+        /// <param name="RecallEntries">Configuration for recall attempts.</param>
+        /// <param name="BreadthFirstRecalls">Whether recalls are performed before considering other numbers (true) or after (false).</param>
+        /// <param name="Id">The globally unique identifier for the object..</param>
+        /// <param name="Name">The UI-visible name of the object.</param>
+        /// <param name="DateCreated">Creation time of the entity.</param>
+        /// <param name="DateModified">Last modified time of the entity.</param>
+        /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
+        public DialerAttemptLimitsConfigChangeAttemptLimits(int? MaxAttemptsPerContact = null, int? MaxAttemptsPerNumber = null, string TimeZoneId = null, ResetPeriodEnum? ResetPeriod = null, Dictionary<string, DialerAttemptLimitsConfigChangeRecallEntry> RecallEntries = null, bool? BreadthFirstRecalls = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.Version = Version;
             this.MaxAttemptsPerContact = MaxAttemptsPerContact;
             this.MaxAttemptsPerNumber = MaxAttemptsPerNumber;
             this.TimeZoneId = TimeZoneId;
             this.ResetPeriod = ResetPeriod;
             this.RecallEntries = RecallEntries;
             this.BreadthFirstRecalls = BreadthFirstRecalls;
-            this.AdditionalProperties = AdditionalProperties;
+            this.Id = Id;
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.Version = Version;
             
         }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Id
-        /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateCreated
-        /// </summary>
-        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateModified
-        /// </summary>
-        [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Version
-        /// </summary>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
         
         
         
@@ -205,8 +160,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets TimeZoneId
+        /// The timezone is necessary to define when \&quot;today\&quot; starts and ends
         /// </summary>
+        /// <value>The timezone is necessary to define when \&quot;today\&quot; starts and ends</value>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
         
@@ -215,26 +171,65 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets RecallEntries
+        /// Configuration for recall attempts
         /// </summary>
+        /// <value>Configuration for recall attempts</value>
         [DataMember(Name="recallEntries", EmitDefaultValue=false)]
         public Dictionary<string, DialerAttemptLimitsConfigChangeRecallEntry> RecallEntries { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets BreadthFirstRecalls
+        /// Whether recalls are performed before considering other numbers (true) or after (false)
         /// </summary>
+        /// <value>Whether recalls are performed before considering other numbers (true) or after (false)</value>
         [DataMember(Name="breadthFirstRecalls", EmitDefaultValue=false)]
         public bool? BreadthFirstRecalls { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AdditionalProperties
+        /// The globally unique identifier for the object.
         /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
+        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The UI-visible name of the object
+        /// </summary>
+        /// <value>The UI-visible name of the object</value>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Creation time of the entity
+        /// </summary>
+        /// <value>Creation time of the entity</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Last modified time of the entity
+        /// </summary>
+        /// <value>Last modified time of the entity</value>
+        [DataMember(Name="dateModified", EmitDefaultValue=false)]
+        public DateTime? DateModified { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Required for updates, must match the version number of the most recent update
+        /// </summary>
+        /// <value>Required for updates, must match the version number of the most recent update</value>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public int? Version { get; set; }
         
         
         /// <summary>
@@ -246,18 +241,17 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class DialerAttemptLimitsConfigChangeAttemptLimits {\n");
             
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  MaxAttemptsPerContact: ").Append(MaxAttemptsPerContact).Append("\n");
             sb.Append("  MaxAttemptsPerNumber: ").Append(MaxAttemptsPerNumber).Append("\n");
             sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
             sb.Append("  ResetPeriod: ").Append(ResetPeriod).Append("\n");
             sb.Append("  RecallEntries: ").Append(RecallEntries).Append("\n");
             sb.Append("  BreadthFirstRecalls: ").Append(BreadthFirstRecalls).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -299,31 +293,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
-                    this.DateCreated == other.DateCreated ||
-                    this.DateCreated != null &&
-                    this.DateCreated.Equals(other.DateCreated)
-                ) &&
-                (
-                    this.DateModified == other.DateModified ||
-                    this.DateModified != null &&
-                    this.DateModified.Equals(other.DateModified)
-                ) &&
-                (
-                    this.Version == other.Version ||
-                    this.Version != null &&
-                    this.Version.Equals(other.Version)
-                ) &&
-                (
                     this.MaxAttemptsPerContact == other.MaxAttemptsPerContact ||
                     this.MaxAttemptsPerContact != null &&
                     this.MaxAttemptsPerContact.Equals(other.MaxAttemptsPerContact)
@@ -354,9 +323,29 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.BreadthFirstRecalls.Equals(other.BreadthFirstRecalls)
                 ) &&
                 (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.DateCreated == other.DateCreated ||
+                    this.DateCreated != null &&
+                    this.DateCreated.Equals(other.DateCreated)
+                ) &&
+                (
+                    this.DateModified == other.DateModified ||
+                    this.DateModified != null &&
+                    this.DateModified.Equals(other.DateModified)
+                ) &&
+                (
+                    this.Version == other.Version ||
+                    this.Version != null &&
+                    this.Version.Equals(other.Version)
                 );
         }
 
@@ -371,21 +360,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-                
-                if (this.DateCreated != null)
-                    hash = hash * 59 + this.DateCreated.GetHashCode();
-                
-                if (this.DateModified != null)
-                    hash = hash * 59 + this.DateModified.GetHashCode();
-                
-                if (this.Version != null)
-                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.MaxAttemptsPerContact != null)
                     hash = hash * 59 + this.MaxAttemptsPerContact.GetHashCode();
@@ -405,8 +379,20 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.BreadthFirstRecalls != null)
                     hash = hash * 59 + this.BreadthFirstRecalls.GetHashCode();
                 
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.DateCreated != null)
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
+                
+                if (this.DateModified != null)
+                    hash = hash * 59 + this.DateModified.GetHashCode();
+                
+                if (this.Version != null)
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 return hash;
             }

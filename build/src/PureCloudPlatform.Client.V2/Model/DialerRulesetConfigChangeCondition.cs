@@ -32,9 +32,13 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
-        /// Gets or Sets ValueType
+        /// Determines the type of the value associated with the condition
         /// </summary>
+        /// <value>Determines the type of the value associated with the condition</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ValueTypeEnum
         {
@@ -75,8 +79,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets _Operator
+        /// An operation type for condition evaluation
         /// </summary>
+        /// <value>An operation type for condition evaluation</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OperatorEnum
         {
@@ -156,8 +161,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets PropertyType
+        /// Determines the type of the property associated with the condition
         /// </summary>
+        /// <value>Determines the type of the property associated with the condition</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum PropertyTypeEnum
         {
@@ -229,21 +235,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
         /// <summary>
-        /// Gets or Sets ValueType
+        /// Determines the type of the value associated with the condition
         /// </summary>
+        /// <value>Determines the type of the value associated with the condition</value>
         [DataMember(Name="valueType", EmitDefaultValue=false)]
         public ValueTypeEnum? ValueType { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets _Operator
+        /// An operation type for condition evaluation
         /// </summary>
+        /// <value>An operation type for condition evaluation</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public OperatorEnum? _Operator { get; set; }
         
@@ -252,14 +256,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets PropertyType
+        /// Determines the type of the property associated with the condition
         /// </summary>
+        /// <value>Determines the type of the property associated with the condition</value>
         [DataMember(Name="propertyType", EmitDefaultValue=false)]
         public PropertyTypeEnum? PropertyType { get; set; }
-        
-        
-        
-        
         
         
         
@@ -280,25 +281,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerRulesetConfigChangeCondition" /> class.
         /// </summary>
-        /// <param name="Type">Type.</param>
-        /// <param name="Inverted">Inverted.</param>
-        /// <param name="AttributeName">AttributeName.</param>
-        /// <param name="Value">Value.</param>
-        /// <param name="ValueType">ValueType.</param>
-        /// <param name="_Operator">_Operator.</param>
-        /// <param name="Codes">Codes.</param>
-        /// <param name="PropertyType">PropertyType.</param>
-        /// <param name="Property">Property.</param>
-        /// <param name="DataNotFoundResolution">DataNotFoundResolution.</param>
-        /// <param name="ContactIdField">ContactIdField.</param>
-        /// <param name="CallAnalysisResultField">CallAnalysisResultField.</param>
-        /// <param name="AgentWrapupField">AgentWrapupField.</param>
-        /// <param name="ContactColumnToDataActionFieldMappings">ContactColumnToDataActionFieldMappings.</param>
-        /// <param name="Predicates">Predicates.</param>
-        /// <param name="DataAction">DataAction.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerRulesetConfigChangeCondition(string Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? _Operator = null, List<string> Codes = null, PropertyTypeEnum? PropertyType = null, string Property = null, bool? DataNotFoundResolution = null, string ContactIdField = null, string CallAnalysisResultField = null, string AgentWrapupField = null, List<DialerRulesetConfigChangeContactColumnToDataActionFieldMapping> ContactColumnToDataActionFieldMappings = null, List<DialerRulesetConfigChangeDataActionConditionPredicate> Predicates = null, DialerRulesetConfigChangeUriReference DataAction = null, Object AdditionalProperties = null)
+        /// <param name="DataAction">A UriReference for a resource.</param>
+        /// <param name="Type">The type of the condition.</param>
+        /// <param name="Inverted">Indicates whether to evaluate for the opposite of the stated condition; default is false.</param>
+        /// <param name="AttributeName">An attribute name associated with the condition (applies only to certain rule conditions).</param>
+        /// <param name="Value">A value associated with the condition.</param>
+        /// <param name="ValueType">Determines the type of the value associated with the condition.</param>
+        /// <param name="_Operator">An operation type for condition evaluation.</param>
+        /// <param name="Codes">List of wrap-up code identifiers (used only in conditions of type &#39;wrapupCondition&#39;).</param>
+        /// <param name="PropertyType">Determines the type of the property associated with the condition.</param>
+        /// <param name="Property">A value associated with the property type of this condition.</param>
+        /// <param name="DataNotFoundResolution">The result of this condition if the data action returns a result indicating there was no data. Required for a DataActionCondition..</param>
+        /// <param name="ContactIdField">The input field from the data action that the contactId will be passed to for this condition. Valid for a dataActionCondition..</param>
+        /// <param name="CallAnalysisResultField">The input field from the data action that the callAnalysisResult will be passed to for this condition. Valid for a wrapup dataActionCondition..</param>
+        /// <param name="AgentWrapupField">The input field from the data action that the agentWrapup will be passed to for this condition. Valid for a wrapup dataActionCondition..</param>
+        /// <param name="ContactColumnToDataActionFieldMappings">A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionCondition..</param>
+        /// <param name="Predicates">A list of predicates defining the comparisons to use for this condition. Required for a dataActionCondition..</param>
+        public DialerRulesetConfigChangeCondition(DialerRulesetConfigChangeUriReference DataAction = null, string Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? _Operator = null, List<string> Codes = null, PropertyTypeEnum? PropertyType = null, string Property = null, bool? DataNotFoundResolution = null, string ContactIdField = null, string CallAnalysisResultField = null, string AgentWrapupField = null, List<DialerRulesetConfigChangeContactColumnToDataActionFieldMapping> ContactColumnToDataActionFieldMappings = null, List<DialerRulesetConfigChangeDataActionConditionPredicate> Predicates = null)
         {
+            this.DataAction = DataAction;
             this.Type = Type;
             this.Inverted = Inverted;
             this.AttributeName = AttributeName;
@@ -314,40 +315,51 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AgentWrapupField = AgentWrapupField;
             this.ContactColumnToDataActionFieldMappings = ContactColumnToDataActionFieldMappings;
             this.Predicates = Predicates;
-            this.DataAction = DataAction;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Type
+        /// A UriReference for a resource
         /// </summary>
+        /// <value>A UriReference for a resource</value>
+        [DataMember(Name="dataAction", EmitDefaultValue=false)]
+        public DialerRulesetConfigChangeUriReference DataAction { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The type of the condition
+        /// </summary>
+        /// <value>The type of the condition</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Inverted
+        /// Indicates whether to evaluate for the opposite of the stated condition; default is false
         /// </summary>
+        /// <value>Indicates whether to evaluate for the opposite of the stated condition; default is false</value>
         [DataMember(Name="inverted", EmitDefaultValue=false)]
         public bool? Inverted { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AttributeName
+        /// An attribute name associated with the condition (applies only to certain rule conditions)
         /// </summary>
+        /// <value>An attribute name associated with the condition (applies only to certain rule conditions)</value>
         [DataMember(Name="attributeName", EmitDefaultValue=false)]
         public string AttributeName { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Value
+        /// A value associated with the condition
         /// </summary>
+        /// <value>A value associated with the condition</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
         
@@ -358,8 +370,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Codes
+        /// List of wrap-up code identifiers (used only in conditions of type &#39;wrapupCondition&#39;)
         /// </summary>
+        /// <value>List of wrap-up code identifiers (used only in conditions of type &#39;wrapupCondition&#39;)</value>
         [DataMember(Name="codes", EmitDefaultValue=false)]
         public List<string> Codes { get; set; }
         
@@ -368,74 +381,65 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Property
+        /// A value associated with the property type of this condition
         /// </summary>
+        /// <value>A value associated with the property type of this condition</value>
         [DataMember(Name="property", EmitDefaultValue=false)]
         public string Property { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets DataNotFoundResolution
+        /// The result of this condition if the data action returns a result indicating there was no data. Required for a DataActionCondition.
         /// </summary>
+        /// <value>The result of this condition if the data action returns a result indicating there was no data. Required for a DataActionCondition.</value>
         [DataMember(Name="dataNotFoundResolution", EmitDefaultValue=false)]
         public bool? DataNotFoundResolution { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ContactIdField
+        /// The input field from the data action that the contactId will be passed to for this condition. Valid for a dataActionCondition.
         /// </summary>
+        /// <value>The input field from the data action that the contactId will be passed to for this condition. Valid for a dataActionCondition.</value>
         [DataMember(Name="contactIdField", EmitDefaultValue=false)]
         public string ContactIdField { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CallAnalysisResultField
+        /// The input field from the data action that the callAnalysisResult will be passed to for this condition. Valid for a wrapup dataActionCondition.
         /// </summary>
+        /// <value>The input field from the data action that the callAnalysisResult will be passed to for this condition. Valid for a wrapup dataActionCondition.</value>
         [DataMember(Name="callAnalysisResultField", EmitDefaultValue=false)]
         public string CallAnalysisResultField { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets AgentWrapupField
+        /// The input field from the data action that the agentWrapup will be passed to for this condition. Valid for a wrapup dataActionCondition.
         /// </summary>
+        /// <value>The input field from the data action that the agentWrapup will be passed to for this condition. Valid for a wrapup dataActionCondition.</value>
         [DataMember(Name="agentWrapupField", EmitDefaultValue=false)]
         public string AgentWrapupField { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ContactColumnToDataActionFieldMappings
+        /// A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionCondition.
         /// </summary>
+        /// <value>A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionCondition.</value>
         [DataMember(Name="contactColumnToDataActionFieldMappings", EmitDefaultValue=false)]
         public List<DialerRulesetConfigChangeContactColumnToDataActionFieldMapping> ContactColumnToDataActionFieldMappings { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Predicates
+        /// A list of predicates defining the comparisons to use for this condition. Required for a dataActionCondition.
         /// </summary>
+        /// <value>A list of predicates defining the comparisons to use for this condition. Required for a dataActionCondition.</value>
         [DataMember(Name="predicates", EmitDefaultValue=false)]
         public List<DialerRulesetConfigChangeDataActionConditionPredicate> Predicates { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DataAction
-        /// </summary>
-        [DataMember(Name="dataAction", EmitDefaultValue=false)]
-        public DialerRulesetConfigChangeUriReference DataAction { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -447,6 +451,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class DialerRulesetConfigChangeCondition {\n");
             
+            sb.Append("  DataAction: ").Append(DataAction).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Inverted: ").Append(Inverted).Append("\n");
             sb.Append("  AttributeName: ").Append(AttributeName).Append("\n");
@@ -462,8 +467,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AgentWrapupField: ").Append(AgentWrapupField).Append("\n");
             sb.Append("  ContactColumnToDataActionFieldMappings: ").Append(ContactColumnToDataActionFieldMappings).Append("\n");
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
-            sb.Append("  DataAction: ").Append(DataAction).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -504,6 +507,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 return false;
 
             return true &&
+                (
+                    this.DataAction == other.DataAction ||
+                    this.DataAction != null &&
+                    this.DataAction.Equals(other.DataAction)
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
@@ -578,16 +586,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Predicates == other.Predicates ||
                     this.Predicates != null &&
                     this.Predicates.SequenceEqual(other.Predicates)
-                ) &&
-                (
-                    this.DataAction == other.DataAction ||
-                    this.DataAction != null &&
-                    this.DataAction.Equals(other.DataAction)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -602,6 +600,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.DataAction != null)
+                    hash = hash * 59 + this.DataAction.GetHashCode();
                 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
@@ -647,12 +648,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Predicates != null)
                     hash = hash * 59 + this.Predicates.GetHashCode();
-                
-                if (this.DataAction != null)
-                    hash = hash * 59 + this.DataAction.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

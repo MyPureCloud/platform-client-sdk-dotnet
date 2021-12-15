@@ -34,8 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundMessagingMessagingCampaignConfigChangeErrorDetail" /> class.
         /// </summary>
-        /// <param name="Error">Error.</param>
-        /// <param name="Details">Details.</param>
+        /// <param name="Error">The name of the error code..</param>
+        /// <param name="Details">The additional information regarding the error message..</param>
         public OutboundMessagingMessagingCampaignConfigChangeErrorDetail(string Error = null, string Details = null)
         {
             this.Error = Error;
@@ -46,16 +46,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Error
+        /// The name of the error code.
         /// </summary>
+        /// <value>The name of the error code.</value>
         [DataMember(Name="error", EmitDefaultValue=false)]
         public string Error { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Details
+        /// The additional information regarding the error message.
         /// </summary>
+        /// <value>The additional information regarding the error message.</value>
         [DataMember(Name="details", EmitDefaultValue=false)]
         public string Details { get; set; }
         

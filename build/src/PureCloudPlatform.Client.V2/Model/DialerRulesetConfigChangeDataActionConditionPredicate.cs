@@ -24,8 +24,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets OutputOperator
+        /// The operation with which to evaluate this condition
         /// </summary>
+        /// <value>The operation with which to evaluate this condition</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OutputOperatorEnum
         {
@@ -113,16 +114,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
-        /// Gets or Sets OutputOperator
+        /// The operation with which to evaluate this condition
         /// </summary>
+        /// <value>The operation with which to evaluate this condition</value>
         [DataMember(Name="outputOperator", EmitDefaultValue=false)]
         public OutputOperatorEnum? OutputOperator { get; set; }
-        
-        
         
         
         
@@ -135,28 +132,27 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerRulesetConfigChangeDataActionConditionPredicate" /> class.
         /// </summary>
-        /// <param name="OutputField">OutputField.</param>
-        /// <param name="OutputOperator">OutputOperator.</param>
-        /// <param name="ComparisonValue">ComparisonValue.</param>
-        /// <param name="OutputFieldMissingResolution">OutputFieldMissingResolution.</param>
-        /// <param name="Inverted">Inverted.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerRulesetConfigChangeDataActionConditionPredicate(string OutputField = null, OutputOperatorEnum? OutputOperator = null, string ComparisonValue = null, bool? OutputFieldMissingResolution = null, bool? Inverted = null, Object AdditionalProperties = null)
+        /// <param name="OutputField">The name of an output field from the data action&#39;s output to use for this condition.</param>
+        /// <param name="OutputOperator">The operation with which to evaluate this condition.</param>
+        /// <param name="ComparisonValue">The value to compare against for this condition.</param>
+        /// <param name="OutputFieldMissingResolution">The result of this predicate if the requested output field is missing from the data action&#39;s result.</param>
+        /// <param name="Inverted">If true, inverts the result of evaluating this Predicate. Default is false..</param>
+        public DialerRulesetConfigChangeDataActionConditionPredicate(string OutputField = null, OutputOperatorEnum? OutputOperator = null, string ComparisonValue = null, bool? OutputFieldMissingResolution = null, bool? Inverted = null)
         {
             this.OutputField = OutputField;
             this.OutputOperator = OutputOperator;
             this.ComparisonValue = ComparisonValue;
             this.OutputFieldMissingResolution = OutputFieldMissingResolution;
             this.Inverted = Inverted;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets OutputField
+        /// The name of an output field from the data action&#39;s output to use for this condition
         /// </summary>
+        /// <value>The name of an output field from the data action&#39;s output to use for this condition</value>
         [DataMember(Name="outputField", EmitDefaultValue=false)]
         public string OutputField { get; set; }
         
@@ -165,34 +161,29 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets ComparisonValue
+        /// The value to compare against for this condition
         /// </summary>
+        /// <value>The value to compare against for this condition</value>
         [DataMember(Name="comparisonValue", EmitDefaultValue=false)]
         public string ComparisonValue { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets OutputFieldMissingResolution
+        /// The result of this predicate if the requested output field is missing from the data action&#39;s result
         /// </summary>
+        /// <value>The result of this predicate if the requested output field is missing from the data action&#39;s result</value>
         [DataMember(Name="outputFieldMissingResolution", EmitDefaultValue=false)]
         public bool? OutputFieldMissingResolution { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Inverted
+        /// If true, inverts the result of evaluating this Predicate. Default is false.
         /// </summary>
+        /// <value>If true, inverts the result of evaluating this Predicate. Default is false.</value>
         [DataMember(Name="inverted", EmitDefaultValue=false)]
         public bool? Inverted { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -209,7 +200,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ComparisonValue: ").Append(ComparisonValue).Append("\n");
             sb.Append("  OutputFieldMissingResolution: ").Append(OutputFieldMissingResolution).Append("\n");
             sb.Append("  Inverted: ").Append(Inverted).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -274,11 +264,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Inverted == other.Inverted ||
                     this.Inverted != null &&
                     this.Inverted.Equals(other.Inverted)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -308,9 +293,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Inverted != null)
                     hash = hash * 59 + this.Inverted.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

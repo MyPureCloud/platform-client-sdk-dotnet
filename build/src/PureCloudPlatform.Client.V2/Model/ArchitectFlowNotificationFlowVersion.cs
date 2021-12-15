@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ArchitectFlowNotificationFlowVersion
+    /// A bare-bones flow version object
     /// </summary>
     [DataContract]
     public partial class ArchitectFlowNotificationFlowVersion :  IEquatable<ArchitectFlowNotificationFlowVersion>
@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchitectFlowNotificationFlowVersion" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
+        /// <param name="Id">The version ID.</param>
         public ArchitectFlowNotificationFlowVersion(string Id = null)
         {
             this.Id = Id;
@@ -39,8 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The version ID
         /// </summary>
+        /// <value>The version ID</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         

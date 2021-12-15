@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ArchitectFlowOutcomeNotificationUser
+    /// The user who initiated the change.
     /// </summary>
     [DataContract]
     public partial class ArchitectFlowOutcomeNotificationUser :  IEquatable<ArchitectFlowOutcomeNotificationUser>
@@ -39,8 +39,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchitectFlowOutcomeNotificationUser" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
+        /// <param name="Id">The ID of the user..</param>
+        /// <param name="Name">The name of the user, if available..</param>
         /// <param name="HomeOrg">HomeOrg.</param>
         public ArchitectFlowOutcomeNotificationUser(string Id = null, string Name = null, ArchitectFlowOutcomeNotificationHomeOrganization HomeOrg = null)
         {
@@ -53,16 +53,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The ID of the user.
         /// </summary>
+        /// <value>The ID of the user.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the user, if available.
         /// </summary>
+        /// <value>The name of the user, if available.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         

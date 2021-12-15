@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// OutboundMessagingMessagingCampaignConfigChangeEmailConfig
+    /// An outbound-messaging messaging campaign email Config
     /// </summary>
     [DataContract]
     public partial class OutboundMessagingMessagingCampaignConfigChangeEmailConfig :  IEquatable<OutboundMessagingMessagingCampaignConfigChangeEmailConfig>
@@ -44,8 +44,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundMessagingMessagingCampaignConfigChangeEmailConfig" /> class.
         /// </summary>
-        /// <param name="EmailColumns">EmailColumns.</param>
-        /// <param name="ContentTemplate">ContentTemplate.</param>
+        /// <param name="EmailColumns">The Contact List column specifying the email to send to the contact..</param>
+        /// <param name="ContentTemplate">A reference for a Response.</param>
         /// <param name="FromAddress">FromAddress.</param>
         /// <param name="ReplyToAddress">ReplyToAddress.</param>
         public OutboundMessagingMessagingCampaignConfigChangeEmailConfig(List<string> EmailColumns = null, OutboundMessagingMessagingCampaignConfigChangeResponseRef ContentTemplate = null, OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress FromAddress = null, OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress ReplyToAddress = null)
@@ -60,16 +60,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets EmailColumns
+        /// The Contact List column specifying the email to send to the contact.
         /// </summary>
+        /// <value>The Contact List column specifying the email to send to the contact.</value>
         [DataMember(Name="emailColumns", EmitDefaultValue=false)]
         public List<string> EmailColumns { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ContentTemplate
+        /// A reference for a Response
         /// </summary>
+        /// <value>A reference for a Response</value>
         [DataMember(Name="contentTemplate", EmitDefaultValue=false)]
         public OutboundMessagingMessagingCampaignConfigChangeResponseRef ContentTemplate { get; set; }
         

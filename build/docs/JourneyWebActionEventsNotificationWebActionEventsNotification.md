@@ -13,8 +13,8 @@ title: JourneyWebActionEventsNotificationWebActionEventsNotification
 | **CreatedDate** | **DateTime?** |  | [optional] |
 | **CustomerId** | **string** |  | [optional] |
 | **CustomerIdType** | **string** |  | [optional] |
-| **EventType** | **string** |  | [optional] |
 | **Session** | [**JourneyWebActionEventsNotificationSession**](JourneyWebActionEventsNotificationSession.html) |  | [optional] |
+| **EventType** | **string** |  | [optional] |
 | **WebActionEvent** | [**JourneyWebActionEventsNotificationWebActionMessage**](JourneyWebActionEventsNotificationWebActionMessage.html) |  | [optional] |
 | **BlockedWebActionOfferEvent** | [**JourneyWebActionEventsNotificationBlockedWebActionOfferMessage**](JourneyWebActionEventsNotificationBlockedWebActionOfferMessage.html) |  | [optional] |
 {: class="table table-striped"}

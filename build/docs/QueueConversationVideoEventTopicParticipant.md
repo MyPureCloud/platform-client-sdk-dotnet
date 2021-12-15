@@ -7,33 +7,33 @@ title: QueueConversationVideoEventTopicParticipant
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
-| **ConnectedTime** | **DateTime?** |  | [optional] |
-| **EndTime** | **DateTime?** |  | [optional] |
-| **UserId** | **string** |  | [optional] |
-| **ExternalContactId** | **string** |  | [optional] |
-| **ExternalOrganizationId** | **string** |  | [optional] |
-| **Name** | **string** |  | [optional] |
-| **QueueId** | **string** |  | [optional] |
-| **GroupId** | **string** |  | [optional] |
-| **TeamId** | **string** |  | [optional] |
-| **Purpose** | **string** |  | [optional] |
-| **ConsultParticipantId** | **string** |  | [optional] |
-| **Address** | **string** |  | [optional] |
-| **WrapupRequired** | **bool?** |  | [optional] |
-| **WrapupExpected** | **bool?** |  | [optional] |
-| **WrapupPrompt** | **string** |  | [optional] |
-| **WrapupTimeoutMs** | **int?** |  | [optional] |
+| **Id** | **string** | A globally unique identifier for this conversation. | [optional] |
+| **ConnectedTime** | **DateTime?** | The timestamp when this participant was connected to the conversation in the provider clock. | [optional] |
+| **EndTime** | **DateTime?** | The timestamp when this participant disconnected from the conversation in the provider clock. | [optional] |
+| **UserId** | **string** | If this participant represents a user, then this will be the globally unique identifier for the user. | [optional] |
+| **ExternalContactId** | **string** | If this participant represents an external contact, then this will be the globally unique identifier for the external contact. | [optional] |
+| **ExternalOrganizationId** | **string** | If this participant represents an external org, then this will be the globally unique identifier for the external org. | [optional] |
+| **Name** | **string** | A human readable name identifying the participant. | [optional] |
+| **QueueId** | **string** | If present, the queue id that the communication channel came in on. | [optional] |
+| **GroupId** | **string** | If present, the group id that the participant represents. | [optional] |
+| **TeamId** | **string** | The team id that this participant is a member of when added to the conversation. | [optional] |
+| **Purpose** | **string** | A well known string that specifies the purpose or type of this participant. | [optional] |
+| **ConsultParticipantId** | **string** | If this participant is part of a consult transfer, then this will be the participant id of the participant being transferred. | [optional] |
+| **Address** | **string** | The address for the this participant. For a phone call this will be the ANI. | [optional] |
+| **WrapupRequired** | **bool?** | True iff this participant is required to enter wrapup for this conversation. | [optional] |
+| **WrapupExpected** | **bool?** | True when a participant is expected to enter a wrapup code once the call connects. | [optional] |
+| **WrapupPrompt** | **string** | This field controls how the UI prompts the agent for a wrapup. | [optional] |
+| **WrapupTimeoutMs** | **int?** | Specifies how long a timed ACW session will last. | [optional] |
 | **Wrapup** | [**QueueConversationVideoEventTopicWrapup**](QueueConversationVideoEventTopicWrapup.html) |  | [optional] |
-| **StartAcwTime** | **DateTime?** |  | [optional] |
-| **EndAcwTime** | **DateTime?** |  | [optional] |
+| **StartAcwTime** | **DateTime?** | The timestamp when this participant started after-call work. | [optional] |
+| **EndAcwTime** | **DateTime?** | The timestamp when this participant ended after-call work. | [optional] |
 | **ConversationRoutingData** | [**QueueConversationVideoEventTopicConversationRoutingData**](QueueConversationVideoEventTopicConversationRoutingData.html) |  | [optional] |
-| **AlertingTimeoutMs** | **int?** |  | [optional] |
-| **MonitoredParticipantId** | **string** |  | [optional] |
-| **CoachedParticipantId** | **string** |  | [optional] |
-| **ScreenRecordingState** | **string** |  | [optional] |
-| **FlaggedReason** | **string** |  | [optional] |
-| **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
+| **AlertingTimeoutMs** | **int?** | Specifies how long the agent has to answer an interaction before being marked as not responding. | [optional] |
+| **MonitoredParticipantId** | **string** | If this participant is a monitor, then this will be the id of the participant that is being monitored. | [optional] |
+| **CoachedParticipantId** | **string** | If this participant is a coach, then this will be the id of the participant that is being coached. | [optional] |
+| **ScreenRecordingState** | **string** | The current screen recording state for this participant. | [optional] |
+| **FlaggedReason** | **string** | If this participant has flagged the conversation, the reason code given. | [optional] |
+| **Attributes** | **Dictionary&lt;string, string&gt;** | Additional participant attributes | [optional] |
 | **Calls** | [**List&lt;QueueConversationVideoEventTopicCall&gt;**](QueueConversationVideoEventTopicCall.html) |  | [optional] |
 | **Callbacks** | [**List&lt;QueueConversationVideoEventTopicCallback&gt;**](QueueConversationVideoEventTopicCallback.html) |  | [optional] |
 | **Chats** | [**List&lt;QueueConversationVideoEventTopicChat&gt;**](QueueConversationVideoEventTopicChat.html) |  | [optional] |
@@ -43,7 +43,6 @@ title: QueueConversationVideoEventTopicParticipant
 | **Screenshares** | [**List&lt;QueueConversationVideoEventTopicScreenshare&gt;**](QueueConversationVideoEventTopicScreenshare.html) |  | [optional] |
 | **SocialExpressions** | [**List&lt;QueueConversationVideoEventTopicSocialExpression&gt;**](QueueConversationVideoEventTopicSocialExpression.html) |  | [optional] |
 | **Videos** | [**List&lt;QueueConversationVideoEventTopicVideo&gt;**](QueueConversationVideoEventTopicVideo.html) |  | [optional] |
-| **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 
 

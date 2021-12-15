@@ -44,9 +44,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchitectPromptNotificationPromptNotification" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
+        /// <param name="Id">The prompt ID.</param>
+        /// <param name="Name">The prompt name.</param>
+        /// <param name="Description">The prompt description.</param>
         /// <param name="CurrentOperation">CurrentOperation.</param>
         public ArchitectPromptNotificationPromptNotification(string Id = null, string Name = null, string Description = null, ArchitectPromptNotificationArchitectOperation CurrentOperation = null)
         {
@@ -60,24 +60,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The prompt ID
         /// </summary>
+        /// <value>The prompt ID</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The prompt name
         /// </summary>
+        /// <value>The prompt name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Description
+        /// The prompt description
         /// </summary>
+        /// <value>The prompt description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
         

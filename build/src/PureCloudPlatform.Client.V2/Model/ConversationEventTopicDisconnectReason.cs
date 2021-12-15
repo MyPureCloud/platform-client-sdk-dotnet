@@ -21,8 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Type
+        /// Disconnect reason protocol type.
         /// </summary>
+        /// <value>Disconnect reason protocol type.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -35,15 +36,15 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Q850 for "Q_850"
+            /// Enum Q850 for "q850"
             /// </summary>
-            [EnumMember(Value = "Q_850")]
+            [EnumMember(Value = "q850")]
             Q850,
             
             /// <summary>
-            /// Enum Sip for "SIP"
+            /// Enum Sip for "sip"
             /// </summary>
-            [EnumMember(Value = "SIP")]
+            [EnumMember(Value = "sip")]
             Sip
         }
         
@@ -58,8 +59,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Type
+        /// Disconnect reason protocol type.
         /// </summary>
+        /// <value>Disconnect reason protocol type.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         
@@ -72,9 +74,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationEventTopicDisconnectReason" /> class.
         /// </summary>
-        /// <param name="Type">Type.</param>
-        /// <param name="Code">Code.</param>
-        /// <param name="Phrase">Phrase.</param>
+        /// <param name="Type">Disconnect reason protocol type..</param>
+        /// <param name="Code">Protocol specific reason code. See the Q.850 and SIP specs..</param>
+        /// <param name="Phrase">Human readable English description of the disconnect reason..</param>
         public ConversationEventTopicDisconnectReason(TypeEnum? Type = null, int? Code = null, string Phrase = null)
         {
             this.Type = Type;
@@ -88,16 +90,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Code
+        /// Protocol specific reason code. See the Q.850 and SIP specs.
         /// </summary>
+        /// <value>Protocol specific reason code. See the Q.850 and SIP specs.</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public int? Code { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Phrase
+        /// Human readable English description of the disconnect reason.
         /// </summary>
+        /// <value>Human readable English description of the disconnect reason.</value>
         [DataMember(Name="phrase", EmitDefaultValue=false)]
         public string Phrase { get; set; }
         

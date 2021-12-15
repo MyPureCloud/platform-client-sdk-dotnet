@@ -29,9 +29,13 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
-        /// Gets or Sets Category
+        /// The category of the rule
         /// </summary>
+        /// <value>The category of the rule</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum CategoryEnum
         {
@@ -71,19 +75,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
         /// <summary>
-        /// Gets or Sets Category
+        /// The category of the rule
         /// </summary>
+        /// <value>The category of the rule</value>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public CategoryEnum? Category { get; set; }
-        
-        
-        
-        
         
         
         
@@ -92,46 +89,56 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerRulesetConfigChangeRule" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Order">Order.</param>
-        /// <param name="Category">Category.</param>
-        /// <param name="Actions">Actions.</param>
-        /// <param name="Conditions">Conditions.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerRulesetConfigChangeRule(string Id = null, string Name = null, int? Order = null, CategoryEnum? Category = null, List<DialerRulesetConfigChangeAction> Actions = null, List<DialerRulesetConfigChangeCondition> Conditions = null, Object AdditionalProperties = null)
+        /// <param name="Conditions">The list of rule conditions; all must evaluate to true to trigger the rule actions.</param>
+        /// <param name="Id">The identifier of the rule.</param>
+        /// <param name="Name">The name of the rule.</param>
+        /// <param name="Order">The ranked order of the rule; rules are processed from lowest number to highest.</param>
+        /// <param name="Category">The category of the rule.</param>
+        /// <param name="Actions">The list of rule actions to be taken if the conditions are true.</param>
+        public DialerRulesetConfigChangeRule(List<DialerRulesetConfigChangeCondition> Conditions = null, string Id = null, string Name = null, int? Order = null, CategoryEnum? Category = null, List<DialerRulesetConfigChangeAction> Actions = null)
         {
+            this.Conditions = Conditions;
             this.Id = Id;
             this.Name = Name;
             this.Order = Order;
             this.Category = Category;
             this.Actions = Actions;
-            this.Conditions = Conditions;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The list of rule conditions; all must evaluate to true to trigger the rule actions
         /// </summary>
+        /// <value>The list of rule conditions; all must evaluate to true to trigger the rule actions</value>
+        [DataMember(Name="conditions", EmitDefaultValue=false)]
+        public List<DialerRulesetConfigChangeCondition> Conditions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The identifier of the rule
+        /// </summary>
+        /// <value>The identifier of the rule</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the rule
         /// </summary>
+        /// <value>The name of the rule</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Order
+        /// The ranked order of the rule; rules are processed from lowest number to highest
         /// </summary>
+        /// <value>The ranked order of the rule; rules are processed from lowest number to highest</value>
         [DataMember(Name="order", EmitDefaultValue=false)]
         public int? Order { get; set; }
         
@@ -140,26 +147,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Actions
+        /// The list of rule actions to be taken if the conditions are true
         /// </summary>
+        /// <value>The list of rule actions to be taken if the conditions are true</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public List<DialerRulesetConfigChangeAction> Actions { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Conditions
-        /// </summary>
-        [DataMember(Name="conditions", EmitDefaultValue=false)]
-        public List<DialerRulesetConfigChangeCondition> Conditions { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -171,13 +163,12 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class DialerRulesetConfigChangeRule {\n");
             
+            sb.Append("  Conditions: ").Append(Conditions).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("  Actions: ").Append(Actions).Append("\n");
-            sb.Append("  Conditions: ").Append(Conditions).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -219,6 +210,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Conditions == other.Conditions ||
+                    this.Conditions != null &&
+                    this.Conditions.SequenceEqual(other.Conditions)
+                ) &&
+                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
@@ -242,16 +238,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Actions == other.Actions ||
                     this.Actions != null &&
                     this.Actions.SequenceEqual(other.Actions)
-                ) &&
-                (
-                    this.Conditions == other.Conditions ||
-                    this.Conditions != null &&
-                    this.Conditions.SequenceEqual(other.Conditions)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -267,6 +253,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.Conditions != null)
+                    hash = hash * 59 + this.Conditions.GetHashCode();
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
@@ -281,12 +270,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
-                
-                if (this.Conditions != null)
-                    hash = hash * 59 + this.Conditions.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

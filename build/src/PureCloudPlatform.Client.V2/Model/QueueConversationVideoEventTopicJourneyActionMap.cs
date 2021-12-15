@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// QueueConversationVideoEventTopicJourneyActionMap
+    /// Details about the action map from the Journey System which triggered this action
     /// </summary>
     [DataContract]
     public partial class QueueConversationVideoEventTopicJourneyActionMap :  IEquatable<QueueConversationVideoEventTopicJourneyActionMap>
@@ -34,8 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationVideoEventTopicJourneyActionMap" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Version">Version.</param>
+        /// <param name="Id">The ID of the actionMap in the Journey System which triggered this action.</param>
+        /// <param name="Version">The version number of the actionMap in the Journey System at the time this action was triggered.</param>
         public QueueConversationVideoEventTopicJourneyActionMap(string Id = null, int? Version = null)
         {
             this.Id = Id;
@@ -46,16 +46,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The ID of the actionMap in the Journey System which triggered this action
         /// </summary>
+        /// <value>The ID of the actionMap in the Journey System which triggered this action</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Version
+        /// The version number of the actionMap in the Journey System at the time this action was triggered
         /// </summary>
+        /// <value>The version number of the actionMap in the Journey System at the time this action was triggered</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
         

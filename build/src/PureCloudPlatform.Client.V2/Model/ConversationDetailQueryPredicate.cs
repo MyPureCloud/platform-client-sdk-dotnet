@@ -260,6 +260,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Omediacount,
             
             /// <summary>
+            /// Enum Omessageturn for "oMessageTurn"
+            /// </summary>
+            [EnumMember(Value = "oMessageTurn")]
+            Omessageturn,
+            
+            /// <summary>
             /// Enum Tabandon for "tAbandon"
             /// </summary>
             [EnumMember(Value = "tAbandon")]
@@ -318,6 +324,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "tCoachingComplete")]
             Tcoachingcomplete,
+            
+            /// <summary>
+            /// Enum Tconnected for "tConnected"
+            /// </summary>
+            [EnumMember(Value = "tConnected")]
+            Tconnected,
             
             /// <summary>
             /// Enum Tcontacting for "tContacting"

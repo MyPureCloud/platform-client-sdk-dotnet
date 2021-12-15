@@ -27,8 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets ActionType
+        /// The type of this action
         /// </summary>
+        /// <value>The type of this action</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ActionTypeEnum
         {
@@ -41,40 +42,40 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum TurnOnCampaign for "TURN_ON_CAMPAIGN"
+            /// Enum Turnoncampaign for "turnOnCampaign"
             /// </summary>
-            [EnumMember(Value = "TURN_ON_CAMPAIGN")]
-            TurnOnCampaign,
+            [EnumMember(Value = "turnOnCampaign")]
+            Turnoncampaign,
             
             /// <summary>
-            /// Enum TurnOffCampaign for "TURN_OFF_CAMPAIGN"
+            /// Enum Turnoffcampaign for "turnOffCampaign"
             /// </summary>
-            [EnumMember(Value = "TURN_OFF_CAMPAIGN")]
-            TurnOffCampaign,
+            [EnumMember(Value = "turnOffCampaign")]
+            Turnoffcampaign,
             
             /// <summary>
-            /// Enum TurnOnSequence for "TURN_ON_SEQUENCE"
+            /// Enum Turnonsequence for "turnOnSequence"
             /// </summary>
-            [EnumMember(Value = "TURN_ON_SEQUENCE")]
-            TurnOnSequence,
+            [EnumMember(Value = "turnOnSequence")]
+            Turnonsequence,
             
             /// <summary>
-            /// Enum TurnOffSequence for "TURN_OFF_SEQUENCE"
+            /// Enum Turnoffsequence for "turnOffSequence"
             /// </summary>
-            [EnumMember(Value = "TURN_OFF_SEQUENCE")]
-            TurnOffSequence,
+            [EnumMember(Value = "turnOffSequence")]
+            Turnoffsequence,
             
             /// <summary>
-            /// Enum SetCampaignPriority for "SET_CAMPAIGN_PRIORITY"
+            /// Enum Setcampaignpriority for "setCampaignPriority"
             /// </summary>
-            [EnumMember(Value = "SET_CAMPAIGN_PRIORITY")]
-            SetCampaignPriority,
+            [EnumMember(Value = "setCampaignPriority")]
+            Setcampaignpriority,
             
             /// <summary>
-            /// Enum RecycleCampaign for "RECYCLE_CAMPAIGN"
+            /// Enum Recyclecampaign for "recycleCampaign"
             /// </summary>
-            [EnumMember(Value = "RECYCLE_CAMPAIGN")]
-            RecycleCampaign
+            [EnumMember(Value = "recycleCampaign")]
+            Recyclecampaign
         }
         
         
@@ -88,16 +89,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
-        /// Gets or Sets ActionType
+        /// The type of this action
         /// </summary>
+        /// <value>The type of this action</value>
         [DataMember(Name="actionType", EmitDefaultValue=false)]
         public ActionTypeEnum? ActionType { get; set; }
-        
-        
         
         
         
@@ -106,34 +103,34 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCampaignRuleConfigChangeCampaignRuleAction" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Parameters">Parameters.</param>
-        /// <param name="ActionType">ActionType.</param>
+        /// <param name="Id">The globally unique identifier for the action.</param>
+        /// <param name="Parameters">The parameters to match this action.</param>
+        /// <param name="ActionType">The type of this action.</param>
         /// <param name="CampaignRuleActionEntities">CampaignRuleActionEntities.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerCampaignRuleConfigChangeCampaignRuleAction(string Id = null, Dictionary<string, string> Parameters = null, ActionTypeEnum? ActionType = null, DialerCampaignRuleConfigChangeCampaignRuleActionEntities CampaignRuleActionEntities = null, Object AdditionalProperties = null)
+        public DialerCampaignRuleConfigChangeCampaignRuleAction(string Id = null, Dictionary<string, string> Parameters = null, ActionTypeEnum? ActionType = null, DialerCampaignRuleConfigChangeCampaignRuleActionEntities CampaignRuleActionEntities = null)
         {
             this.Id = Id;
             this.Parameters = Parameters;
             this.ActionType = ActionType;
             this.CampaignRuleActionEntities = CampaignRuleActionEntities;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The globally unique identifier for the action
         /// </summary>
+        /// <value>The globally unique identifier for the action</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Parameters
+        /// The parameters to match this action
         /// </summary>
+        /// <value>The parameters to match this action</value>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public Dictionary<string, string> Parameters { get; set; }
         
@@ -146,14 +143,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="campaignRuleActionEntities", EmitDefaultValue=false)]
         public DialerCampaignRuleConfigChangeCampaignRuleActionEntities CampaignRuleActionEntities { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -169,7 +158,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
             sb.Append("  ActionType: ").Append(ActionType).Append("\n");
             sb.Append("  CampaignRuleActionEntities: ").Append(CampaignRuleActionEntities).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -229,11 +217,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CampaignRuleActionEntities == other.CampaignRuleActionEntities ||
                     this.CampaignRuleActionEntities != null &&
                     this.CampaignRuleActionEntities.Equals(other.CampaignRuleActionEntities)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -260,9 +243,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CampaignRuleActionEntities != null)
                     hash = hash * 59 + this.CampaignRuleActionEntities.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

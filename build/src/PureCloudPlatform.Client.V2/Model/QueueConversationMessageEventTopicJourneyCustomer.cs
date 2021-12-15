@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// QueueConversationMessageEventTopicJourneyCustomer
+    /// A subset of the Journey System&#39;s customer data at a point-in-time (for external linkage and internal usage/context)
     /// </summary>
     [DataContract]
     public partial class QueueConversationMessageEventTopicJourneyCustomer :  IEquatable<QueueConversationMessageEventTopicJourneyCustomer>
@@ -34,8 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationMessageEventTopicJourneyCustomer" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="IdType">IdType.</param>
+        /// <param name="Id">An ID of a customer within the Journey System at a point-in-time.  Note that a customer entity can have multiple customerIds based on the stitching process.  Depending on the context within the PureCloud conversation, this may or may not be mutable..</param>
+        /// <param name="IdType">The type of the customerId within the Journey System (e.g. cookie)..</param>
         public QueueConversationMessageEventTopicJourneyCustomer(string Id = null, string IdType = null)
         {
             this.Id = Id;
@@ -46,16 +46,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// An ID of a customer within the Journey System at a point-in-time.  Note that a customer entity can have multiple customerIds based on the stitching process.  Depending on the context within the PureCloud conversation, this may or may not be mutable.
         /// </summary>
+        /// <value>An ID of a customer within the Journey System at a point-in-time.  Note that a customer entity can have multiple customerIds based on the stitching process.  Depending on the context within the PureCloud conversation, this may or may not be mutable.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets IdType
+        /// The type of the customerId within the Journey System (e.g. cookie).
         /// </summary>
+        /// <value>The type of the customerId within the Journey System (e.g. cookie).</value>
         [DataMember(Name="idType", EmitDefaultValue=false)]
         public string IdType { get; set; }
         

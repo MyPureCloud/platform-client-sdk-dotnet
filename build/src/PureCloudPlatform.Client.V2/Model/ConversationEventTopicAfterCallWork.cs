@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ConversationEventTopicAfterCallWork
+    /// A communication&#39;s after-call work data.
     /// </summary>
     [DataContract]
     public partial class ConversationEventTopicAfterCallWork :  IEquatable<ConversationEventTopicAfterCallWork>
@@ -21,8 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets State
+        /// The communication's after-call work state.
         /// </summary>
+        /// <value>The communication's after-call work state.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
@@ -35,34 +36,34 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Unknown for "UNKNOWN"
+            /// Enum Unknown for "unknown"
             /// </summary>
-            [EnumMember(Value = "UNKNOWN")]
+            [EnumMember(Value = "unknown")]
             Unknown,
             
             /// <summary>
-            /// Enum Skipped for "SKIPPED"
+            /// Enum Skipped for "skipped"
             /// </summary>
-            [EnumMember(Value = "SKIPPED")]
+            [EnumMember(Value = "skipped")]
             Skipped,
             
             /// <summary>
-            /// Enum Pending for "PENDING"
+            /// Enum Pending for "pending"
             /// </summary>
-            [EnumMember(Value = "PENDING")]
+            [EnumMember(Value = "pending")]
             Pending,
             
             /// <summary>
-            /// Enum Complete for "COMPLETE"
+            /// Enum Complete for "complete"
             /// </summary>
-            [EnumMember(Value = "COMPLETE")]
+            [EnumMember(Value = "complete")]
             Complete,
             
             /// <summary>
-            /// Enum NotApplicable for "NOT_APPLICABLE"
+            /// Enum Notapplicable for "notApplicable"
             /// </summary>
-            [EnumMember(Value = "NOT_APPLICABLE")]
-            NotApplicable
+            [EnumMember(Value = "notApplicable")]
+            Notapplicable
         }
         
         
@@ -76,8 +77,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets State
+        /// The communication's after-call work state.
         /// </summary>
+        /// <value>The communication's after-call work state.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         
@@ -90,9 +92,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationEventTopicAfterCallWork" /> class.
         /// </summary>
-        /// <param name="State">State.</param>
-        /// <param name="StartTime">StartTime.</param>
-        /// <param name="EndTime">EndTime.</param>
+        /// <param name="State">The communication&#39;s after-call work state..</param>
+        /// <param name="StartTime">The timestamp when this communication started after-call work in the cloud clock..</param>
+        /// <param name="EndTime">The timestamp when this communication ended after-call work in the cloud clock..</param>
         public ConversationEventTopicAfterCallWork(StateEnum? State = null, DateTime? StartTime = null, DateTime? EndTime = null)
         {
             this.State = State;
@@ -106,16 +108,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets StartTime
+        /// The timestamp when this communication started after-call work in the cloud clock.
         /// </summary>
+        /// <value>The timestamp when this communication started after-call work in the cloud clock.</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets EndTime
+        /// The timestamp when this communication ended after-call work in the cloud clock.
         /// </summary>
+        /// <value>The timestamp when this communication ended after-call work in the cloud clock.</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
         

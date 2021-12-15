@@ -7,8 +7,8 @@ title: ArchitectPromptNotificationUser
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
-| **Name** | **string** |  | [optional] |
+| **Id** | **string** | The ID of the user. | [optional] |
+| **Name** | **string** | The name of the user, if available. | [optional] |
 | **HomeOrg** | [**ArchitectPromptNotificationHomeOrganization**](ArchitectPromptNotificationHomeOrganization.html) |  | [optional] |
 {: class="table table-striped"}
 

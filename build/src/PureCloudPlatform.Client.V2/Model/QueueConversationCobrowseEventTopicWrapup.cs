@@ -45,79 +45,69 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationCobrowseEventTopicWrapup" /> class.
         /// </summary>
-        /// <param name="Code">Code.</param>
-        /// <param name="Notes">Notes.</param>
-        /// <param name="Tags">Tags.</param>
-        /// <param name="DurationSeconds">DurationSeconds.</param>
-        /// <param name="EndTime">EndTime.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationCobrowseEventTopicWrapup(string Code = null, string Notes = null, List<string> Tags = null, int? DurationSeconds = null, DateTime? EndTime = null, Object AdditionalProperties = null)
+        /// <param name="Code">The user configured wrap up code name..</param>
+        /// <param name="Notes">Text entered by the agent to describe the call or disposition..</param>
+        /// <param name="Tags">List of tags selected by the agent to describe the call or disposition..</param>
+        /// <param name="DurationSeconds">The length of time in seconds that the agent spent doing after call work., Note, the format of utc-millisec should be ignored, our code generator needs it to generate a Long for us internally.</param>
+        /// <param name="EndTime">The timestamp when the wrapup was finished..</param>
+        public QueueConversationCobrowseEventTopicWrapup(string Code = null, string Notes = null, List<string> Tags = null, int? DurationSeconds = null, DateTime? EndTime = null)
         {
             this.Code = Code;
             this.Notes = Notes;
             this.Tags = Tags;
             this.DurationSeconds = DurationSeconds;
             this.EndTime = EndTime;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Code
+        /// The user configured wrap up code name.
         /// </summary>
+        /// <value>The user configured wrap up code name.</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Notes
+        /// Text entered by the agent to describe the call or disposition.
         /// </summary>
+        /// <value>Text entered by the agent to describe the call or disposition.</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Tags
+        /// List of tags selected by the agent to describe the call or disposition.
         /// </summary>
+        /// <value>List of tags selected by the agent to describe the call or disposition.</value>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets DurationSeconds
+        /// The length of time in seconds that the agent spent doing after call work., Note, the format of utc-millisec should be ignored, our code generator needs it to generate a Long for us internally
         /// </summary>
+        /// <value>The length of time in seconds that the agent spent doing after call work., Note, the format of utc-millisec should be ignored, our code generator needs it to generate a Long for us internally</value>
         [DataMember(Name="durationSeconds", EmitDefaultValue=false)]
         public int? DurationSeconds { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets EndTime
+        /// The timestamp when the wrapup was finished.
         /// </summary>
+        /// <value>The timestamp when the wrapup was finished.</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -134,7 +124,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -199,11 +188,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EndTime == other.EndTime ||
                     this.EndTime != null &&
                     this.EndTime.Equals(other.EndTime)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -233,9 +217,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

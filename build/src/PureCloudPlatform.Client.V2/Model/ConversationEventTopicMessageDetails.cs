@@ -27,8 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets MessageStatus
+        /// Indicates the delivery status of the message.
         /// </summary>
+        /// <value>Indicates the delivery status of the message.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum MessageStatusEnum
         {
@@ -41,45 +42,45 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Queued for "QUEUED"
+            /// Enum Queued for "queued"
             /// </summary>
-            [EnumMember(Value = "QUEUED")]
+            [EnumMember(Value = "queued")]
             Queued,
             
             /// <summary>
-            /// Enum Sent for "SENT"
+            /// Enum Sent for "sent"
             /// </summary>
-            [EnumMember(Value = "SENT")]
+            [EnumMember(Value = "sent")]
             Sent,
             
             /// <summary>
-            /// Enum Failed for "FAILED"
+            /// Enum Failed for "failed"
             /// </summary>
-            [EnumMember(Value = "FAILED")]
+            [EnumMember(Value = "failed")]
             Failed,
             
             /// <summary>
-            /// Enum Received for "RECEIVED"
+            /// Enum Received for "received"
             /// </summary>
-            [EnumMember(Value = "RECEIVED")]
+            [EnumMember(Value = "received")]
             Received,
             
             /// <summary>
-            /// Enum DeliverySuccess for "DELIVERY_SUCCESS"
+            /// Enum Deliverysuccess for "delivery-success"
             /// </summary>
-            [EnumMember(Value = "DELIVERY_SUCCESS")]
-            DeliverySuccess,
+            [EnumMember(Value = "delivery-success")]
+            Deliverysuccess,
             
             /// <summary>
-            /// Enum DeliveryFailed for "DELIVERY_FAILED"
+            /// Enum Deliveryfailed for "delivery-failed"
             /// </summary>
-            [EnumMember(Value = "DELIVERY_FAILED")]
-            DeliveryFailed,
+            [EnumMember(Value = "delivery-failed")]
+            Deliveryfailed,
             
             /// <summary>
-            /// Enum Read for "READ"
+            /// Enum Read for "read"
             /// </summary>
-            [EnumMember(Value = "READ")]
+            [EnumMember(Value = "read")]
             Read
         }
         
@@ -101,8 +102,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets MessageStatus
+        /// Indicates the delivery status of the message.
         /// </summary>
+        /// <value>Indicates the delivery status of the message.</value>
         [DataMember(Name="messageStatus", EmitDefaultValue=false)]
         public MessageStatusEnum? MessageStatus { get; set; }
         
@@ -117,12 +119,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationEventTopicMessageDetails" /> class.
         /// </summary>
-        /// <param name="MessageId">MessageId.</param>
-        /// <param name="MessageTime">MessageTime.</param>
-        /// <param name="MessageStatus">MessageStatus.</param>
-        /// <param name="MessageSegmentCount">MessageSegmentCount.</param>
-        /// <param name="Media">Media.</param>
-        /// <param name="Stickers">Stickers.</param>
+        /// <param name="MessageId">UUID identifying the message media..</param>
+        /// <param name="MessageTime">The time when the message was sent or received..</param>
+        /// <param name="MessageStatus">Indicates the delivery status of the message..</param>
+        /// <param name="MessageSegmentCount">The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits..</param>
+        /// <param name="Media">The media (images, files, etc) associated with this message, if any.</param>
+        /// <param name="Stickers">A list of stickers included in the message.</param>
         public ConversationEventTopicMessageDetails(string MessageId = null, DateTime? MessageTime = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null, List<ConversationEventTopicMessageMedia> Media = null, List<ConversationEventTopicMessageSticker> Stickers = null)
         {
             this.MessageId = MessageId;
@@ -137,16 +139,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets MessageId
+        /// UUID identifying the message media.
         /// </summary>
+        /// <value>UUID identifying the message media.</value>
         [DataMember(Name="messageId", EmitDefaultValue=false)]
         public string MessageId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MessageTime
+        /// The time when the message was sent or received.
         /// </summary>
+        /// <value>The time when the message was sent or received.</value>
         [DataMember(Name="messageTime", EmitDefaultValue=false)]
         public DateTime? MessageTime { get; set; }
         
@@ -155,24 +159,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets MessageSegmentCount
+        /// The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits.
         /// </summary>
+        /// <value>The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits.</value>
         [DataMember(Name="messageSegmentCount", EmitDefaultValue=false)]
         public int? MessageSegmentCount { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Media
+        /// The media (images, files, etc) associated with this message, if any
         /// </summary>
+        /// <value>The media (images, files, etc) associated with this message, if any</value>
         [DataMember(Name="media", EmitDefaultValue=false)]
         public List<ConversationEventTopicMessageMedia> Media { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Stickers
+        /// A list of stickers included in the message
         /// </summary>
+        /// <value>A list of stickers included in the message</value>
         [DataMember(Name="stickers", EmitDefaultValue=false)]
         public List<ConversationEventTopicMessageSticker> Stickers { get; set; }
         

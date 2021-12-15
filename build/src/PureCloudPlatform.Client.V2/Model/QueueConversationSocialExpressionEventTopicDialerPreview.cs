@@ -13,16 +13,11 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// QueueConversationSocialExpressionEventTopicDialerPreview
+    /// The preview data to be used when this callback is a Preview.
     /// </summary>
     [DataContract]
     public partial class QueueConversationSocialExpressionEventTopicDialerPreview :  IEquatable<QueueConversationSocialExpressionEventTopicDialerPreview>
     {
-        
-        
-        
-        
-        
         
         
         
@@ -55,19 +50,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="QueueConversationSocialExpressionEventTopicDialerPreview" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        /// <param name="ContactId">ContactId.</param>
-        /// <param name="ContactListId">ContactListId.</param>
-        /// <param name="CampaignId">CampaignId.</param>
-        /// <param name="PhoneNumberColumns">PhoneNumberColumns.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationSocialExpressionEventTopicDialerPreview(string Id = null, string ContactId = null, string ContactListId = null, string CampaignId = null, List<QueueConversationSocialExpressionEventTopicPhoneNumberColumn> PhoneNumberColumns = null, Object AdditionalProperties = null)
+        /// <param name="ContactId">The contact associated with this preview data pop.</param>
+        /// <param name="ContactListId">The contactList associated with this preview data pop..</param>
+        /// <param name="CampaignId">The campaignId associated with this preview data pop..</param>
+        /// <param name="PhoneNumberColumns">The phone number columns associated with this campaign.</param>
+        public QueueConversationSocialExpressionEventTopicDialerPreview(string Id = null, string ContactId = null, string ContactListId = null, string CampaignId = null, List<QueueConversationSocialExpressionEventTopicPhoneNumberColumn> PhoneNumberColumns = null)
         {
             this.Id = Id;
             this.ContactId = ContactId;
             this.ContactListId = ContactListId;
             this.CampaignId = CampaignId;
             this.PhoneNumberColumns = PhoneNumberColumns;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -82,42 +75,38 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets ContactId
+        /// The contact associated with this preview data pop
         /// </summary>
+        /// <value>The contact associated with this preview data pop</value>
         [DataMember(Name="contactId", EmitDefaultValue=false)]
         public string ContactId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ContactListId
+        /// The contactList associated with this preview data pop.
         /// </summary>
+        /// <value>The contactList associated with this preview data pop.</value>
         [DataMember(Name="contactListId", EmitDefaultValue=false)]
         public string ContactListId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CampaignId
+        /// The campaignId associated with this preview data pop.
         /// </summary>
+        /// <value>The campaignId associated with this preview data pop.</value>
         [DataMember(Name="campaignId", EmitDefaultValue=false)]
         public string CampaignId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets PhoneNumberColumns
+        /// The phone number columns associated with this campaign
         /// </summary>
+        /// <value>The phone number columns associated with this campaign</value>
         [DataMember(Name="phoneNumberColumns", EmitDefaultValue=false)]
         public List<QueueConversationSocialExpressionEventTopicPhoneNumberColumn> PhoneNumberColumns { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -134,7 +123,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContactListId: ").Append(ContactListId).Append("\n");
             sb.Append("  CampaignId: ").Append(CampaignId).Append("\n");
             sb.Append("  PhoneNumberColumns: ").Append(PhoneNumberColumns).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -199,11 +187,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PhoneNumberColumns == other.PhoneNumberColumns ||
                     this.PhoneNumberColumns != null &&
                     this.PhoneNumberColumns.SequenceEqual(other.PhoneNumberColumns)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -233,9 +216,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PhoneNumberColumns != null)
                     hash = hash * 59 + this.PhoneNumberColumns.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

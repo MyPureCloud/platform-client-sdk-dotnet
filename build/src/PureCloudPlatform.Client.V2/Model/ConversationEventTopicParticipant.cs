@@ -93,8 +93,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets ScreenRecordingState
+        /// The current screen recording state for this participant.
         /// </summary>
+        /// <value>The current screen recording state for this participant.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ScreenRecordingStateEnum
         {
@@ -107,39 +108,39 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Requested for "REQUESTED"
+            /// Enum Requested for "requested"
             /// </summary>
-            [EnumMember(Value = "REQUESTED")]
+            [EnumMember(Value = "requested")]
             Requested,
             
             /// <summary>
-            /// Enum Active for "ACTIVE"
+            /// Enum Active for "active"
             /// </summary>
-            [EnumMember(Value = "ACTIVE")]
+            [EnumMember(Value = "active")]
             Active,
             
             /// <summary>
-            /// Enum Paused for "PAUSED"
+            /// Enum Paused for "paused"
             /// </summary>
-            [EnumMember(Value = "PAUSED")]
+            [EnumMember(Value = "paused")]
             Paused,
             
             /// <summary>
-            /// Enum Stopped for "STOPPED"
+            /// Enum Stopped for "stopped"
             /// </summary>
-            [EnumMember(Value = "STOPPED")]
+            [EnumMember(Value = "stopped")]
             Stopped,
             
             /// <summary>
-            /// Enum Error for "ERROR"
+            /// Enum Error for "error"
             /// </summary>
-            [EnumMember(Value = "ERROR")]
+            [EnumMember(Value = "error")]
             Error,
             
             /// <summary>
-            /// Enum Timeout for "TIMEOUT"
+            /// Enum Timeout for "timeout"
             /// </summary>
-            [EnumMember(Value = "TIMEOUT")]
+            [EnumMember(Value = "timeout")]
             Timeout
         }
         
@@ -228,16 +229,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
-        /// Gets or Sets ScreenRecordingState
+        /// The current screen recording state for this participant.
         /// </summary>
+        /// <value>The current screen recording state for this participant.</value>
         [DataMember(Name="screenRecordingState", EmitDefaultValue=false)]
         public ScreenRecordingStateEnum? ScreenRecordingState { get; set; }
-        
-        
         
         
         
@@ -266,33 +263,33 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationEventTopicParticipant" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="ConnectedTime">ConnectedTime.</param>
-        /// <param name="EndTime">EndTime.</param>
-        /// <param name="UserId">UserId.</param>
-        /// <param name="ExternalContactId">ExternalContactId.</param>
-        /// <param name="ExternalOrganizationId">ExternalOrganizationId.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="QueueId">QueueId.</param>
-        /// <param name="GroupId">GroupId.</param>
-        /// <param name="TeamId">TeamId.</param>
-        /// <param name="Purpose">Purpose.</param>
-        /// <param name="ConsultParticipantId">ConsultParticipantId.</param>
-        /// <param name="Address">Address.</param>
-        /// <param name="WrapupRequired">WrapupRequired.</param>
-        /// <param name="WrapupExpected">WrapupExpected.</param>
-        /// <param name="WrapupPrompt">WrapupPrompt.</param>
-        /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
+        /// <param name="Id">A globally unique identifier for this conversation..</param>
+        /// <param name="ConnectedTime">The timestamp when this participant was connected to the conversation in the provider clock..</param>
+        /// <param name="EndTime">The timestamp when this participant disconnected from the conversation in the provider clock..</param>
+        /// <param name="UserId">If this participant represents a user, then this will be the globally unique identifier for the user..</param>
+        /// <param name="ExternalContactId">If this participant represents an external contact, then this will be the globally unique identifier for the external contact..</param>
+        /// <param name="ExternalOrganizationId">If this participant represents an external org, then this will be the globally unique identifier for the external org..</param>
+        /// <param name="Name">A human readable name identifying the participant..</param>
+        /// <param name="QueueId">If present, the queue id that the communication channel came in on..</param>
+        /// <param name="GroupId">If present, the group id that the participant represents..</param>
+        /// <param name="TeamId">The team id that this participant is a member of when added to the conversation..</param>
+        /// <param name="Purpose">A well known string that specifies the purpose or type of this participant..</param>
+        /// <param name="ConsultParticipantId">If this participant is part of a consult transfer, then this will be the participant id of the participant being transferred..</param>
+        /// <param name="Address">The address for the this participant. For a phone call this will be the ANI..</param>
+        /// <param name="WrapupRequired">True iff this participant is required to enter wrapup for this conversation..</param>
+        /// <param name="WrapupExpected">True when a participant is expected to enter a wrapup code once the call connects..</param>
+        /// <param name="WrapupPrompt">This field controls how the UI prompts the agent for a wrapup..</param>
+        /// <param name="WrapupTimeoutMs">Specifies how long a timed ACW session will last..</param>
         /// <param name="Wrapup">Wrapup.</param>
-        /// <param name="StartAcwTime">StartAcwTime.</param>
-        /// <param name="EndAcwTime">EndAcwTime.</param>
+        /// <param name="StartAcwTime">The timestamp when this participant started after-call work..</param>
+        /// <param name="EndAcwTime">The timestamp when this participant ended after-call work..</param>
         /// <param name="ConversationRoutingData">ConversationRoutingData.</param>
-        /// <param name="AlertingTimeoutMs">AlertingTimeoutMs.</param>
-        /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
-        /// <param name="CoachedParticipantId">CoachedParticipantId.</param>
-        /// <param name="ScreenRecordingState">ScreenRecordingState.</param>
-        /// <param name="FlaggedReason">FlaggedReason.</param>
-        /// <param name="Attributes">Attributes.</param>
+        /// <param name="AlertingTimeoutMs">Specifies how long the agent has to answer an interaction before being marked as not responding..</param>
+        /// <param name="MonitoredParticipantId">If this participant is a monitor, then this will be the id of the participant that is being monitored..</param>
+        /// <param name="CoachedParticipantId">If this participant is a coach, then this will be the id of the participant that is being coached..</param>
+        /// <param name="ScreenRecordingState">The current screen recording state for this participant..</param>
+        /// <param name="FlaggedReason">If this participant has flagged the conversation, the reason code given..</param>
+        /// <param name="Attributes">Additional participant attributes.</param>
         /// <param name="Calls">Calls.</param>
         /// <param name="Callbacks">Callbacks.</param>
         /// <param name="Chats">Chats.</param>
@@ -302,8 +299,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Screenshares">Screenshares.</param>
         /// <param name="SocialExpressions">SocialExpressions.</param>
         /// <param name="Videos">Videos.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationEventTopicParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string TeamId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, ConversationEventTopicWrapup Wrapup = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, ConversationEventTopicConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<ConversationEventTopicCall> Calls = null, List<ConversationEventTopicCallback> Callbacks = null, List<ConversationEventTopicChat> Chats = null, List<ConversationEventTopicCobrowse> Cobrowsesessions = null, List<ConversationEventTopicEmail> Emails = null, List<ConversationEventTopicMessage> Messages = null, List<ConversationEventTopicScreenshare> Screenshares = null, List<ConversationEventTopicSocialExpression> SocialExpressions = null, List<ConversationEventTopicVideo> Videos = null, Object AdditionalProperties = null)
+        public ConversationEventTopicParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string TeamId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, ConversationEventTopicWrapup Wrapup = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, ConversationEventTopicConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<ConversationEventTopicCall> Calls = null, List<ConversationEventTopicCallback> Callbacks = null, List<ConversationEventTopicChat> Chats = null, List<ConversationEventTopicCobrowse> Cobrowsesessions = null, List<ConversationEventTopicEmail> Emails = null, List<ConversationEventTopicMessage> Messages = null, List<ConversationEventTopicScreenshare> Screenshares = null, List<ConversationEventTopicSocialExpression> SocialExpressions = null, List<ConversationEventTopicVideo> Videos = null)
         {
             this.Id = Id;
             this.ConnectedTime = ConnectedTime;
@@ -341,143 +337,159 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Screenshares = Screenshares;
             this.SocialExpressions = SocialExpressions;
             this.Videos = Videos;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// A globally unique identifier for this conversation.
         /// </summary>
+        /// <value>A globally unique identifier for this conversation.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ConnectedTime
+        /// The timestamp when this participant was connected to the conversation in the provider clock.
         /// </summary>
+        /// <value>The timestamp when this participant was connected to the conversation in the provider clock.</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets EndTime
+        /// The timestamp when this participant disconnected from the conversation in the provider clock.
         /// </summary>
+        /// <value>The timestamp when this participant disconnected from the conversation in the provider clock.</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets UserId
+        /// If this participant represents a user, then this will be the globally unique identifier for the user.
         /// </summary>
+        /// <value>If this participant represents a user, then this will be the globally unique identifier for the user.</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ExternalContactId
+        /// If this participant represents an external contact, then this will be the globally unique identifier for the external contact.
         /// </summary>
+        /// <value>If this participant represents an external contact, then this will be the globally unique identifier for the external contact.</value>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
         public string ExternalContactId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ExternalOrganizationId
+        /// If this participant represents an external org, then this will be the globally unique identifier for the external org.
         /// </summary>
+        /// <value>If this participant represents an external org, then this will be the globally unique identifier for the external org.</value>
         [DataMember(Name="externalOrganizationId", EmitDefaultValue=false)]
         public string ExternalOrganizationId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// A human readable name identifying the participant.
         /// </summary>
+        /// <value>A human readable name identifying the participant.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets QueueId
+        /// If present, the queue id that the communication channel came in on.
         /// </summary>
+        /// <value>If present, the queue id that the communication channel came in on.</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets GroupId
+        /// If present, the group id that the participant represents.
         /// </summary>
+        /// <value>If present, the group id that the participant represents.</value>
         [DataMember(Name="groupId", EmitDefaultValue=false)]
         public string GroupId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets TeamId
+        /// The team id that this participant is a member of when added to the conversation.
         /// </summary>
+        /// <value>The team id that this participant is a member of when added to the conversation.</value>
         [DataMember(Name="teamId", EmitDefaultValue=false)]
         public string TeamId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Purpose
+        /// A well known string that specifies the purpose or type of this participant.
         /// </summary>
+        /// <value>A well known string that specifies the purpose or type of this participant.</value>
         [DataMember(Name="purpose", EmitDefaultValue=false)]
         public string Purpose { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ConsultParticipantId
+        /// If this participant is part of a consult transfer, then this will be the participant id of the participant being transferred.
         /// </summary>
+        /// <value>If this participant is part of a consult transfer, then this will be the participant id of the participant being transferred.</value>
         [DataMember(Name="consultParticipantId", EmitDefaultValue=false)]
         public string ConsultParticipantId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Address
+        /// The address for the this participant. For a phone call this will be the ANI.
         /// </summary>
+        /// <value>The address for the this participant. For a phone call this will be the ANI.</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets WrapupRequired
+        /// True iff this participant is required to enter wrapup for this conversation.
         /// </summary>
+        /// <value>True iff this participant is required to enter wrapup for this conversation.</value>
         [DataMember(Name="wrapupRequired", EmitDefaultValue=false)]
         public bool? WrapupRequired { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets WrapupExpected
+        /// True when a participant is expected to enter a wrapup code once the call connects.
         /// </summary>
+        /// <value>True when a participant is expected to enter a wrapup code once the call connects.</value>
         [DataMember(Name="wrapupExpected", EmitDefaultValue=false)]
         public bool? WrapupExpected { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets WrapupPrompt
+        /// This field controls how the UI prompts the agent for a wrapup.
         /// </summary>
+        /// <value>This field controls how the UI prompts the agent for a wrapup.</value>
         [DataMember(Name="wrapupPrompt", EmitDefaultValue=false)]
         public string WrapupPrompt { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets WrapupTimeoutMs
+        /// Specifies how long a timed ACW session will last.
         /// </summary>
+        /// <value>Specifies how long a timed ACW session will last.</value>
         [DataMember(Name="wrapupTimeoutMs", EmitDefaultValue=false)]
         public int? WrapupTimeoutMs { get; set; }
         
@@ -492,16 +504,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets StartAcwTime
+        /// The timestamp when this participant started after-call work.
         /// </summary>
+        /// <value>The timestamp when this participant started after-call work.</value>
         [DataMember(Name="startAcwTime", EmitDefaultValue=false)]
         public DateTime? StartAcwTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets EndAcwTime
+        /// The timestamp when this participant ended after-call work.
         /// </summary>
+        /// <value>The timestamp when this participant ended after-call work.</value>
         [DataMember(Name="endAcwTime", EmitDefaultValue=false)]
         public DateTime? EndAcwTime { get; set; }
         
@@ -516,24 +530,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets AlertingTimeoutMs
+        /// Specifies how long the agent has to answer an interaction before being marked as not responding.
         /// </summary>
+        /// <value>Specifies how long the agent has to answer an interaction before being marked as not responding.</value>
         [DataMember(Name="alertingTimeoutMs", EmitDefaultValue=false)]
         public int? AlertingTimeoutMs { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MonitoredParticipantId
+        /// If this participant is a monitor, then this will be the id of the participant that is being monitored.
         /// </summary>
+        /// <value>If this participant is a monitor, then this will be the id of the participant that is being monitored.</value>
         [DataMember(Name="monitoredParticipantId", EmitDefaultValue=false)]
         public string MonitoredParticipantId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CoachedParticipantId
+        /// If this participant is a coach, then this will be the id of the participant that is being coached.
         /// </summary>
+        /// <value>If this participant is a coach, then this will be the id of the participant that is being coached.</value>
         [DataMember(Name="coachedParticipantId", EmitDefaultValue=false)]
         public string CoachedParticipantId { get; set; }
         
@@ -542,16 +559,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets FlaggedReason
+        /// If this participant has flagged the conversation, the reason code given.
         /// </summary>
+        /// <value>If this participant has flagged the conversation, the reason code given.</value>
         [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
         public string FlaggedReason { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Attributes
+        /// Additional participant attributes
         /// </summary>
+        /// <value>Additional participant attributes</value>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public Dictionary<string, string> Attributes { get; set; }
         
@@ -628,14 +647,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ConversationEventTopicVideo> Videos { get; set; }
         
         
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -681,7 +692,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Screenshares: ").Append(Screenshares).Append("\n");
             sb.Append("  SocialExpressions: ").Append(SocialExpressions).Append("\n");
             sb.Append("  Videos: ").Append(Videos).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -901,11 +911,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Videos == other.Videos ||
                     this.Videos != null &&
                     this.Videos.SequenceEqual(other.Videos)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -1028,9 +1033,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Videos != null)
                     hash = hash * 59 + this.Videos.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

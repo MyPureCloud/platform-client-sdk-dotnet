@@ -45,6 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="MessengerSettings" /> class.
@@ -53,13 +58,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Styles">The style settings for messenger.</param>
         /// <param name="LauncherButton">The launcher button settings for messenger.</param>
         /// <param name="FileUpload">The file upload settings for messenger.</param>
+        /// <param name="Apps">The apps embedded in the messenger.</param>
         /// <param name="Position">The position settings for messenger.</param>
-        public MessengerSettings(bool? Enabled = null, MessengerStyles Styles = null, LauncherButtonSettings LauncherButton = null, FileUploadSettings FileUpload = null, MessengerPositionSettings Position = null)
+        public MessengerSettings(bool? Enabled = null, MessengerStyles Styles = null, LauncherButtonSettings LauncherButton = null, FileUploadSettings FileUpload = null, MessengerApps Apps = null, MessengerPositionSettings Position = null)
         {
             this.Enabled = Enabled;
             this.Styles = Styles;
             this.LauncherButton = LauncherButton;
             this.FileUpload = FileUpload;
+            this.Apps = Apps;
             this.Position = Position;
             
         }
@@ -103,6 +110,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The apps embedded in the messenger
+        /// </summary>
+        /// <value>The apps embedded in the messenger</value>
+        [DataMember(Name="apps", EmitDefaultValue=false)]
+        public MessengerApps Apps { get; set; }
+        
+        
+        
+        /// <summary>
         /// The position settings for messenger
         /// </summary>
         /// <value>The position settings for messenger</value>
@@ -123,6 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Styles: ").Append(Styles).Append("\n");
             sb.Append("  LauncherButton: ").Append(LauncherButton).Append("\n");
             sb.Append("  FileUpload: ").Append(FileUpload).Append("\n");
+            sb.Append("  Apps: ").Append(Apps).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -185,6 +202,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FileUpload.Equals(other.FileUpload)
                 ) &&
                 (
+                    this.Apps == other.Apps ||
+                    this.Apps != null &&
+                    this.Apps.Equals(other.Apps)
+                ) &&
+                (
                     this.Position == other.Position ||
                     this.Position != null &&
                     this.Position.Equals(other.Position)
@@ -214,6 +236,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.FileUpload != null)
                     hash = hash * 59 + this.FileUpload.GetHashCode();
+                
+                if (this.Apps != null)
+                    hash = hash * 59 + this.Apps.GetHashCode();
                 
                 if (this.Position != null)
                     hash = hash * 59 + this.Position.GetHashCode();

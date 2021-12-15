@@ -309,6 +309,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Nwebactionserrored,
             
             /// <summary>
+            /// Enum Nwebactionsfrequencycapreached for "nWebActionsFrequencyCapReached"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsFrequencyCapReached")]
+            Nwebactionsfrequencycapreached,
+            
+            /// <summary>
             /// Enum Nwebactionsignored for "nWebActionsIgnored"
             /// </summary>
             [EnumMember(Value = "nWebActionsIgnored")]
@@ -319,6 +325,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "nWebActionsOffered")]
             Nwebactionsoffered,
+            
+            /// <summary>
+            /// Enum Nwebactionsofferedoutsideschedule for "nWebActionsOfferedOutsideSchedule"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsOfferedOutsideSchedule")]
+            Nwebactionsofferedoutsideschedule,
             
             /// <summary>
             /// Enum Nwebactionsqualified for "nWebActionsQualified"
@@ -349,18 +361,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "nWebActionsTimedout")]
             Nwebactionstimedout,
-            
-            /// <summary>
-            /// Enum Nwebactionsfrequencycapreached for "nWebActionsFrequencyCapReached"
-            /// </summary>
-            [EnumMember(Value = "nWebActionsFrequencyCapReached")]
-            Nwebactionsfrequencycapreached,
-            
-            /// <summary>
-            /// Enum Nwebactionsofferedoutsideschedule for "nWebActionsOfferedOutsideSchedule"
-            /// </summary>
-            [EnumMember(Value = "nWebActionsOfferedOutsideSchedule")]
-            Nwebactionsofferedoutsideschedule,
             
             /// <summary>
             /// Enum Ojourneyoutcomevalue for "oJourneyOutcomeValue"

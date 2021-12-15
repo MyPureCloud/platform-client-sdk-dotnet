@@ -45,29 +45,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCampaignProgressEventCampaignProgress" /> class.
         /// </summary>
         /// <param name="Campaign">Campaign.</param>
-        /// <param name="NumberOfContactsCalled">NumberOfContactsCalled.</param>
-        /// <param name="NumberOfContactsMessaged">NumberOfContactsMessaged.</param>
-        /// <param name="TotalNumberOfContacts">TotalNumberOfContacts.</param>
-        /// <param name="Percentage">Percentage.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerCampaignProgressEventCampaignProgress(DialerCampaignProgressEventUriReference Campaign = null, double? NumberOfContactsCalled = null, double? NumberOfContactsMessaged = null, double? TotalNumberOfContacts = null, int? Percentage = null, Object AdditionalProperties = null)
+        /// <param name="NumberOfContactsCalled">The number of contacts that have been called so far.</param>
+        /// <param name="NumberOfContactsMessaged">The number of contacts that have been messaged so far.</param>
+        /// <param name="TotalNumberOfContacts">The total number of contacts in the contact list.</param>
+        /// <param name="Percentage">numberOfContactsContacted/totalNumberOfContacts*100.</param>
+        public DialerCampaignProgressEventCampaignProgress(DialerCampaignProgressEventUriReference Campaign = null, double? NumberOfContactsCalled = null, double? NumberOfContactsMessaged = null, double? TotalNumberOfContacts = null, int? Percentage = null)
         {
             this.Campaign = Campaign;
             this.NumberOfContactsCalled = NumberOfContactsCalled;
             this.NumberOfContactsMessaged = NumberOfContactsMessaged;
             this.TotalNumberOfContacts = TotalNumberOfContacts;
             this.Percentage = Percentage;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -82,42 +75,38 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets NumberOfContactsCalled
+        /// The number of contacts that have been called so far
         /// </summary>
+        /// <value>The number of contacts that have been called so far</value>
         [DataMember(Name="numberOfContactsCalled", EmitDefaultValue=false)]
         public double? NumberOfContactsCalled { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets NumberOfContactsMessaged
+        /// The number of contacts that have been messaged so far
         /// </summary>
+        /// <value>The number of contacts that have been messaged so far</value>
         [DataMember(Name="numberOfContactsMessaged", EmitDefaultValue=false)]
         public double? NumberOfContactsMessaged { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets TotalNumberOfContacts
+        /// The total number of contacts in the contact list
         /// </summary>
+        /// <value>The total number of contacts in the contact list</value>
         [DataMember(Name="totalNumberOfContacts", EmitDefaultValue=false)]
         public double? TotalNumberOfContacts { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Percentage
+        /// numberOfContactsContacted/totalNumberOfContacts*100
         /// </summary>
+        /// <value>numberOfContactsContacted/totalNumberOfContacts*100</value>
         [DataMember(Name="percentage", EmitDefaultValue=false)]
         public int? Percentage { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -134,7 +123,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  NumberOfContactsMessaged: ").Append(NumberOfContactsMessaged).Append("\n");
             sb.Append("  TotalNumberOfContacts: ").Append(TotalNumberOfContacts).Append("\n");
             sb.Append("  Percentage: ").Append(Percentage).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -199,11 +187,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Percentage == other.Percentage ||
                     this.Percentage != null &&
                     this.Percentage.Equals(other.Percentage)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -233,9 +216,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Percentage != null)
                     hash = hash * 59 + this.Percentage.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

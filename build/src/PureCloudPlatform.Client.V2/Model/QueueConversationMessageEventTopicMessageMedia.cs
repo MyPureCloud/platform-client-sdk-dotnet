@@ -49,11 +49,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationMessageEventTopicMessageMedia" /> class.
         /// </summary>
-        /// <param name="Url">Url.</param>
-        /// <param name="MediaType">MediaType.</param>
-        /// <param name="ContentLengthBytes">ContentLengthBytes.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Id">Id.</param>
+        /// <param name="Url">The location of the media, useful for retrieving it.</param>
+        /// <param name="MediaType">The optional internet media type of the the media object.  If null then the media type should be dictated by the url.</param>
+        /// <param name="ContentLengthBytes">The optional content length of the the media object, in bytes..</param>
+        /// <param name="Name">The optional name of the the media object..</param>
+        /// <param name="Id">The optional id of the the media object..</param>
         public QueueConversationMessageEventTopicMessageMedia(string Url = null, string MediaType = null, int? ContentLengthBytes = null, string Name = null, string Id = null)
         {
             this.Url = Url;
@@ -67,40 +67,45 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Url
+        /// The location of the media, useful for retrieving it
         /// </summary>
+        /// <value>The location of the media, useful for retrieving it</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MediaType
+        /// The optional internet media type of the the media object.  If null then the media type should be dictated by the url
         /// </summary>
+        /// <value>The optional internet media type of the the media object.  If null then the media type should be dictated by the url</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public string MediaType { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ContentLengthBytes
+        /// The optional content length of the the media object, in bytes.
         /// </summary>
+        /// <value>The optional content length of the the media object, in bytes.</value>
         [DataMember(Name="contentLengthBytes", EmitDefaultValue=false)]
         public int? ContentLengthBytes { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The optional name of the the media object.
         /// </summary>
+        /// <value>The optional name of the the media object.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The optional id of the the media object.
         /// </summary>
+        /// <value>The optional id of the the media object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         

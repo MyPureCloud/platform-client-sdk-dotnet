@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress
+    /// An outbound-messaging messaging campaign email address
     /// </summary>
     [DataContract]
     public partial class OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress :  IEquatable<OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress>
@@ -34,8 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress" /> class.
         /// </summary>
-        /// <param name="Domain">Domain.</param>
-        /// <param name="Route">Route.</param>
+        /// <param name="Domain">A UriReference for a resource.</param>
+        /// <param name="Route">A UriReference for a resource.</param>
         public OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress(OutboundMessagingMessagingCampaignConfigChangeUriReference Domain = null, OutboundMessagingMessagingCampaignConfigChangeUriReference Route = null)
         {
             this.Domain = Domain;
@@ -46,16 +46,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Domain
+        /// A UriReference for a resource
         /// </summary>
+        /// <value>A UriReference for a resource</value>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public OutboundMessagingMessagingCampaignConfigChangeUriReference Domain { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Route
+        /// A UriReference for a resource
         /// </summary>
+        /// <value>A UriReference for a resource</value>
         [DataMember(Name="route", EmitDefaultValue=false)]
         public OutboundMessagingMessagingCampaignConfigChangeUriReference Route { get; set; }
         

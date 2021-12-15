@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef
+    /// A reference for an SmsPhoneNumber
     /// </summary>
     [DataContract]
     public partial class OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef :  IEquatable<OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef>
@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef" /> class.
         /// </summary>
-        /// <param name="PhoneNumber">PhoneNumber.</param>
+        /// <param name="PhoneNumber">The unique phone number.</param>
         public OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef(string PhoneNumber = null)
         {
             this.PhoneNumber = PhoneNumber;
@@ -39,8 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets PhoneNumber
+        /// The unique phone number
         /// </summary>
+        /// <value>The unique phone number</value>
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
         

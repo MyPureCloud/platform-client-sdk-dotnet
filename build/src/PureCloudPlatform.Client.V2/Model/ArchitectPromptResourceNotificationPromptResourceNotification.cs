@@ -54,12 +54,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchitectPromptResourceNotificationPromptResourceNotification" /> class.
         /// </summary>
-        /// <param name="PromptId">PromptId.</param>
-        /// <param name="Id">Id.</param>
-        /// <param name="Language">Language.</param>
-        /// <param name="MediaUri">MediaUri.</param>
-        /// <param name="UploadStatus">UploadStatus.</param>
-        /// <param name="DurationSeconds">DurationSeconds.</param>
+        /// <param name="PromptId">Id of the prompt that this notification is for..</param>
+        /// <param name="Id">Id of the prompt resource that this notification is for..</param>
+        /// <param name="Language">Language resource that this notification is for..</param>
+        /// <param name="MediaUri">Uri to the file for this prompt resource..</param>
+        /// <param name="UploadStatus">Current upload status of the prompt resource (created, uploaded, transcoded, transcodeFailed)..</param>
+        /// <param name="DurationSeconds">Duration (in seconds) for the transcoded audio file..</param>
         public ArchitectPromptResourceNotificationPromptResourceNotification(string PromptId = null, string Id = null, string Language = null, string MediaUri = null, string UploadStatus = null, double? DurationSeconds = null)
         {
             this.PromptId = PromptId;
@@ -74,48 +74,54 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets PromptId
+        /// Id of the prompt that this notification is for.
         /// </summary>
+        /// <value>Id of the prompt that this notification is for.</value>
         [DataMember(Name="promptId", EmitDefaultValue=false)]
         public string PromptId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Id of the prompt resource that this notification is for.
         /// </summary>
+        /// <value>Id of the prompt resource that this notification is for.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Language
+        /// Language resource that this notification is for.
         /// </summary>
+        /// <value>Language resource that this notification is for.</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MediaUri
+        /// Uri to the file for this prompt resource.
         /// </summary>
+        /// <value>Uri to the file for this prompt resource.</value>
         [DataMember(Name="mediaUri", EmitDefaultValue=false)]
         public string MediaUri { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets UploadStatus
+        /// Current upload status of the prompt resource (created, uploaded, transcoded, transcodeFailed).
         /// </summary>
+        /// <value>Current upload status of the prompt resource (created, uploaded, transcoded, transcodeFailed).</value>
         [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
         public string UploadStatus { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets DurationSeconds
+        /// Duration (in seconds) for the transcoded audio file.
         /// </summary>
+        /// <value>Duration (in seconds) for the transcoded audio file.</value>
         [DataMember(Name="durationSeconds", EmitDefaultValue=false)]
         public double? DurationSeconds { get; set; }
         

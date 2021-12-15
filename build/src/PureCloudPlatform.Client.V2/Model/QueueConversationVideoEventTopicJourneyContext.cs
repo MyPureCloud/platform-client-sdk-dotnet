@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// QueueConversationVideoEventTopicJourneyContext
+    /// A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context).
     /// </summary>
     [DataContract]
     public partial class QueueConversationVideoEventTopicJourneyContext :  IEquatable<QueueConversationVideoEventTopicJourneyContext>

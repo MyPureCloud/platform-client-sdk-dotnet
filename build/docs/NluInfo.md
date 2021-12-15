@@ -10,6 +10,7 @@ title: NluInfo
 | **Domain** | [**AddressableEntityRef**](AddressableEntityRef.html) |  | [optional] |
 | **Version** | [**NluDomainVersion**](NluDomainVersion.html) |  | [optional] |
 | **Intents** | [**List&lt;Intent&gt;**](Intent.html) |  | [optional] |
+| **EngineVersion** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

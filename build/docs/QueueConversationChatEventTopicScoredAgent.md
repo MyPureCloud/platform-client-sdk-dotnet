@@ -7,8 +7,8 @@ title: QueueConversationChatEventTopicScoredAgent
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Agent** | [**QueueConversationChatEventTopicUriReference**](QueueConversationChatEventTopicUriReference.html) |  | [optional] |
-| **Score** | **int?** |  | [optional] |
+| **Agent** | [**QueueConversationChatEventTopicUriReference**](QueueConversationChatEventTopicUriReference.html) | A UriReference for a resource | [optional] |
+| **Score** | **int?** | Agent&#39;s score for the current conversation, from 0 - 100, higher being better | [optional] |
 {: class="table table-striped"}
 
 

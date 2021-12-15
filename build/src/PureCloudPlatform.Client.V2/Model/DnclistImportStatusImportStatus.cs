@@ -21,8 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets ImportState
+        /// current status of the import
         /// </summary>
+        /// <value>current status of the import</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ImportStateEnum
         {
@@ -63,16 +64,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
-        /// Gets or Sets ImportState
+        /// current status of the import
         /// </summary>
+        /// <value>current status of the import</value>
         [DataMember(Name="importState", EmitDefaultValue=false)]
         public ImportStateEnum? ImportState { get; set; }
-        
-        
         
         
         
@@ -87,20 +84,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DnclistImportStatusImportStatus" /> class.
         /// </summary>
-        /// <param name="ImportState">ImportState.</param>
-        /// <param name="TotalRecords">TotalRecords.</param>
-        /// <param name="CompletedRecords">CompletedRecords.</param>
-        /// <param name="PercentageComplete">PercentageComplete.</param>
-        /// <param name="FailureReason">FailureReason.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DnclistImportStatusImportStatus(ImportStateEnum? ImportState = null, int? TotalRecords = null, int? CompletedRecords = null, int? PercentageComplete = null, string FailureReason = null, Object AdditionalProperties = null)
+        /// <param name="ImportState">current status of the import.</param>
+        /// <param name="TotalRecords">total number of records to be imported.</param>
+        /// <param name="CompletedRecords">number of records finished importing.</param>
+        /// <param name="PercentageComplete">percentage of records finished importing.</param>
+        /// <param name="FailureReason">if the import has failed, the reason for the failure.</param>
+        public DnclistImportStatusImportStatus(ImportStateEnum? ImportState = null, int? TotalRecords = null, int? CompletedRecords = null, int? PercentageComplete = null, string FailureReason = null)
         {
             this.ImportState = ImportState;
             this.TotalRecords = TotalRecords;
             this.CompletedRecords = CompletedRecords;
             this.PercentageComplete = PercentageComplete;
             this.FailureReason = FailureReason;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -109,42 +104,38 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets TotalRecords
+        /// total number of records to be imported
         /// </summary>
+        /// <value>total number of records to be imported</value>
         [DataMember(Name="totalRecords", EmitDefaultValue=false)]
         public int? TotalRecords { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CompletedRecords
+        /// number of records finished importing
         /// </summary>
+        /// <value>number of records finished importing</value>
         [DataMember(Name="completedRecords", EmitDefaultValue=false)]
         public int? CompletedRecords { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets PercentageComplete
+        /// percentage of records finished importing
         /// </summary>
+        /// <value>percentage of records finished importing</value>
         [DataMember(Name="percentageComplete", EmitDefaultValue=false)]
         public int? PercentageComplete { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets FailureReason
+        /// if the import has failed, the reason for the failure
         /// </summary>
+        /// <value>if the import has failed, the reason for the failure</value>
         [DataMember(Name="failureReason", EmitDefaultValue=false)]
         public string FailureReason { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -161,7 +152,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CompletedRecords: ").Append(CompletedRecords).Append("\n");
             sb.Append("  PercentageComplete: ").Append(PercentageComplete).Append("\n");
             sb.Append("  FailureReason: ").Append(FailureReason).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -226,11 +216,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FailureReason == other.FailureReason ||
                     this.FailureReason != null &&
                     this.FailureReason.Equals(other.FailureReason)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -260,9 +245,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.FailureReason != null)
                     hash = hash * 59 + this.FailureReason.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

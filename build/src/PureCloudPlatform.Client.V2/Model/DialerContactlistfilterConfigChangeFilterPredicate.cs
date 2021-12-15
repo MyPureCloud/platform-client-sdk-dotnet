@@ -24,8 +24,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets ColumnType
+        /// Whether a contact column is numeric or alphabetic
         /// </summary>
+        /// <value>Whether a contact column is numeric or alphabetic</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ColumnTypeEnum
         {
@@ -38,15 +39,15 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Numeric for "NUMERIC"
+            /// Enum Numeric for "numeric"
             /// </summary>
-            [EnumMember(Value = "NUMERIC")]
+            [EnumMember(Value = "numeric")]
             Numeric,
             
             /// <summary>
-            /// Enum Alphabetic for "ALPHABETIC"
+            /// Enum Alphabetic for "alphabetic"
             /// </summary>
-            [EnumMember(Value = "ALPHABETIC")]
+            [EnumMember(Value = "alphabetic")]
             Alphabetic
         }
         
@@ -54,8 +55,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets _Operator
+        /// The comparison operator
         /// </summary>
+        /// <value>The comparison operator</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OperatorEnum
         {
@@ -155,24 +157,21 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
-        /// Gets or Sets ColumnType
+        /// Whether a contact column is numeric or alphabetic
         /// </summary>
+        /// <value>Whether a contact column is numeric or alphabetic</value>
         [DataMember(Name="columnType", EmitDefaultValue=false)]
         public ColumnTypeEnum? ColumnType { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets _Operator
+        /// The comparison operator
         /// </summary>
+        /// <value>The comparison operator</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public OperatorEnum? _Operator { get; set; }
-        
-        
         
         
         
@@ -185,14 +184,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerContactlistfilterConfigChangeFilterPredicate" /> class.
         /// </summary>
-        /// <param name="Column">Column.</param>
-        /// <param name="ColumnType">ColumnType.</param>
-        /// <param name="_Operator">_Operator.</param>
-        /// <param name="Value">Value.</param>
+        /// <param name="Column">The contact list column.</param>
+        /// <param name="ColumnType">Whether a contact column is numeric or alphabetic.</param>
+        /// <param name="_Operator">The comparison operator.</param>
+        /// <param name="Value">The value the predicate applies to.</param>
         /// <param name="Range">Range.</param>
-        /// <param name="Inverted">Inverted.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerContactlistfilterConfigChangeFilterPredicate(string Column = null, ColumnTypeEnum? ColumnType = null, OperatorEnum? _Operator = null, string Value = null, DialerContactlistfilterConfigChangeRange Range = null, bool? Inverted = null, Object AdditionalProperties = null)
+        /// <param name="Inverted">Whether or not to invert to result of evaluating the predicate.</param>
+        public DialerContactlistfilterConfigChangeFilterPredicate(string Column = null, ColumnTypeEnum? ColumnType = null, OperatorEnum? _Operator = null, string Value = null, DialerContactlistfilterConfigChangeRange Range = null, bool? Inverted = null)
         {
             this.Column = Column;
             this.ColumnType = ColumnType;
@@ -200,15 +198,15 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Value = Value;
             this.Range = Range;
             this.Inverted = Inverted;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Column
+        /// The contact list column
         /// </summary>
+        /// <value>The contact list column</value>
         [DataMember(Name="column", EmitDefaultValue=false)]
         public string Column { get; set; }
         
@@ -219,8 +217,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Value
+        /// The value the predicate applies to
         /// </summary>
+        /// <value>The value the predicate applies to</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
         
@@ -235,18 +234,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Inverted
+        /// Whether or not to invert to result of evaluating the predicate
         /// </summary>
+        /// <value>Whether or not to invert to result of evaluating the predicate</value>
         [DataMember(Name="inverted", EmitDefaultValue=false)]
         public bool? Inverted { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -264,7 +256,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Range: ").Append(Range).Append("\n");
             sb.Append("  Inverted: ").Append(Inverted).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -334,11 +325,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Inverted == other.Inverted ||
                     this.Inverted != null &&
                     this.Inverted.Equals(other.Inverted)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -371,9 +357,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Inverted != null)
                     hash = hash * 59 + this.Inverted.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

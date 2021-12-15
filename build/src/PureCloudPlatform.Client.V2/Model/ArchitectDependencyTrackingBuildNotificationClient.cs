@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ArchitectDependencyTrackingBuildNotificationClient
+    /// The client who initiated the change.
     /// </summary>
     [DataContract]
     public partial class ArchitectDependencyTrackingBuildNotificationClient :  IEquatable<ArchitectDependencyTrackingBuildNotificationClient>
@@ -34,8 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchitectDependencyTrackingBuildNotificationClient" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
+        /// <param name="Id">The ID of the client..</param>
+        /// <param name="Name">The name of the client, if available..</param>
         public ArchitectDependencyTrackingBuildNotificationClient(string Id = null, string Name = null)
         {
             this.Id = Id;
@@ -46,16 +46,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The ID of the client.
         /// </summary>
+        /// <value>The ID of the client.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the client, if available.
         /// </summary>
+        /// <value>The name of the client, if available.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         

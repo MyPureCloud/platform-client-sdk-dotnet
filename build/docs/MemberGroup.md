@@ -9,7 +9,7 @@ title: MemberGroup
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
+| **Division** | [**WritableDivision**](WritableDivision.html) | The division to which this entity belongs. | [optional] |
 | **Type** | **string** | The group type | [optional] |
 | **MemberCount** | **int?** | The number of members in this group | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

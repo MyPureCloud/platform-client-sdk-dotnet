@@ -38,6 +38,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets EventType
         /// </summary>
@@ -68,21 +71,8 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Outcomeachievedevent for "OutcomeAchievedEvent"
             /// </summary>
             [EnumMember(Value = "OutcomeAchievedEvent")]
-            Outcomeachievedevent,
-            
-            /// <summary>
-            /// Enum Blockedwebactionofferevent for "BlockedWebActionOfferEvent"
-            /// </summary>
-            [EnumMember(Value = "BlockedWebActionOfferEvent")]
-            Blockedwebactionofferevent,
-            
-            /// <summary>
-            /// Enum Outcomeattributionevent for "OutcomeAttributionEvent"
-            /// </summary>
-            [EnumMember(Value = "OutcomeAttributionEvent")]
-            Outcomeattributionevent
+            Outcomeachievedevent
         }
-        
         
         
         
@@ -124,8 +114,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyWebEventsNotificationWebEventsNotification" /> class.
@@ -136,12 +124,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedDate">CreatedDate.</param>
         /// <param name="CustomerId">CustomerId.</param>
         /// <param name="CustomerIdType">CustomerIdType.</param>
-        /// <param name="EventType">EventType.</param>
         /// <param name="Session">Session.</param>
+        /// <param name="EventType">EventType.</param>
         /// <param name="WebEvent">WebEvent.</param>
         /// <param name="WebActionEvent">WebActionEvent.</param>
         /// <param name="OutcomeAchievedEvent">OutcomeAchievedEvent.</param>
-        public JourneyWebEventsNotificationWebEventsNotification(string Id = null, string CorrelationId = null, JourneyWebEventsNotificationExternalContact ExternalContact = null, DateTime? CreatedDate = null, string CustomerId = null, string CustomerIdType = null, EventTypeEnum? EventType = null, JourneyWebEventsNotificationSession Session = null, JourneyWebEventsNotificationWebMessage WebEvent = null, JourneyWebEventsNotificationWebActionMessage WebActionEvent = null, JourneyWebEventsNotificationOutcomeAchievedMessage OutcomeAchievedEvent = null)
+        public JourneyWebEventsNotificationWebEventsNotification(string Id = null, string CorrelationId = null, JourneyWebEventsNotificationExternalContact ExternalContact = null, DateTime? CreatedDate = null, string CustomerId = null, string CustomerIdType = null, JourneyWebEventsNotificationSession Session = null, EventTypeEnum? EventType = null, JourneyWebEventsNotificationWebMessage WebEvent = null, JourneyWebEventsNotificationWebActionMessage WebActionEvent = null, JourneyWebEventsNotificationOutcomeAchievedMessage OutcomeAchievedEvent = null)
         {
             this.Id = Id;
             this.CorrelationId = CorrelationId;
@@ -149,8 +137,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CreatedDate = CreatedDate;
             this.CustomerId = CustomerId;
             this.CustomerIdType = CustomerIdType;
-            this.EventType = EventType;
             this.Session = Session;
+            this.EventType = EventType;
             this.WebEvent = WebEvent;
             this.WebActionEvent = WebActionEvent;
             this.OutcomeAchievedEvent = OutcomeAchievedEvent;
@@ -207,13 +195,13 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
         /// <summary>
         /// Gets or Sets Session
         /// </summary>
         [DataMember(Name="session", EmitDefaultValue=false)]
         public JourneyWebEventsNotificationSession Session { get; set; }
+        
+        
         
         
         
@@ -255,8 +243,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  CustomerId: ").Append(CustomerId).Append("\n");
             sb.Append("  CustomerIdType: ").Append(CustomerIdType).Append("\n");
-            sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("  Session: ").Append(Session).Append("\n");
+            sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("  WebEvent: ").Append(WebEvent).Append("\n");
             sb.Append("  WebActionEvent: ").Append(WebActionEvent).Append("\n");
             sb.Append("  OutcomeAchievedEvent: ").Append(OutcomeAchievedEvent).Append("\n");
@@ -331,14 +319,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CustomerIdType.Equals(other.CustomerIdType)
                 ) &&
                 (
-                    this.EventType == other.EventType ||
-                    this.EventType != null &&
-                    this.EventType.Equals(other.EventType)
-                ) &&
-                (
                     this.Session == other.Session ||
                     this.Session != null &&
                     this.Session.Equals(other.Session)
+                ) &&
+                (
+                    this.EventType == other.EventType ||
+                    this.EventType != null &&
+                    this.EventType.Equals(other.EventType)
                 ) &&
                 (
                     this.WebEvent == other.WebEvent ||
@@ -387,11 +375,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.CustomerIdType != null)
                     hash = hash * 59 + this.CustomerIdType.GetHashCode();
                 
-                if (this.EventType != null)
-                    hash = hash * 59 + this.EventType.GetHashCode();
-                
                 if (this.Session != null)
                     hash = hash * 59 + this.Session.GetHashCode();
+                
+                if (this.EventType != null)
+                    hash = hash * 59 + this.EventType.GetHashCode();
                 
                 if (this.WebEvent != null)
                     hash = hash * 59 + this.WebEvent.GetHashCode();

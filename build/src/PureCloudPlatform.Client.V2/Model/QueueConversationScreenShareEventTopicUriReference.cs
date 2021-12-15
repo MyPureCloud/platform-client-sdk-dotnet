@@ -34,8 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationScreenShareEventTopicUriReference" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
+        /// <param name="Id">The ID of the resource.</param>
+        /// <param name="Name">The name of the resource.</param>
         public QueueConversationScreenShareEventTopicUriReference(string Id = null, string Name = null)
         {
             this.Id = Id;
@@ -46,16 +46,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The ID of the resource
         /// </summary>
+        /// <value>The ID of the resource</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the resource
         /// </summary>
+        /// <value>The name of the resource</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         

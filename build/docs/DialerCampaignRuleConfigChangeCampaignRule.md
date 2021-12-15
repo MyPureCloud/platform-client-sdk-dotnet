@@ -7,17 +7,16 @@ title: DialerCampaignRuleConfigChangeCampaignRule
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
-| **Name** | **string** |  | [optional] |
-| **DateCreated** | **DateTime?** |  | [optional] |
-| **DateModified** | **DateTime?** |  | [optional] |
-| **Version** | **int?** |  | [optional] |
 | **CampaignRuleEntities** | [**DialerCampaignRuleConfigChangeCampaignRuleEntities**](DialerCampaignRuleConfigChangeCampaignRuleEntities.html) |  | [optional] |
-| **CampaignRuleConditions** | [**List&lt;DialerCampaignRuleConfigChangeCampaignRuleCondition&gt;**](DialerCampaignRuleConfigChangeCampaignRuleCondition.html) |  | [optional] |
-| **CampaignRuleActions** | [**List&lt;DialerCampaignRuleConfigChangeCampaignRuleAction&gt;**](DialerCampaignRuleConfigChangeCampaignRuleAction.html) |  | [optional] |
-| **MatchAnyConditions** | **bool?** |  | [optional] |
-| **Enabled** | **bool?** |  | [optional] |
-| **AdditionalProperties** | **Object** |  | [optional] |
+| **CampaignRuleConditions** | [**List&lt;DialerCampaignRuleConfigChangeCampaignRuleCondition&gt;**](DialerCampaignRuleConfigChangeCampaignRuleCondition.html) | The list of conditions that will trigger this Campaign Rule | [optional] |
+| **CampaignRuleActions** | [**List&lt;DialerCampaignRuleConfigChangeCampaignRuleAction&gt;**](DialerCampaignRuleConfigChangeCampaignRuleAction.html) | The list of actions that will be taken when this Campaign Rule&#39;s conditions are met | [optional] |
+| **MatchAnyConditions** | **bool?** | Whether this Campaign Rule should match any conditions (inclusive OR) or match all conditions (ALL) | [optional] |
+| **Enabled** | **bool?** | Whether this campaign rule is enabled | [optional] |
+| **Id** | **string** | The globally unique identifier for the object. | [optional] |
+| **Name** | **string** | The UI-visible name of the object | [optional] |
+| **DateCreated** | **DateTime?** | Creation time of the entity | [optional] |
+| **DateModified** | **DateTime?** | Last modified time of the entity | [optional] |
+| **Version** | **int?** | Required for updates, must match the version number of the most recent update | [optional] |
 {: class="table table-striped"}
 
 

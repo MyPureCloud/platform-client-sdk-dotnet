@@ -44,45 +44,45 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Queued for "QUEUED"
+            /// Enum Queued for "queued"
             /// </summary>
-            [EnumMember(Value = "QUEUED")]
+            [EnumMember(Value = "queued")]
             Queued,
             
             /// <summary>
-            /// Enum Sent for "SENT"
+            /// Enum Sent for "sent"
             /// </summary>
-            [EnumMember(Value = "SENT")]
+            [EnumMember(Value = "sent")]
             Sent,
             
             /// <summary>
-            /// Enum Failed for "FAILED"
+            /// Enum Failed for "failed"
             /// </summary>
-            [EnumMember(Value = "FAILED")]
+            [EnumMember(Value = "failed")]
             Failed,
             
             /// <summary>
-            /// Enum Received for "RECEIVED"
+            /// Enum Received for "received"
             /// </summary>
-            [EnumMember(Value = "RECEIVED")]
+            [EnumMember(Value = "received")]
             Received,
             
             /// <summary>
-            /// Enum DeliverySuccess for "DELIVERY_SUCCESS"
+            /// Enum Deliverysuccess for "delivery-success"
             /// </summary>
-            [EnumMember(Value = "DELIVERY_SUCCESS")]
-            DeliverySuccess,
+            [EnumMember(Value = "delivery-success")]
+            Deliverysuccess,
             
             /// <summary>
-            /// Enum DeliveryFailed for "DELIVERY_FAILED"
+            /// Enum Deliveryfailed for "delivery-failed"
             /// </summary>
-            [EnumMember(Value = "DELIVERY_FAILED")]
-            DeliveryFailed,
+            [EnumMember(Value = "delivery-failed")]
+            Deliveryfailed,
             
             /// <summary>
-            /// Enum Read for "READ"
+            /// Enum Read for "read"
             /// </summary>
-            [EnumMember(Value = "READ")]
+            [EnumMember(Value = "read")]
             Read
         }
         

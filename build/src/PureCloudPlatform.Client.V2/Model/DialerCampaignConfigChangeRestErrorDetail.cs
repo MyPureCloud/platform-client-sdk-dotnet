@@ -30,49 +30,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCampaignConfigChangeRestErrorDetail" /> class.
         /// </summary>
-        /// <param name="Error">Error.</param>
-        /// <param name="Details">Details.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerCampaignConfigChangeRestErrorDetail(string Error = null, string Details = null, Object AdditionalProperties = null)
+        /// <param name="Error">name of the error.</param>
+        /// <param name="Details">additional information regarding the error.</param>
+        public DialerCampaignConfigChangeRestErrorDetail(string Error = null, string Details = null)
         {
             this.Error = Error;
             this.Details = Details;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Error
+        /// name of the error
         /// </summary>
+        /// <value>name of the error</value>
         [DataMember(Name="error", EmitDefaultValue=false)]
         public string Error { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Details
+        /// additional information regarding the error
         /// </summary>
+        /// <value>additional information regarding the error</value>
         [DataMember(Name="details", EmitDefaultValue=false)]
         public string Details { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -86,7 +73,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("  Details: ").Append(Details).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -136,11 +122,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Details == other.Details ||
                     this.Details != null &&
                     this.Details.Equals(other.Details)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -161,9 +142,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Details != null)
                     hash = hash * 59 + this.Details.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

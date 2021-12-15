@@ -252,7 +252,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Callback for "Callback"
             /// </summary>
             [EnumMember(Value = "Callback")]
-            Callback
+            Callback,
+            
+            /// <summary>
+            /// Enum Workitems for "Workitems"
+            /// </summary>
+            [EnumMember(Value = "Workitems")]
+            Workitems
         }
         
         
@@ -685,7 +691,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Softdelete for "SoftDelete"
             /// </summary>
             [EnumMember(Value = "SoftDelete")]
-            Softdelete
+            Softdelete,
+            
+            /// <summary>
+            /// Enum Harddelete for "HardDelete"
+            /// </summary>
+            [EnumMember(Value = "HardDelete")]
+            Harddelete
         }
         
         
@@ -864,6 +876,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ContactListFilter")]
             Contactlistfilter,
+            
+            /// <summary>
+            /// Enum Contactschema for "ContactSchema"
+            /// </summary>
+            [EnumMember(Value = "ContactSchema")]
+            Contactschema,
             
             /// <summary>
             /// Enum Conversationattributes for "ConversationAttributes"
@@ -1050,6 +1068,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ExternalMetricsDefinition")]
             Externalmetricsdefinition,
+            
+            /// <summary>
+            /// Enum Externalorganizationschema for "ExternalOrganizationSchema"
+            /// </summary>
+            [EnumMember(Value = "ExternalOrganizationSchema")]
+            Externalorganizationschema,
             
             /// <summary>
             /// Enum Feedback for "Feedback"
@@ -1586,6 +1610,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Webhook,
             
             /// <summary>
+            /// Enum Workbin for "Workbin"
+            /// </summary>
+            [EnumMember(Value = "Workbin")]
+            Workbin,
+            
+            /// <summary>
+            /// Enum Workitem for "Workitem"
+            /// </summary>
+            [EnumMember(Value = "Workitem")]
+            Workitem,
+            
+            /// <summary>
             /// Enum Workplan for "WorkPlan"
             /// </summary>
             [EnumMember(Value = "WorkPlan")]
@@ -1602,6 +1638,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Workspace")]
             Workspace,
+            
+            /// <summary>
+            /// Enum Worktype for "Worktype"
+            /// </summary>
+            [EnumMember(Value = "Worktype")]
+            Worktype,
             
             /// <summary>
             /// Enum Wrapupcode for "WrapupCode"

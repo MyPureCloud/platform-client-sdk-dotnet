@@ -30,49 +30,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerContactlistConfigChangeEmailColumn" /> class.
         /// </summary>
-        /// <param name="ColumnName">ColumnName.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerContactlistConfigChangeEmailColumn(string ColumnName = null, string Type = null, Object AdditionalProperties = null)
+        /// <param name="ColumnName">The name of the email address column.</param>
+        /// <param name="Type">The type of the email address column, for example, &#39;work&#39; or &#39;home&#39;.</param>
+        public DialerContactlistConfigChangeEmailColumn(string ColumnName = null, string Type = null)
         {
             this.ColumnName = ColumnName;
             this.Type = Type;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets ColumnName
+        /// The name of the email address column
         /// </summary>
+        /// <value>The name of the email address column</value>
         [DataMember(Name="columnName", EmitDefaultValue=false)]
         public string ColumnName { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Type
+        /// The type of the email address column, for example, &#39;work&#39; or &#39;home&#39;
         /// </summary>
+        /// <value>The type of the email address column, for example, &#39;work&#39; or &#39;home&#39;</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -86,7 +73,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -136,11 +122,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -161,9 +142,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

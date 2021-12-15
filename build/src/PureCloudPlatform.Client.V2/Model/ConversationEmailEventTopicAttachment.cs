@@ -45,79 +45,69 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationEmailEventTopicAttachment" /> class.
         /// </summary>
-        /// <param name="AttachmentId">AttachmentId.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="ContentUri">ContentUri.</param>
-        /// <param name="ContentType">ContentType.</param>
-        /// <param name="ContentLength">ContentLength.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationEmailEventTopicAttachment(string AttachmentId = null, string Name = null, string ContentUri = null, string ContentType = null, int? ContentLength = null, Object AdditionalProperties = null)
+        /// <param name="AttachmentId">The unique identifier for the attachment..</param>
+        /// <param name="Name">The name of the attachment..</param>
+        /// <param name="ContentUri">The content uri of the attachment. If set, this is commonly a public api download location..</param>
+        /// <param name="ContentType">The type of file the attachment is..</param>
+        /// <param name="ContentLength">The length of the attachment file..</param>
+        public ConversationEmailEventTopicAttachment(string AttachmentId = null, string Name = null, string ContentUri = null, string ContentType = null, int? ContentLength = null)
         {
             this.AttachmentId = AttachmentId;
             this.Name = Name;
             this.ContentUri = ContentUri;
             this.ContentType = ContentType;
             this.ContentLength = ContentLength;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets AttachmentId
+        /// The unique identifier for the attachment.
         /// </summary>
+        /// <value>The unique identifier for the attachment.</value>
         [DataMember(Name="attachmentId", EmitDefaultValue=false)]
         public string AttachmentId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the attachment.
         /// </summary>
+        /// <value>The name of the attachment.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ContentUri
+        /// The content uri of the attachment. If set, this is commonly a public api download location.
         /// </summary>
+        /// <value>The content uri of the attachment. If set, this is commonly a public api download location.</value>
         [DataMember(Name="contentUri", EmitDefaultValue=false)]
         public string ContentUri { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ContentType
+        /// The type of file the attachment is.
         /// </summary>
+        /// <value>The type of file the attachment is.</value>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public string ContentType { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ContentLength
+        /// The length of the attachment file.
         /// </summary>
+        /// <value>The length of the attachment file.</value>
         [DataMember(Name="contentLength", EmitDefaultValue=false)]
         public int? ContentLength { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -134,7 +124,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContentUri: ").Append(ContentUri).Append("\n");
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  ContentLength: ").Append(ContentLength).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -199,11 +188,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContentLength == other.ContentLength ||
                     this.ContentLength != null &&
                     this.ContentLength.Equals(other.ContentLength)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -233,9 +217,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ContentLength != null)
                     hash = hash * 59 + this.ContentLength.GetHashCode();
-                
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }
