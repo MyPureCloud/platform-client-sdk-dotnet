@@ -50,7 +50,31 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="Moq">
-      <HintPath>..\..\packages\Moq.4.13.1\lib\net45\Moq.dll</HintPath>
+      <HintPath>..\..\packages\Moq.4.5.3\lib\net45\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath Condition="Exists('..\packages')">..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath Condition="Exists('..\..\packages')">..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\RestSharp.106.3.1\lib\net452\RestSharp.dll</HintPath>
+      <HintPath Condition="Exists('..\packages')">..\packages\RestSharp.106.3.1\lib\net452\RestSharp.dll</HintPath>
+      <HintPath Condition="Exists('..\..\packages')">..\..\packages\RestSharp.106.3.1\lib\net452\RestSharp.dll</HintPath>
+      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\RestSharp.106.3.1\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\WebSocketSharp.1.0.3-rc11\lib\websocket-sharp.dll</HintPath>
+      <HintPath Condition="Exists('..\packages')">..\packages\WebSocketSharp.1.0.3-rc11\lib\websocket-sharp.dll</HintPath>
+      <HintPath Condition="Exists('..\..\packages')">..\..\packages\WebSocketSharp.1.0.3-rc11\lib\websocket-sharp.dll</HintPath>
+      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\WebSocketSharp.1.0.3-rc11\lib\websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ini-parser">
+      <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\ini-parser.3.4.0\lib\net20\INIFileParser.dll</HintPath>
+      <HintPath Condition="Exists('..\packages')">..\packages\ini-parser.3.4.0\lib\net20\INIFileParser.dll</HintPath>
+      <HintPath Condition="Exists('..\..\packages')">..\..\packages\ini-parser.3.4.0\lib\net20\INIFileParser.dll</HintPath>
+      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\ini-parser.3.4.0\lib\net20\INIFileParser.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Genesys")]
 [assembly: AssemblyProduct("PureCloudPlatformClient")]
-[assembly: AssemblyCopyright("Copyright © Genesys 2017")]
+[assembly: AssemblyCopyright("Copyright © Genesys 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -28,5 +28,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("137.0.0")]
-[assembly: AssemblyFileVersion("137.0.0")]
+[assembly: AssemblyVersion("138.0.0")]
+[assembly: AssemblyFileVersion("138.0.0")]
