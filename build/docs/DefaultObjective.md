@@ -11,6 +11,8 @@ title: DefaultObjective
 | **TemplateId** | **string** | The id of this objective&#39;s base template | [optional] |
 | **Zones** | [**List&lt;ObjectiveZone&gt;**](ObjectiveZone.html) | Objective zone specifies min,max points and values for the associated metric | [optional] |
 | **Enabled** | **bool?** | A flag for whether this objective is enabled for the related metric | [optional] |
+| **Topics** | [**List&lt;AddressableEntityRef&gt;**](AddressableEntityRef.html) | A list of topic ids for detected topic metrics | [optional] |
+| **TopicIdsFilterType** | **string** | A filter type for topic Ids. It&#39;s only used for objectives with topicIds. Default filter behavior is \&quot;or\&quot;. | [optional] |
 {: class="table table-striped"}
 
 

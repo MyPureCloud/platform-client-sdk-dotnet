@@ -189,6 +189,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Obotintent,
             
             /// <summary>
+            /// Enum Obotsessionquery for "oBotSessionQuery"
+            /// </summary>
+            [EnumMember(Value = "oBotSessionQuery")]
+            Obotsessionquery,
+            
+            /// <summary>
             /// Enum Obotsessionturn for "oBotSessionTurn"
             /// </summary>
             [EnumMember(Value = "oBotSessionTurn")]

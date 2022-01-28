@@ -8,7 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**GetDate**](UtilitiesApi.html#getdate) | **GET** /api/v2/date | Get the current system date/time |
-| [**GetIpranges**](UtilitiesApi.html#getipranges) | **GET** /api/v2/ipranges | Get public ip address ranges for PureCloud |
+| [**GetIpranges**](UtilitiesApi.html#getipranges) | **GET** /api/v2/ipranges | Get public ip address ranges for Genesys Cloud |
 | [**GetTimezones**](UtilitiesApi.html#gettimezones) | **GET** /api/v2/timezones | Get time zones list |
 | [**PostCertificateDetails**](UtilitiesApi.html#postcertificatedetails) | **POST** /api/v2/certificate/details | Returns the information about an X509 PEM encoded certificate or certificate chain. |
 {: class="table table-striped"}
@@ -78,7 +78,7 @@ This endpoint does require any parameters.
 
 
 
-Get public ip address ranges for PureCloud
+Get public ip address ranges for Genesys Cloud
 
 
 
@@ -110,7 +110,7 @@ namespace Example
 
             try
             { 
-                // Get public ip address ranges for PureCloud
+                // Get public ip address ranges for Genesys Cloud
                 IpAddressRangeListing result = apiInstance.GetIpranges();
                 Debug.WriteLine(result);
             }

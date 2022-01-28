@@ -11,6 +11,7 @@ title: WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate
 | **ManagementUnitId** | **string** |  | [optional] |
 | **Team** | [**WfmUserScheduleAdherenceUpdatedMuTopicUriReference**](WfmUserScheduleAdherenceUpdatedMuTopicUriReference.html) |  | [optional] |
 | **ScheduledActivityCategory** | **string** |  | [optional] |
+| **ScheduledActivityCode** | [**WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference**](WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference.html) |  | [optional] |
 | **SystemPresence** | **string** |  | [optional] |
 | **OrganizationSecondaryPresenceId** | **string** |  | [optional] |
 | **RoutingStatus** | **string** |  | [optional] |

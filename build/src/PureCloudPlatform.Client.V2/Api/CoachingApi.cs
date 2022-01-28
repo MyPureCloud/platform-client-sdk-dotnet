@@ -177,8 +177,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationships">Relationships to filter by (optional)</param>
         /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
+        /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>CoachingAppointmentResponseList</returns>
-        CoachingAppointmentResponseList GetCoachingAppointments (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null);
+        CoachingAppointmentResponseList GetCoachingAppointments (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
 
         /// <summary>
         /// Get appointments for users and optional date range
@@ -197,8 +198,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationships">Relationships to filter by (optional)</param>
         /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
+        /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>ApiResponse of CoachingAppointmentResponseList</returns>
-        ApiResponse<CoachingAppointmentResponseList> GetCoachingAppointmentsWithHttpInfo (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null);
+        ApiResponse<CoachingAppointmentResponseList> GetCoachingAppointmentsWithHttpInfo (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
         
         /// <summary>
         /// Get my appointments for a given date range
@@ -216,8 +218,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationships">Relationships to filter by (optional)</param>
         /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
+        /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>CoachingAppointmentResponseList</returns>
-        CoachingAppointmentResponseList GetCoachingAppointmentsMe (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null);
+        CoachingAppointmentResponseList GetCoachingAppointmentsMe (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
 
         /// <summary>
         /// Get my appointments for a given date range
@@ -235,8 +238,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationships">Relationships to filter by (optional)</param>
         /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
+        /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>ApiResponse of CoachingAppointmentResponseList</returns>
-        ApiResponse<CoachingAppointmentResponseList> GetCoachingAppointmentsMeWithHttpInfo (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null);
+        ApiResponse<CoachingAppointmentResponseList> GetCoachingAppointmentsMeWithHttpInfo (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
         
         /// <summary>
         /// Get an existing notification
@@ -665,8 +669,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationships">Relationships to filter by (optional)</param>
         /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
+        /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>Task of CoachingAppointmentResponseList</returns>
-        System.Threading.Tasks.Task<CoachingAppointmentResponseList> GetCoachingAppointmentsAsync (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null);
+        System.Threading.Tasks.Task<CoachingAppointmentResponseList> GetCoachingAppointmentsAsync (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
 
         /// <summary>
         /// Get appointments for users and optional date range
@@ -685,8 +690,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationships">Relationships to filter by (optional)</param>
         /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
+        /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponseList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsAsyncWithHttpInfo (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null);
+        System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsAsyncWithHttpInfo (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
         
         /// <summary>
         /// Get my appointments for a given date range
@@ -704,8 +710,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationships">Relationships to filter by (optional)</param>
         /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
+        /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>Task of CoachingAppointmentResponseList</returns>
-        System.Threading.Tasks.Task<CoachingAppointmentResponseList> GetCoachingAppointmentsMeAsync (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null);
+        System.Threading.Tasks.Task<CoachingAppointmentResponseList> GetCoachingAppointmentsMeAsync (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
 
         /// <summary>
         /// Get my appointments for a given date range
@@ -723,8 +730,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationships">Relationships to filter by (optional)</param>
         /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
+        /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponseList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsMeAsyncWithHttpInfo (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null);
+        System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsMeAsyncWithHttpInfo (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
         
         /// <summary>
         /// Get an existing notification
@@ -2300,10 +2308,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationships">Relationships to filter by (optional)</param>
         /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
+        /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>CoachingAppointmentResponseList</returns>
-        public CoachingAppointmentResponseList GetCoachingAppointments (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
+        public CoachingAppointmentResponseList GetCoachingAppointments (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
         {
-             ApiResponse<CoachingAppointmentResponseList> localVarResponse = GetCoachingAppointmentsWithHttpInfo(userIds, interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue);
+             ApiResponse<CoachingAppointmentResponseList> localVarResponse = GetCoachingAppointmentsWithHttpInfo(userIds, interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue, intervalCondition);
              return localVarResponse.Data;
         }
 
@@ -2321,8 +2330,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationships">Relationships to filter by (optional)</param>
         /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
+        /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>ApiResponse of CoachingAppointmentResponseList</returns>
-        public ApiResponse< CoachingAppointmentResponseList > GetCoachingAppointmentsWithHttpInfo (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
+        public ApiResponse< CoachingAppointmentResponseList > GetCoachingAppointmentsWithHttpInfo (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
         { 
             // verify the required parameter 'userIds' is set
             if (userIds == null)
@@ -2371,6 +2381,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (relationships != null) relationships.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("relationships", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (completionInterval != null) localVarQueryParams.Add(new Tuple<string, string>("completionInterval", this.Configuration.ApiClient.ParameterToString(completionInterval)));
             if (overdue != null) localVarQueryParams.Add(new Tuple<string, string>("overdue", this.Configuration.ApiClient.ParameterToString(overdue)));
+            if (intervalCondition != null) localVarQueryParams.Add(new Tuple<string, string>("intervalCondition", this.Configuration.ApiClient.ParameterToString(intervalCondition)));
 
             // Header params
 
@@ -2422,10 +2433,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationships">Relationships to filter by (optional)</param>
         /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
+        /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>Task of CoachingAppointmentResponseList</returns>
-        public async System.Threading.Tasks.Task<CoachingAppointmentResponseList> GetCoachingAppointmentsAsync (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
+        public async System.Threading.Tasks.Task<CoachingAppointmentResponseList> GetCoachingAppointmentsAsync (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
         {
-             ApiResponse<CoachingAppointmentResponseList> localVarResponse = await GetCoachingAppointmentsAsyncWithHttpInfo(userIds, interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue);
+             ApiResponse<CoachingAppointmentResponseList> localVarResponse = await GetCoachingAppointmentsAsyncWithHttpInfo(userIds, interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue, intervalCondition);
              return localVarResponse.Data;
 
         }
@@ -2444,8 +2456,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationships">Relationships to filter by (optional)</param>
         /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
+        /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponseList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsAsyncWithHttpInfo (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsAsyncWithHttpInfo (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
         { 
             // verify the required parameter 'userIds' is set
             if (userIds == null)
@@ -2495,6 +2508,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (relationships != null) relationships.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("relationships", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (completionInterval != null) localVarQueryParams.Add(new Tuple<string, string>("completionInterval", this.Configuration.ApiClient.ParameterToString(completionInterval)));
             if (overdue != null) localVarQueryParams.Add(new Tuple<string, string>("overdue", this.Configuration.ApiClient.ParameterToString(overdue)));
+            if (intervalCondition != null) localVarQueryParams.Add(new Tuple<string, string>("intervalCondition", this.Configuration.ApiClient.ParameterToString(intervalCondition)));
 
             // Header params
 
@@ -2546,10 +2560,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationships">Relationships to filter by (optional)</param>
         /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
+        /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>CoachingAppointmentResponseList</returns>
-        public CoachingAppointmentResponseList GetCoachingAppointmentsMe (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
+        public CoachingAppointmentResponseList GetCoachingAppointmentsMe (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
         {
-             ApiResponse<CoachingAppointmentResponseList> localVarResponse = GetCoachingAppointmentsMeWithHttpInfo(interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue);
+             ApiResponse<CoachingAppointmentResponseList> localVarResponse = GetCoachingAppointmentsMeWithHttpInfo(interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue, intervalCondition);
              return localVarResponse.Data;
         }
 
@@ -2566,8 +2581,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationships">Relationships to filter by (optional)</param>
         /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
+        /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>ApiResponse of CoachingAppointmentResponseList</returns>
-        public ApiResponse< CoachingAppointmentResponseList > GetCoachingAppointmentsMeWithHttpInfo (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
+        public ApiResponse< CoachingAppointmentResponseList > GetCoachingAppointmentsMeWithHttpInfo (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
         { 
 
             var localVarPath = "/api/v2/coaching/appointments/me";
@@ -2612,6 +2628,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (relationships != null) relationships.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("relationships", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (completionInterval != null) localVarQueryParams.Add(new Tuple<string, string>("completionInterval", this.Configuration.ApiClient.ParameterToString(completionInterval)));
             if (overdue != null) localVarQueryParams.Add(new Tuple<string, string>("overdue", this.Configuration.ApiClient.ParameterToString(overdue)));
+            if (intervalCondition != null) localVarQueryParams.Add(new Tuple<string, string>("intervalCondition", this.Configuration.ApiClient.ParameterToString(intervalCondition)));
 
             // Header params
 
@@ -2662,10 +2679,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationships">Relationships to filter by (optional)</param>
         /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
+        /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>Task of CoachingAppointmentResponseList</returns>
-        public async System.Threading.Tasks.Task<CoachingAppointmentResponseList> GetCoachingAppointmentsMeAsync (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
+        public async System.Threading.Tasks.Task<CoachingAppointmentResponseList> GetCoachingAppointmentsMeAsync (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
         {
-             ApiResponse<CoachingAppointmentResponseList> localVarResponse = await GetCoachingAppointmentsMeAsyncWithHttpInfo(interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue);
+             ApiResponse<CoachingAppointmentResponseList> localVarResponse = await GetCoachingAppointmentsMeAsyncWithHttpInfo(interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue, intervalCondition);
              return localVarResponse.Data;
 
         }
@@ -2683,8 +2701,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationships">Relationships to filter by (optional)</param>
         /// <param name="completionInterval">Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Overdue status to filter by (optional)</param>
+        /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponseList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsMeAsyncWithHttpInfo (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsMeAsyncWithHttpInfo (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
         { 
 
             var localVarPath = "/api/v2/coaching/appointments/me";
@@ -2729,6 +2748,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (relationships != null) relationships.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("relationships", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (completionInterval != null) localVarQueryParams.Add(new Tuple<string, string>("completionInterval", this.Configuration.ApiClient.ParameterToString(completionInterval)));
             if (overdue != null) localVarQueryParams.Add(new Tuple<string, string>("overdue", this.Configuration.ApiClient.ParameterToString(overdue)));
+            if (intervalCondition != null) localVarQueryParams.Add(new Tuple<string, string>("intervalCondition", this.Configuration.ApiClient.ParameterToString(intervalCondition)));
 
             // Header params
 

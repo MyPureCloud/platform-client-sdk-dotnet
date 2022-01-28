@@ -91,7 +91,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Oactivityscore for "oActivityScore"
             /// </summary>
             [EnumMember(Value = "oActivityScore")]
-            Oactivityscore
+            Oactivityscore,
+            
+            /// <summary>
+            /// Enum Nnotcompletedactivities for "nNotCompletedActivities"
+            /// </summary>
+            [EnumMember(Value = "nNotCompletedActivities")]
+            Nnotcompletedactivities
         }
         
         

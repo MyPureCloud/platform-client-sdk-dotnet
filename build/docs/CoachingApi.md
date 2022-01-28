@@ -434,7 +434,7 @@ namespace Example
 
 <a name="getcoachingappointments"></a>
 
-## [**CoachingAppointmentResponseList**](CoachingAppointmentResponseList.html) GetCoachingAppointments (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
+## [**CoachingAppointmentResponseList**](CoachingAppointmentResponseList.html) GetCoachingAppointments (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
 
 
 
@@ -478,11 +478,12 @@ namespace Example
             var relationships = new List<string>(); // List<string> | Relationships to filter by (optional) 
             var completionInterval = completionInterval_example;  // string | Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
             var overdue = overdue_example;  // string | Overdue status to filter by (optional) 
+            var intervalCondition = intervalCondition_example;  // string | Filter condition for interval (optional) 
 
             try
             { 
                 // Get appointments for users and optional date range
-                CoachingAppointmentResponseList result = apiInstance.GetCoachingAppointments(userIds, interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue);
+                CoachingAppointmentResponseList result = apiInstance.GetCoachingAppointments(userIds, interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue, intervalCondition);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -509,6 +510,7 @@ namespace Example
 | **relationships** | [**List<string>**](string.html)| Relationships to filter by | [optional] <br />**Values**: Creator, Facilitator, Attendee |
 | **completionInterval** | **string**| Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
 | **overdue** | **string**| Overdue status to filter by | [optional] <br />**Values**: True, False, Any |
+| **intervalCondition** | **string**| Filter condition for interval | [optional] <br />**Values**: StartsIn, Overlaps |
 {: class="table table-striped"}
 
 ### Return type
@@ -517,7 +519,7 @@ namespace Example
 
 <a name="getcoachingappointmentsme"></a>
 
-## [**CoachingAppointmentResponseList**](CoachingAppointmentResponseList.html) GetCoachingAppointmentsMe (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null)
+## [**CoachingAppointmentResponseList**](CoachingAppointmentResponseList.html) GetCoachingAppointmentsMe (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
 
 
 
@@ -559,11 +561,12 @@ namespace Example
             var relationships = new List<string>(); // List<string> | Relationships to filter by (optional) 
             var completionInterval = completionInterval_example;  // string | Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
             var overdue = overdue_example;  // string | Overdue status to filter by (optional) 
+            var intervalCondition = intervalCondition_example;  // string | Filter condition for interval (optional) 
 
             try
             { 
                 // Get my appointments for a given date range
-                CoachingAppointmentResponseList result = apiInstance.GetCoachingAppointmentsMe(interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue);
+                CoachingAppointmentResponseList result = apiInstance.GetCoachingAppointmentsMe(interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue, intervalCondition);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -589,6 +592,7 @@ namespace Example
 | **relationships** | [**List<string>**](string.html)| Relationships to filter by | [optional] <br />**Values**: Creator, Facilitator, Attendee |
 | **completionInterval** | **string**| Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
 | **overdue** | **string**| Overdue status to filter by | [optional] <br />**Values**: True, False, Any |
+| **intervalCondition** | **string**| Filter condition for interval | [optional] <br />**Values**: StartsIn, Overlaps |
 {: class="table table-striped"}
 
 ### Return type

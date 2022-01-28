@@ -122,7 +122,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Main for "MAIN"
             /// </summary>
             [EnumMember(Value = "MAIN")]
-            Main
+            Main,
+            
+            /// <summary>
+            /// Enum Other for "OTHER"
+            /// </summary>
+            [EnumMember(Value = "OTHER")]
+            Other
         }
         
         

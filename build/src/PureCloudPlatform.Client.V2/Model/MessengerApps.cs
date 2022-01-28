@@ -25,16 +25,32 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="MessengerApps" /> class.
         /// </summary>
+        /// <param name="Conversations">The conversation settings that handles chats within the messenger.</param>
         /// <param name="Knowledge">The knowledge base config for messenger.</param>
-        public MessengerApps(Knowledge Knowledge = null)
+        public MessengerApps(ConversationAppSettings Conversations = null, Knowledge Knowledge = null)
         {
+            this.Conversations = Conversations;
             this.Knowledge = Knowledge;
             
         }
+        
+        
+        
+        /// <summary>
+        /// The conversation settings that handles chats within the messenger
+        /// </summary>
+        /// <value>The conversation settings that handles chats within the messenger</value>
+        [DataMember(Name="conversations", EmitDefaultValue=false)]
+        public ConversationAppSettings Conversations { get; set; }
         
         
         
@@ -55,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class MessengerApps {\n");
             
+            sb.Append("  Conversations: ").Append(Conversations).Append("\n");
             sb.Append("  Knowledge: ").Append(Knowledge).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -97,6 +114,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Conversations == other.Conversations ||
+                    this.Conversations != null &&
+                    this.Conversations.Equals(other.Conversations)
+                ) &&
+                (
                     this.Knowledge == other.Knowledge ||
                     this.Knowledge != null &&
                     this.Knowledge.Equals(other.Knowledge)
@@ -114,6 +136,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.Conversations != null)
+                    hash = hash * 59 + this.Conversations.GetHashCode();
                 
                 if (this.Knowledge != null)
                     hash = hash * 59 + this.Knowledge.GetHashCode();

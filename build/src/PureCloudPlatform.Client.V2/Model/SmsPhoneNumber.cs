@@ -267,6 +267,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Type of the phone number provisioned.
         /// </summary>
@@ -330,6 +342,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsPhoneNumber" /> class.
@@ -357,7 +377,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AddressId">The id of an address attached to this phone number..</param>
         /// <param name="ShortCodeBillingType">BillingType of this phone number, if the phoneNumberType is shortcode..</param>
         /// <param name="ProvisioningStatus">Status of latest asynchronous provisioning action.</param>
-        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null, SmsAddress AddressId = null, ShortCodeBillingTypeEnum? ShortCodeBillingType = null, SmsProvisioningStatus ProvisioningStatus = null)
+        /// <param name="Country">Localized country name for the country code this phone number belongs too.</param>
+        /// <param name="SupportsSms">Set to true if this phone number has the capability to support SMS.</param>
+        /// <param name="SupportsMms">Set to true if this phone number has the capability to support MMS.</param>
+        /// <param name="SupportsVoice">Set to true if this phone number has the capability to support voice.</param>
+        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null, SmsAddress AddressId = null, ShortCodeBillingTypeEnum? ShortCodeBillingType = null, SmsProvisioningStatus ProvisioningStatus = null, string Country = null, bool? SupportsSms = null, bool? SupportsMms = null, bool? SupportsVoice = null)
         {
             this.Name = Name;
             this.PhoneNumber = PhoneNumber;
@@ -376,6 +400,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AddressId = AddressId;
             this.ShortCodeBillingType = ShortCodeBillingType;
             this.ProvisioningStatus = ProvisioningStatus;
+            this.Country = Country;
+            this.SupportsSms = SupportsSms;
+            this.SupportsMms = SupportsMms;
+            this.SupportsVoice = SupportsVoice;
             
         }
         
@@ -533,6 +561,42 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Localized country name for the country code this phone number belongs too
+        /// </summary>
+        /// <value>Localized country name for the country code this phone number belongs too</value>
+        [DataMember(Name="country", EmitDefaultValue=false)]
+        public string Country { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Set to true if this phone number has the capability to support SMS
+        /// </summary>
+        /// <value>Set to true if this phone number has the capability to support SMS</value>
+        [DataMember(Name="supportsSms", EmitDefaultValue=false)]
+        public bool? SupportsSms { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Set to true if this phone number has the capability to support MMS
+        /// </summary>
+        /// <value>Set to true if this phone number has the capability to support MMS</value>
+        [DataMember(Name="supportsMms", EmitDefaultValue=false)]
+        public bool? SupportsMms { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Set to true if this phone number has the capability to support voice
+        /// </summary>
+        /// <value>Set to true if this phone number has the capability to support voice</value>
+        [DataMember(Name="supportsVoice", EmitDefaultValue=false)]
+        public bool? SupportsVoice { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -569,6 +633,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AddressId: ").Append(AddressId).Append("\n");
             sb.Append("  ShortCodeBillingType: ").Append(ShortCodeBillingType).Append("\n");
             sb.Append("  ProvisioningStatus: ").Append(ProvisioningStatus).Append("\n");
+            sb.Append("  Country: ").Append(Country).Append("\n");
+            sb.Append("  SupportsSms: ").Append(SupportsSms).Append("\n");
+            sb.Append("  SupportsMms: ").Append(SupportsMms).Append("\n");
+            sb.Append("  SupportsVoice: ").Append(SupportsVoice).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -711,6 +779,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ProvisioningStatus.Equals(other.ProvisioningStatus)
                 ) &&
                 (
+                    this.Country == other.Country ||
+                    this.Country != null &&
+                    this.Country.Equals(other.Country)
+                ) &&
+                (
+                    this.SupportsSms == other.SupportsSms ||
+                    this.SupportsSms != null &&
+                    this.SupportsSms.Equals(other.SupportsSms)
+                ) &&
+                (
+                    this.SupportsMms == other.SupportsMms ||
+                    this.SupportsMms != null &&
+                    this.SupportsMms.Equals(other.SupportsMms)
+                ) &&
+                (
+                    this.SupportsVoice == other.SupportsVoice ||
+                    this.SupportsVoice != null &&
+                    this.SupportsVoice.Equals(other.SupportsVoice)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -788,6 +876,18 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ProvisioningStatus != null)
                     hash = hash * 59 + this.ProvisioningStatus.GetHashCode();
+                
+                if (this.Country != null)
+                    hash = hash * 59 + this.Country.GetHashCode();
+                
+                if (this.SupportsSms != null)
+                    hash = hash * 59 + this.SupportsSms.GetHashCode();
+                
+                if (this.SupportsMms != null)
+                    hash = hash * 59 + this.SupportsMms.GetHashCode();
+                
+                if (this.SupportsVoice != null)
+                    hash = hash * 59 + this.SupportsVoice.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

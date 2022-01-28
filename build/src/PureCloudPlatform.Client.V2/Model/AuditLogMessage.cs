@@ -258,7 +258,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Workitems for "Workitems"
             /// </summary>
             [EnumMember(Value = "Workitems")]
-            Workitems
+            Workitems,
+            
+            /// <summary>
+            /// Enum Scim for "SCIM"
+            /// </summary>
+            [EnumMember(Value = "SCIM")]
+            Scim
         }
         
         
@@ -752,6 +758,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Agentroutinginfo,
             
             /// <summary>
+            /// Enum Analyticsreportingsettings for "AnalyticsReportingSettings"
+            /// </summary>
+            [EnumMember(Value = "AnalyticsReportingSettings")]
+            Analyticsreportingsettings,
+            
+            /// <summary>
             /// Enum Annotation for "Annotation"
             /// </summary>
             [EnumMember(Value = "Annotation")]
@@ -918,6 +930,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ConversationThreadingWindow")]
             Conversationthreadingwindow,
+            
+            /// <summary>
+            /// Enum Credential for "Credential"
+            /// </summary>
+            [EnumMember(Value = "Credential")]
+            Credential,
             
             /// <summary>
             /// Enum Dashboardsettings for "DashboardSettings"
@@ -1388,6 +1406,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Response,
             
             /// <summary>
+            /// Enum Responseasset for "ResponseAsset"
+            /// </summary>
+            [EnumMember(Value = "ResponseAsset")]
+            Responseasset,
+            
+            /// <summary>
             /// Enum Role for "Role"
             /// </summary>
             [EnumMember(Value = "Role")]
@@ -1542,6 +1566,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Team")]
             Team,
+            
+            /// <summary>
+            /// Enum Timeofflimit for "TimeOffLimit"
+            /// </summary>
+            [EnumMember(Value = "TimeOffLimit")]
+            Timeofflimit,
+            
+            /// <summary>
+            /// Enum Timeoffplan for "TimeOffPlan"
+            /// </summary>
+            [EnumMember(Value = "TimeOffPlan")]
+            Timeoffplan,
             
             /// <summary>
             /// Enum Timeoffrequest for "TimeOffRequest"

@@ -54,7 +54,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Call for "Call"
             /// </summary>
             [EnumMember(Value = "Call")]
-            Call
+            Call,
+            
+            /// <summary>
+            /// Enum Message for "Message"
+            /// </summary>
+            [EnumMember(Value = "Message")]
+            Message
         }
         
         

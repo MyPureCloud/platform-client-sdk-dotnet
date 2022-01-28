@@ -35,12 +35,57 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\".
+        /// </summary>
+        /// <value>A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\".</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TopicIdsFilterTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum And for "and"
+            /// </summary>
+            [EnumMember(Value = "and")]
+            And,
+            
+            /// <summary>
+            /// Enum Or for "or"
+            /// </summary>
+            [EnumMember(Value = "or")]
+            Or
+        }
         
         
         
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\".
+        /// </summary>
+        /// <value>A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\".</value>
+        [DataMember(Name="topicIdsFilterType", EmitDefaultValue=false)]
+        public TopicIdsFilterTypeEnum? TopicIdsFilterType { get; set; }
         
         
         
@@ -52,12 +97,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TemplateId">The id of this objective&#39;s base template.</param>
         /// <param name="Zones">Objective zone specifies min,max points and values for the associated metric.</param>
         /// <param name="Enabled">A flag for whether this objective is enabled for the related metric.</param>
+        /// <param name="Topics">A list of topic ids for detected topic metrics.</param>
+        /// <param name="TopicIdsFilterType">A filter type for topic Ids. It&#39;s only used for objectives with topicIds. Default filter behavior is \&quot;or\&quot;..</param>
         /// <param name="DateStart">start date of the objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
-        public Objective(string TemplateId = null, List<ObjectiveZone> Zones = null, bool? Enabled = null, String DateStart = null)
+        public Objective(string TemplateId = null, List<ObjectiveZone> Zones = null, bool? Enabled = null, List<AddressableEntityRef> Topics = null, TopicIdsFilterTypeEnum? TopicIdsFilterType = null, String DateStart = null)
         {
             this.TemplateId = TemplateId;
             this.Zones = Zones;
             this.Enabled = Enabled;
+            this.Topics = Topics;
+            this.TopicIdsFilterType = TopicIdsFilterType;
             this.DateStart = DateStart;
             
         }
@@ -101,6 +150,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// A list of topic ids for detected topic metrics
+        /// </summary>
+        /// <value>A list of topic ids for detected topic metrics</value>
+        [DataMember(Name="topics", EmitDefaultValue=false)]
+        public List<AddressableEntityRef> Topics { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
         /// start date of the objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>start date of the objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
@@ -121,6 +181,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TemplateId: ").Append(TemplateId).Append("\n");
             sb.Append("  Zones: ").Append(Zones).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  Topics: ").Append(Topics).Append("\n");
+            sb.Append("  TopicIdsFilterType: ").Append(TopicIdsFilterType).Append("\n");
             sb.Append("  DateStart: ").Append(DateStart).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -183,6 +245,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Enabled.Equals(other.Enabled)
                 ) &&
                 (
+                    this.Topics == other.Topics ||
+                    this.Topics != null &&
+                    this.Topics.SequenceEqual(other.Topics)
+                ) &&
+                (
+                    this.TopicIdsFilterType == other.TopicIdsFilterType ||
+                    this.TopicIdsFilterType != null &&
+                    this.TopicIdsFilterType.Equals(other.TopicIdsFilterType)
+                ) &&
+                (
                     this.DateStart == other.DateStart ||
                     this.DateStart != null &&
                     this.DateStart.Equals(other.DateStart)
@@ -212,6 +284,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+                
+                if (this.Topics != null)
+                    hash = hash * 59 + this.Topics.GetHashCode();
+                
+                if (this.TopicIdsFilterType != null)
+                    hash = hash * 59 + this.TopicIdsFilterType.GetHashCode();
                 
                 if (this.DateStart != null)
                     hash = hash * 59 + this.DateStart.GetHashCode();

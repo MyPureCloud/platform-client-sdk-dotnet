@@ -35,6 +35,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingConversationAttributesResponse" /> class.
@@ -42,11 +47,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Priority">Current priority value on in-queue conversation. Range:[-25000000, 25000000].</param>
         /// <param name="Skills">Current routing skills on in-queue conversation.</param>
         /// <param name="Language">Current language on in-queue conversation.</param>
-        public RoutingConversationAttributesResponse(int? Priority = null, List<RoutingSkill> Skills = null, Language Language = null)
+        /// <param name="ScoredAgents">Current scored agents on in-queue conversation.</param>
+        public RoutingConversationAttributesResponse(int? Priority = null, List<RoutingSkill> Skills = null, Language Language = null, List<ScoredAgent> ScoredAgents = null)
         {
             this.Priority = Priority;
             this.Skills = Skills;
             this.Language = Language;
+            this.ScoredAgents = ScoredAgents;
             
         }
         
@@ -78,6 +85,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Language Language { get; set; }
         
         
+        
+        /// <summary>
+        /// Current scored agents on in-queue conversation
+        /// </summary>
+        /// <value>Current scored agents on in-queue conversation</value>
+        [DataMember(Name="scoredAgents", EmitDefaultValue=false)]
+        public List<ScoredAgent> ScoredAgents { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Priority: ").Append(Priority).Append("\n");
             sb.Append("  Skills: ").Append(Skills).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
+            sb.Append("  ScoredAgents: ").Append(ScoredAgents).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -144,6 +161,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Language == other.Language ||
                     this.Language != null &&
                     this.Language.Equals(other.Language)
+                ) &&
+                (
+                    this.ScoredAgents == other.ScoredAgents ||
+                    this.ScoredAgents != null &&
+                    this.ScoredAgents.SequenceEqual(other.ScoredAgents)
                 );
         }
 
@@ -167,6 +189,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
+                
+                if (this.ScoredAgents != null)
+                    hash = hash * 59 + this.ScoredAgents.GetHashCode();
                 
                 return hash;
             }

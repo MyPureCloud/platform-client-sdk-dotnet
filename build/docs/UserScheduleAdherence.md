@@ -10,6 +10,7 @@ title: UserScheduleAdherence
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
 | **User** | [**UserReference**](UserReference.html) | The user for whom this status applies | [optional] |
+| **BusinessUnit** | [**BusinessUnit**](BusinessUnit.html) | The business unit to which this user belongs | [optional] |
 | **ManagementUnit** | [**ManagementUnit**](ManagementUnit.html) | The management unit to which this user belongs | [optional] |
 | **Team** | [**Team**](Team.html) | The team to which this user belongs | [optional] |
 | **ScheduledActivityCategory** | **string** | Activity for which the user is scheduled | [optional] |

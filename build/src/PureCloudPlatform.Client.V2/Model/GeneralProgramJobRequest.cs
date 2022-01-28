@@ -105,7 +105,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Ptbr for "pt-BR"
             /// </summary>
             [EnumMember(Value = "pt-BR")]
-            Ptbr
+            Ptbr,
+            
+            /// <summary>
+            /// Enum Plpl for "pl-PL"
+            /// </summary>
+            [EnumMember(Value = "pl-PL")]
+            Plpl
         }
         
         

@@ -506,6 +506,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Agentroutinginfo,
             
             /// <summary>
+            /// Enum Analyticsreportingsettings for "AnalyticsReportingSettings"
+            /// </summary>
+            [EnumMember(Value = "AnalyticsReportingSettings")]
+            Analyticsreportingsettings,
+            
+            /// <summary>
             /// Enum Assignment for "Assignment"
             /// </summary>
             [EnumMember(Value = "Assignment")]
@@ -1020,6 +1026,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Team")]
             Team,
+            
+            /// <summary>
+            /// Enum Timeofflimit for "TimeOffLimit"
+            /// </summary>
+            [EnumMember(Value = "TimeOffLimit")]
+            Timeofflimit,
+            
+            /// <summary>
+            /// Enum Timeoffplan for "TimeOffPlan"
+            /// </summary>
+            [EnumMember(Value = "TimeOffPlan")]
+            Timeoffplan,
             
             /// <summary>
             /// Enum Timeoffrequest for "TimeOffRequest"

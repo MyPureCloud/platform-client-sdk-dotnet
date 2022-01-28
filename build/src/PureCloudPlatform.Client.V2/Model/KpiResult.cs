@@ -48,21 +48,21 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Voice for "Voice"
+            /// Enum Voice for "voice"
             /// </summary>
-            [EnumMember(Value = "Voice")]
+            [EnumMember(Value = "voice")]
             Voice,
             
             /// <summary>
-            /// Enum Email for "Email"
+            /// Enum Email for "email"
             /// </summary>
-            [EnumMember(Value = "Email")]
+            [EnumMember(Value = "email")]
             Email,
             
             /// <summary>
-            /// Enum Message for "Message"
+            /// Enum Message for "message"
             /// </summary>
-            [EnumMember(Value = "Message")]
+            [EnumMember(Value = "message")]
             Message
         }
         
@@ -102,7 +102,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Absolute metric (in which the KPI is based) total for the interactions handled by predictive routing (GPR was on)</value>
         [DataMember(Name="kpiTotalOn", EmitDefaultValue=false)]
-        public int? KpiTotalOn { get; private set; }
+        public long? KpiTotalOn { get; private set; }
         
         
         
@@ -111,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Absolute metric (in which the KPI is based) total for the interactions not routed by predictive routing (GPR was off)</value>
         [DataMember(Name="kpiTotalOff", EmitDefaultValue=false)]
-        public int? KpiTotalOff { get; private set; }
+        public long? KpiTotalOff { get; private set; }
         
         
         
@@ -120,7 +120,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Total interactions handled by predictive routing (GPR was on)</value>
         [DataMember(Name="interactionCountOn", EmitDefaultValue=false)]
-        public int? InteractionCountOn { get; private set; }
+        public long? InteractionCountOn { get; private set; }
         
         
         
@@ -129,7 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Total interactions not routed by predictive routing (GPR was off)</value>
         [DataMember(Name="interactionCountOff", EmitDefaultValue=false)]
-        public int? InteractionCountOff { get; private set; }
+        public long? InteractionCountOff { get; private set; }
         
         
         

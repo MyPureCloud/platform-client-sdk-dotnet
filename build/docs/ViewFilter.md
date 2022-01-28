@@ -145,6 +145,7 @@ title: ViewFilter
 | **JourneyUrlContainsAllConditions** | **List&lt;string&gt;** | The list of url contains all conditions to filter offer constraints | [optional] |
 | **JourneyUrlNotContainsAllConditions** | **List&lt;string&gt;** | The list of url not contains all conditions to filter offer constraints | [optional] |
 | **FlowMilestoneIds** | **List&lt;string&gt;** | The list of flow milestones to filter exports | [optional] |
+| **IsAssessmentPassed** | **bool?** | Filter to indicate if Agent passed assessment or not | [optional] |
 {: class="table table-striped"}
 
 

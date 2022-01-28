@@ -183,11 +183,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
-        /// <param name="emailFormatId">The desired media format when downloading an email recording. (optional, default to EML)</param>
-        /// <param name="chatFormatId">The desired media format when downloading a chat recording. (optional, default to ZIP)</param>
-        /// <param name="messageFormatId">The desired media format when downloading a message recording. (optional, default to ZIP)</param>
-        /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
+        /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE (optional, default to WEBM)</param>
+        /// <param name="emailFormatId">The desired media format when downloading an email recording. Valid values:EML,NONE (optional, default to EML)</param>
+        /// <param name="chatFormatId">The desired media format when downloading a chat recording. Valid values:ZIP,NONE  (optional, default to ZIP)</param>
+        /// <param name="messageFormatId">The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional, default to ZIP)</param>
+        /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <returns>Recording</returns>
@@ -202,11 +202,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
-        /// <param name="emailFormatId">The desired media format when downloading an email recording. (optional, default to EML)</param>
-        /// <param name="chatFormatId">The desired media format when downloading a chat recording. (optional, default to ZIP)</param>
-        /// <param name="messageFormatId">The desired media format when downloading a message recording. (optional, default to ZIP)</param>
-        /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
+        /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE (optional, default to WEBM)</param>
+        /// <param name="emailFormatId">The desired media format when downloading an email recording. Valid values:EML,NONE (optional, default to EML)</param>
+        /// <param name="chatFormatId">The desired media format when downloading a chat recording. Valid values:ZIP,NONE  (optional, default to ZIP)</param>
+        /// <param name="messageFormatId">The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional, default to ZIP)</param>
+        /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
@@ -263,7 +263,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<Annotation>> GetConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId);
         
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media.
+        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if recording:recording:view permission is missing.
         /// </summary>
         /// <remarks>
         /// 
@@ -274,7 +274,7 @@ namespace PureCloudPlatform.Client.V2.Api
         List<RecordingMetadata> GetConversationRecordingmetadata (string conversationId);
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media.
+        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if recording:recording:view permission is missing.
         /// </summary>
         /// <remarks>
         /// 
@@ -317,7 +317,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <returns>List&lt;Recording&gt;</returns>
         List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null);
 
@@ -330,7 +330,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
         ApiResponse<List<Recording>> GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
         
@@ -1523,11 +1523,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
-        /// <param name="emailFormatId">The desired media format when downloading an email recording. (optional, default to EML)</param>
-        /// <param name="chatFormatId">The desired media format when downloading a chat recording. (optional, default to ZIP)</param>
-        /// <param name="messageFormatId">The desired media format when downloading a message recording. (optional, default to ZIP)</param>
-        /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
+        /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE (optional, default to WEBM)</param>
+        /// <param name="emailFormatId">The desired media format when downloading an email recording. Valid values:EML,NONE (optional, default to EML)</param>
+        /// <param name="chatFormatId">The desired media format when downloading a chat recording. Valid values:ZIP,NONE  (optional, default to ZIP)</param>
+        /// <param name="messageFormatId">The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional, default to ZIP)</param>
+        /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <returns>Task of Recording</returns>
@@ -1542,11 +1542,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
-        /// <param name="emailFormatId">The desired media format when downloading an email recording. (optional, default to EML)</param>
-        /// <param name="chatFormatId">The desired media format when downloading a chat recording. (optional, default to ZIP)</param>
-        /// <param name="messageFormatId">The desired media format when downloading a message recording. (optional, default to ZIP)</param>
-        /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
+        /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE (optional, default to WEBM)</param>
+        /// <param name="emailFormatId">The desired media format when downloading an email recording. Valid values:EML,NONE (optional, default to EML)</param>
+        /// <param name="chatFormatId">The desired media format when downloading a chat recording. Valid values:ZIP,NONE  (optional, default to ZIP)</param>
+        /// <param name="messageFormatId">The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional, default to ZIP)</param>
+        /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
@@ -1603,7 +1603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> GetConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId);
         
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media.
+        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if recording:recording:view permission is missing.
         /// </summary>
         /// <remarks>
         /// 
@@ -1614,7 +1614,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<List<RecordingMetadata>> GetConversationRecordingmetadataAsync (string conversationId);
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media.
+        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if recording:recording:view permission is missing.
         /// </summary>
         /// <remarks>
         /// 
@@ -1657,7 +1657,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
         System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null);
 
@@ -1670,7 +1670,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
         
@@ -4155,11 +4155,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
-        /// <param name="emailFormatId">The desired media format when downloading an email recording. (optional, default to EML)</param>
-        /// <param name="chatFormatId">The desired media format when downloading a chat recording. (optional, default to ZIP)</param>
-        /// <param name="messageFormatId">The desired media format when downloading a message recording. (optional, default to ZIP)</param>
-        /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
+        /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE (optional, default to WEBM)</param>
+        /// <param name="emailFormatId">The desired media format when downloading an email recording. Valid values:EML,NONE (optional, default to EML)</param>
+        /// <param name="chatFormatId">The desired media format when downloading a chat recording. Valid values:ZIP,NONE  (optional, default to ZIP)</param>
+        /// <param name="messageFormatId">The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional, default to ZIP)</param>
+        /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <returns>Recording</returns>
@@ -4175,11 +4175,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
-        /// <param name="emailFormatId">The desired media format when downloading an email recording. (optional, default to EML)</param>
-        /// <param name="chatFormatId">The desired media format when downloading a chat recording. (optional, default to ZIP)</param>
-        /// <param name="messageFormatId">The desired media format when downloading a message recording. (optional, default to ZIP)</param>
-        /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
+        /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE (optional, default to WEBM)</param>
+        /// <param name="emailFormatId">The desired media format when downloading an email recording. Valid values:EML,NONE (optional, default to EML)</param>
+        /// <param name="chatFormatId">The desired media format when downloading a chat recording. Valid values:ZIP,NONE  (optional, default to ZIP)</param>
+        /// <param name="messageFormatId">The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional, default to ZIP)</param>
+        /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
@@ -4277,11 +4277,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
-        /// <param name="emailFormatId">The desired media format when downloading an email recording. (optional, default to EML)</param>
-        /// <param name="chatFormatId">The desired media format when downloading a chat recording. (optional, default to ZIP)</param>
-        /// <param name="messageFormatId">The desired media format when downloading a message recording. (optional, default to ZIP)</param>
-        /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
+        /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE (optional, default to WEBM)</param>
+        /// <param name="emailFormatId">The desired media format when downloading an email recording. Valid values:EML,NONE (optional, default to EML)</param>
+        /// <param name="chatFormatId">The desired media format when downloading a chat recording. Valid values:ZIP,NONE  (optional, default to ZIP)</param>
+        /// <param name="messageFormatId">The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional, default to ZIP)</param>
+        /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <returns>Task of Recording</returns>
@@ -4298,11 +4298,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
-        /// <param name="emailFormatId">The desired media format when downloading an email recording. (optional, default to EML)</param>
-        /// <param name="chatFormatId">The desired media format when downloading a chat recording. (optional, default to ZIP)</param>
-        /// <param name="messageFormatId">The desired media format when downloading a message recording. (optional, default to ZIP)</param>
-        /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
+        /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE (optional, default to WEBM)</param>
+        /// <param name="emailFormatId">The desired media format when downloading an email recording. Valid values:EML,NONE (optional, default to EML)</param>
+        /// <param name="chatFormatId">The desired media format when downloading a chat recording. Valid values:ZIP,NONE  (optional, default to ZIP)</param>
+        /// <param name="messageFormatId">The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional, default to ZIP)</param>
+        /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
@@ -4823,7 +4823,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. 
+        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if recording:recording:view permission is missing. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -4835,7 +4835,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. 
+        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if recording:recording:view permission is missing. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -4918,7 +4918,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. 
+        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if recording:recording:view permission is missing. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -4931,7 +4931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. 
+        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if recording:recording:view permission is missing. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -5227,7 +5227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <returns>List&lt;Recording&gt;</returns>
         public List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null)
         {
@@ -5241,7 +5241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
         public ApiResponse< List<Recording> > GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
         { 
@@ -5328,7 +5328,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
         public async System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null)
         {
@@ -5343,7 +5343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
         { 

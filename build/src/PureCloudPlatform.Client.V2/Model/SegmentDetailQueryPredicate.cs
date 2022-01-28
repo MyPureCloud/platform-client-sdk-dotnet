@@ -187,6 +187,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Exitreason,
             
             /// <summary>
+            /// Enum Extendeddeliverystatus for "extendedDeliveryStatus"
+            /// </summary>
+            [EnumMember(Value = "extendedDeliveryStatus")]
+            Extendeddeliverystatus,
+            
+            /// <summary>
             /// Enum Externalcontactid for "externalContactId"
             /// </summary>
             [EnumMember(Value = "externalContactId")]

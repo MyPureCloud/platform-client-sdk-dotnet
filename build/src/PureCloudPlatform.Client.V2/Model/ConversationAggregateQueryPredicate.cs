@@ -145,6 +145,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Conversationid,
             
             /// <summary>
+            /// Enum Conversationinitiator for "conversationInitiator"
+            /// </summary>
+            [EnumMember(Value = "conversationInitiator")]
+            Conversationinitiator,
+            
+            /// <summary>
             /// Enum Convertedfrom for "convertedFrom"
             /// </summary>
             [EnumMember(Value = "convertedFrom")]
@@ -203,6 +209,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "eligibleAgentCount")]
             Eligibleagentcount,
+            
+            /// <summary>
+            /// Enum Extendeddeliverystatus for "extendedDeliveryStatus"
+            /// </summary>
+            [EnumMember(Value = "extendedDeliveryStatus")]
+            Extendeddeliverystatus,
             
             /// <summary>
             /// Enum Externalcontactid for "externalContactId"

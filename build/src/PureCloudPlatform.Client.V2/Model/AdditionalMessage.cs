@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AdditionalMessage" /> class.
         /// </summary>
-        /// <param name="TextBody">The body of the text message. (required).</param>
+        /// <param name="TextBody">The body of the text message.  Maximum character counts are: SMS - 765 characters, other channels - 2000 characters. (required).</param>
         /// <param name="MediaIds">The media ids associated with the text message. See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage..</param>
         /// <param name="StickerIds">The sticker ids associated with the text message..</param>
         /// <param name="MessagingTemplate">The messaging template use to send a predefined canned response with the message.</param>
@@ -66,9 +66,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The body of the text message.
+        /// The body of the text message.  Maximum character counts are: SMS - 765 characters, other channels - 2000 characters.
         /// </summary>
-        /// <value>The body of the text message.</value>
+        /// <value>The body of the text message.  Maximum character counts are: SMS - 765 characters, other channels - 2000 characters.</value>
         [DataMember(Name="textBody", EmitDefaultValue=false)]
         public string TextBody { get; set; }
         

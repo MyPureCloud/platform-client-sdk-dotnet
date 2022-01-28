@@ -16,6 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetGamificationMetricdefinitions**](GamificationApi.html#getgamificationmetricdefinitions) | **GET** /api/v2/gamification/metricdefinitions | All metric definitions |
 | [**GetGamificationMetrics**](GamificationApi.html#getgamificationmetrics) | **GET** /api/v2/gamification/metrics | All gamified metrics for a given profile |
 | [**GetGamificationProfile**](GamificationApi.html#getgamificationprofile) | **GET** /api/v2/gamification/profiles/{performanceProfileId} | Performance profile by id |
+| [**GetGamificationProfileMembers**](GamificationApi.html#getgamificationprofilemembers) | **GET** /api/v2/gamification/profiles/{performanceProfileId}/members | Members of a given performance profile |
 | [**GetGamificationProfileMetric**](GamificationApi.html#getgamificationprofilemetric) | **GET** /api/v2/gamification/profiles/{profileId}/metrics/{metricId} | Performance profile gamified metric by id |
 | [**GetGamificationProfileMetrics**](GamificationApi.html#getgamificationprofilemetrics) | **GET** /api/v2/gamification/profiles/{profileId}/metrics | All gamified metrics for a given performance profile |
 | [**GetGamificationProfileMetricsObjectivedetails**](GamificationApi.html#getgamificationprofilemetricsobjectivedetails) | **GET** /api/v2/gamification/profiles/{profileId}/metrics/objectivedetails | All metrics for a given performance profile with objective details such as order and maxPoints |
@@ -45,6 +46,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostGamificationMetrics**](GamificationApi.html#postgamificationmetrics) | **POST** /api/v2/gamification/metrics | Creates a gamified metric with a given metric definition and metric objective |
 | [**PostGamificationProfileActivate**](GamificationApi.html#postgamificationprofileactivate) | **POST** /api/v2/gamification/profiles/{performanceProfileId}/activate | Activate a performance profile |
 | [**PostGamificationProfileDeactivate**](GamificationApi.html#postgamificationprofiledeactivate) | **POST** /api/v2/gamification/profiles/{performanceProfileId}/deactivate | Deactivate a performance profile |
+| [**PostGamificationProfileMembers**](GamificationApi.html#postgamificationprofilemembers) | **POST** /api/v2/gamification/profiles/{performanceProfileId}/members | Assign members to a given performance profile |
+| [**PostGamificationProfileMembersValidate**](GamificationApi.html#postgamificationprofilemembersvalidate) | **POST** /api/v2/gamification/profiles/{performanceProfileId}/members/validate | Validate member assignment |
+| [**PostGamificationProfileMetricLink**](GamificationApi.html#postgamificationprofilemetriclink) | **POST** /api/v2/gamification/profiles/{sourceProfileId}/metrics/{sourceMetricId}/link | Creates a linked metric |
 | [**PostGamificationProfileMetrics**](GamificationApi.html#postgamificationprofilemetrics) | **POST** /api/v2/gamification/profiles/{profileId}/metrics | Creates a gamified metric with a given metric definition and metric objective under in a performance profile |
 | [**PostGamificationProfiles**](GamificationApi.html#postgamificationprofiles) | **POST** /api/v2/gamification/profiles | Create a new custom performance profile |
 | [**PutGamificationMetric**](GamificationApi.html#putgamificationmetric) | **PUT** /api/v2/gamification/metrics/{metricId} | Updates a metric |
@@ -653,6 +657,71 @@ namespace Example
 ### Return type
 
 [**PerformanceProfile**](PerformanceProfile.html)
+
+<a name="getgamificationprofilemembers"></a>
+
+## [**MemberListing**](MemberListing.html) GetGamificationProfileMembers (string performanceProfileId)
+
+
+
+Members of a given performance profile
+
+
+
+Requires ANY permissions: 
+
+* gamification:profile:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationProfileMembersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var performanceProfileId = performanceProfileId_example;  // string | Performance Profile Id
+
+            try
+            { 
+                // Members of a given performance profile
+                MemberListing result = apiInstance.GetGamificationProfileMembers(performanceProfileId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationProfileMembers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **performanceProfileId** | **string**| Performance Profile Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MemberListing**](MemberListing.html)
 
 <a name="getgamificationprofilemetric"></a>
 
@@ -2407,7 +2476,7 @@ This endpoint does require any parameters.
 
 <a name="postgamificationmetrics"></a>
 
-## [**Metric**](Metric.html) PostGamificationMetrics (Metric body)
+## [**Metric**](Metric.html) PostGamificationMetrics (CreateMetric body)
 
 
 
@@ -2441,7 +2510,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new GamificationApi();
-            var body = new Metric(); // Metric | Metric
+            var body = new CreateMetric(); // CreateMetric | Metric
 
             try
             { 
@@ -2463,7 +2532,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Metric**](Metric.html)| Metric |  |
+| **body** | [**CreateMetric**](CreateMetric.html)| Metric |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2600,9 +2669,212 @@ namespace Example
 
 [**PerformanceProfile**](PerformanceProfile.html)
 
+<a name="postgamificationprofilemembers"></a>
+
+## [**Assignment**](Assignment.html) PostGamificationProfileMembers (string performanceProfileId, AssignUsers body)
+
+
+
+Assign members to a given performance profile
+
+
+
+Requires ANY permissions: 
+
+* gamification:profile:update
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostGamificationProfileMembersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var performanceProfileId = performanceProfileId_example;  // string | Performance Profile Id
+            var body = new AssignUsers(); // AssignUsers | assignUsers
+
+            try
+            { 
+                // Assign members to a given performance profile
+                Assignment result = apiInstance.PostGamificationProfileMembers(performanceProfileId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.PostGamificationProfileMembers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **performanceProfileId** | **string**| Performance Profile Id |  |
+| **body** | [**AssignUsers**](AssignUsers.html)| assignUsers |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Assignment**](Assignment.html)
+
+<a name="postgamificationprofilemembersvalidate"></a>
+
+## [**AssignmentValidation**](AssignmentValidation.html) PostGamificationProfileMembersValidate (string performanceProfileId, ValidateAssignUsers body)
+
+
+
+Validate member assignment
+
+
+
+Requires ANY permissions: 
+
+* gamification:profile:update
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostGamificationProfileMembersValidateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var performanceProfileId = performanceProfileId_example;  // string | Performance Profile Id
+            var body = new ValidateAssignUsers(); // ValidateAssignUsers | memberAssignments
+
+            try
+            { 
+                // Validate member assignment
+                AssignmentValidation result = apiInstance.PostGamificationProfileMembersValidate(performanceProfileId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.PostGamificationProfileMembersValidate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **performanceProfileId** | **string**| Performance Profile Id |  |
+| **body** | [**ValidateAssignUsers**](ValidateAssignUsers.html)| memberAssignments |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AssignmentValidation**](AssignmentValidation.html)
+
+<a name="postgamificationprofilemetriclink"></a>
+
+## [**Metric**](Metric.html) PostGamificationProfileMetricLink (string sourceProfileId, string sourceMetricId, TargetPerformanceProfile body)
+
+
+
+Creates a linked metric
+
+
+
+Requires ANY permissions: 
+
+* gamification:profile:update
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostGamificationProfileMetricLinkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var sourceProfileId = sourceProfileId_example;  // string | Source Performance Profile Id
+            var sourceMetricId = sourceMetricId_example;  // string | Source Metric Id
+            var body = new TargetPerformanceProfile(); // TargetPerformanceProfile | linkedMetric
+
+            try
+            { 
+                // Creates a linked metric
+                Metric result = apiInstance.PostGamificationProfileMetricLink(sourceProfileId, sourceMetricId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.PostGamificationProfileMetricLink: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sourceProfileId** | **string**| Source Performance Profile Id |  |
+| **sourceMetricId** | **string**| Source Metric Id |  |
+| **body** | [**TargetPerformanceProfile**](TargetPerformanceProfile.html)| linkedMetric |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Metric**](Metric.html)
+
 <a name="postgamificationprofilemetrics"></a>
 
-## [**Metric**](Metric.html) PostGamificationProfileMetrics (string profileId, Metric body)
+## [**Metric**](Metric.html) PostGamificationProfileMetrics (string profileId, CreateMetric body)
 
 
 
@@ -2637,7 +2909,7 @@ namespace Example
 
             var apiInstance = new GamificationApi();
             var profileId = profileId_example;  // string | Performance Profile Id
-            var body = new Metric(); // Metric | Metric
+            var body = new CreateMetric(); // CreateMetric | Metric
 
             try
             { 
@@ -2660,7 +2932,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **profileId** | **string**| Performance Profile Id |  |
-| **body** | [**Metric**](Metric.html)| Metric |  |
+| **body** | [**CreateMetric**](CreateMetric.html)| Metric |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2734,7 +3006,7 @@ namespace Example
 
 <a name="putgamificationmetric"></a>
 
-## [**Metric**](Metric.html) PutGamificationMetric (string metricId, Metric body, string performanceProfileId = null)
+## [**Metric**](Metric.html) PutGamificationMetric (string metricId, CreateMetric body, string performanceProfileId = null)
 
 
 
@@ -2769,7 +3041,7 @@ namespace Example
 
             var apiInstance = new GamificationApi();
             var metricId = metricId_example;  // string | metric Id
-            var body = new Metric(); // Metric | Metric
+            var body = new CreateMetric(); // CreateMetric | Metric
             var performanceProfileId = performanceProfileId_example;  // string | The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional) 
 
             try
@@ -2793,7 +3065,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **metricId** | **string**| metric Id |  |
-| **body** | [**Metric**](Metric.html)| Metric |  |
+| **body** | [**CreateMetric**](CreateMetric.html)| Metric |  |
 | **performanceProfileId** | **string**| The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. | [optional]  |
 {: class="table table-striped"}
 
@@ -2870,7 +3142,7 @@ namespace Example
 
 <a name="putgamificationprofilemetric"></a>
 
-## [**Metric**](Metric.html) PutGamificationProfileMetric (string profileId, string metricId, Metric body)
+## [**Metric**](Metric.html) PutGamificationProfileMetric (string profileId, string metricId, CreateMetric body)
 
 
 
@@ -2906,7 +3178,7 @@ namespace Example
             var apiInstance = new GamificationApi();
             var profileId = profileId_example;  // string | Performance Profile Id
             var metricId = metricId_example;  // string | Metric Id
-            var body = new Metric(); // Metric | Metric
+            var body = new CreateMetric(); // CreateMetric | Metric
 
             try
             { 
@@ -2930,7 +3202,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **profileId** | **string**| Performance Profile Id |  |
 | **metricId** | **string**| Metric Id |  |
-| **body** | [**Metric**](Metric.html)| Metric |  |
+| **body** | [**CreateMetric**](CreateMetric.html)| Metric |  |
 {: class="table table-striped"}
 
 ### Return type

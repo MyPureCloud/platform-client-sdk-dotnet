@@ -30,11 +30,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidationServiceRequest" /> class.
@@ -46,12 +41,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ValidationServiceRequest" /> class.
         /// </summary>
         /// <param name="DateImportEnded">The last day of the data you are importing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
-        /// <param name="FileUrl">File URL is deprecated, please use upload key.</param>
-        /// <param name="UploadKey">S3 key for the uploaded file.</param>
-        public ValidationServiceRequest(DateTime? DateImportEnded = null, string FileUrl = null, string UploadKey = null)
+        /// <param name="UploadKey">S3 key for the uploaded file (required).</param>
+        public ValidationServiceRequest(DateTime? DateImportEnded = null, string UploadKey = null)
         {
             this.DateImportEnded = DateImportEnded;
-            this.FileUrl = FileUrl;
             this.UploadKey = UploadKey;
             
         }
@@ -64,15 +57,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The last day of the data you are importing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateImportEnded", EmitDefaultValue=false)]
         public DateTime? DateImportEnded { get; set; }
-        
-        
-        
-        /// <summary>
-        /// File URL is deprecated, please use upload key
-        /// </summary>
-        /// <value>File URL is deprecated, please use upload key</value>
-        [DataMember(Name="fileUrl", EmitDefaultValue=false)]
-        public string FileUrl { get; set; }
         
         
         
@@ -94,7 +78,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ValidationServiceRequest {\n");
             
             sb.Append("  DateImportEnded: ").Append(DateImportEnded).Append("\n");
-            sb.Append("  FileUrl: ").Append(FileUrl).Append("\n");
             sb.Append("  UploadKey: ").Append(UploadKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -142,11 +125,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateImportEnded.Equals(other.DateImportEnded)
                 ) &&
                 (
-                    this.FileUrl == other.FileUrl ||
-                    this.FileUrl != null &&
-                    this.FileUrl.Equals(other.FileUrl)
-                ) &&
-                (
                     this.UploadKey == other.UploadKey ||
                     this.UploadKey != null &&
                     this.UploadKey.Equals(other.UploadKey)
@@ -167,9 +145,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DateImportEnded != null)
                     hash = hash * 59 + this.DateImportEnded.GetHashCode();
-                
-                if (this.FileUrl != null)
-                    hash = hash * 59 + this.FileUrl.GetHashCode();
                 
                 if (this.UploadKey != null)
                     hash = hash * 59 + this.UploadKey.GetHashCode();

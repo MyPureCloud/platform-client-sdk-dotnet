@@ -37,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ServerDate> GetDateWithHttpInfo ();
         
         /// <summary>
-        /// Get public ip address ranges for PureCloud
+        /// Get public ip address ranges for Genesys Cloud
         /// </summary>
         /// <remarks>
         /// 
@@ -47,7 +47,7 @@ namespace PureCloudPlatform.Client.V2.Api
         IpAddressRangeListing GetIpranges ();
 
         /// <summary>
-        /// Get public ip address ranges for PureCloud
+        /// Get public ip address ranges for Genesys Cloud
         /// </summary>
         /// <remarks>
         /// 
@@ -127,7 +127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ServerDate>> GetDateAsyncWithHttpInfo ();
         
         /// <summary>
-        /// Get public ip address ranges for PureCloud
+        /// Get public ip address ranges for Genesys Cloud
         /// </summary>
         /// <remarks>
         /// 
@@ -137,7 +137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<IpAddressRangeListing> GetIprangesAsync ();
 
         /// <summary>
-        /// Get public ip address ranges for PureCloud
+        /// Get public ip address ranges for Genesys Cloud
         /// </summary>
         /// <remarks>
         /// 
@@ -465,7 +465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get public ip address ranges for PureCloud 
+        /// Get public ip address ranges for Genesys Cloud 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>IpAddressRangeListing</returns>
@@ -476,7 +476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get public ip address ranges for PureCloud 
+        /// Get public ip address ranges for Genesys Cloud 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of IpAddressRangeListing</returns>
@@ -554,7 +554,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get public ip address ranges for PureCloud 
+        /// Get public ip address ranges for Genesys Cloud 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of IpAddressRangeListing</returns>
@@ -566,7 +566,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get public ip address ranges for PureCloud 
+        /// Get public ip address ranges for Genesys Cloud 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (IpAddressRangeListing)</returns>

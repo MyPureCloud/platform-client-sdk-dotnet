@@ -26,6 +26,133 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Indicates the participant purpose of the participant initiating a message conversation
+        /// </summary>
+        /// <value>Indicates the participant purpose of the participant initiating a message conversation</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ConversationInitiatorEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Acd for "acd"
+            /// </summary>
+            [EnumMember(Value = "acd")]
+            Acd,
+            
+            /// <summary>
+            /// Enum Agent for "agent"
+            /// </summary>
+            [EnumMember(Value = "agent")]
+            Agent,
+            
+            /// <summary>
+            /// Enum Api for "api"
+            /// </summary>
+            [EnumMember(Value = "api")]
+            Api,
+            
+            /// <summary>
+            /// Enum Botflow for "botflow"
+            /// </summary>
+            [EnumMember(Value = "botflow")]
+            Botflow,
+            
+            /// <summary>
+            /// Enum Campaign for "campaign"
+            /// </summary>
+            [EnumMember(Value = "campaign")]
+            Campaign,
+            
+            /// <summary>
+            /// Enum Customer for "customer"
+            /// </summary>
+            [EnumMember(Value = "customer")]
+            Customer,
+            
+            /// <summary>
+            /// Enum Dialer for "dialer"
+            /// </summary>
+            [EnumMember(Value = "dialer")]
+            Dialer,
+            
+            /// <summary>
+            /// Enum External for "external"
+            /// </summary>
+            [EnumMember(Value = "external")]
+            External,
+            
+            /// <summary>
+            /// Enum Fax for "fax"
+            /// </summary>
+            [EnumMember(Value = "fax")]
+            Fax,
+            
+            /// <summary>
+            /// Enum Group for "group"
+            /// </summary>
+            [EnumMember(Value = "group")]
+            Group,
+            
+            /// <summary>
+            /// Enum Inbound for "inbound"
+            /// </summary>
+            [EnumMember(Value = "inbound")]
+            Inbound,
+            
+            /// <summary>
+            /// Enum Ivr for "ivr"
+            /// </summary>
+            [EnumMember(Value = "ivr")]
+            Ivr,
+            
+            /// <summary>
+            /// Enum Manual for "manual"
+            /// </summary>
+            [EnumMember(Value = "manual")]
+            Manual,
+            
+            /// <summary>
+            /// Enum Outbound for "outbound"
+            /// </summary>
+            [EnumMember(Value = "outbound")]
+            Outbound,
+            
+            /// <summary>
+            /// Enum Station for "station"
+            /// </summary>
+            [EnumMember(Value = "station")]
+            Station,
+            
+            /// <summary>
+            /// Enum User for "user"
+            /// </summary>
+            [EnumMember(Value = "user")]
+            User,
+            
+            /// <summary>
+            /// Enum Voicemail for "voicemail"
+            /// </summary>
+            [EnumMember(Value = "voicemail")]
+            Voicemail,
+            
+            /// <summary>
+            /// Enum Workflow for "workflow"
+            /// </summary>
+            [EnumMember(Value = "workflow")]
+            Workflow
+        }
+        
+        
+        
+        
         
         
         
@@ -95,6 +222,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Indicates the participant purpose of the participant initiating a message conversation
+        /// </summary>
+        /// <value>Indicates the participant purpose of the participant initiating a message conversation</value>
+        [DataMember(Name="conversationInitiator", EmitDefaultValue=false)]
+        public ConversationInitiatorEnum? ConversationInitiator { get; set; }
+        
+        
+        
         
         
         
@@ -131,6 +267,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ConversationEnd">The end time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ConversationId">Unique identifier for the conversation.</param>
+        /// <param name="ConversationInitiator">Indicates the participant purpose of the participant initiating a message conversation.</param>
         /// <param name="ConversationStart">The start time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DivisionIds">Identifier(s) of division(s) associated with a conversation.</param>
         /// <param name="ExternalTag">External tag for the conversation.</param>
@@ -143,10 +280,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Surveys">Surveys associated with this conversation.</param>
         /// <param name="Resolutions">Resolutions associated with this conversation.</param>
         /// <param name="Participants">Participants in the conversation.</param>
-        public AnalyticsConversationWithoutAttributes(DateTime? ConversationEnd = null, string ConversationId = null, DateTime? ConversationStart = null, List<string> DivisionIds = null, string ExternalTag = null, List<string> KnowledgeBaseIds = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, bool? SelfServed = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<AnalyticsResolution> Resolutions = null, List<AnalyticsParticipantWithoutAttributes> Participants = null)
+        public AnalyticsConversationWithoutAttributes(DateTime? ConversationEnd = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, DateTime? ConversationStart = null, List<string> DivisionIds = null, string ExternalTag = null, List<string> KnowledgeBaseIds = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, bool? SelfServed = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<AnalyticsResolution> Resolutions = null, List<AnalyticsParticipantWithoutAttributes> Participants = null)
         {
             this.ConversationEnd = ConversationEnd;
             this.ConversationId = ConversationId;
+            this.ConversationInitiator = ConversationInitiator;
             this.ConversationStart = ConversationStart;
             this.DivisionIds = DivisionIds;
             this.ExternalTag = ExternalTag;
@@ -179,6 +317,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Unique identifier for the conversation</value>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
+        
+        
         
         
         
@@ -293,6 +433,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  ConversationEnd: ").Append(ConversationEnd).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
+            sb.Append("  ConversationInitiator: ").Append(ConversationInitiator).Append("\n");
             sb.Append("  ConversationStart: ").Append(ConversationStart).Append("\n");
             sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
             sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
@@ -354,6 +495,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationId == other.ConversationId ||
                     this.ConversationId != null &&
                     this.ConversationId.Equals(other.ConversationId)
+                ) &&
+                (
+                    this.ConversationInitiator == other.ConversationInitiator ||
+                    this.ConversationInitiator != null &&
+                    this.ConversationInitiator.Equals(other.ConversationInitiator)
                 ) &&
                 (
                     this.ConversationStart == other.ConversationStart ||
@@ -434,6 +580,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
+                
+                if (this.ConversationInitiator != null)
+                    hash = hash * 59 + this.ConversationInitiator.GetHashCode();
                 
                 if (this.ConversationStart != null)
                     hash = hash * 59 + this.ConversationStart.GetHashCode();

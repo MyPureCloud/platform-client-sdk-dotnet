@@ -35,6 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Activity for which the user is scheduled
         /// </summary>
@@ -436,6 +439,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Activity for which the user is scheduled
         /// </summary>
@@ -541,6 +546,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The user for whom this status applies</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public UserReference User { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The business unit to which this user belongs
+        /// </summary>
+        /// <value>The business unit to which this user belongs</value>
+        [DataMember(Name="businessUnit", EmitDefaultValue=false)]
+        public BusinessUnit BusinessUnit { get; private set; }
         
         
         
@@ -657,6 +671,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  BusinessUnit: ").Append(BusinessUnit).Append("\n");
             sb.Append("  ManagementUnit: ").Append(ManagementUnit).Append("\n");
             sb.Append("  Team: ").Append(Team).Append("\n");
             sb.Append("  ScheduledActivityCategory: ").Append(ScheduledActivityCategory).Append("\n");
@@ -727,6 +742,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
+                ) &&
+                (
+                    this.BusinessUnit == other.BusinessUnit ||
+                    this.BusinessUnit != null &&
+                    this.BusinessUnit.Equals(other.BusinessUnit)
                 ) &&
                 (
                     this.ManagementUnit == other.ManagementUnit ||
@@ -830,6 +850,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
+                if (this.BusinessUnit != null)
+                    hash = hash * 59 + this.BusinessUnit.GetHashCode();
                 
                 if (this.ManagementUnit != null)
                     hash = hash * 59 + this.ManagementUnit.GetHashCode();

@@ -165,11 +165,21 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
+        
+        
         
         
         
@@ -196,16 +206,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The flow name (required).</param>
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Type">Type.</param>
+        /// <param name="Description">the flow description.</param>
         /// <param name="InputSchema">json schema describing the inputs for the flow.</param>
         /// <param name="OutputSchema">json schema describing the outputs for the flow.</param>
         /// <param name="PublishedVersion">published version information if there is a published version.</param>
         /// <param name="DebugVersion">debug version information if there is a debug version.</param>
-        public FlowDivisionView(string Id = null, string Name = null, WritableDivision Division = null, TypeEnum? Type = null, JsonSchemaDocument InputSchema = null, JsonSchemaDocument OutputSchema = null, FlowVersion PublishedVersion = null, FlowVersion DebugVersion = null)
+        public FlowDivisionView(string Id = null, string Name = null, WritableDivision Division = null, TypeEnum? Type = null, string Description = null, JsonSchemaDocument InputSchema = null, JsonSchemaDocument OutputSchema = null, FlowVersion PublishedVersion = null, FlowVersion DebugVersion = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Division = Division;
             this.Type = Type;
+            this.Description = Description;
             this.InputSchema = InputSchema;
             this.OutputSchema = OutputSchema;
             this.PublishedVersion = PublishedVersion;
@@ -245,6 +257,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// the flow description
+        /// </summary>
+        /// <value>the flow description</value>
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
+        
+        
+        
+        /// <summary>
         /// json schema describing the inputs for the flow
         /// </summary>
         /// <value>json schema describing the inputs for the flow</value>
@@ -259,6 +280,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>json schema describing the outputs for the flow</value>
         [DataMember(Name="outputSchema", EmitDefaultValue=false)]
         public JsonSchemaDocument OutputSchema { get; set; }
+        
+        
+        
+        /// <summary>
+        /// List of supported languages for the published version of the flow.
+        /// </summary>
+        /// <value>List of supported languages for the published version of the flow.</value>
+        [DataMember(Name="supportedLanguages", EmitDefaultValue=false)]
+        public List<SupportedLanguage> SupportedLanguages { get; private set; }
         
         
         
@@ -301,8 +331,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  InputSchema: ").Append(InputSchema).Append("\n");
             sb.Append("  OutputSchema: ").Append(OutputSchema).Append("\n");
+            sb.Append("  SupportedLanguages: ").Append(SupportedLanguages).Append("\n");
             sb.Append("  PublishedVersion: ").Append(PublishedVersion).Append("\n");
             sb.Append("  DebugVersion: ").Append(DebugVersion).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -367,6 +399,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type.Equals(other.Type)
                 ) &&
                 (
+                    this.Description == other.Description ||
+                    this.Description != null &&
+                    this.Description.Equals(other.Description)
+                ) &&
+                (
                     this.InputSchema == other.InputSchema ||
                     this.InputSchema != null &&
                     this.InputSchema.Equals(other.InputSchema)
@@ -375,6 +412,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OutputSchema == other.OutputSchema ||
                     this.OutputSchema != null &&
                     this.OutputSchema.Equals(other.OutputSchema)
+                ) &&
+                (
+                    this.SupportedLanguages == other.SupportedLanguages ||
+                    this.SupportedLanguages != null &&
+                    this.SupportedLanguages.SequenceEqual(other.SupportedLanguages)
                 ) &&
                 (
                     this.PublishedVersion == other.PublishedVersion ||
@@ -417,11 +459,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
                 
+                if (this.Description != null)
+                    hash = hash * 59 + this.Description.GetHashCode();
+                
                 if (this.InputSchema != null)
                     hash = hash * 59 + this.InputSchema.GetHashCode();
                 
                 if (this.OutputSchema != null)
                     hash = hash * 59 + this.OutputSchema.GetHashCode();
+                
+                if (this.SupportedLanguages != null)
+                    hash = hash * 59 + this.SupportedLanguages.GetHashCode();
                 
                 if (this.PublishedVersion != null)
                     hash = hash * 59 + this.PublishedVersion.GetHashCode();

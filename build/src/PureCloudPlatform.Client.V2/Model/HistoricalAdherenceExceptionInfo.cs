@@ -355,13 +355,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="StartOffsetSeconds">Exception start offset in seconds relative to query start time.</param>
         /// <param name="EndOffsetSeconds">Exception end offset in seconds relative to query start time.</param>
-        /// <param name="ScheduledActivityCodeId">The ID of the scheduled activity for this user.</param>
+        /// <param name="ScheduledActivityCodeId">The ID of the scheduled activity code for this user.</param>
         /// <param name="ScheduledActivityCategory">Activity for which the user is scheduled.</param>
         /// <param name="ActualActivityCategory">Activity for which the user is actually engaged.</param>
         /// <param name="SystemPresence">Actual underlying system presence value.</param>
         /// <param name="RoutingStatus">Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue.</param>
         /// <param name="Impact">The impact of the current adherence state for this user.</param>
-        /// <param name="SecondaryPresenceLookupId">The lookup ID used to retrieve secondary status from map of lookup ID to corresponding secondary presence ID.</param>
+        /// <param name="SecondaryPresenceLookupId">The lookup ID used to retrieve the actual secondary status from map of lookup ID to corresponding secondary presence ID.</param>
         public HistoricalAdherenceExceptionInfo(int? StartOffsetSeconds = null, int? EndOffsetSeconds = null, string ScheduledActivityCodeId = null, ScheduledActivityCategoryEnum? ScheduledActivityCategory = null, ActualActivityCategoryEnum? ActualActivityCategory = null, SystemPresenceEnum? SystemPresence = null, RoutingStatus RoutingStatus = null, ImpactEnum? Impact = null, string SecondaryPresenceLookupId = null)
         {
             this.StartOffsetSeconds = StartOffsetSeconds;
@@ -397,9 +397,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The ID of the scheduled activity for this user
+        /// The ID of the scheduled activity code for this user
         /// </summary>
-        /// <value>The ID of the scheduled activity for this user</value>
+        /// <value>The ID of the scheduled activity code for this user</value>
         [DataMember(Name="scheduledActivityCodeId", EmitDefaultValue=false)]
         public string ScheduledActivityCodeId { get; set; }
         
@@ -423,9 +423,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The lookup ID used to retrieve secondary status from map of lookup ID to corresponding secondary presence ID
+        /// The lookup ID used to retrieve the actual secondary status from map of lookup ID to corresponding secondary presence ID
         /// </summary>
-        /// <value>The lookup ID used to retrieve secondary status from map of lookup ID to corresponding secondary presence ID</value>
+        /// <value>The lookup ID used to retrieve the actual secondary status from map of lookup ID to corresponding secondary presence ID</value>
         [DataMember(Name="secondaryPresenceLookupId", EmitDefaultValue=false)]
         public string SecondaryPresenceLookupId { get; set; }
         

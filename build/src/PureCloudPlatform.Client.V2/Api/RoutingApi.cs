@@ -1336,10 +1336,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)</param>
         /// <param name="phoneNumberType">Filter on phone number type (optional)</param>
         /// <param name="phoneNumberStatus">Filter on phone number status (optional)</param>
+        /// <param name="countryCode">Filter on country code (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Optional field to sort results (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to en-US)</param>
         /// <returns>SmsPhoneNumberEntityListing</returns>
-        SmsPhoneNumberEntityListing GetRoutingSmsPhonenumbers (string phoneNumber = null, string phoneNumberType = null, string phoneNumberStatus = null, int? pageSize = null, int? pageNumber = null);
+        SmsPhoneNumberEntityListing GetRoutingSmsPhonenumbers (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null);
 
         /// <summary>
         /// Get a list of provisioned phone numbers.
@@ -1351,10 +1355,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)</param>
         /// <param name="phoneNumberType">Filter on phone number type (optional)</param>
         /// <param name="phoneNumberStatus">Filter on phone number status (optional)</param>
+        /// <param name="countryCode">Filter on country code (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Optional field to sort results (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to en-US)</param>
         /// <returns>ApiResponse of SmsPhoneNumberEntityListing</returns>
-        ApiResponse<SmsPhoneNumberEntityListing> GetRoutingSmsPhonenumbersWithHttpInfo (string phoneNumber = null, string phoneNumberType = null, string phoneNumberStatus = null, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<SmsPhoneNumberEntityListing> GetRoutingSmsPhonenumbersWithHttpInfo (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null);
         
         /// <summary>
         /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
@@ -3884,10 +3892,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)</param>
         /// <param name="phoneNumberType">Filter on phone number type (optional)</param>
         /// <param name="phoneNumberStatus">Filter on phone number status (optional)</param>
+        /// <param name="countryCode">Filter on country code (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Optional field to sort results (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to en-US)</param>
         /// <returns>Task of SmsPhoneNumberEntityListing</returns>
-        System.Threading.Tasks.Task<SmsPhoneNumberEntityListing> GetRoutingSmsPhonenumbersAsync (string phoneNumber = null, string phoneNumberType = null, string phoneNumberStatus = null, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<SmsPhoneNumberEntityListing> GetRoutingSmsPhonenumbersAsync (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null);
 
         /// <summary>
         /// Get a list of provisioned phone numbers.
@@ -3899,10 +3911,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)</param>
         /// <param name="phoneNumberType">Filter on phone number type (optional)</param>
         /// <param name="phoneNumberStatus">Filter on phone number status (optional)</param>
+        /// <param name="countryCode">Filter on country code (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Optional field to sort results (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to en-US)</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumberEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumberEntityListing>> GetRoutingSmsPhonenumbersAsyncWithHttpInfo (string phoneNumber = null, string phoneNumberType = null, string phoneNumberStatus = null, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumberEntityListing>> GetRoutingSmsPhonenumbersAsyncWithHttpInfo (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null);
         
         /// <summary>
         /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
@@ -15771,12 +15787,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)</param>
         /// <param name="phoneNumberType">Filter on phone number type (optional)</param>
         /// <param name="phoneNumberStatus">Filter on phone number status (optional)</param>
+        /// <param name="countryCode">Filter on country code (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Optional field to sort results (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to en-US)</param>
         /// <returns>SmsPhoneNumberEntityListing</returns>
-        public SmsPhoneNumberEntityListing GetRoutingSmsPhonenumbers (string phoneNumber = null, string phoneNumberType = null, string phoneNumberStatus = null, int? pageSize = null, int? pageNumber = null)
+        public SmsPhoneNumberEntityListing GetRoutingSmsPhonenumbers (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null)
         {
-             ApiResponse<SmsPhoneNumberEntityListing> localVarResponse = GetRoutingSmsPhonenumbersWithHttpInfo(phoneNumber, phoneNumberType, phoneNumberStatus, pageSize, pageNumber);
+             ApiResponse<SmsPhoneNumberEntityListing> localVarResponse = GetRoutingSmsPhonenumbersWithHttpInfo(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language);
              return localVarResponse.Data;
         }
 
@@ -15787,10 +15807,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)</param>
         /// <param name="phoneNumberType">Filter on phone number type (optional)</param>
         /// <param name="phoneNumberStatus">Filter on phone number status (optional)</param>
+        /// <param name="countryCode">Filter on country code (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Optional field to sort results (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to en-US)</param>
         /// <returns>ApiResponse of SmsPhoneNumberEntityListing</returns>
-        public ApiResponse< SmsPhoneNumberEntityListing > GetRoutingSmsPhonenumbersWithHttpInfo (string phoneNumber = null, string phoneNumberType = null, string phoneNumberStatus = null, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< SmsPhoneNumberEntityListing > GetRoutingSmsPhonenumbersWithHttpInfo (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null)
         { 
 
             var localVarPath = "/api/v2/routing/sms/phonenumbers";
@@ -15827,10 +15851,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (phoneNumber != null) localVarQueryParams.Add(new Tuple<string, string>("phoneNumber", this.Configuration.ApiClient.ParameterToString(phoneNumber)));
-            if (phoneNumberType != null) localVarQueryParams.Add(new Tuple<string, string>("phoneNumberType", this.Configuration.ApiClient.ParameterToString(phoneNumberType)));
-            if (phoneNumberStatus != null) localVarQueryParams.Add(new Tuple<string, string>("phoneNumberStatus", this.Configuration.ApiClient.ParameterToString(phoneNumberStatus)));
+            if (phoneNumberType != null) phoneNumberType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("phoneNumberType", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (phoneNumberStatus != null) phoneNumberStatus.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("phoneNumberStatus", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (countryCode != null) countryCode.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("countryCode", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
 
             // Header params
 
@@ -15875,12 +15903,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)</param>
         /// <param name="phoneNumberType">Filter on phone number type (optional)</param>
         /// <param name="phoneNumberStatus">Filter on phone number status (optional)</param>
+        /// <param name="countryCode">Filter on country code (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Optional field to sort results (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to en-US)</param>
         /// <returns>Task of SmsPhoneNumberEntityListing</returns>
-        public async System.Threading.Tasks.Task<SmsPhoneNumberEntityListing> GetRoutingSmsPhonenumbersAsync (string phoneNumber = null, string phoneNumberType = null, string phoneNumberStatus = null, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<SmsPhoneNumberEntityListing> GetRoutingSmsPhonenumbersAsync (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null)
         {
-             ApiResponse<SmsPhoneNumberEntityListing> localVarResponse = await GetRoutingSmsPhonenumbersAsyncWithHttpInfo(phoneNumber, phoneNumberType, phoneNumberStatus, pageSize, pageNumber);
+             ApiResponse<SmsPhoneNumberEntityListing> localVarResponse = await GetRoutingSmsPhonenumbersAsyncWithHttpInfo(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language);
              return localVarResponse.Data;
 
         }
@@ -15892,10 +15924,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)</param>
         /// <param name="phoneNumberType">Filter on phone number type (optional)</param>
         /// <param name="phoneNumberStatus">Filter on phone number status (optional)</param>
+        /// <param name="countryCode">Filter on country code (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Optional field to sort results (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to en-US)</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumberEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumberEntityListing>> GetRoutingSmsPhonenumbersAsyncWithHttpInfo (string phoneNumber = null, string phoneNumberType = null, string phoneNumberStatus = null, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumberEntityListing>> GetRoutingSmsPhonenumbersAsyncWithHttpInfo (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null)
         { 
 
             var localVarPath = "/api/v2/routing/sms/phonenumbers";
@@ -15932,10 +15968,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (phoneNumber != null) localVarQueryParams.Add(new Tuple<string, string>("phoneNumber", this.Configuration.ApiClient.ParameterToString(phoneNumber)));
-            if (phoneNumberType != null) localVarQueryParams.Add(new Tuple<string, string>("phoneNumberType", this.Configuration.ApiClient.ParameterToString(phoneNumberType)));
-            if (phoneNumberStatus != null) localVarQueryParams.Add(new Tuple<string, string>("phoneNumberStatus", this.Configuration.ApiClient.ParameterToString(phoneNumberStatus)));
+            if (phoneNumberType != null) phoneNumberType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("phoneNumberType", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (phoneNumberStatus != null) phoneNumberStatus.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("phoneNumberStatus", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (countryCode != null) countryCode.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("countryCode", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
 
             // Header params
 

@@ -88,12 +88,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The status of the coaching appointment.
         /// </summary>
         /// <value>The status of the coaching appointment.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
+        
+        
+        
+        
         
         
     
@@ -107,7 +117,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationIds">IDs of conversations associated with this coaching appointment..</param>
         /// <param name="DocumentIds">IDs of documents associated with this coaching appointment..</param>
         /// <param name="Status">The status of the coaching appointment..</param>
-        public UpdateCoachingAppointmentRequest(string Name = null, string Description = null, DateTime? DateStart = null, int? LengthInMinutes = null, List<string> ConversationIds = null, List<string> DocumentIds = null, StatusEnum? Status = null)
+        /// <param name="WfmSchedule">The Workforce Management schedule the appointment is associated with..</param>
+        /// <param name="ExternalLinks">The list of external links related to the appointment.</param>
+        public UpdateCoachingAppointmentRequest(string Name = null, string Description = null, DateTime? DateStart = null, int? LengthInMinutes = null, List<string> ConversationIds = null, List<string> DocumentIds = null, StatusEnum? Status = null, WfmScheduleReference WfmSchedule = null, List<string> ExternalLinks = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -116,6 +128,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConversationIds = ConversationIds;
             this.DocumentIds = DocumentIds;
             this.Status = Status;
+            this.WfmSchedule = WfmSchedule;
+            this.ExternalLinks = ExternalLinks;
             
         }
         
@@ -176,6 +190,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// The Workforce Management schedule the appointment is associated with.
+        /// </summary>
+        /// <value>The Workforce Management schedule the appointment is associated with.</value>
+        [DataMember(Name="wfmSchedule", EmitDefaultValue=false)]
+        public WfmScheduleReference WfmSchedule { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of external links related to the appointment
+        /// </summary>
+        /// <value>The list of external links related to the appointment</value>
+        [DataMember(Name="externalLinks", EmitDefaultValue=false)]
+        public List<string> ExternalLinks { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -192,6 +224,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationIds: ").Append(ConversationIds).Append("\n");
             sb.Append("  DocumentIds: ").Append(DocumentIds).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  WfmSchedule: ").Append(WfmSchedule).Append("\n");
+            sb.Append("  ExternalLinks: ").Append(ExternalLinks).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -266,6 +300,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
+                ) &&
+                (
+                    this.WfmSchedule == other.WfmSchedule ||
+                    this.WfmSchedule != null &&
+                    this.WfmSchedule.Equals(other.WfmSchedule)
+                ) &&
+                (
+                    this.ExternalLinks == other.ExternalLinks ||
+                    this.ExternalLinks != null &&
+                    this.ExternalLinks.SequenceEqual(other.ExternalLinks)
                 );
         }
 
@@ -301,6 +345,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+                
+                if (this.WfmSchedule != null)
+                    hash = hash * 59 + this.WfmSchedule.GetHashCode();
+                
+                if (this.ExternalLinks != null)
+                    hash = hash * 59 + this.ExternalLinks.GetHashCode();
                 
                 return hash;
             }

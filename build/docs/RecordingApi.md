@@ -17,7 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationRecording**](RecordingApi.html#getconversationrecording) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Gets a specific recording. |
 | [**GetConversationRecordingAnnotation**](RecordingApi.html#getconversationrecordingannotation) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Get annotation |
 | [**GetConversationRecordingAnnotations**](RecordingApi.html#getconversationrecordingannotations) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Get annotations for recording |
-| [**GetConversationRecordingmetadata**](RecordingApi.html#getconversationrecordingmetadata) | **GET** /api/v2/conversations/{conversationId}/recordingmetadata | Get recording metadata for a conversation. Does not return playable media. |
+| [**GetConversationRecordingmetadata**](RecordingApi.html#getconversationrecordingmetadata) | **GET** /api/v2/conversations/{conversationId}/recordingmetadata | Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if recording:recording:view permission is missing. |
 | [**GetConversationRecordingmetadataRecordingId**](RecordingApi.html#getconversationrecordingmetadatarecordingid) | **GET** /api/v2/conversations/{conversationId}/recordingmetadata/{recordingId} | Get metadata for a specific recording. Does not return playable media. |
 | [**GetConversationRecordings**](RecordingApi.html#getconversationrecordings) | **GET** /api/v2/conversations/{conversationId}/recordings | Get all of a Conversation&#39;s Recordings. |
 | [**GetOrphanrecording**](RecordingApi.html#getorphanrecording) | **GET** /api/v2/orphanrecordings/{orphanId} | Gets a single orphan recording |
@@ -529,6 +529,7 @@ Gets a specific recording.
 Requires ANY permissions: 
 
 * recording:recording:view
+* recording:recordingSegment:view
 
 ### Example
 ```{"language":"csharp"}
@@ -554,11 +555,11 @@ namespace Example
             var apiInstance = new RecordingApi();
             var conversationId = conversationId_example;  // string | Conversation ID
             var recordingId = recordingId_example;  // string | Recording ID
-            var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
-            var emailFormatId = emailFormatId_example;  // string | The desired media format when downloading an email recording. (optional)  (default to EML)
-            var chatFormatId = chatFormatId_example;  // string | The desired media format when downloading a chat recording. (optional)  (default to ZIP)
-            var messageFormatId = messageFormatId_example;  // string | The desired media format when downloading a message recording. (optional)  (default to ZIP)
-            var download = true;  // bool? | requesting a download format of the recording (optional)  (default to false)
+            var formatId = formatId_example;  // string | The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE (optional)  (default to WEBM)
+            var emailFormatId = emailFormatId_example;  // string | The desired media format when downloading an email recording. Valid values:EML,NONE (optional)  (default to EML)
+            var chatFormatId = chatFormatId_example;  // string | The desired media format when downloading a chat recording. Valid values:ZIP,NONE  (optional)  (default to ZIP)
+            var messageFormatId = messageFormatId_example;  // string | The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional)  (default to ZIP)
+            var download = true;  // bool? | requesting a download format of the recording. Valid values:true,false (optional)  (default to false)
             var fileName = fileName_example;  // string | the name of the downloaded fileName (optional) 
             var locale = locale_example;  // string | The locale for the requested file when downloading, as an ISO 639-1 code (optional) 
 
@@ -584,11 +585,11 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
-| **formatId** | **string**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
-| **emailFormatId** | **string**| The desired media format when downloading an email recording. | [optional] [default to EML]<br />**Values**: EML, NONE |
-| **chatFormatId** | **string**| The desired media format when downloading a chat recording. | [optional] [default to ZIP]<br />**Values**: ZIP, NONE |
-| **messageFormatId** | **string**| The desired media format when downloading a message recording. | [optional] [default to ZIP]<br />**Values**: ZIP, NONE |
-| **download** | **bool?**| requesting a download format of the recording | [optional] [default to false] |
+| **formatId** | **string**| The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
+| **emailFormatId** | **string**| The desired media format when downloading an email recording. Valid values:EML,NONE | [optional] [default to EML]<br />**Values**: EML, NONE |
+| **chatFormatId** | **string**| The desired media format when downloading a chat recording. Valid values:ZIP,NONE  | [optional] [default to ZIP]<br />**Values**: ZIP, NONE |
+| **messageFormatId** | **string**| The desired media format when downloading a message recording. Valid values:ZIP,NONE | [optional] [default to ZIP]<br />**Values**: ZIP, NONE |
+| **download** | **bool?**| requesting a download format of the recording. Valid values:true,false | [optional] [default to false] |
 | **fileName** | **string**| the name of the downloaded fileName | [optional]  |
 | **locale** | **string**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional]  |
 {: class="table table-striped"}
@@ -739,12 +740,14 @@ namespace Example
 
 
 
-Get recording metadata for a conversation. Does not return playable media.
+Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if recording:recording:view permission is missing.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* recording:recording:view
+* recording:recordingSegment:view
 
 ### Example
 ```{"language":"csharp"}
@@ -772,7 +775,7 @@ namespace Example
 
             try
             { 
-                // Get recording metadata for a conversation. Does not return playable media.
+                // Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if recording:recording:view permission is missing.
                 List<RecordingMetadata> result = apiInstance.GetConversationRecordingmetadata(conversationId);
                 Debug.WriteLine(result);
             }
@@ -810,6 +813,7 @@ Get metadata for a specific recording. Does not return playable media.
 Requires ANY permissions: 
 
 * recording:recording:view
+* recording:recordingSegment:view
 
 ### Example
 ```{"language":"csharp"}
@@ -874,9 +878,10 @@ Get all of a Conversation's Recordings.
 
 
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * recording:recording:view
+* recording:recordingSegment:view
 
 ### Example
 ```{"language":"csharp"}
@@ -902,7 +907,7 @@ namespace Example
             var apiInstance = new RecordingApi();
             var conversationId = conversationId_example;  // string | Conversation ID
             var maxWaitMs = 56;  // int? | The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional)  (default to 5000)
-            var formatId = formatId_example;  // string | The desired media format (optional)  (default to WEBM)
+            var formatId = formatId_example;  // string | The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional)  (default to WEBM)
 
             try
             { 
@@ -926,7 +931,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **maxWaitMs** | **int?**| The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. | [optional] [default to 5000] |
-| **formatId** | **string**| The desired media format | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
+| **formatId** | **string**| The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
 {: class="table table-striped"}
 
 ### Return type
@@ -3110,6 +3115,8 @@ Update annotation
 Requires ANY permissions: 
 
 * recording:annotation:edit
+* recording:recording:view
+* recording:recordingSegment:view
 
 ### Example
 ```{"language":"csharp"}

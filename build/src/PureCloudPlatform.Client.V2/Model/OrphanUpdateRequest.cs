@@ -35,17 +35,31 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="OrphanUpdateRequest" /> class.
         /// </summary>
         /// <param name="ArchiveDate">The orphan recording&#39;s archive date. Must be greater than 1 day from now if set. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="DeleteDate">The orphan recording&#39;s delete date. Must be greater than archiveDate if set, otherwise one day from now. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="DeleteDate">The orphan recording&#39;s delete date. Must be greater than archiveDate and exportDate if set, otherwise one day from now. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="ExportDate">The orphan recording&#39;s export date. Must be greater than 1 day from now if set. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="IntegrationId">IntegrationId to access AWS S3 bucket for export. This field is required if exportDate is set..</param>
         /// <param name="ConversationId">A conversation Id that this orphan&#39;s recording is to be attached to. If not present, the conversationId will be deduced from the recording media..</param>
-        public OrphanUpdateRequest(DateTime? ArchiveDate = null, DateTime? DeleteDate = null, string ConversationId = null)
+        public OrphanUpdateRequest(DateTime? ArchiveDate = null, DateTime? DeleteDate = null, DateTime? ExportDate = null, string IntegrationId = null, string ConversationId = null)
         {
             this.ArchiveDate = ArchiveDate;
             this.DeleteDate = DeleteDate;
+            this.ExportDate = ExportDate;
+            this.IntegrationId = IntegrationId;
             this.ConversationId = ConversationId;
             
         }
@@ -62,11 +76,29 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The orphan recording&#39;s delete date. Must be greater than archiveDate if set, otherwise one day from now. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// The orphan recording&#39;s delete date. Must be greater than archiveDate and exportDate if set, otherwise one day from now. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The orphan recording&#39;s delete date. Must be greater than archiveDate if set, otherwise one day from now. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>The orphan recording&#39;s delete date. Must be greater than archiveDate and exportDate if set, otherwise one day from now. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="deleteDate", EmitDefaultValue=false)]
         public DateTime? DeleteDate { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The orphan recording&#39;s export date. Must be greater than 1 day from now if set. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The orphan recording&#39;s export date. Must be greater than 1 day from now if set. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="exportDate", EmitDefaultValue=false)]
+        public DateTime? ExportDate { get; set; }
+        
+        
+        
+        /// <summary>
+        /// IntegrationId to access AWS S3 bucket for export. This field is required if exportDate is set.
+        /// </summary>
+        /// <value>IntegrationId to access AWS S3 bucket for export. This field is required if exportDate is set.</value>
+        [DataMember(Name="integrationId", EmitDefaultValue=false)]
+        public string IntegrationId { get; set; }
         
         
         
@@ -89,6 +121,8 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  ArchiveDate: ").Append(ArchiveDate).Append("\n");
             sb.Append("  DeleteDate: ").Append(DeleteDate).Append("\n");
+            sb.Append("  ExportDate: ").Append(ExportDate).Append("\n");
+            sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -141,6 +175,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DeleteDate.Equals(other.DeleteDate)
                 ) &&
                 (
+                    this.ExportDate == other.ExportDate ||
+                    this.ExportDate != null &&
+                    this.ExportDate.Equals(other.ExportDate)
+                ) &&
+                (
+                    this.IntegrationId == other.IntegrationId ||
+                    this.IntegrationId != null &&
+                    this.IntegrationId.Equals(other.IntegrationId)
+                ) &&
+                (
                     this.ConversationId == other.ConversationId ||
                     this.ConversationId != null &&
                     this.ConversationId.Equals(other.ConversationId)
@@ -164,6 +208,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DeleteDate != null)
                     hash = hash * 59 + this.DeleteDate.GetHashCode();
+                
+                if (this.ExportDate != null)
+                    hash = hash * 59 + this.ExportDate.GetHashCode();
+                
+                if (this.IntegrationId != null)
+                    hash = hash * 59 + this.IntegrationId.GetHashCode();
                 
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();

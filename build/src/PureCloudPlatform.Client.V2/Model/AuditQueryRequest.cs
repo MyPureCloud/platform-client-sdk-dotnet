@@ -246,7 +246,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Workitems for "Workitems"
             /// </summary>
             [EnumMember(Value = "Workitems")]
-            Workitems
+            Workitems,
+            
+            /// <summary>
+            /// Enum Scim for "SCIM"
+            /// </summary>
+            [EnumMember(Value = "SCIM")]
+            Scim
         }
         
         

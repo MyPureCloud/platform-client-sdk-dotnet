@@ -57,8 +57,17 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Receipt for "Receipt"
             /// </summary>
             [EnumMember(Value = "Receipt")]
-            Receipt
+            Receipt,
+            
+            /// <summary>
+            /// Enum Event for "Event"
+            /// </summary>
+            [EnumMember(Value = "Event")]
+            Event
         }
+        
+        
+        
         
         
         
@@ -149,6 +158,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The direction of the message.  Direction is always from the perspective of the Genesys Cloud platform.  An Inbound message is one sent from a guest to the Genesys Cloud Platform.  An Outbound message is one sent from the Genesys Cloud Platform to a guest.
         /// </summary>
@@ -175,15 +186,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Message type..</param>
         /// <param name="Text">Message text..</param>
         /// <param name="Content">List of content elements..</param>
+        /// <param name="Events">List of event elements..</param>
         /// <param name="Direction">The direction of the message.  Direction is always from the perspective of the Genesys Cloud platform.  An Inbound message is one sent from a guest to the Genesys Cloud Platform.  An Outbound message is one sent from the Genesys Cloud Platform to a guest..</param>
         /// <param name="OriginatingEntity">Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies..</param>
-        public WebMessagingMessage(string Id = null, WebMessagingChannel Channel = null, TypeEnum? Type = null, string Text = null, List<WebMessagingContent> Content = null, DirectionEnum? Direction = null, OriginatingEntityEnum? OriginatingEntity = null)
+        public WebMessagingMessage(string Id = null, WebMessagingChannel Channel = null, TypeEnum? Type = null, string Text = null, List<WebMessagingContent> Content = null, List<WebMessagingEvent> Events = null, DirectionEnum? Direction = null, OriginatingEntityEnum? OriginatingEntity = null)
         {
             this.Id = Id;
             this.Channel = Channel;
             this.Type = Type;
             this.Text = Text;
             this.Content = Content;
+            this.Events = Events;
             this.Direction = Direction;
             this.OriginatingEntity = OriginatingEntity;
             
@@ -229,6 +242,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// List of event elements.
+        /// </summary>
+        /// <value>List of event elements.</value>
+        [DataMember(Name="events", EmitDefaultValue=false)]
+        public List<WebMessagingEvent> Events { get; set; }
+        
+        
+        
         
         
         
@@ -246,6 +268,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
+            sb.Append("  Events: ").Append(Events).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  OriginatingEntity: ").Append(OriginatingEntity).Append("\n");
             sb.Append("}\n");
@@ -314,6 +337,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Content.SequenceEqual(other.Content)
                 ) &&
                 (
+                    this.Events == other.Events ||
+                    this.Events != null &&
+                    this.Events.SequenceEqual(other.Events)
+                ) &&
+                (
                     this.Direction == other.Direction ||
                     this.Direction != null &&
                     this.Direction.Equals(other.Direction)
@@ -351,6 +379,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Content != null)
                     hash = hash * 59 + this.Content.GetHashCode();
+                
+                if (this.Events != null)
+                    hash = hash * 59 + this.Events.GetHashCode();
                 
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
